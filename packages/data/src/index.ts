@@ -11,9 +11,11 @@ import itemsJson from "../catalog/items.json" with { type: "json" };
 import newsJson from "../catalog/news.json" with { type: "json" };
 import taxonomyJson from "../catalog/taxonomy.json" with { type: "json" };
 import statsJson from "../catalog/stats.json" with { type: "json" };
+import loreJson from "../catalog/lore.json" with { type: "json" };
 
 import type {
   Brand,
+  BrandLore,
   Item,
   News,
   Sector,
@@ -48,6 +50,12 @@ export const taxonomy: Taxonomy = taxonomyJson as Taxonomy;
 /** Summary counts for balancing reference. */
 export const stats: Stats = statsJson as unknown as Stats;
 
+/** Authored backstories, keyed by exact brand name. */
+export const lore: Record<string, BrandLore> = loreJson as Record<
+  string,
+  BrandLore
+>;
+
 // ── Lookups ──────────────────────────────────────────────────────────────
 
 const itemsById = new Map<number, Item>(items.map((it) => [it.id, it]));
@@ -59,6 +67,32 @@ export function getItem(id: number): Item | undefined {
 
 export function getBrand(name: string): Brand | undefined {
   return brandsByName.get(name);
+}
+
+/** URL-safe slug for a brand name, e.g. "Skarngrove & Sons" → "skarngrove-sons". */
+export function brandSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+const brandBySlug = new Map<string, Brand>(
+  brands.map((b) => [brandSlug(b.name), b]),
+);
+
+export function getBrandBySlug(slug: string): Brand | undefined {
+  return brandBySlug.get(slug);
+}
+
+export function getLore(name: string): BrandLore | undefined {
+  return lore[name];
+}
+
+/** Items made by a brand. */
+export function itemsByBrand(name: string): Item[] {
+  return items.filter((it) => it.brand === name);
 }
 
 export function sectorLabel(key: SectorKey): string {

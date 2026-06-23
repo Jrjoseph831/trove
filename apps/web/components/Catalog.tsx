@@ -1,8 +1,9 @@
 "use client";
 
 import { useMemo, useRef } from "react";
+import Link from "next/link";
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { brands as allBrands, sectorKeys, sectors } from "@trove/data";
+import { brands as allBrands, brandSlug, sectorKeys, sectors } from "@trove/data";
 import { held } from "@trove/engine";
 import { money, pctChange, signedPct } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
@@ -139,7 +140,12 @@ export function Catalog() {
                       <span className="nmcell">
                         <ItemIcon it={it} size={18} className="ic" />
                         <span className="nm">
-                          <span className="bd">{it.brand}</span>
+                          <Link
+                            href={`/brand/${brandSlug(it.brand)}`}
+                            className="bd bd-link"
+                          >
+                            {it.brand}
+                          </Link>
                           {it.name}
                           {mineQty ? ` · you hold ${mineQty}` : ""}
                         </span>
@@ -183,7 +189,12 @@ export function Catalog() {
                     <ItemIcon it={it} size={30} />
                     <span className="glint">✦</span>
                   </div>
-                  <div className="bd">{it.brand}</div>
+                  <Link
+                    href={`/brand/${brandSlug(it.brand)}`}
+                    className="bd bd-link"
+                  >
+                    {it.brand}
+                  </Link>
                   <div className="nm">{it.name}</div>
                   <div className="edword">
                     {it.edition === 1 ? "1 of 1" : "Limited edition"}

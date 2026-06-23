@@ -934,6 +934,16 @@ body {
   font-style: italic;
   padding: 12px 0;
 }
+.bd-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.12s;
+}
+.bd-link:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 /* ====================== CATALOG ====================== */
 .cat-head {
@@ -1482,4 +1492,232 @@ body {
 :focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 2px;
+}
+
+/* ====================== BRAND DOSSIER ====================== */
+.brandpage {
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--bg);
+}
+.dossier-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 32px 90px;
+}
+.dossier-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 2;
+}
+.backlink {
+  color: var(--ink-dim);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.backlink:hover {
+  color: var(--ink);
+}
+.dossier-mark {
+  font-family: var(--font-display);
+  letter-spacing: 0.3em;
+  font-size: 15px;
+  color: var(--ink);
+}
+.dossier {
+  padding-top: 46px;
+}
+.dossier-head {
+  border-top: 2px solid var(--rule);
+  padding-top: 18px;
+}
+.dossier-head h1 {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.04;
+  margin: 4px 0 0;
+}
+.dossier-tag {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-dim);
+  margin-top: 12px;
+}
+.dossier-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 48px;
+  margin-top: 44px;
+}
+@media (max-width: 820px) {
+  .dossier-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+}
+.dossier-h {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 9px;
+  margin-bottom: 18px;
+}
+.dossier-house p {
+  font-size: 15px;
+  line-height: 1.72;
+  color: var(--ink-dim);
+  max-width: 62ch;
+}
+.makes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.makechip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  padding: 8px 15px;
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.makechip svg {
+  color: var(--ink);
+}
+.standing > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.standing dt {
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.standing dd {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+.houseindex {
+  margin-top: 24px;
+}
+.houseindex-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.houseindex-top span:first-child {
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.houseindex-top .num {
+  font-family: var(--font-display);
+  font-size: 24px;
+}
+.hi-bar {
+  height: 6px;
+  background: var(--track-bg);
+  border-radius: 99px;
+  overflow: hidden;
+  margin: 9px 0 7px;
+}
+.hi-bar i {
+  display: block;
+  height: 100%;
+  background: var(--up);
+}
+.hi-note {
+  font-size: 10.5px;
+  color: var(--ink-faint);
+}
+.dossier-sectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 24px;
+}
+.dossier-sectors span {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.flagship {
+  margin-top: 46px;
+}
+.flag-row {
+  display: grid;
+  grid-template-columns: 24px 1fr 130px 110px;
+  gap: 14px;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+.flag-row .ic {
+  color: var(--ink-dim);
+}
+.flag-nm {
+  font-size: 14px;
+}
+.flag-ed {
+  color: var(--edition);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.flag-sct {
+  color: var(--ink-dim);
+  font-size: 12px;
+}
+.flag-pr {
+  font-family: var(--font-display);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.floor-cta {
+  display: inline-block;
+  margin-top: 38px;
+  color: var(--ink);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink-faint);
+  padding-bottom: 3px;
+}
+.floor-cta:hover {
+  border-color: var(--ink);
+}
+@media (max-width: 560px) {
+  .flag-row {
+    grid-template-columns: 20px 1fr 92px;
+  }
+  .flag-sct {
+    display: none;
+  }
+  .dossier-head h1 {
+    font-size: 34px;
+  }
 }

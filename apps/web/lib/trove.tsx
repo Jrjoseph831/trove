@@ -9,6 +9,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { getBrandBySlug } from "@trove/data";
 import {
   advance,
   borrow,
@@ -90,6 +91,18 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   warpRef.current = warp;
 
   const refresh = useCallback(() => setTick((t) => t + 1), []);
+
+  // Deep link: /?brand=<slug> opens the Catalog filtered to that company.
+  useEffect(() => {
+    const slug = new URLSearchParams(window.location.search).get("brand");
+    if (slug) {
+      const brand = getBrandBySlug(slug);
+      if (brand) {
+        setCatBrand(brand.name);
+        setTab("catalog");
+      }
+    }
+  }, []);
 
   // The game loop: advance both worlds every frame, re-render on a throttle.
   useEffect(() => {

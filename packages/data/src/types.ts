@@ -58,6 +58,16 @@ export interface Brand {
   sectors: SectorKey[];
 }
 
+/** Authored flavor copy for a brand's company page. */
+export interface BrandLore {
+  /** Sharp one-liner, ≤ 8 words. */
+  tagline: string;
+  /** Plausible founding year. */
+  founded: number;
+  /** ~60–90 word company backstory. */
+  story: string;
+}
+
 export interface News {
   id: string;
   /** Eyebrow / category label. */
