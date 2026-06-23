@@ -102,8 +102,14 @@ surface, right to go private). Highest-risk system — safety before thrill.
   full 1,456-item catalog loads & type-checks; `/` prerenders a boot check.
   **Deviation from plan:** app lives in `apps/web`, not repo root — root was
   already populated by the handoff, and `create-next-app` needs a clean dir.
-- [ ] Phase 1 — engine port (`advance`, `settleCycle`, `traderAct`, buy/sell,
-  debt) + invariant tests.
+- [x] **Phase 1 — done.** Full engine ported (`advance`, `settleCycle`,
+  `traderAct`, `playerBuy`/`playerSell`, debt, weighted news sequencing) over
+  the full catalog. Injectable RNG (`./rng`) makes the whole sim deterministic.
+  15 invariant tests green (vitest): unique ids, supply bounds across 200
+  cycles, unit conservation under pure trades, net-worth-neutral buys,
+  fast-restock dampening vs slow-restock swing, edition firm-and-vanish,
+  determinism, headless smoke. `npm test` from root.
+- [ ] Phase 2 — local web app (single-player + sandbox): full terminal UI.
 
 ## Verify Phase 0 locally
 ```

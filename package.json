@@ -12,7 +12,8 @@
     "build": "npm run build -w @trove/web",
     "start": "npm run start -w @trove/web",
     "lint": "npm run lint -w @trove/web",
-    "typecheck": "npm run typecheck --workspaces --if-present"
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
   },
   "engines": {
     "node": ">=20"
