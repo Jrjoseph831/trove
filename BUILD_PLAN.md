@@ -123,9 +123,11 @@ surface, right to go private). Highest-risk system — safety before thrill.
   - THE WIRE: front page + archive, sector demand, leaderboard.
   - MY VAULT: holdings P/L + edition #s, credit line (borrow/repay).
   - Edition reveal modal; toasts; reduced-motion + focus-visible.
-  - Verified: typecheck + production build clean, `/` SSRs the boot shell with
-    no errors. NOT yet visually screenshotted (Chrome extension wasn't
-    connected this session) — run `npm run dev` and open localhost:3000.
+  - **Redesigned (owner direction):** premium white/black editorial theme (not
+    the prototype's dark skin), lucide line-icons by subcategory (no emoji),
+    and a calm spotlight+board "On the Move" (no spammy reordering).
+  - Verified live in Chrome (Trending/Catalog/Wire + a buy flow); typecheck +
+    production build clean. Run `npm run dev` → localhost:3000.
 - [ ] Phase 3 — AWS backbone (shared Live world).
 
 ## Verify Phase 0 locally
