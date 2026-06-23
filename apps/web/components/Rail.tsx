@@ -1,14 +1,22 @@
 "use client";
 
+import {
+  Factory,
+  LayoutGrid,
+  type LucideIcon,
+  Newspaper,
+  TrendingUp,
+  Vault as VaultIcon,
+} from "lucide-react";
 import { assetsValue, netWorth } from "@trove/engine";
 import { money, pctChange } from "@/lib/format";
 import type { TabId } from "@/lib/trove";
 import { useTrove } from "@/lib/trove";
 
-const TABS: { id: TabId; ic: string; label: string }[] = [
-  { id: "trending", ic: "◈", label: "Trending" },
-  { id: "catalog", ic: "▦", label: "Catalog" },
-  { id: "wire", ic: "❧", label: "The Wire" },
+const TABS: { id: TabId; Icon: LucideIcon; label: string }[] = [
+  { id: "trending", Icon: TrendingUp, label: "Trending" },
+  { id: "catalog", Icon: LayoutGrid, label: "Catalog" },
+  { id: "wire", Icon: Newspaper, label: "The Wire" },
 ];
 
 export function Rail() {
@@ -53,7 +61,10 @@ export function Rail() {
             className={tab === t.id ? "on" : ""}
             onClick={() => setTab(t.id)}
           >
-            <span className="ic">{t.ic}</span> {t.label}
+            <span className="ic">
+              <t.Icon size={15} strokeWidth={1.75} />
+            </span>{" "}
+            {t.label}
           </button>
         ))}
         <div className="navh" style={{ marginTop: 14 }}>
@@ -63,10 +74,16 @@ export function Rail() {
           className={tab === "vault" ? "on" : ""}
           onClick={() => setTab("vault")}
         >
-          <span className="ic">⬗</span> My Vault
+          <span className="ic">
+            <VaultIcon size={15} strokeWidth={1.75} />
+          </span>{" "}
+          My Vault
         </button>
         <button disabled>
-          <span className="ic">⚒</span> Factory <span className="soon">soon</span>
+          <span className="ic">
+            <Factory size={15} strokeWidth={1.75} />
+          </span>{" "}
+          Factory <span className="soon">soon</span>
         </button>
       </div>
 

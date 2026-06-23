@@ -13,8 +13,9 @@ export function Wire() {
     state.front
       ? [
           state.front,
+          // archive[0] is the current front (settleCycle unshifts it) — skip it.
           ...state.archive
-            .slice(0, 8)
+            .slice(1, 9)
             .map((a) => newsBank.find((n) => n.head === a.head) ?? a),
         ]
       : state.archive

@@ -2,8 +2,10 @@
 
 import { held } from "@trove/engine";
 import { money } from "@/lib/format";
-import { impliedSectors, moversByAbsMove } from "@/lib/ui";
+import { ItemIcon } from "@/lib/icons";
+import { impliedSectors } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
+import { Movers } from "./Movers";
 import { SectorBars } from "./SectorBars";
 import { Tile } from "./Tile";
 
@@ -11,11 +13,6 @@ export function Trending() {
   const { state } = useTrove();
   const f = state.front;
   const { ups, dns } = impliedSectors(f);
-
-  const movers = moversByAbsMove(state)
-    .filter((m) => m.it.edition === null || m.it.remaining > 0)
-    .slice(0, 8)
-    .map((m) => m.it);
 
   const watching = state.items
     .filter((i) => i.edition !== null && i.remaining > 0)
@@ -31,7 +28,7 @@ export function Trending() {
           {f && (
             <>
               <div className="paper">
-                <span className="name">THE TROVE WIRE</span>
+                <span className="name">The Trove Wire</span>
                 <span className="edition">No. {1000 + state.cycle} · evening edition</span>
               </div>
               <div className="kick">{f.kick}</div>
@@ -74,11 +71,7 @@ export function Trending() {
           <span className="t">On the Move</span>
           <span className="why">biggest shifts since the page turned</span>
         </div>
-        <div className="tiles">
-          {movers.map((it) => (
-            <Tile key={it.id} it={it} />
-          ))}
-        </div>
+        <Movers />
       </div>
 
       <div className="railrow">
@@ -111,7 +104,7 @@ export function Trending() {
               const pl = it.value - (it.buyAt ?? it.value);
               return (
                 <div className="crow" key={it.id}>
-                  <span className="ic">{it.icon}</span>
+                  <ItemIcon it={it} size={18} className="ic" />
                   <span className="nm">
                     <span className="bd">{it.brand}</span>
                     {it.name}

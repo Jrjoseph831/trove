@@ -5,6 +5,7 @@ import { useVirtualizer } from "@tanstack/react-virtual";
 import { brands as allBrands, sectorKeys, sectors } from "@trove/data";
 import { held } from "@trove/engine";
 import { money, pctChange, signedPct } from "@/lib/format";
+import { ItemIcon } from "@/lib/icons";
 import { primarySectorLabel, stockState } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
 
@@ -135,10 +136,13 @@ export function Catalog() {
                         transform: `translateY(${v.start}px)`,
                       }}
                     >
-                      <span className="nm">
-                        <span className="bd">{it.brand}</span>
-                        {it.icon} {it.name}
-                        {mineQty ? ` · you hold ${mineQty}` : ""}
+                      <span className="nmcell">
+                        <ItemIcon it={it} size={18} className="ic" />
+                        <span className="nm">
+                          <span className="bd">{it.brand}</span>
+                          {it.name}
+                          {mineQty ? ` · you hold ${mineQty}` : ""}
+                        </span>
                       </span>
                       <span className="sct">{primarySectorLabel(it)}</span>
                       <span className="stockdot">
@@ -176,7 +180,7 @@ export function Catalog() {
               return (
                 <div className="edcard" key={it.id}>
                   <div className="top">
-                    <span className="ic">{it.icon}</span>
+                    <ItemIcon it={it} size={30} />
                     <span className="glint">✦</span>
                   </div>
                   <div className="bd">{it.brand}</div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 import { Catalog } from "./Catalog";
 import { Rail } from "./Rail";
@@ -80,7 +81,9 @@ function Reveal() {
       }}
     >
       <div className="reveal">
-        <div className="ic">{it.icon}</div>
+        <div className="ic">
+          <ItemIcon it={it} size={52} />
+        </div>
         <div className="kick">Acquired</div>
         <div className="nm2">
           {it.brand} {it.name}

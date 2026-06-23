@@ -2,6 +2,7 @@
 
 import { creditLimit, held } from "@trove/engine";
 import { money } from "@/lib/format";
+import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 
 export function Vault() {
@@ -31,7 +32,7 @@ export function Vault() {
                   : "";
               return (
                 <div className="crow" key={it.id}>
-                  <span className="ic">{it.icon}</span>
+                  <ItemIcon it={it} size={18} className="ic" />
                   <span className="nm">
                     <span className="bd">{it.brand}</span>
                     {it.name}

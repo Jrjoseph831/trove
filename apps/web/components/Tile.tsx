@@ -2,9 +2,10 @@
 
 import type { RuntimeItem } from "@trove/engine";
 import { money, pctChange, signedPct } from "@/lib/format";
+import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 
-/** A glinting mover/marquee tile (Trending rails). Click to acquire. */
+/** A marquee tile (Trending "Worth Watching"). Click to acquire. */
 export function Tile({ it }: { it: RuntimeItem }) {
   const { buy } = useTrove();
   const isEd = it.edition !== null;
@@ -14,7 +15,7 @@ export function Tile({ it }: { it: RuntimeItem }) {
   return (
     <button className={`tile ${isEd ? "ed" : ""}`} onClick={() => buy(it.id)}>
       <div className="top">
-        <span className="ic">{it.icon}</span>
+        <ItemIcon it={it} size={28} />
         {isEd && <span className="glint">✦</span>}
       </div>
       <div className="brandlbl">{it.brand}</div>
