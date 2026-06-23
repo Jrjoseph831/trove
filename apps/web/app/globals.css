@@ -1341,6 +1341,366 @@ body {
   color: var(--ink);
 }
 
+/* ====================== THE WIRE — TNN BROADCAST ====================== */
+.wire .tnn-head-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.tnn-logo {
+  font-family: var(--font-display);
+  font-size: 21px;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+.tnn-logo em {
+  font-style: normal;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-left: 12px;
+}
+.tnn-on {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d11f2d;
+}
+.tnn-on::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d11f2d;
+  animation: livepulse 1.6s infinite;
+}
+@keyframes livepulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(209, 31, 45, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(209, 31, 45, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(209, 31, 45, 0);
+  }
+}
+
+.breaking {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  background: #d11f2d;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.breaking-lab {
+  flex: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #9e0f1c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.breaking-run {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.breaking-run span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: tick 30s linear infinite;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.tnn-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+@media (max-width: 1000px) {
+  .tnn-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* the dark "monitor" — fixed dark palette in both app themes */
+.tnn-screen {
+  position: relative;
+  background: #0a0a0c;
+  border: 1px solid #1b1b22;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 392px;
+  color: #f4efe6;
+}
+.tnn-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 90% at 80% 0%, rgba(233, 162, 59, 0.18), transparent 55%),
+    linear-gradient(180deg, #101016, #0a0a0c);
+  animation: kenburns 18s ease-in-out infinite alternate;
+}
+.tnn-bg::after {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+@keyframes kenburns {
+  from {
+    transform: scale(1.05) translate(1%, 1%);
+  }
+  to {
+    transform: scale(1.16) translate(-2%, -3%);
+  }
+}
+.tnn-ghost {
+  position: absolute;
+  right: 26px;
+  bottom: 140px;
+  font-family: var(--font-display);
+  font-size: 116px;
+  line-height: 0.8;
+  color: rgba(244, 239, 230, 0.05);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  pointer-events: none;
+  animation: fadein 0.8s ease;
+}
+.tnn-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  z-index: 3;
+}
+.tnn-live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #fff;
+  background: #d11f2d;
+  padding: 5px 11px;
+  border-radius: 4px;
+}
+.tnn-live i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  animation: blink 1.2s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+.tnn-clock {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(244, 239, 230, 0.6);
+  font-variant-numeric: tabular-nums;
+}
+.tnn-lower {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 26px 28px 28px;
+  background: linear-gradient(0deg, rgba(8, 8, 10, 0.94) 38%, transparent);
+  z-index: 2;
+  animation: chyron 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@keyframes chyron {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.tnn-kick {
+  display: inline-block;
+  background: #e9a23b;
+  color: #1a1206;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+.tnn-head {
+  font-family: var(--font-display);
+  font-size: 31px;
+  line-height: 1.12;
+  margin: 13px 0 9px;
+  color: #fff;
+  max-width: 24ch;
+}
+.tnn-body {
+  font-size: 13px;
+  color: rgba(244, 239, 230, 0.72);
+  line-height: 1.55;
+  max-width: 62ch;
+}
+.tnn-dots {
+  position: absolute;
+  bottom: 18px;
+  right: 24px;
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+}
+.tnn-dots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(244, 239, 230, 0.25);
+}
+.tnn-dots i.on {
+  background: #e9a23b;
+}
+
+.tnn-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.tnn-panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.tnn-panel-h {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 9px;
+  margin-bottom: 13px;
+}
+.upnext {
+  display: flex;
+  gap: 11px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.upnext:last-child {
+  border-bottom: 0;
+}
+.upnext-kick {
+  flex: none;
+  width: 62px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #d11f2d;
+}
+.upnext-head {
+  font-size: 12.5px;
+  color: var(--ink-dim);
+  line-height: 1.35;
+}
+
+.tnn-tape {
+  margin: 22px 0;
+  background: #0a0a0c;
+  border-radius: 8px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.tnn-tape-run {
+  white-space: nowrap;
+  animation: tick 50s linear infinite;
+  font-size: 12px;
+  color: rgba(244, 239, 230, 0.85);
+}
+.tnn-tape-run span {
+  margin: 0 14px;
+}
+.tnn-tape-run b {
+  color: #e9a23b;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 9.5px;
+  margin-right: 9px;
+}
+
+.wire-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+.wcard {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid #d11f2d;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.wcard-kick {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #d11f2d;
+}
+.wcard h4 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  margin: 8px 0 8px;
+  line-height: 1.25;
+}
+.wcard p {
+  font-size: 12.5px;
+  color: var(--ink-dim);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* ====================== TOAST + REVEAL ====================== */
 .toast {
   position: fixed;
@@ -1477,7 +1837,14 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ticker .run {
+  .ticker .run,
+  .breaking-run span,
+  .tnn-tape-run,
+  .tnn-bg,
+  .tnn-ghost,
+  .tnn-lower,
+  .tnn-live i,
+  .tnn-on::before {
     animation: none;
   }
   .tile:hover {
