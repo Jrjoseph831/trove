@@ -109,7 +109,24 @@ surface, right to go private). Highest-risk system — safety before thrill.
   cycles, unit conservation under pure trades, net-worth-neutral buys,
   fast-restock dampening vs slow-restock swing, edition firm-and-vanish,
   determinism, headless smoke. `npm test` from root.
-- [ ] Phase 2 — local web app (single-player + sandbox): full terminal UI.
+- [x] **Phase 2 — done (pending your visual sign-off).** Full terminal UI in
+  React, driven live by the engine via a requestAnimationFrame game loop
+  (`lib/trove.tsx`), throttled to ~5 renders/s. Both worlds (Live + Sandbox)
+  advance every frame; Sandbox gets warp ×200/×2k + jump.
+  - Shell: fixed rail (net worth, nav, mode switch, quiet clock, warp) + oxblood
+    topbar with the scrolling brass ticker.
+  - TRENDING: masthead lead (front story + inferred-reading line), Heating Up
+    sector bars (click → filtered Catalog), On the Move, Worth Watching, vault
+    glance + floor activity.
+  - CATALOG: virtualized commodity list (@tanstack/react-virtual, all 1,456
+    items) + glowing edition cards, sector chips + brand facet + search.
+  - THE WIRE: front page + archive, sector demand, leaderboard.
+  - MY VAULT: holdings P/L + edition #s, credit line (borrow/repay).
+  - Edition reveal modal; toasts; reduced-motion + focus-visible.
+  - Verified: typecheck + production build clean, `/` SSRs the boot shell with
+    no errors. NOT yet visually screenshotted (Chrome extension wasn't
+    connected this session) — run `npm run dev` and open localhost:3000.
+- [ ] Phase 3 — AWS backbone (shared Live world).
 
 ## Verify Phase 0 locally
 ```

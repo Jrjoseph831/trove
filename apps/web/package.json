@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@tanstack/react-virtual": "^3.14.3",
     "@trove/data": "*",
     "@trove/engine": "*",
     "next": "16.2.9",
