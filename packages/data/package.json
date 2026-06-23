@@ -1,0 +1,17 @@
+{
+  "name": "@trove/data",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Trove catalog: seed data (sectors, brands, items, news, taxonomy) + typed loaders.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "types": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}

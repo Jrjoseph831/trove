@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/*
+  Trove design tokens — the "auction-house terminal" palette, ported from
+  prototype/vault-terminal.html. Depth via layered warm browns (felt/leather),
+  oxblood mastheads/rules, brass accent, Georgia serif for display/prices.
+  Full UI build is Phase 2; these tokens are the shared foundation.
+*/
+:root {
+  --bg: #0c0a0b; /* near-black with warmth */
+  --felt-1: #14100f;
+  --felt-2: #1b1513;
+  --felt-3: #221a18;
+  --line: #2c2320;
+  --line-2: #3a2e29;
+
+  --ink: #ece6dd;
+  --ink-dim: #998d83;
+  --ink-faint: #6b625b;
+
+  --oxblood: #5c1f24; /* signature deep red — mastheads, rules */
+  --oxblood-lit: #8a3038;
+  --brass: #c9a24b; /* metallic accent */
+  --brass-lit: #e3c074;
+  --brass-dim: #7d6a3a;
+
+  --hot: #e8893b; /* rising (warmth, never red/green) */
+  --cool: #5d8aa8; /* cooling */
+  --edition: #b489d6; /* collectible glow */
+
+  --radius: 12px;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-felt-1: var(--felt-1);
+  --color-felt-2: var(--felt-2);
+  --color-felt-3: var(--felt-3);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-ink-faint: var(--ink-faint);
+  --color-oxblood: var(--oxblood);
+  --color-oxblood-lit: var(--oxblood-lit);
+  --color-brass: var(--brass);
+  --color-brass-lit: var(--brass-lit);
+  --color-brass-dim: var(--brass-dim);
+  --color-hot: var(--hot);
+  --color-cool: var(--cool);
+  --color-edition: var(--edition);
+
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), Inter, "Helvetica Neue", system-ui, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}

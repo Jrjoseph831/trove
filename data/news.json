@@ -1,0 +1,764 @@
+[
+  {
+    "id": "news_000",
+    "kick": "Construction",
+    "head": "Unexpected wave of demand catches Construction suppliers flat-footed",
+    "body": "A sharp, unplanned spike in Construction orders has left several suppliers scrambling to keep shelves stocked. Analysts are split on whether the run-up will hold or fade by season's end.",
+    "effects": {
+      "construction": 0.206
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_001",
+    "kick": "Materials",
+    "head": "Supply of key Construction inputs tightens as disruption drags on",
+    "body": "A prolonged disruption has squeezed availability of critical Construction inputs, with lead times stretching and buyers watching inventories nervously. No quick resolution appears to be in sight.",
+    "effects": {
+      "construction": 0.136
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_002",
+    "kick": "Policy",
+    "head": "Lawmakers pass package favoring Logistics over coming seasons",
+    "body": "A long-debated spending package cleared its final vote overnight, directing sustained public funds toward Logistics programs. Operators say the certainty alone is enough to unlock projects that had been sitting on the shelf.",
+    "effects": {
+      "logistics": 0.228
+    },
+    "dur": 6,
+    "weight": 1
+  },
+  {
+    "id": "news_003",
+    "kick": "Materials",
+    "head": "Supply of key Logistics inputs tightens as disruption drags on",
+    "body": "A prolonged disruption has squeezed availability of critical Logistics inputs, with lead times stretching and buyers watching inventories nervously. No quick resolution appears to be in sight.",
+    "effects": {
+      "logistics": 0.163
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_004",
+    "kick": "Automotive",
+    "head": "Unexpected wave of demand catches Automotive suppliers flat-footed",
+    "body": "A sharp, unplanned spike in Automotive orders has left several suppliers scrambling to keep shelves stocked. Analysts are split on whether the run-up will hold or fade by season's end.",
+    "effects": {
+      "automotive": 0.134
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_005",
+    "kick": "Policy",
+    "head": "Lawmakers pass package favoring Automotive over coming seasons",
+    "body": "A long-debated spending package cleared its final vote overnight, directing sustained public funds toward Automotive programs. Operators say the certainty alone is enough to unlock projects that had been sitting on the shelf.",
+    "effects": {
+      "automotive": 0.24
+    },
+    "dur": 6,
+    "weight": 1
+  },
+  {
+    "id": "news_006",
+    "kick": "Technology",
+    "head": "Unexpected wave of demand catches Technology suppliers flat-footed",
+    "body": "A sharp, unplanned spike in Technology orders has left several suppliers scrambling to keep shelves stocked. Analysts are split on whether the run-up will hold or fade by season's end.",
+    "effects": {
+      "technology": 0.194
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_007",
+    "kick": "Materials",
+    "head": "Supply of key Technology inputs tightens as disruption drags on",
+    "body": "A prolonged disruption has squeezed availability of critical Technology inputs, with lead times stretching and buyers watching inventories nervously. No quick resolution appears to be in sight.",
+    "effects": {
+      "technology": 0.15
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_008",
+    "kick": "Industry",
+    "head": "Cindral Power unveils major Energy expansion across the inland hubs",
+    "body": "Cindral Power confirmed a large-scale buildout this morning, with aggressive hiring and procurement slated to begin within weeks. Suppliers in the inland hubs are bracing for a surge in orders as the program ramps.",
+    "effects": {
+      "energy": 0.22
+    },
+    "dur": 6,
+    "weight": 1
+  },
+  {
+    "id": "news_009",
+    "kick": "Energy",
+    "head": "Unexpected wave of demand catches Energy suppliers flat-footed",
+    "body": "A sharp, unplanned spike in Energy orders has left several suppliers scrambling to keep shelves stocked. Analysts are split on whether the run-up will hold or fade by season's end.",
+    "effects": {
+      "energy": 0.153
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_010",
+    "kick": "Policy",
+    "head": "Lawmakers pass package favoring Agriculture over coming seasons",
+    "body": "A long-debated spending package cleared its final vote overnight, directing sustained public funds toward Agriculture programs. Operators say the certainty alone is enough to unlock projects that had been sitting on the shelf.",
+    "effects": {
+      "agriculture": 0.209
+    },
+    "dur": 5,
+    "weight": 1
+  },
+  {
+    "id": "news_011",
+    "kick": "Materials",
+    "head": "Supply of key Agriculture inputs tightens as disruption drags on",
+    "body": "A prolonged disruption has squeezed availability of critical Agriculture inputs, with lead times stretching and buyers watching inventories nervously. No quick resolution appears to be in sight.",
+    "effects": {
+      "agriculture": 0.153
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_012",
+    "kick": "Materials",
+    "head": "Supply of key Manufacturing inputs tightens as disruption drags on",
+    "body": "A prolonged disruption has squeezed availability of critical Manufacturing inputs, with lead times stretching and buyers watching inventories nervously. No quick resolution appears to be in sight.",
+    "effects": {
+      "manufacturing": 0.18
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_013",
+    "kick": "Policy",
+    "head": "Lawmakers pass package favoring Manufacturing over coming seasons",
+    "body": "A long-debated spending package cleared its final vote overnight, directing sustained public funds toward Manufacturing programs. Operators say the certainty alone is enough to unlock projects that had been sitting on the shelf.",
+    "effects": {
+      "manufacturing": 0.251
+    },
+    "dur": 6,
+    "weight": 1
+  },
+  {
+    "id": "news_014",
+    "kick": "Policy",
+    "head": "Lawmakers pass package favoring Medical over coming seasons",
+    "body": "A long-debated spending package cleared its final vote overnight, directing sustained public funds toward Medical programs. Operators say the certainty alone is enough to unlock projects that had been sitting on the shelf.",
+    "effects": {
+      "medical": 0.209
+    },
+    "dur": 5,
+    "weight": 1
+  },
+  {
+    "id": "news_015",
+    "kick": "Materials",
+    "head": "Supply of key Medical inputs tightens as disruption drags on",
+    "body": "A prolonged disruption has squeezed availability of critical Medical inputs, with lead times stretching and buyers watching inventories nervously. No quick resolution appears to be in sight.",
+    "effects": {
+      "medical": 0.145
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_016",
+    "kick": "Hospitality",
+    "head": "Unexpected wave of demand catches Hospitality suppliers flat-footed",
+    "body": "A sharp, unplanned spike in Hospitality orders has left several suppliers scrambling to keep shelves stocked. Analysts are split on whether the run-up will hold or fade by season's end.",
+    "effects": {
+      "hospitality": 0.205
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_017",
+    "kick": "Industry",
+    "head": "Carrow Hospitality unveils major Hospitality expansion across the eastern corridor",
+    "body": "Carrow Hospitality confirmed a large-scale buildout this morning, with aggressive hiring and procurement slated to begin within weeks. Suppliers in the eastern corridor are bracing for a surge in orders as the program ramps.",
+    "effects": {
+      "hospitality": 0.245
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_018",
+    "kick": "Policy",
+    "head": "Lawmakers pass package favoring Consumer over coming seasons",
+    "body": "A long-debated spending package cleared its final vote overnight, directing sustained public funds toward Consumer programs. Operators say the certainty alone is enough to unlock projects that had been sitting on the shelf.",
+    "effects": {
+      "consumer": 0.273
+    },
+    "dur": 5,
+    "weight": 1
+  },
+  {
+    "id": "news_019",
+    "kick": "Industry",
+    "head": "Wold Retail unveils major Consumer expansion across the river valley",
+    "body": "Wold Retail confirmed a large-scale buildout this morning, with aggressive hiring and procurement slated to begin within weeks. Suppliers in the river valley are bracing for a surge in orders as the program ramps.",
+    "effects": {
+      "consumer": 0.258
+    },
+    "dur": 6,
+    "weight": 1
+  },
+  {
+    "id": "news_020",
+    "kick": "Textiles",
+    "head": "Unexpected wave of demand catches Textiles suppliers flat-footed",
+    "body": "A sharp, unplanned spike in Textiles orders has left several suppliers scrambling to keep shelves stocked. Analysts are split on whether the run-up will hold or fade by season's end.",
+    "effects": {
+      "textiles": 0.177
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_021",
+    "kick": "Industry",
+    "head": "Orne Fabrics unveils major Textiles expansion across the western basin",
+    "body": "Orne Fabrics confirmed a large-scale buildout this morning, with aggressive hiring and procurement slated to begin within weeks. Suppliers in the western basin are bracing for a surge in orders as the program ramps.",
+    "effects": {
+      "textiles": 0.194
+    },
+    "dur": 5,
+    "weight": 1
+  },
+  {
+    "id": "news_022",
+    "kick": "Materials",
+    "head": "Supply of key luxury inputs tightens as disruption drags on",
+    "body": "A prolonged disruption has squeezed availability of critical luxury inputs, with lead times stretching and buyers watching inventories nervously. No quick resolution appears to be in sight.",
+    "effects": {
+      "luxury": 0.177
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_023",
+    "kick": "Industry",
+    "head": "Halcyon Maison unveils major luxury expansion across the inland hubs",
+    "body": "Halcyon Maison confirmed a large-scale buildout this morning, with aggressive hiring and procurement slated to begin within weeks. Suppliers in the inland hubs are bracing for a surge in orders as the program ramps.",
+    "effects": {
+      "luxury": 0.231
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_024",
+    "kick": "Markets",
+    "head": "Construction oversupply pulls prices off recent highs",
+    "body": "A wave of new capacity has flooded the Construction space faster than buyers can absorb it. Operators that leaned into the boom are now trimming the excess they'd built up.",
+    "effects": {
+      "construction": -0.204
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_025",
+    "kick": "Construction",
+    "head": "Stonebridge Developments issues sweeping recall, rattling Construction confidence",
+    "body": "Stonebridge Developments announced a broad recall after fault reports surfaced in its flagship line. The news cast a chill over the wider Construction category heading into a closely watched stretch.",
+    "effects": {
+      "construction": -0.205
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_026",
+    "kick": "Logistics",
+    "head": "Meridian Haul issues sweeping recall, rattling Logistics confidence",
+    "body": "Meridian Haul announced a broad recall after fault reports surfaced in its flagship line. The news cast a chill over the wider Logistics category heading into a closely watched stretch.",
+    "effects": {
+      "logistics": -0.194
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_027",
+    "kick": "Markets",
+    "head": "Logistics activity slumps on cost and rate jitters",
+    "body": "Fresh figures show Logistics activity falling sharply as higher costs spook operators. Several large commitments were quietly shelved pending clearer conditions.",
+    "effects": {
+      "logistics": -0.147
+    },
+    "dur": 5,
+    "weight": 1
+  },
+  {
+    "id": "news_028",
+    "kick": "Automotive",
+    "head": "Veldt Drive issues sweeping recall, rattling Automotive confidence",
+    "body": "Veldt Drive announced a broad recall after fault reports surfaced in its flagship line. The news cast a chill over the wider Automotive category heading into a closely watched stretch.",
+    "effects": {
+      "automotive": -0.229
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_029",
+    "kick": "Markets",
+    "head": "Automotive oversupply pulls prices off recent highs",
+    "body": "A wave of new capacity has flooded the Automotive space faster than buyers can absorb it. Operators that leaned into the boom are now trimming the excess they'd built up.",
+    "effects": {
+      "automotive": -0.22
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_030",
+    "kick": "Technology",
+    "head": "Corvon Compute issues sweeping recall, rattling Technology confidence",
+    "body": "Corvon Compute announced a broad recall after fault reports surfaced in its flagship line. The news cast a chill over the wider Technology category heading into a closely watched stretch.",
+    "effects": {
+      "technology": -0.24
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_031",
+    "kick": "Markets",
+    "head": "Technology oversupply pulls prices off recent highs",
+    "body": "A wave of new capacity has flooded the Technology space faster than buyers can absorb it. Operators that leaned into the boom are now trimming the excess they'd built up.",
+    "effects": {
+      "technology": -0.143
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_032",
+    "kick": "Energy",
+    "head": "Boreas Energy issues sweeping recall, rattling Energy confidence",
+    "body": "Boreas Energy announced a broad recall after fault reports surfaced in its flagship line. The news cast a chill over the wider Energy category heading into a closely watched stretch.",
+    "effects": {
+      "energy": -0.161
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_033",
+    "kick": "Markets",
+    "head": "Energy backlog clears faster than forecast",
+    "body": "The strain that had gripped Energy for months has eased ahead of schedule, and conditions are normalizing. Operators are unwinding the surge capacity they'd leaned on.",
+    "effects": {
+      "energy": -0.15
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_034",
+    "kick": "Markets",
+    "head": "Agriculture oversupply pulls prices off recent highs",
+    "body": "A wave of new capacity has flooded the Agriculture space faster than buyers can absorb it. Operators that leaned into the boom are now trimming the excess they'd built up.",
+    "effects": {
+      "agriculture": -0.147
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_035",
+    "kick": "Markets",
+    "head": "Agriculture backlog clears faster than forecast",
+    "body": "The strain that had gripped Agriculture for months has eased ahead of schedule, and conditions are normalizing. Operators are unwinding the surge capacity they'd leaned on.",
+    "effects": {
+      "agriculture": -0.138
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_036",
+    "kick": "Markets",
+    "head": "Manufacturing activity slumps on cost and rate jitters",
+    "body": "Fresh figures show Manufacturing activity falling sharply as higher costs spook operators. Several large commitments were quietly shelved pending clearer conditions.",
+    "effects": {
+      "manufacturing": -0.177
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_037",
+    "kick": "Manufacturing",
+    "head": "Carrow Works issues sweeping recall, rattling Manufacturing confidence",
+    "body": "Carrow Works announced a broad recall after fault reports surfaced in its flagship line. The news cast a chill over the wider Manufacturing category heading into a closely watched stretch.",
+    "effects": {
+      "manufacturing": -0.199
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_038",
+    "kick": "Markets",
+    "head": "Medical backlog clears faster than forecast",
+    "body": "The strain that had gripped Medical for months has eased ahead of schedule, and conditions are normalizing. Operators are unwinding the surge capacity they'd leaned on.",
+    "effects": {
+      "medical": -0.138
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_039",
+    "kick": "Markets",
+    "head": "Medical oversupply pulls prices off recent highs",
+    "body": "A wave of new capacity has flooded the Medical space faster than buyers can absorb it. Operators that leaned into the boom are now trimming the excess they'd built up.",
+    "effects": {
+      "medical": -0.213
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_040",
+    "kick": "Hospitality",
+    "head": "Carrow Hospitality issues sweeping recall, rattling Hospitality confidence",
+    "body": "Carrow Hospitality announced a broad recall after fault reports surfaced in its flagship line. The news cast a chill over the wider Hospitality category heading into a closely watched stretch.",
+    "effects": {
+      "hospitality": -0.173
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_041",
+    "kick": "Markets",
+    "head": "Hospitality activity slumps on cost and rate jitters",
+    "body": "Fresh figures show Hospitality activity falling sharply as higher costs spook operators. Several large commitments were quietly shelved pending clearer conditions.",
+    "effects": {
+      "hospitality": -0.181
+    },
+    "dur": 5,
+    "weight": 1
+  },
+  {
+    "id": "news_042",
+    "kick": "Markets",
+    "head": "Consumer backlog clears faster than forecast",
+    "body": "The strain that had gripped Consumer for months has eased ahead of schedule, and conditions are normalizing. Operators are unwinding the surge capacity they'd leaned on.",
+    "effects": {
+      "consumer": -0.105
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_043",
+    "kick": "Markets",
+    "head": "Consumer activity slumps on cost and rate jitters",
+    "body": "Fresh figures show Consumer activity falling sharply as higher costs spook operators. Several large commitments were quietly shelved pending clearer conditions.",
+    "effects": {
+      "consumer": -0.146
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_044",
+    "kick": "Markets",
+    "head": "Textiles activity slumps on cost and rate jitters",
+    "body": "Fresh figures show Textiles activity falling sharply as higher costs spook operators. Several large commitments were quietly shelved pending clearer conditions.",
+    "effects": {
+      "textiles": -0.184
+    },
+    "dur": 5,
+    "weight": 1
+  },
+  {
+    "id": "news_045",
+    "kick": "Markets",
+    "head": "Textiles oversupply pulls prices off recent highs",
+    "body": "A wave of new capacity has flooded the Textiles space faster than buyers can absorb it. Operators that leaned into the boom are now trimming the excess they'd built up.",
+    "effects": {
+      "textiles": -0.161
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_046",
+    "kick": "Markets",
+    "head": "Luxury backlog clears faster than forecast",
+    "body": "The strain that had gripped luxury for months has eased ahead of schedule, and conditions are normalizing. Operators are unwinding the surge capacity they'd leaned on.",
+    "effects": {
+      "luxury": -0.131
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_047",
+    "kick": "Luxury",
+    "head": "Halcyon Maison issues sweeping recall, rattling luxury confidence",
+    "body": "Halcyon Maison announced a broad recall after fault reports surfaced in its flagship line. The news cast a chill over the wider luxury category heading into a closely watched stretch.",
+    "effects": {
+      "luxury": -0.178
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_048",
+    "kick": "Industry",
+    "head": "Halcrow Build Group program links Construction and Energy in the western basin",
+    "body": "A grid-and-infrastructure program ties construction to power buildout. Halcrow Build Group said the initiative, centered on the western basin, would run for several seasons and draw heavily on connected supply chains. Knock-on demand is expected to spread beyond the headline sector.",
+    "effects": {
+      "construction": 0.253,
+      "energy": 0.072
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_049",
+    "kick": "Industry",
+    "head": "Vantor Logistics program links Logistics and Construction in the gulf ports",
+    "body": "A distribution-network rollout pulls both freight and buildout demand. Vantor Logistics said the initiative, centered on the gulf ports, would run for several seasons and draw heavily on connected supply chains. Knock-on demand is expected to spread beyond the headline sector.",
+    "effects": {
+      "logistics": 0.213,
+      "construction": 0.075
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_050",
+    "kick": "Industry",
+    "head": "Veldt Drive program links Automotive and Energy in the northern belt",
+    "body": "An ev push lifts both vehicle and power-storage demand. Veldt Drive said the initiative, centered on the northern belt, would run for several seasons and draw heavily on connected supply chains. Knock-on demand is expected to spread beyond the headline sector.",
+    "effects": {
+      "automotive": 0.21,
+      "energy": 0.094
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_051",
+    "kick": "Industry",
+    "head": "Corvon Compute program links Technology and Energy in the gulf ports",
+    "body": "A data-center wave drives compute and the power to run it. Corvon Compute said the initiative, centered on the gulf ports, would run for several seasons and draw heavily on connected supply chains. Knock-on demand is expected to spread beyond the headline sector.",
+    "effects": {
+      "technology": 0.191,
+      "energy": 0.087
+    },
+    "dur": 5,
+    "weight": 1
+  },
+  {
+    "id": "news_052",
+    "kick": "Industry",
+    "head": "Tillage Co-op program links Agriculture and Logistics in the northern belt",
+    "body": "A bumper harvest strains storage and freight capacity. Tillage Co-op said the initiative, centered on the northern belt, would run for several seasons and draw heavily on connected supply chains. Knock-on demand is expected to spread beyond the headline sector.",
+    "effects": {
+      "agriculture": 0.183,
+      "logistics": 0.061
+    },
+    "dur": 5,
+    "weight": 1
+  },
+  {
+    "id": "news_053",
+    "kick": "Industry",
+    "head": "Forgewright Industrial program links Manufacturing and Construction in the western basin",
+    "body": "A reshoring drive fuels factory and facility buildout. Forgewright Industrial said the initiative, centered on the western basin, would run for several seasons and draw heavily on connected supply chains. Knock-on demand is expected to spread beyond the headline sector.",
+    "effects": {
+      "manufacturing": 0.182,
+      "construction": 0.098
+    },
+    "dur": 5,
+    "weight": 1
+  },
+  {
+    "id": "news_054",
+    "kick": "Industry",
+    "head": "Hearthstone Resorts program links Hospitality and Consumer in the gulf ports",
+    "body": "A tourism surge lifts food service and everyday goods. Hearthstone Resorts said the initiative, centered on the gulf ports, would run for several seasons and draw heavily on connected supply chains. Knock-on demand is expected to spread beyond the headline sector.",
+    "effects": {
+      "hospitality": 0.205,
+      "consumer": 0.068
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_055",
+    "kick": "Industry",
+    "head": "Ardent Health Supply program links Medical and Manufacturing in the gulf ports",
+    "body": "A health-system stockpiling push pulls device manufacturing. Ardent Health Supply said the initiative, centered on the gulf ports, would run for several seasons and draw heavily on connected supply chains. Knock-on demand is expected to spread beyond the headline sector.",
+    "effects": {
+      "medical": 0.224,
+      "manufacturing": 0.104
+    },
+    "dur": 6,
+    "weight": 1
+  },
+  {
+    "id": "news_056",
+    "kick": "Industry",
+    "head": "Garrweave program links Textiles and Consumer in the northern belt",
+    "body": "An apparel cycle lifts raw cloth and finished goods together. Garrweave said the initiative, centered on the northern belt, would run for several seasons and draw heavily on connected supply chains. Knock-on demand is expected to spread beyond the headline sector.",
+    "effects": {
+      "textiles": 0.208,
+      "consumer": 0.101
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_057",
+    "kick": "Industry",
+    "head": "Halcyon Maison program links luxury and Consumer in the river valley",
+    "body": "A wealth-effect quarter lifts both the top end and broad retail. Halcyon Maison said the initiative, centered on the river valley, would run for several seasons and draw heavily on connected supply chains. Knock-on demand is expected to spread beyond the headline sector.",
+    "effects": {
+      "luxury": 0.249,
+      "consumer": 0.094
+    },
+    "dur": 6,
+    "weight": 1
+  },
+  {
+    "id": "news_058",
+    "kick": "Markets",
+    "head": "Automotive pullback spills into Manufacturing",
+    "body": "An auto downturn ripples into parts manufacturing. The softness that began in Automotive is bleeding into Manufacturing as orders thin across the river valley. Operators are watching to see how far it spreads.",
+    "effects": {
+      "automotive": -0.163,
+      "manufacturing": -0.051
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_059",
+    "kick": "Markets",
+    "head": "Construction pullback spills into Energy",
+    "body": "A building slowdown softens tied power demand. The softness that began in Construction is bleeding into Energy as orders thin across the gulf ports. Operators are watching to see how far it spreads.",
+    "effects": {
+      "construction": -0.145,
+      "energy": -0.056
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_060",
+    "kick": "Markets",
+    "head": "Logistics pullback spills into Consumer",
+    "body": "A freight glut signals cooling consumer flow. The softness that began in Logistics is bleeding into Consumer as orders thin across the river valley. Operators are watching to see how far it spreads.",
+    "effects": {
+      "logistics": -0.184,
+      "consumer": -0.069
+    },
+    "dur": 4,
+    "weight": 1
+  },
+  {
+    "id": "news_061",
+    "kick": "Luxury",
+    "head": "Record gavel: a rare piece shatters its auction estimate",
+    "body": "A closely watched evening sale produced a result several multiples above its low estimate, reigniting chatter about the very top of the collectibles market. Specialists say confidence at the high end tends to feed on itself.",
+    "effects": {
+      "luxury": 0.195
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_062",
+    "kick": "Luxury",
+    "head": "Record gavel: a rare piece shatters its auction estimate",
+    "body": "A closely watched evening sale produced a result several multiples above its low estimate, reigniting chatter about the very top of the collectibles market. Specialists say confidence at the high end tends to feed on itself.",
+    "effects": {
+      "luxury": 0.201
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_063",
+    "kick": "Luxury",
+    "head": "Record gavel: a rare piece shatters its auction estimate",
+    "body": "A closely watched evening sale produced a result several multiples above its low estimate, reigniting chatter about the very top of the collectibles market. Specialists say confidence at the high end tends to feed on itself.",
+    "effects": {
+      "luxury": 0.185
+    },
+    "dur": 3,
+    "weight": 1
+  },
+  {
+    "id": "news_064",
+    "kick": "Markets",
+    "head": "Holiday lull keeps activity subdued",
+    "body": "With much of the trade away, volumes thinned to a trickle. Few were willing to commit ahead of the coming week.",
+    "effects": {},
+    "dur": 1,
+    "weight": 0.4
+  },
+  {
+    "id": "news_065",
+    "kick": "Markets",
+    "head": "A quiet session across the floor",
+    "body": "No major catalysts moved the market today. Trading was thin and prices drifted on their own momentum.",
+    "effects": {},
+    "dur": 1,
+    "weight": 0.4
+  },
+  {
+    "id": "news_066",
+    "kick": "Markets",
+    "head": "A quiet session across the floor",
+    "body": "No major catalysts moved the market today. Trading was thin and prices drifted on their own momentum.",
+    "effects": {},
+    "dur": 1,
+    "weight": 0.4
+  },
+  {
+    "id": "news_067",
+    "kick": "Weather",
+    "head": "Storms snarl movement in scattered regions",
+    "body": "Severe weather briefly disrupted activity in parts of the country, but operators expect normal conditions to resume shortly.",
+    "effects": {},
+    "dur": 1,
+    "weight": 0.4
+  },
+  {
+    "id": "news_068",
+    "kick": "Markets",
+    "head": "A quiet session across the floor",
+    "body": "No major catalysts moved the market today. Trading was thin and prices drifted on their own momentum.",
+    "effects": {},
+    "dur": 1,
+    "weight": 0.4
+  }
+]

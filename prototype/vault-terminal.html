@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAULT</title>
+<!--
+  DESIGN PLAN — "the auction-house terminal"
+  Subject: a private dealing room for invented physical assets. Audience: a player
+  who wants the dopamine of a trading terminal without the cold of a stock app.
+  Page's job (TRENDING): convey the pulse — what's moving, why, and where the gold is.
+
+  PALETTE (richer than flat dark; depth via layered warm browns + felt texture):
+    --bg #0c0a0b  near-black with warmth
+    --felt #14100f / #1b1513  layered panel browns (suggest leather/felt)
+    --oxblood #5c1f24  signature deep red (mastheads, rules)
+    --brass #c9a24b / #e3c074  metallic accent + highlight
+    --hot #e8893b  rising   --cool #5d8aa8 cooling   --edition #b489d6 collectible glow
+  TYPE:
+    display: Georgia serif, tight — auction-catalogue voice (mastheads, prices)
+    body/util: Inter — data, labels, controls
+  LAYOUT: fixed full-viewport terminal. Left rail = nav + identity + worth.
+    Main = tabbed (TRENDING / CATALOG / THE WIRE). No page scroll on the shell;
+    panels scroll internally. TRENDING is editorial, not a raw market.
+  SIGNATURE: the masthead "front page" with a live brass ticker + a "movers rail"
+    of glinting tiles — feels like opening a dealing-room paper, not a dashboard.
+-->
+<style>
+  :root{
+    --bg:#0c0a0b;
+    --felt-1:#14100f; --felt-2:#1b1513; --felt-3:#221a18;
+    --line:#2c2320; --line-2:#3a2e29;
+    --ink:#ece6dd; --ink-dim:#998d83; --ink-faint:#6b625b;
+    --oxblood:#5c1f24; --oxblood-lit:#8a3038;
+    --brass:#c9a24b; --brass-lit:#e3c074; --brass-dim:#7d6a3a;
+    --hot:#e8893b; --cool:#5d8aa8; --edition:#b489d6;
+    --r:12px;
+    --rail:248px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:Inter,"Helvetica Neue",system-ui,sans-serif;font-size:14px;line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:Georgia,"Times New Roman",serif}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:6px;border:2px solid var(--bg)}
+  ::-webkit-scrollbar-track{background:transparent}
+
+  /* ============ APP SHELL: rail + main, full viewport ============ */
+  .app{display:grid;grid-template-columns:var(--rail) 1fr;height:100vh}
+
+  /* ---- left rail ---- */
+  .rail{
+    background:linear-gradient(180deg,var(--felt-2),var(--felt-1));
+    border-right:1px solid var(--line);display:flex;flex-direction:column;
+    padding:22px 18px;gap:22px;overflow-y:auto;
+  }
+  .brand{font-family:Georgia,serif;font-size:26px;letter-spacing:.34em;font-weight:600;padding-left:4px}
+  .brand b{color:var(--brass)}
+  .brand small{display:block;font-family:Inter;font-size:8.5px;letter-spacing:.4em;color:var(--ink-faint);margin-top:4px}
+
+  .worth{background:linear-gradient(155deg,var(--felt-3),var(--felt-1));border:1px solid var(--line);
+    border-radius:var(--r);padding:16px 16px 14px;position:relative;overflow:hidden}
+  .worth::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(120px 80px at 85% 0%,rgba(201,162,75,.12),transparent 70%);pointer-events:none}
+  .worth .lab{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint)}
+  .worth .v{font-family:Georgia,serif;font-size:30px;line-height:1.05;margin:3px 0 2px}
+  .worth .chg{font-size:11.5px}.chg.pos{color:var(--hot)}.chg.neg{color:var(--cool)}
+  .worth .mini{display:flex;justify-content:space-between;margin-top:12px;padding-top:11px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-dim)}
+  .worth .mini b{color:var(--ink);font-family:Georgia,serif;font-size:13px;display:block}
+  .worth .mini .debt b{color:var(--cool)}
+
+  .nav{display:flex;flex-direction:column;gap:3px}
+  .nav .navh{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);padding:0 8px 6px}
+  .nav button{display:flex;align-items:center;gap:11px;background:transparent;border:0;color:var(--ink-dim);
+    padding:10px 12px;border-radius:9px;cursor:pointer;font-size:13px;letter-spacing:.03em;text-align:left;transition:.14s;width:100%;font-family:inherit}
+  .nav button .ic{width:16px;text-align:center;opacity:.8}
+  .nav button:hover{background:var(--felt-3);color:var(--ink)}
+  .nav button.on{background:linear-gradient(90deg,rgba(92,31,36,.55),var(--felt-3));color:var(--ink);box-shadow:inset 2px 0 0 var(--oxblood-lit)}
+  .nav button.on .ic{opacity:1}
+  .nav button:disabled{opacity:.35;cursor:not-allowed}
+  .nav button:disabled .soon{margin-left:auto;font-size:8.5px;letter-spacing:.1em;color:var(--brass-dim);border:1px solid var(--line);padding:2px 6px;border-radius:5px}
+
+  .rail-foot{margin-top:auto;display:flex;flex-direction:column;gap:10px}
+  .modeswitch{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .modeswitch button{flex:1;background:transparent;border:0;color:var(--ink-dim);padding:7px;cursor:pointer;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-family:inherit}
+  .modeswitch button.on{color:#160e09;font-weight:700}.modeswitch button.live.on{background:var(--hot)}.modeswitch button.sandbox.on{background:var(--edition)}
+  .clockline{font-size:10.5px;color:var(--ink-faint);letter-spacing:.06em;text-align:center}
+  .clockline b{color:var(--brass-dim)}
+  .warp{display:none;gap:5px;justify-content:center}
+  body.sandbox .warp{display:flex}
+  .warp button{background:#1a1020;border:1px solid var(--edition);color:#d9c8e8;padding:4px 9px;border-radius:999px;cursor:pointer;font-size:10px;font-family:inherit}
+  .warp button.on{background:var(--edition);color:#160e1f;font-weight:700}
+
+  /* ---- main column ---- */
+  .main{display:flex;flex-direction:column;height:100vh;overflow:hidden;position:relative}
+  body.sandbox .main::after{content:"SANDBOX — private tuning world";position:absolute;top:0;left:0;right:0;
+    text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#160e1f;
+    background:var(--edition);padding:3px;z-index:5;font-weight:700}
+
+  /* topbar: live ticker */
+  .topbar{height:38px;flex:none;display:flex;align-items:center;background:linear-gradient(90deg,var(--oxblood),#3f1418);
+    border-bottom:1px solid #401418;overflow:hidden;position:relative}
+  .topbar .tlabel{flex:none;background:#2a0e11;color:var(--brass-lit);font-size:9.5px;letter-spacing:.2em;
+    text-transform:uppercase;padding:0 14px;height:100%;display:flex;align-items:center;font-weight:700;z-index:2;border-right:1px solid #401418}
+  .ticker{flex:1;overflow:hidden;white-space:nowrap}
+  .ticker .run{display:inline-block;padding-left:100%;animation:tick 40s linear infinite;font-size:12px}
+  .ticker .run span{margin:0 30px;color:#f0d9c6}.ticker .run b{color:var(--brass-lit)}
+  .ticker .run .up{color:var(--brass-lit)}.ticker .run .dn{color:#d9a;opacity:.9}
+  @keyframes tick{to{transform:translateX(-100%)}}
+
+  .view{flex:1;overflow-y:auto;padding:26px 30px 40px}
+  .view[hidden]{display:none}
+
+  /* ====================== TRENDING ====================== */
+  /* masthead front page */
+  .masthead{display:grid;grid-template-columns:1.35fr 1fr;gap:26px;margin-bottom:24px}
+  @media(max-width:1100px){.masthead{grid-template-columns:1fr}}
+  .lead{background:
+      linear-gradient(160deg,var(--felt-2),var(--felt-1)),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Cpath d='M0 0h1v6H0z' fill='%23ffffff05'/%3E%3C/svg%3E");
+    border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;position:relative;overflow:hidden}
+  .lead::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--oxblood-lit),transparent)}
+  .lead .paper{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--oxblood);padding-bottom:8px;margin-bottom:14px}
+  .lead .paper .name{font-family:Georgia,serif;font-size:15px;letter-spacing:.3em;color:var(--brass)}
+  .lead .paper .edition{font-family:Georgia,serif;font-style:italic;font-size:11px;color:var(--ink-faint)}
+  .lead .kick{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--oxblood-lit);filter:brightness(1.5);font-weight:700}
+  .lead h1{font-family:Georgia,serif;font-size:30px;line-height:1.18;margin:7px 0 11px;font-weight:600}
+  .lead p{font-size:13.5px;color:var(--ink-dim);line-height:1.6;max-width:60ch}
+  .lead .implied{margin-top:16px;padding-top:13px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-faint);letter-spacing:.04em}
+  .lead .implied b{color:var(--brass-dim)}
+
+  /* heating sectors panel */
+  .heat-panel{background:linear-gradient(160deg,var(--felt-2),var(--felt-1));border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;display:flex;flex-direction:column}
+  .panel-h{font-family:Georgia,serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center}
+  .panel-h .sub{font-family:Inter;text-transform:none;letter-spacing:0;font-size:10.5px;color:var(--ink-faint)}
+  .sec{display:flex;align-items:center;gap:11px;margin-bottom:11px;font-size:12.5px;cursor:pointer}
+  .sec:last-child{margin-bottom:0}
+  .sec .nm{width:92px;color:var(--ink-dim);transition:.14s}
+  .sec:hover .nm{color:var(--ink)}
+  .sec .track{flex:1;height:8px;background:#0e0a09;border-radius:99px;overflow:hidden;position:relative;box-shadow:inset 0 1px 2px rgba(0,0,0,.5)}
+  .sec .track i{position:absolute;top:0;bottom:0;left:50%;background:var(--brass-dim);transition:width .5s,background .3s}
+  .sec .track i.up{background:linear-gradient(90deg,var(--brass-dim),var(--hot))}
+  .sec .track i.dn{background:linear-gradient(270deg,var(--brass-dim),var(--cool));transform:scaleX(-1)}
+  .sec .pct{width:46px;text-align:right;font-family:Georgia,serif;font-size:13px}.sec .pct.up{color:var(--hot)}.sec .pct.dn{color:var(--cool)}
+
+  /* movers rail */
+  .railrow{margin-bottom:26px}
+  .railrow-h{display:flex;align-items:baseline;gap:12px;margin-bottom:13px}
+  .railrow-h .t{font-family:Georgia,serif;font-size:16px;letter-spacing:.02em}
+  .railrow-h .why{font-size:11px;color:var(--ink-faint);letter-spacing:.03em}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:13px}
+  .tile{background:linear-gradient(165deg,var(--felt-2),var(--felt-1));border:1px solid var(--line);border-radius:var(--r);
+    padding:15px 16px;cursor:pointer;transition:.16s;position:relative;overflow:hidden}
+  .tile:hover{border-color:var(--brass-dim);transform:translateY(-2px)}
+  .tile.ed{border-color:var(--line-2)}
+  .tile.ed::after{content:"";position:absolute;inset:0;border-radius:var(--r);pointer-events:none;
+    box-shadow:inset 0 0 26px -8px rgba(180,137,214,.5)}
+  .tile .top{display:flex;justify-content:space-between;align-items:flex-start}
+  .tile .ic{font-size:30px;line-height:1}
+  .tile .glint{color:var(--edition);font-size:13px;filter:drop-shadow(0 0 5px rgba(180,137,214,.7))}
+  .tile .brand{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-dim);font-weight:700;margin-top:12px}
+  .tile .nm{font-size:13px;font-weight:600;margin-top:2px;line-height:1.3}
+  .tile .row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:11px}
+  .tile .pr{font-family:Georgia,serif;font-size:18px}
+  .tile .chg{font-size:11.5px}.tile .chg.pos{color:var(--hot)}.tile .chg.neg{color:var(--cool)}
+  .tile .edword{font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--edition);font-weight:700;margin-top:3px}
+
+  /* two-up bottom: watchlist-ish + your vault glance */
+  .twoup{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:1100px){.twoup{grid-template-columns:1fr}}
+  .glasspanel{background:linear-gradient(160deg,var(--felt-2),var(--felt-1));border:1px solid var(--line);border-radius:var(--r);padding:20px 22px}
+
+  /* compact rows (used in trending vault glance + catalog table) */
+  .crow{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+  .crow:last-child{border:0}
+  .crow .ic{width:26px;text-align:center;font-size:18px;flex:none}
+  .crow .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .crow .nm .bd{color:var(--brass-dim);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+  .crow .pr{font-family:Georgia,serif;text-align:right;min-width:78px}
+  .crow .chg{text-align:right;min-width:58px;font-size:11.5px}.crow .chg.pos{color:var(--hot)}.crow .chg.neg{color:var(--cool)}
+  .empty{color:var(--ink-faint);font-size:12.5px;font-style:italic;padding:10px 0}
+
+  /* ====================== CATALOG ====================== */
+  .cat-head{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+  .cat-head h2{font-family:Georgia,serif;font-size:22px;font-weight:600}
+  .seg{display:flex;gap:6px;flex-wrap:wrap}
+  .chip{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--felt-2);color:var(--ink-dim);cursor:pointer;transition:.14s;font-family:inherit}
+  .chip:hover{border-color:var(--brass-dim)}.chip.on{border-color:var(--brass);color:var(--ink);background:var(--felt-3)}
+  .search{margin-left:auto;background:var(--felt-2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;color:var(--ink);font-size:12.5px;width:190px;font-family:inherit}
+  .search:focus{outline:none;border-color:var(--brass-dim)}
+
+  .cat-grid{display:grid;grid-template-columns:1fr 320px;gap:26px;align-items:start}
+  @media(max-width:1100px){.cat-grid{grid-template-columns:1fr}}
+
+  /* commodity table */
+  .table{width:100%;border-collapse:collapse}
+  .table thead th{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);text-align:left;padding:0 12px 10px;font-weight:600;border-bottom:1px solid var(--line)}
+  .table thead th.r{text-align:right}
+  .table tbody td{padding:11px 12px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:middle}
+  .table tbody tr:hover{background:var(--felt-2)}
+  .table .nm{font-weight:600}.table .nm .bd{display:block;color:var(--brass-dim);font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+  .table .pr{font-family:Georgia,serif;text-align:right}
+  .table .chg{text-align:right;font-size:11.5px}.table .chg.pos{color:var(--hot)}.table .chg.neg{color:var(--cool)}
+  .stockdot{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;color:var(--ink-dim)}
+  .stockdot i{width:7px;height:7px;border-radius:50%;background:var(--brass-dim);box-shadow:0 0 5px rgba(201,162,75,.4)}
+  .stockdot i.low{background:var(--hot);box-shadow:0 0 6px rgba(232,137,59,.6)}
+  .stockdot i.scarce{background:var(--oxblood-lit);box-shadow:0 0 7px rgba(138,48,56,.8)}
+  .tbtn{border:1px solid var(--line);background:var(--felt-3);color:var(--ink);border-radius:7px;padding:6px 12px;font-size:11px;cursor:pointer;font-family:inherit;transition:.14s}
+  .tbtn:hover{border-color:var(--hot);color:var(--hot)}.tbtn.sell:hover{border-color:var(--cool);color:var(--cool)}.tbtn:disabled{opacity:.3;cursor:not-allowed}
+
+  /* edition cards column */
+  .ed-col h3{font-family:Georgia,serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:14px}
+  .edcard{background:linear-gradient(165deg,#1e1622,var(--felt-1));border:1px solid var(--line-2);border-radius:var(--r);padding:17px;margin-bottom:14px;position:relative;overflow:hidden}
+  .edcard::after{content:"";position:absolute;inset:0;border-radius:var(--r);pointer-events:none;box-shadow:inset 0 0 32px -10px rgba(180,137,214,.55)}
+  .edcard .top{display:flex;justify-content:space-between;align-items:flex-start}
+  .edcard .ic{font-size:34px}.edcard .glint{color:var(--edition);filter:drop-shadow(0 0 6px rgba(180,137,214,.8))}
+  .edcard .bd{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-dim);font-weight:700;margin-top:12px}
+  .edcard .nm{font-family:Georgia,serif;font-size:16px;margin-top:2px}
+  .edcard .edword{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--edition);font-weight:700;margin-top:6px}
+  .edcard .row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:14px}
+  .edcard .pr{font-family:Georgia,serif;font-size:20px}
+  .edcard .chg{font-size:11.5px}.edcard .chg.pos{color:var(--hot)}.edcard .chg.neg{color:var(--cool)}
+  .edcard .acq{width:100%;margin-top:13px;background:linear-gradient(90deg,var(--edition),#9a6fc0);color:#160e1f;border:0;border-radius:9px;padding:10px;font-size:12px;font-weight:700;letter-spacing:.05em;cursor:pointer;font-family:inherit}
+  .edcard .acq:disabled{opacity:.4;cursor:not-allowed;background:var(--felt-3);color:var(--ink-faint)}
+
+  /* ====================== THE WIRE ====================== */
+  .wire-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start}
+  @media(max-width:1100px){.wire-grid{grid-template-columns:1fr}}
+  .wire-archive .a{padding:15px 0;border-bottom:1px solid var(--line)}
+  .wire-archive .a .kick{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--oxblood-lit);filter:brightness(1.4);font-weight:700}
+  .wire-archive .a h4{font-family:Georgia,serif;font-size:16px;margin:4px 0 5px;font-weight:600}
+  .wire-archive .a p{font-size:12.5px;color:var(--ink-dim);line-height:1.5}
+
+  /* credit + activity reused panels in rail-adjacent spots */
+  .stack{display:flex;flex-direction:column;gap:22px}
+  .debtctl{display:flex;flex-direction:column;gap:10px}
+  .debtctl .meter{height:6px;background:#0e0a09;border-radius:99px;overflow:hidden;box-shadow:inset 0 1px 2px rgba(0,0,0,.5)}.debtctl .meter i{display:block;height:100%;background:linear-gradient(90deg,var(--brass-dim),var(--cool))}
+  .debtctl .line{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-dim)}.debtctl .line b{color:var(--ink);font-family:Georgia,serif}
+  .dbtns{display:flex;gap:8px}.dbtns button{flex:1;border:1px solid var(--line);background:var(--felt-3);color:var(--ink);border-radius:8px;padding:9px;font-size:12px;cursor:pointer;font-family:inherit;transition:.14s}.dbtns .borrow:hover{border-color:var(--brass)}.dbtns .repay:hover{border-color:var(--hot)}.dbtns button:disabled{opacity:.3;cursor:not-allowed}
+  .lb{display:flex;justify-content:space-between;padding:8px 0;font-size:13px;border-bottom:1px solid var(--line)}.lb:last-child{border:0}.lb .rk{color:var(--brass-dim);font-family:Georgia,serif;width:20px;display:inline-block}.lb.me{color:var(--brass)}
+  .log{font-size:12px;color:var(--ink-dim);line-height:1.85}.log .who{color:var(--brass-dim)}.log .it{color:var(--ink)}
+
+  .toast{position:fixed;bottom:26px;left:calc(50% + var(--rail)/2);transform:translateX(-50%);background:var(--felt-3);border:1px solid var(--brass-dim);color:var(--ink);padding:12px 22px;border-radius:999px;font-size:13px;opacity:0;pointer-events:none;transition:.3s;z-index:80}.toast.show{opacity:1}
+  .reveal-bg{position:fixed;inset:0;background:rgba(5,4,5,.8);backdrop-filter:blur(7px);z-index:90;display:none;align-items:center;justify-content:center;opacity:0;transition:.3s}.reveal-bg.show{display:flex;opacity:1}
+  .reveal{background:linear-gradient(160deg,#221829,#140d15);border:1px solid var(--edition);border-radius:20px;padding:40px 46px;text-align:center;max-width:360px;box-shadow:0 0 80px -12px rgba(180,137,214,.55);transform:scale(.9);transition:.3s}.reveal-bg.show .reveal{transform:scale(1)}
+  .reveal .ic{font-size:58px;margin-bottom:8px;filter:drop-shadow(0 0 18px rgba(180,137,214,.6))}.reveal .kick{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--edition)}.reveal .nm2{font-family:Georgia,serif;font-size:21px;margin:9px 0 13px}.reveal .ednum{font-family:Georgia,serif;font-style:italic;font-size:36px;color:var(--brass)}.reveal .sub2{font-size:12.5px;color:var(--ink-dim);margin-top:11px}.reveal .close{margin-top:22px;background:linear-gradient(90deg,var(--edition),#9a6fc0);color:#160e1f;border:0;border-radius:999px;padding:12px 30px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+
+  @media(max-width:780px){
+    .app{grid-template-columns:1fr}
+    .rail{position:fixed;z-index:40;width:var(--rail);height:100vh;transform:translateX(-100%);transition:.2s}
+    body.navopen .rail{transform:none}
+    .toast{left:50%}
+  }
+</style>
+</head>
+<body class="live">
+<div class="app">
+  <!-- ░░ LEFT RAIL ░░ -->
+  <nav class="rail">
+    <div class="brand">VA<b>U</b>LT<small>HOLDINGS</small></div>
+
+    <div class="worth">
+      <div class="lab">Net Worth</div>
+      <div class="v" id="nw">$0</div>
+      <div class="chg" id="nwchg">—</div>
+      <div class="mini">
+        <span>Cash<b id="cash">$0</b></span>
+        <span>Assets<b id="assetsv">$0</b></span>
+        <span class="debt">Debt<b id="debt">$0</b></span>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="navh">Floor</div>
+      <button class="on" data-tab="trending"><span class="ic">◈</span> Trending</button>
+      <button data-tab="catalog"><span class="ic">▦</span> Catalog</button>
+      <button data-tab="wire"><span class="ic">❧</span> The Wire</button>
+      <div class="navh" style="margin-top:14px">Account</div>
+      <button data-tab="vault"><span class="ic">⬗</span> My Vault</button>
+      <button disabled><span class="ic">⚒</span> Factory <span class="soon">soon</span></button>
+    </div>
+
+    <div class="rail-foot">
+      <div class="warp">
+        <button data-warp="200">×200</button>
+        <button class="on" data-warp="2000">×2k</button>
+        <button data-jump="1">+1</button>
+      </div>
+      <div class="clockline" id="clockline">front page turns in <b>~12h</b></div>
+      <div class="modeswitch">
+        <button class="live on" id="m-live">Live</button>
+        <button class="sandbox" id="m-sbx">Sandbox</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ░░ MAIN ░░ -->
+  <div class="main">
+    <div class="topbar">
+      <div class="tlabel">The Wire</div>
+      <div class="ticker"><div class="run" id="ticker"></div></div>
+    </div>
+
+    <!-- TRENDING -->
+    <section class="view" id="v-trending">
+      <div class="masthead">
+        <article class="lead" id="lead"></article>
+        <div class="heat-panel">
+          <div class="panel-h">Heating Up <span class="sub">sector demand</span></div>
+          <div id="sectorbars"></div>
+        </div>
+      </div>
+
+      <div class="railrow">
+        <div class="railrow-h"><span class="t">On the Move</span><span class="why">biggest shifts since the page turned</span></div>
+        <div class="tiles" id="movers"></div>
+      </div>
+
+      <div class="railrow">
+        <div class="railrow-h"><span class="t">Worth Watching</span><span class="why">marquee pieces still on the floor</span></div>
+        <div class="tiles" id="watching"></div>
+      </div>
+
+      <div class="twoup">
+        <div class="glasspanel">
+          <div class="panel-h">Your Vault <span class="sub" id="vaultcount"></span></div>
+          <div id="vaultglance"></div>
+        </div>
+        <div class="glasspanel">
+          <div class="panel-h">Floor Activity</div>
+          <div class="log" id="log"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOG -->
+    <section class="view" id="v-catalog" hidden>
+      <div class="cat-head">
+        <h2 class="serif">Catalog</h2>
+        <div class="seg" id="catfilters"></div>
+        <input class="search" id="search" placeholder="Search brand or item…">
+      </div>
+      <div class="cat-grid">
+        <div>
+          <table class="table">
+            <thead><tr><th>Item</th><th>Sector</th><th>Supply</th><th class="r">Price</th><th class="r">Δ</th><th></th></tr></thead>
+            <tbody id="commodityrows"></tbody>
+          </table>
+          <div class="empty" id="catempty" hidden>Nothing matches.</div>
+        </div>
+        <div class="ed-col">
+          <h3>Collectible Editions</h3>
+          <div id="editioncards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE WIRE -->
+    <section class="view" id="v-wire" hidden>
+      <div class="cat-head"><h2 class="serif">The Wire</h2></div>
+      <div class="wire-grid">
+        <div class="wire-archive" id="wirefeed"></div>
+        <div class="stack">
+          <div class="glasspanel"><div class="panel-h">Sector Demand</div><div id="sectorbars2"></div></div>
+          <div class="glasspanel"><div class="panel-h">Leaderboard</div><div id="lb"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY VAULT -->
+    <section class="view" id="v-vault" hidden>
+      <div class="cat-head"><h2 class="serif">My Vault</h2></div>
+      <div class="cat-grid">
+        <div>
+          <table class="table">
+            <thead><tr><th>Holding</th><th>Sector</th><th class="r">Value</th><th class="r">P/L ea</th><th></th></tr></thead>
+            <tbody id="vaultrows"></tbody>
+          </table>
+          <div class="empty" id="vaultempty" hidden>Empty. Read the front page, then acquire something.</div>
+        </div>
+        <div class="stack">
+          <div class="glasspanel">
+            <div class="panel-h">Credit Line</div>
+            <div class="debtctl">
+              <div class="line"><span>Borrowed</span><b id="dbt-bal">$0</b></div>
+              <div class="meter"><i id="dbt-meter" style="width:0%"></i></div>
+              <div class="line"><span id="dbt-avail">Available $0</span><span>0.05%/cycle</span></div>
+              <div class="dbtns"><button class="borrow" id="borrow">Borrow $5k</button><button class="repay" id="repay">Repay $5k</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="reveal-bg" id="revealbg"><div class="reveal">
+  <div class="ic" id="rv-ic">📦</div><div class="kick">Acquired</div>
+  <div class="nm2" id="rv-nm">—</div><div class="ednum" id="rv-ed">—</div><div class="sub2" id="rv-sub"></div>
+  <button class="close" id="rv-close">Add to vault</button></div></div>
+
+<script>
+const SECTORS={
+  construction:{label:"Construction"},
+  logistics:{label:"Logistics"},
+  automotive:{label:"Automotive"},
+  technology:{label:"Technology"},
+  luxury:{label:"Luxury"},
+  energy:{label:"Energy"},
+};
+
+// invented brands, each anchored to a home sector (the slice; full bible later)
+const BRANDS={
+  Brunhaus:{sector:"construction"},   // heavy materials
+  Forgewright:{sector:"construction"},
+  Palett:{sector:"logistics"},        // logistics gear
+  Marrowgear:{sector:"automotive"},
+  Halcyon:{sector:"luxury"},          // watches / fine goods
+  Veldt:{sector:"technology"},
+  Cindral:{sector:"energy"},
+};
+
+/* ITEMS. Each: brand, sector weights {sector:weight}, base price, icon,
+   stockNormal (baseline units on floor), restock (units returned/cycle),
+   edition (null=open commodity; number=finite collectible that VANISHES when gone).
+   restock vs stock is the supply spine: screws restock fast, cars slow. */
+const ITEMDEFS=[
+  // --- fast-supply commodities (hard to move, never scarce) ---
+  ["Hex Bolts, M12","Forgewright",{construction:1,automotive:.3},0.40,"🔩",50000,8000,null],
+  ["Wood Screws, #8","Forgewright",{construction:1},0.12,"🪛",80000,12000,null],
+  ["Steel Plate, 4×8","Brunhaus",{construction:1,automotive:.4,energy:.2},220,"⬜",4000,500,null],
+  ["Rebar Bundle","Brunhaus",{construction:1},85,"🧱",6000,800,null],
+  ["Copper Pipe, 10ft","Brunhaus",{construction:.7,energy:.6},34,"🟤",9000,1100,null],
+  ["Shipping Pallet","Palett",{logistics:1,construction:.2},18,"🟫",30000,5000,null],
+  ["Cardboard, bulk","Palett",{logistics:1},6,"📦",60000,9000,null],
+  // --- mid-supply goods ---
+  ["Forklift FL-7","Palett",{logistics:1,construction:.3},14500,"🚜",120,9,null],
+  ["Diesel Genset","Cindral",{energy:1,construction:.4},8200,"🔋",260,18,null],
+  ["Cargo Drone","Veldt",{logistics:.8,technology:.6},3100,"🛸",900,60,null],
+  ["EV Battery Pack","Marrowgear",{automotive:1,energy:.5,technology:.3},6400,"🔋",700,40,null],
+  ["Microcontroller Tray","Veldt",{technology:1,automotive:.3},290,"💾",5000,650,null],
+  // --- slow-supply big-ticket ---
+  ["Roadster R-Type","Marrowgear",{automotive:1,luxury:.5},58000,"🏎️",40,2,null],
+  ["Sedan Daily","Marrowgear",{automotive:1},19000,"🚗",300,11,null],
+  ["Server Rack, 42U","Veldt",{technology:1,energy:.3},12800,"🖥️",180,7,null],
+  // --- luxury / collectible editions (finite; vanish when claimed) ---
+  ["Halcyon Moonphase","Halcyon",{luxury:1},22000,"⌚",0,0,5],
+  ["Halcyon Tourbillon №1","Halcyon",{luxury:1},145000,"⌚",0,0,1],
+  ["Brunhaus Founder's Ingot","Brunhaus",{luxury:.8,construction:.4},9400,"🟨",0,0,3],
+  ["Marrowgear Concept GT","Marrowgear",{automotive:.6,luxury:1},240000,"🏎️",0,0,1],
+];
+
+/* NEWS BANK — pre-generated stories. Each: headline + body (human reasons from
+   these), a date-ish flavor, hidden sector effects, and a duration in cycles.
+   RULE: body NEVER says "AI will buy/sell" or names a recommendation.
+   It describes a world event; the player infers; traders react via effects. */
+const NEWSBANK=[
+  {kick:"Industry",head:"Atlas Freight unveils 40-hub national network",
+   body:"A new logistics operator says it will stand up forty regional distribution hubs within the year, with aggressive hiring for warehouse and floor staff. Analysts expect a scramble for handling equipment as the buildout begins.",
+   effects:{logistics:+0.22,construction:+0.06},dur:4},
+  {kick:"Materials",head:"Federal infrastructure bill clears final vote",
+   body:"The long-stalled public works package passed overnight, earmarking funds for bridges, rail, and municipal water lines over the next several seasons. Contractors are already lining up bids.",
+   effects:{construction:+0.25,energy:+0.08,logistics:+0.05},dur:5},
+  {kick:"Markets",head:"Copper supply tightens as mine strike drags on",
+   body:"A labor dispute at one of the largest copper operations enters its third week with no resolution in sight. Downstream buyers in building and power are watching inventories closely.",
+   effects:{construction:+0.10,energy:+0.14},dur:3},
+  {kick:"Automotive",head:"Marrowgear recalls flagship over battery fault",
+   body:"The automaker issued a sweeping recall after reports of battery faults in its premium line. The news rattled confidence across the sector heading into the season.",
+   effects:{automotive:-0.20,technology:-0.04},dur:3},
+  {kick:"Technology",head:"Veldt data-center expansion sparks chip demand",
+   body:"A major compute buildout was announced this morning, with orders placed for racks, controllers, and cooling. Suppliers signaled tight lead times into next quarter.",
+   effects:{technology:+0.24,energy:+0.10},dur:4},
+  {kick:"Luxury",head:"Record gavel: collector watch shatters auction estimate",
+   body:"A rare timepiece sold for several multiples of its low estimate at a closely watched evening sale, reigniting chatter about the top end of the collectibles market.",
+   effects:{luxury:+0.18},dur:3},
+  {kick:"Energy",head:"Heatwave pushes grid operators to emergency footing",
+   body:"A prolonged heatwave has utilities leaning on backup generation and bracing for sustained peak load. Fuel and equipment demand is climbing in affected regions.",
+   effects:{energy:+0.20,logistics:+0.05},dur:3},
+  {kick:"Logistics",head:"Port congestion eases as backlog finally clears",
+   body:"The months-long container backlog at major ports has cleared faster than forecast, and freight rates are normalizing. Operators are trimming the surge capacity they'd leaned on.",
+   effects:{logistics:-0.16},dur:3},
+  {kick:"Construction",head:"Housing starts slump on rate jitters",
+   body:"New residential permits fell sharply as borrowing costs spooked developers. Several large projects were quietly shelved pending clearer conditions.",
+   effects:{construction:-0.18,energy:-0.04},dur:4},
+  {kick:"Markets",head:"Quiet week across the floor",
+   body:"No major catalysts moved the market today. Trading was thin and prices drifted on their own momentum.",
+   effects:{},dur:1},
+];
+
+/* ============================================================================
+   ░░ CORE ENGINE ░░ — Lambda-portable, DOM-free.
+============================================================================ */
+function rexp(mean){return -Math.log(1-Math.random())*mean;}
+
+function freshState(){
+  const items=ITEMDEFS.map((d,i)=>({
+    id:i,name:d[0],brand:d[1],weights:d[2],base:d[3],icon:d[4],
+    stockNormal:d[5],restock:d[6],edition:d[7],
+    stock: d[7]===null ? d[5] : d[7],         // editions start at their full run
+    remaining: d[7]===null ? Infinity : d[7], // copies still mintable on floor
+    owners:{}, value:d[3], prevValue:d[3], myCopies:[],
+  }));
+  const sectorIdx={};for(const s in SECTORS)sectorIdx[s]=1;
+  return{
+    cycle:1,cycleFrac:0,cash:25000,debt:0,rate:0.0005,
+    items,sectorIdx,
+    active:[],            // [{news, cyclesLeft}] currently influencing demand
+    archive:[],           // past headlines
+    front:null,           // current front-page story
+    traders:[{name:"Brunhaus_Cap",cash:160000,bias:"construction",next:rexp(1.1)},
+             {name:"Palett_Logistics",cash:120000,bias:"logistics",next:rexp(1.0)},
+             {name:"Halcyon_Holdings",cash:200000,bias:"luxury",next:rexp(1.4)},
+             {name:"Open_Index",cash:140000,bias:null,next:rexp(1.2)}],
+    log:[],lastNewsIdx:-1,
+  };
+}
+let _seedNews=null;
+
+// item's effective demand = blend of its sectors' indices by weight
+function itemDemand(S,it){
+  let num=0,den=0;
+  for(const s in it.weights){num+=S.sectorIdx[s]*it.weights[s];den+=it.weights[s];}
+  return den?num/den:1;
+}
+// scarcity pressure: how depleted is stock vs normal? (open items only)
+function scarcity(it){
+  if(it.edition!==null) return 1+( (it.edition-it.remaining)/it.edition )*0.6; // editions firm as claimed
+  if(it.stockNormal<=0) return 1;
+  const ratio=it.stock/it.stockNormal;          // 1 = normal, <1 = depleted
+  // depleted stock raises price; abundant stock softens it. clamp.
+  return Math.max(0.7, Math.min(2.2, 1 + (1-ratio)*0.8));
+}
+
+function priceItem(S,it){
+  const dem=itemDemand(S,it);
+  // demand elasticity is higher for slow-restock items (can't replenish fast)
+  const elasticity = it.edition!==null ? 1.4
+    : 0.5 + Math.min(1.2, 1200/(it.restock+40)); // low restock -> high elasticity
+  const target=it.base*(1+(dem-1)*elasticity)*scarcity(it);
+  return Math.max(it.base*0.25,target);
+}
+
+function advance(S,dt){
+  S.cycleFrac+=dt;
+  for(const it of S.items){it.value*=1+(Math.random()-0.5)*0.0006*dt*40;}
+  for(const t of S.traders){t.next-=dt;while(t.next<=0){traderAct(S,t);t.next+=rexp(t.bias?1.0:1.3);}}
+  if(S.debt>0)S.debt*=1+S.rate*dt;
+  while(S.cycleFrac>=1){S.cycleFrac-=1;settleCycle(S);}
+}
+
+function settleCycle(S){
+  S.cycle++;
+  // 1. decay active stories; expire finished ones
+  S.active=S.active.filter(a=>{a.cyclesLeft--;return a.cyclesLeft>0;});
+  // 2. roll a new front-page story (avoid immediate repeat)
+  let idx;do{idx=Math.floor(Math.random()*NEWSBANK.length);}while(idx===S.lastNewsIdx&&NEWSBANK.length>1);
+  S.lastNewsIdx=idx;const news=NEWSBANK[idx];
+  S.front={...news,cycle:S.cycle};
+  S.archive.unshift({head:news.head,kick:news.kick,cycle:S.cycle});if(S.archive.length>10)S.archive.pop();
+  if(Object.keys(news.effects).length) S.active.push({news,cyclesLeft:news.dur});
+  // 3. recompute sector indices = baseline drift toward 1 + sum of active effects
+  for(const s in SECTORS){
+    let target=1;
+    for(const a of S.active){ if(a.news.effects[s]) target+=a.news.effects[s]*(a.cyclesLeft/a.news.dur); }
+    // ease current index toward target (smooth, not instant)
+    S.sectorIdx[s]+=(target-S.sectorIdx[s])*0.55 + (Math.random()-0.5)*0.01;
+    S.sectorIdx[s]=Math.max(0.55,S.sectorIdx[s]);
+  }
+  // 4. restock the floor (capped at normal), reprice everything
+  for(const it of S.items){
+    if(it.edition===null){ it.stock=Math.min(it.stockNormal, it.stock+it.restock); }
+    it.prevValue=it.value; it.value=priceItem(S,it);
+  }
+  S.nwHist=S.nwHist||[25000];S.nwHist.push(netWorth(S,"YOU"));if(S.nwHist.length>30)S.nwHist.shift();
+}
+
+function held(it,o){return it.owners[o]||0;}
+function canBuy(it){ return it.edition!==null ? it.remaining>0 : it.stock>0; }
+
+function traderAct(S,t){
+  const owned=S.items.filter(i=>held(i,t.name)>0);
+  if(owned.length&&Math.random()<0.3){
+    const it=owned[Math.floor(Math.random()*owned.length)];
+    it.owners[t.name]--;if(it.owners[t.name]<=0)delete it.owners[t.name];
+    if(it.edition!==null)it.remaining++; else it.stock++;
+    t.cash+=it.value;pushLog(S,t.name,"sold",it.name);return;
+  }
+  // traders read the HIDDEN sector signal and chase rising demand (looks like reasoning)
+  let pool=S.items.filter(i=>canBuy(i)&&i.value<=t.cash);
+  if(!pool.length)return;
+  pool=pool.map(i=>{
+    const dem=itemDemand(S,i);
+    let w=(dem-1)*3                            // chase rising-demand sectors
+      + (BRANDS[i.brand]?.sector===t.bias?0.5:0)
+      + (i.edition!==null?0.4:0)
+      + Math.random()*0.6;
+    return {i,w};
+  }).sort((a,b)=>b.w-a.w).map(x=>x.i);
+  const it=pool[0];
+  it.owners[t.name]=(it.owners[t.name]||0)+1;
+  if(it.edition!==null)it.remaining--; else it.stock=Math.max(0,it.stock-1);
+  t.cash-=it.value;pushLog(S,t.name,"acquired",it.name);
+}
+
+function playerBuy(S,id){const it=S.items[id];if(!canBuy(it)||it.value>S.cash)return false;
+  it.owners["YOU"]=(it.owners["YOU"]||0)+1;let copyNo=null;
+  if(it.edition!==null){copyNo=it.edition-it.remaining+1;it.remaining--;it.myCopies.push(copyNo);}
+  else{it.stock=Math.max(0,it.stock-1);}
+  S.cash-=it.value;it.buyAt=it.value;return{ok:true,it,copyNo};}
+function playerSell(S,id){const it=S.items[id];if(held(it,"YOU")<=0)return false;
+  it.owners["YOU"]--;if(it.owners["YOU"]<=0)delete it.owners["YOU"];
+  if(it.edition!==null){it.remaining++;it.myCopies.pop();}else{it.stock++;}
+  S.cash+=it.value;return true;}
+
+function assetsValue(S,o){let v=0;for(const it of S.items)v+=held(it,o)*it.value;return v;}
+function netWorth(S,o){const base=o==="YOU"?S.cash-S.debt:(S.traders.find(t=>t.name===o)?.cash||0);return base+assetsValue(S,o);}
+function creditLimit(S){return Math.floor(assetsValue(S,"YOU")*0.5);}
+function borrow(S,a){const room=creditLimit(S)-S.debt;a=Math.min(a,room);if(a<=0)return false;S.debt+=a;S.cash+=a;return true;}
+function repay(S,a){a=Math.min(a,S.debt,S.cash);if(a<=0)return false;S.debt-=a;S.cash-=a;return true;}
+function pushLog(S,who,verb,it){S.log.unshift({who,verb,it});if(S.log.length>30)S.log.pop();}
+
+/* ============================================================================
+   ░░ VIEW LAYER ░░  (tabbed full-screen terminal; engine above is untouched)
+============================================================================ */
+const $=s=>document.querySelector(s);
+const $$=s=>document.querySelectorAll(s);
+const money=n=>(n<0?"-$":"$")+Math.abs(Math.round(n)).toLocaleString();
+const SEC_PER_CYCLE=43200;
+
+let mode="live", tab="trending";
+const worlds={live:freshState(),sandbox:freshState()};
+let warp=2000,jumpQueue=0,lastTs=performance.now();
+let catSector=null, catSearch="";
+for(const k in worlds){for(let i=0;i<8;i++)settleCycle(worlds[k]);worlds[k].cycle=1;worlds[k].nwHist=[25000];}
+function S(){return worlds[mode];}
+
+function frame(now){let dt=(now-lastTs)/1000;lastTs=now;
+  advance(worlds.live,dt/SEC_PER_CYCLE);
+  advance(worlds.sandbox,Math.min((dt/SEC_PER_CYCLE)*warp+(mode==="sandbox"?jumpQueue:0),6));jumpQueue=0;
+  render();requestAnimationFrame(frame);}
+
+function stockState(it){if(it.edition!==null)return null;const r=it.stock/it.stockNormal;if(r<0.25)return"scarce";if(r<0.6)return"low";return"normal";}
+const SECNAME=s=>SECTORS[s].label;
+function primarySector(it){let best=null,bw=-1;for(const s in it.weights){if(it.weights[s]>bw){bw=it.weights[s];best=s;}}return best;}
+
+/* derive what the current story implies, WITHOUT stating buy/sell.
+   We surface the affected sectors as plain reading, e.g. "Logistics, Construction in focus". */
+function impliedReading(front){
+  if(!front||!front.effects||!Object.keys(front.effects).length) return "A quiet session. Prices drift on their own.";
+  const ups=[],dns=[];
+  for(const s in front.effects){(front.effects[s]>0?ups:dns).push(SECNAME(s));}
+  const parts=[];
+  if(ups.length) parts.push(`<b>${ups.join(", ")}</b> in focus`);
+  if(dns.length) parts.push(`pressure on <b>${dns.join(", ")}</b>`);
+  return parts.join(" · ");
+}
+
+function sectorBarsHTML(st,clickable){
+  return Object.entries(SECTORS).map(([k,c])=>{
+    const v=st.sectorIdx[k];const pc=(v-1)*100;const up=pc>=0;const w=Math.min(50,Math.abs(pc)*1.5);
+    return `<div class="sec" ${clickable?`data-sec="${k}"`:''}>
+      <span class="nm">${c.label}</span>
+      <span class="track"><i class="${up?'up':'dn'}" style="width:${w}%"></i></span>
+      <span class="pct ${up?'up':'dn'}">${pc>=0?'+':''}${pc.toFixed(0)}%</span></div>`;}).join("");
+}
+
+function tileHTML(it){
+  const d=it.value-it.prevValue,dp=it.prevValue?d/it.prevValue*100:0;const isEd=it.edition!==null;
+  return `<div class="tile ${isEd?'ed':''}" data-buy="${it.id}">
+    <div class="top"><span class="ic">${it.icon}</span>${isEd?'<span class="glint">✦</span>':''}</div>
+    <div class="brand">${it.brand}</div><div class="nm">${it.name}</div>
+    ${isEd?`<div class="edword">${it.edition===1?'1 of 1':'Limited'}</div>`:''}
+    <div class="row"><span class="pr">${money(it.value)}</span>
+      <span class="chg ${d>=0?'pos':'neg'}">${d>=0?'▲':'▼'} ${dp>=0?'+':''}${dp.toFixed(1)}%</span></div></div>`;
+}
+
+function render(){
+  const st=S();
+  // clock
+  const h=((1-st.cycleFrac)*12).toFixed(1);
+  $("#clockline").innerHTML = mode==="live" ? `front page turns in <b>~${h}h</b>` : `sandbox · fast clock`;
+
+  // worth (rail)
+  const nw=netWorth(st,"YOU");$("#nw").textContent=money(nw);
+  const prev=st.nwHist[st.nwHist.length-1]||nw;const chg=nw-prev,pct=prev?chg/prev*100:0;
+  const ce=$("#nwchg");ce.className="chg "+(chg>=0?"pos":"neg");
+  ce.textContent=`${chg>=0?'▲':'▼'} ${money(Math.abs(chg))} (${pct>=0?'+':''}${pct.toFixed(2)}%)`;
+  $("#cash").textContent=money(st.cash);$("#assetsv").textContent=money(assetsValue(st,"YOU"));$("#debt").textContent=money(st.debt);
+
+  // ticker — price moves as a tape, plus the headline
+  const moversAll=st.items.map(it=>({it,dp:it.prevValue?(it.value-it.prevValue)/it.prevValue*100:0}))
+    .sort((a,b)=>Math.abs(b.dp)-Math.abs(a.dp));
+  const tape=moversAll.slice(0,10).map(m=>`<span><b>${m.it.brand} ${m.it.name}</b> ${money(m.it.value)} <span class="${m.dp>=0?'up':'dn'}">${m.dp>=0?'▲':'▼'}${Math.abs(m.dp).toFixed(1)}%</span></span>`).join("");
+  $("#ticker").innerHTML=`<span style="color:var(--brass-lit)">▣ ${st.front?st.front.head:''}</span>`+tape;
+
+  if(tab==="trending"){
+    // lead / masthead
+    const f=st.front;
+    if(f)$("#lead").innerHTML=`
+      <div class="paper"><span class="name">THE VAULT WIRE</span><span class="edition">No. ${1000+st.cycle} · evening edition</span></div>
+      <div class="kick">${f.kick}</div><h1>${f.head}</h1><p>${f.body}</p>
+      <div class="implied">On the floor: ${impliedReading(f)}</div>`;
+    // heating sectors
+    $("#sectorbars").innerHTML=sectorBarsHTML(st,true);
+    bindSectorClicks("#sectorbars");
+    // movers (biggest absolute change, exclude vanished editions)
+    const movers=moversAll.filter(m=>m.it.edition===null||m.it.remaining>0).slice(0,8).map(m=>m.it);
+    $("#movers").innerHTML=movers.map(tileHTML).join("");
+    bindTileBuys("#movers");
+    // worth watching = editions still available, by value
+    const watch=st.items.filter(i=>i.edition!==null&&i.remaining>0).sort((a,b)=>b.value-a.value).slice(0,4);
+    $("#watching").innerHTML=watch.length?watch.map(tileHTML).join(""):'<div class="empty">Every marquee piece has been claimed. Watch for a relisting.</div>';
+    bindTileBuys("#watching");
+    // vault glance
+    const mine=st.items.filter(i=>held(i,"YOU")>0);
+    $("#vaultcount").textContent=mine.length?`${mine.length} holdings`:'';
+    $("#vaultglance").innerHTML=mine.length?mine.slice(0,6).map(it=>{
+      const pl=it.value-(it.buyAt||it.value);const q=held(it,"YOU");
+      return `<div class="crow"><span class="ic">${it.icon}</span>
+        <span class="nm"><span class="bd">${it.brand}</span>${it.name}${q>1?` ×${q}`:''}</span>
+        <span class="pr">${money(it.value*q)}</span>
+        <span class="chg ${pl>=0?'pos':'neg'}">${pl>=0?'+':''}${money(pl)}</span></div>`;}).join("")
+      :'<div class="empty">Empty. Read the page, then acquire something.</div>';
+    // activity
+    $("#log").innerHTML=st.log.slice(0,9).map(l=>`<div><span class="who">${l.who}</span> ${l.verb} <span class="it">${l.it}</span></div>`).join("")||'<div class="empty">Quiet.</div>';
+  }
+
+  if(tab==="catalog") renderCatalog(st);
+  if(tab==="wire"){
+    $("#wirefeed").innerHTML=(st.front?[st.front,...st.archive.slice(0,8).map(a=>NEWSBANK.find(n=>n.head===a.head)||a)]:st.archive)
+      .filter(Boolean).slice(0,9).map((n,i)=>`<div class="a">
+        <div class="kick">${n.kick||'Markets'}${i===0?' · current':''}</div>
+        <h4>${n.head}</h4>${n.body?`<p>${n.body}</p>`:''}</div>`).join("");
+    $("#sectorbars2").innerHTML=sectorBarsHTML(st,false);
+    renderLB(st);
+  }
+  if(tab==="vault") renderVault(st);
+}
+
+function renderCatalog(st){
+  let items=[...st.items];
+  if(catSector)items=items.filter(i=>i.weights[catSector]);
+  if(catSearch){const q=catSearch.toLowerCase();items=items.filter(i=>(i.name+" "+i.brand).toLowerCase().includes(q));}
+  // commodities = table (editions still in stock go to cards; vanished editions excluded)
+  const commodities=items.filter(i=>i.edition===null).sort((a,b)=>b.value-a.value);
+  const editions=items.filter(i=>i.edition!==null&&i.remaining>0).sort((a,b)=>b.value-a.value);
+  $("#commodityrows").innerHTML=commodities.map(it=>{
+    const d=it.value-it.prevValue,dp=it.prevValue?d/it.prevValue*100:0;const ss=stockState(it);const mineQty=held(it,"YOU");
+    return `<tr><td class="nm"><span class="bd">${it.brand}</span>${it.name}${mineQty?` · you hold ${mineQty}`:''}</td>
+      <td style="color:var(--ink-dim)">${SECNAME(primarySector(it))}</td>
+      <td><span class="stockdot"><i class="${ss==='normal'?'':ss}"></i>${ss==='scarce'?'scarce':ss==='low'?'tight':'in stock'}</span></td>
+      <td class="pr">${money(it.value)}</td>
+      <td class="chg ${d>=0?'pos':'neg'}">${d>=0?'▲':'▼'}${Math.abs(dp).toFixed(1)}%</td>
+      <td style="text-align:right"><button class="tbtn" data-buy="${it.id}" ${it.value>st.cash?'disabled':''}>Acquire</button></td></tr>`;}).join("");
+  $("#catempty").hidden=commodities.length>0;
+  bindTileBuys("#commodityrows");
+  $("#editioncards").innerHTML=editions.length?editions.map(it=>{
+    const d=it.value-it.prevValue,dp=it.prevValue?d/it.prevValue*100:0;
+    return `<div class="edcard"><div class="top"><span class="ic">${it.icon}</span><span class="glint">✦</span></div>
+      <div class="bd">${it.brand}</div><div class="nm">${it.name}</div>
+      <div class="edword">${it.edition===1?'1 of 1':'Limited edition'}</div>
+      <div class="row"><span class="pr">${money(it.value)}</span><span class="chg ${d>=0?'pos':'neg'}">${d>=0?'▲':'▼'} ${Math.abs(dp).toFixed(1)}%</span></div>
+      <button class="acq" data-buy="${it.id}" ${it.value>st.cash?'disabled':''}>Acquire</button></div>`;}).join("")
+    :'<div class="empty">No editions match. They may all be claimed.</div>';
+  bindTileBuys("#editioncards");
+  // filters
+  $("#catfilters").innerHTML=`<button class="chip ${!catSector?'on':''}" data-sec="">All</button>`+
+    Object.entries(SECTORS).map(([k,c])=>`<button class="chip ${catSector===k?'on':''}" data-sec="${k}">${c.label}</button>`).join("");
+  $$("#catfilters .chip").forEach(b=>b.onclick=()=>{catSector=b.dataset.sec||null;});
+}
+
+function renderVault(st){
+  const mine=st.items.filter(i=>held(i,"YOU")>0);
+  $("#vaultempty").hidden=mine.length>0;
+  $("#vaultrows").innerHTML=mine.map(it=>{
+    const q=held(it,"YOU");const pl=it.value-(it.buyAt||it.value);
+    const ed=(it.edition!==null&&it.myCopies.length)?` · #${it.myCopies[0]} of ${it.edition}`:'';
+    return `<tr><td class="nm"><span class="bd">${it.brand}</span>${it.name}${q>1?` ×${q}`:''}${ed}</td>
+      <td style="color:var(--ink-dim)">${SECNAME(primarySector(it))}</td>
+      <td class="pr">${money(it.value*q)}</td>
+      <td class="chg ${pl>=0?'pos':'neg'}">${pl>=0?'+':''}${money(pl)}</td>
+      <td style="text-align:right"><button class="tbtn sell" data-sell="${it.id}">Let go</button></td></tr>`;}).join("");
+  $$("#vaultrows [data-sell]").forEach(b=>b.onclick=()=>{const it=st.items[+b.dataset.sell],pl=it.value-(it.buyAt||0);if(playerSell(st,+b.dataset.sell))toast(`Sold · ${pl>=0?'+':''}${money(pl)}`);});
+  const lim=creditLimit(st),avail=Math.max(0,lim-st.debt);
+  $("#dbt-bal").textContent=money(st.debt);$("#dbt-meter").style.width=(lim?Math.min(100,st.debt/lim*100):0)+"%";
+  $("#dbt-avail").textContent=`Available ${money(avail)}`;$("#borrow").disabled=avail<=0;$("#repay").disabled=st.debt<=0||st.cash<=0;
+}
+
+function renderLB(st){const board=[{name:"YOU",w:netWorth(st,"YOU")},...st.traders.map(t=>({name:t.name,w:netWorth(st,t.name)}))].sort((a,b)=>b.w-a.w);
+  $("#lb").innerHTML=board.map((e,i)=>`<div class="lb ${e.name==='YOU'?'me':''}"><span><span class="rk">${i+1}</span>${e.name}</span><span>${money(e.w)}</span></div>`).join("");}
+
+function bindTileBuys(sel){$$(`${sel} [data-buy]`).forEach(b=>b.onclick=()=>{const r=playerBuy(S(),+b.dataset.buy);if(r&&r.ok){if(r.it.edition!==null)showReveal(r.it,r.copyNo);else toast("Acquired");}});}
+function bindSectorClicks(sel){$$(`${sel} [data-sec]`).forEach(b=>b.onclick=()=>{catSector=b.dataset.sec;switchTab("catalog");});}
+
+function showReveal(it,copyNo){$("#rv-ic").textContent=it.icon;$("#rv-nm").textContent=`${it.brand} ${it.name}`;
+  $("#rv-ed").textContent=it.edition===1?"1 of 1":`№ ${copyNo} of ${it.edition}`;
+  $("#rv-sub").textContent=it.edition===1?"The only one in existence.":copyNo===it.edition?"The final copy. It's now gone from the floor.":"A numbered piece for your vault.";
+  $("#revealbg").classList.add("show");}
+$("#rv-close").onclick=()=>$("#revealbg").classList.remove("show");
+$("#revealbg").onclick=e=>{if(e.target.id==="revealbg")$("#revealbg").classList.remove("show");};
+
+function switchTab(t){tab=t;$$(".nav button[data-tab]").forEach(b=>b.classList.toggle("on",b.dataset.tab===t));
+  $$(".view").forEach(v=>v.hidden=true);$("#v-"+t).hidden=false;document.body.classList.remove("navopen");}
+$$(".nav button[data-tab]").forEach(b=>b.onclick=()=>switchTab(b.dataset.tab));
+
+$("#m-live").onclick=()=>{mode="live";document.body.classList.remove("sandbox");document.body.classList.add("live");$("#m-live").classList.add("on");$("#m-sbx").classList.remove("on");};
+$("#m-sbx").onclick=()=>{mode="sandbox";document.body.classList.remove("live");document.body.classList.add("sandbox");$("#m-sbx").classList.add("on");$("#m-live").classList.remove("on");};
+$$("[data-warp]").forEach(b=>b.onclick=()=>{$$("[data-warp]").forEach(x=>x.classList.remove("on"));b.classList.add("on");warp=+b.dataset.warp;});
+$("[data-jump]").onclick=()=>{jumpQueue+=1;toast("Sandbox skipped a cycle");};
+$("#search").oninput=e=>{catSearch=e.target.value;};
+$("#borrow").onclick=()=>{if(borrow(S(),5000))toast("Borrowed $5,000");else toast("No credit available");};
+$("#repay").onclick=()=>{if(repay(S(),5000))toast("Repaid $5,000");else toast("Nothing to repay");};
+let tT;function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(tT);tT=setTimeout(()=>t.classList.remove("show"),1400);}
+
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>

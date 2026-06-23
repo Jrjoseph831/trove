@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.*
+
+# builds
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# env
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+.vercel
+coverage/
+
+# next env shim (regenerated)
+next-env.d.ts

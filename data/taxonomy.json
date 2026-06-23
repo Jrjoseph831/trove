@@ -1,0 +1,645 @@
+{
+  "Fasteners & Fixings": {
+    "sectors": {
+      "construction": 1,
+      "manufacturing": 0.6,
+      "automotive": 0.3
+    },
+    "subs": {
+      "Bolts": [
+        "Hex Bolt M6",
+        "Hex Bolt M12",
+        "Carriage Bolt",
+        "Anchor Bolt",
+        "U-Bolt",
+        "Eye Bolt"
+      ],
+      "Screws": [
+        "Wood Screw #8",
+        "Drywall Screw",
+        "Machine Screw",
+        "Self-Tapping Screw",
+        "Deck Screw",
+        "Lag Screw"
+      ],
+      "Nails & Rivets": [
+        "Common Nail 3in",
+        "Finish Nail",
+        "Roofing Nail",
+        "Pop Rivet",
+        "Blind Rivet"
+      ],
+      "Nuts & Washers": [
+        "Hex Nut M12",
+        "Lock Nut",
+        "Flat Washer",
+        "Spring Washer",
+        "Wing Nut"
+      ]
+    }
+  },
+  "Structural Materials": {
+    "sectors": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "subs": {
+      "Steel": [
+        "Steel Plate 4x8",
+        "Steel I-Beam 20ft",
+        "Steel Rebar Bundle",
+        "Steel Tube Section",
+        "Galvanized Sheet",
+        "Steel Angle Stock"
+      ],
+      "Concrete & Masonry": [
+        "Cement Bag 80lb",
+        "Concrete Block",
+        "Clay Brick Pallet",
+        "Mortar Mix",
+        "Paver Stone",
+        "Rebar Mesh Sheet"
+      ],
+      "Lumber": [
+        "Pine 2x4 Stud",
+        "Plywood Sheet",
+        "OSB Board",
+        "Hardwood Plank",
+        "Pressure-Treated Post"
+      ],
+      "Insulation & Board": [
+        "Fiberglass Batt",
+        "Drywall Sheet",
+        "Foam Board",
+        "Mineral Wool Roll"
+      ]
+    }
+  },
+  "Plumbing & Fixtures": {
+    "sectors": {
+      "construction": 0.8,
+      "consumer": 0.3,
+      "hospitality": 0.3
+    },
+    "subs": {
+      "Pipe": [
+        "Copper Pipe 10ft",
+        "PVC Pipe 10ft",
+        "PEX Tubing Roll",
+        "Cast Iron Pipe",
+        "Galvanized Pipe"
+      ],
+      "Valves & Fittings": [
+        "Ball Valve",
+        "Gate Valve",
+        "Pipe Elbow Fitting",
+        "Coupling Fitting",
+        "Pressure Regulator"
+      ],
+      "Fixtures": [
+        "Kitchen Faucet",
+        "Shower Valve Set",
+        "Toilet Assembly",
+        "Utility Sink"
+      ]
+    }
+  },
+  "Wire & Cable": {
+    "sectors": {
+      "construction": 0.6,
+      "energy": 0.7,
+      "technology": 0.5,
+      "automotive": 0.3
+    },
+    "subs": {
+      "Building Wire": [
+        "Copper Wire Spool 12AWG",
+        "THHN Wire 10AWG",
+        "Romex Cable Roll",
+        "Aluminum Feeder Wire"
+      ],
+      "Data & Fiber": [
+        "Cat6 Ethernet Spool",
+        "Cat7 Cable Roll",
+        "Fiber Optic Cable Spool",
+        "Coaxial Cable Roll",
+        "Patch Cable Bundle"
+      ],
+      "Connectors": [
+        "RJ45 Connector Pack",
+        "Wire Nut Assortment",
+        "Terminal Block",
+        "Cable Gland Set"
+      ]
+    }
+  },
+  "Lighting": {
+    "sectors": {
+      "consumer": 0.6,
+      "construction": 0.4,
+      "hospitality": 0.4,
+      "energy": 0.3
+    },
+    "subs": {
+      "Bulbs": [
+        "LED Bulb A19",
+        "Halogen Bulb",
+        "Fluorescent Tube",
+        "Smart Bulb",
+        "Flood Lamp"
+      ],
+      "Fixtures": [
+        "Recessed Downlight",
+        "LED Panel Fixture",
+        "Shop Light Fixture",
+        "Pendant Fixture"
+      ]
+    }
+  },
+  "Power & Storage": {
+    "sectors": {
+      "energy": 1,
+      "technology": 0.4,
+      "automotive": 0.4
+    },
+    "subs": {
+      "Batteries": [
+        "AA Battery Pack",
+        "Lithium Cell 18650",
+        "Car Battery",
+        "EV Battery Pack",
+        "Grid Storage Module"
+      ],
+      "Generation": [
+        "Portable Generator",
+        "Diesel Genset",
+        "Solar Panel 400W",
+        "Solar Array Pallet",
+        "Wind Micro-Turbine"
+      ],
+      "Fuel": [
+        "Diesel Drum 55gal",
+        "Propane Tank",
+        "Gasoline Barrel",
+        "Lubricant Drum"
+      ]
+    }
+  },
+  "Packaging": {
+    "sectors": {
+      "logistics": 1,
+      "consumer": 0.3,
+      "hospitality": 0.3
+    },
+    "subs": {
+      "Boxes & Mailers": [
+        "Cardboard Box Bundle",
+        "Padded Mailer Pack",
+        "Shipping Carton",
+        "Moving Box Kit"
+      ],
+      "Wrap & Tape": [
+        "Stretch Wrap Roll",
+        "Bubble Wrap Roll",
+        "Packing Tape Case",
+        "Strapping Band Coil"
+      ],
+      "Pallets & Crates": [
+        "Shipping Pallet",
+        "Plastic Pallet",
+        "Wooden Crate",
+        "Bulk Container Bin"
+      ]
+    }
+  },
+  "Material Handling": {
+    "sectors": {
+      "logistics": 1,
+      "construction": 0.4,
+      "manufacturing": 0.4
+    },
+    "subs": {
+      "Manual": [
+        "Hand Truck",
+        "Pallet Jack",
+        "Utility Cart",
+        "Furniture Dolly"
+      ],
+      "Powered": [
+        "Electric Forklift",
+        "Reach Truck",
+        "Order Picker",
+        "Walkie Stacker",
+        "Conveyor Section"
+      ],
+      "Autonomous": [
+        "Warehouse AMR Bot",
+        "Cargo Drone",
+        "Sortation Robot"
+      ]
+    }
+  },
+  "Vehicles": {
+    "sectors": {
+      "automotive": 1,
+      "luxury": 0.3,
+      "logistics": 0.3
+    },
+    "subs": {
+      "Passenger": [
+        "Compact Sedan",
+        "Family SUV",
+        "Electric Hatchback",
+        "Pickup Truck"
+      ],
+      "Commercial": [
+        "Box Truck",
+        "Delivery Van",
+        "Semi Tractor",
+        "Refrigerated Truck"
+      ],
+      "Performance": [
+        "Sport Coupe",
+        "Roadster",
+        "Track Special",
+        "Concept GT"
+      ]
+    }
+  },
+  "Auto Parts": {
+    "sectors": {
+      "automotive": 1,
+      "manufacturing": 0.4
+    },
+    "subs": {
+      "Drivetrain": [
+        "Brake Pad Set",
+        "Clutch Kit",
+        "Alternator",
+        "Starter Motor"
+      ],
+      "Tires & Rubber": [
+        "All-Season Tire",
+        "Performance Tire",
+        "Truck Tire",
+        "Rubber Compound Bale",
+        "Inner Tube Pack"
+      ],
+      "Fluids": [
+        "Motor Oil Case",
+        "Coolant Jug",
+        "Brake Fluid Case",
+        "Transmission Fluid"
+      ]
+    }
+  },
+  "Compute": {
+    "sectors": {
+      "technology": 1,
+      "energy": 0.3
+    },
+    "subs": {
+      "Servers": [
+        "1U Rack Server",
+        "Server Rack 42U",
+        "Blade Chassis",
+        "Storage Array",
+        "Edge Compute Node"
+      ],
+      "Components": [
+        "GPU Accelerator",
+        "CPU Tray",
+        "Memory Module Pack",
+        "SSD Drive Pack",
+        "Microcontroller Tray"
+      ],
+      "Networking": [
+        "Network Switch 48-port",
+        "Router Appliance",
+        "Wireless Access Point",
+        "Optical Transceiver Pack"
+      ]
+    }
+  },
+  "Devices": {
+    "sectors": {
+      "technology": 0.8,
+      "consumer": 0.6
+    },
+    "subs": {
+      "Personal": [
+        "Smartphone",
+        "Laptop",
+        "Tablet",
+        "Smartwatch"
+      ],
+      "Peripherals": [
+        "Mechanical Keyboard",
+        "Monitor 27in",
+        "Webcam Pack",
+        "USB Hub Pack"
+      ]
+    }
+  },
+  "Farm Inputs": {
+    "sectors": {
+      "agriculture": 1,
+      "consumer": 0.2
+    },
+    "subs": {
+      "Seed & Feed": [
+        "Corn Seed Sack",
+        "Wheat Seed Sack",
+        "Livestock Feed Bag",
+        "Fertilizer Sack",
+        "Soy Seed Sack"
+      ],
+      "Crop Protection": [
+        "Pesticide Jug",
+        "Herbicide Drum",
+        "Greenhouse Film Roll"
+      ]
+    }
+  },
+  "Farm Equipment": {
+    "sectors": {
+      "agriculture": 1,
+      "manufacturing": 0.3
+    },
+    "subs": {
+      "Tractors": [
+        "Utility Tractor",
+        "Row-Crop Tractor",
+        "Compact Tractor"
+      ],
+      "Implements": [
+        "Plow Attachment",
+        "Seed Drill",
+        "Harvester Header",
+        "Irrigation Pump"
+      ]
+    }
+  },
+  "Earthmoving": {
+    "sectors": {
+      "construction": 1,
+      "energy": 0.3,
+      "agriculture": 0.3
+    },
+    "subs": {
+      "Excavation": [
+        "Mini Excavator",
+        "Crawler Excavator",
+        "Backhoe Loader",
+        "Skid Steer"
+      ],
+      "Lifting": [
+        "Mobile Crane",
+        "Tower Crane Section",
+        "Telehandler",
+        "Boom Lift"
+      ],
+      "Compaction": [
+        "Plate Compactor",
+        "Road Roller"
+      ]
+    }
+  },
+  "Industrial Machines": {
+    "sectors": {
+      "manufacturing": 1,
+      "technology": 0.3
+    },
+    "subs": {
+      "Machining": [
+        "CNC Mill",
+        "Lathe",
+        "Press Brake",
+        "Industrial 3D Printer"
+      ],
+      "Fluid & Air": [
+        "Air Compressor",
+        "Hydraulic Pump Unit",
+        "Industrial Pump",
+        "Vacuum Pump"
+      ]
+    }
+  },
+  "Medical Consumables": {
+    "sectors": {
+      "medical": 1,
+      "hospitality": 0.2
+    },
+    "subs": {
+      "PPE": [
+        "Nitrile Glove Box",
+        "Surgical Mask Case",
+        "Face Shield Pack",
+        "Isolation Gown Pack"
+      ],
+      "Disposables": [
+        "Syringe Pack",
+        "IV Set",
+        "Gauze Roll Case",
+        "Bandage Pack"
+      ]
+    }
+  },
+  "Medical Equipment": {
+    "sectors": {
+      "medical": 1,
+      "technology": 0.3
+    },
+    "subs": {
+      "Devices": [
+        "Infusion Pump",
+        "Patient Monitor",
+        "Ventilator",
+        "Ultrasound Unit"
+      ],
+      "Imaging": [
+        "Portable X-Ray",
+        "CT Scanner"
+      ]
+    }
+  },
+  "Food Service": {
+    "sectors": {
+      "hospitality": 1,
+      "consumer": 0.4
+    },
+    "subs": {
+      "Disposables": [
+        "Toothpick Box",
+        "Paper Napkin Case",
+        "Plastic Cup Sleeve",
+        "Takeout Container Case",
+        "Drinking Straw Box",
+        "Paper Plate Case"
+      ],
+      "Tableware": [
+        "Dinner Plate Set",
+        "Flatware Set",
+        "Drinking Glass Rack",
+        "Serving Tray"
+      ],
+      "Kitchen Equipment": [
+        "Commercial Range",
+        "Reach-In Fridge",
+        "Deep Fryer",
+        "Dish Machine",
+        "Prep Table"
+      ]
+    }
+  },
+  "Cleaning & Jansan": {
+    "sectors": {
+      "hospitality": 0.7,
+      "consumer": 0.5,
+      "medical": 0.3
+    },
+    "subs": {
+      "Supplies": [
+        "Latex Glove Box",
+        "Cleaning Spray Case",
+        "Paper Towel Case",
+        "Trash Bag Roll Case",
+        "Floor Cleaner Drum"
+      ],
+      "Equipment": [
+        "Floor Scrubber",
+        "Vacuum Unit",
+        "Janitor Cart"
+      ]
+    }
+  },
+  "Raw Textiles": {
+    "sectors": {
+      "textiles": 1,
+      "manufacturing": 0.3,
+      "consumer": 0.3
+    },
+    "subs": {
+      "Fiber & Cloth": [
+        "Cotton Bale",
+        "Polyester Fiber Bale",
+        "Denim Bolt",
+        "Canvas Roll",
+        "Wool Bale",
+        "Silk Bolt"
+      ],
+      "Leather": [
+        "Cowhide Leather",
+        "Synthetic Leather Roll"
+      ],
+      "Notions": [
+        "Zipper Spool",
+        "Button Assortment",
+        "Thread Cone Pack"
+      ]
+    }
+  },
+  "Apparel Goods": {
+    "sectors": {
+      "consumer": 1,
+      "textiles": 0.5
+    },
+    "subs": {
+      "Basics": [
+        "Cotton T-Shirt Pack",
+        "Work Glove Pack",
+        "Sock Bundle",
+        "Uniform Set"
+      ],
+      "Footwear": [
+        "Work Boot",
+        "Running Shoe",
+        "Safety Boot Case"
+      ]
+    }
+  },
+  "Household Goods": {
+    "sectors": {
+      "consumer": 1,
+      "hospitality": 0.2
+    },
+    "subs": {
+      "Kitchen": [
+        "Cookware Set",
+        "Storage Container Set",
+        "Knife Block Set",
+        "Small Appliance"
+      ],
+      "Home": [
+        "Bath Towel Set",
+        "Bedding Set",
+        "Area Rug",
+        "Storage Shelf Unit"
+      ]
+    }
+  },
+  "Hardware & Tools": {
+    "sectors": {
+      "consumer": 0.6,
+      "construction": 0.6,
+      "manufacturing": 0.4
+    },
+    "subs": {
+      "Hand Tools": [
+        "Claw Hammer",
+        "Screwdriver Set",
+        "Wrench Set",
+        "Tape Measure Pack",
+        "Utility Knife Pack"
+      ],
+      "Power Tools": [
+        "Cordless Drill",
+        "Circular Saw",
+        "Angle Grinder",
+        "Impact Driver"
+      ],
+      "Abrasives & Misc": [
+        "Sandpaper Pack",
+        "Cutting Disc Pack",
+        "Duct Tape Case",
+        "Adhesive Tube Case"
+      ]
+    }
+  },
+  "Timepieces": {
+    "sectors": {
+      "luxury": 1
+    },
+    "subs": {
+      "Watches": [
+        "Field Watch",
+        "Dive Watch",
+        "Chronograph",
+        "Moonphase",
+        "Tourbillon",
+        "Skeleton Watch"
+      ]
+    }
+  },
+  "Fine Goods": {
+    "sectors": {
+      "luxury": 1,
+      "consumer": 0.2
+    },
+    "subs": {
+      "Precious": [
+        "Gold Ingot",
+        "Silver Bar",
+        "Cut Diamond",
+        "Sapphire",
+        "Founder's Medallion"
+      ],
+      "Objects": [
+        "Fountain Pen",
+        "Leather Attach\u00e9",
+        "Crystal Decanter"
+      ]
+    }
+  }
+}
