@@ -128,6 +128,12 @@ surface, right to go private). Highest-risk system — safety before thrill.
     and a calm spotlight+board "On the Move" (no spammy reordering).
   - Verified live in Chrome (Trending/Catalog/Wire + a buy flow); typecheck +
     production build clean. Run `npm run dev` → localhost:3000.
+- [x] **Company pages + live deploy (owner request).** 76 brand "dossiers" at
+  `/brand/[slug]` (editorial layout: backstory, what they make, market standing,
+  flagship pieces), reachable from the Catalog and back. Backstories authored via
+  parallel agents → `packages/data/catalog/lore.json`. Light/dark theme toggle.
+  **Live on GitHub Pages: https://jrjoseph831.github.io/trove/** (static export,
+  auto-deploys on push via `.github/workflows/deploy.yml`). Repo is now public.
 - [ ] Phase 3 — AWS backbone (shared Live world).
 
 ## Verify Phase 0 locally
