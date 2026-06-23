@@ -12,6 +12,7 @@ import { assetsValue, netWorth } from "@trove/engine";
 import { money, pctChange } from "@/lib/format";
 import type { TabId } from "@/lib/trove";
 import { useTrove } from "@/lib/trove";
+import { ThemeToggle } from "./ThemeToggle";
 
 const TABS: { id: TabId; Icon: LucideIcon; label: string }[] = [
   { id: "trending", Icon: TrendingUp, label: "Trending" },
@@ -117,6 +118,7 @@ export function Rail() {
             </>
           )}
         </div>
+        <ThemeToggle />
         <div className="modeswitch">
           <button
             className={`live ${mode === "live" ? "on" : ""}`}

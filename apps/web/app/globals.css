@@ -23,9 +23,34 @@
   --dn: #5f7689; /* cooling — muted steel */
   --edition: #9c7b34; /* collectible — antique gold */
   --rule: #1b1714; /* masthead rules */
+  --track-bg: #efece4; /* meter / sector-bar tracks */
+  --scrim: rgba(247, 245, 240, 0.82); /* modal backdrop */
 
   --r: 10px;
   --rail: 256px;
+}
+
+/* Dark mode — a premium gallery-dark counterpart (warm near-black, brighter
+   bronze/steel/gold for legibility). Applied via data-theme on <html>. */
+:root[data-theme="dark"] {
+  --bg: #0e0d0b;
+  --paper: #161410;
+  --paper-2: #1d1a14;
+  --line: #29251f;
+  --line-2: #3a352b;
+
+  --ink: #ece7dd;
+  --ink-dim: #a39c8f;
+  --ink-faint: #6e685d;
+
+  --up: #d79a4e;
+  --dn: #7ea6c4;
+  --edition: #d4af5f;
+  --rule: #b9b2a4;
+  --track-bg: #221f18;
+  --scrim: rgba(8, 7, 6, 0.82);
+
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -265,6 +290,29 @@ body {
   background: var(--ink);
   color: var(--paper);
 }
+.themetoggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  color: var(--ink-dim);
+  padding: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.14s;
+}
+.themetoggle:hover {
+  border-color: var(--ink-faint);
+  color: var(--ink);
+}
 .clockline {
   font-size: 10px;
   color: var(--ink-faint);
@@ -503,7 +551,7 @@ body {
 .sec .track {
   flex: 1;
   height: 6px;
-  background: #efece4;
+  background: var(--track-bg);
   border-radius: 99px;
   overflow: hidden;
   position: relative;
@@ -1197,7 +1245,7 @@ body {
 }
 .debtctl .meter {
   height: 5px;
-  background: #efece4;
+  background: var(--track-bg);
   border-radius: 99px;
   overflow: hidden;
 }
@@ -1307,7 +1355,7 @@ body {
 .reveal-bg {
   position: fixed;
   inset: 0;
-  background: rgba(247, 245, 240, 0.82);
+  background: var(--scrim);
   backdrop-filter: blur(6px);
   z-index: 90;
   display: flex;
