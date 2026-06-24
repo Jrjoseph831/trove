@@ -78,7 +78,7 @@ export function Catalog() {
   const glowId = flashActive ? flashItem : null;
 
   return (
-    <div className="view">
+    <div className="view" data-flash={`${flashItem}/${flashActive}/${glowId}`}>
       <div className="cat-head">
         <h2 className="serif">Catalog</h2>
         <div className="seg">
