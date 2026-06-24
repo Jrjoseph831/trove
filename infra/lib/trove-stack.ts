@@ -143,8 +143,9 @@ export class TroveStack extends Stack {
     const supportedIdps = [cognito.UserPoolClientIdentityProvider.COGNITO];
     const googleClientId = this.node.tryGetContext("googleClientId");
     const googleClientSecret = this.node.tryGetContext("googleClientSecret");
+    let googleIdp: cognito.UserPoolIdentityProviderGoogle | undefined;
     if (googleClientId && googleClientSecret) {
-      const google = new cognito.UserPoolIdentityProviderGoogle(this, "Google", {
+      googleIdp = new cognito.UserPoolIdentityProviderGoogle(this, "Google", {
         userPool,
         clientId: googleClientId,
         clientSecretValue: SecretValue.unsafePlainText(googleClientSecret),
@@ -152,7 +153,6 @@ export class TroveStack extends Stack {
         attributeMapping: { email: cognito.ProviderAttribute.GOOGLE_EMAIL },
       });
       supportedIdps.push(cognito.UserPoolClientIdentityProvider.GOOGLE);
-      userPool.registerIdentityProvider(google);
     }
 
     userPool.addDomain("Domain", {
@@ -174,6 +174,10 @@ export class TroveStack extends Stack {
         logoutUrls: CALLBACK_URLS,
       },
     });
+    // The client lists Google as a provider, so it must be created AFTER the
+    // Google IdP exists — otherwise CloudFormation errors "provider Google does
+    // not exist". An explicit dependency enforces the order.
+    if (googleIdp) userPoolClient.node.addDependency(googleIdp);
 
     const authorizer = new HttpJwtAuthorizer(
       "JwtAuthorizer",
