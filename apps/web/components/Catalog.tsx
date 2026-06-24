@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { brands as allBrands, brandSlug, sectorKeys, sectors } from "@trove/data";
@@ -21,10 +21,11 @@ export function Catalog() {
     setCatBrand,
     setCatSearch,
     buy,
+    flashItem,
+    flashActive,
   } = useTrove();
   const parentRef = useRef<HTMLDivElement>(null);
-  const [glowId, setGlowId] = useState<number | null>(null);
-  const handledFlash = useRef<number | null>(null);
+  const handledScroll = useRef<number | null>(null);
 
   const filtered = useMemo(() => {
     const q = cat.search.trim().toLowerCase();
@@ -56,34 +57,25 @@ export function Catalog() {
     overscan: 12,
   });
 
-  // "Find it on the floor": read the target item straight from the URL, scroll
-  // it into view, and glow it once. Reads the URL directly (not via context) and
-  // waits until the item is actually in the filtered list, retrying as the brand
-  // filter settles. A ref guards against re-running.
+  // "Find it on the floor": scroll the flagged item into view once it's in the
+  // list. The glow itself is driven by flashItem/flashActive from the (stable)
+  // provider, so it survives this component remounting.
   useEffect(() => {
-    const raw =
-      typeof window !== "undefined"
-        ? new URLSearchParams(window.location.search).get("item")
-        : null;
-    if (raw == null) return;
-    const id = Number(raw);
-    if (!Number.isFinite(id) || handledFlash.current === id) return;
-    const idx = commodities.findIndex((i) => i.id === id);
-    const inEditions = idx < 0 && editions.some((i) => i.id === id);
-    console.log("[trove-flash]", { raw, id, idx, inEditions, commodities: commodities.length });
+    if (flashItem == null || handledScroll.current === flashItem) return;
+    const idx = commodities.findIndex((i) => i.id === flashItem);
+    const inEditions = idx < 0 && editions.some((i) => i.id === flashItem);
     if (idx < 0 && !inEditions) return; // not in the list yet — wait & retry
-    handledFlash.current = id;
+    handledScroll.current = flashItem;
     window.setTimeout(() => {
       if (idx >= 0) rowVirt.scrollToIndex(idx, { align: "center" });
       else
         document
-          .getElementById(`floor-item-${id}`)
+          .getElementById(`floor-item-${flashItem}`)
           ?.scrollIntoView({ behavior: "smooth", block: "center" });
-      console.log("[trove-flash] glow set", id);
-      setGlowId(id);
     }, 180);
-    window.setTimeout(() => setGlowId((g) => (g === id ? null : g)), 3200);
-  }, [commodities, editions, rowVirt]);
+  }, [flashItem, commodities, editions, rowVirt]);
+
+  const glowId = flashActive ? flashItem : null;
 
   return (
     <div className="view">

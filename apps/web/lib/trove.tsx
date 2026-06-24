@@ -109,6 +109,9 @@ interface Trove {
   openSector: (s: string) => void;
   /** item id to scroll-to + glow in the catalog (from "Find it on the floor"). */
   flashItem: number | null;
+  /** true for a few seconds after arriving, to drive the glow (provider-held so
+   *  it survives the catalog remounting). */
+  flashActive: boolean;
   clearFlashItem: () => void;
   buy: (id: number) => void;
   sell: (id: number) => void;
@@ -150,6 +153,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [signedIn, setSignedIn] = useState(false);
   const [authReady, setAuthReady] = useState(false);
   const [flashItem, setFlashItem] = useState<number | null>(null);
+  const [flashActive, setFlashActive] = useState(false);
 
   const modeRef = useRef(mode);
   modeRef.current = mode;
@@ -208,9 +212,11 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       }
     }
     const itemParam = params.get("item");
-    if (itemParam) {
+    if (itemParam !== null && itemParam !== "") {
       setFlashItem(Number(itemParam));
       setTab("catalog");
+      setFlashActive(true);
+      window.setTimeout(() => setFlashActive(false), 3400);
     }
   }, []);
 
@@ -417,6 +423,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setCatSearch,
       openSector,
       flashItem,
+      flashActive,
       clearFlashItem,
       buy,
       sell,
@@ -445,6 +452,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       jump,
       openSector,
       flashItem,
+      flashActive,
       clearFlashItem,
       buy,
       sell,
