@@ -14,17 +14,21 @@ import {
   DynamoDBDocumentClient,
   GetCommand,
   PutCommand,
+  ScanCommand,
+  TransactWriteCommand,
 } from "@aws-sdk/lib-dynamodb";
 import { items as catalog } from "@trove/data";
 import {
   createWorld,
   DEBT_RATE,
+  START_CASH,
   wallCycle,
   type RuntimeItem,
   type WorldState,
 } from "@trove/engine";
 
 const TABLE = process.env.MARKET_TABLE ?? "trove-market";
+const PLAYERS = process.env.PLAYERS_TABLE ?? "trove-players";
 /** Singleton key — there is exactly one Live world. */
 const PK = "LIVE";
 
@@ -138,6 +142,128 @@ export async function saveWorld(doc: WorldDoc, prevVersion: number): Promise<voi
       ExpressionAttributeValues: { ":prev": prevVersion },
     }),
   );
+}
+
+/** A player's account. Holdings live in the world doc (item.owners[playerId]);
+ *  only cash/debt are per-player here. */
+export interface Player {
+  playerId: string;
+  cash: number;
+  debt: number;
+}
+
+export async function getPlayer(playerId: string): Promise<Player | null> {
+  const res = await ddb.send(
+    new GetCommand({ TableName: PLAYERS, Key: { playerId } }),
+  );
+  return (res.Item as Player) ?? null;
+}
+
+/** All players (for standings). Small early on; paginates if it ever grows. */
+export async function allPlayers(): Promise<Player[]> {
+  const out: Player[] = [];
+  let ExclusiveStartKey: Record<string, unknown> | undefined;
+  do {
+    const res = await ddb.send(
+      new ScanCommand({ TableName: PLAYERS, ExclusiveStartKey }),
+    );
+    out.push(...((res.Items as Player[]) ?? []));
+    ExclusiveStartKey = res.LastEvaluatedKey as Record<string, unknown> | undefined;
+  } while (ExclusiveStartKey);
+  return out;
+}
+
+/** Load the world, apply a mutation, and save with an optimistic version guard.
+ *  Retries on a concurrent write. Used by settlement + the AI-trader run. */
+export async function mutateWorld(
+  fn: (state: WorldState) => void,
+  retries = 4,
+): Promise<WorldDoc> {
+  for (let attempt = 0; ; attempt++) {
+    const cur = await loadWorld();
+    if (!cur) throw new Error("world not seeded");
+    const state = docToWorld(cur);
+    fn(state);
+    const next = worldToDoc(state, cur.version + 1);
+    try {
+      await saveWorld(next, cur.version);
+      return next;
+    } catch (err) {
+      if (
+        (err as { name?: string }).name === "ConditionalCheckFailedException" &&
+        attempt < retries
+      ) {
+        continue; // someone else wrote; reload and retry
+      }
+      throw err;
+    }
+  }
+}
+
+export class TradeError extends Error {}
+
+/** Apply a trade atomically across the world doc AND the player's cash, with
+ *  optimistic concurrency on both. `fn` mutates the (rehydrated) world and the
+ *  player in place, or throws TradeError to reject (no retry). New players are
+ *  created with START_CASH. */
+export async function mutateTrade<T>(
+  playerId: string,
+  fn: (state: WorldState, player: Player) => T,
+  retries = 5,
+): Promise<T> {
+  for (let attempt = 0; ; attempt++) {
+    const cur = await loadWorld();
+    if (!cur) throw new Error("world not seeded");
+    const existing = await getPlayer(playerId);
+    const isNew = !existing;
+    const player: Player = existing ?? { playerId, cash: START_CASH, debt: 0 };
+    const prevCash = player.cash;
+    const prevDebt = player.debt;
+
+    const state = docToWorld(cur);
+    const result = fn(state, player); // throws TradeError to reject
+    const next = worldToDoc(state, cur.version + 1);
+
+    try {
+      await ddb.send(
+        new TransactWriteCommand({
+          TransactItems: [
+            {
+              Put: {
+                TableName: TABLE,
+                Item: { pk: PK, version: next.version, world: next },
+                ConditionExpression: "version = :v",
+                ExpressionAttributeValues: { ":v": cur.version },
+              },
+            },
+            {
+              Put: {
+                TableName: PLAYERS,
+                Item: player,
+                ConditionExpression: isNew
+                  ? "attribute_not_exists(playerId)"
+                  : "cash = :pc AND debt = :pd",
+                ExpressionAttributeValues: isNew
+                  ? undefined
+                  : { ":pc": prevCash, ":pd": prevDebt },
+              },
+            },
+          ],
+        }),
+      );
+      return result;
+    } catch (err) {
+      const name = (err as { name?: string }).name;
+      if (
+        (name === "TransactionCanceledException" ||
+          name === "ConditionalCheckFailedException") &&
+        attempt < retries
+      ) {
+        continue; // concurrent write; reload and retry
+      }
+      throw err;
+    }
+  }
 }
 
 /** Create the Live world once (idempotent — fails silently if it already exists).

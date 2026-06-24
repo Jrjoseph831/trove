@@ -2,6 +2,7 @@ import * as path from "path";
 import {
   Duration,
   RemovalPolicy,
+  SecretValue,
   Stack,
   type StackProps,
   CfnOutput,
@@ -11,13 +12,21 @@ import * as lambdaNode from "aws-cdk-lib/aws-lambda-nodejs";
 import { Runtime } from "aws-cdk-lib/aws-lambda";
 import * as events from "aws-cdk-lib/aws-events";
 import * as targets from "aws-cdk-lib/aws-events-targets";
+import * as cognito from "aws-cdk-lib/aws-cognito";
 import {
   HttpApi,
   HttpMethod,
   CorsHttpMethod,
 } from "aws-cdk-lib/aws-apigatewayv2";
 import { HttpLambdaIntegration } from "aws-cdk-lib/aws-apigatewayv2-integrations";
+import { HttpJwtAuthorizer } from "aws-cdk-lib/aws-apigatewayv2-authorizers";
 import type { Construct } from "constructs";
+
+/** OAuth redirect targets — the live site (basePath /trove) + local dev. */
+const CALLBACK_URLS = [
+  "https://jrjoseph831.github.io/trove/",
+  "http://localhost:3000/",
+];
 
 /** Where the Lambda handler sources live (@trove/server). */
 const HANDLERS = path.join(__dirname, "..", "..", "packages", "server", "src", "handlers");
@@ -116,6 +125,102 @@ export class TroveStack extends Stack {
       integration: new HttpLambdaIntegration("ReadIntegration", read),
     });
 
+    // ── Auth: Cognito (the Acquire gate) ────────────────────────────────────
+    // Browsing is anonymous; signing in is required only to trade. Email is
+    // built in; Google federation turns on if google client creds are supplied
+    // via context (-c googleClientId=… -c googleClientSecret=…).
+    const userPool = new cognito.UserPool(this, "Users", {
+      userPoolName: "trove-users",
+      selfSignUpEnabled: true,
+      signInAliases: { email: true },
+      autoVerify: { email: true },
+      standardAttributes: { email: { required: true, mutable: true } },
+      passwordPolicy: { minLength: 8, requireLowercase: true, requireDigits: true },
+      accountRecovery: cognito.AccountRecovery.EMAIL_ONLY,
+      removalPolicy: RemovalPolicy.RETAIN,
+    });
+
+    const supportedIdps = [cognito.UserPoolClientIdentityProvider.COGNITO];
+    const googleClientId = this.node.tryGetContext("googleClientId");
+    const googleClientSecret = this.node.tryGetContext("googleClientSecret");
+    if (googleClientId && googleClientSecret) {
+      const google = new cognito.UserPoolIdentityProviderGoogle(this, "Google", {
+        userPool,
+        clientId: googleClientId,
+        clientSecretValue: SecretValue.unsafePlainText(googleClientSecret),
+        scopes: ["openid", "email", "profile"],
+        attributeMapping: { email: cognito.ProviderAttribute.GOOGLE_EMAIL },
+      });
+      supportedIdps.push(cognito.UserPoolClientIdentityProvider.GOOGLE);
+      userPool.registerIdentityProvider(google);
+    }
+
+    userPool.addDomain("Domain", {
+      cognitoDomain: { domainPrefix: `trove-${this.account}` },
+    });
+
+    const userPoolClient = userPool.addClient("WebClient", {
+      userPoolClientName: "trove-web",
+      generateSecret: false, // public SPA client
+      supportedIdentityProviders: supportedIdps,
+      oAuth: {
+        flows: { authorizationCodeGrant: true, implicitCodeGrant: true },
+        scopes: [
+          cognito.OAuthScope.OPENID,
+          cognito.OAuthScope.EMAIL,
+          cognito.OAuthScope.PROFILE,
+        ],
+        callbackUrls: CALLBACK_URLS,
+        logoutUrls: CALLBACK_URLS,
+      },
+    });
+
+    const authorizer = new HttpJwtAuthorizer(
+      "JwtAuthorizer",
+      `https://cognito-idp.${this.region}.amazonaws.com/${userPool.userPoolId}`,
+      { jwtAudience: [userPoolClient.userPoolClientId] },
+    );
+
+    // ── Trade + portfolio (authorized) ──────────────────────────────────────
+    const trade = fn("Trade", "trade.ts", Duration.seconds(15));
+    market.grantReadWriteData(trade);
+    players.grantReadWriteData(trade);
+    api.addRoutes({
+      path: "/trade",
+      methods: [HttpMethod.POST],
+      integration: new HttpLambdaIntegration("TradeIntegration", trade),
+      authorizer,
+    });
+
+    const portfolio = fn("Portfolio", "portfolio.ts", Duration.seconds(10));
+    market.grantReadData(portfolio);
+    players.grantReadData(portfolio);
+    api.addRoutes({
+      path: "/portfolio",
+      methods: [HttpMethod.GET],
+      integration: new HttpLambdaIntegration("PortfolioIntegration", portfolio),
+      authorizer,
+    });
+
+    // ── Standings (public) ──────────────────────────────────────────────────
+    const standings = fn("Standings", "standings.ts", Duration.seconds(10));
+    market.grantReadData(standings);
+    players.grantReadData(standings);
+    api.addRoutes({
+      path: "/standings",
+      methods: [HttpMethod.GET],
+      integration: new HttpLambdaIntegration("StandingsIntegration", standings),
+    });
+
+    // ── AI traders (Stage B): keep the floor alive between human trades ──────
+    const traders = fn("Traders", "traders.ts", Duration.seconds(20));
+    market.grantReadWriteData(traders);
+    new events.Rule(this, "TraderClock", {
+      schedule: events.Schedule.rate(Duration.minutes(15)),
+      targets: [new targets.LambdaFunction(traders)],
+      description: "Fire a batch of AI-trader actions every 15 minutes.",
+    });
+
     // ── Seed (manual / first-deploy convenience) ────────────────────────────
     const seed = fn("Seed", "seed.ts", Duration.seconds(20));
     market.grantReadWriteData(seed);
@@ -123,7 +228,13 @@ export class TroveStack extends Stack {
     // ── Outputs ─────────────────────────────────────────────────────────────
     new CfnOutput(this, "ApiUrl", {
       value: api.apiEndpoint,
-      description: "Public read API base URL (GET {url}/world).",
+      description: "API base URL (GET /world, /standings; auth POST /trade, GET /portfolio).",
+    });
+    new CfnOutput(this, "UserPoolId", { value: userPool.userPoolId });
+    new CfnOutput(this, "UserPoolClientId", { value: userPoolClient.userPoolClientId });
+    new CfnOutput(this, "HostedUiDomain", {
+      value: `https://trove-${this.account}.auth.${this.region}.amazoncognito.com`,
+      description: "Cognito Hosted UI base (sign-in / sign-up).",
     });
     new CfnOutput(this, "SeedFunctionName", {
       value: seed.functionName,
