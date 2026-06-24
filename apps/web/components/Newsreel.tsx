@@ -199,8 +199,10 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
     onClose();
   };
 
-  const mins = Math.floor((state.cycleFrac % 1) * 24 * 60);
-  const clock = `${String(Math.floor(mins / 60)).padStart(2, "0")}:${String(mins % 60).padStart(2, "0")}`;
+  // real broadcast clock (UTC) — the channel runs on the same 6h marks the
+  // world settles on, so the time on screen is the time the floor turns.
+  const nowUtc = new Date();
+  const clock = `${String(nowUtc.getUTCHours()).padStart(2, "0")}:${String(nowUtc.getUTCMinutes()).padStart(2, "0")} UTC`;
   const tape = moversByAbsMove(state).slice(0, 12);
 
   const slide = slidesRef.current[idx];

@@ -18,9 +18,20 @@ import {
   playerSell,
   repay,
   SEC_PER_CYCLE,
+  wallCycle,
+  wallCycleFrac,
   type RuntimeItem,
   type WorldState,
 } from "@trove/engine";
+
+/** A warmed world whose clock is pinned to the current UTC 6h block, so its
+ *  next settlement lands on the next 6h mark — in lockstep with the newsroom. */
+function liveWorld(): WorldState {
+  const w = createWorld();
+  w.cycle = wallCycle();
+  w.cycleFrac = wallCycleFrac();
+  return w;
+}
 
 export type TabId = "trending" | "catalog" | "wire" | "vault";
 export type Mode = "live" | "sandbox";
@@ -69,7 +80,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     null,
   );
   if (worldsRef.current === null) {
-    worldsRef.current = { live: createWorld(), sandbox: createWorld() };
+    worldsRef.current = { live: liveWorld(), sandbox: createWorld() };
   }
   const jumpRef = useRef(0);
 

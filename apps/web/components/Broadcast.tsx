@@ -45,9 +45,9 @@ export function Broadcast({ stories }: { stories: WireStory[] }) {
 
   const cur = idx % stories.length;
   const s = stories[cur]!;
-  const mins = Math.floor((state.cycleFrac % 1) * 24 * 60);
-  const clock = `${String(Math.floor(mins / 60)).padStart(2, "0")}:${String(
-    mins % 60,
+  const nowUtc = new Date();
+  const clock = `${String(nowUtc.getUTCHours()).padStart(2, "0")}:${String(
+    nowUtc.getUTCMinutes(),
   ).padStart(2, "0")}`;
 
   return (

@@ -26,8 +26,23 @@ export { setRng, resetRng, rand, rexp, mulberry32 } from "./rng";
 
 // ── Constants ────────────────────────────────────────────────────────────────
 
-/** 1 cycle = 1 game-day = 12 real hours at 1× speed. */
-export const SEC_PER_CYCLE = 43200;
+/** 1 cycle = 6 real hours — the world settles on the UTC 6h marks
+ *  (00:00 / 06:00 / 12:00 / 18:00), the same beats the newsroom cron fires on. */
+export const SEC_PER_CYCLE = 21600;
+/** One cycle in milliseconds (for wall-clock alignment). */
+export const CYCLE_MS = SEC_PER_CYCLE * 1000;
+
+/** The global 6h cycle index since the epoch — identical to the number the
+ *  newsroom generator stamps on its beats, so client + feed share one clock. */
+export function wallCycle(now: number = Date.now()): number {
+  return Math.floor(now / CYCLE_MS);
+}
+
+/** Progress (0..1) through the current 6h block. At a UTC 6h mark this is ~0,
+ *  so a world seeded with it settles exactly on the next mark. */
+export function wallCycleFrac(now: number = Date.now()): number {
+  return (now % CYCLE_MS) / CYCLE_MS;
+}
 /** Starting player cash. */
 export const START_CASH = 25000;
 /** Interest accrued on debt per cycle. */

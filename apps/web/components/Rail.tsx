@@ -123,7 +123,7 @@ export function Rail() {
           {mode === "live" ? (
             <>
               front page turns in{" "}
-              <b>~{((1 - state.cycleFrac) * 12).toFixed(1)}h</b>
+              <b>~{((1 - state.cycleFrac) * 6).toFixed(1)}h</b>
             </>
           ) : (
             <>
