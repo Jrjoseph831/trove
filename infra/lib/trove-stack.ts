@@ -74,11 +74,14 @@ export class TroveStack extends Stack {
           OWNERSHIP_TABLE: ownership.tableName,
         },
         bundling: {
-          format: lambdaNode.OutputFormat.ESM,
+          // CommonJS output: the AWS SDK (CJS) does `require("node:https")` at
+          // runtime, which an ESM bundle can't satisfy. esbuild transpiles our
+          // ESM engine/data into CJS cleanly.
+          format: lambdaNode.OutputFormat.CJS,
           target: "node20",
           // bundle everything (incl. aws-sdk v3) for reproducible deploys
           externalModules: [],
-          // JSON catalog imports from @trove/data use import attributes
+          // JSON catalog imports from @trove/data
           loader: { ".json": "json" },
         },
       });
