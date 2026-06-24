@@ -45,7 +45,11 @@ jobs:
           aws-region: ${{ vars.AWS_REGION }}
       - name: CDK deploy
         working-directory: infra
-        run: npx cdk deploy --require-approval never --outputs-file cdk-outputs.json
+        # Google federation turns on when these are set (empty = email-only).
+        run: >-
+          npx cdk deploy --require-approval never --outputs-file cdk-outputs.json
+          -c googleClientId="${{ vars.GOOGLE_CLIENT_ID }}"
+          -c googleClientSecret="${{ secrets.GOOGLE_CLIENT_SECRET }}"
       - name: Show outputs
         working-directory: infra
         run: cat cdk-outputs.json
