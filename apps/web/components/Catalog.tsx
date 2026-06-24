@@ -21,7 +21,6 @@ export function Catalog() {
     setCatBrand,
     setCatSearch,
     buy,
-    flashItem,
   } = useTrove();
   const parentRef = useRef<HTMLDivElement>(null);
   const [glowId, setGlowId] = useState<number | null>(null);
@@ -57,25 +56,34 @@ export function Catalog() {
     overscan: 12,
   });
 
-  // "Find it on the floor": scroll the item into view and glow its row once.
-  // A ref guards against re-running; flashItem is set once per page load.
+  // "Find it on the floor": read the target item straight from the URL, scroll
+  // it into view, and glow it once. Reads the URL directly (not via context) and
+  // waits until the item is actually in the filtered list, retrying as the brand
+  // filter settles. A ref guards against re-running.
   useEffect(() => {
-    if (flashItem == null || handledFlash.current === flashItem) return;
-    handledFlash.current = flashItem;
-    const id = flashItem;
+    const raw =
+      typeof window !== "undefined"
+        ? new URLSearchParams(window.location.search).get("item")
+        : null;
+    if (raw == null) return;
+    const id = Number(raw);
+    if (!Number.isFinite(id) || handledFlash.current === id) return;
     const idx = commodities.findIndex((i) => i.id === id);
+    const inEditions = idx < 0 && editions.some((i) => i.id === id);
+    console.log("[trove-flash]", { raw, id, idx, inEditions, commodities: commodities.length });
+    if (idx < 0 && !inEditions) return; // not in the list yet — wait & retry
+    handledFlash.current = id;
     window.setTimeout(() => {
-      if (idx >= 0) {
-        rowVirt.scrollToIndex(idx, { align: "center" });
-      } else {
+      if (idx >= 0) rowVirt.scrollToIndex(idx, { align: "center" });
+      else
         document
           .getElementById(`floor-item-${id}`)
           ?.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
+      console.log("[trove-flash] glow set", id);
       setGlowId(id);
-    }, 160);
-    window.setTimeout(() => setGlowId((g) => (g === id ? null : g)), 3000);
-  }, [flashItem, commodities, rowVirt]);
+    }, 180);
+    window.setTimeout(() => setGlowId((g) => (g === id ? null : g)), 3200);
+  }, [commodities, editions, rowVirt]);
 
   return (
     <div className="view">
