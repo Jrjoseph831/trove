@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 import { Catalog } from "./Catalog";
@@ -71,11 +72,26 @@ function BootShell() {
 
 function Reveal() {
   const { reveal, closeReveal } = useTrove();
+
+  // Flash: auto-dismiss after a beat (editions linger a touch longer so the
+  // collectible moment registers). Click anywhere to dismiss early.
+  const isEd = reveal ? reveal.it.edition !== null : false;
+  useEffect(() => {
+    if (!reveal) return;
+    const t = setTimeout(closeReveal, isEd ? 3200 : 1900);
+    return () => clearTimeout(t);
+  }, [reveal, isEd, closeReveal]);
+
   if (!reveal) return null;
   const { it, copyNo } = reveal;
-  const edNum = it.edition === 1 ? "1 of 1" : `№ ${copyNo} of ${it.edition}`;
-  const sub =
-    it.edition === 1
+  const edNum = !isEd
+    ? null
+    : it.edition === 1
+      ? "1 of 1"
+      : `№ ${copyNo} of ${it.edition}`;
+  const sub = !isEd
+    ? "Added to your vault."
+    : it.edition === 1
       ? "The only one in existence."
       : copyNo === it.edition
         ? "The final copy. It's now gone from the floor."
@@ -95,7 +111,7 @@ function Reveal() {
         <div className="nm2">
           {it.brand} {it.name}
         </div>
-        <div className="ednum">{edNum}</div>
+        {edNum && <div className="ednum">{edNum}</div>}
         <div className="sub2">{sub}</div>
         <button className="close" onClick={closeReveal}>
           Add to vault

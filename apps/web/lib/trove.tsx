@@ -276,8 +276,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
           showToast("Can't acquire that");
           return;
         }
-        if (r.it.edition !== null) setReveal({ it: r.it, copyNo: r.copyNo });
-        else showToast("Acquired");
+        setReveal({ it: r.it, copyNo: r.copyNo });
         refresh();
         return;
       }
@@ -312,7 +311,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         }
         await syncLive();
         const it = worldsRef.current!.live.items.find((i) => i.id === id);
-        if (it && it.edition !== null) setReveal({ it, copyNo: r.copyNo });
+        if (it) setReveal({ it, copyNo: r.copyNo });
         else showToast("Acquired");
       });
     },
@@ -377,6 +376,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     authSignOut();
     setSignedIn(false);
   }, []);
+  const closeReveal = useCallback(() => setReveal(null), []);
 
   const openSector = useCallback((s: string) => {
     setCatSector(s);
@@ -409,7 +409,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       sell,
       doBorrow,
       doRepay,
-      closeReveal: () => setReveal(null),
+      closeReveal,
       signedIn,
       authReady,
       signIn,
@@ -435,6 +435,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       sell,
       doBorrow,
       doRepay,
+      closeReveal,
       signedIn,
       authReady,
       signIn,
