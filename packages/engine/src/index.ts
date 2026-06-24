@@ -34,6 +34,8 @@ export const START_CASH = 25000;
 export const DEBT_RATE = 0.0005;
 /** Cycles a fresh world is warmed up so it opens mid-story, not flat. */
 export const WARMUP_CYCLES = 8;
+/** How many recent news scenarios to avoid repeating. */
+export const RECENT_NEWS_WINDOW = 14;
 
 // brand → home sector, for trader bias matching.
 const brandHomeSector = new Map<string, SectorKey>(
@@ -81,7 +83,7 @@ export function freshState(): WorldState {
     front: null,
     traders: freshTraders(),
     log: [],
-    lastNewsIdx: -1,
+    recentNewsIdx: [],
     nwHist: [START_CASH],
   };
 }
@@ -176,21 +178,30 @@ export function pushLog(
 
 // ── News sequencing (zero runtime AI) ────────────────────────────────────────
 
-/** Pick the next scenario by `weight`, avoiding an immediate repeat. */
+/**
+ * Pick the next scenario by `weight`, avoiding any of the last
+ * RECENT_NEWS_WINDOW stories so the same headline doesn't recycle quickly.
+ */
 function pickNewsIdx(state: WorldState): number {
-  const total = newsBank.reduce((a, n) => a + (n.weight ?? 1), 0);
-  let idx = 0;
-  do {
-    let r = rand() * total;
-    idx = 0;
-    for (let i = 0; i < newsBank.length; i++) {
-      r -= newsBank[i]?.weight ?? 1;
-      if (r <= 0) {
-        idx = i;
-        break;
-      }
+  const recent = new Set(state.recentNewsIdx);
+  let candidates: number[] = [];
+  for (let i = 0; i < newsBank.length; i++) {
+    if (!recent.has(i)) candidates.push(i);
+  }
+  if (candidates.length === 0) {
+    candidates = newsBank.map((_, i) => i);
+  }
+  let total = 0;
+  for (const i of candidates) total += newsBank[i]?.weight ?? 1;
+  let r = rand() * total;
+  let idx = candidates[0] ?? 0;
+  for (const i of candidates) {
+    r -= newsBank[i]?.weight ?? 1;
+    if (r <= 0) {
+      idx = i;
+      break;
     }
-  } while (idx === state.lastNewsIdx && newsBank.length > 1);
+  }
   return idx;
 }
 
@@ -316,9 +327,12 @@ export function settleCycle(state: WorldState): void {
     return a.cyclesLeft > 0;
   });
 
-  // 2. Roll a new front-page story (weighted, no immediate repeat).
+  // 2. Roll a new front-page story (weighted, avoiding recent repeats).
   const idx = pickNewsIdx(state);
-  state.lastNewsIdx = idx;
+  state.recentNewsIdx.push(idx);
+  if (state.recentNewsIdx.length > RECENT_NEWS_WINDOW) {
+    state.recentNewsIdx.shift();
+  }
   const n = newsBank[idx] as News;
   state.front = { ...n, cycle: state.cycle };
   state.archive.unshift({ head: n.head, kick: n.kick, cycle: state.cycle });

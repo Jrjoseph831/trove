@@ -210,6 +210,24 @@ describe("editions firm and vanish", () => {
   });
 });
 
+describe("news variety", () => {
+  it("does not repeat a headline within the recent window", () => {
+    setRng(mulberry32(55));
+    const S = createWorld();
+    const fronts: string[] = [];
+    const dupes: string[] = [];
+    for (let c = 0; c < 80; c++) {
+      settleCycle(S);
+      const head = S.front!.head;
+      if (fronts.slice(-14).includes(head)) dupes.push(`c${c}: ${head}`);
+      fronts.push(head);
+    }
+    expect(dupes).toEqual([]);
+    // and it actually pulls from a large, varied pool
+    expect(new Set(fronts).size).toBeGreaterThan(40);
+  });
+});
+
 describe("headless sim smoke", () => {
   it("runs a warmed world forward and stays sane", () => {
     setRng(mulberry32(2024));

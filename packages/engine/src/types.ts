@@ -68,8 +68,9 @@ export interface WorldState {
   front: (News & { cycle: number }) | null;
   traders: Trader[];
   log: LogEntry[];
-  /** Index of the last news scenario shown (avoids immediate repeat). */
-  lastNewsIdx: number;
+  /** Indices of recently-shown news scenarios (most recent last) — avoids
+   *  recycling a story until the pool has moved well past it. */
+  recentNewsIdx: number[];
   /** Net-worth history for the chart. */
   nwHist: number[];
 }
