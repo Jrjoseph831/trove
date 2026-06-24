@@ -1,15 +1,18 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import { Radio } from "lucide-react";
 import { news as newsBank } from "@trove/data";
 import { netWorth } from "@trove/engine";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 import { Broadcast, type WireStory } from "./Broadcast";
 import { SectorBars } from "./SectorBars";
+import { Studio } from "./Studio";
 
 export function Wire() {
   const { state } = useTrove();
+  const [studioOpen, setStudioOpen] = useState(false);
 
   // Build the rundown once per cycle (front + recent archive, with bodies).
   const stories = useMemo<WireStory[]>(() => {
@@ -48,7 +51,12 @@ export function Wire() {
         <span className="tnn-logo">
           TNN <em>Trove News Network</em>
         </span>
-        <span className="tnn-on">On Air</span>
+        <div className="tnn-head-right">
+          <button className="watch-btn" onClick={() => setStudioOpen(true)}>
+            <Radio size={14} /> Watch the broadcast
+          </button>
+          <span className="tnn-on">On Air</span>
+        </div>
       </div>
 
       {state.front && (
@@ -124,6 +132,8 @@ export function Wire() {
           ))}
         </div>
       </div>
+
+      {studioOpen && <Studio onClose={() => setStudioOpen(false)} />}
     </div>
   );
 }

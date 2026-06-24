@@ -12,10 +12,12 @@ import newsJson from "../catalog/news.json" with { type: "json" };
 import taxonomyJson from "../catalog/taxonomy.json" with { type: "json" };
 import statsJson from "../catalog/stats.json" with { type: "json" };
 import loreJson from "../catalog/lore.json" with { type: "json" };
+import broadcastJson from "../catalog/broadcast.json" with { type: "json" };
 
 import type {
   Brand,
   BrandLore,
+  Broadcast,
   Item,
   News,
   Sector,
@@ -55,6 +57,9 @@ export const lore: Record<string, BrandLore> = loreJson as Record<
   string,
   BrandLore
 >;
+
+/** The latest pre-generated news broadcast (regenerated twice daily). */
+export const broadcast: Broadcast = broadcastJson as unknown as Broadcast;
 
 // ── Lookups ──────────────────────────────────────────────────────────────
 

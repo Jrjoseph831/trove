@@ -1,0 +1,46 @@
+name: Generate news broadcast
+
+# Runs twice a day (00:00 and 12:00 UTC). Writes a fresh broadcast.json (and
+# audio, if a TTS key is set), commits it, and lets the deploy workflow publish.
+on:
+  schedule:
+    - cron: "0 0,12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: broadcast
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Generate broadcast
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          # Optional overrides:
+          # BROADCAST_MODEL: claude-haiku-4-5
+          # VOICE_A: onyx
+          # VOICE_B: nova
+        run: node packages/data/scripts/generate-broadcast.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "trove-bot"
+          git config user.email "trove-bot@users.noreply.github.com"
+          git add packages/data/catalog/broadcast.json data/broadcast.json apps/web/public/broadcast-audio || true
+          if git diff --cached --quiet; then
+            echo "No broadcast changes."
+          else
+            git commit -m "chore: refresh news broadcast [skip ci]"
+            git push
+          fi

@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   basePath: onPages ? repo : undefined,
   assetPrefix: onPages ? `${repo}/` : undefined,
+  // Exposed to the client so we can prefix static assets (broadcast audio).
+  env: { NEXT_PUBLIC_BASE_PATH: onPages ? repo : "" },
   // Compile the workspace TS packages (shipped as source, no build step).
   transpilePackages: ["@trove/engine", "@trove/data"],
   // Pin the monorepo root (avoids picking up stray lockfiles elsewhere on disk).
