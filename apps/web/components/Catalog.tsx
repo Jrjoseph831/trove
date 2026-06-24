@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useMemo, useRef } from "react";
 import Link from "next/link";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { brands as allBrands, brandSlug, sectorKeys, sectors } from "@trove/data";
@@ -14,18 +14,9 @@ const ROW = 46;
 const BRAND_NAMES = [...allBrands].map((b) => b.name).sort();
 
 export function Catalog() {
-  const {
-    state,
-    cat,
-    setCatSector,
-    setCatBrand,
-    setCatSearch,
-    buy,
-    flashItem,
-    flashActive,
-  } = useTrove();
+  const { state, cat, setCatSector, setCatBrand, setCatSearch, buy } =
+    useTrove();
   const parentRef = useRef<HTMLDivElement>(null);
-  const handledScroll = useRef<number | null>(null);
 
   const filtered = useMemo(() => {
     const q = cat.search.trim().toLowerCase();
@@ -57,28 +48,8 @@ export function Catalog() {
     overscan: 12,
   });
 
-  // "Find it on the floor": scroll the flagged item into view once it's in the
-  // list. The glow itself is driven by flashItem/flashActive from the (stable)
-  // provider, so it survives this component remounting.
-  useEffect(() => {
-    if (flashItem == null || handledScroll.current === flashItem) return;
-    const idx = commodities.findIndex((i) => i.id === flashItem);
-    const inEditions = idx < 0 && editions.some((i) => i.id === flashItem);
-    if (idx < 0 && !inEditions) return; // not in the list yet — wait & retry
-    handledScroll.current = flashItem;
-    window.setTimeout(() => {
-      if (idx >= 0) rowVirt.scrollToIndex(idx, { align: "center" });
-      else
-        document
-          .getElementById(`floor-item-${flashItem}`)
-          ?.scrollIntoView({ behavior: "smooth", block: "center" });
-    }, 180);
-  }, [flashItem, commodities, editions, rowVirt]);
-
-  const glowId = flashActive ? flashItem : null;
-
   return (
-    <div className="view" data-flash={`${flashItem}/${flashActive}/${glowId}`}>
+    <div className="view">
       <div className="cat-head">
         <h2 className="serif">Catalog</h2>
         <div className="seg">
@@ -153,7 +124,7 @@ export function Catalog() {
                     <div
                       key={it.id}
                       id={`floor-item-${it.id}`}
-                      className={`trow ${glowId === it.id ? "glow" : ""}`}
+                      className="trow"
                       style={{
                         position: "absolute",
                         top: 0,
@@ -212,11 +183,7 @@ export function Catalog() {
               const d = it.value - it.prevValue;
               const dp = pctChange(it.value, it.prevValue);
               return (
-                <div
-                  className={`edcard ${glowId === it.id ? "glow" : ""}`}
-                  id={`floor-item-${it.id}`}
-                  key={it.id}
-                >
+                <div className="edcard" id={`floor-item-${it.id}`} key={it.id}>
                   <div className="top">
                     <ItemIcon it={it} size={30} />
                     <span className="glint">✦</span>

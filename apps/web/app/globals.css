@@ -3233,3 +3233,14 @@ body {
 .edcard.glow {
   animation: cardglow 2.6s ease-in-out;
 }
+
+/* CSS-only highlight when arriving via #floor-item-<id> from "Find it" */
+.trow:target {
+  animation: rowglow 2.6s ease-in-out;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+.edcard:target {
+  animation: cardglow 2.6s ease-in-out;
+}
