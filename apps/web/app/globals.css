@@ -2311,3 +2311,30 @@ body {
     font-size: 32px;
   }
 }
+
+/* mobile drawer close button (hidden on desktop, shown in the drawer) */
+.rail-close {
+  display: none;
+}
+@media (max-width: 780px) {
+  .rail-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-dim);
+    cursor: pointer;
+    z-index: 1;
+  }
+  .rail-close:hover {
+    color: var(--ink);
+    border-color: var(--ink-faint);
+  }
+}

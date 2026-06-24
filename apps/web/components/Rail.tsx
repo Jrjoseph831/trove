@@ -7,6 +7,7 @@ import {
   Newspaper,
   TrendingUp,
   Vault as VaultIcon,
+  X,
 } from "lucide-react";
 import { assetsValue, netWorth } from "@trove/engine";
 import { money, pctChange } from "@/lib/format";
@@ -35,6 +36,13 @@ export function Rail() {
 
   return (
     <nav className="rail">
+      <button
+        className="rail-close"
+        aria-label="Close menu"
+        onClick={() => setNavOpen(false)}
+      >
+        <X size={20} />
+      </button>
       <div className="brand">
         TR<b>O</b>VE<small>HOLDINGS</small>
       </div>
