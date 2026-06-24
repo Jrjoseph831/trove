@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { brandSlug, sectorLabel, type Brand, type BrandLore } from "@trove/data";
+import { brandSlug, getCompany, sectorLabel, type Brand, type BrandLore } from "@trove/data";
 import { brandStanding, sectorLabels } from "@/lib/brand";
 import { money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
@@ -16,6 +16,10 @@ export function BrandDossier({
 }) {
   const s = brandStanding(brandItems);
   const slug = brandSlug(brand.name);
+  const company = getCompany(brand.name);
+  const events = company
+    ? [...company.events].filter((e) => e.kind !== "profile").reverse().slice(0, 6)
+    : [];
 
   return (
     <div className="dossier-wrap">
@@ -75,6 +79,12 @@ export function BrandDossier({
                 <dt>Top tier</dt>
                 <dd>{s.topTier}</dd>
               </div>
+              {company && (
+                <div>
+                  <dt>Chief executive</dt>
+                  <dd style={{ fontSize: 14 }}>{company.ceo}</dd>
+                </div>
+              )}
             </dl>
             <div className="houseindex">
               <div className="houseindex-top">
@@ -113,6 +123,19 @@ export function BrandDossier({
             </div>
           ))}
         </section>
+
+        {events.length > 0 && (
+          <section className="dossier-news">
+            <h2 className="dossier-h">Latest from the House</h2>
+            {events.map((e, i) => (
+              <article className="dossier-event" key={i}>
+                <span className={`ev-kind ${e.size}`}>{e.kind.replace(/_/g, " ")}</span>
+                <div className="ev-head">{e.head}</div>
+                <p className="ev-body">{e.body}</p>
+              </article>
+            ))}
+          </section>
+        )}
 
         <Link href={`/?brand=${slug}`} className="floor-cta">
           View all {s.count} pieces on the floor →

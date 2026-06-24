@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import {
   news as newsBank,
+  newsroom,
   sectorKeys,
   sectorLabel,
   type SectorKey,
@@ -83,6 +84,21 @@ const STORIES_BY_SECTOR: Record<string, Story[]> = (() => {
   return by;
 })();
 
+// Live company beats from the newsroom, grouped by their home sector. These
+// drive each segment first — the featured houses ARE the story.
+const BEATS_BY_SECTOR: Record<string, Story[]> = (() => {
+  const by: Record<string, Story[]> = {};
+  for (const b of newsroom.beats ?? []) {
+    (by[b.sector] ||= []).push({
+      kick: b.company.toUpperCase(),
+      head: b.head,
+      body: b.body,
+      sector: b.sector,
+    });
+  }
+  return by;
+})();
+
 export function Newsreel({ onClose }: { onClose: () => void }) {
   const { state } = useTrove();
   const stateRef = useRef(state);
@@ -93,10 +109,13 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
   // stories for that industry, with data interludes + a bumper between segments.
   const buildSlides = useCallback((): Slide[] => {
     const s = stateRef.current;
-    // feature the most active industries first, rotating which lead each loop
-    const ordered = [...sectorKeys].sort(
-      (a, b) => Math.abs((s.sectorIdx[b] ?? 1) - 1) - Math.abs((s.sectorIdx[a] ?? 1) - 1),
-    );
+    // feature industries with live company news first, then the most active —
+    // rotating which lead each loop so the wheel stays fresh.
+    const ordered = [...sectorKeys].sort((a, b) => {
+      const beatGap = (BEATS_BY_SECTOR[b]?.length ?? 0) - (BEATS_BY_SECTOR[a]?.length ?? 0);
+      if (beatGap !== 0) return beatGap;
+      return Math.abs((s.sectorIdx[b] ?? 1) - 1) - Math.abs((s.sectorIdx[a] ?? 1) - 1);
+    });
     const off = loopRef.current % ordered.length;
     const featured = [...ordered.slice(off), ...ordered.slice(0, off)].slice(0, 3);
     loopRef.current += 1;
@@ -104,10 +123,17 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
     const slides: Slide[] = [{ type: "ident", dur: 4800 }];
     featured.forEach((sec, i) => {
       slides.push({ type: "segment", sector: sec, dur: 4600 });
-      const pool = STORIES_BY_SECTOR[sec] ?? [];
-      const startK = pool.length ? (loopRef.current * 5) % pool.length : 0;
-      for (let k = 0; k < Math.min(5, pool.length); k++) {
-        const story = pool[(startK + k) % pool.length]!;
+      // lead with the house storylines, then fill with the in-depth bank
+      const beats = BEATS_BY_SECTOR[sec] ?? [];
+      const bank = STORIES_BY_SECTOR[sec] ?? [];
+      const lead = beats.slice(0, 3);
+      const fill: Story[] = [];
+      const need = 5 - lead.length;
+      const startK = bank.length ? (loopRef.current * 5) % bank.length : 0;
+      for (let k = 0; k < Math.min(need, bank.length); k++) {
+        fill.push(bank[(startK + k) % bank.length]!);
+      }
+      for (const story of [...lead, ...fill]) {
         slides.push({
           type: "headline",
           story,

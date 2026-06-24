@@ -1,0 +1,2660 @@
+{
+  "Aldouscraft Mfg.": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1921,
+    "ceo": "Soren Ashby",
+    "ceoSince": 1921,
+    "personality": {
+      "volatility": 0.43,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Aldouscraft Mfg. — Current carried, no compromise",
+        "body": "Spun copper has been the family trade since the first drawing benches went in. Aldouscraft Mfg. pulls wire and cable for everyone from weekend rewires to the kind of jobs inspectors actually sign off on. The cheap spools keep the lights on; the premium harness lines run hot, run long, and don't soften under load. Electricians keep them on the truck because the gauge is honest and the insulation does exactly what the print says.",
+        "effects": {}
+      }
+    ]
+  },
+  "Aldouscyon": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1968,
+    "ceo": "Petra Mercer",
+    "ceoSince": 1968,
+    "personality": {
+      "volatility": 0.45,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Aldouscyon — We sell the light, not the fixture",
+        "body": "Aldouscyon obsesses over one thing: what a room feels like when you flip the switch. Their lighting spans bargain bulbs that simply work to premium luminaires engineered for color you'd swear was daylight. The value line ships by the pallet and never apologizes for it. Up top, the optics are tuned by hand and the housings are built to outlast the building. People who care about how a space reads tend to find their way here eventually.",
+        "effects": {}
+      }
+    ]
+  },
+  "Aldousmont & Sons": {
+    "aiOwned": true,
+    "homeSector": "medical",
+    "founded": 1934,
+    "ceo": "Dunmore Calder",
+    "ceoSince": 1934,
+    "personality": {
+      "volatility": 0.43,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Aldousmont & Sons — Sterile, sealed, ready",
+        "body": "Aldousmont & Sons makes the unglamorous things a ward burns through by the thousand: dressings, gloves, swabs, tubing, the consumables nobody photographs but everybody needs. Two tiers, both dependable. The mass line stocks supply closets without straining a budget; the mid line meets the tighter specs that surgical teams ask for by name. They've never chased prestige. Reliability at volume is the whole reputation, and after this long, it's a sturdy one to stand on.",
+        "effects": {}
+      }
+    ]
+  },
+  "Aldousspire Group": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1955,
+    "ceo": "Mira Ashby",
+    "ceoSince": 1955,
+    "personality": {
+      "volatility": 0.4,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Aldousspire Group — Worn in, not worn out",
+        "body": "Aldousspire Group cuts apparel goods for people who'd rather replace a garment in ten years than ten months. The everyday range is plain, tough, and priced to move off the rack. Climb the tiers and the cloth gets heavier, the stitching tighter, the cut quietly better. Premium pieces carry a finish you notice only after a hundred washes, when they still look right. It's a wardrobe brand that earns loyalty the slow way and keeps it.",
+        "effects": {}
+      }
+    ]
+  },
+  "Aperture Compute": {
+    "aiOwned": true,
+    "homeSector": "technology",
+    "founded": 1978,
+    "ceo": "Halden Dray",
+    "ceoSince": 1978,
+    "personality": {
+      "volatility": 0.69,
+      "trait": "fast-moving and headline-hungry"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Aperture Compute — Clarity, cycle after cycle",
+        "body": "Aperture was founded by hardware obsessives who believed a machine should think as cleanly as it looks. They build processors, servers, and workstations spanning the family desktop to the dense premium rack. The entry boards keep classrooms and offices humming; the top silicon crunches loads that would melt lesser gear. Reviewers call their thermals uncanny and their reliability boring, which is the highest praise. Compute without compromise, built to run quiet and run long.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Aperture Compute Shows Off Faster Interconnect at Dawnmere",
+        "body": "Halden Dray rushed a new high-bandwidth interconnect to the Dawnmere tech week, claiming a sharp drop in cross-rack latency. Headline-hungry as always, Dray streamed the benchmark live and dared rivals to match it. The demo dominated the show floor's chatter.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "funding",
+        "size": "standard",
+        "head": "Aperture Compute Secures Backing to Scale Dawnmere Interconnect",
+        "body": "Fresh off its Dawnmere splash, Aperture Compute lined up a sizable financing round led by the Vell Harbor merchant houses to mass-produce its interconnect. Halden Dray said the funds will fast-track a new fabrication line. He vowed shipping product 'before anyone copies the slide.'",
+        "effects": {
+          "technology": 0.13
+        }
+      }
+    ]
+  },
+  "Ardent Health": {
+    "aiOwned": true,
+    "homeSector": "medical",
+    "founded": 1949,
+    "ceo": "Orla Halloran",
+    "ceoSince": 1949,
+    "personality": {
+      "volatility": 0.3,
+      "trait": "slow-moving, long-horizon"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Ardent Health — Care, engineered without compromise",
+        "body": "Ardent Health builds the equipment that buys clinicians time when seconds count: monitors, imagers, surgical systems, and ventilators. The accessible line stocks community clinics that can't afford to be without; the luxury tier outfits the operating theaters where the hardest cases land. Every unit is built as if a life depends on it, because one always does. Hospitals stake their reputations on the name. Quiet machines doing loud, irreplaceable work, flawlessly, every shift.",
+        "effects": {}
+      }
+    ]
+  },
+  "Ashbystead Holdings": {
+    "aiOwned": true,
+    "homeSector": "medical",
+    "founded": 1947,
+    "ceo": "Cora Holt",
+    "ceoSince": 1947,
+    "personality": {
+      "volatility": 0.34,
+      "trait": "quiet and conservative"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Ashbystead Holdings — Where medicine meets engineering",
+        "body": "Ashbystead Holdings builds the machines clinicians lean on: imaging rigs, monitors, theatre systems, the heavy capital kit a hospital plans budgets around. The standard equipment is rugged and serviceable; the flagship instruments are something else entirely, calibrated to tolerances most rivals only advertise. Buying at the top tier means buying decades of uptime and a name that opens doors at any procurement meeting. Few houses earn that kind of trust in a field where failure isn't an option.",
+        "effects": {}
+      }
+    ]
+  },
+  "Blackhold": {
+    "aiOwned": true,
+    "homeSector": "energy",
+    "founded": 1972,
+    "ceo": "Tomas Vren",
+    "ceoSince": 2026,
+    "personality": {
+      "volatility": 0.68,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Blackhold — Hold the charge, hold the line",
+        "body": "Blackhold stores energy and gives it back when it counts. Their power and storage gear runs from consumer cells you toss in a drawer to premium banks wired into homes and worksites that can't afford a flicker. The cheap stuff is honest about what it is. The premium systems are sealed tight, thermally disciplined, and built to cycle for years without sulking. When the grid stutters, Blackhold is the quiet box in the corner still doing its job.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "expansion",
+        "size": "major",
+        "head": "Blackhold Commits to Massive Greycliff Storage Build",
+        "body": "Mira Marrow staked the firm's future on Greycliff, a colossal storage installation meant to anchor power across the northern reach. The ambitious project is the largest in Blackhold's history and carries heavy upfront cost. Marrow told the assembly the house would 'either define the region or learn a hard lesson.'",
+        "effects": {
+          "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Blackhold Names New Operations Chief to Steer Greycliff",
+        "body": "With the Greycliff build straining its ranks, Blackhold appointed veteran builder Tomas Vren as chief operating officer to manage delivery. Mira Marrow said the hire frees her to 'court capital while Tomas pours concrete.' The move signals how seriously the house is treating the high-stakes project.",
+        "effects": {}
+      }
+    ]
+  },
+  "Blackmoor": {
+    "aiOwned": true,
+    "homeSector": "agriculture",
+    "founded": 1908,
+    "ceo": "Soren Dray",
+    "ceoSince": 1908,
+    "personality": {
+      "volatility": 0.37,
+      "trait": "slow-moving, long-horizon"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Blackmoor — Built for the long furrow",
+        "body": "Blackmoor has been bending steel for the land since horses still did half the work. Their farm equipment runs from compact implements a smallholder can afford to premium machines that swallow acreage and shrug off seasons of abuse. The value gear is forgiving and easy to fix in a muddy yard. The top line is heavy, smart, and stubborn in the best way. Growers don't buy Blackmoor to impress anyone. They buy it because it comes back next harvest.",
+        "effects": {}
+      }
+    ]
+  },
+  "Blackton Industries": {
+    "aiOwned": true,
+    "homeSector": "automotive",
+    "founded": 1939,
+    "ceo": "Mara Mercer",
+    "ceoSince": 1939,
+    "personality": {
+      "volatility": 0.68,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Blackton Industries — Fits right, lasts longer",
+        "body": "Blackton Industries stamps, casts, and machines the auto parts that keep older and newer vehicles honest. From budget replacements that get a car back on the road to premium components spec'd for tight tolerances and hard miles, the catalogue runs deep. Mechanics trust the fit because the engineering is real, not reverse-guessed. The premium line is where Blackton flexes: parts that outlast the originals they replace. A workhorse name that quietly underpins a lot of garages.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Blackton Industries Wins Parts Contract With Halvern Motors",
+        "body": "Mara Mercer landed a multi-year auto-parts supply contract with Halvern Motors, a sizable win for the ambitious house. The deal covers brake and suspension components across Halvern's mid-range fleet. Mercer called it 'the contract that puts us on the map north of the river.'",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Blackton Industries Overhauls Plants to Meet Halvern Demand",
+        "body": "To deliver on the Halvern deal, Blackton Industries announced a sweeping reorganization of its three plants, consolidating brake lines and shifting suspension work to a single hub. Mara Mercer admitted the shuffle would be 'rough for a quarter' but necessary for scale. The turbulent retooling temporarily slowed other orders.",
+        "effects": {
+          "automotive": -0.13
+        }
+      }
+    ]
+  },
+  "Boreas Power": {
+    "aiOwned": true,
+    "homeSector": "energy",
+    "founded": 1961,
+    "ceo": "Mira Thorne",
+    "ceoSince": 1961,
+    "personality": {
+      "volatility": 0.82,
+      "trait": "restless and acquisitive"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Boreas Power — Energy that answers when called",
+        "body": "Born from a cold-country drive to keep the lights on through punishing winters, Boreas builds power and storage gear alongside the compute that orchestrates it. The economy units back up homes and small shops; the premium systems steady whole facilities through the worst the grid can throw. They engineer for the moment everything else fails. Operators trust a Boreas bank to hold the line. Reserves you forget about, right up until they save you.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Boreas Power Acquires Stake in Hollowmere Storage Fields",
+        "body": "Mira Thorne announced Boreas Power has taken a controlling stake in the Hollowmere storage fields, a sprawling battery-bank operation feeding three districts. The move pairs the firm's compute arm with new grid-scale capacity. Thorne said the acquisition 'closes the loop between what we compute and what we store.'",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Boreas Power Tops Forecasts as Hollowmere Comes Online",
+        "body": "Boreas Power beat quarterly expectations as the newly acquired Hollowmere fields began contributing storage revenue ahead of schedule. Mira Thorne credited rapid integration and steady demand across the three districts. She signaled appetite for 'one or two more' deals this year.",
+        "effects": {
+          "energy": 0.06
+        }
+      }
+    ]
+  },
+  "Bruncraft Industries": {
+    "aiOwned": true,
+    "homeSector": "automotive",
+    "founded": 1931,
+    "ceo": "Orla Marrow",
+    "ceoSince": 1931,
+    "personality": {
+      "volatility": 0.75,
+      "trait": "restless and acquisitive"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Bruncraft Industries — Engineered to be driven",
+        "body": "Bruncraft Industries builds vehicles for people who actually feel the road. The mid range is sensible, well-sorted, and built to rack up years without drama. Climb to premium and luxury and the cars turn into statements: bodies hand-finished, drivetrains tuned for poise, cabins that hush the world. Bruncraft never made cheap transport and never pretended to. Its badge means a certain refusal to cut corners, and the people who own one tend to keep them far too long.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Bruncraft Industries Launches the Foundry City Runabout",
+        "body": "Orla Marrow introduced the Foundry, a compact city vehicle aimed at dense districts where Bruncraft has lagged. The launch follows a string of acquisitions Marrow used to assemble its drivetrain. She called the Foundry 'the first car we built instead of bought.'",
+        "effects": {
+          "automotive": 0.13
+        }
+      }
+    ]
+  },
+  "Bruncrest Works": {
+    "aiOwned": true,
+    "homeSector": "technology",
+    "founded": 1979,
+    "ceo": "Petra Veldt",
+    "ceoSince": 1979,
+    "personality": {
+      "volatility": 0.85,
+      "trait": "prone to bold, public swings"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Bruncrest Works — Quiet machines, serious work",
+        "body": "Bruncrest Works makes compute for everyone from the kitchen-table user to the server room that can't go dark. The mass machines are cheerful, capable, and priced for the masses they're named for. The premium boards and systems are something colder and sharper, clocked high, cooled hard, and stable under loads that crater lesser hardware. Engineers respect Bruncrest because the silicon does what the datasheet promises. In a field full of noise, the brand earns trust by simply not breaking.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Bruncrest Works Lands Sweeping Supply Pact With Meridian Exchange",
+        "body": "Petra Veldt announced a multi-year compute supply agreement to power the Meridian Exchange's entire clearing operation, the firm's largest contract to date. The deal reportedly spans 40,000 units across three regions and was sealed after a fierce bidding contest. Veldt called it 'a statement, not a sale.'",
+        "effects": {
+          "technology": 0.22
+        }
+      }
+    ]
+  },
+  "Brunforge Holdings": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1903,
+    "ceo": "Kestrel Bramm",
+    "ceoSince": 1903,
+    "personality": {
+      "volatility": 0.45,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Brunforge Holdings — From the drawer to the table",
+        "body": "Brunforge Holdings is the rare house that furnishes a whole life, devices, household goods, fine goods, and the food-service kit that keeps kitchens running. The everyday range fills cupboards without fuss. Climb to the luxury end and you find heirloom finish: tools weighted just so, surfaces that age beautifully, pieces meant to be handed down. A century of breadth has made the name a byword for getting the small things right, across nearly everything it touches.",
+        "effects": {}
+      }
+    ]
+  },
+  "Brunmark Motors": {
+    "aiOwned": true,
+    "homeSector": "automotive",
+    "founded": 1919,
+    "ceo": "Yvette Calder",
+    "ceoSince": 1919,
+    "personality": {
+      "volatility": 0.68,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Brunmark Motors — Every part earns its place",
+        "body": "Brunmark began as a parts shop fixing what bigger makers got wrong, and never lost that fixer's eye. Now they forge components, assemble power and storage units, and roll complete vehicles off lines that span the whole market. The budget runabout shares its bones with the flagship; both are obsessive about the bits you never see. Mechanics keep Brunmark catalogs dog-eared. From the humble bracket to the crowning coupe, nothing leaves half-considered.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunmark Motors Launches the Veyra Compact With In-House Packs",
+        "body": "Yvette Calder introduced the Veyra, a compact vehicle built on Brunmark's own power-and-storage packs, marking the firm's tightest integration yet. Calder pitched it as proof the house can do parts, power, and vehicles under one roof. First deliveries are promised for the coming season.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Brunmark Motors Slips as Veyra Ramp Strains Supply",
+        "body": "Brunmark Motors reported a softer quarter as its in-house pack lines struggled to keep pace with Veyra demand, forcing rationed shipments. Yvette Calder called the bottleneck 'a problem of success' but conceded margins took a hit. The turbulent ramp left some early orders unfilled.",
+        "effects": {
+          "automotive": -0.13
+        }
+      }
+    ]
+  },
+  "Brunridge Works": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1916,
+    "ceo": "Petra Wold",
+    "ceoSince": 1916,
+    "personality": {
+      "volatility": 0.53,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Brunridge Works — Everything a household runs on",
+        "body": "Brunridge Works is sprawling by design, turning out apparel, cleaning and jansan supplies, devices, fine goods, and packaging under one roof. The value lines stock shelves and supply closets across the board. The luxury tiers are where the craft shows: garments cut with intent, finishes that read expensive because they are. Few houses span this much and stay coherent, yet Brunridge manages it, building a reputation as the dependable spine behind countless ordinary days.",
+        "effects": {}
+      }
+    ]
+  },
+  "Brunstone & Sons": {
+    "aiOwned": true,
+    "homeSector": "automotive",
+    "founded": 1894,
+    "ceo": "Sable Veldt",
+    "ceoSince": 1894,
+    "personality": {
+      "volatility": 0.81,
+      "trait": "prone to bold, public swings"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Brunstone & Sons — Power on every wheel",
+        "body": "Brunstone & Sons started with engines and never really stopped, today pairing vehicles with the power and storage systems that move them. The mass offerings are dependable and plain-spoken. The premium and luxury lines are where the family name earns its keep: motors built like vault doors, batteries engineered for brutal duty cycles, vehicles finished to a standard rivals quietly study. Generations in, the badge still signals that something was made to be relied on, hard and for a long time.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Brunstone & Sons Reveals the Ardent Long-Range Hauler",
+        "body": "Sable Veldt staged a dramatic reveal of the Ardent, a long-range hauling vehicle built around the firm's own swappable storage packs. Veldt drove the prototype onstage herself and claimed a single-charge range that drew gasps from the Dunmere crowd. The bold debut puts Brunstone squarely against heavier rivals.",
+        "effects": {
+          "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Brunstone & Sons Faces Review Over Ardent Pack Heating",
+        "body": "Regional safety inspectors opened a review into the Ardent's storage packs after pre-production tests flagged uneven heating under fast charging. Sable Veldt downplayed the probe as 'routine for anything this new' and paused only the demo fleet. The scrutiny cooled some of the launch's heat.",
+        "effects": {
+          "automotive": -0.13
+        }
+      }
+    ]
+  },
+  "Caldercraft Holdings": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1921,
+    "ceo": "Vale Fenn",
+    "ceoSince": 1921,
+    "personality": {
+      "volatility": 0.44,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Caldercraft Holdings — Built for the hands that build",
+        "body": "It started with a single line of hand-forged hand tools sold off a workshop bench. A century on, Caldercraft Holdings spans hardware, household goods, and raw textiles, with shelves stocked everywhere from corner stores to specialist outfitters. Their value range earns trust on price; their premium tools earn it on heft and balance. Tradespeople pass the wrenches down to apprentices, which tells you most of what you need to know.",
+        "effects": {}
+      }
+    ]
+  },
+  "Calderforge": {
+    "aiOwned": true,
+    "homeSector": "technology",
+    "founded": 1968,
+    "ceo": "Nadia Throne",
+    "ceoSince": 1968,
+    "personality": {
+      "volatility": 0.7,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Calderforge — Quiet silicon, relentless work",
+        "body": "Calderforge cut its teeth assembling the unglamorous guts of computing: boards, modules, and the compute units nobody photographs but everybody depends on. The mass line keeps offices and labs humming on a budget. The premium silicon goes where downtime costs real money. Engineers describe their machines the way pilots describe a reliable airframe, which is to say with relief. No theatrics, just throughput that holds under load.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Calderforge Adds Second Compute Hall at Embergate",
+        "body": "Nadia Throne announced a second compute hall at the firm's Embergate site, nearly doubling capacity to chase a wave of new contracts. The ambitious build runs alongside an aging first hall that Throne admits needs work. She promised both would 'hum as one' by year's end.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "outage",
+        "size": "standard",
+        "head": "Calderforge Hit by Cooling Failure at Aging Embergate Hall",
+        "body": "Calderforge's original Embergate hall suffered a cooling failure that forced an emergency shutdown, briefly idling part of its capacity during the second-hall buildout. Nadia Throne conceded the old hall had been 'pushed too hard' to meet demand. Engineers restored service within a day, but the turbulence rattled clients.",
+        "effects": {
+          "technology": -0.13
+        }
+      }
+    ]
+  },
+  "Calderworks Holdings": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1907,
+    "ceo": "Kestrel Halloran",
+    "ceoSince": 1907,
+    "personality": {
+      "volatility": 0.44,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Calderworks Holdings — Cities lean on what we pour",
+        "body": "Calderworks Holdings makes the structural materials that hold a skyline up and a bridge level: beams, panels, and load-bearing stock graded for the work. The value tier frames warehouses and homes across the region. The premium specifications carry the spans where failure is not an option. Inspectors recognize the stamp and relax a little. Three generations of builders have staked their names on it, and the foundations have stayed put.",
+        "effects": {}
+      }
+    ]
+  },
+  "Carrowcyon & Sons": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1896,
+    "ceo": "Cole Brandt",
+    "ceoSince": 1896,
+    "personality": {
+      "volatility": 0.48,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Carrowcyon & Sons — Honest goods, fair light",
+        "body": "A family shop that never quite stopped being one, Carrowcyon & Sons fills kitchens and hallways with practical household goods and lighting that simply works. Nothing here is precious. The everyday line is priced for ordinary budgets, and the mid range adds a touch more finish without the markup. People buy a lamp, it lasts, and they come back for the matching one years later. Modest reputation, deeply earned.",
+        "effects": {}
+      }
+    ]
+  },
+  "Carrowforge": {
+    "aiOwned": true,
+    "homeSector": "manufacturing",
+    "founded": 1931,
+    "ceo": "Mara Fenn",
+    "ceoSince": 1931,
+    "personality": {
+      "volatility": 0.59,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Carrowforge — Machines that make the machines",
+        "body": "Carrowforge builds the heavy industrial machinery that other factories are built upon: presses, lathes, mills, and lines that stamp out the modern world. Their mid-range tools anchor busy job shops; the premium systems run flagship plants around the clock with eerie precision. There's a weight to a Carrowforge frame that tells you it was made to outlast the building around it. Plant managers plan decades around them. The foundation under everything that gets manufactured.",
+        "effects": {}
+      }
+    ]
+  },
+  "Carrowwell": {
+    "aiOwned": true,
+    "homeSector": "manufacturing",
+    "founded": 1934,
+    "ceo": "Theo Thorne",
+    "ceoSince": 1934,
+    "personality": {
+      "volatility": 0.53,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Carrowwell — The factory floor's favorite",
+        "body": "Carrowwell is industry talking to industry. Their catalog runs from auto parts and hardware to full industrial machines and material-handling rigs, the kind of iron that earns its keep on a three-shift schedule. Budget lines keep small shops moving; premium machinery anchors the big plants. Maintenance crews stockpile the spares because nothing kills a line like waiting on a part. Solid, unsentimental, and rarely the reason a job runs late.",
+        "effects": {}
+      }
+    ]
+  },
+  "Castle Devices": {
+    "aiOwned": true,
+    "homeSector": "medical",
+    "founded": 1963,
+    "ceo": "Bram Calder",
+    "ceoSince": 1963,
+    "personality": {
+      "volatility": 0.3,
+      "trait": "unflashy and dependable"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Castle Devices — Sterile, reliable, ready every time",
+        "body": "Castle Devices makes the unglamorous essentials a ward burns through by the hour: syringes, gloves, dressings, tubing, and test kits. Their value range keeps stockrooms full on tight budgets; the mid tier meets the exacting standards of busy surgical floors. Each item is sealed, single-use, and faultless, because in their world a flaw is unthinkable. Nurses reach for Castle without a second glance. The consumables nobody celebrates and no one can do without.",
+        "effects": {}
+      }
+    ]
+  },
+  "Castlegear Group": {
+    "aiOwned": true,
+    "homeSector": "medical",
+    "founded": 1952,
+    "ceo": "Sable Brandt",
+    "ceoSince": 1952,
+    "personality": {
+      "volatility": 0.29,
+      "trait": "quiet and conservative"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Castlegear Group — Precision where it matters most",
+        "body": "Castlegear Group equips the rooms where mistakes are measured in lives, supplying medical consumables and equipment across every tier from ward basics to top-end surgical instruments. The luxury line is the standard against which others quietly benchmark themselves. Sterile, exact, and obsessively documented, their kit shows up wherever care cannot be compromised. Clinicians trust the labels without a second glance, which is the highest compliment the field offers.",
+        "effects": {}
+      }
+    ]
+  },
+  "Castlehold": {
+    "aiOwned": true,
+    "homeSector": "energy",
+    "founded": 1971,
+    "ceo": "Soren Skarn",
+    "ceoSince": 1971,
+    "personality": {
+      "volatility": 0.76,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Castlehold — Hold the charge, hold the line",
+        "body": "Castlehold builds power and storage for a world that hates running dry, from modest cells for the home to industrial banks that keep critical sites breathing through an outage. The value range puts dependable backup within reach. The premium systems carry hospitals, depots, and data through the worst nights. Their cells are known for aging gracefully rather than dying suddenly. When the grid blinks, Castlehold is what hums on regardless.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Castlehold Pushes Into Coastal Storage With Saltmere Banks",
+        "body": "Soren Skarn unveiled the Saltmere storage banks, a coastal expansion meant to steady supply for the windward districts. The ambitious build doubles Castlehold's regional capacity but stretches its balance sheet. Skarn admitted the timeline is 'aggressive, maybe reckless, but ours.'",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "outage",
+        "size": "standard",
+        "head": "Castlehold Saltmere Banks Stumble in First Storm Season",
+        "body": "Castlehold's new Saltmere banks tripped offline during an early squall, briefly cutting backup capacity to two windward districts. Soren Skarn rushed engineers to the coast and blamed an untested cutover switch. The turbulent debut underscored the risks of his rushed timeline.",
+        "effects": {
+          "energy": -0.13
+        }
+      }
+    ]
+  },
+  "Castlestead": {
+    "aiOwned": true,
+    "homeSector": "agriculture",
+    "founded": 1918,
+    "ceo": "Aurelia Calder",
+    "ceoSince": 1918,
+    "personality": {
+      "volatility": 0.29,
+      "trait": "quiet and conservative"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Castlestead — Feeds the ground that feeds us",
+        "body": "Born in farm country, Castlestead arms growers with earthmoving gear, farm equipment, and the inputs that turn dirt into a harvest. Smallholders lean on the affordable line; large operations run the premium machines hard through every season. Built to start cold, work wet, and forgive a missed service, their kit treats the calendar as the real boss. Generations of families have planted, plowed, and prospered behind that name.",
+        "effects": {}
+      }
+    ]
+  },
+  "Castlestone": {
+    "aiOwned": true,
+    "homeSector": "technology",
+    "founded": 1979,
+    "ceo": "Iris Garr",
+    "ceoSince": 1979,
+    "personality": {
+      "volatility": 0.87,
+      "trait": "prone to bold, public swings"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Castlestone — Compute carved to last",
+        "body": "Castlestone approaches computing like masonry: build it solid and let it stand. Their compute hardware spans approachable everyday units to premium workhorses tuned for sustained, punishing loads. The budget tier wins offices over on value; the high end wins labs over on stamina. Where rivals chase headline numbers, Castlestone chases the boring virtues, thermal headroom and clean uptime. The result is gear people forget about, in the best possible way.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "breakthrough",
+        "size": "major",
+        "head": "Castlestone Claims Record at Vellmont Compute Showcase",
+        "body": "Iris Garr took the main stage at the Vellmont Showcase to demonstrate a new lattice-cooling design she said triples sustained throughput per rack. Independent halls at the event logged the demo running 11 hours without throttling. Garr, never shy, declared it 'the end of the warm-room era' to roaring applause.",
+        "effects": {
+          "technology": 0.22
+        }
+      }
+    ]
+  },
+  "Cranecraft": {
+    "aiOwned": true,
+    "homeSector": "manufacturing",
+    "founded": 1903,
+    "ceo": "Mira Garr",
+    "ceoSince": 1903,
+    "personality": {
+      "volatility": 0.53,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Cranecraft — From the field to the loom",
+        "body": "An unusual pairing made coherent by craft, Cranecraft manufactures both farm equipment and raw textiles, two trades bound by a respect for fiber and field. Their value lines keep operations and mills running lean. The premium offerings carry the finish that discerning buyers pay for. Whether it is a tough implement or a clean bolt of stock, the through-line is the same: make it once, make it right, and let the wear tell the story.",
+        "effects": {}
+      }
+    ]
+  },
+  "Cranegrove": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1961,
+    "ceo": "Vale Calder",
+    "ceoSince": 1961,
+    "personality": {
+      "volatility": 0.45,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Cranegrove — Move the earth, keep the schedule",
+        "body": "Cranegrove does one thing and refuses to do it halfway: earthmoving. There is no bargain-basement line here, only capable mid-grade machines and premium iron engineered to dig, grade, and haul without flinching. Site managers favor the controls that stay precise after ten hours and the hydraulics that hold pressure in the cold. When a job lives or dies on moving dirt fast, Cranegrove is the name that ends the argument.",
+        "effects": {}
+      }
+    ]
+  },
+  "Drayton Freight": {
+    "aiOwned": true,
+    "homeSector": "logistics",
+    "founded": 1951,
+    "ceo": "Emil Holt",
+    "ceoSince": 1951,
+    "personality": {
+      "volatility": 0.45,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Drayton Freight — Heavy things, handled lightly",
+        "body": "Drayton began on a warehouse floor where a young engineer grew tired of crushed crates and aching backs. Their forklifts, reach trucks, and pallet movers turn chaos into choreography, gliding through aisles others jam. The mid-range workhorses anchor distribution hubs nationwide, while the premium electrics run silent through cold stores and clean rooms alike. Logistics managers treat a Drayton mast like an extension of their own arm. Precision lifting, no drama, no wasted motion.",
+        "effects": {}
+      }
+    ]
+  },
+  "Drossware Industries": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1949,
+    "ceo": "Nadia Wold",
+    "ceoSince": 1949,
+    "personality": {
+      "volatility": 0.48,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Drossware Industries — The unglamorous made indispensable",
+        "body": "Drossware Industries owns the overlooked corners of daily life: apparel goods, cleaning and janitorial supplies, lighting, and packaging that protects far more than it costs. The value range keeps facilities stocked without straining a budget; the premium lines bring durability buyers notice. Few people say the name aloud, yet their packaging cushions a thousand shipments and their cleaning kit keeps countless floors gleaming. Quietly everywhere, reliably useful, never showing off.",
+        "effects": {}
+      }
+    ]
+  },
+  "Drustcraft": {
+    "aiOwned": true,
+    "homeSector": "manufacturing",
+    "founded": 1927,
+    "ceo": "Cora Fenn",
+    "ceoSince": 1927,
+    "personality": {
+      "volatility": 0.57,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Drustcraft — Holds everything together, literally",
+        "body": "Drustcraft lives in the joints and seams of the made world, turning out auto parts and the fasteners and fixings that keep machines from rattling apart. The budget bins fill toolboxes and assembly lines everywhere. The premium grades go where a sheared bolt is a catastrophe. Their threads bite true and their parts fit the first time, the kind of unsung reliability that mechanics swear by and rarely think to mention.",
+        "effects": {}
+      }
+    ]
+  },
+  "Drustcyon Industries": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1934,
+    "ceo": "Aurelia Kessler",
+    "ceoSince": 1934,
+    "personality": {
+      "volatility": 0.46,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Drustcyon Industries — The thread that holds it together",
+        "body": "Every wall, deck, and frame needs something holding it shut. Drustcyon makes that something. Bolts, screws, anchors, brackets by the bin and the pallet, sized for the job site and priced for the apprentice. Nobody hangs a Drustcyon fastener on the wall to admire it, and that is rather the point. From everyday value runs to their tougher mid-grade line, they earned their reputation one boring, dependable box of fixings at a time.",
+        "effects": {}
+      }
+    ]
+  },
+  "Dunmorestone": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1951,
+    "ceo": "Orla Mercer",
+    "ceoSince": 1951,
+    "personality": {
+      "volatility": 0.42,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Dunmorestone — Kitchens and pipes, kept honest",
+        "body": "Dunmorestone outfits the rooms where water runs and food gets served. Commercial range tops, prep counters and warming lines for the back of house; taps, valves and fixtures for the walls behind them. The catalog skews practical, spanning budget kits for a first lease all the way to the sturdier mid-range gear that survives a decade of dinner rushes. Caterers and contractors keep coming back for the same plain reason: the stuff works, and it keeps working.",
+        "effects": {}
+      }
+    ]
+  },
+  "Dunmorewright Industries": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1928,
+    "ceo": "Emil Skarn",
+    "ceoSince": 1928,
+    "personality": {
+      "volatility": 0.46,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Dunmorewright Industries — Move the earth, then plumb the building",
+        "body": "Dunmorewright started in the dirt and never quite left. Excavators, loaders and dozers shift the ground; once the slab is poured, their plumbing and fixtures finish the job inside. That span, from raw earthmoving iron to a premium fixture line with real fit and finish, is unusual, and it has made the name a quiet fixture across job sites. Value tier for the rental yard, mid for the steady operator, premium for crews who refuse to stop twice.",
+        "effects": {}
+      }
+    ]
+  },
+  "Erretmark Works": {
+    "aiOwned": true,
+    "homeSector": "automotive",
+    "founded": 1919,
+    "ceo": "Aurelia Garr",
+    "ceoSince": 1919,
+    "personality": {
+      "volatility": 0.62,
+      "trait": "restless and acquisitive"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Erretmark Works — Driven by the very few",
+        "body": "Erretmark builds vehicles the way a tailor cuts a coat: slowly, by hand, for someone specific. Their premium and mid-range coupes carry the engineering, while the flagship luxury machines carry the legend, low production, longer waiting lists, coachwork measured in months. Owners speak of them in hushed tones at the right sort of gathering. Erretmark has never chased volume and never apologized for it. To drive one is to announce, without a word, exactly where you stand.",
+        "effects": {}
+      }
+    ]
+  },
+  "Fenncyon": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1946,
+    "ceo": "Nadia Ashby",
+    "ceoSince": 1946,
+    "personality": {
+      "volatility": 0.5,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Fenncyon — Iron that earns its keep",
+        "body": "Fenncyon does one thing and does it without flinching: earthmoving. Diggers, graders, haulers, the heavy iron that turns a plot into a foundation. The range climbs from honest value machines for the small contractor to a premium line built for crews that run twenty hours a day in the worst conditions going. Operators trust the controls and the uptime, and that trust is the whole business. When the ground has to move, Fenncyon shows up and shifts it.",
+        "effects": {}
+      }
+    ]
+  },
+  "Fennmoor": {
+    "aiOwned": true,
+    "homeSector": "technology",
+    "founded": 1968,
+    "ceo": "Dorian Brandt",
+    "ceoSince": 1968,
+    "personality": {
+      "volatility": 0.69,
+      "trait": "restless and acquisitive"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Fennmoor — Precision, scaled to the moment",
+        "body": "Fennmoor spans the whole arc of modern hardware, from the everyday to the irreplaceable. Consumer devices for the value crowd, industrial machines for the factory floor, and medical equipment where margins for error vanish entirely. The flagship luxury instruments are exacting enough to set their own benchmarks. It is rare for one house to be trusted across so wide a field, yet hospitals, plants and households all reach for the name. Fennmoor builds at every tier and lowers its standards at none.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Fennmoor Acquires Diagnostics Maker Larkspur Medical",
+        "body": "Dorian Brandt extended Fennmoor's reach into medical equipment with the purchase of Larkspur Medical, a maker of portable diagnostic units. The acquisition rounds out Fennmoor's spread across devices, machines, and now clinical gear. Brandt said the house 'grows by addition, not patience.'",
+        "effects": {
+          "technology": 0.13
+        }
+      }
+    ]
+  },
+  "Fennvale Mfg.": {
+    "aiOwned": true,
+    "homeSector": "manufacturing",
+    "founded": 1955,
+    "ceo": "Theo Vossen",
+    "ceoSince": 1955,
+    "personality": {
+      "volatility": 0.45,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Fennvale Mfg. — We make the parts that move you",
+        "body": "Fennvale supplies the unglamorous middle of the supply chain and is proud of it. Auto parts that keep engines turning and fasteners that keep them assembled, shipped by the crate to assembly lines and repair bays alike. The value range covers the high-volume basics; the premium grades meet tolerances tight enough for the fussiest builds. It is a name purchasing managers recognize and rarely have to think about, which in this trade is the highest compliment going.",
+        "effects": {}
+      }
+    ]
+  },
+  "Forgegrave Industries": {
+    "aiOwned": true,
+    "homeSector": "logistics",
+    "founded": 1962,
+    "ceo": "Petra Thorne",
+    "ceoSince": 1962,
+    "personality": {
+      "volatility": 0.48,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Forgegrave Industries — Lift heavy, drop nothing",
+        "body": "Warehouses run on the gear Forgegrave builds. Forklifts, pallet jacks, conveyors and the racking that holds it all up, the muscle of the loading dock. They scale from no-frills value machines for a single bay to premium kit rated for round-the-clock distribution centers. The brand made its name on a simple promise: things that lift loads should not let them fall. Floor managers buy Forgegrave because a dropped pallet costs more than the discount ever saved.",
+        "effects": {}
+      }
+    ]
+  },
+  "Garrware": {
+    "aiOwned": true,
+    "homeSector": "logistics",
+    "founded": 1948,
+    "ceo": "Orla Holt",
+    "ceoSince": 1948,
+    "personality": {
+      "volatility": 0.5,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Garrware — What's inside arrives intact",
+        "body": "Garrware is in the business of protection nobody notices until it fails. Cartons, crates, films, foams and the whole boxed-up science of getting goods from there to here unbroken. Value packaging keeps the margins sane on bulk runs; the premium grades cradle the things that genuinely cannot afford a dent. Shippers across half a dozen industries spec Garrware by habit. The mark of good work here is an unremarkable one: the package opens, and everything inside is exactly as it left.",
+        "effects": {}
+      }
+    ]
+  },
+  "Garrweave Mills": {
+    "aiOwned": true,
+    "homeSector": "textiles",
+    "founded": 1901,
+    "ceo": "Lorne Veldt",
+    "ceoSince": 1901,
+    "personality": {
+      "volatility": 0.29,
+      "trait": "slow-moving, long-horizon"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Garrweave Mills — Cloth begins where we begin",
+        "body": "Garrweave Mills has spun raw fiber into usable cloth since the looms ran on water and grit. They produce yarns, weaves, and base fabrics by the bolt, the unglamorous foundation beneath everything that's later cut and sewn. The economy goods clothe and outfit at scale; the mid tier supplies makers who demand a tighter, truer weave. The mill hums day and night, as it always has. The first honest thread in a long chain.",
+        "effects": {}
+      }
+    ]
+  },
+  "Greenmarsh Agro": {
+    "aiOwned": true,
+    "homeSector": "agriculture",
+    "founded": 1945,
+    "ceo": "Petra Kessler",
+    "ceoSince": 1945,
+    "personality": {
+      "volatility": 0.37,
+      "trait": "slow-moving, long-horizon"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Greenmarsh Agro — From furrow to full barn",
+        "body": "Greenmarsh sprang from wet, difficult fields nobody else wanted to farm, and built gear tough enough to tame them. They craft seeders, sprayers, and harvesters alongside the inputs that go in the ground. Their affordable equipment carries family operations through the long season; the premium machines run dawn to dusk without complaint. Farmers swear a Greenmarsh implement only gets better once it's properly muddy. Iron and agronomy, working the same patient land together.",
+        "effects": {}
+      }
+    ]
+  },
+  "Greywater Grid": {
+    "aiOwned": true,
+    "homeSector": "energy",
+    "founded": 1983,
+    "ceo": "Vale Halloran",
+    "ceoSince": 1983,
+    "personality": {
+      "volatility": 0.64,
+      "trait": "fast-moving and headline-hungry"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Greywater Grid — Power, balanced to the watt",
+        "body": "Greywater Grid grew out of a workshop wiring up scattered, stubborn power sources into something coherent. They make storage banks, controllers, and the compute that keeps the flow in balance. The value tier electrifies remote cabins and modest installs; the premium controllers conduct sprawling networks with a maestro's calm. Their kit thrives where the grid grows thin and tempers grow short. Efficiency as a discipline, not a slogan, every joule accounted for.",
+        "effects": {}
+      }
+    ]
+  },
+  "Gromford Works": {
+    "aiOwned": true,
+    "homeSector": "luxury",
+    "founded": 1897,
+    "ceo": "Mira Ashby",
+    "ceoSince": 1897,
+    "personality": {
+      "volatility": 0.85,
+      "trait": "fast-moving and headline-hungry"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Gromford Works — Patience, pressed into objects",
+        "body": "Gromford makes things meant to outlive their owners. Fine goods and timepieces, worked by hands that learned the craft over years, not weeks. There is no value tier and there never will be; the line runs from premium to outright luxury, each piece signed, numbered and slow. Collectors treat the name as a benchmark. A Gromford passes down, gets serviced, gets willed, and keeps its standing the whole way. They build heirlooms, and bill accordingly.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Debuts the Aurelian Tourbillon Collection",
+        "body": "Mira Ashby pulled the cover off the Aurelian line at a packed Halverford salon, a set of 250 hand-finished timepieces with an open-heart movement. Ashby, ever the showwoman, arrived an hour late and let the watches speak first. The entire run was spoken for by patrons before the night closed.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "award",
+        "size": "flash",
+        "head": "Gromford Works Aurelian Named Piece of the Year at Halverford Guild",
+        "body": "The Halverford Watchmakers Guild handed Gromford Works its top honor for the Aurelian Tourbillon, praising its movement finishing. Mira Ashby accepted on stage and immediately teased a second collection. The recognition cements a banner season for the house.",
+        "effects": {
+          "luxury": 0.06
+        }
+      }
+    ]
+  },
+  "Halcrest": {
+    "aiOwned": true,
+    "homeSector": "luxury",
+    "founded": 1904,
+    "ceo": "Iris Marrow",
+    "ceoSince": 1904,
+    "personality": {
+      "volatility": 0.58,
+      "trait": "prone to bold, public swings"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Halcrest — Time, kept impeccably",
+        "body": "Halcrest makes watches and nothing else, which is precisely why theirs are the ones that matter. Every movement is luxury-grade, assembled and regulated by a small bench of specialists who would sooner scrap a piece than ship a flaw. There is no entry model, no diffusion line, no compromise hiding behind the name. To wear a Halcrest is to carry a small, perfect argument for doing one thing supremely well. The waiting list is the price of admission, and worth it.",
+        "effects": {}
+      }
+    ]
+  },
+  "Halcrow & Vance": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1908,
+    "ceo": "Mira Skarn",
+    "ceoSince": 1908,
+    "personality": {
+      "volatility": 0.48,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Halcrow & Vance — Earth gives way to patience",
+        "body": "Two surveyors, one handshake, and a conviction that earthmoving was less about brute force than precise intent. Halcrow & Vance build graders, backhoes, and haulers that read terrain like a contour map. Their budget fleet earned trust on municipal sites; their flagship machines carve foundations for the kind of projects that reshape skylines. Engineers admire the controls, operators love the cab, and competitors quietly measure themselves against the firm's reach. Refined muscle, deliberate to the last bolt.",
+        "effects": {}
+      }
+    ]
+  },
+  "Halcyon Industries": {
+    "aiOwned": true,
+    "homeSector": "logistics",
+    "founded": 1959,
+    "ceo": "Dorian Ashby",
+    "ceoSince": 1959,
+    "personality": {
+      "volatility": 0.57,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Halcyon Industries — Boxed, sealed, on its way",
+        "body": "Halcyon turns logistics into something you can stack on a pallet. Boxes, mailers, protective fill and bulk packaging built for high throughput and low headache. The value range moves freight by the truckload; the premium line handles the goods that need a gentler ride. Fulfillment operations lean on Halcyon for one reason above all, consistency, carton after carton, run after run. In a trade where a single weak seam ruins a shipment, that reliability is the entire reputation.",
+        "effects": {}
+      }
+    ]
+  },
+  "Halhold Systems": {
+    "aiOwned": true,
+    "homeSector": "technology",
+    "founded": 1972,
+    "ceo": "Cora Aldous",
+    "ceoSince": 1972,
+    "personality": {
+      "volatility": 0.86,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Halhold Systems — Steady hardware for serious work",
+        "body": "Halhold made its name on machines that simply refused to crash during the long shift. The catalog reaches from affordable terminals to premium blade arrays humming in chilled rooms. Where rivals chase headline speeds, Halhold chases uptime, the kind measured in years, not benchmarks. System administrators speak of their boxes with the fondness reserved for trusted tools. Dependable compute, unglamorous and unbreakable, the backbone behind a thousand quiet operations.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halhold Systems Breaks Ground on Northgate Compute Campus",
+        "body": "Cora Aldous confirmed a sprawling new build outside Northgate, citing surging demand for the firm's compute clusters. The campus will employ an estimated 1,200 at full capacity and draw power from the nearby Coldwater grid. Aldous framed the move as 'overdue and underbuilt by half.'",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Halhold Systems Books Charge as Northgate Costs Overrun",
+        "body": "Halhold Systems posted softer quarterly figures after the Northgate build ran past budget, with Cora Aldous citing labor shortfalls and steel pricing. The firm absorbed a one-time charge tied to delayed power hookups at the Coldwater grid. Aldous insisted the campus remains 'the right bet, just a heavier one.'",
+        "effects": {
+          "technology": -0.13
+        }
+      }
+    ]
+  },
+  "Halhold Works": {
+    "aiOwned": true,
+    "homeSector": "technology",
+    "founded": 1971,
+    "ceo": "Nadia Brandt",
+    "ceoSince": 1971,
+    "personality": {
+      "volatility": 0.89,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Halhold Works — From the wire up",
+        "body": "Halhold builds across the electronic stack, from the cable on out. Wire and cable for the infrastructure, devices for the desk and the pocket, and medical equipment where a failure is unthinkable. The value tier puts capable hardware in everyone's hands, while the premium line earns the trust of clinics that cannot gamble on a reading. Few houses span the humble and the critical so comfortably. Halhold does it by treating the cheapest cable with the same seriousness as the costliest monitor.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Works Unveils Bedside Monitoring Line for Regional Clinics",
+        "body": "CEO Nadia Brandt introduced the Verity series of compact patient monitors at the Eastmarch Medical Forum, targeting under-equipped clinics across the Tessen Valley. The line bundles vital-sign tracking with the firm's own shielded wiring, a nod to its legacy cable business. Brandt promised first shipments within two quarters.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "recall",
+        "size": "standard",
+        "head": "Halhold Works Pulls Verity Monitors After Display Fault Reports",
+        "body": "Just weeks after launch, Halhold Works recalled roughly 4,000 Verity units after clinics in the Tessen Valley reported screens dimming under sustained use. Nadia Brandt called the issue a sourcing defect in a single supplier batch and pledged free replacements. The misstep tempered an otherwise buoyant rollout.",
+        "effects": {
+          "technology": -0.13
+        }
+      }
+    ]
+  },
+  "Hearthstone Group": {
+    "aiOwned": true,
+    "homeSector": "hospitality",
+    "founded": 1958,
+    "ceo": "Aurelia Aldous",
+    "ceoSince": 1958,
+    "personality": {
+      "volatility": 0.44,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Hearthstone Group — The clean you feel before you see",
+        "body": "Hearthstone Group keeps the world's hotels, halls, and homes presentable. They produce cleaning chemicals, janitorial gear, and household goods that earn their keep through sheer reliability. The everyday range stocks supply closets coast to coast; the mid tier handles the high-traffic floors where standards can't slip. Housekeepers know a Hearthstone bottle won't streak, quit, or let them down mid-shift. Fresh linens, gleaming floors, the quiet dignity of a room set perfectly right.",
+        "effects": {}
+      }
+    ]
+  },
+  "Hesperforge Supply": {
+    "aiOwned": true,
+    "homeSector": "manufacturing",
+    "founded": 1912,
+    "ceo": "Sable Halloran",
+    "ceoSince": 1912,
+    "personality": {
+      "volatility": 0.51,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Hesperforge Supply — Where every great build begins",
+        "body": "Hesperforge started as a single carding mill and a stubborn refusal to ship a flawed bolt of cloth. A century on, it supplies raw textiles and structural materials to anyone who needs the foundation right: framers, weavers, fabricators. The everyday lines keep job sites moving; the premium grades carry tolerances tight enough to earn quiet trust. Builders rarely name their suppliers, but when pressed, this one comes up.",
+        "effects": {}
+      }
+    ]
+  },
+  "Holtforge Group": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1928,
+    "ceo": "Yvette Bramm",
+    "ceoSince": 1928,
+    "personality": {
+      "volatility": 0.47,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Holtforge Group — Current you can count on",
+        "body": "Holtforge draws wire the slow way, then proves it the hard way. The group spins cable and conductor for construction crews who can't afford a fault behind a finished wall. Value reels handle the bulk runs; the premium jacketed lines go where heat, water, and decades are the test. Inspectors recognize the spool stamp on sight. A reputation built one continuous, unbroken length at a time.",
+        "effects": {}
+      }
+    ]
+  },
+  "Holtgate Cloth": {
+    "aiOwned": true,
+    "homeSector": "textiles",
+    "founded": 1912,
+    "ceo": "Dorian Carrow",
+    "ceoSince": 1912,
+    "personality": {
+      "volatility": 0.27,
+      "trait": "quiet and conservative"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Holtgate Cloth — Fabric with a longer memory",
+        "body": "Holtgate Cloth was founded by weavers who believed a fabric should hold its shape long after the fashion that bought it has passed. They make raw textiles, sturdy base cloths and yarns sold by the run, in grades from the practical to the genuinely fine. The value bolts dress everyday work; the mid tier finds its way into garments meant to last. Buyers prize the consistency. Plain cloth, true to the touch, woven to endure.",
+        "effects": {}
+      }
+    ]
+  },
+  "Holtgate Group": {
+    "aiOwned": true,
+    "homeSector": "textiles",
+    "founded": 1946,
+    "ceo": "Dorian Throne",
+    "ceoSince": 1946,
+    "personality": {
+      "volatility": 0.31,
+      "trait": "unflashy and dependable"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Holtgate Group — Honest cloth, by the mile",
+        "body": "Holtgate runs lean and loud, looms going day and night. It makes raw textiles for the unglamorous middle of the world: linings, backings, workwear stock, the fabric nobody photographs but everybody wears. Mass rolls feed the big cut-and-sew floors, while the mid grades win on a softer hand and a straighter weave. No frills, no fuss, just dependable yardage that shows up when promised.",
+        "effects": {}
+      }
+    ]
+  },
+  "Holtware Co.": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1937,
+    "ceo": "Aurelia Dray",
+    "ceoSince": 1937,
+    "personality": {
+      "volatility": 0.46,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Holtware Co. — Tools that outlive the warranty",
+        "body": "Holtware forges hardware and hand tools for people who use them, not collect them. Hammers, fasteners, clamps, the drawer of small metal things every household secretly relies on. The value range stocks shelves cheap and cheerful; the mid line adds the heft and finish that turn a one-time buy into a hand-me-down. Drop one, kick one, leave one in the rain. It'll still be there.",
+        "effects": {}
+      }
+    ]
+  },
+  "Ironcrestcrest Supply": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1959,
+    "ceo": "Dorian Garr",
+    "ceoSince": 1959,
+    "personality": {
+      "volatility": 0.4,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Ironcrestcrest Supply — Bright rooms, fair prices",
+        "body": "Ironcrestcrest got its start wiring lamp sockets in a back room and never lost the knack. Today it lights kitchens, shop floors, and porches with fixtures pitched at real budgets. The everyday range keeps it affordable and bright; the mid tier brings cleaner lines and warmer, steadier glow. It's not the name on a designer's mood board, but it's the one in the cart when the bulb finally goes.",
+        "effects": {}
+      }
+    ]
+  },
+  "Ironcrestton": {
+    "aiOwned": true,
+    "homeSector": "luxury",
+    "founded": 1921,
+    "ceo": "Sable Carrow",
+    "ceoSince": 1921,
+    "personality": {
+      "volatility": 0.68,
+      "trait": "fast-moving and headline-hungry"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Ironcrestton — Made for the few who notice",
+        "body": "Ironcrestton deals in fine goods and very little else. Each piece passes through a small bench of makers who measure twice and apologize for nothing. The premium line is exacting; the luxury line is uncompromising, finished by hands that have done it for thirty years. Owners speak of these objects the way others speak of heirlooms. Scarce by intent, coveted by reputation, and worth the wait.",
+        "effects": {}
+      }
+    ]
+  },
+  "Kessel Drive": {
+    "aiOwned": true,
+    "homeSector": "automotive",
+    "founded": 1936,
+    "ceo": "Dorian Brandt",
+    "ceoSince": 1936,
+    "personality": {
+      "volatility": 0.62,
+      "trait": "fast-moving and headline-hungry"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Kessel Drive — Built to outlast its owners",
+        "body": "Kessel Drive cut its teeth on engines that wouldn't quit, then built whole vehicles around them. Today the range runs from a rugged everyman runabout to a hand-finished grand tourer, with power packs and battery systems that feed the lot. Their cells endure brutal cold; their cars hold the road like they own it. Owners pass the keys down a generation and find the car still eager. Engineering as inheritance, torque as a promise.",
+        "effects": {}
+      }
+    ]
+  },
+  "Kesselgrove Co.": {
+    "aiOwned": true,
+    "homeSector": "manufacturing",
+    "founded": 1934,
+    "ceo": "Orla Steg",
+    "ceoSince": 1934,
+    "personality": {
+      "volatility": 0.49,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Kesselgrove Co. — The machine behind the machine",
+        "body": "Kesselgrove builds industrial machines for factories that can't stop. Presses, mills, the heavy iron that runs three shifts and asks for little. The mid range earns its keep on uptime and serviceable parts; the premium line is precision-ground for plants where a thousandth of an inch is money. Engineers don't gush about it. They just keep ordering it, year after year, line after line.",
+        "effects": {}
+      }
+    ]
+  },
+  "Korrgrave Mfg.": {
+    "aiOwned": true,
+    "homeSector": "agriculture",
+    "founded": 1903,
+    "ceo": "Aurelia Halloran",
+    "ceoSince": 1903,
+    "personality": {
+      "volatility": 0.28,
+      "trait": "slow-moving, long-horizon"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Korrgrave Mfg. — Feeding the season, every season",
+        "body": "Korrgrove has had dirt under its fingernails since the first plow season. It supplies farm inputs across the spread, from the basics that fill every barn to the premium blends agronomists swear by. Value sacks keep small holdings solvent; the mid and top grades push yield where margins are thin. Generations of growers have planted on its word. Practical, weathered, and trusted from the gate to the granary.",
+        "effects": {}
+      }
+    ]
+  },
+  "Korrworks": {
+    "aiOwned": true,
+    "homeSector": "logistics",
+    "founded": 1968,
+    "ceo": "Rhys Throne",
+    "ceoSince": 1968,
+    "personality": {
+      "volatility": 0.56,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Korrworks — Heavy lifting, handled",
+        "body": "Korrworks moves what others struggle to move. Material handling is the whole trade here: lifts, conveyors, the rugged gear that keeps a warehouse breathing. The mid range is the workhorse of busy docks; the premium line carries the load capacities and safety margins that big operations demand. Foremen plan their floors around it. Reliable under weight, and quietly proud of never being the thing that breaks down.",
+        "effects": {}
+      }
+    ]
+  },
+  "Korrwright Group": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1925,
+    "ceo": "Halden Fenn",
+    "ceoSince": 1925,
+    "personality": {
+      "volatility": 0.56,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Korrwright Group — Built to stand, wired to last",
+        "body": "Korrwright Group puts up the bones and runs the nerves. It makes structural materials and the wire and cable that thread through them, supplying construction from foundation to finish. Value lines handle the volume work; the premium grades meet the codes that don't bend. Few outfits cover both the frame and the current under one roof. On a serious site, you'll likely find both stamped Korrwright.",
+        "effects": {}
+      }
+    ]
+  },
+  "Korrwright Works": {
+    "aiOwned": true,
+    "homeSector": "luxury",
+    "founded": 1908,
+    "ceo": "Dunmore Carrow",
+    "ceoSince": 1908,
+    "personality": {
+      "volatility": 0.79,
+      "trait": "restless and acquisitive"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Korrwright Works — Time, kept honestly",
+        "body": "Korrwright Works makes timepieces for people who understand what a movement costs. Every case shelters hundreds of parts assembled under a loupe, regulated by hand, signed only when it's right. The premium line is finely finished; the luxury line is a small ceremony of metal and patience. These watches outlive their first owners and gain stories on the way. Worn quietly, valued loudly, and never rushed to market.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrwright Works Buys Heritage Dial-Maker Velloux",
+        "body": "Dunmore Carrow added the storied dial atelier Velloux to the Korrwright stable, securing a sought-after enamel workshop. The acquisition gives Korrwright in-house control over its most coveted finishes. Carrow said he 'won't wait on suppliers for art.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      }
+    ]
+  },
+  "Lhaus Industries": {
+    "aiOwned": true,
+    "homeSector": "automotive",
+    "founded": 1953,
+    "ceo": "Cole Brandt",
+    "ceoSince": 1953,
+    "personality": {
+      "volatility": 0.83,
+      "trait": "restless and acquisitive"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Lhaus Industries — Engineered to move you",
+        "body": "Lhaus Industries does the whole drivetrain of life, from the bolt to the body. It makes auto parts, power and storage systems, and complete vehicles across every tier. The mass lines keep ordinary cars on the road; the premium and luxury builds answer to drivers who feel the difference in a closing door. Few houses span value to top-end this convincingly. Broad by ambition, respected by the road.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Lhaus Industries Acquires Driveline Maker Korrick Axle",
+        "body": "Restless as ever, Cole Brandt closed the purchase of Korrick Axle, a respected driveline specialist in the Ferrlands. The deal folds Korrick's plants into Lhaus's growing parts division and adds capacity for its vehicle line. Brandt said the firm is 'building a spine, vertebra by vertebra.'",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Lhaus Industries Reopens Korrick Axle's Idled Ferrlands Plant",
+        "body": "Weeks after the acquisition, Lhaus Industries restarted Korrick Axle's mothballed second plant in the Ferrlands, recalling some 300 workers. Cole Brandt toured the floor and committed to a power-and-storage upgrade for the site. The quick turnaround signaled how fast Brandt intends to integrate.",
+        "effects": {
+          "automotive": 0.06
+        }
+      }
+    ]
+  },
+  "Maison & Vale": {
+    "aiOwned": true,
+    "homeSector": "hospitality",
+    "founded": 1939,
+    "ceo": "Rhys Kessler",
+    "ceoSince": 1939,
+    "personality": {
+      "volatility": 0.6,
+      "trait": "restless and acquisitive"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Maison & Vale — Order, in every quiet detail",
+        "body": "Maison & Vale brought a touch of grace to the workaday business of keeping house. Their cleaning supplies, janitorial lines, and household goods marry function with a finish you'd actually want on display. The value range earns its place in everyday cupboards; the mid tier dresses boutique stays and well-run homes. There's a pleasing weight to their wares, a sense someone cared. Tidiness raised, gently, to something close to a small pleasure.",
+        "effects": {}
+      }
+    ]
+  },
+  "Marlgear Supply": {
+    "aiOwned": true,
+    "homeSector": "technology",
+    "founded": 1974,
+    "ceo": "Halden Vossen",
+    "ceoSince": 1974,
+    "personality": {
+      "volatility": 0.71,
+      "trait": "prone to bold, public swings"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Marlgear Supply — Smart iron for working floors",
+        "body": "Marlgear Supply sits where the wrench meets the circuit. It builds devices and industrial machines for operations that want their tools to think a little. The value range gets the job done without fuss; the premium line packs the sensors and durability that modern plants lean on. Newer than the old iron houses and faster on its feet, it has earned a name for gear that's clever where it counts.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Marlgear Supply Unveils the Atlas Industrial Press",
+        "body": "Halden Vossen made a splash at the Ironworks Expo with the Atlas, a heavy industrial press he claims halves changeover time on the factory floor. Vossen ran a live stamping demo and took open questions for an hour. The bold showing positions Marlgear as more than a devices maker.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Marlgear Supply Books First Atlas Order From Drennan Mills",
+        "body": "Marlgear Supply secured its first major Atlas press order from Drennan Mills, a sizable fabricator in the southern works belt. Halden Vossen said the deal validates the firm's leap into industrial machines. Delivery is slated across two phases this year.",
+        "effects": {
+          "technology": 0.13
+        }
+      }
+    ]
+  },
+  "Marrowcyon": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1947,
+    "ceo": "Theo Orne",
+    "ceoSince": 1947,
+    "personality": {
+      "volatility": 0.52,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Marrowcyon — Wear it. Plumb it. Trust it",
+        "body": "Marrowcyon began stitching workwear for people who hated replacing it. The fixtures came later, when customers asked why their faucets failed faster than their coveralls. Today the apparel runs from honest value lines to a premium tier prized for seams that outlive trends, while the plumbing range carries the same stubborn standard. Two trades, one belief: things you touch every day should never let you down.",
+        "effects": {}
+      }
+    ]
+  },
+  "Marrowmoor Holdings": {
+    "aiOwned": true,
+    "homeSector": "hospitality",
+    "founded": 1962,
+    "ceo": "Dorian Steg",
+    "ceoSince": 1962,
+    "personality": {
+      "volatility": 0.54,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Marrowmoor Holdings — Clean rooms, ready by morning",
+        "body": "Born in the back corridors of hotels, Marrowmoor Holdings learned what guests never see: the cleaning carts, the cases of detergent, the towels folded before dawn. They build janitorial supplies and household goods for places that turn over a thousand rooms a night. No frills, no premium pretensions, just dependable mass and mid-tier kit that holds up shift after shift. Housekeeping crews know the name, and they keep reordering it.",
+        "effects": {}
+      }
+    ]
+  },
+  "Marrowstone Build": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1924,
+    "ceo": "Bram Halloran",
+    "ceoSince": 1924,
+    "personality": {
+      "volatility": 0.56,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Marrowstone Build — We move the ground others fear",
+        "body": "Marrowstone started in a flooded quarry with one battered shovel and a stubborn foreman who refused to leave a job unfinished. A century on, their excavators, dozers, and loaders break dirt on everything from roadside trenches to canyon-spanning cuts. The value line keeps small crews running; the premium machines outwork operators twice their size. Site bosses say a Marrowstone rig dies of old age, never of work. Plain steel, honest reach.",
+        "effects": {}
+      }
+    ]
+  },
+  "Ornewright Goods": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1942,
+    "ceo": "Petra Veldt",
+    "ceoSince": 1942,
+    "personality": {
+      "volatility": 0.48,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Ornewright Goods — Stocking the rooms that keep running",
+        "body": "Ornewright Goods supplies the places that never close: kitchens, clinics, and working farms. Their catalog runs from cleaning and janitorial lines to food service gear and farm inputs, a deliberately broad spread for clients who'd rather order once. The budget tier keeps margins survivable; the premium range meets the demands of operations that can't afford an off day. Buyers value the breadth and the backbone. One trusted name across a dozen unglamorous, indispensable shelves.",
+        "effects": {}
+      }
+    ]
+  },
+  "Ornewright Supply": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1934,
+    "ceo": "Rhys Throne",
+    "ceoSince": 1934,
+    "personality": {
+      "volatility": 0.5,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Ornewright Supply — From the soil to the sink",
+        "body": "Ornewright Supply started as a feed-and-cleaning outfit serving country kitchens and barns alike. That range still defines them: farm inputs for the field, sanitation chemicals for the back of house, and food-service goods for the line cook. The everyday lines feed the many; the premium range earns its keep in kitchens that demand consistency. Few suppliers span the whole chain from growing to serving, and Ornewright wears that reach with quiet confidence.",
+        "effects": {}
+      }
+    ]
+  },
+  "Palettstead Holdings": {
+    "aiOwned": true,
+    "homeSector": "logistics",
+    "founded": 1971,
+    "ceo": "Orla Marrow",
+    "ceoSince": 1971,
+    "personality": {
+      "volatility": 0.44,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Palettstead Holdings — Whatever ships, ships in ours",
+        "body": "Palettstead Holdings makes the thing nobody thanks until it fails: packaging. Corrugate, void fill, strapping, the crates that survive a forklift's worst day. They scaled inside the logistics world, where a split carton means a lost shipment, and they earned a name for boxes that arrive intact. Value grades move warehouses by the pallet; the premium tier protects cargo that cannot be replaced. Their work ends the moment yours arrives safely.",
+        "effects": {}
+      }
+    ]
+  },
+  "Palettstone & Sons": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1908,
+    "ceo": "Cole Fenn",
+    "ceoSince": 1908,
+    "personality": {
+      "volatility": 0.48,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Palettstone & Sons — Tools your grandfather would recognize",
+        "body": "Four generations on, Palettstone & Sons still grinds, forges, and hardens hand tools the slow way. The workshop sells everything from a starter set for the first apartment to a premium chest a tradesman wills to his apprentice. Hammers balanced to the ounce, wrenches that bite and hold. They never chased gimmicks; they chased grip, heft, and the satisfying weight of a tool that simply works. The family name is still on every handle.",
+        "effects": {}
+      }
+    ]
+  },
+  "Skarngrave": {
+    "aiOwned": true,
+    "homeSector": "medical",
+    "founded": 1956,
+    "ceo": "Orla Dray",
+    "ceoSince": 1956,
+    "personality": {
+      "volatility": 0.39,
+      "trait": "unflashy and dependable"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Skarngrave — Sterile is not a suggestion",
+        "body": "Skarngrave equips the rooms where mistakes are measured in lives. Their medical equipment and clinical sanitation lines climb from dependable ward stock to a luxury tier built for the operating theatre, where every surface and instrument answers to a higher tolerance. Hospitals specify the name when failure is not an option. Precision is the product, and the premium and luxury ranges have made Skarngrave a quiet benchmark wherever sterility cannot be compromised.",
+        "effects": {}
+      }
+    ]
+  },
+  "Skarngrove & Sons": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1921,
+    "ceo": "Quinn Fenn",
+    "ceoSince": 1921,
+    "personality": {
+      "volatility": 0.49,
+      "trait": "measured but opportunistic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Skarngrove & Sons — Hold the whole thing together",
+        "body": "Skarngrove & Sons threads, casts, and rolls the parts buildings depend on. Fasteners and fixings that won't back out under load; structural materials rated for the floors above your head. From mass-grade bolts that fill a contractor's bin to premium steel destined for serious spans, the family has spent a century proving that the small pieces decide whether the big ones stand. Engineers spec them because the failure they fear most never comes.",
+        "effects": {}
+      }
+    ]
+  },
+  "Skarnstone Industries": {
+    "aiOwned": true,
+    "homeSector": "medical",
+    "founded": 1968,
+    "ceo": "Yvette Aldous",
+    "ceoSince": 1968,
+    "personality": {
+      "volatility": 0.28,
+      "trait": "slow-moving, long-horizon"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Skarnstone Industries — Boxes opened, lives kept moving",
+        "body": "Skarnstone Industries runs on volume: gloves, gauze, syringes, swabs, the consumables a clinic burns through before lunch. They keep supply closets stocked with value and mid-tier goods that meet spec without bleeding the budget. No prestige posturing here, just reliable boxes that arrive on time and perform when torn open. Clinics ration many things; thanks to Skarnstone, the basics are rarely one of them.",
+        "effects": {}
+      }
+    ]
+  },
+  "Skarnvale": {
+    "aiOwned": true,
+    "homeSector": "logistics",
+    "founded": 1959,
+    "ceo": "Lena Calder",
+    "ceoSince": 1959,
+    "personality": {
+      "volatility": 0.58,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Skarnvale — Move more, drop nothing",
+        "body": "Skarnvale builds the muscle of the warehouse: pallet jacks, carts, racking, the material-handling gear that turns chaos into throughput. Forged in the logistics trade, they understand that downtime is the only real cost. The everyday range keeps small operations rolling; the premium tier carries the abuse of round-the-clock floors. Operators lean on Skarnvale because the load always moves, the wheels always turn, and nothing ends up on the concrete.",
+        "effects": {}
+      }
+    ]
+  },
+  "Steg Tooling": {
+    "aiOwned": true,
+    "homeSector": "manufacturing",
+    "founded": 1955,
+    "ceo": "Iris Vossen",
+    "ceoSince": 1955,
+    "personality": {
+      "volatility": 0.56,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Steg Tooling — Where everything else bolts together",
+        "body": "Steg Tooling is the quiet firm holding the loud world in place. They machine auto parts and turn out fasteners and fixings by the millions, each thread cut to tolerances you could lose an argument over. The standard stock fills every hardware drawer; the premium fixings clamp aircraft skins and engine blocks. Nobody throws a parade for a perfect bolt, which suits Steg fine. Small steel, immense consequence, never once permitted to fail.",
+        "effects": {}
+      }
+    ]
+  },
+  "Stegforge": {
+    "aiOwned": true,
+    "homeSector": "manufacturing",
+    "founded": 1899,
+    "ceo": "Aurelia Steg",
+    "ceoSince": 1899,
+    "personality": {
+      "volatility": 0.51,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Stegforge — Heavy industry, made to last",
+        "body": "Stegforge is an old name with iron under its fingernails. They cast farm equipment, machine tools, structural stock, and raw textiles from the same belief: industry runs on things that refuse to quit. The value lines arm working operations on a budget; the premium tier supplies plants that measure uptime in decades. Spanning field, factory, and mill, Stegforge has the unfussy authority of a maker that built half of what the trades take for granted.",
+        "effects": {}
+      }
+    ]
+  },
+  "Stegreach": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1977,
+    "ceo": "Halden Ashby",
+    "ceoSince": 1977,
+    "personality": {
+      "volatility": 0.41,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Stegreach — Power, light, and a tight grip",
+        "body": "Stegreach wires and bolts the modern jobsite together. Their catalogue runs three ways at once: fasteners and fixings, lighting that survives a worksite, and wire and cable rated for the long pull. Builders trust the everyday grades for daily framing and rough-in, while the premium tier handles installs that have to pass the strictest inspection. One supplier for the things that hold fast and the things that carry current. Fewer trucks, fewer excuses.",
+        "effects": {}
+      }
+    ]
+  },
+  "Thaldale Group": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1983,
+    "ceo": "Sable Wold",
+    "ceoSince": 1983,
+    "personality": {
+      "volatility": 0.58,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Thaldale Group — Good tools, fair price, no fuss",
+        "body": "Thaldale Group exists for the weekend fixer and the budget-minded crew. Hand tools and hardware that do the job without asking for a premium, sold by value and mid-tier grades that punch above their cost. They never promised heirlooms; they promised a screwdriver that holds its tip and a kit that gets you through the project. Honest, accessible, and everywhere a homeowner first reaches when something needs tightening.",
+        "effects": {}
+      }
+    ]
+  },
+  "Thronehaus & Co.": {
+    "aiOwned": true,
+    "homeSector": "luxury",
+    "founded": 1890,
+    "ceo": "Cora Dray",
+    "ceoSince": 1890,
+    "personality": {
+      "volatility": 0.71,
+      "trait": "restless and acquisitive"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Thronehaus & Co. — Few make them. Fewer own them",
+        "body": "Thronehaus & Co. makes one thing, and makes it as though nothing else matters: the timepiece. A single workshop, a handful of master horologists, and a waiting list measured in years. Every movement is built, tuned, and tested by hand until it keeps faith with time itself. There is no entry tier, only the summit. To wear a Thronehaus is to carry an argument that patience, in the end, outvalues everything.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Thronehaus & Co. Acquires Movement Specialist Caldwynn",
+        "body": "Cora Dray brought movement-maker Caldwynn into the Thronehaus fold, securing rare in-house complication expertise. The acquisition lets the house cut its reliance on outside workshops. Dray said she is 'collecting craftsmen, not just companies.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      }
+    ]
+  },
+  "Tillage & Co.": {
+    "aiOwned": true,
+    "homeSector": "agriculture",
+    "founded": 1897,
+    "ceo": "Kestrel Fenn",
+    "ceoSince": 1897,
+    "personality": {
+      "volatility": 0.35,
+      "trait": "unflashy and dependable"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Tillage & Co. — Feed the soil, trust the harvest",
+        "body": "Tillage & Co. has read the land since before tractors replaced horses. They formulate seed, feed, fertilizer, and soil treatments tuned to every kind of acre. The everyday blends keep smallholders solvent season after season; the premium inputs coax record yields from the most demanding fields. Generations of growers have learned to trust the name on the sack. Knowledge stitched into every bag. Patience above ground, chemistry below, harvest as the reward.",
+        "effects": {}
+      }
+    ]
+  },
+  "Vantor Lines": {
+    "aiOwned": true,
+    "homeSector": "logistics",
+    "founded": 1967,
+    "ceo": "Halden Vossen",
+    "ceoSince": 1967,
+    "personality": {
+      "volatility": 0.49,
+      "trait": "competent and rarely dramatic"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Vantor Lines — What protects also presents",
+        "body": "Vantor Lines came up packing fragile cargo for clients who couldn't afford a single dent. They make corrugated cases, molded inserts, films, and crates across every grade of need. The economy stock keeps shippers moving cheaply; the premium tier cradles instruments and heirlooms in custom foam. There's a craft to keeping things whole in transit, and Vantor treats it as one. Boxes nobody notices, until the one that saved everything inside.",
+        "effects": {}
+      }
+    ]
+  },
+  "Varnvale & Sons": {
+    "aiOwned": true,
+    "homeSector": "luxury",
+    "founded": 1901,
+    "ceo": "Bram Wold",
+    "ceoSince": 1901,
+    "personality": {
+      "volatility": 0.76,
+      "trait": "restless and acquisitive"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Varnvale & Sons — Hours kept by hands that remember",
+        "body": "Varnvale & Sons began in a single panelled workroom, dressing pocketwatches and fine accessories for clients who never asked the price. A century on, the house still finishes every timepiece by hand and stamps its leather and metal goods with a quiet maker's mark. Their work sits firmly at the premium and luxury end, sought less for ornament than for the certainty that nothing inside will fail. Discretion is the whole reputation, and they protect it.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Varnvale & Sons Snaps Up Leathercraft House Bellmont",
+        "body": "Bram Wold expanded Varnvale's fine-goods reach by acquiring Bellmont, a respected leather atelier known for its travel cases. The deal pairs Bellmont's craft with Varnvale's timepiece clientele. Wold hinted at co-branded sets 'before the season turns.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      }
+    ]
+  },
+  "Varnvale House": {
+    "aiOwned": true,
+    "homeSector": "luxury",
+    "founded": 1893,
+    "ceo": "Petra Holt",
+    "ceoSince": 1893,
+    "personality": {
+      "volatility": 0.71,
+      "trait": "prone to bold, public swings"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Varnvale House — Time, kept exquisitely",
+        "body": "Varnvale House was built on the conviction that the finest objects should outlive everyone who admires them. They craft fine goods and timepieces, each movement assembled by hand and each case finished until it catches the light just so. There is no budget line and never will be; the premium pieces are merely the threshold to the truly rare. Heirs inherit them, collectors covet them. Quiet mastery, measured in decades, signed with absolute restraint.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale House Debuts the Ember Fine-Goods Capsule",
+        "body": "Petra Holt launched the Ember capsule, a limited run pairing lacquered desk pieces with a matching pocket timepiece. Holt staged the reveal on a rooftop at dusk, leaning into the line's name. The bold presentation drew a crowd well past the fine-goods regulars.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82515,
+        "kind": "scandal",
+        "size": "standard",
+        "head": "Varnvale House Pressed Over Ember Sourcing Claims",
+        "body": "Varnvale House faced sharp questions after a guild publication challenged the 'single-origin lacquer' claims behind its Ember capsule. Petra Holt fired back publicly, calling the report 'lazy and jealous,' before agreeing to an outside audit. The spat turned a glossy launch into a messy week.",
+        "effects": {
+          "luxury": -0.13
+        }
+      }
+    ]
+  },
+  "Veldtreach & Sons": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1932,
+    "ceo": "Petra Steg",
+    "ceoSince": 1932,
+    "personality": {
+      "volatility": 0.45,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Veldtreach & Sons — We move what won't move itself",
+        "body": "Veldtreach & Sons cut their teeth on flood-clearing crews, building blades and buckets tough enough to outlast the men running them. Today their excavators, loaders and dozers span the everyday-value machines smaller outfits depend on right up to premium rigs built for the worst ground there is. Site foremen trust the name because a Veldtreach frame rarely cracks and parts arrive before the downtime hurts. Plain steel, plainer promises, kept.",
+        "effects": {}
+      }
+    ]
+  },
+  "Vencyon": {
+    "aiOwned": true,
+    "homeSector": "logistics",
+    "founded": 1968,
+    "ceo": "Iris Halloran",
+    "ceoSince": 1968,
+    "personality": {
+      "volatility": 0.57,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Vencyon — Keep the floor flowing",
+        "body": "Vencyon started by reworking forklift hydraulics nobody else could fix, then decided to build the whole machine better. Now their pallet jacks, lift trucks and conveyor gear run warehouses from tight value-priced fleets to the heavy mid-tier and premium units that shift product all night without complaint. Operators like the controls, managers like the uptime, and few notice the badge until something else breaks first. Quiet, dependable, everywhere goods need to keep moving.",
+        "effects": {}
+      }
+    ]
+  },
+  "Venline & Sons": {
+    "aiOwned": true,
+    "homeSector": "medical",
+    "founded": 1947,
+    "ceo": "Mara Garr",
+    "ceoSince": 1947,
+    "personality": {
+      "volatility": 0.31,
+      "trait": "slow-moving, long-horizon"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Venline & Sons — Sterile, sealed, on time",
+        "body": "Venline & Sons grew out of a wartime dressing supplier and never lost the urgency. They make the consumables hospitals burn through by the crate, gloves, syringes, swabs, drapes, at everyday and mid-tier pricing that keeps ward budgets intact. Nothing here is glamorous, and that is rather the point; their reputation rests on lots that pass inspection every single time and boxes that show up when the schedule says they will. Volume done right.",
+        "effects": {}
+      }
+    ]
+  },
+  "Vossenspire Holdings": {
+    "aiOwned": true,
+    "homeSector": "energy",
+    "founded": 1979,
+    "ceo": "Kestrel Calder",
+    "ceoSince": 1979,
+    "personality": {
+      "volatility": 0.58,
+      "trait": "ambitious, often turbulent"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Vossenspire Holdings — Power that simply stays on",
+        "body": "Vossenspire Holdings wires the unseen backbone, processing boards, battery banks and grid-scale storage that hum away in rooms no one visits. Their range runs from affordable everyday modules to premium compute and power systems built for buildings that cannot afford a dark second. Engineers specify the name when failure is not on the table, and rivals quietly benchmark against it. The house sells reliability measured in years without an outage, and bills accordingly.",
+        "effects": {}
+      }
+    ]
+  },
+  "Vossenspire Supply": {
+    "aiOwned": true,
+    "homeSector": "luxury",
+    "founded": 1924,
+    "ceo": "Quinn Marrow",
+    "ceoSince": 1924,
+    "personality": {
+      "volatility": 0.73,
+      "trait": "restless and acquisitive"
+    },
+    "arc": null,
+    "lastEventCycle": 82515,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Vossenspire Supply — Built for the long road back",
+        "body": "Vossenspire Supply made its name on coachwork and precision movements, marrying the discipline of watchmaking to the craft of building motorcars. Their timepieces and vehicles climb from capable mid-tier offerings to premium and luxury pieces commissioned one at a time. Owners speak of doors that shut like a vault and dials that keep faith for decades. The house never advertises loudly; the people who matter already know, and that has always been enough for it.",
+        "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vossenspire Supply Acquires Coachbuilder Renmark",
+        "body": "Quinn Marrow broadened Vossenspire beyond timepieces with the purchase of luxury coachbuilder Renmark, signaling a serious push into vehicles. The deal brings a small but prized workshop in the Highmoor. Marrow described it as 'two crafts, one obsession with finish.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      }
+    ]
+  },
+  "Vossenstead Supply": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1955,
+    "ceo": "Bram Thorne",
+    "ceoSince": 1955,
+    "personality": {
+      "volatility": 0.55,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Vossenstead Supply — Fittings that earn their keep daily",
+        "body": "Vossenstead Supply outfits the working rooms of the world, commercial kitchens and the pipes and fixtures behind every wall. They span budget-friendly everyday lines through robust mid-tier ranges up to premium fittings specified for buildings meant to last generations. Plumbers and kitchen crews rate the name for threads that seat clean and valves that hold under abuse. It is unfussy hardware made by people who clearly understand the punishment it takes, and it shows in the wear.",
+        "effects": {}
+      }
+    ]
+  },
+  "Vossenwright Holdings": {
+    "aiOwned": true,
+    "homeSector": "agriculture",
+    "founded": 1911,
+    "ceo": "Quinn Skarn",
+    "ceoSince": 1911,
+    "personality": {
+      "volatility": 0.3,
+      "trait": "quiet and conservative"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Vossenwright Holdings — Feeding the season after next",
+        "body": "Vossenwright Holdings has worked the land's needs since horse teams still pulled the plough, growing from a single implement shed into a full house of tractors, harvesters, seed and feed. Their gear runs from affordable everyday rigs to premium machines built for the largest holdings, paired with inputs farmers trust to deliver a yield. Generations of families have leaned on the name through droughts and gluts alike. Dependable iron and honest sacks, season upon season.",
+        "effects": {}
+      }
+    ]
+  },
+  "Wold & Bramm": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1927,
+    "ceo": "Mara Marrow",
+    "ceoSince": 1927,
+    "personality": {
+      "volatility": 0.4,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Wold & Bramm — Furnishing the ordinary, beautifully",
+        "body": "Wold & Bramm have outfitted homes since lamplight gave way to the switch. They make household goods and lighting built to live with for years, not seasons. The everyday range fills first apartments and family kitchens; the mid tier brings a warmer glow and a sturdier hinge to those ready to trade up. Their fixtures age into favorites rather than out of fashion. Honest objects, warm light, the comfortable furniture of an everyday well lived.",
+        "effects": {}
+      }
+    ]
+  },
+  "Woldmark": {
+    "aiOwned": true,
+    "homeSector": "technology",
+    "founded": 1983,
+    "ceo": "Cole Carrow",
+    "ceoSince": 1983,
+    "personality": {
+      "volatility": 0.64,
+      "trait": "prone to bold, public swings"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Woldmark — Compute without the drama",
+        "body": "Woldmark builds the machines that do the actual thinking, processors and systems pitched from value desktops to premium workstations that chew through heavy loads. They earned standing the hard way, shipping boards that boot the first time and run cool the thousandth. There is no theatre to the brand, just specs that hold up and support that answers. People who depend on the work, not the badge, keep coming back, and that quiet loyalty is the whole story.",
+        "effects": {}
+      }
+    ]
+  },
+  "Wrengrove Group": {
+    "aiOwned": true,
+    "homeSector": "medical",
+    "founded": 1962,
+    "ceo": "Rhys Vossen",
+    "ceoSince": 1962,
+    "personality": {
+      "volatility": 0.41,
+      "trait": "steady, with the occasional bold move"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Wrengrove Group — The basics, never the bottleneck",
+        "body": "Wrengrove Group makes the unglamorous staples of care, the gauze, tubing, gloves and sterile packs clinics order by the pallet. They hold to everyday and mid-tier pricing because keeping supply rooms stocked matters more than any flourish. Their name carries weight precisely for being boring; lots arrive consistent, certified and on schedule, year after year. When a ward runs low, nobody wants surprises, and Wrengrove has built decades of trust on giving them none at all.",
+        "effects": {}
+      }
+    ]
+  },
+  "Wrenhaus": {
+    "aiOwned": true,
+    "homeSector": "construction",
+    "founded": 1938,
+    "ceo": "Quinn Thorne",
+    "ceoSince": 1938,
+    "personality": {
+      "volatility": 0.4,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Wrenhaus — Where the water meets the wall",
+        "body": "Wrenhaus began as a foundry casting taps for terraced housing and never strayed far from the trade. Their fixtures and fittings run the full span, thrifty everyday lines, dependable mid-tier ranges, and premium pieces chosen when the finish has to match the build. Tradespeople favour the name for fittings that seal first try and survive hard water for years. It is solid, sensible hardware from a house that has watched what fails and quietly designed against it.",
+        "effects": {}
+      }
+    ]
+  },
+  "Wrenspire": {
+    "aiOwned": true,
+    "homeSector": "consumer",
+    "founded": 1949,
+    "ceo": "Theo Aldous",
+    "ceoSince": 1949,
+    "personality": {
+      "volatility": 0.4,
+      "trait": "disciplined, quietly expanding"
+    },
+    "arc": null,
+    "lastEventCycle": 0,
+    "events": [
+      {
+        "cycle": 0,
+        "kind": "profile",
+        "size": "standard",
+        "head": "Wrenspire — Stocking every room of the house",
+        "body": "Wrenspire spread outward from a humble dry-goods workshop into clothing, household wares, kitchen supply and the inputs that keep a smallholding running. The range stretches from affordable everyday staples to mid-tier goods built to outlast a few seasons of real use. Families know the name from cupboards, wardrobes and back sheds rather than any showroom. It is broad, practical, fairly priced stock from a house that grasps the difference between cheap and simply good value.",
+        "effects": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+name: Newsroom (living economy)
+
+# Every 6 hours, let the houses develop their next storyline. Claude reads each
+# due company's MEMORY and writes its next in-character beat; the updated
+# companies.json + newsroom.json are committed, which triggers the Pages deploy.
+#
+# Requires repo secret ANTHROPIC_API_KEY. Without it the generator skips
+# cleanly (no changes, no failure), so this workflow is safe to enable early.
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # 00:00, 06:00, 12:00, 18:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: newsroom
+  cancel-in-progress: false
+
+jobs:
+  develop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Develop the next beats
+        run: npm run gen:newsroom -w @trove/data
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Commit if the world moved
+        run: |
+          git config user.name "trove-newsroom[bot]"
+          git config user.email "trove-newsroom@users.noreply.github.com"
+          if git diff --quiet -- packages/data/catalog/companies.json packages/data/catalog/newsroom.json data/companies.json data/newsroom.json; then
+            echo "Quiet cycle — nothing to commit."
+            exit 0
+          fi
+          git add packages/data/catalog/companies.json packages/data/catalog/newsroom.json data/companies.json data/newsroom.json
+          git commit -m "newsroom: develop the next beats"
+          git push

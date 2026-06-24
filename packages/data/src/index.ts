@@ -12,10 +12,14 @@ import newsJson from "../catalog/news.json" with { type: "json" };
 import taxonomyJson from "../catalog/taxonomy.json" with { type: "json" };
 import statsJson from "../catalog/stats.json" with { type: "json" };
 import loreJson from "../catalog/lore.json" with { type: "json" };
+import companiesJson from "../catalog/companies.json" with { type: "json" };
+import newsroomJson from "../catalog/newsroom.json" with { type: "json" };
 
 import type {
   Brand,
   BrandLore,
+  Company,
+  Newsroom,
   Item,
   News,
   Sector,
@@ -55,6 +59,19 @@ export const lore: Record<string, BrandLore> = loreJson as Record<
   string,
   BrandLore
 >;
+
+/** AI-house memory store, keyed by exact brand name. */
+export const companies: Record<string, Company> = companiesJson as unknown as Record<
+  string,
+  Company
+>;
+
+/** The live newsroom feed (company beats currently on air). */
+export const newsroom: Newsroom = newsroomJson as unknown as Newsroom;
+
+export function getCompany(name: string): Company | undefined {
+  return companies[name];
+}
 
 // ── Lookups ──────────────────────────────────────────────────────────────
 

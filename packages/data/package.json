@@ -11,7 +11,9 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "gen:news": "node scripts/generate-news.mjs",
-    "gen:companies": "node scripts/generate-companies.mjs"
+    "gen:companies": "node scripts/generate-companies.mjs",
+    "gen:company-seed": "node scripts/generate-company-seed.mjs",
+    "gen:newsroom": "node scripts/generate-newsroom.mjs"
   },
   "devDependencies": {
     "typescript": "^5"

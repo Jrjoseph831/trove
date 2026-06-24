@@ -58,6 +58,49 @@ export interface Brand {
   sectors: SectorKey[];
 }
 
+export type BeatSize = "flash" | "standard" | "major";
+
+/** One dated event in a company's memory (append-only). */
+export interface CompanyEvent {
+  cycle: number;
+  kind: string;
+  size: BeatSize;
+  head: string;
+  body: string;
+  effects: Record<SectorKey, number>;
+}
+
+/** An AI-owned house's persistent memory: identity, personality, event log. */
+export interface Company {
+  aiOwned: boolean;
+  homeSector: SectorKey;
+  founded: number;
+  ceo: string;
+  ceoSince: number;
+  personality: { volatility: number; trait: string };
+  arc: string | null;
+  lastEventCycle: number;
+  events: CompanyEvent[];
+}
+
+/** A live newsroom beat (a company event currently on air). */
+export interface NewsroomBeat {
+  company: string;
+  sector: SectorKey;
+  kind: string;
+  size: BeatSize;
+  head: string;
+  body: string;
+  cycle: number;
+  /** On-air lifetime in 6h cycles (flash 1, standard 2, major 8). */
+  dur: number;
+}
+
+export interface Newsroom {
+  generatedAt: string;
+  beats: NewsroomBeat[];
+}
+
 /** Authored flavor copy for a brand's company page. */
 export interface BrandLore {
   /** Sharp one-liner, ≤ 8 words. */
