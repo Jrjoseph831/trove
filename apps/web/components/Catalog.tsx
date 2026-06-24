@@ -73,8 +73,8 @@ export function Catalog() {
           ?.scrollIntoView({ behavior: "smooth", block: "center" });
       }
       setGlowId(id);
-    }, 90);
-    window.setTimeout(() => setGlowId((g) => (g === id ? null : g)), 2200);
+    }, 160);
+    window.setTimeout(() => setGlowId((g) => (g === id ? null : g)), 3000);
   }, [flashItem, commodities, rowVirt]);
 
   return (
