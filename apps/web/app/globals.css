@@ -2858,3 +2858,28 @@ body {
   line-height: 1.6;
   max-width: 70ch;
 }
+
+/* shared-world account control in the rail footer */
+.accountline {
+  margin-bottom: 8px;
+}
+.acct {
+  width: 100%;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-dim);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 7px 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.acct:hover {
+  color: var(--ink);
+  border-color: var(--ink-dim);
+}
+.acct b {
+  color: var(--accent, var(--ink));
+  font-weight: 700;
+}

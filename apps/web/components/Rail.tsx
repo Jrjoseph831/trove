@@ -22,8 +22,21 @@ const TABS: { id: TabId; Icon: LucideIcon; label: string }[] = [
 ];
 
 export function Rail() {
-  const { state, mode, tab, warp, setTab, setMode, setWarp, jump, setNavOpen } =
-    useTrove();
+  const {
+    state,
+    mode,
+    tab,
+    warp,
+    setTab,
+    setMode,
+    setWarp,
+    jump,
+    setNavOpen,
+    signedIn,
+    authReady,
+    signIn,
+    signOut,
+  } = useTrove();
   const go = (t: TabId) => {
     setTab(t);
     setNavOpen(false);
@@ -117,6 +130,19 @@ export function Rail() {
               ×2k
             </button>
             <button onClick={jump}>+1</button>
+          </div>
+        )}
+        {mode === "live" && authReady && (
+          <div className="accountline">
+            {signedIn ? (
+              <button className="acct" onClick={signOut}>
+                Signed in · <b>sign out</b>
+              </button>
+            ) : (
+              <button className="acct" onClick={signIn}>
+                <b>Sign in</b> to acquire
+              </button>
+            )}
           </div>
         )}
         <div className="clockline">

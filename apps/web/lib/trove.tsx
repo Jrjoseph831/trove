@@ -11,6 +11,20 @@ import {
 } from "react";
 import { getBrandBySlug } from "@trove/data";
 import {
+  fetchPortfolio,
+  fetchWorld,
+  postTrade,
+  type ApiPortfolio,
+  type ApiWorld,
+} from "./api";
+import {
+  captureTokenFromHash,
+  isSignedIn,
+  signIn as authSignIn,
+  signOut as authSignOut,
+} from "./auth";
+import { AUTH_ENABLED } from "./config";
+import {
   advance,
   borrow,
   createWorld,
@@ -31,6 +45,36 @@ function liveWorld(): WorldState {
   w.cycle = wallCycle();
   w.cycleFrac = wallCycleFrac();
   return w;
+}
+
+/** Overlay the server's shared prices/news onto the live world in place. The
+ *  server owns these — the client never drifts them locally in live mode. */
+function overlayWorld(live: WorldState, api: ApiWorld): void {
+  const byId = new Map(live.items.map((it) => [it.id, it]));
+  for (const s of api.items) {
+    const it = byId.get(s.id);
+    if (!it) continue;
+    it.value = s.value;
+    it.prevValue = s.prevValue;
+    it.stock = s.stock;
+    it.remaining = s.remaining ?? Infinity;
+  }
+  live.cycle = api.cycle;
+  if (api.front) live.front = { ...live.front, ...api.front } as WorldState["front"];
+  if (api.archive) live.archive = api.archive;
+}
+
+/** Overlay the signed-in player's own holdings/cash onto the live world. */
+function overlayPortfolio(live: WorldState, p: ApiPortfolio): void {
+  live.cash = p.cash;
+  live.debt = p.debt;
+  const owned = new Map(p.holdings.map((h) => [h.id, h.qty]));
+  for (const it of live.items) {
+    const qty = owned.get(it.id) ?? 0;
+    if (qty > 0) it.owners["YOU"] = qty;
+    else delete it.owners["YOU"];
+  }
+  live.nwHist = [...live.nwHist.slice(-29), p.netWorth];
 }
 
 export type TabId = "trending" | "catalog" | "wire" | "vault";
@@ -68,6 +112,11 @@ interface Trove {
   doBorrow: () => void;
   doRepay: () => void;
   closeReveal: () => void;
+  /** Shared-world auth (the Acquire gate). */
+  signedIn: boolean;
+  authReady: boolean;
+  signIn: () => void;
+  signOut: () => void;
 }
 
 const TroveContext = createContext<Trove | null>(null);
@@ -95,6 +144,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [catSector, setCatSector] = useState<string | null>(null);
   const [catBrand, setCatBrand] = useState<string | null>(null);
   const [catSearch, setCatSearch] = useState("");
+  const [signedIn, setSignedIn] = useState(false);
+  const [authReady, setAuthReady] = useState(false);
 
   const modeRef = useRef(mode);
   modeRef.current = mode;
@@ -102,6 +153,44 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   warpRef.current = warp;
 
   const refresh = useCallback(() => setTick((t) => t + 1), []);
+
+  // Capture a Hosted-UI token on return, then track sign-in state.
+  useEffect(() => {
+    captureTokenFromHash();
+    setSignedIn(isSignedIn());
+    setAuthReady(true);
+  }, []);
+
+  // Live mode: pull the shared world (and the player's portfolio, if signed in)
+  // every 15s and overlay it. This is what makes the floor the SAME for everyone.
+  useEffect(() => {
+    if (mode !== "live") return;
+    let alive = true;
+    const pull = async () => {
+      try {
+        const w = await fetchWorld();
+        if (!alive) return;
+        overlayWorld(worldsRef.current!.live, w);
+        if (isSignedIn()) {
+          try {
+            const p = await fetchPortfolio();
+            if (alive) overlayPortfolio(worldsRef.current!.live, p);
+          } catch {
+            /* portfolio is best-effort */
+          }
+        }
+        refresh();
+      } catch {
+        /* keep last-known world on a failed poll */
+      }
+    };
+    pull();
+    const t = setInterval(pull, 15000);
+    return () => {
+      alive = false;
+      clearInterval(t);
+    };
+  }, [mode, signedIn, refresh]);
 
   // Deep link: /?brand=<slug> opens the Catalog filtered to that company.
   useEffect(() => {
@@ -125,7 +214,9 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       const dt = (now - last) / 1000;
       last = now;
       const w = worldsRef.current!;
-      advance(w.live, dt / SEC_PER_CYCLE);
+      // Live prices are server-owned (overlaid by the poll); only keep the
+      // clock ticking for the "front page turns in ~Xh" countdown.
+      w.live.cycleFrac = wallCycleFrac();
       const sbx =
         (dt / SEC_PER_CYCLE) * warpRef.current +
         (modeRef.current === "sandbox" ? jumpRef.current : 0);
@@ -160,33 +251,104 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     jumpRef.current += 1;
   }, []);
 
+  // Re-pull the shared world + portfolio after a trade so the UI reflects the
+  // authoritative server state immediately.
+  const syncLive = useCallback(async () => {
+    try {
+      const w = await fetchWorld();
+      overlayWorld(worldsRef.current!.live, w);
+      if (isSignedIn()) {
+        const p = await fetchPortfolio();
+        overlayPortfolio(worldsRef.current!.live, p);
+      }
+    } catch {
+      /* best-effort */
+    }
+    refresh();
+  }, [refresh]);
+
   const buy = useCallback(
     (id: number) => {
-      const r = playerBuy(worldsRef.current![modeRef.current], id);
-      if (!r) {
-        showToast("Can't acquire that");
+      // Sandbox: the local engine, instant and free.
+      if (modeRef.current === "sandbox") {
+        const r = playerBuy(worldsRef.current!.sandbox, id);
+        if (!r) {
+          showToast("Can't acquire that");
+          return;
+        }
+        if (r.it.edition !== null) setReveal({ it: r.it, copyNo: r.copyNo });
+        else showToast("Acquired");
+        refresh();
         return;
       }
-      if (r.it.edition !== null) setReveal({ it: r.it, copyNo: r.copyNo });
-      else showToast("Acquired");
-      refresh();
+      // Live: the Acquire gate — sign in, then trade against the shared world.
+      if (!AUTH_ENABLED) {
+        showToast("Trading opens soon");
+        return;
+      }
+      if (!isSignedIn()) {
+        showToast("Sign in to acquire");
+        authSignIn();
+        return;
+      }
+      void postTrade("buy", id).then(async (r) => {
+        if ("error" in r) {
+          if (r.status === 401) {
+            authSignIn();
+            return;
+          }
+          showToast(
+            r.error === "insufficient funds"
+              ? "Not enough cash"
+              : r.error === "sold out"
+                ? "Sold out"
+                : "Can't acquire that",
+          );
+          return;
+        }
+        await syncLive();
+        const it = worldsRef.current!.live.items.find((i) => i.id === id);
+        if (it && it.edition !== null) setReveal({ it, copyNo: r.copyNo });
+        else showToast("Acquired");
+      });
     },
-    [refresh, showToast],
+    [refresh, showToast, syncLive],
   );
 
   const sell = useCallback(
     (id: number) => {
-      const r = playerSell(worldsRef.current![modeRef.current], id);
-      if (!r) return;
-      showToast(`Sold · ${r.pl >= 0 ? "+" : ""}${moneyShort(r.pl)}`);
-      refresh();
+      if (modeRef.current === "sandbox") {
+        const r = playerSell(worldsRef.current!.sandbox, id);
+        if (!r) return;
+        showToast(`Sold · ${r.pl >= 0 ? "+" : ""}${moneyShort(r.pl)}`);
+        refresh();
+        return;
+      }
+      if (!isSignedIn()) {
+        authSignIn();
+        return;
+      }
+      void postTrade("sell", id).then(async (r) => {
+        if ("error" in r) {
+          if (r.status === 401) authSignIn();
+          else showToast("Can't sell that");
+          return;
+        }
+        await syncLive();
+        showToast("Sold");
+      });
     },
-    [refresh, showToast],
+    [refresh, showToast, syncLive],
   );
 
+  // Debt is a sandbox-only mechanic for now (no server credit endpoint yet).
   const doBorrow = useCallback(() => {
+    if (modeRef.current === "live") {
+      showToast("Credit opens soon");
+      return;
+    }
     showToast(
-      borrow(worldsRef.current![modeRef.current], 5000)
+      borrow(worldsRef.current!.sandbox, 5000)
         ? "Borrowed $5,000"
         : "No credit available",
     );
@@ -194,13 +356,23 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   }, [refresh, showToast]);
 
   const doRepay = useCallback(() => {
+    if (modeRef.current === "live") {
+      showToast("Credit opens soon");
+      return;
+    }
     showToast(
-      repay(worldsRef.current![modeRef.current], 5000)
+      repay(worldsRef.current!.sandbox, 5000)
         ? "Repaid $5,000"
         : "Nothing to repay",
     );
     refresh();
   }, [refresh, showToast]);
+
+  const signIn = useCallback(() => authSignIn(), []);
+  const signOut = useCallback(() => {
+    authSignOut();
+    setSignedIn(false);
+  }, []);
 
   const openSector = useCallback((s: string) => {
     setCatSector(s);
@@ -234,6 +406,10 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       doBorrow,
       doRepay,
       closeReveal: () => setReveal(null),
+      signedIn,
+      authReady,
+      signIn,
+      signOut,
     }),
     [
       mounted,
@@ -255,6 +431,10 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       sell,
       doBorrow,
       doRepay,
+      signedIn,
+      authReady,
+      signIn,
+      signOut,
     ],
   );
 
