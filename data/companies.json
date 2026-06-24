@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82515,
     "events": [
       {
         "cycle": 0,
@@ -19,6 +19,16 @@
         "head": "Aldouscraft Mfg. — Current carried, no compromise",
         "body": "Spun copper has been the family trade since the first drawing benches went in. Aldouscraft Mfg. pulls wire and cable for everyone from weekend rewires to the kind of jobs inspectors actually sign off on. The cheap spools keep the lights on; the premium harness lines run hot, run long, and don't soften under load. Electricians keep them on the truck because the gauge is honest and the insulation does exactly what the print says.",
         "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aldouscraft Lands Grid-Modernization Supply Contract",
+        "body": "Aldouscraft Mfg. has been named primary cable supplier for the Verrin Valley transmission upgrade, a five-year agreement valued at 340 million credits. CEO Soren Ashby called the award 'a natural fit for our high-tension lines,' noting the contract will keep the Eastfield plant at full capacity through 1934.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -33,7 +43,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82515,
     "events": [
       {
         "cycle": 0,
@@ -42,6 +52,16 @@
         "head": "Aldouscyon — We sell the light, not the fixture",
         "body": "Aldouscyon obsesses over one thing: what a room feels like when you flip the switch. Their lighting spans bargain bulbs that simply work to premium luminaires engineered for color you'd swear was daylight. The value line ships by the pallet and never apologizes for it. Up top, the optics are tuned by hand and the housings are built to outlast the building. People who care about how a space reads tend to find their way here eventually.",
         "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Aldouscyon Rolls Out Long-Life Filament Range",
+        "body": "Aldouscyon introduced its Meridian series of warm-output bulbs, rated for 12,000 hours of service. Petra Mercer said early retail orders covered three regional chains, with broader distribution expected by the spring buying season.",
+        "effects": {
+          "consumer": 0.06
+        }
       }
     ]
   },
@@ -56,7 +76,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82515,
     "events": [
       {
         "cycle": 0,
@@ -65,6 +85,16 @@
         "head": "Aldousmont & Sons — Sterile, sealed, ready",
         "body": "Aldousmont & Sons makes the unglamorous things a ward burns through by the thousand: dressings, gloves, swabs, tubing, the consumables nobody photographs but everybody needs. Two tiers, both dependable. The mass line stocks supply closets without straining a budget; the mid line meets the tighter specs that surgical teams ask for by name. They've never chased prestige. Reliability at volume is the whole reputation, and after this long, it's a sturdy one to stand on.",
         "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aldousmont Posts Stronger-Than-Expected Quarter on Sterile Goods Demand",
+        "body": "Aldousmont & Sons reported quarterly revenue of 88 million credits, up 9 percent year-over-year, led by surging hospital orders for single-use surgical kits. Dunmore Calder credited tighter sterilization standards across the care sector for the durable demand.",
+        "effects": {
+          "medical": 0.13
+        }
       }
     ]
   },
@@ -145,7 +175,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82515,
     "events": [
       {
         "cycle": 0,
@@ -154,6 +184,16 @@
         "head": "Ardent Health — Care, engineered without compromise",
         "body": "Ardent Health builds the equipment that buys clinicians time when seconds count: monitors, imagers, surgical systems, and ventilators. The accessible line stocks community clinics that can't afford to be without; the luxury tier outfits the operating theaters where the hardest cases land. Every unit is built as if a life depends on it, because one always does. Hospitals stake their reputations on the name. Quiet machines doing loud, irreplaceable work, flawlessly, every shift.",
         "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Ardent Unveils Next-Generation Diagnostic Imaging Platform",
+        "body": "After seven years in development, Ardent Health has cleared certification on its Lumen scanning system, which cuts imaging time by roughly a third. Orla Halloran, characteristically patient, said deployment would begin with two teaching hospitals before any wider commitment.",
+        "effects": {
+          "medical": 0.13
+        }
       }
     ]
   },
@@ -232,7 +272,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82515,
     "events": [
       {
         "cycle": 0,
@@ -241,6 +281,16 @@
         "head": "Blackmoor — Built for the long furrow",
         "body": "Blackmoor has been bending steel for the land since horses still did half the work. Their farm equipment runs from compact implements a smallholder can afford to premium machines that swallow acreage and shrug off seasons of abuse. The value gear is forgiving and easy to fix in a muddy yard. The top line is heavy, smart, and stubborn in the best way. Growers don't buy Blackmoor to impress anyone. They buy it because it comes back next harvest.",
         "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Blackmoor Adds Assembly Line at Holloway Works",
+        "body": "Blackmoor commissioned a second assembly bay at its Holloway facility to handle rising orders for its heavy tillage equipment. Soren Dray framed the move as a measured response to a multi-year backlog, declining to forecast beyond current commitments.",
+        "effects": {
+          "agriculture": 0.06
+        }
       }
     ]
   },
@@ -407,7 +457,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82515,
     "events": [
       {
         "cycle": 0,
@@ -416,6 +466,16 @@
         "head": "Brunforge Holdings — From the drawer to the table",
         "body": "Brunforge Holdings is the rare house that furnishes a whole life, devices, household goods, fine goods, and the food-service kit that keeps kitchens running. The everyday range fills cupboards without fuss. Climb to the luxury end and you find heirloom finish: tools weighted just so, surfaces that age beautifully, pieces meant to be handed down. A century of breadth has made the name a byword for getting the small things right, across nearly everything it touches.",
         "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Brunforge Acquires Tableware Maker Vellan & Co.",
+        "body": "Brunforge Holdings agreed to purchase fine-goods producer Vellan & Co. for 215 million credits, extending its reach from kitchen drawers to the dinner table. Kestrel Bramm said the deal aligns with a deliberate strategy of bolt-on additions, with Vellan's factories to remain in operation.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -473,7 +533,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82515,
     "events": [
       {
         "cycle": 0,
@@ -482,6 +542,16 @@
         "head": "Brunridge Works — Everything a household runs on",
         "body": "Brunridge Works is sprawling by design, turning out apparel, cleaning and jansan supplies, devices, fine goods, and packaging under one roof. The value lines stock shelves and supply closets across the board. The luxury tiers are where the craft shows: garments cut with intent, finishes that read expensive because they are. Few houses span this much and stay coherent, yet Brunridge manages it, building a reputation as the dependable spine behind countless ordinary days.",
         "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Brunridge Consolidates Five Divisions Into Three Pillars",
+        "body": "Brunridge Works announced a reorganization grouping its apparel, packaging, and household lines under three operating pillars to streamline distribution. Petra Wold said the change would eliminate duplicate logistics centers and is expected to save 40 million credits annually, with no plant closures planned.",
+        "effects": {
+          "consumer": -0.13
+        }
       }
     ]
   },
@@ -605,7 +675,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82515,
     "events": [
       {
         "cycle": 0,
@@ -614,6 +684,16 @@
         "head": "Calderworks Holdings — Cities lean on what we pour",
         "body": "Calderworks Holdings makes the structural materials that hold a skyline up and a bridge level: beams, panels, and load-bearing stock graded for the work. The value tier frames warehouses and homes across the region. The premium specifications carry the spans where failure is not an option. Inspectors recognize the stamp and relax a little. Three generations of builders have staked their names on it, and the foundations have stayed put.",
         "effects": {}
+      },
+      {
+        "cycle": 82515,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderworks Tops Forecasts as Urban Building Demand Holds",
+        "body": "Calderworks Holdings reported quarterly profit of 122 million credits, beating expectations on strong structural-material shipments to three metro construction projects. Kestrel Halloran said the firm is weighing capacity additions but will move only as committed orders justify the outlay.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
