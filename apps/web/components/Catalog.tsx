@@ -4,7 +4,7 @@ import { useMemo, useRef } from "react";
 import Link from "next/link";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { brands as allBrands, brandSlug, sectorKeys, sectors } from "@trove/data";
-import { held } from "@trove/engine";
+import { canBuy, held } from "@trove/engine";
 import { money, pctChange, signedPct } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { primarySectorLabel, stockState } from "@/lib/ui";
@@ -158,10 +158,10 @@ export function Catalog() {
                       <span style={{ textAlign: "right" }}>
                         <button
                           className="tbtn"
-                          disabled={it.value > state.cash}
+                          disabled={!canBuy(it) || it.value > state.cash}
                           onClick={() => buy(it.id)}
                         >
-                          Acquire
+                          {canBuy(it) ? "Acquire" : "Sold out"}
                         </button>
                       </span>
                     </div>
@@ -202,10 +202,10 @@ export function Catalog() {
                   </div>
                   <button
                     className="acq"
-                    disabled={it.value > state.cash}
+                    disabled={!canBuy(it) || it.value > state.cash}
                     onClick={() => buy(it.id)}
                   >
-                    Acquire
+                    {canBuy(it) ? "Acquire" : "Claimed"}
                   </button>
                 </div>
               );

@@ -70,11 +70,16 @@ export async function postTrade(
 ): Promise<TradeResult | { error: string; status: number }> {
   const token = getIdToken();
   if (!token) return { error: "unauthorized", status: 401 };
-  const res = await fetch(`${API_BASE}/trade`, {
-    method: "POST",
-    headers: { "content-type": "application/json", authorization: token },
-    body: JSON.stringify({ action, id }),
-  });
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}/trade`, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: token },
+      body: JSON.stringify({ action, id }),
+    });
+  } catch {
+    return { error: "network error", status: 0 };
+  }
   if (!res.ok) {
     let msg = `trade failed (${res.status})`;
     try {

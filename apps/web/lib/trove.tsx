@@ -301,9 +301,13 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
             r.error === "insufficient funds"
               ? "Not enough cash"
               : r.error === "sold out"
-                ? "Sold out"
-                : "Can't acquire that",
+                ? "Just sold out"
+                : r.error === "network error"
+                  ? "Connection issue — try again"
+                  : "Couldn't acquire that",
           );
+          // refresh so a sold-out item immediately greys out for everyone
+          await syncLive();
           return;
         }
         await syncLive();
@@ -331,7 +335,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       void postTrade("sell", id).then(async (r) => {
         if ("error" in r) {
           if (r.status === 401) authSignIn();
-          else showToast("Can't sell that");
+          else showToast(r.error === "network error" ? "Connection issue — try again" : "Couldn't sell that");
           return;
         }
         await syncLive();

@@ -114,8 +114,13 @@ export class TroveStack extends Stack {
       apiName: "trove-public",
       corsPreflight: {
         allowOrigins: ALLOWED_ORIGINS,
-        allowMethods: [CorsHttpMethod.GET, CorsHttpMethod.OPTIONS],
-        allowHeaders: ["content-type"],
+        // POST is needed for /trade; authorization carries the Cognito token.
+        allowMethods: [
+          CorsHttpMethod.GET,
+          CorsHttpMethod.POST,
+          CorsHttpMethod.OPTIONS,
+        ],
+        allowHeaders: ["content-type", "authorization"],
         maxAge: Duration.hours(1),
       },
     });
