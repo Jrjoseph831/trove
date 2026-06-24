@@ -67,6 +67,38 @@
     ]
   },
   {
+    "name": "Aperture Compute",
+    "homeSector": "technology",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Compute"
+    ],
+    "sectors": [
+      "energy",
+      "technology"
+    ]
+  },
+  {
+    "name": "Ardent Health",
+    "homeSector": "medical",
+    "tiers": [
+      "luxury",
+      "mass",
+      "mid"
+    ],
+    "categories": [
+      "Medical Equipment"
+    ],
+    "sectors": [
+      "medical",
+      "technology"
+    ]
+  },
+  {
     "name": "Ashbystead Holdings",
     "homeSector": "medical",
     "tiers": [
@@ -132,6 +164,24 @@
     ]
   },
   {
+    "name": "Boreas Power",
+    "homeSector": "energy",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Compute",
+      "Power & Storage"
+    ],
+    "sectors": [
+      "automotive",
+      "energy",
+      "technology"
+    ]
+  },
+  {
     "name": "Bruncraft Industries",
     "homeSector": "automotive",
     "tiers": [
@@ -183,6 +233,29 @@
       "consumer",
       "hospitality",
       "luxury",
+      "technology"
+    ]
+  },
+  {
+    "name": "Brunmark Motors",
+    "homeSector": "automotive",
+    "tiers": [
+      "luxury",
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Auto Parts",
+      "Power & Storage",
+      "Vehicles"
+    ],
+    "sectors": [
+      "automotive",
+      "energy",
+      "logistics",
+      "luxury",
+      "manufacturing",
       "technology"
     ]
   },
@@ -306,6 +379,21 @@
     ]
   },
   {
+    "name": "Carrowforge",
+    "homeSector": "manufacturing",
+    "tiers": [
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Industrial Machines"
+    ],
+    "sectors": [
+      "manufacturing",
+      "technology"
+    ]
+  },
+  {
     "name": "Carrowwell",
     "homeSector": "manufacturing",
     "tiers": [
@@ -326,6 +414,21 @@
       "logistics",
       "manufacturing",
       "technology"
+    ]
+  },
+  {
+    "name": "Castle Devices",
+    "homeSector": "medical",
+    "tiers": [
+      "mass",
+      "mid"
+    ],
+    "categories": [
+      "Medical Consumables"
+    ],
+    "sectors": [
+      "hospitality",
+      "medical"
     ]
   },
   {
@@ -434,6 +537,22 @@
       "agriculture",
       "construction",
       "energy"
+    ]
+  },
+  {
+    "name": "Drayton Freight",
+    "homeSector": "logistics",
+    "tiers": [
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Material Handling"
+    ],
+    "sectors": [
+      "construction",
+      "logistics",
+      "manufacturing"
     ]
   },
   {
@@ -639,6 +758,58 @@
     ]
   },
   {
+    "name": "Garrweave Mills",
+    "homeSector": "textiles",
+    "tiers": [
+      "mass",
+      "mid"
+    ],
+    "categories": [
+      "Raw Textiles"
+    ],
+    "sectors": [
+      "consumer",
+      "manufacturing",
+      "textiles"
+    ]
+  },
+  {
+    "name": "Greenmarsh Agro",
+    "homeSector": "agriculture",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Farm Equipment",
+      "Farm Inputs"
+    ],
+    "sectors": [
+      "agriculture",
+      "consumer",
+      "manufacturing"
+    ]
+  },
+  {
+    "name": "Greywater Grid",
+    "homeSector": "energy",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Compute",
+      "Power & Storage"
+    ],
+    "sectors": [
+      "automotive",
+      "energy",
+      "technology"
+    ]
+  },
+  {
     "name": "Gromford Works",
     "homeSector": "luxury",
     "tiers": [
@@ -668,6 +839,23 @@
     ]
   },
   {
+    "name": "Halcrow & Vance",
+    "homeSector": "construction",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Earthmoving"
+    ],
+    "sectors": [
+      "agriculture",
+      "construction",
+      "energy"
+    ]
+  },
+  {
     "name": "Halcyon Industries",
     "homeSector": "logistics",
     "tiers": [
@@ -682,6 +870,22 @@
       "consumer",
       "hospitality",
       "logistics"
+    ]
+  },
+  {
+    "name": "Halhold Systems",
+    "homeSector": "technology",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Compute"
+    ],
+    "sectors": [
+      "energy",
+      "technology"
     ]
   },
   {
@@ -704,6 +908,23 @@
       "energy",
       "medical",
       "technology"
+    ]
+  },
+  {
+    "name": "Hearthstone Group",
+    "homeSector": "hospitality",
+    "tiers": [
+      "mass",
+      "mid"
+    ],
+    "categories": [
+      "Cleaning & Jansan",
+      "Household Goods"
+    ],
+    "sectors": [
+      "consumer",
+      "hospitality",
+      "medical"
     ]
   },
   {
@@ -742,6 +963,22 @@
       "construction",
       "energy",
       "technology"
+    ]
+  },
+  {
+    "name": "Holtgate Cloth",
+    "homeSector": "textiles",
+    "tiers": [
+      "mass",
+      "mid"
+    ],
+    "categories": [
+      "Raw Textiles"
+    ],
+    "sectors": [
+      "consumer",
+      "manufacturing",
+      "textiles"
     ]
   },
   {
@@ -806,6 +1043,27 @@
     "sectors": [
       "consumer",
       "luxury"
+    ]
+  },
+  {
+    "name": "Kessel Drive",
+    "homeSector": "automotive",
+    "tiers": [
+      "luxury",
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Power & Storage",
+      "Vehicles"
+    ],
+    "sectors": [
+      "automotive",
+      "energy",
+      "logistics",
+      "luxury",
+      "technology"
     ]
   },
   {
@@ -913,6 +1171,23 @@
     ]
   },
   {
+    "name": "Maison & Vale",
+    "homeSector": "hospitality",
+    "tiers": [
+      "mass",
+      "mid"
+    ],
+    "categories": [
+      "Cleaning & Jansan",
+      "Household Goods"
+    ],
+    "sectors": [
+      "consumer",
+      "hospitality",
+      "medical"
+    ]
+  },
+  {
     "name": "Marlgear Supply",
     "homeSector": "technology",
     "tiers": [
@@ -961,6 +1236,43 @@
       "Household Goods"
     ],
     "sectors": [
+      "consumer",
+      "hospitality",
+      "medical"
+    ]
+  },
+  {
+    "name": "Marrowstone Build",
+    "homeSector": "construction",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Earthmoving"
+    ],
+    "sectors": [
+      "agriculture",
+      "construction",
+      "energy"
+    ]
+  },
+  {
+    "name": "Ornewright Goods",
+    "homeSector": "consumer",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Cleaning & Jansan",
+      "Farm Inputs",
+      "Food Service"
+    ],
+    "sectors": [
+      "agriculture",
       "consumer",
       "hospitality",
       "medical"
@@ -1092,6 +1404,24 @@
     ]
   },
   {
+    "name": "Steg Tooling",
+    "homeSector": "manufacturing",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Auto Parts",
+      "Fasteners & Fixings"
+    ],
+    "sectors": [
+      "automotive",
+      "construction",
+      "manufacturing"
+    ]
+  },
+  {
     "name": "Stegforge",
     "homeSector": "manufacturing",
     "tiers": [
@@ -1155,7 +1485,69 @@
     ]
   },
   {
+    "name": "Thronehaus & Co.",
+    "homeSector": "luxury",
+    "tiers": [
+      "luxury"
+    ],
+    "categories": [
+      "Timepieces"
+    ],
+    "sectors": [
+      "luxury"
+    ]
+  },
+  {
+    "name": "Tillage & Co.",
+    "homeSector": "agriculture",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Farm Inputs"
+    ],
+    "sectors": [
+      "agriculture",
+      "consumer"
+    ]
+  },
+  {
+    "name": "Vantor Lines",
+    "homeSector": "logistics",
+    "tiers": [
+      "mass",
+      "mid",
+      "premium"
+    ],
+    "categories": [
+      "Packaging"
+    ],
+    "sectors": [
+      "consumer",
+      "hospitality",
+      "logistics"
+    ]
+  },
+  {
     "name": "Varnvale & Sons",
+    "homeSector": "luxury",
+    "tiers": [
+      "luxury",
+      "premium"
+    ],
+    "categories": [
+      "Fine Goods",
+      "Timepieces"
+    ],
+    "sectors": [
+      "consumer",
+      "luxury"
+    ]
+  },
+  {
+    "name": "Varnvale House",
     "homeSector": "luxury",
     "tiers": [
       "luxury",
@@ -1289,6 +1681,24 @@
       "agriculture",
       "consumer",
       "manufacturing"
+    ]
+  },
+  {
+    "name": "Wold & Bramm",
+    "homeSector": "consumer",
+    "tiers": [
+      "mass",
+      "mid"
+    ],
+    "categories": [
+      "Household Goods",
+      "Lighting"
+    ],
+    "sectors": [
+      "construction",
+      "consumer",
+      "energy",
+      "hospitality"
     ]
   },
   {

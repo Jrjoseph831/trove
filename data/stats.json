@@ -1,37 +1,37 @@
 {
-  "total_items": 1456,
-  "total_brands": 76,
+  "total_items": 1753,
+  "total_brands": 100,
   "total_sectors": 12,
   "total_categories": 26,
   "total_subcategories": 67,
-  "editions": 34,
+  "editions": 44,
   "items_by_archetype": {
-    "bulk_consumable": 510,
-    "commodity": 270,
-    "micro_consumable": 144,
-    "component": 232,
-    "light_equipment": 96,
-    "heavy_equipment": 104,
-    "vehicle": 32,
-    "collectible": 36,
-    "luxury_good": 32
+    "bulk_consumable": 603,
+    "commodity": 315,
+    "micro_consumable": 154,
+    "component": 282,
+    "light_equipment": 124,
+    "heavy_equipment": 146,
+    "vehicle": 37,
+    "collectible": 48,
+    "luxury_good": 44
   },
   "item_appearances_by_sector": {
-    "construction": 608,
-    "manufacturing": 564,
-    "automotive": 388,
-    "energy": 414,
-    "consumer": 636,
-    "hospitality": 400,
-    "technology": 298,
-    "logistics": 168,
-    "luxury": 104,
-    "agriculture": 116,
-    "medical": 116,
-    "textiles": 96
+    "construction": 662,
+    "manufacturing": 629,
+    "automotive": 439,
+    "energy": 512,
+    "consumer": 753,
+    "hospitality": 471,
+    "technology": 388,
+    "logistics": 200,
+    "luxury": 131,
+    "agriculture": 176,
+    "medical": 159,
+    "textiles": 119
   },
   "price_range": [
     0.01,
-    713831.76
+    778490.41
   ]
 }

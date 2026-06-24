@@ -10,7 +10,8 @@
   "types": "./src/index.ts",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "gen:news": "node scripts/generate-news.mjs"
+    "gen:news": "node scripts/generate-news.mjs",
+    "gen:companies": "node scripts/generate-companies.mjs"
   },
   "devDependencies": {
     "typescript": "^5"
