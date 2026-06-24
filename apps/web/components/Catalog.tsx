@@ -68,10 +68,9 @@ export function Catalog() {
             </button>
           ))}
         </div>
-        <div style={{ marginLeft: "auto", display: "flex", gap: 10 }}>
+        <div className="cat-controls">
           <select
-            className="search"
-            style={{ width: 160, marginLeft: 0 }}
+            className="search brand-select"
             value={cat.brand ?? ""}
             onChange={(e) => setCatBrand(e.target.value || null)}
             aria-label="Filter by brand"
@@ -84,8 +83,7 @@ export function Catalog() {
             ))}
           </select>
           <input
-            className="search"
-            style={{ marginLeft: 0 }}
+            className="search cat-search"
             placeholder="Search brand or item…"
             value={cat.search}
             onChange={(e) => setCatSearch(e.target.value)}
@@ -107,10 +105,7 @@ export function Catalog() {
           {commodities.length === 0 ? (
             <div className="empty">Nothing matches.</div>
           ) : (
-            <div
-              ref={parentRef}
-              style={{ height: "calc(100vh - 210px)", overflowY: "auto" }}
-            >
+            <div ref={parentRef} className="catlist">
               <div
                 style={{
                   height: rowVirt.getTotalSize(),

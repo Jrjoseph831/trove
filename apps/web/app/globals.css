@@ -1003,6 +1003,18 @@ body {
   outline: none;
   border-color: var(--ink);
 }
+.cat-controls {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+.brand-select {
+  width: 160px;
+}
+.catlist {
+  height: calc(100vh - 210px);
+  overflow-y: auto;
+}
 .cat-grid {
   display: grid;
   grid-template-columns: 1fr 332px;
@@ -2086,5 +2098,216 @@ body {
   }
   .dossier-head h1 {
     font-size: 34px;
+  }
+}
+
+/* tap-to-close scrim behind the mobile nav drawer */
+.nav-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 39;
+  border: 0;
+  background: rgba(20, 16, 12, 0.45);
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 780px) {
+  .nav-scrim {
+    display: block;
+  }
+}
+
+/* ====================== PHONE (≤640px) ====================== */
+@media (max-width: 640px) {
+  .view {
+    padding: 18px 14px 44px;
+    overflow-x: hidden;
+  }
+
+  /* rail drawer: don't span the whole screen */
+  .rail {
+    width: min(86vw, 300px);
+  }
+
+  /* masthead / panels */
+  .masthead {
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+  .lead {
+    padding: 18px 17px 20px;
+  }
+  .lead h1 {
+    font-size: 23px;
+    margin: 8px 0 10px;
+  }
+  .lead p {
+    font-size: 13px;
+  }
+  .lead .paper .name {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+  .heat-panel {
+    padding: 16px 16px;
+  }
+  .sec .nm {
+    width: 78px;
+    font-size: 11.5px;
+  }
+
+  /* On the Move — stack the spotlight */
+  .move {
+    gap: 16px;
+  }
+  .spotlight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+    min-height: 0;
+  }
+  .spot-media {
+    width: 80px;
+    height: 80px;
+  }
+  .spot-media svg {
+    width: 40px;
+    height: 40px;
+  }
+  .spot-body .nm {
+    font-size: 21px;
+  }
+  .spot-price {
+    text-align: left;
+    align-self: flex-start;
+  }
+  .spot-price .pr {
+    font-size: 27px;
+  }
+  .spot-dots {
+    position: static;
+    transform: none;
+    margin-top: 4px;
+  }
+
+  /* tiles + two-up */
+  .railrow {
+    margin-bottom: 26px;
+  }
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .tile {
+    padding: 14px;
+  }
+  .twoup {
+    gap: 18px;
+  }
+  .glasspanel {
+    padding: 16px 16px;
+  }
+
+  /* Catalog header → full-width controls */
+  .cat-head {
+    gap: 10px;
+  }
+  .cat-head h2 {
+    font-size: 20px;
+  }
+  .cat-controls {
+    margin-left: 0;
+    width: 100%;
+  }
+  .cat-controls .search {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+  }
+  .brand-select {
+    width: auto;
+    flex: 1;
+  }
+  .catlist {
+    height: calc(100dvh - 252px);
+  }
+
+  /* Catalog table → Item · Price · Δ · Acquire (hide Sector + Supply) */
+  .thead,
+  .trow {
+    grid-template-columns: 1fr 74px 46px 66px;
+    gap: 8px;
+  }
+  .thead > :nth-child(2),
+  .thead > :nth-child(3),
+  .trow > :nth-child(2),
+  .trow > :nth-child(3) {
+    display: none;
+  }
+  .trow .nm {
+    font-size: 12.5px;
+  }
+  .tbtn {
+    padding: 6px 8px;
+    font-size: 10.5px;
+  }
+  .ed-col {
+    margin-top: 8px;
+  }
+
+  /* The Wire — TNN broadcast */
+  .tnn-logo em {
+    display: none;
+  }
+  .tnn-screen {
+    min-height: 320px;
+  }
+  .tnn-head {
+    font-size: 22px;
+  }
+  .tnn-ghost {
+    font-size: 84px;
+    bottom: 150px;
+  }
+  .tnn-lower {
+    padding: 18px 18px 22px;
+  }
+  .upnext-kick {
+    width: 52px;
+  }
+  .wire-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Brand dossier */
+  .dossier-wrap {
+    padding: 0 16px 64px;
+  }
+  .dossier-head h1 {
+    font-size: 28px;
+  }
+  .dossier-tag {
+    font-size: 16px;
+  }
+  .dossier-grid {
+    gap: 28px;
+    margin-top: 30px;
+  }
+  .dossier-house p {
+    font-size: 14px;
+  }
+
+  /* reveal modal */
+  .reveal {
+    padding: 32px 24px;
+    max-width: calc(100vw - 28px);
+  }
+  .reveal .ic svg {
+    width: 44px;
+    height: 44px;
+  }
+  .reveal .ednum {
+    font-size: 32px;
   }
 }

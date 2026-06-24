@@ -21,7 +21,12 @@ const TABS: { id: TabId; Icon: LucideIcon; label: string }[] = [
 ];
 
 export function Rail() {
-  const { state, mode, tab, warp, setTab, setMode, setWarp, jump } = useTrove();
+  const { state, mode, tab, warp, setTab, setMode, setWarp, jump, setNavOpen } =
+    useTrove();
+  const go = (t: TabId) => {
+    setTab(t);
+    setNavOpen(false);
+  };
 
   const nw = netWorth(state, "YOU");
   const prev = state.nwHist[state.nwHist.length - 1] ?? nw;
@@ -60,7 +65,7 @@ export function Rail() {
           <button
             key={t.id}
             className={tab === t.id ? "on" : ""}
-            onClick={() => setTab(t.id)}
+            onClick={() => go(t.id)}
           >
             <span className="ic">
               <t.Icon size={15} strokeWidth={1.75} />
@@ -73,7 +78,7 @@ export function Rail() {
         </div>
         <button
           className={tab === "vault" ? "on" : ""}
-          onClick={() => setTab("vault")}
+          onClick={() => go("vault")}
         >
           <span className="ic">
             <VaultIcon size={15} strokeWidth={1.75} />

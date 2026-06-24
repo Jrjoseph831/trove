@@ -18,6 +18,13 @@ export function Terminal() {
 
   return (
     <div className={`app ${navOpen ? "navopen" : ""}`}>
+      {navOpen && (
+        <button
+          className="nav-scrim"
+          aria-label="Close navigation"
+          onClick={() => setNavOpen(false)}
+        />
+      )}
       <Rail />
       <div className={`main ${mode === "sandbox" ? "sandbox" : ""}`}>
         <div className="topbar">
