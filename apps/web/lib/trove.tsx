@@ -107,6 +107,9 @@ interface Trove {
   setCatSearch: (s: string) => void;
   /** jump straight to the catalog filtered to a sector (deep-link). */
   openSector: (s: string) => void;
+  /** item id to scroll-to + glow in the catalog (from "Find it on the floor"). */
+  flashItem: number | null;
+  clearFlashItem: () => void;
   buy: (id: number) => void;
   sell: (id: number) => void;
   doBorrow: () => void;
@@ -146,6 +149,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [catSearch, setCatSearch] = useState("");
   const [signedIn, setSignedIn] = useState(false);
   const [authReady, setAuthReady] = useState(false);
+  const [flashItem, setFlashItem] = useState<number | null>(null);
 
   const modeRef = useRef(mode);
   modeRef.current = mode;
@@ -194,13 +198,19 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
 
   // Deep link: /?brand=<slug> opens the Catalog filtered to that company.
   useEffect(() => {
-    const slug = new URLSearchParams(window.location.search).get("brand");
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("brand");
     if (slug) {
       const brand = getBrandBySlug(slug);
       if (brand) {
         setCatBrand(brand.name);
         setTab("catalog");
       }
+    }
+    const itemParam = params.get("item");
+    if (itemParam) {
+      setFlashItem(Number(itemParam));
+      setTab("catalog");
     }
   }, []);
 
@@ -377,6 +387,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     setSignedIn(false);
   }, []);
   const closeReveal = useCallback(() => setReveal(null), []);
+  const clearFlashItem = useCallback(() => setFlashItem(null), []);
 
   const openSector = useCallback((s: string) => {
     setCatSector(s);
@@ -405,6 +416,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setCatBrand,
       setCatSearch,
       openSector,
+      flashItem,
+      clearFlashItem,
       buy,
       sell,
       doBorrow,
@@ -431,6 +444,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setMode,
       jump,
       openSector,
+      flashItem,
+      clearFlashItem,
       buy,
       sell,
       doBorrow,

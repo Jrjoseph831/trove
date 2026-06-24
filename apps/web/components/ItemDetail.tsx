@@ -61,7 +61,7 @@ export function ItemDetail({ item }: { item: Item }) {
           {body && <p className="item-body">{body}</p>}
           <p className="item-supply">{supply}</p>
 
-          <Link href={`/?brand=${slug}`} className="item-cta">
+          <Link href={`/?brand=${slug}&item=${item.id}`} className="item-cta">
             Find it on the floor →
           </Link>
         </div>
