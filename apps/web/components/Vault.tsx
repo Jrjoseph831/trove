@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { brandSlug } from "@trove/data";
 import { creditLimit, held } from "@trove/engine";
 import { money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
@@ -34,8 +36,15 @@ export function Vault() {
                 <div className="crow" key={it.id}>
                   <ItemIcon it={it} size={18} className="ic" />
                   <span className="nm">
-                    <span className="bd">{it.brand}</span>
-                    {it.name}
+                    <Link
+                      href={`/brand/${brandSlug(it.brand)}`}
+                      className="bd bd-link"
+                    >
+                      {it.brand}
+                    </Link>
+                    <Link href={`/item/${it.id}`} className="it-link">
+                      {it.name}
+                    </Link>
                     {q > 1 ? ` ×${q}` : ""}
                     {edNo}
                   </span>

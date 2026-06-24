@@ -2883,3 +2883,312 @@ body {
   color: var(--accent, var(--ink));
   font-weight: 700;
 }
+
+/* non-blocking "Acquired" flash — floats over the floor, never covers it */
+.flash-wrap {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  z-index: 95;
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* the floor behind stays clickable */
+}
+.flash {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: min(90vw, 420px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--up);
+  border-radius: 12px;
+  padding: 11px 18px 11px 14px;
+  box-shadow: 0 18px 50px -20px rgba(27, 23, 20, 0.45);
+  animation: flashin 0.26s ease;
+}
+.flash.ed {
+  border-left-color: var(--edition);
+}
+.flash-ic {
+  display: flex;
+  color: var(--up);
+}
+.flash.ed .flash-ic {
+  color: var(--edition);
+}
+.flash-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.flash-kick {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--up);
+}
+.flash.ed .flash-kick {
+  color: var(--edition);
+}
+.flash-nm {
+  font-family: var(--font-display);
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@keyframes flashin {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Item detail page (Amazon-style product page) ───────────────────────── */
+.itempage {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+.itempage-inner {
+  font-family: var(--font-body);
+}
+.item-bread {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--ink-dim);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.item-bread a {
+  color: var(--ink-dim);
+  text-decoration: none;
+}
+.item-bread a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.item-bread .cur {
+  color: var(--ink);
+}
+.item-hero {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.item-art {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface, color-mix(in srgb, var(--ink) 4%, var(--paper)));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: var(--ink);
+}
+.item-edbadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--edition);
+  border: 1px solid color-mix(in srgb, var(--edition) 45%, var(--line));
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+.item-supplier {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+}
+.item-supplier:hover {
+  text-decoration: underline;
+}
+.item-name {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1.1;
+  margin: 8px 0 12px;
+}
+.item-tags {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12.5px;
+  color: var(--ink-dim);
+  margin-bottom: 20px;
+}
+.item-tags i {
+  opacity: 0.4;
+}
+.item-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+.item-price .lp {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-dim);
+}
+.item-price .amt {
+  font-family: var(--font-display);
+  font-size: 28px;
+}
+.item-price .note {
+  font-size: 11px;
+  color: var(--ink-dim);
+  font-style: italic;
+}
+.item-lede {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.item-body,
+.item-supply {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink-dim);
+  margin-bottom: 12px;
+}
+.item-cta {
+  display: inline-block;
+  margin-top: 8px;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.item-cta:hover {
+  opacity: 0.88;
+}
+.item-specs {
+  margin-top: 48px;
+}
+.item-specs dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+  margin-top: 8px;
+}
+.item-specs dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+}
+.item-specs dt {
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.item-specs dd {
+  font-size: 13px;
+  text-align: right;
+}
+.item-specs .bd-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+.item-specs .bd-link:hover {
+  text-decoration: underline;
+}
+.item-more {
+  margin-top: 48px;
+}
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.more-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.15s, transform 0.15s;
+}
+.more-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.more-nm {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.more-pr {
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.item-back {
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--ink-dim);
+  text-decoration: none;
+}
+.item-back:hover {
+  color: var(--accent);
+}
+@media (max-width: 640px) {
+  .item-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .item-art {
+    max-width: 220px;
+  }
+  .item-specs dl {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .item-name {
+    font-size: 27px;
+  }
+}
+
+/* inline item-name links (catalog + vault → item page) */
+.it-link {
+  color: inherit;
+  text-decoration: none;
+}
+.it-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

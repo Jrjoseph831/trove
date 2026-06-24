@@ -89,33 +89,22 @@ function Reveal() {
     : it.edition === 1
       ? "1 of 1"
       : `№ ${copyNo} of ${it.edition}`;
-  const sub = !isEd
-    ? "Added to your vault."
-    : it.edition === 1
-      ? "The only one in existence."
-      : copyNo === it.edition
-        ? "The final copy. It's now gone from the floor."
-        : "A numbered piece for your vault.";
+  // A small non-blocking flash: it floats over the floor, which stays fully
+  // visible and clickable behind it (pointer-events: none on the wrapper).
   return (
-    <div
-      className="reveal-bg show"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) closeReveal();
-      }}
-    >
-      <div className="reveal">
-        <div className="ic">
-          <ItemIcon it={it} size={52} />
-        </div>
-        <div className="kick">Acquired</div>
-        <div className="nm2">
-          {it.brand} {it.name}
-        </div>
-        {edNum && <div className="ednum">{edNum}</div>}
-        <div className="sub2">{sub}</div>
-        <button className="close" onClick={closeReveal}>
-          Add to vault
-        </button>
+    <div className="flash-wrap" aria-live="polite">
+      <div className={`flash ${isEd ? "ed" : ""}`}>
+        <span className="flash-ic">
+          <ItemIcon it={it} size={26} />
+        </span>
+        <span className="flash-txt">
+          <span className="flash-kick">
+            Acquired{edNum ? ` · ${edNum}` : ""}
+          </span>
+          <span className="flash-nm">
+            {it.brand} {it.name}
+          </span>
+        </span>
       </div>
     </div>
   );

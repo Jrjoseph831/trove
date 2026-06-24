@@ -141,7 +141,9 @@ export function Catalog() {
                           >
                             {it.brand}
                           </Link>
-                          {it.name}
+                          <Link href={`/item/${it.id}`} className="it-link">
+                            {it.name}
+                          </Link>
                           {mineQty ? ` · you hold ${mineQty}` : ""}
                         </span>
                       </span>
@@ -190,7 +192,9 @@ export function Catalog() {
                   >
                     {it.brand}
                   </Link>
-                  <div className="nm">{it.name}</div>
+                  <Link href={`/item/${it.id}`} className="nm it-link">
+                    {it.name}
+                  </Link>
                   <div className="edword">
                     {it.edition === 1 ? "1 of 1" : "Limited edition"}
                   </div>
