@@ -26,7 +26,6 @@ import {
   news as newsBank,
   sectorKeys,
   sectorLabel,
-  type News,
   type SectorKey,
 } from "@trove/data";
 import { netWorth } from "@trove/engine";
@@ -63,63 +62,67 @@ interface Story {
 }
 type Slide =
   | { type: "ident"; dur: number }
+  | { type: "segment"; dur: number; sector: SectorKey }
   | { type: "headline"; dur: number; story: Story }
   | { type: "sectorwatch"; dur: number; sector?: SectorKey }
   | { type: "movers"; dur: number }
   | { type: "standings"; dur: number }
   | { type: "bumper"; dur: number };
 
-function dominantSector(effects: Record<string, number>): SectorKey | undefined {
-  let best: SectorKey | undefined;
-  let mag = 0;
-  for (const [s, v] of Object.entries(effects || {})) {
-    if (Math.abs(v) > mag) {
-      mag = Math.abs(v);
-      best = s;
-    }
-  }
-  return best;
-}
 const clamp = (lo: number, v: number, hi: number) => Math.min(hi, Math.max(lo, v));
+
+// Group every in-depth, single-sector story by its sector (built once).
+const STORIES_BY_SECTOR: Record<string, Story[]> = (() => {
+  const by: Record<string, Story[]> = {};
+  for (const n of newsBank) {
+    if (!n.body) continue;
+    const keys = Object.keys(n.effects ?? {});
+    if (keys.length !== 1) continue;
+    const sec = keys[0]!;
+    (by[sec] ||= []).push({ kick: n.kick, head: n.head, body: n.body, sector: sec });
+  }
+  return by;
+})();
 
 export function Newsreel({ onClose }: { onClose: () => void }) {
   const { state } = useTrove();
   const stateRef = useRef(state);
   stateRef.current = state;
+  const loopRef = useRef(0);
 
+  // Build the loop as per-industry segments: a title card, then ~5 in-depth
+  // stories for that industry, with data interludes + a bumper between segments.
   const buildSlides = useCallback((): Slide[] => {
     const s = stateRef.current;
-    const seen = new Set<string>();
-    const stories: Story[] = [];
-    const add = (n: News) => {
-      if (seen.has(n.head)) return;
-      seen.add(n.head);
-      stories.push({ kick: n.kick, head: n.head, body: n.body, sector: dominantSector(n.effects) });
-    };
-    if (s.front) add(s.front);
-    for (const a of s.archive) {
-      const n = newsBank.find((x) => x.head === a.head);
-      if (n) add(n);
-      if (stories.length >= 10) break;
-    }
-    const topSector = [...sectorKeys].sort(
-      (a, b) => (s.sectorIdx[b] ?? 1) - (s.sectorIdx[a] ?? 1),
-    )[0];
+    // feature the most active industries first, rotating which lead each loop
+    const ordered = [...sectorKeys].sort(
+      (a, b) => Math.abs((s.sectorIdx[b] ?? 1) - 1) - Math.abs((s.sectorIdx[a] ?? 1) - 1),
+    );
+    const off = loopRef.current % ordered.length;
+    const featured = [...ordered.slice(off), ...ordered.slice(0, off)].slice(0, 3);
+    loopRef.current += 1;
 
-    const slides: Slide[] = [{ type: "ident", dur: 5200 }];
-    stories.forEach((story, i) => {
-      slides.push({
-        type: "headline",
-        story,
-        dur: clamp(13000, (story.body?.length ?? 90) * 65, 20000),
-      });
-      if (i === 2) slides.push({ type: "sectorwatch", dur: 13000, sector: topSector });
-      if (i === 5) {
-        slides.push({ type: "movers", dur: 13000 });
-        slides.push({ type: "bumper", dur: 30000 });
+    const slides: Slide[] = [{ type: "ident", dur: 4800 }];
+    featured.forEach((sec, i) => {
+      slides.push({ type: "segment", sector: sec, dur: 4600 });
+      const pool = STORIES_BY_SECTOR[sec] ?? [];
+      const startK = pool.length ? (loopRef.current * 5) % pool.length : 0;
+      for (let k = 0; k < Math.min(5, pool.length); k++) {
+        const story = pool[(startK + k) % pool.length]!;
+        slides.push({
+          type: "headline",
+          story,
+          dur: clamp(12000, (story.body?.length ?? 90) * 52, 19000),
+        });
       }
-      if (i === 8) slides.push({ type: "standings", dur: 13000 });
+      if (i < featured.length - 1) {
+        if (i % 3 === 0) slides.push({ type: "sectorwatch", dur: 12000, sector: sec });
+        else if (i % 3 === 1) slides.push({ type: "movers", dur: 12000 });
+        else slides.push({ type: "standings", dur: 12000 });
+        if (i === 1) slides.push({ type: "bumper", dur: 30000 });
+      }
     });
+    slides.push({ type: "standings", dur: 12000 });
     return slides;
   }, []);
 
@@ -181,12 +184,15 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
   const slideSector =
     slide?.type === "headline"
       ? slide.story.sector
-      : slide?.type === "sectorwatch"
+      : slide?.type === "segment"
         ? slide.sector
-        : undefined;
-  const bgName = slide?.type === "headline" || slide?.type === "sectorwatch"
-    ? (slideSector ?? "bumper")
-    : "bumper";
+        : slide?.type === "sectorwatch"
+          ? slide.sector
+          : undefined;
+  const bgName =
+    slide?.type === "headline" || slide?.type === "segment" || slide?.type === "sectorwatch"
+      ? (slideSector ?? "bumper")
+      : "bumper";
 
   return (
     <div className="reel" role="dialog" aria-label="Trove News Network">
@@ -230,6 +236,14 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
               <Newspaper size={44} />
               <div className="reel-ident-name">TROVE NEWS NETWORK</div>
               <div className="reel-ident-sub">The floor, around the clock</div>
+            </div>
+          )}
+
+          {slide.type === "segment" && (
+            <div className="reel-segment">
+              <div className="reel-segment-eyebrow">Now reporting</div>
+              <div className="reel-segment-name">{sectorLabel(slide.sector)}</div>
+              <div className="reel-segment-rule" />
             </div>
           )}
 
