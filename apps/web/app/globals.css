@@ -2813,3 +2813,9 @@ body {
   height: 2px;
   background: #e9a23b;
 }
+
+/* full-width masthead lead (Trending no longer shows a sector-demand panel) */
+.lead-wide {
+  max-width: 960px;
+  margin-bottom: 34px;
+}

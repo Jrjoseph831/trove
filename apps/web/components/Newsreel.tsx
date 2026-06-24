@@ -64,7 +64,6 @@ type Slide =
   | { type: "ident"; dur: number }
   | { type: "segment"; dur: number; sector: SectorKey }
   | { type: "headline"; dur: number; story: Story }
-  | { type: "sectorwatch"; dur: number; sector?: SectorKey }
   | { type: "movers"; dur: number }
   | { type: "standings"; dur: number }
   | { type: "bumper"; dur: number };
@@ -116,9 +115,7 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
         });
       }
       if (i < featured.length - 1) {
-        if (i % 3 === 0) slides.push({ type: "sectorwatch", dur: 12000, sector: sec });
-        else if (i % 3 === 1) slides.push({ type: "movers", dur: 12000 });
-        else slides.push({ type: "standings", dur: 12000 });
+        slides.push(i % 2 === 0 ? { type: "movers", dur: 12000 } : { type: "standings", dur: 12000 });
         if (i === 1) slides.push({ type: "bumper", dur: 30000 });
       }
     });
@@ -186,11 +183,9 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
       ? slide.story.sector
       : slide?.type === "segment"
         ? slide.sector
-        : slide?.type === "sectorwatch"
-          ? slide.sector
-          : undefined;
+        : undefined;
   const bgName =
-    slide?.type === "headline" || slide?.type === "segment" || slide?.type === "sectorwatch"
+    slide?.type === "headline" || slide?.type === "segment"
       ? (slideSector ?? "bumper")
       : "bumper";
 
@@ -252,31 +247,6 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
               <div className="reel-kick">{slide.story.kick}</div>
               <h1 className="reel-head">{slide.story.head}</h1>
               {slide.story.body && <p className="reel-body">{slide.story.body}</p>}
-            </div>
-          )}
-
-          {slide.type === "sectorwatch" && (
-            <div className="reel-panel">
-              <div className="reel-panel-h">Sector Watch</div>
-              <div className="reel-sectors">
-                {sectorKeys.map((k) => {
-                  const v = state.sectorIdx[k] ?? 1;
-                  const pc = (v - 1) * 100;
-                  const up = pc >= 0;
-                  return (
-                    <div className="reel-sec" key={k}>
-                      <span className="reel-sec-nm">{sectorLabel(k)}</span>
-                      <span className="reel-sec-track">
-                        <i className={up ? "up" : "dn"} style={{ width: `${Math.min(50, Math.abs(pc) * 1.5)}%` }} />
-                      </span>
-                      <span className={`reel-sec-pc ${up ? "up" : "dn"}`}>
-                        {pc >= 0 ? "+" : ""}
-                        {pc.toFixed(0)}%
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
             </div>
           )}
 

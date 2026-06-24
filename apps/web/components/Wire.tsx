@@ -7,7 +7,6 @@ import { netWorth } from "@trove/engine";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 import { Broadcast, type WireStory } from "./Broadcast";
-import { SectorBars } from "./SectorBars";
 import { Newsreel } from "./Newsreel";
 
 export function Wire() {
@@ -84,11 +83,6 @@ export function Wire() {
             ) : (
               <div className="empty">Quiet on the wire.</div>
             )}
-          </div>
-
-          <div className="tnn-panel">
-            <div className="tnn-panel-h">Sector Demand</div>
-            <SectorBars />
           </div>
 
           <div className="tnn-panel">

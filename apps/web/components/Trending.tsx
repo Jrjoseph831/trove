@@ -6,7 +6,6 @@ import { ItemIcon } from "@/lib/icons";
 import { impliedSectors } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
 import { Movers } from "./Movers";
-import { SectorBars } from "./SectorBars";
 import { Tile } from "./Tile";
 
 export function Trending() {
@@ -23,8 +22,7 @@ export function Trending() {
 
   return (
     <div className="view">
-      <div className="masthead">
-        <article className="lead">
+      <article className="lead lead-wide">
           {f && (
             <>
               <div className="paper">
@@ -56,15 +54,7 @@ export function Trending() {
               </div>
             </>
           )}
-        </article>
-
-        <div className="heat-panel">
-          <div className="panel-h">
-            Heating Up <span className="sub">sector demand</span>
-          </div>
-          <SectorBars clickable />
-        </div>
-      </div>
+      </article>
 
       <div className="railrow">
         <div className="railrow-h">
