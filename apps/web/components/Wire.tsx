@@ -8,7 +8,7 @@ import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 import { Broadcast, type WireStory } from "./Broadcast";
 import { SectorBars } from "./SectorBars";
-import { Studio } from "./Studio";
+import { Newsreel } from "./Newsreel";
 
 export function Wire() {
   const { state } = useTrove();
@@ -53,7 +53,7 @@ export function Wire() {
         </span>
         <div className="tnn-head-right">
           <button className="watch-btn" onClick={() => setStudioOpen(true)}>
-            <Radio size={14} /> Watch the broadcast
+            <Radio size={14} /> Watch the news wheel
           </button>
           <span className="tnn-on">On Air</span>
         </div>
@@ -133,7 +133,7 @@ export function Wire() {
         </div>
       </div>
 
-      {studioOpen && <Studio onClose={() => setStudioOpen(false)} />}
+      {studioOpen && <Newsreel onClose={() => setStudioOpen(false)} />}
     </div>
   );
 }

@@ -58,29 +58,6 @@ export interface Brand {
   sectors: SectorKey[];
 }
 
-/** One spoken line in a news broadcast, delivered by anchor A or B. */
-export interface BroadcastSegment {
-  anchor: "A" | "B";
-  /** What the anchor says (also used as the browser-speech fallback text). */
-  text: string;
-  kind?: "intro" | "story" | "handoff" | "signoff";
-  /** The story shown on the backdrop while this line is read. */
-  story?: { kick: string; head: string; sector?: SectorKey };
-  /** Pre-rendered audio path (relative to the site root), if available. */
-  audio?: string;
-}
-
-/** A pre-generated twice-daily news broadcast for the studio scene. */
-export interface Broadcast {
-  /** ISO timestamp the segment was generated. */
-  generatedAt: string;
-  /** Edition number for the on-screen bug. */
-  edition: number;
-  /** Anchor display names. */
-  anchors: { A: string; B: string };
-  segments: BroadcastSegment[];
-}
-
 /** Authored flavor copy for a brand's company page. */
 export interface BrandLore {
   /** Sharp one-liner, ≤ 8 words. */
