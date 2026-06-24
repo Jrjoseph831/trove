@@ -1,0 +1,76 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Trove — GitHub Actions OIDC trust. Creates (optionally) the GitHub OIDC
+  provider and a deploy role that GitHub Actions can assume with NO long-lived
+  keys. The role can only be assumed by workflows in the Jrjoseph831/trove repo,
+  and it only has the rights CDK needs (assume the CDK bootstrap roles + read the
+  bootstrap version). Deploy this ONCE per account.
+
+Parameters:
+  GitHubOrg:
+    Type: String
+    Default: Jrjoseph831
+  GitHubRepo:
+    Type: String
+    Default: trove
+  CreateOIDCProvider:
+    Type: String
+    Default: "true"
+    AllowedValues: ["true", "false"]
+    Description: >
+      Set to "false" if this account ALREADY has the GitHub OIDC provider
+      (token.actions.githubusercontent.com) — a CFN account can only have one.
+
+Conditions:
+  ShouldCreateProvider: !Equals [!Ref CreateOIDCProvider, "true"]
+
+Resources:
+  GitHubOIDCProvider:
+    Type: AWS::IAM::OIDCProvider
+    Condition: ShouldCreateProvider
+    Properties:
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList:
+        - sts.amazonaws.com
+      # GitHub's OIDC thumbprint is validated by IAM automatically for this
+      # well-known provider; this value is the documented fallback.
+      ThumbprintList:
+        - ffffffffffffffffffffffffffffffffffffffff
+
+  DeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: trove-github-deploy
+      MaxSessionDuration: 3600
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Sub arn:aws:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+              StringLike:
+                # Only this repo's workflows (any branch) may assume the role.
+                token.actions.githubusercontent.com:sub: !Sub repo:${GitHubOrg}/${GitHubRepo}:*
+      Policies:
+        - PolicyName: cdk-deploy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              # Let the CI identity assume the CDK bootstrap roles, which do the
+              # real provisioning. This is the least-privilege modern pattern.
+              - Effect: Allow
+                Action: sts:AssumeRole
+                Resource: !Sub arn:aws:iam::${AWS::AccountId}:role/cdk-*
+              # CDK checks the bootstrap version in SSM before deploying.
+              - Effect: Allow
+                Action: ssm:GetParameter
+                Resource: !Sub arn:aws:ssm:*:${AWS::AccountId}:parameter/cdk-bootstrap/*
+
+Outputs:
+  DeployRoleArn:
+    Description: Put this in the GitHub repo variable AWS_DEPLOY_ROLE_ARN.
+    Value: !GetAtt DeployRole.Arn

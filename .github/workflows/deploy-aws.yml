@@ -1,0 +1,51 @@
+name: Deploy AWS (shared world)
+
+# Deploys the Trove shared-world stack (DynamoDB + Settlement/Read Lambdas +
+# the 6h EventBridge clock + the public read API) via CDK. Authenticates with
+# GitHub OIDC — no stored AWS keys. Requires one-time setup (see
+# infra/README.md): deploy the OIDC role, run `cdk bootstrap`, and set the
+# AWS_DEPLOY_ROLE_ARN + AWS_REGION repo variables.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "infra/**"
+      - "packages/server/**"
+      - "packages/engine/**"
+      - "packages/data/**"
+      - ".github/workflows/deploy-aws.yml"
+  workflow_dispatch:
+
+permissions:
+  id-token: write # required to request the OIDC token
+  contents: read
+
+concurrency:
+  group: deploy-aws
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Skip cleanly if the deploy role hasn't been configured yet.
+    if: vars.AWS_DEPLOY_ROLE_ARN != ''
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+      - name: CDK deploy
+        working-directory: infra
+        run: npx cdk deploy --require-approval never --outputs-file cdk-outputs.json
+      - name: Show outputs
+        working-directory: infra
+        run: cat cdk-outputs.json

@@ -24,3 +24,7 @@ coverage/
 
 # next env shim (regenerated)
 next-env.d.ts
+
+# CDK
+infra/cdk.out/
+infra/cdk-outputs.json

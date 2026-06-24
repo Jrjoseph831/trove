@@ -1,0 +1,27 @@
+{
+  "name": "@trove/infra",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Trove AWS infrastructure (CDK): the shared-world stack.",
+  "bin": { "trove": "bin/trove.ts" },
+  "scripts": {
+    "synth": "cdk synth",
+    "deploy": "cdk deploy --require-approval never",
+    "diff": "cdk diff",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@trove/data": "*",
+    "@trove/engine": "*",
+    "@trove/server": "*",
+    "aws-cdk-lib": "^2.170.0",
+    "constructs": "^10.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "aws-cdk": "^2.170.0",
+    "esbuild": "^0.24.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}

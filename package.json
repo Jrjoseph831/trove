@@ -5,7 +5,8 @@
   "description": "Trove — a real-time, shared-world market game for physical assets, priced by a news-driven economy.",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "infra"
   ],
   "scripts": {
     "dev": "npm run dev -w @trove/web",

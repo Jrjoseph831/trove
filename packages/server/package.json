@@ -1,0 +1,24 @@
+{
+  "name": "@trove/server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Trove server: DynamoDB repository + Lambda handlers (settlement, read, seed). Reuses @trove/engine unchanged.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "types": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@trove/data": "*",
+    "@trove/engine": "*",
+    "@aws-sdk/client-dynamodb": "^3.700.0",
+    "@aws-sdk/lib-dynamodb": "^3.700.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "typescript": "^5"
+  }
+}
