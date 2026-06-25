@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 import { Catalog } from "./Catalog";
+import { Desk } from "./Desk";
 import { Rail } from "./Rail";
 import { Ticker } from "./Ticker";
 import { Trending } from "./Trending";
@@ -43,8 +44,10 @@ export function Terminal() {
         {tab === "catalog" && <Catalog />}
         {tab === "wire" && <Wire />}
         {tab === "vault" && <Vault />}
+        {tab === "orders" && <Desk />}
       </div>
       {reveal && <Reveal />}
+      <Onboarding />
       <Toast />
     </div>
   );
@@ -108,6 +111,43 @@ function Reveal() {
             {it.brand} {it.name}
           </span>
         </span>
+      </div>
+    </div>
+  );
+}
+
+function Onboarding() {
+  const { signedIn, desk, nameHolding } = useTrove();
+  const [val, setVal] = useState("");
+  // Shown once: signed in, desk loaded, but no Holding name yet.
+  if (!signedIn || !desk || desk.name) return null;
+  return (
+    <div className="reveal-bg show">
+      <div className="onboard">
+        <div className="ob-mark">TROVE</div>
+        <div className="ob-h">Establish your Holding</div>
+        <p className="ob-sub">
+          Name your house on the floor — this is how you&apos;ll appear in the
+          standings and on every order.
+        </p>
+        <input
+          className="ob-input"
+          placeholder="e.g. Skuvera Holdings"
+          value={val}
+          maxLength={40}
+          autoFocus
+          onChange={(e) => setVal(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && val.trim()) nameHolding(val);
+          }}
+        />
+        <button
+          className="ob-go"
+          disabled={!val.trim()}
+          onClick={() => nameHolding(val)}
+        >
+          Open the doors
+        </button>
       </div>
     </div>
   );

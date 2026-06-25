@@ -213,6 +213,17 @@ export class TroveStack extends Stack {
       authorizer,
     });
 
+    // ── Order Desk (authorized): the PVE contract loop ──────────────────────
+    const desk = fn("Desk", "desk.ts", Duration.seconds(15));
+    market.grantReadWriteData(desk);
+    players.grantReadWriteData(desk);
+    api.addRoutes({
+      path: "/desk",
+      methods: [HttpMethod.GET, HttpMethod.POST],
+      integration: new HttpLambdaIntegration("DeskIntegration", desk),
+      authorizer,
+    });
+
     // ── Standings (public) ──────────────────────────────────────────────────
     const standings = fn("Standings", "standings.ts", Duration.seconds(10));
     market.grantReadData(standings);

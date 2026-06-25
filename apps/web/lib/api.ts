@@ -63,6 +63,57 @@ export const fetchStandings = () =>
   get<{ standings: ApiStanding[] }>("/standings").then((r) => r.standings);
 export const fetchPortfolio = () => get<ApiPortfolio>("/portfolio", true);
 
+export interface DeskOrder {
+  id: string;
+  company: string;
+  itemId: number;
+  itemName: string;
+  brand: string;
+  qty: number;
+  quote: number;
+  status: "pending" | "accepted";
+  expiresAt: number;
+  marketValue: number;
+  held: number;
+}
+export interface Desk {
+  name: string | null;
+  reputation: number;
+  cash: number;
+  orders: DeskOrder[];
+}
+
+export const fetchDesk = () => get<Desk>("/desk", true);
+
+/** Returns the updated Desk, or {error,status} (401 → sign in). */
+export async function deskAction(
+  action: "name" | "accept" | "decline" | "fulfill",
+  payload: { orderId?: string; name?: string } = {},
+): Promise<Desk | { error: string; status: number }> {
+  const token = getIdToken();
+  if (!token) return { error: "unauthorized", status: 401 };
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}/desk`, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: token },
+      body: JSON.stringify({ action, ...payload }),
+    });
+  } catch {
+    return { error: "network error", status: 0 };
+  }
+  if (!res.ok) {
+    let msg = `failed (${res.status})`;
+    try {
+      msg = (await res.json()).error ?? msg;
+    } catch {
+      /* keep */
+    }
+    return { error: msg, status: res.status };
+  }
+  return res.json() as Promise<Desk>;
+}
+
 /** Returns the trade outcome, or an {error} with the HTTP status for handling
  *  (401 → sign in, 409 → rejected e.g. sold out / insufficient funds). */
 export async function postTrade(

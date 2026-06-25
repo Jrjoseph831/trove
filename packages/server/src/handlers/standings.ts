@@ -41,11 +41,11 @@ export async function handler(): Promise<APIGatewayProxyResultV2> {
     });
   }
 
-  // human players (cash on the player record)
+  // human players (cash on the player record); show their Holding name
   const players = await allPlayers();
   for (const p of players) {
     rows.push({
-      handle: `Player-${p.playerId.slice(0, 4)}`,
+      handle: p.name?.trim() || `Holding-${p.playerId.slice(0, 4)}`,
       id: p.playerId.slice(0, 8),
       net: p.cash - p.debt + (assets[p.playerId] ?? 0),
       isAI: false,

@@ -144,12 +144,33 @@ export async function saveWorld(doc: WorldDoc, prevVersion: number): Promise<voi
   );
 }
 
-/** A player's account. Holdings live in the world doc (item.owners[playerId]);
- *  only cash/debt are per-player here. */
+/** One Order-Desk contract on a player's record. */
+export interface Order {
+  id: string;
+  company: string;
+  itemId: number;
+  qty: number;
+  /** Fixed payout the company commits to (set at creation). */
+  quote: number;
+  status: "pending" | "accepted";
+  createdAt: number;
+  /** Pending offers vanish after this; accepted contracts are due by it. */
+  expiresAt: number;
+}
+
+/** A player's account ("Holding"). Item holdings live in the world doc
+ *  (item.owners[playerId]); cash/debt/name/reputation/orders are per-player. */
 export interface Player {
   playerId: string;
   cash: number;
   debt: number;
+  /** The Holding's display name (set at onboarding). */
+  name?: string;
+  /** Order-Desk standing — rises on fulfilment, dips on missed contracts. */
+  reputation?: number;
+  orders?: Order[];
+  /** Last time a new order was rolled onto the desk (ms). */
+  lastOrderAt?: number;
 }
 
 export async function getPlayer(playerId: string): Promise<Player | null> {
@@ -157,6 +178,11 @@ export async function getPlayer(playerId: string): Promise<Player | null> {
     new GetCommand({ TableName: PLAYERS, Key: { playerId } }),
   );
   return (res.Item as Player) ?? null;
+}
+
+/** Persist a player record (per-player, low contention — last write wins). */
+export async function savePlayer(p: Player): Promise<void> {
+  await ddb.send(new PutCommand({ TableName: PLAYERS, Item: p }));
 }
 
 /** All players (for standings). Small early on; paginates if it ever grows. */

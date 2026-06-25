@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  ClipboardList,
   Factory,
   LayoutGrid,
   type LucideIcon,
@@ -36,7 +37,9 @@ export function Rail() {
     authReady,
     signIn,
     signOut,
+    desk,
   } = useTrove();
+  const pendingOrders = desk?.orders.filter((o) => o.status === "pending").length ?? 0;
   const go = (t: TabId) => {
     setTab(t);
     setNavOpen(false);
@@ -78,6 +81,11 @@ export function Rail() {
             Debt<b>{money(state.debt)}</b>
           </span>
         </div>
+        {signedIn && desk?.name && (
+          <div className="holdingline">
+            {desk.name} <span>· rep {desk.reputation}</span>
+          </div>
+        )}
       </div>
 
       <div className="nav">
@@ -97,6 +105,16 @@ export function Rail() {
         <div className="navh" style={{ marginTop: 14 }}>
           Account
         </div>
+        <button
+          className={tab === "orders" ? "on" : ""}
+          onClick={() => go("orders")}
+        >
+          <span className="ic">
+            <ClipboardList size={15} strokeWidth={1.75} />
+          </span>{" "}
+          Order Desk
+          {pendingOrders > 0 && <span className="navbadge">{pendingOrders}</span>}
+        </button>
         <button
           className={tab === "vault" ? "on" : ""}
           onClick={() => go("vault")}

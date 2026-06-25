@@ -11,11 +11,14 @@ import {
 } from "react";
 import { getBrandBySlug } from "@trove/data";
 import {
+  deskAction,
+  fetchDesk,
   fetchPortfolio,
   fetchWorld,
   postTrade,
   type ApiPortfolio,
   type ApiWorld,
+  type Desk,
 } from "./api";
 import {
   captureTokenFromHash,
@@ -77,7 +80,7 @@ function overlayPortfolio(live: WorldState, p: ApiPortfolio): void {
   live.nwHist = [...live.nwHist.slice(-29), p.netWorth];
 }
 
-export type TabId = "trending" | "catalog" | "wire" | "vault";
+export type TabId = "trending" | "catalog" | "wire" | "vault" | "orders";
 export type Mode = "live" | "sandbox";
 
 export interface RevealInfo {
@@ -121,6 +124,12 @@ interface Trove {
   authReady: boolean;
   signIn: () => void;
   signOut: () => void;
+  /** Order Desk (PVE). null until loaded. */
+  desk: Desk | null;
+  acceptOrder: (id: string) => void;
+  declineOrder: (id: string) => void;
+  fulfillOrder: (id: string) => void;
+  nameHolding: (name: string) => void;
 }
 
 const TroveContext = createContext<Trove | null>(null);
@@ -151,6 +160,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [hlItem, setHlItem] = useState<number | null>(null);
   const [signedIn, setSignedIn] = useState(false);
   const [authReady, setAuthReady] = useState(false);
+  const [desk, setDesk] = useState<Desk | null>(null);
 
   const modeRef = useRef(mode);
   modeRef.current = mode;
@@ -196,6 +206,30 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       clearInterval(t);
     };
   }, [mode, signedIn, refresh]);
+
+  // Order Desk: poll for new contracts while signed in (server rolls one ~every
+  // 10 min; we check in on a shorter beat so the desk + countdowns stay live).
+  useEffect(() => {
+    if (!signedIn) {
+      setDesk(null);
+      return;
+    }
+    let alive = true;
+    const pull = async () => {
+      try {
+        const d = await fetchDesk();
+        if (alive) setDesk(d);
+      } catch {
+        /* best-effort */
+      }
+    };
+    pull();
+    const t = setInterval(pull, 30000);
+    return () => {
+      alive = false;
+      clearInterval(t);
+    };
+  }, [signedIn]);
 
   // Deep link: /?brand=<slug> opens the Catalog filtered to that company.
   useEffect(() => {
@@ -424,6 +458,52 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     setNavOpen(false);
   }, []);
 
+  // ── Order Desk actions ──────────────────────────────────────────────────
+  const nameHolding = useCallback((name: string) => {
+    const trimmed = name.trim().slice(0, 40);
+    if (!trimmed) return;
+    void deskAction("name", { name: trimmed }).then((d) => {
+      if (!("error" in d)) setDesk(d);
+    });
+  }, []);
+
+  const acceptOrder = useCallback(
+    (id: string) => {
+      void deskAction("accept", { orderId: id }).then((d) => {
+        if ("error" in d) showToast("Couldn't accept");
+        else setDesk(d);
+      });
+    },
+    [showToast],
+  );
+
+  const declineOrder = useCallback((id: string) => {
+    void deskAction("decline", { orderId: id }).then((d) => {
+      if (!("error" in d)) setDesk(d);
+    });
+  }, []);
+
+  const fulfillOrder = useCallback(
+    (id: string) => {
+      void deskAction("fulfill", { orderId: id }).then(async (d) => {
+        if ("error" in d) {
+          showToast(
+            d.error === "not enough in your vault"
+              ? "Not enough in your vault"
+              : d.error === "deadline passed"
+                ? "Deadline passed"
+                : "Couldn't fulfill",
+          );
+          return;
+        }
+        setDesk(d);
+        await syncLive(); // vault + cash changed
+        showToast("Order fulfilled");
+      });
+    },
+    [showToast, syncLive],
+  );
+
   const value = useMemo<Trove>(
     () => ({
       mounted,
@@ -455,6 +535,11 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       authReady,
       signIn,
       signOut,
+      desk,
+      acceptOrder,
+      declineOrder,
+      fulfillOrder,
+      nameHolding,
     }),
     [
       mounted,
@@ -482,6 +567,11 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       authReady,
       signIn,
       signOut,
+      desk,
+      acceptOrder,
+      declineOrder,
+      fulfillOrder,
+      nameHolding,
     ],
   );
 
