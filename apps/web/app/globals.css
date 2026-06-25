@@ -22,6 +22,7 @@
   --up: #9a6a2a; /* rising — muted bronze */
   --dn: #5f7689; /* cooling — muted steel */
   --edition: #9c7b34; /* collectible — antique gold */
+  --accent: #c8851f; /* gold accent */
   --rule: #1b1714; /* masthead rules */
   --track-bg: #efece4; /* meter / sector-bar tracks */
   --scrim: rgba(247, 245, 240, 0.82); /* modal backdrop */
@@ -46,6 +47,7 @@
   --up: #d79a4e;
   --dn: #7ea6c4;
   --edition: #d4af5f;
+  --accent: #f0ab3c; /* gold accent */
   --rule: #b9b2a4;
   --track-bg: #221f18;
   --scrim: rgba(8, 7, 6, 0.82);
