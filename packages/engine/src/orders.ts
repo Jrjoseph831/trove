@@ -418,6 +418,16 @@ export function fulfillSandboxOrder(
   if (state.ledger) {
     state.ledger.orderUnits += o.qty;
     state.ledger.orderRev += o.quote;
+    if (!state.ledger.items) state.ledger.items = {};
+    const fl = (state.ledger.items[o.itemId] ??= {
+      produced: 0,
+      sold: 0,
+      soldRev: 0,
+      bought: 0,
+      spent: 0,
+    });
+    fl.sold += o.qty;
+    fl.soldRev += o.quote;
   }
   state.orders = (state.orders ?? []).filter((x) => x.id !== o.id);
   return { ok: true, quote: o.quote, qty: o.qty };

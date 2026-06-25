@@ -117,6 +117,15 @@ export interface Infra {
   qc: boolean;
 }
 
+/** Per-item flow within a period (for the report's item-detail breakdown). */
+export interface ItemFlow {
+  produced: number;
+  sold: number; // units sold (listing + order + market)
+  soldRev: number;
+  bought: number;
+  spent: number;
+}
+
 /** Running tally of cash/goods flows within the current report period. */
 export interface Ledger {
   produced: number; // units produced
@@ -129,6 +138,8 @@ export interface Ledger {
   soldUnits: number; // units dumped back to market
   soldRev: number;
   upkeep: number; // factory upkeep + input spend
+  /** Per-item breakdown (itemId → flow). */
+  items: Record<number, ItemFlow>;
 }
 
 /** A snapshot captured each "flip" (settlement) — one row of the report log. */

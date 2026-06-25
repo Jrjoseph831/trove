@@ -4895,6 +4895,44 @@ body {
   color: var(--ink);
   font-variant-numeric: tabular-nums;
 }
+/* item-detail table */
+.idt {
+  font-size: 12.5px;
+}
+.idt-h,
+.idt-row {
+  display: grid;
+  grid-template-columns: 1fr 90px 90px 90px 100px;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 0;
+}
+.idt-h {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-bottom: 1px solid var(--line);
+}
+.idt-h span:not(:first-child),
+.idt-row span:not(.idt-name) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.idt-row {
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 50%, transparent);
+}
+.idt-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.idt-more {
+  font-size: 11px;
+  color: var(--ink-faint);
+  padding-top: 8px;
+}
 
 /* Daily-report popup card */
 .dailyrep {

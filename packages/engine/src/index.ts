@@ -22,6 +22,7 @@ import { rand, rexp } from "./rng";
 import type {
   ActiveStory,
   Factory,
+  ItemFlow,
   Ledger,
   RuntimeItem,
   Trader,
@@ -41,7 +42,19 @@ export function emptyLedger(): Ledger {
     soldUnits: 0,
     soldRev: 0,
     upkeep: 0,
+    items: {},
   };
+}
+
+/** Get-or-create a per-item flow row in a ledger. */
+export function itemFlow(led: Ledger, id: number): ItemFlow {
+  return (led.items[id] ??= {
+    produced: 0,
+    sold: 0,
+    soldRev: 0,
+    bought: 0,
+    spent: 0,
+  });
 }
 
 export * from "./types";
@@ -339,6 +352,9 @@ export function playerBuy(state: WorldState, id: number): BuyResult | null {
   it.buyAt = it.value;
   state.ledger.bought += 1;
   state.ledger.spent += it.value;
+  const bf = itemFlow(state.ledger, it.id);
+  bf.bought += 1;
+  bf.spent += it.value;
   return { ok: true, it, copyNo };
 }
 
@@ -369,6 +385,9 @@ export function playerSell(state: WorldState, id: number): SellResult | null {
   state.cash += it.value;
   state.ledger.soldUnits += 1;
   state.ledger.soldRev += it.value;
+  const sf = itemFlow(state.ledger, it.id);
+  sf.sold += 1;
+  sf.soldRev += it.value;
   return { ok: true, it, pl };
 }
 
@@ -755,6 +774,7 @@ function produceFactories(state: WorldState): void {
     state.cash -= cashCost;
     state.ledger.upkeep += cashCost; // input spend
     state.ledger.produced += rate;
+    itemFlow(state.ledger, out.id).produced += rate;
     giveYou(out, rate);
     // Track these as PRODUCED units (can't be dumped; sold via listings/orders).
     state.producedQty[out.id] = (state.producedQty[out.id] ?? 0) + rate;
@@ -809,6 +829,9 @@ function sellListings(state: WorldState): void {
     state.cash += rev;
     state.ledger.listingUnits += qty;
     state.ledger.listingRev += rev;
+    const lf = itemFlow(state.ledger, id);
+    lf.sold += qty;
+    lf.soldRev += rev;
     pushLog(state, "Market", "bought", `${qty}× ${it.name}`);
   }
 }

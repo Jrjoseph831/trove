@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import type { Ledger, Report } from "@trove/engine";
+import { getItem } from "@trove/data";
+import type { ItemFlow, Ledger, Report } from "@trove/engine";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 
@@ -17,7 +18,7 @@ interface DayAgg {
   halves: string[];
 }
 
-const LEDGER_KEYS: (keyof Ledger)[] = [
+const LEDGER_KEYS = [
   "produced",
   "listingUnits",
   "listingRev",
@@ -28,7 +29,7 @@ const LEDGER_KEYS: (keyof Ledger)[] = [
   "soldUnits",
   "soldRev",
   "upkeep",
-];
+] as const;
 
 function aggregateDays(reports: Report[]): DayAgg[] {
   const map = new Map<number, Report[]>();
@@ -42,9 +43,27 @@ function aggregateDays(reports: Report[]): DayAgg[] {
     .map((day) => {
       const ps = map.get(day)!.sort((a, b) => a.period - b.period);
       const last = ps[ps.length - 1]!;
-      const flows = Object.fromEntries(
+      const scalars = Object.fromEntries(
         LEDGER_KEYS.map((k) => [k, ps.reduce((s, p) => s + p.flows[k], 0)]),
-      ) as unknown as Ledger;
+      );
+      const items: Record<number, ItemFlow> = {};
+      for (const p of ps)
+        for (const [idStr, fl] of Object.entries(p.flows.items ?? {})) {
+          const id = Number(idStr);
+          const cur = (items[id] ??= {
+            produced: 0,
+            sold: 0,
+            soldRev: 0,
+            bought: 0,
+            spent: 0,
+          });
+          cur.produced += fl.produced;
+          cur.sold += fl.sold;
+          cur.soldRev += fl.soldRev;
+          cur.bought += fl.bought;
+          cur.spent += fl.spent;
+        }
+      const flows = { ...scalars, items } as unknown as Ledger;
       return {
         day,
         netWorth: last.netWorth,
@@ -293,6 +312,51 @@ export function ReportView() {
           </div>
         </div>
       </div>
+
+      {/* Per-item detail for the day */}
+      {(() => {
+        const rows = Object.entries(d.flows.items ?? {})
+          .map(([id, fl]) => ({
+            id: Number(id),
+            name: getItem(Number(id))?.name ?? `#${id}`,
+            ...fl,
+          }))
+          .filter((r) => r.produced || r.sold || r.bought)
+          .sort(
+            (a, b) =>
+              b.produced + b.sold + b.bought - (a.produced + a.sold + a.bought),
+          );
+        if (!rows.length) return null;
+        const shown = rows.slice(0, 40);
+        return (
+          <div className="dash-card">
+            <div className="dash-h">Item detail · Day {d.day}</div>
+            <div className="idt">
+              <div className="idt-h">
+                <span>Item</span>
+                <span>Produced</span>
+                <span>Sold</span>
+                <span>Bought</span>
+                <span>Revenue</span>
+              </div>
+              {shown.map((r) => (
+                <div key={r.id} className="idt-row">
+                  <span className="idt-name">{r.name}</span>
+                  <span>{r.produced ? r.produced.toLocaleString() : "—"}</span>
+                  <span>{r.sold ? r.sold.toLocaleString() : "—"}</span>
+                  <span>{r.bought ? r.bought.toLocaleString() : "—"}</span>
+                  <span className="rc-up">{r.soldRev ? money(r.soldRev) : "—"}</span>
+                </div>
+              ))}
+              {rows.length > shown.length && (
+                <div className="idt-more">
+                  +{rows.length - shown.length} more items
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })()}
     </div>
   );
 }
