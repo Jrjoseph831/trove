@@ -66,8 +66,9 @@ function pickOrderItem(state: WorldState, rep: number): RuntimeItem | null {
   if (!within.length) return null;
 
   const producedIds = [...new Set(state.factories.map((f) => f.itemId))];
-  // ~65% of demand targets your own production (if you make anything).
-  if (producedIds.length && rand() < 0.65) {
+  // Most demand targets your own production (the EXACT items your lines make),
+  // so what you produce is what gets ordered — and you fulfil by producing.
+  if (producedIds.length && rand() < 0.85) {
     const pool = producedIds
       .map((id) => state.items.find((i) => i.id === id))
       .filter((it): it is RuntimeItem => !!it);

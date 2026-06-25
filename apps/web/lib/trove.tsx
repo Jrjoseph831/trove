@@ -190,6 +190,7 @@ function sandboxDeskView(state: WorldState, name: string | null): Desk {
         expiresAt: o.expiresAt,
         marketValue: Math.round((it?.value ?? 0) * o.qty),
         held: it?.owners["YOU"] ?? 0,
+        youProduce: state.factories.some((f) => f.itemId === o.itemId),
       };
     }),
   };

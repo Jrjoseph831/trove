@@ -3476,6 +3476,14 @@ body {
   color: var(--ink-dim);
   font-weight: 400;
 }
+.oc-make {
+  margin-left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--up);
+  white-space: nowrap;
+}
 .oc-round {
   float: right;
   color: var(--ink-faint);

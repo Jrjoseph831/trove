@@ -82,6 +82,8 @@ export interface DeskOrder {
   expiresAt: number;
   marketValue: number;
   held: number;
+  /** Sandbox: you own a factory line that makes this exact item. */
+  youProduce?: boolean;
 }
 
 /** The result of a negotiation action, relayed for a toast. */

@@ -42,6 +42,7 @@ function OfferCard({ o }: { o: DeskOrder }) {
           {o.itemName}
         </Link>
         <span className="oc-bd">{o.brand}</span>
+        {o.youProduce && <span className="oc-make">◆ you make this</span>}
       </div>
       <div className="oc-meta">
         <span>
@@ -152,6 +153,7 @@ export function Desk() {
                 {o.itemName}
               </Link>
               <span className="oc-bd">{o.brand}</span>
+              {o.youProduce && <span className="oc-make">◆ you make this</span>}
             </div>
             <div className="oc-meta">
               <span>
@@ -174,7 +176,9 @@ export function Desk() {
               >
                 {ready
                   ? `Fulfill · ${money(o.quote)}`
-                  : `Source ${(o.qty - o.held).toLocaleString()} more`}
+                  : o.youProduce
+                    ? `Need ${(o.qty - o.held).toLocaleString()} more — produce or buy`
+                    : `Need ${(o.qty - o.held).toLocaleString()} more`}
               </button>
             </div>
           </div>
