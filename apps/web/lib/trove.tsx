@@ -37,6 +37,11 @@ import {
   installModule,
   routeFactory as engineRouteFactory,
   setSource as engineSetSource,
+  rollSandboxOrders,
+  negotiateSandbox,
+  acceptSandboxOffer,
+  declineSandboxOrder,
+  fulfillSandboxOrder,
   playerBuy,
   playerSell,
   repay,
@@ -160,6 +165,36 @@ interface Trove {
 
 const TroveContext = createContext<Trove | null>(null);
 
+/** Shape the sandbox world's local orders into the Desk view the UI consumes
+ *  (same type the live API returns), so one Desk screen serves both modes. */
+function sandboxDeskView(state: WorldState, name: string | null): Desk {
+  return {
+    name,
+    reputation: state.reputation ?? 0,
+    cash: state.cash,
+    orders: (state.orders ?? []).map((o) => {
+      const it = state.items.find((i) => i.id === o.itemId);
+      return {
+        id: o.id,
+        company: o.company,
+        sector: o.sector,
+        itemId: o.itemId,
+        itemName: it?.name ?? `#${o.itemId}`,
+        brand: it?.brand ?? "",
+        qty: o.qty,
+        companyOffer: o.companyOffer,
+        round: o.round,
+        maxRounds: o.maxRounds,
+        quote: o.quote,
+        status: o.status,
+        expiresAt: o.expiresAt,
+        marketValue: Math.round((it?.value ?? 0) * o.qty),
+        held: it?.owners["YOU"] ?? 0,
+      };
+    }),
+  };
+}
+
 /** Render cadence — prices update ~5×/s; the ticker scroll is CSS-continuous. */
 const RENDER_MS = 180;
 
@@ -263,6 +298,18 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       clearInterval(t);
     };
   }, [signedIn]);
+
+  // Sandbox Order Desk: roll/expire local orders on a short beat (demand pulls
+  // toward what you produce + heated sectors; faster when the market is hot).
+  useEffect(() => {
+    if (mode !== "sandbox") return;
+    const tick = () => {
+      if (rollSandboxOrders(worldsRef.current!.sandbox, Date.now())) refresh();
+    };
+    tick();
+    const t = setInterval(tick, 4000);
+    return () => clearInterval(t);
+  }, [mode, refresh]);
 
   // Deep link: /?brand=<slug> opens the Catalog filtered to that company.
   useEffect(() => {
@@ -601,6 +648,13 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   // Accept the client's current standing offer outright (no counter).
   const acceptOrder = useCallback(
     (id: string) => {
+      if (modeRef.current === "sandbox") {
+        const r = acceptSandboxOffer(worldsRef.current!.sandbox, id, Date.now());
+        if (r.kind === "deal")
+          showToast(`Deal · ${moneyShort(r.price)} — deliver before the timer`);
+        refresh();
+        return;
+      }
       void deskAction("accept", { orderId: id }).then((d) => {
         if ("error" in d) {
           showToast("Couldn't accept");
@@ -611,12 +665,25 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
           showToast(`Deal · ${moneyShort(d.note.price)} — deliver within 2h`);
       });
     },
-    [showToast],
+    [refresh, showToast],
   );
 
   // Counter with an ask; the client haggles within its hidden budget.
   const counterOrder = useCallback(
     (id: string, bid: number) => {
+      if (modeRef.current === "sandbox") {
+        const n = negotiateSandbox(worldsRef.current!.sandbox, id, bid, Date.now());
+        if (n.kind === "invalid") showToast("Enter a valid bid");
+        else if (n.kind === "deal")
+          showToast(`Deal · ${moneyShort(n.price)} — deliver before the timer`);
+        else if (n.kind === "counter")
+          showToast(
+            `Countered: ${moneyShort(n.offer)}${n.overBudget ? " · over their budget" : ""}`,
+          );
+        else if (n.kind === "pullout") showToast("They walked away");
+        refresh();
+        return;
+      }
       void deskAction("counter", { orderId: id, bid }).then((d) => {
         if ("error" in d) {
           showToast(d.error === "invalid bid" ? "Enter a valid bid" : "Couldn't send");
@@ -637,17 +704,39 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
           showToast(`${n.company ?? "They"} walked away`);
       });
     },
-    [showToast],
+    [refresh, showToast],
   );
 
-  const declineOrder = useCallback((id: string) => {
-    void deskAction("decline", { orderId: id }).then((d) => {
-      if (!("error" in d)) setDesk(d);
-    });
-  }, []);
+  const declineOrder = useCallback(
+    (id: string) => {
+      if (modeRef.current === "sandbox") {
+        declineSandboxOrder(worldsRef.current!.sandbox, id);
+        refresh();
+        return;
+      }
+      void deskAction("decline", { orderId: id }).then((d) => {
+        if (!("error" in d)) setDesk(d);
+      });
+    },
+    [refresh],
+  );
 
   const fulfillOrder = useCallback(
     (id: string) => {
+      if (modeRef.current === "sandbox") {
+        const r = fulfillSandboxOrder(worldsRef.current!.sandbox, id, Date.now());
+        showToast(
+          r.ok
+            ? `Order fulfilled · +${moneyShort(r.quote)}`
+            : r.reason === "not enough in your vault"
+              ? "Not enough in your vault"
+              : r.reason === "deadline passed"
+                ? "Deadline passed"
+                : "Couldn't fulfill",
+        );
+        refresh();
+        return;
+      }
       void deskAction("fulfill", { orderId: id }).then(async (d) => {
         if ("error" in d) {
           showToast(
@@ -664,8 +753,15 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         showToast("Order fulfilled");
       });
     },
-    [showToast, syncLive],
+    [refresh, showToast, syncLive],
   );
+
+  // The desk is mode-aware: in sandbox it's derived from the local world; in
+  // live it's the server-backed state. One Desk screen serves both.
+  const effectiveDesk =
+    mode === "sandbox"
+      ? sandboxDeskView(worldsRef.current!.sandbox, desk?.name ?? null)
+      : desk;
 
   const value = useMemo<Trove>(
     () => ({
@@ -705,7 +801,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       authReady,
       signIn,
       signOut,
-      desk,
+      desk: effectiveDesk,
       acceptOrder,
       counterOrder,
       declineOrder,
@@ -748,7 +844,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       authReady,
       signIn,
       signOut,
-      desk,
+      effectiveDesk,
       acceptOrder,
       counterOrder,
       declineOrder,

@@ -52,6 +52,31 @@ export interface Factory {
   status: "building" | "running" | "idle";
 }
 
+/** A bulk contract on the player's desk (sandbox). A client opens with a visible
+ *  `companyOffer` and haggles within a HIDDEN budget; once a price is agreed the
+ *  order flips to "accepted" and is fulfilled from the vault by the deadline. */
+export interface Order {
+  id: string;
+  /** End-user client firm requesting the goods. */
+  company: string;
+  sector: SectorKey;
+  itemId: number;
+  qty: number;
+  /** The client's current visible offer (negotiate up from here). */
+  companyOffer: number;
+  /** HIDDEN — the most they'll pay. */
+  budget: number;
+  /** HIDDEN — at/below this they accept on the spot. */
+  target: number;
+  round: number;
+  maxRounds: number;
+  /** Agreed payout once accepted (0 while negotiating). */
+  quote: number;
+  status: "offer" | "accepted";
+  createdAt: number;
+  expiresAt: number;
+}
+
 /** A news story currently influencing sector demand. */
 export interface ActiveStory {
   news: News;
@@ -92,6 +117,12 @@ export interface WorldState {
   factories: Factory[];
   /** Factory-floor capacity: how many lines can run at once. Expandable. */
   floorSlots: number;
+  /** Order Desk (sandbox): bulk contracts clients send for your goods. */
+  orders: Order[];
+  /** Desk standing — rises on fulfilment, dips on missed contracts. */
+  reputation: number;
+  /** Last time (ms) an order was rolled onto the desk. */
+  lastOrderAt: number;
   log: LogEntry[];
   /** Indices of recently-shown news scenarios (most recent last) — avoids
    *  recycling a story until the pool has moved well past it. */

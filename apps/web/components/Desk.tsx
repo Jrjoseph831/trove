@@ -84,9 +84,9 @@ function OfferCard({ o }: { o: DeskOrder }) {
 }
 
 export function Desk() {
-  const { desk, signedIn, signIn, fulfillOrder } = useTrove();
+  const { desk, mode, signedIn, signIn, fulfillOrder } = useTrove();
 
-  if (!signedIn) {
+  if (mode === "live" && !signedIn) {
     return (
       <div className="view">
         <div className="cat-head">

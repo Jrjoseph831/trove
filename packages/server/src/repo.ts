@@ -120,6 +120,9 @@ export function docToWorld(doc: WorldDoc): WorldState {
     // per-player concern handled outside the singleton doc.
     factories: [],
     floorSlots: 0,
+    orders: [],
+    reputation: 0,
+    lastOrderAt: 0,
     log: doc.log ?? [],
     recentNewsIdx: doc.recentNewsIdx ?? [],
     nwHist: [],

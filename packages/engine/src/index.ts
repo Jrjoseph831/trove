@@ -28,6 +28,7 @@ import type {
 } from "./types";
 
 export * from "./types";
+export * from "./orders";
 export { setRng, resetRng, rand, rexp, mulberry32 } from "./rng";
 
 // ── Constants ────────────────────────────────────────────────────────────────
@@ -118,6 +119,9 @@ export function freshState(): WorldState {
     traders: freshTraders(),
     factories: [],
     floorSlots: STARTING_SLOTS,
+    orders: [],
+    reputation: 0,
+    lastOrderAt: 0,
     log: [],
     recentNewsIdx: [],
     nwHist: [START_CASH],
