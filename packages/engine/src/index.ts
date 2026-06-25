@@ -80,6 +80,18 @@ export function wallCycle(now: number = Date.now()): number {
 export function wallCycleFrac(now: number = Date.now()): number {
   return (now % CYCLE_MS) / CYCLE_MS;
 }
+
+/** Live factory clock — DECOUPLED from the 6h market/news cycle so the floor
+ *  feels alive. Lines come online and produce a batch on this fast beat while
+ *  news + prices still turn on the slow 6h cycle. The production cron and the
+ *  factory build path both index factory cycles by this, so onlineCycle and the
+ *  produce check share one basis. */
+export const PROD_SEC_PER_CYCLE = 300; // 5 real minutes per factory batch
+export const PROD_CYCLE_MS = PROD_SEC_PER_CYCLE * 1000;
+/** The live production-tick index since the epoch (one every PROD_SEC_PER_CYCLE). */
+export function wallProdCycle(now: number = Date.now()): number {
+  return Math.floor(now / PROD_CYCLE_MS);
+}
 /** Starting player cash. */
 export const START_CASH = 25000;
 // ── Factory floor ───────────────────────────────────────────────────────────
@@ -475,18 +487,34 @@ export function settleCycle(state: WorldState): void {
 }
 
 /**
- * The player-side slice of a settlement, for the LIVE world. The shared market
- * (prices/news/stock) is already advanced by the Settlement Lambda on the
- * singleton; here we only run the signed-in player's own per-cycle work against
- * those settled prices: factories produce, listings sell, net worth + the report
- * row are captured. Called once per settled world cycle, per player, server-side.
+ * One LIVE production tick for a player, on the FAST factory clock (decoupled
+ * from the 6h market cycle). Factories produce and listings sell against the
+ * market prices already settled on the singleton; flows accumulate in the ledger
+ * but the report is NOT captured here — that happens per market flip (6h) so the
+ * Trove-day calendar (2 flips/day) stays intact. Drive `state.cycle` by the
+ * production-tick index (wallProdCycle) so online checks line up with build.
  */
-export function settlePlayerCycle(state: WorldState): void {
+export function runProduction(state: WorldState): void {
   produceFactories(state);
   sellListings(state);
+}
+
+/**
+ * Capture a market FLIP (6h) for a player: snapshot net worth and file the
+ * report row from the flows accumulated across this period, then reset the
+ * ledger. Run once per 6h market flip, after that period's production ticks.
+ */
+export function captureFlip(state: WorldState): void {
   state.nwHist.push(netWorth(state, "YOU"));
   if (state.nwHist.length > 30) state.nwHist.shift();
   captureReport(state);
+}
+
+/** Full per-cycle settlement (sandbox: one cycle = produce + sell + flip). Live
+ *  splits these onto two clocks — see runProduction / captureFlip. */
+export function settlePlayerCycle(state: WorldState): void {
+  runProduction(state);
+  captureFlip(state);
 }
 
 /** Capture the period that just settled as a report row, then reset the ledger.

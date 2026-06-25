@@ -97,19 +97,30 @@ export class TroveStack extends Stack {
         },
       });
 
-    // ── Settlement: the 6h heartbeat ────────────────────────────────────────
-    // Advances the shared market AND runs each player's factories/listings, so
-    // it reads+writes both tables (produced holdings → world doc, factory/cash/
-    // report state → player records, committed together).
-    const settlement = fn("Settlement", "settlement.ts", Duration.seconds(60));
+    // ── Settlement: the 6h MARKET heartbeat (prices/news only) ──────────────
+    const settlement = fn("Settlement", "settlement.ts");
     market.grantReadWriteData(settlement);
-    players.grantReadWriteData(settlement);
 
     new events.Rule(this, "SettlementClock", {
       // UTC 6h marks — the same beats the newsroom cron fires on
       schedule: events.Schedule.cron({ minute: "0", hour: "0,6,12,18" }),
       targets: [new targets.LambdaFunction(settlement)],
-      description: "Settle the Trove world every 6 hours (00/06/12/18 UTC).",
+      description: "Settle the Trove market every 6 hours (00/06/12/18 UTC).",
+    });
+
+    // ── Production: the FAST factory clock (decoupled from the market) ───────
+    // Every few minutes it advances each player's factories (a batch per ~5min
+    // production tick), runs Auto-Fulfill, and files reports per 6h flip. Reads
+    // the market, reads+writes players, and writes produced holdings to the
+    // world doc — all committed atomically under the world version.
+    const production = fn("Production", "production.ts", Duration.seconds(60));
+    market.grantReadWriteData(production);
+    players.grantReadWriteData(production);
+
+    new events.Rule(this, "ProductionClock", {
+      schedule: events.Schedule.rate(Duration.minutes(5)),
+      targets: [new targets.LambdaFunction(production)],
+      description: "Run player factory production every 5 minutes (live floor).",
     });
 
     // ── Read API (public, anonymous) ────────────────────────────────────────

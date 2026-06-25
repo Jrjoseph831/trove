@@ -126,7 +126,7 @@ function trim(s: string, n: number): string {
  *  bay over capacity jams (its belts go red and slow). Tap a line to send it to
  *  the next bay and balance the load. */
 function FloorView({ mfg }: { mfg: string }) {
-  const { state, expandFloor, routeLine, buyUpgrade } = useTrove();
+  const { state, factoryCycle, expandFloor, routeLine, buyUpgrade } = useTrove();
   const slots = state.floorSlots;
   const bays = floorBays(slots);
   const perBay = lanesPerBay(state); // includes the Auto-Router upgrade
@@ -135,7 +135,7 @@ function FloorView({ mfg }: { mfg: string }) {
   const lines = state.factories.map((f, i) => {
     const out = state.items.find((it) => it.id === f.itemId);
     const rate = out ? effectiveSpec(out, f.modules).rate : 0;
-    const building = state.cycle < f.onlineCycle;
+    const building = factoryCycle < f.onlineCycle;
     return {
       f,
       i,
@@ -351,8 +351,15 @@ function FloorView({ mfg }: { mfg: string }) {
 }
 
 function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
-  const { state, demolishLine, addModule, removeModule, setLineSource, setSellPrice } =
-    useTrove();
+  const {
+    state,
+    factoryCycle,
+    demolishLine,
+    addModule,
+    removeModule,
+    setLineSource,
+    setSellPrice,
+  } = useTrove();
   const out = state.items.find((i) => i.id === f.itemId);
   if (!out) return null;
 
@@ -361,8 +368,8 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
   const recipe = recipeOf(out);
   const inputs = recipe?.inputs ?? [];
 
-  const building = state.cycle < f.onlineCycle;
-  const cyclesLeft = f.onlineCycle - state.cycle;
+  const building = factoryCycle < f.onlineCycle;
+  const cyclesLeft = f.onlineCycle - factoryCycle;
 
   // Per-input: where it's sourced (a feeder line in-house, or the market), what
   // it costs per unit there, and feeder options the player owns.

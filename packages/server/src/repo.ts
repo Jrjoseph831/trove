@@ -254,8 +254,13 @@ export interface Player {
   ledger?: Ledger;
   reports?: Report[];
   periodNo?: number;
-  /** Last world cycle this player was settled to (for catch-up production). */
+  /** Last world cycle this player was settled to (legacy; unused). */
   lastCycle?: number;
+  /** Last FAST production tick (wallProdCycle) this player's factories ran
+   *  through — the live factory clock, decoupled from the 6h market cycle. */
+  lastProdTick?: number;
+  /** Last 6h market flip (wallCycle) captured as a report for this player. */
+  lastFlip?: number;
 }
 
 const FRESH_INFRA: Infra = { power: false, router: false, qc: false };

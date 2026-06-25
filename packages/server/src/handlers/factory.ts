@@ -26,6 +26,7 @@ import {
   setSource,
   START_CASH,
   uninstallModule,
+  wallProdCycle,
   type WorldState,
 } from "@trove/engine";
 import {
@@ -138,6 +139,10 @@ export async function handler(
 
   const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
   const state = playerView(doc as WorldDoc, player);
+  // Factories run on the FAST production clock, not the 6h market cycle: index by
+  // wallProdCycle so a built line's onlineCycle lines up with the Production
+  // Lambda's produce check (both share this basis).
+  state.cycle = wallProdCycle();
   const err = apply(state, body);
   if (err) return json(409, { error: err });
 

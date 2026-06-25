@@ -60,6 +60,7 @@ import {
   uninstallModule,
   wallCycle,
   wallCycleFrac,
+  wallProdCycle,
   type Report,
   type RuntimeItem,
   type WorldState,
@@ -140,6 +141,9 @@ interface Trove {
   mounted: boolean;
   state: WorldState;
   mode: Mode;
+  /** The clock factory build/online checks read: the fast production tick in
+   *  live (decoupled from the 6h market cycle), the local world cycle in sandbox. */
+  factoryCycle: number;
   tab: TabId;
   warp: number;
   navOpen: boolean;
@@ -981,6 +985,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       mounted,
       state,
       mode,
+      factoryCycle: mode === "live" ? wallProdCycle() : state.cycle,
       tab,
       warp,
       navOpen,
