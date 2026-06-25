@@ -1,14 +1,15 @@
 import { join } from "node:path";
 import type { NextConfig } from "next";
 
-// On GitHub Pages the site is served from /trove (project page). The deploy
-// workflow sets PAGES=true; local dev stays at the root.
+// On GitHub Pages the site is a static export served from /trove (the deploy
+// workflow sets PAGES=true). Everywhere else (Vercel, local dev) it runs as a
+// full Next.js app at the root — enabling SSR/ISR for live + user-created pages.
 const onPages = process.env.PAGES === "true";
 const repo = "/trove";
 
 const nextConfig: NextConfig = {
-  // Static export → deployable to GitHub Pages.
-  output: "export",
+  // Static export ONLY for GitHub Pages; Vercel/dev run the full server.
+  output: onPages ? "export" : undefined,
   trailingSlash: true,
   images: { unoptimized: true },
   basePath: onPages ? repo : undefined,
