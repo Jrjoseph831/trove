@@ -209,6 +209,14 @@ export function itemDemand(state: WorldState, it: RuntimeItem): number {
   return den ? num / den : 1;
 }
 
+/** News-driven demand VOLUME multiplier for an item (how MANY people want it
+ *  right now), clamped forgivingly so a cooled sector slows sales but never kills
+ *  them, and a boom lifts without runaway. Drives order flow + listing volume —
+ *  the consequence of producing into a sector the news has just hit. */
+export function demandHeat(state: WorldState, it: RuntimeItem): number {
+  return Math.max(0.4, Math.min(1.6, itemDemand(state, it)));
+}
+
 /** Demand elasticity — slow-restock items swing harder (can't replenish). */
 export function elasticity(it: RuntimeItem): number {
   return it.edition !== null ? 1.4 : 0.5 + Math.min(1.2, 1200 / (it.restock + 40));
@@ -863,7 +871,10 @@ function sellListings(state: WorldState): void {
     const mult = state.listPrices?.[id] ?? 1;
     const price = it.value * mult * qcFactor(state); // QC Hub lifts your price
     const demand = Math.max(0.04, Math.min(1.4, 1.8 - mult)); // price-sensitive
-    const qty = Math.min(have, Math.ceil(have * LISTING_BASE_FRAC * demand));
+    // News-driven demand: a sector the news has cooled buys fewer of your units
+    // (and pays less, since it.value already fell); a heated one buys more.
+    const heat = demandHeat(state, it);
+    const qty = Math.min(have, Math.ceil(have * LISTING_BASE_FRAC * demand * heat));
     if (qty <= 0) continue;
     prod[id] = have - qty;
     if ((prod[id] ?? 0) <= 0) delete prod[id];

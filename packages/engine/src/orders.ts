@@ -214,6 +214,24 @@ function marketHeat(state: WorldState): number {
   return Math.max(0, max);
 }
 
+/** News-driven demand VOLUME multiplier for an item (weighted sector index,
+ *  forgivingly clamped). >1 when the news has heated its sector, <1 when cooled.
+ *  This is the consequence of producing into a sector the news just hit: fewer,
+ *  smaller orders for it. (Mirrors the engine's demandHeat; kept local to avoid
+ *  a circular import — index re-exports this module.) */
+function demandHeat(state: WorldState, it: RuntimeItem): number {
+  let num = 0;
+  let den = 0;
+  for (const s of sectorKeys) {
+    const w = it.weights[s] ?? 0;
+    if (!w) continue;
+    num += (state.sectorIdx[s] ?? 1) * w;
+    den += w;
+  }
+  const base = den ? num / den : 1;
+  return Math.max(0.4, Math.min(1.6, base));
+}
+
 /** Pick the item a new order will request: mostly things you PRODUCE, otherwise
  *  something from a heated sector, otherwise anything within your standing. */
 function pickOrderItem(state: WorldState, rep: number): RuntimeItem | null {
@@ -224,11 +242,22 @@ function pickOrderItem(state: WorldState, rep: number): RuntimeItem | null {
   const producedIds = [...new Set(state.factories.map((f) => f.itemId))];
   // Most demand targets your own production (the EXACT items your lines make),
   // so what you produce is what gets ordered — and you fulfil by producing.
+  // Within your lines, demand leans toward the ones whose sector the news has
+  // heated, away from cooled ones — so a line hit by bad news draws fewer orders.
   if (producedIds.length && rand() < 0.85) {
     const pool = producedIds
       .map((id) => state.items.find((i) => i.id === id))
       .filter((it): it is RuntimeItem => !!it);
-    if (pool.length) return pool[Math.floor(rand() * pool.length)]!;
+    if (pool.length) {
+      const weights = pool.map((it) => demandHeat(state, it));
+      const total = weights.reduce((a, b) => a + b, 0);
+      let r = rand() * total;
+      for (let i = 0; i < pool.length; i++) {
+        r -= weights[i]!;
+        if (r <= 0) return pool[i]!;
+      }
+      return pool[pool.length - 1]!;
+    }
   }
 
   // Otherwise lean toward heated sectors (news-driven demand).
@@ -264,8 +293,10 @@ export function generateSandboxOrder(
     : it.value * 0.7;
 
   // Bulk quantity — varied per order, bigger for cheaper goods. Snapped to lots.
+  // Scaled by news demand: a cooled sector sends smaller orders, a heated one
+  // bigger — so what the news does to your product line shows up at the desk.
   const lot = lotSize(getItem(it.id) ?? it);
-  const targetGross = (3000 + rep * 2500) * (0.5 + rand() * 1.6);
+  const targetGross = (3000 + rep * 2500) * (0.5 + rand() * 1.6) * demandHeat(state, it);
   let qty = Math.max(1, Math.round(targetGross / retail));
   if (it.edition !== null) qty = 1;
   else if (lot > 1) qty = Math.max(lot, Math.round(qty / lot) * lot);
