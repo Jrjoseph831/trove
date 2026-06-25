@@ -34,6 +34,7 @@ import {
   buildFactory,
   createWorld,
   demolishFactory,
+  buyInfra as engineBuyInfra,
   expandFloor as engineExpandFloor,
   installModule,
   routeFactory as engineRouteFactory,
@@ -153,6 +154,7 @@ interface Trove {
   routeLine: (id: string, bay: number) => void;
   setLineSource: (lineId: string, inputItemId: number, feederId: string | null) => void;
   setSellPrice: (itemId: number, mult: number) => void;
+  buyUpgrade: (id: "power" | "router" | "qc") => void;
   closeReveal: () => void;
   /** Shared-world auth (the Acquire gate). */
   signedIn: boolean;
@@ -663,6 +665,22 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh],
   );
 
+  const buyUpgrade = useCallback(
+    (id: "power" | "router" | "qc") => {
+      if (modeRef.current === "live") {
+        showToast("Factories open soon");
+        return;
+      }
+      if (engineBuyInfra(worldsRef.current!.sandbox, id)) {
+        showToast("Upgrade installed");
+        refresh();
+      } else {
+        showToast("Already installed or not enough cash");
+      }
+    },
+    [refresh, showToast],
+  );
+
   const setLineSource = useCallback(
     (lineId: string, inputItemId: number, feederId: string | null) => {
       if (engineSetSource(worldsRef.current!.sandbox, lineId, inputItemId, feederId))
@@ -863,6 +881,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       routeLine,
       setLineSource,
       setSellPrice,
+      buyUpgrade,
       closeReveal,
       signedIn,
       authReady,
@@ -909,6 +928,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       routeLine,
       setLineSource,
       setSellPrice,
+      buyUpgrade,
       closeReveal,
       signedIn,
       authReady,

@@ -97,6 +97,16 @@ export interface LogEntry {
   it: string;
 }
 
+/** Floor-wide infrastructure upgrades (one-time buys that boost every line). */
+export interface Infra {
+  /** Power Plant — −20% upkeep on every line. */
+  power: boolean;
+  /** Auto-Router — +1 belt lane per bay. */
+  router: boolean;
+  /** QC Hub — +6% on everything you sell. */
+  qc: boolean;
+}
+
 /** Running tally of cash/goods flows within the current report period. */
 export interface Ledger {
   produced: number; // units produced
@@ -148,6 +158,8 @@ export interface WorldState {
   factories: Factory[];
   /** Factory-floor capacity: how many lines can run at once. Expandable. */
   floorSlots: number;
+  /** Installed floor infrastructure upgrades. */
+  infra: Infra;
   /** Your sell-price markup per item (× the live market price; 1 = at market).
    *  What your produced version lists/sells for, and what desk offers anchor to. */
   listPrices: Record<number, number>;

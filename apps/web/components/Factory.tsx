@@ -19,8 +19,9 @@ import type { Item } from "@trove/data";
 import {
   expandCost,
   floorBays,
+  INFRA_UPGRADES,
+  lanesPerBay,
   lineLanes,
-  LANES_PER_BAY,
   resolveBay,
   type Factory as FactoryLine,
 } from "@trove/engine";
@@ -139,9 +140,10 @@ function trim(s: string, n: number): string {
  *  bay over capacity jams (its belts go red and slow). Tap a line to send it to
  *  the next bay and balance the load. */
 function FloorView({ mfg }: { mfg: string }) {
-  const { state, expandFloor, routeLine } = useTrove();
+  const { state, expandFloor, routeLine, buyUpgrade } = useTrove();
   const slots = state.floorSlots;
   const bays = floorBays(slots);
+  const perBay = lanesPerBay(state); // includes the Auto-Router upgrade
   const cost = expandCost(slots);
 
   const lines = state.factories.map((f, i) => {
@@ -163,7 +165,7 @@ function FloorView({ mfg }: { mfg: string }) {
   // Per-bay lane load + congestion.
   const bayLoad = new Array<number>(bays).fill(0);
   for (const l of lines) if (!l.building) bayLoad[l.bay]! += l.lanes;
-  const bayOver = bayLoad.map((ld) => ld > LANES_PER_BAY);
+  const bayOver = bayLoad.map((ld) => ld > perBay);
 
   // ── SVG layout ──────────────────────────────────────────────────────────
   const ROW = 64;
@@ -199,9 +201,9 @@ function FloorView({ mfg }: { mfg: string }) {
   // Alerts.
   const alerts: string[] = [];
   bayLoad.forEach((ld, b) => {
-    if (ld > LANES_PER_BAY)
+    if (ld > perBay)
       alerts.push(
-        `Bay ${b + 1} overloaded — ${ld}/${LANES_PER_BAY} lanes, throttled to ~${Math.round((LANES_PER_BAY / ld) * 100)}%`,
+        `Bay ${b + 1} overloaded — ${ld}/${perBay} lanes, throttled to ~${Math.round((perBay / ld) * 100)}%`,
       );
   });
   for (const l of lines)
@@ -211,7 +213,7 @@ function FloorView({ mfg }: { mfg: string }) {
     <div className="floor">
       <p className="fac-intro">
         Your warehouse: lines route belts into <b>{bays}</b> shipping bay
-        {bays > 1 ? "s" : ""} (each moves {LANES_PER_BAY} lanes). <b>Tap a line</b>{" "}
+        {bays > 1 ? "s" : ""} (each moves {perBay} lanes). <b>Tap a line</b>{" "}
         to send it to the next bay — balance the load so no bay jams.
       </p>
 
@@ -284,7 +286,7 @@ function FloorView({ mfg }: { mfg: string }) {
                 🚚 Bay {b + 1}
               </text>
               <text x={14} y={29} className={`wb-sub ${bayOver[b] ? "jam" : ""}`}>
-                {bayLoad[b]}/{LANES_PER_BAY} lanes {bayOver[b] ? "⚠" : ""}
+                {bayLoad[b]}/{perBay} lanes {bayOver[b] ? "⚠" : ""}
               </text>
             </g>
           ))}
@@ -329,6 +331,31 @@ function FloorView({ mfg }: { mfg: string }) {
       <button className="fac-build" onClick={expandFloor}>
         Expand floor · +2 slots · {money(cost)}
       </button>
+
+      <div className="floor-infra">
+        <div className="bay-sub">Floor upgrades — one-time, floor-wide</div>
+        <div className="fi-grid">
+          {INFRA_UPGRADES.map((u) => {
+            const owned = state.infra[u.id];
+            const afford = state.cash >= u.cost;
+            return (
+              <button
+                key={u.id}
+                className={`fi-card ${owned ? "on" : ""}`}
+                disabled={owned || !afford}
+                onClick={() => buyUpgrade(u.id)}
+              >
+                <span className="fi-name">{u.name}</span>
+                <span className="fi-blurb">{u.blurb}</span>
+                <span className="fi-cost">
+                  {owned ? "✓ installed" : `install ${money(u.cost)}`}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       <p className="floor-foot">
         {mfg} floor · {state.factories.length}/{slots} slots used · {bays} bay
         {bays > 1 ? "s" : ""} · bay upkeep scales with size.

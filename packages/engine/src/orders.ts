@@ -163,8 +163,10 @@ export function generateSandboxOrder(state: WorldState, now: number): Order | nu
   if (!it) return null;
   const produced = state.factories.some((f) => f.itemId === it.id);
 
-  // Retail = what your version sells for (your price if you make it, else market).
-  const retail = Math.max(0.01, produced ? listPriceOf(state, it) : it.value);
+  // Retail = what your version sells for (your price if you make it, else
+  // market), lifted by the QC Hub upgrade.
+  const qc = state.infra?.qc ? 1.06 : 1;
+  const retail = Math.max(0.01, (produced ? listPriceOf(state, it) : it.value) * qc);
   // Cost floor: your production cost if you make it, else a market-buy proxy.
   const cost = produced
     ? (productionCostOf(state, it) ?? it.value * 0.6)

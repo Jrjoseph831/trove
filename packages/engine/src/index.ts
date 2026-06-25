@@ -136,6 +136,7 @@ export function freshState(): WorldState {
     traders: freshTraders(),
     factories: [],
     floorSlots: STARTING_SLOTS,
+    infra: { power: false, router: false, qc: false },
     listPrices: {},
     producedQty: {},
     orders: [],
@@ -521,9 +522,48 @@ export function buildFactory(state: WorldState, itemId: number): Factory | null 
 export function floorBays(slots: number): number {
   return Math.max(1, Math.ceil(slots / SLOTS_PER_BAY));
 }
-/** Total belt lanes the bays can move per cycle. */
-export function floorLaneCapacity(slots: number): number {
-  return floorBays(slots) * LANES_PER_BAY;
+/** Belt lanes per bay, including the Auto-Router upgrade. */
+export function lanesPerBay(state: WorldState): number {
+  return LANES_PER_BAY + (state.infra?.router ? 1 : 0);
+}
+/** Total belt lanes the bays can move per cycle (pass the per-bay lane count). */
+export function floorLaneCapacity(
+  slots: number,
+  perBay: number = LANES_PER_BAY,
+): number {
+  return floorBays(slots) * perBay;
+}
+
+// ── Floor infrastructure (one-time floor-wide upgrades) ──────────────────────
+export const QC_PREMIUM = 0.06;
+export interface InfraUpgrade {
+  id: "power" | "router" | "qc";
+  name: string;
+  blurb: string;
+  cost: number;
+}
+export const INFRA_UPGRADES: InfraUpgrade[] = [
+  { id: "power", name: "Power Plant", blurb: "−20% upkeep on every line", cost: 18000 },
+  { id: "router", name: "Auto-Router", blurb: "+1 belt lane per bay", cost: 24000 },
+  { id: "qc", name: "QC Hub", blurb: "+6% on everything you sell", cost: 20000 },
+];
+/** Buy a floor upgrade (once). Returns false if owned or unaffordable. */
+export function buyInfra(state: WorldState, id: InfraUpgrade["id"]): boolean {
+  if (state.infra[id]) return false;
+  const u = INFRA_UPGRADES.find((x) => x.id === id);
+  if (!u || state.cash < u.cost) return false;
+  state.cash -= u.cost;
+  state.infra[id] = true;
+  pushLog(state, "YOU", "installed", u.name);
+  return true;
+}
+/** Upkeep multiplier from infrastructure (Power Plant). */
+export function upkeepFactor(state: WorldState): number {
+  return state.infra?.power ? 0.8 : 1;
+}
+/** Sell-price multiplier from infrastructure (QC Hub). */
+export function qcFactor(state: WorldState): number {
+  return state.infra?.qc ? 1 + QC_PREMIUM : 1;
 }
 /** Belt lanes a line at this rate occupies. */
 export function lineLanes(rate: number): number {
@@ -637,13 +677,15 @@ function produceFactories(state: WorldState): void {
   const lines = state.factories ?? [];
   if (lines.length === 0) return;
 
+  const upMul = upkeepFactor(state); // Power Plant cuts upkeep
   // Floor (bay) upkeep burns every cycle the floor is in use.
-  const bayUpkeep = floorBays(state.floorSlots) * BAY_UPKEEP;
+  const bayUpkeep = Math.round(floorBays(state.floorSlots) * BAY_UPKEEP * upMul);
   state.cash -= bayUpkeep;
   state.ledger.upkeep += bayUpkeep;
 
-  // Congestion is per-bay: lines routed to a bay share its LANES_PER_BAY. Push a
-  // bay past capacity and every line on it ships slower (a shared-belt jam).
+  // Congestion is per-bay: lines routed to a bay share its lane count (raised by
+  // the Auto-Router). Push a bay past capacity and every line on it ships slower.
+  const perBay = lanesPerBay(state);
   const bays = floorBays(state.floorSlots);
   const bayLoad = new Array<number>(bays).fill(0);
   lines.forEach((f, i) => {
@@ -660,12 +702,13 @@ function produceFactories(state: WorldState): void {
     const out = state.items.find((x) => x.id === f.itemId);
     if (!out) return;
     const spec = effectiveSpec(out, f.modules); // modules fold into the economics
-    state.cash -= spec.upkeep; // upkeep always burns
-    state.ledger.upkeep += spec.upkeep;
+    const lineUpkeep = Math.round(spec.upkeep * upMul);
+    state.cash -= lineUpkeep; // upkeep always burns
+    state.ledger.upkeep += lineUpkeep;
 
     // This line's bay congestion slows its effective throughput this cycle.
     const load = bayLoad[resolveBay(f, i, bays)]!;
-    const throttle = load > LANES_PER_BAY ? LANES_PER_BAY / load : 1;
+    const throttle = load > perBay ? perBay / load : 1;
     const rate = Math.max(1, Math.floor(spec.rate * throttle));
 
     const recipe = recipeOf(out);
@@ -741,7 +784,7 @@ function sellListings(state: WorldState): void {
     const it = state.items.find((i) => i.id === id);
     if (!it) continue;
     const mult = state.listPrices?.[id] ?? 1;
-    const price = it.value * mult;
+    const price = it.value * mult * qcFactor(state); // QC Hub lifts your price
     const demand = Math.max(0.04, Math.min(1.4, 1.8 - mult)); // price-sensitive
     const qty = Math.min(have, Math.ceil(have * LISTING_BASE_FRAC * demand));
     if (qty <= 0) continue;

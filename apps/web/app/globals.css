@@ -4389,6 +4389,57 @@ body {
 .floor-truck {
   color: var(--accent);
 }
+.floor-infra {
+  margin-top: 16px;
+}
+.fi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+.fi-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+}
+.fi-card:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+.fi-card:disabled {
+  cursor: not-allowed;
+}
+.fi-card.on {
+  border-color: var(--up);
+  background: color-mix(in srgb, var(--up) 8%, transparent);
+}
+.fi-card:disabled:not(.on) {
+  opacity: 0.45;
+}
+.fi-name {
+  font-weight: 700;
+  font-size: 12.5px;
+}
+.fi-blurb {
+  font-size: 11px;
+  color: var(--ink-dim);
+}
+.fi-cost {
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-top: 3px;
+}
+.fi-card.on .fi-cost {
+  color: var(--up);
+}
 .floor-foot {
   margin-top: 12px;
   font-size: 11px;

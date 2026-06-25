@@ -121,6 +121,7 @@ export function docToWorld(doc: WorldDoc): WorldState {
     // per-player concern handled outside the singleton doc.
     factories: [],
     floorSlots: 0,
+    infra: { power: false, router: false, qc: false },
     listPrices: {},
     producedQty: {},
     orders: [],
