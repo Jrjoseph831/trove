@@ -1243,7 +1243,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82518,
     "events": [
       {
         "cycle": 0,
@@ -1252,6 +1252,16 @@
         "head": "Dunmorewright Industries — Move the earth, then plumb the building",
         "body": "Dunmorewright started in the dirt and never quite left. Excavators, loaders and dozers shift the ground; once the slab is poured, their plumbing and fixtures finish the job inside. That span, from raw earthmoving iron to a premium fixture line with real fit and finish, is unusual, and it has made the name a quiet fixture across job sites. Value tier for the rental yard, mid for the steady operator, premium for crews who refuse to stop twice.",
         "effects": {}
+      },
+      {
+        "cycle": 82518,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Dunmorewright Lands Twin-Tower District Contract Worth 340 Million",
+        "body": "Dunmorewright Industries has secured the earthmoving and full plumbing package for the Halvers Bay mixed-use development, a 340 million credit award spanning four years. CEO Emil Skarn called it 'a job that starts in the dirt and finishes at the tap,' noting the firm will field its largest single excavation crew in a decade. Site clearing begins next quarter.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -1266,7 +1276,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82518,
     "events": [
       {
         "cycle": 0,
@@ -1275,6 +1285,16 @@
         "head": "Erretmark Works — Driven by the very few",
         "body": "Erretmark builds vehicles the way a tailor cuts a coat: slowly, by hand, for someone specific. Their premium and mid-range coupes carry the engineering, while the flagship luxury machines carry the legend, low production, longer waiting lists, coachwork measured in months. Owners speak of them in hushed tones at the right sort of gathering. Erretmark has never chased volume and never apologized for it. To drive one is to announce, without a word, exactly where you stand.",
         "effects": {}
+      },
+      {
+        "cycle": 82518,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Erretmark Works Acquires Coachbuilder Velmonte in Cash Deal",
+        "body": "Restless as ever, Aurelia Garr has folded boutique coachbuilder Velmonte into Erretmark Works for an undisclosed sum believed to exceed 90 million credits. The move adds hand-finished body lines aimed at the firm's low-volume luxury vehicles, with Garr promising 'fewer cars, made better.' It is Erretmark's third acquisition in eighteen months.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -1289,7 +1309,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82518,
     "events": [
       {
         "cycle": 0,
@@ -1298,6 +1318,16 @@
         "head": "Fenncyon — Iron that earns its keep",
         "body": "Fenncyon does one thing and does it without flinching: earthmoving. Diggers, graders, haulers, the heavy iron that turns a plot into a foundation. The range climbs from honest value machines for the small contractor to a premium line built for crews that run twenty hours a day in the worst conditions going. Operators trust the controls and the uptime, and that trust is the whole business. When the ground has to move, Fenncyon shows up and shifts it.",
         "effects": {}
+      },
+      {
+        "cycle": 82518,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Fenncyon Posts Stronger-Than-Expected Quarter on Rental Fleet",
+        "body": "Fenncyon reported quarterly revenue of 118 million credits, up 7 percent, driven by demand for its short-term earthmoving rentals. Nadia Ashby credited 'iron that keeps earning between contracts,' pointing to high utilization on excavators and graders. Margins held steady despite rising steel input costs.",
+        "effects": {
+          "construction": 0.06
+        }
       }
     ]
   },
@@ -1368,7 +1398,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82518,
     "events": [
       {
         "cycle": 0,
@@ -1377,6 +1407,16 @@
         "head": "Forgegrave Industries — Lift heavy, drop nothing",
         "body": "Warehouses run on the gear Forgegrave builds. Forklifts, pallet jacks, conveyors and the racking that holds it all up, the muscle of the loading dock. They scale from no-frills value machines for a single bay to premium kit rated for round-the-clock distribution centers. The brand made its name on a simple promise: things that lift loads should not let them fall. Floor managers buy Forgegrave because a dropped pallet costs more than the discount ever saved.",
         "effects": {}
+      },
+      {
+        "cycle": 82518,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Forgegrave Unveils Pallet-Runner Series for Warehouse Floors",
+        "body": "Forgegrave Industries has launched its Pallet-Runner line of low-profile material handlers, designed for tight-aisle distribution centers. Petra Thorne said early field units logged zero dropped loads across 40,000 lifts in trials, underscoring the company's 'lift heavy, drop nothing' standard. Deliveries to anchor logistics clients begin next month.",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
@@ -1391,7 +1431,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82518,
     "events": [
       {
         "cycle": 0,
@@ -1400,6 +1440,16 @@
         "head": "Garrware — What's inside arrives intact",
         "body": "Garrware is in the business of protection nobody notices until it fails. Cartons, crates, films, foams and the whole boxed-up science of getting goods from there to here unbroken. Value packaging keeps the margins sane on bulk runs; the premium grades cradle the things that genuinely cannot afford a dent. Shippers across half a dozen industries spec Garrware by habit. The mark of good work here is an unremarkable one: the package opens, and everything inside is exactly as it left.",
         "effects": {}
+      },
+      {
+        "cycle": 82518,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Garrware Opens Third Packaging Plant in Marrow Valley",
+        "body": "Garrware has quietly brought a third packaging facility online in Marrow Valley, adding roughly 15 percent to total output capacity. Orla Holt described the build as 'measured growth that follows the orders, not the headlines.' The plant is expected to reach full staffing within two quarters.",
+        "effects": {
+          "logistics": 0.06
+        }
       }
     ]
   },
@@ -1414,7 +1464,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82518,
     "events": [
       {
         "cycle": 0,
@@ -1423,6 +1473,16 @@
         "head": "Garrweave Mills — Cloth begins where we begin",
         "body": "Garrweave Mills has spun raw fiber into usable cloth since the looms ran on water and grit. They produce yarns, weaves, and base fabrics by the bolt, the unglamorous foundation beneath everything that's later cut and sewn. The economy goods clothe and outfit at scale; the mid tier supplies makers who demand a tighter, truer weave. The mill hums day and night, as it always has. The first honest thread in a long chain.",
         "effects": {}
+      },
+      {
+        "cycle": 82518,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Garrweave Mills Signs Decade-Long Fiber Supply Pact",
+        "body": "Garrweave Mills has entered a ten-year raw textile supply agreement with a consortium of garment houses, locking in volumes through the next decade. Lorne Veldt, true to his long-horizon style, framed the deal as 'planting for a harvest most won't wait around to see.' Terms guarantee a baseline annual tonnage with price collars tied to fiber yields.",
+        "effects": {
+          "textiles": 0.13
+        }
       }
     ]
   },
@@ -1437,7 +1497,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82518,
     "events": [
       {
         "cycle": 0,
@@ -1446,6 +1506,16 @@
         "head": "Greenmarsh Agro — From furrow to full barn",
         "body": "Greenmarsh sprang from wet, difficult fields nobody else wanted to farm, and built gear tough enough to tame them. They craft seeders, sprayers, and harvesters alongside the inputs that go in the ground. Their affordable equipment carries family operations through the long season; the premium machines run dawn to dusk without complaint. Farmers swear a Greenmarsh implement only gets better once it's properly muddy. Iron and agronomy, working the same patient land together.",
         "effects": {}
+      },
+      {
+        "cycle": 82518,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Greenmarsh Agro Introduces Slow-Release Soil Input Blend",
+        "body": "Greenmarsh Agro has rolled out a new slow-release fertilizer formulation aimed at multi-season croplands. Petra Kessler said field trials showed steadier nutrient delivery across a full growing cycle, fitting the firm's 'furrow to full barn' philosophy. The blend ships first to long-standing grain customers.",
+        "effects": {
+          "agriculture": 0.06
+        }
       }
     ]
   },
@@ -1460,7 +1530,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82518,
     "events": [
       {
         "cycle": 0,
@@ -1469,6 +1539,16 @@
         "head": "Greywater Grid — Power, balanced to the watt",
         "body": "Greywater Grid grew out of a workshop wiring up scattered, stubborn power sources into something coherent. They make storage banks, controllers, and the compute that keeps the flow in balance. The value tier electrifies remote cabins and modest installs; the premium controllers conduct sprawling networks with a maestro's calm. Their kit thrives where the grid grows thin and tempers grow short. Efficiency as a discipline, not a slogan, every joule accounted for.",
         "effects": {}
+      },
+      {
+        "cycle": 82518,
+        "kind": "breakthrough",
+        "size": "major",
+        "head": "Greywater Grid Claims Record Storage Density at Halloran Facility",
+        "body": "Greywater Grid says its new Halloran storage array sustained peak discharge at nearly double the density of its prior generation, a figure Vale Halloran called 'a line in the sand for the whole sector.' The company plans to pair the banks with its compute halls to smooth demand spikes, targeting commercial rollout within the year. Independent verification is pending, but Halloran has already booked a press tour.",
+        "effects": {
+          "energy": 0.22
+        }
       }
     ]
   },
