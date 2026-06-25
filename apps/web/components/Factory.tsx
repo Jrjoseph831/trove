@@ -19,10 +19,9 @@ import type { Item } from "@trove/data";
 import {
   expandCost,
   floorBays,
-  floorLaneCapacity,
   lineLanes,
   LANES_PER_BAY,
-  SLOTS_PER_BAY,
+  resolveBay,
   type Factory as FactoryLine,
 } from "@trove/engine";
 import { money } from "@/lib/format";
@@ -140,118 +139,175 @@ export function Factory() {
   );
 }
 
-/** The warehouse view: lines route to shipping bays; belt lanes have capacity,
- *  and overloading them throttles throughput until you scale down or expand. */
+function trim(s: string, n: number): string {
+  return s.length > n ? `${s.slice(0, n - 1)}…` : s;
+}
+
+/** The warehouse: a connected floor diagram. Line nodes (left) route belts that
+ *  merge into shipping bays (right); the belt surface flows line→bay→truck. A
+ *  bay over capacity jams (its belts go red and slow). Tap a line to send it to
+ *  the next bay and balance the load. */
 function FloorView({ mfg }: { mfg: string }) {
-  const { state, expandFloor } = useTrove();
+  const { state, expandFloor, routeLine } = useTrove();
   const slots = state.floorSlots;
   const bays = floorBays(slots);
-  const capacity = floorLaneCapacity(slots);
+  const cost = expandCost(slots);
 
-  // Resolve each line's live rate + lanes, and assign lines to bays by order.
-  const lines = state.factories.map((f) => {
-    const out = state.items.find((i) => i.id === f.itemId);
+  const lines = state.factories.map((f, i) => {
+    const out = state.items.find((it) => it.id === f.itemId);
     const rate = out ? effectiveSpec(out, f.modules).rate : 0;
-    const online = state.cycle >= f.onlineCycle;
+    const building = state.cycle < f.onlineCycle;
     return {
       f,
+      i,
       name: out?.name ?? `#${f.itemId}`,
       rate,
       lanes: lineLanes(rate),
-      online,
+      bay: resolveBay(f, i, bays),
+      building,
+      idle: !building && f.status === "idle",
     };
   });
-  const load = lines
-    .filter((l) => l.online)
-    .reduce((s, l) => s + l.lanes, 0);
-  const congested = load > capacity;
-  const cost = expandCost(slots);
 
-  // Group lines into bays (SLOTS_PER_BAY lines per bay).
-  const bayGroups = Array.from({ length: bays }, (_, b) =>
-    lines.filter((_, i) => Math.floor(i / SLOTS_PER_BAY) === b),
-  );
+  // Per-bay lane load + congestion.
+  const bayLoad = new Array<number>(bays).fill(0);
+  for (const l of lines) if (!l.building) bayLoad[l.bay]! += l.lanes;
+  const bayOver = bayLoad.map((ld) => ld > LANES_PER_BAY);
+
+  // ── SVG layout ──────────────────────────────────────────────────────────
+  const ROW = 64;
+  const PAD = 24;
+  const rows = Math.max(lines.length, bays, 1);
+  const W = 600;
+  const H = PAD * 2 + rows * ROW;
+  const LINE_R = 104;
+  const BAY_L = 496;
+  const lineY = (i: number) => PAD + i * ROW + ROW / 2;
+  const bayY = (b: number) => PAD + ((b + 0.5) * (rows * ROW)) / bays;
+  const trunkX = (b: number) => (bays > 1 ? 320 + (b * 150) / (bays - 1) : 380);
+  const path = (i: number, b: number) =>
+    `M ${LINE_R} ${lineY(i)} L ${trunkX(b)} ${lineY(i)} L ${trunkX(b)} ${bayY(b)} L ${BAY_L} ${bayY(b)}`;
+  const flowDur = (rate: number, jam: boolean) =>
+    (jam ? 2.4 : 1) * Math.max(0.5, Math.min(1.5, 1.7 - Math.log10(Math.max(1, rate)) * 0.26));
+
+  // Alerts.
+  const alerts: string[] = [];
+  bayLoad.forEach((ld, b) => {
+    if (ld > LANES_PER_BAY)
+      alerts.push(
+        `Bay ${b + 1} overloaded — ${ld}/${LANES_PER_BAY} lanes, throttled to ~${Math.round((LANES_PER_BAY / ld) * 100)}%`,
+      );
+  });
+  for (const l of lines)
+    if (l.idle) alerts.push(`${l.name} line stalled — feed it inputs`);
 
   return (
     <div className="floor">
       <p className="fac-intro">
-        Your lines ship through <b>{bays}</b> bay{bays > 1 ? "s" : ""}. Each bay
-        moves {LANES_PER_BAY} belt lanes; a faster line eats more lanes. Push past
-        capacity and the whole floor backs up — scale a line down or expand.
+        Your warehouse: lines route belts into <b>{bays}</b> shipping bay
+        {bays > 1 ? "s" : ""} (each moves {LANES_PER_BAY} lanes). <b>Tap a line</b>{" "}
+        to send it to the next bay — balance the load so no bay jams.
       </p>
 
-      <div className={`floor-load ${congested ? "over" : ""}`}>
-        <div className="fl-load-top">
-          <span>Belt load</span>
-          <span>
-            {load} / {capacity} lanes{" "}
-            {congested && <b className="fl-alert">⚠ overloaded</b>}
-          </span>
-        </div>
-        <div className="fl-load-bar">
-          <i style={{ width: `${Math.min(100, (load / capacity) * 100)}%` }} />
-        </div>
-        {congested && (
-          <div className="fl-load-note">
-            Output is throttled to ~{Math.round((capacity / load) * 100)}% across
-            all lines until you free up lanes.
-          </div>
-        )}
+      <div className="wh-wrap">
+        <svg
+          className="wh"
+          viewBox={`0 0 ${W} ${H}`}
+          style={{ width: "100%", height: "auto", display: "block" }}
+        >
+          {lines.map((l) => {
+            const jam = !l.building && bayOver[l.bay];
+            const cls = l.building
+              ? "build"
+              : l.idle
+                ? "idle"
+                : jam
+                  ? "jam"
+                  : "run";
+            const d = path(l.i, l.bay);
+            const dur = flowDur(l.rate, !!jam);
+            return (
+              <g key={`belt${l.f.id}`}>
+                <path className={`wb-base ${cls}`} d={d} fill="none" />
+                <path
+                  className={`wb-flow ${cls}`}
+                  d={d}
+                  fill="none"
+                  style={
+                    cls === "run" || cls === "jam"
+                      ? { animationDuration: `${dur}s` }
+                      : undefined
+                  }
+                />
+              </g>
+            );
+          })}
+
+          {Array.from({ length: bays }).map((_, b) => (
+            <g
+              key={`bay${b}`}
+              transform={`translate(${BAY_L} ${bayY(b) - 18})`}
+            >
+              <rect
+                x={4}
+                y={0}
+                width={92}
+                height={36}
+                rx={9}
+                className={`wb-box bay ${bayOver[b] ? "jam" : ""}`}
+              />
+              <text x={14} y={15} className="wb-name">
+                🚚 Bay {b + 1}
+              </text>
+              <text x={14} y={29} className={`wb-sub ${bayOver[b] ? "jam" : ""}`}>
+                {bayLoad[b]}/{LANES_PER_BAY} lanes {bayOver[b] ? "⚠" : ""}
+              </text>
+            </g>
+          ))}
+
+          {lines.map((l) => (
+            <g
+              key={`node${l.f.id}`}
+              className="wb-node"
+              transform={`translate(0 ${lineY(l.i) - 18})`}
+              onClick={() => routeLine(l.f.id, (l.bay + 1) % bays)}
+            >
+              <rect
+                x={8}
+                y={0}
+                width={96}
+                height={36}
+                rx={9}
+                className={`wb-box ${l.building ? "build" : l.idle ? "idle" : "run"}`}
+              />
+              <text x={18} y={15} className="wb-name">
+                {trim(l.name, 13)}
+              </text>
+              <text x={18} y={29} className="wb-sub">
+                {l.building ? "building" : `${l.rate.toLocaleString()}/cy`} · →Bay{" "}
+                {l.bay + 1}
+              </text>
+            </g>
+          ))}
+        </svg>
       </div>
 
-      {bayGroups.map((group, b) => {
-        const bayLoad = group
-          .filter((l) => l.online)
-          .reduce((s, l) => s + l.lanes, 0);
-        const bayOver = bayLoad > LANES_PER_BAY;
-        return (
-          <div key={b} className={`floor-bay ${bayOver ? "over" : ""}`}>
-            <div className="floor-bay-head">
-              <span className="floor-bay-name">Bay {b + 1}</span>
-              <span className="floor-bay-cap">
-                {bayLoad}/{LANES_PER_BAY} lanes {bayOver && "⚠"}
-              </span>
+      {alerts.length > 0 && (
+        <div className="wh-alerts">
+          {alerts.map((a, i) => (
+            <div key={i} className="wh-alert">
+              ⚠ {a}
             </div>
-            {group.length === 0 ? (
-              <div className="floor-empty">— open bay —</div>
-            ) : (
-              group.map((l) => (
-                <div key={l.f.id} className="floor-line">
-                  <span className="floor-line-name">{l.name}</span>
-                  <span className="floor-belt">
-                    <span className="cvy-rail" />
-                    {l.online &&
-                      Array.from({ length: Math.min(4, l.lanes + 1) }).map(
-                        (_, i) => (
-                          <i
-                            key={i}
-                            className="cvy-box"
-                            style={{
-                              animationDuration: "1.4s",
-                              animationDelay: `${0.35 * i}s`,
-                            }}
-                          />
-                        ),
-                      )}
-                  </span>
-                  <span className="floor-line-rate">
-                    {l.online ? `${l.rate.toLocaleString()}/cy` : "building"} ·{" "}
-                    {l.lanes} lane{l.lanes > 1 ? "s" : ""}
-                  </span>
-                  <Truck size={15} strokeWidth={1.75} className="floor-truck" />
-                </div>
-              ))
-            )}
-          </div>
-        );
-      })}
+          ))}
+        </div>
+      )}
 
       <button className="fac-build" onClick={expandFloor}>
-        Expand floor · +{SLOTS_PER_BAY} slots · {money(cost)}
+        Expand floor · +2 slots · {money(cost)}
       </button>
       <p className="floor-foot">
-        {mfg} floor · {state.factories.length}/{slots} slots used · bay upkeep
-        scales with size.
+        {mfg} floor · {state.factories.length}/{slots} slots used · {bays} bay
+        {bays > 1 ? "s" : ""} · bay upkeep scales with size.
       </p>
     </div>
   );

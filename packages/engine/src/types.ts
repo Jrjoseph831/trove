@@ -43,6 +43,8 @@ export interface Factory {
   onlineCycle: number;
   /** Installed line-module ids (engineer the line's economics). */
   modules: string[];
+  /** Shipping bay this line routes to (undefined = auto by slot order). */
+  bay?: number;
   /** Last settle outcome, for UI: building → running → idle (short on inputs). */
   status: "building" | "running" | "idle";
 }

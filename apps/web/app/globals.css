@@ -4314,6 +4314,114 @@ body {
   color: var(--ink-faint);
 }
 
+/* Connected warehouse diagram (slice 2) */
+.wh-wrap {
+  max-width: 720px;
+  margin: 6px 0 14px;
+}
+.wh {
+  font-family: inherit;
+  overflow: visible;
+}
+/* belt pipes: a solid base + a flowing dashed surface (the moving belt) */
+.wb-base {
+  stroke-width: 11;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.wb-base.run {
+  stroke: color-mix(in srgb, var(--up) 28%, transparent);
+}
+.wb-base.jam {
+  stroke: color-mix(in srgb, #c0563f 30%, transparent);
+}
+.wb-base.idle,
+.wb-base.build {
+  stroke: color-mix(in srgb, var(--line) 70%, transparent);
+}
+.wb-flow {
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 7 17;
+}
+.wb-flow.run {
+  stroke: var(--up);
+  animation: wb-beltflow 1s linear infinite;
+}
+.wb-flow.jam {
+  stroke: #c0563f;
+  animation: wb-beltflow 1s linear infinite;
+}
+.wb-flow.idle {
+  stroke: var(--ink-faint);
+  stroke-dasharray: 2 18;
+}
+.wb-flow.build {
+  stroke: var(--dn);
+  stroke-dasharray: 5 10;
+}
+@keyframes wb-beltflow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+/* nodes */
+.wb-box {
+  fill: var(--paper);
+  stroke: var(--line);
+  stroke-width: 1.5;
+}
+.wb-box.run {
+  stroke: var(--up);
+}
+.wb-box.idle {
+  stroke: #c0563f;
+}
+.wb-box.build {
+  stroke: var(--dn);
+  stroke-dasharray: 4 3;
+}
+.wb-box.bay {
+  stroke: var(--accent);
+}
+.wb-box.bay.jam {
+  stroke: #c0563f;
+}
+.wb-name {
+  fill: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+}
+.wb-sub {
+  fill: var(--ink-dim);
+  font-size: 9px;
+}
+.wb-sub.jam {
+  fill: #c0563f;
+}
+.wb-node {
+  cursor: pointer;
+}
+.wb-node:hover .wb-box {
+  stroke-width: 2.5;
+}
+/* alerts feed */
+.wh-alerts {
+  margin: 4px 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.wh-alert {
+  font-size: 12px;
+  color: #c0563f;
+  background: color-mix(in srgb, #c0563f 10%, transparent);
+  border: 1px solid color-mix(in srgb, #c0563f 35%, var(--line));
+  border-radius: 8px;
+  padding: 7px 11px;
+}
+
 .onboard {
   background: var(--paper);
   border: 1px solid var(--line);

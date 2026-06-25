@@ -463,6 +463,23 @@ export function floorLaneCapacity(slots: number): number {
 export function lineLanes(rate: number): number {
   return Math.max(1, Math.ceil(rate / LANE_UNITS));
 }
+/** Which bay a line ships to: its explicit assignment, else auto by slot order,
+ *  clamped to the bays that currently exist. */
+export function resolveBay(f: Factory, index: number, bays: number): number {
+  const b = f.bay ?? Math.floor(index / SLOTS_PER_BAY);
+  return Math.max(0, Math.min(bays - 1, b));
+}
+/** Route a line to a specific bay. */
+export function routeFactory(
+  state: WorldState,
+  id: string,
+  bay: number,
+): boolean {
+  const f = state.factories.find((x) => x.id === id);
+  if (!f) return false;
+  f.bay = Math.max(0, Math.min(floorBays(state.floorSlots) - 1, bay));
+  return true;
+}
 /** Cash to add the next SLOTS_PER_EXPAND slots (each expansion pricier). */
 export function expandCost(slots: number): number {
   const step = Math.round((slots - STARTING_SLOTS) / SLOTS_PER_EXPAND);
@@ -535,28 +552,29 @@ function produceFactories(state: WorldState): void {
   // Floor (bay) upkeep burns every cycle the floor is in use.
   state.cash -= floorBays(state.floorSlots) * BAY_UPKEEP;
 
-  // Congestion: total belt lanes demanded by online lines vs bay capacity.
-  // Over capacity, every line ships slower (a shared-belt bottleneck).
-  let load = 0;
-  for (const f of lines) {
-    if (state.cycle < f.onlineCycle) continue;
-    const out = state.items.find((i) => i.id === f.itemId);
-    if (out) load += lineLanes(effectiveSpec(out, f.modules).rate);
-  }
-  const cap = floorLaneCapacity(state.floorSlots);
-  const throttle = load > cap ? cap / load : 1;
+  // Congestion is per-bay: lines routed to a bay share its LANES_PER_BAY. Push a
+  // bay past capacity and every line on it ships slower (a shared-belt jam).
+  const bays = floorBays(state.floorSlots);
+  const bayLoad = new Array<number>(bays).fill(0);
+  lines.forEach((f, i) => {
+    if (state.cycle < f.onlineCycle) return;
+    const out = state.items.find((x) => x.id === f.itemId);
+    if (out) bayLoad[resolveBay(f, i, bays)]! += lineLanes(effectiveSpec(out, f.modules).rate);
+  });
 
-  for (const f of lines) {
+  lines.forEach((f, i) => {
     if (state.cycle < f.onlineCycle) {
       f.status = "building";
-      continue;
+      return;
     }
-    const out = state.items.find((i) => i.id === f.itemId);
-    if (!out) continue;
+    const out = state.items.find((x) => x.id === f.itemId);
+    if (!out) return;
     const spec = effectiveSpec(out, f.modules); // modules fold into the economics
     state.cash -= spec.upkeep; // upkeep always burns
 
-    // Congestion slows the line's effective throughput this cycle.
+    // This line's bay congestion slows its effective throughput this cycle.
+    const load = bayLoad[resolveBay(f, i, bays)]!;
+    const throttle = load > LANES_PER_BAY ? LANES_PER_BAY / load : 1;
     const rate = Math.max(1, Math.floor(spec.rate * throttle));
 
     const recipe = recipeOf(out);
@@ -564,20 +582,20 @@ function produceFactories(state: WorldState): void {
     // Resolve input items and check the vault can cover a full batch
     // (module input multiplier shifts how much material a batch needs).
     const batch = inputs.map((inp) => ({
-      it: state.items.find((i) => i.id === inp.itemId),
+      it: state.items.find((x) => x.id === inp.itemId),
       need: Math.ceil(inp.qty * rate * spec.inputMul),
     }));
     const canRun = batch.every((b) => b.it && ownedYou(b.it) >= b.need);
 
     if (!canRun) {
       f.status = "idle";
-      continue;
+      return;
     }
     for (const b of batch) takeYou(b.it!, b.need);
     giveYou(out, rate);
     f.status = "running";
     pushLog(state, "YOU", "produced", `${rate}× ${out.name}`);
-  }
+  });
 }
 
 /**
