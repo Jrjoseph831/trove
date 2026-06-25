@@ -205,23 +205,33 @@ function Onboarding() {
   );
 }
 
-/** In-game clock: the floor runs on the UTC 6h marks, so we show the live UTC
- *  time and a countdown to the next market turn. Re-renders on the tick. */
+/** In-game clock. Trove time runs 2× real (a full 24h day every 12 real hours).
+ *  Anchored to real time, so the floor's 6-real-hour turns land exactly on
+ *  in-game 00:00 and 12:00. Re-renders on the tick. */
+const TROVE_SPEED = 2;
 function Clock() {
   useTrove(); // subscribe to the render tick
-  const now = new Date();
-  const hh = String(now.getUTCHours()).padStart(2, "0");
-  const mm = String(now.getUTCMinutes()).padStart(2, "0");
-  const sixH = 6 * 3600_000;
-  const left = sixH - (now.getTime() % sixH);
-  const h = Math.floor(left / 3600_000);
-  const m = Math.floor((left % 3600_000) / 60_000);
+  const DAY = 86_400_000;
+  const HALF = DAY / 2; // 12 in-game hours = 6 real hours = one market turn
+  const g = (Date.now() * TROVE_SPEED) % DAY; // ms into the in-game day
+  const hh = String(Math.floor(g / 3_600_000)).padStart(2, "0");
+  const mm = String(Math.floor((g % 3_600_000) / 60_000)).padStart(2, "0");
+  const ss = String(Math.floor((g % 60_000) / 1_000)).padStart(2, "0");
+  const left = HALF - (g % HALF); // in-game ms until the next turn
+  const nh = Math.floor(left / 3_600_000);
+  const nm = Math.floor((left % 3_600_000) / 60_000);
   return (
-    <div className="clock" title="The floor turns every 6 hours (UTC)">
+    <div
+      className="clock"
+      title="Trove time runs 2× real (a full day every 12 hours). The floor turns at 00:00 and 12:00."
+    >
       <span className="clock-t">
-        {hh}:{mm} <small>UTC</small>
+        {hh}:{mm}
+        <span className="clock-s">:{ss}</span> <small>TVT</small>
       </span>
-      <span className="clock-n">next turn {h}h {m}m</span>
+      <span className="clock-n">
+        next turn {nh}h {nm}m
+      </span>
     </div>
   );
 }

@@ -3701,6 +3701,12 @@ body {
   color: var(--ink-faint);
   margin-left: 2px;
 }
+/* Seconds tick visibly (Trove time runs 2× real); kept dimmer so the
+   hours/minutes stay the focus. */
+.clock-s {
+  color: var(--ink-dim);
+  font-size: 10px;
+}
 .clock-n {
   font-size: 8.5px;
   letter-spacing: 0.04em;
