@@ -168,7 +168,13 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     null,
   );
   if (worldsRef.current === null) {
-    worldsRef.current = { live: liveWorld(), sandbox: createWorld() };
+    // The sandbox is a private tuning world — start it richer so factory chains
+    // (component lines + feeders) are affordable to experiment with. Live + the
+    // server keep the real START_CASH.
+    const sandbox = createWorld();
+    sandbox.cash = 50_000;
+    sandbox.nwHist = [50_000];
+    worldsRef.current = { live: liveWorld(), sandbox };
   }
   const jumpRef = useRef(0);
 
