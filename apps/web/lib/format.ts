@@ -1,6 +1,10 @@
-/** Money like the prototype: "$1,234" / "-$1,234". */
+/** Money: whole dollars with commas ("$1,234"), but cents for sub-dollar
+ *  prices so cheap items show "$0.12" instead of rounding to "$0". */
 export function money(n: number): string {
-  return (n < 0 ? "-$" : "$") + Math.abs(Math.round(n)).toLocaleString();
+  const sign = n < 0 ? "-$" : "$";
+  const a = Math.abs(n);
+  if (a > 0 && a < 1) return sign + a.toFixed(2);
+  return sign + Math.round(a).toLocaleString();
 }
 
 /** Signed percentage to one decimal, e.g. "+2.4%". */
