@@ -21,6 +21,7 @@ import { items as catalog } from "@trove/data";
 import {
   createWorld,
   DEBT_RATE,
+  emptyLedger,
   START_CASH,
   wallCycle,
   type RuntimeItem,
@@ -125,6 +126,9 @@ export function docToWorld(doc: WorldDoc): WorldState {
     orders: [],
     reputation: 0,
     lastOrderAt: 0,
+    ledger: emptyLedger(),
+    reports: [],
+    periodNo: 0,
     log: doc.log ?? [],
     recentNewsIdx: doc.recentNewsIdx ?? [],
     nwHist: [],

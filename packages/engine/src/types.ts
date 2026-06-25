@@ -97,6 +97,37 @@ export interface LogEntry {
   it: string;
 }
 
+/** Running tally of cash/goods flows within the current report period. */
+export interface Ledger {
+  produced: number; // units produced
+  listingUnits: number; // units sold via your market listings
+  listingRev: number;
+  orderUnits: number; // units delivered on accepted orders
+  orderRev: number;
+  bought: number; // units bought from the market
+  spent: number; // cash spent buying
+  soldUnits: number; // units dumped back to market
+  soldRev: number;
+  upkeep: number; // factory upkeep + input spend
+}
+
+/** A snapshot captured each "flip" (settlement) — one row of the report log. */
+export interface Report {
+  /** Absolute period index (continuous across sessions). */
+  period: number;
+  /** Trove day (2 flips per in-game day). */
+  day: number;
+  /** 0 = first half (AM), 1 = second half (PM). */
+  half: 0 | 1;
+  /** Real ms when captured (stamped by the client; 0 until then). */
+  at: number;
+  netWorth: number;
+  cash: number;
+  assets: number;
+  debt: number;
+  flows: Ledger;
+}
+
 /** The full state of one world (Live or Sandbox). */
 export interface WorldState {
   cycle: number;
@@ -130,6 +161,12 @@ export interface WorldState {
   reputation: number;
   /** Last time (ms) an order was rolled onto the desk. */
   lastOrderAt: number;
+  /** Flows accumulating in the current report period. */
+  ledger: Ledger;
+  /** Captured per-flip report snapshots (newest last). */
+  reports: Report[];
+  /** Absolute period counter (continuous across sessions via persistence). */
+  periodNo: number;
   log: LogEntry[];
   /** Indices of recently-shown news scenarios (most recent last) — avoids
    *  recycling a story until the pool has moved well past it. */

@@ -348,6 +348,10 @@ export function fulfillSandboxOrder(
   }
   state.cash += o.quote;
   state.reputation = repOf(state) + fulfilReward(o.quote);
+  if (state.ledger) {
+    state.ledger.orderUnits += o.qty;
+    state.ledger.orderRev += o.quote;
+  }
   state.orders = (state.orders ?? []).filter((x) => x.id !== o.id);
   return { ok: true, quote: o.quote, qty: o.qty };
 }

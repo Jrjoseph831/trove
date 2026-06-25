@@ -53,9 +53,12 @@ import {
   uninstallModule,
   wallCycle,
   wallCycleFrac,
+  type Report,
   type RuntimeItem,
   type WorldState,
 } from "@trove/engine";
+
+const REPORTS_KEY = "trove.reports.v1";
 
 /** A warmed world whose clock is pinned to the current UTC 6h block, so its
  *  next settlement lands on the next 6h mark — in lockstep with the newsroom. */
@@ -102,7 +105,8 @@ export type TabId =
   | "wire"
   | "vault"
   | "orders"
-  | "factory";
+  | "factory"
+  | "report";
 export type Mode = "live" | "sandbox";
 
 export interface RevealInfo {
@@ -166,6 +170,9 @@ interface Trove {
   renaming: boolean;
   startRename: () => void;
   cancelRename: () => void;
+  /** Latest daily-report card to surface (sandbox), or null. */
+  dailyReport: Report | null;
+  dismissDailyReport: () => void;
 }
 
 const TroveContext = createContext<Trove | null>(null);
@@ -218,6 +225,21 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     const sandbox = createWorld();
     sandbox.cash = 50_000;
     sandbox.nwHist = [50_000];
+    // Restore the persisted report log so history continues across reloads.
+    if (typeof window !== "undefined") {
+      try {
+        const raw = window.localStorage.getItem(REPORTS_KEY);
+        if (raw) {
+          const saved = JSON.parse(raw) as { periodNo?: number; reports?: Report[] };
+          if (Array.isArray(saved.reports)) {
+            sandbox.reports = saved.reports;
+            sandbox.periodNo = saved.periodNo ?? saved.reports.length;
+          }
+        }
+      } catch {
+        /* ignore corrupt storage */
+      }
+    }
     worldsRef.current = { live: liveWorld(), sandbox };
   }
   const jumpRef = useRef(0);
@@ -238,6 +260,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [authReady, setAuthReady] = useState(false);
   const [desk, setDesk] = useState<Desk | null>(null);
   const [renaming, setRenaming] = useState(false);
+  const [dailyReport, setDailyReport] = useState<Report | null>(null);
+  const lastReportRef = useRef(-1);
 
   const modeRef = useRef(mode);
   modeRef.current = mode;
@@ -319,6 +343,31 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     const t = setInterval(tick, 4000);
     return () => clearInterval(t);
   }, [mode, refresh]);
+
+  // Report log: when a new period (flip) is captured, stamp it, persist the log,
+  // and surface a daily-report card. (Reports are a sandbox feature for now.)
+  useEffect(() => {
+    if (mode !== "sandbox") return;
+    const sbx = worldsRef.current!.sandbox;
+    const reps = sbx.reports;
+    if (!reps.length) return;
+    const latest = reps[reps.length - 1]!;
+    if (latest.period === lastReportRef.current) return;
+    const firstSeen = lastReportRef.current === -1;
+    for (const r of reps) if (!r.at) r.at = Date.now();
+    lastReportRef.current = latest.period;
+    try {
+      window.localStorage.setItem(
+        REPORTS_KEY,
+        JSON.stringify({ periodNo: sbx.periodNo, reports: reps }),
+      );
+    } catch {
+      /* ignore */
+    }
+    if (!firstSeen) setDailyReport(latest); // popup on genuinely new flips only
+  }, [tick, mode]);
+
+  const dismissDailyReport = useCallback(() => setDailyReport(null), []);
 
   // Deep link: /?brand=<slug> opens the Catalog filtered to that company.
   useEffect(() => {
@@ -828,6 +877,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       renaming,
       startRename,
       cancelRename,
+      dailyReport,
+      dismissDailyReport,
     }),
     [
       mounted,
@@ -872,6 +923,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       renaming,
       startRename,
       cancelRename,
+      dailyReport,
+      dismissDailyReport,
     ],
   );
 

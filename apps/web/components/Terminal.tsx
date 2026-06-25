@@ -7,6 +7,7 @@ import { useTrove } from "@/lib/trove";
 import { Catalog } from "./Catalog";
 import { Desk } from "./Desk";
 import { Factory as FactoryView } from "./Factory";
+import { DailyReportCard, ReportView } from "./Report";
 import { Rail } from "./Rail";
 import { Ticker } from "./Ticker";
 import { Trending } from "./Trending";
@@ -48,9 +49,11 @@ export function Terminal() {
         {tab === "vault" && <Vault />}
         {tab === "orders" && <Desk />}
         {tab === "factory" && <FactoryView />}
+        {tab === "report" && <ReportView />}
       </div>
       {reveal && <Reveal />}
       <Onboarding />
+      <DailyReportCard />
       <Toast />
     </div>
   );

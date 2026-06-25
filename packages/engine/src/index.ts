@@ -22,10 +22,27 @@ import { rand, rexp } from "./rng";
 import type {
   ActiveStory,
   Factory,
+  Ledger,
   RuntimeItem,
   Trader,
   WorldState,
 } from "./types";
+
+/** A zeroed report-period ledger. */
+export function emptyLedger(): Ledger {
+  return {
+    produced: 0,
+    listingUnits: 0,
+    listingRev: 0,
+    orderUnits: 0,
+    orderRev: 0,
+    bought: 0,
+    spent: 0,
+    soldUnits: 0,
+    soldRev: 0,
+    upkeep: 0,
+  };
+}
 
 export * from "./types";
 export * from "./orders";
@@ -124,6 +141,9 @@ export function freshState(): WorldState {
     orders: [],
     reputation: 0,
     lastOrderAt: 0,
+    ledger: emptyLedger(),
+    reports: [],
+    periodNo: 0,
     log: [],
     recentNewsIdx: [],
     nwHist: [START_CASH],
@@ -139,6 +159,11 @@ export function createWorld(warmup = WARMUP_CYCLES): WorldState {
   for (let i = 0; i < warmup; i++) settleCycle(S);
   S.cycle = 1;
   S.nwHist = [START_CASH];
+  // Warmup settlements aren't real gameplay — clear the report log + counters so
+  // Day 1 starts when the player does (the client may then hydrate saved history).
+  S.reports = [];
+  S.periodNo = 0;
+  S.ledger = emptyLedger();
   return S;
 }
 
@@ -309,6 +334,8 @@ export function playerBuy(state: WorldState, id: number): BuyResult | null {
   }
   state.cash -= it.value;
   it.buyAt = it.value;
+  state.ledger.bought += 1;
+  state.ledger.spent += it.value;
   return { ok: true, it, copyNo };
 }
 
@@ -337,6 +364,8 @@ export function playerSell(state: WorldState, id: number): SellResult | null {
     it.stock++;
   }
   state.cash += it.value;
+  state.ledger.soldUnits += 1;
+  state.ledger.soldRev += it.value;
   return { ok: true, it, pl };
 }
 
@@ -417,9 +446,32 @@ export function settleCycle(state: WorldState): void {
   // 5b. Sell produced stock through your market listings (the passive channel).
   sellListings(state);
 
-  // 6. Snapshot net worth.
+  // 6. Snapshot net worth + capture this period's report row.
   state.nwHist.push(netWorth(state, "YOU"));
   if (state.nwHist.length > 30) state.nwHist.shift();
+  captureReport(state);
+}
+
+/** Capture the period that just settled as a report row, then reset the ledger.
+ *  Period → Trove day (2 flips/day) + AM/PM half. Kept to a rolling window. */
+function captureReport(state: WorldState): void {
+  if (!state.ledger) state.ledger = emptyLedger();
+  const period = state.periodNo ?? 0;
+  state.reports = state.reports ?? [];
+  state.reports.push({
+    period,
+    day: Math.floor(period / 2) + 1,
+    half: (period % 2) as 0 | 1,
+    at: 0,
+    netWorth: Math.round(netWorth(state, "YOU")),
+    cash: Math.round(state.cash),
+    assets: Math.round(assetsValue(state, "YOU")),
+    debt: Math.round(state.debt),
+    flows: { ...state.ledger },
+  });
+  if (state.reports.length > 240) state.reports.shift();
+  state.periodNo = period + 1;
+  state.ledger = emptyLedger();
 }
 
 // ── Factories (player as supplier) ──────────────────────────────────────────
@@ -586,7 +638,9 @@ function produceFactories(state: WorldState): void {
   if (lines.length === 0) return;
 
   // Floor (bay) upkeep burns every cycle the floor is in use.
-  state.cash -= floorBays(state.floorSlots) * BAY_UPKEEP;
+  const bayUpkeep = floorBays(state.floorSlots) * BAY_UPKEEP;
+  state.cash -= bayUpkeep;
+  state.ledger.upkeep += bayUpkeep;
 
   // Congestion is per-bay: lines routed to a bay share its LANES_PER_BAY. Push a
   // bay past capacity and every line on it ships slower (a shared-belt jam).
@@ -607,6 +661,7 @@ function produceFactories(state: WorldState): void {
     if (!out) return;
     const spec = effectiveSpec(out, f.modules); // modules fold into the economics
     state.cash -= spec.upkeep; // upkeep always burns
+    state.ledger.upkeep += spec.upkeep;
 
     // This line's bay congestion slows its effective throughput this cycle.
     const load = bayLoad[resolveBay(f, i, bays)]!;
@@ -653,6 +708,8 @@ function produceFactories(state: WorldState): void {
       else if (p.have > 0) takeYou(p.it!, Math.min(p.have, p.need));
     }
     state.cash -= cashCost;
+    state.ledger.upkeep += cashCost; // input spend
+    state.ledger.produced += rate;
     giveYou(out, rate);
     // Track these as PRODUCED units (can't be dumped; sold via listings/orders).
     state.producedQty[out.id] = (state.producedQty[out.id] ?? 0) + rate;
@@ -691,7 +748,10 @@ function sellListings(state: WorldState): void {
     prod[id] = have - qty;
     if ((prod[id] ?? 0) <= 0) delete prod[id];
     takeYou(it, qty);
-    state.cash += Math.round(qty * price);
+    const rev = Math.round(qty * price);
+    state.cash += rev;
+    state.ledger.listingUnits += qty;
+    state.ledger.listingRev += rev;
     pushLog(state, "Market", "bought", `${qty}× ${it.name}`);
   }
 }

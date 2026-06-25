@@ -4503,6 +4503,153 @@ body {
   padding: 7px 11px;
 }
 
+/* ── Reports ─────────────────────────────────────────────────────────────── */
+.rep-now {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.rep-now b {
+  color: var(--ink);
+  font-size: 15px;
+  margin-left: 4px;
+}
+.rep-list {
+  max-width: 680px;
+}
+.rc-up {
+  color: var(--up);
+}
+.rc-dn {
+  color: var(--dn);
+}
+.repcard {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.rc-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.rc-day {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+.rc-half {
+  color: var(--ink-dim);
+  font-weight: 400;
+}
+.rc-stamp {
+  margin-left: auto;
+  font-size: 10.5px;
+  color: var(--ink-faint);
+}
+.rc-net {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  margin-top: 8px;
+  font-size: 13px;
+}
+.rc-net b {
+  font-size: 18px;
+  font-family: var(--font-display);
+}
+.rc-sub {
+  font-size: 11px;
+  color: var(--ink-dim);
+  margin-top: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.rc-flows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.rc-flow b {
+  font-variant-numeric: tabular-nums;
+}
+.rc-quiet {
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+/* Daily-report popup card */
+.dailyrep {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  width: min(92vw, 320px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.45);
+}
+.dr-head {
+  display: flex;
+  align-items: center;
+}
+.dr-kick {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+.dr-x {
+  margin-left: auto;
+  background: none;
+  border: 0;
+  font-size: 14px;
+  color: var(--ink-faint);
+  cursor: pointer;
+}
+.dr-day {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+.dr-net {
+  font-size: 13px;
+  color: var(--ink-dim);
+  margin: 6px 0 8px;
+}
+.dr-net b {
+  color: var(--ink);
+  margin: 0 4px 0 4px;
+}
+.dr-flows {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+.dr-flow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.dr-flow b {
+  font-variant-numeric: tabular-nums;
+}
+
 .onboard {
   background: var(--paper);
   border: 1px solid var(--line);
