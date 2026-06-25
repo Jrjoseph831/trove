@@ -107,6 +107,8 @@ interface Trove {
   setCatSearch: (s: string) => void;
   /** jump straight to the catalog filtered to a sector (deep-link). */
   openSector: (s: string) => void;
+  /** item id to highlight in the catalog (from "Find it on the floor"). */
+  hlItem: number | null;
   buy: (id: number) => void;
   sell: (id: number) => void;
   doBorrow: () => void;
@@ -144,6 +146,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [catSector, setCatSector] = useState<string | null>(null);
   const [catBrand, setCatBrand] = useState<string | null>(null);
   const [catSearch, setCatSearch] = useState("");
+  const [hlItem, setHlItem] = useState<number | null>(null);
   const [signedIn, setSignedIn] = useState(false);
   const [authReady, setAuthReady] = useState(false);
 
@@ -208,7 +211,12 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setCatSearch(q);
       setTab("catalog");
     }
-    if (params.get("hl")) setTab("catalog");
+    const hl = params.get("hl");
+    if (hl && /^\d+$/.test(hl)) {
+      setHlItem(Number(hl));
+      setTab("catalog");
+      window.setTimeout(() => setHlItem(null), 6000);
+    }
   }, []);
 
   // The game loop: advance both worlds every frame, re-render on a throttle.
@@ -412,6 +420,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setCatBrand,
       setCatSearch,
       openSector,
+      hlItem,
       buy,
       sell,
       doBorrow,
@@ -438,6 +447,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setMode,
       jump,
       openSector,
+      hlItem,
       buy,
       sell,
       doBorrow,

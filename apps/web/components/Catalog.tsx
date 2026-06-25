@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { brands as allBrands, brandSlug, sectorKeys, sectors } from "@trove/data";
@@ -22,19 +22,14 @@ const HL_STYLE = {
 const BRAND_NAMES = [...allBrands].map((b) => b.name).sort();
 
 export function Catalog() {
-  const { state, cat, setCatSector, setCatBrand, setCatSearch, buy } =
+  const { state, cat, setCatSector, setCatBrand, setCatSearch, buy, hlItem } =
     useTrove();
   const parentRef = useRef<HTMLDivElement>(null);
 
-  // "Find it on the floor" (?hl=<id>): read the target id from the URL ONCE and
-  // highlight that row with an INLINE style at render time — React paints it on
-  // every render, so it's immune to re-renders/remounts/virtualization and has
-  // no timing to miss. Cleared after a few seconds.
-  const [hlId, setHlId] = useState<number | null>(() => {
-    if (typeof window === "undefined") return null;
-    const h = new URLSearchParams(window.location.search).get("hl");
-    return h && /^\d+$/.test(h) ? Number(h) : null;
-  });
+  // "Find it on the floor": hlItem comes from the provider (same reliable path
+  // as the q search filter). Apply an INLINE highlight at render time so it can't
+  // be lost to re-renders/remounts/virtualization. Scroll it into view.
+  const hlId = hlItem;
   useEffect(() => {
     if (hlId == null) return;
     const find = (n = 0) => {
@@ -43,8 +38,6 @@ export function Catalog() {
       else if (n < 40) window.setTimeout(() => find(n + 1), 100);
     };
     window.setTimeout(() => find(0), 200);
-    const t = window.setTimeout(() => setHlId(null), 6000);
-    return () => window.clearTimeout(t);
   }, [hlId]);
 
   const filtered = useMemo(() => {
