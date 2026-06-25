@@ -40,6 +40,7 @@ import {
   routeFactory as engineRouteFactory,
   setSource as engineSetSource,
   setListPrice as engineSetListPrice,
+  setListed as engineSetListed,
   rollSandboxOrders,
   negotiateSandbox,
   acceptSandboxOffer,
@@ -157,6 +158,7 @@ interface Trove {
   routeLine: (id: string, bay: number) => void;
   setLineSource: (lineId: string, inputItemId: number, feederId: string | null) => void;
   setSellPrice: (itemId: number, mult: number) => void;
+  setListing: (itemId: number, on: boolean) => void;
   buyUpgrade: (id: "power" | "router" | "qc") => void;
   setDeskAutomation: (patch: {
     specialist?: boolean;
@@ -718,6 +720,14 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh],
   );
 
+  const setListing = useCallback(
+    (itemId: number, on: boolean) => {
+      engineSetListed(worldsRef.current!.sandbox, itemId, on);
+      refresh();
+    },
+    [refresh],
+  );
+
   const signIn = useCallback(() => authSignIn(), []);
   const signOut = useCallback(() => {
     authSignOut();
@@ -902,6 +912,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       routeLine,
       setLineSource,
       setSellPrice,
+      setListing,
       buyUpgrade,
       setDeskAutomation,
       closeReveal,
@@ -950,6 +961,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       routeLine,
       setLineSource,
       setSellPrice,
+      setListing,
       buyUpgrade,
       setDeskAutomation,
       closeReveal,

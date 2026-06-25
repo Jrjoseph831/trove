@@ -124,6 +124,7 @@ export function docToWorld(doc: WorldDoc): WorldState {
     infra: { power: false, router: false, qc: false },
     listPrices: {},
     producedQty: {},
+    listed: {},
     orders: [],
     reputation: 0,
     deskAuto: { specialist: false, autoFulfill: false, minMargin: 0.1 },

@@ -177,6 +177,9 @@ export interface WorldState {
    *  BOUGHT). Produced stock can't be dumped to market — only sold via listings
    *  or orders; bought stock stays freely sellable. */
   producedQty: Record<number, number>;
+  /** Per-item listing switch. Absent/true = listed (produced stock sells
+   *  passively); false = held (you keep it, no passive sale). */
+  listed: Record<number, boolean>;
   /** Order Desk (sandbox): bulk contracts clients send for your goods. */
   orders: Order[];
   /** Desk standing — rises on fulfilment, dips on missed contracts. */

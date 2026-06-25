@@ -139,6 +139,7 @@ export function freshState(): WorldState {
     infra: { power: false, router: false, qc: false },
     listPrices: {},
     producedQty: {},
+    listed: {},
     orders: [],
     reputation: 0,
     deskAuto: { specialist: false, autoFulfill: false, minMargin: 0.1 },
@@ -762,6 +763,17 @@ function produceFactories(state: WorldState): void {
   });
 }
 
+/** Is an item's produced stock listed for passive sale? (Default: yes.) */
+export function isListed(state: WorldState, id: number): boolean {
+  return state.listed?.[id] !== false;
+}
+/** List or unlist an item's produced stock (unlisted = held, no passive sale). */
+export function setListed(state: WorldState, id: number, on: boolean): void {
+  if (!state.listed) state.listed = {};
+  if (on) delete state.listed[id]; // listed is the default; keep the map small
+  else state.listed[id] = false;
+}
+
 /** Fraction of a product's listed (produced) stock that can clear per cycle at
  *  market price; cheaper-than-market clears faster, pricier slower. */
 const LISTING_BASE_FRAC = 0.25;
@@ -782,6 +794,7 @@ function sellListings(state: WorldState): void {
       delete prod[id];
       continue;
     }
+    if (!isListed(state, id)) continue; // unlisted → held, no passive sale
     const it = state.items.find((i) => i.id === id);
     if (!it) continue;
     const mult = state.listPrices?.[id] ?? 1;

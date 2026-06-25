@@ -1148,6 +1148,9 @@ body {
   color: var(--up);
   white-space: nowrap;
 }
+.vlisted.held {
+  color: var(--ink-faint);
+}
 .ed-col h3 {
   font-family: var(--font-display);
   font-size: 12px;

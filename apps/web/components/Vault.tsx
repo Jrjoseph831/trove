@@ -8,7 +8,7 @@ import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 
 export function Vault() {
-  const { state, sell, doBorrow, doRepay } = useTrove();
+  const { state, sell, setListing, doBorrow, doRepay } = useTrove();
   const mine = state.items.filter((i) => held(i, "YOU") > 0);
   const lim = creditLimit(state);
   const avail = Math.max(0, lim - state.debt);
@@ -29,6 +29,7 @@ export function Vault() {
               const q = held(it, "YOU");
               const produced = state.producedQty[it.id] ?? 0;
               const bought = q - produced;
+              const listed = state.listed[it.id] !== false;
               const pl = it.value - (it.buyAt ?? it.value);
               const edNo =
                 it.edition !== null && it.myCopies.length
@@ -50,8 +51,8 @@ export function Vault() {
                     {q > 1 ? ` ×${q.toLocaleString()}` : ""}
                     {edNo}
                     {produced > 0 && (
-                      <span className="vlisted">
-                        {produced.toLocaleString()} made · listed
+                      <span className={`vlisted ${listed ? "" : "held"}`}>
+                        {produced.toLocaleString()} made · {listed ? "listed" : "held"}
                       </span>
                     )}
                   </span>
@@ -60,19 +61,30 @@ export function Vault() {
                     {pl >= 0 ? "+" : ""}
                     {money(pl)}
                   </span>
-                  <button
-                    className="tbtn sell"
-                    style={{ marginLeft: 12 }}
-                    disabled={bought <= 0}
-                    title={
-                      bought <= 0
-                        ? "Produced goods sell via listings or orders — they can't be dumped on the market"
-                        : "Sell a bought unit at market"
-                    }
-                    onClick={() => sell(it.id)}
-                  >
-                    Let go
-                  </button>
+                  {produced > 0 && (
+                    <button
+                      className={`tbtn ${listed ? "" : "sell"}`}
+                      style={{ marginLeft: 12 }}
+                      title={
+                        listed
+                          ? "Listed for passive sale — click to hold instead"
+                          : "Held (not selling) — click to list for passive sale"
+                      }
+                      onClick={() => setListing(it.id, !listed)}
+                    >
+                      {listed ? "Unlist" : "List"}
+                    </button>
+                  )}
+                  {bought > 0 && (
+                    <button
+                      className="tbtn sell"
+                      style={{ marginLeft: 8 }}
+                      title="Sell a bought unit at market"
+                      onClick={() => sell(it.id)}
+                    >
+                      Let go
+                    </button>
+                  )}
                 </div>
               );
             })
