@@ -3265,3 +3265,30 @@ body {
   color: var(--accent);
   border-color: var(--accent);
 }
+
+/* sortable catalog headers */
+.thead button.th {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  text-align: left;
+}
+.thead button.th.r {
+  justify-content: flex-end;
+}
+.thead button.th:hover {
+  color: var(--ink);
+}
+.th-arr {
+  color: var(--accent);
+  font-size: 10px;
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { brands as allBrands, brandSlug, sectorKeys, sectors } from "@trove/data";
@@ -11,6 +11,8 @@ import { primarySectorLabel, stockState } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
 
 const ROW = 46;
+
+type SortKey = "item" | "sector" | "supply" | "price" | "change";
 
 /** Inline highlight for the "Find it on the floor" target row. */
 const HL_STYLE = {
@@ -51,10 +53,41 @@ export function Catalog() {
     // recompute when filters change; live prices don't change membership
   }, [state, cat.sector, cat.brand, cat.search]);
 
-  const commodities = useMemo(
-    () => filtered.filter((i) => i.edition === null).sort((a, b) => b.value - a.value),
-    [filtered],
-  );
+  // Sortable columns. Text columns default ascending, numbers descending;
+  // clicking the active column flips direction.
+  const [sort, setSort] = useState<{ key: SortKey; dir: 1 | -1 }>({
+    key: "price",
+    dir: -1,
+  });
+  const toggleSort = (key: SortKey) =>
+    setSort((s) =>
+      s.key === key
+        ? { key, dir: (s.dir === 1 ? -1 : 1) as 1 | -1 }
+        : { key, dir: key === "item" || key === "sector" ? 1 : -1 },
+    );
+
+  const commodities = useMemo(() => {
+    const arr = filtered.filter((i) => i.edition === null);
+    const d = sort.dir;
+    arr.sort((a, b) => {
+      switch (sort.key) {
+        case "item":
+          return a.name.localeCompare(b.name) * d;
+        case "sector":
+          return primarySectorLabel(a).localeCompare(primarySectorLabel(b)) * d;
+        case "supply":
+          return (a.stock - b.stock) * d;
+        case "change":
+          return (
+            (pctChange(a.value, a.prevValue) - pctChange(b.value, b.prevValue)) *
+            d
+          );
+        default:
+          return (a.value - b.value) * d;
+      }
+    });
+    return arr;
+  }, [filtered, sort]);
   const editions = useMemo(
     () =>
       filtered
@@ -127,11 +160,26 @@ export function Catalog() {
       <div className="cat-grid">
         <div>
           <div className="thead">
-            <span>Item</span>
-            <span>Sector</span>
-            <span>Supply</span>
-            <span className="r">Price</span>
-            <span className="r">Δ</span>
+            {(
+              [
+                ["item", "Item", ""],
+                ["sector", "Sector", ""],
+                ["supply", "Supply", ""],
+                ["price", "Price", "r"],
+                ["change", "Δ", "r"],
+              ] as [SortKey, string, string][]
+            ).map(([key, label, align]) => (
+              <button
+                key={key}
+                className={`th ${align}`}
+                onClick={() => toggleSort(key)}
+              >
+                {label}
+                {sort.key === key && (
+                  <span className="th-arr">{sort.dir === 1 ? "↑" : "↓"}</span>
+                )}
+              </button>
+            ))}
             <span />
           </div>
 
