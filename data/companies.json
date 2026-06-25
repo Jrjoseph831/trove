@@ -109,7 +109,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82516,
     "events": [
       {
         "cycle": 0,
@@ -118,6 +118,16 @@
         "head": "Aldousspire Group — Worn in, not worn out",
         "body": "Aldousspire Group cuts apparel goods for people who'd rather replace a garment in ten years than ten months. The everyday range is plain, tough, and priced to move off the rack. Climb the tiers and the cloth gets heavier, the stitching tighter, the cut quietly better. Premium pieces carry a finish you notice only after a hundred washes, when they still look right. It's a wardrobe brand that earns loyalty the slow way and keeps it.",
         "effects": {}
+      },
+      {
+        "cycle": 82516,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Aldousspire Group Unveils Heirloom Denim Line Built to Outlast Decades",
+        "body": "CEO Mira Ashby introduced the 'Endurance' collection at the company's flagship showroom, featuring reinforced workwear backed by a 20-year repair guarantee. The line carries a premium price point but targets a growing market of buyers tired of disposable apparel. Initial wholesale orders covered 340 retail partners across four regions.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -208,7 +218,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82516,
     "events": [
       {
         "cycle": 0,
@@ -217,6 +227,16 @@
         "head": "Ashbystead Holdings — Where medicine meets engineering",
         "body": "Ashbystead Holdings builds the machines clinicians lean on: imaging rigs, monitors, theatre systems, the heavy capital kit a hospital plans budgets around. The standard equipment is rugged and serviceable; the flagship instruments are something else entirely, calibrated to tolerances most rivals only advertise. Buying at the top tier means buying decades of uptime and a name that opens doors at any procurement meeting. Few houses earn that kind of trust in a field where failure isn't an option.",
         "effects": {}
+      },
+      {
+        "cycle": 82516,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Edges Past Quarterly Targets on Steady Hospital Demand",
+        "body": "The medical equipment maker reported revenue of $612 million, narrowly ahead of internal projections, with CEO Cora Holt crediting consistent reorders of surgical imaging units. Margins held flat as the firm continued its cautious, debt-light approach. Holt declined to offer raised guidance, calling the quarter 'unremarkable in the best way.'",
+        "effects": {
+          "medical": 0.06
+        }
       }
     ]
   },
@@ -609,7 +629,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82516,
     "events": [
       {
         "cycle": 0,
@@ -618,6 +638,16 @@
         "head": "Caldercraft Holdings — Built for the hands that build",
         "body": "It started with a single line of hand-forged hand tools sold off a workshop bench. A century on, Caldercraft Holdings spans hardware, household goods, and raw textiles, with shelves stocked everywhere from corner stores to specialist outfitters. Their value range earns trust on price; their premium tools earn it on heft and balance. Tradespeople pass the wrenches down to apprentices, which tells you most of what you need to know.",
         "effects": {}
+      },
+      {
+        "cycle": 82516,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Caldercraft Holdings Opens Second Textile Mill to Ease Supply Bottlenecks",
+        "body": "CEO Vale Fenn confirmed the $185 million facility in the Marlow district will double raw textile output and shorten lead times for the company's household goods division. The plant is expected to add 900 jobs and reach full capacity within 18 months. Fenn framed the move as overdue rather than ambitious, citing repeated order backlogs over the past two years.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -708,7 +738,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82516,
     "events": [
       {
         "cycle": 0,
@@ -717,6 +747,16 @@
         "head": "Carrowcyon & Sons — Honest goods, fair light",
         "body": "A family shop that never quite stopped being one, Carrowcyon & Sons fills kitchens and hallways with practical household goods and lighting that simply works. Nothing here is precious. The everyday line is priced for ordinary budgets, and the mid range adds a touch more finish without the markup. People buy a lamp, it lasts, and they come back for the matching one years later. Modest reputation, deeply earned.",
         "effects": {}
+      },
+      {
+        "cycle": 82516,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Lands Multi-Year Lighting Contract for Regional Transit Network",
+        "body": "CEO Cole Brandt secured a $240 million agreement to supply station and platform lighting across the Eastvale transit expansion. The deal spans seven years and includes maintenance fixtures, marking the firm's largest single contract in over a decade. Brandt called the timing 'a window we'd been watching closely.'",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -731,7 +771,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82516,
     "events": [
       {
         "cycle": 0,
@@ -740,6 +780,16 @@
         "head": "Carrowforge — Machines that make the machines",
         "body": "Carrowforge builds the heavy industrial machinery that other factories are built upon: presses, lathes, mills, and lines that stamp out the modern world. Their mid-range tools anchor busy job shops; the premium systems run flagship plants around the clock with eerie precision. There's a weight to a Carrowforge frame that tells you it was made to outlast the building around it. Plant managers plan decades around them. The foundation under everything that gets manufactured.",
         "effects": {}
+      },
+      {
+        "cycle": 82516,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Carrowforge Rocked by Probe Into Falsified Machine-Testing Records",
+        "body": "An internal review found that key durability certifications on several industrial machine lines were signed off without completed testing, prompting an emergency board session. CEO Mara Fenn acknowledged 'serious lapses' and suspended two senior plant managers pending an outside audit. Several major buyers have paused new orders while the firm scrambles to re-certify affected units.",
+        "effects": {
+          "manufacturing": -0.22
+        }
       }
     ]
   },
@@ -754,7 +804,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82516,
     "events": [
       {
         "cycle": 0,
@@ -763,6 +813,16 @@
         "head": "Carrowwell — The factory floor's favorite",
         "body": "Carrowwell is industry talking to industry. Their catalog runs from auto parts and hardware to full industrial machines and material-handling rigs, the kind of iron that earns its keep on a three-shift schedule. Budget lines keep small shops moving; premium machinery anchors the big plants. Maintenance crews stockpile the spares because nothing kills a line like waiting on a part. Solid, unsentimental, and rarely the reason a job runs late.",
         "effects": {}
+      },
+      {
+        "cycle": 82516,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowwell Posts Record Quarter as Material Handling Orders Surge",
+        "body": "CEO Theo Thorne reported revenue of $1.4 billion, up 11% year over year, driven by strong demand for conveyor and lift systems amid rival Carrowforge's troubles. The auto parts division also rebounded after a soft prior quarter. Thorne announced a modest capacity boost at two plants to meet the inflow.",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -777,7 +837,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82516,
     "events": [
       {
         "cycle": 0,
@@ -786,6 +846,16 @@
         "head": "Castle Devices — Sterile, reliable, ready every time",
         "body": "Castle Devices makes the unglamorous essentials a ward burns through by the hour: syringes, gloves, dressings, tubing, and test kits. Their value range keeps stockrooms full on tight budgets; the mid tier meets the exacting standards of busy surgical floors. Each item is sealed, single-use, and faultless, because in their world a flaw is unthinkable. Nurses reach for Castle without a second glance. The consumables nobody celebrates and no one can do without.",
         "effects": {}
+      },
+      {
+        "cycle": 82516,
+        "kind": "major_deal",
+        "size": "flash",
+        "head": "Castle Devices Renews Long-Term Supply Pact With National Clinic Group",
+        "body": "CEO Bram Calder confirmed a five-year extension to supply sterile consumables to the Brightwell clinic network, valued at roughly $96 million. The renewal preserves the firm's largest recurring revenue stream with no change in pricing. Calder described it as 'business as usual, which is exactly the point.'",
+        "effects": {
+          "medical": 0.06
+        }
       }
     ]
   },
@@ -800,7 +870,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82516,
     "events": [
       {
         "cycle": 0,
@@ -809,6 +879,16 @@
         "head": "Castlegear Group — Precision where it matters most",
         "body": "Castlegear Group equips the rooms where mistakes are measured in lives, supplying medical consumables and equipment across every tier from ward basics to top-end surgical instruments. The luxury line is the standard against which others quietly benchmark themselves. Sterile, exact, and obsessively documented, their kit shows up wherever care cannot be compromised. Clinicians trust the labels without a second glance, which is the highest compliment the field offers.",
         "effects": {}
+      },
+      {
+        "cycle": 82516,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Castlegear Group Introduces Refined Surgical Instrument Tray System",
+        "body": "CEO Sable Brandt unveiled an updated modular tray line designed to cut sterilization cycle times for hospital operating rooms. The launch was deliberately limited to three pilot facilities for evaluation before broader rollout. Brandt emphasized the company's preference for 'proving it quietly before promising it loudly.'",
+        "effects": {
+          "medical": 0.06
+        }
       }
     ]
   },

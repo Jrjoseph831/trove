@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-24T19:17:12.483Z",
+  "generatedAt": "2026-06-25T00:58:36.137Z",
   "beats": [
+    {
+      "company": "Aldousspire Group",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Aldousspire Group Unveils Heirloom Denim Line Built to Outlast Decades",
+      "body": "CEO Mira Ashby introduced the 'Endurance' collection at the company's flagship showroom, featuring reinforced workwear backed by a 20-year repair guarantee. The line carries a premium price point but targets a growing market of buyers tired of disposable apparel. Initial wholesale orders covered 340 retail partners across four regions.",
+      "cycle": 82516,
+      "dur": 2
+    },
+    {
+      "company": "Ashbystead Holdings",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ashbystead Holdings Edges Past Quarterly Targets on Steady Hospital Demand",
+      "body": "The medical equipment maker reported revenue of $612 million, narrowly ahead of internal projections, with CEO Cora Holt crediting consistent reorders of surgical imaging units. Margins held flat as the firm continued its cautious, debt-light approach. Holt declined to offer raised guidance, calling the quarter 'unremarkable in the best way.'",
+      "cycle": 82516,
+      "dur": 1
+    },
+    {
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Caldercraft Holdings Opens Second Textile Mill to Ease Supply Bottlenecks",
+      "body": "CEO Vale Fenn confirmed the $185 million facility in the Marlow district will double raw textile output and shorten lead times for the company's household goods division. The plant is expected to add 900 jobs and reach full capacity within 18 months. Fenn framed the move as overdue rather than ambitious, citing repeated order backlogs over the past two years.",
+      "cycle": 82516,
+      "dur": 2
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Carrowcyon & Sons Lands Multi-Year Lighting Contract for Regional Transit Network",
+      "body": "CEO Cole Brandt secured a $240 million agreement to supply station and platform lighting across the Eastvale transit expansion. The deal spans seven years and includes maintenance fixtures, marking the firm's largest single contract in over a decade. Brandt called the timing 'a window we'd been watching closely.'",
+      "cycle": 82516,
+      "dur": 2
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Carrowforge Rocked by Probe Into Falsified Machine-Testing Records",
+      "body": "An internal review found that key durability certifications on several industrial machine lines were signed off without completed testing, prompting an emergency board session. CEO Mara Fenn acknowledged 'serious lapses' and suspended two senior plant managers pending an outside audit. Several major buyers have paused new orders while the firm scrambles to re-certify affected units.",
+      "cycle": 82516,
+      "dur": 8
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowwell Posts Record Quarter as Material Handling Orders Surge",
+      "body": "CEO Theo Thorne reported revenue of $1.4 billion, up 11% year over year, driven by strong demand for conveyor and lift systems amid rival Carrowforge's troubles. The auto parts division also rebounded after a soft prior quarter. Thorne announced a modest capacity boost at two plants to meet the inflow.",
+      "cycle": 82516,
+      "dur": 2
+    },
+    {
+      "company": "Castle Devices",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "flash",
+      "head": "Castle Devices Renews Long-Term Supply Pact With National Clinic Group",
+      "body": "CEO Bram Calder confirmed a five-year extension to supply sterile consumables to the Brightwell clinic network, valued at roughly $96 million. The renewal preserves the firm's largest recurring revenue stream with no change in pricing. Calder described it as 'business as usual, which is exactly the point.'",
+      "cycle": 82516,
+      "dur": 1
+    },
+    {
+      "company": "Castlegear Group",
+      "sector": "medical",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Castlegear Group Introduces Refined Surgical Instrument Tray System",
+      "body": "CEO Sable Brandt unveiled an updated modular tray line designed to cut sterilization cycle times for hospital operating rooms. The launch was deliberately limited to three pilot facilities for evaluation before broader rollout. Brandt emphasized the company's preference for 'proving it quietly before promising it loudly.'",
+      "cycle": 82516,
+      "dur": 1
+    },
     {
       "company": "Aldouscraft Mfg.",
       "sector": "construction",
@@ -10,16 +90,6 @@
       "body": "Aldouscraft Mfg. has been named primary cable supplier for the Verrin Valley transmission upgrade, a five-year agreement valued at 340 million credits. CEO Soren Ashby called the award 'a natural fit for our high-tension lines,' noting the contract will keep the Eastfield plant at full capacity through 1934.",
       "cycle": 82515,
       "dur": 2
-    },
-    {
-      "company": "Aldouscyon",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Aldouscyon Rolls Out Long-Life Filament Range",
-      "body": "Aldouscyon introduced its Meridian series of warm-output bulbs, rated for 12,000 hours of service. Petra Mercer said early retail orders covered three regional chains, with broader distribution expected by the spring buying season.",
-      "cycle": 82515,
-      "dur": 1
     },
     {
       "company": "Aldousmont & Sons",
@@ -82,16 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Blackmoor",
-      "sector": "agriculture",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Blackmoor Adds Assembly Line at Holloway Works",
-      "body": "Blackmoor commissioned a second assembly bay at its Holloway facility to handle rising orders for its heavy tillage equipment. Soren Dray framed the move as a measured response to a multi-year backlog, declining to forecast beyond current commitments.",
-      "cycle": 82515,
-      "dur": 1
-    },
-    {
       "company": "Blackton Industries",
       "sector": "automotive",
       "kind": "major_deal",
@@ -120,16 +180,6 @@
       "body": "Mira Thorne announced Boreas Power has taken a controlling stake in the Hollowmere storage fields, a sprawling battery-bank operation feeding three districts. The move pairs the firm's compute arm with new grid-scale capacity. Thorne said the acquisition 'closes the loop between what we compute and what we store.'",
       "cycle": 82515,
       "dur": 2
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Boreas Power Tops Forecasts as Hollowmere Comes Online",
-      "body": "Boreas Power beat quarterly expectations as the newly acquired Hollowmere fields began contributing storage revenue ahead of schedule. Mira Thorne credited rapid integration and steady demand across the three districts. She signaled appetite for 'one or two more' deals this year.",
-      "cycle": 82515,
-      "dur": 1
     },
     {
       "company": "Bruncraft Industries",
@@ -250,56 +300,6 @@
       "body": "Soren Skarn unveiled the Saltmere storage banks, a coastal expansion meant to steady supply for the windward districts. The ambitious build doubles Castlehold's regional capacity but stretches its balance sheet. Skarn admitted the timeline is 'aggressive, maybe reckless, but ours.'",
       "cycle": 82515,
       "dur": 2
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "outage",
-      "size": "standard",
-      "head": "Castlehold Saltmere Banks Stumble in First Storm Season",
-      "body": "Castlehold's new Saltmere banks tripped offline during an early squall, briefly cutting backup capacity to two windward districts. Soren Skarn rushed engineers to the coast and blamed an untested cutover switch. The turbulent debut underscored the risks of his rushed timeline.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "breakthrough",
-      "size": "major",
-      "head": "Castlestone Claims Record at Vellmont Compute Showcase",
-      "body": "Iris Garr took the main stage at the Vellmont Showcase to demonstrate a new lattice-cooling design she said triples sustained throughput per rack. Independent halls at the event logged the demo running 11 hours without throttling. Garr, never shy, declared it 'the end of the warm-room era' to roaring applause.",
-      "cycle": 82515,
-      "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Fennmoor Acquires Diagnostics Maker Larkspur Medical",
-      "body": "Dorian Brandt extended Fennmoor's reach into medical equipment with the purchase of Larkspur Medical, a maker of portable diagnostic units. The acquisition rounds out Fennmoor's spread across devices, machines, and now clinical gear. Brandt said the house 'grows by addition, not patience.'",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Gromford Works Debuts the Aurelian Tourbillon Collection",
-      "body": "Mira Ashby pulled the cover off the Aurelian line at a packed Halverford salon, a set of 250 hand-finished timepieces with an open-heart movement. Ashby, ever the showwoman, arrived an hour late and let the watches speak first. The entire run was spoken for by patrons before the night closed.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "flash",
-      "head": "Gromford Works Aurelian Named Piece of the Year at Halverford Guild",
-      "body": "The Halverford Watchmakers Guild handed Gromford Works its top honor for the Aurelian Tourbillon, praising its movement finishing. Mira Ashby accepted on stage and immediately teased a second collection. The recognition cements a banner season for the house.",
-      "cycle": 82515,
-      "dur": 1
     }
   ]
 }
