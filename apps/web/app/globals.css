@@ -3946,6 +3946,126 @@ body {
 .bay.building .stg-bar i {
   background: var(--dn);
 }
+/* Animated conveyor (the assembly line) */
+.cvy {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 16px 0 4px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.cvy-station {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  width: 58px;
+  text-align: center;
+  position: relative;
+}
+.cvy-ic {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--ink-dim);
+  background: var(--paper);
+}
+.cvy.running .cvy-station:not(.bay) .cvy-ic {
+  border-color: color-mix(in srgb, var(--up) 45%, var(--line));
+  color: var(--ink);
+}
+.cvy-station.bay .cvy-ic {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.cvy-lbl {
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+.cvy-station.output .cvy-lbl,
+.cvy-station.bay .cvy-lbl {
+  color: var(--ink-dim);
+}
+.cvy-dot {
+  position: absolute;
+  top: -2px;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--up);
+}
+.cvy-belt {
+  flex: 1;
+  min-width: 26px;
+  height: 34px;
+  position: relative;
+  overflow: hidden;
+}
+.cvy-rail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 3px;
+  margin-top: -1.5px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--line) 0 6px,
+    transparent 6px 12px
+  );
+}
+.cvy-box {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-radius: 1px;
+  background: var(--up);
+  animation-name: cvy-flow;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes cvy-flow {
+  0% {
+    left: -10px;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+.cvy.idle .cvy-rail {
+  background: repeating-linear-gradient(
+    90deg,
+    #c0563f55 0 6px,
+    transparent 6px 12px
+  );
+}
+.cvy-note {
+  font-size: 11.5px;
+  color: var(--ink-dim);
+  margin: 2px 0 6px;
+}
+.cvy.idle ~ .cvy-note {
+  color: #c0563f;
+}
 /* Feed coverage detail */
 .bay-inputs {
   margin: 12px 0;

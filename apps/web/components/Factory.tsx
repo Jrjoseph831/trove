@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import Link from "next/link";
+import { Boxes, Cog, Package, Truck } from "lucide-react";
 import {
   canProduce,
   effectiveSpec,
@@ -174,38 +175,18 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
         </span>
       </div>
 
-      <div className="bay-stages">
-        {stages.map((s, i) => {
-          const fill =
-            s.kind === "output"
-              ? 100
-              : building
-                ? 35
-                : s.kind === "feed"
-                  ? Math.round(coverage * 100)
-                  : 100;
-          const detail =
-            s.kind === "feed"
-              ? inputs.length
-                ? "raw materials"
-                : "raw extraction"
-              : s.kind === "output"
-                ? `→ ${eff.rate.toLocaleString()}/cy`
-                : (badge[s.key]?.join(", ") ?? "—");
-          return (
-            <div key={s.key} className={`stg ${s.kind}`}>
-              <span className="stg-n">{i + 1}</span>
-              <span className="stg-label">{s.label}</span>
-              <span className="stg-detail">{detail}</span>
-              {s.kind !== "output" && (
-                <span className="stg-bar">
-                  <i style={{ width: `${fill}%` }} />
-                </span>
-              )}
-            </div>
-          );
-        })}
-      </div>
+      <Conveyor
+        stages={stages}
+        rate={eff.rate}
+        status={status}
+        badge={badge}
+      />
+      {status === "idle" && (
+        <div className="cvy-note">Line stalled — feed it inputs below.</div>
+      )}
+      {building && (
+        <div className="cvy-note">Line under construction — coming online soon.</div>
+      )}
 
       {inputs.length > 0 && (
         <div className="bay-inputs">
@@ -278,6 +259,79 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
         <button className="fl-demolish" onClick={() => demolishLine(f.id)}>
           Tear down
         </button>
+      </div>
+    </div>
+  );
+}
+
+/** The animated assembly line: stations linked by belts with product flowing
+ *  Source → … → Pack → 🚚. Belt speed + box count scale with the line's rate;
+ *  boxes only flow when the line is running. */
+function Conveyor({
+  stages,
+  rate,
+  status,
+  badge,
+}: {
+  stages: { key: string; label: string; kind: "feed" | "process" | "output" }[];
+  rate: number;
+  status: "building" | "running" | "idle";
+  badge: Record<string, string[]>;
+}) {
+  // Faster belt + more boxes for higher throughput.
+  const lg = Math.log10(Math.max(1, rate));
+  const dur = Math.max(0.8, Math.min(2.8, 3 - lg * 0.4)); // seconds per box
+  const boxes = Math.max(2, Math.min(6, Math.round(lg + 1)));
+  const flowing = status === "running";
+
+  const icon = (kind: string) =>
+    kind === "feed" ? (
+      <Boxes size={16} strokeWidth={1.75} />
+    ) : kind === "output" ? (
+      <Package size={16} strokeWidth={1.75} />
+    ) : (
+      <Cog size={16} strokeWidth={1.75} />
+    );
+
+  const Belt = () => (
+    <div className="cvy-belt">
+      <span className="cvy-rail" />
+      {flowing &&
+        Array.from({ length: boxes }).map((_, b) => (
+          <i
+            key={b}
+            className="cvy-box"
+            style={{
+              animationDuration: `${dur}s`,
+              animationDelay: `${(dur / boxes) * b}s`,
+            }}
+          />
+        ))}
+    </div>
+  );
+
+  return (
+    <div className={`cvy ${status}`}>
+      {stages.map((s, i) => (
+        <Fragment key={s.key}>
+          <div className={`cvy-station ${s.kind}`}>
+            <span className="cvy-ic">{icon(s.kind)}</span>
+            <span className="cvy-lbl">{s.label}</span>
+            {badge[s.key]?.length ? (
+              <span className="cvy-dot" title={badge[s.key]!.join(", ")} />
+            ) : null}
+          </div>
+          {i < stages.length - 1 && <Belt />}
+        </Fragment>
+      ))}
+      <Belt />
+      <div className="cvy-station bay">
+        <span className="cvy-ic">
+          <Truck size={16} strokeWidth={1.75} />
+        </span>
+        <span className="cvy-lbl">
+          {flowing ? `${rate.toLocaleString()}/cy` : "Bay"}
+        </span>
       </div>
     </div>
   );
