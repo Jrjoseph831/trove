@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { brands as allBrands, brandSlug, sectorKeys, sectors } from "@trove/data";
@@ -11,6 +11,14 @@ import { primarySectorLabel, stockState } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
 
 const ROW = 46;
+
+/** Inline highlight for the "Find it on the floor" target row. */
+const HL_STYLE = {
+  background: "color-mix(in srgb, var(--accent) 22%, transparent)",
+  boxShadow: "inset 0 0 0 2px var(--accent), 0 0 22px -6px var(--accent)",
+  borderRadius: 8,
+  zIndex: 3,
+} as const;
 const BRAND_NAMES = [...allBrands].map((b) => b.name).sort();
 
 export function Catalog() {
@@ -18,32 +26,26 @@ export function Catalog() {
     useTrove();
   const parentRef = useRef<HTMLDivElement>(null);
 
-  // "Find it on the floor" (?hl=<id>): give the target row an unmistakable,
-  // PERSISTENT highlight (steady gold tint + ring + a few pulses) by injecting a
-  // <head> rule keyed to its id. A head rule applies to whatever element carries
-  // that id, so it's immune to React re-renders, remounts, and virtualization.
+  // "Find it on the floor" (?hl=<id>): read the target id from the URL ONCE and
+  // highlight that row with an INLINE style at render time — React paints it on
+  // every render, so it's immune to re-renders/remounts/virtualization and has
+  // no timing to miss. Cleared after a few seconds.
+  const [hlId, setHlId] = useState<number | null>(() => {
+    if (typeof window === "undefined") return null;
+    const h = new URLSearchParams(window.location.search).get("hl");
+    return h && /^\d+$/.test(h) ? Number(h) : null;
+  });
   useEffect(() => {
-    const hl = new URLSearchParams(window.location.search).get("hl");
-    if (!hl || !/^\d+$/.test(hl)) return;
-    const styleId = `hl-style-${hl}`;
-    if (document.getElementById(styleId)) return;
-    const elId = `floor-item-${hl}`;
-    const style = document.createElement("style");
-    style.id = styleId;
-    style.textContent =
-      `#${elId}{background:color-mix(in srgb,var(--accent) 22%,transparent)!important;` +
-      `box-shadow:inset 0 0 0 2px var(--accent),0 0 24px -6px var(--accent)!important;` +
-      `border-radius:8px;position:relative;z-index:3;` +
-      `animation:cardglow 1.3s ease-in-out 3!important}`;
-    document.head.appendChild(style);
+    if (hlId == null) return;
     const find = (n = 0) => {
-      const el = document.getElementById(elId);
+      const el = document.getElementById(`floor-item-${hlId}`);
       if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
       else if (n < 40) window.setTimeout(() => find(n + 1), 100);
     };
     window.setTimeout(() => find(0), 200);
-    window.setTimeout(() => style.remove(), 8000);
-  }, []);
+    const t = window.setTimeout(() => setHlId(null), 6000);
+    return () => window.clearTimeout(t);
+  }, [hlId]);
 
   const filtered = useMemo(() => {
     const q = cat.search.trim().toLowerCase();
@@ -159,6 +161,7 @@ export function Catalog() {
                         width: "100%",
                         height: ROW,
                         transform: `translateY(${v.start}px)`,
+                        ...(hlId === it.id ? HL_STYLE : {}),
                       }}
                     >
                       <span className="nmcell">
@@ -210,7 +213,12 @@ export function Catalog() {
               const d = it.value - it.prevValue;
               const dp = pctChange(it.value, it.prevValue);
               return (
-                <div className="edcard" id={`floor-item-${it.id}`} key={it.id}>
+                <div
+                  className="edcard"
+                  id={`floor-item-${it.id}`}
+                  key={it.id}
+                  style={hlId === it.id ? HL_STYLE : undefined}
+                >
                   <div className="top">
                     <ItemIcon it={it} size={30} />
                     <span className="glint">✦</span>
