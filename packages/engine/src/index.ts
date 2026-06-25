@@ -120,6 +120,7 @@ export function freshState(): WorldState {
     factories: [],
     floorSlots: STARTING_SLOTS,
     listPrices: {},
+    producedQty: {},
     orders: [],
     reputation: 0,
     lastOrderAt: 0,
@@ -321,6 +322,11 @@ export interface SellResult {
 export function playerSell(state: WorldState, id: number): SellResult | null {
   const it = state.items[id];
   if (!it || held(it, "YOU") <= 0) return null;
+  // Liquidity rule: you can only dump BOUGHT units to the market. Produced units
+  // must be sold via listings (passive) or orders — not liquidated at will.
+  const produced = state.producedQty?.[id] ?? 0;
+  const bought = held(it, "YOU") - produced;
+  if (bought <= 0) return null;
   const pl = it.value - (it.buyAt ?? it.value);
   it.owners["YOU"]!--;
   if ((it.owners["YOU"] ?? 0) <= 0) delete it.owners["YOU"];
@@ -407,6 +413,9 @@ export function settleCycle(state: WorldState): void {
 
   // 5. Run player factories: pay upkeep, consume inputs, produce to the vault.
   produceFactories(state);
+
+  // 5b. Sell produced stock through your market listings (the passive channel).
+  sellListings(state);
 
   // 6. Snapshot net worth.
   state.nwHist.push(netWorth(state, "YOU"));
@@ -645,9 +654,46 @@ function produceFactories(state: WorldState): void {
     }
     state.cash -= cashCost;
     giveYou(out, rate);
+    // Track these as PRODUCED units (can't be dumped; sold via listings/orders).
+    state.producedQty[out.id] = (state.producedQty[out.id] ?? 0) + rate;
     f.status = "running";
     pushLog(state, "YOU", "produced", `${rate}× ${out.name}`);
   });
+}
+
+/** Fraction of a product's listed (produced) stock that can clear per cycle at
+ *  market price; cheaper-than-market clears faster, pricier slower. */
+const LISTING_BASE_FRAC = 0.25;
+
+/**
+ * Passive market sales: each cycle the market buys some of your PRODUCED stock
+ * through your listings, at YOUR price. Cheaper listings clear faster. Drains
+ * producedQty + the vault, credits cash. (The standard sell channel; produced
+ * goods can't be dumped, only sold this way or via orders.)
+ */
+function sellListings(state: WorldState): void {
+  const prod = state.producedQty;
+  if (!prod) return;
+  for (const idStr of Object.keys(prod)) {
+    const id = Number(idStr);
+    const have = prod[id] ?? 0;
+    if (have <= 0) {
+      delete prod[id];
+      continue;
+    }
+    const it = state.items.find((i) => i.id === id);
+    if (!it) continue;
+    const mult = state.listPrices?.[id] ?? 1;
+    const price = it.value * mult;
+    const demand = Math.max(0.04, Math.min(1.4, 1.8 - mult)); // price-sensitive
+    const qty = Math.min(have, Math.ceil(have * LISTING_BASE_FRAC * demand));
+    if (qty <= 0) continue;
+    prod[id] = have - qty;
+    if ((prod[id] ?? 0) <= 0) delete prod[id];
+    takeYou(it, qty);
+    state.cash += Math.round(qty * price);
+    pushLog(state, "Market", "bought", `${qty}× ${it.name}`);
+  }
 }
 
 /**

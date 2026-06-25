@@ -121,6 +121,7 @@ export function docToWorld(doc: WorldDoc): WorldState {
     factories: [],
     floorSlots: 0,
     listPrices: {},
+    producedQty: {},
     orders: [],
     reputation: 0,
     lastOrderAt: 0,

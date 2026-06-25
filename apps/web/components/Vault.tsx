@@ -27,6 +27,8 @@ export function Vault() {
           ) : (
             mine.map((it) => {
               const q = held(it, "YOU");
+              const produced = state.producedQty[it.id] ?? 0;
+              const bought = q - produced;
               const pl = it.value - (it.buyAt ?? it.value);
               const edNo =
                 it.edition !== null && it.myCopies.length
@@ -45,8 +47,13 @@ export function Vault() {
                     <Link href={`/item/${it.id}`} className="it-link">
                       {it.name}
                     </Link>
-                    {q > 1 ? ` ×${q}` : ""}
+                    {q > 1 ? ` ×${q.toLocaleString()}` : ""}
                     {edNo}
+                    {produced > 0 && (
+                      <span className="vlisted">
+                        {produced.toLocaleString()} made · listed
+                      </span>
+                    )}
                   </span>
                   <span className="pr">{money(it.value * q)}</span>
                   <span className={`chg ${pl >= 0 ? "pos" : "neg"}`}>
@@ -56,6 +63,12 @@ export function Vault() {
                   <button
                     className="tbtn sell"
                     style={{ marginLeft: 12 }}
+                    disabled={bought <= 0}
+                    title={
+                      bought <= 0
+                        ? "Produced goods sell via listings or orders — they can't be dumped on the market"
+                        : "Sell a bought unit at market"
+                    }
                     onClick={() => sell(it.id)}
                   >
                     Let go

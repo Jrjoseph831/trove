@@ -120,6 +120,10 @@ export interface WorldState {
   /** Your sell-price markup per item (× the live market price; 1 = at market).
    *  What your produced version lists/sells for, and what desk offers anchor to. */
   listPrices: Record<number, number>;
+  /** Units of each item you PRODUCED and still hold (the rest of your holding is
+   *  BOUGHT). Produced stock can't be dumped to market — only sold via listings
+   *  or orders; bought stock stays freely sellable. */
+  producedQty: Record<number, number>;
   /** Order Desk (sandbox): bulk contracts clients send for your goods. */
   orders: Order[];
   /** Desk standing — rises on fulfilment, dips on missed contracts. */

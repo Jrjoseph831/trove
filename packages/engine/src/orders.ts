@@ -339,6 +339,11 @@ export function fulfillSandboxOrder(
     const left = have - take;
     if (left > 0) it.owners["YOU"] = left;
     else delete it.owners["YOU"];
+    // Drain the produced count too (orders sell your produced stock).
+    if (state.producedQty?.[it.id]) {
+      state.producedQty[it.id] = Math.max(0, state.producedQty[it.id]! - take);
+      if (state.producedQty[it.id] === 0) delete state.producedQty[it.id];
+    }
     need -= take;
   }
   state.cash += o.quote;
