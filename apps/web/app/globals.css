@@ -430,6 +430,160 @@ body {
   letter-spacing: 0.1em;
   font-size: 10px;
 }
+
+/* ── TNN: embedded wheel on the front page + off-peak filler ─────────────── */
+.tnn-on.live::before {
+  background: #d11f2d;
+}
+.tnn-on.offpeak::before {
+  background: var(--ink-faint);
+}
+
+/* The news wheel, embedded in the front-page monitor (vs the fullscreen modal). */
+.reel.embedded {
+  position: relative;
+  inset: auto;
+  z-index: 0;
+  height: 100%;
+  min-height: 360px;
+  border-radius: 12px;
+  border: 1px solid #1b1b22;
+}
+.reel.embedded .reel-ticker {
+  display: none;
+}
+.reel.embedded .reel-bar {
+  height: 36px;
+}
+.reel.embedded .reel-ident-name,
+.reel.embedded .reel-bumper-t {
+  font-size: 22px;
+}
+.reel.embedded .reel-head {
+  font-size: 24px;
+}
+.reel.embedded .reel-body {
+  font-size: 14px;
+  max-width: 52ch;
+}
+.reel.embedded .reel-segment-name {
+  font-size: 26px;
+}
+.reel.embedded .reel-lower {
+  bottom: 26px;
+}
+.reel.embedded .reel-panel {
+  width: min(92%, 560px);
+}
+.reel.embedded .reel-panel-h {
+  font-size: 18px;
+}
+.reel.embedded .reel-row {
+  padding: 8px 0;
+  font-size: 13px;
+}
+.reel-live.offpeak {
+  background: rgba(255, 255, 255, 0.12);
+  color: #eef0f2;
+  letter-spacing: 0.12em;
+}
+
+/* Trove Forecast (weather filler) */
+.reel-wx {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+.reel-wxrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.reel-wxic {
+  color: #f0c14b;
+  flex: none;
+}
+.reel-wxsec {
+  flex: 1;
+  font-weight: 600;
+  color: #fff;
+}
+.reel-wxsky {
+  width: 8em;
+  text-align: right;
+  color: rgba(238, 240, 242, 0.92);
+}
+.reel-wxnote {
+  width: 14em;
+  text-align: right;
+  font-size: 12px;
+  color: rgba(238, 240, 242, 0.6);
+}
+
+/* Fake ad */
+.reel-ad {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: min(680px, 86%);
+  height: max-content;
+  text-align: center;
+}
+.reel-ad-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(238, 240, 242, 0.6);
+}
+.reel-ad-brand {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 5vw, 56px);
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-top: 8px;
+}
+.reel.embedded .reel-ad-brand {
+  font-size: 30px;
+}
+.reel-ad-tag {
+  font-size: clamp(16px, 2.2vw, 24px);
+  font-style: italic;
+  color: rgba(238, 240, 242, 0.9);
+  margin-top: 10px;
+}
+.reel.embedded .reel-ad-tag {
+  font-size: 16px;
+}
+.reel-ad-foot {
+  margin-top: 16px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(238, 240, 242, 0.55);
+}
+
+/* Coming up */
+.reel-cu-bell {
+  font-size: 16px;
+  color: rgba(238, 240, 242, 0.92);
+  margin: 6px 0 16px;
+}
+.reel-cu-bell b {
+  color: #f0c14b;
+}
+.reel-cu-sub {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(238, 240, 242, 0.5);
+  margin-bottom: 4px;
+}
 @keyframes tick {
   to {
     transform: translateX(-100%);

@@ -3,11 +3,15 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   Car,
+  Cloud,
+  CloudLightning,
+  CloudSun,
   Cpu,
   Factory,
   Gem,
   HardHat,
   type LucideIcon,
+  Megaphone,
   Newspaper,
   Pause,
   Play,
@@ -15,6 +19,8 @@ import {
   Shirt,
   Sprout,
   Stethoscope,
+  Sun,
+  Timer,
   Truck,
   UtensilsCrossed,
   Volume2,
@@ -23,13 +29,15 @@ import {
   Zap,
 } from "lucide-react";
 import {
+  brands,
+  itemsByBrand,
   news as newsBank,
   newsroom,
   sectorKeys,
   sectorLabel,
   type SectorKey,
 } from "@trove/data";
-import { netWorth } from "@trove/engine";
+import { netWorth, type WorldState } from "@trove/engine";
 import { money, pctChange } from "@/lib/format";
 import { moversByAbsMove } from "@/lib/ui";
 import { createAmbient } from "@/lib/ambient";
@@ -61,15 +69,44 @@ interface Story {
   body?: string;
   sector?: SectorKey;
 }
+type Ad = {
+  brand: string;
+  product: string;
+  tagline: string;
+  price: number;
+  sector?: SectorKey;
+};
 type Slide =
   | { type: "ident"; dur: number }
   | { type: "segment"; dur: number; sector: SectorKey }
   | { type: "headline"; dur: number; story: Story }
   | { type: "movers"; dur: number }
   | { type: "standings"; dur: number }
-  | { type: "bumper"; dur: number };
+  | { type: "bumper"; dur: number }
+  | { type: "weather"; dur: number; sectors: SectorKey[] }
+  | { type: "ad"; dur: number; ad: Ad }
+  | { type: "comingup"; dur: number };
 
 const clamp = (lo: number, v: number, hi: number) => Math.min(hi, Math.max(lo, v));
+
+// ── Off-peak filler ──────────────────────────────────────────────────────────
+const AD_TEMPLATES: ((b: string, i: string) => string)[] = [
+  (b) => `${b} — built for the long haul.`,
+  (b) => `When it has to hold, the floor calls ${b}.`,
+  (_, i) => `${i}. Nothing else comes close.`,
+  (b) => `${b}: for the people who move the world.`,
+  (b) => `Ask for ${b} by name.`,
+  (_, i) => `${i} — now on the Trove floor.`,
+  (b) => `Three generations. One standard. ${b}.`,
+];
+
+/** A sector's "weather" from its index — playful, but it tracks the real floor. */
+function forecast(idx: number): { Icon: LucideIcon; sky: string; note: string } {
+  if (idx >= 1.06) return { Icon: Sun, sky: "Sunny", note: "warming · indices firm" };
+  if (idx >= 1.0) return { Icon: CloudSun, sky: "Mild", note: "steady" };
+  if (idx >= 0.94) return { Icon: Cloud, sky: "Overcast", note: "easing" };
+  return { Icon: CloudLightning, sky: "Storm warning", note: "under pressure" };
+}
 
 // Group every in-depth, single-sector story by its sector (built once).
 const STORIES_BY_SECTOR: Record<string, Story[]> = (() => {
@@ -99,7 +136,56 @@ const BEATS_BY_SECTOR: Record<string, Story[]> = (() => {
   return by;
 })();
 
+/** Off-peak filler rundown: ident → weather → ads (with a bumper) → coming up. */
+function buildFiller(s: WorldState, loop: { current: number }): Slide[] {
+  const slides: Slide[] = [{ type: "ident", dur: 4200 }];
+  const wsect = [...sectorKeys]
+    .sort(
+      (a, b) =>
+        Math.abs((s.sectorIdx[b] ?? 1) - 1) - Math.abs((s.sectorIdx[a] ?? 1) - 1),
+    )
+    .slice(0, 6) as SectorKey[];
+  slides.push({ type: "weather", dur: 13000, sectors: wsect });
+
+  const start = (loop.current * 3) % Math.max(1, brands.length);
+  for (let i = 0; i < 3; i++) {
+    const b = brands[(start + i) % brands.length]!;
+    const items = itemsByBrand(b.name)
+      .filter((it) => it.edition === null)
+      .sort((a, c) => c.base - a.base);
+    const item = items[0];
+    const tmpl = AD_TEMPLATES[(loop.current + i) % AD_TEMPLATES.length]!;
+    slides.push({
+      type: "ad",
+      dur: 9000,
+      ad: {
+        brand: b.name,
+        product: item?.name ?? "",
+        tagline: tmpl(b.name, item?.name ?? ""),
+        price: item?.base ?? 0,
+        sector: b.homeSector as SectorKey,
+      },
+    });
+    if (i === 0) slides.push({ type: "bumper", dur: 8000 });
+  }
+  slides.push({ type: "comingup", dur: 12000 });
+  loop.current += 1;
+  return slides;
+}
+
 export function Newsreel({ onClose }: { onClose: () => void }) {
+  return <Wheel mode="news" onClose={onClose} />;
+}
+
+export function Wheel({
+  mode = "news",
+  embedded = false,
+  onClose,
+}: {
+  mode?: "news" | "filler";
+  embedded?: boolean;
+  onClose?: () => void;
+}) {
   const { state } = useTrove();
   const stateRef = useRef(state);
   stateRef.current = state;
@@ -109,6 +195,7 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
   // stories for that industry, with data interludes + a bumper between segments.
   const buildSlides = useCallback((): Slide[] => {
     const s = stateRef.current;
+    if (mode === "filler") return buildFiller(s, loopRef);
     // feature industries with live company news first, then the most active —
     // rotating which lead each loop so the wheel stays fresh.
     const ordered = [...sectorKeys].sort((a, b) => {
@@ -147,15 +234,15 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
     });
     slides.push({ type: "standings", dur: 12000 });
     return slides;
-  }, []);
+  }, [mode]);
 
   const slidesRef = useRef<Slide[]>([]);
   const [, force] = useState(0);
   const [idx, setIdx] = useState(0);
-  const [started, setStarted] = useState(false);
+  const [started, setStarted] = useState(embedded);
   const [paused, setPaused] = useState(false);
   const [muted, setMuted] = useState(false);
-  const ambient = useRef(createAmbient());
+  const ambient = useRef(embedded ? null : createAmbient());
 
   const advance = useCallback(() => {
     setIdx((prev) => {
@@ -169,6 +256,15 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
     });
   }, [buildSlides]);
 
+  // Embedded: autostart, and rebuild the deck whenever the mode flips (the
+  // front page swaps news↔filler at the top-of-hour bell automatically).
+  useEffect(() => {
+    if (!embedded) return;
+    slidesRef.current = buildSlides();
+    setIdx(0);
+    force((n) => n + 1);
+  }, [embedded, buildSlides]);
+
   // auto-advance timer
   useEffect(() => {
     if (!started || paused) return;
@@ -179,24 +275,24 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
 
   useEffect(() => {
     const a = ambient.current;
-    return () => a.stop();
+    return () => a?.stop();
   }, []);
 
   const start = () => {
     slidesRef.current = buildSlides();
     setIdx(0);
     setStarted(true);
-    ambient.current.start();
+    ambient.current?.start();
   };
   const toggleMute = () => {
     setMuted((m) => {
-      ambient.current.setMuted(!m);
+      ambient.current?.setMuted(!m);
       return !m;
     });
   };
   const close = () => {
-    ambient.current.stop();
-    onClose();
+    ambient.current?.stop();
+    onClose?.();
   };
 
   // real broadcast clock (UTC) — the channel runs on the same 6h marks the
@@ -211,14 +307,20 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
       ? slide.story.sector
       : slide?.type === "segment"
         ? slide.sector
-        : undefined;
+        : slide?.type === "ad"
+          ? slide.ad.sector
+          : undefined;
+  // Ads reuse their sector's backdrop; weather has its own optional art; the rest
+  // fall back to the bumper plate (missing images degrade to the gradient).
   const bgName =
-    slide?.type === "headline" || slide?.type === "segment"
-      ? (slideSector ?? "bumper")
-      : "bumper";
+    slide?.type === "weather" ? "weather" : (slideSector ?? "bumper");
 
   return (
-    <div className="reel" role="dialog" aria-label="Trove News Network">
+    <div
+      className={`reel ${embedded ? "embedded" : ""}`}
+      role="dialog"
+      aria-label="Trove News Network"
+    >
       {/* background */}
       <div className="reel-bg" key={`bg-${bgName}-${idx}`} style={{ background: meta(slideSector).grad }}>
         <img
@@ -234,21 +336,27 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
 
       {/* top bar */}
       <div className="reel-bar">
-        <span className="reel-live">
-          <i /> LIVE
-        </span>
+        {mode === "filler" ? (
+          <span className="reel-live offpeak">OFF-PEAK</span>
+        ) : (
+          <span className="reel-live">
+            <i /> LIVE
+          </span>
+        )}
         <span className="reel-net">TNN · TROVE NEWS NETWORK · {clock}</span>
-        <div className="reel-tools">
-          <button className="reel-tool" onClick={toggleMute} aria-label={muted ? "Unmute" : "Mute"}>
-            {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
-          </button>
-          <button className="reel-tool" onClick={() => setPaused((p) => !p)} aria-label={paused ? "Play" : "Pause"} disabled={!started}>
-            {paused ? <Play size={16} /> : <Pause size={16} />}
-          </button>
-          <button className="reel-tool" onClick={close} aria-label="Close">
-            <X size={16} />
-          </button>
-        </div>
+        {!embedded && (
+          <div className="reel-tools">
+            <button className="reel-tool" onClick={toggleMute} aria-label={muted ? "Unmute" : "Mute"}>
+              {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+            </button>
+            <button className="reel-tool" onClick={() => setPaused((p) => !p)} aria-label={paused ? "Play" : "Pause"} disabled={!started}>
+              {paused ? <Play size={16} /> : <Pause size={16} />}
+            </button>
+            <button className="reel-tool" onClick={close} aria-label="Close">
+              <X size={16} />
+            </button>
+          </div>
+        )}
       </div>
 
       {/* slide content */}
@@ -331,6 +439,72 @@ export function Newsreel({ onClose }: { onClose: () => void }) {
                 <i style={{ animationDuration: `${slide.dur}ms` }} />
               </div>
               <div className="reel-bumper-sub">Trove News Network · stay with us</div>
+            </div>
+          )}
+
+          {slide.type === "weather" && (
+            <div className="reel-panel">
+              <div className="reel-panel-h">Trove Forecast</div>
+              <div className="reel-wx">
+                {slide.sectors.map((sec) => {
+                  const f = forecast(state.sectorIdx[sec] ?? 1);
+                  return (
+                    <div className="reel-wxrow" key={sec}>
+                      <f.Icon size={22} className="reel-wxic" />
+                      <span className="reel-wxsec">{sectorLabel(sec)}</span>
+                      <span className="reel-wxsky">{f.sky}</span>
+                      <span className="reel-wxnote">{f.note}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {slide.type === "ad" && (
+            <div className="reel-ad fadein">
+              <div className="reel-ad-eyebrow">
+                <Megaphone size={14} /> A word from
+              </div>
+              <div className="reel-ad-brand">{slide.ad.brand}</div>
+              <div className="reel-ad-tag">{slide.ad.tagline}</div>
+              {slide.ad.product && (
+                <div className="reel-ad-foot">
+                  {slide.ad.product}
+                  {slide.ad.price > 0 ? ` · from ${money(slide.ad.price)}` : ""} · now on
+                  the Trove floor
+                </div>
+              )}
+            </div>
+          )}
+
+          {slide.type === "comingup" && (
+            <div className="reel-panel">
+              <div className="reel-panel-h">
+                <Timer size={14} /> Coming up
+              </div>
+              <div className="reel-cu-bell">
+                Live coverage returns in{" "}
+                <b>~{((1 - (state.cycleFrac ?? 0)) * 12).toFixed(1)}h</b> at the next
+                bell.
+              </div>
+              <div className="reel-cu-sub">Watch for</div>
+              <div className="reel-list">
+                {moversByAbsMove(state)
+                  .filter((m) => m.it.edition === null || m.it.remaining > 0)
+                  .slice(0, 5)
+                  .map((m) => (
+                    <div className="reel-row" key={m.it.id}>
+                      <span className="reel-row-nm">
+                        <span className="bd">{m.it.brand}</span>
+                        {m.it.name}
+                      </span>
+                      <span className={`reel-row-chg ${m.dp >= 0 ? "up" : "dn"}`}>
+                        {m.dp >= 0 ? "▲" : "▼"} {Math.abs(m.dp).toFixed(1)}%
+                      </span>
+                    </div>
+                  ))}
+              </div>
             </div>
           )}
         </div>

@@ -5,9 +5,10 @@ import { Radio } from "lucide-react";
 import { news as newsBank } from "@trove/data";
 import { netWorth } from "@trove/engine";
 import { money } from "@/lib/format";
+import { tnnLive } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
-import { Broadcast, type WireStory } from "./Broadcast";
-import { Newsreel } from "./Newsreel";
+import type { WireStory } from "./Broadcast";
+import { Newsreel, Wheel } from "./Newsreel";
 
 export function Wire() {
   const { state } = useTrove();
@@ -34,8 +35,8 @@ export function Wire() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state, state.cycle]);
 
-  const broadcast = stories.slice(0, 6);
-  const upNext = broadcast.slice(1);
+  const live = tnnLive(state);
+  const upNext = stories.slice(1, 6);
   const cards = stories.slice(1, 9);
   const tape = cards.length ? cards : stories;
 
@@ -54,7 +55,9 @@ export function Wire() {
           <button className="watch-btn" onClick={() => setStudioOpen(true)}>
             <Radio size={14} /> Watch the news wheel
           </button>
-          <span className="tnn-on">On Air</span>
+          <span className={`tnn-on ${live ? "live" : "offpeak"}`}>
+            {live ? "Live now" : "Off-peak"}
+          </span>
         </div>
       </div>
 
@@ -68,7 +71,7 @@ export function Wire() {
       )}
 
       <div className="tnn-grid">
-        <Broadcast stories={broadcast} />
+        <Wheel embedded mode={live ? "news" : "filler"} />
 
         <aside className="tnn-rail">
           <div className="tnn-panel">

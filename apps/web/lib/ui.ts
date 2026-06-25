@@ -53,6 +53,15 @@ export interface Mover {
   dp: number;
 }
 
+/** TNN programming: the channel goes LIVE with the news wheel for the first
+ *  Trove hour after the bell (the market turns every 12 TVT hours = a 6h block,
+ *  so one TVT hour = 1/12 of the block), then runs off-peak filler until the
+ *  next bell. */
+export const TNN_LIVE_FRAC = 1 / 12;
+export function tnnLive(state: WorldState): boolean {
+  return (state.cycleFrac ?? 0) < TNN_LIVE_FRAC;
+}
+
 /** Items sorted by absolute % move since the last cycle. */
 export function moversByAbsMove(state: WorldState): Mover[] {
   return state.items
