@@ -24,17 +24,8 @@ import {
   resolveBay,
   type Factory as FactoryLine,
 } from "@trove/engine";
-import { money } from "@/lib/format";
+import { manufacturingName, money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
-
-/** "G&H Holdings" → "G&H Manufacturing": your production division. */
-const FIRM_TAIL =
-  /\s+(holdings?|capital|group|trading|partners|house|ventures|industries|works|syndicate|trust|llc|inc\.?|firm|exchange|traders|mfg\.?|corp\.?|company|associates|bros\.?|sons|co\.?)$/i;
-function manufacturingName(holding: string | null): string {
-  if (!holding) return "Trove Manufacturing";
-  const base = holding.replace(/\s+/g, " ").trim().replace(FIRM_TAIL, "").trim();
-  return `${base || holding} Manufacturing`;
-}
 
 /** Short "2× Steel Billet + 1× I-Beam" recipe summary, or "extraction". */
 function recipeText(out: Item): string {

@@ -27,6 +27,7 @@ import {
   signOut as authSignOut,
 } from "./auth";
 import { AUTH_ENABLED } from "./config";
+import { manufacturingName } from "./format";
 import {
   advance,
   borrow,
@@ -168,19 +169,22 @@ const TroveContext = createContext<Trove | null>(null);
 /** Shape the sandbox world's local orders into the Desk view the UI consumes
  *  (same type the live API returns), so one Desk screen serves both modes. */
 function sandboxDeskView(state: WorldState, name: string | null): Desk {
+  const mfg = manufacturingName(name);
   return {
     name,
     reputation: state.reputation ?? 0,
     cash: state.cash,
     orders: (state.orders ?? []).map((o) => {
       const it = state.items.find((i) => i.id === o.itemId);
+      const youProduce = state.factories.some((f) => f.itemId === o.itemId);
       return {
         id: o.id,
         company: o.company,
         sector: o.sector,
         itemId: o.itemId,
         itemName: it?.name ?? `#${o.itemId}`,
-        brand: it?.brand ?? "",
+        // Goods you make are branded as YOURS, not the original catalog maker.
+        brand: youProduce ? mfg : (it?.brand ?? ""),
         qty: o.qty,
         companyOffer: o.companyOffer,
         round: o.round,
@@ -190,7 +194,7 @@ function sandboxDeskView(state: WorldState, name: string | null): Desk {
         expiresAt: o.expiresAt,
         marketValue: Math.round((it?.value ?? 0) * o.qty),
         held: it?.owners["YOU"] ?? 0,
-        youProduce: state.factories.some((f) => f.itemId === o.itemId),
+        youProduce,
       };
     }),
   };

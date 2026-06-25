@@ -16,3 +16,14 @@ export function signedPct(n: number): string {
 export function pctChange(value: number, prev: number): number {
   return prev ? ((value - prev) / prev) * 100 : 0;
 }
+
+const FIRM_TAIL =
+  /\s+(holdings?|capital|group|trading|partners|house|ventures|industries|works|syndicate|trust|llc|inc\.?|firm|exchange|traders|mfg\.?|corp\.?|company|associates|bros\.?|sons|co\.?)$/i;
+
+/** Your production division's name: "G&H Holdings" → "G&H Manufacturing".
+ *  Goods you produce are branded under this, not the original catalog maker. */
+export function manufacturingName(holding: string | null | undefined): string {
+  if (!holding) return "Trove Manufacturing";
+  const base = holding.replace(/\s+/g, " ").trim().replace(FIRM_TAIL, "").trim();
+  return `${base || holding} Manufacturing`;
+}
