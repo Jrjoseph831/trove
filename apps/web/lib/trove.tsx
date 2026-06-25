@@ -208,6 +208,25 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setCatSearch(q);
       setTab("catalog");
     }
+    // Highlight a specific item: inject a <style> rule keyed to the row's id.
+    // A head stylesheet rule applies to whatever element carries that id, so it
+    // survives React re-renders, remounts, and virtualization entirely.
+    const hl = params.get("hl");
+    if (hl && /^\d+$/.test(hl)) {
+      setTab("catalog");
+      const elId = `floor-item-${hl}`;
+      const style = document.createElement("style");
+      style.textContent = `#${elId}{animation:cardglow 2.6s ease-in-out 2 !important;border-radius:8px;position:relative;z-index:3}`;
+      document.head.appendChild(style);
+      let tries = 0;
+      const find = () => {
+        const el = document.getElementById(elId);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+        else if (tries++ < 40) window.setTimeout(find, 100);
+      };
+      window.setTimeout(find, 250);
+      window.setTimeout(() => style.remove(), 6000);
+    }
   }, []);
 
   // The game loop: advance both worlds every frame, re-render on a throttle.

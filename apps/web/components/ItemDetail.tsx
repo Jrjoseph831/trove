@@ -62,7 +62,7 @@ export function ItemDetail({ item }: { item: Item }) {
           <p className="item-supply">{supply}</p>
 
           <Link
-            href={`/?q=${encodeURIComponent(item.name)}#floor-item-${item.id}`}
+            href={`/?q=${encodeURIComponent(item.name)}&hl=${item.id}`}
             className="item-cta"
           >
             Find it on the floor →
