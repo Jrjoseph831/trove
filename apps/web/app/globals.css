@@ -4152,6 +4152,50 @@ body {
   color: var(--accent);
   font-weight: 600;
 }
+/* Sell-price control */
+.bay-price {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.bp-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+.bp-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+}
+.bp-btn:hover {
+  border-color: var(--accent);
+}
+.bp-val {
+  font-size: 16px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  min-width: 92px;
+  text-align: center;
+}
+.bp-val small {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--ink-faint);
+}
+.bp-mkt {
+  font-size: 11px;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+}
+
 /* Module shelf */
 .bay-modules {
   margin-top: 14px;

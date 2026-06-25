@@ -38,6 +38,7 @@ import {
   installModule,
   routeFactory as engineRouteFactory,
   setSource as engineSetSource,
+  setListPrice as engineSetListPrice,
   rollSandboxOrders,
   negotiateSandbox,
   acceptSandboxOffer,
@@ -145,6 +146,7 @@ interface Trove {
   expandFloor: () => void;
   routeLine: (id: string, bay: number) => void;
   setLineSource: (lineId: string, inputItemId: number, feederId: string | null) => void;
+  setSellPrice: (itemId: number, mult: number) => void;
   closeReveal: () => void;
   /** Shared-world auth (the Acquire gate). */
   signedIn: boolean;
@@ -618,6 +620,14 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh],
   );
 
+  const setSellPrice = useCallback(
+    (itemId: number, mult: number) => {
+      engineSetListPrice(worldsRef.current!.sandbox, itemId, mult);
+      refresh();
+    },
+    [refresh],
+  );
+
   const signIn = useCallback(() => authSignIn(), []);
   const signOut = useCallback(() => {
     authSignOut();
@@ -801,6 +811,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       expandFloor,
       routeLine,
       setLineSource,
+      setSellPrice,
       closeReveal,
       signedIn,
       authReady,
@@ -844,6 +855,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       expandFloor,
       routeLine,
       setLineSource,
+      setSellPrice,
       closeReveal,
       signedIn,
       authReady,

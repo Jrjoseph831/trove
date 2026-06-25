@@ -119,6 +119,7 @@ export function freshState(): WorldState {
     traders: freshTraders(),
     factories: [],
     floorSlots: STARTING_SLOTS,
+    listPrices: {},
     orders: [],
     reputation: 0,
     lastOrderAt: 0,

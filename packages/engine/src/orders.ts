@@ -9,10 +9,55 @@
  * Pure logic over WorldState; the client drives timing by passing `now`. The
  * live desk (server) mirrors this — kept separate for now, to be unified.
  */
-import { getItem, lotSize, pickClient, sectorKeys } from "@trove/data";
-import type { SectorKey } from "@trove/data";
+import {
+  effectiveSpec,
+  getItem,
+  lotSize,
+  pickClient,
+  recipeOf,
+  sectorKeys,
+} from "@trove/data";
+import type { Item, SectorKey } from "@trove/data";
 import { rand } from "./rng";
 import type { Order, RuntimeItem, WorldState } from "./types";
+
+// ── Your sell price ─────────────────────────────────────────────────────────
+/** Your listing markup for an item (× market). 1 = at market. */
+export function listMult(state: WorldState, itemId: number): number {
+  return state.listPrices?.[itemId] ?? 1;
+}
+/** What your version of an item sells/lists for (market × your markup). */
+export function listPriceOf(state: WorldState, item: RuntimeItem): number {
+  return item.value * listMult(state, item.id);
+}
+/** Nudge your sell-price markup for an item (clamped to a sane band). */
+export function setListPrice(
+  state: WorldState,
+  itemId: number,
+  mult: number,
+): void {
+  if (!state.listPrices) state.listPrices = {};
+  state.listPrices[itemId] = Math.max(0.7, Math.min(1.6, mult));
+}
+
+/** Your marginal cost to MAKE one unit of an item, or null if no line makes it.
+ *  Materials (market price × per-unit × input multiplier) + amortised upkeep. */
+export function productionCostOf(
+  state: WorldState,
+  item: RuntimeItem,
+): number | null {
+  const f = state.factories.find((x) => x.itemId === item.id);
+  if (!f) return null;
+  const seed: Item = getItem(item.id) ?? item;
+  const spec = effectiveSpec(seed, f.modules);
+  const inputs = recipeOf(seed)?.inputs ?? [];
+  const mat =
+    inputs.reduce((s, inp) => {
+      const it = state.items.find((x) => x.id === inp.itemId);
+      return s + (it?.value ?? 0) * inp.qty;
+    }, 0) * spec.inputMul;
+  return mat + spec.upkeep / spec.rate;
+}
 
 const OFFER_TTL = 3 * 60_000; // a live negotiation stands for 3 min
 const DELIVER_TTL = 6 * 60_000; // 6 min to deliver once a price is agreed
@@ -84,28 +129,42 @@ function pickOrderItem(state: WorldState, rep: number): RuntimeItem | null {
   return within[Math.floor(rand() * within.length)]!;
 }
 
-/** Build one fresh negotiable order from the current world. */
+/** Build one fresh negotiable BULK order from the current world.
+ *  For items you produce, the offer anchors to YOUR sell price with a bulk
+ *  discount; for market goods it anchors to the market price. Either way it's
+ *  floored so a deal always clears a profit, and quantities/prices vary. */
 export function generateSandboxOrder(state: WorldState, now: number): Order | null {
   const rep = repOf(state);
   const it = pickOrderItem(state, rep);
   if (!it) return null;
-  const v = Math.max(1, it.value);
+  const produced = state.factories.some((f) => f.itemId === it.id);
+
+  // Retail = what your version sells for (your price if you make it, else market).
+  const retail = Math.max(0.01, produced ? listPriceOf(state, it) : it.value);
+  // Cost floor: your production cost if you make it, else a market-buy proxy.
+  const cost = produced
+    ? (productionCostOf(state, it) ?? it.value * 0.6)
+    : it.value * 0.7;
+
+  // Bulk quantity — varied per order, bigger for cheaper goods. Snapped to lots.
   const lot = lotSize(getItem(it.id) ?? it);
-
-  let qty: number;
+  const targetGross = (3000 + rep * 2500) * (0.5 + rand() * 1.6);
+  let qty = Math.max(1, Math.round(targetGross / retail));
   if (it.edition !== null) qty = 1;
-  else if (lot > 1) qty = lot * (1 + Math.floor(rand() * 4));
-  else qty = 1;
+  else if (lot > 1) qty = Math.max(lot, Math.round(qty / lot) * lot);
+  qty = Math.min(qty, 1_000_000);
 
-  const baseCost = Math.max(1, v * qty);
+  // Bulk discount grows with order size; varied. Per-unit prices, profit-floored.
+  const disc = Math.min(0.2, 0.04 + Math.log10(qty + 1) * 0.04) * (0.7 + rand() * 0.6);
+  const floor = cost * 1.05; // always clear a margin
+  const targetUnit = Math.max(floor, retail * (1 - disc));
+  const budgetUnit = Math.max(targetUnit, retail * (1 - disc * 0.35));
+  const openUnit = Math.max(cost * 1.02, targetUnit * (0.86 + rand() * 0.08));
+
+  const budget = Math.round(budgetUnit * qty);
+  const target = Math.round(targetUnit * qty);
+  const companyOffer = Math.max(1, Math.min(target - 1, Math.round(openUnit * qty)));
   const sector = topSector(it.weights);
-  const maxMargin = 0.25 + rand() * 0.35 + Math.min(0.15, rep * 0.005);
-  const budget = Math.round(baseCost * (1 + maxMargin));
-  const target = Math.round(baseCost * (1 + maxMargin * (0.35 + rand() * 0.2)));
-  const companyOffer = Math.min(
-    target - 1,
-    Math.round(baseCost * (1 + 0.02 + rand() * 0.08)),
-  );
 
   return {
     id: newId(now),
@@ -113,7 +172,7 @@ export function generateSandboxOrder(state: WorldState, now: number): Order | nu
     sector,
     itemId: it.id,
     qty,
-    companyOffer: Math.max(1, companyOffer),
+    companyOffer,
     budget,
     target,
     round: 0,

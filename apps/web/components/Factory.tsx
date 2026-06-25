@@ -338,7 +338,7 @@ function FloorView({ mfg }: { mfg: string }) {
 }
 
 function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
-  const { state, demolishLine, addModule, removeModule, setLineSource } =
+  const { state, demolishLine, addModule, removeModule, setLineSource, setSellPrice } =
     useTrove();
   const out = state.items.find((i) => i.id === f.itemId);
   if (!out) return null;
@@ -521,6 +521,38 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
           <span className="bay-prem">+{Math.round(eff.premium * 100)}% quality</span>
         )}
       </div>
+
+      {(() => {
+        const mult = state.listPrices[out.id] ?? 1;
+        const pct = Math.round((mult - 1) * 100);
+        return (
+          <div className="bay-price">
+            <span className="bay-sub">Your sell price — what orders anchor to</span>
+            <div className="bp-row">
+              <button
+                className="bp-btn"
+                onClick={() => setSellPrice(out.id, mult - 0.05)}
+              >
+                −
+              </button>
+              <span className="bp-val">
+                {money(out.value * mult)}
+                <small>/ea</small>
+              </span>
+              <button
+                className="bp-btn"
+                onClick={() => setSellPrice(out.id, mult + 0.05)}
+              >
+                +
+              </button>
+              <span className="bp-mkt">
+                market {money(out.value)} · {pct >= 0 ? "+" : ""}
+                {pct}%
+              </span>
+            </div>
+          </div>
+        );
+      })()}
 
       <div className="bay-modules">
         <div className="bay-sub">Modules — engineer the line</div>
