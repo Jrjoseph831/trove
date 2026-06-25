@@ -16,7 +16,15 @@ import {
   recipeOf,
 } from "@trove/data";
 import type { Item } from "@trove/data";
-import type { Factory as FactoryLine } from "@trove/engine";
+import {
+  expandCost,
+  floorBays,
+  floorLaneCapacity,
+  lineLanes,
+  LANES_PER_BAY,
+  SLOTS_PER_BAY,
+  type Factory as FactoryLine,
+} from "@trove/engine";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 
@@ -41,6 +49,7 @@ function recipeText(out: Item): string {
 export function Factory() {
   const { mode, state, buildLine, desk } = useTrove();
   const [picking, setPicking] = useState(false);
+  const [view, setView] = useState<"lines" | "floor">("lines");
   const mfg = manufacturingName(desk?.name ?? null);
 
   if (mode === "live") {
@@ -57,6 +66,8 @@ export function Factory() {
     );
   }
 
+  const full = state.factories.length >= state.floorSlots;
+
   return (
     <div className="view">
       <div className="cat-head">
@@ -66,25 +77,54 @@ export function Factory() {
         </div>
       </div>
 
-      <p className="fac-intro">
-        Engineer a line: pick a product, then install <b>modules</b> to push
-        throughput up, upkeep down, or trim material per unit. Output is branded{" "}
-        <b>{mfg}</b> and lands in your vault to sell or fill orders.
-      </p>
+      <div className="fac-tabs">
+        <button
+          className={view === "lines" ? "on" : ""}
+          onClick={() => setView("lines")}
+        >
+          Lines
+        </button>
+        <button
+          className={view === "floor" ? "on" : ""}
+          onClick={() => setView("floor")}
+        >
+          Floor
+        </button>
+        <span className="fac-tabnote">
+          {state.factories.length}/{state.floorSlots} slots ·{" "}
+          {floorBays(state.floorSlots)} bay
+          {floorBays(state.floorSlots) > 1 ? "s" : ""}
+        </span>
+      </div>
 
-      {state.factories.length === 0 && (
-        <div className="empty">
-          No lines yet. Build one below — start cheap, then engineer it.
-        </div>
+      {view === "floor" ? (
+        <FloorView mfg={mfg} />
+      ) : (
+        <>
+          <p className="fac-intro">
+            Engineer a line: pick a product, then install <b>modules</b> to push
+            throughput up, upkeep down, or trim material per unit. Output is
+            branded <b>{mfg}</b> and lands in your vault to sell or fill orders.
+          </p>
+
+          {state.factories.length === 0 && (
+            <div className="empty">
+              No lines yet. Build one below — start cheap, then engineer it.
+            </div>
+          )}
+
+          {state.factories.map((f) => (
+            <LineBay key={f.id} f={f} mfg={mfg} />
+          ))}
+
+          <button
+            className="fac-build"
+            onClick={() => (full ? setView("floor") : setPicking(true))}
+          >
+            {full ? "Floor's full — expand it →" : "＋ Build a new line"}
+          </button>
+        </>
       )}
-
-      {state.factories.map((f) => (
-        <LineBay key={f.id} f={f} mfg={mfg} />
-      ))}
-
-      <button className="fac-build" onClick={() => setPicking(true)}>
-        ＋ Build a new line
-      </button>
 
       {picking && (
         <BuildPicker
@@ -96,6 +136,123 @@ export function Factory() {
           onClose={() => setPicking(false)}
         />
       )}
+    </div>
+  );
+}
+
+/** The warehouse view: lines route to shipping bays; belt lanes have capacity,
+ *  and overloading them throttles throughput until you scale down or expand. */
+function FloorView({ mfg }: { mfg: string }) {
+  const { state, expandFloor } = useTrove();
+  const slots = state.floorSlots;
+  const bays = floorBays(slots);
+  const capacity = floorLaneCapacity(slots);
+
+  // Resolve each line's live rate + lanes, and assign lines to bays by order.
+  const lines = state.factories.map((f) => {
+    const out = state.items.find((i) => i.id === f.itemId);
+    const rate = out ? effectiveSpec(out, f.modules).rate : 0;
+    const online = state.cycle >= f.onlineCycle;
+    return {
+      f,
+      name: out?.name ?? `#${f.itemId}`,
+      rate,
+      lanes: lineLanes(rate),
+      online,
+    };
+  });
+  const load = lines
+    .filter((l) => l.online)
+    .reduce((s, l) => s + l.lanes, 0);
+  const congested = load > capacity;
+  const cost = expandCost(slots);
+
+  // Group lines into bays (SLOTS_PER_BAY lines per bay).
+  const bayGroups = Array.from({ length: bays }, (_, b) =>
+    lines.filter((_, i) => Math.floor(i / SLOTS_PER_BAY) === b),
+  );
+
+  return (
+    <div className="floor">
+      <p className="fac-intro">
+        Your lines ship through <b>{bays}</b> bay{bays > 1 ? "s" : ""}. Each bay
+        moves {LANES_PER_BAY} belt lanes; a faster line eats more lanes. Push past
+        capacity and the whole floor backs up — scale a line down or expand.
+      </p>
+
+      <div className={`floor-load ${congested ? "over" : ""}`}>
+        <div className="fl-load-top">
+          <span>Belt load</span>
+          <span>
+            {load} / {capacity} lanes{" "}
+            {congested && <b className="fl-alert">⚠ overloaded</b>}
+          </span>
+        </div>
+        <div className="fl-load-bar">
+          <i style={{ width: `${Math.min(100, (load / capacity) * 100)}%` }} />
+        </div>
+        {congested && (
+          <div className="fl-load-note">
+            Output is throttled to ~{Math.round((capacity / load) * 100)}% across
+            all lines until you free up lanes.
+          </div>
+        )}
+      </div>
+
+      {bayGroups.map((group, b) => {
+        const bayLoad = group
+          .filter((l) => l.online)
+          .reduce((s, l) => s + l.lanes, 0);
+        const bayOver = bayLoad > LANES_PER_BAY;
+        return (
+          <div key={b} className={`floor-bay ${bayOver ? "over" : ""}`}>
+            <div className="floor-bay-head">
+              <span className="floor-bay-name">Bay {b + 1}</span>
+              <span className="floor-bay-cap">
+                {bayLoad}/{LANES_PER_BAY} lanes {bayOver && "⚠"}
+              </span>
+            </div>
+            {group.length === 0 ? (
+              <div className="floor-empty">— open bay —</div>
+            ) : (
+              group.map((l) => (
+                <div key={l.f.id} className="floor-line">
+                  <span className="floor-line-name">{l.name}</span>
+                  <span className="floor-belt">
+                    <span className="cvy-rail" />
+                    {l.online &&
+                      Array.from({ length: Math.min(4, l.lanes + 1) }).map(
+                        (_, i) => (
+                          <i
+                            key={i}
+                            className="cvy-box"
+                            style={{
+                              animationDuration: "1.4s",
+                              animationDelay: `${0.35 * i}s`,
+                            }}
+                          />
+                        ),
+                      )}
+                  </span>
+                  <span className="floor-line-rate">
+                    {l.online ? `${l.rate.toLocaleString()}/cy` : "building"} ·{" "}
+                    {l.lanes} lane{l.lanes > 1 ? "s" : ""}
+                  </span>
+                  <Truck size={15} strokeWidth={1.75} className="floor-truck" />
+                </div>
+              ))
+            )}
+          </div>
+        );
+      })}
+
+      <button className="fac-build" onClick={expandFloor}>
+        Expand floor · +{SLOTS_PER_BAY} slots · {money(cost)}
+      </button>
+      <p className="floor-foot">
+        {mfg} floor · {state.factories.length}/{slots} slots used · bay upkeep
+        scales with size.
+      </p>
     </div>
   );
 }

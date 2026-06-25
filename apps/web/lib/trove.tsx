@@ -33,6 +33,7 @@ import {
   buildFactory,
   createWorld,
   demolishFactory,
+  expandFloor as engineExpandFloor,
   installModule,
   playerBuy,
   playerSell,
@@ -133,6 +134,7 @@ interface Trove {
   demolishLine: (id: string) => void;
   addModule: (factoryId: string, moduleId: string) => void;
   removeModule: (factoryId: string, moduleId: string) => void;
+  expandFloor: () => void;
   closeReveal: () => void;
   /** Shared-world auth (the Acquire gate). */
   signedIn: boolean;
@@ -474,12 +476,17 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         showToast("Factories open soon");
         return;
       }
+      const sbx = worldsRef.current!.sandbox;
+      if (sbx.factories.length >= sbx.floorSlots) {
+        showToast("Floor's full — expand it on the Floor tab");
+        return;
+      }
       const it = getItem(itemId);
-      const f = buildFactory(worldsRef.current!.sandbox, itemId);
+      const f = buildFactory(sbx, itemId);
       if (!f) {
         const spec = it ? factorySpec(it) : null;
         showToast(
-          spec && worldsRef.current!.sandbox.cash < spec.buildCost
+          spec && sbx.cash < spec.buildCost
             ? "Not enough cash to build"
             : "Can't build that line",
         );
@@ -520,6 +527,19 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     },
     [refresh],
   );
+
+  const expandFloor = useCallback(() => {
+    if (modeRef.current === "live") {
+      showToast("Factories open soon");
+      return;
+    }
+    if (engineExpandFloor(worldsRef.current!.sandbox)) {
+      showToast("Floor expanded");
+      refresh();
+    } else {
+      showToast("Not enough cash to expand");
+    }
+  }, [refresh, showToast]);
 
   const signIn = useCallback(() => authSignIn(), []);
   const signOut = useCallback(() => {
@@ -652,6 +672,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       demolishLine,
       addModule,
       removeModule,
+      expandFloor,
       closeReveal,
       signedIn,
       authReady,
@@ -692,6 +713,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       demolishLine,
       addModule,
       removeModule,
+      expandFloor,
       closeReveal,
       signedIn,
       authReady,

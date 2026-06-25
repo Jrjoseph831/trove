@@ -85,6 +85,8 @@ export interface WorldState {
   traders: Trader[];
   /** Player-owned production lines. */
   factories: Factory[];
+  /** Factory-floor capacity: how many lines can run at once. Expandable. */
+  floorSlots: number;
   log: LogEntry[];
   /** Indices of recently-shown news scenarios (most recent last) — avoids
    *  recycling a story until the pool has moved well past it. */

@@ -51,6 +51,19 @@ export function wallCycleFrac(now: number = Date.now()): number {
 }
 /** Starting player cash. */
 export const START_CASH = 25000;
+// ── Factory floor ───────────────────────────────────────────────────────────
+/** Line slots a fresh floor holds. */
+export const STARTING_SLOTS = 2;
+/** Slots gained per expansion. */
+export const SLOTS_PER_EXPAND = 2;
+/** Line slots served by one shipping bay. */
+export const SLOTS_PER_BAY = 2;
+/** Belt lanes each bay can move. */
+export const LANES_PER_BAY = 3;
+/** Output units one belt lane carries per cycle. */
+export const LANE_UNITS = 2500;
+/** Cash upkeep per shipping bay per cycle. */
+export const BAY_UPKEEP = 120;
 /** Interest accrued on debt per cycle. */
 export const DEBT_RATE = 0.0005;
 /** Cycles a fresh world is warmed up so it opens mid-story, not flat. */
@@ -104,6 +117,7 @@ export function freshState(): WorldState {
     front: null,
     traders: freshTraders(),
     factories: [],
+    floorSlots: STARTING_SLOTS,
     log: [],
     recentNewsIdx: [],
     nwHist: [START_CASH],
@@ -419,6 +433,7 @@ function takeYou(it: RuntimeItem, qty: number): void {
 export function buildFactory(state: WorldState, itemId: number): Factory | null {
   const out = state.items.find((i) => i.id === itemId);
   if (!out || !canProduce(out)) return null;
+  if (state.factories.length >= state.floorSlots) return null; // floor full
   const spec = factorySpec(out);
   if (state.cash < spec.buildCost) return null;
   state.cash -= spec.buildCost;
@@ -433,6 +448,34 @@ export function buildFactory(state: WorldState, itemId: number): Factory | null 
   state.factories.push(f);
   pushLog(state, "YOU", "broke ground on", `${out.name} line`);
   return f;
+}
+
+// ── Floor capacity (warehouse) ───────────────────────────────────────────────
+/** Shipping bays a floor of `slots` line-slots has. */
+export function floorBays(slots: number): number {
+  return Math.max(1, Math.ceil(slots / SLOTS_PER_BAY));
+}
+/** Total belt lanes the bays can move per cycle. */
+export function floorLaneCapacity(slots: number): number {
+  return floorBays(slots) * LANES_PER_BAY;
+}
+/** Belt lanes a line at this rate occupies. */
+export function lineLanes(rate: number): number {
+  return Math.max(1, Math.ceil(rate / LANE_UNITS));
+}
+/** Cash to add the next SLOTS_PER_EXPAND slots (each expansion pricier). */
+export function expandCost(slots: number): number {
+  const step = Math.round((slots - STARTING_SLOTS) / SLOTS_PER_EXPAND);
+  return 8000 * (step + 1);
+}
+/** Expand the floor: more slots + bays, for a one-time cost. */
+export function expandFloor(state: WorldState): boolean {
+  const cost = expandCost(state.floorSlots);
+  if (state.cash < cost) return false;
+  state.cash -= cost;
+  state.floorSlots += SLOTS_PER_EXPAND;
+  pushLog(state, "YOU", "expanded the floor to", `${state.floorSlots} slots`);
+  return true;
 }
 
 /** Tear down a line. No refund in v1. */
@@ -486,7 +529,24 @@ export function uninstallModule(
  */
 function produceFactories(state: WorldState): void {
   // Older persisted world docs (e.g. the live singleton) predate factories.
-  for (const f of state.factories ?? []) {
+  const lines = state.factories ?? [];
+  if (lines.length === 0) return;
+
+  // Floor (bay) upkeep burns every cycle the floor is in use.
+  state.cash -= floorBays(state.floorSlots) * BAY_UPKEEP;
+
+  // Congestion: total belt lanes demanded by online lines vs bay capacity.
+  // Over capacity, every line ships slower (a shared-belt bottleneck).
+  let load = 0;
+  for (const f of lines) {
+    if (state.cycle < f.onlineCycle) continue;
+    const out = state.items.find((i) => i.id === f.itemId);
+    if (out) load += lineLanes(effectiveSpec(out, f.modules).rate);
+  }
+  const cap = floorLaneCapacity(state.floorSlots);
+  const throttle = load > cap ? cap / load : 1;
+
+  for (const f of lines) {
     if (state.cycle < f.onlineCycle) {
       f.status = "building";
       continue;
@@ -496,13 +556,16 @@ function produceFactories(state: WorldState): void {
     const spec = effectiveSpec(out, f.modules); // modules fold into the economics
     state.cash -= spec.upkeep; // upkeep always burns
 
+    // Congestion slows the line's effective throughput this cycle.
+    const rate = Math.max(1, Math.floor(spec.rate * throttle));
+
     const recipe = recipeOf(out);
     const inputs = recipe?.inputs ?? [];
     // Resolve input items and check the vault can cover a full batch
     // (module input multiplier shifts how much material a batch needs).
     const batch = inputs.map((inp) => ({
       it: state.items.find((i) => i.id === inp.itemId),
-      need: Math.ceil(inp.qty * spec.rate * spec.inputMul),
+      need: Math.ceil(inp.qty * rate * spec.inputMul),
     }));
     const canRun = batch.every((b) => b.it && ownedYou(b.it) >= b.need);
 
@@ -511,9 +574,9 @@ function produceFactories(state: WorldState): void {
       continue;
     }
     for (const b of batch) takeYou(b.it!, b.need);
-    giveYou(out, spec.rate);
+    giveYou(out, rate);
     f.status = "running";
-    pushLog(state, "YOU", "produced", `${spec.rate}× ${out.name}`);
+    pushLog(state, "YOU", "produced", `${rate}× ${out.name}`);
   }
 }
 
