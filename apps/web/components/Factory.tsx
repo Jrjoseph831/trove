@@ -180,13 +180,28 @@ function FloorView({ mfg }: { mfg: string }) {
   const rows = Math.max(lines.length, bays, 1);
   const W = 600;
   const H = PAD * 2 + rows * ROW;
-  const LINE_R = 104;
+  const LINE_L = 36; // node left edge (leaves a left margin for feeder belts)
+  const LINE_R = 132; // node right edge (belts to bays start here)
   const BAY_L = 496;
   const lineY = (i: number) => PAD + i * ROW + ROW / 2;
   const bayY = (b: number) => PAD + ((b + 0.5) * (rows * ROW)) / bays;
-  const trunkX = (b: number) => (bays > 1 ? 320 + (b * 150) / (bays - 1) : 380);
+  const trunkX = (b: number) => (bays > 1 ? 340 + (b * 130) / (bays - 1) : 390);
   const path = (i: number, b: number) =>
     `M ${LINE_R} ${lineY(i)} L ${trunkX(b)} ${lineY(i)} L ${trunkX(b)} ${bayY(b)} L ${BAY_L} ${bayY(b)}`;
+
+  // In-house feeder links: a belt bowing into the left margin from the feeder
+  // line to the consumer line.
+  const byId = new Map(lines.map((l) => [l.f.id, l]));
+  const feederLinks = lines
+    .flatMap((c) =>
+      Object.values(c.f.sources ?? {}).map((fid) => {
+        const fdr = byId.get(fid);
+        return fdr ? { key: `${c.i}-${fdr.i}`, c, fdr } : null;
+      }),
+    )
+    .filter((x): x is { key: string; c: (typeof lines)[number]; fdr: (typeof lines)[number] } => !!x);
+  const feederPath = (ci: number, fi: number) =>
+    `M ${LINE_L} ${lineY(fi)} C 6 ${lineY(fi)}, 6 ${lineY(ci)}, ${LINE_L} ${lineY(ci)}`;
   const flowDur = (rate: number, jam: boolean) =>
     (jam ? 2.4 : 1) * Math.max(0.5, Math.min(1.5, 1.7 - Math.log10(Math.max(1, rate)) * 0.26));
 
@@ -243,6 +258,24 @@ function FloorView({ mfg }: { mfg: string }) {
             );
           })}
 
+          {/* in-house feeder belts (line → line) */}
+          {feederLinks.map(({ key, c, fdr }) => {
+            const live = !c.building && !fdr.building;
+            const cls = live ? "run" : "build";
+            const d = feederPath(c.i, fdr.i);
+            return (
+              <g key={`feed${key}`}>
+                <path className={`wb-base ${cls}`} d={d} fill="none" />
+                <path
+                  className={`wb-flow ${cls}`}
+                  d={d}
+                  fill="none"
+                  style={live ? { animationDuration: "1.1s" } : undefined}
+                />
+              </g>
+            );
+          })}
+
           {Array.from({ length: bays }).map((_, b) => (
             <g
               key={`bay${b}`}
@@ -273,17 +306,17 @@ function FloorView({ mfg }: { mfg: string }) {
               onClick={() => routeLine(l.f.id, (l.bay + 1) % bays)}
             >
               <rect
-                x={8}
+                x={36}
                 y={0}
                 width={96}
                 height={36}
                 rx={9}
                 className={`wb-box ${l.building ? "build" : l.idle ? "idle" : "run"}`}
               />
-              <text x={18} y={15} className="wb-name">
+              <text x={46} y={15} className="wb-name">
                 {trim(l.name, 13)}
               </text>
-              <text x={18} y={29} className="wb-sub">
+              <text x={46} y={29} className="wb-sub">
                 {l.building ? "building" : `${l.rate.toLocaleString()}/cy`} · →Bay{" "}
                 {l.bay + 1}
               </text>
@@ -314,7 +347,8 @@ function FloorView({ mfg }: { mfg: string }) {
 }
 
 function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
-  const { state, demolishLine, addModule, removeModule } = useTrove();
+  const { state, demolishLine, addModule, removeModule, setLineSource } =
+    useTrove();
   const out = state.items.find((i) => i.id === f.itemId);
   if (!out) return null;
 
@@ -326,10 +360,29 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
   const building = state.cycle < f.onlineCycle;
   const cyclesLeft = f.onlineCycle - state.cycle;
 
-  // Per-input batch coverage (module input multiplier shifts the need).
+  // Per-input: where it's sourced (a feeder line in-house, or the market), what
+  // it costs per unit there, and feeder options the player owns.
   const batch = inputs.map((inp) => {
     const held = state.items.find((i) => i.id === inp.itemId);
     const need = Math.ceil(inp.qty * eff.rate * eff.inputMul);
+    const feederId = f.sources?.[inp.itemId];
+    const feeder = feederId
+      ? state.factories.find((x) => x.id === feederId)
+      : undefined;
+    const inHouse = !!feeder;
+    // In-house unit cost ≈ the feeder's marginal cost (upkeep / its rate);
+    // market unit cost = the live price.
+    const fSpec = feeder
+      ? effectiveSpec(
+          state.items.find((i) => i.id === feeder.itemId) ?? out,
+          feeder.modules,
+        )
+      : null;
+    const unitCost =
+      inHouse && fSpec ? fSpec.upkeep / fSpec.rate : (held?.value ?? 0);
+    const feeders = state.factories.filter(
+      (x) => x.itemId === inp.itemId && x.id !== f.id,
+    );
     return {
       id: inp.itemId,
       name: held?.name ?? `#${inp.itemId}`,
@@ -337,17 +390,29 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
       perUnit: inp.qty,
       have: held?.owners["YOU"] ?? 0,
       need,
+      inHouse,
+      feederId: feederId ?? null,
+      unitCost,
+      feeders,
     };
   });
-  const ready = batch.every((b) => b.have >= b.need);
+  // Run-readiness mirrors the engine: in-house needs vault stock; market
+  // auto-buys the shortfall (so it just needs cash).
+  let cashCost = 0;
+  let canRun = true;
+  for (const b of batch) {
+    if (b.inHouse) {
+      if (b.have < b.need) canRun = false;
+    } else {
+      cashCost += Math.max(0, b.need - b.have) * b.value;
+    }
+  }
+  const ready = canRun && state.cash >= cashCost;
   const status = building ? "building" : ready ? "running" : "idle";
-  const coverage = batch.length
-    ? Math.min(1, ...batch.map((b) => (b.need ? b.have / b.need : 1)))
-    : 1;
 
-  // Cost to make one unit: materials (× input multiplier) + amortised upkeep.
+  // Cost to make one unit: per-input source cost (× input multiplier) + upkeep.
   const matPerUnit =
-    batch.reduce((s, b) => s + b.value * b.perUnit, 0) * eff.inputMul;
+    batch.reduce((s, b) => s + b.unitCost * b.perUnit, 0) * eff.inputMul;
   const perUnit = matPerUnit + eff.upkeep / eff.rate;
   const sellEa = out.value * (1 + eff.premium);
 
@@ -403,24 +468,49 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
 
       {inputs.length > 0 && (
         <div className="bay-inputs">
-          <div className="bay-sub">Feed / cycle</div>
-          {batch.map((b) => (
-            <div
-              key={b.id}
-              className={`bay-inp ${b.have >= b.need ? "" : "short"}`}
-            >
-              <Link href={`/item/${b.id}`} className="it-link">
-                {b.name}
-              </Link>
-              <span className="bay-need">
-                {b.have.toLocaleString()} / {b.need.toLocaleString()}
-              </span>
-            </div>
-          ))}
+          <div className="bay-sub">Feed / cycle · source</div>
+          {batch.map((b) => {
+            const short = b.inHouse && b.have < b.need;
+            return (
+              <div key={b.id} className={`bay-inp ${short ? "short" : ""}`}>
+                <Link href={`/item/${b.id}`} className="it-link">
+                  {b.name}
+                </Link>
+                <select
+                  className="bay-src"
+                  value={b.feederId ?? "market"}
+                  onChange={(e) =>
+                    setLineSource(
+                      f.id,
+                      b.id,
+                      e.target.value === "market" ? null : e.target.value,
+                    )
+                  }
+                >
+                  <option value="market">Market · {money(b.value)}/ea</option>
+                  {b.feeders.map((fd) => (
+                    <option key={fd.id} value={fd.id}>
+                      In-house · my line
+                    </option>
+                  ))}
+                </select>
+                <span className="bay-need">
+                  {b.inHouse
+                    ? `${b.have.toLocaleString()} / ${b.need.toLocaleString()}`
+                    : `${b.need.toLocaleString()}/cy`}
+                </span>
+              </div>
+            );
+          })}
           {!building && !ready && (
             <div className="bay-warn">
-              Short on inputs — line idles (upkeep still burns). Buy more on the
-              floor.
+              Line idles — an in-house feeder can&apos;t keep up, or not enough
+              cash to buy market inputs.
+            </div>
+          )}
+          {batch.some((b) => b.feeders.length > 0) && (
+            <div className="bay-srchint">
+              Tip: source an input from your own line to skip the market markup.
             </div>
           )}
         </div>

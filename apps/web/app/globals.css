@@ -4100,6 +4100,26 @@ body {
   line-height: 1.45;
   color: #c0563f;
 }
+.bay-src {
+  margin-left: auto;
+  max-width: 200px;
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--paper);
+  color: var(--ink-dim);
+  font-size: 11px;
+  cursor: pointer;
+}
+.bay-inp.short .bay-src {
+  border-color: #c0563f;
+}
+.bay-srchint {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-style: italic;
+}
 /* Live stat readout */
 .bay-stats {
   display: flex;

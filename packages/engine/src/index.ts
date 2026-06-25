@@ -480,6 +480,28 @@ export function routeFactory(
   f.bay = Math.max(0, Math.min(floorBays(state.floorSlots) - 1, bay));
   return true;
 }
+
+/** Set an input's source: a feeder line that makes it in-house, or null = market.
+ *  The feeder must exist, not be the line itself, and produce that input. */
+export function setSource(
+  state: WorldState,
+  lineId: string,
+  inputItemId: number,
+  feederId: string | null,
+): boolean {
+  const f = state.factories.find((x) => x.id === lineId);
+  if (!f) return false;
+  if (!f.sources) f.sources = {};
+  if (feederId) {
+    const feeder = state.factories.find((x) => x.id === feederId);
+    if (!feeder || feeder.id === lineId || feeder.itemId !== inputItemId)
+      return false;
+    f.sources[inputItemId] = feederId;
+  } else {
+    delete f.sources[inputItemId];
+  }
+  return true;
+}
 /** Cash to add the next SLOTS_PER_EXPAND slots (each expansion pricier). */
 export function expandCost(slots: number): number {
   const step = Math.round((slots - STARTING_SLOTS) / SLOTS_PER_EXPAND);
@@ -579,19 +601,44 @@ function produceFactories(state: WorldState): void {
 
     const recipe = recipeOf(out);
     const inputs = recipe?.inputs ?? [];
-    // Resolve input items and check the vault can cover a full batch
-    // (module input multiplier shifts how much material a batch needs).
-    const batch = inputs.map((inp) => ({
-      it: state.items.find((x) => x.id === inp.itemId),
-      need: Math.ceil(inp.qty * rate * spec.inputMul),
-    }));
-    const canRun = batch.every((b) => b.it && ownedYou(b.it) >= b.need);
-
-    if (!canRun) {
+    // Each input is either IN-HOUSE (pull from the vault, which a feeder line
+    // fills — idle if it can't keep up) or MARKET (auto-buy any shortfall at the
+    // current price). Casuals leave every input on market = no manual stocking.
+    const plan = inputs.map((inp) => {
+      const it = state.items.find((x) => x.id === inp.itemId);
+      const need = Math.ceil(inp.qty * rate * spec.inputMul);
+      return {
+        it,
+        need,
+        inHouse: !!f.sources?.[inp.itemId],
+        have: it ? ownedYou(it) : 0,
+      };
+    });
+    let cashCost = 0;
+    let ok = true;
+    for (const p of plan) {
+      if (!p.it) {
+        ok = false;
+        break;
+      }
+      if (p.inHouse) {
+        if (p.have < p.need) {
+          ok = false; // feeder hasn't stocked enough
+          break;
+        }
+      } else {
+        cashCost += Math.max(0, p.need - p.have) * p.it.value; // buy shortfall
+      }
+    }
+    if (!ok || state.cash < cashCost) {
       f.status = "idle";
       return;
     }
-    for (const b of batch) takeYou(b.it!, b.need);
+    for (const p of plan) {
+      if (p.inHouse) takeYou(p.it!, p.need);
+      else if (p.have > 0) takeYou(p.it!, Math.min(p.have, p.need));
+    }
+    state.cash -= cashCost;
     giveYou(out, rate);
     f.status = "running";
     pushLog(state, "YOU", "produced", `${rate}× ${out.name}`);

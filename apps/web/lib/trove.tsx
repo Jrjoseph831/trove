@@ -36,6 +36,7 @@ import {
   expandFloor as engineExpandFloor,
   installModule,
   routeFactory as engineRouteFactory,
+  setSource as engineSetSource,
   playerBuy,
   playerSell,
   repay,
@@ -137,6 +138,7 @@ interface Trove {
   removeModule: (factoryId: string, moduleId: string) => void;
   expandFloor: () => void;
   routeLine: (id: string, bay: number) => void;
+  setLineSource: (lineId: string, inputItemId: number, feederId: string | null) => void;
   closeReveal: () => void;
   /** Shared-world auth (the Acquire gate). */
   signedIn: boolean;
@@ -550,6 +552,14 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh],
   );
 
+  const setLineSource = useCallback(
+    (lineId: string, inputItemId: number, feederId: string | null) => {
+      if (engineSetSource(worldsRef.current!.sandbox, lineId, inputItemId, feederId))
+        refresh();
+    },
+    [refresh],
+  );
+
   const signIn = useCallback(() => authSignIn(), []);
   const signOut = useCallback(() => {
     authSignOut();
@@ -683,6 +693,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       removeModule,
       expandFloor,
       routeLine,
+      setLineSource,
       closeReveal,
       signedIn,
       authReady,
@@ -725,6 +736,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       removeModule,
       expandFloor,
       routeLine,
+      setLineSource,
       closeReveal,
       signedIn,
       authReady,

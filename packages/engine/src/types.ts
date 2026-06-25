@@ -45,6 +45,9 @@ export interface Factory {
   modules: string[];
   /** Shipping bay this line routes to (undefined = auto by slot order). */
   bay?: number;
+  /** Per-input sourcing: input itemId → feeder line id that makes it in-house.
+   *  Absent for an input = bought from the market (auto-supplied). */
+  sources?: Record<number, string>;
   /** Last settle outcome, for UI: building → running → idle (short on inputs). */
   status: "building" | "running" | "idle";
 }
