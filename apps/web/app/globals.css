@@ -119,6 +119,7 @@ body {
   display: grid;
   grid-template-columns: var(--rail) 1fr;
   height: 100vh;
+  height: 100dvh; /* dynamic viewport — nothing hidden under mobile browser UI */
   background: var(--bg);
 }
 
@@ -351,8 +352,10 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   position: relative;
+  min-width: 0;
 }
 .main.sandbox::after {
   content: "Sandbox — private tuning world";
@@ -1823,11 +1826,13 @@ body {
   .rail {
     position: fixed;
     z-index: 40;
-    width: var(--rail);
+    width: min(86vw, var(--rail));
     height: 100vh;
+    height: 100dvh;
     transform: translateX(-100%);
     transition: 0.2s;
     box-shadow: 0 0 40px -10px rgba(27, 23, 20, 0.25);
+    overflow-y: auto;
   }
   .app.navopen .rail {
     transform: none;
@@ -3659,4 +3664,54 @@ body {
 }
 .rename-btn:hover {
   color: var(--accent);
+}
+
+/* holding name in the brand slot */
+.brand-holding {
+  font-family: var(--font-display);
+  font-size: 19px;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  display: block;
+  word-break: break-word;
+  color: var(--ink);
+}
+
+/* in-game clock in the topbar */
+.clock {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+  padding: 0 16px;
+  height: 100%;
+  border-right: 1px solid var(--line);
+  white-space: nowrap;
+}
+.clock-t {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.clock-t small {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  margin-left: 2px;
+}
+.clock-n {
+  font-size: 8.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+@media (max-width: 560px) {
+  .clock {
+    padding: 0 10px;
+  }
+  .clock-n {
+    display: none;
+  }
 }

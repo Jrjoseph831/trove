@@ -61,7 +61,13 @@ export function Rail() {
         <X size={20} />
       </button>
       <div className="brand">
-        TR<b>O</b>VE<small>HOLDINGS</small>
+        {signedIn && desk?.name ? (
+          <span className="brand-holding">{desk.name}</span>
+        ) : (
+          <>
+            TR<b>O</b>VE<small>HOLDINGS</small>
+          </>
+        )}
       </div>
 
       <div className="worth">

@@ -38,7 +38,7 @@ export function Terminal() {
           >
             ☰
           </button>
-          <div className="tlabel">The Wire</div>
+          <Clock />
           <Ticker />
         </div>
         {tab === "trending" && <Trending />}
@@ -201,6 +201,27 @@ function Onboarding() {
           </button>
         </div>
       </div>
+    </div>
+  );
+}
+
+/** In-game clock: the floor runs on the UTC 6h marks, so we show the live UTC
+ *  time and a countdown to the next market turn. Re-renders on the tick. */
+function Clock() {
+  useTrove(); // subscribe to the render tick
+  const now = new Date();
+  const hh = String(now.getUTCHours()).padStart(2, "0");
+  const mm = String(now.getUTCMinutes()).padStart(2, "0");
+  const sixH = 6 * 3600_000;
+  const left = sixH - (now.getTime() % sixH);
+  const h = Math.floor(left / 3600_000);
+  const m = Math.floor((left % 3600_000) / 60_000);
+  return (
+    <div className="clock" title="The floor turns every 6 hours (UTC)">
+      <span className="clock-t">
+        {hh}:{mm} <small>UTC</small>
+      </span>
+      <span className="clock-n">next turn {h}h {m}m</span>
     </div>
   );
 }
