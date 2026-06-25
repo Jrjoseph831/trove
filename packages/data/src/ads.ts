@@ -36,6 +36,7 @@ export const ads: AdSpot[] = [
   { id: "tinsel", brand: "Tinsel Snack Cakes", line: "Sixty percent air. One hundred percent joy.", sub: "Now in a slightly smaller box for the same price.", tone: "food" },
   { id: "boyardunno", brand: "Chef Boyar-Dunno", line: "Dinner. Probably.", sub: "A meal-adjacent experience for the whole family.", tone: "food" },
   { id: "petunia", brand: "Aunt Petunia's Pickled Everything", line: "If it fits in a jar, we've pickled it.", sub: "Yes. Even that. Especially that.", tone: "food" },
+  { id: "greasemonkey", brand: "Grease Monkey Deluxe", line: "It's not just a burger. It's a lifestyle.", sub: "Burgers · shakes · bad decisions.", tone: "food", img: "greasemonkey.png" },
 
   // ── Cigarettes & smokes (retro, satirical) ──────────────────────────────
   { id: "camembert", brand: "Camembert Cigarettes", line: "The smooth taste of poor decisions.", sub: "Doctors no longer return our calls.", tone: "smoke" },
