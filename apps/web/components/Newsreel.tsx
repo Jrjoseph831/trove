@@ -141,10 +141,14 @@ function buildFiller(s: WorldState, loop: { current: number }): Slide[] {
     .slice(0, 6) as SectorKey[];
   slides.push({ type: "weather", dur: 13000, sectors: wsect });
 
-  // Rotate through the commercial bank, 3 spots per filler block.
-  const start = (loop.current * 3) % Math.max(1, ads.length);
+  // Rotate through the commercial bank, 3 spots per filler block. Prefer the
+  // finished, fully-designed ads (those with baked artwork); fall back to the
+  // whole bank (text-on-backdrop) only if none have art yet.
+  const baked = ads.filter((a) => a.img);
+  const pool = baked.length ? baked : ads;
+  const start = (loop.current * 3) % pool.length;
   for (let i = 0; i < 3; i++) {
-    const ad = ads[(start + i) % ads.length]!;
+    const ad = pool[(start + i) % pool.length]!;
     slides.push({ type: "ad", dur: 8500, ad });
     if (i === 0) slides.push({ type: "bumper", dur: 8000 });
   }
@@ -291,6 +295,8 @@ export function Wheel({
   // Ads + weather have their own optional art (ad-<tone>.png / weather.png); the
   // rest use the sector photo or bumper plate. Missing images degrade to the
   // gradient (which for ads is tone-tinted).
+  // A baked ad (its own designed image) renders edge-to-edge with no overlay.
+  const bakedAd = slide?.type === "ad" && !!slide.ad.img;
   const bgName =
     slide?.type === "weather"
       ? "weather"
@@ -306,18 +312,31 @@ export function Wheel({
       role="dialog"
       aria-label="Trove News Network"
     >
-      {/* background */}
-      <div className="reel-bg" key={`bg-${bgName}-${idx}`} style={{ background: bgGrad }}>
-        <img
-          className="reel-photo"
-          src={bgUrl(bgName)}
-          alt=""
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
-        />
-        <div className="reel-scrim" />
-      </div>
+      {/* background — or a full-frame baked ad */}
+      {bakedAd && slide?.type === "ad" ? (
+        <div className="reel-bg" key={`ad-${slide.ad.id}`} style={{ background: "#000" }}>
+          <img
+            className="reel-adimg"
+            src={`${BASE}/news-bg/ads/${slide.ad.img}`}
+            alt={slide.ad.brand}
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
+            }}
+          />
+        </div>
+      ) : (
+        <div className="reel-bg" key={`bg-${bgName}-${idx}`} style={{ background: bgGrad }}>
+          <img
+            className="reel-photo"
+            src={bgUrl(bgName)}
+            alt=""
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
+            }}
+          />
+          <div className="reel-scrim" />
+        </div>
+      )}
 
       {/* top bar */}
       <div className="reel-bar">
@@ -344,8 +363,8 @@ export function Wheel({
         )}
       </div>
 
-      {/* slide content */}
-      {started && slide && (
+      {/* slide content (baked ads are image-only — nothing to overlay) */}
+      {started && slide && !bakedAd && (
         <div className="reel-stage" key={idx}>
           {slide.type === "ident" && (
             <div className="reel-ident">
@@ -428,7 +447,7 @@ export function Wheel({
           )}
 
           {slide.type === "weather" && (
-            <div className="reel-panel">
+            <div className="reel-panel wx">
               <div className="reel-panel-h">Trove Forecast</div>
               <div className="reel-wx">
                 {slide.sectors.map((sec) => {

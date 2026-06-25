@@ -488,7 +488,24 @@ body {
   letter-spacing: 0.12em;
 }
 
-/* Trove Forecast (weather filler) */
+/* A fully-designed baked ad image — shown whole (letterboxed), no overlay. */
+.reel-adimg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+/* Trove Forecast (weather filler) — dark backing so it reads on any backdrop. */
+.reel-panel.wx {
+  background: rgba(6, 8, 12, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 22px 26px;
+  width: min(720px, 90%);
+}
 .reel-wx {
   display: flex;
   flex-direction: column;
