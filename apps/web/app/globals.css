@@ -421,6 +421,15 @@ body {
 .ticker .run .dn {
   color: var(--dn);
 }
+.ticker .run .tk-lead {
+  color: var(--brass-lit);
+}
+.ticker .run .tk-seg {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+}
 @keyframes tick {
   to {
     transform: translateX(-100%);

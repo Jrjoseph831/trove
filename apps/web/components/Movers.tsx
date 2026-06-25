@@ -4,15 +4,17 @@ import { useEffect, useMemo, useState } from "react";
 import { money, pctChange, signedPct } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { primarySectorLabel } from "@/lib/ui";
+import { useSnapshot } from "@/lib/useSnapshot";
 import { useTrove } from "@/lib/trove";
 
 /**
  * "On the Move" — a calm news-segment treatment instead of spammy reordering
  * tiles. The set is locked each cycle (no jumping); one mover is spotlighted
- * and auto-advances on a slow timer with a crossfade, with a stable board
- * beside it whose prices update in place.
+ * and auto-advances on a slow timer with a crossfade. Prices are a periodic
+ * SNAPSHOT (not live), so the numbers hold steady instead of flickering.
  */
 const ADVANCE_MS = 5000;
+const SNAP_MS = 8000;
 
 export function Movers() {
   const { state, buy } = useTrove();
@@ -30,25 +32,35 @@ export function Movers() {
     [state, state.cycle],
   );
 
+  // Freeze the displayed prices/moves to a slow snapshot (refreshed on the cycle
+  // turn too) so they don't tick every render.
+  const frozen = useSnapshot(
+    () => top.map((it) => ({ it, value: it.value, dp: pctChange(it.value, it.prevValue) })),
+    SNAP_MS,
+    state.cycle,
+  );
+
   const [idx, setIdx] = useState(0);
   useEffect(() => {
     setIdx(0);
-  }, [state.cycle, state]);
+  }, [state.cycle]);
   useEffect(() => {
-    if (top.length < 2) return;
-    const t = setInterval(() => setIdx((i) => (i + 1) % top.length), ADVANCE_MS);
+    if (frozen.length < 2) return;
+    const t = setInterval(() => setIdx((i) => (i + 1) % frozen.length), ADVANCE_MS);
     return () => clearInterval(t);
-  }, [top.length]);
+  }, [frozen.length]);
 
-  if (top.length === 0) {
+  if (frozen.length === 0) {
     return <div className="empty">The floor is still. Nothing has moved yet.</div>;
   }
 
-  const safeIdx = idx % top.length;
-  const hero = top[safeIdx]!;
+  const safeIdx = idx % frozen.length;
+  const heroSnap = frozen[safeIdx]!;
+  const hero = heroSnap.it;
   const isEd = hero.edition !== null;
-  const heroDp = pctChange(hero.value, hero.prevValue);
-  const board = top.slice(0, 4);
+  const heroDp = heroSnap.dp;
+  const heroVal = heroSnap.value;
+  const board = frozen.slice(0, 4);
 
   return (
     <div className="move">
@@ -73,35 +85,32 @@ export function Movers() {
           )}
         </div>
         <div className="spot-price fadein" key={`p-${hero.id}`}>
-          <div className="pr">{money(hero.value)}</div>
+          <div className="pr">{money(heroVal)}</div>
           <div className={`chg ${heroDp >= 0 ? "pos" : "neg"}`}>
             {heroDp >= 0 ? "▲" : "▼"} {signedPct(heroDp)}
           </div>
         </div>
         <div className="spot-dots">
-          {top.map((m, i) => (
-            <i key={m.id} className={i === safeIdx ? "on" : ""} />
+          {frozen.map((m, i) => (
+            <i key={m.it.id} className={i === safeIdx ? "on" : ""} />
           ))}
         </div>
       </button>
 
       <div className="board">
-        {board.map((it) => {
-          const dp = pctChange(it.value, it.prevValue);
-          return (
-            <div className="brow" key={it.id} onClick={() => buy(it.id)}>
-              <ItemIcon it={it} size={18} className="ic" />
-              <span className="nm">
-                <span className="bd">{it.brand}</span>
-                {it.name}
-              </span>
-              <span className="pr">{money(it.value)}</span>
-              <span className={`chg ${dp >= 0 ? "pos" : "neg"}`}>
-                {dp >= 0 ? "▲" : "▼"} {Math.abs(dp).toFixed(1)}%
-              </span>
-            </div>
-          );
-        })}
+        {board.map(({ it, value, dp }) => (
+          <div className="brow" key={it.id} onClick={() => buy(it.id)}>
+            <ItemIcon it={it} size={18} className="ic" />
+            <span className="nm">
+              <span className="bd">{it.brand}</span>
+              {it.name}
+            </span>
+            <span className="pr">{money(value)}</span>
+            <span className={`chg ${dp >= 0 ? "pos" : "neg"}`}>
+              {dp >= 0 ? "▲" : "▼"} {Math.abs(dp).toFixed(1)}%
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );
