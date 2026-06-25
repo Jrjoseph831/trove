@@ -5,12 +5,16 @@
  * TradeError to reject; the caller's atomic commit guarantees no two players
  * claim the last edition copy.
  */
+import { lotSize } from "@trove/data";
 import { canBuy, held, type RuntimeItem, type WorldState } from "@trove/engine";
 import { TradeError, type Player } from "./repo";
 
 export interface TradeOutcome {
   action: "buy" | "sell";
   itemId: number;
+  /** Units actually traded (bulk goods trade in cases). */
+  qty: number;
+  /** Per-unit price at execution. */
   value: number;
   /** Edition copy number claimed on buy (for the reveal), else null. */
   copyNo: number | null;
@@ -26,23 +30,37 @@ function findItem(state: WorldState, id: number): RuntimeItem {
   return it;
 }
 
-export function serverBuy(state: WorldState, player: Player, id: number): TradeOutcome {
+export function serverBuy(
+  state: WorldState,
+  player: Player,
+  id: number,
+  qty = 1,
+): TradeOutcome {
   const it = findItem(state, id);
+  const isEd = it.edition !== null;
+  const lot = lotSize(it);
+  const n = isEd ? 1 : Math.floor(qty);
+  if (n < 1) throw new TradeError("bad quantity");
+  if (!isEd && (n % lot !== 0 || n < lot))
+    throw new TradeError(`sold in cases of ${lot}`);
   if (!canBuy(it)) throw new TradeError("sold out");
-  if (it.value > player.cash) throw new TradeError("insufficient funds");
+  if (!isEd && it.stock < n) throw new TradeError("not enough stock");
+  const cost = it.value * n;
+  if (cost > player.cash) throw new TradeError("insufficient funds");
 
-  it.owners[player.playerId] = (it.owners[player.playerId] ?? 0) + 1;
+  it.owners[player.playerId] = (it.owners[player.playerId] ?? 0) + n;
   let copyNo: number | null = null;
-  if (it.edition !== null) {
-    copyNo = it.edition - it.remaining + 1; // the copy being claimed
+  if (isEd) {
+    copyNo = (it.edition as number) - it.remaining + 1; // the copy being claimed
     it.remaining--;
   } else {
-    it.stock = Math.max(0, it.stock - 1);
+    it.stock -= n;
   }
-  player.cash -= it.value;
+  player.cash -= cost;
   return {
     action: "buy",
     itemId: id,
+    qty: n,
     value: it.value,
     copyNo,
     cash: player.cash,
@@ -50,19 +68,28 @@ export function serverBuy(state: WorldState, player: Player, id: number): TradeO
   };
 }
 
-export function serverSell(state: WorldState, player: Player, id: number): TradeOutcome {
+export function serverSell(
+  state: WorldState,
+  player: Player,
+  id: number,
+  qty = 1,
+): TradeOutcome {
   const it = findItem(state, id);
-  if (held(it, player.playerId) <= 0) throw new TradeError("you don't own this");
+  const have = held(it, player.playerId);
+  if (have <= 0) throw new TradeError("you don't own this");
+  const isEd = it.edition !== null;
+  const n = isEd ? 1 : Math.min(Math.max(1, Math.floor(qty)), have);
 
-  it.owners[player.playerId]!--;
-  const left = it.owners[player.playerId] ?? 0;
+  it.owners[player.playerId] = have - n;
+  const left = it.owners[player.playerId]!;
   if (left <= 0) delete it.owners[player.playerId];
-  if (it.edition !== null) it.remaining++;
-  else it.stock++;
-  player.cash += it.value;
+  if (isEd) it.remaining++;
+  else it.stock += n;
+  player.cash += it.value * n;
   return {
     action: "sell",
     itemId: id,
+    qty: n,
     value: it.value,
     copyNo: null,
     cash: player.cash,

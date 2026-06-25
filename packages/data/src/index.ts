@@ -115,3 +115,37 @@ export function itemsByBrand(name: string): Item[] {
 export function sectorLabel(key: SectorKey): string {
   return sectors[key]?.label ?? key;
 }
+
+// ── Bulk / wholesale ─────────────────────────────────────────────────────
+const CASE_SIZES = [10, 25, 50, 100, 250, 500, 1000];
+const BULK_ARCH = new Set([
+  "micro_consumable",
+  "bulk_consumable",
+  "commodity",
+  "component",
+]);
+
+/** Deterministic: ~1 in 5 brands is a wholesale house that sells only in
+ *  cases (even its pricier goods, when affordable in a case). */
+export function isWholesale(brand: string): boolean {
+  let h = 0;
+  for (let i = 0; i < brand.length; i++) h = (h * 31 + brand.charCodeAt(i)) >>> 0;
+  return h % 100 < 22;
+}
+
+/** Largest case size whose total cost stays under `cap`, else 1 (sold singly). */
+function caseUnder(base: number, cap: number): number {
+  let lot = 1;
+  for (const c of CASE_SIZES) if (c * base <= cap) lot = c;
+  return lot;
+}
+
+/** Lot (case) size for an item: 1 = sold singly; N>1 = sold in cases of N, so
+ *  purchases come in multiples of N. Editions are always single. Cheap goods
+ *  case up to ~$60; wholesale suppliers case their goods up to ~$400. */
+export function lotSize(it: Item): number {
+  if (it.edition !== null) return 1;
+  let lot = BULK_ARCH.has(it.archetype) ? caseUnder(it.base, 60) : 1;
+  if (isWholesale(it.brand)) lot = Math.max(lot, caseUnder(it.base, 400));
+  return lot < 1 ? 1 : lot;
+}

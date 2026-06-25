@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   brandSlug,
   itemsByBrand,
+  lotSize,
   sectorLabel,
   type Item,
 } from "@trove/data";
@@ -16,6 +17,7 @@ export function ItemDetail({ item }: { item: Item }) {
     .filter((i) => i.id !== item.id)
     .slice(0, 6);
   const isEd = item.edition !== null;
+  const lot = lotSize(item);
 
   return (
     <div className="itempage-inner">
@@ -110,6 +112,10 @@ export function ItemDetail({ item }: { item: Item }) {
                   : `Limited run of ${item.edition}`
                 : "Open stock"}
             </dd>
+          </div>
+          <div>
+            <dt>Sold in</dt>
+            <dd>{lot > 1 ? `Cases of ${lot.toLocaleString()}` : "Singles"}</dd>
           </div>
           <div>
             <dt>List price</dt>

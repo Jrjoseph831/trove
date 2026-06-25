@@ -27,7 +27,7 @@ export async function handler(
     | undefined;
   if (!playerId) return json(401, { error: "unauthorized" });
 
-  let body: { action?: string; id?: number };
+  let body: { action?: string; id?: number; qty?: number };
   try {
     const raw = event.isBase64Encoded
       ? Buffer.from(event.body ?? "", "base64").toString("utf8")
@@ -38,15 +38,22 @@ export async function handler(
   }
 
   const { action, id } = body;
-  if ((action !== "buy" && action !== "sell") || typeof id !== "number") {
-    return json(400, { error: "expected { action: 'buy'|'sell', id: number }" });
+  const qty = Math.floor(body.qty ?? 1);
+  if (
+    (action !== "buy" && action !== "sell") ||
+    typeof id !== "number" ||
+    !Number.isFinite(qty) ||
+    qty < 1 ||
+    qty > 1_000_000
+  ) {
+    return json(400, { error: "expected { action: 'buy'|'sell', id, qty? }" });
   }
 
   try {
     const outcome = await mutateTrade(playerId, (state, player) =>
       action === "buy"
-        ? serverBuy(state, player, id)
-        : serverSell(state, player, id),
+        ? serverBuy(state, player, id, qty)
+        : serverSell(state, player, id, qty),
     );
     return json(200, outcome);
   } catch (err) {

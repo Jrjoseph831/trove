@@ -83,6 +83,8 @@ export type Mode = "live" | "sandbox";
 export interface RevealInfo {
   it: RuntimeItem;
   copyNo: number | null;
+  /** Units acquired (bulk goods come in cases). */
+  qty?: number;
 }
 
 interface Trove {
@@ -109,8 +111,8 @@ interface Trove {
   openSector: (s: string) => void;
   /** item id to highlight in the catalog (from "Find it on the floor"). */
   hlItem: number | null;
-  buy: (id: number) => void;
-  sell: (id: number) => void;
+  buy: (id: number, qty?: number) => void;
+  sell: (id: number, qty?: number) => void;
   doBorrow: () => void;
   doRepay: () => void;
   closeReveal: () => void;
@@ -283,15 +285,23 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   }, [refresh]);
 
   const buy = useCallback(
-    (id: number) => {
+    (id: number, qty = 1) => {
+      const n = Math.max(1, Math.floor(qty));
       // Sandbox: the local engine, instant and free.
       if (modeRef.current === "sandbox") {
-        const r = playerBuy(worldsRef.current!.sandbox, id);
+        let r: ReturnType<typeof playerBuy> = null;
+        let got = 0;
+        for (let i = 0; i < n; i++) {
+          const x = playerBuy(worldsRef.current!.sandbox, id);
+          if (!x) break;
+          r = x;
+          got++;
+        }
         if (!r) {
           showToast("Can't acquire that");
           return;
         }
-        setReveal({ it: r.it, copyNo: r.copyNo });
+        setReveal({ it: r.it, copyNo: r.copyNo, qty: got });
         refresh();
         return;
       }
@@ -305,7 +315,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         authSignIn();
         return;
       }
-      void postTrade("buy", id).then(async (r) => {
+      void postTrade("buy", id, n).then(async (r) => {
         if ("error" in r) {
           if (r.status === 401) {
             authSignIn();
@@ -318,7 +328,9 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
                 ? "Just sold out"
                 : r.error === "network error"
                   ? "Connection issue — try again"
-                  : "Couldn't acquire that",
+                  : r.error.startsWith("sold in cases")
+                    ? `This is ${r.error}`
+                    : "Couldn't acquire that",
           );
           // refresh so a sold-out item immediately greys out for everyone
           await syncLive();
@@ -326,7 +338,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         }
         await syncLive();
         const it = worldsRef.current!.live.items.find((i) => i.id === id);
-        if (it) setReveal({ it, copyNo: r.copyNo });
+        if (it) setReveal({ it, copyNo: r.copyNo, qty: r.qty });
         else showToast("Acquired");
       });
     },
@@ -334,11 +346,19 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   );
 
   const sell = useCallback(
-    (id: number) => {
+    (id: number, qty = 1) => {
+      const n = Math.max(1, Math.floor(qty));
       if (modeRef.current === "sandbox") {
-        const r = playerSell(worldsRef.current!.sandbox, id);
-        if (!r) return;
-        showToast(`Sold · ${r.pl >= 0 ? "+" : ""}${moneyShort(r.pl)}`);
+        let last: ReturnType<typeof playerSell> = null;
+        let pl = 0;
+        for (let i = 0; i < n; i++) {
+          const x = playerSell(worldsRef.current!.sandbox, id);
+          if (!x) break;
+          last = x;
+          pl += x.pl;
+        }
+        if (!last) return;
+        showToast(`Sold · ${pl >= 0 ? "+" : ""}${moneyShort(pl)}`);
         refresh();
         return;
       }
@@ -346,14 +366,19 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         authSignIn();
         return;
       }
-      void postTrade("sell", id).then(async (r) => {
+      void postTrade("sell", id, n).then(async (r) => {
         if ("error" in r) {
           if (r.status === 401) authSignIn();
-          else showToast(r.error === "network error" ? "Connection issue — try again" : "Couldn't sell that");
+          else
+            showToast(
+              r.error === "network error"
+                ? "Connection issue — try again"
+                : "Couldn't sell that",
+            );
           return;
         }
         await syncLive();
-        showToast("Sold");
+        showToast(r.qty > 1 ? `Sold ${r.qty}` : "Sold");
       });
     },
     [refresh, showToast, syncLive],

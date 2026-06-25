@@ -40,6 +40,7 @@ export interface ApiPortfolio {
 export interface TradeResult {
   action: "buy" | "sell";
   itemId: number;
+  qty: number;
   value: number;
   copyNo: number | null;
   cash: number;
@@ -67,6 +68,7 @@ export const fetchPortfolio = () => get<ApiPortfolio>("/portfolio", true);
 export async function postTrade(
   action: "buy" | "sell",
   id: number,
+  qty = 1,
 ): Promise<TradeResult | { error: string; status: number }> {
   const token = getIdToken();
   if (!token) return { error: "unauthorized", status: 401 };
@@ -75,7 +77,7 @@ export async function postTrade(
     res = await fetch(`${API_BASE}/trade`, {
       method: "POST",
       headers: { "content-type": "application/json", authorization: token },
-      body: JSON.stringify({ action, id }),
+      body: JSON.stringify({ action, id, qty }),
     });
   } catch {
     return { error: "network error", status: 0 };

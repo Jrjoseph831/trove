@@ -3,7 +3,14 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { brands as allBrands, brandSlug, sectorKeys, sectors } from "@trove/data";
+import {
+  brands as allBrands,
+  brandSlug,
+  lotSize,
+  sectorKeys,
+  sectors,
+} from "@trove/data";
+import type { RuntimeItem } from "@trove/engine";
 import { canBuy, held } from "@trove/engine";
 import { money, pctChange, signedPct } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
@@ -27,6 +34,7 @@ export function Catalog() {
   const { state, cat, setCatSector, setCatBrand, setCatSearch, buy, hlItem } =
     useTrove();
   const parentRef = useRef<HTMLDivElement>(null);
+  const [bulkId, setBulkId] = useState<number | null>(null);
 
   // "Find it on the floor": hlItem comes from the provider (same reliable path
   // as the q search filter). Apply an INLINE highlight at render time so it can't
@@ -102,6 +110,9 @@ export function Catalog() {
     estimateSize: () => ROW,
     overscan: 12,
   });
+
+  const bulkItem =
+    bulkId != null ? state.items.find((i) => i.id === bulkId) ?? null : null;
 
   return (
     <div className="view">
@@ -200,6 +211,7 @@ export function Catalog() {
                   const dp = pctChange(it.value, it.prevValue);
                   const ss = stockState(it);
                   const mineQty = held(it, "YOU");
+                  const lot = lotSize(it);
                   return (
                     <div
                       key={it.id}
@@ -235,19 +247,32 @@ export function Catalog() {
                         <i className={ss ?? ""} />
                         {ss === "scarce" ? "scarce" : ss === "low" ? "tight" : "in stock"}
                       </span>
-                      <span className="pr">{money(it.value)}</span>
+                      <span className="pr">
+                        {money(it.value)}
+                        {lot > 1 && <span className="per">/ea</span>}
+                      </span>
                       <span className={`chg ${d >= 0 ? "pos" : "neg"}`}>
                         {d >= 0 ? "▲" : "▼"}
                         {Math.abs(dp).toFixed(1)}%
                       </span>
                       <span style={{ textAlign: "right" }}>
-                        <button
-                          className="tbtn"
-                          disabled={!canBuy(it) || it.value > state.cash}
-                          onClick={() => buy(it.id)}
-                        >
-                          {canBuy(it) ? "Acquire" : "Sold out"}
-                        </button>
+                        {lot > 1 ? (
+                          <button
+                            className="tbtn"
+                            disabled={!canBuy(it) || it.value * lot > state.cash}
+                            onClick={() => setBulkId(it.id)}
+                          >
+                            {canBuy(it) ? `Case · ${lot}` : "Sold out"}
+                          </button>
+                        ) : (
+                          <button
+                            className="tbtn"
+                            disabled={!canBuy(it) || it.value > state.cash}
+                            onClick={() => buy(it.id)}
+                          >
+                            {canBuy(it) ? "Acquire" : "Sold out"}
+                          </button>
+                        )}
                       </span>
                     </div>
                   );
@@ -305,6 +330,83 @@ export function Catalog() {
           ) : (
             <div className="empty">No editions match. They may all be claimed.</div>
           )}
+        </div>
+      </div>
+
+      {bulkItem && (
+        <BulkBuy
+          item={bulkItem}
+          cash={state.cash}
+          onClose={() => setBulkId(null)}
+          onConfirm={(qty) => {
+            buy(bulkItem.id, qty);
+            setBulkId(null);
+          }}
+        />
+      )}
+    </div>
+  );
+}
+
+/** Bulk-purchase popup: a case-multiple stepper + live total. */
+function BulkBuy({
+  item,
+  cash,
+  onClose,
+  onConfirm,
+}: {
+  item: RuntimeItem;
+  cash: number;
+  onClose: () => void;
+  onConfirm: (qty: number) => void;
+}) {
+  const lot = lotSize(item);
+  const [qty, setQty] = useState(lot);
+  const total = qty * item.value;
+  return (
+    <div
+      className="reveal-bg show"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+    >
+      <div className="bulkbuy">
+        <div className="bb-kick">Buy in bulk</div>
+        <div className="bb-name">
+          {item.brand} {item.name}
+        </div>
+        <div className="bb-sub">
+          Sold in cases of {lot.toLocaleString()} · {money(item.value)} each
+        </div>
+        <div className="bb-step">
+          <button
+            onClick={() => setQty((q) => Math.max(lot, q - lot))}
+            aria-label="Fewer"
+          >
+            −
+          </button>
+          <div className="bb-qty">
+            <b>{qty.toLocaleString()}</b>
+            <span>units</span>
+          </div>
+          <button onClick={() => setQty((q) => q + lot)} aria-label="More">
+            +
+          </button>
+        </div>
+        <div className="bb-total">
+          Total <b>{money(total)}</b>
+        </div>
+        <div className="bb-actions">
+          <button className="bb-cancel" onClick={onClose}>
+            Cancel
+          </button>
+          <button
+            className="bb-buy"
+            disabled={total > cash}
+            onClick={() => onConfirm(qty)}
+          >
+            {total > cash ? "Not enough cash" : `Acquire ${qty.toLocaleString()}`}
+          </button>
         </div>
       </div>
     </div>

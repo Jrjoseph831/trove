@@ -83,12 +83,14 @@ function Reveal() {
   }, [reveal, isEd, closeReveal]);
 
   if (!reveal) return null;
-  const { it, copyNo } = reveal;
+  const { it, copyNo, qty } = reveal;
   const edNum = !isEd
     ? null
     : it.edition === 1
       ? "1 of 1"
       : `№ ${copyNo} of ${it.edition}`;
+  const kick =
+    qty && qty > 1 ? `Acquired ${qty.toLocaleString()}` : "Acquired";
   // A small non-blocking flash: it floats over the floor, which stays fully
   // visible and clickable behind it (pointer-events: none on the wrapper).
   return (
@@ -99,7 +101,8 @@ function Reveal() {
         </span>
         <span className="flash-txt">
           <span className="flash-kick">
-            Acquired{edNum ? ` · ${edNum}` : ""}
+            {kick}
+            {edNum ? ` · ${edNum}` : ""}
           </span>
           <span className="flash-nm">
             {it.brand} {it.name}
