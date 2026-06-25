@@ -1375,7 +1375,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82519,
     "events": [
       {
         "cycle": 0,
@@ -1384,6 +1384,16 @@
         "head": "Fennvale Mfg. — We make the parts that move you",
         "body": "Fennvale supplies the unglamorous middle of the supply chain and is proud of it. Auto parts that keep engines turning and fasteners that keep them assembled, shipped by the crate to assembly lines and repair bays alike. The value range covers the high-volume basics; the premium grades meet tolerances tight enough for the fussiest builds. It is a name purchasing managers recognize and rarely have to think about, which in this trade is the highest compliment going.",
         "effects": {}
+      },
+      {
+        "cycle": 82519,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Fennvale Mfg. Breaks Ground on Third Fastener Line at Drennt Works",
+        "body": "CEO Theo Vossen confirmed a $240 million build-out at the Drennt Works facility, adding two cold-forming lines and an automated coating bay expected to lift fastener output by roughly 18% annually. The expansion follows three consecutive quarters of order backlog in the auto-parts division, and Vossen said full capacity should be reached within fourteen months.",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -1606,7 +1616,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82519,
     "events": [
       {
         "cycle": 0,
@@ -1615,6 +1625,16 @@
         "head": "Halcrest — Time, kept impeccably",
         "body": "Halcrest makes watches and nothing else, which is precisely why theirs are the ones that matter. Every movement is luxury-grade, assembled and regulated by a small bench of specialists who would sooner scrap a piece than ship a flaw. There is no entry model, no diffusion line, no compromise hiding behind the name. To wear a Halcrest is to carry a small, perfect argument for doing one thing supremely well. The waiting list is the price of admission, and worth it.",
         "effects": {}
+      },
+      {
+        "cycle": 82519,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Halcrest Unveils the Meridian Tourbillon, Its Costliest Release in Decades",
+        "body": "Iris Marrow staged a sold-out reveal for the Meridian Tourbillon, a limited run of 250 pieces priced from $480,000, calling it 'the finest movement we have ever signed our name to.' The launch caps an aggressive year of brand pushes, with Marrow betting the high-margin line will reshape Halcrest's standing at the top of the timepiece market.",
+        "effects": {
+          "luxury": 0.22
+        }
       }
     ]
   },
@@ -1629,7 +1649,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82519,
     "events": [
       {
         "cycle": 0,
@@ -1638,6 +1658,16 @@
         "head": "Halcrow & Vance — Earth gives way to patience",
         "body": "Two surveyors, one handshake, and a conviction that earthmoving was less about brute force than precise intent. Halcrow & Vance build graders, backhoes, and haulers that read terrain like a contour map. Their budget fleet earned trust on municipal sites; their flagship machines carve foundations for the kind of projects that reshape skylines. Engineers admire the controls, operators love the cab, and competitors quietly measure themselves against the firm's reach. Refined muscle, deliberate to the last bolt.",
         "effects": {}
+      },
+      {
+        "cycle": 82519,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halcrow & Vance Lands Earthmoving Contract for Vetask Basin Project",
+        "body": "Mira Skarn secured a $610 million multi-year deal to supply and operate excavation fleets for the Veask Basin water-management works, beating two rival bidders. The contract guarantees minimum equipment-hours through 2031 and includes an option for fleet expansion that Skarn described as 'patience finally paying its dividend.'",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -1652,7 +1682,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82519,
     "events": [
       {
         "cycle": 0,
@@ -1661,6 +1691,16 @@
         "head": "Halcyon Industries — Boxed, sealed, on its way",
         "body": "Halcyon turns logistics into something you can stack on a pallet. Boxes, mailers, protective fill and bulk packaging built for high throughput and low headache. The value range moves freight by the truckload; the premium line handles the goods that need a gentler ride. Fulfillment operations lean on Halcyon for one reason above all, consistency, carton after carton, run after run. In a trade where a single weak seam ruins a shipment, that reliability is the entire reputation.",
         "effects": {}
+      },
+      {
+        "cycle": 82519,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcyon Industries Tops Forecasts as Packaging Volumes Climb",
+        "body": "Halcyon reported quarterly revenue of $1.34 billion, up 9% year-on-year, with operating margin widening to 14.2% on improved fiber costs. CEO Dorian Ashby credited steady gains in sealed-shipping orders and confirmed two new regional distribution hubs would open before year-end.",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
@@ -1761,7 +1801,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82519,
     "events": [
       {
         "cycle": 0,
@@ -1770,6 +1810,16 @@
         "head": "Hearthstone Group — The clean you feel before you see",
         "body": "Hearthstone Group keeps the world's hotels, halls, and homes presentable. They produce cleaning chemicals, janitorial gear, and household goods that earn their keep through sheer reliability. The everyday range stocks supply closets coast to coast; the mid tier handles the high-traffic floors where standards can't slip. Housekeepers know a Hearthstone bottle won't streak, quit, or let them down mid-shift. Fresh linens, gleaming floors, the quiet dignity of a room set perfectly right.",
         "effects": {}
+      },
+      {
+        "cycle": 82519,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Hearthstone Group Rolls Out Refillable Jansan Concentrate Range",
+        "body": "Aurelia Aldous introduced a refillable concentrate system across the company's commercial cleaning line, aimed at lowering packaging weight and shipping costs for institutional buyers. Initial distribution covers the hospitality and facilities segments, with household versions slated for a later phase.",
+        "effects": {
+          "hospitality": 0.06
+        }
       }
     ]
   },
@@ -1784,7 +1834,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82519,
     "events": [
       {
         "cycle": 0,
@@ -1793,6 +1843,16 @@
         "head": "Hesperforge Supply — Where every great build begins",
         "body": "Hesperforge started as a single carding mill and a stubborn refusal to ship a flawed bolt of cloth. A century on, it supplies raw textiles and structural materials to anyone who needs the foundation right: framers, weavers, fabricators. The everyday lines keep job sites moving; the premium grades carry tolerances tight enough to earn quiet trust. Builders rarely name their suppliers, but when pressed, this one comes up.",
         "effects": {}
+      },
+      {
+        "cycle": 82519,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Hesperforge Supply Patents Higher-Yield Structural Beam Process",
+        "body": "Sable Halloran announced a new rolling process that cuts material waste on structural beams by an estimated 11% while improving load tolerance. The company has filed patents in multiple markets and will pilot the method at its Korran mill, with Halloran calling it 'the kind of bold step we make once a decade.'",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -1807,7 +1867,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82519,
     "events": [
       {
         "cycle": 0,
@@ -1816,6 +1876,16 @@
         "head": "Holtforge Group — Current you can count on",
         "body": "Holtforge draws wire the slow way, then proves it the hard way. The group spins cable and conductor for construction crews who can't afford a fault behind a finished wall. Value reels handle the bulk runs; the premium jacketed lines go where heat, water, and decades are the test. Inspectors recognize the spool stamp on sight. A reputation built one continuous, unbroken length at a time.",
         "effects": {}
+      },
+      {
+        "cycle": 82519,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtforge Group Posts Steady Quarter on Firm Cable Demand",
+        "body": "Holtforge reported revenue of $792 million, modestly ahead of guidance, with wire and cable shipments holding flat-to-positive across all regions. CEO Yvette Bramm reaffirmed the full-year outlook and noted no change to capital plans.",
+        "effects": {
+          "construction": 0.06
+        }
       }
     ]
   },
@@ -1830,7 +1900,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82519,
     "events": [
       {
         "cycle": 0,
@@ -1839,6 +1909,16 @@
         "head": "Holtgate Cloth — Fabric with a longer memory",
         "body": "Holtgate Cloth was founded by weavers who believed a fabric should hold its shape long after the fashion that bought it has passed. They make raw textiles, sturdy base cloths and yarns sold by the run, in grades from the practical to the genuinely fine. The value bolts dress everyday work; the mid tier finds its way into garments meant to last. Buyers prize the consistency. Plain cloth, true to the touch, woven to endure.",
         "effects": {}
+      },
+      {
+        "cycle": 82519,
+        "kind": "major_deal",
+        "size": "flash",
+        "head": "Holtgate Cloth Renews Long-Term Raw Textile Supply Pact",
+        "body": "Dorian Carrow confirmed a quiet five-year renewal with a major garment-mill customer, securing baseline volumes that account for roughly a fifth of Holtgate's annual output. Carrow declined to disclose pricing but said the agreement 'keeps the looms predictable,' consistent with the firm's conservative posture.",
+        "effects": {
+          "textiles": 0.06
+        }
       }
     ]
   },
