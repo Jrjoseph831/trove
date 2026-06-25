@@ -41,7 +41,6 @@ function OfferCard({ o }: { o: DeskOrder }) {
         <Link href={`/item/${o.itemId}`} className="it-link">
           {o.itemName}
         </Link>
-        <span className="oc-bd">{o.brand}</span>
         {o.youProduce && <span className="oc-make">◆ you make this</span>}
       </div>
       <div className="oc-meta">
@@ -152,7 +151,6 @@ export function Desk() {
               <Link href={`/item/${o.itemId}`} className="it-link">
                 {o.itemName}
               </Link>
-              <span className="oc-bd">{o.brand}</span>
               {o.youProduce && <span className="oc-make">◆ you make this</span>}
             </div>
             <div className="oc-meta">
