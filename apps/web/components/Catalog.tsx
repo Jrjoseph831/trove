@@ -111,6 +111,16 @@ export function Catalog() {
             value={cat.search}
             onChange={(e) => setCatSearch(e.target.value)}
           />
+          <button
+            className="cat-reset"
+            onClick={() => {
+              setCatSector(null);
+              setCatBrand(null);
+              setCatSearch("");
+            }}
+          >
+            Reset
+          </button>
         </div>
       </div>
 

@@ -1014,8 +1014,9 @@ body {
   width: 160px;
 }
 .catlist {
-  height: calc(100vh - 210px);
+  height: calc(100vh - 218px);
   overflow-y: auto;
+  padding-top: 8px;
 }
 .cat-grid {
   display: grid;
@@ -3245,4 +3246,22 @@ body {
 }
 .edcard:target {
   animation: cardglow 2.6s ease-in-out;
+}
+
+/* filter reset button */
+.cat-reset {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-dim);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s;
+}
+.cat-reset:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
