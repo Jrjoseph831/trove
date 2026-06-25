@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { brands as allBrands, brandSlug, sectorKeys, sectors } from "@trove/data";
@@ -17,6 +17,33 @@ export function Catalog() {
   const { state, cat, setCatSector, setCatBrand, setCatSearch, buy } =
     useTrove();
   const parentRef = useRef<HTMLDivElement>(null);
+
+  // "Find it on the floor" (?hl=<id>): give the target row an unmistakable,
+  // PERSISTENT highlight (steady gold tint + ring + a few pulses) by injecting a
+  // <head> rule keyed to its id. A head rule applies to whatever element carries
+  // that id, so it's immune to React re-renders, remounts, and virtualization.
+  useEffect(() => {
+    const hl = new URLSearchParams(window.location.search).get("hl");
+    if (!hl || !/^\d+$/.test(hl)) return;
+    const styleId = `hl-style-${hl}`;
+    if (document.getElementById(styleId)) return;
+    const elId = `floor-item-${hl}`;
+    const style = document.createElement("style");
+    style.id = styleId;
+    style.textContent =
+      `#${elId}{background:color-mix(in srgb,var(--accent) 22%,transparent)!important;` +
+      `box-shadow:inset 0 0 0 2px var(--accent),0 0 24px -6px var(--accent)!important;` +
+      `border-radius:8px;position:relative;z-index:3;` +
+      `animation:cardglow 1.3s ease-in-out 3!important}`;
+    document.head.appendChild(style);
+    const find = (n = 0) => {
+      const el = document.getElementById(elId);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      else if (n < 40) window.setTimeout(() => find(n + 1), 100);
+    };
+    window.setTimeout(() => find(0), 200);
+    window.setTimeout(() => style.remove(), 8000);
+  }, []);
 
   const filtered = useMemo(() => {
     const q = cat.search.trim().toLowerCase();
