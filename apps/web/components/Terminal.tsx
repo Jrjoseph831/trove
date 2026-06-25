@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { validateHoldingName } from "@trove/data";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 import { Catalog } from "./Catalog";
@@ -139,8 +140,9 @@ function Onboarding() {
   // Shown once: signed in, desk loaded, but no Holding name yet.
   if (!signedIn || !desk || desk.name) return null;
   const preview = holdingName(val);
+  const check = preview ? validateHoldingName(preview) : { ok: false };
   const submit = () => {
-    if (preview) nameHolding(preview);
+    if (preview && check.ok) nameHolding(preview);
   };
   return (
     <div className="reveal-bg show">
@@ -162,16 +164,18 @@ function Onboarding() {
             if (e.key === "Enter") submit();
           }}
         />
-        <div className="ob-preview">
-          {preview ? (
-            <>
-              You&apos;ll trade as <b>{preview}</b>
-            </>
-          ) : (
-            "We'll add “Holdings” unless you include your own (Capital, Group, House…)"
-          )}
+        <div className={`ob-preview ${preview && !check.ok ? "bad" : ""}`}>
+          {!preview
+            ? "We'll add “Holdings” unless you include your own (Capital, Group, House…)"
+            : check.ok
+              ? (
+                  <>
+                    You&apos;ll trade as <b>{preview}</b>
+                  </>
+                )
+              : check.reason}
         </div>
-        <button className="ob-go" disabled={!preview} onClick={submit}>
+        <button className="ob-go" disabled={!check.ok} onClick={submit}>
           Open the doors
         </button>
       </div>

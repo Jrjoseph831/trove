@@ -29,6 +29,7 @@ import type {
 } from "./types";
 
 export * from "./types";
+export * from "./names";
 
 /** All 12 sectors, keyed by canonical sector id. */
 export const sectors: Record<SectorKey, Sector> = sectorsJson as Record<

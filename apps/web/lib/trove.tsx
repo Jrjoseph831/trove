@@ -459,13 +459,17 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   // ── Order Desk actions ──────────────────────────────────────────────────
-  const nameHolding = useCallback((name: string) => {
-    const trimmed = name.trim().slice(0, 40);
-    if (!trimmed) return;
-    void deskAction("name", { name: trimmed }).then((d) => {
-      if (!("error" in d)) setDesk(d);
-    });
-  }, []);
+  const nameHolding = useCallback(
+    (name: string) => {
+      const trimmed = name.trim().slice(0, 40);
+      if (!trimmed) return;
+      void deskAction("name", { name: trimmed }).then((d) => {
+        if ("error" in d) showToast(d.error);
+        else setDesk(d);
+      });
+    },
+    [showToast],
+  );
 
   const acceptOrder = useCallback(
     (id: string) => {

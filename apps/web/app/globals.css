@@ -3615,3 +3615,10 @@ body {
   color: var(--accent);
   font-weight: 700;
 }
+
+.ob-preview.bad {
+  color: var(--danger, #c0492b);
+}
+.ob-preview.bad b {
+  color: inherit;
+}

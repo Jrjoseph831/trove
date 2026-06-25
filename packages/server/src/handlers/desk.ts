@@ -7,7 +7,7 @@ import type {
   APIGatewayProxyEventV2WithJWTAuthorizer,
   APIGatewayProxyResultV2,
 } from "aws-lambda";
-import { getItem } from "@trove/data";
+import { getItem, validateHoldingName } from "@trove/data";
 import { START_CASH } from "@trove/engine";
 import {
   getPlayer,
@@ -93,7 +93,8 @@ export async function handler(
 
   if (action === "name") {
     const name = String(body.name ?? "").trim().slice(0, 40);
-    if (!name) return json(400, { error: "name required" });
+    const check = validateHoldingName(name);
+    if (!check.ok) return json(400, { error: check.reason ?? "Invalid name." });
     const player = (await getPlayer(playerId)) ?? fresh(playerId);
     player.name = name;
     await savePlayer(player);
