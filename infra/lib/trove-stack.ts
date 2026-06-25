@@ -98,8 +98,12 @@ export class TroveStack extends Stack {
       });
 
     // ── Settlement: the 6h heartbeat ────────────────────────────────────────
-    const settlement = fn("Settlement", "settlement.ts");
+    // Advances the shared market AND runs each player's factories/listings, so
+    // it reads+writes both tables (produced holdings → world doc, factory/cash/
+    // report state → player records, committed together).
+    const settlement = fn("Settlement", "settlement.ts", Duration.seconds(60));
     market.grantReadWriteData(settlement);
+    players.grantReadWriteData(settlement);
 
     new events.Rule(this, "SettlementClock", {
       // UTC 6h marks — the same beats the newsroom cron fires on
@@ -221,6 +225,18 @@ export class TroveStack extends Stack {
       path: "/desk",
       methods: [HttpMethod.GET, HttpMethod.POST],
       integration: new HttpLambdaIntegration("DeskIntegration", desk),
+      authorizer,
+    });
+
+    // ── Factory (authorized): the production floor. Pure player-record writes
+    //    (lines/infra/listings); produced stock is created by Settlement. ──────
+    const factory = fn("Factory", "factory.ts", Duration.seconds(15));
+    market.grantReadData(factory);
+    players.grantReadWriteData(factory);
+    api.addRoutes({
+      path: "/factory",
+      methods: [HttpMethod.POST],
+      integration: new HttpLambdaIntegration("FactoryIntegration", factory),
       authorizer,
     });
 

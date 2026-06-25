@@ -166,6 +166,37 @@ export async function saveWorld(doc: WorldDoc, prevVersion: number): Promise<voi
   );
 }
 
+/** Commit a settled world doc together with the player records whose factories
+ *  produced this run, in ONE transaction guarded by the world's version. If
+ *  anything raced (a trade bumped the world while we settled), the whole commit
+ *  fails and the caller retries from a fresh read — so produced holdings (in the
+ *  doc) and the factory/cash/report state (on the players) stay consistent.
+ *  DynamoDB caps a transaction at 100 items; we reserve 1 for the world. */
+export async function commitSettlement(
+  doc: WorldDoc,
+  prevVersion: number,
+  players: Player[],
+): Promise<void> {
+  const batch = players.slice(0, 99);
+  await ddb.send(
+    new TransactWriteCommand({
+      TransactItems: [
+        {
+          Put: {
+            TableName: TABLE,
+            Item: { pk: PK, version: doc.version, world: doc },
+            ConditionExpression: "attribute_not_exists(pk) OR version = :prev",
+            ExpressionAttributeValues: { ":prev": prevVersion },
+          },
+        },
+        ...batch.map((p) => ({
+          Put: { TableName: PLAYERS, Item: p },
+        })),
+      ],
+    }),
+  );
+}
+
 /** One Order-Desk contract on a player's record.
  *  An order is negotiated: the client opens with `companyOffer`, the player
  *  counters, and they haggle within the client's HIDDEN budget. Once a price is
@@ -284,6 +315,59 @@ export function extractPlayer(state: WorldState, player: Player): Player {
     // Cap the on-record report log so the player item stays well under 400KB.
     reports: (state.reports ?? []).slice(-60),
     periodNo: state.periodNo,
+  };
+}
+
+/** The full per-player snapshot the live client overlays onto its world: cash,
+ *  holdings (from the doc), and all the factory/sales/report state. One shape
+ *  served by both GET /portfolio and the factory action endpoint, so the client
+ *  has a single overlay path. */
+export interface PortfolioView {
+  cash: number;
+  debt: number;
+  netWorth: number;
+  reputation: number;
+  holdings: { id: number; qty: number; value: number }[];
+  floorSlots: number;
+  infra: Infra;
+  factories: Factory[];
+  listPrices: Record<number, number>;
+  producedQty: Record<number, number>;
+  listed: Record<number, boolean>;
+  deskAuto: DeskAuto;
+  reports: Report[];
+  periodNo: number;
+}
+
+/** Build the player's portfolio snapshot from the shared doc + their record.
+ *  Holdings + their values come from the doc; everything else from the player. */
+export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
+  const holdings: { id: number; qty: number; value: number }[] = [];
+  let assets = 0;
+  for (const it of doc.items) {
+    const qty = it.owners?.[player.playerId] ?? 0;
+    if (qty > 0) {
+      holdings.push({ id: it.id, qty, value: it.value });
+      assets += qty * it.value;
+    }
+  }
+  const cash = player.cash;
+  const debt = player.debt;
+  return {
+    cash,
+    debt,
+    netWorth: cash - debt + assets,
+    reputation: player.reputation ?? 0,
+    holdings,
+    floorSlots: player.floorSlots ?? STARTING_SLOTS,
+    infra: player.infra ?? { ...FRESH_INFRA },
+    factories: player.factories ?? [],
+    listPrices: player.listPrices ?? {},
+    producedQty: player.producedQty ?? {},
+    listed: player.listed ?? {},
+    deskAuto: player.deskAuto ?? { ...FRESH_DESKAUTO },
+    reports: player.reports ?? [],
+    periodNo: player.periodNo ?? 0,
   };
 }
 

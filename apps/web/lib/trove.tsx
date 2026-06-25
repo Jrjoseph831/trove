@@ -12,6 +12,7 @@ import {
 import { factorySpec, getBrandBySlug, getItem } from "@trove/data";
 import {
   deskAction,
+  factoryAction,
   fetchDesk,
   fetchPortfolio,
   fetchWorld,
@@ -19,6 +20,7 @@ import {
   type ApiPortfolio,
   type ApiWorld,
   type Desk,
+  type FactoryAction,
 } from "./api";
 import {
   captureTokenFromHash,
@@ -91,7 +93,10 @@ function overlayWorld(live: WorldState, api: ApiWorld): void {
   if (api.archive) live.archive = api.archive;
 }
 
-/** Overlay the signed-in player's own holdings/cash onto the live world. */
+/** Overlay the signed-in player's own holdings/cash AND factory/sales/report
+ *  state onto the live world, so the Vault/Factory/Report screens render off the
+ *  live WorldState exactly as they do in the sandbox. The server owns all of it;
+ *  the client never mutates these locally in live mode. */
 function overlayPortfolio(live: WorldState, p: ApiPortfolio): void {
   live.cash = p.cash;
   live.debt = p.debt;
@@ -102,6 +107,16 @@ function overlayPortfolio(live: WorldState, p: ApiPortfolio): void {
     else delete it.owners["YOU"];
   }
   live.nwHist = [...live.nwHist.slice(-29), p.netWorth];
+  if (p.reputation !== undefined) live.reputation = p.reputation;
+  if (p.floorSlots !== undefined) live.floorSlots = p.floorSlots;
+  if (p.infra) live.infra = p.infra;
+  if (p.factories) live.factories = p.factories;
+  if (p.listPrices) live.listPrices = p.listPrices;
+  if (p.producedQty) live.producedQty = p.producedQty;
+  if (p.listed) live.listed = p.listed;
+  if (p.deskAuto) live.deskAuto = p.deskAuto;
+  if (p.reports) live.reports = p.reports;
+  if (p.periodNo !== undefined) live.periodNo = p.periodNo;
 }
 
 export type TabId =
@@ -361,28 +376,36 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     return () => clearInterval(t);
   }, [mode, refresh]);
 
-  // Report log: when a new period (flip) is captured, stamp it, persist the log,
-  // and surface a daily-report card. (Reports are a sandbox feature for now.)
+  // Report log: when a new period (flip) is captured, stamp it, surface a
+  // daily-report card, and (sandbox only) persist the log to localStorage. Live
+  // reports are server-captured on the 6h settlement and arrive via the
+  // portfolio overlay; sandbox captures them locally as the clock warps.
   useEffect(() => {
-    if (mode !== "sandbox") return;
-    const sbx = worldsRef.current!.sandbox;
-    const reps = sbx.reports;
+    const w = worldsRef.current![mode];
+    const reps = w.reports;
     if (!reps.length) return;
     const latest = reps[reps.length - 1]!;
     if (latest.period === lastReportRef.current) return;
     const firstSeen = lastReportRef.current === -1;
     for (const r of reps) if (!r.at) r.at = Date.now();
     lastReportRef.current = latest.period;
-    try {
-      window.localStorage.setItem(
-        REPORTS_KEY,
-        JSON.stringify({ periodNo: sbx.periodNo, reports: reps }),
-      );
-    } catch {
-      /* ignore */
+    if (mode === "sandbox") {
+      try {
+        window.localStorage.setItem(
+          REPORTS_KEY,
+          JSON.stringify({ periodNo: w.periodNo, reports: reps }),
+        );
+      } catch {
+        /* ignore */
+      }
     }
     if (!firstSeen) setDailyReport(latest); // popup on genuinely new flips only
   }, [tick, mode]);
+
+  // Reset the report watermark on mode switch so we don't pop a stale flip.
+  useEffect(() => {
+    lastReportRef.current = -1;
+  }, [mode]);
 
   const dismissDailyReport = useCallback(() => setDailyReport(null), []);
 
@@ -473,6 +496,32 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     }
     refresh();
   }, [refresh]);
+
+  // Live factory/sales action: post to the shared world, then overlay the fresh
+  // portfolio snapshot the server returns. Returns true on success.
+  const liveFactory = useCallback(
+    async (
+      body: FactoryAction,
+      ok?: string,
+      errMsg = "Couldn't do that",
+    ): Promise<boolean> => {
+      if (!isSignedIn()) {
+        authSignIn();
+        return false;
+      }
+      const r = await factoryAction(body);
+      if ("error" in r) {
+        if (r.status === 401) authSignIn();
+        else showToast(errMsg);
+        return false;
+      }
+      overlayPortfolio(worldsRef.current!.live, r);
+      if (ok) showToast(ok);
+      refresh();
+      return true;
+    },
+    [refresh, showToast],
+  );
 
   const buy = useCallback(
     (id: number, qty = 1) => {
@@ -601,69 +650,93 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     refresh();
   }, [refresh, showToast]);
 
-  // Factories are a sandbox mechanic for now (live needs the Settlement Lambda
-  // production step + a per-player factories table — next phase).
+  // Factories run on both worlds: the sandbox mutates the local engine instantly;
+  // live posts to the shared world and overlays the server's fresh snapshot.
   const buildLine = useCallback(
     (itemId: number) => {
-      if (modeRef.current === "live") {
-        showToast("Factories open soon");
-        return;
-      }
-      const sbx = worldsRef.current!.sandbox;
-      if (sbx.factories.length >= sbx.floorSlots) {
+      const w = worldsRef.current![modeRef.current];
+      const it = getItem(itemId);
+      if (w.factories.length >= w.floorSlots) {
         showToast("Floor's full — expand it on the Floor tab");
         return;
       }
-      const it = getItem(itemId);
-      const f = buildFactory(sbx, itemId);
-      if (!f) {
-        const spec = it ? factorySpec(it) : null;
-        showToast(
-          spec && sbx.cash < spec.buildCost
-            ? "Not enough cash to build"
-            : "Can't build that line",
+      const spec = it ? factorySpec(it) : null;
+      if (spec && w.cash < spec.buildCost) {
+        showToast("Not enough cash to build");
+        return;
+      }
+      if (modeRef.current === "live") {
+        void liveFactory(
+          { action: "build", itemId },
+          `Building ${it?.name ?? "line"}…`,
+          "Can't build that line",
         );
+        return;
+      }
+      const f = buildFactory(w, itemId);
+      if (!f) {
+        showToast("Can't build that line");
         return;
       }
       showToast(`Building ${it?.name ?? "line"}…`);
       refresh();
     },
-    [refresh, showToast],
+    [refresh, showToast, liveFactory],
   );
 
   const demolishLine = useCallback(
     (id: string) => {
+      if (modeRef.current === "live") {
+        void liveFactory({ action: "demolish", factoryId: id }, "Line torn down");
+        return;
+      }
       if (demolishFactory(worldsRef.current!.sandbox, id)) {
         showToast("Line torn down");
         refresh();
       }
     },
-    [refresh, showToast],
+    [refresh, showToast, liveFactory],
   );
 
   const addModule = useCallback(
     (factoryId: string, moduleId: string) => {
+      if (modeRef.current === "live") {
+        void liveFactory(
+          { action: "module-add", factoryId, moduleId },
+          undefined,
+          "Can't install — check your cash",
+        );
+        return;
+      }
       if (installModule(worldsRef.current!.sandbox, factoryId, moduleId)) {
         refresh();
       } else {
         showToast("Can't install — check your cash");
       }
     },
-    [refresh, showToast],
+    [refresh, showToast, liveFactory],
   );
 
   const removeModule = useCallback(
     (factoryId: string, moduleId: string) => {
+      if (modeRef.current === "live") {
+        void liveFactory({ action: "module-remove", factoryId, moduleId });
+        return;
+      }
       if (uninstallModule(worldsRef.current!.sandbox, factoryId, moduleId)) {
         refresh();
       }
     },
-    [refresh],
+    [refresh, liveFactory],
   );
 
   const expandFloor = useCallback(() => {
     if (modeRef.current === "live") {
-      showToast("Factories open soon");
+      void liveFactory(
+        { action: "expand" },
+        "Floor expanded",
+        "Not enough cash to expand",
+      );
       return;
     }
     if (engineExpandFloor(worldsRef.current!.sandbox)) {
@@ -672,27 +745,39 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     } else {
       showToast("Not enough cash to expand");
     }
-  }, [refresh, showToast]);
+  }, [refresh, showToast, liveFactory]);
 
   const routeLine = useCallback(
     (id: string, bay: number) => {
+      if (modeRef.current === "live") {
+        void liveFactory({ action: "route", lineId: id, bay });
+        return;
+      }
       if (engineRouteFactory(worldsRef.current!.sandbox, id, bay)) refresh();
     },
-    [refresh],
+    [refresh, liveFactory],
   );
 
   const setDeskAutomation = useCallback(
     (patch: { specialist?: boolean; autoFulfill?: boolean; minMargin?: number }) => {
+      if (modeRef.current === "live") {
+        void liveFactory({ action: "deskauto", patch });
+        return;
+      }
       engineSetDeskAuto(worldsRef.current!.sandbox, patch);
       refresh();
     },
-    [refresh],
+    [refresh, liveFactory],
   );
 
   const buyUpgrade = useCallback(
     (id: "power" | "router" | "qc") => {
       if (modeRef.current === "live") {
-        showToast("Factories open soon");
+        void liveFactory(
+          { action: "infra", id },
+          "Upgrade installed",
+          "Already installed or not enough cash",
+        );
         return;
       }
       if (engineBuyInfra(worldsRef.current!.sandbox, id)) {
@@ -702,31 +787,43 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         showToast("Already installed or not enough cash");
       }
     },
-    [refresh, showToast],
+    [refresh, showToast, liveFactory],
   );
 
   const setLineSource = useCallback(
     (lineId: string, inputItemId: number, feederId: string | null) => {
+      if (modeRef.current === "live") {
+        void liveFactory({ action: "source", lineId, inputItemId, feederId });
+        return;
+      }
       if (engineSetSource(worldsRef.current!.sandbox, lineId, inputItemId, feederId))
         refresh();
     },
-    [refresh],
+    [refresh, liveFactory],
   );
 
   const setSellPrice = useCallback(
     (itemId: number, mult: number) => {
+      if (modeRef.current === "live") {
+        void liveFactory({ action: "listprice", itemId, mult });
+        return;
+      }
       engineSetListPrice(worldsRef.current!.sandbox, itemId, mult);
       refresh();
     },
-    [refresh],
+    [refresh, liveFactory],
   );
 
   const setListing = useCallback(
     (itemId: number, on: boolean) => {
+      if (modeRef.current === "live") {
+        void liveFactory({ action: "listed", itemId, on });
+        return;
+      }
       engineSetListed(worldsRef.current!.sandbox, itemId, on);
       refresh();
     },
-    [refresh],
+    [refresh, liveFactory],
   );
 
   const signIn = useCallback(() => authSignIn(), []);

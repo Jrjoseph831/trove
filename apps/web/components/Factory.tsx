@@ -38,24 +38,10 @@ function recipeText(out: Item): string {
 }
 
 export function Factory() {
-  const { mode, state, buildLine, desk } = useTrove();
+  const { state, buildLine, desk } = useTrove();
   const [picking, setPicking] = useState(false);
   const [view, setView] = useState<"lines" | "floor">("lines");
   const mfg = manufacturingName(desk?.name ?? null);
-
-  if (mode === "live") {
-    return (
-      <div className="view">
-        <div className="cat-head">
-          <h2 className="serif">Factory</h2>
-        </div>
-        <div className="empty">
-          Production lines are coming to the live floor — engineer factories,
-          source supply chains, and fulfil bulk orders. Stay tuned.
-        </div>
-      </div>
-    );
-  }
 
   const full = state.factories.length >= state.floorSlots;
 

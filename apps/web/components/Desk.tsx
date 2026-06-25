@@ -195,7 +195,7 @@ export function Desk() {
         </div>
       </div>
 
-      {mode === "sandbox" && <Automation />}
+      <Automation />
 
       {desk.orders.length === 0 && (
         <div className="empty">

@@ -104,22 +104,8 @@ function flowRows(r: Report) {
 }
 
 export function ReportView() {
-  const { mode, state } = useTrove();
+  const { state } = useTrove();
   const [sel, setSel] = useState<number | null>(null); // null = follow latest
-
-  if (mode === "live") {
-    return (
-      <div className="view">
-        <div className="cat-head">
-          <h2 className="serif">Reports</h2>
-        </div>
-        <div className="empty">
-          Daily reports track your factory + trading activity — coming to the
-          live floor alongside production.
-        </div>
-      </div>
-    );
-  }
 
   const days = aggregateDays(state.reports);
 
@@ -130,8 +116,8 @@ export function ReportView() {
           <h2 className="serif">Reports</h2>
         </div>
         <div className="empty">
-          No reports yet — a report is filed every time the floor flips. Advance
-          the sandbox clock and a dashboard will build here.
+          No reports yet — a report is filed every time the floor flips (twice a
+          Trove day). Once your floor produces or trades, a dashboard builds here.
         </div>
       </div>
     );

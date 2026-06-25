@@ -474,6 +474,21 @@ export function settleCycle(state: WorldState): void {
   captureReport(state);
 }
 
+/**
+ * The player-side slice of a settlement, for the LIVE world. The shared market
+ * (prices/news/stock) is already advanced by the Settlement Lambda on the
+ * singleton; here we only run the signed-in player's own per-cycle work against
+ * those settled prices: factories produce, listings sell, net worth + the report
+ * row are captured. Called once per settled world cycle, per player, server-side.
+ */
+export function settlePlayerCycle(state: WorldState): void {
+  produceFactories(state);
+  sellListings(state);
+  state.nwHist.push(netWorth(state, "YOU"));
+  if (state.nwHist.length > 30) state.nwHist.shift();
+  captureReport(state);
+}
+
 /** Capture the period that just settled as a report row, then reset the ledger.
  *  Period → Trove day (2 flips/day) + AM/PM half. Kept to a rolling window. */
 function captureReport(state: WorldState): void {

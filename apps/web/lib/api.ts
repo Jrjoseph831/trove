@@ -3,6 +3,7 @@
  * writes (/trade) and the player's own view (/portfolio) carry the Cognito id
  * token.
  */
+import type { DeskAuto, Factory, Infra, Report } from "@trove/engine";
 import { API_BASE } from "./config";
 import { getIdToken } from "./auth";
 
@@ -36,6 +37,63 @@ export interface ApiPortfolio {
   debt: number;
   netWorth: number;
   holdings: { id: number; qty: number; value: number }[];
+  // Factory / sales / report state (live-wired). Optional so an older API or a
+  // brand-new player without a record still overlays cleanly.
+  reputation?: number;
+  floorSlots?: number;
+  infra?: Infra;
+  factories?: Factory[];
+  listPrices?: Record<number, number>;
+  producedQty?: Record<number, number>;
+  listed?: Record<number, boolean>;
+  deskAuto?: DeskAuto;
+  reports?: Report[];
+  periodNo?: number;
+}
+
+/** A factory-floor action against the shared world. Returns the player's fresh
+ *  portfolio snapshot for overlay, or {error,status}. */
+export type FactoryAction =
+  | { action: "build"; itemId: number }
+  | { action: "demolish"; factoryId: string }
+  | { action: "module-add"; factoryId: string; moduleId: string }
+  | { action: "module-remove"; factoryId: string; moduleId: string }
+  | { action: "expand" }
+  | { action: "route"; lineId: string; bay: number }
+  | { action: "source"; lineId: string; inputItemId: number; feederId: string | null }
+  | { action: "listprice"; itemId: number; mult: number }
+  | { action: "listed"; itemId: number; on: boolean }
+  | { action: "infra"; id: "power" | "router" | "qc" }
+  | {
+      action: "deskauto";
+      patch: { specialist?: boolean; autoFulfill?: boolean; minMargin?: number };
+    };
+
+export async function factoryAction(
+  body: FactoryAction,
+): Promise<ApiPortfolio | { error: string; status: number }> {
+  const token = getIdToken();
+  if (!token) return { error: "unauthorized", status: 401 };
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}/factory`, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: token },
+      body: JSON.stringify(body),
+    });
+  } catch {
+    return { error: "network error", status: 0 };
+  }
+  if (!res.ok) {
+    let msg = `failed (${res.status})`;
+    try {
+      msg = (await res.json()).error ?? msg;
+    } catch {
+      /* keep */
+    }
+    return { error: msg, status: res.status };
+  }
+  return res.json() as Promise<ApiPortfolio>;
 }
 export interface TradeResult {
   action: "buy" | "sell";
