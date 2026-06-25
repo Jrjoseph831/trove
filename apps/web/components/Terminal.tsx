@@ -116,11 +116,32 @@ function Reveal() {
   );
 }
 
+// Company-type words; if the player already typed one, we don't add "Holdings".
+const FIRM_WORDS = new Set([
+  "holdings", "capital", "group", "trading", "co", "co.", "partners", "house",
+  "ventures", "industries", "works", "syndicate", "trust", "llc", "inc", "inc.",
+  "firm", "exchange", "traders", "mfg", "mfg.", "corp", "corp.", "company",
+  "associates", "bros", "bros.", "sons",
+]);
+
+/** "Skuvera" → "Skuvera Holdings"; "Veldt Capital" → "Veldt Capital". */
+function holdingName(raw: string): string {
+  const t = raw.trim().replace(/\s+/g, " ");
+  if (!t) return "";
+  const words = t.toLowerCase().split(" ");
+  if (words.some((w) => FIRM_WORDS.has(w))) return t;
+  return `${t} Holdings`;
+}
+
 function Onboarding() {
   const { signedIn, desk, nameHolding } = useTrove();
   const [val, setVal] = useState("");
   // Shown once: signed in, desk loaded, but no Holding name yet.
   if (!signedIn || !desk || desk.name) return null;
+  const preview = holdingName(val);
+  const submit = () => {
+    if (preview) nameHolding(preview);
+  };
   return (
     <div className="reveal-bg show">
       <div className="onboard">
@@ -132,20 +153,25 @@ function Onboarding() {
         </p>
         <input
           className="ob-input"
-          placeholder="e.g. Skuvera Holdings"
+          placeholder="e.g. Skuvera"
           value={val}
-          maxLength={40}
+          maxLength={32}
           autoFocus
           onChange={(e) => setVal(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter" && val.trim()) nameHolding(val);
+            if (e.key === "Enter") submit();
           }}
         />
-        <button
-          className="ob-go"
-          disabled={!val.trim()}
-          onClick={() => nameHolding(val)}
-        >
+        <div className="ob-preview">
+          {preview ? (
+            <>
+              You&apos;ll trade as <b>{preview}</b>
+            </>
+          ) : (
+            "We'll add “Holdings” unless you include your own (Capital, Group, House…)"
+          )}
+        </div>
+        <button className="ob-go" disabled={!preview} onClick={submit}>
           Open the doors
         </button>
       </div>
