@@ -33,10 +33,12 @@ import {
   buildFactory,
   createWorld,
   demolishFactory,
+  installModule,
   playerBuy,
   playerSell,
   repay,
   SEC_PER_CYCLE,
+  uninstallModule,
   wallCycle,
   wallCycleFrac,
   type RuntimeItem,
@@ -126,9 +128,11 @@ interface Trove {
   sell: (id: number, qty?: number) => void;
   doBorrow: () => void;
   doRepay: () => void;
-  /** Factory (sandbox): stand up / tear down a production line. */
+  /** Factory (sandbox): stand up / tear down a production line, tune modules. */
   buildLine: (itemId: number) => void;
   demolishLine: (id: string) => void;
+  addModule: (factoryId: string, moduleId: string) => void;
+  removeModule: (factoryId: string, moduleId: string) => void;
   closeReveal: () => void;
   /** Shared-world auth (the Acquire gate). */
   signedIn: boolean;
@@ -497,6 +501,26 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh, showToast],
   );
 
+  const addModule = useCallback(
+    (factoryId: string, moduleId: string) => {
+      if (installModule(worldsRef.current!.sandbox, factoryId, moduleId)) {
+        refresh();
+      } else {
+        showToast("Can't install — check your cash");
+      }
+    },
+    [refresh, showToast],
+  );
+
+  const removeModule = useCallback(
+    (factoryId: string, moduleId: string) => {
+      if (uninstallModule(worldsRef.current!.sandbox, factoryId, moduleId)) {
+        refresh();
+      }
+    },
+    [refresh],
+  );
+
   const signIn = useCallback(() => authSignIn(), []);
   const signOut = useCallback(() => {
     authSignOut();
@@ -626,6 +650,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       doRepay,
       buildLine,
       demolishLine,
+      addModule,
+      removeModule,
       closeReveal,
       signedIn,
       authReady,
@@ -664,6 +690,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       doRepay,
       buildLine,
       demolishLine,
+      addModule,
+      removeModule,
       closeReveal,
       signedIn,
       authReady,

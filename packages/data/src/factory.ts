@@ -215,7 +215,7 @@ const BUILD_CYCLES: Record<Archetype, number> = {
   collectible: 0,
 };
 
-/** Build/run economics for a line producing this item. */
+/** Build/run economics for a line producing this item (before any modules). */
 export function factorySpec(it: Item): FactorySpec {
   const cap = RATE_CAP[it.archetype] ?? 1;
   const rate = Math.max(1, Math.min(cap, Math.round(THROUGHPUT / it.base)));
@@ -225,4 +225,175 @@ export function factorySpec(it: Item): FactorySpec {
   );
   const upkeep = Math.max(50, Math.round(buildCost * 0.04));
   return { buildCost, rate, upkeep, buildCycles: BUILD_CYCLES[it.archetype] ?? 2 };
+}
+
+// ── Line modules (engineer the line) ─────────────────────────────────────────
+// Installable upgrades that re-shape a line's economics. Each is a trade-off;
+// composing them is the engineering puzzle. Effects multiply (rate/upkeep/input)
+// or add (premium). `stage` is a display hint for which step it bolts onto.
+
+export interface LineModule {
+  id: string;
+  name: string;
+  /** One-line effect summary for the UI. */
+  blurb: string;
+  /** Install cost as a fraction of the line's base build cost. */
+  costFactor: number;
+  rateMul: number;
+  upkeepMul: number;
+  /** Input consumed per unit (×). <1 = less waste. */
+  inputMul: number;
+  /** Additive quality premium on the output's realizable value. */
+  premium: number;
+  /** Process step this module visually attaches to. */
+  stage: string;
+}
+
+export const MODULES: LineModule[] = [
+  {
+    id: "auto",
+    name: "Automation Arm",
+    blurb: "rate ×1.5 · upkeep +30%",
+    costFactor: 0.6,
+    rateMul: 1.5,
+    upkeepMul: 1.3,
+    inputMul: 1,
+    premium: 0,
+    stage: "Assemble",
+  },
+  {
+    id: "bulk",
+    name: "Bulk Feeder",
+    blurb: "rate ×2 · input +10% · upkeep +25%",
+    costFactor: 0.8,
+    rateMul: 2,
+    upkeepMul: 1.25,
+    inputMul: 1.1,
+    premium: 0,
+    stage: "Feed",
+  },
+  {
+    id: "power",
+    name: "Power Optimizer",
+    blurb: "upkeep −25% · rate −10%",
+    costFactor: 0.5,
+    rateMul: 0.9,
+    upkeepMul: 0.75,
+    inputMul: 1,
+    premium: 0,
+    stage: "Refine",
+  },
+  {
+    id: "eff",
+    name: "Efficiency Tuner",
+    blurb: "input −20% · upkeep +5%",
+    costFactor: 0.7,
+    rateMul: 1,
+    upkeepMul: 1.05,
+    inputMul: 0.8,
+    premium: 0,
+    stage: "Machine",
+  },
+  {
+    id: "qc",
+    name: "QC Station",
+    blurb: "sells +6% · rate −10%",
+    costFactor: 0.55,
+    rateMul: 0.9,
+    upkeepMul: 1.1,
+    inputMul: 1,
+    premium: 0.06,
+    stage: "Inspect",
+  },
+  {
+    id: "shift",
+    name: "Second Shift",
+    blurb: "rate ×1.8 · upkeep ×1.8",
+    costFactor: 0.4,
+    rateMul: 1.8,
+    upkeepMul: 1.8,
+    inputMul: 1,
+    premium: 0,
+    stage: "Pack",
+  },
+];
+
+const moduleById = new Map(MODULES.map((m) => [m.id, m]));
+export const getModule = (id: string): LineModule | undefined =>
+  moduleById.get(id);
+
+/** Cash to install a module on a line (scales with the line's build cost). */
+export function moduleCost(it: Item, moduleId: string): number {
+  const m = moduleById.get(moduleId);
+  if (!m) return 0;
+  return Math.max(500, Math.round(factorySpec(it).buildCost * m.costFactor));
+}
+
+export interface EffectiveSpec {
+  rate: number;
+  upkeep: number;
+  /** Input-per-unit multiplier (1 = recipe as-is). */
+  inputMul: number;
+  /** Quality premium on realizable output value (0 = market). */
+  premium: number;
+  buildCycles: number;
+}
+
+/** A line's live economics with its installed modules folded in. */
+export function effectiveSpec(it: Item, moduleIds: string[]): EffectiveSpec {
+  const base = factorySpec(it);
+  let rate = base.rate;
+  let upkeep = base.upkeep;
+  let inputMul = 1;
+  let premium = 0;
+  for (const id of moduleIds) {
+    const m = moduleById.get(id);
+    if (!m) continue;
+    rate *= m.rateMul;
+    upkeep *= m.upkeepMul;
+    inputMul *= m.inputMul;
+    premium += m.premium;
+  }
+  return {
+    rate: Math.max(1, Math.round(rate)),
+    upkeep: Math.max(1, Math.round(upkeep)),
+    inputMul,
+    premium,
+    buildCycles: base.buildCycles,
+  };
+}
+
+// ── Production stages (the visible line flow) ───────────────────────────────
+// Cosmetic process steps by archetype; FEED (inputs) and PACK (output) bracket
+// them. The line "looks" like a factory without each step having its own math.
+const STAGE_STEPS: Record<Archetype, string[]> = {
+  micro_consumable: ["Mill"],
+  bulk_consumable: ["Form"],
+  commodity: ["Refine"],
+  component: ["Machine", "Assemble"],
+  light_equipment: ["Fabricate", "Assemble", "Test"],
+  heavy_equipment: ["Fabricate", "Assemble", "Test"],
+  vehicle: ["Stamp", "Weld", "Assemble", "Inspect"],
+  luxury_good: ["Craft", "Finish", "Inspect"],
+  collectible: [],
+};
+
+export interface LineStage {
+  key: string;
+  label: string;
+  kind: "feed" | "process" | "output";
+}
+
+/** The ordered stages of a line: Feed/Source → process steps → Pack. */
+export function productionStages(it: Item): LineStage[] {
+  const recipe = recipeOf(it);
+  const hasInputs = !!recipe && recipe.inputs.length > 0;
+  const stages: LineStage[] = [
+    { key: "feed", label: hasInputs ? "Feed" : "Source", kind: "feed" },
+  ];
+  (STAGE_STEPS[it.archetype] ?? []).forEach((s, i) =>
+    stages.push({ key: `p${i}`, label: s, kind: "process" }),
+  );
+  stages.push({ key: "out", label: "Pack", kind: "output" });
+  return stages;
 }

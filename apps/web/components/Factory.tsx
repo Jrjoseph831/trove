@@ -4,14 +4,29 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import {
   canProduce,
+  effectiveSpec,
   factorySpec,
   getItem,
+  getModule,
   items as catalog,
+  MODULES,
+  moduleCost,
+  productionStages,
   recipeOf,
 } from "@trove/data";
 import type { Item } from "@trove/data";
+import type { Factory as FactoryLine } from "@trove/engine";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+
+/** "G&H Holdings" → "G&H Manufacturing": your production division. */
+const FIRM_TAIL =
+  /\s+(holdings?|capital|group|trading|partners|house|ventures|industries|works|syndicate|trust|llc|inc\.?|firm|exchange|traders|mfg\.?|corp\.?|company|associates|bros\.?|sons|co\.?)$/i;
+function manufacturingName(holding: string | null): string {
+  if (!holding) return "Trove Manufacturing";
+  const base = holding.replace(/\s+/g, " ").trim().replace(FIRM_TAIL, "").trim();
+  return `${base || holding} Manufacturing`;
+}
 
 /** Short "2× Steel Billet + 1× I-Beam" recipe summary, or "extraction". */
 function recipeText(out: Item): string {
@@ -23,11 +38,10 @@ function recipeText(out: Item): string {
 }
 
 export function Factory() {
-  const { mode, state, buildLine, demolishLine } = useTrove();
+  const { mode, state, buildLine, desk } = useTrove();
   const [picking, setPicking] = useState(false);
+  const mfg = manufacturingName(desk?.name ?? null);
 
-  // Live factories need the Settlement Lambda production step + a per-player
-  // table — that's the next phase. For now the Factory lives in the sandbox.
   if (mode === "live") {
     return (
       <div className="view">
@@ -36,131 +50,36 @@ export function Factory() {
         </div>
         <div className="empty">
           Production lines are coming to the live floor soon. For now, switch to{" "}
-          <b>Sandbox</b> to build factories, source inputs, and watch a line run.
+          <b>Sandbox</b> to engineer a line, install modules, and watch it run.
         </div>
       </div>
     );
   }
 
-  const factories = state.factories;
-
   return (
     <div className="view">
       <div className="cat-head">
-        <h2 className="serif">Factory</h2>
+        <h2 className="serif">{mfg}</h2>
         <div className="fac-cash">
           Cash <b>{money(state.cash)}</b>
         </div>
       </div>
 
       <p className="fac-intro">
-        Build a line to <b>produce</b> a good every cycle. A line consumes input
-        items from your vault, pays upkeep whether it runs or not, and drops its
-        output into your vault — sell it on the floor or fill orders.
+        Engineer a line: pick a product, then install <b>modules</b> to push
+        throughput up, upkeep down, or trim material per unit. Output is branded{" "}
+        <b>{mfg}</b> and lands in your vault to sell or fill orders.
       </p>
 
-      {factories.length === 0 && (
+      {state.factories.length === 0 && (
         <div className="empty">
-          No lines yet. Build one below — start cheap (screws, bolts) and reinvest
-          into bigger goods.
+          No lines yet. Build one below — start cheap, then engineer it.
         </div>
       )}
 
-      {factories.map((f) => {
-        // The runtime item carries the live floor price + your holdings.
-        const out = state.items.find((i) => i.id === f.itemId);
-        if (!out) return null;
-        const spec = factorySpec(out);
-        const recipe = recipeOf(out);
-        const inputs = recipe?.inputs ?? [];
-        const building = state.cycle < f.onlineCycle;
-        const cyclesLeft = f.onlineCycle - state.cycle;
-        // Can the vault cover a full batch right now?
-        const batch = inputs.map((inp) => {
-          const held = state.items.find((i) => i.id === inp.itemId);
-          const need = inp.qty * spec.rate;
-          return {
-            inp,
-            name: held?.name ?? `#${inp.itemId}`,
-            have: held?.owners["YOU"] ?? 0,
-            need,
-          };
-        });
-        const ready = batch.every((b) => b.have >= b.need);
-        const status = building
-          ? "building"
-          : ready
-            ? "running"
-            : "idle";
-
-        return (
-          <div key={f.id} className={`facline ${status}`}>
-            <div className="fl-top">
-              <div className="fl-name">
-                <Link href={`/item/${out.id}`} className="it-link">
-                  {out.name}
-                </Link>
-                <span className="fl-bd">{out.brand}</span>
-              </div>
-              <span className={`fl-status ${status}`}>
-                {building
-                  ? `building · ${cyclesLeft} cy`
-                  : status === "running"
-                    ? "● running"
-                    : "◐ idle"}
-              </span>
-            </div>
-
-            <div className="fl-econ">
-              <span>
-                <b>{spec.rate.toLocaleString()}</b>/cycle
-              </span>
-              <span>upkeep {money(spec.upkeep)}/cy</span>
-              <span>
-                ≈ {money(out.value)} ea on the floor
-              </span>
-            </div>
-
-            {inputs.length > 0 ? (
-              <div className="fl-recipe">
-                <div className="fl-rlabel">Consumes per cycle</div>
-                {batch.map((b) => (
-                  <div
-                    key={b.inp.itemId}
-                    className={`fl-inp ${b.have >= b.need ? "" : "short"}`}
-                  >
-                    <Link href={`/item/${b.inp.itemId}`} className="it-link">
-                      {b.name}
-                    </Link>
-                    <span className="fl-need">
-                      {b.have.toLocaleString()} / {b.need.toLocaleString()}
-                    </span>
-                  </div>
-                ))}
-                {!building && !ready && (
-                  <div className="fl-warn">
-                    Short on inputs — line idles (still paying upkeep). Buy more on
-                    the floor.
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div className="fl-recipe">
-                <div className="fl-rlabel">Extraction · no inputs</div>
-              </div>
-            )}
-
-            <div className="fl-foot">
-              <button
-                className="fl-demolish"
-                onClick={() => demolishLine(f.id)}
-              >
-                Tear down
-              </button>
-            </div>
-          </div>
-        );
-      })}
+      {state.factories.map((f) => (
+        <LineBay key={f.id} f={f} mfg={mfg} />
+      ))}
 
       <button className="fac-build" onClick={() => setPicking(true)}>
         ＋ Build a new line
@@ -176,6 +95,190 @@ export function Factory() {
           onClose={() => setPicking(false)}
         />
       )}
+    </div>
+  );
+}
+
+function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
+  const { state, demolishLine, addModule, removeModule } = useTrove();
+  const out = state.items.find((i) => i.id === f.itemId);
+  if (!out) return null;
+
+  const base = factorySpec(out);
+  const eff = effectiveSpec(out, f.modules);
+  const recipe = recipeOf(out);
+  const inputs = recipe?.inputs ?? [];
+
+  const building = state.cycle < f.onlineCycle;
+  const cyclesLeft = f.onlineCycle - state.cycle;
+
+  // Per-input batch coverage (module input multiplier shifts the need).
+  const batch = inputs.map((inp) => {
+    const held = state.items.find((i) => i.id === inp.itemId);
+    const need = Math.ceil(inp.qty * eff.rate * eff.inputMul);
+    return {
+      id: inp.itemId,
+      name: held?.name ?? `#${inp.itemId}`,
+      value: held?.value ?? 0,
+      perUnit: inp.qty,
+      have: held?.owners["YOU"] ?? 0,
+      need,
+    };
+  });
+  const ready = batch.every((b) => b.have >= b.need);
+  const status = building ? "building" : ready ? "running" : "idle";
+  const coverage = batch.length
+    ? Math.min(1, ...batch.map((b) => (b.need ? b.have / b.need : 1)))
+    : 1;
+
+  // Cost to make one unit: materials (× input multiplier) + amortised upkeep.
+  const matPerUnit =
+    batch.reduce((s, b) => s + b.value * b.perUnit, 0) * eff.inputMul;
+  const perUnit = matPerUnit + eff.upkeep / eff.rate;
+  const sellEa = out.value * (1 + eff.premium);
+
+  // Which installed module badges onto which stage.
+  const stages = productionStages(out);
+  const processStages = stages.filter((s) => s.kind === "process");
+  const badge: Record<string, string[]> = {};
+  for (const id of f.modules) {
+    const m = getModule(id);
+    if (!m) continue;
+    let st = stages.find((s) => s.label === m.stage);
+    if (!st)
+      st =
+        m.stage === "Feed"
+          ? stages[0]
+          : m.stage === "Pack"
+            ? stages[stages.length - 1]
+            : (processStages[0] ?? stages[0]);
+    (badge[st.key] ??= []).push(m.name);
+  }
+
+  return (
+    <div className={`bay ${status}`}>
+      <div className="bay-head">
+        <div className="bay-title">
+          <span className="bay-mfg">{mfg}</span>
+          <Link href={`/item/${out.id}`} className="it-link">
+            {out.name}
+          </Link>{" "}
+          Line
+        </div>
+        <span className={`bay-status ${status}`}>
+          {building
+            ? `building · ${cyclesLeft} cy`
+            : status === "running"
+              ? "● running"
+              : "◐ idle"}
+        </span>
+      </div>
+
+      <div className="bay-stages">
+        {stages.map((s, i) => {
+          const fill =
+            s.kind === "output"
+              ? 100
+              : building
+                ? 35
+                : s.kind === "feed"
+                  ? Math.round(coverage * 100)
+                  : 100;
+          const detail =
+            s.kind === "feed"
+              ? inputs.length
+                ? "raw materials"
+                : "raw extraction"
+              : s.kind === "output"
+                ? `→ ${eff.rate.toLocaleString()}/cy`
+                : (badge[s.key]?.join(", ") ?? "—");
+          return (
+            <div key={s.key} className={`stg ${s.kind}`}>
+              <span className="stg-n">{i + 1}</span>
+              <span className="stg-label">{s.label}</span>
+              <span className="stg-detail">{detail}</span>
+              {s.kind !== "output" && (
+                <span className="stg-bar">
+                  <i style={{ width: `${fill}%` }} />
+                </span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {inputs.length > 0 && (
+        <div className="bay-inputs">
+          <div className="bay-sub">Feed / cycle</div>
+          {batch.map((b) => (
+            <div
+              key={b.id}
+              className={`bay-inp ${b.have >= b.need ? "" : "short"}`}
+            >
+              <Link href={`/item/${b.id}`} className="it-link">
+                {b.name}
+              </Link>
+              <span className="bay-need">
+                {b.have.toLocaleString()} / {b.need.toLocaleString()}
+              </span>
+            </div>
+          ))}
+          {!building && !ready && (
+            <div className="bay-warn">
+              Short on inputs — line idles (upkeep still burns). Buy more on the
+              floor.
+            </div>
+          )}
+        </div>
+      )}
+
+      <div className="bay-stats">
+        <span>
+          rate <b>{eff.rate.toLocaleString()}/cy</b>
+          {f.modules.length > 0 && (
+            <em className="bay-vs"> (base {base.rate.toLocaleString()})</em>
+          )}
+        </span>
+        <span>upkeep {money(eff.upkeep)}/cy</span>
+        <span>cost/ea {money(perUnit)}</span>
+        <span>sells ≈ {money(sellEa)}/ea</span>
+        {eff.premium > 0 && (
+          <span className="bay-prem">+{Math.round(eff.premium * 100)}% quality</span>
+        )}
+      </div>
+
+      <div className="bay-modules">
+        <div className="bay-sub">Modules — engineer the line</div>
+        <div className="bay-mgrid">
+          {MODULES.map((m) => {
+            const installed = f.modules.includes(m.id);
+            const cost = moduleCost(out, m.id);
+            const afford = state.cash >= cost;
+            return (
+              <button
+                key={m.id}
+                className={`mod ${installed ? "on" : ""}`}
+                disabled={!installed && !afford}
+                onClick={() =>
+                  installed ? removeModule(f.id, m.id) : addModule(f.id, m.id)
+                }
+              >
+                <span className="mod-name">{m.name}</span>
+                <span className="mod-blurb">{m.blurb}</span>
+                <span className="mod-cost">
+                  {installed ? "✓ installed · remove" : `install ${money(cost)}`}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="bay-foot">
+        <button className="fl-demolish" onClick={() => demolishLine(f.id)}>
+          Tear down
+        </button>
+      </div>
     </div>
   );
 }
@@ -223,7 +326,7 @@ function BuildPicker({
         </div>
         <input
           className="fp-search"
-          placeholder="Search items to produce…"
+          placeholder="Search a product to make…"
           value={q}
           autoFocus
           onChange={(e) => setQ(e.target.value)}

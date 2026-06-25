@@ -9,8 +9,10 @@
 import {
   brands,
   canProduce,
+  effectiveSpec,
   factorySpec,
   items as catalog,
+  moduleCost,
   news as newsBank,
   recipeOf,
   sectorKeys,
@@ -425,10 +427,11 @@ export function buildFactory(state: WorldState, itemId: number): Factory | null 
     itemId,
     builtCycle: state.cycle,
     onlineCycle: state.cycle + spec.buildCycles,
+    modules: [],
     status: "building",
   };
   state.factories.push(f);
-  pushLog(state, "YOU", "broke ground on", `${out.brand} ${out.name} line`);
+  pushLog(state, "YOU", "broke ground on", `${out.name} line`);
   return f;
 }
 
@@ -437,6 +440,39 @@ export function demolishFactory(state: WorldState, id: string): boolean {
   const i = state.factories.findIndex((f) => f.id === id);
   if (i < 0) return false;
   state.factories.splice(i, 1);
+  return true;
+}
+
+/** Install a module on a line, charging its cost. Returns false if the line
+ *  doesn't exist, the module is already installed, or you can't afford it. */
+export function installModule(
+  state: WorldState,
+  factoryId: string,
+  moduleId: string,
+): boolean {
+  const f = state.factories.find((x) => x.id === factoryId);
+  if (!f) return false;
+  if (f.modules.includes(moduleId)) return false;
+  const out = state.items.find((i) => i.id === f.itemId);
+  if (!out) return false;
+  const cost = moduleCost(out, moduleId);
+  if (cost <= 0 || state.cash < cost) return false;
+  state.cash -= cost;
+  f.modules.push(moduleId);
+  return true;
+}
+
+/** Remove a module, refunding half its install cost. */
+export function uninstallModule(
+  state: WorldState,
+  factoryId: string,
+  moduleId: string,
+): boolean {
+  const f = state.factories.find((x) => x.id === factoryId);
+  if (!f || !f.modules.includes(moduleId)) return false;
+  const out = state.items.find((i) => i.id === f.itemId);
+  f.modules = f.modules.filter((m) => m !== moduleId);
+  if (out) state.cash += Math.round(moduleCost(out, moduleId) * 0.5);
   return true;
 }
 
@@ -457,15 +493,16 @@ function produceFactories(state: WorldState): void {
     }
     const out = state.items.find((i) => i.id === f.itemId);
     if (!out) continue;
-    const spec = factorySpec(out);
+    const spec = effectiveSpec(out, f.modules); // modules fold into the economics
     state.cash -= spec.upkeep; // upkeep always burns
 
     const recipe = recipeOf(out);
     const inputs = recipe?.inputs ?? [];
-    // Resolve input items and check the vault can cover a full batch.
+    // Resolve input items and check the vault can cover a full batch
+    // (module input multiplier shifts how much material a batch needs).
     const batch = inputs.map((inp) => ({
       it: state.items.find((i) => i.id === inp.itemId),
-      need: inp.qty * spec.rate,
+      need: Math.ceil(inp.qty * spec.rate * spec.inputMul),
     }));
     const canRun = batch.every((b) => b.it && ownedYou(b.it) >= b.need);
 

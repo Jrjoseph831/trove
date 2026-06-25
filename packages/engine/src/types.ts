@@ -41,6 +41,8 @@ export interface Factory {
   builtCycle: number;
   /** Cycle it comes online and starts producing. */
   onlineCycle: number;
+  /** Installed line-module ids (engineer the line's economics). */
+  modules: string[];
   /** Last settle outcome, for UI: building → running → idle (short on inputs). */
   status: "building" | "running" | "idle";
 }
