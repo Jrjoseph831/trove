@@ -107,6 +107,38 @@ export interface DeskAuto {
   minMargin: number;
 }
 
+/** A player's company website (the manufacturing storefront). Public-facing,
+ *  built from their LISTED produced goods — list it in the Vault and it appears
+ *  on the site, unlist it and it's hidden. Identity + storefront only; private
+ *  vault holdings and net worth never go on the site. */
+export type SiteSectionId =
+  | "masthead"
+  | "about"
+  | "storefront"
+  | "standing"
+  | "contact";
+
+export interface SiteSection {
+  id: SiteSectionId;
+  /** Whether the section renders (masthead + storefront are always on). */
+  on: boolean;
+}
+
+export interface SiteConfig {
+  /** URL handle / sidebar slug (derived from the holding name, editable). */
+  handle: string;
+  /** One-line headline under the company name. */
+  tagline?: string;
+  /** The "About / The House" body copy. */
+  about?: string;
+  /** Accent theme for the page. */
+  accent?: "gold" | "steel" | "ink";
+  /** Section order + visibility (modular builder). */
+  sections?: SiteSection[];
+  /** Live on the directory? Drafts stay private to the owner. */
+  published?: boolean;
+}
+
 /** Floor-wide infrastructure upgrades (one-time buys that boost every line). */
 export interface Infra {
   /** Power Plant — −20% upkeep on every line. */

@@ -36,6 +36,7 @@ const empty = {
   deskAuto: { specialist: false, autoFulfill: false, minMargin: 0.1 },
   reports: [],
   periodNo: 0,
+  site: null,
 };
 
 export async function handler(

@@ -251,6 +251,27 @@ export class TroveStack extends Stack {
       authorizer,
     });
 
+    // ── Company websites: public directory + sites, authorized save ─────────
+    const company = fn("Company", "company.ts", Duration.seconds(15));
+    market.grantReadData(company);
+    players.grantReadWriteData(company);
+    api.addRoutes({
+      path: "/companies",
+      methods: [HttpMethod.GET],
+      integration: new HttpLambdaIntegration("CompaniesIntegration", company),
+    });
+    api.addRoutes({
+      path: "/companies/{handle}",
+      methods: [HttpMethod.GET],
+      integration: new HttpLambdaIntegration("CompanyIntegration", company),
+    });
+    api.addRoutes({
+      path: "/site",
+      methods: [HttpMethod.POST],
+      integration: new HttpLambdaIntegration("SiteIntegration", company),
+      authorizer,
+    });
+
     // ── Standings (public) ──────────────────────────────────────────────────
     const standings = fn("Standings", "standings.ts", Duration.seconds(10));
     market.grantReadData(standings);

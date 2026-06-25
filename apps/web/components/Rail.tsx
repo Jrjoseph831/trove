@@ -4,6 +4,7 @@ import {
   ClipboardList,
   Factory,
   FileBarChart,
+  Globe,
   LayoutGrid,
   type LucideIcon,
   Newspaper,
@@ -144,7 +145,6 @@ export function Rail() {
             <Factory size={15} strokeWidth={1.75} />
           </span>{" "}
           Factory
-          {mode === "live" && <span className="soon">soon</span>}
         </button>
         <button
           className={tab === "report" ? "on" : ""}
@@ -154,6 +154,15 @@ export function Rail() {
             <FileBarChart size={15} strokeWidth={1.75} />
           </span>{" "}
           Reports
+        </button>
+        <button
+          className={tab === "companies" ? "on" : ""}
+          onClick={() => go("companies")}
+        >
+          <span className="ic">
+            <Globe size={15} strokeWidth={1.75} />
+          </span>{" "}
+          Companies
         </button>
       </div>
 

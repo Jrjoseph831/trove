@@ -31,6 +31,7 @@ import {
   type Ledger,
   type Report,
   type RuntimeItem,
+  type SiteConfig,
   type WorldState,
 } from "@trove/engine";
 
@@ -261,6 +262,8 @@ export interface Player {
   lastProdTick?: number;
   /** Last 6h market flip (wallCycle) captured as a report for this player. */
   lastFlip?: number;
+  /** The player's company website (manufacturing storefront). */
+  site?: SiteConfig;
 }
 
 const FRESH_INFRA: Infra = { power: false, router: false, qc: false };
@@ -342,6 +345,7 @@ export interface PortfolioView {
   deskAuto: DeskAuto;
   reports: Report[];
   periodNo: number;
+  site: SiteConfig | null;
 }
 
 /** Build the player's portfolio snapshot from the shared doc + their record.
@@ -373,6 +377,147 @@ export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
     deskAuto: player.deskAuto ?? { ...FRESH_DESKAUTO },
     reports: player.reports ?? [],
     periodNo: player.periodNo ?? 0,
+    site: player.site ?? null,
+  };
+}
+
+// ── Company websites (the manufacturing storefront) ──────────────────────────
+
+/** A product on a company's public storefront (a LISTED produced good). */
+export interface CompanyProduct {
+  id: number;
+  name: string;
+  /** Listed unit price (market value × the seller's markup × QC premium). */
+  price: number;
+  /** Units the seller has produced and holds (available to order). */
+  available: number;
+}
+
+/** A directory row — the public card for one company. */
+export interface CompanyCard {
+  handle: string;
+  /** The holding name (the client renders the "… Manufacturing" form). */
+  name: string;
+  tagline: string;
+  accent: string;
+  /** Dominant sector key (the client maps it to a label). */
+  sector: string;
+  /** How many products are on the storefront. */
+  products: number;
+}
+
+/** The full public site for one company. */
+export interface CompanySite extends CompanyCard {
+  about: string;
+  sections: NonNullable<SiteConfig["sections"]>;
+  storefront: CompanyProduct[];
+  standing: { rank: number | null; lines: number; sectors: string[] };
+}
+
+const DEFAULT_SECTIONS: NonNullable<SiteConfig["sections"]> = [
+  { id: "masthead", on: true },
+  { id: "about", on: true },
+  { id: "storefront", on: true },
+  { id: "standing", on: true },
+  { id: "contact", on: false },
+];
+
+/** Top-weighted sector of a catalog item. */
+function topSectorOf(id: number): string {
+  const c = catById.get(id);
+  if (!c) return "";
+  let best = "";
+  let bw = -1;
+  for (const k in c.weights) {
+    const w = c.weights[k] ?? 0;
+    if (w > bw) {
+      bw = w;
+      best = k;
+    }
+  }
+  return best;
+}
+
+/** The LISTED produced goods that make up a player's storefront. */
+export function storefrontOf(doc: WorldDoc, player: Player): CompanyProduct[] {
+  const prod = player.producedQty ?? {};
+  const qc = player.infra?.qc ? 1.06 : 1;
+  const out: CompanyProduct[] = [];
+  for (const idStr of Object.keys(prod)) {
+    const id = Number(idStr);
+    const qty = prod[id] ?? 0;
+    if (qty <= 0) continue;
+    if (player.listed?.[id] === false) continue; // unlisted = held, not for sale
+    const it = doc.items.find((i) => i.id === id);
+    if (!it) continue;
+    const mult = player.listPrices?.[id] ?? 1;
+    out.push({
+      id,
+      name: catById.get(id)?.name ?? `#${id}`,
+      price: Math.round(it.value * mult * qc),
+      available: qty,
+    });
+  }
+  return out.sort((a, b) => b.price - a.price);
+}
+
+/** Dominant sectors a company works in (from its storefront, else its lines). */
+function companySectors(player: Player, store: CompanyProduct[]): string[] {
+  const tally: Record<string, number> = {};
+  const ids = store.length
+    ? store.map((p) => p.id)
+    : (player.factories ?? []).map((f) => f.itemId);
+  for (const id of ids) {
+    const s = topSectorOf(id);
+    if (s) tally[s] = (tally[s] ?? 0) + 1;
+  }
+  return Object.entries(tally)
+    .sort((a, b) => b[1] - a[1])
+    .map(([s]) => s)
+    .slice(0, 3);
+}
+
+/** Directory card for a player (only meaningful once they've published). */
+export function companyCard(doc: WorldDoc, player: Player): CompanyCard | null {
+  const site = player.site;
+  if (!site?.handle || !site.published || !player.name) return null;
+  const store = storefrontOf(doc, player);
+  const sectors = companySectors(player, store);
+  return {
+    handle: site.handle,
+    name: player.name,
+    tagline: site.tagline ?? "",
+    accent: site.accent ?? "gold",
+    sector: sectors[0] ?? "",
+    products: store.length,
+  };
+}
+
+/** Build a player's full public site. `rank` (1-based) is computed by the caller
+ *  from the standings pass, or null if unranked. */
+export function companySite(
+  doc: WorldDoc,
+  player: Player,
+  rank: number | null,
+): CompanySite {
+  const site = player.site ?? { handle: "" };
+  const store = storefrontOf(doc, player);
+  const sectors = companySectors(player, store);
+  return {
+    handle: site.handle,
+    name: player.name ?? "Unnamed Holding",
+    tagline: site.tagline ?? "",
+    accent: site.accent ?? "gold",
+    sector: sectors[0] ?? "",
+    products: store.length,
+    about: site.about ?? "",
+    sections: site.sections ?? DEFAULT_SECTIONS,
+    storefront: store,
+    standing: {
+      rank,
+      lines: (player.factories ?? []).length,
+      sectors,
+    },
   };
 }
 

@@ -5,6 +5,7 @@ import { validateHoldingName } from "@trove/data";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 import { Catalog } from "./Catalog";
+import { Companies } from "./Companies";
 import { Desk } from "./Desk";
 import { Factory as FactoryView } from "./Factory";
 import { DailyReportCard, ReportView } from "./Report";
@@ -50,6 +51,7 @@ export function Terminal() {
         {tab === "orders" && <Desk />}
         {tab === "factory" && <FactoryView />}
         {tab === "report" && <ReportView />}
+        {tab === "companies" && <Companies />}
       </div>
       {reveal && <Reveal />}
       <Onboarding />

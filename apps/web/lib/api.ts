@@ -3,7 +3,7 @@
  * writes (/trade) and the player's own view (/portfolio) carry the Cognito id
  * token.
  */
-import type { DeskAuto, Factory, Infra, Report } from "@trove/engine";
+import type { DeskAuto, Factory, Infra, Report, SiteConfig } from "@trove/engine";
 import { API_BASE } from "./config";
 import { getIdToken } from "./auth";
 
@@ -49,6 +49,63 @@ export interface ApiPortfolio {
   deskAuto?: DeskAuto;
   reports?: Report[];
   periodNo?: number;
+  /** The player's own company-site config (so the owner can edit a draft). */
+  site?: SiteConfig | null;
+}
+
+// ── Company websites (manufacturing storefront) ──────────────────────────────
+export interface CompanyProduct {
+  id: number;
+  name: string;
+  price: number;
+  available: number;
+}
+export interface CompanyCard {
+  handle: string;
+  name: string;
+  tagline: string;
+  accent: string;
+  sector: string;
+  products: number;
+}
+export interface CompanySite extends CompanyCard {
+  about: string;
+  sections: { id: string; on: boolean }[];
+  storefront: CompanyProduct[];
+  standing: { rank: number | null; lines: number; sectors: string[] };
+}
+
+export const fetchCompanies = () =>
+  get<{ companies: CompanyCard[] }>("/companies").then((r) => r.companies);
+export const fetchCompany = (handle: string) =>
+  get<CompanySite>(`/companies/${encodeURIComponent(handle)}`);
+
+/** Save the signed-in player's site config; returns the updated config + view. */
+export async function saveSite(
+  patch: Partial<SiteConfig>,
+): Promise<{ site: SiteConfig; view: CompanySite } | { error: string; status: number }> {
+  const token = getIdToken();
+  if (!token) return { error: "unauthorized", status: 401 };
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}/site`, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: token },
+      body: JSON.stringify(patch),
+    });
+  } catch {
+    return { error: "network error", status: 0 };
+  }
+  if (!res.ok) {
+    let msg = `failed (${res.status})`;
+    try {
+      msg = (await res.json()).error ?? msg;
+    } catch {
+      /* keep */
+    }
+    return { error: msg, status: res.status };
+  }
+  return res.json() as Promise<{ site: SiteConfig; view: CompanySite }>;
 }
 
 /** A factory-floor action against the shared world. Returns the player's fresh

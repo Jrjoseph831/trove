@@ -17,11 +17,14 @@ import {
   fetchPortfolio,
   fetchWorld,
   postTrade,
+  saveSite as apiSaveSite,
   type ApiPortfolio,
   type ApiWorld,
+  type CompanySite,
   type Desk,
   type FactoryAction,
 } from "./api";
+import type { SiteConfig } from "@trove/engine";
 import {
   captureTokenFromHash,
   isSignedIn,
@@ -127,7 +130,8 @@ export type TabId =
   | "vault"
   | "orders"
   | "factory"
-  | "report";
+  | "report"
+  | "companies";
 export type Mode = "live" | "sandbox";
 
 export interface RevealInfo {
@@ -204,6 +208,10 @@ interface Trove {
   /** Latest daily-report card to surface (sandbox), or null. */
   dailyReport: Report | null;
   dismissDailyReport: () => void;
+  /** The signed-in player's own company-site config (null until loaded / set). */
+  mySite: SiteConfig | null;
+  /** Save the player's site config; resolves to the updated public view or null. */
+  saveSite: (patch: Partial<SiteConfig>) => Promise<CompanySite | null>;
 }
 
 const TroveContext = createContext<Trove | null>(null);
@@ -292,6 +300,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [desk, setDesk] = useState<Desk | null>(null);
   const [renaming, setRenaming] = useState(false);
   const [dailyReport, setDailyReport] = useState<Report | null>(null);
+  const [mySite, setMySite] = useState<SiteConfig | null>(null);
   const lastReportRef = useRef(-1);
 
   const modeRef = useRef(mode);
@@ -321,7 +330,10 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         if (isSignedIn()) {
           try {
             const p = await fetchPortfolio();
-            if (alive) overlayPortfolio(worldsRef.current!.live, p);
+            if (alive) {
+              overlayPortfolio(worldsRef.current!.live, p);
+              setMySite(p.site ?? null);
+            }
           } catch {
             /* portfolio is best-effort */
           }
@@ -494,12 +506,38 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       if (isSignedIn()) {
         const p = await fetchPortfolio();
         overlayPortfolio(worldsRef.current!.live, p);
+        setMySite(p.site ?? null);
       }
     } catch {
       /* best-effort */
     }
     refresh();
   }, [refresh]);
+
+  // Save the player's company-site config, then reflect it locally.
+  const saveSite = useCallback(
+    async (patch: Partial<SiteConfig>): Promise<CompanySite | null> => {
+      if (!isSignedIn()) {
+        authSignIn();
+        return null;
+      }
+      const r = await apiSaveSite(patch);
+      if ("error" in r) {
+        showToast(
+          r.error === "that address is taken"
+            ? "That address is taken"
+            : r.error === "name your Holding first"
+              ? "Name your Holding first"
+              : "Couldn't save your site",
+        );
+        return null;
+      }
+      setMySite(r.site);
+      showToast(r.site.published ? "Site published" : "Draft saved");
+      return r.view;
+    },
+    [showToast],
+  );
 
   // Live factory/sales action: post to the shared world, then overlay the fresh
   // portfolio snapshot the server returns. Returns true on success.
@@ -1034,6 +1072,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       cancelRename,
       dailyReport,
       dismissDailyReport,
+      mySite,
+      saveSite,
     }),
     [
       mounted,
@@ -1083,6 +1123,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       cancelRename,
       dailyReport,
       dismissDailyReport,
+      mySite,
+      saveSite,
     ],
   );
 
