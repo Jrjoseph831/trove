@@ -134,11 +134,15 @@ export function Rail() {
           </span>{" "}
           My Vault
         </button>
-        <button disabled>
+        <button
+          className={tab === "factory" ? "on" : ""}
+          onClick={() => go("factory")}
+        >
           <span className="ic">
             <Factory size={15} strokeWidth={1.75} />
           </span>{" "}
-          Factory <span className="soon">soon</span>
+          Factory
+          {mode === "live" && <span className="soon">soon</span>}
         </button>
       </div>
 

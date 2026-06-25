@@ -3549,6 +3549,239 @@ body {
   cursor: not-allowed;
 }
 
+/* ── Factory ─────────────────────────────────────────────────────────────── */
+.fac-cash {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.fac-cash b {
+  color: var(--accent);
+  font-size: 15px;
+  margin-left: 4px;
+}
+.fac-intro {
+  max-width: 640px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-dim);
+  margin: 0 0 18px;
+}
+.facline {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  max-width: 640px;
+}
+.facline.running {
+  border-left-color: var(--up);
+}
+.facline.building {
+  border-left-color: var(--dn);
+}
+.facline.idle {
+  border-left-color: #c0563f;
+}
+.fl-top {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.fl-name {
+  font-weight: 700;
+  font-size: 15px;
+}
+.fl-bd {
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-weight: 400;
+  margin-left: 8px;
+}
+.fl-status {
+  margin-left: auto;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.fl-status.running {
+  color: var(--up);
+}
+.fl-status.building {
+  color: var(--dn);
+}
+.fl-status.idle {
+  color: #c0563f;
+}
+.fl-econ {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.fl-econ b {
+  color: var(--ink);
+}
+.fl-recipe {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.fl-rlabel {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+}
+.fl-inp {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 13px;
+  padding: 3px 0;
+}
+.fl-need {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-dim);
+}
+.fl-inp.short .fl-need {
+  color: #c0563f;
+  font-weight: 700;
+}
+.fl-warn {
+  margin-top: 8px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #c0563f;
+}
+.fl-foot {
+  margin-top: 14px;
+}
+.fl-demolish {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 12px;
+  color: var(--ink-dim);
+  cursor: pointer;
+}
+.fl-demolish:hover {
+  border-color: #c0563f;
+  color: #c0563f;
+}
+.fac-build {
+  width: 100%;
+  max-width: 640px;
+  margin-top: 6px;
+  padding: 14px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  background: none;
+  color: var(--ink-dim);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.fac-build:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Build-a-line picker (modal) */
+.facpick {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  width: min(92vw, 540px);
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.fp-head {
+  display: flex;
+  align-items: center;
+  padding: 16px 18px 12px;
+}
+.fp-head h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.fp-x {
+  margin-left: auto;
+  background: none;
+  border: 0;
+  font-size: 16px;
+  color: var(--ink-faint);
+  cursor: pointer;
+}
+.fp-search {
+  margin: 0 18px 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
+}
+.fp-list {
+  overflow-y: auto;
+  padding: 0 12px 14px;
+}
+.fp-row {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: 11px 6px;
+  cursor: pointer;
+}
+.fp-row:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+.fp-row:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.fp-r-main {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.fp-r-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+.fp-r-bd {
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+.fp-r-recipe {
+  font-size: 11.5px;
+  color: var(--ink-dim);
+  margin-top: 2px;
+}
+.fp-r-econ {
+  display: flex;
+  gap: 14px;
+  margin-top: 4px;
+  font-size: 11.5px;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+}
+.fp-cant {
+  color: #c0563f;
+}
+
 .onboard {
   background: var(--paper);
   border: 1px solid var(--line);

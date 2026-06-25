@@ -31,6 +31,20 @@ export interface Trader {
   next: number;
 }
 
+/** A production line the player owns. Economics (rate/upkeep/recipe) are derived
+ *  live from the output item via @trove/data, so only identity + timing persist. */
+export interface Factory {
+  id: string;
+  /** Output item id. */
+  itemId: number;
+  /** Cycle it was built. */
+  builtCycle: number;
+  /** Cycle it comes online and starts producing. */
+  onlineCycle: number;
+  /** Last settle outcome, for UI: building → running → idle (short on inputs). */
+  status: "building" | "running" | "idle";
+}
+
 /** A news story currently influencing sector demand. */
 export interface ActiveStory {
   news: News;
@@ -67,6 +81,8 @@ export interface WorldState {
   archive: ArchiveEntry[];
   front: (News & { cycle: number }) | null;
   traders: Trader[];
+  /** Player-owned production lines. */
+  factories: Factory[];
   log: LogEntry[];
   /** Indices of recently-shown news scenarios (most recent last) — avoids
    *  recycling a story until the pool has moved well past it. */

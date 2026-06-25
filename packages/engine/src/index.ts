@@ -8,14 +8,18 @@
  */
 import {
   brands,
+  canProduce,
+  factorySpec,
   items as catalog,
   news as newsBank,
+  recipeOf,
   sectorKeys,
 } from "@trove/data";
 import type { News, SectorKey } from "@trove/data";
 import { rand, rexp } from "./rng";
 import type {
   ActiveStory,
+  Factory,
   RuntimeItem,
   Trader,
   WorldState,
@@ -97,6 +101,7 @@ export function freshState(): WorldState {
     archive: [],
     front: null,
     traders: freshTraders(),
+    factories: [],
     log: [],
     recentNewsIdx: [],
     nwHist: [START_CASH],
@@ -379,9 +384,100 @@ export function settleCycle(state: WorldState): void {
     it.value = priceItem(state, it);
   }
 
-  // 5. Snapshot net worth.
+  // 5. Run player factories: pay upkeep, consume inputs, produce to the vault.
+  produceFactories(state);
+
+  // 6. Snapshot net worth.
   state.nwHist.push(netWorth(state, "YOU"));
   if (state.nwHist.length > 30) state.nwHist.shift();
+}
+
+// ── Factories (player as supplier) ──────────────────────────────────────────
+
+/** Held by the player ("YOU"), or 0. */
+function ownedYou(it: RuntimeItem): number {
+  return it.owners["YOU"] ?? 0;
+}
+
+function giveYou(it: RuntimeItem, qty: number): void {
+  it.owners["YOU"] = ownedYou(it) + qty;
+}
+
+function takeYou(it: RuntimeItem, qty: number): void {
+  const left = ownedYou(it) - qty;
+  if (left > 0) it.owners["YOU"] = left;
+  else delete it.owners["YOU"];
+}
+
+/**
+ * Build a production line for an item. Charges the one-time build cost; the line
+ * comes online after its build delay. Returns the factory, or null if the item
+ * can't be produced or the player can't afford it.
+ */
+export function buildFactory(state: WorldState, itemId: number): Factory | null {
+  const out = state.items.find((i) => i.id === itemId);
+  if (!out || !canProduce(out)) return null;
+  const spec = factorySpec(out);
+  if (state.cash < spec.buildCost) return null;
+  state.cash -= spec.buildCost;
+  const f: Factory = {
+    id: `f${state.cycle}-${Math.floor(rand() * 1e9).toString(36)}`,
+    itemId,
+    builtCycle: state.cycle,
+    onlineCycle: state.cycle + spec.buildCycles,
+    status: "building",
+  };
+  state.factories.push(f);
+  pushLog(state, "YOU", "broke ground on", `${out.brand} ${out.name} line`);
+  return f;
+}
+
+/** Tear down a line. No refund in v1. */
+export function demolishFactory(state: WorldState, id: string): boolean {
+  const i = state.factories.findIndex((f) => f.id === id);
+  if (i < 0) return false;
+  state.factories.splice(i, 1);
+  return true;
+}
+
+/**
+ * One cycle of production for every line. Upkeep burns whether or not the line
+ * runs. A line runs only if the vault holds enough of every input for a full
+ * batch (rate × per-unit input); it then consumes those inputs and credits the
+ * output to the vault. Short on inputs → the line idles (still paying upkeep).
+ * Output goes to the vault, not the floor — price impact happens when the
+ * player sells, via the existing scarcity term.
+ */
+function produceFactories(state: WorldState): void {
+  // Older persisted world docs (e.g. the live singleton) predate factories.
+  for (const f of state.factories ?? []) {
+    if (state.cycle < f.onlineCycle) {
+      f.status = "building";
+      continue;
+    }
+    const out = state.items.find((i) => i.id === f.itemId);
+    if (!out) continue;
+    const spec = factorySpec(out);
+    state.cash -= spec.upkeep; // upkeep always burns
+
+    const recipe = recipeOf(out);
+    const inputs = recipe?.inputs ?? [];
+    // Resolve input items and check the vault can cover a full batch.
+    const batch = inputs.map((inp) => ({
+      it: state.items.find((i) => i.id === inp.itemId),
+      need: inp.qty * spec.rate,
+    }));
+    const canRun = batch.every((b) => b.it && ownedYou(b.it) >= b.need);
+
+    if (!canRun) {
+      f.status = "idle";
+      continue;
+    }
+    for (const b of batch) takeYou(b.it!, b.need);
+    giveYou(out, spec.rate);
+    f.status = "running";
+    pushLog(state, "YOU", "produced", `${spec.rate}× ${out.name}`);
+  }
 }
 
 /**

@@ -9,7 +9,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { getBrandBySlug } from "@trove/data";
+import { factorySpec, getBrandBySlug, getItem } from "@trove/data";
 import {
   deskAction,
   fetchDesk,
@@ -30,7 +30,9 @@ import { AUTH_ENABLED } from "./config";
 import {
   advance,
   borrow,
+  buildFactory,
   createWorld,
+  demolishFactory,
   playerBuy,
   playerSell,
   repay,
@@ -80,7 +82,13 @@ function overlayPortfolio(live: WorldState, p: ApiPortfolio): void {
   live.nwHist = [...live.nwHist.slice(-29), p.netWorth];
 }
 
-export type TabId = "trending" | "catalog" | "wire" | "vault" | "orders";
+export type TabId =
+  | "trending"
+  | "catalog"
+  | "wire"
+  | "vault"
+  | "orders"
+  | "factory";
 export type Mode = "live" | "sandbox";
 
 export interface RevealInfo {
@@ -118,6 +126,9 @@ interface Trove {
   sell: (id: number, qty?: number) => void;
   doBorrow: () => void;
   doRepay: () => void;
+  /** Factory (sandbox): stand up / tear down a production line. */
+  buildLine: (itemId: number) => void;
+  demolishLine: (id: string) => void;
   closeReveal: () => void;
   /** Shared-world auth (the Acquire gate). */
   signedIn: boolean;
@@ -450,6 +461,41 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     refresh();
   }, [refresh, showToast]);
 
+  // Factories are a sandbox mechanic for now (live needs the Settlement Lambda
+  // production step + a per-player factories table — next phase).
+  const buildLine = useCallback(
+    (itemId: number) => {
+      if (modeRef.current === "live") {
+        showToast("Factories open soon");
+        return;
+      }
+      const it = getItem(itemId);
+      const f = buildFactory(worldsRef.current!.sandbox, itemId);
+      if (!f) {
+        const spec = it ? factorySpec(it) : null;
+        showToast(
+          spec && worldsRef.current!.sandbox.cash < spec.buildCost
+            ? "Not enough cash to build"
+            : "Can't build that line",
+        );
+        return;
+      }
+      showToast(`Building ${it?.name ?? "line"}…`);
+      refresh();
+    },
+    [refresh, showToast],
+  );
+
+  const demolishLine = useCallback(
+    (id: string) => {
+      if (demolishFactory(worldsRef.current!.sandbox, id)) {
+        showToast("Line torn down");
+        refresh();
+      }
+    },
+    [refresh, showToast],
+  );
+
   const signIn = useCallback(() => authSignIn(), []);
   const signOut = useCallback(() => {
     authSignOut();
@@ -545,6 +591,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       sell,
       doBorrow,
       doRepay,
+      buildLine,
+      demolishLine,
       closeReveal,
       signedIn,
       authReady,
@@ -580,6 +628,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       sell,
       doBorrow,
       doRepay,
+      buildLine,
+      demolishLine,
       closeReveal,
       signedIn,
       authReady,

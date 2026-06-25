@@ -6,6 +6,7 @@ import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 import { Catalog } from "./Catalog";
 import { Desk } from "./Desk";
+import { Factory as FactoryView } from "./Factory";
 import { Rail } from "./Rail";
 import { Ticker } from "./Ticker";
 import { Trending } from "./Trending";
@@ -46,6 +47,7 @@ export function Terminal() {
         {tab === "wire" && <Wire />}
         {tab === "vault" && <Vault />}
         {tab === "orders" && <Desk />}
+        {tab === "factory" && <FactoryView />}
       </div>
       {reveal && <Reveal />}
       <Onboarding />
