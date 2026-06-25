@@ -32,8 +32,9 @@ const CALLBACK_URLS = [
 /** Where the Lambda handler sources live (@trove/server). */
 const HANDLERS = path.join(__dirname, "..", "..", "packages", "server", "src", "handlers");
 
-/** Origins allowed to read the world (the live site + local dev). */
+/** Origins allowed to call the API (Vercel primary, Pages, local dev). */
 const ALLOWED_ORIGINS = [
+  "https://trove-web-beta.vercel.app",
   "https://jrjoseph831.github.io",
   "http://localhost:3000",
 ];
