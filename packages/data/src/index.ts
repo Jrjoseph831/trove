@@ -32,6 +32,7 @@ export * from "./types";
 export * from "./names";
 export * from "./factory";
 export * from "./clients";
+export * from "./ads";
 
 /** All 12 sectors, keyed by canonical sector id. */
 export const sectors: Record<SectorKey, Sector> = sectorsJson as Record<

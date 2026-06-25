@@ -29,12 +29,13 @@ import {
   Zap,
 } from "lucide-react";
 import {
-  brands,
-  itemsByBrand,
+  ads,
   news as newsBank,
   newsroom,
   sectorKeys,
   sectorLabel,
+  type AdSpot,
+  type AdTone,
   type SectorKey,
 } from "@trove/data";
 import { netWorth, type WorldState } from "@trove/engine";
@@ -69,13 +70,6 @@ interface Story {
   body?: string;
   sector?: SectorKey;
 }
-type Ad = {
-  brand: string;
-  product: string;
-  tagline: string;
-  price: number;
-  sector?: SectorKey;
-};
 type Slide =
   | { type: "ident"; dur: number }
   | { type: "segment"; dur: number; sector: SectorKey }
@@ -84,21 +78,21 @@ type Slide =
   | { type: "standings"; dur: number }
   | { type: "bumper"; dur: number }
   | { type: "weather"; dur: number; sectors: SectorKey[] }
-  | { type: "ad"; dur: number; ad: Ad }
+  | { type: "ad"; dur: number; ad: AdSpot }
   | { type: "comingup"; dur: number };
 
 const clamp = (lo: number, v: number, hi: number) => Math.min(hi, Math.max(lo, v));
 
 // ── Off-peak filler ──────────────────────────────────────────────────────────
-const AD_TEMPLATES: ((b: string, i: string) => string)[] = [
-  (b) => `${b} — built for the long haul.`,
-  (b) => `When it has to hold, the floor calls ${b}.`,
-  (_, i) => `${i}. Nothing else comes close.`,
-  (b) => `${b}: for the people who move the world.`,
-  (b) => `Ask for ${b} by name.`,
-  (_, i) => `${i} — now on the Trove floor.`,
-  (b) => `Three generations. One standard. ${b}.`,
-];
+/** Backdrop gradient per ad tone (shown under the optional ad-<tone>.png art). */
+const AD_GRAD: Record<AdTone, string> = {
+  tech: "linear-gradient(135deg,#10243f,#070b12)",
+  food: "linear-gradient(135deg,#3a2412,#0d0805)",
+  smoke: "linear-gradient(135deg,#241c16,#0b0907)",
+  lux: "linear-gradient(135deg,#3a2c0e,#100b05)",
+  street: "linear-gradient(135deg,#1c1c22,#08080a)",
+  studio: "linear-gradient(135deg,#222329,#0a0b0e)",
+};
 
 /** A sector's "weather" from its index — playful, but it tracks the real floor. */
 function forecast(idx: number): { Icon: LucideIcon; sky: string; note: string } {
@@ -147,25 +141,11 @@ function buildFiller(s: WorldState, loop: { current: number }): Slide[] {
     .slice(0, 6) as SectorKey[];
   slides.push({ type: "weather", dur: 13000, sectors: wsect });
 
-  const start = (loop.current * 3) % Math.max(1, brands.length);
+  // Rotate through the commercial bank, 3 spots per filler block.
+  const start = (loop.current * 3) % Math.max(1, ads.length);
   for (let i = 0; i < 3; i++) {
-    const b = brands[(start + i) % brands.length]!;
-    const items = itemsByBrand(b.name)
-      .filter((it) => it.edition === null)
-      .sort((a, c) => c.base - a.base);
-    const item = items[0];
-    const tmpl = AD_TEMPLATES[(loop.current + i) % AD_TEMPLATES.length]!;
-    slides.push({
-      type: "ad",
-      dur: 9000,
-      ad: {
-        brand: b.name,
-        product: item?.name ?? "",
-        tagline: tmpl(b.name, item?.name ?? ""),
-        price: item?.base ?? 0,
-        sector: b.homeSector as SectorKey,
-      },
-    });
+    const ad = ads[(start + i) % ads.length]!;
+    slides.push({ type: "ad", dur: 8500, ad });
     if (i === 0) slides.push({ type: "bumper", dur: 8000 });
   }
   slides.push({ type: "comingup", dur: 12000 });
@@ -307,13 +287,18 @@ export function Wheel({
       ? slide.story.sector
       : slide?.type === "segment"
         ? slide.sector
-        : slide?.type === "ad"
-          ? slide.ad.sector
-          : undefined;
-  // Ads reuse their sector's backdrop; weather has its own optional art; the rest
-  // fall back to the bumper plate (missing images degrade to the gradient).
+        : undefined;
+  // Ads + weather have their own optional art (ad-<tone>.png / weather.png); the
+  // rest use the sector photo or bumper plate. Missing images degrade to the
+  // gradient (which for ads is tone-tinted).
   const bgName =
-    slide?.type === "weather" ? "weather" : (slideSector ?? "bumper");
+    slide?.type === "weather"
+      ? "weather"
+      : slide?.type === "ad"
+        ? `ad-${slide.ad.tone}`
+        : (slideSector ?? "bumper");
+  const bgGrad =
+    slide?.type === "ad" ? AD_GRAD[slide.ad.tone] : meta(slideSector).grad;
 
   return (
     <div
@@ -322,7 +307,7 @@ export function Wheel({
       aria-label="Trove News Network"
     >
       {/* background */}
-      <div className="reel-bg" key={`bg-${bgName}-${idx}`} style={{ background: meta(slideSector).grad }}>
+      <div className="reel-bg" key={`bg-${bgName}-${idx}`} style={{ background: bgGrad }}>
         <img
           className="reel-photo"
           src={bgUrl(bgName)}
@@ -462,19 +447,13 @@ export function Wheel({
           )}
 
           {slide.type === "ad" && (
-            <div className="reel-ad fadein">
+            <div className={`reel-ad fadein tone-${slide.ad.tone}`}>
               <div className="reel-ad-eyebrow">
-                <Megaphone size={14} /> A word from
+                <Megaphone size={14} /> A word from our sponsors
               </div>
               <div className="reel-ad-brand">{slide.ad.brand}</div>
-              <div className="reel-ad-tag">{slide.ad.tagline}</div>
-              {slide.ad.product && (
-                <div className="reel-ad-foot">
-                  {slide.ad.product}
-                  {slide.ad.price > 0 ? ` · from ${money(slide.ad.price)}` : ""} · now on
-                  the Trove floor
-                </div>
-              )}
+              <div className="reel-ad-tag">{slide.ad.line}</div>
+              {slide.ad.sub && <div className="reel-ad-foot">{slide.ad.sub}</div>}
             </div>
           )}
 
