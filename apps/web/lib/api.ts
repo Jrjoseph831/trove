@@ -3,7 +3,16 @@
  * writes (/trade) and the player's own view (/portfolio) carry the Cognito id
  * token.
  */
-import type { DeskAuto, Factory, Infra, Report, SiteConfig } from "@trove/engine";
+import type {
+  DeskAuto,
+  Factory,
+  Infra,
+  PvpOrder,
+  Report,
+  SiteConfig,
+} from "@trove/engine";
+
+export type { PvpOrder };
 import { API_BASE } from "./config";
 import { getIdToken } from "./auth";
 
@@ -74,6 +83,52 @@ export interface CompanySite extends CompanyCard {
   storefront: CompanyProduct[];
   standing: { rank: number | null; lines: number; sectors: string[] };
 }
+
+// ── Player-to-player orders (multiplayer routing) ────────────────────────────
+export const fetchOrders = () =>
+  get<{ incoming: PvpOrder[]; outgoing: PvpOrder[] }>("/orders", true);
+
+type OrdersResult<T> = T | { error: string; status: number };
+
+async function ordersPost<T>(path: string, payload: unknown): Promise<OrdersResult<T>> {
+  const token = getIdToken();
+  if (!token) return { error: "unauthorized", status: 401 };
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}${path}`, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: token },
+      body: JSON.stringify(payload),
+    });
+  } catch {
+    return { error: "network error", status: 0 };
+  }
+  if (!res.ok) {
+    let msg = `failed (${res.status})`;
+    try {
+      msg = (await res.json()).error ?? msg;
+    } catch {
+      /* keep */
+    }
+    return { error: msg, status: res.status };
+  }
+  return res.json() as Promise<T>;
+}
+
+/** Buyer creates a bulk request against a company's storefront. */
+export const createOrder = (body: {
+  sellerHandle: string;
+  itemId: number;
+  qty: number;
+  price: number;
+}) => ordersPost<{ ok: true; order: PvpOrder }>("/orders", body);
+
+/** Act on an order: accept | decline | counter | withdraw (counter needs price). */
+export const orderAction = (
+  id: string,
+  action: "accept" | "decline" | "counter" | "withdraw",
+  price?: number,
+) => ordersPost<{ ok: true }>(`/orders/${encodeURIComponent(id)}/action`, { action, price });
 
 export const fetchCompanies = () =>
   get<{ companies: CompanyCard[] }>("/companies").then((r) => r.companies);

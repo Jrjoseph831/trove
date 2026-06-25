@@ -71,6 +71,24 @@ export class TroveStack extends Stack {
       pointInTimeRecoverySpecification: { pointInTimeRecoveryEnabled: true },
     });
 
+    // Player-to-player orders (multiplayer routing). Queried by both sides via
+    // GSIs on sellerId (a desk's incoming) and buyerId (a player's outgoing).
+    const orders = new dynamodb.Table(this, "Orders", {
+      tableName: "trove-orders",
+      partitionKey: { name: "id", type: dynamodb.AttributeType.STRING },
+      billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
+      removalPolicy: RemovalPolicy.RETAIN,
+      pointInTimeRecoverySpecification: { pointInTimeRecoveryEnabled: true },
+    });
+    orders.addGlobalSecondaryIndex({
+      indexName: "sellerId-index",
+      partitionKey: { name: "sellerId", type: dynamodb.AttributeType.STRING },
+    });
+    orders.addGlobalSecondaryIndex({
+      indexName: "buyerId-index",
+      partitionKey: { name: "buyerId", type: dynamodb.AttributeType.STRING },
+    });
+
     // ── Lambda factory ──────────────────────────────────────────────────────
     const fn = (name: string, entry: string, timeout = Duration.seconds(30)) =>
       new lambdaNode.NodejsFunction(this, name, {
@@ -83,6 +101,7 @@ export class TroveStack extends Stack {
           MARKET_TABLE: market.tableName,
           PLAYERS_TABLE: players.tableName,
           OWNERSHIP_TABLE: ownership.tableName,
+          ORDERS_TABLE: orders.tableName,
         },
         bundling: {
           // CommonJS output: the AWS SDK (CJS) does `require("node:https")` at
@@ -269,6 +288,26 @@ export class TroveStack extends Stack {
       path: "/site",
       methods: [HttpMethod.POST],
       integration: new HttpLambdaIntegration("SiteIntegration", company),
+      authorizer,
+    });
+
+    // ── Player-to-player orders (authorized): multiplayer routing ───────────
+    // Settling a deal moves goods (world doc) + cash (both players) atomically,
+    // so it reads+writes the market, players, and the orders table.
+    const ordersFn = fn("OrdersFn", "orders.ts", Duration.seconds(15));
+    market.grantReadWriteData(ordersFn);
+    players.grantReadWriteData(ordersFn);
+    orders.grantReadWriteData(ordersFn);
+    api.addRoutes({
+      path: "/orders",
+      methods: [HttpMethod.GET, HttpMethod.POST],
+      integration: new HttpLambdaIntegration("OrdersIntegration", ordersFn),
+      authorizer,
+    });
+    api.addRoutes({
+      path: "/orders/{id}/action",
+      methods: [HttpMethod.POST],
+      integration: new HttpLambdaIntegration("OrderActionIntegration", ordersFn),
       authorizer,
     });
 

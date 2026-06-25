@@ -3,9 +3,144 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AUTOFULFILL_REP, SPECIALIST_REP } from "@trove/engine";
-import type { DeskOrder } from "@/lib/api";
-import { money } from "@/lib/format";
+import type { DeskOrder, PvpOrder } from "@/lib/api";
+import { manufacturingName, money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+
+type OrderAct = (
+  id: string,
+  action: "accept" | "decline" | "counter" | "withdraw",
+  price?: number,
+) => void;
+
+/** A request from another holding, seen on YOUR desk (you're the seller). */
+function IncomingCard({ o, held, act }: { o: PvpOrder; held: number; act: OrderAct }) {
+  const enough = held >= o.qty;
+  const [bid, setBid] = useState(String(Math.round(o.price * 1.12)));
+  const bidNum = Math.round(Number(bid));
+  const valid = Number.isFinite(bidNum) && bidNum > 0;
+  const waiting = o.turn === "buyer";
+
+  return (
+    <div className="ordercard offer pvp">
+      <div className="oc-co">
+        <span className="pvp-tag">◈ holding</span> {manufacturingName(o.buyerName)}
+      </div>
+      <div className="oc-line">
+        <b>{o.qty.toLocaleString()} ×</b>{" "}
+        <Link href={`/item/${o.itemId}`} className="it-link">
+          {o.itemName}
+        </Link>
+      </div>
+      <div className="oc-meta">
+        <span>
+          Offer <b>{money(o.price)}</b> ({money(Math.round(o.price / o.qty))}/u)
+        </span>
+        <span className={enough ? "pvp-ok" : "pvp-short"}>
+          you hold {held.toLocaleString()} {enough ? "✓" : `/ ${o.qty.toLocaleString()}`}
+        </span>
+      </div>
+
+      {waiting ? (
+        <div className="pvp-wait">Countered {money(o.price)} · awaiting their reply</div>
+      ) : (
+        <>
+          {!o.countered && (
+            <div className="oc-bidrow">
+              <span className="oc-bidlbl">Counter</span>
+              <input
+                className="oc-bid"
+                type="number"
+                min={1}
+                value={bid}
+                onChange={(e) => setBid(e.target.value)}
+              />
+              <button
+                className="oc-counter"
+                disabled={!valid}
+                onClick={() => act(o.id, "counter", bidNum)}
+              >
+                Send
+              </button>
+            </div>
+          )}
+          <div className="oc-actions">
+            <button className="oc-decline" onClick={() => act(o.id, "decline")}>
+              Decline
+            </button>
+            <button
+              className="oc-accept"
+              disabled={!enough}
+              title={enough ? "" : "You don't hold enough to deliver"}
+              onClick={() => act(o.id, "accept")}
+            >
+              {enough ? `Accept ${money(o.price)}` : "Need more stock"}
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+/** One of YOUR outgoing requests (you're the buyer). */
+function OutgoingCard({ o, cash, act }: { o: PvpOrder; cash: number; act: OrderAct }) {
+  const yourMove = o.turn === "buyer"; // the seller countered back to you
+  const afford = cash >= o.price;
+  return (
+    <div className="ordercard offer pvp out">
+      <div className="oc-co">→ {manufacturingName(o.sellerName)}</div>
+      <div className="oc-line">
+        <b>{o.qty.toLocaleString()} ×</b>{" "}
+        <Link href={`/item/${o.itemId}`} className="it-link">
+          {o.itemName}
+        </Link>
+      </div>
+      <div className="oc-meta">
+        <span>
+          {yourMove ? "Their counter" : "Your offer"} <b>{money(o.price)}</b>
+        </span>
+        <span>{yourMove ? "your move" : "awaiting seller"}</span>
+      </div>
+      <div className="oc-actions">
+        <button className="oc-decline" onClick={() => act(o.id, "withdraw")}>
+          Withdraw
+        </button>
+        {yourMove && (
+          <button
+            className="oc-accept"
+            disabled={!afford}
+            title={afford ? "" : "Not enough cash"}
+            onClick={() => act(o.id, "accept")}
+          >
+            {afford ? `Accept ${money(o.price)}` : "Can't cover it"}
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/** The player-to-player order book on the desk (multiplayer routing). */
+function PlayerOrders() {
+  const { orders, orderAct, state } = useTrove();
+  if (!orders) return null;
+  const { incoming, outgoing } = orders;
+  if (!incoming.length && !outgoing.length) return null;
+  const heldOf = (id: number) => state.items.find((i) => i.id === id)?.owners["YOU"] ?? 0;
+  return (
+    <>
+      {incoming.length > 0 && <div className="desk-sec">Requests from holdings</div>}
+      {incoming.map((o) => (
+        <IncomingCard key={o.id} o={o} held={heldOf(o.itemId)} act={orderAct} />
+      ))}
+      {outgoing.length > 0 && <div className="desk-sec">Your outgoing requests</div>}
+      {outgoing.map((o) => (
+        <OutgoingCard key={o.id} o={o} cash={state.cash} act={orderAct} />
+      ))}
+    </>
+  );
+}
 
 /** Reputation-gated automation unlocks (sandbox). */
 function Automation() {
@@ -197,12 +332,16 @@ export function Desk() {
 
       <Automation />
 
+      <PlayerOrders />
+
       {desk.orders.length === 0 && (
         <div className="empty">
-          No requests yet. Companies send work every few minutes — keep the floor
-          in view, then haggle for the best price.
+          No client contracts right now. Companies send work every few minutes —
+          and other holdings can order from your storefront (see Companies).
         </div>
       )}
+
+      {desk.orders.length > 0 && <div className="desk-sec">Client contracts</div>}
 
       {accepted.length > 0 && <div className="desk-sec">In progress</div>}
       {accepted.map((o) => {

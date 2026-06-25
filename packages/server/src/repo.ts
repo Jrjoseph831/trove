@@ -11,9 +11,11 @@
  */
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import {
+  DeleteCommand,
   DynamoDBDocumentClient,
   GetCommand,
   PutCommand,
+  QueryCommand,
   ScanCommand,
   TransactWriteCommand,
 } from "@aws-sdk/lib-dynamodb";
@@ -29,6 +31,7 @@ import {
   type Factory,
   type Infra,
   type Ledger,
+  type PvpOrder,
   type Report,
   type RuntimeItem,
   type SiteConfig,
@@ -37,6 +40,7 @@ import {
 
 const TABLE = process.env.MARKET_TABLE ?? "trove-market";
 const PLAYERS = process.env.PLAYERS_TABLE ?? "trove-players";
+const ORDERS = process.env.ORDERS_TABLE ?? "trove-orders";
 /** Singleton key — there is exactly one Live world. */
 const PK = "LIVE";
 
@@ -545,6 +549,134 @@ export async function allPlayers(): Promise<Player[]> {
     ExclusiveStartKey = res.LastEvaluatedKey as Record<string, unknown> | undefined;
   } while (ExclusiveStartKey);
   return out;
+}
+
+// ── Player-to-player orders (multiplayer routing) ────────────────────────────
+
+export async function putOrder(o: PvpOrder): Promise<void> {
+  await ddb.send(new PutCommand({ TableName: ORDERS, Item: o }));
+}
+
+export async function getOrder(id: string): Promise<PvpOrder | null> {
+  const res = await ddb.send(new GetCommand({ TableName: ORDERS, Key: { id } }));
+  return (res.Item as PvpOrder) ?? null;
+}
+
+export async function deleteOrder(id: string): Promise<void> {
+  await ddb.send(new DeleteCommand({ TableName: ORDERS, Key: { id } }));
+}
+
+async function ordersByIndex(index: string, key: string, value: string): Promise<PvpOrder[]> {
+  const res = await ddb.send(
+    new QueryCommand({
+      TableName: ORDERS,
+      IndexName: index,
+      KeyConditionExpression: "#k = :v",
+      ExpressionAttributeNames: { "#k": key },
+      ExpressionAttributeValues: { ":v": value },
+    }),
+  );
+  return (res.Items as PvpOrder[]) ?? [];
+}
+
+/** Incoming requests on a player's desk (they're the seller). */
+export const ordersForSeller = (sellerId: string) =>
+  ordersByIndex("sellerId-index", "sellerId", sellerId);
+/** A player's outgoing requests (they're the buyer). */
+export const ordersForBuyer = (buyerId: string) =>
+  ordersByIndex("buyerId-index", "buyerId", buyerId);
+
+export type DealResult =
+  | { ok: true; price: number; qty: number }
+  | { ok: false; reason: string };
+
+/**
+ * Settle a player-to-player deal atomically: the seller's goods move to the
+ * buyer's vault, the buyer's cash moves to the seller (who also gains a little
+ * reputation), and the order is removed — all in ONE transaction. Guarded by:
+ * the world version (so a racing trade/production write makes us re-validate the
+ * seller's stock) and the buyer's `cash >= price` condition (so they can never
+ * overspend). Bought goods land as ordinary holdings (resellable). Retries on
+ * contention. (The seller's producedQty self-heals via sellListings/storefront
+ * clamps — left out of the transaction to keep it robust.)
+ */
+export async function settleDeal(orderId: string, retries = 4): Promise<DealResult> {
+  for (let attempt = 0; ; attempt++) {
+    const order = await getOrder(orderId);
+    if (!order) return { ok: false, reason: "order is gone" };
+    const cur = await loadWorld();
+    if (!cur) return { ok: false, reason: "world not seeded" };
+
+    const stored = cur.items.find((i) => i.id === order.itemId);
+    const sellerHeld = stored?.owners?.[order.sellerId] ?? 0;
+    if (sellerHeld < order.qty)
+      return { ok: false, reason: "seller no longer holds enough" };
+
+    // Move the goods in a full world projection, then write with a version CAS.
+    const full = docToWorld(cur);
+    const it = full.items.find((i) => i.id === order.itemId);
+    if (!it) return { ok: false, reason: "unknown item" };
+    const sH = it.owners[order.sellerId] ?? 0;
+    if (sH - order.qty > 0) it.owners[order.sellerId] = sH - order.qty;
+    else delete it.owners[order.sellerId];
+    it.owners[order.buyerId] = (it.owners[order.buyerId] ?? 0) + order.qty;
+    const nextDoc = worldToDoc(full, cur.version + 1);
+
+    try {
+      await ddb.send(
+        new TransactWriteCommand({
+          TransactItems: [
+            {
+              Put: {
+                TableName: TABLE,
+                Item: { pk: PK, version: nextDoc.version, world: nextDoc },
+                ConditionExpression: "version = :v",
+                ExpressionAttributeValues: { ":v": cur.version },
+              },
+            },
+            {
+              Update: {
+                TableName: PLAYERS,
+                Key: { playerId: order.buyerId },
+                UpdateExpression: "ADD cash :neg",
+                ConditionExpression: "attribute_exists(playerId) AND cash >= :price",
+                ExpressionAttributeValues: { ":neg": -order.price, ":price": order.price },
+              },
+            },
+            {
+              Update: {
+                TableName: PLAYERS,
+                Key: { playerId: order.sellerId },
+                UpdateExpression: "ADD cash :price, reputation :rep",
+                ConditionExpression: "attribute_exists(playerId)",
+                ExpressionAttributeValues: { ":price": order.price, ":rep": 2 },
+              },
+            },
+            {
+              Delete: {
+                TableName: ORDERS,
+                Key: { id: orderId },
+                ConditionExpression: "attribute_exists(id)",
+              },
+            },
+          ],
+        }),
+      );
+      return { ok: true, price: order.price, qty: order.qty };
+    } catch (err) {
+      const name = (err as { name?: string }).name;
+      if (
+        (name === "TransactionCanceledException" ||
+          name === "ConditionalCheckFailedException") &&
+        attempt < retries
+      ) {
+        continue; // version race or transient — reload + re-validate
+      }
+      if (name === "TransactionCanceledException" || name === "ConditionalCheckFailedException")
+        return { ok: false, reason: "buyer can't cover it (or it just changed)" };
+      throw err;
+    }
+  }
 }
 
 /** Load the world, apply a mutation, and save with an optimistic version guard.

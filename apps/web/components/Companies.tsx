@@ -317,11 +317,13 @@ function SiteView({
   onBack: () => void;
   onEdit?: () => void;
 }) {
+  const [req, setReq] = useState<CompanyProduct | null>(null);
   const sections = (site.sections.length ? site.sections : DEFAULT_SECTIONS).filter(
     (s) => s.on || s.id === "masthead" || s.id === "storefront",
   );
   const mfg = manufacturingName(site.name);
   const show = (id: string) => sections.some((s) => s.id === id && (s.on || id === "masthead" || id === "storefront"));
+  const canRequest = !owner && !!site.handle;
 
   return (
     <div className="view">
@@ -383,14 +385,21 @@ function SiteView({
               </section>
             );
           if (sec.id === "storefront")
-            return <Storefront key="storefront" products={site.storefront} owner={owner} />;
+            return (
+              <Storefront
+                key="storefront"
+                products={site.storefront}
+                owner={owner}
+                onRequest={canRequest ? (p) => setReq(p) : undefined}
+              />
+            );
           if (sec.id === "contact" && sec.on)
             return (
               <section className="site-sec" key="contact">
                 <h2 className="site-h">Bulk orders</h2>
                 <p className="site-about">
-                  {mfg} takes bulk contracts through the Order Desk. Cross-company
-                  ordering is coming — for now, this is the front door.
+                  {mfg} takes bulk contracts through the Order Desk. Hit{" "}
+                  <b>Request</b> on any product to send an offer.
                 </p>
               </section>
             );
@@ -400,6 +409,14 @@ function SiteView({
           <div className="empty">Nothing listed yet.</div>
         )}
       </div>
+      {req && (
+        <RequestModal
+          handle={site.handle}
+          seller={site.name}
+          product={req}
+          onClose={() => setReq(null)}
+        />
+      )}
     </div>
   );
 }
@@ -407,9 +424,11 @@ function SiteView({
 function Storefront({
   products,
   owner,
+  onRequest,
 }: {
   products: CompanyProduct[];
   owner?: boolean;
+  onRequest?: (p: CompanyProduct) => void;
 }) {
   return (
     <section className="site-sec" key="storefront">
@@ -432,7 +451,12 @@ function Storefront({
                 <span className="store-nm">{p.name}</span>
                 <span className="store-pr">{money(p.price)}</span>
                 <span className="store-av">{p.available.toLocaleString()} available</span>
-                <button className="store-req" disabled title="Cross-company ordering is coming">
+                <button
+                  className="store-req"
+                  disabled={!onRequest}
+                  onClick={onRequest ? () => onRequest(p) : undefined}
+                  title={onRequest ? "Request a bulk order" : "Your own storefront"}
+                >
                   Request
                 </button>
               </div>
@@ -441,6 +465,89 @@ function Storefront({
         </div>
       )}
     </section>
+  );
+}
+
+/** Buyer's bulk-order composer for a storefront product. */
+function RequestModal({
+  handle,
+  seller,
+  product,
+  onClose,
+}: {
+  handle: string;
+  seller: string;
+  product: CompanyProduct;
+  onClose: () => void;
+}) {
+  const { state, requestOrder } = useTrove();
+  // product.price is the per-UNIT listed price from the server.
+  const unitPrice = product.price;
+  const startQty = Math.min(10, product.available) || 1;
+  const [qty, setQty] = useState(startQty);
+  const [offer, setOffer] = useState(unitPrice * startQty);
+  const [busy, setBusy] = useState(false);
+
+  const setQtyClamped = (n: number) => {
+    const q = Math.max(1, Math.min(product.available, Math.floor(n || 1)));
+    setQty(q);
+    setOffer(unitPrice * q); // re-anchor the offer to list price on qty change
+  };
+
+  const send = async () => {
+    setBusy(true);
+    const ok = await requestOrder(handle, product.id, qty, Math.round(offer));
+    setBusy(false);
+    if (ok) onClose();
+  };
+
+  const cash = state.cash;
+  const short = Math.round(offer) > cash;
+
+  return (
+    <div className="reveal-bg show" onClick={(e) => e.target === e.currentTarget && onClose()}>
+      <div className="reqmodal">
+        <div className="req-co">{manufacturingName(seller)}</div>
+        <div className="req-item">{product.name}</div>
+        <div className="req-sub">
+          List {money(unitPrice)}/unit · {product.available.toLocaleString()} available
+        </div>
+
+        <label className="req-field">
+          <span>Quantity</span>
+          <input
+            type="number"
+            min={1}
+            max={product.available}
+            value={qty}
+            onChange={(e) => setQtyClamped(Number(e.target.value))}
+          />
+        </label>
+
+        <label className="req-field">
+          <span>Your offer (total)</span>
+          <input
+            type="number"
+            min={1}
+            value={Math.round(offer)}
+            onChange={(e) => setOffer(Number(e.target.value))}
+          />
+        </label>
+        <div className="req-meta">
+          {money(Math.round(offer / Math.max(1, qty)))}/unit · your cash {money(cash)}
+        </div>
+        {short && <div className="req-warn">That's more than your cash on hand.</div>}
+
+        <div className="req-actions">
+          <button className="site-btn ghost" onClick={onClose} disabled={busy}>
+            Cancel
+          </button>
+          <button className="site-btn" onClick={send} disabled={busy || short}>
+            {busy ? "Sending…" : "Send request"}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 

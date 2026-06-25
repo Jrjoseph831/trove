@@ -17,6 +17,9 @@ import {
   fetchPortfolio,
   fetchWorld,
   postTrade,
+  createOrder as apiCreateOrder,
+  fetchOrders,
+  orderAction as apiOrderAction,
   saveSite as apiSaveSite,
   type ApiPortfolio,
   type ApiWorld,
@@ -24,7 +27,12 @@ import {
   type Desk,
   type FactoryAction,
 } from "./api";
-import type { SiteConfig } from "@trove/engine";
+import type { PvpOrder, SiteConfig } from "@trove/engine";
+
+export interface OrderBook {
+  incoming: PvpOrder[];
+  outgoing: PvpOrder[];
+}
 import {
   captureTokenFromHash,
   isSignedIn,
@@ -212,6 +220,21 @@ interface Trove {
   mySite: SiteConfig | null;
   /** Save the player's site config; resolves to the updated public view or null. */
   saveSite: (patch: Partial<SiteConfig>) => Promise<CompanySite | null>;
+  /** Player-to-player order book (incoming as seller, outgoing as buyer). */
+  orders: OrderBook | null;
+  /** Buyer: request a bulk order from a company storefront. */
+  requestOrder: (
+    sellerHandle: string,
+    itemId: number,
+    qty: number,
+    price: number,
+  ) => Promise<boolean>;
+  /** Act on a P2P order: accept | decline | counter | withdraw. */
+  orderAct: (
+    id: string,
+    action: "accept" | "decline" | "counter" | "withdraw",
+    price?: number,
+  ) => Promise<void>;
 }
 
 const TroveContext = createContext<Trove | null>(null);
@@ -301,6 +324,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [renaming, setRenaming] = useState(false);
   const [dailyReport, setDailyReport] = useState<Report | null>(null);
   const [mySite, setMySite] = useState<SiteConfig | null>(null);
+  const [orders, setOrders] = useState<OrderBook | null>(null);
   const lastReportRef = useRef(-1);
 
   const modeRef = useRef(mode);
@@ -369,6 +393,29 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     };
     pull();
     const t = setInterval(pull, 30000);
+    return () => {
+      alive = false;
+      clearInterval(t);
+    };
+  }, [signedIn]);
+
+  // Player-to-player order book: poll both sides while signed in.
+  useEffect(() => {
+    if (!signedIn) {
+      setOrders(null);
+      return;
+    }
+    let alive = true;
+    const pull = async () => {
+      try {
+        const o = await fetchOrders();
+        if (alive) setOrders(o);
+      } catch {
+        /* best-effort */
+      }
+    };
+    pull();
+    const t = setInterval(pull, 20000);
     return () => {
       alive = false;
       clearInterval(t);
@@ -537,6 +584,79 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       return r.view;
     },
     [showToast],
+  );
+
+  const refreshOrders = useCallback(async () => {
+    try {
+      setOrders(await fetchOrders());
+    } catch {
+      /* best-effort */
+    }
+  }, []);
+
+  // Buyer: send a bulk request to a company storefront.
+  const requestOrder = useCallback(
+    async (sellerHandle: string, itemId: number, qty: number, price: number) => {
+      if (!isSignedIn()) {
+        authSignIn();
+        return false;
+      }
+      const r = await apiCreateOrder({ sellerHandle, itemId, qty, price });
+      if ("error" in r) {
+        showToast(
+          r.error === "name your Holding first"
+            ? "Name your Holding first"
+            : r.error.startsWith("they only have")
+              ? r.error.charAt(0).toUpperCase() + r.error.slice(1)
+              : r.error === "that's your own company"
+                ? "That's your own company"
+                : r.error === "they don't list that"
+                  ? "They don't list that anymore"
+                  : "Couldn't send the request",
+        );
+        return false;
+      }
+      showToast("Request sent");
+      void refreshOrders();
+      return true;
+    },
+    [showToast, refreshOrders],
+  );
+
+  // Either side: act on a P2P order. Accept settles, so resync cash + holdings.
+  const orderAct = useCallback(
+    async (
+      id: string,
+      action: "accept" | "decline" | "counter" | "withdraw",
+      price?: number,
+    ) => {
+      const r = await apiOrderAction(id, action, price);
+      if ("error" in r) {
+        showToast(
+          r.error === "not your move"
+            ? "Not your move yet"
+            : r.error.startsWith("buyer can't")
+              ? "Buyer can't cover it right now"
+              : r.error === "seller no longer holds enough"
+                ? "Not enough stock to deliver"
+                : "Couldn't do that",
+        );
+        await refreshOrders();
+        return;
+      }
+      const verb =
+        action === "accept"
+          ? "Deal closed"
+          : action === "counter"
+            ? "Counter sent"
+            : action === "decline"
+              ? "Declined"
+              : "Withdrawn";
+      showToast(verb);
+      await refreshOrders();
+      if (action === "accept") await syncLive(); // cash + vault changed
+    },
+    [showToast, refreshOrders, syncLive],
   );
 
   // Live factory/sales action: post to the shared world, then overlay the fresh
@@ -1074,6 +1194,9 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       dismissDailyReport,
       mySite,
       saveSite,
+      orders,
+      requestOrder,
+      orderAct,
     }),
     [
       mounted,
@@ -1125,6 +1248,9 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       dismissDailyReport,
       mySite,
       saveSite,
+      orders,
+      requestOrder,
+      orderAct,
     ],
   );
 

@@ -139,6 +139,30 @@ export interface SiteConfig {
   published?: boolean;
 }
 
+/** A player-to-player bulk order (multiplayer routing). A buyer requests goods
+ *  from a seller's storefront; one counter round of haggling, then it settles
+ *  atomically (goods seller→buyer, cash buyer→seller). `turn` is whose move it
+ *  is; `price` is the current total on the table (the buyer's offer, or the
+ *  seller's counter once they've used their one counter). */
+export interface PvpOrder {
+  id: string;
+  sellerId: string;
+  sellerName: string;
+  buyerId: string;
+  buyerName: string;
+  itemId: number;
+  itemName: string;
+  qty: number;
+  /** Current total price on the table. */
+  price: number;
+  /** Whose move it is: the seller (a fresh offer) or the buyer (after a counter). */
+  turn: "seller" | "buyer";
+  /** The seller has used their one counter. */
+  countered: boolean;
+  createdAt: number;
+  updatedAt: number;
+}
+
 /** Floor-wide infrastructure upgrades (one-time buys that boost every line). */
 export interface Infra {
   /** Power Plant — −20% upkeep on every line. */
