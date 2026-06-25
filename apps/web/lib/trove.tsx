@@ -44,6 +44,8 @@ import {
   acceptSandboxOffer,
   declineSandboxOrder,
   fulfillSandboxOrder,
+  heldOfProduct,
+  producesProduct,
   playerBuy,
   playerSell,
   repay,
@@ -178,7 +180,7 @@ function sandboxDeskView(state: WorldState, name: string | null): Desk {
     cash: state.cash,
     orders: (state.orders ?? []).map((o) => {
       const it = state.items.find((i) => i.id === o.itemId);
-      const youProduce = state.factories.some((f) => f.itemId === o.itemId);
+      const youProduce = it ? producesProduct(state, it) : false;
       return {
         id: o.id,
         company: o.company,
@@ -195,7 +197,7 @@ function sandboxDeskView(state: WorldState, name: string | null): Desk {
         status: o.status,
         expiresAt: o.expiresAt,
         marketValue: Math.round((it?.value ?? 0) * o.qty),
-        held: it?.owners["YOU"] ?? 0,
+        held: it ? heldOfProduct(state, it) : 0,
         youProduce,
       };
     }),

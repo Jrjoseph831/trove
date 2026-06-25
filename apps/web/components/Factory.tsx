@@ -663,9 +663,19 @@ function Conveyor({
   );
 }
 
-const PRODUCIBLE: Item[] = catalog
-  .filter(canProduce)
-  .sort((a, b) => a.base - b.base);
+// One entry per PRODUCT (name), cheapest-base representative — you build "a
+// Flatware Set", not a specific brand's SKU. Production is matched by product.
+const PRODUCIBLE: Item[] = (() => {
+  const seen = new Set<string>();
+  const out: Item[] = [];
+  for (const it of catalog.filter(canProduce).sort((a, b) => a.base - b.base)) {
+    const key = it.name.trim().toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(it);
+  }
+  return out;
+})();
 
 function BuildPicker({
   cash,
@@ -725,7 +735,6 @@ function BuildPicker({
               >
                 <div className="fp-r-main">
                   <span className="fp-r-name">{it.name}</span>
-                  <span className="fp-r-bd">{it.brand}</span>
                 </div>
                 <div className="fp-r-recipe">{recipeText(it)}</div>
                 <div className="fp-r-econ">

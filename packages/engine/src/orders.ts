@@ -69,6 +69,30 @@ const MISS_PENALTY = 3;
 
 export const repOf = (s: WorldState): number => s.reputation ?? 0;
 
+// ── Products (decouple from brand/SKU) ───────────────────────────────────────
+// Orders and production are about a PRODUCT (e.g. "Pallet Flatware Set"), not a
+// specific brand's SKU. Same-named items are the same product, so producing any
+// brand's version satisfies an order for that product.
+export function productKey(item: { name: string }): string {
+  return item.name.trim().toLowerCase();
+}
+/** Total units of a product you hold, across every brand/SKU of it. */
+export function heldOfProduct(state: WorldState, item: RuntimeItem): number {
+  const key = productKey(item);
+  let n = 0;
+  for (const it of state.items)
+    if (productKey(it) === key) n += it.owners["YOU"] ?? 0;
+  return n;
+}
+/** Do you run a line making this product (any brand of it)? */
+export function producesProduct(state: WorldState, item: RuntimeItem): boolean {
+  const key = productKey(item);
+  return state.factories.some((f) => {
+    const o = state.items.find((i) => i.id === f.itemId);
+    return !!o && productKey(o) === key;
+  });
+}
+
 /** Reputation gate on order size: higher standing unlocks pricier goods. */
 function maxItemValue(rep: number): number {
   return 1500 + rep * 1500;
@@ -298,14 +322,25 @@ export function fulfillSandboxOrder(
   if (!o) return { ok: false, reason: "no such order" };
   if (o.status !== "accepted") return { ok: false, reason: "not accepted" };
   if (now > o.expiresAt) return { ok: false, reason: "deadline passed" };
-  const it = state.items.find((x) => x.id === o.itemId);
-  if (!it) return { ok: false, reason: "no such item" };
-  const have = it.owners["YOU"] ?? 0;
-  if (have < o.qty) return { ok: false, reason: "not enough in your vault" };
+  const orderItem = state.items.find((x) => x.id === o.itemId);
+  if (!orderItem) return { ok: false, reason: "no such item" };
+  // Fulfil from ANY brand of the product you hold (you make the product).
+  const key = productKey(orderItem);
+  const matches = state.items.filter((it) => productKey(it) === key);
+  const total = matches.reduce((s, it) => s + (it.owners["YOU"] ?? 0), 0);
+  if (total < o.qty) return { ok: false, reason: "not enough in your vault" };
 
-  const left = have - o.qty;
-  if (left > 0) it.owners["YOU"] = left;
-  else delete it.owners["YOU"];
+  let need = o.qty;
+  for (const it of matches) {
+    if (need <= 0) break;
+    const have = it.owners["YOU"] ?? 0;
+    if (have <= 0) continue;
+    const take = Math.min(have, need);
+    const left = have - take;
+    if (left > 0) it.owners["YOU"] = left;
+    else delete it.owners["YOU"];
+    need -= take;
+  }
   state.cash += o.quote;
   state.reputation = repOf(state) + fulfilReward(o.quote);
   state.orders = (state.orders ?? []).filter((x) => x.id !== o.id);
