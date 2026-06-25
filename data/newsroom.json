@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-25T00:58:36.137Z",
+  "generatedAt": "2026-06-25T07:20:37.904Z",
   "beats": [
+    {
+      "company": "Castlestead",
+      "sector": "agriculture",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Castlestead Unveils Low-Till Seeder Line for Compacted Soils",
+      "body": "Castlestead introduced its new Greenfurrow seeding range, engineered to plant directly into hardened ground without heavy turnover. CEO Aurelia Calder framed the launch as a careful answer to soil-erosion complaints from longtime grower clients, with initial units shipping to regional cooperatives this season.",
+      "cycle": 82517,
+      "dur": 2
+    },
+    {
+      "company": "Cranecraft",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Cranecraft Lands Multi-Year Textile Supply Contract with Garment Belt",
+      "body": "Cranecraft signed a five-year agreement to supply raw spun fiber to a consortium of apparel mills, a deal estimated at 240 million per year. Mira Garr called the arrangement a natural extension of the company's field-to-loom model, locking in steady volume through the next harvest cycles.",
+      "cycle": 82517,
+      "dur": 2
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Cranegrove Opens Third Earthmoving Depot to Serve Inland Corridor",
+      "body": "Cranegrove broke ground on a new equipment depot and service yard along the growing inland freight route, adding roughly 180 jobs. Vale Calder said the measured buildout keeps crews closer to active sites and protects the company's record for on-schedule delivery.",
+      "cycle": 82517,
+      "dur": 2
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Drayton Freight Debuts Modular Pallet-Lift System",
+      "body": "Drayton Freight rolled out its Featherlift modular handling units, designed to reconfigure for oversized and irregular loads on a single floor. Emil Holt described the launch as one of his bolder bets, targeting warehouses that currently juggle multiple specialized machines.",
+      "cycle": 82517,
+      "dur": 2
+    },
+    {
+      "company": "Drossware Industries",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drossware Posts Stronger-Than-Expected Quarter on Packaging Demand",
+      "body": "Drossware Industries reported quarterly revenue of 1.4 billion, up 9 percent, led by surging orders in its packaging and cleaning divisions. Nadia Wold credited disciplined pricing and steady demand for what she called 'the products nobody notices until they run out.'",
+      "cycle": 82517,
+      "dur": 2
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drustcraft Wins Fastener Supply Slot for New Vehicle Platform",
+      "body": "Drustcraft secured a role as primary fastener and clip supplier for an upcoming light-truck platform, a contract worth an estimated 310 million over its run. Cora Fenn said the win reflects years of quiet reliability that finally opened a marquee account.",
+      "cycle": 82517,
+      "dur": 2
+    },
+    {
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "breakthrough",
+      "size": "standard",
+      "head": "Drustcyon Develops Corrosion-Resistant Anchor for Coastal Builds",
+      "body": "Drustcyon Industries announced a new galvanized anchor bolt rated for extended saltwater exposure, addressing a persistent failure point in seaside construction. Aurelia Kessler said early field trials showed a marked improvement in load retention, with broader rollout planned once certification clears.",
+      "cycle": 82517,
+      "dur": 2
+    },
+    {
+      "company": "Dunmorestone",
+      "sector": "consumer",
+      "kind": "recall",
+      "size": "standard",
+      "head": "Dunmorestone Recalls Faucet Cartridge Batch Over Leak Reports",
+      "body": "Dunmorestone issued a voluntary recall of roughly 60,000 plumbing cartridges after reports of premature seal failure in select kitchen fixtures. Orla Mercer said the move was precautionary and consistent with the company's 'kept honest' promise, with free replacements offered to affected buyers.",
+      "cycle": 82517,
+      "dur": 2
+    },
     {
       "company": "Aldousspire Group",
       "sector": "consumer",
@@ -10,16 +90,6 @@
       "body": "CEO Mira Ashby introduced the 'Endurance' collection at the company's flagship showroom, featuring reinforced workwear backed by a 20-year repair guarantee. The line carries a premium price point but targets a growing market of buyers tired of disposable apparel. Initial wholesale orders covered 340 retail partners across four regions.",
       "cycle": 82516,
       "dur": 2
-    },
-    {
-      "company": "Ashbystead Holdings",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ashbystead Holdings Edges Past Quarterly Targets on Steady Hospital Demand",
-      "body": "The medical equipment maker reported revenue of $612 million, narrowly ahead of internal projections, with CEO Cora Holt crediting consistent reorders of surgical imaging units. Margins held flat as the firm continued its cautious, debt-light approach. Holt declined to offer raised guidance, calling the quarter 'unremarkable in the best way.'",
-      "cycle": 82516,
-      "dur": 1
     },
     {
       "company": "Caldercraft Holdings",
@@ -62,76 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Castle Devices",
-      "sector": "medical",
-      "kind": "major_deal",
-      "size": "flash",
-      "head": "Castle Devices Renews Long-Term Supply Pact With National Clinic Group",
-      "body": "CEO Bram Calder confirmed a five-year extension to supply sterile consumables to the Brightwell clinic network, valued at roughly $96 million. The renewal preserves the firm's largest recurring revenue stream with no change in pricing. Calder described it as 'business as usual, which is exactly the point.'",
-      "cycle": 82516,
-      "dur": 1
-    },
-    {
-      "company": "Castlegear Group",
-      "sector": "medical",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Castlegear Group Introduces Refined Surgical Instrument Tray System",
-      "body": "CEO Sable Brandt unveiled an updated modular tray line designed to cut sterilization cycle times for hospital operating rooms. The launch was deliberately limited to three pilot facilities for evaluation before broader rollout. Brandt emphasized the company's preference for 'proving it quietly before promising it loudly.'",
-      "cycle": 82516,
-      "dur": 1
-    },
-    {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Aldouscraft Lands Grid-Modernization Supply Contract",
-      "body": "Aldouscraft Mfg. has been named primary cable supplier for the Verrin Valley transmission upgrade, a five-year agreement valued at 340 million credits. CEO Soren Ashby called the award 'a natural fit for our high-tension lines,' noting the contract will keep the Eastfield plant at full capacity through 1934.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aldousmont Posts Stronger-Than-Expected Quarter on Sterile Goods Demand",
-      "body": "Aldousmont & Sons reported quarterly revenue of 88 million credits, up 9 percent year-over-year, led by surging hospital orders for single-use surgical kits. Dunmore Calder credited tighter sterilization standards across the care sector for the durable demand.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "breakthrough",
-      "size": "standard",
-      "head": "Aperture Compute Shows Off Faster Interconnect at Dawnmere",
-      "body": "Halden Dray rushed a new high-bandwidth interconnect to the Dawnmere tech week, claiming a sharp drop in cross-rack latency. Headline-hungry as always, Dray streamed the benchmark live and dared rivals to match it. The demo dominated the show floor's chatter.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "funding",
-      "size": "standard",
-      "head": "Aperture Compute Secures Backing to Scale Dawnmere Interconnect",
-      "body": "Fresh off its Dawnmere splash, Aperture Compute lined up a sizable financing round led by the Vell Harbor merchant houses to mass-produce its interconnect. Halden Dray said the funds will fast-track a new fabrication line. He vowed shipping product 'before anyone copies the slide.'",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Ardent Health",
-      "sector": "medical",
-      "kind": "breakthrough",
-      "size": "standard",
-      "head": "Ardent Unveils Next-Generation Diagnostic Imaging Platform",
-      "body": "After seven years in development, Ardent Health has cleared certification on its Lumen scanning system, which cuts imaging time by roughly a third. Orla Halloran, characteristically patient, said deployment would begin with two teaching hospitals before any wider commitment.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
       "company": "Blackhold",
       "sector": "energy",
       "kind": "expansion",
@@ -140,56 +140,6 @@
       "body": "Mira Marrow staked the firm's future on Greycliff, a colossal storage installation meant to anchor power across the northern reach. The ambitious project is the largest in Blackhold's history and carries heavy upfront cost. Marrow told the assembly the house would 'either define the region or learn a hard lesson.'",
       "cycle": 82515,
       "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Blackhold Names New Operations Chief to Steer Greycliff",
-      "body": "With the Greycliff build straining its ranks, Blackhold appointed veteran builder Tomas Vren as chief operating officer to manage delivery. Mira Marrow said the hire frees her to 'court capital while Tomas pours concrete.' The move signals how seriously the house is treating the high-stakes project.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Blackton Industries Wins Parts Contract With Halvern Motors",
-      "body": "Mara Mercer landed a multi-year auto-parts supply contract with Halvern Motors, a sizable win for the ambitious house. The deal covers brake and suspension components across Halvern's mid-range fleet. Mercer called it 'the contract that puts us on the map north of the river.'",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Blackton Industries Overhauls Plants to Meet Halvern Demand",
-      "body": "To deliver on the Halvern deal, Blackton Industries announced a sweeping reorganization of its three plants, consolidating brake lines and shifting suspension work to a single hub. Mara Mercer admitted the shuffle would be 'rough for a quarter' but necessary for scale. The turbulent retooling temporarily slowed other orders.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Boreas Power Acquires Stake in Hollowmere Storage Fields",
-      "body": "Mira Thorne announced Boreas Power has taken a controlling stake in the Hollowmere storage fields, a sprawling battery-bank operation feeding three districts. The move pairs the firm's compute arm with new grid-scale capacity. Thorne said the acquisition 'closes the loop between what we compute and what we store.'",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Bruncraft Industries Launches the Foundry City Runabout",
-      "body": "Orla Marrow introduced the Foundry, a compact city vehicle aimed at dense districts where Bruncraft has lagged. The launch follows a string of acquisitions Marrow used to assemble its drivetrain. She called the Foundry 'the first car we built instead of bought.'",
-      "cycle": 82515,
-      "dur": 2
     },
     {
       "company": "Bruncrest Works",
@@ -202,46 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Brunforge Holdings",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Brunforge Acquires Tableware Maker Vellan & Co.",
-      "body": "Brunforge Holdings agreed to purchase fine-goods producer Vellan & Co. for 215 million credits, extending its reach from kitchen drawers to the dinner table. Kestrel Bramm said the deal aligns with a deliberate strategy of bolt-on additions, with Vellan's factories to remain in operation.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunmark Motors Launches the Veyra Compact With In-House Packs",
-      "body": "Yvette Calder introduced the Veyra, a compact vehicle built on Brunmark's own power-and-storage packs, marking the firm's tightest integration yet. Calder pitched it as proof the house can do parts, power, and vehicles under one roof. First deliveries are promised for the coming season.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Brunmark Motors Slips as Veyra Ramp Strains Supply",
-      "body": "Brunmark Motors reported a softer quarter as its in-house pack lines struggled to keep pace with Veyra demand, forcing rationed shipments. Yvette Calder called the bottleneck 'a problem of success' but conceded margins took a hit. The turbulent ramp left some early orders unfilled.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Brunridge Consolidates Five Divisions Into Three Pillars",
-      "body": "Brunridge Works announced a reorganization grouping its apparel, packaging, and household lines under three operating pillars to streamline distribution. Petra Wold said the change would eliminate duplicate logistics centers and is expected to save 40 million credits annually, with no plant closures planned.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
       "company": "Brunstone & Sons",
       "sector": "automotive",
       "kind": "product_launch",
@@ -252,54 +162,24 @@
       "dur": 8
     },
     {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "standard",
-      "head": "Brunstone & Sons Faces Review Over Ardent Pack Heating",
-      "body": "Regional safety inspectors opened a review into the Ardent's storage packs after pre-production tests flagged uneven heating under fast charging. Sable Veldt downplayed the probe as 'routine for anything this new' and paused only the demo fleet. The scrutiny cooled some of the launch's heat.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Calderforge",
+      "company": "Castlestone",
       "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Calderforge Adds Second Compute Hall at Embergate",
-      "body": "Nadia Throne announced a second compute hall at the firm's Embergate site, nearly doubling capacity to chase a wave of new contracts. The ambitious build runs alongside an aging first hall that Throne admits needs work. She promised both would 'hum as one' by year's end.",
+      "kind": "breakthrough",
+      "size": "major",
+      "head": "Castlestone Claims Record at Vellmont Compute Showcase",
+      "body": "Iris Garr took the main stage at the Vellmont Showcase to demonstrate a new lattice-cooling design she said triples sustained throughput per rack. Independent halls at the event logged the demo running 11 hours without throttling. Garr, never shy, declared it 'the end of the warm-room era' to roaring applause.",
       "cycle": 82515,
-      "dur": 2
+      "dur": 8
     },
     {
-      "company": "Calderforge",
+      "company": "Marlgear Supply",
       "sector": "technology",
-      "kind": "outage",
-      "size": "standard",
-      "head": "Calderforge Hit by Cooling Failure at Aging Embergate Hall",
-      "body": "Calderforge's original Embergate hall suffered a cooling failure that forced an emergency shutdown, briefly idling part of its capacity during the second-hall buildout. Nadia Throne conceded the old hall had been 'pushed too hard' to meet demand. Engineers restored service within a day, but the turbulence rattled clients.",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Marlgear Supply Unveils the Atlas Industrial Press",
+      "body": "Halden Vossen made a splash at the Ironworks Expo with the Atlas, a heavy industrial press he claims halves changeover time on the factory floor. Vossen ran a live stamping demo and took open questions for an hour. The bold showing positions Marlgear as more than a devices maker.",
       "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Calderworks Tops Forecasts as Urban Building Demand Holds",
-      "body": "Calderworks Holdings reported quarterly profit of 122 million credits, beating expectations on strong structural-material shipments to three metro construction projects. Kestrel Halloran said the firm is weighing capacity additions but will move only as committed orders justify the outlay.",
-      "cycle": 82515,
-      "dur": 2
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Castlehold Pushes Into Coastal Storage With Saltmere Banks",
-      "body": "Soren Skarn unveiled the Saltmere storage banks, a coastal expansion meant to steady supply for the windward districts. The ambitious build doubles Castlehold's regional capacity but stretches its balance sheet. Skarn admitted the timeline is 'aggressive, maybe reckless, but ours.'",
-      "cycle": 82515,
-      "dur": 2
+      "dur": 8
     }
   ]
 }

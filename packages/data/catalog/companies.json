@@ -946,7 +946,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82517,
     "events": [
       {
         "cycle": 0,
@@ -955,6 +955,16 @@
         "head": "Castlestead — Feeds the ground that feeds us",
         "body": "Born in farm country, Castlestead arms growers with earthmoving gear, farm equipment, and the inputs that turn dirt into a harvest. Smallholders lean on the affordable line; large operations run the premium machines hard through every season. Built to start cold, work wet, and forgive a missed service, their kit treats the calendar as the real boss. Generations of families have planted, plowed, and prospered behind that name.",
         "effects": {}
+      },
+      {
+        "cycle": 82517,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Castlestead Unveils Low-Till Seeder Line for Compacted Soils",
+        "body": "Castlestead introduced its new Greenfurrow seeding range, engineered to plant directly into hardened ground without heavy turnover. CEO Aurelia Calder framed the launch as a careful answer to soil-erosion complaints from longtime grower clients, with initial units shipping to regional cooperatives this season.",
+        "effects": {
+          "agriculture": 0.13
+        }
       }
     ]
   },
@@ -1002,7 +1012,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82517,
     "events": [
       {
         "cycle": 0,
@@ -1011,6 +1021,16 @@
         "head": "Cranecraft — From the field to the loom",
         "body": "An unusual pairing made coherent by craft, Cranecraft manufactures both farm equipment and raw textiles, two trades bound by a respect for fiber and field. Their value lines keep operations and mills running lean. The premium offerings carry the finish that discerning buyers pay for. Whether it is a tough implement or a clean bolt of stock, the through-line is the same: make it once, make it right, and let the wear tell the story.",
         "effects": {}
+      },
+      {
+        "cycle": 82517,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Cranecraft Lands Multi-Year Textile Supply Contract with Garment Belt",
+        "body": "Cranecraft signed a five-year agreement to supply raw spun fiber to a consortium of apparel mills, a deal estimated at 240 million per year. Mira Garr called the arrangement a natural extension of the company's field-to-loom model, locking in steady volume through the next harvest cycles.",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -1025,7 +1045,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82517,
     "events": [
       {
         "cycle": 0,
@@ -1034,6 +1054,16 @@
         "head": "Cranegrove — Move the earth, keep the schedule",
         "body": "Cranegrove does one thing and refuses to do it halfway: earthmoving. There is no bargain-basement line here, only capable mid-grade machines and premium iron engineered to dig, grade, and haul without flinching. Site managers favor the controls that stay precise after ten hours and the hydraulics that hold pressure in the cold. When a job lives or dies on moving dirt fast, Cranegrove is the name that ends the argument.",
         "effects": {}
+      },
+      {
+        "cycle": 82517,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Cranegrove Opens Third Earthmoving Depot to Serve Inland Corridor",
+        "body": "Cranegrove broke ground on a new equipment depot and service yard along the growing inland freight route, adding roughly 180 jobs. Vale Calder said the measured buildout keeps crews closer to active sites and protects the company's record for on-schedule delivery.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -1048,7 +1078,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82517,
     "events": [
       {
         "cycle": 0,
@@ -1057,6 +1087,16 @@
         "head": "Drayton Freight — Heavy things, handled lightly",
         "body": "Drayton began on a warehouse floor where a young engineer grew tired of crushed crates and aching backs. Their forklifts, reach trucks, and pallet movers turn chaos into choreography, gliding through aisles others jam. The mid-range workhorses anchor distribution hubs nationwide, while the premium electrics run silent through cold stores and clean rooms alike. Logistics managers treat a Drayton mast like an extension of their own arm. Precision lifting, no drama, no wasted motion.",
         "effects": {}
+      },
+      {
+        "cycle": 82517,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Drayton Freight Debuts Modular Pallet-Lift System",
+        "body": "Drayton Freight rolled out its Featherlift modular handling units, designed to reconfigure for oversized and irregular loads on a single floor. Emil Holt described the launch as one of his bolder bets, targeting warehouses that currently juggle multiple specialized machines.",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
@@ -1071,7 +1111,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82517,
     "events": [
       {
         "cycle": 0,
@@ -1080,6 +1120,16 @@
         "head": "Drossware Industries — The unglamorous made indispensable",
         "body": "Drossware Industries owns the overlooked corners of daily life: apparel goods, cleaning and janitorial supplies, lighting, and packaging that protects far more than it costs. The value range keeps facilities stocked without straining a budget; the premium lines bring durability buyers notice. Few people say the name aloud, yet their packaging cushions a thousand shipments and their cleaning kit keeps countless floors gleaming. Quietly everywhere, reliably useful, never showing off.",
         "effects": {}
+      },
+      {
+        "cycle": 82517,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drossware Posts Stronger-Than-Expected Quarter on Packaging Demand",
+        "body": "Drossware Industries reported quarterly revenue of 1.4 billion, up 9 percent, led by surging orders in its packaging and cleaning divisions. Nadia Wold credited disciplined pricing and steady demand for what she called 'the products nobody notices until they run out.'",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -1094,7 +1144,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82517,
     "events": [
       {
         "cycle": 0,
@@ -1103,6 +1153,16 @@
         "head": "Drustcraft — Holds everything together, literally",
         "body": "Drustcraft lives in the joints and seams of the made world, turning out auto parts and the fasteners and fixings that keep machines from rattling apart. The budget bins fill toolboxes and assembly lines everywhere. The premium grades go where a sheared bolt is a catastrophe. Their threads bite true and their parts fit the first time, the kind of unsung reliability that mechanics swear by and rarely think to mention.",
         "effects": {}
+      },
+      {
+        "cycle": 82517,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drustcraft Wins Fastener Supply Slot for New Vehicle Platform",
+        "body": "Drustcraft secured a role as primary fastener and clip supplier for an upcoming light-truck platform, a contract worth an estimated 310 million over its run. Cora Fenn said the win reflects years of quiet reliability that finally opened a marquee account.",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -1117,7 +1177,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82517,
     "events": [
       {
         "cycle": 0,
@@ -1126,6 +1186,16 @@
         "head": "Drustcyon Industries — The thread that holds it together",
         "body": "Every wall, deck, and frame needs something holding it shut. Drustcyon makes that something. Bolts, screws, anchors, brackets by the bin and the pallet, sized for the job site and priced for the apprentice. Nobody hangs a Drustcyon fastener on the wall to admire it, and that is rather the point. From everyday value runs to their tougher mid-grade line, they earned their reputation one boring, dependable box of fixings at a time.",
         "effects": {}
+      },
+      {
+        "cycle": 82517,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Drustcyon Develops Corrosion-Resistant Anchor for Coastal Builds",
+        "body": "Drustcyon Industries announced a new galvanized anchor bolt rated for extended saltwater exposure, addressing a persistent failure point in seaside construction. Aurelia Kessler said early field trials showed a marked improvement in load retention, with broader rollout planned once certification clears.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -1140,7 +1210,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82517,
     "events": [
       {
         "cycle": 0,
@@ -1149,6 +1219,16 @@
         "head": "Dunmorestone — Kitchens and pipes, kept honest",
         "body": "Dunmorestone outfits the rooms where water runs and food gets served. Commercial range tops, prep counters and warming lines for the back of house; taps, valves and fixtures for the walls behind them. The catalog skews practical, spanning budget kits for a first lease all the way to the sturdier mid-range gear that survives a decade of dinner rushes. Caterers and contractors keep coming back for the same plain reason: the stuff works, and it keeps working.",
         "effects": {}
+      },
+      {
+        "cycle": 82517,
+        "kind": "recall",
+        "size": "standard",
+        "head": "Dunmorestone Recalls Faucet Cartridge Batch Over Leak Reports",
+        "body": "Dunmorestone issued a voluntary recall of roughly 60,000 plumbing cartridges after reports of premature seal failure in select kitchen fixtures. Orla Mercer said the move was precautionary and consistent with the company's 'kept honest' promise, with free replacements offered to affected buyers.",
+        "effects": {
+          "consumer": -0.13
+        }
       }
     ]
   },
