@@ -130,6 +130,10 @@ interface Trove {
   declineOrder: (id: string) => void;
   fulfillOrder: (id: string) => void;
   nameHolding: (name: string) => void;
+  /** Rename flow: open the name dialog for an already-named Holding. */
+  renaming: boolean;
+  startRename: () => void;
+  cancelRename: () => void;
 }
 
 const TroveContext = createContext<Trove | null>(null);
@@ -161,6 +165,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [signedIn, setSignedIn] = useState(false);
   const [authReady, setAuthReady] = useState(false);
   const [desk, setDesk] = useState<Desk | null>(null);
+  const [renaming, setRenaming] = useState(false);
 
   const modeRef = useRef(mode);
   modeRef.current = mode;
@@ -464,12 +469,18 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       const trimmed = name.trim().slice(0, 40);
       if (!trimmed) return;
       void deskAction("name", { name: trimmed }).then((d) => {
-        if ("error" in d) showToast(d.error);
-        else setDesk(d);
+        if ("error" in d) {
+          showToast(d.error);
+        } else {
+          setDesk(d);
+          setRenaming(false);
+        }
       });
     },
     [showToast],
   );
+  const startRename = useCallback(() => setRenaming(true), []);
+  const cancelRename = useCallback(() => setRenaming(false), []);
 
   const acceptOrder = useCallback(
     (id: string) => {
@@ -544,6 +555,9 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       declineOrder,
       fulfillOrder,
       nameHolding,
+      renaming,
+      startRename,
+      cancelRename,
     }),
     [
       mounted,
@@ -576,6 +590,9 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       declineOrder,
       fulfillOrder,
       nameHolding,
+      renaming,
+      startRename,
+      cancelRename,
     ],
   );
 

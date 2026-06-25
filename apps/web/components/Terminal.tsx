@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { validateHoldingName } from "@trove/data";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
@@ -135,20 +135,35 @@ function holdingName(raw: string): string {
 }
 
 function Onboarding() {
-  const { signedIn, desk, nameHolding } = useTrove();
+  const { signedIn, desk, nameHolding, renaming, cancelRename } = useTrove();
   const [val, setVal] = useState("");
-  // Shown once: signed in, desk loaded, but no Holding name yet.
-  if (!signedIn || !desk || desk.name) return null;
+  // Open on first sign-in (no name yet) OR when the player chose to rename.
+  const open = !!(signedIn && desk && (!desk.name || renaming));
+  const isRename = !!desk?.name;
+  const wasOpen = useRef(false);
+  useEffect(() => {
+    if (open && !wasOpen.current) setVal(isRename ? (desk?.name ?? "") : "");
+    wasOpen.current = open;
+  }, [open, isRename, desk?.name]);
+
+  if (!open) return null;
   const preview = holdingName(val);
   const check = preview ? validateHoldingName(preview) : { ok: false };
   const submit = () => {
     if (preview && check.ok) nameHolding(preview);
   };
   return (
-    <div className="reveal-bg show">
+    <div
+      className="reveal-bg show"
+      onClick={(e) => {
+        if (isRename && e.target === e.currentTarget) cancelRename();
+      }}
+    >
       <div className="onboard">
         <div className="ob-mark">TROVE</div>
-        <div className="ob-h">Establish your Holding</div>
+        <div className="ob-h">
+          {isRename ? "Rename your Holding" : "Establish your Holding"}
+        </div>
         <p className="ob-sub">
           Name your house on the floor — this is how you&apos;ll appear in the
           standings and on every order.
@@ -175,9 +190,16 @@ function Onboarding() {
                 )
               : check.reason}
         </div>
-        <button className="ob-go" disabled={!check.ok} onClick={submit}>
-          Open the doors
-        </button>
+        <div className="ob-actions">
+          {isRename && (
+            <button className="ob-cancel" onClick={cancelRename}>
+              Cancel
+            </button>
+          )}
+          <button className="ob-go" disabled={!check.ok} onClick={submit}>
+            {isRename ? "Save name" : "Open the doors"}
+          </button>
+        </div>
       </div>
     </div>
   );

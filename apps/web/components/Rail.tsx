@@ -38,6 +38,7 @@ export function Rail() {
     signIn,
     signOut,
     desk,
+    startRename,
   } = useTrove();
   const pendingOrders = desk?.orders.filter((o) => o.status === "pending").length ?? 0;
   const go = (t: TabId) => {
@@ -84,6 +85,9 @@ export function Rail() {
         {signedIn && desk?.name && (
           <div className="holdingline">
             {desk.name} <span>· rep {desk.reputation}</span>
+            <button className="rename-btn" onClick={startRename}>
+              edit
+            </button>
           </div>
         )}
       </div>
