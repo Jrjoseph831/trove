@@ -126,6 +126,7 @@ export function docToWorld(doc: WorldDoc): WorldState {
     producedQty: {},
     orders: [],
     reputation: 0,
+    deskAuto: { specialist: false, autoFulfill: false, minMargin: 0.1 },
     lastOrderAt: 0,
     ledger: emptyLedger(),
     reports: [],

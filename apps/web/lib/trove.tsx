@@ -45,6 +45,9 @@ import {
   acceptSandboxOffer,
   declineSandboxOrder,
   fulfillSandboxOrder,
+  autoNegotiate,
+  autoFulfillOrders,
+  setDeskAuto as engineSetDeskAuto,
   heldOfProduct,
   producesProduct,
   playerBuy,
@@ -155,6 +158,11 @@ interface Trove {
   setLineSource: (lineId: string, inputItemId: number, feederId: string | null) => void;
   setSellPrice: (itemId: number, mult: number) => void;
   buyUpgrade: (id: "power" | "router" | "qc") => void;
+  setDeskAutomation: (patch: {
+    specialist?: boolean;
+    autoFulfill?: boolean;
+    minMargin?: number;
+  }) => void;
   closeReveal: () => void;
   /** Shared-world auth (the Acquire gate). */
   signedIn: boolean;
@@ -339,7 +347,12 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (mode !== "sandbox") return;
     const tick = () => {
-      if (rollSandboxOrders(worldsRef.current!.sandbox, Date.now())) refresh();
+      const sbx = worldsRef.current!.sandbox;
+      const now = Date.now();
+      let changed = rollSandboxOrders(sbx, now);
+      if (autoNegotiate(sbx, now)) changed = true; // Procurement Specialist
+      if (autoFulfillOrders(sbx, now)) changed = true; // Auto-Fulfill
+      if (changed) refresh();
     };
     tick();
     const t = setInterval(tick, 4000);
@@ -665,6 +678,14 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh],
   );
 
+  const setDeskAutomation = useCallback(
+    (patch: { specialist?: boolean; autoFulfill?: boolean; minMargin?: number }) => {
+      engineSetDeskAuto(worldsRef.current!.sandbox, patch);
+      refresh();
+    },
+    [refresh],
+  );
+
   const buyUpgrade = useCallback(
     (id: "power" | "router" | "qc") => {
       if (modeRef.current === "live") {
@@ -882,6 +903,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setLineSource,
       setSellPrice,
       buyUpgrade,
+      setDeskAutomation,
       closeReveal,
       signedIn,
       authReady,
@@ -929,6 +951,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setLineSource,
       setSellPrice,
       buyUpgrade,
+      setDeskAutomation,
       closeReveal,
       signedIn,
       authReady,

@@ -97,6 +97,16 @@ export interface LogEntry {
   it: string;
 }
 
+/** Order-Desk automation, unlocked by reputation. */
+export interface DeskAuto {
+  /** Procurement Specialist: auto-negotiates incoming offers. */
+  specialist: boolean;
+  /** Auto-delivers accepted orders once you have the stock. */
+  autoFulfill: boolean;
+  /** Margin floor the specialist holds: agreed price ≥ source value × (1+this). */
+  minMargin: number;
+}
+
 /** Floor-wide infrastructure upgrades (one-time buys that boost every line). */
 export interface Infra {
   /** Power Plant — −20% upkeep on every line. */
@@ -171,6 +181,8 @@ export interface WorldState {
   orders: Order[];
   /** Desk standing — rises on fulfilment, dips on missed contracts. */
   reputation: number;
+  /** Order-Desk automation settings (rep-gated). */
+  deskAuto: DeskAuto;
   /** Last time (ms) an order was rolled onto the desk. */
   lastOrderAt: number;
   /** Flows accumulating in the current report period. */

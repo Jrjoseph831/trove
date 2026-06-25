@@ -19,7 +19,72 @@ import {
 } from "@trove/data";
 import type { Item, SectorKey } from "@trove/data";
 import { rand } from "./rng";
-import type { Order, RuntimeItem, WorldState } from "./types";
+import type { DeskAuto, Order, RuntimeItem, WorldState } from "./types";
+
+// ── Order Desk automation (rep-gated) ────────────────────────────────────────
+export const SPECIALIST_REP = 15; // Procurement Specialist unlocks here
+export const AUTOFULFILL_REP = 25; // Auto-Fulfill unlocks here
+
+/** Update desk-automation settings (margin clamped to a sane band). */
+export function setDeskAuto(state: WorldState, patch: Partial<DeskAuto>): void {
+  const cur = state.deskAuto ?? {
+    specialist: false,
+    autoFulfill: false,
+    minMargin: 0.1,
+  };
+  state.deskAuto = { ...cur, ...patch };
+  state.deskAuto.minMargin = Math.max(0, Math.min(0.5, state.deskAuto.minMargin));
+}
+
+/**
+ * Procurement Specialist: auto-haggle every live offer. Hold a floor of
+ * source value × (1 + minMargin); accept the moment the client's offer clears
+ * it, push for more first, and walk if the client's budget can't reach the floor.
+ */
+export function autoNegotiate(state: WorldState, now: number): boolean {
+  const a = state.deskAuto;
+  if (!a?.specialist || repOf(state) < SPECIALIST_REP) return false;
+  let changed = false;
+  for (const o of [...(state.orders ?? [])]) {
+    if (o.status !== "offer") continue;
+    const it = state.items.find((x) => x.id === o.itemId);
+    if (!it) continue;
+    const floorUnit = it.value * (1 + a.minMargin);
+    const floorTotal = Math.round(floorUnit * o.qty);
+    let guard = 0;
+    while (o.status === "offer" && guard++ < 8) {
+      if (o.companyOffer >= floorTotal) {
+        acceptSandboxOffer(state, o.id, now);
+        changed = true;
+        break;
+      }
+      const ask = Math.max(floorTotal, Math.round(floorUnit * 1.15 * o.qty));
+      const r = negotiateSandbox(state, o.id, ask, now);
+      changed = true;
+      if (r.kind === "deal" || r.kind === "pullout" || r.kind === "invalid") break;
+      if (o.round >= o.maxRounds && o.companyOffer < floorTotal) {
+        declineSandboxOrder(state, o.id); // can't reach the floor — walk
+        break;
+      }
+    }
+  }
+  return changed;
+}
+
+/** Auto-Fulfill: deliver any accepted order the moment you hold enough. */
+export function autoFulfillOrders(state: WorldState, now: number): boolean {
+  const a = state.deskAuto;
+  if (!a?.autoFulfill || repOf(state) < AUTOFULFILL_REP) return false;
+  let changed = false;
+  for (const o of [...(state.orders ?? [])]) {
+    if (o.status !== "accepted") continue;
+    const it = state.items.find((x) => x.id === o.itemId);
+    if (it && heldOfProduct(state, it) >= o.qty) {
+      if (fulfillSandboxOrder(state, o.id, now).ok) changed = true;
+    }
+  }
+  return changed;
+}
 
 // ── Your sell price ─────────────────────────────────────────────────────────
 /** Your listing markup for an item (× market). 1 = at market. */

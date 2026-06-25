@@ -2,9 +2,75 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AUTOFULFILL_REP, SPECIALIST_REP } from "@trove/engine";
 import type { DeskOrder } from "@/lib/api";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+
+/** Reputation-gated automation unlocks (sandbox). */
+function Automation() {
+  const { state, desk, setDeskAutomation } = useTrove();
+  const rep = desk?.reputation ?? state.reputation ?? 0;
+  const a = state.deskAuto;
+
+  return (
+    <div className="desk-auto">
+      <div className="desk-sec">Automation · unlocked by reputation</div>
+
+      <div className="da-row">
+        <div className="da-info">
+          <b>Procurement Specialist</b>
+          <span>
+            Auto-negotiates every offer — holds a margin floor over source value,
+            accepts at/above it, walks if the buyer can&apos;t reach it.
+          </span>
+        </div>
+        {rep >= SPECIALIST_REP ? (
+          <div className="da-ctl">
+            <button
+              className={`da-toggle ${a.specialist ? "on" : ""}`}
+              onClick={() => setDeskAutomation({ specialist: !a.specialist })}
+            >
+              {a.specialist ? "On" : "Off"}
+            </button>
+            <div className="da-margin">
+              <button
+                onClick={() => setDeskAutomation({ minMargin: a.minMargin - 0.05 })}
+              >
+                −
+              </button>
+              <span>floor +{Math.round(a.minMargin * 100)}%</span>
+              <button
+                onClick={() => setDeskAutomation({ minMargin: a.minMargin + 0.05 })}
+              >
+                +
+              </button>
+            </div>
+          </div>
+        ) : (
+          <span className="da-lock">Unlocks at rep {SPECIALIST_REP}</span>
+        )}
+      </div>
+
+      <div className="da-row">
+        <div className="da-info">
+          <b>Auto-Fulfill</b>
+          <span>Delivers accepted orders from your vault the moment you have the stock.</span>
+        </div>
+        {rep >= AUTOFULFILL_REP ? (
+          <button
+            className={`da-toggle ${a.autoFulfill ? "on" : ""}`}
+            onClick={() => setDeskAutomation({ autoFulfill: !a.autoFulfill })}
+          >
+            {a.autoFulfill ? "On" : "Off"}
+          </button>
+        ) : (
+          <span className="da-lock">Unlocks at rep {AUTOFULFILL_REP}</span>
+        )}
+      </div>
+    </div>
+  );
+}
 
 function timeLeft(expiresAt: number): string {
   const ms = expiresAt - Date.now();
@@ -128,6 +194,8 @@ export function Desk() {
           Reputation <b>{desk.reputation}</b>
         </div>
       </div>
+
+      {mode === "sandbox" && <Automation />}
 
       {desk.orders.length === 0 && (
         <div className="empty">
