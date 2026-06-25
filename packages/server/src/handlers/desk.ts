@@ -1,29 +1,37 @@
 /**
- * Order Desk Lambda (authorized). GET reads the desk (rolling a new offer when
- * due, expiring stale ones), POST acts on it: name the Holding, accept/decline
- * an offer, or fulfil a contract from the Vault.
+ * Order Desk Lambda (authorized). Runs the SAME engine order logic the sandbox
+ * uses (product matching, smarter negotiation), via a per-player WorldState view
+ * of the shared world. GET rolls/expires offers; POST acts: name, accept,
+ * counter, decline, fulfil.
  */
 import type {
   APIGatewayProxyEventV2WithJWTAuthorizer,
   APIGatewayProxyResultV2,
 } from "aws-lambda";
 import { getItem, validateHoldingName } from "@trove/data";
-import { START_CASH } from "@trove/engine";
 import {
+  acceptSandboxOffer,
+  autoNegotiate,
+  declineSandboxOrder,
+  fulfillSandboxOrder,
+  heldOfProduct,
+  LIVE_TIMING,
+  negotiateSandbox,
+  producesProduct,
+  rollSandboxOrders,
+  START_CASH,
+  type WorldState,
+} from "@trove/engine";
+import {
+  extractPlayer,
   getPlayer,
   loadWorld,
-  mutateTrade,
+  mutatePlayerWorld,
+  playerView,
   savePlayer,
-  TradeError,
   type Player,
+  type WorldDoc,
 } from "../repo";
-import {
-  acceptCurrentOffer,
-  fulfilReward,
-  negotiate,
-  repOf,
-  rollAndExpire,
-} from "../orders";
 
 const json = (status: number, body: unknown): APIGatewayProxyResultV2 => ({
   statusCode: status,
@@ -34,26 +42,27 @@ const json = (status: number, body: unknown): APIGatewayProxyResultV2 => ({
 const subOf = (e: APIGatewayProxyEventV2WithJWTAuthorizer) =>
   e.requestContext.authorizer?.jwt?.claims?.sub as string | undefined;
 
-const fresh = (playerId: string): Player => ({
+const freshPlayer = (playerId: string): Player => ({
   playerId,
   cash: START_CASH,
   debt: 0,
 });
 
-function deskView(player: Player, valueOf: (id: number) => number, ownedOf: (id: number) => number) {
+/** Build the client-facing desk view from a per-player WorldState. Budget/target
+ *  stay hidden; held + youProduce are by PRODUCT (any brand of it). */
+function deskView(state: WorldState, name: string | null) {
   return {
-    name: player.name ?? null,
-    reputation: repOf(player),
-    cash: player.cash,
-    // NOTE: budget + target are HIDDEN — never include them here.
-    orders: (player.orders ?? []).map((o) => {
-      const it = getItem(o.itemId);
+    name,
+    reputation: state.reputation ?? 0,
+    cash: state.cash,
+    orders: (state.orders ?? []).map((o) => {
+      const it = state.items.find((i) => i.id === o.itemId);
       return {
         id: o.id,
         company: o.company,
         sector: o.sector,
         itemId: o.itemId,
-        itemName: it?.name ?? `#${o.itemId}`,
+        itemName: it?.name ?? getItem(o.itemId)?.name ?? `#${o.itemId}`,
         brand: it?.brand ?? "",
         qty: o.qty,
         companyOffer: o.companyOffer,
@@ -62,8 +71,9 @@ function deskView(player: Player, valueOf: (id: number) => number, ownedOf: (id:
         quote: o.quote,
         status: o.status,
         expiresAt: o.expiresAt,
-        marketValue: Math.round(valueOf(o.itemId) * o.qty),
-        held: ownedOf(o.itemId),
+        marketValue: Math.round((it?.value ?? 0) * o.qty),
+        held: it ? heldOfProduct(state, it) : 0,
+        youProduce: it ? producesProduct(state, it) : false,
       };
     }),
   };
@@ -76,27 +86,20 @@ export async function handler(
   if (!playerId) return json(401, { error: "unauthorized" });
 
   const doc = await loadWorld();
-  const valueOf = (id: number) =>
-    doc?.items.find((i) => i.id === id)?.value ?? getItem(id)?.base ?? 0;
-  const ownedOf = (id: number) =>
-    doc?.items.find((i) => i.id === id)?.owners?.[playerId] ?? 0;
-
-  const method = event.requestContext.http.method;
+  if (!doc) return json(503, { error: "world not seeded" });
   const now = Date.now();
+  const method = event.requestContext.http.method;
 
   if (method === "GET") {
-    const player = (await getPlayer(playerId)) ?? fresh(playerId);
-    if (rollAndExpire(player, valueOf, now)) await savePlayer(player);
-    return json(200, deskView(player, valueOf, ownedOf));
+    const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
+    const state = playerView(doc as WorldDoc, player);
+    const rolled = rollSandboxOrders(state, now, LIVE_TIMING);
+    const auto = autoNegotiate(state, now, LIVE_TIMING); // no-op unless specialist is on
+    if (rolled || auto) await savePlayer(extractPlayer(state, player));
+    return json(200, deskView(state, player.name ?? null));
   }
 
-  // POST actions
-  let body: {
-    action?: string;
-    orderId?: string;
-    name?: string;
-    bid?: number;
-  };
+  let body: { action?: string; orderId?: string; name?: string; bid?: number };
   try {
     const raw = event.isBase64Encoded
       ? Buffer.from(event.body ?? "", "base64").toString("utf8")
@@ -111,78 +114,59 @@ export async function handler(
     const name = String(body.name ?? "").trim().slice(0, 40);
     const check = validateHoldingName(name);
     if (!check.ok) return json(400, { error: check.reason ?? "Invalid name." });
-    const player = (await getPlayer(playerId)) ?? fresh(playerId);
+    const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
     player.name = name;
     await savePlayer(player);
-    return json(200, deskView(player, valueOf, ownedOf));
+    const state = playerView(doc as WorldDoc, player);
+    return json(200, deskView(state, name));
   }
 
   if (action === "decline") {
-    const player = (await getPlayer(playerId)) ?? fresh(playerId);
-    const orders = player.orders ?? [];
-    if (!orders.some((x) => x.id === orderId))
+    const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
+    const state = playerView(doc as WorldDoc, player);
+    if (!declineSandboxOrder(state, orderId ?? ""))
       return json(404, { error: "no such order" });
-    player.orders = orders.filter((x) => x.id !== orderId);
-    await savePlayer(player);
-    return json(200, deskView(player, valueOf, ownedOf));
+    await savePlayer(extractPlayer(state, player));
+    return json(200, deskView(state, player.name ?? null));
   }
 
   if (action === "accept") {
-    // Accept the client's CURRENT standing offer outright (no counter).
-    const player = (await getPlayer(playerId)) ?? fresh(playerId);
-    const o = (player.orders ?? []).find((x) => x.id === orderId);
-    if (!o) return json(404, { error: "no such order" });
-    const res = acceptCurrentOffer(o, now);
+    const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
+    const state = playerView(doc as WorldDoc, player);
+    const res = acceptSandboxOffer(state, orderId ?? "", now, LIVE_TIMING);
     if (res.kind !== "deal") return json(409, { error: "offer is closed" });
-    await savePlayer(player);
-    return json(200, { ...deskView(player, valueOf, ownedOf), note: res });
+    await savePlayer(extractPlayer(state, player));
+    return json(200, { ...deskView(state, player.name ?? null), note: res });
   }
 
   if (action === "counter") {
-    // Player asks `bid`; the client haggles within its hidden budget.
     const bid = Math.round(Number(body.bid));
-    const player = (await getPlayer(playerId)) ?? fresh(playerId);
-    const orders = player.orders ?? [];
-    const o = orders.find((x) => x.id === orderId);
+    const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
+    const state = playerView(doc as WorldDoc, player);
+    const o = (state.orders ?? []).find((x) => x.id === orderId);
     if (!o) return json(404, { error: "no such order" });
-    const res = negotiate(o, bid, now);
+    const company = o.company;
+    const res = negotiateSandbox(state, orderId ?? "", bid, now, LIVE_TIMING);
     if (res.kind === "invalid") return json(400, { error: "invalid bid" });
-    if (res.kind === "pullout") {
-      // They walked: the request is gone (no reputation penalty).
-      player.orders = orders.filter((x) => x.id !== orderId);
-    }
-    await savePlayer(player);
+    await savePlayer(extractPlayer(state, player));
     return json(200, {
-      ...deskView(player, valueOf, ownedOf),
-      note: { ...res, company: o.company },
+      ...deskView(state, player.name ?? null),
+      note: { ...res, company },
     });
   }
 
   if (action === "fulfill") {
     try {
-      const result = await mutateTrade(playerId, (state, player) => {
-        const o = (player.orders ?? []).find((x) => x.id === orderId);
-        if (!o) throw new TradeError("no such order");
-        if (o.status !== "accepted") throw new TradeError("not accepted");
-        if (Date.now() > o.expiresAt) throw new TradeError("deadline passed");
-        const it = state.items.find((i) => i.id === o.itemId);
-        if (!it) throw new TradeError("no such item");
-        const have = it.owners[playerId] ?? 0;
-        if (have < o.qty) throw new TradeError("not enough in your vault");
-        // deliver: goods leave the vault, payout lands, reputation rises
-        const left = have - o.qty;
-        if (left > 0) it.owners[playerId] = left;
-        else delete it.owners[playerId];
-        player.cash += o.quote;
-        player.reputation = repOf(player) + fulfilReward(o.quote);
-        player.orders = (player.orders ?? []).filter((x) => x.id !== o.id);
-        return { quote: o.quote, qty: o.qty };
+      const { result, state } = await mutatePlayerWorld(playerId, (st) =>
+        fulfillSandboxOrder(st, orderId ?? "", Date.now()),
+      );
+      if (!result.ok) return json(409, { error: result.reason });
+      const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
+      return json(200, {
+        ...deskView(state, player.name ?? null),
+        fulfilled: { quote: result.quote, qty: result.qty },
       });
-      // re-read for an up-to-date view
-      const player = (await getPlayer(playerId)) ?? fresh(playerId);
-      return json(200, { ...deskView(player, valueOf, ownedOf), fulfilled: result });
     } catch (err) {
-      if (err instanceof TradeError) return json(409, { error: err.message });
       console.error("fulfill failed", err);
       return json(500, { error: "fulfill failed" });
     }

@@ -23,7 +23,13 @@ import {
   DEBT_RATE,
   emptyLedger,
   START_CASH,
+  STARTING_SLOTS,
   wallCycle,
+  type DeskAuto,
+  type Factory,
+  type Infra,
+  type Ledger,
+  type Report,
   type RuntimeItem,
   type WorldState,
 } from "@trove/engine";
@@ -206,6 +212,79 @@ export interface Player {
   orders?: Order[];
   /** Last time a new order was rolled onto the desk (ms). */
   lastOrderAt?: number;
+  // ── Factory / sales state (live-wired; absent for pre-factory players) ───────
+  factories?: Factory[];
+  floorSlots?: number;
+  infra?: Infra;
+  listPrices?: Record<number, number>;
+  producedQty?: Record<number, number>;
+  listed?: Record<number, boolean>;
+  deskAuto?: DeskAuto;
+  ledger?: Ledger;
+  reports?: Report[];
+  periodNo?: number;
+  /** Last world cycle this player was settled to (for catch-up production). */
+  lastCycle?: number;
+}
+
+const FRESH_INFRA: Infra = { power: false, router: false, qc: false };
+const FRESH_DESKAUTO: DeskAuto = {
+  specialist: false,
+  autoFulfill: false,
+  minMargin: 0.1,
+};
+
+/** Build a per-player WorldState from the shared doc + the player's record:
+ *  the player's holdings become owners["YOU"], and cash/orders/factory state
+ *  come off the player. Run the engine on this, then write back with
+ *  extractPlayer (+ mutatePlayerWorld for ownership changes). */
+export function playerView(doc: WorldDoc, player: Player): WorldState {
+  const w = docToWorld(doc);
+  for (const it of w.items) {
+    const mine = it.owners[player.playerId] ?? 0;
+    it.owners = mine > 0 ? { YOU: mine } : {};
+  }
+  w.cash = player.cash;
+  w.debt = player.debt;
+  w.reputation = player.reputation ?? 0;
+  w.orders = player.orders ?? [];
+  w.lastOrderAt = player.lastOrderAt ?? 0;
+  w.factories = player.factories ?? [];
+  w.floorSlots = player.floorSlots ?? STARTING_SLOTS;
+  w.infra = player.infra ?? { ...FRESH_INFRA };
+  w.listPrices = player.listPrices ?? {};
+  w.producedQty = player.producedQty ?? {};
+  w.listed = player.listed ?? {};
+  w.deskAuto = player.deskAuto ?? { ...FRESH_DESKAUTO };
+  w.ledger = player.ledger ?? emptyLedger();
+  w.reports = player.reports ?? [];
+  w.periodNo = player.periodNo ?? 0;
+  w.cycle = doc.cycle;
+  return w;
+}
+
+/** Pull the per-player fields off a WorldState back into the player record.
+ *  (Holdings live in the world doc — see mutatePlayerWorld for those.) */
+export function extractPlayer(state: WorldState, player: Player): Player {
+  return {
+    ...player,
+    cash: state.cash,
+    debt: state.debt,
+    reputation: state.reputation,
+    orders: state.orders,
+    lastOrderAt: state.lastOrderAt,
+    factories: state.factories,
+    floorSlots: state.floorSlots,
+    infra: state.infra,
+    listPrices: state.listPrices,
+    producedQty: state.producedQty,
+    listed: state.listed,
+    deskAuto: state.deskAuto,
+    ledger: state.ledger,
+    // Cap the on-record report log so the player item stays well under 400KB.
+    reports: (state.reports ?? []).slice(-60),
+    periodNo: state.periodNo,
+  };
 }
 
 export async function getPlayer(playerId: string): Promise<Player | null> {
@@ -262,6 +341,83 @@ export async function mutateWorld(
 }
 
 export class TradeError extends Error {}
+
+/** Run an engine op on a per-player WorldState and persist atomically: the
+ *  player's holdings (owners["YOU"]) map back into the shared doc under their id
+ *  (others preserved), and the player record is written under optimistic CAS.
+ *  Returns the op's result plus the mutated per-player state (for building a
+ *  response view). `fn` may throw TradeError to reject without retry. */
+export async function mutatePlayerWorld<T>(
+  playerId: string,
+  fn: (state: WorldState) => T,
+  retries = 5,
+): Promise<{ result: T; state: WorldState }> {
+  for (let attempt = 0; ; attempt++) {
+    const cur = await loadWorld();
+    if (!cur) throw new Error("world not seeded");
+    const existing = await getPlayer(playerId);
+    const isNew = !existing;
+    const base: Player = existing ?? { playerId, cash: START_CASH, debt: 0 };
+    const prevCash = base.cash;
+    const prevDebt = base.debt;
+
+    const full = docToWorld(cur); // all players' holdings
+    const pv = playerView(cur, base); // this player's view (owners["YOU"])
+    const result = fn(pv); // engine mutates pv; may throw TradeError
+
+    // Map this player's holdings back into the full doc (others untouched).
+    const byId = new Map(full.items.map((it) => [it.id, it]));
+    for (const it of pv.items) {
+      const f = byId.get(it.id);
+      if (!f) continue;
+      const v = it.owners["YOU"] ?? 0;
+      if (v > 0) f.owners[playerId] = v;
+      else delete f.owners[playerId];
+    }
+    const nextDoc = worldToDoc(full, cur.version + 1);
+    const player = extractPlayer(pv, base);
+
+    try {
+      await ddb.send(
+        new TransactWriteCommand({
+          TransactItems: [
+            {
+              Put: {
+                TableName: TABLE,
+                Item: { pk: PK, version: nextDoc.version, world: nextDoc },
+                ConditionExpression: "version = :v",
+                ExpressionAttributeValues: { ":v": cur.version },
+              },
+            },
+            {
+              Put: {
+                TableName: PLAYERS,
+                Item: player,
+                ConditionExpression: isNew
+                  ? "attribute_not_exists(playerId)"
+                  : "cash = :pc AND debt = :pd",
+                ExpressionAttributeValues: isNew
+                  ? undefined
+                  : { ":pc": prevCash, ":pd": prevDebt },
+              },
+            },
+          ],
+        }),
+      );
+      return { result, state: pv };
+    } catch (err) {
+      const name = (err as { name?: string }).name;
+      if (
+        (name === "TransactionCanceledException" ||
+          name === "ConditionalCheckFailedException") &&
+        attempt < retries
+      ) {
+        continue;
+      }
+      throw err;
+    }
+  }
+}
 
 /** Apply a trade atomically across the world doc AND the player's cash, with
  *  optimistic concurrency on both. `fn` mutates the (rehydrated) world and the

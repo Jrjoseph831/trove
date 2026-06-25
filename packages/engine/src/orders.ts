@@ -41,7 +41,11 @@ export function setDeskAuto(state: WorldState, patch: Partial<DeskAuto>): void {
  * source value × (1 + minMargin); accept the moment the client's offer clears
  * it, push for more first, and walk if the client's budget can't reach the floor.
  */
-export function autoNegotiate(state: WorldState, now: number): boolean {
+export function autoNegotiate(
+  state: WorldState,
+  now: number,
+  timing: DeskTiming = SANDBOX_TIMING,
+): boolean {
   const a = state.deskAuto;
   if (!a?.specialist || repOf(state) < SPECIALIST_REP) return false;
   let changed = false;
@@ -54,12 +58,12 @@ export function autoNegotiate(state: WorldState, now: number): boolean {
     let guard = 0;
     while (o.status === "offer" && guard++ < 8) {
       if (o.companyOffer >= floorTotal) {
-        acceptSandboxOffer(state, o.id, now);
+        acceptSandboxOffer(state, o.id, now, timing);
         changed = true;
         break;
       }
       const ask = Math.max(floorTotal, Math.round(floorUnit * 1.15 * o.qty));
-      const r = negotiateSandbox(state, o.id, ask, now);
+      const r = negotiateSandbox(state, o.id, ask, now, timing);
       changed = true;
       if (r.kind === "deal" || r.kind === "pullout" || r.kind === "invalid") break;
       if (o.round >= o.maxRounds && o.companyOffer < floorTotal) {
@@ -124,13 +128,31 @@ export function productionCostOf(
   return mat + spec.upkeep / spec.rate;
 }
 
-const OFFER_TTL = 3 * 60_000; // a live negotiation stands for 3 min
-const DELIVER_TTL = 6 * 60_000; // 6 min to deliver once a price is agreed
-const ROLL_INTERVAL = 22_000; // base: a new request ~every 22s (faster when hot)
 const MAX_PENDING = 3;
 const MAX_ORDERS = 6;
 const MAX_ROUNDS = 3;
 const MISS_PENALTY = 3;
+
+/** Desk cadence — differs by world. The fast sandbox rolls offers in seconds and
+ *  delivers in minutes; the live world runs on the real clock (slower). */
+export interface DeskTiming {
+  /** Base ms between new offers (faster when the market is hot). */
+  rollInterval: number;
+  /** How long a live negotiation stands before lapsing (ms). */
+  offerTTL: number;
+  /** Time to deliver once a price is agreed (ms). */
+  deliverTTL: number;
+}
+export const SANDBOX_TIMING: DeskTiming = {
+  rollInterval: 22_000,
+  offerTTL: 14 * 60_000,
+  deliverTTL: 6 * 60_000,
+};
+export const LIVE_TIMING: DeskTiming = {
+  rollInterval: 10 * 60_000,
+  offerTTL: 30 * 60_000,
+  deliverTTL: 6 * 60 * 60_000, // a full settlement cycle to source + deliver
+};
 
 export const repOf = (s: WorldState): number => s.reputation ?? 0;
 
@@ -222,7 +244,11 @@ function pickOrderItem(state: WorldState, rep: number): RuntimeItem | null {
  *  For items you produce, the offer anchors to YOUR sell price with a bulk
  *  discount; for market goods it anchors to the market price. Either way it's
  *  floored so a deal always clears a profit, and quantities/prices vary. */
-export function generateSandboxOrder(state: WorldState, now: number): Order | null {
+export function generateSandboxOrder(
+  state: WorldState,
+  now: number,
+  timing: DeskTiming = SANDBOX_TIMING,
+): Order | null {
   const rep = repOf(state);
   const it = pickOrderItem(state, rep);
   if (!it) return null;
@@ -271,13 +297,17 @@ export function generateSandboxOrder(state: WorldState, now: number): Order | nu
     quote: 0,
     status: "offer",
     createdAt: now,
-    expiresAt: now + OFFER_TTL,
+    expiresAt: now + timing.offerTTL,
   };
 }
 
 /** Expire stale offers + overdue contracts, then roll a new request if due.
  *  Demand arrives faster when the market is hot. Returns whether anything changed. */
-export function rollSandboxOrders(state: WorldState, now: number): boolean {
+export function rollSandboxOrders(
+  state: WorldState,
+  now: number,
+  timing: DeskTiming = SANDBOX_TIMING,
+): boolean {
   if (!state.orders) state.orders = [];
   let changed = false;
 
@@ -293,10 +323,10 @@ export function rollSandboxOrders(state: WorldState, now: number): boolean {
   }
 
   const pending = kept.filter((o) => o.status === "offer").length;
-  const interval = ROLL_INTERVAL / (1 + marketHeat(state) * 2.5);
+  const interval = timing.rollInterval / (1 + marketHeat(state) * 2.5);
   const due = now - (state.lastOrderAt ?? 0) >= interval;
   if (due && pending < MAX_PENDING && kept.length < MAX_ORDERS) {
-    const o = generateSandboxOrder(state, now);
+    const o = generateSandboxOrder(state, now, timing);
     if (o) {
       kept.push(o);
       state.lastOrderAt = now;
@@ -313,10 +343,15 @@ export type NegotiateResult =
   | { kind: "pullout" }
   | { kind: "invalid" };
 
-function seal(o: Order, price: number, now: number): NegotiateResult {
+function seal(
+  o: Order,
+  price: number,
+  now: number,
+  timing: DeskTiming,
+): NegotiateResult {
   o.status = "accepted";
   o.quote = price;
-  o.expiresAt = now + DELIVER_TTL;
+  o.expiresAt = now + timing.deliverTTL;
   return { kind: "deal", price };
 }
 
@@ -326,16 +361,17 @@ export function negotiateSandbox(
   orderId: string,
   bid: number,
   now: number,
+  timing: DeskTiming = SANDBOX_TIMING,
 ): NegotiateResult {
   const o = (state.orders ?? []).find((x) => x.id === orderId);
   if (!o || o.status !== "offer") return { kind: "invalid" };
   if (!Number.isFinite(bid) || bid <= 0) return { kind: "invalid" };
 
-  if (bid <= o.target) return seal(o, bid, now);
+  if (bid <= o.target) return seal(o, bid, now, timing);
 
   const nextRound = o.round + 1;
   if (bid <= o.budget) {
-    if (nextRound >= o.maxRounds) return seal(o, bid, now);
+    if (nextRound >= o.maxRounds) return seal(o, bid, now, timing);
     const step = 0.45 + rand() * 0.2;
     o.companyOffer = Math.max(
       o.companyOffer + 1,
@@ -362,10 +398,11 @@ export function acceptSandboxOffer(
   state: WorldState,
   orderId: string,
   now: number,
+  timing: DeskTiming = SANDBOX_TIMING,
 ): NegotiateResult {
   const o = (state.orders ?? []).find((x) => x.id === orderId);
   if (!o || o.status !== "offer") return { kind: "invalid" };
-  return seal(o, o.companyOffer, now);
+  return seal(o, o.companyOffer, now, timing);
 }
 
 /** Walk away from an offer. */
