@@ -40,7 +40,7 @@ export function Rail() {
     desk,
     startRename,
   } = useTrove();
-  const pendingOrders = desk?.orders.filter((o) => o.status === "pending").length ?? 0;
+  const pendingOrders = desk?.orders.filter((o) => o.status === "offer").length ?? 0;
   const go = (t: TabId) => {
     setTab(t);
     setNavOpen(false);

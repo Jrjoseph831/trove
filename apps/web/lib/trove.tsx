@@ -138,6 +138,7 @@ interface Trove {
   /** Order Desk (PVE). null until loaded. */
   desk: Desk | null;
   acceptOrder: (id: string) => void;
+  counterOrder: (id: string, bid: number) => void;
   declineOrder: (id: string) => void;
   fulfillOrder: (id: string) => void;
   nameHolding: (name: string) => void;
@@ -528,11 +529,43 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const startRename = useCallback(() => setRenaming(true), []);
   const cancelRename = useCallback(() => setRenaming(false), []);
 
+  // Accept the client's current standing offer outright (no counter).
   const acceptOrder = useCallback(
     (id: string) => {
       void deskAction("accept", { orderId: id }).then((d) => {
-        if ("error" in d) showToast("Couldn't accept");
-        else setDesk(d);
+        if ("error" in d) {
+          showToast("Couldn't accept");
+          return;
+        }
+        setDesk(d);
+        if (d.note?.kind === "deal")
+          showToast(`Deal · ${moneyShort(d.note.price)} — deliver within 2h`);
+      });
+    },
+    [showToast],
+  );
+
+  // Counter with an ask; the client haggles within its hidden budget.
+  const counterOrder = useCallback(
+    (id: string, bid: number) => {
+      void deskAction("counter", { orderId: id, bid }).then((d) => {
+        if ("error" in d) {
+          showToast(d.error === "invalid bid" ? "Enter a valid bid" : "Couldn't send");
+          return;
+        }
+        setDesk(d);
+        const n = d.note;
+        if (!n) return;
+        if (n.kind === "deal")
+          showToast(`Deal · ${moneyShort(n.price)} — deliver within 2h`);
+        else if (n.kind === "counter")
+          showToast(
+            `${n.company ?? "They"} countered: ${moneyShort(n.offer)}${
+              n.overBudget ? " · over their budget" : ""
+            }`,
+          );
+        else if (n.kind === "pullout")
+          showToast(`${n.company ?? "They"} walked away`);
       });
     },
     [showToast],
@@ -600,6 +633,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       signOut,
       desk,
       acceptOrder,
+      counterOrder,
       declineOrder,
       fulfillOrder,
       nameHolding,
@@ -637,6 +671,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       signOut,
       desk,
       acceptOrder,
+      counterOrder,
       declineOrder,
       fulfillOrder,
       nameHolding,

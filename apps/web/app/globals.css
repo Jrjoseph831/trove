@@ -3462,6 +3462,9 @@ body {
 .ordercard.accepted {
   border-left: 3px solid var(--accent);
 }
+.ordercard.offer {
+  border-left: 3px solid var(--dn);
+}
 .oc-co {
   font-size: 10px;
   letter-spacing: 0.1em;
@@ -3469,11 +3472,59 @@ body {
   color: var(--accent);
   font-weight: 700;
 }
+.oc-sector {
+  color: var(--ink-dim);
+  font-weight: 400;
+}
+.oc-round {
+  float: right;
+  color: var(--ink-faint);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
 .oc-time {
   color: var(--ink-dim);
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
+}
+/* Negotiation bid row */
+.oc-bidrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 10px;
+}
+.oc-bidlbl {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.oc-bid {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.oc-counter {
+  padding: 8px 16px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: none;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.oc-counter:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 .oc-line {
   font-family: var(--font-display);

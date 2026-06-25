@@ -147,17 +147,36 @@ export async function saveWorld(doc: WorldDoc, prevVersion: number): Promise<voi
   );
 }
 
-/** One Order-Desk contract on a player's record. */
+/** One Order-Desk contract on a player's record.
+ *  An order is negotiated: the client opens with `companyOffer`, the player
+ *  counters, and they haggle within the client's HIDDEN budget. Once a price is
+ *  agreed the order flips to "accepted" with `quote` set, and the
+ *  source-and-deliver-by-deadline flow takes over. */
 export interface Order {
   id: string;
+  /** End-user client firm (from @trove/data clients), e.g. "Cardinal Carriers". */
   company: string;
+  /** The client's sector (for display + flavor). */
+  sector: string;
   itemId: number;
   qty: number;
-  /** Fixed payout the company commits to (set at creation). */
+  // ── Negotiation (status "offer") ──────────────────────────────────────────
+  /** The client's current visible offer; the player can accept or counter it. */
+  companyOffer: number;
+  /** HIDDEN — the most the client will ever pay. Never sent to the client. */
+  budget: number;
+  /** HIDDEN — at/below this the client accepts instantly. Never sent. */
+  target: number;
+  /** Haggling rounds used so far. */
+  round: number;
+  /** Patience: rounds allowed before the client walks. */
+  maxRounds: number;
+  // ── Agreed contract (status "accepted") ─────────────────────────────────────
+  /** Agreed payout once accepted (0 while still negotiating). */
   quote: number;
-  status: "pending" | "accepted";
+  status: "offer" | "accepted";
   createdAt: number;
-  /** Pending offers vanish after this; accepted contracts are due by it. */
+  /** Offers vanish after this; accepted contracts are due by it. */
   expiresAt: number;
 }
 

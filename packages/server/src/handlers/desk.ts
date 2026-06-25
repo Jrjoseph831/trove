@@ -17,7 +17,13 @@ import {
   TradeError,
   type Player,
 } from "../repo";
-import { fulfilReward, repOf, rollAndExpire } from "../orders";
+import {
+  acceptCurrentOffer,
+  fulfilReward,
+  negotiate,
+  repOf,
+  rollAndExpire,
+} from "../orders";
 
 const json = (status: number, body: unknown): APIGatewayProxyResultV2 => ({
   statusCode: status,
@@ -39,15 +45,20 @@ function deskView(player: Player, valueOf: (id: number) => number, ownedOf: (id:
     name: player.name ?? null,
     reputation: repOf(player),
     cash: player.cash,
+    // NOTE: budget + target are HIDDEN — never include them here.
     orders: (player.orders ?? []).map((o) => {
       const it = getItem(o.itemId);
       return {
         id: o.id,
         company: o.company,
+        sector: o.sector,
         itemId: o.itemId,
         itemName: it?.name ?? `#${o.itemId}`,
         brand: it?.brand ?? "",
         qty: o.qty,
+        companyOffer: o.companyOffer,
+        round: o.round,
+        maxRounds: o.maxRounds,
         quote: o.quote,
         status: o.status,
         expiresAt: o.expiresAt,
@@ -80,7 +91,12 @@ export async function handler(
   }
 
   // POST actions
-  let body: { action?: string; orderId?: string; name?: string };
+  let body: {
+    action?: string;
+    orderId?: string;
+    name?: string;
+    bid?: number;
+  };
   try {
     const raw = event.isBase64Encoded
       ? Buffer.from(event.body ?? "", "base64").toString("utf8")
@@ -101,20 +117,45 @@ export async function handler(
     return json(200, deskView(player, valueOf, ownedOf));
   }
 
-  if (action === "accept" || action === "decline") {
+  if (action === "decline") {
+    const player = (await getPlayer(playerId)) ?? fresh(playerId);
+    const orders = player.orders ?? [];
+    if (!orders.some((x) => x.id === orderId))
+      return json(404, { error: "no such order" });
+    player.orders = orders.filter((x) => x.id !== orderId);
+    await savePlayer(player);
+    return json(200, deskView(player, valueOf, ownedOf));
+  }
+
+  if (action === "accept") {
+    // Accept the client's CURRENT standing offer outright (no counter).
+    const player = (await getPlayer(playerId)) ?? fresh(playerId);
+    const o = (player.orders ?? []).find((x) => x.id === orderId);
+    if (!o) return json(404, { error: "no such order" });
+    const res = acceptCurrentOffer(o, now);
+    if (res.kind !== "deal") return json(409, { error: "offer is closed" });
+    await savePlayer(player);
+    return json(200, { ...deskView(player, valueOf, ownedOf), note: res });
+  }
+
+  if (action === "counter") {
+    // Player asks `bid`; the client haggles within its hidden budget.
+    const bid = Math.round(Number(body.bid));
     const player = (await getPlayer(playerId)) ?? fresh(playerId);
     const orders = player.orders ?? [];
     const o = orders.find((x) => x.id === orderId);
     if (!o) return json(404, { error: "no such order" });
-    if (action === "decline") {
+    const res = negotiate(o, bid, now);
+    if (res.kind === "invalid") return json(400, { error: "invalid bid" });
+    if (res.kind === "pullout") {
+      // They walked: the request is gone (no reputation penalty).
       player.orders = orders.filter((x) => x.id !== orderId);
-    } else {
-      if (o.status !== "pending") return json(409, { error: "already taken" });
-      o.status = "accepted";
-      o.expiresAt = now + 2 * 60 * 60_000; // 2h to deliver
     }
     await savePlayer(player);
-    return json(200, deskView(player, valueOf, ownedOf));
+    return json(200, {
+      ...deskView(player, valueOf, ownedOf),
+      note: { ...res, company: o.company },
+    });
   }
 
   if (action === "fulfill") {
