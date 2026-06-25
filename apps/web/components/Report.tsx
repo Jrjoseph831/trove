@@ -114,8 +114,8 @@ export function ReportView() {
           <h2 className="serif">Reports</h2>
         </div>
         <div className="empty">
-          Daily reports track your factory + trading activity. Switch to{" "}
-          <b>Sandbox</b> to start building a history.
+          Daily reports track your factory + trading activity — coming to the
+          live floor alongside production.
         </div>
       </div>
     );

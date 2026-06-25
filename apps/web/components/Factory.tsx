@@ -50,8 +50,8 @@ export function Factory() {
           <h2 className="serif">Factory</h2>
         </div>
         <div className="empty">
-          Production lines are coming to the live floor soon. For now, switch to{" "}
-          <b>Sandbox</b> to engineer a line, install modules, and watch it run.
+          Production lines are coming to the live floor — engineer factories,
+          source supply chains, and fulfil bulk orders. Stay tuned.
         </div>
       </div>
     );

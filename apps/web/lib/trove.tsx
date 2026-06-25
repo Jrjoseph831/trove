@@ -26,7 +26,7 @@ import {
   signIn as authSignIn,
   signOut as authSignOut,
 } from "./auth";
-import { AUTH_ENABLED } from "./config";
+import { AUTH_ENABLED, sandboxEnabled } from "./config";
 import { manufacturingName } from "./format";
 import {
   advance,
@@ -449,7 +449,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const state = worldsRef.current[mode];
 
   const setMode = useCallback((m: Mode) => {
-    setModeState(m);
+    // Sandbox is dev-only; never let it engage on the public site.
+    setModeState(m === "sandbox" && !sandboxEnabled() ? "live" : m);
     setNavOpen(false);
   }, []);
 

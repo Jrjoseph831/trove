@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import { assetsValue, netWorth } from "@trove/engine";
+import { sandboxEnabled } from "@/lib/config";
 import { money, pctChange } from "@/lib/format";
 import type { TabId } from "@/lib/trove";
 import { useTrove } from "@/lib/trove";
@@ -200,20 +201,22 @@ export function Rail() {
           )}
         </div>
         <ThemeToggle />
-        <div className="modeswitch">
-          <button
-            className={`live ${mode === "live" ? "on" : ""}`}
-            onClick={() => setMode("live")}
-          >
-            Live
-          </button>
-          <button
-            className={`sandbox ${mode === "sandbox" ? "on" : ""}`}
-            onClick={() => setMode("sandbox")}
-          >
-            Sandbox
-          </button>
-        </div>
+        {sandboxEnabled() && (
+          <div className="modeswitch">
+            <button
+              className={`live ${mode === "live" ? "on" : ""}`}
+              onClick={() => setMode("live")}
+            >
+              Live
+            </button>
+            <button
+              className={`sandbox ${mode === "sandbox" ? "on" : ""}`}
+              onClick={() => setMode("sandbox")}
+            >
+              Sandbox
+            </button>
+          </div>
+        )}
       </div>
     </nav>
   );
