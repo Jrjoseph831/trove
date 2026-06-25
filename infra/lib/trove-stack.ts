@@ -22,8 +22,9 @@ import { HttpLambdaIntegration } from "aws-cdk-lib/aws-apigatewayv2-integrations
 import { HttpJwtAuthorizer } from "aws-cdk-lib/aws-apigatewayv2-authorizers";
 import type { Construct } from "constructs";
 
-/** OAuth redirect targets — the live site (basePath /trove) + local dev. */
+/** OAuth redirect targets — Vercel (primary), GitHub Pages, and local dev. */
 const CALLBACK_URLS = [
+  "https://trove-web-beta.vercel.app/",
   "https://jrjoseph831.github.io/trove/",
   "http://localhost:3000/",
 ];
