@@ -38,6 +38,12 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Verify — typecheck + economy invariant tests
+        run: |
+          npm run -w @trove/data typecheck
+          npm run -w @trove/engine typecheck
+          npm run -w @trove/engine test
+          npm run -w @trove/server typecheck
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
