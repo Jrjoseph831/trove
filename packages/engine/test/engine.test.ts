@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { canProduce, COMPANY_TIERS, items as catalog } from "@trove/data";
+import { canProduce, COMPANY_TIERS, effectiveSpec, items as catalog } from "@trove/data";
 import {
   accrueIncome,
   advance,
@@ -327,6 +327,28 @@ describe("order desk runs on company treasuries", () => {
       expect(o.budget).toBeLessThanOrEqual(buyer.cash); // can always cover it
     }
     expect(seen).toBeGreaterThan(0);
+  });
+
+  it("sizes produced-good orders to what you can deliver, not millions of units", () => {
+    setRng(mulberry32(31));
+    const S = createWorld(0);
+    S.cash = 3_000_000;
+    S.floorSlots = 4;
+    const target = catalog.find((i) => canProduce(i as RuntimeItem))!;
+    expect(buildFactory(S, target.id)).not.toBeNull();
+    const rate = effectiveSpec(target, []).rate;
+    // With one line, on-hand 0, an order should never exceed ~2.5 windows of output
+    // (the deliverable ceiling) — i.e. it's fulfillable, not a dollar-driven blowup.
+    const ceiling = Math.round(rate * 14 * 2.5);
+    let producedSeen = 0;
+    for (let i = 0; i < 120; i++) {
+      const o = generateSandboxOrder(S, i * 1000);
+      if (!o || o.itemId !== target.id) continue;
+      producedSeen++;
+      expect(o.qty).toBeLessThanOrEqual(ceiling);
+      expect(o.qty).toBeGreaterThan(0);
+    }
+    expect(producedSeen).toBeGreaterThan(0); // the desk does request what you make
   });
 
   it("fulfilment moves cash from the buyer's treasury to the player (closed loop)", () => {

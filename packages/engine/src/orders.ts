@@ -133,6 +133,10 @@ const MAX_PENDING = 3;
 const MAX_ORDERS = 6;
 const MAX_ROUNDS = 3;
 const MISS_PENALTY = 3;
+/** Production cycles of output an order is sized around (a comfortable slice of
+ *  the deliver window — in live, 14 cycles ≈ 70 min vs the 6h deadline). Orders
+ *  scale to (on-hand + rate × this), so they grow with your output + stock. */
+const ORDER_WINDOW_CYCLES = 14;
 
 /** Desk cadence — differs by world. The fast sandbox rolls offers in seconds and
  *  delivers in minutes; the live world runs on the real clock (slower). */
@@ -270,6 +274,20 @@ function pickOrderItem(state: WorldState, rep: number): RuntimeItem | null {
   return within[Math.floor(rand() * within.length)]!;
 }
 
+/** The player's total production rate (units/cycle) for an item's product, across
+ *  every line that makes it — what they can actually turn out, for order sizing. */
+function producedRateOf(state: WorldState, it: RuntimeItem): number {
+  const key = productKey(it);
+  let rate = 0;
+  for (const f of state.factories ?? []) {
+    const out = state.items.find((x) => x.id === f.itemId);
+    if (out && productKey(out) === key) {
+      rate += effectiveSpec(getItem(f.itemId) ?? out, f.modules).rate;
+    }
+  }
+  return rate;
+}
+
 /** Pick an AI company to place an order in a sector: prefer its home-sector
  *  house, then the broad index, then anyone — and only companies holding enough
  *  cash to actually pay. Returns null if no one can afford to buy right now. */
@@ -320,10 +338,28 @@ export function generateSandboxOrder(
     (buyer.cash ?? 0) * 0.5,
   );
 
-  // Bulk quantity — varied + news-demand-scaled, then capped to the buyer's means.
+  // Bulk quantity — sized to what YOU can realistically DELIVER, so orders scale
+  // with your output + stock + reputation instead of a flat dollar target (which
+  // ballooned cheap goods into millions of units no one could fulfil).
+  //  • Goods you make: a slice of (on-hand + what you can produce over a
+  //    comfortable window), grown by reputation, capped so it stays deliverable
+  //    inside the ~6h window. Often more than you hold now, but you can make it.
+  //  • Goods you don't make (reseller): a modest quantity you'd source on the floor.
   const lot = lotSize(getItem(it.id) ?? it);
-  const targetGross = (3000 + rep * 2500) * (0.5 + rand() * 1.6) * demandHeat(state, it);
-  let qty = Math.max(1, Math.round(targetGross / retail));
+  let qty: number;
+  if (produced) {
+    const rate = producedRateOf(state, it);
+    const onHand = heldOfProduct(state, it);
+    const window = rate * ORDER_WINDOW_CYCLES;
+    const repScale = 0.6 + Math.min(1.4, rep / 25); // 0.6 → 2.0 as you build rep
+    qty = Math.round((onHand + window) * (0.3 + rand() * 0.7) * demandHeat(state, it) * repScale);
+    qty = Math.min(qty, Math.round(onHand + window * 2.5)); // keep it deliverable
+    qty = Math.max(qty, Math.round(rate)); // at least about one batch
+  } else {
+    const dollars = (1200 + rep * 900) * (0.5 + rand() * 1.1) * demandHeat(state, it);
+    const resellCap = Math.round(150 + rep * 120);
+    qty = Math.min(resellCap, Math.max(1, Math.round(dollars / retail)));
+  }
 
   const floor = cost * 1.05; // always clear a margin
   const discFor = (q: number) =>
