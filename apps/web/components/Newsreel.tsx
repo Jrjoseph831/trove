@@ -79,7 +79,7 @@ type Slide =
   | { type: "movers"; dur: number }
   | { type: "standings"; dur: number }
   | { type: "bumper"; dur: number }
-  | { type: "weather"; dur: number; sectors: SectorKey[] }
+  | { type: "weather"; dur: number; states: { state: string; sector: SectorKey }[] }
   | { type: "ad"; dur: number; ad: AdSpot }
   | { type: "comingup"; dur: number };
 
@@ -96,12 +96,33 @@ const AD_GRAD: Record<AdTone, string> = {
   studio: "linear-gradient(135deg,#222329,#0a0b0e)",
 };
 
-/** A sector's "weather" from its index — playful, but it tracks the real floor. */
-function forecast(idx: number): { Icon: LucideIcon; sky: string; note: string } {
-  if (idx >= 1.06) return { Icon: Sun, sky: "Sunny", note: "warming · indices firm" };
-  if (idx >= 1.0) return { Icon: CloudSun, sky: "Mild", note: "steady" };
-  if (idx >= 0.94) return { Icon: Cloud, sky: "Overcast", note: "easing" };
-  return { Icon: CloudLightning, sky: "Storm warning", note: "under pressure" };
+/** Fictional Trove states for the forecast. Each quietly leans on a sector, so
+ *  the on-screen weather still tracks the real floor — but it reads as a weather
+ *  map of places, not "manufacturing: cloudy". */
+const STATES: { state: string; sector: SectorKey }[] = [
+  { state: "Brunhollow", sector: "manufacturing" },
+  { state: "Caelmark", sector: "technology" },
+  { state: "Verdant Reach", sector: "agriculture" },
+  { state: "Stonewater", sector: "energy" },
+  { state: "Ashfen", sector: "construction" },
+  { state: "Glimmercoast", sector: "hospitality" },
+  { state: "Dunmore", sector: "logistics" },
+  { state: "Highcrest", sector: "luxury" },
+  { state: "Marrow Vale", sector: "medical" },
+  { state: "Tindale", sector: "textiles" },
+  { state: "Ferrspire", sector: "automotive" },
+  { state: "Wexford Flats", sector: "consumer" },
+];
+
+/** Weather for a state, derived from its sector's index — clear when the floor's
+ *  warm there, stormy when it's under pressure. Plain weather words, no market
+ *  jargon. Temperature trends warmer with the index, for flavor. */
+function forecast(idx: number): { Icon: LucideIcon; sky: string; note: string; temp: number } {
+  const temp = Math.max(38, Math.min(84, Math.round(60 + (idx - 1) * 48)));
+  if (idx >= 1.06) return { Icon: Sun, sky: "Sunny", note: "clear skies", temp };
+  if (idx >= 1.0) return { Icon: CloudSun, sky: "Fair", note: "partly cloudy", temp };
+  if (idx >= 0.94) return { Icon: Cloud, sky: "Overcast", note: "grey and still", temp };
+  return { Icon: CloudLightning, sky: "Storms", note: "storm warning", temp };
 }
 
 // Group every in-depth, single-sector story by its sector (built once).
@@ -141,13 +162,10 @@ const BEATS_BY_SECTOR: Record<string, Story[]> = (() => {
 /** Off-peak filler rundown: ident → weather → ads (with a bumper) → coming up. */
 function buildFiller(s: WorldState, loop: { current: number }): Slide[] {
   const slides: Slide[] = [{ type: "ident", dur: 4200 }];
-  const wsect = [...sectorKeys]
-    .sort(
-      (a, b) =>
-        Math.abs((s.sectorIdx[b] ?? 1) - 1) - Math.abs((s.sectorIdx[a] ?? 1) - 1),
-    )
-    .slice(0, 6) as SectorKey[];
-  slides.push({ type: "weather", dur: 13000, sectors: wsect });
+  // A rotating window of fictional states for the forecast (6 at a time).
+  const off = (loop.current * 6) % STATES.length;
+  const states = Array.from({ length: 6 }, (_, k) => STATES[(off + k) % STATES.length]!);
+  slides.push({ type: "weather", dur: 13000, states });
 
   // Rotate through the commercial bank, 3 spots per filler block. Prefer the
   // finished, fully-designed ads (those with baked artwork); fall back to the
@@ -463,14 +481,16 @@ export function Wheel({
             <div className="reel-panel wx">
               <div className="reel-panel-h">Trove Forecast</div>
               <div className="reel-wx">
-                {slide.sectors.map((sec) => {
-                  const f = forecast(state.sectorIdx[sec] ?? 1);
+                {slide.states.map((row) => {
+                  const f = forecast(state.sectorIdx[row.sector] ?? 1);
                   return (
-                    <div className="reel-wxrow" key={sec}>
+                    <div className="reel-wxrow" key={row.state}>
                       <f.Icon size={22} className="reel-wxic" />
-                      <span className="reel-wxsec">{sectorLabel(sec)}</span>
+                      <span className="reel-wxsec">{row.state}</span>
                       <span className="reel-wxsky">{f.sky}</span>
-                      <span className="reel-wxnote">{f.note}</span>
+                      <span className="reel-wxnote">
+                        {f.temp}° · {f.note}
+                      </span>
                     </div>
                   );
                 })}

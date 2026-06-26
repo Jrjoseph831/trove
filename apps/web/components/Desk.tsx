@@ -233,9 +233,6 @@ function OfferCard({ o }: { o: DeskOrder }) {
       <div className="oc-co">
         {o.company}
         <span className="oc-sector"> · {o.sector}</span>
-        <span className="oc-round">
-          round {o.round + 1} of {o.maxRounds}
-        </span>
       </div>
       <div className="oc-line">
         <b>{o.qty.toLocaleString()} ×</b>{" "}
