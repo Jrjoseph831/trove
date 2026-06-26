@@ -282,8 +282,42 @@ export function pushLog(
 // ── News sequencing (zero runtime AI) ────────────────────────────────────────
 
 /**
- * Pick the next scenario by `weight`, avoiding any of the last
- * RECENT_NEWS_WINDOW stories so the same headline doesn't recycle quickly.
+ * Coherence multiplier for a candidate story vs the current atmosphere, so the
+ * front page reads like a continuous story instead of contradicting itself
+ * ("energy in decline" one cycle, "energy's best days" the next). Stories that
+ * CONTINUE an existing sector trend are favored; ones that sharply REVERSE a
+ * strong trend, or directly contradict a still-on-air storyline, are damped.
+ * Mild corrections stay possible (markets do turn) — it's hard flips we kill.
+ */
+function newsCoherence(state: WorldState, n: News): number {
+  let score = 1;
+  for (const s of sectorKeys) {
+    const e = n.effects[s];
+    if (!e) continue;
+    const dev = (state.sectorIdx[s] ?? 1) - 1; // current trend for this sector
+    if (Math.abs(dev) < 0.03) continue; // sector is calm → no constraint
+    const strength = Math.min(1, Math.abs(dev) / 0.3);
+    if (Math.sign(e) === Math.sign(dev)) {
+      score *= 1 + 0.6 * strength; // continues the trend → favored
+    } else {
+      score *= 1 - 0.7 * strength; // reverses it → damped (more if trend is strong)
+    }
+  }
+  // Never flatly contradict a storyline that's still on the air for that sector.
+  for (const a of state.active) {
+    for (const s of sectorKeys) {
+      const e = n.effects[s];
+      const ae = a.news.effects[s];
+      if (e && ae && Math.sign(e) !== Math.sign(ae)) score *= 0.45;
+    }
+  }
+  return Math.max(0.05, score);
+}
+
+/**
+ * Pick the next scenario by `weight` × coherence, avoiding any of the last
+ * RECENT_NEWS_WINDOW stories so the same headline doesn't recycle quickly. The
+ * coherence factor keeps the unfolding narrative consistent (see newsCoherence).
  */
 function pickNewsIdx(state: WorldState): number {
   const recent = new Set(state.recentNewsIdx);
@@ -294,12 +328,14 @@ function pickNewsIdx(state: WorldState): number {
   if (candidates.length === 0) {
     candidates = newsBank.map((_, i) => i);
   }
+  const wt = (i: number) =>
+    (newsBank[i]?.weight ?? 1) * newsCoherence(state, newsBank[i] as News);
   let total = 0;
-  for (const i of candidates) total += newsBank[i]?.weight ?? 1;
+  for (const i of candidates) total += wt(i);
   let r = rand() * total;
   let idx = candidates[0] ?? 0;
   for (const i of candidates) {
-    r -= newsBank[i]?.weight ?? 1;
+    r -= wt(i);
     if (r <= 0) {
       idx = i;
       break;

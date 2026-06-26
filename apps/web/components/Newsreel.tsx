@@ -69,6 +69,8 @@ interface Story {
   head: string;
   body?: string;
   sector?: SectorKey;
+  /** Direction of this story's effect on its sector (+1 up, -1 down). */
+  dir?: number;
 }
 type Slide =
   | { type: "ident"; dur: number }
@@ -110,7 +112,13 @@ const STORIES_BY_SECTOR: Record<string, Story[]> = (() => {
     const keys = Object.keys(n.effects ?? {});
     if (keys.length !== 1) continue;
     const sec = keys[0]!;
-    (by[sec] ||= []).push({ kick: n.kick, head: n.head, body: n.body, sector: sec });
+    (by[sec] ||= []).push({
+      kick: n.kick,
+      head: n.head,
+      body: n.body,
+      sector: sec,
+      dir: Math.sign(n.effects[sec as SectorKey] ?? 0),
+    });
   }
   return by;
 })();
@@ -194,9 +202,14 @@ export function Wheel({
     const slides: Slide[] = [{ type: "ident", dur: 4800 }];
     featured.forEach((sec, i) => {
       slides.push({ type: "segment", sector: sec, dur: 4600 });
-      // lead with the house storylines, then fill with the in-depth bank
+      // lead with the house storylines, then fill with in-depth stories that
+      // MATCH the sector's current trend (don't run a "boom" piece while the
+      // sector is sliding); fall back to the whole bank if none align.
       const beats = BEATS_BY_SECTOR[sec] ?? [];
-      const bank = STORIES_BY_SECTOR[sec] ?? [];
+      const all = STORIES_BY_SECTOR[sec] ?? [];
+      const trend = Math.sign((s.sectorIdx[sec] ?? 1) - 1);
+      const aligned = trend !== 0 ? all.filter((st) => st.dir === trend) : all;
+      const bank = aligned.length ? aligned : all;
       const lead = beats.slice(0, 3);
       const fill: Story[] = [];
       const need = 5 - lead.length;
