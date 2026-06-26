@@ -4293,45 +4293,60 @@ body {
 }
 .cvy-belt {
   flex: 1;
-  min-width: 26px;
+  min-width: 30px;
   height: 34px;
   position: relative;
   overflow: hidden;
+  align-self: center;
 }
-.cvy-rail {
+/* A real belt: a rounded track with diagonal cleats that scroll when running. */
+.cvy-track {
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
-  height: 3px;
-  margin-top: -1.5px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--line) 0 6px,
-    transparent 6px 12px
+  height: 13px;
+  margin-top: -6.5px;
+  border-radius: 7px;
+  background-color: var(--paper-2);
+  border: 1px solid var(--line);
+  background-image: repeating-linear-gradient(
+    115deg,
+    color-mix(in srgb, var(--ink) 8%, transparent) 0 6px,
+    transparent 6px 15px
   );
+  background-size: 30px 100%;
+}
+.cvy.running .cvy-track {
+  animation: cvy-belt 1s linear infinite;
+}
+@keyframes cvy-belt {
+  to {
+    background-position: 30px 0;
+  }
 }
 .cvy-box {
   position: absolute;
   top: 50%;
-  width: 8px;
-  height: 8px;
-  margin-top: -4px;
-  border-radius: 1px;
-  background: var(--up);
+  width: 12px;
+  height: 10px;
+  margin-top: -5px;
+  border-radius: 2px;
+  background: var(--accent);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
   animation-name: cvy-flow;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 @keyframes cvy-flow {
   0% {
-    left: -10px;
+    left: -12px;
     opacity: 0;
   }
-  12% {
+  14% {
     opacity: 1;
   }
-  88% {
+  86% {
     opacity: 1;
   }
   100% {
@@ -4339,12 +4354,26 @@ body {
     opacity: 0;
   }
 }
-.cvy.idle .cvy-rail {
-  background: repeating-linear-gradient(
-    90deg,
-    #c0563f55 0 6px,
-    transparent 6px 12px
+.cvy.idle .cvy-track {
+  border-color: #c0563f66;
+  background-image: repeating-linear-gradient(
+    115deg,
+    #c0563f33 0 6px,
+    transparent 6px 15px
   );
+}
+/* The output bay pulses while the line runs — it feels alive. */
+.cvy.running .cvy-station.bay .cvy-ic {
+  animation: cvy-pulse 2.4s ease-in-out infinite;
+}
+@keyframes cvy-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 0 5px transparent;
+  }
 }
 .cvy-note {
   font-size: 11.5px;
@@ -4432,6 +4461,178 @@ body {
   color: var(--accent);
   font-weight: 600;
 }
+
+/* Hero per-cycle economics panel */
+.bay-econ {
+  margin: 16px 0 4px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--paper-2);
+  overflow: hidden;
+}
+.be-head {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding: 8px 14px 0;
+}
+.be-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  padding: 6px 4px 4px;
+}
+.be-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 10px;
+}
+.be-cell.hero {
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  border-radius: 8px;
+}
+.be-lab {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.be-val {
+  font-size: 19px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.be-val small {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--ink-faint);
+}
+.be-val.pos {
+  color: var(--up);
+}
+.be-val.neg {
+  color: var(--danger, #c0492b);
+}
+.be-sub {
+  font-size: 10.5px;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 620px) {
+  .be-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Self-explaining module (upgrade) cards */
+.modcard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.modcard {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 12px 13px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--paper);
+}
+.modcard.on {
+  border-color: color-mix(in srgb, var(--up) 55%, var(--line));
+  background: color-mix(in srgb, var(--up) 7%, transparent);
+}
+.mc-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.mc-name {
+  font-weight: 700;
+  font-size: 14px;
+}
+.mc-cost {
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-dim);
+}
+.mc-tag {
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--up);
+  font-weight: 700;
+}
+.mc-desc {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--ink-dim);
+}
+.mc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.mc-chip {
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
+.mc-chip.good {
+  color: var(--up);
+  background: color-mix(in srgb, var(--up) 13%, transparent);
+}
+.mc-chip.bad {
+  color: var(--danger, #c0492b);
+  background: color-mix(in srgb, var(--danger, #c0492b) 11%, transparent);
+}
+.mc-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 2px;
+}
+.mc-prev {
+  font-size: 11px;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+}
+.mc-prev b {
+  color: var(--ink);
+}
+.mc-btn {
+  margin-left: auto;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.mc-btn:hover:not(:disabled) {
+  opacity: 0.88;
+}
+.mc-btn.remove {
+  background: transparent;
+  color: var(--ink-dim);
+  border-color: var(--line-2);
+}
+.mc-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 /* Sell-price control */
 .bay-price {
   margin-top: 14px;

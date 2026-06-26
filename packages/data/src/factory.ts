@@ -239,8 +239,10 @@ export function factorySpec(it: Item): FactorySpec {
 export interface LineModule {
   id: string;
   name: string;
-  /** One-line effect summary for the UI. */
+  /** One-line effect summary for the UI (terse). */
   blurb: string;
+  /** Plain-English description of what it does + the trade-off. */
+  desc: string;
   /** Install cost as a fraction of the line's base build cost. */
   costFactor: number;
   rateMul: number;
@@ -258,6 +260,7 @@ export const MODULES: LineModule[] = [
     id: "auto",
     name: "Automation Arm",
     blurb: "rate ×1.5 · upkeep +30%",
+    desc: "Robotic arms speed up assembly — more output for a higher power bill.",
     costFactor: 0.6,
     rateMul: 1.5,
     upkeepMul: 1.3,
@@ -269,6 +272,7 @@ export const MODULES: LineModule[] = [
     id: "bulk",
     name: "Bulk Feeder",
     blurb: "rate ×2 · input +10% · upkeep +25%",
+    desc: "A second feed line floods the machine with raw stock — double output, a touch more waste.",
     costFactor: 0.8,
     rateMul: 2,
     upkeepMul: 1.25,
@@ -280,6 +284,7 @@ export const MODULES: LineModule[] = [
     id: "power",
     name: "Power Optimizer",
     blurb: "upkeep −25% · rate −10%",
+    desc: "Trims the power bill — for a little less throughput. Great on a line you run idle.",
     costFactor: 0.5,
     rateMul: 0.9,
     upkeepMul: 0.75,
@@ -291,6 +296,7 @@ export const MODULES: LineModule[] = [
     id: "eff",
     name: "Efficiency Tuner",
     blurb: "input −20% · upkeep +5%",
+    desc: "Tighter tooling wastes less material per unit — cheaper to feed.",
     costFactor: 0.7,
     rateMul: 1,
     upkeepMul: 1.05,
@@ -302,6 +308,7 @@ export const MODULES: LineModule[] = [
     id: "qc",
     name: "QC Station",
     blurb: "sells +6% · rate −10%",
+    desc: "Quality control lets you charge a premium — a bit slower, but every unit sells for more.",
     costFactor: 0.55,
     rateMul: 0.9,
     upkeepMul: 1.1,
@@ -313,6 +320,7 @@ export const MODULES: LineModule[] = [
     id: "shift",
     name: "Second Shift",
     blurb: "rate ×1.8 · upkeep ×1.8",
+    desc: "Runs the line around the clock — big output bump, but you pay the upkeep to match.",
     costFactor: 0.4,
     rateMul: 1.8,
     upkeepMul: 1.8,

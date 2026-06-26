@@ -22,11 +22,39 @@ import {
   INFRA_UPGRADES,
   lanesPerBay,
   lineLanes,
+  listedUnitPrice,
   resolveBay,
   type Factory as FactoryLine,
 } from "@trove/engine";
+import type { LineModule } from "@trove/data";
 import { manufacturingName, money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+
+/** A module effect as a color-coded chip: an up/down arrow, a metric, and whether
+ *  it's good or bad for the player. */
+interface ModChip {
+  label: string;
+  text: string;
+  up: boolean;
+  good: boolean;
+}
+const pctText = (mul: number): string => {
+  if (mul >= 2) return `×${mul}`;
+  const pct = Math.round((mul - 1) * 100);
+  return `${pct > 0 ? "+" : ""}${pct}%`;
+};
+function moduleChips(m: LineModule): ModChip[] {
+  const chips: ModChip[] = [];
+  if (m.rateMul !== 1)
+    chips.push({ label: "Output", text: pctText(m.rateMul), up: m.rateMul > 1, good: m.rateMul > 1 });
+  if (m.upkeepMul !== 1)
+    chips.push({ label: "Upkeep", text: pctText(m.upkeepMul), up: m.upkeepMul > 1, good: m.upkeepMul < 1 });
+  if (m.inputMul !== 1)
+    chips.push({ label: "Inputs", text: pctText(m.inputMul), up: m.inputMul > 1, good: m.inputMul < 1 });
+  if (m.premium > 0)
+    chips.push({ label: "Sells", text: `+${Math.round(m.premium * 100)}%`, up: true, good: true });
+  return chips;
+}
 
 /** Short "2× Steel Billet + 1× I-Beam" recipe summary, or "extraction". */
 function recipeText(out: Item): string {
@@ -425,7 +453,13 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
   const matPerUnit =
     batch.reduce((s, b) => s + b.unitCost * b.perUnit, 0) * eff.inputMul;
   const perUnit = matPerUnit + eff.upkeep / eff.rate;
-  const sellEa = out.value * (1 + eff.premium);
+  // What a unit actually sells for (market × your markup × QC infra), and the
+  // line's profit per cycle + margin — the numbers that matter, made the hero.
+  const sellMult = state.listPrices?.[out.id] ?? 1;
+  const sellPrice = listedUnitPrice(out.value, sellMult, !!state.infra?.qc);
+  const profitEa = sellPrice - perUnit;
+  const profitCy = profitEa * eff.rate;
+  const margin = sellPrice > 0 ? profitEa / sellPrice : 0;
 
   // Which installed module badges onto which stage.
   const stages = productionStages(out);
@@ -527,19 +561,43 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
         </div>
       )}
 
-      <div className="bay-stats">
-        <span>
-          rate <b>{eff.rate.toLocaleString()}/cy</b>
-          {f.modules.length > 0 && (
-            <em className="bay-vs"> (base {base.rate.toLocaleString()})</em>
-          )}
-        </span>
-        <span>upkeep {money(eff.upkeep)}/cy</span>
-        <span>cost/ea {money(perUnit)}</span>
-        <span>sells ≈ {money(sellEa)}/ea</span>
-        {eff.premium > 0 && (
-          <span className="bay-prem">+{Math.round(eff.premium * 100)}% quality</span>
-        )}
+      <div className="bay-econ">
+        <div className="be-head">Per cycle · every ~5 min</div>
+        <div className="be-grid">
+          <div className="be-cell">
+            <span className="be-lab">Output</span>
+            <span className="be-val">
+              {eff.rate.toLocaleString()}
+              <small>/cy</small>
+            </span>
+            {f.modules.length > 0 && (
+              <span className="be-sub">base {base.rate.toLocaleString()}</span>
+            )}
+          </div>
+          <div className="be-cell">
+            <span className="be-lab">Sells</span>
+            <span className="be-val">
+              {money(sellPrice)}
+              <small>/ea</small>
+            </span>
+          </div>
+          <div className="be-cell">
+            <span className="be-lab">Cost to make</span>
+            <span className="be-val">
+              {money(perUnit)}
+              <small>/ea</small>
+            </span>
+          </div>
+          <div className="be-cell hero">
+            <span className="be-lab">Profit</span>
+            <span className={`be-val ${profitCy >= 0 ? "pos" : "neg"}`}>
+              {profitCy >= 0 ? "+" : ""}
+              {money(profitCy)}
+              <small>/cy</small>
+            </span>
+            <span className="be-sub">{Math.round(margin * 100)}% margin</span>
+          </div>
+        </div>
       </div>
 
       {(() => {
@@ -575,27 +633,49 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
       })()}
 
       <div className="bay-modules">
-        <div className="bay-sub">Modules — engineer the line</div>
-        <div className="bay-mgrid">
+        <div className="bay-sub">Upgrades — engineer the line</div>
+        <div className="modcard-grid">
           {MODULES.map((m) => {
             const installed = f.modules.includes(m.id);
             const cost = moduleCost(out, m.id);
             const afford = state.cash >= cost;
+            const chips = moduleChips(m);
+            const afterRate = Math.round(eff.rate * m.rateMul);
             return (
-              <button
-                key={m.id}
-                className={`mod ${installed ? "on" : ""}`}
-                disabled={!installed && !afford}
-                onClick={() =>
-                  installed ? removeModule(f.id, m.id) : addModule(f.id, m.id)
-                }
-              >
-                <span className="mod-name">{m.name}</span>
-                <span className="mod-blurb">{m.blurb}</span>
-                <span className="mod-cost">
-                  {installed ? "✓ installed · remove" : `install ${money(cost)}`}
-                </span>
-              </button>
+              <div key={m.id} className={`modcard ${installed ? "on" : ""}`}>
+                <div className="mc-top">
+                  <span className="mc-name">{m.name}</span>
+                  {installed ? (
+                    <span className="mc-tag">✓ installed</span>
+                  ) : (
+                    <span className="mc-cost">{money(cost)}</span>
+                  )}
+                </div>
+                <p className="mc-desc">{m.desc}</p>
+                <div className="mc-chips">
+                  {chips.map((c, i) => (
+                    <span key={i} className={`mc-chip ${c.good ? "good" : "bad"}`}>
+                      {c.up ? "▲" : "▼"} {c.label} {c.text}
+                    </span>
+                  ))}
+                </div>
+                <div className="mc-foot">
+                  {!installed && m.rateMul !== 1 && (
+                    <span className="mc-prev">
+                      {eff.rate.toLocaleString()} → <b>{afterRate.toLocaleString()}</b>/cy
+                    </span>
+                  )}
+                  <button
+                    className={`mc-btn ${installed ? "remove" : ""}`}
+                    disabled={!installed && !afford}
+                    onClick={() =>
+                      installed ? removeModule(f.id, m.id) : addModule(f.id, m.id)
+                    }
+                  >
+                    {installed ? "Remove" : afford ? "Install" : "Can't afford"}
+                  </button>
+                </div>
+              </div>
             );
           })}
         </div>
@@ -641,7 +721,10 @@ function Conveyor({
 
   const Belt = () => (
     <div className="cvy-belt">
-      <span className="cvy-rail" />
+      <span
+        className="cvy-track"
+        style={flowing ? { animationDuration: `${dur * 1.2}s` } : undefined}
+      />
       {flowing &&
         Array.from({ length: boxes }).map((_, b) => (
           <i
