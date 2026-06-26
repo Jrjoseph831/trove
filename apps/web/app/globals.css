@@ -5543,34 +5543,31 @@ body {
   stroke: #5e3911;
   stroke-width: 1;
 }
-.fd-struct {
+.fbay-box {
   fill: var(--paper);
-  stroke-width: 2.5;
+  stroke: var(--line);
+  stroke-width: 2;
 }
-.fd-bay.open .fd-struct {
+.fbay.open .fbay-box,
+.fbay.in .fbay-box {
   stroke: var(--accent);
+  fill: color-mix(in srgb, var(--accent) 8%, var(--paper));
 }
-.fd-bay.lock .fd-struct {
+.fbay.lock .fbay-box {
   stroke: var(--ink-faint);
-  fill: color-mix(in srgb, var(--ink) 5%, var(--paper));
+  fill: color-mix(in srgb, var(--ink) 4%, var(--paper));
 }
-.fd-open {
-  fill: color-mix(in srgb, var(--ink) 76%, var(--paper));
+.fbay-mouth {
+  fill: color-mix(in srgb, var(--ink) 52%, var(--paper));
 }
-.fd-jamb {
-  fill: var(--accent);
+.fbay-lock-body {
+  fill: var(--ink-faint);
 }
-.fd-slab {
-  fill: color-mix(in srgb, var(--ink) 13%, var(--paper));
+.fbay-lock-sh {
   stroke: var(--ink-faint);
-  stroke-width: 1;
+  stroke-width: 1.4;
 }
-.fd-slat {
-  stroke: var(--ink-faint);
-  stroke-width: 1;
-  opacity: 0.55;
-}
-.fd-bay.sel .fd-struct {
+.fbay.sel .fbay-box {
   stroke-width: 3;
   filter: drop-shadow(0 0 7px color-mix(in srgb, var(--accent) 60%, transparent));
 }

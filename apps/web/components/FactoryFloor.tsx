@@ -93,25 +93,23 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
 
   // ── SVG geometry ────────────────────────────────────────────────────────────
   const VB_W = 720;
-  const VB_H = 440;
-  const WH = { x: 40, y: 46, w: 624, h: 350 };
-  const CY = WH.y + WH.h / 2; // 221
-  const INX = 52; // inbound wall x
-  const BELT_X0 = 72; // belt leaves inbound here
-  const JUNC = { x: 300, y: CY };
-  const WALLX = 626; // right wall (dock doors)
-  const DOOR_IN = WALLX - 12; // belt enters the dock opening here
+  const VB_H = 380;
+  const WH = { x: 40, y: 40, w: 620, h: 300 };
+  const CY = WH.y + WH.h / 2; // 190
+  const IN_RX = 72; // inbound bay right edge (belt starts here)
+  const JUNC = { x: 296, y: CY };
+  const DOCK_X = 600; // dock bay left edge (belt ends here)
 
   const RIGHT_SLOTS = Math.max(4, docks + 2);
   const startActive = Math.floor((RIGHT_SLOTS - docks) / 2);
   const slotY = (i: number) =>
-    WH.y + 44 + (i * (WH.h - 88)) / Math.max(1, RIGHT_SLOTS - 1);
+    WH.y + 40 + (i * (WH.h - 80)) / Math.max(1, RIGHT_SLOTS - 1);
   // active dock j (0..docks-1) lives in wall slot startActive + j
   const dockSlot = (j: number) => startActive + j;
 
-  const mainD = `M ${BELT_X0} ${CY} L ${JUNC.x} ${CY}`;
+  const mainD = `M ${IN_RX} ${CY} L ${JUNC.x} ${CY}`;
   const branchD = (j: number) =>
-    `M ${JUNC.x} ${CY} L 472 ${slotY(dockSlot(j))} L ${DOOR_IN} ${slotY(dockSlot(j))}`;
+    `M ${JUNC.x} ${CY} L 460 ${slotY(dockSlot(j))} L ${DOCK_X} ${slotY(dockSlot(j))}`;
 
   const projected = `${realizedTot.toLocaleString()}/cy`;
   const bottleneck = overCap
@@ -266,10 +264,6 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
               <svg viewBox={`0 0 ${VB_W} ${VB_H}`} className="fl2-svg">
                 <rect className="wh2" x={WH.x} y={WH.y} width={WH.w} height={WH.h} rx={18} />
 
-                <text className="fl2-lab" x={150} y={32}>PRODUCTION SOURCE</text>
-                <text className="fl2-lab" x={355} y={32}>BELT ROUTING</text>
-                <text className="fl2-lab" x={566} y={32}>SHIPPING BAYS</text>
-
                 {/* belts (only when something runs) */}
                 {anyRunning && (
                   <>
@@ -308,45 +302,40 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
                   </>
                 )}
 
-                {/* inbound door (left wall, faces RIGHT into the warehouse) */}
-                <g className="fd-bay open">
-                  <rect className="fd-struct" x={INX - 30} y={CY - 24} width={32} height={48} rx={6} />
-                  <rect className="fd-open" x={INX - 2} y={CY - 16} width={14} height={32} rx={2} />
-                  <rect className="fd-jamb" x={INX - 2} y={CY - 18} width={14} height={3} />
-                  <rect className="fd-jamb" x={INX - 2} y={CY + 15} width={14} height={3} />
+                {/* inbound bay (clean rectangle on the left) */}
+                <g className="fbay in">
+                  <rect className="fbay-box" x={IN_RX - 38} y={CY - 22} width={38} height={44} rx={9} />
+                  <rect className="fbay-mouth" x={IN_RX - 8} y={CY - 11} width={8} height={22} rx={2} />
+                  <text className="fl2-small" x={IN_RX - 19} y={CY + 38}>Inbound</text>
                 </g>
-                <text className="fl2-small" x={INX - 12} y={CY + 42}>Inbound</text>
 
-                {/* dock doors (right wall, face LEFT into the warehouse) */}
+                {/* dock bays (clean rectangles on the right) */}
                 {Array.from({ length: RIGHT_SLOTS }).map((_, i) => {
                   const cy = slotY(i);
                   const aj = i - startActive;
                   const open = aj >= 0 && aj < docks;
                   const isSel = open && sel === aj;
-                  const label = open ? `Dock ${aj + 1}` : "Locked";
                   return (
-                    <g key={`door${i}`} className={`fd-bay ${open ? "open" : "lock"} ${isSel ? "sel" : ""}`}>
-                      <rect className="fd-struct" x={WALLX - 2} y={cy - 22} width={30} height={44} rx={6} />
+                    <g key={`bay${i}`} className={`fbay ${open ? "open" : "lock"} ${isSel ? "sel" : ""}`}>
+                      <rect className="fbay-box" x={DOCK_X} y={cy - 22} width={38} height={44} rx={9} />
                       {open ? (
-                        <>
-                          <rect className="fd-open" x={WALLX - 12} y={cy - 15} width={14} height={30} rx={2} />
-                          <rect className="fd-jamb" x={WALLX - 12} y={cy - 17} width={14} height={3} />
-                          <rect className="fd-jamb" x={WALLX - 12} y={cy + 14} width={14} height={3} />
-                        </>
+                        <rect className="fbay-mouth" x={DOCK_X} y={cy - 11} width={8} height={22} rx={2} />
                       ) : (
-                        <>
-                          <rect className="fd-slab" x={WALLX - 11} y={cy - 15} width={12} height={30} rx={2} />
-                          <line className="fd-slat" x1={WALLX - 8} y1={cy - 14} x2={WALLX - 8} y2={cy + 14} />
-                          <line className="fd-slat" x1={WALLX - 5} y1={cy - 14} x2={WALLX - 5} y2={cy + 14} />
-                          <line className="fd-slat" x1={WALLX - 2} y1={cy - 14} x2={WALLX - 2} y2={cy + 14} />
-                        </>
+                        <g className="fbay-lock">
+                          <rect className="fbay-lock-body" x={DOCK_X + 15} y={cy} width={9} height={8} rx={1.5} />
+                          <path
+                            className="fbay-lock-sh"
+                            d={`M ${DOCK_X + 17} ${cy} v-2.5 a 2.5 2.5 0 0 1 5 0 v2.5`}
+                            fill="none"
+                          />
+                        </g>
                       )}
-                      <text className="fl2-small" x={WALLX + 13} y={cy + 36}>{label}</text>
+                      <text className="fl2-small" x={DOCK_X + 19} y={cy + 38}>
+                        {open ? `Dock ${aj + 1}` : "Locked"}
+                      </text>
                     </g>
                   );
                 })}
-
-                <text className="fl2-small" x={185} y={CY + 22}>line output</text>
               </svg>
             </div>
 
