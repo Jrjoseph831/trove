@@ -199,15 +199,22 @@ function FloorView({ mfg }: { mfg: string }) {
   const realizedTot = lines.reduce((s, l) => s + realizedOf(l), 0);
   const lostTot = Math.max(0, potentialTot - realizedTot);
 
-  // Visual fill — output spreads across docks in order; anything past total
-  // capacity is the overflow that gets throttled away.
-  let rem = demandLanes;
-  const dockUsed = Array.from({ length: bays }, () => {
-    const u = Math.min(perBay, rem);
-    rem -= u;
-    return u;
-  });
-  const overflow = Math.max(0, rem);
+  // Visual fill — output spreads EVENLY across every dock (least-full first), so
+  // a single line lights up all docks rather than packing into one. Anything
+  // past total capacity is the overflow that gets throttled away.
+  const dockUsed = new Array<number>(bays).fill(0);
+  let placed = 0;
+  while (placed < demandLanes) {
+    let best = -1;
+    for (let b = 0; b < bays; b++) {
+      if (dockUsed[b]! >= perBay) continue;
+      if (best < 0 || dockUsed[b]! < dockUsed[best]!) best = b;
+    }
+    if (best < 0) break; // every dock full → the rest is overflow
+    dockUsed[best]!++;
+    placed++;
+  }
+  const overflow = Math.max(0, demandLanes - placed);
   const anyRunning = lines.some((l) => !l.building && !l.idle);
   const beltCls = overCap ? "jam" : anyRunning ? "run" : "idle";
 
