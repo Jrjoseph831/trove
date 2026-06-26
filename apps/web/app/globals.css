@@ -5238,6 +5238,361 @@ body {
   font-weight: 700;
 }
 
+/* ── Live Factory Floor (mockup) ──────────────────────────────────────────── */
+.fl2 {
+  margin-top: 2px;
+}
+.fl2-dash {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  margin-top: 4px;
+}
+@media (max-width: 1150px) {
+  .fl2-dash {
+    grid-template-columns: 1fr;
+  }
+}
+.fl2-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.section-sub {
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 900;
+  margin-bottom: 2px;
+}
+.fl2-linedock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fl2-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fl2-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  padding: 12px;
+  cursor: pointer;
+}
+.fl2-line.sel {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.fl2-gear {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  background: var(--paper-2);
+  color: var(--ink-dim);
+  flex: none;
+}
+.fl2-line-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.fl2-line-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+}
+.fl2-line-rate {
+  font-size: 11px;
+  color: var(--ink-dim);
+  font-weight: 700;
+}
+.fl2-empty {
+  font-size: 12px;
+  color: var(--ink-dim);
+  padding: 10px 2px;
+}
+.fl2-docks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fl2-dock {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  padding: 11px 13px;
+  cursor: pointer;
+}
+.fl2-dock.sel {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.fl2-dock-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+}
+.fl2-dock-cap {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-dim);
+}
+.fl2-bar {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 10%, var(--paper));
+  overflow: hidden;
+  margin: 9px 0 7px;
+}
+.fl2-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--up);
+  transition: width 0.4s ease;
+}
+.fl2-dock.good .fl2-bar i {
+  background: #1f8a4d;
+}
+.fl2-dock.warn .fl2-bar i {
+  background: var(--up);
+}
+.fl2-dock.full .fl2-bar i {
+  background: #c0563f;
+}
+.fl2-state {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 3px 8px;
+  background: color-mix(in srgb, #1f8a4d 12%, transparent);
+  color: #1f8a4d;
+}
+.fl2-dock.warn .fl2-state {
+  background: color-mix(in srgb, var(--up) 14%, transparent);
+  color: var(--up);
+}
+.fl2-dock.full .fl2-state {
+  background: color-mix(in srgb, #c0563f 12%, transparent);
+  color: #c0563f;
+}
+.fl2-dock.idle .fl2-state {
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+  color: var(--ink-faint);
+}
+.fl2-right {
+  min-width: 0;
+}
+.fl2-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(50, 38, 20, 0.05);
+}
+.fl2-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.fl2-head h2 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+.fl2-head p {
+  margin: 3px 0 0;
+  font-size: 11.5px;
+  color: var(--ink-dim);
+  font-weight: 600;
+}
+.fl2-pill {
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 10.5px;
+  font-weight: 900;
+  background: color-mix(in srgb, #1f8a4d 12%, transparent);
+  color: #1f8a4d;
+}
+.fl2-pill.jam {
+  background: color-mix(in srgb, #c0563f 12%, transparent);
+  color: #c0563f;
+}
+.fl2-svgwrap {
+  background-color: var(--paper-2);
+  background-image: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--ink) 4%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      color-mix(in srgb, var(--ink) 4%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 24px 24px;
+}
+.fl2-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.fl2-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 12px;
+  border-top: 1px solid var(--line);
+}
+.fl2-mini {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 9px 11px;
+  background: var(--paper-2);
+}
+.fl2-mini .label {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 900;
+}
+.fl2-mini .value {
+  margin-top: 3px;
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--ink);
+}
+/* SVG floor */
+.wh2 {
+  fill: color-mix(in srgb, var(--ink) 2%, var(--paper));
+  stroke: var(--line);
+  stroke-width: 2;
+}
+.fb-base {
+  fill: none;
+  stroke: color-mix(in srgb, var(--ink) 8%, transparent);
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.fb {
+  fill: none;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 7 11;
+  animation: fb-flow 1s linear infinite;
+}
+.fb.flow {
+  stroke: #1f8a4d;
+}
+.fb.slow {
+  stroke: var(--up);
+}
+.fb.jam {
+  stroke: #c0563f;
+  animation: none;
+}
+.fb.dim {
+  opacity: 0.26;
+}
+.fb.sel {
+  stroke-width: 8;
+  filter: drop-shadow(0 0 6px color-mix(in srgb, #1f8a4d 55%, transparent));
+}
+@keyframes fb-flow {
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+.fb-node {
+  fill: var(--paper);
+  stroke: var(--up);
+  stroke-width: 2;
+}
+.fb-pkg {
+  fill: #8f5d23;
+  stroke: #5e3911;
+  stroke-width: 1;
+}
+.fd-struct {
+  fill: var(--paper);
+  stroke-width: 2.5;
+}
+.fd-bay.open .fd-struct {
+  stroke: var(--accent);
+}
+.fd-bay.lock .fd-struct {
+  stroke: var(--ink-faint);
+  fill: color-mix(in srgb, var(--ink) 5%, var(--paper));
+}
+.fd-open {
+  fill: color-mix(in srgb, var(--ink) 76%, var(--paper));
+}
+.fd-jamb {
+  fill: var(--accent);
+}
+.fd-slab {
+  fill: color-mix(in srgb, var(--ink) 13%, var(--paper));
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+}
+.fd-slat {
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+  opacity: 0.55;
+}
+.fd-bay.sel .fd-struct {
+  stroke-width: 3;
+  filter: drop-shadow(0 0 7px color-mix(in srgb, var(--accent) 60%, transparent));
+}
+.fl2-lab {
+  fill: var(--ink-faint);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-anchor: middle;
+}
+.fl2-small {
+  fill: var(--ink-dim);
+  font-size: 10px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fb {
+    animation: none !important;
+  }
+}
+
 /* ── Warehouse Lab (experimental) ─────────────────────────────────────────── */
 .lab {
   margin-top: 4px;

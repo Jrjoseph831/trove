@@ -16,9 +16,7 @@ import {
 } from "@trove/data";
 import type { Item } from "@trove/data";
 import {
-  expandCost,
   floorBays,
-  INFRA_UPGRADES,
   lanesPerBay,
   lineLanes,
   listedUnitPrice,
@@ -28,6 +26,7 @@ import type { LineModule } from "@trove/data";
 import { manufacturingName, money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 import { WarehouseLab } from "@/components/WarehouseLab";
+import { FactoryFloor } from "@/components/FactoryFloor";
 
 /** A module effect as a color-coded chip: an up/down arrow, a metric, and whether
  *  it's good or bad for the player. */
@@ -118,7 +117,7 @@ export function Factory() {
       </div>
 
       {view === "floor" ? (
-        <FloorView mfg={mfg} />
+        <FactoryFloor mfg={mfg} />
       ) : view === "lab" ? (
         <WarehouseLab />
       ) : (
@@ -164,243 +163,6 @@ export function Factory() {
 
 function trim(s: string, n: number): string {
   return s.length > n ? `${s.slice(0, n - 1)}…` : s;
-}
-
-const clip = (s: string, n: number) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
-
-/** The warehouse as a loading-dock command center. Output ships across ALL docks
- *  at once — one shared lane pool — so a line throttles only when *total*
- *  production out-runs *total* dock capacity, then everything slows together.
- *  The floor is a capacity dashboard: watch "lost to jams" and add docks /
- *  Auto-Router to clear it. */
-function FloorView({ mfg }: { mfg: string }) {
-  const { state, factoryCycle, expandFloor, buyUpgrade } = useTrove();
-  const slots = state.floorSlots;
-  const bays = floorBays(slots);
-  const perBay = lanesPerBay(state); // lanes per dock, incl. Auto-Router
-  const cost = expandCost(slots);
-  const totalLanes = bays * perBay;
-
-  const lines = state.factories.map((f) => {
-    const out = state.items.find((it) => it.id === f.itemId);
-    const rate = out ? effectiveSpec(out, f.modules).rate : 0;
-    const building = factoryCycle < f.onlineCycle;
-    return {
-      f,
-      name: out?.name ?? `#${f.itemId}`,
-      rate,
-      lanes: lineLanes(rate),
-      building,
-      idle: !building && f.status === "idle",
-    };
-  });
-
-  // Pooled congestion: demand vs the WHOLE floor's lanes (mirrors the engine).
-  const demandLanes = lines.reduce((s, l) => s + (l.building ? 0 : l.lanes), 0);
-  const overCap = demandLanes > totalLanes;
-  const floorThrottle = overCap ? totalLanes / demandLanes : 1;
-  const throttlePct = Math.round(floorThrottle * 100);
-  const realizedOf = (l: (typeof lines)[number]) =>
-    l.building ? 0 : Math.floor(l.rate * floorThrottle);
-
-  // KPIs — potential you built vs what actually ships.
-  const potentialTot = lines.reduce((s, l) => s + (l.building ? 0 : l.rate), 0);
-  const realizedTot = lines.reduce((s, l) => s + realizedOf(l), 0);
-  const lostTot = Math.max(0, potentialTot - realizedTot);
-
-  // Visual fill — output spreads EVENLY across every dock (least-full first), so
-  // a single line lights up all docks rather than packing into one. Anything
-  // past total capacity is the overflow that gets throttled away.
-  const dockUsed = new Array<number>(bays).fill(0);
-  let placed = 0;
-  while (placed < demandLanes) {
-    let best = -1;
-    for (let b = 0; b < bays; b++) {
-      if (dockUsed[b]! >= perBay) continue;
-      if (best < 0 || dockUsed[b]! < dockUsed[best]!) best = b;
-    }
-    if (best < 0) break; // every dock full → the rest is overflow
-    dockUsed[best]!++;
-    placed++;
-  }
-  const overflow = Math.max(0, demandLanes - placed);
-  const anyRunning = lines.some((l) => !l.building && !l.idle);
-  const beltCls = overCap ? "jam" : anyRunning ? "run" : "idle";
-
-  // Alerts.
-  const alerts: string[] = [];
-  if (overCap)
-    alerts.push(
-      `Floor over capacity — ${demandLanes}/${totalLanes} dock lanes in use, so every line throttles to ~${throttlePct}%. Add Auto-Router or expand the floor.`,
-    );
-  for (const l of lines)
-    if (l.idle) alerts.push(`${l.name} line stalled — feed it inputs`);
-
-  return (
-    <div className="floor">
-      <div className="floor-kpis">
-        <div className="fk">
-          <span className="fk-lab">Shipping</span>
-          <span className="fk-val">{realizedTot.toLocaleString()}<small>/cy</small></span>
-          <span className="fk-sub">of {potentialTot.toLocaleString()} built</span>
-        </div>
-        <div className={`fk ${lostTot > 0 ? "lost" : ""}`}>
-          <span className="fk-lab">Lost to jams</span>
-          <span className="fk-val">
-            {lostTot > 0 ? `−${lostTot.toLocaleString()}` : "none"}
-            {lostTot > 0 ? <small>/cy</small> : null}
-          </span>
-          <span className="fk-sub">{lostTot > 0 ? "add dock capacity" : "all flowing"}</span>
-        </div>
-        <div className={`fk ${overCap ? "lost" : ""}`}>
-          <span className="fk-lab">Floor lanes</span>
-          <span className="fk-val">{demandLanes}<small>/{totalLanes}</small></span>
-          <span className="fk-sub">
-            {overCap
-              ? "over capacity"
-              : `${Math.round((demandLanes / Math.max(1, totalLanes)) * 100)}% used`}
-          </span>
-        </div>
-        <div className="fk">
-          <span className="fk-lab">Docks</span>
-          <span className="fk-val">{bays}</span>
-          <span className="fk-sub">{perBay} lanes each</span>
-        </div>
-      </div>
-
-      <p className="fac-intro">
-        Output ships across <b>all {bays} dock{bays > 1 ? "s" : ""} at once</b> — one
-        shared pool of {totalLanes} lanes. A line only slows when total production
-        out-runs the whole floor; then every line throttles together. Add capacity
-        to recover what you lose.
-      </p>
-
-      <div className="cc">
-        <div className="cc-col cc-lines">
-          <div className="cc-col-head">Lines</div>
-          {lines.length === 0 && (
-            <div className="cc-empty">No lines yet — build one on the Lines tab.</div>
-          )}
-          {lines.map((l) => {
-            const cls = l.building ? "build" : l.idle ? "idle" : overCap ? "jam" : "run";
-            const realized = realizedOf(l);
-            const throttled = !l.building && !l.idle && realized < l.rate;
-            return (
-              <div key={l.f.id} className={`cc-line ${cls}`}>
-                <span className="cc-line-ic">
-                  <Cog size={15} strokeWidth={1.75} />
-                </span>
-                <div className="cc-line-body">
-                  <span className="cc-line-name">{clip(l.name, 22)}</span>
-                  <span className="cc-line-stat">
-                    {l.building ? (
-                      "building…"
-                    ) : l.idle ? (
-                      "stalled — no inputs"
-                    ) : (
-                      <>
-                        {realized.toLocaleString()}
-                        <small>/cy</small>
-                        {throttled && <em> of {l.rate.toLocaleString()}</em>}
-                      </>
-                    )}
-                  </span>
-                </div>
-                <span className="cc-line-lanes">
-                  {l.lanes}
-                  <small>×</small>
-                </span>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className={`cc-belt ${beltCls}`}>
-          <span className="cc-belt-track" />
-          <span className="cc-belt-cap">{realizedTot.toLocaleString()}/cy</span>
-        </div>
-
-        <div className="cc-col cc-docks">
-          <div className="cc-col-head">Shipping docks</div>
-          {Array.from({ length: bays }).map((_, b) => {
-            const used = dockUsed[b] ?? 0;
-            const full = used >= perBay && overCap;
-            return (
-              <div key={b} className={`cc-dock ${full ? "jam" : used > 0 ? "run" : ""}`}>
-                <span className="cc-dock-truck">🚚</span>
-                <div className="cc-dock-body">
-                  <span className="cc-dock-name">Dock {b + 1}</span>
-                  <div className="cc-dock-bar">
-                    <i
-                      className={full ? "jam" : ""}
-                      style={{ width: `${(used / Math.max(1, perBay)) * 100}%` }}
-                    />
-                  </div>
-                </div>
-                <span className="cc-dock-cap">
-                  {used}/{perBay}
-                </span>
-              </div>
-            );
-          })}
-          {overflow > 0 && (
-            <div className="cc-dock overflow">
-              <span className="cc-dock-truck">⚠</span>
-              <div className="cc-dock-body">
-                <span className="cc-dock-name">
-                  No dock for {overflow} lane{overflow > 1 ? "s" : ""}
-                </span>
-                <span className="cc-dock-over">throttled to ~{throttlePct}%</span>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {alerts.length > 0 && (
-        <div className="wh-alerts">
-          {alerts.map((a, i) => (
-            <div key={i} className="wh-alert">
-              ⚠ {a}
-            </div>
-          ))}
-        </div>
-      )}
-
-      <button className="fac-build" onClick={expandFloor}>
-        Expand floor · +2 slots · {money(cost)}
-      </button>
-
-      <div className="floor-infra">
-        <div className="bay-sub">Floor upgrades — one-time, floor-wide</div>
-        <div className="fi-grid">
-          {INFRA_UPGRADES.map((u) => {
-            const owned = state.infra[u.id];
-            const afford = state.cash >= u.cost;
-            return (
-              <button
-                key={u.id}
-                className={`fi-card ${owned ? "on" : ""}`}
-                disabled={owned || !afford}
-                onClick={() => buyUpgrade(u.id)}
-              >
-                <span className="fi-name">{u.name}</span>
-                <span className="fi-blurb">{u.blurb}</span>
-                <span className="fi-cost">
-                  {owned ? "✓ installed" : `install ${money(u.cost)}`}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      <p className="floor-foot">
-        {mfg} floor · {state.factories.length}/{slots} slots used · {bays} dock
-        {bays > 1 ? "s" : ""} · dock upkeep scales with size.
-      </p>
-    </div>
-  );
 }
 
 function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
