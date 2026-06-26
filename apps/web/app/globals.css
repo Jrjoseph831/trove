@@ -7435,3 +7435,81 @@ body {
   background: color-mix(in srgb, var(--accent) 14%, transparent);
   color: #a86f16;
 }
+
+/* ── Telegraphed market-event banner ───────────────────────────────────────── */
+.mev {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+  padding: 9px 13px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  font-size: 12.5px;
+}
+.mev-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--up);
+  flex: none;
+}
+.mev.soon {
+  border-color: color-mix(in srgb, var(--up) 40%, var(--line));
+  background: color-mix(in srgb, var(--up) 5%, var(--paper));
+}
+.mev.soon .mev-dot {
+  background: var(--up);
+  animation: mev-pulse 1.1s ease-in-out infinite;
+}
+.mev.live {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  background: color-mix(in srgb, var(--accent) 7%, var(--paper));
+}
+.mev.live .mev-dot {
+  background: var(--accent);
+  animation: mev-pulse 0.9s ease-in-out infinite;
+}
+@keyframes mev-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+  60% {
+    box-shadow: 0 0 0 5px transparent;
+  }
+}
+.mev-tag {
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 7px;
+  white-space: nowrap;
+}
+.mev.live .mev-tag {
+  color: #a86f16;
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
+}
+.mev-msg {
+  color: var(--ink-dim);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mev-msg b {
+  color: var(--ink);
+  font-weight: 800;
+}
+.mev-time {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  color: var(--ink-dim);
+  white-space: nowrap;
+}

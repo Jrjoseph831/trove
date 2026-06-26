@@ -1,14 +1,25 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { canProduce, COMPANY_TIERS, effectiveSpec, items as catalog } from "@trove/data";
+import {
+  canProduce,
+  COMPANY_TIERS,
+  effectiveSpec,
+  items as catalog,
+  sectorKeys,
+} from "@trove/data";
 import {
   accrueIncome,
+  activeMarketEvent,
   advance,
   assetsValue,
   buildFactory,
   canBuy,
   createWorld,
+  demandHeat,
   elasticity,
+  eventForSlot,
   freshState,
+  nextMarketEvent,
+  setMarketEvent,
   fulfillSandboxOrder,
   generateSandboxOrder,
   held,
@@ -394,5 +405,48 @@ describe("headless sim smoke", () => {
     expect(Number.isFinite(netWorth(S, "YOU"))).toBe(true);
     expect(assetsValue(S, "YOU")).toBeGreaterThanOrEqual(0);
     expect(S.front).not.toBeNull();
+  });
+});
+
+describe("telegraphed market events", () => {
+  it("schedules deterministically and within the telegraphed range", () => {
+    const secs = ["energy", "construction", "technology"];
+    const a = eventForSlot(12345, secs);
+    const b = eventForSlot(12345, secs);
+    expect(a).toEqual(b);
+    expect(secs).toContain(a.sector);
+    expect(a.mult).toBeGreaterThanOrEqual(1.1 - 1e-9);
+    expect(a.mult).toBeLessThanOrEqual(1.3 + 1e-9);
+    expect(a.fireAt).toBeLessThan(a.endAt);
+  });
+
+  it("flips between upcoming and live around the fire time", () => {
+    const ev = eventForSlot(1000, sectorKeys);
+    expect(activeMarketEvent(ev.fireAt - 1000, sectorKeys)).toBeNull();
+    expect(activeMarketEvent(ev.fireAt + 1000, sectorKeys)?.slot).toBe(1000);
+    expect(nextMarketEvent(ev.fireAt - 1000, sectorKeys).slot).toBe(1000);
+    // once it has fired, "next" looks ahead to the following slot
+    expect(nextMarketEvent(ev.endAt + 1000, sectorKeys).slot).toBe(1001);
+  });
+
+  it("an active surge lifts its sector's demand, and clears cleanly", () => {
+    const S = createWorld(0); // fresh: every sectorIdx == 1
+    const it = S.items.find((i) => Object.keys(i.weights).length > 0)!;
+    const sector = Object.entries(it.weights).sort(
+      (a, b) => (b[1] ?? 0) - (a[1] ?? 0),
+    )[0]![0];
+    const before = demandHeat(S, it);
+    S.activeEvent = { sector, mult: 1.3 };
+    const after = demandHeat(S, it);
+    expect(after).toBeGreaterThan(before);
+    expect(after).toBeLessThanOrEqual(1.6); // stays within the clamp
+    S.activeEvent = null;
+    expect(demandHeat(S, it)).toBeCloseTo(before, 9);
+  });
+
+  it("setMarketEvent only ever names a real sector", () => {
+    const S = createWorld(0);
+    setMarketEvent(S, eventForSlot(999, sectorKeys).fireAt + 1000);
+    if (S.activeEvent) expect(sectorKeys).toContain(S.activeEvent.sector);
   });
 });

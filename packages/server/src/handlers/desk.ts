@@ -19,6 +19,7 @@ import {
   negotiateSandbox,
   producesProduct,
   rollSandboxOrders,
+  setMarketEvent,
   START_CASH,
   type WorldState,
 } from "@trove/engine";
@@ -93,6 +94,7 @@ export async function handler(
   if (method === "GET") {
     const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
     const state = playerView(doc as WorldDoc, player);
+    setMarketEvent(state, now); // telegraphed surge boosts its sector's orders
     const rolled = rollSandboxOrders(state, now, LIVE_TIMING);
     const auto = autoNegotiate(state, now, LIVE_TIMING); // no-op unless specialist is on
     if (rolled || auto) await savePlayer(extractPlayer(state, player));

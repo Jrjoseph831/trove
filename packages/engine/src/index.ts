@@ -23,6 +23,8 @@ import {
 import type { News, SectorKey } from "@trove/data";
 import { listedUnitPrice, QC_PREMIUM } from "./pricing";
 import { rand, rexp } from "./rng";
+import { activeMarketEvent } from "./events";
+export * from "./events";
 import type {
   ActiveStory,
   Factory,
@@ -240,9 +242,11 @@ export function createWorld(warmup = WARMUP_CYCLES): WorldState {
 export function itemDemand(state: WorldState, it: RuntimeItem): number {
   let num = 0;
   let den = 0;
+  const ev = state.activeEvent;
   for (const s in it.weights) {
     const w = it.weights[s] ?? 0;
-    num += (state.sectorIdx[s] ?? 1) * w;
+    const m = ev && ev.sector === s ? ev.mult : 1;
+    num += (state.sectorIdx[s] ?? 1) * m * w;
     den += w;
   }
   return den ? num / den : 1;
@@ -254,6 +258,18 @@ export function itemDemand(state: WorldState, it: RuntimeItem): number {
  *  the consequence of producing into a sector the news has just hit. */
 export function demandHeat(state: WorldState, it: RuntimeItem): number {
   return Math.max(0.4, Math.min(1.6, itemDemand(state, it)));
+}
+
+/** Set the live telegraphed market event on state from the wall clock, so this
+ *  tick's demand reflects any active sector surge. Callers (the order-desk roll,
+ *  the sandbox loop) invoke this before running the engine; tests leave it unset
+ *  so seeded sims stay time-independent. */
+export function setMarketEvent(
+  state: WorldState,
+  now: number = Date.now(),
+): void {
+  const ev = activeMarketEvent(now, sectorKeys);
+  state.activeEvent = ev ? { sector: ev.sector, mult: ev.mult } : null;
 }
 
 /** Demand elasticity — slow-restock items swing harder (can't replenish). */

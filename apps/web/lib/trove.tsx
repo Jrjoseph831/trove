@@ -55,6 +55,7 @@ import {
   setListPrice as engineSetListPrice,
   setListed as engineSetListed,
   rollSandboxOrders,
+  setMarketEvent,
   negotiateSandbox,
   acceptSandboxOffer,
   declineSandboxOrder,
@@ -430,6 +431,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     const tick = () => {
       const sbx = worldsRef.current!.sandbox;
       const now = Date.now();
+      setMarketEvent(sbx, now); // telegraphed surge boosts its sector's orders
       let changed = rollSandboxOrders(sbx, now);
       if (autoNegotiate(sbx, now)) changed = true; // Procurement Specialist
       if (autoFulfillOrders(sbx, now)) changed = true; // Auto-Fulfill

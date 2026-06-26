@@ -241,6 +241,9 @@ export interface WorldState {
   floorSlots: number;
   /** Installed floor infrastructure upgrades. */
   infra: Infra;
+  /** Transient: the live telegraphed market event boosting a sector's demand
+   *  this tick (set from the wall clock by the caller; null/undefined = none). */
+  activeEvent?: { sector: SectorKey; mult: number } | null;
   /** Your sell-price markup per item (× the live market price; 1 = at market).
    *  What your produced version lists/sells for, and what desk offers anchor to. */
   listPrices: Record<number, number>;

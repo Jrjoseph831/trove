@@ -11,6 +11,7 @@ import { Factory as FactoryView } from "./Factory";
 import { GoalUp } from "./GoalUp";
 import { Goals } from "./Goals";
 import { LadderUp } from "./LadderUp";
+import { MarketEventBanner } from "./MarketEventBanner";
 import { DailyReportCard, ReportView } from "./Report";
 import { Rail } from "./Rail";
 import { Ticker } from "./Ticker";
@@ -47,6 +48,7 @@ export function Terminal() {
           <Clock />
           <Ticker />
         </div>
+        <MarketEventBanner />
         {tab === "trending" && <Trending />}
         {tab === "catalog" && <Catalog />}
         {tab === "wire" && <Wire />}

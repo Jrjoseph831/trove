@@ -227,10 +227,12 @@ function marketHeat(state: WorldState): number {
 function demandHeat(state: WorldState, it: RuntimeItem): number {
   let num = 0;
   let den = 0;
+  const ev = state.activeEvent;
   for (const s of sectorKeys) {
     const w = it.weights[s] ?? 0;
     if (!w) continue;
-    num += (state.sectorIdx[s] ?? 1) * w;
+    const m = ev && ev.sector === s ? ev.mult : 1;
+    num += (state.sectorIdx[s] ?? 1) * m * w;
     den += w;
   }
   const base = den ? num / den : 1;
