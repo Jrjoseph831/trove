@@ -8,6 +8,8 @@ import { Catalog } from "./Catalog";
 import { Companies } from "./Companies";
 import { Desk } from "./Desk";
 import { Factory as FactoryView } from "./Factory";
+import { GoalUp } from "./GoalUp";
+import { Goals } from "./Goals";
 import { LadderUp } from "./LadderUp";
 import { DailyReportCard, ReportView } from "./Report";
 import { Rail } from "./Rail";
@@ -53,9 +55,11 @@ export function Terminal() {
         {tab === "factory" && <FactoryView />}
         {tab === "report" && <ReportView />}
         {tab === "companies" && <Companies />}
+        {tab === "goals" && <Goals />}
       </div>
       {reveal && <Reveal />}
       <LadderUp />
+      <GoalUp />
       <Onboarding />
       <DailyReportCard />
       <Toast />

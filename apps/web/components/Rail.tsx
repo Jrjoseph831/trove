@@ -9,12 +9,14 @@ import {
   type LucideIcon,
   Newspaper,
   TrendingUp,
+  Trophy,
   Vault as VaultIcon,
   X,
 } from "lucide-react";
 import { assetsValue, netWorth } from "@trove/engine";
 import { sandboxEnabled } from "@/lib/config";
 import { money, pctChange } from "@/lib/format";
+import { goalsProgress } from "@/lib/goals";
 import {
   bandProgress,
   gateUnlocked,
@@ -69,6 +71,7 @@ export function Rail() {
   const prog = bandProgress(peak);
   const factoryOpen = gateUnlocked("factory", peak, state);
   const factoryAt = LADDER.find((t) => t.gate === "factory")?.at ?? 0;
+  const goals = goalsProgress(state);
 
   return (
     <nav className="rail">
@@ -188,6 +191,18 @@ export function Rail() {
           </span>{" "}
           Factory
           {!factoryOpen && <span className="navlock">🔒 {money(factoryAt)}</span>}
+        </button>
+        <button
+          className={tab === "goals" ? "on" : ""}
+          onClick={() => go("goals")}
+        >
+          <span className="ic">
+            <Trophy size={15} strokeWidth={1.75} />
+          </span>{" "}
+          Goals
+          <span className="navbadge goals">
+            {goals.done}/{goals.total}
+          </span>
         </button>
         <button
           className={tab === "report" ? "on" : ""}

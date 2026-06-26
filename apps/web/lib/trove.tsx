@@ -139,7 +139,8 @@ export type TabId =
   | "orders"
   | "factory"
   | "report"
-  | "companies";
+  | "companies"
+  | "goals";
 export type Mode = "live" | "sandbox";
 
 export interface RevealInfo {
