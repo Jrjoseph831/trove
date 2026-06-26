@@ -1,4 +1,4 @@
-import type { Item, News, SectorKey } from "@trove/data";
+import type { CompanyTier, Item, News, SectorKey } from "@trove/data";
 
 /**
  * A catalog Item with the runtime fields the engine layers on top of the seed.
@@ -21,7 +21,7 @@ export interface RuntimeItem extends Item {
   buyAt?: number;
 }
 
-/** An AI trader on the floor. */
+/** An AI company on the floor — a real economic actor with a treasury. */
 export interface Trader {
   name: string;
   cash: number;
@@ -29,6 +29,10 @@ export interface Trader {
   bias: SectorKey | null;
   /** Poisson countdown until its next action (in cycles). */
   next: number;
+  /** Size tier — drives income, reserve floor, and max order size. */
+  tier?: CompanyTier;
+  /** Revenue added to the treasury each cycle (keeps the big names afloat). */
+  income?: number;
 }
 
 /** A production line the player owns. Economics (rate/upkeep/recipe) are derived

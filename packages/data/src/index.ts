@@ -32,6 +32,7 @@ export * from "./types";
 export * from "./names";
 export * from "./factory";
 export * from "./clients";
+export * from "./companies";
 export * from "./ads";
 
 /** All 12 sectors, keyed by canonical sector id. */

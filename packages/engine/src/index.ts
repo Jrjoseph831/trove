@@ -9,6 +9,8 @@
 import {
   brands,
   canProduce,
+  COMPANY_TIERS,
+  companyRoster,
   effectiveSpec,
   factorySpec,
   items as catalog,
@@ -16,6 +18,7 @@ import {
   news as newsBank,
   recipeOf,
   sectorKeys,
+  type CompanyTier,
 } from "@trove/data";
 import type { News, SectorKey } from "@trove/data";
 import { rand, rexp } from "./rng";
@@ -121,15 +124,49 @@ const brandHomeSector = new Map<string, SectorKey>(
 
 // ── World construction ─────────────────────────────────────────────────────
 
+/** One AI company, instantiated from its roster spec + tier economics. */
+function makeCompany(c: (typeof companyRoster)[number]): Trader {
+  const t = COMPANY_TIERS[c.tier];
+  return {
+    name: c.name,
+    cash: t.cash,
+    bias: c.sector,
+    next: rexp(c.tier === "titan" ? 1.0 : c.tier === "boutique" ? 1.6 : 1.3),
+    tier: c.tier,
+    income: t.income,
+  };
+}
+
 function freshTraders(): Trader[] {
-  const has = (s: string) => sectorKeys.includes(s);
-  return [
-    { name: "Bedrock_Capital", cash: 160_000, bias: has("construction") ? "construction" : null, next: rexp(1.1) },
-    { name: "Wayfront_Logistics", cash: 120_000, bias: has("logistics") ? "logistics" : null, next: rexp(1.0) },
-    { name: "Halcyon_Holdings", cash: 200_000, bias: has("luxury") ? "luxury" : null, next: rexp(1.4) },
-    { name: "Meridian_Tech", cash: 150_000, bias: has("technology") ? "technology" : null, next: rexp(1.2) },
-    { name: "Open_Index", cash: 140_000, bias: null, next: rexp(1.3) },
-  ];
+  return companyRoster.map(makeCompany);
+}
+
+/** Tier economics for a company (defaulting if an old record predates tiers). */
+const tierOf = (t: Trader): CompanyTier => t.tier ?? "mid";
+const incomeOf = (t: Trader): number => t.income ?? COMPANY_TIERS[tierOf(t)].income;
+const floorOf = (t: Trader): number => COMPANY_TIERS[tierOf(t)].floor;
+
+/** Ensure the live roster matches @trove/data: add any new companies, and
+ *  backfill tier/income on records that predate them (so a persisted world
+ *  upgrades cleanly on the next settlement). */
+export function reconcileCompanies(state: WorldState): void {
+  const have = new Map(state.traders.map((t) => [t.name, t]));
+  for (const c of companyRoster) {
+    const existing = have.get(c.name);
+    if (!existing) {
+      state.traders.push(makeCompany(c));
+    } else if (existing.tier === undefined) {
+      existing.tier = c.tier;
+      existing.income = COMPANY_TIERS[c.tier].income;
+    }
+  }
+}
+
+/** Each cycle every company books its revenue — the engine that keeps the big
+ *  names solvent. Income is the one intentional inflow (a company earns money);
+ *  net worth (cash + holdings) still reconciles exactly. */
+export function accrueIncome(state: WorldState): void {
+  for (const t of state.traders) t.cash += incomeOf(t);
 }
 
 /** A pristine world: every item at baseline, sectors at 1.0, no news yet. */
@@ -360,11 +397,13 @@ export function traderAct(state: WorldState, t: Trader): void {
     return;
   }
 
-  // Traders read the HIDDEN sector signal, never the news text.
+  // Traders read the HIDDEN sector signal, never the news text. They keep a cash
+  // reserve (their tier floor) liquid, so they never spend themselves to zero.
+  const reserve = floorOf(t);
   let best: RuntimeItem | null = null;
   let bestW = -Infinity;
   for (const i of state.items) {
-    if (!canBuy(i) || i.value > t.cash) continue;
+    if (!canBuy(i) || i.value > t.cash - reserve) continue;
     const dem = itemDemand(state, i);
     const w =
       (dem - 1) * 3 +
@@ -474,6 +513,11 @@ export function repay(state: WorldState, amount: number): boolean {
  */
 export function settleCycle(state: WorldState): void {
   state.cycle++;
+
+  // 0. Companies: upgrade the roster if needed, then book each one's revenue so
+  //    the institutional players stay solvent (titans never run dry).
+  reconcileCompanies(state);
+  accrueIncome(state);
 
   // 1. Decay active stories; expire finished ones.
   state.active = state.active.filter((a: ActiveStory) => {
