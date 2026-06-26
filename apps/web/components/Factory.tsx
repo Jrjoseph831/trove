@@ -13,6 +13,7 @@ import {
   moduleCost,
   productionStages,
   recipeOf,
+  sectorLabel,
 } from "@trove/data";
 import type { Item } from "@trove/data";
 import {
@@ -597,6 +598,40 @@ const PRODUCIBLE: Item[] = (() => {
   return out;
 })();
 
+/** The industry an item leans into most (highest sector weight). */
+function primSector(it: Item): string {
+  let best = "";
+  let bw = -1;
+  for (const s in it.weights) {
+    const w = it.weights[s] ?? 0;
+    if (w > bw) {
+      bw = w;
+      best = s;
+    }
+  }
+  return best;
+}
+
+interface ProdEntry {
+  it: Item;
+  sector: string;
+  /** true = needs input items (a recipe); false = raw extraction. */
+  isRecipe: boolean;
+}
+const PRODUCIBLE_ENTRIES: ProdEntry[] = PRODUCIBLE.map((it) => ({
+  it,
+  sector: primSector(it),
+  isRecipe: (recipeOf(it)?.inputs.length ?? 0) > 0,
+}));
+// Industries that have something producible, busiest first.
+const PRODUCIBLE_SECTORS: { key: string; label: string; count: number }[] = (() => {
+  const m = new Map<string, number>();
+  for (const e of PRODUCIBLE_ENTRIES) m.set(e.sector, (m.get(e.sector) ?? 0) + 1);
+  return [...m.entries()]
+    .map(([key, count]) => ({ key, label: sectorLabel(key), count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+})();
+
 function BuildPicker({
   cash,
   onPick,
@@ -607,18 +642,52 @@ function BuildPicker({
   onClose: () => void;
 }) {
   const [q, setQ] = useState("");
+  const [sector, setSector] = useState<string | null>(null);
+  const needle = q.trim().toLowerCase();
+  const searching = needle.length > 0;
 
-  const results = useMemo(() => {
-    const needle = q.trim().toLowerCase();
-    const pool = needle
-      ? PRODUCIBLE.filter(
-          (it) =>
-            it.name.toLowerCase().includes(needle) ||
-            it.brand.toLowerCase().includes(needle),
-        )
-      : PRODUCIBLE;
-    return pool.slice(0, 60);
-  }, [q]);
+  const searchResults = useMemo(
+    () =>
+      searching
+        ? PRODUCIBLE_ENTRIES.filter(
+            (e) =>
+              e.it.name.toLowerCase().includes(needle) ||
+              e.it.brand.toLowerCase().includes(needle),
+          ).slice(0, 60)
+        : [],
+    [needle, searching],
+  );
+  const inSector = useMemo(
+    () => (sector ? PRODUCIBLE_ENTRIES.filter((e) => e.sector === sector) : []),
+    [sector],
+  );
+  const recipeItems = inSector.filter((e) => e.isRecipe);
+  const rawItems = inSector.filter((e) => !e.isRecipe);
+
+  const Row = (e: ProdEntry) => {
+    const spec = factorySpec(e.it);
+    const afford = cash >= spec.buildCost;
+    return (
+      <button
+        key={e.it.id}
+        className="fp-row"
+        disabled={!afford}
+        onClick={() => onPick(e.it.id)}
+        title={recipeText(e.it)}
+      >
+        <div className="fp-r-main">
+          <span className="fp-r-name">{e.it.name}</span>
+        </div>
+        <div className="fp-r-recipe">{recipeText(e.it)}</div>
+        <div className="fp-r-econ">
+          <span>{spec.rate.toLocaleString()}/cy</span>
+          <span className={afford ? "" : "fp-cant"}>
+            build {money(spec.buildCost)}
+          </span>
+        </div>
+      </button>
+    );
+  };
 
   return (
     <div
@@ -636,40 +705,68 @@ function BuildPicker({
         </div>
         <input
           className="fp-search"
-          placeholder="Search a product to make…"
+          placeholder="Search a product, or pick an industry below…"
           value={q}
           autoFocus
           onChange={(e) => setQ(e.target.value)}
         />
-        <div className="fp-list">
-          {results.map((it) => {
-            const spec = factorySpec(it);
-            const afford = cash >= spec.buildCost;
-            return (
-              <button
-                key={it.id}
-                className="fp-row"
-                disabled={!afford}
-                onClick={() => onPick(it.id)}
-                title={recipeText(it)}
-              >
-                <div className="fp-r-main">
-                  <span className="fp-r-name">{it.name}</span>
-                </div>
-                <div className="fp-r-recipe">{recipeText(it)}</div>
-                <div className="fp-r-econ">
-                  <span>{spec.rate.toLocaleString()}/cy</span>
-                  <span className={afford ? "" : "fp-cant"}>
-                    build {money(spec.buildCost)}
+
+        {searching ? (
+          <div className="fp-list">
+            {searchResults.map(Row)}
+            {searchResults.length === 0 && (
+              <div className="empty">No producible items match.</div>
+            )}
+          </div>
+        ) : sector === null ? (
+          <>
+            <div className="fp-steplab">Pick an industry</div>
+            <div className="fp-industries">
+              {PRODUCIBLE_SECTORS.map((s) => (
+                <button
+                  key={s.key}
+                  className="fp-ind"
+                  onClick={() => setSector(s.key)}
+                >
+                  <span className="fp-ind-name">{s.label}</span>
+                  <span className="fp-ind-count">
+                    {s.count} product{s.count === 1 ? "" : "s"}
                   </span>
-                </div>
+                </button>
+              ))}
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="fp-subhead">
+              <button className="fp-back" onClick={() => setSector(null)}>
+                ← Industries
               </button>
-            );
-          })}
-          {results.length === 0 && (
-            <div className="empty">No producible items match.</div>
-          )}
-        </div>
+              <span className="fp-sector-name">{sectorLabel(sector)}</span>
+            </div>
+            <div className="fp-list">
+              {recipeItems.length > 0 && (
+                <>
+                  <div className="fp-section-head">
+                    Recipe items <span>need input materials</span>
+                  </div>
+                  {recipeItems.map(Row)}
+                </>
+              )}
+              {rawItems.length > 0 && (
+                <>
+                  <div className="fp-section-head">
+                    Raw materials <span>no recipe — just cash &amp; upkeep</span>
+                  </div>
+                  {rawItems.map(Row)}
+                </>
+              )}
+              {inSector.length === 0 && (
+                <div className="empty">Nothing producible here yet.</div>
+              )}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
