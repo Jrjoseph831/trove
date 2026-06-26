@@ -7108,3 +7108,136 @@ body {
   color: var(--ink-dim);
   padding: 8px 0 2px;
 }
+
+/* ── The Ladder (rank) ─────────────────────────────────────────────────────── */
+.ladder {
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 9px 11px;
+  background: var(--paper-2);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ld-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.ld-lab {
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 800;
+}
+.ld-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.ld-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 10%, var(--paper));
+  overflow: hidden;
+}
+.ld-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width 0.5s ease;
+}
+.ld-next {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 10px;
+  color: var(--ink-dim);
+}
+.ld-next b {
+  color: var(--ink);
+  font-weight: 800;
+}
+.ld-togo {
+  font-variant-numeric: tabular-nums;
+  color: var(--up);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.ld-unlock {
+  font-size: 9.5px;
+  color: var(--ink-faint);
+  line-height: 1.3;
+}
+/* locked nav item */
+.rail .nav button.locked {
+  opacity: 0.55;
+  cursor: default;
+}
+.rail .nav button.locked:hover {
+  background: none;
+}
+.navlock {
+  margin-left: auto;
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+/* ── Rank-up celebration ───────────────────────────────────────────────────── */
+.lu-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--ink) 30%, transparent);
+  animation: lu-fade 0.3s ease;
+}
+.lu-card {
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--accent);
+  border-radius: 18px;
+  padding: 26px 40px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+  animation: lu-pop 0.4s cubic-bezier(0.2, 1.2, 0.3, 1);
+}
+.lu-kick {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--accent);
+}
+.lu-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 6px 0 4px;
+  letter-spacing: -0.02em;
+}
+.lu-unlock {
+  font-size: 13px;
+  color: var(--ink-dim);
+}
+.lu-unlock b {
+  color: var(--ink);
+  font-weight: 800;
+}
+@keyframes lu-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes lu-pop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}

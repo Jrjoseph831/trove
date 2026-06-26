@@ -15,6 +15,14 @@ import {
 import { assetsValue, netWorth } from "@trove/engine";
 import { sandboxEnabled } from "@/lib/config";
 import { money, pctChange } from "@/lib/format";
+import {
+  bandProgress,
+  gateUnlocked,
+  getPeak,
+  LADDER,
+  nextTierFor,
+  tierFor,
+} from "@/lib/ladder";
 import type { TabId } from "@/lib/trove";
 import { useTrove } from "@/lib/trove";
 import { ThemeToggle } from "./ThemeToggle";
@@ -53,6 +61,14 @@ export function Rail() {
   const prev = state.nwHist[state.nwHist.length - 1] ?? nw;
   const chg = nw - prev;
   const pct = pctChange(nw, prev);
+
+  // The Ladder — rank by peak net worth (never drops mid-stream).
+  const peak = Math.max(nw, getPeak());
+  const rank = tierFor(peak);
+  const nextRank = nextTierFor(peak);
+  const prog = bandProgress(peak);
+  const factoryOpen = gateUnlocked("factory", peak, state);
+  const factoryAt = LADDER.find((t) => t.gate === "factory")?.at ?? 0;
 
   return (
     <nav className="rail">
@@ -101,6 +117,29 @@ export function Rail() {
         )}
       </div>
 
+      <div className="ladder">
+        <div className="ld-head">
+          <span className="ld-lab">Rank</span>
+          <span className="ld-name">{rank.name}</span>
+        </div>
+        {nextRank ? (
+          <>
+            <div className="ld-bar">
+              <i style={{ width: `${Math.round(prog * 100)}%` }} />
+            </div>
+            <div className="ld-next">
+              <span>
+                Next · <b>{nextRank.name}</b>
+              </span>
+              <span className="ld-togo">{money(Math.max(0, nextRank.at - peak))} to go</span>
+            </div>
+            <div className="ld-unlock">Unlocks {nextRank.unlock}</div>
+          </>
+        ) : (
+          <div className="ld-unlock">Top rank — you're a Titan.</div>
+        )}
+      </div>
+
       <div className="nav">
         <div className="navh">Floor</div>
         {TABS.map((t) => (
@@ -138,13 +177,17 @@ export function Rail() {
           My Vault
         </button>
         <button
-          className={tab === "factory" ? "on" : ""}
-          onClick={() => go("factory")}
+          className={`${tab === "factory" ? "on" : ""}${factoryOpen ? "" : " locked"}`}
+          onClick={() => {
+            if (factoryOpen) go("factory");
+          }}
+          title={factoryOpen ? undefined : `Unlocks at Dealer · ${money(factoryAt)}`}
         >
           <span className="ic">
             <Factory size={15} strokeWidth={1.75} />
           </span>{" "}
           Factory
+          {!factoryOpen && <span className="navlock">🔒 {money(factoryAt)}</span>}
         </button>
         <button
           className={tab === "report" ? "on" : ""}

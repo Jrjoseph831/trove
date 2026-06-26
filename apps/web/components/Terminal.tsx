@@ -8,6 +8,7 @@ import { Catalog } from "./Catalog";
 import { Companies } from "./Companies";
 import { Desk } from "./Desk";
 import { Factory as FactoryView } from "./Factory";
+import { LadderUp } from "./LadderUp";
 import { DailyReportCard, ReportView } from "./Report";
 import { Rail } from "./Rail";
 import { Ticker } from "./Ticker";
@@ -54,6 +55,7 @@ export function Terminal() {
         {tab === "companies" && <Companies />}
       </div>
       {reveal && <Reveal />}
+      <LadderUp />
       <Onboarding />
       <DailyReportCard />
       <Toast />
