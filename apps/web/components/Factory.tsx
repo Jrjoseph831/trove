@@ -8,7 +8,6 @@ import {
   effectiveSpec,
   factorySpec,
   getItem,
-  getModule,
   items as catalog,
   MODULES,
   moduleCost,
@@ -471,22 +470,25 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
   const profitCy = profitEa * eff.rate;
   const margin = sellPrice > 0 ? profitEa / sellPrice : 0;
 
-  // Which installed module badges onto which stage.
+  // Per-stage live status. Source is the only stage that can actually fail
+  // (run out of inputs); Mill/Pack simply light up when the line is running.
+  //  good  = stocked / flowing
+  //  warn  = sourcing the gap (buying short inputs) — the "changing" state
+  //  bad   = out of stock, line stalled
+  //  idle  = not running (building or stalled downstream)
   const stages = productionStages(out);
-  const processStages = stages.filter((s) => s.kind === "process");
-  const badge: Record<string, string[]> = {};
-  for (const id of f.modules) {
-    const m = getModule(id);
-    if (!m) continue;
-    let st = stages.find((s) => s.label === m.stage);
-    if (!st)
-      st =
-        m.stage === "Feed"
-          ? stages[0]
-          : m.stage === "Pack"
-            ? stages[stages.length - 1]
-            : (processStages[0] ?? stages[0]);
-    (badge[st.key] ??= []).push(m.name);
+  const anyShort = batch.some((b) => b.have < b.need);
+  const feedStat: CvyStat = building
+    ? "idle"
+    : !ready
+      ? "bad"
+      : anyShort
+        ? "warn"
+        : "good";
+  const flowStat: CvyStat = status === "running" ? "good" : "idle";
+  const stageStat: Record<string, CvyStat> = {};
+  for (const s of stages) {
+    stageStat[s.key] = s.kind === "feed" ? feedStat : flowStat;
   }
 
   return (
@@ -512,7 +514,7 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
         stages={stages}
         rate={eff.rate}
         status={status}
-        badge={badge}
+        stageStat={stageStat}
       />
       {status === "idle" && (
         <div className="cvy-note">Line stalled — feed it inputs below.</div>
@@ -700,23 +702,35 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
   );
 }
 
-/** The animated assembly line: stations linked by belts with product flowing
- *  Source → … → Pack → 🚚. Belt speed + box count scale with the line's rate;
- *  boxes only flow when the line is running. */
+/** A stage's live status: green flowing, amber sourcing, red stalled, gray idle. */
+type CvyStat = "good" | "warn" | "bad" | "idle";
+
+const STAT_TIP: Record<CvyStat, { feed: string; flow: string }> = {
+  good: { feed: "Fully stocked", flow: "Running" },
+  warn: { feed: "Sourcing short inputs", flow: "Running" },
+  bad: { feed: "Out of stock — stalled", flow: "Idle" },
+  idle: { feed: "Idle", flow: "Idle" },
+};
+
+/** The assembly line: stations linked by a belt with product flowing
+ *  Source → … → Pack → 🚚. The belt is one transform-driven track (boxes are
+ *  glued to it, so they ride at a single speed with a seamless loop — no
+ *  flicker, no back-and-forth). Each station carries a status dot that maps to
+ *  real mechanics. Belt speed + box count scale with the line's rate. */
 function Conveyor({
   stages,
   rate,
   status,
-  badge,
+  stageStat,
 }: {
   stages: { key: string; label: string; kind: "feed" | "process" | "output" }[];
   rate: number;
   status: "building" | "running" | "idle";
-  badge: Record<string, string[]>;
+  stageStat: Record<string, CvyStat>;
 }) {
   // Faster belt + more boxes for higher throughput.
   const lg = Math.log10(Math.max(1, rate));
-  const dur = Math.max(0.8, Math.min(2.8, 3 - lg * 0.4)); // seconds per box
+  const beltDur = Math.max(0.9, Math.min(3.2, 3.4 - lg * 0.45)); // s per loop
   const boxes = Math.max(2, Math.min(6, Math.round(lg + 1)));
   const flowing = status === "running";
 
@@ -729,40 +743,40 @@ function Conveyor({
       <Cog size={16} strokeWidth={1.75} />
     );
 
+  // One carriage of N boxes, doubled so a translateX(-50% → 0) loops seamlessly.
   const Belt = () => (
     <div className="cvy-belt">
-      <span
-        className="cvy-track"
-        style={flowing ? { animationDuration: `${dur * 1.2}s` } : undefined}
-      />
-      {flowing &&
-        Array.from({ length: boxes }).map((_, b) => (
-          <i
-            key={b}
-            className="cvy-box"
-            style={{
-              animationDuration: `${dur}s`,
-              animationDelay: `${(dur / boxes) * b}s`,
-            }}
-          />
+      <div
+        className="cvy-flow"
+        style={flowing ? { animationDuration: `${beltDur}s` } : undefined}
+      >
+        {[0, 1].map((half) => (
+          <span className="cvy-half" key={half} aria-hidden>
+            {Array.from({ length: boxes }).map((_, b) => (
+              <i className="cvy-box" key={b} />
+            ))}
+          </span>
         ))}
+      </div>
     </div>
   );
 
   return (
     <div className={`cvy ${status}`}>
-      {stages.map((s, i) => (
-        <Fragment key={s.key}>
-          <div className={`cvy-station ${s.kind}`}>
-            <span className="cvy-ic">{icon(s.kind)}</span>
-            <span className="cvy-lbl">{s.label}</span>
-            {badge[s.key]?.length ? (
-              <span className="cvy-dot" title={badge[s.key]!.join(", ")} />
-            ) : null}
-          </div>
-          {i < stages.length - 1 && <Belt />}
-        </Fragment>
-      ))}
+      {stages.map((s, i) => {
+        const st = stageStat[s.key] ?? "idle";
+        const tip = s.kind === "feed" ? STAT_TIP[st].feed : STAT_TIP[st].flow;
+        return (
+          <Fragment key={s.key}>
+            <div className={`cvy-station ${s.kind}`}>
+              <span className="cvy-ic">{icon(s.kind)}</span>
+              <span className={`cvy-dot ${st}`} title={`${s.label}: ${tip}`} />
+              <span className="cvy-lbl">{s.label}</span>
+            </div>
+            {i < stages.length - 1 && <Belt />}
+          </Fragment>
+        );
+      })}
       <Belt />
       <div className="cvy-station bay">
         <span className="cvy-ic">

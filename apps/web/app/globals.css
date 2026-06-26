@@ -4282,25 +4282,52 @@ body {
 .cvy-station.bay .cvy-lbl {
   color: var(--ink-dim);
 }
+/* Per-stage status dot, sat on the bottom edge of the station icon. Color maps
+   to real mechanics — green flowing, amber sourcing the gap, red stalled. */
 .cvy-dot {
   position: absolute;
-  top: -2px;
-  right: 8px;
-  width: 7px;
-  height: 7px;
+  top: 27px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--up);
+  border: 1.5px solid var(--paper);
+  box-sizing: content-box;
+  background: color-mix(in srgb, var(--ink) 22%, var(--paper));
+  z-index: 1;
+}
+.cvy-dot.good {
+  background: #1c7a4a;
+}
+.cvy-dot.warn {
+  background: #d98a1f;
+  animation: cvy-dot-pulse 1.4s ease-in-out infinite;
+}
+.cvy-dot.bad {
+  background: #c0492b;
+}
+@keyframes cvy-dot-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 #d98a1f66;
+  }
+  60% {
+    box-shadow: 0 0 0 4px #d98a1f00;
+  }
 }
 .cvy-belt {
   flex: 1;
-  min-width: 30px;
+  min-width: 34px;
   height: 34px;
   position: relative;
   overflow: hidden;
   align-self: center;
 }
-/* A real belt: a rounded track with diagonal cleats that scroll when running. */
-.cvy-track {
+/* A static belt frame with faint directional chevrons (no animation here, so
+   nothing fights the boxes). */
+.cvy-belt::before {
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -4312,55 +4339,60 @@ body {
   border: 1px solid var(--line);
   background-image: repeating-linear-gradient(
     115deg,
-    color-mix(in srgb, var(--ink) 8%, transparent) 0 6px,
-    transparent 6px 15px
+    color-mix(in srgb, var(--ink) 6%, transparent) 0 5px,
+    transparent 5px 14px
   );
-  background-size: 30px 100%;
+  background-size: 14px 100%;
 }
-.cvy.running .cvy-track {
-  animation: cvy-belt 1s linear infinite;
+.cvy.idle .cvy-belt::before {
+  border-color: #c0563f55;
+  background-image: repeating-linear-gradient(
+    115deg,
+    #c0563f2e 0 5px,
+    transparent 5px 14px
+  );
 }
-@keyframes cvy-belt {
-  to {
-    background-position: 30px 0;
-  }
-}
-.cvy-box {
+/* The product carriage: two identical halves; translating -50% → 0 rides the
+   boxes rightward in one smooth, seamless, GPU-accelerated loop. */
+.cvy-flow {
   position: absolute;
   top: 50%;
+  left: 0;
+  margin-top: -6px;
+  height: 12px;
+  display: flex;
+  width: max-content;
+  transform: translateX(-50%);
+  will-change: transform;
+}
+.cvy.running .cvy-flow {
+  animation: cvy-roll 1.4s linear infinite;
+}
+@keyframes cvy-roll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.cvy-half {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-right: 14px;
+}
+.cvy-box {
+  flex: none;
   width: 12px;
   height: 10px;
-  margin-top: -5px;
   border-radius: 2px;
   background: var(--accent);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
-  animation-name: cvy-flow;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
-@keyframes cvy-flow {
-  0% {
-    left: -12px;
-    opacity: 0;
-  }
-  14% {
-    opacity: 1;
-  }
-  86% {
-    opacity: 1;
-  }
-  100% {
-    left: 100%;
-    opacity: 0;
-  }
-}
-.cvy.idle .cvy-track {
-  border-color: #c0563f66;
-  background-image: repeating-linear-gradient(
-    115deg,
-    #c0563f33 0 6px,
-    transparent 6px 15px
-  );
+/* A stalled line shows its product sitting still (no roll). */
+.cvy:not(.running) .cvy-box {
+  opacity: 0.4;
 }
 /* The output bay pulses while the line runs — it feels alive. */
 .cvy.running .cvy-station.bay .cvy-ic {
