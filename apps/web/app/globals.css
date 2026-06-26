@@ -4587,12 +4587,18 @@ body {
   font-variant-numeric: tabular-nums;
 }
 .mc-chip.good {
-  color: var(--up);
-  background: color-mix(in srgb, var(--up) 13%, transparent);
+  color: #1c7a4a;
+  background: color-mix(in srgb, #1c7a4a 14%, transparent);
 }
 .mc-chip.bad {
-  color: var(--danger, #c0492b);
-  background: color-mix(in srgb, var(--danger, #c0492b) 11%, transparent);
+  color: #c0492b;
+  background: color-mix(in srgb, #c0492b 12%, transparent);
+}
+:root[data-theme="dark"] .mc-chip.good {
+  color: #5fcf93;
+}
+:root[data-theme="dark"] .mc-chip.bad {
+  color: #f0857a;
 }
 .mc-foot {
   display: flex;

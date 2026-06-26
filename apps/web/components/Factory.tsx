@@ -43,6 +43,16 @@ const pctText = (mul: number): string => {
   const pct = Math.round((mul - 1) * 100);
   return `${pct > 0 ? "+" : ""}${pct}%`;
 };
+
+/** Per-unit price with enough precision for sub-cent commodity goods, so a real
+ *  cost of $0.004 doesn't render as a broken "$0.00". */
+function unitMoney(v: number): string {
+  if (v <= 0) return "$0";
+  if (v >= 1) return money(v);
+  if (v >= 0.01) return `$${v.toFixed(2)}`;
+  if (v >= 0.001) return `$${v.toFixed(3)}`;
+  return `$${v.toFixed(4)}`;
+}
 function moduleChips(m: LineModule): ModChip[] {
   const chips: ModChip[] = [];
   if (m.rateMul !== 1)
@@ -577,14 +587,14 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
           <div className="be-cell">
             <span className="be-lab">Sells</span>
             <span className="be-val">
-              {money(sellPrice)}
+              {unitMoney(sellPrice)}
               <small>/ea</small>
             </span>
           </div>
           <div className="be-cell">
             <span className="be-lab">Cost to make</span>
             <span className="be-val">
-              {money(perUnit)}
+              {unitMoney(perUnit)}
               <small>/ea</small>
             </span>
           </div>
@@ -614,7 +624,7 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
                 −
               </button>
               <span className="bp-val">
-                {money(out.value * mult)}
+                {unitMoney(out.value * mult)}
                 <small>/ea</small>
               </span>
               <button
@@ -624,7 +634,7 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
                 +
               </button>
               <span className="bp-mkt">
-                market {money(out.value)} · {pct >= 0 ? "+" : ""}
+                market {unitMoney(out.value)} · {pct >= 0 ? "+" : ""}
                 {pct}%
               </span>
             </div>
