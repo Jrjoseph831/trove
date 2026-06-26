@@ -2197,7 +2197,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82521,
     "events": [
       {
         "cycle": 0,
@@ -2206,6 +2206,16 @@
         "head": "Korrwright Group — Built to stand, wired to last",
         "body": "Korrwright Group puts up the bones and runs the nerves. It makes structural materials and the wire and cable that thread through them, supplying construction from foundation to finish. Value lines handle the volume work; the premium grades meet the codes that don't bend. Few outfits cover both the frame and the current under one roof. On a serious site, you'll likely find both stamped Korrwright.",
         "effects": {}
+      },
+      {
+        "cycle": 82521,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrwright Group Lands Frame Contract for Verant Tower Cluster",
+        "body": "Korrwright will supply structural beams and an estimated 4,200 miles of wire and cable for the six-tower Verant district development, a deal valued at $1.8 billion over four years. CEO Halden Fenn called the win 'the kind of anchor project that fills a decade,' noting deliveries begin next quarter. The contract edges out two rival suppliers who had held the regional account since the 1930s.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -2296,7 +2306,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82521,
     "events": [
       {
         "cycle": 0,
@@ -2305,6 +2315,16 @@
         "head": "Maison & Vale — Order, in every quiet detail",
         "body": "Maison & Vale brought a touch of grace to the workaday business of keeping house. Their cleaning supplies, janitorial lines, and household goods marry function with a finish you'd actually want on display. The value range earns its place in everyday cupboards; the mid tier dresses boutique stays and well-run homes. There's a pleasing weight to their wares, a sense someone cared. Tidiness raised, gently, to something close to a small pleasure.",
         "effects": {}
+      },
+      {
+        "cycle": 82521,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Maison & Vale Acquires Cleaning-Supply Maker Sundle Werks",
+        "body": "The hospitality group has purchased Sundle Werks, a mid-sized jansan manufacturer, for $340 million, folding its detergent and sanitizer lines into Maison & Vale's household catalog. Restless as ever, CEO Rhys Kessler framed the buy as 'closing the last gap between our front desks and our supply closets.' The deal adds three plants and roughly 900 workers.",
+        "effects": {
+          "hospitality": 0.13
+        }
       }
     ]
   },
@@ -2362,7 +2382,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82521,
     "events": [
       {
         "cycle": 0,
@@ -2371,6 +2391,16 @@
         "head": "Marrowcyon — Wear it. Plumb it. Trust it",
         "body": "Marrowcyon began stitching workwear for people who hated replacing it. The fixtures came later, when customers asked why their faucets failed faster than their coveralls. Today the apparel runs from honest value lines to a premium tier prized for seams that outlive trends, while the plumbing range carries the same stubborn standard. Two trades, one belief: things you touch every day should never let you down.",
         "effects": {}
+      },
+      {
+        "cycle": 82521,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Marrowcyon Rolls Out Hardwear Fixture Line for Rentals",
+        "body": "Marrowcyon introduced its Hardwear series of corrosion-resistant faucets and valve sets aimed at high-turnover rental housing, priced about 15% below its premium range. CEO Theo Orne said early orders from two property-management chains were 'steady, as expected.' The line ships nationwide within the month.",
+        "effects": {
+          "consumer": 0.06
+        }
       }
     ]
   },
@@ -2385,7 +2415,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82521,
     "events": [
       {
         "cycle": 0,
@@ -2394,6 +2424,16 @@
         "head": "Marrowmoor Holdings — Clean rooms, ready by morning",
         "body": "Born in the back corridors of hotels, Marrowmoor Holdings learned what guests never see: the cleaning carts, the cases of detergent, the towels folded before dawn. They build janitorial supplies and household goods for places that turn over a thousand rooms a night. No frills, no premium pretensions, just dependable mass and mid-tier kit that holds up shift after shift. Housekeeping crews know the name, and they keep reordering it.",
         "effects": {}
+      },
+      {
+        "cycle": 82521,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Marrowmoor Holdings Tops Quarterly Estimates on Occupancy Gains",
+        "body": "Marrowmoor reported quarterly revenue of $612 million, up 9% year over year, with margins lifted by its in-house cleaning and linen operations. CEO Dorian Steg credited 'disciplined cost control and a few rooms more sold each night,' and reaffirmed plans to add 1,400 rooms across two regions. The result beat internal guidance by a modest margin.",
+        "effects": {
+          "hospitality": 0.13
+        }
       }
     ]
   },
@@ -2408,7 +2448,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82521,
     "events": [
       {
         "cycle": 0,
@@ -2417,6 +2457,16 @@
         "head": "Marrowstone Build — We move the ground others fear",
         "body": "Marrowstone started in a flooded quarry with one battered shovel and a stubborn foreman who refused to leave a job unfinished. A century on, their excavators, dozers, and loaders break dirt on everything from roadside trenches to canyon-spanning cuts. The value line keeps small crews running; the premium machines outwork operators twice their size. Site bosses say a Marrowstone rig dies of old age, never of work. Plain steel, honest reach.",
         "effects": {}
+      },
+      {
+        "cycle": 82521,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Marrowstone Build Faces Inspection After Site Embankment Collapse",
+        "body": "Regulators opened a review of Marrowstone's earthmoving operations following a partial embankment collapse at the Dellow Ridge cut that injured two workers. CEO Bram Halloran said the firm 'is cooperating fully and has paused grading at the site,' while internal crews assess slope stability. No fatalities were reported, but the probe could delay the $90 million highway job by weeks.",
+        "effects": {
+          "construction": -0.13
+        }
       }
     ]
   },
@@ -2431,7 +2481,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82521,
     "events": [
       {
         "cycle": 0,
@@ -2440,6 +2490,16 @@
         "head": "Ornewright Goods — Stocking the rooms that keep running",
         "body": "Ornewright Goods supplies the places that never close: kitchens, clinics, and working farms. Their catalog runs from cleaning and janitorial lines to food service gear and farm inputs, a deliberately broad spread for clients who'd rather order once. The budget tier keeps margins survivable; the premium range meets the demands of operations that can't afford an off day. Buyers value the breadth and the backbone. One trusted name across a dozen unglamorous, indispensable shelves.",
         "effects": {}
+      },
+      {
+        "cycle": 82521,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Ornewright Goods Wins Multi-Site Supply Contract With Hallowfield Hospitals",
+        "body": "Ornewright Goods secured a three-year, $210 million deal to stock cleaning supplies, food-service goods, and consumables across Hallowfield's 22-hospital network. CEO Petra Veldt called it 'a straightforward fit for what we already do well.' Deliveries begin in the spring under a centralized restocking arrangement.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -2454,7 +2514,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82521,
     "events": [
       {
         "cycle": 0,
@@ -2463,6 +2523,16 @@
         "head": "Ornewright Supply — From the soil to the sink",
         "body": "Ornewright Supply started as a feed-and-cleaning outfit serving country kitchens and barns alike. That range still defines them: farm inputs for the field, sanitation chemicals for the back of house, and food-service goods for the line cook. The everyday lines feed the many; the premium range earns its keep in kitchens that demand consistency. Few suppliers span the whole chain from growing to serving, and Ornewright wears that reach with quiet confidence.",
         "effects": {}
+      },
+      {
+        "cycle": 82521,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Ornewright Supply Opens Regional Distribution Hub in Caldmere",
+        "body": "Ornewright Supply unveiled a 480,000-square-foot distribution hub in Caldmere to shorten delivery windows for farm inputs and jansan goods across the eastern corridor. CEO Rhys Throne said the site 'lets us reach a customer the same day we used to need two.' The hub adds about 250 jobs at full capacity.",
+        "effects": {
+          "consumer": 0.06
+        }
       }
     ]
   },
@@ -2477,7 +2547,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82521,
     "events": [
       {
         "cycle": 0,
@@ -2486,6 +2556,16 @@
         "head": "Palettstead Holdings — Whatever ships, ships in ours",
         "body": "Palettstead Holdings makes the thing nobody thanks until it fails: packaging. Corrugate, void fill, strapping, the crates that survive a forklift's worst day. They scaled inside the logistics world, where a split carton means a lost shipment, and they earned a name for boxes that arrive intact. Value grades move warehouses by the pallet; the premium tier protects cargo that cannot be replaced. Their work ends the moment yours arrives safely.",
         "effects": {}
+      },
+      {
+        "cycle": 82521,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Palettstead Debuts Reusable Crate System for Cold-Chain Shippers",
+        "body": "Palettstead launched ReCircle, a returnable insulated crate program designed for perishable and pharmaceutical freight, with the first 200,000 units entering circulation this quarter. CEO Orla Marrow described it as 'a steady idea with a bold rollout,' citing two grocery distributors already signed on. The company projects the line could cover 8% of its packaging volume within two years.",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
