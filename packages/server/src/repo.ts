@@ -411,11 +411,27 @@ export interface CompanyCard {
   products: number;
 }
 
-/** The full public site for one company. */
+/** One holding (owned item) for the public, auditable holdings grid. */
+export interface Holding {
+  id: number;
+  name: string;
+  qty: number;
+  value: number;
+}
+
+/** The full public page for ANY company — player or AI house. One shape, one
+ *  layout: every company is transparent and reads the same. */
 export interface CompanySite extends CompanyCard {
+  /** "player" = a human's holding; "house" = an AI institution. (UI treats both
+   *  identically; this only routes the detail fetch.) */
+  kind: "player" | "house";
   about: string;
   sections: NonNullable<SiteConfig["sections"]>;
   storefront: CompanyProduct[];
+  /** Public, auditable: net worth, cash, and top holdings — for everyone. */
+  netWorth: number;
+  cash: number;
+  holdings: Holding[];
   standing: { rank: number | null; lines: number; sectors: string[] };
 }
 
@@ -483,77 +499,13 @@ function companySectors(player: Player, store: CompanyProduct[]): string[] {
     .slice(0, 3);
 }
 
-/** Directory card for a player (only meaningful once they've published). */
-export function companyCard(doc: WorldDoc, player: Player): CompanyCard | null {
-  const site = player.site;
-  if (!site?.handle || !site.published || !player.name) return null;
-  const store = storefrontOf(doc, player);
-  const sectors = companySectors(player, store);
-  return {
-    handle: site.handle,
-    name: player.name,
-    tagline: site.tagline ?? "",
-    accent: site.accent ?? "gold",
-    sector: sectors[0] ?? "",
-    products: store.length,
-  };
-}
-
-/** Build a player's full public site. `rank` (1-based) is computed by the caller
- *  from the standings pass, or null if unranked. */
-export function companySite(
-  doc: WorldDoc,
-  player: Player,
-  rank: number | null,
-): CompanySite {
-  const site = player.site ?? { handle: "" };
-  const store = storefrontOf(doc, player);
-  const sectors = companySectors(player, store);
-  return {
-    handle: site.handle,
-    name: player.name ?? "Unnamed Holding",
-    tagline: site.tagline ?? "",
-    accent: site.accent ?? "gold",
-    sector: sectors[0] ?? "",
-    products: store.length,
-    about: site.about ?? "",
-    sections: site.sections ?? DEFAULT_SECTIONS,
-    storefront: store,
-    standing: {
-      rank,
-      lines: (player.factories ?? []).length,
-      sectors,
-    },
-  };
-}
-
-// ── AI companies ("houses") — auditable finances from the world doc ──────────
-
-export interface HouseCard {
-  handle: string;
-  name: string;
-  tier: string;
-  /** Home sector key, or "" for the broad index. */
-  sector: string;
-  netWorth: number;
-}
-export interface HouseView extends HouseCard {
-  cash: number;
-  assets: number;
-  /** Top holdings by value, for the audit. */
-  holdings: { id: number; name: string; qty: number; value: number }[];
-}
-
-const houseHandle = (name: string) =>
-  name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-const houseName = (name: string) => name.replace(/_/g, " ");
-
-/** A company's holdings (from the world doc) + their total value. */
-function houseAssets(doc: WorldDoc, name: string) {
+/** A company's holdings (from the world doc) + their total value, top-first.
+ *  Works for any owner key — a player id or an AI company name. */
+function ownerHoldings(doc: WorldDoc, ownerKey: string) {
   let assets = 0;
-  const holdings: HouseView["holdings"] = [];
+  const holdings: Holding[] = [];
   for (const it of doc.items) {
-    const qty = it.owners?.[name] ?? 0;
+    const qty = it.owners?.[ownerKey] ?? 0;
     if (qty > 0) {
       assets += qty * it.value;
       holdings.push({ id: it.id, name: catById.get(it.id)?.name ?? `#${it.id}`, qty, value: it.value });
@@ -563,36 +515,108 @@ function houseAssets(doc: WorldDoc, name: string) {
   return { assets, holdings };
 }
 
-/** Directory cards for every AI company, richest first. */
-export function houseCards(doc: WorldDoc): HouseCard[] {
-  return (doc.traders ?? [])
-    .map((t) => {
-      const { assets } = houseAssets(doc, t.name);
-      return {
-        handle: houseHandle(t.name),
-        name: houseName(t.name),
-        tier: t.tier ?? "mid",
-        sector: t.bias ?? "",
-        netWorth: Math.round(t.cash + assets),
-      };
-    })
-    .sort((a, b) => b.netWorth - a.netWorth);
+const houseHandle = (name: string) =>
+  name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const houseName = (name: string) => name.replace(/_/g, " ");
+const HOUSE_SECTIONS: NonNullable<SiteConfig["sections"]> = [
+  { id: "masthead", on: true },
+  { id: "standing", on: true },
+];
+
+/** One row in the UNIFIED company directory — a player OR an AI house, same shape. */
+export interface DirEntry {
+  handle: string;
+  name: string;
+  kind: "player" | "house";
+  sector: string;
+  accent: string;
+  netWorth: number;
 }
 
-/** Full audit view of one AI company (cash, holdings, net worth). */
-export function houseView(doc: WorldDoc, handle: string): HouseView | null {
+/** The whole directory: every published player company + every AI house, as the
+ *  same kind of entry, richest first — one list, indistinguishable. */
+export function companyEntries(doc: WorldDoc, players: Player[]): DirEntry[] {
+  const entries: DirEntry[] = [];
+  for (const p of players) {
+    if (!p.site?.handle || !p.site.published || !p.name) continue;
+    const sectors = companySectors(p, storefrontOf(doc, p));
+    const { assets } = ownerHoldings(doc, p.playerId);
+    entries.push({
+      handle: p.site.handle,
+      name: p.name,
+      kind: "player",
+      sector: sectors[0] ?? "",
+      accent: p.site.accent ?? "gold",
+      netWorth: Math.round((p.cash ?? 0) - (p.debt ?? 0) + assets),
+    });
+  }
+  for (const t of doc.traders ?? []) {
+    const { assets } = ownerHoldings(doc, t.name);
+    entries.push({
+      handle: houseHandle(t.name),
+      name: houseName(t.name),
+      kind: "house",
+      sector: t.bias ?? "",
+      accent: "ink",
+      netWorth: Math.round(t.cash + assets),
+    });
+  }
+  return entries.sort((a, b) => b.netWorth - a.netWorth);
+}
+
+/** A player's full public company page — transparent (net worth + holdings too). */
+export function companySite(
+  doc: WorldDoc,
+  player: Player,
+  rank: number | null,
+): CompanySite {
+  const site = player.site ?? { handle: "" };
+  const store = storefrontOf(doc, player);
+  const sectors = companySectors(player, store);
+  const { assets, holdings } = ownerHoldings(doc, player.playerId);
+  return {
+    handle: site.handle,
+    name: player.name ?? "Unnamed Holding",
+    kind: "player",
+    tagline: site.tagline ?? "",
+    accent: site.accent ?? "gold",
+    sector: sectors[0] ?? "",
+    products: store.length,
+    about: site.about ?? "",
+    sections: site.sections ?? DEFAULT_SECTIONS,
+    storefront: store,
+    netWorth: Math.round((player.cash ?? 0) - (player.debt ?? 0) + assets),
+    cash: Math.round(player.cash ?? 0),
+    holdings: holdings.slice(0, 12),
+    standing: { rank, lines: (player.factories ?? []).length, sectors },
+  };
+}
+
+/** An AI house's full public page — the SAME shape + layout as a player's. */
+export function houseView(
+  doc: WorldDoc,
+  handle: string,
+  rankByName: Map<string, number>,
+): CompanySite | null {
   const t = (doc.traders ?? []).find((x) => houseHandle(x.name) === handle);
   if (!t) return null;
-  const { assets, holdings } = houseAssets(doc, t.name);
+  const { assets, holdings } = ownerHoldings(doc, t.name);
+  const sector = t.bias ?? "";
   return {
     handle,
     name: houseName(t.name),
-    tier: t.tier ?? "mid",
-    sector: t.bias ?? "",
-    cash: Math.round(t.cash),
-    assets: Math.round(assets),
+    kind: "house",
+    tagline: sector ? "Institutional house" : "Broad-market index",
+    accent: "ink",
+    sector,
+    products: 0,
+    about: "",
+    sections: HOUSE_SECTIONS,
+    storefront: [],
     netWorth: Math.round(t.cash + assets),
+    cash: Math.round(t.cash),
     holdings: holdings.slice(0, 12),
+    standing: { rank: rankByName.get(t.name) ?? null, lines: 0, sectors: sector ? [sector] : [] },
   };
 }
 

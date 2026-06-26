@@ -77,11 +77,31 @@ export interface CompanyCard {
   sector: string;
   products: number;
 }
+export interface Holding {
+  id: number;
+  name: string;
+  qty: number;
+  value: number;
+}
 export interface CompanySite extends CompanyCard {
+  kind: "player" | "house";
   about: string;
   sections: { id: string; on: boolean }[];
   storefront: CompanyProduct[];
+  netWorth: number;
+  cash: number;
+  holdings: Holding[];
   standing: { rank: number | null; lines: number; sectors: string[] };
+}
+
+/** One row in the unified company directory (player or AI house — same shape). */
+export interface DirEntry {
+  handle: string;
+  name: string;
+  kind: "player" | "house";
+  sector: string;
+  accent: string;
+  netWorth: number;
 }
 
 // ── Player-to-player orders (multiplayer routing) ────────────────────────────
@@ -130,25 +150,12 @@ export const orderAction = (
   price?: number,
 ) => ordersPost<{ ok: true }>(`/orders/${encodeURIComponent(id)}/action`, { action, price });
 
-export interface HouseCard {
-  handle: string;
-  name: string;
-  tier: string;
-  sector: string;
-  netWorth: number;
-}
-export interface HouseView extends HouseCard {
-  cash: number;
-  assets: number;
-  holdings: { id: number; name: string; qty: number; value: number }[];
-}
-
 export const fetchCompanies = () =>
-  get<{ companies: CompanyCard[]; houses: HouseCard[] }>("/companies");
+  get<{ entries: DirEntry[] }>("/companies").then((r) => r.entries);
 export const fetchCompany = (handle: string) =>
   get<CompanySite>(`/companies/${encodeURIComponent(handle)}`);
 export const fetchHouse = (handle: string) =>
-  get<HouseView>(`/houses/${encodeURIComponent(handle)}`);
+  get<CompanySite>(`/houses/${encodeURIComponent(handle)}`);
 
 /** Save the signed-in player's site config; returns the updated config + view. */
 export async function saveSite(

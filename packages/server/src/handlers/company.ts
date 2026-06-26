@@ -17,10 +17,9 @@ import type {
 import type { SiteConfig } from "@trove/engine";
 import {
   allPlayers,
-  companyCard,
+  companyEntries,
   companySite,
   getPlayer,
-  houseCards,
   houseView,
   loadWorld,
   savePlayer,
@@ -126,13 +125,14 @@ export async function handler(
 
   const handle = event.pathParameters?.handle;
 
-  // ── GET /houses/{handle} — one AI company's audit view ──────────────────
+  // ── GET /houses/{handle} — one AI company's page (same shape as a player) ─
   if (handle && event.routeKey?.includes("/houses/")) {
-    const view = houseView(doc as WorldDoc, handle);
+    const players = await allPlayers();
+    const view = houseView(doc as WorldDoc, handle, rankMap(doc as WorldDoc, players));
     return view ? json(200, view, 15) : json(404, { error: "no such company" });
   }
 
-  // ── GET /companies/{handle} — one player company's public site ──────────
+  // ── GET /companies/{handle} — one player company's page ─────────────────
   if (handle) {
     const players = await allPlayers();
     const player = players.find((p) => p.site?.handle === handle && p.site?.published);
@@ -141,11 +141,7 @@ export async function handler(
     return json(200, companySite(doc as WorldDoc, player, rank), 15);
   }
 
-  // ── GET /companies — the directory (player holdings + AI houses) ─────────
+  // ── GET /companies — ONE unified directory (players + AI houses) ─────────
   const players = await allPlayers();
-  const companies = players
-    .map((p) => companyCard(doc as WorldDoc, p))
-    .filter((c): c is NonNullable<typeof c> => !!c)
-    .sort((a, b) => b.products - a.products);
-  return json(200, { companies, houses: houseCards(doc as WorldDoc) }, 15);
+  return json(200, { entries: companyEntries(doc as WorldDoc, players) }, 15);
 }

@@ -8,11 +8,9 @@ import {
   fetchCompanies,
   fetchCompany,
   fetchHouse,
-  type CompanyCard,
   type CompanyProduct,
   type CompanySite,
-  type HouseCard,
-  type HouseView,
+  type DirEntry,
 } from "@/lib/api";
 import { manufacturingName, money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
@@ -116,11 +114,11 @@ export function Companies() {
   }
 
   if (open?.startsWith("house:")) {
-    return <HouseDossier handle={open.slice(6)} onBack={() => setOpen(null)} />;
+    return <RemoteSite handle={open.slice(6)} kind="house" onBack={() => setOpen(null)} />;
   }
 
   if (open) {
-    return <RemoteSite handle={open} onBack={() => setOpen(null)} />;
+    return <RemoteSite handle={open} kind="player" onBack={() => setOpen(null)} />;
   }
 
   return (
@@ -130,10 +128,28 @@ export function Companies() {
       myName={desk?.name ?? null}
       onOpenMine={() => setOpen("__me__")}
       onEdit={() => setEditing(true)}
-      onOpen={(h) => setOpen(h)}
-      onOpenHouse={(h) => setOpen(`house:${h}`)}
+      onOpen={(e) => setOpen(e.kind === "house" ? `house:${e.handle}` : e.handle)}
     />
   );
+}
+
+/** The signed-in player's own holdings + net worth, from the live world state. */
+function ownFinances(state: ReturnType<typeof useTrove>["state"]) {
+  let assets = 0;
+  const holdings: CompanySite["holdings"] = [];
+  for (const it of state.items) {
+    const qty = it.owners["YOU"] ?? 0;
+    if (qty > 0) {
+      assets += qty * it.value;
+      holdings.push({ id: it.id, name: it.name, qty, value: it.value });
+    }
+  }
+  holdings.sort((a, b) => b.qty * b.value - a.qty * a.value);
+  return {
+    netWorth: Math.round(state.cash - (state.debt ?? 0) + assets),
+    cash: Math.round(state.cash),
+    holdings: holdings.slice(0, 12),
+  };
 }
 
 /** Assemble a CompanySite for the owner's own preview (rank unknown locally). */
@@ -144,9 +160,11 @@ function ownPreview(
   state: ReturnType<typeof useTrove>["state"],
 ): CompanySite {
   const sectors = dominantSectors(storefront, state);
+  const fin = ownFinances(state);
   return {
     handle: site?.handle ?? "",
     name: name ?? "Your Holding",
+    kind: "player",
     tagline: site?.tagline ?? "",
     accent: site?.accent ?? "gold",
     sector: sectors[0] ?? "",
@@ -154,6 +172,9 @@ function ownPreview(
     about: site?.about ?? "",
     sections: site?.sections ?? DEFAULT_SECTIONS,
     storefront,
+    netWorth: fin.netWorth,
+    cash: fin.cash,
+    holdings: fin.holdings,
     standing: {
       rank: null,
       lines: state.factories.length,
@@ -190,7 +211,7 @@ function dominantSectors(
     .slice(0, 3);
 }
 
-// ── Directory ────────────────────────────────────────────────────────────────
+// ── One unified directory: every company on the floor ───────────────────────
 function Directory({
   hasSite,
   published,
@@ -198,28 +219,21 @@ function Directory({
   onOpenMine,
   onEdit,
   onOpen,
-  onOpenHouse,
 }: {
   hasSite: boolean;
   published: boolean;
   myName: string | null;
   onOpenMine: () => void;
   onEdit: () => void;
-  onOpen: (handle: string) => void;
-  onOpenHouse: (handle: string) => void;
+  onOpen: (entry: DirEntry) => void;
 }) {
-  const [companies, setCompanies] = useState<CompanyCard[] | null>(null);
-  const [houses, setHouses] = useState<HouseCard[]>([]);
+  const [entries, setEntries] = useState<DirEntry[] | null>(null);
 
   useEffect(() => {
     let alive = true;
     fetchCompanies()
-      .then((r) => {
-        if (!alive) return;
-        setCompanies(r.companies);
-        setHouses(r.houses ?? []);
-      })
-      .catch(() => alive && setCompanies([]));
+      .then((e) => alive && setEntries(e))
+      .catch(() => alive && setEntries([]));
     return () => {
       alive = false;
     };
@@ -233,7 +247,7 @@ function Directory({
 
       <div className="site-myrow">
         <div className="site-myinfo">
-          <span className="site-mylab">Your website</span>
+          <span className="site-mylab">Your company</span>
           <b>{manufacturingName(myName)}</b>
           <span className="site-mystate">
             {!hasSite
@@ -250,80 +264,64 @@ function Directory({
             </button>
           )}
           <button className="site-btn" onClick={onEdit}>
-            <Pencil size={13} /> {hasSite ? "Edit site" : "Build my site"}
+            <Pencil size={13} /> {hasSite ? "Edit page" : "Build my page"}
           </button>
         </div>
       </div>
 
-      <div className="site-dirhead">The Directory</div>
-      {companies === null ? (
+      <div className="site-dirhead">The Directory · every company on the floor</div>
+      {entries === null ? (
         <div className="empty">Loading the directory…</div>
-      ) : companies.length === 0 ? (
-        <div className="empty">
-          No company sites published yet. Be the first — build yours above.
-        </div>
+      ) : entries.length === 0 ? (
+        <div className="empty">No companies on the floor yet.</div>
       ) : (
         <div className="site-grid">
-          {companies.map((c) => (
-            <button key={c.handle} className="site-card" onClick={() => onOpen(c.handle)}>
-              <span className={`site-card-accent a-${c.accent}`} />
-              <span className="site-card-sector">{label(c.sector)}</span>
-              <span className="site-card-name">{manufacturingName(c.name)}</span>
-              {c.tagline && <span className="site-card-tag">{c.tagline}</span>}
+          {entries.map((e) => (
+            <button
+              key={`${e.kind}:${e.handle}`}
+              className="site-card"
+              onClick={() => onOpen(e)}
+            >
+              <span className={`site-card-accent a-${e.accent}`} />
+              <span className="site-card-sector">{e.sector ? label(e.sector) : "Index"}</span>
+              <span className="site-card-name">
+                {e.kind === "player" ? manufacturingName(e.name) : e.name}
+              </span>
               <span className="site-card-foot">
-                <Globe size={12} /> {c.handle} · {c.products} product
-                {c.products === 1 ? "" : "s"}
+                Net worth <b>{money(e.netWorth)}</b>
               </span>
             </button>
           ))}
         </div>
       )}
-
-      {houses.length > 0 && (
-        <>
-          <div className="site-dirhead" style={{ marginTop: 26 }}>
-            The Houses · institutional players
-          </div>
-          <div className="site-grid">
-            {houses.map((h) => (
-              <button
-                key={h.handle}
-                className="site-card"
-                onClick={() => onOpenHouse(h.handle)}
-              >
-                <span className="site-card-accent a-ink" />
-                <span className="site-card-sector">
-                  {h.sector ? label(h.sector) : "Index"} · {h.tier}
-                </span>
-                <span className="site-card-name">{h.name}</span>
-                <span className="site-card-foot">
-                  Net worth <b>{money(h.netWorth)}</b>
-                </span>
-              </button>
-            ))}
-          </div>
-        </>
-      )}
     </div>
   );
 }
 
-// ── An AI company's audit dossier (fetched) ─────────────────────────────────
-function HouseDossier({ handle, onBack }: { handle: string; onBack: () => void }) {
-  const [h, setH] = useState<HouseView | null>(null);
+// ── A remote company's page (fetched — player OR AI house, same component) ───
+function RemoteSite({
+  handle,
+  kind,
+  onBack,
+}: {
+  handle: string;
+  kind: "player" | "house";
+  onBack: () => void;
+}) {
+  const [site, setSite] = useState<CompanySite | null>(null);
   const [err, setErr] = useState(false);
 
   useEffect(() => {
     let alive = true;
-    setH(null);
+    setSite(null);
     setErr(false);
-    fetchHouse(handle)
-      .then((v) => alive && setH(v))
+    (kind === "house" ? fetchHouse(handle) : fetchCompany(handle))
+      .then((s) => alive && setSite(s))
       .catch(() => alive && setErr(true));
     return () => {
       alive = false;
     };
-  }, [handle]);
+  }, [handle, kind]);
 
   if (err) {
     return (
@@ -332,110 +330,6 @@ function HouseDossier({ handle, onBack }: { handle: string; onBack: () => void }
           ← Directory
         </button>
         <div className="empty">That company couldn&apos;t be found.</div>
-      </div>
-    );
-  }
-  if (!h) {
-    return (
-      <div className="view">
-        <button className="site-back" onClick={onBack}>
-          ← Directory
-        </button>
-        <div className="empty">Opening {handle}…</div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="view">
-      <div className="site-bar">
-        <button className="site-back" onClick={onBack}>
-          ← Directory
-        </button>
-        <span className="site-url">{h.sector ? label(h.sector) : "Index"} · {h.tier}</span>
-      </div>
-
-      <div className="site a-ink">
-        <header className="site-masthead">
-          <div className="site-eyebrow">Institutional player</div>
-          <h1>{h.name}</h1>
-          <p className="site-tag">
-            {h.sector ? `${label(h.sector)} house` : "Broad-market index"} ·{" "}
-            {h.tier} tier
-          </p>
-        </header>
-
-        <section className="site-sec">
-          <h2 className="site-h">Balance sheet</h2>
-          <div className="site-standing">
-            <div>
-              <span className="ss-lab">Net worth</span>
-              <span className="ss-v">{money(h.netWorth)}</span>
-            </div>
-            <div>
-              <span className="ss-lab">Cash</span>
-              <span className="ss-v">{money(h.cash)}</span>
-            </div>
-            <div>
-              <span className="ss-lab">Holdings value</span>
-              <span className="ss-v">{money(h.assets)}</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="site-sec">
-          <h2 className="site-h">Top holdings</h2>
-          {h.holdings.length === 0 ? (
-            <p className="site-about">Holding cash — nothing on the floor right now.</p>
-          ) : (
-            <div className="store-grid">
-              {h.holdings.map((it) => {
-                const cat = getItem(it.id);
-                return (
-                  <div className="store-card" key={it.id}>
-                    <span className="store-ic">
-                      {cat ? <ItemIcon it={cat} size={22} /> : null}
-                    </span>
-                    <span className="store-nm">{it.name}</span>
-                    <span className="store-pr">{money(it.qty * it.value)}</span>
-                    <span className="store-av">
-                      {it.qty.toLocaleString()} × {money(it.value)}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </section>
-      </div>
-    </div>
-  );
-}
-
-// ── A remote company's site (fetched) ───────────────────────────────────────
-function RemoteSite({ handle, onBack }: { handle: string; onBack: () => void }) {
-  const [site, setSite] = useState<CompanySite | null>(null);
-  const [err, setErr] = useState(false);
-
-  useEffect(() => {
-    let alive = true;
-    setSite(null);
-    setErr(false);
-    fetchCompany(handle)
-      .then((s) => alive && setSite(s))
-      .catch(() => alive && setErr(true));
-    return () => {
-      alive = false;
-    };
-  }, [handle]);
-
-  if (err) {
-    return (
-      <div className="view">
-        <button className="site-back" onClick={onBack}>
-          ← Directory
-        </button>
-        <div className="empty">That company site couldn&apos;t be found.</div>
       </div>
     );
   }
@@ -452,7 +346,34 @@ function RemoteSite({ handle, onBack }: { handle: string; onBack: () => void }) 
   return <SiteView site={site} onBack={onBack} />;
 }
 
-// ── The rendered storefront (shared by owner preview + remote view) ─────────
+/** Top holdings grid — the transparent, auditable inventory, on every page. */
+function HoldingsGrid({ holdings }: { holdings: CompanySite["holdings"] }) {
+  if (!holdings.length) return null;
+  return (
+    <section className="site-sec">
+      <h2 className="site-h">Holdings</h2>
+      <div className="store-grid">
+        {holdings.map((it) => {
+          const cat = getItem(it.id);
+          return (
+            <div className="store-card" key={it.id}>
+              <span className="store-ic">{cat ? <ItemIcon it={cat} size={22} /> : null}</span>
+              <span className="store-nm">{it.name}</span>
+              <span className="store-pr">{money(it.qty * it.value)}</span>
+              <span className="store-av">
+                {it.qty.toLocaleString()} × {money(it.value)}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+// ── The rendered company page (one layout for players AND AI houses) ────────
+const ALWAYS_ON = new Set(["masthead", "storefront", "standing"]);
+
 function SiteView({
   site,
   owner,
@@ -465,12 +386,17 @@ function SiteView({
   onEdit?: () => void;
 }) {
   const [req, setReq] = useState<CompanyProduct | null>(null);
+  const isHouse = site.kind === "house";
   const sections = (site.sections.length ? site.sections : DEFAULT_SECTIONS).filter(
-    (s) => s.on || s.id === "masthead" || s.id === "storefront",
+    (s) => s.on || ALWAYS_ON.has(s.id),
   );
-  const mfg = manufacturingName(site.name);
-  const show = (id: string) => sections.some((s) => s.id === id && (s.on || id === "masthead" || id === "storefront"));
-  const canRequest = !owner && !!site.handle;
+  const displayName = isHouse ? site.name : manufacturingName(site.name);
+  const eyebrow = isHouse
+    ? site.sector
+      ? `${label(site.sector)} · Institutional house`
+      : "Broad-market index"
+    : `${label(site.sector)} · Manufacturing`;
+  const canRequest = !owner && !isHouse && !!site.handle;
 
   return (
     <div className="view">
@@ -493,35 +419,39 @@ function SiteView({
           if (sec.id === "masthead")
             return (
               <header className="site-masthead" key="masthead">
-                <div className="site-eyebrow">{label(site.sector)} · Manufacturing</div>
-                <h1>{mfg}</h1>
+                <div className="site-eyebrow">{eyebrow}</div>
+                <h1>{displayName}</h1>
                 {site.tagline && <p className="site-tag">{site.tagline}</p>}
               </header>
             );
-          if (sec.id === "about" && sec.on)
+          if (sec.id === "about" && sec.on && !isHouse)
             return (
               <section className="site-sec" key="about">
                 <h2 className="site-h">The House</h2>
-                <p className="site-about">
-                  {site.about || "A house of the Trove floor."}
-                </p>
+                <p className="site-about">{site.about || "A house of the Trove floor."}</p>
               </section>
             );
-          if (sec.id === "standing" && sec.on)
+          if (sec.id === "standing")
             return (
               <section className="site-sec" key="standing">
                 <h2 className="site-h">Standing</h2>
                 <div className="site-standing">
+                  <div>
+                    <span className="ss-lab">Net worth</span>
+                    <span className="ss-v">{money(site.netWorth)}</span>
+                  </div>
                   <div>
                     <span className="ss-lab">Floor rank</span>
                     <span className="ss-v">
                       {site.standing.rank ? `#${site.standing.rank}` : "—"}
                     </span>
                   </div>
-                  <div>
-                    <span className="ss-lab">Production lines</span>
-                    <span className="ss-v">{site.standing.lines}</span>
-                  </div>
+                  {site.standing.lines > 0 && (
+                    <div>
+                      <span className="ss-lab">Production lines</span>
+                      <span className="ss-v">{site.standing.lines}</span>
+                    </div>
+                  )}
                   <div>
                     <span className="ss-lab">Sectors</span>
                     <span className="ss-v small">
@@ -531,7 +461,7 @@ function SiteView({
                 </div>
               </section>
             );
-          if (sec.id === "storefront")
+          if (sec.id === "storefront" && site.storefront.length > 0)
             return (
               <Storefront
                 key="storefront"
@@ -540,21 +470,19 @@ function SiteView({
                 onRequest={canRequest ? (p) => setReq(p) : undefined}
               />
             );
-          if (sec.id === "contact" && sec.on)
+          if (sec.id === "contact" && sec.on && !isHouse)
             return (
               <section className="site-sec" key="contact">
                 <h2 className="site-h">Bulk orders</h2>
                 <p className="site-about">
-                  {mfg} takes bulk contracts through the Order Desk. Hit{" "}
+                  {displayName} takes bulk contracts through the Order Desk. Hit{" "}
                   <b>Request</b> on any product to send an offer.
                 </p>
               </section>
             );
           return null;
         })}
-        {!show("about") && !show("standing") && site.storefront.length === 0 && (
-          <div className="empty">Nothing listed yet.</div>
-        )}
+        <HoldingsGrid holdings={site.holdings} />
       </div>
       {req && (
         <RequestModal
@@ -730,7 +658,7 @@ function Builder({ onDone }: { onDone: () => void }) {
     });
   }, []);
   const toggle = useCallback((id: SiteSectionId) => {
-    if (id === "masthead" || id === "storefront") return; // always on
+    if (id === "masthead" || id === "storefront" || id === "standing") return; // always on
     setSections((prev) => prev.map((s) => (s.id === id ? { ...s, on: !s.on } : s)));
   }, []);
 
@@ -815,7 +743,8 @@ function Builder({ onDone }: { onDone: () => void }) {
           <div className="bld-sectionshd">Sections — show, hide, reorder</div>
           <div className="bld-sections">
             {sections.map((s, i) => {
-              const locked = s.id === "masthead" || s.id === "storefront";
+              const locked =
+                s.id === "masthead" || s.id === "storefront" || s.id === "standing";
               return (
                 <div className={`bld-sec ${s.on ? "" : "off"}`} key={s.id}>
                   <span className="bld-secnm">{SECTION_LABELS[s.id]}</span>
@@ -889,8 +818,8 @@ function Builder({ onDone }: { onDone: () => void }) {
                     <h2 className="site-h">Standing</h2>
                     <div className="site-standing">
                       <div>
-                        <span className="ss-lab">Production lines</span>
-                        <span className="ss-v">{preview.standing.lines}</span>
+                        <span className="ss-lab">Net worth</span>
+                        <span className="ss-v">{money(preview.netWorth)}</span>
                       </div>
                       <div>
                         <span className="ss-lab">Sectors</span>
