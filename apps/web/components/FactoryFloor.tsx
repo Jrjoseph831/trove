@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Cog } from "lucide-react";
 import { effectiveSpec } from "@trove/data";
 import {
@@ -15,12 +14,9 @@ import { useTrove } from "@/lib/trove";
 
 const clip = (s: string, n: number) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
 
-/** The Live Factory Floor (after Joe's mockup). Top-down view, as if the roof
- *  were peeled back: an inbound door on the left wall feeds a central junction;
- *  belts branch straight into the shipping-dock doors on the right wall. Doors
- *  face the warehouse interior (inbound faces right, docks face left) — never
- *  flat-to-the-sky. Belt colour is live throughput health: green flowing, bronze
- *  slowing (≥85% of floor lanes), red jammed. No forklift / staging clutter. */
+/** The Floor as a command console — a status board you scan at a glance: which
+ *  lines are flowing (green), which are throttled (bronze) or stalled (red),
+ *  which docks are full, and what needs attention. No animation; just signal. */
 export function FactoryFloor({ mfg }: { mfg: string }) {
   const { state, factoryCycle, expandFloor, buyUpgrade } = useTrove();
   const slots = state.floorSlots;
@@ -55,7 +51,7 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
   const util = totalLanes > 0 ? demand / totalLanes : 0;
   const anyRunning = lines.some((l) => !l.building && !l.idle);
 
-  // Even per-dock fill (least-full first) so one line lights every dock.
+  // Even per-dock fill (least-full first).
   const dockUsed = new Array<number>(docks).fill(0);
   let placed = 0;
   while (placed < demand) {
@@ -69,58 +65,48 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
     placed++;
   }
 
-  // Belt health → colour.
-  const health: "flow" | "slow" | "jam" = !anyRunning
-    ? "flow"
-    : overCap
-      ? "jam"
+  // Overall floor status.
+  const status: "ok" | "warn" | "bad" | "idle" = overCap
+    ? "bad"
+    : !anyRunning
+      ? "idle"
       : util >= 0.85
-        ? "slow"
-        : "flow";
-  const beltDur = health === "jam" ? 2.6 : health === "slow" ? 1.5 : 1.05;
+        ? "warn"
+        : "ok";
+  const statusMsg = overCap
+    ? `Jammed — losing ${lostTot.toLocaleString()}/cy to congestion`
+    : !anyRunning
+      ? "Floor idle — no lines running"
+      : util >= 0.85
+        ? `Near capacity — ${Math.round(util * 100)}% of dock lanes in use`
+        : "All lines flowing";
 
-  const dockState = (used: number) => {
-    const r = used / Math.max(1, perBay);
-    if (r >= 1) return { cls: "full", label: "FULL" };
-    if (r >= 0.6) return { cls: "warn", label: "BUSY" };
-    if (used > 0) return { cls: "good", label: "OPEN" };
-    return { cls: "idle", label: "IDLE" };
+  // Problems list.
+  const problems: string[] = [];
+  if (overCap)
+    problems.push(
+      `Floor over capacity (${demand}/${totalLanes} lanes) — every line throttled to ~${Math.round(throttle * 100)}%. Add Auto-Router or expand the floor.`,
+    );
+  for (const l of lines)
+    if (l.idle) problems.push(`${clip(l.name, 30)} line stalled — feed it inputs.`);
+  if (!overCap && util >= 0.85 && anyRunning)
+    problems.push(`Floor at ${Math.round(util * 100)}% — one more line could start jamming it.`);
+
+  const lineStatus = (l: (typeof lines)[number]) => {
+    if (l.building) return { dot: "idle", tag: "BUILDING" };
+    if (l.idle) return { dot: "jam", tag: "STALLED" };
+    if (realizedOf(l) < l.rate) return { dot: "slow", tag: "THROTTLED" };
+    return { dot: "flow", tag: "FLOWING" };
   };
-  const fullDock = dockUsed.findIndex((u) => u >= perBay);
-
-  // ── Selection (click a line or dock to highlight its route) ─────────────────
-  const [sel, setSel] = useState<"line" | number>("line");
-
-  // ── SVG geometry ────────────────────────────────────────────────────────────
-  const VB_W = 720;
-  const VB_H = 380;
-  const WH = { x: 40, y: 40, w: 620, h: 300 };
-  const CY = WH.y + WH.h / 2; // 190
-  const IN_RX = 72; // inbound bay right edge (belt starts here)
-  const JUNC = { x: 296, y: CY };
-  const DOCK_X = 600; // dock bay left edge (belt ends here)
-
-  const RIGHT_SLOTS = Math.max(4, docks + 2);
-  const startActive = Math.floor((RIGHT_SLOTS - docks) / 2);
-  const slotY = (i: number) =>
-    WH.y + 40 + (i * (WH.h - 80)) / Math.max(1, RIGHT_SLOTS - 1);
-  // active dock j (0..docks-1) lives in wall slot startActive + j
-  const dockSlot = (j: number) => startActive + j;
-
-  const mainD = `M ${IN_RX} ${CY} L ${JUNC.x} ${CY}`;
-  const branchD = (j: number) =>
-    `M ${JUNC.x} ${CY} L 460 ${slotY(dockSlot(j))} L ${DOCK_X} ${slotY(dockSlot(j))}`;
-
-  const projected = `${realizedTot.toLocaleString()}/cy`;
-  const bottleneck = overCap
-    ? "Floor over capacity"
-    : fullDock >= 0
-      ? `Dock ${fullDock + 1} full`
-      : "none";
+  const dockStatus = (used: number) => {
+    if (used <= 0) return { dot: "idle", tag: "IDLE" };
+    if (used >= perBay) return { dot: overCap ? "jam" : "slow", tag: "FULL" };
+    return { dot: "flow", tag: "OPEN" };
+  };
 
   return (
-    <div className="fl2">
-      {/* KPI strip */}
+    <div className="cons">
+      {/* headline metrics */}
       <div className="floor-kpis">
         <div className="fk">
           <span className="fk-lab">Shipping</span>
@@ -149,213 +135,121 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
         </div>
       </div>
 
-      <p className="fac-intro">
-        Output ships across <b>all {docks} dock{docks > 1 ? "s" : ""} at once</b> — one
-        shared pool of {totalLanes} lanes. A line only slows when total production
-        out-runs the whole floor. Click a dock or line to highlight its route.
-      </p>
+      {/* overall status banner */}
+      <div className={`cons-status ${status}`}>
+        <span className="cons-status-dot" />
+        <span className="cons-status-msg">{statusMsg}</span>
+        <span className="cons-status-sub">
+          {realizedTot.toLocaleString()}/cy shipping · {lines.length} line
+          {lines.length === 1 ? "" : "s"} · {docks} dock{docks === 1 ? "" : "s"}
+        </span>
+      </div>
 
-      <div className="fl2-dash">
-        {/* LEFT: lines + docks + capacity */}
-        <div className="fl2-left">
-          <div className="section-sub">Lines + shipping docks</div>
-          <div className="fl2-linedock">
-            <div className="fl2-lines">
-              {lines.length === 0 && (
-                <div className="fl2-empty">No lines yet — build one on the Lines tab.</div>
-              )}
-              {lines.map((l) => {
-                const realized = realizedOf(l);
-                const throttled = !l.building && !l.idle && realized < l.rate;
-                return (
-                  <button
-                    key={l.f.id}
-                    className={`fl2-line ${sel === "line" ? "sel" : ""}`}
-                    onClick={() => setSel("line")}
-                  >
-                    <span className="fl2-gear"><Cog size={15} strokeWidth={1.75} /></span>
-                    <span className="fl2-line-body">
-                      <span className="fl2-line-name">{clip(l.name, 24)}</span>
-                      <span className="fl2-line-rate">
-                        {l.building
-                          ? "building…"
-                          : l.idle
-                            ? "stalled — no inputs"
-                            : `${realized.toLocaleString()}/cy · routes to ${docks} dock${docks > 1 ? "s" : ""}${throttled ? ` · of ${l.rate.toLocaleString()}` : ""}`}
-                      </span>
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-
-            <div className="fl2-docks">
-              {Array.from({ length: docks }).map((_, j) => {
-                const used = dockUsed[j] ?? 0;
-                const st = dockState(used);
-                return (
-                  <button
-                    key={j}
-                    className={`fl2-dock ${st.cls} ${sel === j ? "sel" : ""}`}
-                    onClick={() => setSel(j)}
-                  >
-                    <span className="fl2-dock-top">
-                      <span>🚚 Dock {j + 1}</span>
-                      <span className="fl2-dock-cap">{used}/{perBay}</span>
-                    </span>
-                    <span className="fl2-bar">
-                      <i style={{ width: `${(used / Math.max(1, perBay)) * 100}%` }} />
-                    </span>
-                    <span className="fl2-state">{st.label}</span>
-                  </button>
-                );
-              })}
-            </div>
+      <div className="cons-grid">
+        {/* lines */}
+        <div className="cons-panel">
+          <div className="cons-panel-head">
+            Production lines<span>{lines.length}</span>
           </div>
-
-          <button className="fac-build" onClick={expandFloor}>
-            Expand floor · +2 slots · {money(cost)}
-          </button>
-
-          <div className="floor-infra">
-            <div className="bay-sub">Floor upgrades — one-time, floor-wide</div>
-            <div className="fi-grid">
-              {INFRA_UPGRADES.map((u) => {
-                const owned = state.infra[u.id];
-                const afford = state.cash >= u.cost;
-                return (
-                  <button
-                    key={u.id}
-                    className={`fi-card ${owned ? "on" : ""}`}
-                    disabled={owned || !afford}
-                    onClick={() => buyUpgrade(u.id)}
-                  >
-                    <span className="fi-name">{u.name}</span>
-                    <span className="fi-blurb">{u.blurb}</span>
-                    <span className="fi-cost">
-                      {owned ? "✓ installed" : `install ${money(u.cost)}`}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          <p className="floor-foot">
-            {mfg} floor · {state.factories.length}/{slots} slots used · {docks} dock
-            {docks > 1 ? "s" : ""} · dock upkeep scales with size.
-          </p>
+          {lines.length === 0 && (
+            <div className="cons-empty">No lines yet — build one on the Lines tab.</div>
+          )}
+          {lines.map((l) => {
+            const st = lineStatus(l);
+            const realized = realizedOf(l);
+            const throttled = !l.building && !l.idle && realized < l.rate;
+            return (
+              <div key={l.f.id} className="cons-row">
+                <span className={`cons-dot ${st.dot}`} />
+                <span className="cons-row-ic"><Cog size={14} strokeWidth={1.75} /></span>
+                <div className="cons-row-body">
+                  <span className="cons-row-name">{clip(l.name, 26)}</span>
+                  <span className="cons-row-sub">
+                    {l.building
+                      ? "coming online…"
+                      : l.idle
+                        ? "no inputs"
+                        : `${realized.toLocaleString()}/cy${throttled ? ` of ${l.rate.toLocaleString()}` : ""} · ${l.lanes} lane${l.lanes === 1 ? "" : "s"}`}
+                  </span>
+                </div>
+                <span className={`cons-tag ${st.dot}`}>{st.tag}</span>
+              </div>
+            );
+          })}
         </div>
 
-        {/* RIGHT: the live factory floor */}
-        <div className="fl2-right">
-          <div className="fl2-card">
-            <div className="fl2-head">
-              <div>
-                <h2>Live Factory Floor</h2>
-                <p>Belts route from the inbound door straight to each shipping dock.</p>
-              </div>
-              <span className={`fl2-pill ${overCap ? "jam" : ""}`}>
-                {overCap ? "⚠ Jam Status: over capacity" : "✅ Jam Status: Clear"}
-              </span>
-            </div>
-
-            <div className="fl2-svgwrap">
-              <svg viewBox={`0 0 ${VB_W} ${VB_H}`} className="fl2-svg">
-                <rect className="wh2" x={WH.x} y={WH.y} width={WH.w} height={WH.h} rx={18} />
-
-                {/* belts (only when something runs) */}
-                {anyRunning && (
-                  <>
-                    <path className="fb-base" d={mainD} fill="none" />
-                    <path
-                      className={`fb ${health}`}
-                      d={mainD}
-                      fill="none"
-                      style={{ animationDuration: `${beltDur}s` }}
-                    />
-                    {Array.from({ length: docks }).map((_, j) => {
-                      const d = branchD(j);
-                      const mark =
-                        sel === j ? "sel" : typeof sel === "number" ? "dim" : "";
-                      return (
-                        <g key={`br${j}`}>
-                          <path className="fb-base" d={d} fill="none" />
-                          <path
-                            className={`fb ${health} ${mark}`}
-                            d={d}
-                            fill="none"
-                            style={{ animationDuration: `${beltDur}s` }}
-                          />
-                          {/* package riding the branch */}
-                          <rect className="fb-pkg" x={-6} y={-6} width={12} height={12} rx={2}>
-                            <animateMotion dur={`${beltDur * 2.4}s`} repeatCount="indefinite" path={d} />
-                          </rect>
-                        </g>
-                      );
-                    })}
-                    {/* package on the main belt */}
-                    <rect className="fb-pkg" x={-6} y={-6} width={12} height={12} rx={2}>
-                      <animateMotion dur={`${beltDur * 2}s`} repeatCount="indefinite" path={mainD} />
-                    </rect>
-                    <circle className="fb-node" cx={JUNC.x} cy={JUNC.y} r={8} />
-                  </>
-                )}
-
-                {/* inbound bay (clean rectangle on the left) */}
-                <g className="fbay in">
-                  <rect className="fbay-box" x={IN_RX - 38} y={CY - 22} width={38} height={44} rx={9} />
-                  <rect className="fbay-mouth" x={IN_RX - 8} y={CY - 11} width={8} height={22} rx={2} />
-                  <text className="fl2-small" x={IN_RX - 19} y={CY + 38}>Inbound</text>
-                </g>
-
-                {/* dock bays (clean rectangles on the right) */}
-                {Array.from({ length: RIGHT_SLOTS }).map((_, i) => {
-                  const cy = slotY(i);
-                  const aj = i - startActive;
-                  const open = aj >= 0 && aj < docks;
-                  const isSel = open && sel === aj;
-                  return (
-                    <g key={`bay${i}`} className={`fbay ${open ? "open" : "lock"} ${isSel ? "sel" : ""}`}>
-                      <rect className="fbay-box" x={DOCK_X} y={cy - 22} width={38} height={44} rx={9} />
-                      {open ? (
-                        <rect className="fbay-mouth" x={DOCK_X} y={cy - 11} width={8} height={22} rx={2} />
-                      ) : (
-                        <g className="fbay-lock">
-                          <rect className="fbay-lock-body" x={DOCK_X + 15} y={cy} width={9} height={8} rx={1.5} />
-                          <path
-                            className="fbay-lock-sh"
-                            d={`M ${DOCK_X + 17} ${cy} v-2.5 a 2.5 2.5 0 0 1 5 0 v2.5`}
-                            fill="none"
-                          />
-                        </g>
-                      )}
-                      <text className="fl2-small" x={DOCK_X + 19} y={cy + 38}>
-                        {open ? `Dock ${aj + 1}` : "Locked"}
-                      </text>
-                    </g>
-                  );
-                })}
-              </svg>
-            </div>
-
-            <div className="fl2-bottom">
-              <div className="fl2-mini">
-                <div className="label">Selected</div>
-                <div className="value">{sel === "line" ? clip(lines[0]?.name ?? "Line", 18) : `Dock ${(sel as number) + 1}`}</div>
-              </div>
-              <div className="fl2-mini">
-                <div className="label">Projected output</div>
-                <div className="value">{projected}</div>
-              </div>
-              <div className="fl2-mini">
-                <div className="label">Next bottleneck</div>
-                <div className="value">{bottleneck}</div>
-              </div>
-            </div>
+        {/* docks */}
+        <div className="cons-panel">
+          <div className="cons-panel-head">
+            Shipping docks<span>{docks}</span>
           </div>
+          {Array.from({ length: docks }).map((_, j) => {
+            const used = dockUsed[j] ?? 0;
+            const st = dockStatus(used);
+            return (
+              <div key={j} className="cons-row">
+                <span className={`cons-dot ${st.dot}`} />
+                <div className="cons-row-body">
+                  <span className="cons-row-name">Dock {j + 1}</span>
+                  <span className="cons-bar">
+                    <i
+                      className={st.dot}
+                      style={{ width: `${(used / Math.max(1, perBay)) * 100}%` }}
+                    />
+                  </span>
+                </div>
+                <span className="cons-row-cap">{used}/{perBay}</span>
+                <span className={`cons-tag ${st.dot}`}>{st.tag}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
+
+      {/* problems / all-clear */}
+      {problems.length > 0 ? (
+        <div className="cons-problems">
+          <div className="cons-panel-head">⚠ Needs attention<span>{problems.length}</span></div>
+          {problems.map((p, i) => (
+            <div key={i} className="cons-problem">{p}</div>
+          ))}
+        </div>
+      ) : (
+        <div className="cons-allclear">✅ No problems — everything's flowing.</div>
+      )}
+
+      <button className="fac-build" onClick={expandFloor}>
+        Expand floor · +2 slots · {money(cost)}
+      </button>
+
+      <div className="floor-infra">
+        <div className="bay-sub">Floor upgrades — one-time, floor-wide</div>
+        <div className="fi-grid">
+          {INFRA_UPGRADES.map((u) => {
+            const owned = state.infra[u.id];
+            const afford = state.cash >= u.cost;
+            return (
+              <button
+                key={u.id}
+                className={`fi-card ${owned ? "on" : ""}`}
+                disabled={owned || !afford}
+                onClick={() => buyUpgrade(u.id)}
+              >
+                <span className="fi-name">{u.name}</span>
+                <span className="fi-blurb">{u.blurb}</span>
+                <span className="fi-cost">
+                  {owned ? "✓ installed" : `install ${money(u.cost)}`}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <p className="floor-foot">
+        {mfg} floor · {state.factories.length}/{slots} slots used · {docks} dock
+        {docks > 1 ? "s" : ""} · dock upkeep scales with size.
+      </p>
     </div>
   );
 }
