@@ -5237,6 +5237,225 @@ body {
 .bay-throttle b {
   font-weight: 700;
 }
+
+/* ── Warehouse Lab (experimental) ─────────────────────────────────────────── */
+.lab {
+  margin-top: 4px;
+}
+.lab-banner {
+  font-size: 12px;
+  color: var(--ink-dim);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+.lab-banner b {
+  color: var(--ink);
+  font-weight: 700;
+}
+.lab-wrap {
+  overflow-x: auto;
+  padding-bottom: 6px;
+  max-width: 100%;
+}
+.lab-scene {
+  position: relative;
+  flex: none;
+}
+.lab-svg {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.lab-floor {
+  fill: color-mix(in srgb, var(--ink) 3%, var(--paper));
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.lab-wall {
+  fill: color-mix(in srgb, var(--ink) 6%, var(--paper));
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.lab-belt-base {
+  stroke: color-mix(in srgb, var(--ink) 9%, transparent);
+  stroke-width: 13;
+  stroke-linecap: round;
+}
+.lab-belt-flow {
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 6 16;
+}
+.lab-belt-flow.run {
+  stroke: var(--up);
+  animation: lab-beltflow 1s linear infinite;
+}
+.lab-belt-flow.jam {
+  stroke: #c0563f;
+  animation: lab-beltflow 2.4s linear infinite;
+}
+.lab-belt-flow.idle {
+  stroke: var(--ink-faint);
+  stroke-dasharray: 2 18;
+}
+@keyframes lab-beltflow {
+  to {
+    stroke-dashoffset: -22;
+  }
+}
+/* actors layered over the SVG */
+.lab-pkg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  background: var(--accent);
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  offset-anchor: center;
+  offset-rotate: 0deg;
+  animation-name: lab-ride;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.lab-pkg.jam {
+  background: #c0563f;
+  color: #fff;
+}
+@keyframes lab-ride {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+.lab-fork {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  transform: translate(-50%, -50%);
+  animation: lab-fork 2.6s ease-in-out infinite;
+}
+@keyframes lab-fork {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(calc(-50% - 13px), -56%);
+  }
+}
+.lab-dock {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 64px;
+}
+.lab-door {
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  width: 40px;
+  height: 22px;
+  margin-left: -20px;
+  background: color-mix(in srgb, var(--up) 48%, var(--paper));
+  border: 1px solid var(--line);
+  border-radius: 4px 4px 0 0;
+  transform-origin: top;
+  animation-name: lab-door;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.lab-dock.jam .lab-door {
+  background: color-mix(in srgb, #c0563f 48%, var(--paper));
+}
+@keyframes lab-door {
+  0%,
+  52% {
+    transform: scaleY(1);
+  }
+  62%,
+  86% {
+    transform: scaleY(0.08);
+  }
+  94%,
+  100% {
+    transform: scaleY(1);
+  }
+}
+.lab-truck {
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  animation-name: lab-truck;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+@keyframes lab-truck {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  58% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  86% {
+    transform: translateX(96px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(96px);
+    opacity: 0;
+  }
+}
+.lab-dock-lab {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+.lab-empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  color: var(--ink-dim);
+}
+.lab-foot {
+  font-size: 11.5px;
+  color: var(--ink-dim);
+  margin: 10px 0 4px;
+  max-width: 640px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lab-pkg,
+  .lab-fork,
+  .lab-door,
+  .lab-truck,
+  .lab-belt-flow {
+    animation: none !important;
+  }
+}
 /* alerts feed */
 .wh-alerts {
   margin: 4px 0 14px;
