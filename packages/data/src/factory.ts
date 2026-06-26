@@ -223,7 +223,11 @@ export function factorySpec(it: Item): FactorySpec {
     1500,
     Math.min(8_000_000, Math.round(rate * it.base * 1.5)),
   );
-  const upkeep = Math.max(50, Math.round(buildCost * 0.04));
+  // Upkeep scales with the line's OUTPUT VALUE per cycle (rate × base), not its
+  // build cost — so a cheap-good line isn't crushed by a flat floor that would
+  // eat most of its tiny output. ~5% of output value, with a small floor so an
+  // idle line still costs something.
+  const upkeep = Math.max(8, Math.round(rate * it.base * 0.05));
   return { buildCost, rate, upkeep, buildCycles: BUILD_CYCLES[it.archetype] ?? 2 };
 }
 
