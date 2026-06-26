@@ -160,6 +160,18 @@ export async function handler(
   if (qty > product.available)
     return json(409, { error: `they only have ${product.available} available` });
 
+  // Affordability: you can only commit cash you actually hold. Every open
+  // request you've sent counts against your cash, so your outstanding offers can
+  // never total more than you can pay (a deal pays from cash, not holdings).
+  const outstanding = (await ordersForBuyer(me)).reduce((s, o) => s + o.price, 0);
+  if (outstanding + price > buyer.cash)
+    return json(409, {
+      error:
+        outstanding > 0
+          ? "your open requests would exceed your cash"
+          : "you can't cover that offer",
+    });
+
   const now = Date.now();
   const order: PvpOrder = {
     id: newId(),

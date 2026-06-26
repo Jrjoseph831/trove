@@ -612,7 +612,11 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
                 ? "That's your own company"
                 : r.error === "they don't list that"
                   ? "They don't list that anymore"
-                  : "Couldn't send the request",
+                  : r.error === "you can't cover that offer"
+                    ? "You can't cover that offer"
+                    : r.error === "your open requests would exceed your cash"
+                      ? "Your open requests would exceed your cash"
+                      : "Couldn't send the request",
         );
         return false;
       }
