@@ -16,6 +16,7 @@ import {
 import { assetsValue, netWorth } from "@trove/engine";
 import { sandboxEnabled } from "@/lib/config";
 import { money, pctChange } from "@/lib/format";
+import { breakingBeat } from "@/lib/breaking";
 import { goalsProgress } from "@/lib/goals";
 import {
   bandProgress,
@@ -72,6 +73,7 @@ export function Rail() {
   const factoryOpen = gateUnlocked("factory", peak, state);
   const factoryAt = LADDER.find((t) => t.gate === "factory")?.at ?? 0;
   const goals = goalsProgress(state);
+  const breaking = breakingBeat();
 
   return (
     <nav className="rail">
@@ -155,6 +157,15 @@ export function Rail() {
               <t.Icon size={15} strokeWidth={1.75} />
             </span>{" "}
             {t.label}
+            {t.id === "wire" && breaking && (
+              <span
+                className="navbreak"
+                title="Breaking on the Wire"
+                aria-label="Breaking news"
+              >
+                ⚡
+              </span>
+            )}
           </button>
         ))}
         <div className="navh" style={{ marginTop: 14 }}>

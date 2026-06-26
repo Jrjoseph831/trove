@@ -1,9 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Radio } from "lucide-react";
 import { news as newsBank } from "@trove/data";
 import { netWorth } from "@trove/engine";
+import { breakingBeat } from "@/lib/breaking";
 import { money } from "@/lib/format";
 import { tnnLive } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
@@ -13,6 +14,13 @@ import { Newsreel, Wheel } from "./Newsreel";
 export function Wire() {
   const { state } = useTrove();
   const [studioOpen, setStudioOpen] = useState(false);
+  // The telegraphed market-event Breaking beat — refreshed on its own clock.
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const t = setInterval(() => setNow(Date.now()), 5000);
+    return () => clearInterval(t);
+  }, []);
+  const beat = breakingBeat(now);
 
   // Build the rundown once per cycle (front + recent archive, with bodies).
   const stories = useMemo<WireStory[]>(() => {
@@ -60,6 +68,14 @@ export function Wire() {
           </span>
         </div>
       </div>
+
+      {beat && (
+        <article className={`brk-card ${beat.phase}`}>
+          <span className="brk-card-kick">⚡ {beat.kicker}</span>
+          <h3 className="brk-card-head">{beat.head}</h3>
+          <p className="brk-card-body">{beat.body}</p>
+        </article>
+      )}
 
       {state.front && (
         <div className="breaking">

@@ -7513,3 +7513,92 @@ body {
   color: var(--ink-dim);
   white-space: nowrap;
 }
+
+/* ── Market event, routed through the Wire as Breaking ─────────────────────── */
+.brk-card {
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 6%, var(--paper));
+  padding: 12px 16px;
+  margin: 0 0 14px;
+}
+.brk-card.live {
+  border-color: color-mix(in srgb, #c0563f 45%, var(--line));
+  border-left-color: #c0563f;
+  background: color-mix(in srgb, #c0563f 5%, var(--paper));
+}
+.brk-card-kick {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a86f16;
+}
+.brk-card.live .brk-card-kick {
+  color: #b5471f;
+}
+.brk-card-head {
+  margin: 4px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.brk-card-body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-dim);
+}
+.brk-alert {
+  position: fixed;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #26231f;
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  animation: brk-rise 0.3s ease;
+}
+.brk-alert-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f0ab3c;
+  animation: mev-pulse 1s ease-in-out infinite;
+}
+.brk-alert-cta {
+  color: #f0ab3c;
+  font-weight: 900;
+}
+@keyframes brk-rise {
+  from {
+    transform: translate(-50%, 14px);
+    opacity: 0;
+  }
+}
+.navbreak {
+  margin-left: auto;
+  font-size: 11px;
+  animation: brk-flick 1.6s ease-in-out infinite;
+}
+@keyframes brk-flick {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
