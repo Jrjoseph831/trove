@@ -1,17 +1,20 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { Forklift, Package, Truck } from "lucide-react";
+import { Forklift } from "lucide-react";
 import { effectiveSpec } from "@trove/data";
 import { floorBays, lanesPerBay, lineLanes } from "@trove/engine";
 import { useTrove } from "@/lib/trove";
 
-/** Experimental warehouse scene (v0). Open-source lucide actors — forklift,
- *  packages, outbound trucks — animated over PROCEDURAL belts that curve to each
- *  dock, lightly bound to live shipping. The art is placeholder; the real
- *  deliverable is the data-driven motion system, into which we later drop AI /
- *  Kenney / Lottie sprites. Isolated behind the Lab tab — nothing here touches
- *  the live Floor. */
+/** Experimental warehouse scene (v0). Real external sprites — OpenMoji package &
+ *  delivery-truck (CC-BY-SA 4.0, hfg-gmuend/openmoji) — plus a lucide forklift,
+ *  animated over PROCEDURAL belts that curve to each dock, lightly bound to live
+ *  shipping. The art is swappable; the real deliverable is the data-driven motion
+ *  system, into which we drop AI / Kenney / Lottie sprites next. Isolated behind
+ *  the Lab tab — nothing here touches the live Floor.
+ *
+ *  Attribution: warehouse sprites from OpenMoji (https://openmoji.org), CC-BY-SA
+ *  4.0 — keep this credit if these ship to production. */
 export function WarehouseLab() {
   const { state, factoryCycle } = useTrove();
   const bays = floorBays(state.floorSlots);
@@ -99,7 +102,7 @@ export function WarehouseLab() {
                     animationDelay: `${-(beltDur / pkgPerBelt) * p}s`,
                   }}
                 >
-                  <Package size={15} strokeWidth={2} />
+                  <img src="/lab/package.svg" alt="" draggable={false} />
                 </span>
               )),
             )}
@@ -124,7 +127,7 @@ export function WarehouseLab() {
                 className="lab-truck"
                 style={active ? { animationDuration: `${truckDur}s`, animationDelay: `${-b * 1.1}s` } : { opacity: 1 }}
               >
-                <Truck size={26} strokeWidth={1.6} />
+                <img src="/lab/truck.svg" alt="" draggable={false} />
               </span>
               <span className="lab-dock-lab">Dock {b + 1}</span>
             </div>

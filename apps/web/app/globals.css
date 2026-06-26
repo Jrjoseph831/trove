@@ -5311,23 +5311,25 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   display: grid;
   place-items: center;
-  color: var(--ink);
-  background: var(--accent);
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   offset-anchor: center;
   offset-rotate: 0deg;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.22));
   animation-name: lab-ride;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+.lab-pkg img {
+  width: 26px;
+  height: 26px;
+  display: block;
+  pointer-events: none;
+}
 .lab-pkg.jam {
-  background: #c0563f;
-  color: #fff;
+  filter: drop-shadow(0 0 3px #c0563f);
 }
 @keyframes lab-ride {
   from {
@@ -5400,6 +5402,13 @@ body {
   animation-name: lab-truck;
   animation-timing-function: ease-in;
   animation-iteration-count: infinite;
+}
+.lab-truck img {
+  width: 32px;
+  height: 32px;
+  display: block;
+  transform: scaleX(-1); /* face the exit (drives off to the right) */
+  pointer-events: none;
 }
 @keyframes lab-truck {
   0% {
