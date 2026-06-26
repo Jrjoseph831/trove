@@ -5005,137 +5005,237 @@ body {
   color: #c0563f;
 }
 
-/* ── Isometric warehouse floor ───────────────────────────────────────────── */
-.iso-wrap {
+/* ── Floor: loading-dock command center ──────────────────────────────────── */
+.cc {
+  display: grid;
+  grid-template-columns: 1fr 66px 1fr;
+  align-items: start;
   max-width: 720px;
   margin: 6px 0 14px;
 }
-.iso {
-  font-family: inherit;
-  overflow: visible;
-  user-select: none;
+.cc-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.iso-ground {
-  fill: color-mix(in srgb, var(--ink) 4%, var(--paper));
-  stroke: var(--line);
-  stroke-width: 1;
-}
-/* iso block faces — top lightest, right darkest; hue set per-group via --mc */
-.iso-face-t {
-  fill: color-mix(in srgb, var(--mc, var(--accent)) 22%, var(--paper));
-  stroke: var(--line);
-  stroke-width: 1;
-}
-.iso-face-l {
-  fill: color-mix(in srgb, var(--mc, var(--accent)) 40%, var(--paper));
-  stroke: var(--line);
-  stroke-width: 1;
-}
-.iso-face-r {
-  fill: color-mix(in srgb, var(--mc, var(--accent)) 58%, var(--paper));
-  stroke: var(--line);
-  stroke-width: 1;
-}
-.iso-machine.run {
-  --mc: var(--up);
-}
-.iso-machine.idle,
-.iso-machine.jam {
-  --mc: #c0563f;
-}
-.iso-machine.build {
-  --mc: var(--ink-faint);
-}
-.iso-dock {
-  --mc: var(--accent);
-}
-.iso-dock.jam {
-  --mc: #c0563f;
-}
-.iso-machine {
-  cursor: grab;
-}
-.iso-machine:hover .iso-face-t {
-  stroke: var(--ink);
-  stroke-width: 1.5;
-}
-.iso-machine.dragging {
-  cursor: grabbing;
-  filter: drop-shadow(0 7px 9px rgba(0, 0, 0, 0.28));
-}
-.iso-cog {
-  color: var(--ink-dim);
-}
-.iso-dock.hot .iso-face-t,
-.iso-dock.hot .iso-face-l,
-.iso-dock.hot .iso-face-r {
-  stroke: var(--accent);
-  stroke-width: 2;
-}
-.iso-cap {
-  fill: color-mix(in srgb, var(--ink) 12%, var(--paper));
-}
-.iso-cap-fill {
-  fill: var(--up);
-}
-.iso-cap-fill.jam {
-  fill: #c0563f;
-}
-.iso-truck {
-  font-size: 17px;
-}
-.iso-name {
-  fill: var(--ink);
-  font-size: 11px;
-  font-weight: 700;
-}
-.iso-sub {
-  fill: var(--ink-dim);
+.cc-col-head {
   font-size: 9.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 1px;
 }
-.iso-sub.jam {
-  fill: #c0563f;
+.cc-empty {
+  font-size: 12px;
+  color: var(--ink-dim);
+  padding: 14px 0;
 }
-/* conveyors: solid base + flowing dashed surface */
-.iso-belt-base {
-  stroke-width: 12;
-  stroke-linecap: round;
+.cc-line {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--up);
+  border-radius: 10px;
+  padding: 9px 11px;
+  background: var(--paper);
 }
-.iso-belt-base.run {
-  stroke: color-mix(in srgb, var(--up) 26%, transparent);
+.cc-line.jam {
+  border-left-color: #c0563f;
 }
-.iso-belt-base.jam {
-  stroke: color-mix(in srgb, #c0563f 30%, transparent);
+.cc-line.idle {
+  border-left-color: #c0563f;
+  opacity: 0.85;
 }
-.iso-belt-base.idle,
-.iso-belt-base.build {
-  stroke: color-mix(in srgb, var(--line) 70%, transparent);
+.cc-line.build {
+  border-left-color: var(--ink-faint);
+  opacity: 0.8;
 }
-.iso-belt-flow {
-  stroke-width: 7;
-  stroke-linecap: round;
-  stroke-dasharray: 6 16;
+.cc-line-ic {
+  color: var(--ink-dim);
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  flex: none;
 }
-.iso-belt-flow.run {
-  stroke: var(--up);
-  animation: iso-flow 1s linear infinite;
+.cc-line.run .cc-line-ic {
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--up) 45%, var(--line));
 }
-.iso-belt-flow.jam {
-  stroke: #c0563f;
-  animation: iso-flow 1s linear infinite;
+.cc-line-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+  flex: 1;
 }
-.iso-belt-flow.idle {
-  stroke: var(--ink-faint);
-  stroke-dasharray: 2 18;
+.cc-line-name {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.iso-belt-flow.build {
-  stroke: var(--dn);
-  stroke-dasharray: 5 10;
+.cc-line-stat {
+  font-size: 11px;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
 }
-@keyframes iso-flow {
+.cc-line-stat small {
+  font-size: 9px;
+  color: var(--ink-faint);
+}
+.cc-line-stat em {
+  font-style: normal;
+  color: var(--ink-faint);
+}
+.cc-line.jam .cc-line-stat {
+  color: #c0563f;
+}
+.cc-line-lanes {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+.cc-line-lanes small {
+  font-size: 9px;
+  color: var(--ink-faint);
+}
+/* the trunk belt between the columns */
+.cc-belt {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 6px;
+}
+.cc-belt-track {
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background-color: var(--paper-2);
+  background-image: repeating-linear-gradient(
+    115deg,
+    color-mix(in srgb, var(--ink) 7%, transparent) 0 5px,
+    transparent 5px 13px
+  );
+  background-size: 13px 100%;
+}
+.cc-belt.run .cc-belt-track {
+  animation: cc-belt 0.9s linear infinite;
+}
+.cc-belt.jam .cc-belt-track {
+  border-color: #c0563f66;
+  background-image: repeating-linear-gradient(
+    115deg,
+    #c0563f3a 0 5px,
+    transparent 5px 13px
+  );
+  animation: cc-belt 2.4s linear infinite;
+}
+@keyframes cc-belt {
   to {
-    stroke-dashoffset: -22;
+    background-position: 13px 0;
   }
+}
+.cc-belt-cap {
+  font-size: 9px;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  text-align: center;
+}
+.cc-belt.jam .cc-belt-cap {
+  color: #c0563f;
+}
+/* shipping docks */
+.cc-dock {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 11px;
+  background: var(--paper);
+}
+.cc-dock.run {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+}
+.cc-dock.jam {
+  border-color: #c0563f88;
+  background: color-mix(in srgb, #c0563f 5%, var(--paper));
+}
+.cc-dock.overflow {
+  border-color: #c0563f88;
+  border-style: dashed;
+  background: color-mix(in srgb, #c0563f 7%, var(--paper));
+}
+.cc-dock-truck {
+  font-size: 18px;
+  flex: none;
+}
+.cc-dock-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+.cc-dock-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.cc-dock-bar {
+  height: 7px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--ink) 10%, var(--paper));
+  overflow: hidden;
+}
+.cc-dock-bar i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+.cc-dock-bar i.jam {
+  background: #c0563f;
+}
+.cc-dock-cap {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+.cc-dock.jam .cc-dock-cap {
+  color: #c0563f;
+}
+.cc-dock-over {
+  font-size: 10.5px;
+  color: #c0563f;
+}
+/* Lines page — floor-jam throttle banner */
+.bay-throttle {
+  font-size: 12px;
+  color: #c0563f;
+  background: color-mix(in srgb, #c0563f 8%, transparent);
+  border: 1px solid color-mix(in srgb, #c0563f 35%, var(--line));
+  border-radius: 8px;
+  padding: 7px 11px;
+  margin: 8px 0 4px;
+}
+.bay-throttle b {
+  font-weight: 700;
 }
 /* alerts feed */
 .wh-alerts {

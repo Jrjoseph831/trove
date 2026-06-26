@@ -836,18 +836,20 @@ function produceFactories(state: WorldState): void {
   state.cash -= bayUpkeep;
   state.ledger.upkeep += bayUpkeep;
 
-  // Congestion is per-bay: lines routed to a bay share its lane count (raised by
-  // the Auto-Router). Push a bay past capacity and every line on it ships slower.
-  const perBay = lanesPerBay(state);
-  const bays = floorBays(state.floorSlots);
-  const bayLoad = new Array<number>(bays).fill(0);
-  lines.forEach((f, i) => {
+  // Shipping capacity is the WHOLE floor — every dock's lanes pooled (Auto-Router
+  // raises each dock; expanding the floor adds docks). Output auto-spreads across
+  // docks, so a line throttles only when total production out-runs total floor
+  // capacity, never just because it's parked on one dock.
+  const totalLanes = floorBays(state.floorSlots) * lanesPerBay(state);
+  let demandLanes = 0;
+  lines.forEach((f) => {
     if (state.cycle < f.onlineCycle) return;
     const out = state.items.find((x) => x.id === f.itemId);
-    if (out) bayLoad[resolveBay(f, i, bays)]! += lineLanes(effectiveSpec(out, f.modules).rate);
+    if (out) demandLanes += lineLanes(effectiveSpec(out, f.modules).rate);
   });
+  const floorThrottle = demandLanes > totalLanes ? totalLanes / demandLanes : 1;
 
-  lines.forEach((f, i) => {
+  lines.forEach((f) => {
     if (state.cycle < f.onlineCycle) {
       f.status = "building";
       return;
@@ -859,10 +861,10 @@ function produceFactories(state: WorldState): void {
     state.cash -= lineUpkeep; // upkeep always burns
     state.ledger.upkeep += lineUpkeep;
 
-    // This line's bay congestion slows its effective throughput this cycle.
-    const load = bayLoad[resolveBay(f, i, bays)]!;
-    const throttle = load > perBay ? perBay / load : 1;
-    const rate = Math.max(1, Math.floor(spec.rate * throttle));
+    // Floor congestion: output auto-spreads across every dock first, so a line
+    // only ships slower when the whole floor is over capacity — and then every
+    // line throttles together, proportionally.
+    const rate = Math.max(1, Math.floor(spec.rate * floorThrottle));
 
     const recipe = recipeOf(out);
     const inputs = recipe?.inputs ?? [];

@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useMemo, useRef, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import Link from "next/link";
 import { Boxes, Cog, Package, Truck } from "lucide-react";
 import {
@@ -22,7 +22,6 @@ import {
   lanesPerBay,
   lineLanes,
   listedUnitPrice,
-  resolveBay,
   type Factory as FactoryLine,
 } from "@trove/engine";
 import type { LineModule } from "@trove/data";
@@ -158,147 +157,66 @@ function trim(s: string, n: number): string {
   return s.length > n ? `${s.slice(0, n - 1)}…` : s;
 }
 
-// ── Isometric helpers ──────────────────────────────────────────────────────
-const ISO_HW = 34; // tile half-width
-const ISO_HH = 17; // tile half-height
-const MACH_DH = 26; // machine block depth
-const DOCK_DH = 20; // dock block depth
-const isoTop = (cx: number, cy: number, hw = ISO_HW, hh = ISO_HH) =>
-  `M ${cx} ${cy - hh} L ${cx + hw} ${cy} L ${cx} ${cy + hh} L ${cx - hw} ${cy} Z`;
-const isoLeft = (cx: number, cy: number, dh: number, hw = ISO_HW, hh = ISO_HH) =>
-  `M ${cx - hw} ${cy} L ${cx} ${cy + hh} L ${cx} ${cy + hh + dh} L ${cx - hw} ${cy + dh} Z`;
-const isoRight = (cx: number, cy: number, dh: number, hw = ISO_HW, hh = ISO_HH) =>
-  `M ${cx + hw} ${cy} L ${cx} ${cy + hh} L ${cx} ${cy + hh + dh} L ${cx + hw} ${cy + dh} Z`;
 const clip = (s: string, n: number) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
 
-/** The warehouse, isometric. Each line is a machine block that runs a conveyor
- *  to a shipping dock. Docks have a lane capacity; routing too many lines to one
- *  dock jams it and *throttles their real output* (same math as the engine), so
- *  the floor is where you recover units lost to congestion. Drag a machine onto
- *  another dock to re-route it — or tap it to send it to the next dock. */
+/** The warehouse as a loading-dock command center. Output ships across ALL docks
+ *  at once — one shared lane pool — so a line throttles only when *total*
+ *  production out-runs *total* dock capacity, then everything slows together.
+ *  The floor is a capacity dashboard: watch "lost to jams" and add docks /
+ *  Auto-Router to clear it. */
 function FloorView({ mfg }: { mfg: string }) {
-  const { state, factoryCycle, expandFloor, routeLine, buyUpgrade } = useTrove();
+  const { state, factoryCycle, expandFloor, buyUpgrade } = useTrove();
   const slots = state.floorSlots;
   const bays = floorBays(slots);
-  const perBay = lanesPerBay(state); // includes the Auto-Router upgrade
+  const perBay = lanesPerBay(state); // lanes per dock, incl. Auto-Router
   const cost = expandCost(slots);
+  const totalLanes = bays * perBay;
 
-  const lines = state.factories.map((f, i) => {
+  const lines = state.factories.map((f) => {
     const out = state.items.find((it) => it.id === f.itemId);
     const rate = out ? effectiveSpec(out, f.modules).rate : 0;
     const building = factoryCycle < f.onlineCycle;
     return {
       f,
-      i,
       name: out?.name ?? `#${f.itemId}`,
       rate,
       lanes: lineLanes(rate),
-      bay: resolveBay(f, i, bays),
       building,
       idle: !building && f.status === "idle",
     };
   });
 
-  // Per-dock lane load + congestion throttle (mirrors the engine).
-  const bayLoad = new Array<number>(bays).fill(0);
-  for (const l of lines) if (!l.building) bayLoad[l.bay]! += l.lanes;
-  const bayOver = bayLoad.map((ld) => ld > perBay);
-  const throttleOf = (b: number) => {
-    const ld = bayLoad[b] ?? 0;
-    return ld > perBay ? perBay / ld : 1;
-  };
+  // Pooled congestion: demand vs the WHOLE floor's lanes (mirrors the engine).
+  const demandLanes = lines.reduce((s, l) => s + (l.building ? 0 : l.lanes), 0);
+  const overCap = demandLanes > totalLanes;
+  const floorThrottle = overCap ? totalLanes / demandLanes : 1;
+  const throttlePct = Math.round(floorThrottle * 100);
   const realizedOf = (l: (typeof lines)[number]) =>
-    l.building ? 0 : Math.floor(l.rate * throttleOf(l.bay));
+    l.building ? 0 : Math.floor(l.rate * floorThrottle);
 
-  // Floor-wide KPIs — potential you built vs what actually ships.
+  // KPIs — potential you built vs what actually ships.
   const potentialTot = lines.reduce((s, l) => s + (l.building ? 0 : l.rate), 0);
   const realizedTot = lines.reduce((s, l) => s + realizedOf(l), 0);
   const lostTot = Math.max(0, potentialTot - realizedTot);
-  const usedLanes = bayLoad.reduce((a, b) => a + b, 0);
-  const totalLanes = bays * perBay;
 
-  // ── Isometric layout ──────────────────────────────────────────────────────
-  const W = 600;
-  const ROW = 96;
-  const TOP = 86;
-  const rows = Math.max(lines.length, bays, 1);
-  const H = TOP + rows * ROW + 40;
-  const MX = 132; // machine column centre-x
-  const DX = 452; // dock column centre-x
-  const machY = (i: number) => TOP + i * ROW;
-  const dockY = (b: number) => TOP + ((b + 0.5) / bays) * (rows * ROW) - ROW / 2;
-  const beltPath = (i: number, b: number) =>
-    `M ${MX + ISO_HW} ${machY(i) + ISO_HH * 0.4} L ${DX - ISO_HW} ${dockY(b) + ISO_HH * 0.4}`;
-  const flowDur = (rate: number, jam: boolean) =>
-    (jam ? 2.6 : 1) *
-    Math.max(0.55, Math.min(1.6, 1.8 - Math.log10(Math.max(1, rate)) * 0.26));
-
-  // ── Drag-to-reroute ───────────────────────────────────────────────────────
-  const svgRef = useRef<SVGSVGElement>(null);
-  const [drag, setDrag] = useState<{
-    id: string;
-    x: number;
-    y: number;
-    moved: boolean;
-  } | null>(null);
-  const toSvg = (e: React.PointerEvent) => {
-    const svg = svgRef.current;
-    if (!svg) return { x: 0, y: 0 };
-    const pt = svg.createSVGPoint();
-    pt.x = e.clientX;
-    pt.y = e.clientY;
-    const ctm = svg.getScreenCTM();
-    const loc = ctm ? pt.matrixTransform(ctm.inverse()) : pt;
-    return { x: loc.x, y: loc.y };
-  };
-  const dockAt = (x: number, y: number) => {
-    for (let b = 0; b < bays; b++) {
-      const cy = dockY(b);
-      if (
-        Math.abs(x - DX) < ISO_HW + 16 &&
-        y > cy - ISO_HH - 14 &&
-        y < cy + ISO_HH + DOCK_DH + 30
-      )
-        return b;
-    }
-    return -1;
-  };
-  const onPointerDownMachine = (e: React.PointerEvent, id: string) => {
-    e.stopPropagation();
-    const { x, y } = toSvg(e);
-    setDrag({ id, x, y, moved: false });
-    svgRef.current?.setPointerCapture(e.pointerId);
-  };
-  const onPointerMove = (e: React.PointerEvent) => {
-    if (!drag) return;
-    const { x, y } = toSvg(e);
-    setDrag((d) =>
-      d
-        ? { ...d, x, y, moved: d.moved || Math.hypot(x - d.x, y - d.y) > 5 }
-        : d,
-    );
-  };
-  const onPointerUp = () => {
-    if (!drag) return;
-    const line = lines.find((l) => l.f.id === drag.id);
-    if (line) {
-      const target = dockAt(drag.x, drag.y);
-      if (target >= 0 && target !== line.bay) routeLine(drag.id, target);
-      else if (!drag.moved && bays > 1)
-        routeLine(drag.id, (line.bay + 1) % bays);
-    }
-    setDrag(null);
-  };
-  const hotDock = drag ? dockAt(drag.x, drag.y) : -1;
+  // Visual fill — output spreads across docks in order; anything past total
+  // capacity is the overflow that gets throttled away.
+  let rem = demandLanes;
+  const dockUsed = Array.from({ length: bays }, () => {
+    const u = Math.min(perBay, rem);
+    rem -= u;
+    return u;
+  });
+  const overflow = Math.max(0, rem);
+  const anyRunning = lines.some((l) => !l.building && !l.idle);
+  const beltCls = overCap ? "jam" : anyRunning ? "run" : "idle";
 
   // Alerts.
   const alerts: string[] = [];
-  bayLoad.forEach((ld, b) => {
-    if (ld > perBay)
-      alerts.push(
-        `Dock ${b + 1} jammed — ${ld}/${perBay} lanes, output throttled to ~${Math.round((perBay / ld) * 100)}%`,
-      );
-  });
+  if (overCap)
+    alerts.push(
+      `Floor over capacity — ${demandLanes}/${totalLanes} dock lanes in use, so every line throttles to ~${throttlePct}%. Add Auto-Router or expand the floor.`,
+    );
   for (const l of lines)
     if (l.idle) alerts.push(`${l.name} line stalled — feed it inputs`);
 
@@ -316,12 +234,16 @@ function FloorView({ mfg }: { mfg: string }) {
             {lostTot > 0 ? `−${lostTot.toLocaleString()}` : "none"}
             {lostTot > 0 ? <small>/cy</small> : null}
           </span>
-          <span className="fk-sub">{lostTot > 0 ? "re-route to recover" : "all flowing"}</span>
+          <span className="fk-sub">{lostTot > 0 ? "add dock capacity" : "all flowing"}</span>
         </div>
-        <div className="fk">
-          <span className="fk-lab">Dock lanes</span>
-          <span className="fk-val">{usedLanes}<small>/{totalLanes}</small></span>
-          <span className="fk-sub">{Math.round((usedLanes / Math.max(1, totalLanes)) * 100)}% used</span>
+        <div className={`fk ${overCap ? "lost" : ""}`}>
+          <span className="fk-lab">Floor lanes</span>
+          <span className="fk-val">{demandLanes}<small>/{totalLanes}</small></span>
+          <span className="fk-sub">
+            {overCap
+              ? "over capacity"
+              : `${Math.round((demandLanes / Math.max(1, totalLanes)) * 100)}% used`}
+          </span>
         </div>
         <div className="fk">
           <span className="fk-lab">Docks</span>
@@ -331,113 +253,92 @@ function FloorView({ mfg }: { mfg: string }) {
       </div>
 
       <p className="fac-intro">
-        <b>Drag a machine onto a dock</b> to re-route it (or tap to send it to the
-        next dock). Each dock moves {perBay} lanes — overload one and its lines
-        throttle, so spread the load to ship everything you build.
+        Output ships across <b>all {bays} dock{bays > 1 ? "s" : ""} at once</b> — one
+        shared pool of {totalLanes} lanes. A line only slows when total production
+        out-runs the whole floor; then every line throttles together. Add capacity
+        to recover what you lose.
       </p>
 
-      <div className="iso-wrap">
-        <svg
-          ref={svgRef}
-          className="iso"
-          viewBox={`0 0 ${W} ${H}`}
-          style={{ width: "100%", height: "auto", display: "block", touchAction: "none" }}
-          onPointerMove={onPointerMove}
-          onPointerUp={onPointerUp}
-          onPointerLeave={onPointerUp}
-        >
-          {/* ground plane */}
-          <path
-            className="iso-ground"
-            d={isoTop((MX + DX) / 2, TOP + (rows * ROW) / 2 - 6, (DX - MX) / 2 + 120, (rows * ROW) / 2 + 70)}
-          />
-
-          {/* conveyors machine → dock */}
+      <div className="cc">
+        <div className="cc-col cc-lines">
+          <div className="cc-col-head">Lines</div>
+          {lines.length === 0 && (
+            <div className="cc-empty">No lines yet — build one on the Lines tab.</div>
+          )}
           {lines.map((l) => {
-            const jam = !l.building && bayOver[l.bay];
-            const cls = l.building ? "build" : l.idle ? "idle" : jam ? "jam" : "run";
-            const d = beltPath(l.i, l.bay);
-            return (
-              <g key={`belt${l.f.id}`}>
-                <path className={`iso-belt-base ${cls}`} d={d} fill="none" />
-                <path
-                  className={`iso-belt-flow ${cls}`}
-                  d={d}
-                  fill="none"
-                  style={
-                    cls === "run" || cls === "jam"
-                      ? { animationDuration: `${flowDur(l.rate, !!jam)}s` }
-                      : undefined
-                  }
-                />
-              </g>
-            );
-          })}
-
-          {/* docks */}
-          {Array.from({ length: bays }).map((_, b) => {
-            const cy = dockY(b);
-            const jam = bayOver[b];
-            const hot = hotDock === b;
-            const fill = Math.min(1, (bayLoad[b] ?? 0) / Math.max(1, perBay));
-            return (
-              <g key={`dock${b}`} className={`iso-dock ${jam ? "jam" : ""} ${hot ? "hot" : ""}`}>
-                <path className="iso-face-l dock" d={isoLeft(DX, cy, DOCK_DH)} />
-                <path className="iso-face-r dock" d={isoRight(DX, cy, DOCK_DH)} />
-                <path className="iso-face-t dock" d={isoTop(DX, cy)} />
-                <text x={DX} y={cy - 1} className="iso-truck" textAnchor="middle">🚚</text>
-                <text x={DX} y={cy + ISO_HH + DOCK_DH + 14} className="iso-name" textAnchor="middle">
-                  Dock {b + 1}
-                </text>
-                {/* lane capacity bar */}
-                <rect x={DX - 30} y={cy + ISO_HH + DOCK_DH + 20} width={60} height={6} rx={3} className="iso-cap" />
-                <rect
-                  x={DX - 30}
-                  y={cy + ISO_HH + DOCK_DH + 20}
-                  width={60 * fill}
-                  height={6}
-                  rx={3}
-                  className={`iso-cap-fill ${jam ? "jam" : ""}`}
-                />
-                <text x={DX} y={cy + ISO_HH + DOCK_DH + 38} className={`iso-sub ${jam ? "jam" : ""}`} textAnchor="middle">
-                  {bayLoad[b] ?? 0}/{perBay} lanes {jam ? "⚠" : ""}
-                </text>
-              </g>
-            );
-          })}
-
-          {/* machines */}
-          {lines.map((l) => {
-            const dragging = drag?.id === l.f.id;
-            const cx = dragging ? drag!.x : MX;
-            const cy = dragging ? drag!.y : machY(l.i);
-            const jam = !l.building && bayOver[l.bay];
-            const cls = l.building ? "build" : l.idle ? "idle" : jam ? "jam" : "run";
+            const cls = l.building ? "build" : l.idle ? "idle" : overCap ? "jam" : "run";
             const realized = realizedOf(l);
+            const throttled = !l.building && !l.idle && realized < l.rate;
             return (
-              <g
-                key={`mach${l.f.id}`}
-                className={`iso-machine ${cls} ${dragging ? "dragging" : ""}`}
-                onPointerDown={(e) => onPointerDownMachine(e, l.f.id)}
-              >
-                <path className={`iso-face-l ${cls}`} d={isoLeft(cx, cy, MACH_DH)} />
-                <path className={`iso-face-r ${cls}`} d={isoRight(cx, cy, MACH_DH)} />
-                <path className={`iso-face-t ${cls}`} d={isoTop(cx, cy)} />
-                <Cog x={cx - 8} y={cy - 9} size={16} strokeWidth={1.75} className="iso-cog" />
-                <text x={cx} y={cy + ISO_HH + MACH_DH + 13} className="iso-name" textAnchor="middle">
-                  {clip(l.name, 16)}
-                </text>
-                <text x={cx} y={cy + ISO_HH + MACH_DH + 27} className={`iso-sub ${jam ? "jam" : ""}`} textAnchor="middle">
-                  {l.building
-                    ? "building…"
-                    : l.idle
-                      ? "stalled"
-                      : `${realized.toLocaleString()}/cy${jam ? ` · −${(l.rate - realized).toLocaleString()}` : ""} → Dock ${l.bay + 1}`}
-                </text>
-              </g>
+              <div key={l.f.id} className={`cc-line ${cls}`}>
+                <span className="cc-line-ic">
+                  <Cog size={15} strokeWidth={1.75} />
+                </span>
+                <div className="cc-line-body">
+                  <span className="cc-line-name">{clip(l.name, 22)}</span>
+                  <span className="cc-line-stat">
+                    {l.building ? (
+                      "building…"
+                    ) : l.idle ? (
+                      "stalled — no inputs"
+                    ) : (
+                      <>
+                        {realized.toLocaleString()}
+                        <small>/cy</small>
+                        {throttled && <em> of {l.rate.toLocaleString()}</em>}
+                      </>
+                    )}
+                  </span>
+                </div>
+                <span className="cc-line-lanes">
+                  {l.lanes}
+                  <small>×</small>
+                </span>
+              </div>
             );
           })}
-        </svg>
+        </div>
+
+        <div className={`cc-belt ${beltCls}`}>
+          <span className="cc-belt-track" />
+          <span className="cc-belt-cap">{realizedTot.toLocaleString()}/cy</span>
+        </div>
+
+        <div className="cc-col cc-docks">
+          <div className="cc-col-head">Shipping docks</div>
+          {Array.from({ length: bays }).map((_, b) => {
+            const used = dockUsed[b] ?? 0;
+            const full = used >= perBay && overCap;
+            return (
+              <div key={b} className={`cc-dock ${full ? "jam" : used > 0 ? "run" : ""}`}>
+                <span className="cc-dock-truck">🚚</span>
+                <div className="cc-dock-body">
+                  <span className="cc-dock-name">Dock {b + 1}</span>
+                  <div className="cc-dock-bar">
+                    <i
+                      className={full ? "jam" : ""}
+                      style={{ width: `${(used / Math.max(1, perBay)) * 100}%` }}
+                    />
+                  </div>
+                </div>
+                <span className="cc-dock-cap">
+                  {used}/{perBay}
+                </span>
+              </div>
+            );
+          })}
+          {overflow > 0 && (
+            <div className="cc-dock overflow">
+              <span className="cc-dock-truck">⚠</span>
+              <div className="cc-dock-body">
+                <span className="cc-dock-name">
+                  No dock for {overflow} lane{overflow > 1 ? "s" : ""}
+                </span>
+                <span className="cc-dock-over">throttled to ~{throttlePct}%</span>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       {alerts.length > 0 && (
@@ -506,6 +407,20 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
 
   const building = factoryCycle < f.onlineCycle;
   const cyclesLeft = f.onlineCycle - factoryCycle;
+
+  // Floor congestion (pooled, mirrors the engine): this line ships slower only
+  // when total production out-runs total dock lanes. Surface it so the Lines
+  // page tells the same truth as the Floor instead of bragging the full rate.
+  const floorLanes = floorBays(state.floorSlots) * lanesPerBay(state);
+  const floorDemand = state.factories.reduce((s, x) => {
+    const xo = state.items.find((it) => it.id === x.itemId);
+    if (!xo || factoryCycle < x.onlineCycle) return s;
+    return s + lineLanes(effectiveSpec(xo, x.modules).rate);
+  }, 0);
+  const floorThrottle = floorDemand > floorLanes ? floorLanes / floorDemand : 1;
+  const shipRate = Math.floor(eff.rate * floorThrottle);
+  const throttled = !building && shipRate < eff.rate;
+  const throttlePct = Math.round(floorThrottle * 100);
 
   // Per-input: where it's sourced (a feeder line in-house, or the market), what
   // it costs per unit there, and feeder options the player owns.
@@ -672,8 +587,18 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
         </div>
       )}
 
+      {throttled && (
+        <div className="bay-throttle">
+          ⚠ Floor jammed — actually shipping{" "}
+          <b>{shipRate.toLocaleString()}/cy</b> of {eff.rate.toLocaleString()} (
+          {throttlePct}%). Add dock capacity on the <b>Floor</b> to recover.
+        </div>
+      )}
+
       <div className="bay-econ">
-        <div className="be-head">Per cycle · every ~5 min</div>
+        <div className="be-head">
+          Per cycle · every ~5 min{throttled ? " · potential" : ""}
+        </div>
         <div className="be-grid">
           <div className="be-cell">
             <span className="be-lab">Output</span>
