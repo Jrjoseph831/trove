@@ -2679,7 +2679,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82523,
     "events": [
       {
         "cycle": 0,
@@ -2688,6 +2688,16 @@
         "head": "Skarnstone Industries — Boxes opened, lives kept moving",
         "body": "Skarnstone Industries runs on volume: gloves, gauze, syringes, swabs, the consumables a clinic burns through before lunch. They keep supply closets stocked with value and mid-tier goods that meet spec without bleeding the budget. No prestige posturing here, just reliable boxes that arrive on time and perform when torn open. Clinics ration many things; thanks to Skarnstone, the basics are rarely one of them.",
         "effects": {}
+      },
+      {
+        "cycle": 82523,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarnstone Industries posts steady quarter as consumables demand holds",
+        "body": "The medical supplier reported revenue of $2.1 billion, up 4% year over year, with operating margins widening to 22%. CEO Yvette Aldous credited multi-year hospital contracts and a deliberate refusal to chase volatile spot orders. Management reaffirmed full-year guidance, citing 'the same boxes, the same beds.'",
+        "effects": {
+          "medical": 0.13
+        }
       }
     ]
   },
@@ -2898,7 +2908,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82523,
     "events": [
       {
         "cycle": 0,
@@ -2907,6 +2917,16 @@
         "head": "Tillage & Co. — Feed the soil, trust the harvest",
         "body": "Tillage & Co. has read the land since before tractors replaced horses. They formulate seed, feed, fertilizer, and soil treatments tuned to every kind of acre. The everyday blends keep smallholders solvent season after season; the premium inputs coax record yields from the most demanding fields. Generations of growers have learned to trust the name on the sack. Knowledge stitched into every bag. Patience above ground, chemistry below, harvest as the reward.",
         "effects": {}
+      },
+      {
+        "cycle": 82523,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Tillage & Co. locks in five-year supply pact with regional grain cooperatives",
+        "body": "The agreement covers seed treatments and soil amendments across an estimated 3.4 million acres, valued at roughly $880 million over its term. CEO Kestrel Fenn said the deal extends a relationship some member farms have held for three generations. Deliveries begin with the spring planting cycle.",
+        "effects": {
+          "agriculture": 0.13
+        }
       }
     ]
   },
@@ -2921,7 +2941,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82523,
     "events": [
       {
         "cycle": 0,
@@ -2930,6 +2950,16 @@
         "head": "Vantor Lines — What protects also presents",
         "body": "Vantor Lines came up packing fragile cargo for clients who couldn't afford a single dent. They make corrugated cases, molded inserts, films, and crates across every grade of need. The economy stock keeps shippers moving cheaply; the premium tier cradles instruments and heirlooms in custom foam. There's a craft to keeping things whole in transit, and Vantor treats it as one. Boxes nobody notices, until the one that saved everything inside.",
         "effects": {}
+      },
+      {
+        "cycle": 82523,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Vantor Lines rolls out recyclable molded-fiber line for fragile goods",
+        "body": "The new Contour series replaces foam inserts with pressed-fiber casings rated for heavier electronics and glassware. CEO Halden Vossen said early adopters reported a 9% drop in transit damage during pilot runs. The line enters general availability next month at parity pricing.",
+        "effects": {
+          "logistics": 0.06
+        }
       }
     ]
   },
@@ -3020,7 +3050,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82523,
     "events": [
       {
         "cycle": 0,
@@ -3029,6 +3059,16 @@
         "head": "Veldtreach & Sons — We move what won't move itself",
         "body": "Veldtreach & Sons cut their teeth on flood-clearing crews, building blades and buckets tough enough to outlast the men running them. Today their excavators, loaders and dozers span the everyday-value machines smaller outfits depend on right up to premium rigs built for the worst ground there is. Site foremen trust the name because a Veldtreach frame rarely cracks and parts arrive before the downtime hurts. Plain steel, plainer promises, kept.",
         "effects": {}
+      },
+      {
+        "cycle": 82523,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Veldtreach & Sons wins $1.6 billion contract for coastal land-reclamation works",
+        "body": "The construction house will supply and operate earthmoving fleets for a decade-long harbor-expansion project spanning 40 kilometers of shoreline. CEO Petra Steg called it 'the largest single undertaking in our books,' requiring a 30% expansion of the heavy-equipment division. Mobilization begins within 90 days, with first dredging milestones set for next year.",
+        "effects": {
+          "construction": 0.22
+        }
       }
     ]
   },
@@ -3089,7 +3129,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82523,
     "events": [
       {
         "cycle": 0,
@@ -3098,6 +3138,16 @@
         "head": "Vossenspire Holdings — Power that simply stays on",
         "body": "Vossenspire Holdings wires the unseen backbone, processing boards, battery banks and grid-scale storage that hum away in rooms no one visits. Their range runs from affordable everyday modules to premium compute and power systems built for buildings that cannot afford a dark second. Engineers specify the name when failure is not on the table, and rivals quietly benchmark against it. The house sells reliability measured in years without an outage, and bills accordingly.",
         "effects": {}
+      },
+      {
+        "cycle": 82523,
+        "kind": "outage",
+        "size": "major",
+        "head": "Vossenspire Holdings hit by cascading grid failure across two regions",
+        "body": "A substation fault triggered rolling blackouts affecting an estimated 1.2 million customers for up to 14 hours, the worst disruption in the company's history. CEO Kestrel Calder apologized publicly and pledged an independent review, while regulators opened an inquiry into maintenance records. The company warned of compensation costs and possible penalties weighing on the current quarter.",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },
@@ -3145,7 +3195,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82523,
     "events": [
       {
         "cycle": 0,
@@ -3154,6 +3204,16 @@
         "head": "Vossenstead Supply — Fittings that earn their keep daily",
         "body": "Vossenstead Supply outfits the working rooms of the world, commercial kitchens and the pipes and fixtures behind every wall. They span budget-friendly everyday lines through robust mid-tier ranges up to premium fittings specified for buildings meant to last generations. Plumbers and kitchen crews rate the name for threads that seat clean and valves that hold under abuse. It is unfussy hardware made by people who clearly understand the punishment it takes, and it shows in the wear.",
         "effects": {}
+      },
+      {
+        "cycle": 82523,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vossenstead Supply opens third regional distribution hub",
+        "body": "The 480,000-square-foot facility expands the company's plumbing and food-service reach into the northern corridor, adding an estimated 350 jobs. CEO Bram Thorne said the hub trims average delivery times by a full day for contractors in the region. The investment totals roughly $145 million.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -3168,7 +3228,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82523,
     "events": [
       {
         "cycle": 0,
@@ -3177,6 +3237,16 @@
         "head": "Vossenwright Holdings — Feeding the season after next",
         "body": "Vossenwright Holdings has worked the land's needs since horse teams still pulled the plough, growing from a single implement shed into a full house of tractors, harvesters, seed and feed. Their gear runs from affordable everyday rigs to premium machines built for the largest holdings, paired with inputs farmers trust to deliver a yield. Generations of families have leaned on the name through droughts and gluts alike. Dependable iron and honest sacks, season upon season.",
         "effects": {}
+      },
+      {
+        "cycle": 82523,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenwright Holdings edges past forecasts on equipment servicing",
+        "body": "Quarterly profit rose 3% to $312 million, helped by steady demand for replacement parts and maintenance contracts. CEO Quinn Skarn pointed to disciplined inventory management rather than new orders. Guidance was left unchanged for the remainder of the year.",
+        "effects": {
+          "agriculture": 0.06
+        }
       }
     ]
   },
@@ -3191,7 +3261,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82523,
     "events": [
       {
         "cycle": 0,
@@ -3200,6 +3270,16 @@
         "head": "Wold & Bramm — Furnishing the ordinary, beautifully",
         "body": "Wold & Bramm have outfitted homes since lamplight gave way to the switch. They make household goods and lighting built to live with for years, not seasons. The everyday range fills first apartments and family kitchens; the mid tier brings a warmer glow and a sturdier hinge to those ready to trade up. Their fixtures age into favorites rather than out of fashion. Honest objects, warm light, the comfortable furniture of an everyday well lived.",
         "effects": {}
+      },
+      {
+        "cycle": 82523,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Wold & Bramm debuts heritage lighting collection at trade showcase",
+        "body": "The Halden range pairs brass fittings with warm-tone fixtures, targeting mid-market households and boutique hospitality clients. CEO Mara Marrow said pre-orders already cover the first production run of 60,000 units. The line anchors a broader push into coordinated room sets rolling out through the year.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },

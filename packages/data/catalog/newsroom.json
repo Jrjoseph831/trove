@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-26T12:51:43.669Z",
+  "generatedAt": "2026-06-26T18:43:35.231Z",
   "beats": [
+    {
+      "company": "Skarnstone Industries",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Skarnstone Industries posts steady quarter as consumables demand holds",
+      "body": "The medical supplier reported revenue of $2.1 billion, up 4% year over year, with operating margins widening to 22%. CEO Yvette Aldous credited multi-year hospital contracts and a deliberate refusal to chase volatile spot orders. Management reaffirmed full-year guidance, citing 'the same boxes, the same beds.'",
+      "cycle": 82523,
+      "dur": 2
+    },
+    {
+      "company": "Tillage & Co.",
+      "sector": "agriculture",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Tillage & Co. locks in five-year supply pact with regional grain cooperatives",
+      "body": "The agreement covers seed treatments and soil amendments across an estimated 3.4 million acres, valued at roughly $880 million over its term. CEO Kestrel Fenn said the deal extends a relationship some member farms have held for three generations. Deliveries begin with the spring planting cycle.",
+      "cycle": 82523,
+      "dur": 2
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Vantor Lines rolls out recyclable molded-fiber line for fragile goods",
+      "body": "The new Contour series replaces foam inserts with pressed-fiber casings rated for heavier electronics and glassware. CEO Halden Vossen said early adopters reported a 9% drop in transit damage during pilot runs. The line enters general availability next month at parity pricing.",
+      "cycle": 82523,
+      "dur": 1
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Veldtreach & Sons wins $1.6 billion contract for coastal land-reclamation works",
+      "body": "The construction house will supply and operate earthmoving fleets for a decade-long harbor-expansion project spanning 40 kilometers of shoreline. CEO Petra Steg called it 'the largest single undertaking in our books,' requiring a 30% expansion of the heavy-equipment division. Mobilization begins within 90 days, with first dredging milestones set for next year.",
+      "cycle": 82523,
+      "dur": 8
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "outage",
+      "size": "major",
+      "head": "Vossenspire Holdings hit by cascading grid failure across two regions",
+      "body": "A substation fault triggered rolling blackouts affecting an estimated 1.2 million customers for up to 14 hours, the worst disruption in the company's history. CEO Kestrel Calder apologized publicly and pledged an independent review, while regulators opened an inquiry into maintenance records. The company warned of compensation costs and possible penalties weighing on the current quarter.",
+      "cycle": 82523,
+      "dur": 8
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Vossenstead Supply opens third regional distribution hub",
+      "body": "The 480,000-square-foot facility expands the company's plumbing and food-service reach into the northern corridor, adding an estimated 350 jobs. CEO Bram Thorne said the hub trims average delivery times by a full day for contractors in the region. The investment totals roughly $145 million.",
+      "cycle": 82523,
+      "dur": 2
+    },
+    {
+      "company": "Vossenwright Holdings",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vossenwright Holdings edges past forecasts on equipment servicing",
+      "body": "Quarterly profit rose 3% to $312 million, helped by steady demand for replacement parts and maintenance contracts. CEO Quinn Skarn pointed to disciplined inventory management rather than new orders. Guidance was left unchanged for the remainder of the year.",
+      "cycle": 82523,
+      "dur": 1
+    },
+    {
+      "company": "Wold & Bramm",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Wold & Bramm debuts heritage lighting collection at trade showcase",
+      "body": "The Halden range pairs brass fittings with warm-tone fixtures, targeting mid-market households and boutique hospitality clients. CEO Mara Marrow said pre-orders already cover the first production run of 60,000 units. The line anchors a broader push into coordinated room sets rolling out through the year.",
+      "cycle": 82523,
+      "dur": 2
+    },
     {
       "company": "Palettstone & Sons",
       "sector": "consumer",
@@ -82,66 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrwright Group Lands Frame Contract for Verant Tower Cluster",
-      "body": "Korrwright will supply structural beams and an estimated 4,200 miles of wire and cable for the six-tower Verant district development, a deal valued at $1.8 billion over four years. CEO Halden Fenn called the win 'the kind of anchor project that fills a decade,' noting deliveries begin next quarter. The contract edges out two rival suppliers who had held the regional account since the 1930s.",
-      "cycle": 82521,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Maison & Vale Acquires Cleaning-Supply Maker Sundle Werks",
-      "body": "The hospitality group has purchased Sundle Werks, a mid-sized jansan manufacturer, for $340 million, folding its detergent and sanitizer lines into Maison & Vale's household catalog. Restless as ever, CEO Rhys Kessler framed the buy as 'closing the last gap between our front desks and our supply closets.' The deal adds three plants and roughly 900 workers.",
-      "cycle": 82521,
-      "dur": 2
-    },
-    {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Marrowmoor Holdings Tops Quarterly Estimates on Occupancy Gains",
-      "body": "Marrowmoor reported quarterly revenue of $612 million, up 9% year over year, with margins lifted by its in-house cleaning and linen operations. CEO Dorian Steg credited 'disciplined cost control and a few rooms more sold each night,' and reaffirmed plans to add 1,400 rooms across two regions. The result beat internal guidance by a modest margin.",
-      "cycle": 82521,
-      "dur": 2
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "safety_probe",
-      "size": "standard",
-      "head": "Marrowstone Build Faces Inspection After Site Embankment Collapse",
-      "body": "Regulators opened a review of Marrowstone's earthmoving operations following a partial embankment collapse at the Dellow Ridge cut that injured two workers. CEO Bram Halloran said the firm 'is cooperating fully and has paused grading at the site,' while internal crews assess slope stability. No fatalities were reported, but the probe could delay the $90 million highway job by weeks.",
-      "cycle": 82521,
-      "dur": 2
-    },
-    {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Ornewright Goods Wins Multi-Site Supply Contract With Hallowfield Hospitals",
-      "body": "Ornewright Goods secured a three-year, $210 million deal to stock cleaning supplies, food-service goods, and consumables across Hallowfield's 22-hospital network. CEO Petra Veldt called it 'a straightforward fit for what we already do well.' Deliveries begin in the spring under a centralized restocking arrangement.",
-      "cycle": 82521,
-      "dur": 2
-    },
-    {
-      "company": "Palettstead Holdings",
-      "sector": "logistics",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Palettstead Debuts Reusable Crate System for Cold-Chain Shippers",
-      "body": "Palettstead launched ReCircle, a returnable insulated crate program designed for perishable and pharmaceutical freight, with the first 200,000 units entering circulation this quarter. CEO Orla Marrow described it as 'a steady idea with a bold rollout,' citing two grocery distributors already signed on. The company projects the line could cover 8% of its packaging volume within two years.",
-      "cycle": 82521,
-      "dur": 2
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "product_launch",
@@ -179,56 +199,6 @@
       "head": "Carrowforge Rocked by Probe Into Falsified Machine-Testing Records",
       "body": "An internal review found that key durability certifications on several industrial machine lines were signed off without completed testing, prompting an emergency board session. CEO Mara Fenn acknowledged 'serious lapses' and suspended two senior plant managers pending an outside audit. Several major buyers have paused new orders while the firm scrambles to re-certify affected units.",
       "cycle": 82516,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "expansion",
-      "size": "major",
-      "head": "Blackhold Commits to Massive Greycliff Storage Build",
-      "body": "Mira Marrow staked the firm's future on Greycliff, a colossal storage installation meant to anchor power across the northern reach. The ambitious project is the largest in Blackhold's history and carries heavy upfront cost. Marrow told the assembly the house would 'either define the region or learn a hard lesson.'",
-      "cycle": 82515,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Bruncrest Works Lands Sweeping Supply Pact With Meridian Exchange",
-      "body": "Petra Veldt announced a multi-year compute supply agreement to power the Meridian Exchange's entire clearing operation, the firm's largest contract to date. The deal reportedly spans 40,000 units across three regions and was sealed after a fierce bidding contest. Veldt called it 'a statement, not a sale.'",
-      "cycle": 82515,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Brunstone & Sons Reveals the Ardent Long-Range Hauler",
-      "body": "Sable Veldt staged a dramatic reveal of the Ardent, a long-range hauling vehicle built around the firm's own swappable storage packs. Veldt drove the prototype onstage herself and claimed a single-charge range that drew gasps from the Dunmere crowd. The bold debut puts Brunstone squarely against heavier rivals.",
-      "cycle": 82515,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "breakthrough",
-      "size": "major",
-      "head": "Castlestone Claims Record at Vellmont Compute Showcase",
-      "body": "Iris Garr took the main stage at the Vellmont Showcase to demonstrate a new lattice-cooling design she said triples sustained throughput per rack. Independent halls at the event logged the demo running 11 hours without throttling. Garr, never shy, declared it 'the end of the warm-room era' to roaring applause.",
-      "cycle": 82515,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Marlgear Supply Unveils the Atlas Industrial Press",
-      "body": "Halden Vossen made a splash at the Ironworks Expo with the Atlas, a heavy industrial press he claims halves changeover time on the factory floor. Vossen ran a live stamping demo and took open questions for an hour. The bold showing positions Marlgear as more than a devices maker.",
-      "cycle": 82515,
       "dur": 8
     }
   ]
