@@ -25,7 +25,6 @@ import {
 import type { LineModule } from "@trove/data";
 import { manufacturingName, money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
-import { WarehouseLab } from "@/components/WarehouseLab";
 import { FactoryFloor } from "@/components/FactoryFloor";
 
 /** A module effect as a color-coded chip: an up/down arrow, a metric, and whether
@@ -76,7 +75,7 @@ function recipeText(out: Item): string {
 export function Factory() {
   const { state, buildLine, desk } = useTrove();
   const [picking, setPicking] = useState(false);
-  const [view, setView] = useState<"lines" | "floor" | "lab">("lines");
+  const [view, setView] = useState<"lines" | "floor">("lines");
   const mfg = manufacturingName(desk?.name ?? null);
 
   const full = state.factories.length >= state.floorSlots;
@@ -103,12 +102,6 @@ export function Factory() {
         >
           Floor
         </button>
-        <button
-          className={view === "lab" ? "on" : ""}
-          onClick={() => setView("lab")}
-        >
-          Lab 🧪
-        </button>
         <span className="fac-tabnote">
           {state.factories.length}/{state.floorSlots} slots ·{" "}
           {floorBays(state.floorSlots)} bay
@@ -118,8 +111,6 @@ export function Factory() {
 
       {view === "floor" ? (
         <FactoryFloor mfg={mfg} />
-      ) : view === "lab" ? (
-        <WarehouseLab />
       ) : (
         <>
           <p className="fac-intro">
