@@ -5269,67 +5269,99 @@ body {
   inset: 0;
   display: block;
 }
-.lab-floor {
-  fill: color-mix(in srgb, var(--ink) 3%, var(--paper));
+/* warehouse shell */
+.w2 {
+  fill: color-mix(in srgb, var(--ink) 2.5%, var(--paper));
   stroke: var(--line);
-  stroke-width: 1;
+  stroke-width: 1.5;
 }
-.lab-wall {
-  fill: color-mix(in srgb, var(--ink) 6%, var(--paper));
-  stroke: var(--line);
-  stroke-width: 1;
-}
-.lab-belt-base {
-  stroke: color-mix(in srgb, var(--ink) 9%, transparent);
-  stroke-width: 13;
+/* belts: a faint base + a dashed flowing surface, coloured by health */
+.b2-base {
+  stroke: color-mix(in srgb, var(--ink) 8%, transparent);
+  stroke-width: 9;
   stroke-linecap: round;
+  stroke-linejoin: round;
 }
-.lab-belt-flow {
-  stroke-width: 8;
+.b2 {
+  stroke-width: 5.5;
   stroke-linecap: round;
-  stroke-dasharray: 6 16;
+  stroke-linejoin: round;
+  stroke-dasharray: 5 12;
+  animation-name: b2flow;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
-.lab-belt-flow.run {
+.b2.flow {
+  stroke: #1f8a4d;
+}
+.b2.slow {
   stroke: var(--up);
-  animation: lab-beltflow 1s linear infinite;
 }
-.lab-belt-flow.jam {
+.b2.jam {
   stroke: #c0563f;
-  animation: lab-beltflow 2.4s linear infinite;
 }
-.lab-belt-flow.idle {
+.b2.idle {
   stroke: var(--ink-faint);
-  stroke-dasharray: 2 18;
+  stroke-dasharray: 2 14;
+  animation: none;
 }
-@keyframes lab-beltflow {
+@keyframes b2flow {
   to {
-    stroke-dashoffset: -22;
+    stroke-dashoffset: -17;
   }
 }
-/* actors layered over the SVG */
-.lab-pkg {
+/* bays (HTML over the SVG) */
+.bay2 {
+  position: absolute;
+  width: 34px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  border: 1.5px solid var(--line);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.bay2.in {
+  background: color-mix(in srgb, var(--dn) 16%, var(--paper));
+  border-color: var(--dn);
+  color: var(--dn);
+}
+.bay2.out {
+  background: color-mix(in srgb, var(--accent) 18%, var(--paper));
+  border-color: var(--accent);
+  color: #a86f16;
+}
+.bay2.lock {
+  background: color-mix(in srgb, var(--ink) 4%, var(--paper));
+  color: var(--ink-faint);
+}
+/* forklift handoff */
+.fk2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: var(--ink-dim);
+  pointer-events: none;
+}
+/* package riding a belt */
+.pk2 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 26px;
-  height: 26px;
-  display: grid;
-  place-items: center;
+  width: 18px;
+  height: 18px;
   offset-anchor: center;
   offset-rotate: 0deg;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.22));
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
   animation-name: lab-ride;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-.lab-pkg img {
-  width: 26px;
-  height: 26px;
+.pk2 img {
+  width: 18px;
+  height: 18px;
   display: block;
   pointer-events: none;
-}
-.lab-pkg.jam {
-  filter: drop-shadow(0 0 3px #c0563f);
 }
 @keyframes lab-ride {
   from {
@@ -5338,109 +5370,6 @@ body {
   to {
     offset-distance: 100%;
   }
-}
-.lab-fork {
-  position: absolute;
-  display: grid;
-  place-items: center;
-  color: var(--ink);
-  transform: translate(-50%, -50%);
-  animation: lab-fork 2.6s ease-in-out infinite;
-}
-@keyframes lab-fork {
-  0%,
-  100% {
-    transform: translate(-50%, -50%);
-  }
-  50% {
-    transform: translate(calc(-50% - 13px), -56%);
-  }
-}
-.lab-dock {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  display: grid;
-  place-items: center;
-  width: 64px;
-}
-.lab-door {
-  position: absolute;
-  top: -27px;
-  left: 50%;
-  width: 40px;
-  height: 22px;
-  margin-left: -20px;
-  background: color-mix(in srgb, var(--up) 48%, var(--paper));
-  border: 1px solid var(--line);
-  border-radius: 4px 4px 0 0;
-  transform-origin: top;
-  animation-name: lab-door;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-.lab-dock.jam .lab-door {
-  background: color-mix(in srgb, #c0563f 48%, var(--paper));
-}
-@keyframes lab-door {
-  0%,
-  52% {
-    transform: scaleY(1);
-  }
-  62%,
-  86% {
-    transform: scaleY(0.08);
-  }
-  94%,
-  100% {
-    transform: scaleY(1);
-  }
-}
-.lab-truck {
-  color: var(--ink);
-  display: grid;
-  place-items: center;
-  animation-name: lab-truck;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-}
-.lab-truck img {
-  width: 32px;
-  height: 32px;
-  display: block;
-  transform: scaleX(-1); /* face the exit (drives off to the right) */
-  pointer-events: none;
-}
-@keyframes lab-truck {
-  0% {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  58% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  86% {
-    transform: translateX(96px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(96px);
-    opacity: 0;
-  }
-}
-.lab-dock-lab {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 9.5px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  white-space: nowrap;
 }
 .lab-empty {
   position: absolute;
@@ -5457,11 +5386,8 @@ body {
   max-width: 640px;
 }
 @media (prefers-reduced-motion: reduce) {
-  .lab-pkg,
-  .lab-fork,
-  .lab-door,
-  .lab-truck,
-  .lab-belt-flow {
+  .b2,
+  .pk2 {
     animation: none !important;
   }
 }
