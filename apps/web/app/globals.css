@@ -5462,6 +5462,7 @@ body {
 .fl2-svg {
   width: 100%;
   height: auto;
+  max-height: 420px;
   display: block;
 }
 .fl2-bottom {
