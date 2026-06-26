@@ -10,17 +10,17 @@
  * live desk (server) mirrors this — kept separate for now, to be unified.
  */
 import {
+  COMPANY_TIERS,
   effectiveSpec,
   getItem,
   lotSize,
-  pickClient,
   recipeOf,
   sectorKeys,
 } from "@trove/data";
 import type { Item, SectorKey } from "@trove/data";
 import { listedUnitPrice } from "./pricing";
 import { rand } from "./rng";
-import type { DeskAuto, Order, RuntimeItem, WorldState } from "./types";
+import type { DeskAuto, Order, RuntimeItem, Trader, WorldState } from "./types";
 
 // ── Order Desk automation (rep-gated) ────────────────────────────────────────
 export const SPECIALIST_REP = 15; // Procurement Specialist unlocks here
@@ -270,10 +270,23 @@ function pickOrderItem(state: WorldState, rep: number): RuntimeItem | null {
   return within[Math.floor(rand() * within.length)]!;
 }
 
+/** Pick an AI company to place an order in a sector: prefer its home-sector
+ *  house, then the broad index, then anyone — and only companies holding enough
+ *  cash to actually pay. Returns null if no one can afford to buy right now. */
+function pickBuyer(state: WorldState, sector: SectorKey): Trader | null {
+  const MIN_CASH = 20_000;
+  const able = (state.traders ?? []).filter((t) => (t.cash ?? 0) > MIN_CASH);
+  if (!able.length) return null;
+  const home = able.filter((t) => t.bias === sector);
+  const index = able.filter((t) => t.bias === null);
+  const pool = home.length ? home : index.length ? index : able;
+  return pool[Math.floor(rand() * pool.length)]!;
+}
+
 /** Build one fresh negotiable BULK order from the current world.
- *  For items you produce, the offer anchors to YOUR sell price with a bulk
- *  discount; for market goods it anchors to the market price. Either way it's
- *  floored so a deal always clears a profit, and quantities/prices vary. */
+ *  The buyer is a real AI company; the order is bounded by what that company will
+ *  commit (so it can always pay), anchored to YOUR sell price for goods you make
+ *  with a bulk discount, and floored so a deal always clears a profit. */
 export function generateSandboxOrder(
   state: WorldState,
   now: number,
@@ -295,31 +308,48 @@ export function generateSandboxOrder(
     ? (productionCostOf(state, it) ?? it.value * 0.6)
     : it.value * 0.7;
 
-  // Bulk quantity — varied per order, bigger for cheaper goods. Snapped to lots.
-  // Scaled by news demand: a cooled sector sends smaller orders, a heated one
-  // bigger — so what the news does to your product line shows up at the desk.
+  // Who's buying: a real AI company in this sector (or the broad index). The
+  // order is bounded by what that company will commit (≤ half its cash, ≤ its
+  // tier's max order), so a small house never sends a contract it can't pay —
+  // and fulfilment debits its treasury (see fulfillSandboxOrder).
+  const sector = topSector(it.weights);
+  const buyer = pickBuyer(state, sector);
+  if (!buyer) return null;
+  const spend = Math.min(
+    COMPANY_TIERS[buyer.tier ?? "mid"].maxOrder,
+    (buyer.cash ?? 0) * 0.5,
+  );
+
+  // Bulk quantity — varied + news-demand-scaled, then capped to the buyer's means.
   const lot = lotSize(getItem(it.id) ?? it);
   const targetGross = (3000 + rep * 2500) * (0.5 + rand() * 1.6) * demandHeat(state, it);
   let qty = Math.max(1, Math.round(targetGross / retail));
-  if (it.edition !== null) qty = 1;
-  else if (lot > 1) qty = Math.max(lot, Math.round(qty / lot) * lot);
-  qty = Math.min(qty, 1_000_000);
 
-  // Bulk discount grows with order size; varied. Per-unit prices, profit-floored.
-  const disc = Math.min(0.2, 0.04 + Math.log10(qty + 1) * 0.04) * (0.7 + rand() * 0.6);
   const floor = cost * 1.05; // always clear a margin
+  const discFor = (q: number) =>
+    Math.min(0.2, 0.04 + Math.log10(q + 1) * 0.04) * (0.7 + rand() * 0.6);
+  // The most a unit can ever cost the buyer — cap qty against it so the order
+  // total never exceeds the buyer's budget.
+  let budgetUnit = Math.max(floor, retail);
+  qty = Math.min(qty, Math.floor(spend / budgetUnit));
+  if (it.edition !== null) qty = Math.min(qty, 1);
+  else if (lot > 1) qty = Math.floor(qty / lot) * lot;
+  if (qty < 1) return null;
+
+  // Final per-unit prices for the settled quantity (bulk discount, profit-floored).
+  const disc = discFor(qty);
   const targetUnit = Math.max(floor, retail * (1 - disc));
-  const budgetUnit = Math.max(targetUnit, retail * (1 - disc * 0.35));
+  budgetUnit = Math.max(targetUnit, retail * (1 - disc * 0.35));
   const openUnit = Math.max(cost * 1.02, targetUnit * (0.86 + rand() * 0.08));
 
-  const budget = Math.round(budgetUnit * qty);
-  const target = Math.round(targetUnit * qty);
+  // Clamp totals to the buyer's budget so it can always pay the agreed price.
+  const budget = Math.min(Math.round(budgetUnit * qty), Math.floor(spend));
+  const target = Math.min(Math.round(targetUnit * qty), budget);
   const companyOffer = Math.max(1, Math.min(target - 1, Math.round(openUnit * qty)));
-  const sector = topSector(it.weights);
 
   return {
     id: newId(now),
-    company: pickClient(sector),
+    company: buyer.name,
     sector,
     itemId: it.id,
     qty,
@@ -485,6 +515,9 @@ export function fulfillSandboxOrder(
     need -= take;
   }
   state.cash += o.quote;
+  // Closed loop: the buyer company pays you from its own treasury.
+  const buyer = state.traders?.find((t) => t.name === o.company);
+  if (buyer) buyer.cash -= o.quote;
   state.reputation = repOf(state) + fulfilReward(o.quote);
   if (state.ledger) {
     state.ledger.orderUnits += o.qty;

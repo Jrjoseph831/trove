@@ -9,6 +9,8 @@ import {
   createWorld,
   elasticity,
   freshState,
+  fulfillSandboxOrder,
+  generateSandboxOrder,
   held,
   listedUnitPrice,
   mulberry32,
@@ -308,6 +310,57 @@ describe("production + listings stay consistent", () => {
     expect(issues).toEqual([]);
     expect(Number.isFinite(netWorth(S, "YOU"))).toBe(true);
   }, 20000);
+});
+
+describe("order desk runs on company treasuries", () => {
+  it("orders come from a real company and never exceed what it can pay", () => {
+    setRng(mulberry32(5));
+    const S = createWorld();
+    const names = new Set(S.traders.map((t) => t.name));
+    let seen = 0;
+    for (let i = 0; i < 60; i++) {
+      const o = generateSandboxOrder(S, i * 1000);
+      if (!o) continue;
+      seen++;
+      expect(names.has(o.company)).toBe(true); // a real roster company
+      const buyer = S.traders.find((t) => t.name === o.company)!;
+      expect(o.budget).toBeLessThanOrEqual(buyer.cash); // can always cover it
+    }
+    expect(seen).toBeGreaterThan(0);
+  });
+
+  it("fulfilment moves cash from the buyer's treasury to the player (closed loop)", () => {
+    const S = createWorld(0);
+    const buyer = S.traders[0]!;
+    const buyerCash0 = buyer.cash;
+    const playerCash0 = S.cash;
+    const item = S.items.find((i) => i.edition === null)!;
+    item.owners["YOU"] = 5;
+    const quote = 1234;
+    S.orders = [
+      {
+        id: "o1",
+        company: buyer.name,
+        sector: "construction",
+        itemId: item.id,
+        qty: 5,
+        companyOffer: quote,
+        budget: quote,
+        target: quote,
+        round: 1,
+        maxRounds: 3,
+        quote,
+        status: "accepted",
+        createdAt: 0,
+        expiresAt: 9e15,
+      },
+    ];
+    const r = fulfillSandboxOrder(S, "o1", 1000);
+    expect(r.ok).toBe(true);
+    expect(S.cash).toBeCloseTo(playerCash0 + quote, 6); // player paid
+    expect(buyer.cash).toBeCloseTo(buyerCash0 - quote, 6); // company debited
+    expect(item.owners["YOU"] ?? 0).toBe(0); // goods delivered
+  });
 });
 
 describe("headless sim smoke", () => {

@@ -742,6 +742,13 @@ export async function mutatePlayerWorld<T>(
       if (v > 0) f.owners[playerId] = v;
       else delete f.owners[playerId];
     }
+    // Persist any AI-company treasury changes (e.g. an order fulfilment debits
+    // the buyer company's cash — the closed loop).
+    const tradersByName = new Map(full.traders.map((t) => [t.name, t]));
+    for (const t of pv.traders) {
+      const ft = tradersByName.get(t.name);
+      if (ft) ft.cash = t.cash;
+    }
     const nextDoc = worldToDoc(full, cur.version + 1);
     const player = extractPlayer(pv, base);
 
