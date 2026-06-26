@@ -1933,7 +1933,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82520,
     "events": [
       {
         "cycle": 0,
@@ -1942,6 +1942,16 @@
         "head": "Holtgate Group — Honest cloth, by the mile",
         "body": "Holtgate runs lean and loud, looms going day and night. It makes raw textiles for the unglamorous middle of the world: linings, backings, workwear stock, the fabric nobody photographs but everybody wears. Mass rolls feed the big cut-and-sew floors, while the mid grades win on a softer hand and a straighter weave. No frills, no fuss, just dependable yardage that shows up when promised.",
         "effects": {}
+      },
+      {
+        "cycle": 82520,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Holtgate Group Locks Multi-Year Supply Pact With Uniform Makers Guild",
+        "body": "Holtgate confirmed a four-year agreement to supply 12 million yards of base cloth annually to the Eastfield Uniform Consortium. CEO Dorian Throne called the deal 'the kind of steady work we were built for,' noting it secures roughly 18% of Holtgate's mill capacity through 1951.",
+        "effects": {
+          "textiles": 0.13
+        }
       }
     ]
   },
@@ -1956,7 +1966,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82520,
     "events": [
       {
         "cycle": 0,
@@ -1965,6 +1975,16 @@
         "head": "Holtware Co. — Tools that outlive the warranty",
         "body": "Holtware forges hardware and hand tools for people who use them, not collect them. Hammers, fasteners, clamps, the drawer of small metal things every household secretly relies on. The value range stocks shelves cheap and cheerful; the mid line adds the heft and finish that turn a one-time buy into a hand-me-down. Drop one, kick one, leave one in the rain. It'll still be there.",
         "effects": {}
+      },
+      {
+        "cycle": 82520,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Holtware Co. Unveils Lifetime-Warranty Hand Tool Line",
+        "body": "Holtware introduced its new 'Ironhold' series of wrenches and pliers, backed by an unconditional replacement pledge. CEO Aurelia Dray said early orders from regional hardware chains exceeded 40,000 units, framing the launch as 'a calculated bet that durability still sells.'",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -1979,7 +1999,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82520,
     "events": [
       {
         "cycle": 0,
@@ -1988,6 +2008,16 @@
         "head": "Ironcrestcrest Supply — Bright rooms, fair prices",
         "body": "Ironcrestcrest got its start wiring lamp sockets in a back room and never lost the knack. Today it lights kitchens, shop floors, and porches with fixtures pitched at real budgets. The everyday range keeps it affordable and bright; the mid tier brings cleaner lines and warmer, steadier glow. It's not the name on a designer's mood board, but it's the one in the cart when the bulb finally goes.",
         "effects": {}
+      },
+      {
+        "cycle": 82520,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Opens Third Fixtures Warehouse",
+        "body": "The lighting house quietly commissioned a new 90,000-square-foot distribution hub in the Marlow district to serve western retailers. CEO Dorian Garr said the facility would trim delivery times by two days without raising shelf prices.",
+        "effects": {
+          "consumer": 0.06
+        }
       }
     ]
   },
@@ -2002,7 +2032,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82520,
     "events": [
       {
         "cycle": 0,
@@ -2011,6 +2041,16 @@
         "head": "Ironcrestton — Made for the few who notice",
         "body": "Ironcrestton deals in fine goods and very little else. Each piece passes through a small bench of makers who measure twice and apologize for nothing. The premium line is exacting; the luxury line is uncompromising, finished by hands that have done it for thirty years. Owners speak of these objects the way others speak of heirlooms. Scarce by intent, coveted by reputation, and worth the wait.",
         "effects": {}
+      },
+      {
+        "cycle": 82520,
+        "kind": "award",
+        "size": "standard",
+        "head": "Ironcrestton Sweeps Coveted Artisan's Circle Honors",
+        "body": "Ironcrestton took three of five top prizes at this year's Artisan's Circle gala, including Object of the Year for its hand-finished travel case. CEO Sable Carrow, never shy of a stage, declared the wins 'proof that the few who notice are noticing us.'",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -2025,7 +2065,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82520,
     "events": [
       {
         "cycle": 0,
@@ -2034,6 +2074,16 @@
         "head": "Kessel Drive — Built to outlast its owners",
         "body": "Kessel Drive cut its teeth on engines that wouldn't quit, then built whole vehicles around them. Today the range runs from a rugged everyman runabout to a hand-finished grand tourer, with power packs and battery systems that feed the lot. Their cells endure brutal cold; their cars hold the road like they own it. Owners pass the keys down a generation and find the car still eager. Engineering as inheritance, torque as a promise.",
         "effects": {}
+      },
+      {
+        "cycle": 82520,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Kessel Drive Debuts Long-Range Touring Vehicle in Splashy Reveal",
+        "body": "Kessel Drive pulled the covers off its flagship 'Meridian' touring model, paired with a new high-capacity storage cell promising 30% longer service life. CEO Dorian Brandt staged the launch before 2,000 guests, claiming pre-orders topped 6,500 units within 48 hours — the company's biggest rollout in a decade.",
+        "effects": {
+          "automotive": 0.22
+        }
       }
     ]
   },
@@ -2048,7 +2098,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82520,
     "events": [
       {
         "cycle": 0,
@@ -2057,6 +2107,16 @@
         "head": "Kesselgrove Co. — The machine behind the machine",
         "body": "Kesselgrove builds industrial machines for factories that can't stop. Presses, mills, the heavy iron that runs three shifts and asks for little. The mid range earns its keep on uptime and serviceable parts; the premium line is precision-ground for plants where a thousandth of an inch is money. Engineers don't gush about it. They just keep ordering it, year after year, line after line.",
         "effects": {}
+      },
+      {
+        "cycle": 82520,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Kesselgrove Co. Posts Quiet Record Quarter on Machine Demand",
+        "body": "Kesselgrove reported quarterly revenue of $84 million, up 11% year-on-year, driven by orders for its precision press lines. CEO Orla Steg credited 'steady, unglamorous discipline,' adding that the order backlog now stretches into next spring.",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -2071,7 +2131,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82520,
     "events": [
       {
         "cycle": 0,
@@ -2080,6 +2140,16 @@
         "head": "Korrgrave Mfg. — Feeding the season, every season",
         "body": "Korrgrove has had dirt under its fingernails since the first plow season. It supplies farm inputs across the spread, from the basics that fill every barn to the premium blends agronomists swear by. Value sacks keep small holdings solvent; the mid and top grades push yield where margins are thin. Generations of growers have planted on its word. Practical, weathered, and trusted from the gate to the granary.",
         "effects": {}
+      },
+      {
+        "cycle": 82520,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Korrgrave Mfg. Adds Acreage to Northern Input Plant",
+        "body": "Korrgrave broke ground on a modest extension to its Hartwell fertilizer works, adding capacity for the coming planting cycle. CEO Aurelia Halloran described the move as 'one more season's worth of certainty for the growers who count on us.'",
+        "effects": {
+          "agriculture": 0.06
+        }
       }
     ]
   },
@@ -2094,7 +2164,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82520,
     "events": [
       {
         "cycle": 0,
@@ -2103,6 +2173,16 @@
         "head": "Korrworks — Heavy lifting, handled",
         "body": "Korrworks moves what others struggle to move. Material handling is the whole trade here: lifts, conveyors, the rugged gear that keeps a warehouse breathing. The mid range is the workhorse of busy docks; the premium line carries the load capacities and safety margins that big operations demand. Foremen plan their floors around it. Reliable under weight, and quietly proud of never being the thing that breaks down.",
         "effects": {}
+      },
+      {
+        "cycle": 82520,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrworks Wins Port Authority Handling Contract",
+        "body": "Korrworks secured a contract to supply forklifts and conveyor systems to the Brevald Port Authority, valued at an estimated $22 million over three years. CEO Rhys Throne said the win positions the company to bid on two adjacent terminal upgrades expected next year.",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
