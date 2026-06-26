@@ -7602,3 +7602,47 @@ body {
     opacity: 0.35;
   }
 }
+
+/* ── Mobile: Vault + Reports overflow fixes ────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Reports: the item-detail table scrolls horizontally instead of clipping. */
+  .idt {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .idt-h,
+  .idt-row {
+    min-width: 460px;
+  }
+  /* Reports: revenue bars keep readable columns without overflowing. */
+  .bar-row {
+    grid-template-columns: 84px 1fr 72px;
+  }
+  .cat-head {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 560px) {
+  /* Vault: rows wrap instead of cutting buttons/figures off the right edge. */
+  .crow {
+    flex-wrap: wrap;
+    row-gap: 6px;
+    column-gap: 10px;
+  }
+  .crow .nm {
+    flex: 1 1 60%;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+  .crow .pr {
+    min-width: 0;
+  }
+  .crow .chg {
+    min-width: 0;
+    margin-left: auto;
+  }
+  .crow .tbtn {
+    margin-left: 0 !important;
+  }
+}

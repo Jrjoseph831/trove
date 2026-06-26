@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { held } from "@trove/engine";
+import { breakingBeat } from "@/lib/breaking";
 import { money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { impliedSectors } from "@/lib/ui";
@@ -12,6 +14,12 @@ export function Trending() {
   const { state } = useTrove();
   const f = state.front;
   const { ups, dns } = impliedSectors(f);
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const t = setInterval(() => setNow(Date.now()), 5000);
+    return () => clearInterval(t);
+  }, []);
+  const beat = breakingBeat(now);
 
   const watching = state.items
     .filter((i) => i.edition !== null && i.remaining > 0)
@@ -22,6 +30,13 @@ export function Trending() {
 
   return (
     <div className="view">
+      {beat && (
+        <article className={`brk-card ${beat.phase}`}>
+          <span className="brk-card-kick">⚡ {beat.kicker}</span>
+          <h3 className="brk-card-head">{beat.head}</h3>
+          <p className="brk-card-body">{beat.body}</p>
+        </article>
+      )}
       <article className="lead lead-wide">
           {f && (
             <>
