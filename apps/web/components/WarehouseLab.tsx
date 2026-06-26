@@ -31,10 +31,21 @@ export function WarehouseLab() {
     return s + Math.floor(effectiveSpec(out, f.modules).rate * t);
   }, 0);
 
+  // With no real lines (e.g. signed-out demo), run a sample route so the concept
+  // is always visible.
+  const previewMode = lines.length === 0;
+  const activeLines = previewMode ? 1 : lines.length;
+  const docksShown = previewMode ? 3 : docks;
+
   // Throughput health → belt colour.
   const util = totalLanes > 0 ? demand / totalLanes : 0;
-  const health: "idle" | "flow" | "slow" | "jam" =
-    demand === 0 ? "idle" : util > 1 ? "jam" : util >= 0.85 ? "slow" : "flow";
+  const health: "flow" | "slow" | "jam" = previewMode
+    ? "flow"
+    : util > 1
+      ? "jam"
+      : util >= 0.85
+        ? "slow"
+        : "flow";
   const beltDur = health === "jam" ? 3 : health === "slow" ? 1.8 : 1;
   const pkgDur = Math.max(4.5, Math.min(9, 10 - Math.log10(Math.max(1, realized))));
 
@@ -48,7 +59,7 @@ export function WarehouseLab() {
     if (i < TOP_N) order.push({ edge: "top", idx: i });
     if (i < RIGHT_N) order.push({ edge: "right", idx: i });
   }
-  const activeKey = new Set(order.slice(0, docks).map((o) => `${o.edge}${o.idx}`));
+  const activeKey = new Set(order.slice(0, docksShown).map((o) => `${o.edge}${o.idx}`));
 
   // ── Geometry (fixed px so HTML actors line up with the SVG belts) ───────────
   const W = 760;
@@ -82,8 +93,6 @@ export function WarehouseLab() {
     return `${head} ${tail}`;
   };
 
-  const activeLines = lines.length;
-
   return (
     <div className="lab">
       <div className="lab-banner">
@@ -93,7 +102,7 @@ export function WarehouseLab() {
         <b style={{ color: "#1f8a4d" }}>green flowing</b>,{" "}
         <b style={{ color: "var(--up)" }}>bronze slowing</b>,{" "}
         <b style={{ color: "#c0563f" }}>red jammed</b> (
-        {realized.toLocaleString()}/cy).
+        {previewMode ? "preview — sign in to bind your lines" : `${realized.toLocaleString()}/cy`}).
       </div>
 
       <div className="lab-wrap">
@@ -109,16 +118,14 @@ export function WarehouseLab() {
                 <path className="b2-base" d={spineD} fill="none" />
                 <path className={`b2 ${health}`} d={spineD} fill="none" style={{ animationDuration: `${beltDur}s` }} />
                 {/* inbound feeders */}
-                {lines.map((f, i) =>
-                  i < IN_SLOTS ? (
-                    <g key={`fd${f.id}`}>
-                      <path className="b2-base" d={feederD(i)} fill="none" />
-                      <path className={`b2 ${health}`} d={feederD(i)} fill="none" style={{ animationDuration: `${beltDur}s` }} />
-                    </g>
-                  ) : null,
-                )}
+                {Array.from({ length: Math.min(activeLines, IN_SLOTS) }).map((_, i) => (
+                  <g key={`fd${i}`}>
+                    <path className="b2-base" d={feederD(i)} fill="none" />
+                    <path className={`b2 ${health}`} d={feederD(i)} fill="none" style={{ animationDuration: `${beltDur}s` }} />
+                  </g>
+                ))}
                 {/* outbound branches */}
-                {order.slice(0, docks).map((o) => {
+                {order.slice(0, docksShown).map((o) => {
                   const d = o.edge === "top" ? topD(o.idx) : rightD(o.idx);
                   return (
                     <g key={`br${o.edge}${o.idx}`}>
@@ -134,7 +141,7 @@ export function WarehouseLab() {
           {/* packages: a staggered stream from each source bay, through the
               center, out to its outbound area */}
           {activeLines > 0 &&
-            order.slice(0, docks).flatMap((o, a) => {
+            order.slice(0, docksShown).flatMap((o, a) => {
               const src = a % activeLines; // which inbound bay feeds this route
               const route = routeD(src, o);
               const N = 3;
@@ -184,7 +191,7 @@ export function WarehouseLab() {
           })}
 
           {/* forklift handoffs at each active outbound door */}
-          {order.slice(0, docks).map((o) => {
+          {order.slice(0, docksShown).map((o) => {
             const pos =
               o.edge === "top"
                 ? { left: topX(o.idx), top: TOPY + 26 }
@@ -196,9 +203,6 @@ export function WarehouseLab() {
             );
           })}
 
-          {activeLines === 0 && (
-            <div className="lab-empty">No active lines — build &amp; feed one to route the floor.</div>
-          )}
         </div>
       </div>
 
