@@ -20,6 +20,8 @@ import {
   companyCard,
   companySite,
   getPlayer,
+  houseCards,
+  houseView,
   loadWorld,
   savePlayer,
   type Player,
@@ -122,8 +124,15 @@ export async function handler(
     return json(200, { site, view: companySite(doc as WorldDoc, player, rank) });
   }
 
-  // ── GET /companies/{handle} — one company's public site ─────────────────
   const handle = event.pathParameters?.handle;
+
+  // ── GET /houses/{handle} — one AI company's audit view ──────────────────
+  if (handle && event.routeKey?.includes("/houses/")) {
+    const view = houseView(doc as WorldDoc, handle);
+    return view ? json(200, view, 15) : json(404, { error: "no such company" });
+  }
+
+  // ── GET /companies/{handle} — one player company's public site ──────────
   if (handle) {
     const players = await allPlayers();
     const player = players.find((p) => p.site?.handle === handle && p.site?.published);
@@ -132,11 +141,11 @@ export async function handler(
     return json(200, companySite(doc as WorldDoc, player, rank), 15);
   }
 
-  // ── GET /companies — the directory ──────────────────────────────────────
+  // ── GET /companies — the directory (player holdings + AI houses) ─────────
   const players = await allPlayers();
   const companies = players
     .map((p) => companyCard(doc as WorldDoc, p))
     .filter((c): c is NonNullable<typeof c> => !!c)
     .sort((a, b) => b.products - a.products);
-  return json(200, { companies }, 15);
+  return json(200, { companies, houses: houseCards(doc as WorldDoc) }, 15);
 }

@@ -285,6 +285,11 @@ export class TroveStack extends Stack {
       integration: new HttpLambdaIntegration("CompanyIntegration", company),
     });
     api.addRoutes({
+      path: "/houses/{handle}",
+      methods: [HttpMethod.GET],
+      integration: new HttpLambdaIntegration("HouseIntegration", company),
+    });
+    api.addRoutes({
       path: "/site",
       methods: [HttpMethod.POST],
       integration: new HttpLambdaIntegration("SiteIntegration", company),

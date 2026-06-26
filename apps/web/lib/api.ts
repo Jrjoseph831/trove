@@ -130,10 +130,25 @@ export const orderAction = (
   price?: number,
 ) => ordersPost<{ ok: true }>(`/orders/${encodeURIComponent(id)}/action`, { action, price });
 
+export interface HouseCard {
+  handle: string;
+  name: string;
+  tier: string;
+  sector: string;
+  netWorth: number;
+}
+export interface HouseView extends HouseCard {
+  cash: number;
+  assets: number;
+  holdings: { id: number; name: string; qty: number; value: number }[];
+}
+
 export const fetchCompanies = () =>
-  get<{ companies: CompanyCard[] }>("/companies").then((r) => r.companies);
+  get<{ companies: CompanyCard[]; houses: HouseCard[] }>("/companies");
 export const fetchCompany = (handle: string) =>
   get<CompanySite>(`/companies/${encodeURIComponent(handle)}`);
+export const fetchHouse = (handle: string) =>
+  get<HouseView>(`/houses/${encodeURIComponent(handle)}`);
 
 /** Save the signed-in player's site config; returns the updated config + view. */
 export async function saveSite(

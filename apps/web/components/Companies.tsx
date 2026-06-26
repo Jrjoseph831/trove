@@ -7,9 +7,12 @@ import { listedUnitPrice, type SiteConfig, type SiteSectionId } from "@trove/eng
 import {
   fetchCompanies,
   fetchCompany,
+  fetchHouse,
   type CompanyCard,
   type CompanyProduct,
   type CompanySite,
+  type HouseCard,
+  type HouseView,
 } from "@/lib/api";
 import { manufacturingName, money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
@@ -112,6 +115,10 @@ export function Companies() {
     );
   }
 
+  if (open?.startsWith("house:")) {
+    return <HouseDossier handle={open.slice(6)} onBack={() => setOpen(null)} />;
+  }
+
   if (open) {
     return <RemoteSite handle={open} onBack={() => setOpen(null)} />;
   }
@@ -124,6 +131,7 @@ export function Companies() {
       onOpenMine={() => setOpen("__me__")}
       onEdit={() => setEditing(true)}
       onOpen={(h) => setOpen(h)}
+      onOpenHouse={(h) => setOpen(`house:${h}`)}
     />
   );
 }
@@ -190,6 +198,7 @@ function Directory({
   onOpenMine,
   onEdit,
   onOpen,
+  onOpenHouse,
 }: {
   hasSite: boolean;
   published: boolean;
@@ -197,13 +206,19 @@ function Directory({
   onOpenMine: () => void;
   onEdit: () => void;
   onOpen: (handle: string) => void;
+  onOpenHouse: (handle: string) => void;
 }) {
   const [companies, setCompanies] = useState<CompanyCard[] | null>(null);
+  const [houses, setHouses] = useState<HouseCard[]>([]);
 
   useEffect(() => {
     let alive = true;
     fetchCompanies()
-      .then((c) => alive && setCompanies(c))
+      .then((r) => {
+        if (!alive) return;
+        setCompanies(r.companies);
+        setHouses(r.houses ?? []);
+      })
       .catch(() => alive && setCompanies([]));
     return () => {
       alive = false;
@@ -263,6 +278,136 @@ function Directory({
           ))}
         </div>
       )}
+
+      {houses.length > 0 && (
+        <>
+          <div className="site-dirhead" style={{ marginTop: 26 }}>
+            The Houses · institutional players
+          </div>
+          <div className="site-grid">
+            {houses.map((h) => (
+              <button
+                key={h.handle}
+                className="site-card"
+                onClick={() => onOpenHouse(h.handle)}
+              >
+                <span className="site-card-accent a-ink" />
+                <span className="site-card-sector">
+                  {h.sector ? label(h.sector) : "Index"} · {h.tier}
+                </span>
+                <span className="site-card-name">{h.name}</span>
+                <span className="site-card-foot">
+                  Net worth <b>{money(h.netWorth)}</b>
+                </span>
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+// ── An AI company's audit dossier (fetched) ─────────────────────────────────
+function HouseDossier({ handle, onBack }: { handle: string; onBack: () => void }) {
+  const [h, setH] = useState<HouseView | null>(null);
+  const [err, setErr] = useState(false);
+
+  useEffect(() => {
+    let alive = true;
+    setH(null);
+    setErr(false);
+    fetchHouse(handle)
+      .then((v) => alive && setH(v))
+      .catch(() => alive && setErr(true));
+    return () => {
+      alive = false;
+    };
+  }, [handle]);
+
+  if (err) {
+    return (
+      <div className="view">
+        <button className="site-back" onClick={onBack}>
+          ← Directory
+        </button>
+        <div className="empty">That company couldn&apos;t be found.</div>
+      </div>
+    );
+  }
+  if (!h) {
+    return (
+      <div className="view">
+        <button className="site-back" onClick={onBack}>
+          ← Directory
+        </button>
+        <div className="empty">Opening {handle}…</div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="view">
+      <div className="site-bar">
+        <button className="site-back" onClick={onBack}>
+          ← Directory
+        </button>
+        <span className="site-url">{h.sector ? label(h.sector) : "Index"} · {h.tier}</span>
+      </div>
+
+      <div className="site a-ink">
+        <header className="site-masthead">
+          <div className="site-eyebrow">Institutional player</div>
+          <h1>{h.name}</h1>
+          <p className="site-tag">
+            {h.sector ? `${label(h.sector)} house` : "Broad-market index"} ·{" "}
+            {h.tier} tier
+          </p>
+        </header>
+
+        <section className="site-sec">
+          <h2 className="site-h">Balance sheet</h2>
+          <div className="site-standing">
+            <div>
+              <span className="ss-lab">Net worth</span>
+              <span className="ss-v">{money(h.netWorth)}</span>
+            </div>
+            <div>
+              <span className="ss-lab">Cash</span>
+              <span className="ss-v">{money(h.cash)}</span>
+            </div>
+            <div>
+              <span className="ss-lab">Holdings value</span>
+              <span className="ss-v">{money(h.assets)}</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="site-sec">
+          <h2 className="site-h">Top holdings</h2>
+          {h.holdings.length === 0 ? (
+            <p className="site-about">Holding cash — nothing on the floor right now.</p>
+          ) : (
+            <div className="store-grid">
+              {h.holdings.map((it) => {
+                const cat = getItem(it.id);
+                return (
+                  <div className="store-card" key={it.id}>
+                    <span className="store-ic">
+                      {cat ? <ItemIcon it={cat} size={22} /> : null}
+                    </span>
+                    <span className="store-nm">{it.name}</span>
+                    <span className="store-pr">{money(it.qty * it.value)}</span>
+                    <span className="store-av">
+                      {it.qty.toLocaleString()} × {money(it.value)}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </section>
+      </div>
     </div>
   );
 }

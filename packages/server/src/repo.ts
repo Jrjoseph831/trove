@@ -527,6 +527,75 @@ export function companySite(
   };
 }
 
+// ── AI companies ("houses") — auditable finances from the world doc ──────────
+
+export interface HouseCard {
+  handle: string;
+  name: string;
+  tier: string;
+  /** Home sector key, or "" for the broad index. */
+  sector: string;
+  netWorth: number;
+}
+export interface HouseView extends HouseCard {
+  cash: number;
+  assets: number;
+  /** Top holdings by value, for the audit. */
+  holdings: { id: number; name: string; qty: number; value: number }[];
+}
+
+const houseHandle = (name: string) =>
+  name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const houseName = (name: string) => name.replace(/_/g, " ");
+
+/** A company's holdings (from the world doc) + their total value. */
+function houseAssets(doc: WorldDoc, name: string) {
+  let assets = 0;
+  const holdings: HouseView["holdings"] = [];
+  for (const it of doc.items) {
+    const qty = it.owners?.[name] ?? 0;
+    if (qty > 0) {
+      assets += qty * it.value;
+      holdings.push({ id: it.id, name: catById.get(it.id)?.name ?? `#${it.id}`, qty, value: it.value });
+    }
+  }
+  holdings.sort((a, b) => b.qty * b.value - a.qty * a.value);
+  return { assets, holdings };
+}
+
+/** Directory cards for every AI company, richest first. */
+export function houseCards(doc: WorldDoc): HouseCard[] {
+  return (doc.traders ?? [])
+    .map((t) => {
+      const { assets } = houseAssets(doc, t.name);
+      return {
+        handle: houseHandle(t.name),
+        name: houseName(t.name),
+        tier: t.tier ?? "mid",
+        sector: t.bias ?? "",
+        netWorth: Math.round(t.cash + assets),
+      };
+    })
+    .sort((a, b) => b.netWorth - a.netWorth);
+}
+
+/** Full audit view of one AI company (cash, holdings, net worth). */
+export function houseView(doc: WorldDoc, handle: string): HouseView | null {
+  const t = (doc.traders ?? []).find((x) => houseHandle(x.name) === handle);
+  if (!t) return null;
+  const { assets, holdings } = houseAssets(doc, t.name);
+  return {
+    handle,
+    name: houseName(t.name),
+    tier: t.tier ?? "mid",
+    sector: t.bias ?? "",
+    cash: Math.round(t.cash),
+    assets: Math.round(assets),
+    netWorth: Math.round(t.cash + assets),
+    holdings: holdings.slice(0, 12),
+  };
+}
+
 export async function getPlayer(playerId: string): Promise<Player | null> {
   const res = await ddb.send(
     new GetCommand({ TableName: PLAYERS, Key: { playerId } }),
