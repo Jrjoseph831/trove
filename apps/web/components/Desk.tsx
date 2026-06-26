@@ -2,10 +2,25 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { AUTOFULFILL_REP, SPECIALIST_REP } from "@trove/engine";
+import {
+  AUTOFULFILL_REP,
+  productionCostOf,
+  SPECIALIST_REP,
+  type WorldState,
+} from "@trove/engine";
 import type { DeskOrder, PvpOrder } from "@/lib/api";
 import { manufacturingName, money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+
+/** What it costs YOU to make the whole order (materials + upkeep, all-in), or
+ *  null if you don't make it. productionCostOf is per-unit; × qty for the order. */
+function makeCostOf(state: WorldState, o: DeskOrder): number | null {
+  if (!o.youProduce) return null;
+  const item = state.items.find((i) => i.id === o.itemId);
+  if (!item) return null;
+  const unit = productionCostOf(state, item);
+  return unit == null ? null : Math.round(unit * o.qty);
+}
 
 type OrderAct = (
   id: string,
@@ -218,7 +233,7 @@ function timeLeft(expiresAt: number): string {
 
 /** A live negotiation: their standing offer, your ask, accept/counter/walk. */
 function OfferCard({ o }: { o: DeskOrder }) {
-  const { acceptOrder, counterOrder, declineOrder } = useTrove();
+  const { acceptOrder, counterOrder, declineOrder, state } = useTrove();
   // Default ask: a healthy premium over your sourcing cost.
   const suggested = Math.max(
     o.companyOffer + 1,
@@ -227,6 +242,10 @@ function OfferCard({ o }: { o: DeskOrder }) {
   const [bid, setBid] = useState(String(suggested));
   const bidNum = Math.round(Number(bid));
   const valid = Number.isFinite(bidNum) && bidNum > 0;
+
+  const makeCost = makeCostOf(state, o);
+  const profit = makeCost != null ? o.companyOffer - makeCost : null;
+  const margin = profit != null ? Math.round((profit / o.companyOffer) * 100) : 0;
 
   return (
     <div className="ordercard offer">
@@ -245,8 +264,26 @@ function OfferCard({ o }: { o: DeskOrder }) {
         <span>
           Their offer <b>{money(o.companyOffer)}</b>
         </span>
-        <span>≈ {money(o.marketValue)} to source</span>
+        <span>
+          ~{money(o.marketValue)} to source
+          {makeCost != null && (
+            <>
+              {" · "}
+              ~<b>{money(makeCost)}</b> to make
+            </>
+          )}
+        </span>
       </div>
+      {makeCost != null && profit != null && (
+        <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
+          {profit >= 0 ? "Profit if you make " : "Loss if you make "}
+          <b>
+            {profit >= 0 ? "+" : ""}
+            {money(profit)}
+          </b>
+          {profit >= 0 && o.companyOffer > 0 && ` · ${margin}% margin`}
+        </div>
+      )}
 
       <div className="oc-bidrow">
         <span className="oc-bidlbl">Your ask</span>
@@ -282,7 +319,7 @@ function OfferCard({ o }: { o: DeskOrder }) {
 }
 
 export function Desk() {
-  const { desk, mode, signedIn, signIn, fulfillOrder } = useTrove();
+  const { desk, mode, state, signedIn, signIn, fulfillOrder } = useTrove();
 
   if (mode === "live" && !signedIn) {
     return (
@@ -343,6 +380,8 @@ export function Desk() {
       {accepted.length > 0 && <div className="desk-sec">In progress</div>}
       {accepted.map((o) => {
         const ready = o.held >= o.qty;
+        const makeCost = makeCostOf(state, o);
+        const profit = makeCost != null ? o.quote - makeCost : null;
         return (
           <div key={o.id} className="ordercard accepted">
             <div className="oc-co">
@@ -360,11 +399,22 @@ export function Desk() {
             <div className="oc-meta">
               <span>
                 Pays <b>{money(o.quote)}</b>
+                {makeCost != null && <> · ~{money(makeCost)} to make</>}
               </span>
               <span>
                 In vault: {o.held.toLocaleString()} / {o.qty.toLocaleString()}
               </span>
             </div>
+            {profit != null && (
+              <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
+                {profit >= 0 ? "Profit " : "Loss "}
+                <b>
+                  {profit >= 0 ? "+" : ""}
+                  {money(profit)}
+                </b>{" "}
+                on delivery
+              </div>
+            )}
             <div className="oc-bar">
               <i
                 style={{ width: `${Math.min(100, (o.held / o.qty) * 100)}%` }}
