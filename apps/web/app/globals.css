@@ -4957,96 +4957,185 @@ body {
 }
 
 /* Connected warehouse diagram (slice 2) */
-.wh-wrap {
+/* ── Floor KPI strip ─────────────────────────────────────────────────────── */
+.floor-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 720px;
+  margin: 4px 0 14px;
+}
+.fk {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.fk-lab {
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.fk-val {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.fk-val small {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-faint);
+  margin-left: 1px;
+}
+.fk-sub {
+  font-size: 10px;
+  color: var(--ink-dim);
+}
+.fk.lost {
+  border-color: color-mix(in srgb, #c0563f 40%, var(--line));
+  background: color-mix(in srgb, #c0563f 6%, var(--paper));
+}
+.fk.lost .fk-val {
+  color: #c0563f;
+}
+
+/* ── Isometric warehouse floor ───────────────────────────────────────────── */
+.iso-wrap {
   max-width: 720px;
   margin: 6px 0 14px;
 }
-.wh {
+.iso {
   font-family: inherit;
   overflow: visible;
+  user-select: none;
 }
-/* belt pipes: a solid base + a flowing dashed surface (the moving belt) */
-.wb-base {
-  stroke-width: 11;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.wb-base.run {
-  stroke: color-mix(in srgb, var(--up) 28%, transparent);
-}
-.wb-base.jam {
-  stroke: color-mix(in srgb, #c0563f 30%, transparent);
-}
-.wb-base.idle,
-.wb-base.build {
-  stroke: color-mix(in srgb, var(--line) 70%, transparent);
-}
-.wb-flow {
-  stroke-width: 7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 7 17;
-}
-.wb-flow.run {
-  stroke: var(--up);
-  animation: wb-beltflow 1s linear infinite;
-}
-.wb-flow.jam {
-  stroke: #c0563f;
-  animation: wb-beltflow 1s linear infinite;
-}
-.wb-flow.idle {
-  stroke: var(--ink-faint);
-  stroke-dasharray: 2 18;
-}
-.wb-flow.build {
-  stroke: var(--dn);
-  stroke-dasharray: 5 10;
-}
-@keyframes wb-beltflow {
-  to {
-    stroke-dashoffset: -24;
-  }
-}
-/* nodes */
-.wb-box {
-  fill: var(--paper);
+.iso-ground {
+  fill: color-mix(in srgb, var(--ink) 4%, var(--paper));
   stroke: var(--line);
+  stroke-width: 1;
+}
+/* iso block faces — top lightest, right darkest; hue set per-group via --mc */
+.iso-face-t {
+  fill: color-mix(in srgb, var(--mc, var(--accent)) 22%, var(--paper));
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.iso-face-l {
+  fill: color-mix(in srgb, var(--mc, var(--accent)) 40%, var(--paper));
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.iso-face-r {
+  fill: color-mix(in srgb, var(--mc, var(--accent)) 58%, var(--paper));
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.iso-machine.run {
+  --mc: var(--up);
+}
+.iso-machine.idle,
+.iso-machine.jam {
+  --mc: #c0563f;
+}
+.iso-machine.build {
+  --mc: var(--ink-faint);
+}
+.iso-dock {
+  --mc: var(--accent);
+}
+.iso-dock.jam {
+  --mc: #c0563f;
+}
+.iso-machine {
+  cursor: grab;
+}
+.iso-machine:hover .iso-face-t {
+  stroke: var(--ink);
   stroke-width: 1.5;
 }
-.wb-box.run {
-  stroke: var(--up);
+.iso-machine.dragging {
+  cursor: grabbing;
+  filter: drop-shadow(0 7px 9px rgba(0, 0, 0, 0.28));
 }
-.wb-box.idle {
-  stroke: #c0563f;
+.iso-cog {
+  color: var(--ink-dim);
 }
-.wb-box.build {
-  stroke: var(--dn);
-  stroke-dasharray: 4 3;
-}
-.wb-box.bay {
+.iso-dock.hot .iso-face-t,
+.iso-dock.hot .iso-face-l,
+.iso-dock.hot .iso-face-r {
   stroke: var(--accent);
+  stroke-width: 2;
 }
-.wb-box.bay.jam {
-  stroke: #c0563f;
+.iso-cap {
+  fill: color-mix(in srgb, var(--ink) 12%, var(--paper));
 }
-.wb-name {
+.iso-cap-fill {
+  fill: var(--up);
+}
+.iso-cap-fill.jam {
+  fill: #c0563f;
+}
+.iso-truck {
+  font-size: 17px;
+}
+.iso-name {
   fill: var(--ink);
   font-size: 11px;
   font-weight: 700;
 }
-.wb-sub {
+.iso-sub {
   fill: var(--ink-dim);
-  font-size: 9px;
+  font-size: 9.5px;
 }
-.wb-sub.jam {
+.iso-sub.jam {
   fill: #c0563f;
 }
-.wb-node {
-  cursor: pointer;
+/* conveyors: solid base + flowing dashed surface */
+.iso-belt-base {
+  stroke-width: 12;
+  stroke-linecap: round;
 }
-.wb-node:hover .wb-box {
-  stroke-width: 2.5;
+.iso-belt-base.run {
+  stroke: color-mix(in srgb, var(--up) 26%, transparent);
+}
+.iso-belt-base.jam {
+  stroke: color-mix(in srgb, #c0563f 30%, transparent);
+}
+.iso-belt-base.idle,
+.iso-belt-base.build {
+  stroke: color-mix(in srgb, var(--line) 70%, transparent);
+}
+.iso-belt-flow {
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: 6 16;
+}
+.iso-belt-flow.run {
+  stroke: var(--up);
+  animation: iso-flow 1s linear infinite;
+}
+.iso-belt-flow.jam {
+  stroke: #c0563f;
+  animation: iso-flow 1s linear infinite;
+}
+.iso-belt-flow.idle {
+  stroke: var(--ink-faint);
+  stroke-dasharray: 2 18;
+}
+.iso-belt-flow.build {
+  stroke: var(--dn);
+  stroke-dasharray: 5 10;
+}
+@keyframes iso-flow {
+  to {
+    stroke-dashoffset: -22;
+  }
 }
 /* alerts feed */
 .wh-alerts {
