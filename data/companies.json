@@ -2580,7 +2580,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82522,
     "events": [
       {
         "cycle": 0,
@@ -2589,6 +2589,16 @@
         "head": "Palettstone & Sons — Tools your grandfather would recognize",
         "body": "Four generations on, Palettstone & Sons still grinds, forges, and hardens hand tools the slow way. The workshop sells everything from a starter set for the first apartment to a premium chest a tradesman wills to his apprentice. Hammers balanced to the ounce, wrenches that bite and hold. They never chased gimmicks; they chased grip, heft, and the satisfying weight of a tool that simply works. The family name is still on every handle.",
         "effects": {}
+      },
+      {
+        "cycle": 82522,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Palettstone & Sons Unveils Heirloom Pro Line of Hand Tools",
+        "body": "The 116-year-old toolmaker introduced its Heirloom Pro range, a 40-piece collection of wrenches, chisels and hammers backed by a lifetime replacement guarantee. CEO Cole Fenn said the line targets working tradespeople willing to pay a premium, with units priced 30% above the company's standard catalog. First shipments reach 4,200 hardware outlets next month.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -2603,7 +2613,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82522,
     "events": [
       {
         "cycle": 0,
@@ -2612,6 +2622,16 @@
         "head": "Skarngrave — Sterile is not a suggestion",
         "body": "Skarngrave equips the rooms where mistakes are measured in lives. Their medical equipment and clinical sanitation lines climb from dependable ward stock to a luxury tier built for the operating theatre, where every surface and instrument answers to a higher tolerance. Hospitals specify the name when failure is not an option. Precision is the product, and the premium and luxury ranges have made Skarngrave a quiet benchmark wherever sterility cannot be compromised.",
         "effects": {}
+      },
+      {
+        "cycle": 82522,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Skarngrave Wins Five-Year Sterilization Supply Contract",
+        "body": "Skarngrave secured a $310 million agreement to supply sterilization equipment and Jansan consumables to the Meridian Health Network's 88 facilities. CEO Orla Dray called the deal 'steady work for steady people,' noting it replaces a rival incumbent after a competitive bid. Deliveries begin in the first quarter.",
+        "effects": {
+          "medical": 0.13
+        }
       }
     ]
   },
@@ -2626,7 +2646,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82522,
     "events": [
       {
         "cycle": 0,
@@ -2635,6 +2655,16 @@
         "head": "Skarngrove & Sons — Hold the whole thing together",
         "body": "Skarngrove & Sons threads, casts, and rolls the parts buildings depend on. Fasteners and fixings that won't back out under load; structural materials rated for the floors above your head. From mass-grade bolts that fill a contractor's bin to premium steel destined for serious spans, the family has spent a century proving that the small pieces decide whether the big ones stand. Engineers spec them because the failure they fear most never comes.",
         "effects": {}
+      },
+      {
+        "cycle": 82522,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Skarngrove & Sons Breaks Ground on New Fastener Plant",
+        "body": "The structural materials maker began construction on a 540,000-square-foot fastener facility in the Calderbridge industrial corridor, a $215 million investment expected to add 600 jobs. CEO Quinn Fenn said demand from high-rise contractors had stretched existing capacity to its limit. The plant is slated to open in 18 months.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -2672,7 +2702,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82522,
     "events": [
       {
         "cycle": 0,
@@ -2681,6 +2711,16 @@
         "head": "Skarnvale — Move more, drop nothing",
         "body": "Skarnvale builds the muscle of the warehouse: pallet jacks, carts, racking, the material-handling gear that turns chaos into throughput. Forged in the logistics trade, they understand that downtime is the only real cost. The everyday range keeps small operations rolling; the premium tier carries the abuse of round-the-clock floors. Operators lean on Skarnvale because the load always moves, the wheels always turn, and nothing ends up on the concrete.",
         "effects": {}
+      },
+      {
+        "cycle": 82522,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Skarnvale Misses Quarterly Targets as Freight Costs Bite",
+        "body": "Skarnvale reported quarterly profit of $48 million, well short of the $71 million analysts expected, blaming surging fuel and a backlog at three regional depots. CEO Lena Calder acknowledged 'a rough stretch' but insisted handling-equipment orders remain strong heading into the next quarter. Shares of the logistics house slid in after-hours activity.",
+        "effects": {
+          "logistics": -0.13
+        }
       }
     ]
   },
@@ -2695,7 +2735,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82522,
     "events": [
       {
         "cycle": 0,
@@ -2704,6 +2744,16 @@
         "head": "Steg Tooling — Where everything else bolts together",
         "body": "Steg Tooling is the quiet firm holding the loud world in place. They machine auto parts and turn out fasteners and fixings by the millions, each thread cut to tolerances you could lose an argument over. The standard stock fills every hardware drawer; the premium fixings clamp aircraft skins and engine blocks. Nobody throws a parade for a perfect bolt, which suits Steg fine. Small steel, immense consequence, never once permitted to fail.",
         "effects": {}
+      },
+      {
+        "cycle": 82522,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Steg Tooling Tops Forecasts on Auto-Parts Surge",
+        "body": "Steg Tooling posted quarterly revenue of $390 million, up 14% year over year, beating estimates as auto-parts and fastener volumes climbed. CEO Iris Vossen credited disciplined inventory management and new contracts with three vehicle assemblers. The firm raised its full-year outlook modestly.",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -2718,7 +2768,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82522,
     "events": [
       {
         "cycle": 0,
@@ -2727,6 +2777,16 @@
         "head": "Stegforge — Heavy industry, made to last",
         "body": "Stegforge is an old name with iron under its fingernails. They cast farm equipment, machine tools, structural stock, and raw textiles from the same belief: industry runs on things that refuse to quit. The value lines arm working operations on a budget; the premium tier supplies plants that measure uptime in decades. Spanning field, factory, and mill, Stegforge has the unfussy authority of a maker that built half of what the trades take for granted.",
         "effects": {}
+      },
+      {
+        "cycle": 82522,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Stegforge Debuts Longer-Lasting Alloy for Heavy Machinery",
+        "body": "Stegforge announced a new wear-resistant steel alloy that lab tests show extends component life by up to 40% under heavy load. CEO Aurelia Steg said the material will first appear in the company's farm-equipment gearboxes before reaching industrial machine lines. Patents covering the process have been filed in nine jurisdictions.",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -2741,7 +2801,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82522,
     "events": [
       {
         "cycle": 0,
@@ -2750,6 +2810,16 @@
         "head": "Stegreach — Power, light, and a tight grip",
         "body": "Stegreach wires and bolts the modern jobsite together. Their catalogue runs three ways at once: fasteners and fixings, lighting that survives a worksite, and wire and cable rated for the long pull. Builders trust the everyday grades for daily framing and rough-in, while the premium tier handles installs that have to pass the strictest inspection. One supplier for the things that hold fast and the things that carry current. Fewer trucks, fewer excuses.",
         "effects": {}
+      },
+      {
+        "cycle": 82522,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Stegreach Lands Wiring Contract for Major Transit Project",
+        "body": "Stegreach won a $185 million contract to supply wire, cable and lighting for the Eastmere regional transit expansion. CEO Halden Ashby called it 'the kind of bold swing that pays off,' noting the deal spans four years and 60 station sites. Material deliveries start this spring.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -2757,14 +2827,14 @@
     "aiOwned": true,
     "homeSector": "consumer",
     "founded": 1983,
-    "ceo": "Sable Wold",
-    "ceoSince": 1983,
+    "ceo": "Renna Voss",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.58,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82522,
     "events": [
       {
         "cycle": 0,
@@ -2772,6 +2842,14 @@
         "size": "standard",
         "head": "Thaldale Group — Good tools, fair price, no fuss",
         "body": "Thaldale Group exists for the weekend fixer and the budget-minded crew. Hand tools and hardware that do the job without asking for a premium, sold by value and mid-tier grades that punch above their cost. They never promised heirlooms; they promised a screwdriver that holds its tip and a kit that gets you through the project. Honest, accessible, and everywhere a homeowner first reaches when something needs tightening.",
+        "effects": {}
+      },
+      {
+        "cycle": 82522,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Thaldale Group CEO Sable Wold Steps Down After Boardroom Clash",
+        "body": "Sable Wold resigned abruptly after 41 years leading the value-tool maker, following reported disagreements with the board over an aggressive overseas expansion plan. The company named operations chief Renna Voss as interim chief executive, pledging continuity for its budget-conscious customers. Shares wobbled on the surprise departure before steadying.",
         "effects": {}
       }
     ]

@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-26T07:26:36.527Z",
+  "generatedAt": "2026-06-26T12:51:43.669Z",
   "beats": [
+    {
+      "company": "Palettstone & Sons",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Palettstone & Sons Unveils Heirloom Pro Line of Hand Tools",
+      "body": "The 116-year-old toolmaker introduced its Heirloom Pro range, a 40-piece collection of wrenches, chisels and hammers backed by a lifetime replacement guarantee. CEO Cole Fenn said the line targets working tradespeople willing to pay a premium, with units priced 30% above the company's standard catalog. First shipments reach 4,200 hardware outlets next month.",
+      "cycle": 82522,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrave",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Skarngrave Wins Five-Year Sterilization Supply Contract",
+      "body": "Skarngrave secured a $310 million agreement to supply sterilization equipment and Jansan consumables to the Meridian Health Network's 88 facilities. CEO Orla Dray called the deal 'steady work for steady people,' noting it replaces a rival incumbent after a competitive bid. Deliveries begin in the first quarter.",
+      "cycle": 82522,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Skarngrove & Sons Breaks Ground on New Fastener Plant",
+      "body": "The structural materials maker began construction on a 540,000-square-foot fastener facility in the Calderbridge industrial corridor, a $215 million investment expected to add 600 jobs. CEO Quinn Fenn said demand from high-rise contractors had stretched existing capacity to its limit. The plant is slated to open in 18 months.",
+      "cycle": 82522,
+      "dur": 2
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Skarnvale Misses Quarterly Targets as Freight Costs Bite",
+      "body": "Skarnvale reported quarterly profit of $48 million, well short of the $71 million analysts expected, blaming surging fuel and a backlog at three regional depots. CEO Lena Calder acknowledged 'a rough stretch' but insisted handling-equipment orders remain strong heading into the next quarter. Shares of the logistics house slid in after-hours activity.",
+      "cycle": 82522,
+      "dur": 2
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Steg Tooling Tops Forecasts on Auto-Parts Surge",
+      "body": "Steg Tooling posted quarterly revenue of $390 million, up 14% year over year, beating estimates as auto-parts and fastener volumes climbed. CEO Iris Vossen credited disciplined inventory management and new contracts with three vehicle assemblers. The firm raised its full-year outlook modestly.",
+      "cycle": 82522,
+      "dur": 2
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "breakthrough",
+      "size": "standard",
+      "head": "Stegforge Debuts Longer-Lasting Alloy for Heavy Machinery",
+      "body": "Stegforge announced a new wear-resistant steel alloy that lab tests show extends component life by up to 40% under heavy load. CEO Aurelia Steg said the material will first appear in the company's farm-equipment gearboxes before reaching industrial machine lines. Patents covering the process have been filed in nine jurisdictions.",
+      "cycle": 82522,
+      "dur": 2
+    },
+    {
+      "company": "Stegreach",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Stegreach Lands Wiring Contract for Major Transit Project",
+      "body": "Stegreach won a $185 million contract to supply wire, cable and lighting for the Eastmere regional transit expansion. CEO Halden Ashby called it 'the kind of bold swing that pays off,' noting the deal spans four years and 60 station sites. Material deliveries start this spring.",
+      "cycle": 82522,
+      "dur": 2
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Thaldale Group CEO Sable Wold Steps Down After Boardroom Clash",
+      "body": "Sable Wold resigned abruptly after 41 years leading the value-tool maker, following reported disagreements with the board over an aggressive overseas expansion plan. The company named operations chief Renna Voss as interim chief executive, pledging continuity for its budget-conscious customers. Shares wobbled on the surprise departure before steadying.",
+      "cycle": 82522,
+      "dur": 8
+    },
     {
       "company": "Korrwright Group",
       "sector": "construction",
@@ -20,16 +100,6 @@
       "body": "The hospitality group has purchased Sundle Werks, a mid-sized jansan manufacturer, for $340 million, folding its detergent and sanitizer lines into Maison & Vale's household catalog. Restless as ever, CEO Rhys Kessler framed the buy as 'closing the last gap between our front desks and our supply closets.' The deal adds three plants and roughly 900 workers.",
       "cycle": 82521,
       "dur": 2
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Marrowcyon Rolls Out Hardwear Fixture Line for Rentals",
-      "body": "Marrowcyon introduced its Hardwear series of corrosion-resistant faucets and valve sets aimed at high-turnover rental housing, priced about 15% below its premium range. CEO Theo Orne said early orders from two property-management chains were 'steady, as expected.' The line ships nationwide within the month.",
-      "cycle": 82521,
-      "dur": 1
     },
     {
       "company": "Marrowmoor Holdings",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Ornewright Supply Opens Regional Distribution Hub in Caldmere",
-      "body": "Ornewright Supply unveiled a 480,000-square-foot distribution hub in Caldmere to shorten delivery windows for farm inputs and jansan goods across the eastern corridor. CEO Rhys Throne said the site 'lets us reach a customer the same day we used to need two.' The hub adds about 250 jobs at full capacity.",
-      "cycle": 82521,
-      "dur": 1
-    },
-    {
       "company": "Palettstead Holdings",
       "sector": "logistics",
       "kind": "product_launch",
@@ -79,36 +139,6 @@
       "head": "Palettstead Debuts Reusable Crate System for Cold-Chain Shippers",
       "body": "Palettstead launched ReCircle, a returnable insulated crate program designed for perishable and pharmaceutical freight, with the first 200,000 units entering circulation this quarter. CEO Orla Marrow described it as 'a steady idea with a bold rollout,' citing two grocery distributors already signed on. The company projects the line could cover 8% of its packaging volume within two years.",
       "cycle": 82521,
-      "dur": 2
-    },
-    {
-      "company": "Holtgate Group",
-      "sector": "textiles",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Holtgate Group Locks Multi-Year Supply Pact With Uniform Makers Guild",
-      "body": "Holtgate confirmed a four-year agreement to supply 12 million yards of base cloth annually to the Eastfield Uniform Consortium. CEO Dorian Throne called the deal 'the kind of steady work we were built for,' noting it secures roughly 18% of Holtgate's mill capacity through 1951.",
-      "cycle": 82520,
-      "dur": 2
-    },
-    {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Holtware Co. Unveils Lifetime-Warranty Hand Tool Line",
-      "body": "Holtware introduced its new 'Ironhold' series of wrenches and pliers, backed by an unconditional replacement pledge. CEO Aurelia Dray said early orders from regional hardware chains exceeded 40,000 units, framing the launch as 'a calculated bet that durability still sells.'",
-      "cycle": 82520,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "standard",
-      "head": "Ironcrestton Sweeps Coveted Artisan's Circle Honors",
-      "body": "Ironcrestton took three of five top prizes at this year's Artisan's Circle gala, including Object of the Year for its hand-finished travel case. CEO Sable Carrow, never shy of a stage, declared the wins 'proof that the few who notice are noticing us.'",
-      "cycle": 82520,
       "dur": 2
     },
     {
@@ -120,26 +150,6 @@
       "body": "Kessel Drive pulled the covers off its flagship 'Meridian' touring model, paired with a new high-capacity storage cell promising 30% longer service life. CEO Dorian Brandt staged the launch before 2,000 guests, claiming pre-orders topped 6,500 units within 48 hours — the company's biggest rollout in a decade.",
       "cycle": 82520,
       "dur": 8
-    },
-    {
-      "company": "Kesselgrove Co.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Kesselgrove Co. Posts Quiet Record Quarter on Machine Demand",
-      "body": "Kesselgrove reported quarterly revenue of $84 million, up 11% year-on-year, driven by orders for its precision press lines. CEO Orla Steg credited 'steady, unglamorous discipline,' adding that the order backlog now stretches into next spring.",
-      "cycle": 82520,
-      "dur": 2
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrworks Wins Port Authority Handling Contract",
-      "body": "Korrworks secured a contract to supply forklifts and conveyor systems to the Brevald Port Authority, valued at an estimated $22 million over three years. CEO Rhys Throne said the win positions the company to bid on two adjacent terminal upgrades expected next year.",
-      "cycle": 82520,
-      "dur": 2
     },
     {
       "company": "Halcrest",
