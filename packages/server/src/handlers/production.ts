@@ -68,8 +68,11 @@ export async function handler(): Promise<{ producers: number; worked: number }> 
       const pv = playerView(cur as WorldDoc, p);
       let changed = false;
 
-      // 1. Factory production on the fast clock.
-      let tick = p.lastProdTick ?? prodTarget;
+      // 1. Factory production on the fast clock. A brand-new producer starts one
+      //    tick back so its first run produces a batch (and persists lastProdTick);
+      //    otherwise it would sit at `prodTarget`, never enter the loop, never get
+      //    saved, and never produce anything.
+      let tick = p.lastProdTick ?? prodTarget - 1;
       pv.cycle = tick;
       let pc = 0;
       while (tick < prodTarget && pc < MAX_PROD_CATCHUP) {

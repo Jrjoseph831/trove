@@ -5390,6 +5390,13 @@ body {
 .site-myinfo b {
   font-size: 17px;
 }
+.site-mylink {
+  cursor: pointer;
+}
+.site-mylink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .site-mystate {
   font-size: 12px;
   color: var(--ink-dim);

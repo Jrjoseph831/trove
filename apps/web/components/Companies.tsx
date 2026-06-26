@@ -102,6 +102,19 @@ export function Companies() {
   }
 
   if (open === "__me__") {
+    // Published → show your REAL public page (server data, real rank), exactly as
+    // others see it, with your owner controls. Not published yet → local draft.
+    if (mySite?.published && mySite.handle) {
+      return (
+        <RemoteSite
+          handle={mySite.handle}
+          kind="player"
+          owner
+          onEdit={() => setEditing(true)}
+          onBack={() => setOpen(null)}
+        />
+      );
+    }
     const site = ownPreview(mySite, desk?.name ?? null, ownStorefront(state), state);
     return (
       <SiteView
@@ -248,7 +261,13 @@ function Directory({
       <div className="site-myrow">
         <div className="site-myinfo">
           <span className="site-mylab">Your company</span>
-          <b>{manufacturingName(myName)}</b>
+          {hasSite ? (
+            <b className="site-mylink" onClick={onOpenMine}>
+              {manufacturingName(myName)}
+            </b>
+          ) : (
+            <b>{manufacturingName(myName)}</b>
+          )}
           <span className="site-mystate">
             {!hasSite
               ? "Not set up yet"
@@ -302,10 +321,14 @@ function Directory({
 function RemoteSite({
   handle,
   kind,
+  owner,
+  onEdit,
   onBack,
 }: {
   handle: string;
   kind: "player" | "house";
+  owner?: boolean;
+  onEdit?: () => void;
   onBack: () => void;
 }) {
   const [site, setSite] = useState<CompanySite | null>(null);
@@ -343,7 +366,7 @@ function RemoteSite({
       </div>
     );
   }
-  return <SiteView site={site} onBack={onBack} />;
+  return <SiteView site={site} owner={owner} onEdit={onEdit} onBack={onBack} />;
 }
 
 /** Top holdings grid — the transparent, auditable inventory, on every page. */
