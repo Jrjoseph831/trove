@@ -36,7 +36,7 @@ export function WarehouseLab() {
   const health: "idle" | "flow" | "slow" | "jam" =
     demand === 0 ? "idle" : util > 1 ? "jam" : util >= 0.85 ? "slow" : "flow";
   const beltDur = health === "jam" ? 3 : health === "slow" ? 1.8 : 1;
-  const pkgDur = Math.max(3, Math.min(7, 8 - Math.log10(Math.max(1, realized))));
+  const pkgDur = Math.max(4.5, Math.min(9, 10 - Math.log10(Math.max(1, realized))));
 
   // ── Bay slots ──────────────────────────────────────────────────────────────
   const IN_SLOTS = Math.max(3, Math.min(5, state.floorSlots));
@@ -70,6 +70,17 @@ export function WarehouseLab() {
   const topD = (j: number) => `M ${topX(j)} ${SPINE} L ${topX(j)} ${TOPY + 28}`;
   const rightD = (k: number) =>
     `M ${SPINE_X1} ${SPINE} L 652 ${SPINE} L 652 ${rightY(k)} L ${RIGHTX - 30} ${rightY(k)}`;
+
+  // Full source→center→dock route a package travels: out of an inbound bay,
+  // down to the spine, along the center, then off to its outbound area.
+  const routeD = (i: number, o: { edge: "top" | "right"; idx: number }) => {
+    const head = `M ${INX + 19} ${inY(i)} L ${SPINE_X0} ${inY(i)} L ${SPINE_X0} ${SPINE}`;
+    const tail =
+      o.edge === "top"
+        ? `L ${topX(o.idx)} ${SPINE} L ${topX(o.idx)} ${TOPY + 28}`
+        : `L 652 ${SPINE} L 652 ${rightY(o.idx)} L ${RIGHTX - 30} ${rightY(o.idx)}`;
+    return `${head} ${tail}`;
+  };
 
   const activeLines = lines.length;
 
@@ -120,19 +131,26 @@ export function WarehouseLab() {
             )}
           </svg>
 
-          {/* packages riding the active outbound branches */}
+          {/* packages: a staggered stream from each source bay, through the
+              center, out to its outbound area */}
           {activeLines > 0 &&
-            order.slice(0, docks).map((o) => {
-              const d = o.edge === "top" ? topD(o.idx) : rightD(o.idx);
-              return (
+            order.slice(0, docks).flatMap((o, a) => {
+              const src = a % activeLines; // which inbound bay feeds this route
+              const route = routeD(src, o);
+              const N = 3;
+              return Array.from({ length: N }).map((_, p) => (
                 <span
-                  key={`pk${o.edge}${o.idx}`}
+                  key={`pk${o.edge}${o.idx}-${p}`}
                   className="pk2"
-                  style={{ offsetPath: `path("${d}")`, animationDuration: `${pkgDur}s` }}
+                  style={{
+                    offsetPath: `path("${route}")`,
+                    animationDuration: `${pkgDur}s`,
+                    animationDelay: `${-(pkgDur / N) * p}s`,
+                  }}
                 >
                   <img src="/lab/package.svg" alt="" draggable={false} />
                 </span>
-              );
+              ));
             })}
 
           {/* inbound bays (left) */}
