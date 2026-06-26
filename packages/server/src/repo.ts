@@ -24,6 +24,7 @@ import {
   createWorld,
   DEBT_RATE,
   emptyLedger,
+  listedUnitPrice,
   START_CASH,
   STARTING_SLOTS,
   wallCycle,
@@ -445,7 +446,7 @@ function topSectorOf(id: number): string {
 /** The LISTED produced goods that make up a player's storefront. */
 export function storefrontOf(doc: WorldDoc, player: Player): CompanyProduct[] {
   const prod = player.producedQty ?? {};
-  const qc = player.infra?.qc ? 1.06 : 1;
+  const qcOn = !!player.infra?.qc;
   const out: CompanyProduct[] = [];
   for (const idStr of Object.keys(prod)) {
     const id = Number(idStr);
@@ -458,7 +459,8 @@ export function storefrontOf(doc: WorldDoc, player: Player): CompanyProduct[] {
     out.push({
       id,
       name: catById.get(id)?.name ?? `#${id}`,
-      price: Math.round(it.value * mult * qc),
+      // Same canonical formula the engine uses for listing sales + order pricing.
+      price: Math.round(listedUnitPrice(it.value, mult, qcOn)),
       available: qty,
     });
   }

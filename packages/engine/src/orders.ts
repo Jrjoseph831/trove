@@ -18,6 +18,7 @@ import {
   sectorKeys,
 } from "@trove/data";
 import type { Item, SectorKey } from "@trove/data";
+import { listedUnitPrice } from "./pricing";
 import { rand } from "./rng";
 import type { DeskAuto, Order, RuntimeItem, WorldState } from "./types";
 
@@ -284,9 +285,11 @@ export function generateSandboxOrder(
   const produced = state.factories.some((f) => f.itemId === it.id);
 
   // Retail = what your version sells for (your price if you make it, else
-  // market), lifted by the QC Hub upgrade.
-  const qc = state.infra?.qc ? 1.06 : 1;
-  const retail = Math.max(0.01, (produced ? listPriceOf(state, it) : it.value) * qc);
+  // market), via the one canonical listed-price formula (incl. the QC premium).
+  const retail = Math.max(
+    0.01,
+    listedUnitPrice(it.value, produced ? listMult(state, it.id) : 1, !!state.infra?.qc),
+  );
   // Cost floor: your production cost if you make it, else a market-buy proxy.
   const cost = produced
     ? (productionCostOf(state, it) ?? it.value * 0.6)

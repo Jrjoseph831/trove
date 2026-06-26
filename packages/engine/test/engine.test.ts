@@ -1,18 +1,22 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { items as catalog } from "@trove/data";
+import { canProduce, COMPANY_TIERS, items as catalog } from "@trove/data";
 import {
+  accrueIncome,
   advance,
   assetsValue,
+  buildFactory,
   canBuy,
   createWorld,
   elasticity,
   freshState,
   held,
+  listedUnitPrice,
   mulberry32,
   netWorth,
   playerBuy,
   playerSell,
   priceItem,
+  reconcileCompanies,
   resetRng,
   scarcity,
   setRng,
@@ -226,6 +230,84 @@ describe("news variety", () => {
     // and it actually pulls from a large, varied pool
     expect(new Set(fronts).size).toBeGreaterThan(40);
   });
+});
+
+describe("listed-price formula is single-sourced", () => {
+  it("is value × markup × QC, exactly", () => {
+    expect(listedUnitPrice(100, 1, false)).toBe(100);
+    expect(listedUnitPrice(100, 1.25, false)).toBeCloseTo(125, 6);
+    expect(listedUnitPrice(100, 1, true)).toBeCloseTo(106, 6); // QC premium 6%
+    expect(listedUnitPrice(200, 1.5, true)).toBeCloseTo(200 * 1.5 * 1.06, 6);
+  });
+});
+
+describe("AI company finances reconcile", () => {
+  it("every company books exactly its income each cycle", () => {
+    const S = createWorld(0);
+    const before = S.traders.map((t) => ({ cash: t.cash, income: t.income ?? 0 }));
+    accrueIncome(S);
+    S.traders.forEach((t, i) => {
+      expect(t.cash).toBeCloseTo(before[i]!.cash + before[i]!.income, 6);
+      expect(before[i]!.income).toBeGreaterThan(0); // a real, positive revenue
+    });
+  });
+
+  it("reconcileCompanies upgrades a legacy world without losing balances", () => {
+    const S = createWorld(0);
+    // Simulate an old persisted world: one untiered trader with custom cash.
+    S.traders = [{ name: "Open_Index", cash: 142_345, bias: null, next: 0.5 }];
+    reconcileCompanies(S);
+    const idx = S.traders.find((t) => t.name === "Open_Index")!;
+    expect(idx.cash).toBe(142_345); // balance preserved
+    expect(idx.tier).toBeDefined(); // tier backfilled
+    expect(idx.income).toBeGreaterThan(0);
+    expect(S.traders.length).toBeGreaterThan(1); // missing companies added
+  });
+
+  it("no company ever spends below its tier reserve, across 200 cycles of news + trading", () => {
+    setRng(mulberry32(13));
+    const S = createWorld();
+    const violations: string[] = [];
+    for (let c = 0; c < 200; c++) {
+      for (const t of S.traders) traderAct(S, t);
+      settleCycle(S); // advances news/economy AND books income
+      for (const t of S.traders) {
+        const floor = COMPANY_TIERS[t.tier ?? "mid"].floor;
+        if (t.cash < floor - 0.01) violations.push(`c${c} ${t.name} cash=${Math.round(t.cash)} < floor ${floor}`);
+        if (!Number.isFinite(netWorth(S, t.name))) violations.push(`c${c} ${t.name} net worth not finite`);
+      }
+    }
+    expect(violations).toEqual([]);
+  }, 20000);
+});
+
+describe("production + listings stay consistent", () => {
+  it("a producing/selling player keeps non-negative, finite books across cycles", () => {
+    setRng(mulberry32(21));
+    const S = createWorld(0);
+    S.cash = 2_000_000; // fund the build
+    S.floorSlots = 4;
+    const target = catalog.find((i) => canProduce(i as RuntimeItem))!;
+    expect(buildFactory(S, target.id)).not.toBeNull();
+    const cashAfterBuild = S.cash;
+    expect(cashAfterBuild).toBeLessThan(2_000_000); // build cost was charged
+
+    const issues: string[] = [];
+    for (let c = 0; c < 60; c++) {
+      settleCycle(S); // line comes online, produces, lists/sells, reports
+      if (!Number.isFinite(S.cash)) issues.push(`c${c} cash not finite`);
+      for (const id of Object.keys(S.producedQty ?? {})) {
+        if ((S.producedQty[Number(id)] ?? 0) < 0) issues.push(`c${c} producedQty<0`);
+      }
+      for (const it of S.items) {
+        if ((it.owners["YOU"] ?? 0) < 0) issues.push(`c${c} #${it.id} held<0`);
+      }
+      if (S.ledger.listingUnits < 0 || S.ledger.listingRev < 0)
+        issues.push(`c${c} negative listing flow`);
+    }
+    expect(issues).toEqual([]);
+    expect(Number.isFinite(netWorth(S, "YOU"))).toBe(true);
+  }, 20000);
 });
 
 describe("headless sim smoke", () => {

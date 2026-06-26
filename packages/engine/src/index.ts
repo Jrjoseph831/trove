@@ -21,6 +21,7 @@ import {
   type CompanyTier,
 } from "@trove/data";
 import type { News, SectorKey } from "@trove/data";
+import { listedUnitPrice, QC_PREMIUM } from "./pricing";
 import { rand, rexp } from "./rng";
 import type {
   ActiveStory,
@@ -63,6 +64,7 @@ export function itemFlow(led: Ledger, id: number): ItemFlow {
 export * from "./types";
 export * from "./orders";
 export { setRng, resetRng, rand, rexp, mulberry32 } from "./rng";
+export { listedUnitPrice, QC_PREMIUM } from "./pricing";
 
 // ── Constants ────────────────────────────────────────────────────────────────
 
@@ -687,7 +689,6 @@ export function floorLaneCapacity(
 }
 
 // ── Floor infrastructure (one-time floor-wide upgrades) ──────────────────────
-export const QC_PREMIUM = 0.06;
 export interface InfraUpgrade {
   id: "power" | "router" | "qc";
   name: string;
@@ -949,7 +950,7 @@ function sellListings(state: WorldState): void {
     const it = state.items.find((i) => i.id === id);
     if (!it) continue;
     const mult = state.listPrices?.[id] ?? 1;
-    const price = it.value * mult * qcFactor(state); // QC Hub lifts your price
+    const price = listedUnitPrice(it.value, mult, !!state.infra?.qc); // canonical
     const demand = Math.max(0.04, Math.min(1.4, 1.8 - mult)); // price-sensitive
     // News-driven demand: a sector the news has cooled buys fewer of your units
     // (and pays less, since it.value already fell); a heated one buys more.

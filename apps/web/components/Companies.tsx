@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ArrowDown, ArrowUp, Globe, Pencil } from "lucide-react";
 import { getItem, sectorLabel, type SectorKey } from "@trove/data";
-import type { SiteConfig, SiteSectionId } from "@trove/engine";
+import { listedUnitPrice, type SiteConfig, type SiteSectionId } from "@trove/engine";
 import {
   fetchCompanies,
   fetchCompany,
@@ -37,7 +37,7 @@ const label = (key: string): string =>
  *  owner gets an instant preview (their listed produced goods, at their price). */
 function ownStorefront(state: ReturnType<typeof useTrove>["state"]): CompanyProduct[] {
   const prod = state.producedQty ?? {};
-  const qc = state.infra?.qc ? 1.06 : 1;
+  const qcOn = !!state.infra?.qc;
   const out: CompanyProduct[] = [];
   for (const idStr of Object.keys(prod)) {
     const id = Number(idStr);
@@ -50,7 +50,9 @@ function ownStorefront(state: ReturnType<typeof useTrove>["state"]): CompanyProd
     out.push({
       id,
       name: it.name,
-      price: Math.round(it.value * mult * qc),
+      // Same canonical formula the server storefront + engine use, so the
+      // owner's preview matches exactly what others see and what orders charge.
+      price: Math.round(listedUnitPrice(it.value, mult, qcOn)),
       available: qty,
     });
   }
