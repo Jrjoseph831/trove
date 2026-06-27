@@ -142,7 +142,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82527,
     "events": [
       {
         "cycle": 0,
@@ -168,6 +168,16 @@
         "size": "standard",
         "head": "Aperture Compute Secures Backing to Scale Dawnmere Interconnect",
         "body": "Fresh off its Dawnmere splash, Aperture Compute lined up a sizable financing round led by the Vell Harbor merchant houses to mass-produce its interconnect. Halden Dray said the funds will fast-track a new fabrication line. He vowed shipping product 'before anyone copies the slide.'",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82527,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Aperture Compute Breaks Ground on Second Dawnmere Site",
+        "body": "Flush with fresh backing, Aperture Compute began construction on a second Dawnmere facility built around its faster interconnect, targeting a 60% lift in capacity. Halden Dray promised first racks online within nine months and teased customer pilots already lined up. The £200 million build will add roughly 400 jobs to the region.",
         "effects": {
           "technology": 0.13
         }
@@ -421,7 +431,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82527,
     "events": [
       {
         "cycle": 0,
@@ -437,6 +447,16 @@
         "size": "standard",
         "head": "Bruncraft Industries Launches the Foundry City Runabout",
         "body": "Orla Marrow introduced the Foundry, a compact city vehicle aimed at dense districts where Bruncraft has lagged. The launch follows a string of acquisitions Marrow used to assemble its drivetrain. She called the Foundry 'the first car we built instead of bought.'",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82527,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Bruncraft Industries Tops Forecasts as Runabout Sells Through",
+        "body": "Bruncraft posted quarterly revenue of £612 million, up 14% year on year, with the Foundry City Runabout clearing its first production run weeks ahead of schedule. Orla Marrow told reporters that order books for the compact were 'comfortably full into next year' and hinted at a second assembly line. Margins widened on stronger parts pricing.",
         "effects": {
           "automotive": 0.13
         }
@@ -692,7 +712,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82527,
     "events": [
       {
         "cycle": 0,
@@ -718,6 +738,16 @@
         "size": "standard",
         "head": "Calderforge Hit by Cooling Failure at Aging Embergate Hall",
         "body": "Calderforge's original Embergate hall suffered a cooling failure that forced an emergency shutdown, briefly idling part of its capacity during the second-hall buildout. Nadia Throne conceded the old hall had been 'pushed too hard' to meet demand. Engineers restored service within a day, but the turbulence rattled clients.",
+        "effects": {
+          "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82527,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Calderforge to Retire Aging Embergate Hall After Outage",
+        "body": "Calderforge announced it will decommission the original Embergate compute hall, source of last month's cooling failure, and redirect workloads to its newer second hall. Nadia Throne pledged £55 million toward modern cooling systems and a phased migration over six months. The company conceded the older hall had been 'running past its years.'",
         "effects": {
           "technology": -0.13
         }
@@ -1392,7 +1422,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82527,
     "events": [
       {
         "cycle": 0,
@@ -1408,6 +1438,16 @@
         "size": "standard",
         "head": "Fennmoor Acquires Diagnostics Maker Larkspur Medical",
         "body": "Dorian Brandt extended Fennmoor's reach into medical equipment with the purchase of Larkspur Medical, a maker of portable diagnostic units. The acquisition rounds out Fennmoor's spread across devices, machines, and now clinical gear. Brandt said the house 'grows by addition, not patience.'",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82527,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Fennmoor Debuts Larkspur-Branded Diagnostics Line",
+        "body": "Fennmoor launched its first medical product since acquiring Larkspur Medical, a benchtop diagnostics unit aimed at regional clinics and priced to undercut incumbents. Dorian Brandt said the integration 'moved faster than anyone expected,' with Larkspur's lab team now embedded in Fennmoor's device division. The company is targeting 1,200 unit placements in the first year.",
         "effects": {
           "technology": 0.13
         }
@@ -2437,7 +2477,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82527,
     "events": [
       {
         "cycle": 0,
@@ -2465,6 +2505,16 @@
         "body": "Marlgear Supply secured its first major Atlas press order from Drennan Mills, a sizable fabricator in the southern works belt. Halden Vossen said the deal validates the firm's leap into industrial machines. Delivery is slated across two phases this year.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82527,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Marlgear Supply Lands Landmark Atlas Order From Carrow Group",
+        "body": "Marlgear signed a £240 million framework with manufacturing conglomerate Carrow Group to supply 90 Atlas Industrial Presses across eleven plants over three years, the largest order in the company's history. Halden Vossen called it 'the day the working floor changed hands,' staking Marlgear's expansion plans on the deal. Shares of the Drennan Mills supply chain are expected to ramp through next quarter.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -3072,7 +3122,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82527,
     "events": [
       {
         "cycle": 0,
@@ -3091,6 +3141,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82527,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Varnvale & Sons Folds Bellmont Into New Leather Atelier",
+        "body": "Following its acquisition, Varnvale & Sons has opened a dedicated leathercraft atelier at its Harrowgate flagship, retaining 140 Bellmont artisans under master craftsman Edmund Crale. Bram Wold framed the move as the start of a 'house of houses,' with leather goods set to debut alongside the spring timepiece line. The company is committing £18 million to retool the workshop floors.",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -3105,7 +3165,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82527,
     "events": [
       {
         "cycle": 0,
@@ -3133,6 +3193,16 @@
         "body": "Varnvale House faced sharp questions after a guild publication challenged the 'single-origin lacquer' claims behind its Ember capsule. Petra Holt fired back publicly, calling the report 'lazy and jealous,' before agreeing to an outside audit. The spat turned a glossy launch into a messy week.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82527,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Varnvale House Sued Over Ember Capsule Sourcing Disclosures",
+        "body": "A consumer coalition filed suit against Varnvale House, alleging the Ember Fine-Goods Capsule was marketed with origin claims the company could not substantiate. The complaint seeks £30 million and pulls directly from the scandal that erupted weeks ago; Petra Holt called the action 'opportunistic' but confirmed the capsule has been pulled from select counters pending review. An independent audit of suppliers is underway.",
+        "effects": {
+          "luxury": -0.22
         }
       }
     ]
@@ -3280,7 +3350,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82527,
     "events": [
       {
         "cycle": 0,
@@ -3296,6 +3366,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Acquires Coachbuilder Renmark",
         "body": "Quinn Marrow broadened Vossenspire beyond timepieces with the purchase of luxury coachbuilder Renmark, signaling a serious push into vehicles. The deal brings a small but prized workshop in the Highmoor. Marrow described it as 'two crafts, one obsession with finish.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82527,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vossenspire Supply Unveils Renmark-Built Tourer",
+        "body": "Vossenspire revealed the Renmark Grand Tourer, the first vehicle built on the coachbuilder it acquired earlier this year, pairing hand-finished bodywork with its in-house drivetrain. Quinn Marrow positioned the £140,000 tourer as proof the Renmark deal 'already earns its keep.' Initial allocation is capped at 300 units.",
         "effects": {
           "luxury": 0.13
         }
