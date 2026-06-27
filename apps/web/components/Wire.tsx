@@ -5,6 +5,7 @@ import { Radio } from "lucide-react";
 import { news as newsBank } from "@trove/data";
 import { netWorth } from "@trove/engine";
 import { breakingBeat } from "@/lib/breaking";
+import { firmBeat } from "@/lib/firmnews";
 import { money } from "@/lib/format";
 import { tnnLive } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
@@ -21,6 +22,8 @@ export function Wire() {
     return () => clearInterval(t);
   }, []);
   const beat = breakingBeat(now);
+  // Your own firm in the news — only when you've earned it (a record period).
+  const firm = firmBeat(state, desk?.name ?? null);
 
   // Build the rundown once per cycle (front + recent archive, with bodies).
   const stories = useMemo<WireStory[]>(() => {
@@ -71,6 +74,14 @@ export function Wire() {
           </span>
         </div>
       </div>
+
+      {firm && (
+        <article className="brk-card firm">
+          <span className="brk-card-kick">🏆 {firm.kicker}</span>
+          <h3 className="brk-card-head">{firm.head}</h3>
+          <p className="brk-card-body">{firm.body}</p>
+        </article>
+      )}
 
       {beat && (
         <article className={`brk-card ${beat.phase}`}>

@@ -7528,6 +7528,14 @@ body {
   border-left-color: #c0563f;
   background: color-mix(in srgb, #c0563f 5%, var(--paper));
 }
+.brk-card.firm {
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--line));
+  border-left-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--paper));
+}
+.brk-card.firm .brk-card-kick {
+  color: var(--accent);
+}
 .brk-card-kick {
   font-size: 10px;
   font-weight: 900;
