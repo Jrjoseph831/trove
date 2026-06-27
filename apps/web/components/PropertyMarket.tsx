@@ -6,10 +6,11 @@ import { properties as catalog, type Property } from "@trove/data";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 
-/** Where the card art lives once generated: public/properties/<slug>.jpg.
- *  Until then a category gradient + the emoji stands in. */
-const artUrl = (slug: string) =>
-  `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/properties/${slug}.jpg`;
+/** Card art lives at public/properties/<slug>.jpg (or .png from dall-e-3). Try
+ *  each in turn; a category gradient + emoji stands in until one loads. */
+const ART_EXTS = ["jpg", "png"] as const;
+const artUrl = (slug: string, ext: string) =>
+  `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/properties/${slug}.${ext}`;
 
 const CATS = [
   "All",
@@ -46,7 +47,8 @@ export function PropertyMarket() {
   const [cat, setCat] = useState<(typeof CATS)[number]>("All");
   const [sort, setSort] = useState<"low" | "high" | "yield">("low");
   const [sel, setSel] = useState<number | null>(null);
-  const [failed, setFailed] = useState<Set<string>>(new Set());
+  // slug → which extension we're trying (index into ART_EXTS); past the end = no art.
+  const [artTry, setArtTry] = useState<Record<string, number>>({});
 
   const owned = useMemo(
     () => new Map((state.properties ?? []).map((o) => [o.propId, o])),
@@ -79,16 +81,19 @@ export function PropertyMarket() {
     );
   }, [cat, sort]);
 
-  const sale = (slug: string) =>
-    failed.has(slug) ? null : (
+  const sale = (slug: string) => {
+    const t = artTry[slug] ?? 0;
+    if (t >= ART_EXTS.length) return null;
+    return (
       <img
         className="est-img"
-        src={artUrl(slug)}
+        src={artUrl(slug, ART_EXTS[t])}
         alt=""
         loading="lazy"
-        onError={() => setFailed((s) => new Set(s).add(slug))}
+        onError={() => setArtTry((s) => ({ ...s, [slug]: (s[slug] ?? 0) + 1 }))}
       />
     );
+  };
 
   const selProp = sel != null ? catalog.find((p) => p.id === sel) : null;
 
