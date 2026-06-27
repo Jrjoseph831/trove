@@ -51,15 +51,34 @@ const ALLOWED_ORIGINS = [
   "http://localhost:3000",
 ];
 
+export interface TroveStackProps extends StackProps {
+  /** "prod" (default) = the live world: prod table/api names + its own Cognito.
+   *  Any other value = an ISOLATED env (e.g. "staging"): prefixed table/api
+   *  names AND it reuses the prod Cognito pool (via authPool/authClient) instead
+   *  of creating its own — so the same login works while the world/data is
+   *  fully separate. `beta` deploys only the staging stack, so prod is untouched. */
+  stage?: string;
+  /** Existing Cognito user-pool id to reuse for the authorizer (non-prod only). */
+  authPool?: string;
+  /** Existing Cognito app-client id to accept as JWT audience (non-prod only). */
+  authClient?: string;
+}
+
 export class TroveStack extends Stack {
-  constructor(scope: Construct, id: string, props?: StackProps) {
+  constructor(scope: Construct, id: string, props?: TroveStackProps) {
     super(scope, id, props);
+
+    const stage = props?.stage ?? "prod";
+    const isProd = stage === "prod";
+    // Resource name prefix: prod keeps the existing "trove-*" names exactly (so
+    // the live tables are never renamed/replaced); other stages get "trove-<stage>-*".
+    const pfx = isProd ? "trove" : `trove-${stage}`;
 
     // ── DynamoDB ────────────────────────────────────────────────────────────
     // The one Live world (singleton document) + per-player tables (used from
     // Stage C onward; created now so the schema is stable).
     const market = new dynamodb.Table(this, "Market", {
-      tableName: "trove-market",
+      tableName: `${pfx}-market`,
       partitionKey: { name: "pk", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       removalPolicy: RemovalPolicy.RETAIN, // never auto-drop the world
@@ -67,7 +86,7 @@ export class TroveStack extends Stack {
     });
 
     const players = new dynamodb.Table(this, "Players", {
-      tableName: "trove-players",
+      tableName: `${pfx}-players`,
       partitionKey: { name: "playerId", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       removalPolicy: RemovalPolicy.RETAIN,
@@ -75,7 +94,7 @@ export class TroveStack extends Stack {
     });
 
     const ownership = new dynamodb.Table(this, "Ownership", {
-      tableName: "trove-ownership",
+      tableName: `${pfx}-ownership`,
       partitionKey: { name: "playerId", type: dynamodb.AttributeType.STRING },
       sortKey: { name: "itemId", type: dynamodb.AttributeType.NUMBER },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
@@ -86,7 +105,7 @@ export class TroveStack extends Stack {
     // Player-to-player orders (multiplayer routing). Queried by both sides via
     // GSIs on sellerId (a desk's incoming) and buyerId (a player's outgoing).
     const orders = new dynamodb.Table(this, "Orders", {
-      tableName: "trove-orders",
+      tableName: `${pfx}-orders`,
       partitionKey: { name: "id", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       removalPolicy: RemovalPolicy.RETAIN,
@@ -159,7 +178,7 @@ export class TroveStack extends Stack {
     market.grantReadWriteData(read); // may seed the world on first call
 
     const api = new HttpApi(this, "Api", {
-      apiName: "trove-public",
+      apiName: `${pfx}-public`,
       corsPreflight: {
         allowOrigins: ALLOWED_ORIGINS,
         // POST is needed for /trade; authorization carries the Cognito token.
@@ -182,6 +201,19 @@ export class TroveStack extends Stack {
     // Browsing is anonymous; signing in is required only to trade. Email is
     // built in; Google federation turns on if google client creds are supplied
     // via context (-c googleClientId=… -c googleClientSecret=…).
+    //
+    // Non-prod stages (staging) DON'T create their own pool — they reuse the prod
+    // pool (authPool/authClient) so the same login works while the world is
+    // separate. This also avoids minting duplicate Cognito/Google resources.
+    let issuer: string;
+    let audience: string;
+    if (!isProd) {
+      if (!props?.authPool || !props?.authClient) {
+        throw new Error(`stage "${stage}" requires authPool + authClient to reuse`);
+      }
+      issuer = `https://cognito-idp.${this.region}.amazonaws.com/${props.authPool}`;
+      audience = props.authClient;
+    } else {
     const userPool = new cognito.UserPool(this, "Users", {
       userPoolName: "trove-users",
       selfSignUpEnabled: true,
@@ -245,11 +277,15 @@ export class TroveStack extends Stack {
     // not exist". An explicit dependency enforces the order.
     if (googleIdp) userPoolClient.node.addDependency(googleIdp);
 
-    const authorizer = new HttpJwtAuthorizer(
-      "JwtAuthorizer",
-      `https://cognito-idp.${this.region}.amazonaws.com/${userPool.userPoolId}`,
-      { jwtAudience: [userPoolClient.userPoolClientId] },
-    );
+    issuer = `https://cognito-idp.${this.region}.amazonaws.com/${userPool.userPoolId}`;
+    audience = userPoolClient.userPoolClientId;
+    new CfnOutput(this, "UserPoolId", { value: userPool.userPoolId });
+    new CfnOutput(this, "UserPoolClientId", { value: userPoolClient.userPoolClientId });
+    } // end prod-only Cognito
+
+    const authorizer = new HttpJwtAuthorizer("JwtAuthorizer", issuer, {
+      jwtAudience: [audience],
+    });
 
     // ── Trade + portfolio (authorized) ──────────────────────────────────────
     const trade = fn("Trade", "trade.ts", Duration.seconds(15));
@@ -369,12 +405,13 @@ export class TroveStack extends Stack {
       value: api.apiEndpoint,
       description: "API base URL (GET /world, /standings; auth POST /trade, GET /portfolio).",
     });
-    new CfnOutput(this, "UserPoolId", { value: userPool.userPoolId });
-    new CfnOutput(this, "UserPoolClientId", { value: userPoolClient.userPoolClientId });
-    new CfnOutput(this, "HostedUiDomain", {
-      value: `https://trove-${this.account}.auth.${this.region}.amazoncognito.com`,
-      description: "Cognito Hosted UI base (sign-in / sign-up).",
-    });
+    // UserPoolId / UserPoolClientId are emitted inside the prod-only Cognito block.
+    if (isProd) {
+      new CfnOutput(this, "HostedUiDomain", {
+        value: `https://trove-${this.account}.auth.${this.region}.amazoncognito.com`,
+        description: "Cognito Hosted UI base (sign-in / sign-up).",
+      });
+    }
     new CfnOutput(this, "SeedFunctionName", {
       value: seed.functionName,
       description: "Invoke once to seed the world (or just hit /world).",

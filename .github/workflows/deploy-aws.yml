@@ -8,7 +8,9 @@ name: Deploy AWS (shared world)
 
 on:
   push:
-    branches: [main]
+    # main → deploys the prod stack (TroveShared); beta → deploys the isolated
+    # staging stack (TroveStaging). Prod is never touched by a beta push.
+    branches: [main, beta]
     paths:
       - "infra/**"
       - "packages/server/**"
@@ -51,9 +53,12 @@ jobs:
           aws-region: ${{ vars.AWS_REGION }}
       - name: CDK deploy
         working-directory: infra
+        # main → TroveShared (prod); beta → TroveStaging (isolated staging world).
         # Google federation turns on when these are set (empty = email-only).
         run: >-
-          npx cdk deploy --require-approval never --outputs-file cdk-outputs.json
+          npx cdk deploy
+          ${{ github.ref_name == 'beta' && 'TroveStaging' || 'TroveShared' }}
+          --require-approval never --outputs-file cdk-outputs.json
           -c googleClientId="${{ vars.GOOGLE_CLIENT_ID }}"
           -c googleClientSecret="${{ secrets.GOOGLE_CLIENT_SECRET }}"
       - name: Show outputs
