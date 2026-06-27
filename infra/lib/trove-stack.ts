@@ -73,6 +73,10 @@ export class TroveStack extends Stack {
     // Resource name prefix: prod keeps the existing "trove-*" names exactly (so
     // the live tables are never renamed/replaced); other stages get "trove-<stage>-*".
     const pfx = isProd ? "trove" : `trove-${stage}`;
+    // Prod data is sacred (RETAIN); a staging world is disposable, so it tears
+    // down cleanly (DESTROY) instead of orphaning tables on a failed/rolled-back
+    // deploy.
+    const retain = isProd ? RemovalPolicy.RETAIN : RemovalPolicy.DESTROY;
 
     // ── DynamoDB ────────────────────────────────────────────────────────────
     // The one Live world (singleton document) + per-player tables (used from
@@ -81,7 +85,7 @@ export class TroveStack extends Stack {
       tableName: `${pfx}-market`,
       partitionKey: { name: "pk", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
-      removalPolicy: RemovalPolicy.RETAIN, // never auto-drop the world
+      removalPolicy: retain, // prod never drops the world; staging is disposable
       pointInTimeRecoverySpecification: { pointInTimeRecoveryEnabled: true },
     });
 
@@ -89,7 +93,7 @@ export class TroveStack extends Stack {
       tableName: `${pfx}-players`,
       partitionKey: { name: "playerId", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
-      removalPolicy: RemovalPolicy.RETAIN,
+      removalPolicy: retain,
       pointInTimeRecoverySpecification: { pointInTimeRecoveryEnabled: true },
     });
 
@@ -98,7 +102,7 @@ export class TroveStack extends Stack {
       partitionKey: { name: "playerId", type: dynamodb.AttributeType.STRING },
       sortKey: { name: "itemId", type: dynamodb.AttributeType.NUMBER },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
-      removalPolicy: RemovalPolicy.RETAIN,
+      removalPolicy: retain,
       pointInTimeRecoverySpecification: { pointInTimeRecoveryEnabled: true },
     });
 
@@ -108,7 +112,7 @@ export class TroveStack extends Stack {
       tableName: `${pfx}-orders`,
       partitionKey: { name: "id", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
-      removalPolicy: RemovalPolicy.RETAIN,
+      removalPolicy: retain,
       pointInTimeRecoverySpecification: { pointInTimeRecoveryEnabled: true },
     });
     orders.addGlobalSecondaryIndex({
@@ -222,7 +226,7 @@ export class TroveStack extends Stack {
       standardAttributes: { email: { required: true, mutable: true } },
       passwordPolicy: { minLength: 8, requireLowercase: true, requireDigits: true },
       accountRecovery: cognito.AccountRecovery.EMAIL_ONLY,
-      removalPolicy: RemovalPolicy.RETAIN,
+      removalPolicy: retain,
     });
 
     const supportedIdps = [cognito.UserPoolClientIdentityProvider.COGNITO];

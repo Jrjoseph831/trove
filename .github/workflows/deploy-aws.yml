@@ -61,13 +61,24 @@ jobs:
             --query 'Stacks[0].StackStatus' --output text 2>/dev/null || echo NONE)
           echo "TroveStaging status: $st"
           case "$st" in
-            ROLLBACK_COMPLETE|ROLLBACK_FAILED|UPDATE_ROLLBACK_FAILED|CREATE_FAILED|DELETE_FAILED)
+            ROLLBACK_COMPLETE|ROLLBACK_FAILED|UPDATE_ROLLBACK_FAILED|CREATE_FAILED|DELETE_FAILED|REVIEW_IN_PROGRESS)
               echo "Deleting failed stack so it can be recreated cleanly…"
               aws cloudformation delete-stack --stack-name TroveStaging
-              aws cloudformation wait stack-delete-complete --stack-name TroveStaging
-              echo "Deleted." ;;
-            *) echo "No cleanup needed." ;;
+              aws cloudformation wait stack-delete-complete --stack-name TroveStaging || true
+              st=NONE ;;
           esac
+          if [ "$st" = "NONE" ]; then
+            echo "No stack owns the staging tables — removing any orphans for a clean create…"
+            for t in market players ownership orders; do
+              if aws dynamodb describe-table --table-name "trove-staging-$t" >/dev/null 2>&1; then
+                aws dynamodb delete-table --table-name "trove-staging-$t" >/dev/null
+                aws dynamodb wait table-not-exists --table-name "trove-staging-$t"
+                echo "  dropped orphaned trove-staging-$t"
+              fi
+            done
+          else
+            echo "Healthy stack present — no cleanup needed."
+          fi
       - name: CDK deploy
         working-directory: infra
         # main → TroveShared (prod); beta → TroveStaging (isolated staging world).
