@@ -18,6 +18,7 @@ import {
   fetchWorld,
   postTrade,
   createOrder as apiCreateOrder,
+  createBuyout as apiCreateBuyout,
   fetchOrders,
   orderAction as apiOrderAction,
   saveSite as apiSaveSite,
@@ -248,6 +249,8 @@ interface Trove {
     qty: number,
     price: number,
   ) => Promise<boolean>;
+  /** M&A: offer to acquire another player's entire firm (full buyout). */
+  requestBuyout: (sellerHandle: string, price: number) => Promise<boolean>;
   /** Act on a P2P order: accept | decline | counter | withdraw. */
   orderAct: (
     id: string,
@@ -660,6 +663,37 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         return false;
       }
       showToast("Request sent");
+      void refreshOrders();
+      return true;
+    },
+    [showToast, refreshOrders],
+  );
+
+  // M&A: offer to acquire another player's entire firm (consensual full buyout).
+  const requestBuyout = useCallback(
+    async (sellerHandle: string, price: number) => {
+      if (!isSignedIn()) {
+        authSignIn();
+        return false;
+      }
+      const r = await apiCreateBuyout(sellerHandle, price);
+      if ("error" in r) {
+        showToast(
+          r.error === "name your Holding first"
+            ? "Name your Holding first"
+            : r.error === "that's your own company"
+              ? "That's your own firm"
+              : r.error === "you can't cover that offer"
+                ? "You can't cover that offer"
+                : r.error === "your open offers would exceed your cash"
+                  ? "Your open offers would exceed your cash"
+                  : r.error === "no such company"
+                    ? "Can't find that firm"
+                    : "Couldn't send the offer",
+        );
+        return false;
+      }
+      showToast("Buyout offer sent");
       void refreshOrders();
       return true;
     },
@@ -1339,6 +1373,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       saveSite,
       orders,
       requestOrder,
+      requestBuyout,
       orderAct,
     }),
     [
@@ -1397,6 +1432,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       saveSite,
       orders,
       requestOrder,
+      requestBuyout,
       orderAct,
     ],
   );

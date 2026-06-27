@@ -163,6 +163,9 @@ export interface SiteConfig {
  *  seller's counter once they've used their one counter). */
 export interface PvpOrder {
   id: string;
+  /** "goods" = buy listed product from a storefront (default). "buyout" = M&A:
+   *  an offer to acquire the seller's ENTIRE firm; itemId/qty are unused. */
+  kind?: "goods" | "buyout";
   sellerId: string;
   sellerName: string;
   buyerId: string;

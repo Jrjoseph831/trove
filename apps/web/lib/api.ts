@@ -146,6 +146,14 @@ export const createOrder = (body: {
   price: number;
 }) => ordersPost<{ ok: true; order: PvpOrder }>("/orders", body);
 
+/** M&A: offer to acquire another player's entire firm (full buyout). */
+export const createBuyout = (sellerHandle: string, price: number) =>
+  ordersPost<{ ok: true; order: PvpOrder }>("/orders", {
+    kind: "buyout",
+    sellerHandle,
+    price,
+  });
+
 /** Act on an order: accept | decline | counter | withdraw (counter needs price). */
 export const orderAction = (
   id: string,

@@ -7838,3 +7838,47 @@ body {
   background: var(--paper); color: var(--ink); font-weight: 700; font-size: 13px; cursor: pointer;
 }
 .deal-sell:hover { border-color: var(--danger, #d04b46); color: var(--danger, #d04b46); }
+
+/* ── Deal Room: houses/players toggle + live-player M&A ───────────────────── */
+.deal-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.deal-tabs button {
+  border: 1px solid var(--line); background: var(--paper); color: var(--ink-dim);
+  border-radius: 999px; padding: 7px 16px; font-size: 13px; font-weight: 700; cursor: pointer;
+}
+.deal-tabs button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.ma-sub { font-size: 13px; color: var(--ink-dim); line-height: 1.55; margin: 0 0 16px; max-width: 640px; }
+.ma-inbox {
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  background: color-mix(in srgb, var(--accent) 6%, var(--paper));
+  border-radius: 12px; padding: 12px 14px; margin-bottom: 18px;
+}
+.ma-h { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 8px; }
+.ma-deal {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  flex-wrap: wrap; padding: 8px 0; border-top: 1px solid var(--line);
+}
+.ma-deal:first-of-type { border-top: none; }
+.ma-deal-txt { font-size: 13px; color: var(--ink); }
+.ma-acts { display: flex; gap: 7px; }
+
+.ma-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.ma-card { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 13px 15px; }
+.ma-card-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.ma-name { font-weight: 750; font-size: 14.5px; color: var(--ink); }
+.ma-meta { font-size: 12px; color: var(--ink-dim); margin-top: 2px; }
+.ma-offer {
+  border: 1px solid var(--accent); background: none; color: var(--accent);
+  border-radius: 9px; padding: 7px 13px; font-size: 12.5px; font-weight: 700; cursor: pointer; white-space: nowrap;
+}
+.ma-offer:hover { background: var(--accent); color: #fff; }
+.ma-form { display: flex; gap: 7px; margin-top: 11px; }
+.ma-input {
+  flex: 1; border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+  border-radius: 9px; padding: 8px 11px; font-size: 13px;
+}
+.ma-yes, .ma-no { border: none; border-radius: 9px; padding: 8px 13px; font-size: 12.5px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.ma-yes { background: var(--accent); color: #fff; }
+.ma-yes:hover { filter: brightness(1.07); }
+.ma-no { background: var(--paper); color: var(--ink-dim); border: 1px solid var(--line); }
+.ma-no:hover { color: var(--ink); }
