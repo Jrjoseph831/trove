@@ -81,8 +81,12 @@ export class TroveStack extends Stack {
     // ── DynamoDB ────────────────────────────────────────────────────────────
     // The one Live world (singleton document) + per-player tables (used from
     // Stage C onward; created now so the schema is stable).
+    // Prod uses fixed names (trove-*). Non-prod OMITS the name so CloudFormation
+    // auto-generates a unique one — no collisions with leftover tables, and the
+    // Lambdas read the real name from env vars regardless.
+    const tableName = (base: string) => (isProd ? `${pfx}-${base}` : undefined);
     const market = new dynamodb.Table(this, "Market", {
-      tableName: `${pfx}-market`,
+      tableName: tableName("market"),
       partitionKey: { name: "pk", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       removalPolicy: retain, // prod never drops the world; staging is disposable
@@ -90,7 +94,7 @@ export class TroveStack extends Stack {
     });
 
     const players = new dynamodb.Table(this, "Players", {
-      tableName: `${pfx}-players`,
+      tableName: tableName("players"),
       partitionKey: { name: "playerId", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       removalPolicy: retain,
@@ -98,7 +102,7 @@ export class TroveStack extends Stack {
     });
 
     const ownership = new dynamodb.Table(this, "Ownership", {
-      tableName: `${pfx}-ownership`,
+      tableName: tableName("ownership"),
       partitionKey: { name: "playerId", type: dynamodb.AttributeType.STRING },
       sortKey: { name: "itemId", type: dynamodb.AttributeType.NUMBER },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
@@ -109,7 +113,7 @@ export class TroveStack extends Stack {
     // Player-to-player orders (multiplayer routing). Queried by both sides via
     // GSIs on sellerId (a desk's incoming) and buyerId (a player's outgoing).
     const orders = new dynamodb.Table(this, "Orders", {
-      tableName: `${pfx}-orders`,
+      tableName: tableName("orders"),
       partitionKey: { name: "id", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       removalPolicy: retain,
