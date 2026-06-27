@@ -128,6 +128,7 @@ function overlayPortfolio(live: WorldState, p: ApiPortfolio): void {
   if (p.floorSlots !== undefined) live.floorSlots = p.floorSlots;
   if (p.infra) live.infra = p.infra;
   if (p.factories) live.factories = p.factories;
+  if (p.properties) live.properties = p.properties;
   if (p.listPrices) live.listPrices = p.listPrices;
   if (p.producedQty) live.producedQty = p.producedQty;
   if (p.listed) live.listed = p.listed;
@@ -880,16 +881,20 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh, showToast, liveFactory],
   );
 
-  // Property Market — sandbox-only in v1 (live needs a server endpoint + rent in
-  // settlement; coming next). Browsing works in both modes.
+  // Property Market — live posts to the shared world (cash + ownership persist,
+  // rent accrues server-side per flip); sandbox mutates the local world.
   const buyEstate = useCallback(
     (propId: number) => {
+      const p = propertyById(propId);
       if (modeRef.current === "live") {
-        showToast("Property deals open in the live world soon — try Sandbox");
+        void liveFactory(
+          { action: "buy-property", propId },
+          `Acquired ${p?.name ?? "property"}`,
+          "Can't buy — check your cash",
+        );
         return;
       }
       const w = worldsRef.current!.sandbox;
-      const p = propertyById(propId);
       if (p && w.cash < p.price) {
         showToast("Not enough cash for that property");
         return;
@@ -901,23 +906,27 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         showToast("Can't buy that property");
       }
     },
-    [refresh, showToast],
+    [refresh, showToast, liveFactory],
   );
 
   const sellEstate = useCallback(
     (propId: number) => {
+      const p = propertyById(propId);
       if (modeRef.current === "live") {
-        showToast("Property deals open in the live world soon — try Sandbox");
+        void liveFactory(
+          { action: "sell-property", propId },
+          `Sold ${p?.name ?? "property"}`,
+          "Can't sell that property",
+        );
         return;
       }
       const w = worldsRef.current!.sandbox;
-      const p = propertyById(propId);
       if (sellProperty(w, propId)) {
         showToast(`Sold ${p?.name ?? "property"}`);
         refresh();
       }
     },
-    [refresh, showToast],
+    [refresh, showToast, liveFactory],
   );
 
   const demolishLine = useCallback(

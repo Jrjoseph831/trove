@@ -7,6 +7,7 @@ import type {
   DeskAuto,
   Factory,
   Infra,
+  OwnedProperty,
   PvpOrder,
   Report,
   SiteConfig,
@@ -52,6 +53,7 @@ export interface ApiPortfolio {
   floorSlots?: number;
   infra?: Infra;
   factories?: Factory[];
+  properties?: OwnedProperty[];
   listPrices?: Record<number, number>;
   producedQty?: Record<number, number>;
   listed?: Record<number, boolean>;
@@ -189,6 +191,8 @@ export async function saveSite(
  *  portfolio snapshot for overlay, or {error,status}. */
 export type FactoryAction =
   | { action: "build"; itemId: number }
+  | { action: "buy-property"; propId: number }
+  | { action: "sell-property"; propId: number }
   | { action: "demolish"; factoryId: string }
   | { action: "module-add"; factoryId: string; moduleId: string }
   | { action: "module-remove"; factoryId: string; moduleId: string }

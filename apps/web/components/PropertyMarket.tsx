@@ -42,7 +42,7 @@ const volLabel = (v: number) =>
 const yieldPct = (p: Property) => (p.rentYield * 100).toFixed(2);
 
 export function PropertyMarket() {
-  const { state, buyEstate, sellEstate, mode } = useTrove();
+  const { state, buyEstate, sellEstate } = useTrove();
   const [cat, setCat] = useState<(typeof CATS)[number]>("All");
   const [sort, setSort] = useState<"low" | "high" | "yield">("low");
   const [sel, setSel] = useState<number | null>(null);
@@ -182,12 +182,6 @@ export function PropertyMarket() {
                   ? `Buy for ${money(selProp.price)}`
                   : `Need ${money(selProp.price - state.cash)} more`}
               </button>
-            )}
-            {mode === "live" && (
-              <p className="est-note">
-                Property deals go live on the shared world soon — try it in
-                Sandbox for now.
-              </p>
             )}
           </div>
         </div>

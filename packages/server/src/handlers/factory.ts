@@ -15,6 +15,8 @@ import type {
 } from "aws-lambda";
 import {
   buildFactory,
+  buyProperty,
+  sellProperty,
   buyInfra,
   demolishFactory,
   expandFloor,
@@ -58,6 +60,7 @@ const freshPlayer = (playerId: string): Player => ({
 interface Body {
   action?: string;
   itemId?: number;
+  propId?: number;
   factoryId?: string;
   moduleId?: string;
   lineId?: string;
@@ -76,6 +79,10 @@ function apply(state: WorldState, b: Body): string | null {
   switch (b.action) {
     case "build":
       return buildFactory(state, Number(b.itemId)) ? null : "can't build that line";
+    case "buy-property":
+      return buyProperty(state, Number(b.propId)) ? null : "can't buy that property";
+    case "sell-property":
+      return sellProperty(state, Number(b.propId)) ? null : "no such property";
     case "demolish":
       return demolishFactory(state, String(b.factoryId ?? b.id ?? "")) ? null : "no such line";
     case "module-add":
