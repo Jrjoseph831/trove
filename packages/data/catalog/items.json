@@ -34438,5 +34438,2018 @@
     "restock": 0,
     "edition": 3,
     "elaborate": 0.926
+  },
+  {
+    "id": 1753,
+    "name": "Flange Bolt M10",
+    "brand": "Drustcraft",
+    "tier": "mid",
+    "category": "Fasteners & Fixings",
+    "sub": "Screws",
+    "archetype": "micro_consumable",
+    "icon": "🪛",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.6,
+      "automotive": 0.3
+    },
+    "base": 1,
+    "stockNormal": 260803,
+    "restock": 34635,
+    "edition": null,
+    "elaborate": 0.129
+  },
+  {
+    "id": 1754,
+    "name": "Lag Screw 6in",
+    "brand": "Drustcraft",
+    "tier": "mid",
+    "category": "Fasteners & Fixings",
+    "sub": "Screws",
+    "archetype": "micro_consumable",
+    "icon": "🪛",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.6,
+      "automotive": 0.3
+    },
+    "base": 1,
+    "stockNormal": 260803,
+    "restock": 34635,
+    "edition": null,
+    "elaborate": 0.129
+  },
+  {
+    "id": 1755,
+    "name": "Toggle Anchor Pack",
+    "brand": "Drustcraft",
+    "tier": "mid",
+    "category": "Fasteners & Fixings",
+    "sub": "Screws",
+    "archetype": "micro_consumable",
+    "icon": "🪛",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.6,
+      "automotive": 0.3
+    },
+    "base": 1,
+    "stockNormal": 260803,
+    "restock": 34635,
+    "edition": null,
+    "elaborate": 0.129
+  },
+  {
+    "id": 1756,
+    "name": "Threaded Rod M12",
+    "brand": "Drustcraft",
+    "tier": "mid",
+    "category": "Fasteners & Fixings",
+    "sub": "Screws",
+    "archetype": "micro_consumable",
+    "icon": "🪛",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.6,
+      "automotive": 0.3
+    },
+    "base": 1,
+    "stockNormal": 260803,
+    "restock": 34635,
+    "edition": null,
+    "elaborate": 0.129
+  },
+  {
+    "id": 1757,
+    "name": "Hex Nut M10 Case",
+    "brand": "Drustcraft",
+    "tier": "mid",
+    "category": "Fasteners & Fixings",
+    "sub": "Screws",
+    "archetype": "micro_consumable",
+    "icon": "🪛",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.6,
+      "automotive": 0.3
+    },
+    "base": 1,
+    "stockNormal": 260803,
+    "restock": 34635,
+    "edition": null,
+    "elaborate": 0.129
+  },
+  {
+    "id": 1758,
+    "name": "Galvanized I-Beam",
+    "brand": "Hesperforge Supply",
+    "tier": "mid",
+    "category": "Structural Materials",
+    "sub": "Concrete & Masonry",
+    "archetype": "commodity",
+    "icon": "🔲",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "base": 101.69,
+    "stockNormal": 33374,
+    "restock": 1701,
+    "edition": null,
+    "elaborate": 0.24
+  },
+  {
+    "id": 1759,
+    "name": "Cement Board Sheet",
+    "brand": "Hesperforge Supply",
+    "tier": "mid",
+    "category": "Structural Materials",
+    "sub": "Concrete & Masonry",
+    "archetype": "commodity",
+    "icon": "🔲",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "base": 137.57,
+    "stockNormal": 24670,
+    "restock": 1257,
+    "edition": null,
+    "elaborate": 0.24
+  },
+  {
+    "id": 1760,
+    "name": "Rebar Grade 60",
+    "brand": "Hesperforge Supply",
+    "tier": "mid",
+    "category": "Structural Materials",
+    "sub": "Concrete & Masonry",
+    "archetype": "commodity",
+    "icon": "🔲",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "base": 113.65,
+    "stockNormal": 29862,
+    "restock": 1522,
+    "edition": null,
+    "elaborate": 0.24
+  },
+  {
+    "id": 1761,
+    "name": "Insulation Batt R30",
+    "brand": "Hesperforge Supply",
+    "tier": "mid",
+    "category": "Structural Materials",
+    "sub": "Concrete & Masonry",
+    "archetype": "commodity",
+    "icon": "🔲",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "base": 119.63,
+    "stockNormal": 28369,
+    "restock": 1446,
+    "edition": null,
+    "elaborate": 0.24
+  },
+  {
+    "id": 1762,
+    "name": "Plywood Sheet 3/4in",
+    "brand": "Hesperforge Supply",
+    "tier": "mid",
+    "category": "Structural Materials",
+    "sub": "Concrete & Masonry",
+    "archetype": "commodity",
+    "icon": "🔲",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "base": 161.5,
+    "stockNormal": 21014,
+    "restock": 1071,
+    "edition": null,
+    "elaborate": 0.24
+  },
+  {
+    "id": 1763,
+    "name": "Brass Ball Valve 1in",
+    "brand": "Dunmorewright Industries",
+    "tier": "mass",
+    "category": "Plumbing & Fixtures",
+    "sub": "Pipe",
+    "archetype": "commodity",
+    "icon": "🟤",
+    "weights": {
+      "construction": 0.8,
+      "consumer": 0.3,
+      "hospitality": 0.3
+    },
+    "base": 186.71,
+    "stockNormal": 41444,
+    "restock": 3769,
+    "edition": null,
+    "elaborate": 0.178
+  },
+  {
+    "id": 1764,
+    "name": "PEX Manifold 6-Port",
+    "brand": "Dunmorewright Industries",
+    "tier": "mass",
+    "category": "Plumbing & Fixtures",
+    "sub": "Pipe",
+    "archetype": "commodity",
+    "icon": "🟤",
+    "weights": {
+      "construction": 0.8,
+      "consumer": 0.3,
+      "hospitality": 0.3
+    },
+    "base": 252.61,
+    "stockNormal": 30632,
+    "restock": 2786,
+    "edition": null,
+    "elaborate": 0.178
+  },
+  {
+    "id": 1765,
+    "name": "Sump Pump 1/2HP",
+    "brand": "Dunmorewright Industries",
+    "tier": "mass",
+    "category": "Plumbing & Fixtures",
+    "sub": "Pipe",
+    "archetype": "commodity",
+    "icon": "🟤",
+    "weights": {
+      "construction": 0.8,
+      "consumer": 0.3,
+      "hospitality": 0.3
+    },
+    "base": 208.68,
+    "stockNormal": 37081,
+    "restock": 3373,
+    "edition": null,
+    "elaborate": 0.178
+  },
+  {
+    "id": 1766,
+    "name": "Pipe Fitting Kit",
+    "brand": "Dunmorewright Industries",
+    "tier": "mass",
+    "category": "Plumbing & Fixtures",
+    "sub": "Pipe",
+    "archetype": "commodity",
+    "icon": "🟤",
+    "weights": {
+      "construction": 0.8,
+      "consumer": 0.3,
+      "hospitality": 0.3
+    },
+    "base": 219.66,
+    "stockNormal": 35227,
+    "restock": 3204,
+    "edition": null,
+    "elaborate": 0.178
+  },
+  {
+    "id": 1767,
+    "name": "Cat6 Cable Spool",
+    "brand": "Stegreach",
+    "tier": "mid",
+    "category": "Wire & Cable",
+    "sub": "Building Wire",
+    "archetype": "commodity",
+    "icon": "🧶",
+    "weights": {
+      "construction": 0.6,
+      "energy": 0.7,
+      "technology": 0.5,
+      "automotive": 0.3
+    },
+    "base": 71.93,
+    "stockNormal": 27172,
+    "restock": 2894,
+    "edition": null,
+    "elaborate": 0.174
+  },
+  {
+    "id": 1768,
+    "name": "THHN Wire 12AWG",
+    "brand": "Stegreach",
+    "tier": "mid",
+    "category": "Wire & Cable",
+    "sub": "Building Wire",
+    "archetype": "commodity",
+    "icon": "🧶",
+    "weights": {
+      "construction": 0.6,
+      "energy": 0.7,
+      "technology": 0.5,
+      "automotive": 0.3
+    },
+    "base": 75.72,
+    "stockNormal": 25812,
+    "restock": 2749,
+    "edition": null,
+    "elaborate": 0.174
+  },
+  {
+    "id": 1769,
+    "name": "Coaxial Cable RG6",
+    "brand": "Stegreach",
+    "tier": "mid",
+    "category": "Wire & Cable",
+    "sub": "Building Wire",
+    "archetype": "commodity",
+    "icon": "🧶",
+    "weights": {
+      "construction": 0.6,
+      "energy": 0.7,
+      "technology": 0.5,
+      "automotive": 0.3
+    },
+    "base": 102.22,
+    "stockNormal": 19120,
+    "restock": 2036,
+    "edition": null,
+    "elaborate": 0.174
+  },
+  {
+    "id": 1770,
+    "name": "Welding Cable 2/0",
+    "brand": "Stegreach",
+    "tier": "mid",
+    "category": "Wire & Cable",
+    "sub": "Building Wire",
+    "archetype": "commodity",
+    "icon": "🧶",
+    "weights": {
+      "construction": 0.6,
+      "energy": 0.7,
+      "technology": 0.5,
+      "automotive": 0.3
+    },
+    "base": 64.36,
+    "stockNormal": 30368,
+    "restock": 3234,
+    "edition": null,
+    "elaborate": 0.174
+  },
+  {
+    "id": 1771,
+    "name": "LED High Bay 150W",
+    "brand": "Stegreach",
+    "tier": "mid",
+    "category": "Lighting",
+    "sub": "Bulbs",
+    "archetype": "bulk_consumable",
+    "icon": "💡",
+    "weights": {
+      "consumer": 0.6,
+      "construction": 0.4,
+      "hospitality": 0.4,
+      "energy": 0.3
+    },
+    "base": 8.87,
+    "stockNormal": 71943,
+    "restock": 7466,
+    "edition": null,
+    "elaborate": 0.166
+  },
+  {
+    "id": 1772,
+    "name": "Smart Bulb A19 4-Pack",
+    "brand": "Stegreach",
+    "tier": "mid",
+    "category": "Lighting",
+    "sub": "Bulbs",
+    "archetype": "bulk_consumable",
+    "icon": "💡",
+    "weights": {
+      "consumer": 0.6,
+      "construction": 0.4,
+      "hospitality": 0.4,
+      "energy": 0.3
+    },
+    "base": 5.58,
+    "stockNormal": 114360,
+    "restock": 11868,
+    "edition": null,
+    "elaborate": 0.166
+  },
+  {
+    "id": 1773,
+    "name": "Linear Pendant Fixture",
+    "brand": "Stegreach",
+    "tier": "mid",
+    "category": "Lighting",
+    "sub": "Bulbs",
+    "archetype": "bulk_consumable",
+    "icon": "💡",
+    "weights": {
+      "consumer": 0.6,
+      "construction": 0.4,
+      "hospitality": 0.4,
+      "energy": 0.3
+    },
+    "base": 7.56,
+    "stockNormal": 84409,
+    "restock": 8760,
+    "edition": null,
+    "elaborate": 0.166
+  },
+  {
+    "id": 1774,
+    "name": "Flood Light 100W",
+    "brand": "Stegreach",
+    "tier": "mid",
+    "category": "Lighting",
+    "sub": "Bulbs",
+    "archetype": "bulk_consumable",
+    "icon": "💡",
+    "weights": {
+      "consumer": 0.6,
+      "construction": 0.4,
+      "hospitality": 0.4,
+      "energy": 0.3
+    },
+    "base": 6.24,
+    "stockNormal": 102265,
+    "restock": 10613,
+    "edition": null,
+    "elaborate": 0.166
+  },
+  {
+    "id": 1775,
+    "name": "LiFePO4 Cell 280Ah",
+    "brand": "Blackhold",
+    "tier": "premium",
+    "category": "Power & Storage",
+    "sub": "Fuel",
+    "archetype": "commodity",
+    "icon": "⛽",
+    "weights": {
+      "energy": 1,
+      "technology": 0.4,
+      "automotive": 0.4
+    },
+    "base": 424.4,
+    "stockNormal": 4666,
+    "restock": 517,
+    "edition": null,
+    "elaborate": 0.233
+  },
+  {
+    "id": 1776,
+    "name": "UPS 1500VA",
+    "brand": "Blackhold",
+    "tier": "premium",
+    "category": "Power & Storage",
+    "sub": "Fuel",
+    "archetype": "commodity",
+    "icon": "⛽",
+    "weights": {
+      "energy": 1,
+      "technology": 0.4,
+      "automotive": 0.4
+    },
+    "base": 350.59,
+    "stockNormal": 5648,
+    "restock": 626,
+    "edition": null,
+    "elaborate": 0.233
+  },
+  {
+    "id": 1777,
+    "name": "Solar Charge Controller",
+    "brand": "Blackhold",
+    "tier": "premium",
+    "category": "Power & Storage",
+    "sub": "Fuel",
+    "archetype": "commodity",
+    "icon": "⛽",
+    "weights": {
+      "energy": 1,
+      "technology": 0.4,
+      "automotive": 0.4
+    },
+    "base": 369.04,
+    "stockNormal": 5366,
+    "restock": 595,
+    "edition": null,
+    "elaborate": 0.233
+  },
+  {
+    "id": 1778,
+    "name": "Surge Power Strip 12",
+    "brand": "Blackhold",
+    "tier": "premium",
+    "category": "Power & Storage",
+    "sub": "Fuel",
+    "archetype": "commodity",
+    "icon": "⛽",
+    "weights": {
+      "energy": 1,
+      "technology": 0.4,
+      "automotive": 0.4
+    },
+    "base": 498.2,
+    "stockNormal": 3975,
+    "restock": 441,
+    "edition": null,
+    "elaborate": 0.233
+  },
+  {
+    "id": 1779,
+    "name": "Corrugated Box 18in",
+    "brand": "Brunridge Works",
+    "tier": "mass",
+    "category": "Packaging",
+    "sub": "Boxes & Mailers",
+    "archetype": "bulk_consumable",
+    "icon": "📦",
+    "weights": {
+      "logistics": 1,
+      "consumer": 0.3,
+      "hospitality": 0.3
+    },
+    "base": 6.38,
+    "stockNormal": 113047,
+    "restock": 11087,
+    "edition": null,
+    "elaborate": 0.148
+  },
+  {
+    "id": 1780,
+    "name": "Bubble Mailer Pack",
+    "brand": "Brunridge Works",
+    "tier": "mass",
+    "category": "Packaging",
+    "sub": "Boxes & Mailers",
+    "archetype": "bulk_consumable",
+    "icon": "📦",
+    "weights": {
+      "logistics": 1,
+      "consumer": 0.3,
+      "hospitality": 0.3
+    },
+    "base": 6.06,
+    "stockNormal": 119016,
+    "restock": 11672,
+    "edition": null,
+    "elaborate": 0.148
+  },
+  {
+    "id": 1781,
+    "name": "Pallet Shrink Film",
+    "brand": "Brunridge Works",
+    "tier": "mass",
+    "category": "Packaging",
+    "sub": "Boxes & Mailers",
+    "archetype": "bulk_consumable",
+    "icon": "📦",
+    "weights": {
+      "logistics": 1,
+      "consumer": 0.3,
+      "hospitality": 0.3
+    },
+    "base": 6.38,
+    "stockNormal": 113047,
+    "restock": 11087,
+    "edition": null,
+    "elaborate": 0.148
+  },
+  {
+    "id": 1782,
+    "name": "Hand Pallet Jack",
+    "brand": "Carrowwell",
+    "tier": "premium",
+    "category": "Material Handling",
+    "sub": "Powered",
+    "archetype": "light_equipment",
+    "icon": "🛠️",
+    "weights": {
+      "logistics": 1,
+      "construction": 0.4,
+      "manufacturing": 0.4
+    },
+    "base": 13777.45,
+    "stockNormal": 720,
+    "restock": 28,
+    "edition": null,
+    "elaborate": 0.563
+  },
+  {
+    "id": 1783,
+    "name": "Wire Mesh Decking",
+    "brand": "Carrowwell",
+    "tier": "premium",
+    "category": "Material Handling",
+    "sub": "Powered",
+    "archetype": "light_equipment",
+    "icon": "🛠️",
+    "weights": {
+      "logistics": 1,
+      "construction": 0.4,
+      "manufacturing": 0.4
+    },
+    "base": 14502.58,
+    "stockNormal": 684,
+    "restock": 27,
+    "edition": null,
+    "elaborate": 0.563
+  },
+  {
+    "id": 1784,
+    "name": "Gravity Roller Conveyor",
+    "brand": "Carrowwell",
+    "tier": "premium",
+    "category": "Material Handling",
+    "sub": "Powered",
+    "archetype": "light_equipment",
+    "icon": "🛠️",
+    "weights": {
+      "logistics": 1,
+      "construction": 0.4,
+      "manufacturing": 0.4
+    },
+    "base": 19578.48,
+    "stockNormal": 507,
+    "restock": 20,
+    "edition": null,
+    "elaborate": 0.563
+  },
+  {
+    "id": 1785,
+    "name": "Stacking Bin Set",
+    "brand": "Carrowwell",
+    "tier": "premium",
+    "category": "Material Handling",
+    "sub": "Powered",
+    "archetype": "light_equipment",
+    "icon": "🛠️",
+    "weights": {
+      "logistics": 1,
+      "construction": 0.4,
+      "manufacturing": 0.4
+    },
+    "base": 12327.19,
+    "stockNormal": 805,
+    "restock": 32,
+    "edition": null,
+    "elaborate": 0.563
+  },
+  {
+    "id": 1786,
+    "name": "Cargo Van Mk II",
+    "brand": "Kessel Drive",
+    "tier": "mid",
+    "category": "Vehicles",
+    "sub": "Performance",
+    "archetype": "vehicle",
+    "icon": "🏎️",
+    "weights": {
+      "automotive": 1,
+      "luxury": 0.3,
+      "logistics": 0.3
+    },
+    "base": 118157.49,
+    "stockNormal": 202,
+    "restock": 7,
+    "edition": null,
+    "elaborate": 0.657
+  },
+  {
+    "id": 1787,
+    "name": "Electric Box Truck",
+    "brand": "Kessel Drive",
+    "tier": "mid",
+    "category": "Vehicles",
+    "sub": "Performance",
+    "archetype": "vehicle",
+    "icon": "🏎️",
+    "weights": {
+      "automotive": 1,
+      "luxury": 0.3,
+      "logistics": 0.3
+    },
+    "base": 74395.46,
+    "stockNormal": 321,
+    "restock": 12,
+    "edition": null,
+    "elaborate": 0.657
+  },
+  {
+    "id": 1788,
+    "name": "Compact Crossover",
+    "brand": "Kessel Drive",
+    "tier": "mid",
+    "category": "Vehicles",
+    "sub": "Performance",
+    "archetype": "vehicle",
+    "icon": "🏎️",
+    "weights": {
+      "automotive": 1,
+      "luxury": 0.3,
+      "logistics": 0.3
+    },
+    "base": 100652.68,
+    "stockNormal": 237,
+    "restock": 9,
+    "edition": null,
+    "elaborate": 0.657
+  },
+  {
+    "id": 1789,
+    "name": "Utility Flatbed",
+    "brand": "Kessel Drive",
+    "tier": "mid",
+    "category": "Vehicles",
+    "sub": "Performance",
+    "archetype": "vehicle",
+    "icon": "🏎️",
+    "weights": {
+      "automotive": 1,
+      "luxury": 0.3,
+      "logistics": 0.3
+    },
+    "base": 83147.87,
+    "stockNormal": 287,
+    "restock": 11,
+    "edition": null,
+    "elaborate": 0.657
+  },
+  {
+    "id": 1790,
+    "name": "Brake Caliper Set",
+    "brand": "Carrowwell",
+    "tier": "mid",
+    "category": "Auto Parts",
+    "sub": "Tires & Rubber",
+    "archetype": "component",
+    "icon": "⚫",
+    "weights": {
+      "automotive": 1,
+      "manufacturing": 0.4
+    },
+    "base": 173.96,
+    "stockNormal": 3046,
+    "restock": 138,
+    "edition": null,
+    "elaborate": 0.371
+  },
+  {
+    "id": 1791,
+    "name": "Alternator 140A",
+    "brand": "Carrowwell",
+    "tier": "mid",
+    "category": "Auto Parts",
+    "sub": "Tires & Rubber",
+    "archetype": "component",
+    "icon": "⚫",
+    "weights": {
+      "automotive": 1,
+      "manufacturing": 0.4
+    },
+    "base": 143.71,
+    "stockNormal": 3687,
+    "restock": 167,
+    "edition": null,
+    "elaborate": 0.371
+  },
+  {
+    "id": 1792,
+    "name": "Cabin Air Filter Pack",
+    "brand": "Carrowwell",
+    "tier": "mid",
+    "category": "Auto Parts",
+    "sub": "Tires & Rubber",
+    "archetype": "component",
+    "icon": "⚫",
+    "weights": {
+      "automotive": 1,
+      "manufacturing": 0.4
+    },
+    "base": 151.27,
+    "stockNormal": 3503,
+    "restock": 159,
+    "edition": null,
+    "elaborate": 0.371
+  },
+  {
+    "id": 1793,
+    "name": "Performance Spark Plug Set",
+    "brand": "Carrowwell",
+    "tier": "mid",
+    "category": "Auto Parts",
+    "sub": "Tires & Rubber",
+    "archetype": "component",
+    "icon": "⚫",
+    "weights": {
+      "automotive": 1,
+      "manufacturing": 0.4
+    },
+    "base": 204.21,
+    "stockNormal": 2595,
+    "restock": 118,
+    "edition": null,
+    "elaborate": 0.371
+  },
+  {
+    "id": 1794,
+    "name": "Shock Absorber Pair",
+    "brand": "Carrowwell",
+    "tier": "mid",
+    "category": "Auto Parts",
+    "sub": "Tires & Rubber",
+    "archetype": "component",
+    "icon": "⚫",
+    "weights": {
+      "automotive": 1,
+      "manufacturing": 0.4
+    },
+    "base": 128.58,
+    "stockNormal": 4121,
+    "restock": 187,
+    "edition": null,
+    "elaborate": 0.371
+  },
+  {
+    "id": 1795,
+    "name": "Edge GPU Module",
+    "brand": "Bruncrest Works",
+    "tier": "mid",
+    "category": "Compute",
+    "sub": "Networking",
+    "archetype": "component",
+    "icon": "🖥️",
+    "weights": {
+      "technology": 1,
+      "energy": 0.3
+    },
+    "base": 2717.75,
+    "stockNormal": 6220,
+    "restock": 370,
+    "edition": null,
+    "elaborate": 0.419
+  },
+  {
+    "id": 1796,
+    "name": "NVMe SSD 2TB",
+    "brand": "Bruncrest Works",
+    "tier": "mid",
+    "category": "Compute",
+    "sub": "Networking",
+    "archetype": "component",
+    "icon": "🖥️",
+    "weights": {
+      "technology": 1,
+      "energy": 0.3
+    },
+    "base": 2245.1,
+    "stockNormal": 7529,
+    "restock": 447,
+    "edition": null,
+    "elaborate": 0.419
+  },
+  {
+    "id": 1797,
+    "name": "Rack Switch 48-Port",
+    "brand": "Bruncrest Works",
+    "tier": "mid",
+    "category": "Compute",
+    "sub": "Networking",
+    "archetype": "component",
+    "icon": "🖥️",
+    "weights": {
+      "technology": 1,
+      "energy": 0.3
+    },
+    "base": 2363.26,
+    "stockNormal": 7153,
+    "restock": 425,
+    "edition": null,
+    "elaborate": 0.419
+  },
+  {
+    "id": 1798,
+    "name": "DDR5 Module 32GB",
+    "brand": "Bruncrest Works",
+    "tier": "mid",
+    "category": "Compute",
+    "sub": "Networking",
+    "archetype": "component",
+    "icon": "🖥️",
+    "weights": {
+      "technology": 1,
+      "energy": 0.3
+    },
+    "base": 3190.4,
+    "stockNormal": 5299,
+    "restock": 315,
+    "edition": null,
+    "elaborate": 0.419
+  },
+  {
+    "id": 1799,
+    "name": "Handheld Scanner",
+    "brand": "Brunforge Holdings",
+    "tier": "mid",
+    "category": "Devices",
+    "sub": "Personal",
+    "archetype": "component",
+    "icon": "💾",
+    "weights": {
+      "technology": 0.8,
+      "consumer": 0.6
+    },
+    "base": 372.09,
+    "stockNormal": 3840,
+    "restock": 252,
+    "edition": null,
+    "elaborate": 0.422
+  },
+  {
+    "id": 1800,
+    "name": "Smart Thermostat",
+    "brand": "Brunforge Holdings",
+    "tier": "mid",
+    "category": "Devices",
+    "sub": "Personal",
+    "archetype": "component",
+    "icon": "💾",
+    "weights": {
+      "technology": 0.8,
+      "consumer": 0.6
+    },
+    "base": 502.32,
+    "stockNormal": 2844,
+    "restock": 187,
+    "edition": null,
+    "elaborate": 0.422
+  },
+  {
+    "id": 1801,
+    "name": "Industrial Label Printer",
+    "brand": "Brunforge Holdings",
+    "tier": "mid",
+    "category": "Devices",
+    "sub": "Personal",
+    "archetype": "component",
+    "icon": "💾",
+    "weights": {
+      "technology": 0.8,
+      "consumer": 0.6
+    },
+    "base": 316.28,
+    "stockNormal": 4518,
+    "restock": 296,
+    "edition": null,
+    "elaborate": 0.422
+  },
+  {
+    "id": 1802,
+    "name": "Rugged Tablet 10in",
+    "brand": "Brunforge Holdings",
+    "tier": "mid",
+    "category": "Devices",
+    "sub": "Personal",
+    "archetype": "component",
+    "icon": "💾",
+    "weights": {
+      "technology": 0.8,
+      "consumer": 0.6
+    },
+    "base": 427.9,
+    "stockNormal": 3339,
+    "restock": 219,
+    "edition": null,
+    "elaborate": 0.422
+  },
+  {
+    "id": 1803,
+    "name": "Nitrogen Blend 46-0-0",
+    "brand": "Tillage & Co.",
+    "tier": "mid",
+    "category": "Farm Inputs",
+    "sub": "Seed & Feed",
+    "archetype": "bulk_consumable",
+    "icon": "🌱",
+    "weights": {
+      "agriculture": 1,
+      "consumer": 0.2
+    },
+    "base": 5.28,
+    "stockNormal": 200869,
+    "restock": 23479,
+    "edition": null,
+    "elaborate": 0.07
+  },
+  {
+    "id": 1804,
+    "name": "Drip Irrigation Kit",
+    "brand": "Tillage & Co.",
+    "tier": "mid",
+    "category": "Farm Inputs",
+    "sub": "Seed & Feed",
+    "archetype": "bulk_consumable",
+    "icon": "🌱",
+    "weights": {
+      "agriculture": 1,
+      "consumer": 0.2
+    },
+    "base": 7.14,
+    "stockNormal": 148542,
+    "restock": 17363,
+    "edition": null,
+    "elaborate": 0.07
+  },
+  {
+    "id": 1805,
+    "name": "Pelletized Lime Bag",
+    "brand": "Tillage & Co.",
+    "tier": "mid",
+    "category": "Farm Inputs",
+    "sub": "Seed & Feed",
+    "archetype": "bulk_consumable",
+    "icon": "🌱",
+    "weights": {
+      "agriculture": 1,
+      "consumer": 0.2
+    },
+    "base": 5.9,
+    "stockNormal": 179761,
+    "restock": 21012,
+    "edition": null,
+    "elaborate": 0.07
+  },
+  {
+    "id": 1806,
+    "name": "Hybrid Seed Sack",
+    "brand": "Tillage & Co.",
+    "tier": "mid",
+    "category": "Farm Inputs",
+    "sub": "Seed & Feed",
+    "archetype": "bulk_consumable",
+    "icon": "🌱",
+    "weights": {
+      "agriculture": 1,
+      "consumer": 0.2
+    },
+    "base": 6.21,
+    "stockNormal": 170787,
+    "restock": 19963,
+    "edition": null,
+    "elaborate": 0.07
+  },
+  {
+    "id": 1807,
+    "name": "Disc Harrow 12ft",
+    "brand": "Castlestead",
+    "tier": "premium",
+    "category": "Farm Equipment",
+    "sub": "Tractors",
+    "archetype": "light_equipment",
+    "icon": "🚜",
+    "weights": {
+      "agriculture": 1,
+      "manufacturing": 0.3
+    },
+    "base": 26537.39,
+    "stockNormal": 1875,
+    "restock": 81,
+    "edition": null,
+    "elaborate": 0.533
+  },
+  {
+    "id": 1808,
+    "name": "Round Baler",
+    "brand": "Castlestead",
+    "tier": "premium",
+    "category": "Farm Equipment",
+    "sub": "Tractors",
+    "archetype": "light_equipment",
+    "icon": "🚜",
+    "weights": {
+      "agriculture": 1,
+      "manufacturing": 0.3
+    },
+    "base": 27934.09,
+    "stockNormal": 1781,
+    "restock": 77,
+    "edition": null,
+    "elaborate": 0.533
+  },
+  {
+    "id": 1809,
+    "name": "Grain Auger",
+    "brand": "Castlestead",
+    "tier": "premium",
+    "category": "Farm Equipment",
+    "sub": "Tractors",
+    "archetype": "light_equipment",
+    "icon": "🚜",
+    "weights": {
+      "agriculture": 1,
+      "manufacturing": 0.3
+    },
+    "base": 37711.02,
+    "stockNormal": 1319,
+    "restock": 57,
+    "edition": null,
+    "elaborate": 0.533
+  },
+  {
+    "id": 1810,
+    "name": "Mini Excavator 3.5t",
+    "brand": "Marrowstone Build",
+    "tier": "mass",
+    "category": "Earthmoving",
+    "sub": "Compaction",
+    "archetype": "heavy_equipment",
+    "icon": "🏗️",
+    "weights": {
+      "construction": 1,
+      "energy": 0.3,
+      "agriculture": 0.3
+    },
+    "base": 246259.24,
+    "stockNormal": 217,
+    "restock": 2,
+    "edition": null,
+    "elaborate": 0.628
+  },
+  {
+    "id": 1811,
+    "name": "Skid Steer Mk III",
+    "brand": "Marrowstone Build",
+    "tier": "mass",
+    "category": "Earthmoving",
+    "sub": "Compaction",
+    "archetype": "heavy_equipment",
+    "icon": "🏗️",
+    "weights": {
+      "construction": 1,
+      "energy": 0.3,
+      "agriculture": 0.3
+    },
+    "base": 203431.55,
+    "stockNormal": 262,
+    "restock": 2,
+    "edition": null,
+    "elaborate": 0.628
+  },
+  {
+    "id": 1812,
+    "name": "Trench Roller",
+    "brand": "Marrowstone Build",
+    "tier": "mass",
+    "category": "Earthmoving",
+    "sub": "Compaction",
+    "archetype": "heavy_equipment",
+    "icon": "🏗️",
+    "weights": {
+      "construction": 1,
+      "energy": 0.3,
+      "agriculture": 0.3
+    },
+    "base": 246259.24,
+    "stockNormal": 217,
+    "restock": 2,
+    "edition": null,
+    "elaborate": 0.628
+  },
+  {
+    "id": 1813,
+    "name": "CNC Router Table",
+    "brand": "Carrowforge",
+    "tier": "mid",
+    "category": "Industrial Machines",
+    "sub": "Fluid & Air",
+    "archetype": "light_equipment",
+    "icon": "🛠️",
+    "weights": {
+      "manufacturing": 1,
+      "technology": 0.3
+    },
+    "base": 3518.32,
+    "stockNormal": 564,
+    "restock": 18,
+    "edition": null,
+    "elaborate": 0.509
+  },
+  {
+    "id": 1814,
+    "name": "Hydraulic Press 50t",
+    "brand": "Carrowforge",
+    "tier": "mid",
+    "category": "Industrial Machines",
+    "sub": "Fluid & Air",
+    "archetype": "light_equipment",
+    "icon": "🛠️",
+    "weights": {
+      "manufacturing": 1,
+      "technology": 0.3
+    },
+    "base": 4760.08,
+    "stockNormal": 417,
+    "restock": 13,
+    "edition": null,
+    "elaborate": 0.509
+  },
+  {
+    "id": 1815,
+    "name": "Industrial Lathe",
+    "brand": "Carrowforge",
+    "tier": "mid",
+    "category": "Industrial Machines",
+    "sub": "Fluid & Air",
+    "archetype": "light_equipment",
+    "icon": "🛠️",
+    "weights": {
+      "manufacturing": 1,
+      "technology": 0.3
+    },
+    "base": 3932.24,
+    "stockNormal": 504,
+    "restock": 16,
+    "edition": null,
+    "elaborate": 0.509
+  },
+  {
+    "id": 1816,
+    "name": "Injection Molder",
+    "brand": "Carrowforge",
+    "tier": "mid",
+    "category": "Industrial Machines",
+    "sub": "Fluid & Air",
+    "archetype": "light_equipment",
+    "icon": "🛠️",
+    "weights": {
+      "manufacturing": 1,
+      "technology": 0.3
+    },
+    "base": 4139.2,
+    "stockNormal": 479,
+    "restock": 15,
+    "edition": null,
+    "elaborate": 0.509
+  },
+  {
+    "id": 1817,
+    "name": "Nitrile Glove Case",
+    "brand": "Castlegear Group",
+    "tier": "mid",
+    "category": "Medical Consumables",
+    "sub": "Disposables",
+    "archetype": "bulk_consumable",
+    "icon": "💉",
+    "weights": {
+      "medical": 1,
+      "hospitality": 0.2
+    },
+    "base": 2.91,
+    "stockNormal": 121734,
+    "restock": 18030,
+    "edition": null,
+    "elaborate": 0.111
+  },
+  {
+    "id": 1818,
+    "name": "Surgical Mask Box",
+    "brand": "Castlegear Group",
+    "tier": "mid",
+    "category": "Medical Consumables",
+    "sub": "Disposables",
+    "archetype": "bulk_consumable",
+    "icon": "💉",
+    "weights": {
+      "medical": 1,
+      "hospitality": 0.2
+    },
+    "base": 3.06,
+    "stockNormal": 115767,
+    "restock": 17146,
+    "edition": null,
+    "elaborate": 0.111
+  },
+  {
+    "id": 1819,
+    "name": "IV Tubing Set",
+    "brand": "Castlegear Group",
+    "tier": "mid",
+    "category": "Medical Consumables",
+    "sub": "Disposables",
+    "archetype": "bulk_consumable",
+    "icon": "💉",
+    "weights": {
+      "medical": 1,
+      "hospitality": 0.2
+    },
+    "base": 4.13,
+    "stockNormal": 85774,
+    "restock": 12704,
+    "edition": null,
+    "elaborate": 0.111
+  },
+  {
+    "id": 1820,
+    "name": "Wound Dressing Pack",
+    "brand": "Castlegear Group",
+    "tier": "mid",
+    "category": "Medical Consumables",
+    "sub": "Disposables",
+    "archetype": "bulk_consumable",
+    "icon": "💉",
+    "weights": {
+      "medical": 1,
+      "hospitality": 0.2
+    },
+    "base": 2.6,
+    "stockNormal": 136249,
+    "restock": 20180,
+    "edition": null,
+    "elaborate": 0.111
+  },
+  {
+    "id": 1821,
+    "name": "Infusion Pump Mk II",
+    "brand": "Ardent Health",
+    "tier": "luxury",
+    "category": "Medical Equipment",
+    "sub": "Imaging",
+    "archetype": "light_equipment",
+    "icon": "🖥️",
+    "weights": {
+      "medical": 1,
+      "technology": 0.3
+    },
+    "base": 5311.55,
+    "stockNormal": 820,
+    "restock": 41,
+    "edition": null,
+    "elaborate": 0.577
+  },
+  {
+    "id": 1822,
+    "name": "Portable Ultrasound",
+    "brand": "Ardent Health",
+    "tier": "luxury",
+    "category": "Medical Equipment",
+    "sub": "Imaging",
+    "archetype": "light_equipment",
+    "icon": "🖥️",
+    "weights": {
+      "medical": 1,
+      "technology": 0.3
+    },
+    "base": 5591.1,
+    "stockNormal": 779,
+    "restock": 39,
+    "edition": null,
+    "elaborate": 0.577
+  },
+  {
+    "id": 1823,
+    "name": "Surgical Light",
+    "brand": "Ardent Health",
+    "tier": "luxury",
+    "category": "Medical Equipment",
+    "sub": "Imaging",
+    "archetype": "light_equipment",
+    "icon": "🖥️",
+    "weights": {
+      "medical": 1,
+      "technology": 0.3
+    },
+    "base": 7547.99,
+    "stockNormal": 577,
+    "restock": 29,
+    "edition": null,
+    "elaborate": 0.577
+  },
+  {
+    "id": 1824,
+    "name": "Commercial Mixer 20qt",
+    "brand": "Ornewright Goods",
+    "tier": "mass",
+    "category": "Food Service",
+    "sub": "Tableware",
+    "archetype": "bulk_consumable",
+    "icon": "📄",
+    "weights": {
+      "hospitality": 1,
+      "consumer": 0.4
+    },
+    "base": 3.76,
+    "stockNormal": 105660,
+    "restock": 17296,
+    "edition": null,
+    "elaborate": 0.064
+  },
+  {
+    "id": 1825,
+    "name": "Reach-In Freezer",
+    "brand": "Ornewright Goods",
+    "tier": "mass",
+    "category": "Food Service",
+    "sub": "Tableware",
+    "archetype": "bulk_consumable",
+    "icon": "📄",
+    "weights": {
+      "hospitality": 1,
+      "consumer": 0.4
+    },
+    "base": 5.08,
+    "stockNormal": 78205,
+    "restock": 12802,
+    "edition": null,
+    "elaborate": 0.064
+  },
+  {
+    "id": 1826,
+    "name": "Induction Range",
+    "brand": "Ornewright Goods",
+    "tier": "mass",
+    "category": "Food Service",
+    "sub": "Tableware",
+    "archetype": "bulk_consumable",
+    "icon": "📄",
+    "weights": {
+      "hospitality": 1,
+      "consumer": 0.4
+    },
+    "base": 3.2,
+    "stockNormal": 124150,
+    "restock": 20323,
+    "edition": null,
+    "elaborate": 0.064
+  },
+  {
+    "id": 1827,
+    "name": "Stainless Prep Table",
+    "brand": "Ornewright Goods",
+    "tier": "mass",
+    "category": "Food Service",
+    "sub": "Tableware",
+    "archetype": "bulk_consumable",
+    "icon": "📄",
+    "weights": {
+      "hospitality": 1,
+      "consumer": 0.4
+    },
+    "base": 4.32,
+    "stockNormal": 91963,
+    "restock": 15054,
+    "edition": null,
+    "elaborate": 0.064
+  },
+  {
+    "id": 1828,
+    "name": "Auto Floor Scrubber",
+    "brand": "Hearthstone Group",
+    "tier": "mid",
+    "category": "Cleaning & Jansan",
+    "sub": "Equipment",
+    "archetype": "bulk_consumable",
+    "icon": "🛠️",
+    "weights": {
+      "hospitality": 0.7,
+      "consumer": 0.5,
+      "medical": 0.3
+    },
+    "base": 4.72,
+    "stockNormal": 144174,
+    "restock": 25541,
+    "edition": null,
+    "elaborate": 0.158
+  },
+  {
+    "id": 1829,
+    "name": "Microfiber Mop Kit",
+    "brand": "Hearthstone Group",
+    "tier": "mid",
+    "category": "Cleaning & Jansan",
+    "sub": "Equipment",
+    "archetype": "bulk_consumable",
+    "icon": "🛠️",
+    "weights": {
+      "hospitality": 0.7,
+      "consumer": 0.5,
+      "medical": 0.3
+    },
+    "base": 6.38,
+    "stockNormal": 106662,
+    "restock": 18895,
+    "edition": null,
+    "elaborate": 0.158
+  },
+  {
+    "id": 1830,
+    "name": "Pressure Washer 3000psi",
+    "brand": "Hearthstone Group",
+    "tier": "mid",
+    "category": "Cleaning & Jansan",
+    "sub": "Equipment",
+    "archetype": "bulk_consumable",
+    "icon": "🛠️",
+    "weights": {
+      "hospitality": 0.7,
+      "consumer": 0.5,
+      "medical": 0.3
+    },
+    "base": 5.27,
+    "stockNormal": 129128,
+    "restock": 22875,
+    "edition": null,
+    "elaborate": 0.158
+  },
+  {
+    "id": 1831,
+    "name": "Wet/Dry Vac 16gal",
+    "brand": "Hearthstone Group",
+    "tier": "mid",
+    "category": "Cleaning & Jansan",
+    "sub": "Equipment",
+    "archetype": "bulk_consumable",
+    "icon": "🛠️",
+    "weights": {
+      "hospitality": 0.7,
+      "consumer": 0.5,
+      "medical": 0.3
+    },
+    "base": 5.55,
+    "stockNormal": 122613,
+    "restock": 21721,
+    "edition": null,
+    "elaborate": 0.158
+  },
+  {
+    "id": 1832,
+    "name": "Cotton Bale Grade A",
+    "brand": "Holtgate Cloth",
+    "tier": "mid",
+    "category": "Raw Textiles",
+    "sub": "Notions",
+    "archetype": "commodity",
+    "icon": "🧵",
+    "weights": {
+      "textiles": 1,
+      "manufacturing": 0.3,
+      "consumer": 0.3
+    },
+    "base": 150.84,
+    "stockNormal": 40007,
+    "restock": 2761,
+    "edition": null,
+    "elaborate": 0.273
+  },
+  {
+    "id": 1833,
+    "name": "Polyester Fiber Roll",
+    "brand": "Holtgate Cloth",
+    "tier": "mid",
+    "category": "Raw Textiles",
+    "sub": "Notions",
+    "archetype": "commodity",
+    "icon": "🧵",
+    "weights": {
+      "textiles": 1,
+      "manufacturing": 0.3,
+      "consumer": 0.3
+    },
+    "base": 158.78,
+    "stockNormal": 38006,
+    "restock": 2623,
+    "edition": null,
+    "elaborate": 0.273
+  },
+  {
+    "id": 1834,
+    "name": "Wool Top Sliver",
+    "brand": "Holtgate Cloth",
+    "tier": "mid",
+    "category": "Raw Textiles",
+    "sub": "Notions",
+    "archetype": "commodity",
+    "icon": "🧵",
+    "weights": {
+      "textiles": 1,
+      "manufacturing": 0.3,
+      "consumer": 0.3
+    },
+    "base": 214.35,
+    "stockNormal": 28153,
+    "restock": 1943,
+    "edition": null,
+    "elaborate": 0.273
+  },
+  {
+    "id": 1835,
+    "name": "Nylon Filament Spool",
+    "brand": "Holtgate Cloth",
+    "tier": "mid",
+    "category": "Raw Textiles",
+    "sub": "Notions",
+    "archetype": "commodity",
+    "icon": "🧵",
+    "weights": {
+      "textiles": 1,
+      "manufacturing": 0.3,
+      "consumer": 0.3
+    },
+    "base": 134.96,
+    "stockNormal": 44714,
+    "restock": 3086,
+    "edition": null,
+    "elaborate": 0.273
+  },
+  {
+    "id": 1836,
+    "name": "Insulated Work Jacket",
+    "brand": "Marrowcyon",
+    "tier": "mid",
+    "category": "Apparel Goods",
+    "sub": "Basics",
+    "archetype": "bulk_consumable",
+    "icon": "🧤",
+    "weights": {
+      "consumer": 1,
+      "textiles": 0.5
+    },
+    "base": 10.26,
+    "stockNormal": 61244,
+    "restock": 8407,
+    "edition": null,
+    "elaborate": 0.126
+  },
+  {
+    "id": 1837,
+    "name": "Steel-Toe Safety Boot",
+    "brand": "Marrowcyon",
+    "tier": "mid",
+    "category": "Apparel Goods",
+    "sub": "Basics",
+    "archetype": "bulk_consumable",
+    "icon": "🧤",
+    "weights": {
+      "consumer": 1,
+      "textiles": 0.5
+    },
+    "base": 6.46,
+    "stockNormal": 97271,
+    "restock": 13352,
+    "edition": null,
+    "elaborate": 0.126
+  },
+  {
+    "id": 1838,
+    "name": "Hi-Vis Vest Pack",
+    "brand": "Marrowcyon",
+    "tier": "mid",
+    "category": "Apparel Goods",
+    "sub": "Basics",
+    "archetype": "bulk_consumable",
+    "icon": "🧤",
+    "weights": {
+      "consumer": 1,
+      "textiles": 0.5
+    },
+    "base": 8.74,
+    "stockNormal": 71896,
+    "restock": 9869,
+    "edition": null,
+    "elaborate": 0.126
+  },
+  {
+    "id": 1839,
+    "name": "Flame-Resistant Coverall",
+    "brand": "Marrowcyon",
+    "tier": "mid",
+    "category": "Apparel Goods",
+    "sub": "Basics",
+    "archetype": "bulk_consumable",
+    "icon": "🧤",
+    "weights": {
+      "consumer": 1,
+      "textiles": 0.5
+    },
+    "base": 7.22,
+    "stockNormal": 87032,
+    "restock": 11946,
+    "edition": null,
+    "elaborate": 0.126
+  },
+  {
+    "id": 1840,
+    "name": "Stainless Cookware Set",
+    "brand": "Wrenspire",
+    "tier": "mid",
+    "category": "Household Goods",
+    "sub": "Home",
+    "archetype": "bulk_consumable",
+    "icon": "🧵",
+    "weights": {
+      "consumer": 1,
+      "hospitality": 0.2
+    },
+    "base": 5.13,
+    "stockNormal": 171639,
+    "restock": 23355,
+    "edition": null,
+    "elaborate": 0.056
+  },
+  {
+    "id": 1841,
+    "name": "Memory Foam Mattress",
+    "brand": "Wrenspire",
+    "tier": "mid",
+    "category": "Household Goods",
+    "sub": "Home",
+    "archetype": "bulk_consumable",
+    "icon": "🧵",
+    "weights": {
+      "consumer": 1,
+      "hospitality": 0.2
+    },
+    "base": 4.24,
+    "stockNormal": 207667,
+    "restock": 28258,
+    "edition": null,
+    "elaborate": 0.056
+  },
+  {
+    "id": 1842,
+    "name": "Ceramic Dinnerware Set",
+    "brand": "Wrenspire",
+    "tier": "mid",
+    "category": "Household Goods",
+    "sub": "Home",
+    "archetype": "bulk_consumable",
+    "icon": "🧵",
+    "weights": {
+      "consumer": 1,
+      "hospitality": 0.2
+    },
+    "base": 4.46,
+    "stockNormal": 197423,
+    "restock": 26864,
+    "edition": null,
+    "elaborate": 0.056
+  },
+  {
+    "id": 1843,
+    "name": "Cordless Vacuum",
+    "brand": "Wrenspire",
+    "tier": "mid",
+    "category": "Household Goods",
+    "sub": "Home",
+    "archetype": "bulk_consumable",
+    "icon": "🧵",
+    "weights": {
+      "consumer": 1,
+      "hospitality": 0.2
+    },
+    "base": 6.02,
+    "stockNormal": 146264,
+    "restock": 19903,
+    "edition": null,
+    "elaborate": 0.056
+  },
+  {
+    "id": 1844,
+    "name": "Cordless Impact Driver",
+    "brand": "Thaldale Group",
+    "tier": "mid",
+    "category": "Hardware & Tools",
+    "sub": "Abrasives & Misc",
+    "archetype": "bulk_consumable",
+    "icon": "⬜",
+    "weights": {
+      "consumer": 0.6,
+      "construction": 0.6,
+      "manufacturing": 0.4
+    },
+    "base": 3.88,
+    "stockNormal": 181894,
+    "restock": 22824,
+    "edition": null,
+    "elaborate": 0.113
+  },
+  {
+    "id": 1845,
+    "name": "Socket Wrench Set",
+    "brand": "Thaldale Group",
+    "tier": "mid",
+    "category": "Hardware & Tools",
+    "sub": "Abrasives & Misc",
+    "archetype": "bulk_consumable",
+    "icon": "⬜",
+    "weights": {
+      "consumer": 0.6,
+      "construction": 0.6,
+      "manufacturing": 0.4
+    },
+    "base": 5.24,
+    "stockNormal": 134685,
+    "restock": 16900,
+    "edition": null,
+    "elaborate": 0.113
+  },
+  {
+    "id": 1846,
+    "name": "Laser Level Kit",
+    "brand": "Thaldale Group",
+    "tier": "mid",
+    "category": "Hardware & Tools",
+    "sub": "Abrasives & Misc",
+    "archetype": "bulk_consumable",
+    "icon": "⬜",
+    "weights": {
+      "consumer": 0.6,
+      "construction": 0.6,
+      "manufacturing": 0.4
+    },
+    "base": 3.3,
+    "stockNormal": 213863,
+    "restock": 26835,
+    "edition": null,
+    "elaborate": 0.113
+  },
+  {
+    "id": 1847,
+    "name": "Angle Grinder 4.5in",
+    "brand": "Thaldale Group",
+    "tier": "mid",
+    "category": "Hardware & Tools",
+    "sub": "Abrasives & Misc",
+    "archetype": "bulk_consumable",
+    "icon": "⬜",
+    "weights": {
+      "consumer": 0.6,
+      "construction": 0.6,
+      "manufacturing": 0.4
+    },
+    "base": 4.46,
+    "stockNormal": 158240,
+    "restock": 19856,
+    "edition": null,
+    "elaborate": 0.113
+  },
+  {
+    "id": 1848,
+    "name": "Field Chronograph",
+    "brand": "Vossenspire Supply",
+    "tier": "premium",
+    "category": "Timepieces",
+    "sub": "Watches",
+    "archetype": "luxury_good",
+    "icon": "⌚",
+    "weights": {
+      "luxury": 1
+    },
+    "base": 63998.25,
+    "stockNormal": 122,
+    "restock": 1,
+    "edition": null,
+    "elaborate": 0.84
+  },
+  {
+    "id": 1849,
+    "name": "Automatic Dive Watch",
+    "brand": "Vossenspire Supply",
+    "tier": "premium",
+    "category": "Timepieces",
+    "sub": "Watches",
+    "archetype": "luxury_good",
+    "icon": "⌚",
+    "weights": {
+      "luxury": 1
+    },
+    "base": 86585.87,
+    "stockNormal": 90,
+    "restock": 1,
+    "edition": null,
+    "elaborate": 0.84
+  },
+  {
+    "id": 1850,
+    "name": "Pilot GMT",
+    "brand": "Vossenspire Supply",
+    "tier": "premium",
+    "category": "Timepieces",
+    "sub": "Watches",
+    "archetype": "luxury_good",
+    "icon": "⌚",
+    "weights": {
+      "luxury": 1
+    },
+    "base": 71527.46,
+    "stockNormal": 109,
+    "restock": 1,
+    "edition": null,
+    "elaborate": 0.84
+  },
+  {
+    "id": 1851,
+    "name": "Quartz Dress Watch",
+    "brand": "Vossenspire Supply",
+    "tier": "premium",
+    "category": "Timepieces",
+    "sub": "Watches",
+    "archetype": "luxury_good",
+    "icon": "⌚",
+    "weights": {
+      "luxury": 1
+    },
+    "base": 75292.06,
+    "stockNormal": 104,
+    "restock": 1,
+    "edition": null,
+    "elaborate": 0.84
+  },
+  {
+    "id": 1852,
+    "name": "Sapphire Pendant",
+    "brand": "Brunridge Works",
+    "tier": "premium",
+    "category": "Fine Goods",
+    "sub": "Precious",
+    "archetype": "luxury_good",
+    "icon": "🟨",
+    "weights": {
+      "luxury": 1,
+      "consumer": 0.2
+    },
+    "base": 106155.56,
+    "stockNormal": 511,
+    "restock": 11,
+    "edition": null,
+    "elaborate": 0.771
+  },
+  {
+    "id": 1853,
+    "name": "Engraved Fountain Pen",
+    "brand": "Brunridge Works",
+    "tier": "premium",
+    "category": "Fine Goods",
+    "sub": "Precious",
+    "archetype": "luxury_good",
+    "icon": "🟨",
+    "weights": {
+      "luxury": 1,
+      "consumer": 0.2
+    },
+    "base": 111742.7,
+    "stockNormal": 485,
+    "restock": 10,
+    "edition": null,
+    "elaborate": 0.771
+  },
+  {
+    "id": 1854,
+    "name": "Marble Desk Set",
+    "brand": "Brunridge Works",
+    "tier": "premium",
+    "category": "Fine Goods",
+    "sub": "Precious",
+    "archetype": "luxury_good",
+    "icon": "🟨",
+    "weights": {
+      "luxury": 1,
+      "consumer": 0.2
+    },
+    "base": 150852.65,
+    "stockNormal": 359,
+    "restock": 7,
+    "edition": null,
+    "elaborate": 0.771
+  },
+  {
+    "id": 1855,
+    "name": "Crystal Decanter",
+    "brand": "Brunridge Works",
+    "tier": "premium",
+    "category": "Fine Goods",
+    "sub": "Precious",
+    "archetype": "luxury_good",
+    "icon": "🟨",
+    "weights": {
+      "luxury": 1,
+      "consumer": 0.2
+    },
+    "base": 94981.3,
+    "stockNormal": 571,
+    "restock": 12,
+    "edition": null,
+    "elaborate": 0.771
   }
 ]

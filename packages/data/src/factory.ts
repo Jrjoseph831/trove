@@ -108,6 +108,82 @@ function buckets(): Buckets {
   return b;
 }
 
+/** Bill of materials: which input CATEGORIES plausibly go into each output
+ *  category. Sector alone is too coarse (it let tyres pull transmission fluid);
+ *  this keeps inputs to sensible materials/components — tyres draw rubber/fabric
+ *  + metal + fasteners, compute draws boards + cells + wiring, etc. Output
+ *  categories not listed (mostly raw materials) fall back to extraction or any
+ *  cheaper raw input. */
+const INPUT_CATEGORIES: Record<string, string[]> = {
+  "Fasteners & Fixings": ["Structural Materials"],
+  "Plumbing & Fixtures": ["Structural Materials", "Fasteners & Fixings"],
+  "Wire & Cable": ["Structural Materials"],
+  Lighting: ["Wire & Cable", "Power & Storage", "Structural Materials"],
+  "Power & Storage": ["Wire & Cable", "Structural Materials"],
+  Packaging: ["Raw Textiles", "Structural Materials"],
+  "Material Handling": [
+    "Structural Materials",
+    "Fasteners & Fixings",
+    "Power & Storage",
+    "Wire & Cable",
+  ],
+  Vehicles: ["Auto Parts", "Structural Materials", "Power & Storage", "Wire & Cable"],
+  "Auto Parts": [
+    "Structural Materials",
+    "Wire & Cable",
+    "Raw Textiles",
+    "Fasteners & Fixings",
+  ],
+  Compute: ["Wire & Cable", "Power & Storage", "Structural Materials"],
+  Devices: ["Compute", "Power & Storage", "Wire & Cable"],
+  "Farm Inputs": ["Packaging", "Raw Textiles"],
+  "Farm Equipment": [
+    "Structural Materials",
+    "Auto Parts",
+    "Power & Storage",
+    "Wire & Cable",
+  ],
+  Earthmoving: ["Structural Materials", "Auto Parts", "Power & Storage"],
+  "Industrial Machines": [
+    "Structural Materials",
+    "Power & Storage",
+    "Wire & Cable",
+    "Compute",
+  ],
+  "Medical Consumables": ["Raw Textiles", "Packaging"],
+  "Medical Equipment": [
+    "Compute",
+    "Power & Storage",
+    "Wire & Cable",
+    "Structural Materials",
+  ],
+  "Food Service": ["Structural Materials", "Power & Storage", "Wire & Cable"],
+  "Cleaning & Jansan": ["Packaging", "Raw Textiles", "Power & Storage"],
+  "Apparel Goods": ["Raw Textiles"],
+  "Household Goods": ["Structural Materials", "Raw Textiles", "Wire & Cable"],
+  "Hardware & Tools": ["Structural Materials", "Power & Storage"],
+  Timepieces: ["Compute", "Power & Storage", "Fasteners & Fixings"],
+  "Fine Goods": ["Structural Materials"],
+  "Structural Materials": ["Structural Materials"],
+  "Raw Textiles": ["Raw Textiles"],
+};
+
+// Category → its RAW/PART items (sorted by base), for bill-of-materials inputs.
+let _catPool: Record<string, Item[]> | null = null;
+function catPools(): Record<string, Item[]> {
+  if (_catPool) return _catPool;
+  const m: Record<string, Item[]> = {};
+  for (const it of items) {
+    if (it.edition !== null) continue;
+    const t = tierOf(it.archetype);
+    if (t !== "raw" && t !== "part") continue;
+    (m[it.category] ??= []).push(it);
+  }
+  for (const k of Object.keys(m)) m[k]!.sort((a, b) => a.base - b.base);
+  _catPool = m;
+  return m;
+}
+
 /** Stable small hash so input choice varies across the catalog but is fixed. */
 function hash(n: number): number {
   let h = (n ^ 0x9e3779b9) >>> 0;
@@ -152,20 +228,29 @@ export function recipeOf(it: Item): Recipe | null {
     result = { inputs: [] }; // extraction
   } else {
     buckets();
-    const s = topSector(it);
-    const sec = _buckets![s] ?? { raw: [], part: [], goods: [], none: [] };
-    const rawPool = sec.raw.length ? sec.raw : _globalRaw!;
-    const partPool = sec.part.length ? sec.part : _globalPart!;
-    // PART: two RAW inputs. GOODS: one PART + one RAW.
+    // Inputs come from this product's bill of materials — plausible material /
+    // component categories, not just anything in the same sector — and must be
+    // cheaper than the output. So tyres draw rubber/fabric + metal, not
+    // transmission fluid.
+    const inCats = INPUT_CATEGORIES[it.category] ?? [];
+    const matPool = inCats
+      .flatMap((c) => catPools()[c] ?? [])
+      .filter((x) => x.id !== it.id && x.base < it.base);
+    const pool = matPool.length
+      ? matPool
+      : _globalRaw!.filter((x) => x.base < it.base);
+    const partPool = pool.filter((x) => tierOf(x.archetype) === "part");
+    const rawPool = pool.filter((x) => tierOf(x.archetype) === "raw");
+    // PART: two cheaper materials. GOODS: a component + a material.
     const slots: { pool: Item[]; share: number }[] =
       tier === "part"
         ? [
-            { pool: rawPool, share: 0.3 },
-            { pool: rawPool, share: 0.25 },
+            { pool: rawPool.length ? rawPool : pool, share: 0.3 },
+            { pool: rawPool.length ? rawPool : pool, share: 0.25 },
           ]
         : [
-            { pool: partPool.length ? partPool : rawPool, share: 0.32 },
-            { pool: rawPool, share: 0.23 },
+            { pool: partPool.length ? partPool : pool, share: 0.32 },
+            { pool: rawPool.length ? rawPool : pool, share: 0.23 },
           ];
     const inputs: RecipeInput[] = [];
     const used = new Set<number>([it.id]);
