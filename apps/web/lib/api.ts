@@ -54,6 +54,7 @@ export interface ApiPortfolio {
   infra?: Infra;
   factories?: Factory[];
   properties?: OwnedProperty[];
+  stakes?: Record<string, number>;
   listPrices?: Record<number, number>;
   producedQty?: Record<number, number>;
   listed?: Record<number, boolean>;
@@ -193,6 +194,8 @@ export type FactoryAction =
   | { action: "build"; itemId: number }
   | { action: "buy-property"; propId: number }
   | { action: "sell-property"; propId: number }
+  | { action: "buy-stake"; company: string; pct: number }
+  | { action: "sell-stake"; company: string; pct: number }
   | { action: "demolish"; factoryId: string }
   | { action: "module-add"; factoryId: string; moduleId: string }
   | { action: "module-remove"; factoryId: string; moduleId: string }

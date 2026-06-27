@@ -154,6 +154,7 @@ export function docToWorld(doc: WorldDoc): WorldState {
     // both are per-player concerns handled outside the singleton doc.
     factories: [],
     properties: [],
+    stakes: {},
     floorSlots: 0,
     infra: { power: false, router: false, qc: false },
     listPrices: {},
@@ -275,6 +276,8 @@ export interface Player {
   factories?: Factory[];
   /** Owned real estate (Property Market). */
   properties?: OwnedProperty[];
+  /** Equity stakes in AI houses (Deal Room): name → fraction owned. */
+  stakes?: Record<string, number>;
   floorSlots?: number;
   infra?: Infra;
   listPrices?: Record<number, number>;
@@ -319,6 +322,7 @@ export function playerView(doc: WorldDoc, player: Player): WorldState {
   w.lastOrderAt = player.lastOrderAt ?? 0;
   w.factories = player.factories ?? [];
   w.properties = player.properties ?? [];
+  w.stakes = player.stakes ?? {};
   w.floorSlots = player.floorSlots ?? STARTING_SLOTS;
   w.infra = player.infra ?? { ...FRESH_INFRA };
   w.listPrices = player.listPrices ?? {};
@@ -344,6 +348,7 @@ export function extractPlayer(state: WorldState, player: Player): Player {
     lastOrderAt: state.lastOrderAt,
     factories: state.factories,
     properties: state.properties,
+    stakes: state.stakes,
     floorSlots: state.floorSlots,
     infra: state.infra,
     listPrices: state.listPrices,
@@ -371,6 +376,7 @@ export interface PortfolioView {
   infra: Infra;
   factories: Factory[];
   properties: OwnedProperty[];
+  stakes: Record<string, number>;
   listPrices: Record<number, number>;
   producedQty: Record<number, number>;
   listed: Record<number, boolean>;
@@ -397,16 +403,26 @@ export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
   const props = player.properties ?? [];
   let propValue = 0;
   for (const op of props) propValue += op.value;
+  const stakes = player.stakes ?? {};
+  let stakeVal = 0;
+  if (Object.keys(stakes).length) {
+    const tByName = new Map((doc.traders ?? []).map((t) => [t.name, t]));
+    for (const [name, pct] of Object.entries(stakes)) {
+      const t = tByName.get(name);
+      if (t) stakeVal += pct * (t.cash + ownerHoldings(doc, name).assets);
+    }
+  }
   return {
     cash,
     debt,
-    netWorth: cash - debt + assets + propValue,
+    netWorth: cash - debt + assets + propValue + stakeVal,
     reputation: player.reputation ?? 0,
     holdings,
     floorSlots: player.floorSlots ?? STARTING_SLOTS,
     infra: player.infra ?? { ...FRESH_INFRA },
     factories: player.factories ?? [],
     properties: props,
+    stakes,
     listPrices: player.listPrices ?? {},
     producedQty: player.producedQty ?? {},
     listed: player.listed ?? {},

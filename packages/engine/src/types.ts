@@ -252,6 +252,9 @@ export interface WorldState {
   factories: Factory[];
   /** Player-owned real estate (Property Market). */
   properties: OwnedProperty[];
+  /** Equity stakes in AI houses (Deal Room): company name → fraction owned 0..1.
+   *  Pays dividends each settlement; value counts toward net worth. */
+  stakes: Record<string, number>;
   /** Factory-floor capacity: how many lines can run at once. Expandable. */
   floorSlots: number;
   /** Installed floor infrastructure upgrades. */

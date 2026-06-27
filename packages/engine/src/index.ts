@@ -210,6 +210,7 @@ export function freshState(): WorldState {
     traders: freshTraders(),
     factories: [],
     properties: [],
+    stakes: {},
     floorSlots: STARTING_SLOTS,
     infra: { power: false, router: false, qc: false },
     listPrices: {},
@@ -325,8 +326,67 @@ export function netWorth(state: WorldState, owner: string): number {
       ? state.cash - state.debt
       : state.traders.find((t) => t.name === owner)?.cash ?? 0;
   return (
-    base + assetsValue(state, owner) + (owner === "YOU" ? propertyValue(state) : 0)
+    base +
+    assetsValue(state, owner) +
+    (owner === "YOU" ? propertyValue(state) + stakeValue(state) : 0)
   );
+}
+
+// ── Deal Room: equity stakes in AI houses ────────────────────────────────────
+/** A company's valuation = its cash + the market value of everything it holds. */
+export function companyValuation(state: WorldState, name: string): number {
+  const t = state.traders.find((x) => x.name === name);
+  if (!t) return 0;
+  return t.cash + assetsValue(state, name);
+}
+
+/** Total value of the player's equity stakes (their % × each firm's valuation). */
+export function stakeValue(state: WorldState): number {
+  let v = 0;
+  for (const [name, pct] of Object.entries(state.stakes ?? {})) {
+    v += pct * companyValuation(state, name);
+  }
+  return v;
+}
+
+/** Dividends the stakes pay per settlement (your % of each firm's cycle income). */
+export function stakeDividends(state: WorldState): number {
+  let d = 0;
+  for (const [name, pct] of Object.entries(state.stakes ?? {})) {
+    const t = state.traders.find((x) => x.name === name);
+    if (t) d += pct * (t.income ?? 0);
+  }
+  return Math.round(d);
+}
+
+/** Buy `pct` (0..1) more equity in a house at market (cost = pct × valuation). */
+export function buyStake(state: WorldState, name: string, pct: number): boolean {
+  if (!(pct > 0)) return false;
+  const t = state.traders.find((x) => x.name === name);
+  if (!t) return false;
+  const owned = state.stakes?.[name] ?? 0;
+  const buy = Math.min(pct, 1 - owned);
+  if (buy <= 0) return false; // already at 100%
+  const cost = buy * companyValuation(state, name);
+  if (state.cash < cost) return false;
+  state.cash -= cost;
+  (state.stakes ??= {})[name] = owned + buy;
+  pushLog(state, "YOU", buy + owned >= 0.999 ? "took control of" : "bought into", t.name);
+  return true;
+}
+
+/** Sell `pct` (0..1) of a held stake back at market value. */
+export function sellStake(state: WorldState, name: string, pct: number): boolean {
+  if (!(pct > 0)) return false;
+  const owned = state.stakes?.[name] ?? 0;
+  if (owned <= 0) return false;
+  const sell = Math.min(pct, owned);
+  state.cash += sell * companyValuation(state, name);
+  const left = owned - sell;
+  if (left <= 0.0001) delete state.stakes![name];
+  else state.stakes![name] = left;
+  pushLog(state, "YOU", "sold its stake in", name);
+  return true;
 }
 
 // ── Property Market ──────────────────────────────────────────────────────────
@@ -686,6 +746,9 @@ export function settleCycle(state: WorldState): void {
   // 5c. Real estate: pay rent + drift property values with the economy.
   settleProperties(state);
 
+  // 5d. Deal Room: equity stakes pay dividends into cash.
+  state.cash += stakeDividends(state);
+
   // 6. Snapshot net worth + capture this period's report row.
   state.nwHist.push(netWorth(state, "YOU"));
   if (state.nwHist.length > 30) state.nwHist.shift();
@@ -712,6 +775,7 @@ export function runProduction(state: WorldState): void {
  */
 export function captureFlip(state: WorldState): void {
   settleProperties(state);
+  state.cash += stakeDividends(state);
   state.nwHist.push(netWorth(state, "YOU"));
   if (state.nwHist.length > 30) state.nwHist.shift();
   captureReport(state);

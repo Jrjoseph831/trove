@@ -49,6 +49,9 @@ import {
   buyProperty,
   sellProperty,
   propertyById,
+  buyStake,
+  sellStake,
+  companyValuation,
   createWorld,
   demolishFactory,
   buyInfra as engineBuyInfra,
@@ -129,6 +132,7 @@ function overlayPortfolio(live: WorldState, p: ApiPortfolio): void {
   if (p.infra) live.infra = p.infra;
   if (p.factories) live.factories = p.factories;
   if (p.properties) live.properties = p.properties;
+  if (p.stakes) live.stakes = p.stakes;
   if (p.listPrices) live.listPrices = p.listPrices;
   if (p.producedQty) live.producedQty = p.producedQty;
   if (p.listed) live.listed = p.listed;
@@ -145,6 +149,7 @@ export type TabId =
   | "orders"
   | "factory"
   | "estates"
+  | "deals"
   | "report"
   | "companies"
   | "goals";
@@ -193,6 +198,9 @@ interface Trove {
   /** Property Market: buy / sell real estate (sandbox in v1). */
   buyEstate: (propId: number) => void;
   sellEstate: (propId: number) => void;
+  /** Deal Room: buy / sell an equity stake (pct 0..1) in an AI house. */
+  buyStakeIn: (company: string, pct: number) => void;
+  sellStakeIn: (company: string, pct: number) => void;
   demolishLine: (id: string) => void;
   addModule: (factoryId: string, moduleId: string) => void;
   removeModule: (factoryId: string, moduleId: string) => void;
@@ -929,6 +937,52 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh, showToast, liveFactory],
   );
 
+  // Deal Room — equity stakes in AI houses. Live posts to the shared world
+  // (player-record only, like factories); sandbox mutates the local world.
+  const buyStakeIn = useCallback(
+    (company: string, pct: number) => {
+      if (modeRef.current === "live") {
+        void liveFactory(
+          { action: "buy-stake", company, pct },
+          `Bought into ${company}`,
+          "Can't buy — check your cash",
+        );
+        return;
+      }
+      const w = worldsRef.current!.sandbox;
+      const cost = pct * companyValuation(w, company);
+      if (w.cash < cost) {
+        showToast("Not enough cash for that stake");
+        return;
+      }
+      if (buyStake(w, company, pct)) {
+        showToast(`Bought into ${company}`);
+        refresh();
+      } else {
+        showToast("Can't buy that stake");
+      }
+    },
+    [refresh, showToast, liveFactory],
+  );
+
+  const sellStakeIn = useCallback(
+    (company: string, pct: number) => {
+      if (modeRef.current === "live") {
+        void liveFactory(
+          { action: "sell-stake", company, pct },
+          `Sold stake in ${company}`,
+          "Can't sell that stake",
+        );
+        return;
+      }
+      if (sellStake(worldsRef.current!.sandbox, company, pct)) {
+        showToast(`Sold stake in ${company}`);
+        refresh();
+      }
+    },
+    [refresh, showToast, liveFactory],
+  );
+
   const demolishLine = useCallback(
     (id: string) => {
       if (modeRef.current === "live") {
@@ -1253,6 +1307,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       buildLine,
       buyEstate,
       sellEstate,
+      buyStakeIn,
+      sellStakeIn,
       demolishLine,
       addModule,
       removeModule,
@@ -1309,6 +1365,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       buildLine,
       buyEstate,
       sellEstate,
+      buyStakeIn,
+      sellStakeIn,
       demolishLine,
       addModule,
       removeModule,

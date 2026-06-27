@@ -17,6 +17,8 @@ import {
   buildFactory,
   buyProperty,
   sellProperty,
+  buyStake,
+  sellStake,
   buyInfra,
   demolishFactory,
   expandFloor,
@@ -61,6 +63,8 @@ interface Body {
   action?: string;
   itemId?: number;
   propId?: number;
+  company?: string;
+  pct?: number;
   factoryId?: string;
   moduleId?: string;
   lineId?: string;
@@ -83,6 +87,10 @@ function apply(state: WorldState, b: Body): string | null {
       return buyProperty(state, Number(b.propId)) ? null : "can't buy that property";
     case "sell-property":
       return sellProperty(state, Number(b.propId)) ? null : "no such property";
+    case "buy-stake":
+      return buyStake(state, String(b.company), Number(b.pct)) ? null : "can't buy that stake";
+    case "sell-stake":
+      return sellStake(state, String(b.company), Number(b.pct)) ? null : "no such stake";
     case "demolish":
       return demolishFactory(state, String(b.factoryId ?? b.id ?? "")) ? null : "no such line";
     case "module-add":

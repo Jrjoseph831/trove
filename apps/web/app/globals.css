@@ -7776,3 +7776,65 @@ body {
   .est-detail { grid-template-columns: 1fr; }
   .est-hero { aspect-ratio: 16 / 10; }
 }
+
+/* ── The Deal Room (equity stakes in AI houses) ───────────────────────────── */
+.view.deals { max-width: 1180px; margin: 0 auto; }
+
+.deal-grid {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+}
+.deal-card {
+  display: flex; align-items: center; gap: 12px; text-align: left; cursor: pointer;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px 14px; transition: transform .12s, box-shadow .12s, border-color .12s;
+}
+.deal-card:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.14); border-color: var(--accent); }
+
+/* Monogram tile, tinted by tier */
+.deal-mono {
+  flex: 0 0 auto; width: 46px; height: 46px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 16px; color: #fff; letter-spacing: .02em;
+  background: #5b6472;
+}
+.deal-mono.t-titan { background: linear-gradient(135deg,#b9851f,#e9c46a); color: #1b1714; }
+.deal-mono.t-large { background: linear-gradient(135deg,#2f5390,#5b86c4); }
+.deal-mono.t-mid { background: linear-gradient(135deg,#3a6b58,#5a967e); }
+.deal-mono.t-boutique { background: linear-gradient(135deg,#5b5560,#857c8a); }
+
+.deal-cardmain { flex: 1 1 auto; min-width: 0; }
+.deal-cardname { font-weight: 750; font-size: 14px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.deal-cardmeta { font-size: 11.5px; color: var(--ink-dim); margin-top: 2px; }
+.deal-cardright { flex: 0 0 auto; text-align: right; }
+.deal-cardval { font-weight: 850; font-size: 15px; color: var(--ink); }
+.deal-cardincome { font-size: 11px; color: var(--ink-dim); display: flex; align-items: center; gap: 3px; justify-content: flex-end; margin-top: 2px; }
+.deal-cardstake { font-size: 11.5px; font-weight: 800; color: var(--accent); margin-top: 2px; }
+
+/* Company file (detail) */
+.deal-file { max-width: 760px; }
+.deal-fhead { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; flex-wrap: wrap; }
+.deal-fhead .deal-mono { width: 60px; height: 60px; font-size: 21px; border-radius: 13px; }
+.deal-sub { font-size: 13px; color: var(--ink-dim); margin-top: 3px; }
+.deal-ctrl-tag {
+  margin-left: auto; align-self: flex-start; background: var(--accent); color: #fff;
+  font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px;
+}
+.deal-trait { font-size: 12.5px; color: var(--ink-dim); font-style: italic; margin: -6px 0 16px; }
+
+.deal-actions { margin-top: 4px; }
+.deal-buyrow, .deal-sellrow { display: flex; gap: 10px; flex-wrap: wrap; }
+.deal-sellrow { margin-top: 10px; }
+.deal-buy {
+  flex: 1 1 140px; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 11px; border: none; border-radius: 11px; background: var(--accent); color: #fff;
+  font-weight: 800; font-size: 14px; cursor: pointer; transition: filter .12s;
+}
+.deal-buy:hover:not(:disabled) { filter: brightness(1.07); }
+.deal-buy:disabled { background: var(--line); color: var(--ink-dim); cursor: not-allowed; }
+.deal-buy-cost { font-size: 11px; font-weight: 600; opacity: .85; }
+.deal-sell {
+  flex: 1 1 140px; padding: 10px; border: 1px solid var(--line); border-radius: 11px;
+  background: var(--paper); color: var(--ink); font-weight: 700; font-size: 13px; cursor: pointer;
+}
+.deal-sell:hover { border-color: var(--danger, #d04b46); color: var(--danger, #d04b46); }

@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Briefcase,
   Building2,
   ClipboardList,
   Factory,
@@ -212,6 +213,15 @@ export function Rail() {
             <Building2 size={15} strokeWidth={1.75} />
           </span>{" "}
           Estates
+        </button>
+        <button
+          className={tab === "deals" ? "on" : ""}
+          onClick={() => go("deals")}
+        >
+          <span className="ic">
+            <Briefcase size={15} strokeWidth={1.75} />
+          </span>{" "}
+          Deal Room
         </button>
         <button
           className={tab === "goals" ? "on" : ""}
