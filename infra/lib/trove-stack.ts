@@ -24,6 +24,8 @@ import type { Construct } from "constructs";
 
 /** OAuth redirect targets — Vercel (primary), GitHub Pages, and local dev. */
 const CALLBACK_URLS = [
+  "https://trove.ceo/",
+  "https://www.trove.ceo/",
   "https://troveworld.tech/",
   "https://www.troveworld.tech/",
   "https://troveworld.fun/",
