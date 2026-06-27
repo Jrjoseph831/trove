@@ -444,8 +444,10 @@ body {
   position: relative;
   inset: auto;
   z-index: 0;
-  height: 100%;
-  min-height: 360px;
+  /* Hold a video-player shape (16:9) instead of stretching to the rail height. */
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 0;
   border-radius: 12px;
   border: 1px solid #1b1b22;
 }
@@ -1642,7 +1644,7 @@ body {
   display: grid;
   grid-template-columns: 1.7fr 1fr;
   gap: 24px;
-  align-items: stretch;
+  align-items: start;
 }
 @media (max-width: 1000px) {
   .tnn-grid {
