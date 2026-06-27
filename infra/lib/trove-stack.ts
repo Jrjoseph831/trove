@@ -26,6 +26,7 @@ import type { Construct } from "constructs";
 const CALLBACK_URLS = [
   "https://trove.ceo/",
   "https://www.trove.ceo/",
+  "https://beta.trove.ceo/",
   "https://troveworld.tech/",
   "https://www.troveworld.tech/",
   "https://troveworld.fun/",
@@ -40,6 +41,11 @@ const HANDLERS = path.join(__dirname, "..", "..", "packages", "server", "src", "
 
 /** Origins allowed to call the API (Vercel primary, Pages, local dev). */
 const ALLOWED_ORIGINS = [
+  "https://trove.ceo",
+  "https://www.trove.ceo",
+  "https://beta.trove.ceo",
+  "https://troveworld.fun",
+  "https://troveworld.tech",
   "https://trove-web-beta.vercel.app",
   "https://jrjoseph831.github.io",
   "http://localhost:3000",
