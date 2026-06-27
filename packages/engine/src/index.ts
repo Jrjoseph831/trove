@@ -16,11 +16,12 @@ import {
   items as catalog,
   moduleCost,
   news as newsBank,
+  properties as propertyCatalog,
   recipeOf,
   sectorKeys,
   type CompanyTier,
 } from "@trove/data";
-import type { News, SectorKey } from "@trove/data";
+import type { News, Property, SectorKey } from "@trove/data";
 import { listedUnitPrice, QC_PREMIUM } from "./pricing";
 import { rand, rexp } from "./rng";
 import { activeMarketEvent } from "./events";
@@ -201,6 +202,7 @@ export function freshState(): WorldState {
     front: null,
     traders: freshTraders(),
     factories: [],
+    properties: [],
     floorSlots: STARTING_SLOTS,
     infra: { power: false, router: false, qc: false },
     listPrices: {},
@@ -315,7 +317,95 @@ export function netWorth(state: WorldState, owner: string): number {
     owner === "YOU"
       ? state.cash - state.debt
       : state.traders.find((t) => t.name === owner)?.cash ?? 0;
-  return base + assetsValue(state, owner);
+  return (
+    base + assetsValue(state, owner) + (owner === "YOU" ? propertyValue(state) : 0)
+  );
+}
+
+// ── Property Market ──────────────────────────────────────────────────────────
+const propById = new Map<number, Property>(propertyCatalog.map((p) => [p.id, p]));
+
+/** Catalog property by id. */
+export function propertyById(id: number): Property | undefined {
+  return propById.get(id);
+}
+
+/** Total current market value of all real estate the player owns. */
+export function propertyValue(state: WorldState): number {
+  let v = 0;
+  for (const op of state.properties ?? []) v += op.value;
+  return v;
+}
+
+/** Rent the player's portfolio pays per settlement period (sum of rentals). */
+export function propertyRent(state: WorldState): number {
+  let r = 0;
+  for (const op of state.properties ?? []) {
+    const p = propById.get(op.propId);
+    if (p) r += p.price * p.rentYield;
+  }
+  return Math.round(r);
+}
+
+/** Buy a property at its list price. One owner per asset (no duplicates). */
+export function buyProperty(state: WorldState, propId: number): boolean {
+  const p = propById.get(propId);
+  if (!p) return false;
+  if ((state.properties ??= []).some((o) => o.propId === propId)) return false;
+  if (state.cash < p.price) return false;
+  state.cash -= p.price;
+  state.properties.push({
+    propId,
+    boughtCycle: state.cycle,
+    boughtValue: p.price,
+    value: p.price,
+  });
+  pushLog(state, "YOU", "acquired", p.name);
+  return true;
+}
+
+/** Sell an owned property back at its current market value. */
+export function sellProperty(state: WorldState, propId: number): boolean {
+  const list = state.properties ?? [];
+  const i = list.findIndex((o) => o.propId === propId);
+  if (i < 0) return false;
+  const op = list[i]!;
+  state.cash += op.value;
+  list.splice(i, 1);
+  const p = propById.get(propId);
+  pushLog(state, "YOU", "sold", p?.name ?? "a property");
+  return true;
+}
+
+/** Deterministic 0..1 hash for property value drift (client + server agree). */
+function hash01(n: number): number {
+  let h = (n ^ 0x9e3779b9) >>> 0;
+  h = Math.imul(h ^ (h >>> 16), 0x45d9f3b) >>> 0;
+  h = Math.imul(h ^ (h >>> 16), 0x45d9f3b) >>> 0;
+  return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
+}
+
+/** Each settlement: pay rent into cash and drift every owned property's value
+ *  with the economy. Deterministic per (cycle, property) so client and server
+ *  agree. Drift = a small positive trend + a volatility-scaled swing tied to
+ *  overall market health (the mean sector index). */
+function settleProperties(state: WorldState): void {
+  const list = state.properties ?? [];
+  if (!list.length) return;
+  const sectors = sectorKeys;
+  let health = 0;
+  for (const s of sectors) health += state.sectorIdx[s] ?? 1;
+  health = sectors.length ? health / sectors.length : 1;
+  const trend = 0.002 + (health - 1) * 0.05; // market mood nudges all values
+  for (const op of list) {
+    const p = propById.get(op.propId);
+    if (!p) continue;
+    if (p.rentYield > 0) state.cash += p.price * p.rentYield;
+    const swing = (hash01(op.propId * 7919 + state.cycle) - 0.5) * 2 * p.volatility;
+    const next = op.value * (1 + trend + swing);
+    // Keep values sane: never below 30% of, nor above 4× the list price.
+    op.value = Math.max(p.price * 0.3, Math.min(p.price * 4, Math.round(next)));
+  }
 }
 
 export function creditLimit(state: WorldState): number {
@@ -586,6 +676,9 @@ export function settleCycle(state: WorldState): void {
   // 5b. Sell produced stock through your market listings (the passive channel).
   sellListings(state);
 
+  // 5c. Real estate: pay rent + drift property values with the economy.
+  settleProperties(state);
+
   // 6. Snapshot net worth + capture this period's report row.
   state.nwHist.push(netWorth(state, "YOU"));
   if (state.nwHist.length > 30) state.nwHist.shift();
@@ -611,6 +704,7 @@ export function runProduction(state: WorldState): void {
  * ledger. Run once per 6h market flip, after that period's production ticks.
  */
 export function captureFlip(state: WorldState): void {
+  settleProperties(state);
   state.nwHist.push(netWorth(state, "YOU"));
   if (state.nwHist.length > 30) state.nwHist.shift();
   captureReport(state);

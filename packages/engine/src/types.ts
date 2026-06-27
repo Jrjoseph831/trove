@@ -56,6 +56,19 @@ export interface Factory {
   status: "building" | "running" | "idle";
 }
 
+/** A real-estate asset the player owns (Property Market). `value` drifts each
+ *  settlement with the economy; rentals also pay rent. Sellable at `value`. */
+export interface OwnedProperty {
+  /** Catalog property id (see @trove/data `properties`). */
+  propId: number;
+  /** Cycle it was bought (market cycle). */
+  boughtCycle: number;
+  /** Price paid at purchase. */
+  boughtValue: number;
+  /** Current market value (drifts each settlement). */
+  value: number;
+}
+
 /** A bulk contract on the player's desk (sandbox). A client opens with a visible
  *  `companyOffer` and haggles within a HIDDEN budget; once a price is agreed the
  *  order flips to "accepted" and is fulfilled from the vault by the deadline. */
@@ -237,6 +250,8 @@ export interface WorldState {
   traders: Trader[];
   /** Player-owned production lines. */
   factories: Factory[];
+  /** Player-owned real estate (Property Market). */
+  properties: OwnedProperty[];
   /** Factory-floor capacity: how many lines can run at once. Expandable. */
   floorSlots: number;
   /** Installed floor infrastructure upgrades. */

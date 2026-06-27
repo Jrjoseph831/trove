@@ -149,9 +149,10 @@ export function docToWorld(doc: WorldDoc): WorldState {
     archive: doc.archive,
     front: doc.front,
     traders: doc.traders,
-    // The global world has no player-owned production lines; factories are a
-    // per-player concern handled outside the singleton doc.
+    // The global world has no player-owned production lines or real estate;
+    // both are per-player concerns handled outside the singleton doc.
     factories: [],
+    properties: [],
     floorSlots: 0,
     infra: { power: false, router: false, qc: false },
     listPrices: {},

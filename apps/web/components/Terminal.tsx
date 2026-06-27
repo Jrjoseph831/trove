@@ -12,6 +12,7 @@ import { GoalUp } from "./GoalUp";
 import { BreakingAlert } from "./BreakingAlert";
 import { Goals } from "./Goals";
 import { LadderUp } from "./LadderUp";
+import { PropertyMarket } from "./PropertyMarket";
 import { DailyReportCard, ReportView } from "./Report";
 import { Rail } from "./Rail";
 import { Ticker } from "./Ticker";
@@ -54,6 +55,7 @@ export function Terminal() {
         {tab === "vault" && <Vault />}
         {tab === "orders" && <Desk />}
         {tab === "factory" && <FactoryView />}
+        {tab === "estates" && <PropertyMarket />}
         {tab === "report" && <ReportView />}
         {tab === "companies" && <Companies />}
         {tab === "goals" && <Goals />}

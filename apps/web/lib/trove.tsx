@@ -46,6 +46,9 @@ import {
   advance,
   borrow,
   buildFactory,
+  buyProperty,
+  sellProperty,
+  propertyById,
   createWorld,
   demolishFactory,
   buyInfra as engineBuyInfra,
@@ -140,6 +143,7 @@ export type TabId =
   | "vault"
   | "orders"
   | "factory"
+  | "estates"
   | "report"
   | "companies"
   | "goals";
@@ -185,6 +189,9 @@ interface Trove {
   doRepay: () => void;
   /** Factory (sandbox): stand up / tear down a production line, tune modules. */
   buildLine: (itemId: number) => void;
+  /** Property Market: buy / sell real estate (sandbox in v1). */
+  buyEstate: (propId: number) => void;
+  sellEstate: (propId: number) => void;
   demolishLine: (id: string) => void;
   addModule: (factoryId: string, moduleId: string) => void;
   removeModule: (factoryId: string, moduleId: string) => void;
@@ -873,6 +880,46 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh, showToast, liveFactory],
   );
 
+  // Property Market — sandbox-only in v1 (live needs a server endpoint + rent in
+  // settlement; coming next). Browsing works in both modes.
+  const buyEstate = useCallback(
+    (propId: number) => {
+      if (modeRef.current === "live") {
+        showToast("Property deals open in the live world soon — try Sandbox");
+        return;
+      }
+      const w = worldsRef.current!.sandbox;
+      const p = propertyById(propId);
+      if (p && w.cash < p.price) {
+        showToast("Not enough cash for that property");
+        return;
+      }
+      if (buyProperty(w, propId)) {
+        showToast(`Acquired ${p?.name ?? "property"}`);
+        refresh();
+      } else {
+        showToast("Can't buy that property");
+      }
+    },
+    [refresh, showToast],
+  );
+
+  const sellEstate = useCallback(
+    (propId: number) => {
+      if (modeRef.current === "live") {
+        showToast("Property deals open in the live world soon — try Sandbox");
+        return;
+      }
+      const w = worldsRef.current!.sandbox;
+      const p = propertyById(propId);
+      if (sellProperty(w, propId)) {
+        showToast(`Sold ${p?.name ?? "property"}`);
+        refresh();
+      }
+    },
+    [refresh, showToast],
+  );
+
   const demolishLine = useCallback(
     (id: string) => {
       if (modeRef.current === "live") {
@@ -1195,6 +1242,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       doBorrow,
       doRepay,
       buildLine,
+      buyEstate,
+      sellEstate,
       demolishLine,
       addModule,
       removeModule,
@@ -1249,6 +1298,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       doBorrow,
       doRepay,
       buildLine,
+      buyEstate,
+      sellEstate,
       demolishLine,
       addModule,
       removeModule,

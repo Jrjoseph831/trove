@@ -7654,3 +7654,125 @@ body {
     margin-left: 0 !important;
   }
 }
+
+/* ── Property Market (Trove Estates) ──────────────────────────────────────── */
+.view.estates { max-width: 1180px; margin: 0 auto; }
+.est-head {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 18px; flex-wrap: wrap; margin-bottom: 16px;
+}
+.est-title { font-family: Georgia, "Times New Roman", serif; font-size: 26px; margin: 0; color: var(--ink); }
+.est-sub { margin: 2px 0 0; font-size: 13px; color: var(--ink-dim); }
+.est-portfolio { display: flex; gap: 10px; flex-wrap: wrap; }
+.est-pf {
+  background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
+  padding: 8px 14px; min-width: 110px;
+}
+.est-pf .k { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-dim); }
+.est-pf .v { display: block; font-size: 18px; font-weight: 800; color: var(--ink); margin-top: 2px; }
+.est-pf .v.rent { color: #2e9c5e; }
+
+.est-filters { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.est-chips { display: flex; gap: 7px; flex-wrap: wrap; }
+.est-chip {
+  border: 1px solid var(--line); background: var(--paper); color: var(--ink-dim);
+  border-radius: 999px; padding: 6px 13px; font-size: 12.5px; font-weight: 600; cursor: pointer;
+  transition: all .12s;
+}
+.est-chip:hover { color: var(--ink); border-color: var(--accent); }
+.est-chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.est-sort {
+  border: 1px solid var(--line); background: var(--paper); color: var(--ink);
+  border-radius: 9px; padding: 7px 11px; font-size: 12.5px; cursor: pointer;
+}
+
+.est-grid {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+.est-card {
+  text-align: left; padding: 0; cursor: pointer; overflow: hidden;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+  transition: transform .14s, box-shadow .14s, border-color .14s;
+  display: flex; flex-direction: column;
+}
+.est-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.18); border-color: var(--accent); }
+
+.est-photo, .est-hero {
+  position: relative; overflow: hidden; display: flex;
+  align-items: center; justify-content: center;
+  background: #1a1a22;
+}
+.est-photo { aspect-ratio: 16 / 10; }
+.est-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.est-emoji { font-size: 54px; opacity: .9; filter: drop-shadow(0 4px 10px rgba(0,0,0,.4)); }
+.est-hero .est-emoji { font-size: 96px; }
+
+/* Category gradients (stand-in until photos land; sit under the photo). */
+.est-photo[data-cat="Residential"], .est-hero[data-cat="Residential"] { background: linear-gradient(135deg,#1f3d2f,#2e6b4a); }
+.est-photo[data-cat="Estate"],      .est-hero[data-cat="Estate"]      { background: linear-gradient(135deg,#3a2a4d,#6b4f8a); }
+.est-photo[data-cat="Land"],        .est-hero[data-cat="Land"]        { background: linear-gradient(135deg,#3a3320,#6e5e34); }
+.est-photo[data-cat="Retail"],      .est-hero[data-cat="Retail"]      { background: linear-gradient(135deg,#16403f,#1f7a72); }
+.est-photo[data-cat="Office"],      .est-hero[data-cat="Office"]      { background: linear-gradient(135deg,#1c2c4a,#2f5390); }
+.est-photo[data-cat="Industrial"],  .est-hero[data-cat="Industrial"]  { background: linear-gradient(135deg,#2a2e33,#4d5560); }
+.est-photo[data-cat="Hospitality"], .est-hero[data-cat="Hospitality"] { background: linear-gradient(135deg,#4d2535,#9a4a5f); }
+.est-photo[data-cat="Tower"],       .est-hero[data-cat="Tower"]       { background: linear-gradient(135deg,#1b2447,#3a4f9c); }
+.est-photo[data-cat="Flagship"],    .est-hero[data-cat="Flagship"]    { background: linear-gradient(135deg,#3a2c0c,#c8851f); }
+
+.est-tag {
+  position: absolute; top: 9px; font-size: 10.5px; font-weight: 800;
+  padding: 3px 8px; border-radius: 999px; letter-spacing: .03em;
+  backdrop-filter: blur(4px); display: inline-flex; align-items: center; gap: 3px;
+}
+.est-tag.oneof { left: 9px; background: rgba(200,133,31,.92); color: #fff; }
+.est-tag.owned { right: 9px; background: rgba(46,156,94,.92); color: #fff; }
+.est-tag.yield { left: 9px; bottom: 9px; top: auto; background: rgba(0,0,0,.55); color: #fff; }
+
+.est-cardbody { padding: 11px 13px 13px; }
+.est-cardprice { font-size: 19px; font-weight: 850; color: var(--ink); }
+.est-cardname { font-size: 13.5px; font-weight: 600; color: var(--ink); margin-top: 1px; }
+.est-cardmeta { font-size: 11.5px; color: var(--ink-dim); margin-top: 4px; display: flex; align-items: center; gap: 3px; }
+
+/* Detail / full listing */
+.est-back {
+  display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
+  background: none; border: none; color: var(--ink-dim); font-size: 13px; font-weight: 600;
+  padding: 4px 0; margin-bottom: 12px;
+}
+.est-back:hover { color: var(--accent); }
+.est-detail { display: grid; grid-template-columns: 1.3fr 1fr; gap: 22px; }
+.est-hero { aspect-ratio: 4 / 3; border-radius: 16px; border: 1px solid var(--line); }
+.est-hero-foot { position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 14px;
+  background: linear-gradient(to top, rgba(0,0,0,.55), transparent); }
+.est-hero-cat { color: #fff; font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
+.est-hero .est-tag { top: 12px; font-size: 12px; padding: 5px 11px; }
+
+.est-info { padding-top: 4px; }
+.est-h1 { font-family: Georgia, "Times New Roman", serif; font-size: 28px; margin: 0 0 6px; color: var(--ink); line-height: 1.15; }
+.est-priceline { font-size: 22px; font-weight: 850; color: var(--ink); margin-bottom: 16px; }
+.est-nowworth { font-size: 13px; font-weight: 500; color: var(--ink-dim); }
+.est-nowworth em { font-style: normal; font-weight: 800; }
+.est-nowworth em.up { color: #2e9c5e; }
+.est-nowworth em.down { color: var(--danger, #d04b46); }
+
+.est-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+.est-stat { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; }
+.est-stat .k { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-dim); }
+.est-stat .v { display: block; font-size: 16px; font-weight: 800; color: var(--ink); margin-top: 2px; }
+.est-stat .v.cap { text-transform: capitalize; }
+.est-blurb { font-size: 13.5px; line-height: 1.6; color: var(--ink-dim); margin: 0 0 18px; }
+
+.est-act {
+  width: 100%; padding: 14px; border-radius: 12px; border: none; cursor: pointer;
+  font-size: 15px; font-weight: 800; color: #fff; transition: filter .12s;
+}
+.est-act.buy { background: var(--accent); }
+.est-act.sell { background: var(--danger, #d04b46); }
+.est-act:hover:not(:disabled) { filter: brightness(1.07); }
+.est-act:disabled { background: var(--line); color: var(--ink-dim); cursor: not-allowed; }
+.est-note { font-size: 11.5px; color: var(--ink-dim); margin: 9px 0 0; text-align: center; }
+
+@media (max-width: 760px) {
+  .est-detail { grid-template-columns: 1fr; }
+  .est-hero { aspect-ratio: 16 / 10; }
+}

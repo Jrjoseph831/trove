@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Building2,
   ClipboardList,
   Factory,
   FileBarChart,
@@ -202,6 +203,15 @@ export function Rail() {
           </span>{" "}
           Factory
           {!factoryOpen && <span className="navlock">🔒 {money(factoryAt)}</span>}
+        </button>
+        <button
+          className={tab === "estates" ? "on" : ""}
+          onClick={() => go("estates")}
+        >
+          <span className="ic">
+            <Building2 size={15} strokeWidth={1.75} />
+          </span>{" "}
+          Estates
         </button>
         <button
           className={tab === "goals" ? "on" : ""}
