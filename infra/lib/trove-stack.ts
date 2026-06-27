@@ -141,6 +141,7 @@ export class TroveStack extends Stack {
           PLAYERS_TABLE: players.tableName,
           OWNERSHIP_TABLE: ownership.tableName,
           ORDERS_TABLE: orders.tableName,
+          STAGE: stage,
         },
         bundling: {
           // CommonJS output: the AWS SDK (CJS) does `require("node:https")` at
@@ -394,6 +395,20 @@ export class TroveStack extends Stack {
       methods: [HttpMethod.GET],
       integration: new HttpLambdaIntegration("StandingsIntegration", standings),
     });
+
+    // ── Dev tools (STAGING ONLY): fund + summon a buyout offer for testing ──
+    if (!isProd) {
+      const dev = fn("Dev", "dev.ts", Duration.seconds(15));
+      market.grantReadData(dev);
+      players.grantReadWriteData(dev);
+      orders.grantReadWriteData(dev);
+      api.addRoutes({
+        path: "/dev",
+        methods: [HttpMethod.POST],
+        integration: new HttpLambdaIntegration("DevIntegration", dev),
+        authorizer,
+      });
+    }
 
     // ── AI traders (Stage B): keep the floor alive between human trades ──────
     const traders = fn("Traders", "traders.ts", Duration.seconds(20));

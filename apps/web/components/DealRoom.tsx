@@ -4,7 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, TrendingUp } from "lucide-react";
 import { companies as lore, sectors } from "@trove/data";
 import { companyValuation } from "@trove/engine";
-import { fetchCompanies, type DirEntry } from "@/lib/api";
+import { devAction, fetchCompanies, type DirEntry } from "@/lib/api";
+import { IS_STAGING } from "@/lib/config";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 
@@ -265,6 +266,14 @@ function LivePlayers() {
   const [dir, setDir] = useState<DirEntry[] | null>(null);
   const [openTo, setOpenTo] = useState<string | null>(null);
   const [bid, setBid] = useState("");
+  const [devPrice, setDevPrice] = useState("5000000");
+  const [devBusy, setDevBusy] = useState(false);
+
+  const runDev = async (action: string, extra: Record<string, number> = {}) => {
+    setDevBusy(true);
+    await devAction({ action, ...extra });
+    if (typeof window !== "undefined") window.location.reload();
+  };
 
   useEffect(() => {
     let alive = true;
@@ -293,6 +302,28 @@ function LivePlayers() {
 
   return (
     <div className="ma-wrap">
+      {IS_STAGING && (
+        <div className="ma-dev">
+          <span className="ma-dev-h">🧪 Staging tools</span>
+          <button disabled={devBusy} onClick={() => runDev("fund", { amount: 50_000_000 })}>
+            Fund +$50M
+          </button>
+          <input
+            className="ma-input"
+            type="number"
+            value={devPrice}
+            onChange={(e) => setDevPrice(e.target.value)}
+            style={{ maxWidth: 150 }}
+          />
+          <button
+            disabled={devBusy}
+            onClick={() => runDev("offer-me", { price: Math.round(Number(devPrice) || 1_000_000) })}
+          >
+            Send me a buyout offer
+          </button>
+        </div>
+      )}
+
       {(incoming.length > 0 || outgoing.length > 0) && (
         <div className="ma-inbox">
           <div className="ma-h">Deals on the table</div>

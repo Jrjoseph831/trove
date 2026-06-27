@@ -154,6 +154,10 @@ export const createBuyout = (sellerHandle: string, price: number) =>
     price,
   });
 
+/** Staging-only dev tools: fund your account / summon a buyout offer. */
+export const devAction = (body: { action: string; amount?: number; price?: number }) =>
+  ordersPost<{ ok?: true }>("/dev", body);
+
 /** Act on an order: accept | decline | counter | withdraw (counter needs price). */
 export const orderAction = (
   id: string,
