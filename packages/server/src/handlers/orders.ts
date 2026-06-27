@@ -25,6 +25,7 @@ import {
   ordersForSeller,
   putOrder,
   settleDeal,
+  settleBuyout,
   storefrontOf,
   type WorldDoc,
 } from "../repo";
@@ -89,7 +90,7 @@ export async function handler(
           (isSeller && order.turn === "seller") ||
           (isBuyer && order.turn === "buyer");
         if (!myTurn) return json(409, { error: "not your move" });
-        const r = await settleDeal(id);
+        const r = order.kind === "buyout" ? await settleBuyout(id) : await settleDeal(id);
         return r.ok ? json(200, { ok: true, deal: r }) : json(409, { error: r.reason });
       }
       case "decline": {
@@ -127,6 +128,7 @@ export async function handler(
 
   // ── POST /orders — create a request ─────────────────────────────────────
   const body = parseBody<{
+    kind?: "goods" | "buyout";
     sellerHandle?: string;
     itemId?: number;
     qty?: number;
@@ -146,6 +148,41 @@ export async function handler(
   );
   if (!seller) return json(404, { error: "no such company" });
   if (seller.playerId === me) return json(400, { error: "that's your own company" });
+
+  // ── Buyout (M&A): an offer to acquire the seller's entire firm ───────────
+  if (body.kind === "buyout") {
+    const price = Math.round(Number(body.price));
+    if (!Number.isFinite(price) || price <= 0)
+      return json(400, { error: "invalid offer" });
+    // Your open offers can never total more than the cash you hold.
+    const outstanding = (await ordersForBuyer(me)).reduce((s, o) => s + o.price, 0);
+    if (outstanding + price > buyer.cash)
+      return json(409, {
+        error:
+          outstanding > 0
+            ? "your open offers would exceed your cash"
+            : "you can't cover that offer",
+      });
+    const now = Date.now();
+    const offer: PvpOrder = {
+      id: newId(),
+      kind: "buyout",
+      sellerId: seller.playerId,
+      sellerName: seller.name ?? "",
+      buyerId: me,
+      buyerName: buyer.name,
+      itemId: 0,
+      itemName: "Full buyout",
+      qty: 1,
+      price,
+      turn: "seller",
+      countered: false,
+      createdAt: now,
+      updatedAt: now,
+    };
+    await putOrder(offer);
+    return json(200, { ok: true, order: offer });
+  }
 
   const itemId = Number(body.itemId);
   const qty = Math.floor(Number(body.qty));

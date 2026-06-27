@@ -1,9 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, TrendingUp } from "lucide-react";
 import { companies as lore, sectors } from "@trove/data";
 import { companyValuation } from "@trove/engine";
+import { fetchCompanies, type DirEntry } from "@/lib/api";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 
@@ -33,6 +34,7 @@ interface Row {
 
 export function DealRoom() {
   const { state, buyStakeIn, sellStakeIn } = useTrove();
+  const [view, setView] = useState<"houses" | "players">("houses");
   const [sec, setSec] = useState("All");
   const [sort, setSort] = useState<"val" | "div" | "mine">("val");
   const [sel, setSel] = useState<string | null>(null);
@@ -196,6 +198,19 @@ export function DealRoom() {
         </div>
       </header>
 
+      <div className="deal-tabs">
+        <button className={view === "houses" ? "on" : ""} onClick={() => setView("houses")}>
+          AI Houses
+        </button>
+        <button className={view === "players" ? "on" : ""} onClick={() => setView("players")}>
+          Live Players (M&amp;A)
+        </button>
+      </div>
+
+      {view === "players" ? (
+        <LivePlayers />
+      ) : (
+        <>
       <div className="est-filters">
         <div className="est-chips">
           {secChips.map((c) => (
@@ -238,6 +253,143 @@ export function DealRoom() {
           </button>
         ))}
       </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+// ── Live-player M&A: acquire another player's entire firm (consensual) ────────
+function LivePlayers() {
+  const { desk, requestBuyout, orders, orderAct } = useTrove();
+  const [dir, setDir] = useState<DirEntry[] | null>(null);
+  const [openTo, setOpenTo] = useState<string | null>(null);
+  const [bid, setBid] = useState("");
+
+  useEffect(() => {
+    let alive = true;
+    fetchCompanies()
+      .then((e) => alive && setDir(e))
+      .catch(() => alive && setDir([]));
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  const myName = desk?.name?.trim();
+  const targets = (dir ?? []).filter((e) => e.kind === "player" && e.name !== myName);
+  const incoming = (orders?.incoming ?? []).filter((o) => o.kind === "buyout");
+  const outgoing = (orders?.outgoing ?? []).filter((o) => o.kind === "buyout");
+
+  const send = async (handle: string) => {
+    const price = Math.round(Number(bid));
+    if (!Number.isFinite(price) || price <= 0) return;
+    const ok = await requestBuyout(handle, price);
+    if (ok) {
+      setOpenTo(null);
+      setBid("");
+    }
+  };
+
+  return (
+    <div className="ma-wrap">
+      {(incoming.length > 0 || outgoing.length > 0) && (
+        <div className="ma-inbox">
+          <div className="ma-h">Deals on the table</div>
+          {incoming.map((o) => (
+            <div className="ma-deal" key={o.id}>
+              <span className="ma-deal-txt">
+                <b>{o.buyerName}</b> offers <b>{money(o.price)}</b> to acquire your firm
+                {o.turn === "buyer" && " · you countered, awaiting them"}
+              </span>
+              {o.turn === "seller" && (
+                <span className="ma-acts">
+                  <button className="ma-yes" onClick={() => orderAct(o.id, "accept")}>
+                    Sell for {money(o.price)}
+                  </button>
+                  <button
+                    className="ma-no"
+                    onClick={() => {
+                      const p = Math.round(Number(prompt("Counter price?") ?? ""));
+                      if (p > 0) orderAct(o.id, "counter", p);
+                    }}
+                  >
+                    Counter
+                  </button>
+                  <button className="ma-no" onClick={() => orderAct(o.id, "decline")}>
+                    Decline
+                  </button>
+                </span>
+              )}
+            </div>
+          ))}
+          {outgoing.map((o) => (
+            <div className="ma-deal" key={o.id}>
+              <span className="ma-deal-txt">
+                Your offer of <b>{money(o.price)}</b> for <b>{o.sellerName}</b>
+                {o.turn === "buyer" ? " · they countered" : " · awaiting their call"}
+              </span>
+              <span className="ma-acts">
+                {o.turn === "buyer" && (
+                  <button className="ma-yes" onClick={() => orderAct(o.id, "accept")}>
+                    Accept {money(o.price)}
+                  </button>
+                )}
+                <button className="ma-no" onClick={() => orderAct(o.id, "withdraw")}>
+                  Withdraw
+                </button>
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="ma-sub">
+        Acquire a rival&apos;s entire firm. They must accept — you both negotiate
+        the price. On a deal, you absorb their lines, properties, stakes &amp;
+        holdings; they cash out.
+      </div>
+
+      {dir === null ? (
+        <div className="empty">Loading the floor…</div>
+      ) : targets.length === 0 ? (
+        <div className="empty">No other player firms on the floor yet.</div>
+      ) : (
+        <div className="ma-grid">
+          {targets.map((t) => (
+            <div className="ma-card" key={t.handle}>
+              <div className="ma-card-top">
+                <div>
+                  <div className="ma-name">{t.name}</div>
+                  <div className="ma-meta">Net worth {money(t.netWorth)}</div>
+                </div>
+                {openTo !== t.handle && (
+                  <button className="ma-offer" onClick={() => { setOpenTo(t.handle); setBid(String(t.netWorth)); }}>
+                    Make offer
+                  </button>
+                )}
+              </div>
+              {openTo === t.handle && (
+                <div className="ma-form">
+                  <input
+                    className="ma-input"
+                    type="number"
+                    value={bid}
+                    onChange={(e) => setBid(e.target.value)}
+                    placeholder="Your offer ($)"
+                  />
+                  <button className="ma-yes" onClick={() => send(t.handle)}>
+                    Send offer
+                  </button>
+                  <button className="ma-no" onClick={() => setOpenTo(null)}>
+                    Cancel
+                  </button>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

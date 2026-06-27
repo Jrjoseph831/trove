@@ -821,6 +821,135 @@ export async function settleDeal(orderId: string, retries = 4): Promise<DealResu
   }
 }
 
+const mergeNums = (
+  a: Record<string | number, number> = {},
+  b: Record<string | number, number> = {},
+  cap?: number,
+): Record<string, number> => {
+  const out: Record<string, number> = { ...a };
+  for (const [k, v] of Object.entries(b)) {
+    const sum = (out[k] ?? 0) + v;
+    out[k] = cap ? Math.min(cap, sum) : sum;
+  }
+  return out;
+};
+
+/** Settle a full BUYOUT (M&A): atomically move the target's ENTIRE firm to the
+ *  buyer (cash, factories, properties, stakes, produced stock, market holdings),
+ *  and leave the target liquid — they keep the agreed price, firm liquidated.
+ *  Optimistic locks: world `version` + each player's `cash` unchanged since read. */
+export async function settleBuyout(orderId: string, retries = 4): Promise<DealResult> {
+  for (let attempt = 0; ; attempt++) {
+    const order = await getOrder(orderId);
+    if (!order) return { ok: false, reason: "offer is gone" };
+    const [buyer, target, cur] = await Promise.all([
+      getPlayer(order.buyerId),
+      getPlayer(order.sellerId),
+      loadWorld(),
+    ]);
+    if (!buyer) return { ok: false, reason: "buyer is gone" };
+    if (!target) return { ok: false, reason: "that firm is gone" };
+    if (!cur) return { ok: false, reason: "world not seeded" };
+    if (buyer.cash < order.price) return { ok: false, reason: "buyer can't cover it" };
+
+    // Move the target's market holdings → buyer in the world doc.
+    const full = docToWorld(cur as WorldDoc);
+    for (const it of full.items) {
+      const held = it.owners[order.sellerId] ?? 0;
+      if (held > 0) {
+        it.owners[order.buyerId] = (it.owners[order.buyerId] ?? 0) + held;
+        delete it.owners[order.sellerId];
+      }
+    }
+    const nextDoc = worldToDoc(full, cur.version + 1);
+
+    const buyerFactories = [...(buyer.factories ?? []), ...(target.factories ?? [])];
+    const mergedBuyer: Player = {
+      ...buyer,
+      // Buyer pays the price and absorbs the target's treasury + assets.
+      cash: buyer.cash - order.price + target.cash,
+      factories: buyerFactories,
+      properties: [...(buyer.properties ?? []), ...(target.properties ?? [])],
+      stakes: mergeNums(buyer.stakes, target.stakes, 1),
+      producedQty: mergeNums(buyer.producedQty, target.producedQty),
+      listPrices: { ...(target.listPrices ?? {}), ...(buyer.listPrices ?? {}) },
+      listed: { ...(target.listed ?? {}), ...(buyer.listed ?? {}) },
+      floorSlots: Math.max(buyer.floorSlots ?? STARTING_SLOTS, buyerFactories.length),
+      infra: {
+        power: !!(buyer.infra?.power || target.infra?.power),
+        router: !!(buyer.infra?.router || target.infra?.router),
+        qc: !!(buyer.infra?.qc || target.infra?.qc),
+      },
+    };
+    // The acquired firm cashes out: keeps the agreed price, everything else wiped.
+    const cashedOut: Player = {
+      ...target,
+      cash: order.price,
+      factories: [],
+      properties: [],
+      stakes: {},
+      producedQty: {},
+      listed: {},
+      listPrices: {},
+      floorSlots: STARTING_SLOTS,
+      infra: { ...FRESH_INFRA },
+    };
+
+    try {
+      await ddb.send(
+        new TransactWriteCommand({
+          TransactItems: [
+            {
+              Put: {
+                TableName: TABLE,
+                Item: { pk: PK, version: nextDoc.version, world: nextDoc },
+                ConditionExpression: "version = :v",
+                ExpressionAttributeValues: { ":v": cur.version },
+              },
+            },
+            {
+              Put: {
+                TableName: PLAYERS,
+                Item: mergedBuyer,
+                ConditionExpression: "cash = :bc",
+                ExpressionAttributeValues: { ":bc": buyer.cash },
+              },
+            },
+            {
+              Put: {
+                TableName: PLAYERS,
+                Item: cashedOut,
+                ConditionExpression: "cash = :tc",
+                ExpressionAttributeValues: { ":tc": target.cash },
+              },
+            },
+            {
+              Delete: {
+                TableName: ORDERS,
+                Key: { id: orderId },
+                ConditionExpression: "attribute_exists(id)",
+              },
+            },
+          ],
+        }),
+      );
+      return { ok: true, price: order.price, qty: 1 };
+    } catch (err) {
+      const name = (err as { name?: string }).name;
+      if (
+        (name === "TransactionCanceledException" ||
+          name === "ConditionalCheckFailedException") &&
+        attempt < retries
+      ) {
+        continue; // version/cash race or transient — reload + re-validate
+      }
+      if (name === "TransactionCanceledException" || name === "ConditionalCheckFailedException")
+        return { ok: false, reason: "it just changed — try again" };
+      throw err;
+    }
+  }
+}
+
 /** Load the world, apply a mutation, and save with an optimistic version guard.
  *  Retries on a concurrent write. Used by settlement + the AI-trader run. */
 export async function mutateWorld(
