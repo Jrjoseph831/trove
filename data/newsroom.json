@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-26T18:43:35.231Z",
+  "generatedAt": "2026-06-27T00:57:27.687Z",
   "beats": [
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Castlestone Signs Landmark Supply Agreement After Vellmont Record",
+      "body": "Riding momentum from its record at the Vellmont Showcase, Castlestone inked a $2.1 billion, five-year compute supply deal with Harrowgate Networks, its largest contract ever. CEO Iris Garr called it 'proof the carving holds under load,' pledging dedicated capacity at two plants. Shares of attention turned sharply as rivals scrambled to respond.",
+      "cycle": 82524,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Halhold Systems Names New Chief as Aldous Departs Amid Northgate Fallout",
+      "body": "Following the cost overruns that triggered last quarter's charge, longtime CEO Cora Aldous has stepped down, ending a turbulent 50-year tenure. The board appointed veteran operations chief Dahlia Renn to stabilize the troubled Northgate campus and restore confidence. Renn pledged a full review of the project's budget within ninety days.",
+      "cycle": 82524,
+      "dur": 8
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Vencyon Lands Multi-Year Supply Pact with Drenfield Distribution",
+      "body": "Vencyon will outfit Drenfield Distribution's twelve regional hubs with conveyor and palletizing systems under a four-year, $310 million agreement. CEO Iris Halloran called it 'the kind of measured bet that keeps floors moving for a decade.' First installations begin at the Caldwater hub next quarter.",
+      "cycle": 82524,
+      "dur": 2
+    },
+    {
+      "company": "Venline & Sons",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Venline & Sons Edges Past Quarterly Estimates on Steady Demand",
+      "body": "The medical-consumables maker reported revenue of $1.42 billion, modestly ahead of forecasts, with margins holding flat year over year. CEO Mara Garr credited 'patient, predictable replenishment cycles' across hospital clients. The company reaffirmed its full-year outlook.",
+      "cycle": 82524,
+      "dur": 1
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Woldmark Unveils Halcyon Compute Line at Annual Showcase",
+      "body": "Woldmark introduced its Halcyon server family, promising 35% better throughput per rack than its prior generation. CEO Cole Carrow took the stage personally, declaring the launch 'the boring revolution our customers actually asked for.' Volume shipments are slated for early next quarter.",
+      "cycle": 82524,
+      "dur": 2
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Wrengrove Group Adds Second Line at Easton Consumables Plant",
+      "body": "Wrengrove will commission a second production line at its Easton facility, lifting output of sterile basics by roughly 18%. CEO Rhys Vossen framed the move as 'making sure we're never the bottleneck.' The line is expected online within six months.",
+      "cycle": 82524,
+      "dur": 1
+    },
+    {
+      "company": "Wrenhaus",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Wrenhaus Wins Fixture Contract for Brackenfield Development",
+      "body": "Wrenhaus secured a $185 million order to supply plumbing and fixtures across the 4,200-unit Brackenfield residential development. CEO Quinn Thorne described it as 'a quiet, steady win that fits how we grow.' Deliveries phase in over three years.",
+      "cycle": 82524,
+      "dur": 2
+    },
+    {
+      "company": "Wrenspire",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Wrenspire Opens New Distribution Center in Marlowe",
+      "body": "Wrenspire cut the ribbon on a 600,000-square-foot Marlowe distribution center serving its household and apparel lines. CEO Theo Aldous said the site 'stocks every room a little faster.' The facility is expected to shorten regional delivery times by two days.",
+      "cycle": 82524,
+      "dur": 1
+    },
     {
       "company": "Skarnstone Industries",
       "sector": "medical",
@@ -20,16 +100,6 @@
       "body": "The agreement covers seed treatments and soil amendments across an estimated 3.4 million acres, valued at roughly $880 million over its term. CEO Kestrel Fenn said the deal extends a relationship some member farms have held for three generations. Deliveries begin with the spring planting cycle.",
       "cycle": 82523,
       "dur": 2
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Vantor Lines rolls out recyclable molded-fiber line for fragile goods",
-      "body": "The new Contour series replaces foam inserts with pressed-fiber casings rated for heavier electronics and glassware. CEO Halden Vossen said early adopters reported a 9% drop in transit damage during pilot runs. The line enters general availability next month at parity pricing.",
-      "cycle": 82523,
-      "dur": 1
     },
     {
       "company": "Veldtreach & Sons",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Vossenwright Holdings",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vossenwright Holdings edges past forecasts on equipment servicing",
-      "body": "Quarterly profit rose 3% to $312 million, helped by steady demand for replacement parts and maintenance contracts. CEO Quinn Skarn pointed to disciplined inventory management rather than new orders. Guidance was left unchanged for the remainder of the year.",
-      "cycle": 82523,
-      "dur": 1
-    },
-    {
       "company": "Wold & Bramm",
       "sector": "consumer",
       "kind": "product_launch",
@@ -79,76 +139,6 @@
       "head": "Wold & Bramm debuts heritage lighting collection at trade showcase",
       "body": "The Halden range pairs brass fittings with warm-tone fixtures, targeting mid-market households and boutique hospitality clients. CEO Mara Marrow said pre-orders already cover the first production run of 60,000 units. The line anchors a broader push into coordinated room sets rolling out through the year.",
       "cycle": 82523,
-      "dur": 2
-    },
-    {
-      "company": "Palettstone & Sons",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Palettstone & Sons Unveils Heirloom Pro Line of Hand Tools",
-      "body": "The 116-year-old toolmaker introduced its Heirloom Pro range, a 40-piece collection of wrenches, chisels and hammers backed by a lifetime replacement guarantee. CEO Cole Fenn said the line targets working tradespeople willing to pay a premium, with units priced 30% above the company's standard catalog. First shipments reach 4,200 hardware outlets next month.",
-      "cycle": 82522,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrave",
-      "sector": "medical",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Skarngrave Wins Five-Year Sterilization Supply Contract",
-      "body": "Skarngrave secured a $310 million agreement to supply sterilization equipment and Jansan consumables to the Meridian Health Network's 88 facilities. CEO Orla Dray called the deal 'steady work for steady people,' noting it replaces a rival incumbent after a competitive bid. Deliveries begin in the first quarter.",
-      "cycle": 82522,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Skarngrove & Sons Breaks Ground on New Fastener Plant",
-      "body": "The structural materials maker began construction on a 540,000-square-foot fastener facility in the Calderbridge industrial corridor, a $215 million investment expected to add 600 jobs. CEO Quinn Fenn said demand from high-rise contractors had stretched existing capacity to its limit. The plant is slated to open in 18 months.",
-      "cycle": 82522,
-      "dur": 2
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Skarnvale Misses Quarterly Targets as Freight Costs Bite",
-      "body": "Skarnvale reported quarterly profit of $48 million, well short of the $71 million analysts expected, blaming surging fuel and a backlog at three regional depots. CEO Lena Calder acknowledged 'a rough stretch' but insisted handling-equipment orders remain strong heading into the next quarter. Shares of the logistics house slid in after-hours activity.",
-      "cycle": 82522,
-      "dur": 2
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Steg Tooling Tops Forecasts on Auto-Parts Surge",
-      "body": "Steg Tooling posted quarterly revenue of $390 million, up 14% year over year, beating estimates as auto-parts and fastener volumes climbed. CEO Iris Vossen credited disciplined inventory management and new contracts with three vehicle assemblers. The firm raised its full-year outlook modestly.",
-      "cycle": 82522,
-      "dur": 2
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "breakthrough",
-      "size": "standard",
-      "head": "Stegforge Debuts Longer-Lasting Alloy for Heavy Machinery",
-      "body": "Stegforge announced a new wear-resistant steel alloy that lab tests show extends component life by up to 40% under heavy load. CEO Aurelia Steg said the material will first appear in the company's farm-equipment gearboxes before reaching industrial machine lines. Patents covering the process have been filed in nine jurisdictions.",
-      "cycle": 82522,
-      "dur": 2
-    },
-    {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Stegreach Lands Wiring Contract for Major Transit Project",
-      "body": "Stegreach won a $185 million contract to supply wire, cable and lighting for the Eastmere regional transit expansion. CEO Halden Ashby called it 'the kind of bold swing that pays off,' noting the deal spans four years and 60 station sites. Material deliveries start this spring.",
-      "cycle": 82522,
       "dur": 2
     },
     {
@@ -189,16 +179,6 @@
       "head": "Greywater Grid Claims Record Storage Density at Halloran Facility",
       "body": "Greywater Grid says its new Halloran storage array sustained peak discharge at nearly double the density of its prior generation, a figure Vale Halloran called 'a line in the sand for the whole sector.' The company plans to pair the banks with its compute halls to smooth demand spikes, targeting commercial rollout within the year. Independent verification is pending, but Halloran has already booked a press tour.",
       "cycle": 82518,
-      "dur": 8
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Carrowforge Rocked by Probe Into Falsified Machine-Testing Records",
-      "body": "An internal review found that key durability certifications on several industrial machine lines were signed off without completed testing, prompting an emergency board session. CEO Mara Fenn acknowledged 'serious lapses' and suspended two senior plant managers pending an outside audit. Several major buyers have paused new orders while the firm scrambles to re-certify affected units.",
-      "cycle": 82516,
       "dur": 8
     }
   ]

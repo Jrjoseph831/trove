@@ -979,7 +979,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82524,
     "events": [
       {
         "cycle": 0,
@@ -995,6 +995,16 @@
         "size": "major",
         "head": "Castlestone Claims Record at Vellmont Compute Showcase",
         "body": "Iris Garr took the main stage at the Vellmont Showcase to demonstrate a new lattice-cooling design she said triples sustained throughput per rack. Independent halls at the event logged the demo running 11 hours without throttling. Garr, never shy, declared it 'the end of the warm-room era' to roaring applause.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82524,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Castlestone Signs Landmark Supply Agreement After Vellmont Record",
+        "body": "Riding momentum from its record at the Vellmont Showcase, Castlestone inked a $2.1 billion, five-year compute supply deal with Harrowgate Networks, its largest contract ever. CEO Iris Garr called it 'proof the carving holds under load,' pledging dedicated capacity at two plants. Shares of attention turned sharply as rivals scrambled to respond.",
         "effects": {
           "technology": 0.22
         }
@@ -1708,14 +1718,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1972,
-    "ceo": "Cora Aldous",
-    "ceoSince": 1972,
+    "ceo": "Dahlia Renn",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.86,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82524,
     "events": [
       {
         "cycle": 0,
@@ -1744,6 +1754,14 @@
         "effects": {
           "technology": -0.13
         }
+      },
+      {
+        "cycle": 82524,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Systems Names New Chief as Aldous Departs Amid Northgate Fallout",
+        "body": "Following the cost overruns that triggered last quarter's charge, longtime CEO Cora Aldous has stepped down, ending a turbulent 50-year tenure. The board appointed veteran operations chief Dahlia Renn to stabilize the troubled Northgate campus and restore confidence. Renn pledged a full review of the project's budget within ninety days.",
+        "effects": {}
       }
     ]
   },
@@ -3083,7 +3101,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82524,
     "events": [
       {
         "cycle": 0,
@@ -3092,6 +3110,16 @@
         "head": "Vencyon — Keep the floor flowing",
         "body": "Vencyon started by reworking forklift hydraulics nobody else could fix, then decided to build the whole machine better. Now their pallet jacks, lift trucks and conveyor gear run warehouses from tight value-priced fleets to the heavy mid-tier and premium units that shift product all night without complaint. Operators like the controls, managers like the uptime, and few notice the badge until something else breaks first. Quiet, dependable, everywhere goods need to keep moving.",
         "effects": {}
+      },
+      {
+        "cycle": 82524,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vencyon Lands Multi-Year Supply Pact with Drenfield Distribution",
+        "body": "Vencyon will outfit Drenfield Distribution's twelve regional hubs with conveyor and palletizing systems under a four-year, $310 million agreement. CEO Iris Halloran called it 'the kind of measured bet that keeps floors moving for a decade.' First installations begin at the Caldwater hub next quarter.",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
@@ -3106,7 +3134,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82524,
     "events": [
       {
         "cycle": 0,
@@ -3115,6 +3143,16 @@
         "head": "Venline & Sons — Sterile, sealed, on time",
         "body": "Venline & Sons grew out of a wartime dressing supplier and never lost the urgency. They make the consumables hospitals burn through by the crate, gloves, syringes, swabs, drapes, at everyday and mid-tier pricing that keeps ward budgets intact. Nothing here is glamorous, and that is rather the point; their reputation rests on lots that pass inspection every single time and boxes that show up when the schedule says they will. Volume done right.",
         "effects": {}
+      },
+      {
+        "cycle": 82524,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Venline & Sons Edges Past Quarterly Estimates on Steady Demand",
+        "body": "The medical-consumables maker reported revenue of $1.42 billion, modestly ahead of forecasts, with margins holding flat year over year. CEO Mara Garr credited 'patient, predictable replenishment cycles' across hospital clients. The company reaffirmed its full-year outlook.",
+        "effects": {
+          "medical": 0.06
+        }
       }
     ]
   },
@@ -3294,7 +3332,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82524,
     "events": [
       {
         "cycle": 0,
@@ -3303,6 +3341,16 @@
         "head": "Woldmark — Compute without the drama",
         "body": "Woldmark builds the machines that do the actual thinking, processors and systems pitched from value desktops to premium workstations that chew through heavy loads. They earned standing the hard way, shipping boards that boot the first time and run cool the thousandth. There is no theatre to the brand, just specs that hold up and support that answers. People who depend on the work, not the badge, keep coming back, and that quiet loyalty is the whole story.",
         "effects": {}
+      },
+      {
+        "cycle": 82524,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Woldmark Unveils Halcyon Compute Line at Annual Showcase",
+        "body": "Woldmark introduced its Halcyon server family, promising 35% better throughput per rack than its prior generation. CEO Cole Carrow took the stage personally, declaring the launch 'the boring revolution our customers actually asked for.' Volume shipments are slated for early next quarter.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -3317,7 +3365,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82524,
     "events": [
       {
         "cycle": 0,
@@ -3326,6 +3374,16 @@
         "head": "Wrengrove Group — The basics, never the bottleneck",
         "body": "Wrengrove Group makes the unglamorous staples of care, the gauze, tubing, gloves and sterile packs clinics order by the pallet. They hold to everyday and mid-tier pricing because keeping supply rooms stocked matters more than any flourish. Their name carries weight precisely for being boring; lots arrive consistent, certified and on schedule, year after year. When a ward runs low, nobody wants surprises, and Wrengrove has built decades of trust on giving them none at all.",
         "effects": {}
+      },
+      {
+        "cycle": 82524,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wrengrove Group Adds Second Line at Easton Consumables Plant",
+        "body": "Wrengrove will commission a second production line at its Easton facility, lifting output of sterile basics by roughly 18%. CEO Rhys Vossen framed the move as 'making sure we're never the bottleneck.' The line is expected online within six months.",
+        "effects": {
+          "medical": 0.06
+        }
       }
     ]
   },
@@ -3340,7 +3398,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82524,
     "events": [
       {
         "cycle": 0,
@@ -3349,6 +3407,16 @@
         "head": "Wrenhaus — Where the water meets the wall",
         "body": "Wrenhaus began as a foundry casting taps for terraced housing and never strayed far from the trade. Their fixtures and fittings run the full span, thrifty everyday lines, dependable mid-tier ranges, and premium pieces chosen when the finish has to match the build. Tradespeople favour the name for fittings that seal first try and survive hard water for years. It is solid, sensible hardware from a house that has watched what fails and quietly designed against it.",
         "effects": {}
+      },
+      {
+        "cycle": 82524,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Wrenhaus Wins Fixture Contract for Brackenfield Development",
+        "body": "Wrenhaus secured a $185 million order to supply plumbing and fixtures across the 4,200-unit Brackenfield residential development. CEO Quinn Thorne described it as 'a quiet, steady win that fits how we grow.' Deliveries phase in over three years.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -3363,7 +3431,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 0,
+    "lastEventCycle": 82524,
     "events": [
       {
         "cycle": 0,
@@ -3372,6 +3440,16 @@
         "head": "Wrenspire — Stocking every room of the house",
         "body": "Wrenspire spread outward from a humble dry-goods workshop into clothing, household wares, kitchen supply and the inputs that keep a smallholding running. The range stretches from affordable everyday staples to mid-tier goods built to outlast a few seasons of real use. Families know the name from cupboards, wardrobes and back sheds rather than any showroom. It is broad, practical, fairly priced stock from a house that grasps the difference between cheap and simply good value.",
         "effects": {}
+      },
+      {
+        "cycle": 82524,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wrenspire Opens New Distribution Center in Marlowe",
+        "body": "Wrenspire cut the ribbon on a 600,000-square-foot Marlowe distribution center serving its household and apparel lines. CEO Theo Aldous said the site 'stocks every room a little faster.' The facility is expected to shorten regional delivery times by two days.",
+        "effects": {
+          "consumer": 0.06
+        }
       }
     ]
   }
