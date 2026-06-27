@@ -126,21 +126,36 @@ export async function captureTokenFromQuery(): Promise<boolean> {
 }
 
 /** Renew the id token from the refresh token. Clears tokens if the refresh token
- *  itself is dead (then the user is genuinely signed out). */
+ *  itself is dead (then the user is genuinely signed out).
+ *
+ *  Single-flight: with refresh-token ROTATION enabled server-side, each refresh
+ *  consumes the current refresh token and returns a new one. If two callers (the
+ *  timer + a tab-focus, say) refreshed at once they'd race to spend the same
+ *  token and orphan one of the rotated results — so concurrent calls share one
+ *  in-flight request. */
+let inFlight: Promise<boolean> | null = null;
 async function refreshTokens(): Promise<boolean> {
   if (typeof window === "undefined") return false;
-  const rt = localStorage.getItem(RT_KEY);
-  if (!rt) return false;
-  const ok = await tokenRequest({
-    grant_type: "refresh_token",
-    client_id: COGNITO_CLIENT_ID,
-    refresh_token: rt,
-  });
-  if (!ok) {
-    localStorage.removeItem(ID_KEY);
-    localStorage.removeItem(RT_KEY);
+  if (inFlight) return inFlight;
+  inFlight = (async () => {
+    const rt = localStorage.getItem(RT_KEY);
+    if (!rt) return false;
+    const ok = await tokenRequest({
+      grant_type: "refresh_token",
+      client_id: COGNITO_CLIENT_ID,
+      refresh_token: rt,
+    });
+    if (!ok) {
+      localStorage.removeItem(ID_KEY);
+      localStorage.removeItem(RT_KEY);
+    }
+    return ok;
+  })();
+  try {
+    return await inFlight;
+  } finally {
+    inFlight = null;
   }
-  return ok;
 }
 
 /** Refresh if the id token is missing/expired/within 5 min of expiry and we have
@@ -171,9 +186,20 @@ export async function signIn(): Promise<void> {
   window.location.assign(u.toString());
 }
 
-/** Clear local tokens and bounce through Cognito logout. */
+/** Clear local tokens and bounce through Cognito logout. Best-effort revokes the
+ *  refresh token server-side first (keepalive so it survives the redirect), so a
+ *  signed-out token can't be reused even if it leaked. */
 export function signOut(): void {
   if (typeof window !== "undefined") {
+    const rt = localStorage.getItem(RT_KEY);
+    if (rt && AUTH_ENABLED) {
+      void fetch(`${COGNITO_DOMAIN}/oauth2/revoke`, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ token: rt, client_id: COGNITO_CLIENT_ID }),
+        keepalive: true,
+      }).catch(() => {});
+    }
     localStorage.removeItem(ID_KEY);
     localStorage.removeItem(RT_KEY);
   }

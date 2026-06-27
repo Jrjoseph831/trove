@@ -204,8 +204,12 @@ export class TroveStack extends Stack {
       userPoolClientName: "trove-web",
       generateSecret: false, // public SPA client
       supportedIdentityProviders: supportedIdps,
+      // Authorization Code + PKCE only. The legacy implicit grant returns tokens
+      // in the URL fragment with no refresh token — drop it now that the app uses
+      // the code flow, so there's no insecure path left to abuse.
+      enableTokenRevocation: true,
       oAuth: {
-        flows: { authorizationCodeGrant: true, implicitCodeGrant: true },
+        flows: { authorizationCodeGrant: true },
         scopes: [
           cognito.OAuthScope.OPENID,
           cognito.OAuthScope.EMAIL,
@@ -215,6 +219,15 @@ export class TroveStack extends Stack {
         logoutUrls: CALLBACK_URLS,
       },
     });
+    // Refresh-token rotation: each refresh invalidates the old token and issues a
+    // new one, so a stolen refresh token is useful for one cycle instead of the
+    // full ~30-day window. The client (auth.ts) stores the rotated token and
+    // single-flights refreshes; the grace period covers brief concurrent calls.
+    (userPoolClient.node.defaultChild as cognito.CfnUserPoolClient)
+      .refreshTokenRotation = {
+      feature: "ENABLED",
+      retryGracePeriodSeconds: 30,
+    };
     // The client lists Google as a provider, so it must be created AFTER the
     // Google IdP exists — otherwise CloudFormation errors "provider Google does
     // not exist". An explicit dependency enforces the order.
