@@ -26,6 +26,8 @@ import type { Construct } from "constructs";
 const CALLBACK_URLS = [
   "https://troveworld.tech/",
   "https://www.troveworld.tech/",
+  "https://troveworld.fun/",
+  "https://www.troveworld.fun/",
   "https://trove-web-beta.vercel.app/",
   "https://jrjoseph831.github.io/trove/",
   "http://localhost:3000/",
