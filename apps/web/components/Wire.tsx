@@ -12,7 +12,7 @@ import type { WireStory } from "./Broadcast";
 import { Newsreel, Wheel } from "./Newsreel";
 
 export function Wire() {
-  const { state } = useTrove();
+  const { state, desk } = useTrove();
   const [studioOpen, setStudioOpen] = useState(false);
   // The telegraphed market-event Breaking beat — refreshed on its own clock.
   const [now, setNow] = useState(() => Date.now());
@@ -48,9 +48,12 @@ export function Wire() {
   const cards = stories.slice(1, 9);
   const tape = cards.length ? cards : stories;
 
+  // The player's own row shows their Holding name (not "YOU"); the internal id
+  // stays "YOU" for the net-worth lookup and the highlight.
+  const myLabel = desk?.name?.trim() || "Your Holding";
   const board = [
-    { name: "YOU", w: netWorth(state, "YOU") },
-    ...state.traders.map((t) => ({ name: t.name, w: netWorth(state, t.name) })),
+    { id: "YOU", label: myLabel, w: netWorth(state, "YOU") },
+    ...state.traders.map((t) => ({ id: t.name, label: t.name, w: netWorth(state, t.name) })),
   ].sort((a, b) => b.w - a.w);
 
   return (
@@ -107,10 +110,10 @@ export function Wire() {
           <div className="tnn-panel">
             <div className="tnn-panel-h">Leaderboard</div>
             {board.map((e, i) => (
-              <div className={`lb ${e.name === "YOU" ? "me" : ""}`} key={e.name}>
+              <div className={`lb ${e.id === "YOU" ? "me" : ""}`} key={e.id}>
                 <span>
                   <span className="rk">{i + 1}</span>
-                  {e.name}
+                  {e.label}
                 </span>
                 <span>{money(e.w)}</span>
               </div>

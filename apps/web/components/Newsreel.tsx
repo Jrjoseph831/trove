@@ -196,7 +196,8 @@ export function Wheel({
   embedded?: boolean;
   onClose?: () => void;
 }) {
-  const { state } = useTrove();
+  const { state, desk } = useTrove();
+  const myLabel = desk?.name?.trim() || "Your Holding";
   const stateRef = useRef(state);
   stateRef.current = state;
   const loopRef = useRef(0);
@@ -449,15 +450,15 @@ export function Wheel({
               <div className="reel-panel-h">Standings</div>
               <div className="reel-list">
                 {[
-                  { name: "YOU", w: netWorth(state, "YOU") },
-                  ...state.traders.map((t) => ({ name: t.name, w: netWorth(state, t.name) })),
+                  { id: "YOU", label: myLabel, w: netWorth(state, "YOU") },
+                  ...state.traders.map((t) => ({ id: t.name, label: t.name, w: netWorth(state, t.name) })),
                 ]
                   .sort((a, b) => b.w - a.w)
                   .map((e, i) => (
-                    <div className={`reel-row ${e.name === "YOU" ? "me" : ""}`} key={e.name}>
+                    <div className={`reel-row ${e.id === "YOU" ? "me" : ""}`} key={e.id}>
                       <span className="reel-row-nm">
                         <span className="rk">{i + 1}</span>
-                        {e.name}
+                        {e.label}
                       </span>
                       <span className="reel-row-pr">{money(e.w)}</span>
                     </div>
