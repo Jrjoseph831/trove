@@ -368,7 +368,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82525,
     "events": [
       {
         "cycle": 0,
@@ -396,6 +396,16 @@
         "body": "Boreas Power beat quarterly expectations as the newly acquired Hollowmere fields began contributing storage revenue ahead of schedule. Mira Thorne credited rapid integration and steady demand across the three districts. She signaled appetite for 'one or two more' deals this year.",
         "effects": {
           "energy": 0.06
+        }
+      },
+      {
+        "cycle": 82525,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Boreas Power Moves to Full Ownership of Hollowmere Storage Fields",
+        "body": "Boreas Power has agreed to buy out its remaining partners in the Hollowmere Storage Fields for 480 million, converting its earlier minority stake into outright control. CEO Mira Thorne said full ownership lets the company route Hollowmere's capacity directly into its Power & Storage contracts without revenue-sharing. The deal follows a quarter in which Hollowmere alone contributed nearly a fifth of group output.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -444,7 +454,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82525,
     "events": [
       {
         "cycle": 0,
@@ -462,6 +472,16 @@
         "body": "Petra Veldt announced a multi-year compute supply agreement to power the Meridian Exchange's entire clearing operation, the firm's largest contract to date. The deal reportedly spans 40,000 units across three regions and was sealed after a fierce bidding contest. Veldt called it 'a statement, not a sale.'",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82525,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Bruncrest Works Posts Record Quarter as Meridian Pact Ramps",
+        "body": "Bruncrest Works reported quarterly revenue of 612 million, up 23 percent, driven by the first full shipments under its Meridian Exchange supply agreement. CEO Petra Veldt told reporters the compute backlog now stretches eleven months and hinted at a second production line. Margins widened to 31 percent as the Meridian volume absorbed fixed plant costs.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -586,7 +606,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82525,
     "events": [
       {
         "cycle": 0,
@@ -614,6 +634,16 @@
         "body": "Regional safety inspectors opened a review into the Ardent's storage packs after pre-production tests flagged uneven heating under fast charging. Sable Veldt downplayed the probe as 'routine for anything this new' and paused only the demo fleet. The scrutiny cooled some of the launch's heat.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82525,
+        "kind": "recall",
+        "size": "major",
+        "head": "Brunstone & Sons Recalls Entire Ardent Hauler Fleet Over Pack Heating",
+        "body": "Following the safety review, Brunstone & Sons has ordered a full recall of all 6,200 Ardent Long-Range Haulers shipped to date, citing confirmed thermal faults in the power pack under sustained load. CEO Sable Veldt, in a combative briefing, blamed a supplier's cell batch but pledged free replacements and an estimated 220-million remediation program. Deliveries of new Ardent units are suspended indefinitely pending a redesigned pack.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -903,7 +933,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82525,
     "events": [
       {
         "cycle": 0,
@@ -929,6 +959,16 @@
         "size": "standard",
         "head": "Castlehold Saltmere Banks Stumble in First Storm Season",
         "body": "Castlehold's new Saltmere banks tripped offline during an early squall, briefly cutting backup capacity to two windward districts. Soren Skarn rushed engineers to the coast and blamed an untested cutover switch. The turbulent debut underscored the risks of his rushed timeline.",
+        "effects": {
+          "energy": -0.13
+        }
+      },
+      {
+        "cycle": 82525,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Castlehold Splits Saltmere Into Standalone Unit After Storm-Season Faults",
+        "body": "Castlehold has carved its troubled Saltmere Banks coastal operation into a separate division with its own management and a 95-million hardening budget for sea-wall and drainage upgrades. CEO Soren Skarn framed the move as 'ring-fencing the problem so the core book stays clean,' isolating Saltmere's losses from the company's stable inland storage business. Analysts noted the restructure quietly walks back Skarn's earlier coastal-expansion ambitions.",
         "effects": {
           "energy": -0.13
         }
@@ -1583,7 +1623,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82525,
     "events": [
       {
         "cycle": 0,
@@ -1611,6 +1651,16 @@
         "body": "The Halverford Watchmakers Guild handed Gromford Works its top honor for the Aurelian Tourbillon, praising its movement finishing. Mira Ashby accepted on stage and immediately teased a second collection. The recognition cements a banner season for the house.",
         "effects": {
           "luxury": 0.06
+        }
+      },
+      {
+        "cycle": 82525,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Gromford Works Opens Flagship Atelier in Caldwyck Following Aurelian Acclaim",
+        "body": "Riding the momentum of its Piece of the Year win, Gromford Works has unveiled a 9,000-square-foot atelier and salesroom in the Caldwyck luxury district. CEO Mira Ashby said the location will double as a workshop where clients can commission bespoke Aurelian variants, with waiting lists already at eighteen months. The firm expects the site to lift Fine Goods revenue by an estimated 12 percent next year.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -1776,7 +1826,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82525,
     "events": [
       {
         "cycle": 0,
@@ -1804,6 +1854,16 @@
         "body": "Just weeks after launch, Halhold Works recalled roughly 4,000 Verity units after clinics in the Tessen Valley reported screens dimming under sustained use. Nadia Brandt called the issue a sourcing defect in a single supplier batch and pledged free replacements. The misstep tempered an otherwise buoyant rollout.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82525,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Halhold Works Returns Verity Monitors to Market With Redesigned Display Module",
+        "body": "Halhold Works has cleared the Verity line for reissue after a four-month engineering overhaul, replacing the faulty display assembly with a new dual-layer panel sourced from its own Wire & Cable division. CEO Nadia Brandt said the rework cost the company roughly 14 million but called the fix 'a permanent answer, not a patch.' Initial reorders from regional clinics have already covered nearly half the recalled inventory.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -2248,7 +2308,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82525,
     "events": [
       {
         "cycle": 0,
@@ -2267,6 +2327,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82525,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Korrwright Works Debuts the Velloux Heritage Series, Its First Since the Acquisition",
+        "body": "Korrwright Works has launched the Velloux Heritage series, a six-model line pairing its movements with enamel dials from the newly acquired Velloux workshop. CEO Dunmore Carrow positioned the collection as proof the buyout was 'about craft, not just capacity,' with pieces priced from 14,000 to 60,000. The opening run of 900 units sold through to dealers within the first week.",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -2281,7 +2351,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82525,
     "events": [
       {
         "cycle": 0,
@@ -2309,6 +2379,16 @@
         "body": "Weeks after the acquisition, Lhaus Industries restarted Korrick Axle's mothballed second plant in the Ferrlands, recalling some 300 workers. Cole Brandt toured the floor and committed to a power-and-storage upgrade for the site. The quick turnaround signaled how fast Brandt intends to integrate.",
         "effects": {
           "automotive": 0.06
+        }
+      },
+      {
+        "cycle": 82525,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Lhaus Industries Strikes Landmark Driveline Pact With Vehicle Giant Marwick Motors",
+        "body": "Lhaus Industries has signed a seven-year, 1.4-billion supply agreement to fit Korrick-built axles and drivelines across Marwick Motors' entire hauler range. CEO Cole Brandt called it 'the deal the Korrick acquisition was built for,' noting the reopened Ferrlands plant will run at full capacity by spring. The contract instantly makes Lhaus the largest independent driveline supplier in the region.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
