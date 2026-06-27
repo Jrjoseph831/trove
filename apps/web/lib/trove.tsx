@@ -34,7 +34,8 @@ export interface OrderBook {
   outgoing: PvpOrder[];
 }
 import {
-  captureTokenFromHash,
+  captureTokenFromQuery,
+  refreshIfNeeded,
   isSignedIn,
   signIn as authSignIn,
   signOut as authSignOut,
@@ -336,11 +337,30 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
 
   const refresh = useCallback(() => setTick((t) => t + 1), []);
 
-  // Capture a Hosted-UI token on return, then track sign-in state.
+  // Capture the Hosted-UI auth code on return (or silently refresh a stored
+  // session), then keep the id token fresh on a timer and on tab refocus so the
+  // player stays signed in for days instead of an hour.
   useEffect(() => {
-    captureTokenFromHash();
-    setSignedIn(isSignedIn());
-    setAuthReady(true);
+    let alive = true;
+    void (async () => {
+      const handled = await captureTokenFromQuery();
+      if (!handled) await refreshIfNeeded();
+      if (!alive) return;
+      setSignedIn(isSignedIn());
+      setAuthReady(true);
+    })();
+    const sync = () =>
+      void refreshIfNeeded().then(() => alive && setSignedIn(isSignedIn()));
+    const t = setInterval(sync, 8 * 60 * 1000);
+    const onVis = () => {
+      if (document.visibilityState === "visible") sync();
+    };
+    document.addEventListener("visibilitychange", onVis);
+    return () => {
+      alive = false;
+      clearInterval(t);
+      document.removeEventListener("visibilitychange", onVis);
+    };
   }, []);
 
   // Live mode: pull the shared world (and the player's portfolio, if signed in)
@@ -995,7 +1015,9 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh, liveFactory],
   );
 
-  const signIn = useCallback(() => authSignIn(), []);
+  const signIn = useCallback(() => {
+    void authSignIn();
+  }, []);
   const signOut = useCallback(() => {
     authSignOut();
     setSignedIn(false);

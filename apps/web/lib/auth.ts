@@ -1,11 +1,11 @@
 /**
- * Minimal Cognito Hosted-UI auth for a static SPA. Uses the implicit grant: we
- * send the player to the Hosted UI, they return with #id_token=… in the URL
- * fragment, we stash it in localStorage. No secrets, no backend exchange.
+ * Cognito Hosted-UI auth for a static SPA, using the Authorization Code grant
+ * with PKCE (public client, no secret). Unlike the old implicit grant, this
+ * returns a REFRESH TOKEN, so we can silently renew the 1-hour id token for as
+ * long as the refresh token is valid (~30 days) — the player stays signed in
+ * across refreshes and days instead of being kicked out every hour.
  *
- * Browsing never calls any of this — only the Acquire/sell path does, so a
- * signed-out visitor can roam the whole floor and is prompted to sign in exactly
- * when they try to trade.
+ * Browsing never calls any of this — only the Acquire/sell path does.
  */
 import {
   AUTH_ENABLED,
@@ -14,7 +14,9 @@ import {
   redirectUri,
 } from "./config";
 
-const TOKEN_KEY = "trove.idToken";
+const ID_KEY = "trove.idToken";
+const RT_KEY = "trove.refreshToken";
+const PKCE_KEY = "trove.pkceVerifier";
 
 interface JwtPayload {
   exp?: number;
@@ -32,57 +34,149 @@ function decode(token: string): JwtPayload | null {
   }
 }
 
-/** Pull an id_token out of the URL fragment after a Hosted-UI redirect, persist
- *  it, and clean the address bar. Call once on mount. Returns true if captured. */
-export function captureTokenFromHash(): boolean {
-  if (typeof window === "undefined" || !window.location.hash) return false;
-  const params = new URLSearchParams(window.location.hash.slice(1));
-  const token = params.get("id_token");
-  if (!token) return false;
-  localStorage.setItem(TOKEN_KEY, token);
-  // strip the fragment so the token isn't left in the URL
-  history.replaceState(null, "", window.location.pathname + window.location.search);
-  return true;
+// ── PKCE helpers ─────────────────────────────────────────────────────────────
+function b64url(bytes: Uint8Array): string {
+  let s = "";
+  for (const b of bytes) s += String.fromCharCode(b);
+  return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function randomVerifier(): string {
+  const a = new Uint8Array(32);
+  crypto.getRandomValues(a);
+  return b64url(a);
+}
+async function challengeOf(verifier: string): Promise<string> {
+  const digest = await crypto.subtle.digest(
+    "SHA-256",
+    new TextEncoder().encode(verifier),
+  );
+  return b64url(new Uint8Array(digest));
 }
 
-/** The current id token if present and unexpired, else null. */
+// ── Token reads (sync — API calls use these) ─────────────────────────────────
+/** The current id token if present and unexpired, else null. Renewal is handled
+ *  separately by refreshIfNeeded(), so we never quietly drop the refresh token. */
 export function getIdToken(): string | null {
   if (typeof window === "undefined") return null;
-  const token = localStorage.getItem(TOKEN_KEY);
+  const token = localStorage.getItem(ID_KEY);
   if (!token) return null;
-  const payload = decode(token);
-  if (!payload?.exp || payload.exp * 1000 < Date.now()) {
-    localStorage.removeItem(TOKEN_KEY);
-    return null;
-  }
+  const p = decode(token);
+  if (!p?.exp || p.exp * 1000 < Date.now()) return null;
   return token;
 }
 
+function hasRefresh(): boolean {
+  return typeof window !== "undefined" && !!localStorage.getItem(RT_KEY);
+}
+
+/** Signed in if we hold a valid id token OR a refresh token that can mint one. */
 export function isSignedIn(): boolean {
-  return getIdToken() !== null;
+  return getIdToken() !== null || hasRefresh();
 }
 
 /** First 8 chars of the player's sub — matches the standings handle id. */
 export function myShortId(): string | null {
-  const token = getIdToken();
+  const token = typeof window !== "undefined" ? localStorage.getItem(ID_KEY) : null;
   const sub = token ? decode(token)?.sub : null;
   return typeof sub === "string" ? sub.slice(0, 8) : null;
 }
 
-/** Redirect to the Hosted UI to sign in / sign up. */
-export function signIn(): void {
-  if (!AUTH_ENABLED) return;
+// ── Token exchange + refresh (async) ─────────────────────────────────────────
+async function tokenRequest(body: Record<string, string>): Promise<boolean> {
+  try {
+    const res = await fetch(`${COGNITO_DOMAIN}/oauth2/token`, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(body),
+    });
+    if (!res.ok) return false;
+    const t = (await res.json()) as {
+      id_token?: string;
+      refresh_token?: string;
+    };
+    if (t.id_token) localStorage.setItem(ID_KEY, t.id_token);
+    if (t.refresh_token) localStorage.setItem(RT_KEY, t.refresh_token);
+    return !!t.id_token;
+  } catch {
+    return false;
+  }
+}
+
+/** On return from the Hosted UI (?code=…), exchange the code for tokens, persist
+ *  them, and clean the address bar. Returns true if a code was handled. */
+export async function captureTokenFromQuery(): Promise<boolean> {
+  if (typeof window === "undefined") return false;
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("code");
+  if (!code) return false;
+  const verifier = sessionStorage.getItem(PKCE_KEY) ?? "";
+  sessionStorage.removeItem(PKCE_KEY);
+  await tokenRequest({
+    grant_type: "authorization_code",
+    client_id: COGNITO_CLIENT_ID,
+    code,
+    redirect_uri: redirectUri(),
+    code_verifier: verifier,
+  });
+  const url = new URL(window.location.href);
+  url.searchParams.delete("code");
+  url.searchParams.delete("state");
+  history.replaceState(null, "", url.pathname + url.search + url.hash);
+  return true;
+}
+
+/** Renew the id token from the refresh token. Clears tokens if the refresh token
+ *  itself is dead (then the user is genuinely signed out). */
+async function refreshTokens(): Promise<boolean> {
+  if (typeof window === "undefined") return false;
+  const rt = localStorage.getItem(RT_KEY);
+  if (!rt) return false;
+  const ok = await tokenRequest({
+    grant_type: "refresh_token",
+    client_id: COGNITO_CLIENT_ID,
+    refresh_token: rt,
+  });
+  if (!ok) {
+    localStorage.removeItem(ID_KEY);
+    localStorage.removeItem(RT_KEY);
+  }
+  return ok;
+}
+
+/** Refresh if the id token is missing/expired/within 5 min of expiry and we have
+ *  a refresh token. Safe to call often (load, on a timer, on tab focus). */
+export async function refreshIfNeeded(): Promise<void> {
+  if (typeof window === "undefined") return;
+  const id = localStorage.getItem(ID_KEY);
+  const exp = id ? (decode(id)?.exp ?? 0) * 1000 : 0;
+  if (exp - Date.now() < 5 * 60 * 1000 && localStorage.getItem(RT_KEY)) {
+    await refreshTokens();
+  }
+}
+
+// ── Redirects ────────────────────────────────────────────────────────────────
+/** Send the player to the Hosted UI (code grant + PKCE) to sign in / sign up. */
+export async function signIn(): Promise<void> {
+  if (!AUTH_ENABLED || typeof window === "undefined") return;
+  const verifier = randomVerifier();
+  sessionStorage.setItem(PKCE_KEY, verifier);
+  const challenge = await challengeOf(verifier);
   const u = new URL(`${COGNITO_DOMAIN}/login`);
   u.searchParams.set("client_id", COGNITO_CLIENT_ID);
-  u.searchParams.set("response_type", "token"); // implicit grant
+  u.searchParams.set("response_type", "code");
   u.searchParams.set("scope", "openid email profile");
   u.searchParams.set("redirect_uri", redirectUri());
+  u.searchParams.set("code_challenge", challenge);
+  u.searchParams.set("code_challenge_method", "S256");
   window.location.assign(u.toString());
 }
 
-/** Clear the local token and bounce through Cognito logout. */
+/** Clear local tokens and bounce through Cognito logout. */
 export function signOut(): void {
-  localStorage.removeItem(TOKEN_KEY);
+  if (typeof window !== "undefined") {
+    localStorage.removeItem(ID_KEY);
+    localStorage.removeItem(RT_KEY);
+  }
   if (!AUTH_ENABLED) return;
   const u = new URL(`${COGNITO_DOMAIN}/logout`);
   u.searchParams.set("client_id", COGNITO_CLIENT_ID);
