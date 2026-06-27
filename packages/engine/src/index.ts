@@ -155,6 +155,7 @@ const floorOf = (t: Trader): number => COMPANY_TIERS[tierOf(t)].floor;
  *  backfill tier/income on records that predate them (so a persisted world
  *  upgrades cleanly on the next settlement). */
 export function reconcileCompanies(state: WorldState): void {
+  const roster = new Map(companyRoster.map((c) => [c.name, c]));
   const have = new Map(state.traders.map((t) => [t.name, t]));
   for (const c of companyRoster) {
     const existing = have.get(c.name);
@@ -164,6 +165,12 @@ export function reconcileCompanies(state: WorldState): void {
       existing.tier = c.tier;
       existing.income = COMPANY_TIERS[c.tier].income;
     }
+  }
+  // Drop traders no longer in the roster (e.g. legacy seed names from before the
+  // roster was rebuilt from companies.json). Only the AI traders array is touched
+  // — never items' owners map, which in the live world holds real player ids.
+  if (state.traders.length > roster.size) {
+    state.traders = state.traders.filter((t) => roster.has(t.name));
   }
 }
 

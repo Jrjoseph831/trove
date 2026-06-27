@@ -52,12 +52,22 @@ export function Wire() {
   const tape = cards.length ? cards : stories;
 
   // The player's own row shows their Holding name (not "YOU"); the internal id
-  // stays "YOU" for the net-worth lookup and the highlight.
+  // stays "YOU" for the net-worth lookup and the highlight. With 100 firms on the
+  // floor, show the top 12 — but always include YOU (with your true rank).
   const myLabel = desk?.name?.trim() || "Your Holding";
-  const board = [
-    { id: "YOU", label: myLabel, w: netWorth(state, "YOU") },
-    ...state.traders.map((t) => ({ id: t.name, label: t.name, w: netWorth(state, t.name) })),
-  ].sort((a, b) => b.w - a.w);
+  const board = useMemo(() => {
+    const ranked = [
+      { id: "YOU", label: myLabel, w: netWorth(state, "YOU") },
+      ...state.traders.map((t) => ({ id: t.name, label: t.name, w: netWorth(state, t.name) })),
+    ]
+      .sort((a, b) => b.w - a.w)
+      .map((e, i) => ({ ...e, rank: i + 1 }));
+    const top = ranked.slice(0, 12);
+    return top.some((e) => e.id === "YOU")
+      ? top
+      : [...top, ranked.find((e) => e.id === "YOU")!];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state, state.cycle, myLabel]);
 
   return (
     <div className="view wire">
@@ -120,10 +130,10 @@ export function Wire() {
 
           <div className="tnn-panel">
             <div className="tnn-panel-h">Leaderboard</div>
-            {board.map((e, i) => (
+            {board.map((e) => (
               <div className={`lb ${e.id === "YOU" ? "me" : ""}`} key={e.id}>
                 <span>
-                  <span className="rk">{i + 1}</span>
+                  <span className="rk">{e.rank}</span>
                   {e.label}
                 </span>
                 <span>{money(e.w)}</span>

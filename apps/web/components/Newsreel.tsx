@@ -449,20 +449,27 @@ export function Wheel({
             <div className="reel-panel">
               <div className="reel-panel-h">Standings</div>
               <div className="reel-list">
-                {[
-                  { id: "YOU", label: myLabel, w: netWorth(state, "YOU") },
-                  ...state.traders.map((t) => ({ id: t.name, label: t.name, w: netWorth(state, t.name) })),
-                ]
-                  .sort((a, b) => b.w - a.w)
-                  .map((e, i) => (
+                {(() => {
+                  const ranked = [
+                    { id: "YOU", label: myLabel, w: netWorth(state, "YOU") },
+                    ...state.traders.map((t) => ({ id: t.name, label: t.name, w: netWorth(state, t.name) })),
+                  ]
+                    .sort((a, b) => b.w - a.w)
+                    .map((e, i) => ({ ...e, rank: i + 1 }));
+                  const top = ranked.slice(0, 10);
+                  const rows = top.some((e) => e.id === "YOU")
+                    ? top
+                    : [...top, ranked.find((e) => e.id === "YOU")!];
+                  return rows.map((e) => (
                     <div className={`reel-row ${e.id === "YOU" ? "me" : ""}`} key={e.id}>
                       <span className="reel-row-nm">
-                        <span className="rk">{i + 1}</span>
+                        <span className="rk">{e.rank}</span>
                         {e.label}
                       </span>
                       <span className="reel-row-pr">{money(e.w)}</span>
                     </div>
-                  ))}
+                  ));
+                })()}
               </div>
             </div>
           )}

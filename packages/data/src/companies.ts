@@ -10,6 +10,7 @@
  * One roster drives both the market traders AND the order-desk demand, so the
  * company that buys on the floor is the same one that can send you a contract.
  */
+import companiesJson from "../catalog/companies.json" with { type: "json" };
 import type { SectorKey } from "./types";
 
 export type CompanyTier = "boutique" | "mid" | "large" | "titan";
@@ -39,22 +40,37 @@ export interface CompanySpec {
   tier: CompanyTier;
 }
 
-/** The institutional roster. Names echo the firms quoted in the news so the world
- *  reads as one place. Tiers span the floor; the two titans anchor liquidity. */
+/** Deterministic 0..1 hash of a name (FNV-1a) — fixes each house's tier. */
+function hash01(s: string): number {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619) >>> 0;
+  }
+  return (h >>> 0) / 4294967296;
+}
+
+/** Tier each house into a stable pyramid: a few titans, some large, a broad
+ *  middle, and a long boutique tail — so liquidity is anchored but the floor is
+ *  mostly small/mid firms. */
+function tierFor(name: string): CompanyTier {
+  const r = hash01(name);
+  return r < 0.03 ? "titan" : r < 0.15 ? "large" : r < 0.55 ? "mid" : "boutique";
+}
+
+type RawCompany = { homeSector: SectorKey | null };
+
+/** The institutional roster: a broad-index titan anchors liquidity, then EVERY
+ *  backstoried house (companies.json — CEO, history, newsroom beats) trades on
+ *  the floor with its home sector and a deterministic tier. One roster drives the
+ *  market traders, the order-desk demand, the leaderboard, and the directory. */
+const houses: CompanySpec[] = Object.entries(
+  companiesJson as Record<string, RawCompany>,
+).map(([name, c]) => ({ name, sector: c.homeSector ?? null, tier: tierFor(name) }));
+
 export const companyRoster: CompanySpec[] = [
-  { name: "Open_Index", sector: null, tier: "titan" }, // broad index — the floor's anchor
-  { name: "Halcyon_Holdings", sector: "luxury", tier: "titan" },
-  { name: "Bedrock_Capital", sector: "construction", tier: "large" },
-  { name: "Meridian_Tech", sector: "technology", tier: "large" },
-  { name: "Cindral_Power", sector: "energy", tier: "large" },
-  { name: "Forgewright_Industrial", sector: "manufacturing", tier: "large" },
-  { name: "Thal_Medical", sector: "medical", tier: "large" },
-  { name: "Wayfront_Logistics", sector: "logistics", tier: "mid" },
-  { name: "Marrowgear_Motors", sector: "automotive", tier: "mid" },
-  { name: "Harrow_Agro", sector: "agriculture", tier: "mid" },
-  { name: "Carrow_Hospitality", sector: "hospitality", tier: "mid" },
-  { name: "Drust_Goods", sector: "consumer", tier: "mid" },
-  { name: "Garrweave_Mills", sector: "textiles", tier: "boutique" },
+  { name: "Open_Index", sector: null, tier: "titan" }, // broad index — the anchor
+  ...houses,
 ];
 
 const byName = new Map(companyRoster.map((c) => [c.name, c]));
