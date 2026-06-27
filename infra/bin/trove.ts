@@ -20,7 +20,7 @@ new TroveStack(app, "TroveShared", {
 new TroveStack(app, "TroveStaging", {
   env,
   stage: "staging",
-  authPool: "us-east-1_ES1s2w3Kx",
+  authPool: "us-east-1_E51s2w3Kx",
   authClient: "70stuln68g90umttvrfk1k84kk",
   description: "Trove — isolated staging world (beta.trove.ceo).",
 });
