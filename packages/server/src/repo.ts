@@ -105,15 +105,35 @@ export function worldToDoc(state: WorldState, version: number): WorldDoc {
  *  catalog. Player-specific fields (cash/debt/nwHist) are zeroed — the global
  *  world has no single owner; settlement never reads them meaningfully. */
 export function docToWorld(doc: WorldDoc): WorldState {
-  const items: RuntimeItem[] = doc.items.map((si) => {
-    const c = catById.get(si.id)!;
+  // Build from the FULL catalog, overlaying the doc's stored dynamics by id. This
+  // way items ADDED to @trove/data after the world was seeded appear immediately
+  // (with fresh defaults), instead of being missing from the live world — which
+  // made e.g. "build a Silicon Wafer line" fail with "can't build that line"
+  // because the item wasn't in doc.items. Items already in the doc keep their
+  // evolved stock/value/owners; the next settlement persists the newcomers via
+  // worldToDoc.
+  const stored = new Map(doc.items.map((si) => [si.id, si]));
+  const items: RuntimeItem[] = catalog.map((c) => {
+    const si = stored.get(c.id);
+    if (si) {
+      return {
+        ...c,
+        stock: si.stock,
+        remaining: si.remaining ?? Infinity,
+        owners: si.owners ?? {},
+        value: si.value,
+        prevValue: si.prevValue,
+        myCopies: [],
+      };
+    }
+    // New catalog item not yet in the world doc — initialize like freshState().
     return {
       ...c,
-      stock: si.stock,
-      remaining: si.remaining ?? Infinity,
-      owners: si.owners ?? {},
-      value: si.value,
-      prevValue: si.prevValue,
+      stock: c.edition === null ? c.stockNormal : c.edition,
+      remaining: c.edition === null ? Infinity : c.edition,
+      owners: {},
+      value: c.base,
+      prevValue: c.base,
       myCopies: [],
     };
   });
