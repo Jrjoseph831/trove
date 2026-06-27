@@ -14,6 +14,7 @@ import statsJson from "../catalog/stats.json" with { type: "json" };
 import loreJson from "../catalog/lore.json" with { type: "json" };
 import companiesJson from "../catalog/companies.json" with { type: "json" };
 import newsroomJson from "../catalog/newsroom.json" with { type: "json" };
+import propertiesJson from "../catalog/properties.json" with { type: "json" };
 
 import type {
   Brand,
@@ -22,6 +23,7 @@ import type {
   Newsroom,
   Item,
   News,
+  Property,
   Sector,
   SectorKey,
   Stats,
@@ -52,6 +54,9 @@ export const items: Item[] = itemsJson as Item[];
 
 /** The pre-generated news bank — 69 scenarios. */
 export const news: News[] = newsJson as News[];
+
+/** Property Market catalog — 54 real-estate assets ($185K homes → $5B trophies). */
+export const properties: Property[] = propertiesJson as Property[];
 
 /** sector → category → sub → leaf tree. */
 export const taxonomy: Taxonomy = taxonomyJson as Taxonomy;

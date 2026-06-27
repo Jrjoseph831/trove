@@ -143,3 +143,33 @@ export interface Stats {
   item_appearances_by_sector: Record<string, number>;
   price_range: [number, number];
 }
+
+/** A buyable real-estate asset in the Property Market (endgame money sink).
+ *  Some pay rent each settlement period; appreciation-only ones (rentYield 0)
+ *  just hold/trade. All are sellable back at their current value. `img` is the
+ *  art subject for the marketplace card (the UI overlays all wording). */
+export interface Property {
+  id: number;
+  slug: string;
+  name: string;
+  category:
+    | "Residential"
+    | "Estate"
+    | "Land"
+    | "Retail"
+    | "Office"
+    | "Tower"
+    | "Industrial"
+    | "Hospitality"
+    | "Flagship";
+  /** List/base price in dollars (real-life-scaled: $185K homes → $5B trophies). */
+  price: number;
+  /** Rent paid per settlement period as a fraction of price; 0 = appreciation-only. */
+  rentYield: number;
+  /** How much the value drifts each period with the economy (appreciation swing). */
+  volatility: number;
+  scarcity: "common" | "rare" | "1of1";
+  icon: string;
+  /** Image-generation subject for the card art. */
+  img: string;
+}
