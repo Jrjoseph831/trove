@@ -51,6 +51,23 @@ jobs:
         with:
           role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
           aws-region: ${{ vars.AWS_REGION }}
+      - name: Clean up a failed staging stack (beta only)
+        # A first-ever CREATE that fails leaves the stack in ROLLBACK_COMPLETE,
+        # which CloudFormation refuses to update — it must be deleted first.
+        # Scoped to beta + TroveStaging, so prod is never affected.
+        if: github.ref_name == 'beta'
+        run: |
+          st=$(aws cloudformation describe-stacks --stack-name TroveStaging \
+            --query 'Stacks[0].StackStatus' --output text 2>/dev/null || echo NONE)
+          echo "TroveStaging status: $st"
+          case "$st" in
+            ROLLBACK_COMPLETE|ROLLBACK_FAILED|UPDATE_ROLLBACK_FAILED|CREATE_FAILED|DELETE_FAILED)
+              echo "Deleting failed stack so it can be recreated cleanly…"
+              aws cloudformation delete-stack --stack-name TroveStaging
+              aws cloudformation wait stack-delete-complete --stack-name TroveStaging
+              echo "Deleted." ;;
+            *) echo "No cleanup needed." ;;
+          esac
       - name: CDK deploy
         working-directory: infra
         # main → TroveShared (prod); beta → TroveStaging (isolated staging world).
