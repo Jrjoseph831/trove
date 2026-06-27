@@ -94,6 +94,8 @@ export function PropertyMarket() {
       />
     );
   };
+  // Show the emoji ONLY as a fallback when no image is available — never over art.
+  const noArt = (slug: string) => (artTry[slug] ?? 0) >= ART_EXTS.length;
 
   const selProp = sel != null ? catalog.find((p) => p.id === sel) : null;
 
@@ -111,7 +113,7 @@ export function PropertyMarket() {
         <div className="est-detail">
           <div className="est-hero" data-cat={selProp.category}>
             {sale(selProp.slug)}
-            <span className="est-emoji">{selProp.icon}</span>
+            {noArt(selProp.slug) && <span className="est-emoji">{selProp.icon}</span>}
             {selProp.scarcity === "1of1" && (
               <span className="est-tag oneof">◆ 1 of 1</span>
             )}
@@ -252,7 +254,7 @@ export function PropertyMarket() {
             >
               <div className="est-photo" data-cat={p.category}>
                 {sale(p.slug)}
-                <span className="est-emoji">{p.icon}</span>
+                {noArt(p.slug) && <span className="est-emoji">{p.icon}</span>}
                 {p.scarcity === "1of1" && (
                   <span className="est-tag oneof">◆ 1 of 1</span>
                 )}
