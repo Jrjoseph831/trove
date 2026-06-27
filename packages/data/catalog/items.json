@@ -36451,5 +36451,205 @@
     "restock": 12,
     "edition": null,
     "elaborate": 0.771
+  },
+  {
+    "id": 1856,
+    "name": "Rubber Compound",
+    "brand": "Cranecraft",
+    "tier": "premium",
+    "category": "Raw Textiles",
+    "sub": "Fiber & Cloth",
+    "archetype": "bulk_consumable",
+    "icon": "⚫",
+    "weights": {
+      "textiles": 1,
+      "manufacturing": 0.3,
+      "consumer": 0.3
+    },
+    "base": 8,
+    "stockNormal": 967745,
+    "restock": 107637,
+    "edition": null,
+    "elaborate": 0.05
+  },
+  {
+    "id": 1857,
+    "name": "Plastic Resin Pellets",
+    "brand": "Cranecraft",
+    "tier": "premium",
+    "category": "Raw Textiles",
+    "sub": "Fiber & Cloth",
+    "archetype": "bulk_consumable",
+    "icon": "🧴",
+    "weights": {
+      "textiles": 1,
+      "manufacturing": 0.3,
+      "consumer": 0.3
+    },
+    "base": 5,
+    "stockNormal": 1548392,
+    "restock": 172219,
+    "edition": null,
+    "elaborate": 0.05
+  },
+  {
+    "id": 1858,
+    "name": "Industrial Adhesive",
+    "brand": "Cranecraft",
+    "tier": "premium",
+    "category": "Raw Textiles",
+    "sub": "Fiber & Cloth",
+    "archetype": "bulk_consumable",
+    "icon": "🧪",
+    "weights": {
+      "textiles": 1,
+      "manufacturing": 0.3,
+      "consumer": 0.3
+    },
+    "base": 14,
+    "stockNormal": 552997,
+    "restock": 61507,
+    "edition": null,
+    "elaborate": 0.05
+  },
+  {
+    "id": 1859,
+    "name": "Steel Coil",
+    "brand": "Skarngrove & Sons",
+    "tier": "mid",
+    "category": "Structural Materials",
+    "sub": "Steel",
+    "archetype": "bulk_consumable",
+    "icon": "🪙",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "base": 12,
+    "stockNormal": 57672,
+    "restock": 3380,
+    "edition": null,
+    "elaborate": 0.05
+  },
+  {
+    "id": 1860,
+    "name": "Aluminum Ingot",
+    "brand": "Skarngrove & Sons",
+    "tier": "mid",
+    "category": "Structural Materials",
+    "sub": "Steel",
+    "archetype": "bulk_consumable",
+    "icon": "🧱",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "base": 18,
+    "stockNormal": 38448,
+    "restock": 2253,
+    "edition": null,
+    "elaborate": 0.05
+  },
+  {
+    "id": 1861,
+    "name": "Glass Sheet Stock",
+    "brand": "Skarngrove & Sons",
+    "tier": "mid",
+    "category": "Structural Materials",
+    "sub": "Steel",
+    "archetype": "bulk_consumable",
+    "icon": "🪟",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "base": 9,
+    "stockNormal": 76896,
+    "restock": 4507,
+    "edition": null,
+    "elaborate": 0.05
+  },
+  {
+    "id": 1862,
+    "name": "Portland Cement",
+    "brand": "Skarngrove & Sons",
+    "tier": "mid",
+    "category": "Structural Materials",
+    "sub": "Steel",
+    "archetype": "bulk_consumable",
+    "icon": "🪨",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "base": 4,
+    "stockNormal": 173015,
+    "restock": 10140,
+    "edition": null,
+    "elaborate": 0.05
+  },
+  {
+    "id": 1863,
+    "name": "Hardwood Lumber",
+    "brand": "Skarngrove & Sons",
+    "tier": "mid",
+    "category": "Structural Materials",
+    "sub": "Steel",
+    "archetype": "bulk_consumable",
+    "icon": "🪵",
+    "weights": {
+      "construction": 1,
+      "manufacturing": 0.4,
+      "energy": 0.2
+    },
+    "base": 7,
+    "stockNormal": 98866,
+    "restock": 5794,
+    "edition": null,
+    "elaborate": 0.05
+  },
+  {
+    "id": 1864,
+    "name": "Copper Cathode",
+    "brand": "Aldouscraft Mfg.",
+    "tier": "mid",
+    "category": "Wire & Cable",
+    "sub": "Building Wire",
+    "archetype": "bulk_consumable",
+    "icon": "🟤",
+    "weights": {
+      "construction": 0.6,
+      "energy": 0.7,
+      "technology": 0.5,
+      "automotive": 0.3
+    },
+    "base": 22,
+    "stockNormal": 39485,
+    "restock": 2525,
+    "edition": null,
+    "elaborate": 0.05
+  },
+  {
+    "id": 1865,
+    "name": "Silicon Wafer",
+    "brand": "Woldmark",
+    "tier": "mass",
+    "category": "Compute",
+    "sub": "Components",
+    "archetype": "bulk_consumable",
+    "icon": "💿",
+    "weights": {
+      "technology": 1,
+      "energy": 0.3
+    },
+    "base": 40,
+    "stockNormal": 68411,
+    "restock": 6480,
+    "edition": null,
+    "elaborate": 0.05
   }
 ]

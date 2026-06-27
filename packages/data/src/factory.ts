@@ -184,6 +184,46 @@ function catPools(): Record<string, Item[]> {
   return m;
 }
 
+/** Products map to the raw material they're chiefly MADE OF, by name keyword,
+ *  so a tyre pulls rubber — not the cheapest hex bolt in its sector. First match
+ *  wins; the named material must exist in the catalog and be cheaper than the
+ *  output, else we fall back to the bill-of-materials pool below. */
+const PRIMARY_MATERIAL: [RegExp, string][] = [
+  [/\b(tyre|tire|tread|hose|gasket|seal|bushing|grommet|wiper|rubber|o-ring|belt)\b/i, "Rubber Compound"],
+  [/\b(glove|nitrile|latex)\b/i, "Rubber Compound"],
+  [/\b(jacket|boot|vest|coverall|garment|apparel|uniform|sock|shirt|trouser)\b/i, "Cotton Bale Grade A"],
+  [/\b(mask|gown|drape|dressing|gauze|bandage|wipe|filter|sponge|tubing)\b/i, "Polyester Fiber Roll"],
+  [/\b(wire|cable|harness|conduit|busbar|winding|coil|spool)\b/i, "Copper Cathode"],
+  [/\b(chip|gpu|ssd|cpu|ram|memory|module|server|switch|sensor|processor|wafer|circuit|board|monitor|scanner|printer|tablet|thermostat)\b/i, "Silicon Wafer"],
+  [/\b(window|lens|glass|mirror|pane|display|screen|optic|decanter|crystal)\b/i, "Glass Sheet Stock"],
+  [/\b(bottle|jug|case|crate|bin|tote|container|sleeve|tray|housing|enclosure|shell|mailer|wrap|film|pellet|box|bag)\b/i, "Plastic Resin Pellets"],
+  [/\b(can|foil|tin|ingot|cookware|kettle)\b/i, "Aluminum Ingot"],
+  [/\b(beam|girder|frame|chassis|rebar|stud|plate|bracket|rail|caliper|alternator|shock|spring|wrench|socket|driver|grinder|press|lathe|excavator|loader|baler|harrow|auger|drill|mixer|range|freezer|scrubber|vac|pump|valve|pipe|fitting|flange|duct|manifold|faucet|nozzle|fixture)\b/i, "Steel Coil"],
+  [/\b(lumber|plywood|cabinet|furniture|desk|table|shelf|dinnerware|mattress|pallet)\b/i, "Hardwood Lumber"],
+  [/\b(concrete|cement|mortar|block|brick|slab|insulation|drywall)\b/i, "Portland Cement"],
+];
+
+let _byName: Map<string, Item> | null = null;
+function itemByName(name: string): Item | undefined {
+  if (!_byName) {
+    _byName = new Map();
+    for (const it of items) if (it.edition === null) _byName.set(it.name.trim().toLowerCase(), it);
+  }
+  return _byName.get(name.trim().toLowerCase());
+}
+
+/** The raw material this product is chiefly made of (by name), or null. */
+function primaryMaterial(it: Item): Item | null {
+  const hay = `${it.name} ${it.sub ?? ""}`;
+  for (const [re, name] of PRIMARY_MATERIAL) {
+    if (re.test(hay)) {
+      const mat = itemByName(name);
+      if (mat && mat.id !== it.id && mat.base < it.base) return mat;
+    }
+  }
+  return null;
+}
+
 /** Stable small hash so input choice varies across the catalog but is fixed. */
 function hash(n: number): number {
   let h = (n ^ 0x9e3779b9) >>> 0;
@@ -241,9 +281,22 @@ export function recipeOf(it: Item): Recipe | null {
       : _globalRaw!.filter((x) => x.base < it.base);
     const partPool = pool.filter((x) => tierOf(x.archetype) === "part");
     const rawPool = pool.filter((x) => tierOf(x.archetype) === "raw");
-    // PART: two cheaper materials. GOODS: a component + a material.
-    const slots: { pool: Item[]; share: number }[] =
-      tier === "part"
+    const inputs: RecipeInput[] = [];
+    const used = new Set<number>([it.id]);
+    // Slot 1: the material this product is chiefly made of, by name (rubber for
+    // a tyre, copper for a harness, silicon for a chip). Then a secondary input
+    // from the bill of materials so it isn't a single ingredient.
+    const primMat = primaryMaterial(it);
+    if (primMat) {
+      const qty = Math.max(1, Math.min(9999, Math.round((it.base * 0.4) / primMat.base)));
+      inputs.push({ itemId: primMat.id, qty });
+      used.add(primMat.id);
+    }
+    // PART: cheaper materials. GOODS: a component + a material. With a named
+    // primary material we only need one secondary input.
+    const slots: { pool: Item[]; share: number }[] = primMat
+      ? [{ pool: tier === "part" ? rawPool : partPool, share: 0.2 }]
+      : tier === "part"
         ? [
             { pool: rawPool.length ? rawPool : pool, share: 0.3 },
             { pool: rawPool.length ? rawPool : pool, share: 0.25 },
@@ -252,14 +305,12 @@ export function recipeOf(it: Item): Recipe | null {
             { pool: partPool.length ? partPool : pool, share: 0.32 },
             { pool: rawPool.length ? rawPool : pool, share: 0.23 },
           ];
-    const inputs: RecipeInput[] = [];
-    const used = new Set<number>([it.id]);
     slots.forEach((slot, i) => {
       const picked = pickInput(
-        slot.pool.filter((x) => !used.has(x.id)),
+        (slot.pool.length ? slot.pool : pool).filter((x) => !used.has(x.id)),
         it.base * slot.share,
         it.id,
-        i,
+        i + 1,
         it.id,
       );
       if (picked) {
