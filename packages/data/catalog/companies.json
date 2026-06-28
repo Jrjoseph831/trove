@@ -537,7 +537,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82530,
     "events": [
       {
         "cycle": 0,
@@ -553,6 +553,16 @@
         "size": "standard",
         "head": "Brunforge Acquires Tableware Maker Vellan & Co.",
         "body": "Brunforge Holdings agreed to purchase fine-goods producer Vellan & Co. for 215 million credits, extending its reach from kitchen drawers to the dinner table. Kestrel Bramm said the deal aligns with a deliberate strategy of bolt-on additions, with Vellan's factories to remain in operation.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82530,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunforge Holdings Folds Vellan Lines Into New Home Division",
+        "body": "Brunforge formally integrated Vellan & Co. into a newly created Home & Table division, combining tableware, household goods and fine goods under one banner. CEO Kestrel Bramm said the consolidation should yield $22 million in annual cost savings by 2028 and open shared retail channels. The quiet reorganization reflects Bramm's steady acquire-and-integrate approach.",
         "effects": {
           "consumer": 0.13
         }
@@ -664,7 +674,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82525,
+    "lastEventCycle": 82530,
     "events": [
       {
         "cycle": 0,
@@ -700,6 +710,16 @@
         "size": "major",
         "head": "Brunstone & Sons Recalls Entire Ardent Hauler Fleet Over Pack Heating",
         "body": "Following the safety review, Brunstone & Sons has ordered a full recall of all 6,200 Ardent Long-Range Haulers shipped to date, citing confirmed thermal faults in the power pack under sustained load. CEO Sable Veldt, in a combative briefing, blamed a supplier's cell batch but pledged free replacements and an estimated 220-million remediation program. Deliveries of new Ardent units are suspended indefinitely pending a redesigned pack.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82530,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Brunstone & Sons Posts Steep Loss as Ardent Recall Costs Mount",
+        "body": "The automaker reported a quarterly loss of $268 million, citing recall logistics, pack replacements and halted Ardent deliveries that gutted vehicle revenue. CEO Sable Veldt acknowledged the heating fault had 'cost us a year' but vowed a re-engineered pack would return the hauler to roads by spring. Shares of confidence wavered as Veldt confirmed deliveries remain frozen pending certification.",
         "effects": {
           "automotive": -0.22
         }
@@ -836,7 +856,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82516,
+    "lastEventCycle": 82530,
     "events": [
       {
         "cycle": 0,
@@ -852,6 +872,16 @@
         "size": "standard",
         "head": "Carrowcyon & Sons Lands Multi-Year Lighting Contract for Regional Transit Network",
         "body": "CEO Cole Brandt secured a $240 million agreement to supply station and platform lighting across the Eastvale transit expansion. The deal spans seven years and includes maintenance fixtures, marking the firm's largest single contract in over a decade. Brandt called the timing 'a window we'd been watching closely.'",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82530,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Lifts Margins as Transit Lighting Deal Ramps",
+        "body": "The household-goods house reported quarterly revenue up 11% to $218 million, with lighting volumes climbing as the regional transit contract entered full installation. CEO Cole Brandt credited disciplined sourcing and steady household demand, raising the full-year outlook modestly. Management noted lighting now accounts for nearly a third of segment sales.",
         "effects": {
           "consumer": 0.13
         }
@@ -1267,7 +1297,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82517,
+    "lastEventCycle": 82530,
     "events": [
       {
         "cycle": 0,
@@ -1283,6 +1313,16 @@
         "size": "standard",
         "head": "Drossware Posts Stronger-Than-Expected Quarter on Packaging Demand",
         "body": "Drossware Industries reported quarterly revenue of 1.4 billion, up 9 percent, led by surging orders in its packaging and cleaning divisions. Nadia Wold credited disciplined pricing and steady demand for what she called 'the products nobody notices until they run out.'",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82530,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drossware Industries Secures National Packaging Contract With Grocer Alliance",
+        "body": "Building on its strong quarter, Drossware signed a multi-year packaging supply agreement with the Fennmark Grocers Alliance covering more than 900 stores. CEO Nadia Wold pegged the deal's value near $140 million and said it locks in volume for its newest sustainable packaging plant. Wold called it proof that 'the unglamorous keeps the shelves stocked.'",
         "effects": {
           "consumer": 0.13
         }
@@ -1769,7 +1809,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82525,
+    "lastEventCycle": 82530,
     "events": [
       {
         "cycle": 0,
@@ -1805,6 +1845,16 @@
         "size": "standard",
         "head": "Gromford Works Opens Flagship Atelier in Caldwyck Following Aurelian Acclaim",
         "body": "Riding the momentum of its Piece of the Year win, Gromford Works has unveiled a 9,000-square-foot atelier and salesroom in the Caldwyck luxury district. CEO Mira Ashby said the location will double as a workshop where clients can commission bespoke Aurelian variants, with waiting lists already at eighteen months. The firm expects the site to lift Fine Goods revenue by an estimated 12 percent next year.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82530,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Extends Aurelian Line With Limited Caldwyck Edition",
+        "body": "Capitalizing on its new flagship atelier, Gromford Works unveiled a 200-piece Aurelian Caldwyck Edition timepiece priced from $58,000, with engraving exclusive to the boutique. CEO Mira Ashby said pre-orders for the run filled within the opening week. The launch deepens the house's push into top-tier collector demand following its Piece of the Year honor.",
         "effects": {
           "luxury": 0.13
         }
@@ -1941,7 +1991,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82524,
+    "lastEventCycle": 82530,
     "events": [
       {
         "cycle": 0,
@@ -1978,6 +2028,16 @@
         "head": "Halhold Systems Names New Chief as Aldous Departs Amid Northgate Fallout",
         "body": "Following the cost overruns that triggered last quarter's charge, longtime CEO Cora Aldous has stepped down, ending a turbulent 50-year tenure. The board appointed veteran operations chief Dahlia Renn to stabilize the troubled Northgate campus and restore confidence. Renn pledged a full review of the project's budget within ninety days.",
         "effects": {}
+      },
+      {
+        "cycle": 82530,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Halhold Systems Slashes Northgate Scope as Renn Resets Compute Strategy",
+        "body": "Newly installed chief Dahlia Renn announced a sweeping restructuring that cuts Northgate's planned capacity by 40% and folds two regional compute units into a single division, alongside roughly 1,200 job reductions. Renn framed the move as 'clearing the wreckage' of the overrun, taking a further $310 million charge while pledging the trimmed campus will reach first output by mid-2027. The board signaled patience, but several units now report directly to Renn as she consolidates control.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -1992,7 +2052,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82525,
+    "lastEventCycle": 82530,
     "events": [
       {
         "cycle": 0,
@@ -2028,6 +2088,16 @@
         "size": "standard",
         "head": "Halhold Works Returns Verity Monitors to Market With Redesigned Display Module",
         "body": "Halhold Works has cleared the Verity line for reissue after a four-month engineering overhaul, replacing the faulty display assembly with a new dual-layer panel sourced from its own Wire & Cable division. CEO Nadia Brandt said the rework cost the company roughly 14 million but called the fix 'a permanent answer, not a patch.' Initial reorders from regional clinics have already covered nearly half the recalled inventory.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82530,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halhold Works Wins Regional Hospital Network Supply Agreement for Verity Line",
+        "body": "The Meridian Health consortium named Halhold Works its primary bedside-monitoring supplier in a five-year deal covering 28 facilities, a vote of confidence following the Verity redesign. CEO Nadia Brandt said the agreement is valued near $94 million and includes a service contract for the new display modules. The win marks a recovery milestone after the earlier recall.",
         "effects": {
           "technology": 0.13
         }
@@ -2590,7 +2660,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82521,
+    "lastEventCycle": 82530,
     "events": [
       {
         "cycle": 0,
@@ -2608,6 +2678,16 @@
         "body": "The hospitality group has purchased Sundle Werks, a mid-sized jansan manufacturer, for $340 million, folding its detergent and sanitizer lines into Maison & Vale's household catalog. Restless as ever, CEO Rhys Kessler framed the buy as 'closing the last gap between our front desks and our supply closets.' The deal adds three plants and roughly 900 workers.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82530,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Maison & Vale Rolls Out Sundle-Branded Professional Cleaning Range",
+        "body": "Following its Sundle Werks acquisition, Maison & Vale launched a 14-product professional cleaning line aimed at hotels and serviced residences. CEO Rhys Kessler said the range pairs Sundle's formulations with Maison & Vale's hospitality distribution. Initial rollout targets the company's existing managed-property clients.",
+        "effects": {
+          "hospitality": 0.06
         }
       }
     ]

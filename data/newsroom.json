@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-28T07:29:10.540Z",
+  "generatedAt": "2026-06-28T12:36:15.290Z",
   "beats": [
+    {
+      "company": "Brunforge Holdings",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Brunforge Holdings Folds Vellan Lines Into New Home Division",
+      "body": "Brunforge formally integrated Vellan & Co. into a newly created Home & Table division, combining tableware, household goods and fine goods under one banner. CEO Kestrel Bramm said the consolidation should yield $22 million in annual cost savings by 2028 and open shared retail channels. The quiet reorganization reflects Bramm's steady acquire-and-integrate approach.",
+      "cycle": 82530,
+      "dur": 2
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Brunstone & Sons Posts Steep Loss as Ardent Recall Costs Mount",
+      "body": "The automaker reported a quarterly loss of $268 million, citing recall logistics, pack replacements and halted Ardent deliveries that gutted vehicle revenue. CEO Sable Veldt acknowledged the heating fault had 'cost us a year' but vowed a re-engineered pack would return the hauler to roads by spring. Shares of confidence wavered as Veldt confirmed deliveries remain frozen pending certification.",
+      "cycle": 82530,
+      "dur": 8
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowcyon & Sons Lifts Margins as Transit Lighting Deal Ramps",
+      "body": "The household-goods house reported quarterly revenue up 11% to $218 million, with lighting volumes climbing as the regional transit contract entered full installation. CEO Cole Brandt credited disciplined sourcing and steady household demand, raising the full-year outlook modestly. Management noted lighting now accounts for nearly a third of segment sales.",
+      "cycle": 82530,
+      "dur": 2
+    },
+    {
+      "company": "Drossware Industries",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drossware Industries Secures National Packaging Contract With Grocer Alliance",
+      "body": "Building on its strong quarter, Drossware signed a multi-year packaging supply agreement with the Fennmark Grocers Alliance covering more than 900 stores. CEO Nadia Wold pegged the deal's value near $140 million and said it locks in volume for its newest sustainable packaging plant. Wold called it proof that 'the unglamorous keeps the shelves stocked.'",
+      "cycle": 82530,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Gromford Works Extends Aurelian Line With Limited Caldwyck Edition",
+      "body": "Capitalizing on its new flagship atelier, Gromford Works unveiled a 200-piece Aurelian Caldwyck Edition timepiece priced from $58,000, with engraving exclusive to the boutique. CEO Mira Ashby said pre-orders for the run filled within the opening week. The launch deepens the house's push into top-tier collector demand following its Piece of the Year honor.",
+      "cycle": 82530,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Halhold Systems Slashes Northgate Scope as Renn Resets Compute Strategy",
+      "body": "Newly installed chief Dahlia Renn announced a sweeping restructuring that cuts Northgate's planned capacity by 40% and folds two regional compute units into a single division, alongside roughly 1,200 job reductions. Renn framed the move as 'clearing the wreckage' of the overrun, taking a further $310 million charge while pledging the trimmed campus will reach first output by mid-2027. The board signaled patience, but several units now report directly to Renn as she consolidates control.",
+      "cycle": 82530,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Halhold Works Wins Regional Hospital Network Supply Agreement for Verity Line",
+      "body": "The Meridian Health consortium named Halhold Works its primary bedside-monitoring supplier in a five-year deal covering 28 facilities, a vote of confidence following the Verity redesign. CEO Nadia Brandt said the agreement is valued near $94 million and includes a service contract for the new display modules. The win marks a recovery milestone after the earlier recall.",
+      "cycle": 82530,
+      "dur": 2
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Maison & Vale Rolls Out Sundle-Branded Professional Cleaning Range",
+      "body": "Following its Sundle Werks acquisition, Maison & Vale launched a 14-product professional cleaning line aimed at hotels and serviced residences. CEO Rhys Kessler said the range pairs Sundle's formulations with Maison & Vale's hospitality distribution. Initial rollout targets the company's existing managed-property clients.",
+      "cycle": 82530,
+      "dur": 1
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -42,36 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Posts Steady Gains as Textile Contract Ramps",
-      "body": "Cranecraft delivered modest single-digit revenue growth this quarter as shipments under its multi-year Garment Belt deal began contributing meaningfully. CEO Mira Garr credited disciplined loom utilization and stable farm-equipment demand for the result. The company reaffirmed its full-year outlook.",
-      "cycle": 82529,
-      "dur": 1
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "flash",
-      "head": "Halcrest Meridian Tourbillon Takes Top Honor at Crown Watch Salon",
-      "body": "The Meridian Tourbillon, Halcrest's costliest release in decades, won the Grand Complication prize at the annual Crown Watch Salon, beating a crowded field of rivals. CEO Iris Marrow called the trophy proof that 'patience and price can still share a wrist.' The maker said the recognition has lengthened its waiting list.",
-      "cycle": 82529,
-      "dur": 1
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Halcyon Industries Adds Automated Line at Northgate Hub",
-      "body": "Halcyon Industries quietly commissioned a second high-speed packaging line at its Northgate distribution hub, lifting regional capacity by an estimated 20%. CEO Dorian Ashby said the addition supports rising volumes without straining margins, consistent with the firm's steady expansion approach. No major headcount changes were announced.",
-      "cycle": 82529,
-      "dur": 1
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "major_deal",
@@ -79,46 +129,6 @@
       "head": "Kessel Drive Lands Fleet Order for Long-Range Touring Line",
       "body": "Kessel Drive secured a 12,000-unit order from a national coach operator for its newly launched long-range touring vehicle, its biggest single fleet commitment in years. CEO Dorian Brandt called it validation of the splashy reveal, promising first deliveries within nine months. The deal includes a multi-year service and battery-storage maintenance package.",
       "cycle": 82529,
-      "dur": 2
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Blackton Industries Tops Forecasts as Halvern Volumes Surge",
-      "body": "Blackton posted quarterly revenue of 1.84 billion, up 22% year over year, with retooled plants running near full capacity for the Halvern Motors contract. CEO Mara Mercer credited the overhaul push but warned that overtime costs trimmed margins to 11.3%. The company raised its full-year delivery guidance for the second time this year.",
-      "cycle": 82528,
-      "dur": 2
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Brunmark Motors Splits Out Power Unit to Steady Veyra Supply",
-      "body": "Reeling from a bruising quarter, Brunmark moved its Power & Storage operation into a standalone unit with its own supply chain and dedicated cell lines. Yvette Calder said the carve-out would 'stop the Veyra ramp from starving the rest of the house,' and named pack production as the top fix. The reorganization affects roughly 2,600 staff across three plants.",
-      "cycle": 82528,
-      "dur": 2
-    },
-    {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Brunridge Works Names New Chief to Steer Three-Pillar Structure",
-      "body": "After overseeing the consolidation of five divisions into three pillars, Petra Wold will step back to a chairmanship as Halia Brennt takes the chief executive seat. Brennt, who led the Devices pillar through the reshuffle, inherits a leaner organization tasked with proving the new structure can lift margins. Wold said the handover had been planned to 'finish one chapter and let the next begin clean.'",
-      "cycle": 82528,
-      "dur": 2
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Erretmark Works Buys Engine Atelier Sorne to Pair With Velmonte",
-      "body": "Continuing Aurelia Garr's buying spree, Erretmark acquired bespoke engine atelier Sorne for an undisclosed sum, slotting it alongside recently purchased coachbuilder Velmonte. The pairing gives Erretmark in-house control of both bodywork and powertrain for its low-volume commissions. Garr said the goal is 'a car built entirely under one roof for clients who count in dozens, not thousands.'",
-      "cycle": 82528,
       "dur": 2
     },
     {
@@ -130,26 +140,6 @@
       "body": "Greywater inked a 12-year, 4.1 billion agreement to supply storage and balancing capacity for a sprawling compute campus, the largest contract in the company's history. The deal leans on the record-density cells revealed at the Halloran Facility, with first banks due online within 18 months. Vale Halloran called it 'the moment Greywater stops selling power and starts selling certainty.'",
       "cycle": 82528,
       "dur": 8
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Ironcrestton Turns Award Buzz Into the Carrow Atelier Line",
-      "body": "Riding its Artisan's Circle sweep, Ironcrestton launched the Carrow Atelier collection, a tightly limited run of fine goods showcasing the techniques that earned the honors. Sable Carrow staged a single-night unveiling that drew a waitlist exceeding the production run of 300 pieces. The house said allocations would favor existing patrons before any wider release.",
-      "cycle": 82528,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Thronehaus & Co. Debuts Caldwynn-Powered Regent Tourbillon",
-      "body": "Fresh off its acquisition of movement specialist Caldwynn, Thronehaus unveiled the Regent Tourbillon, the first timepiece to house an in-built Caldwynn caliber. Priced at 240,000 per piece and capped at 75 units, the launch marks Cora Dray's push to control the craft end-to-end. Early allocations sold out within the first showing in the maison's flagship salon.",
-      "cycle": 82528,
-      "dur": 2
     },
     {
       "company": "Marlgear Supply",
@@ -229,16 +219,6 @@
       "head": "Vossenspire Holdings hit by cascading grid failure across two regions",
       "body": "A substation fault triggered rolling blackouts affecting an estimated 1.2 million customers for up to 14 hours, the worst disruption in the company's history. CEO Kestrel Calder apologized publicly and pledged an independent review, while regulators opened an inquiry into maintenance records. The company warned of compensation costs and possible penalties weighing on the current quarter.",
       "cycle": 82523,
-      "dur": 8
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Thaldale Group CEO Sable Wold Steps Down After Boardroom Clash",
-      "body": "Sable Wold resigned abruptly after 41 years leading the value-tool maker, following reported disagreements with the board over an aggressive overseas expansion plan. The company named operations chief Renna Voss as interim chief executive, pledging continuity for its budget-conscious customers. Shares wobbled on the surprise departure before steadying.",
-      "cycle": 82522,
       "dur": 8
     }
   ]
