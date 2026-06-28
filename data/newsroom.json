@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-28T12:36:15.290Z",
+  "generatedAt": "2026-06-28T18:31:09.084Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Boreas Power Lifts Annual Guidance as Hollowmere Runs at Full Tilt",
+      "body": "Mira Thorne raised full-year output guidance after Hollowmere's fully-owned storage fields delivered a 14 percent jump in dispatchable capacity. Quarterly revenue reached $2.1 billion, beating consensus by $180 million, with management citing record availability through peak demand. Thorne hinted at fresh acquisition talks, noting the balance sheet 'has room to move.'",
+      "cycle": 82531,
+      "dur": 2
+    },
+    {
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Caldercraft Holdings Rolls Out Reinforced Tradesman Tool Line",
+      "body": "Vale Fenn introduced the Tradesman Pro hand-tool range, the first product refresh to draw textile-reinforced grips from the company's expanded mills. The line spans 38 hardware items aimed at professional users and ships to retailers next month. Fenn described it as 'a steady step, the way we prefer them.'",
+      "cycle": 82531,
+      "dur": 1
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Castlehold Faces Probe Over Withheld Saltmere Fault Reports",
+      "body": "Regulators opened an inquiry after internal documents suggested Castlehold knew of structural weaknesses at Saltmere Banks before last season's storm failures. The disclosures, surfacing weeks after the unit was spun into a standalone entity, have prompted calls for an independent review of Soren Skarn's leadership. Shares slid sharply as Skarn defended the restructure as 'transparent, not evasive.'",
+      "cycle": 82531,
+      "dur": 8
+    },
+    {
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drustcyon Lands Coastal Supply Deal on the Back of Corrosion Anchor",
+      "body": "Aurelia Kessler signed a supply agreement with marine-infrastructure builder Tidewall Group to furnish Drustcyon's new corrosion-resistant anchors across three harbor projects. The contract is worth an estimated $190 million and validates the firm's recent coastal-fasteners breakthrough. Kessler said demand 'arrived faster than we modeled,' prompting a review of plating capacity.",
+      "cycle": 82531,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Fenncyon Doubles Down on Rentals With New Eastfield Depot Network",
+      "body": "Nadia Ashby announced a $260 million rollout of six rental depots across the Eastfield corridor, extending the strategy that drove last quarter's beat. The network adds 900 earthmoving units to the rental pool and targets contractors priced out of outright purchases. Ashby framed the move as 'opportunistic, not reckless,' citing firm utilization rates above 80 percent.",
+      "cycle": 82531,
+      "dur": 2
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Garrware Wins Multi-Year Packaging Contract With Grocer Halloway & Pace",
+      "body": "Garrware secured a five-year supply agreement with regional grocery chain Halloway & Pace, routing volume through its new Marrow Valley plant. The deal, valued near $340 million over its term, locks in baseload demand for the third facility months ahead of schedule. Orla Holt said the contract 'fits the plan we've been building quietly for years.'",
+      "cycle": 82531,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "flash",
+      "head": "Korrwright Works Velloux Heritage Series Wins Carrowmore Craft Prize",
+      "body": "The Velloux Heritage Series took top honors in the enamel-dial category at the annual Carrowmore Craft Prize, the first such recognition since Korrwright absorbed Velloux. Judges praised the restored kiln-firing technique recovered from Velloux's archives. Dunmore Carrow called the award 'proof the heritage was worth buying.'",
+      "cycle": 82531,
+      "dur": 1
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Lhaus Industries Breaks Ground on Second Driveline Line at Ferrlands",
+      "body": "Cole Brandt confirmed a $410 million expansion at the Ferrlands plant, doubling axle output to meet commitments under the Marwick Motors pact. The addition is expected to add 1,200 jobs by the second quarter and lift Korrick Axle capacity by roughly 60 percent. Brandt told reporters the firm is 'already scouting the next bolt-on,' fueling speculation of further driveline deals.",
+      "cycle": 82531,
+      "dur": 2
+    },
     {
       "company": "Brunforge Holdings",
       "sector": "consumer",
@@ -72,26 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Maison & Vale Rolls Out Sundle-Branded Professional Cleaning Range",
-      "body": "Following its Sundle Werks acquisition, Maison & Vale launched a 14-product professional cleaning line aimed at hotels and serviced residences. CEO Rhys Kessler said the range pairs Sundle's formulations with Maison & Vale's hospitality distribution. Initial rollout targets the company's existing managed-property clients.",
-      "cycle": 82530,
-      "dur": 1
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "outage",
-      "size": "standard",
-      "head": "Blackhold Grid Fault Knocks Out Greycliff Test Bank Hours After Launch",
-      "body": "A thermal fault in the newly commissioned Greycliff storage array forced an emergency shutdown of three test cells late Tuesday, cutting supply to two regional substations for roughly four hours. New Operations Chief Lena Voss said the trip was contained and no permanent damage occurred, but CEO Tomas Vren faced sharp questions over whether the aggressive build timeline outpaced safety checks. Blackhold pledged a full review before bringing the bank back online.",
-      "cycle": 82529,
-      "dur": 2
-    },
-    {
       "company": "Carrowforge",
       "sector": "manufacturing",
       "kind": "leadership_change",
@@ -100,36 +160,6 @@
       "body": "Mara Fenn, who led Carrowforge for nearly a century, resigned Wednesday as investigators widened their inquiry into falsified machine-testing certificates spanning three product lines. The board named longtime quality director Halden Roe as interim chief, vowing a clean-sheet audit of every certification issued in the past five years. Shares of the manufacturer have been battered since the probe surfaced.",
       "cycle": 82529,
       "dur": 8
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Carrowwell Breaks Ground on New Material Handling Plant",
-      "body": "Riding last quarter's record orders, Carrowwell unveiled plans for a 600,000-square-foot assembly plant in the Eastmere industrial corridor, expected to add 1,400 jobs by 2028. CEO Theo Thorne framed the move as a measured response to surging conveyor and lift demand rather than a gamble, noting the facility is already 40% pre-booked. Construction begins next quarter.",
-      "cycle": 82529,
-      "dur": 2
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Castlestone Earnings Surge on Vellmont-Era Order Book",
-      "body": "Castlestone reported quarterly revenue up 31% as deliveries under its landmark supply agreement began flowing, with compute backlog reaching a record 18-month horizon. CEO Iris Garr touted margins fattened by the high-end Vellmont line but warned that meeting demand would require a costly capacity push. Operating profit beat consensus by a wide margin.",
-      "cycle": 82529,
-      "dur": 2
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Kessel Drive Lands Fleet Order for Long-Range Touring Line",
-      "body": "Kessel Drive secured a 12,000-unit order from a national coach operator for its newly launched long-range touring vehicle, its biggest single fleet commitment in years. CEO Dorian Brandt called it validation of the splashy reveal, promising first deliveries within nine months. The deal includes a multi-year service and battery-storage maintenance package.",
-      "cycle": 82529,
-      "dur": 2
     },
     {
       "company": "Greywater Grid",
@@ -199,26 +229,6 @@
       "head": "Halhold Systems Names New Chief as Aldous Departs Amid Northgate Fallout",
       "body": "Following the cost overruns that triggered last quarter's charge, longtime CEO Cora Aldous has stepped down, ending a turbulent 50-year tenure. The board appointed veteran operations chief Dahlia Renn to stabilize the troubled Northgate campus and restore confidence. Renn pledged a full review of the project's budget within ninety days.",
       "cycle": 82524,
-      "dur": 8
-    },
-    {
-      "company": "Veldtreach & Sons",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Veldtreach & Sons wins $1.6 billion contract for coastal land-reclamation works",
-      "body": "The construction house will supply and operate earthmoving fleets for a decade-long harbor-expansion project spanning 40 kilometers of shoreline. CEO Petra Steg called it 'the largest single undertaking in our books,' requiring a 30% expansion of the heavy-equipment division. Mobilization begins within 90 days, with first dredging milestones set for next year.",
-      "cycle": 82523,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "outage",
-      "size": "major",
-      "head": "Vossenspire Holdings hit by cascading grid failure across two regions",
-      "body": "A substation fault triggered rolling blackouts affecting an estimated 1.2 million customers for up to 14 hours, the worst disruption in the company's history. CEO Kestrel Calder apologized publicly and pledged an independent review, while regulators opened an inquiry into maintenance records. The company warned of compensation costs and possible penalties weighing on the current quarter.",
-      "cycle": 82523,
       "dur": 8
     }
   ]
