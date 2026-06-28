@@ -7902,7 +7902,7 @@ details.bay-modules > summary.bay-sub:hover {
 }
 .est-card {
   text-align: left; padding: 0; cursor: pointer; overflow: hidden;
-  background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--bento-r);
   transition: transform .14s, box-shadow .14s, border-color .14s;
   display: flex; flex-direction: column;
 }
@@ -7996,8 +7996,8 @@ details.bay-modules > summary.bay-sub:hover {
 }
 .deal-card {
   display: flex; align-items: center; gap: 12px; text-align: left; cursor: pointer;
-  background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
-  padding: 12px 14px; transition: transform .12s, box-shadow .12s, border-color .12s;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--bento-r);
+  padding: 14px 16px; transition: transform .12s, box-shadow .12s, border-color .12s;
 }
 .deal-card:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.14); border-color: var(--accent); }
 
@@ -8061,7 +8061,7 @@ details.bay-modules > summary.bay-sub:hover {
 .ma-inbox {
   border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
   background: color-mix(in srgb, var(--accent) 6%, var(--paper));
-  border-radius: 12px; padding: 12px 14px; margin-bottom: 18px;
+  border-radius: var(--bento-r); padding: 14px 16px; margin-bottom: 18px;
 }
 .ma-h { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 8px; }
 .ma-deal {
@@ -8073,7 +8073,7 @@ details.bay-modules > summary.bay-sub:hover {
 .ma-acts { display: flex; gap: 7px; }
 
 .ma-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
-.ma-card { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 13px 15px; }
+.ma-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--bento-r); padding: 13px 15px; }
 .ma-card-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .ma-name { font-weight: 750; font-size: 14.5px; color: var(--ink); }
 .ma-meta { font-size: 12px; color: var(--ink-dim); margin-top: 2px; }
