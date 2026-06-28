@@ -683,9 +683,11 @@ body {
 }
 
 /* ====================== TRENDING ====================== */
-/* Contain the front page so it reads as a focused, curated edition rather than
-   a full-bleed dashboard — same centered-column treatment as Estates/Deals. */
-.view.trend {
+/* Contain the front page so it reads as a focused, curated edition rather than a
+   full-bleed dashboard. NB: center the inner .bento block, NOT the .view flex
+   item — auto margins on a flex:1 item absorb free space before flex-grow and
+   collapse the column to min-content. */
+.view.trend .bento {
   max-width: 1200px;
   margin: 0 auto;
 }
