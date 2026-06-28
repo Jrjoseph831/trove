@@ -2,17 +2,17 @@
 
 import { useEffect, useState } from "react";
 import { held } from "@trove/engine";
-import { sectorKeys, sectorLabel } from "@trove/data";
 import { breakingBeat } from "@/lib/breaking";
 import { money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { impliedSectors } from "@/lib/ui";
+import { useLeaderboard } from "@/lib/useLeaderboard";
 import { useTrove } from "@/lib/trove";
 import { Movers } from "./Movers";
 import { Tile } from "./Tile";
 
 export function Trending() {
-  const { state } = useTrove();
+  const { state, desk, mode } = useTrove();
   const f = state.front;
   const { ups, dns } = impliedSectors(f);
   const [now, setNow] = useState(() => Date.now());
@@ -29,10 +29,14 @@ export function Trending() {
 
   const mine = state.items.filter((i) => held(i, "YOU") > 0);
 
-  // Sector demand snapshot — the hottest first. Reads as a market pulse.
-  const pulse = [...sectorKeys]
-    .map((s) => ({ s, idx: state.sectorIdx[s] ?? 1 }))
-    .sort((a, b) => b.idx - a.idx);
+  // Standings beside the headline — competitive context (observable), not a
+  // give-away sector readout. Top firms + you.
+  const myLabel = desk?.name?.trim() || "Your Holding";
+  const ranked = useLeaderboard(state, mode, myLabel);
+  const standTop = ranked.slice(0, 9);
+  const meRow = ranked.find((e) => e.id === "YOU");
+  const standings =
+    standTop.some((e) => e.id === "YOU") || !meRow ? standTop : [...standTop, meRow];
 
   return (
     <div className="view">
@@ -81,26 +85,19 @@ export function Trending() {
 
         <aside className="pulse">
           <div className="pulse-h">
-            Market Pulse <span className="sub">sector demand now</span>
+            Standings <span className="sub">top firms · net worth</span>
           </div>
           <div className="pulse-list">
-            {pulse.map(({ s, idx }) => {
-              const dev = (idx - 1) * 100;
-              const up = dev >= 0;
-              const w = Math.min(100, Math.max(6, Math.abs(dev) * 7));
-              return (
-                <div className="pulse-row" key={s}>
-                  <span className="pulse-nm">{sectorLabel(s)}</span>
-                  <span className="pulse-bar">
-                    <i className={up ? "up" : "down"} style={{ width: `${w}%` }} />
-                  </span>
-                  <span className={`pulse-pct ${up ? "up" : "down"}`}>
-                    {up ? "+" : ""}
-                    {dev.toFixed(1)}%
-                  </span>
-                </div>
-              );
-            })}
+            {standings.map((e) => (
+              <div className={`stand-row ${e.id === "YOU" ? "me" : ""}`} key={e.id}>
+                <span className="stand-rk">{e.rank}</span>
+                <span className="stand-nm">
+                  {e.live && e.id !== "YOU" && <span className="lb-live">●</span>}
+                  {e.label}
+                </span>
+                <span className="stand-w">{money(e.w)}</span>
+              </div>
+            ))}
           </div>
         </aside>
       </div>

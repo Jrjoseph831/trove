@@ -8087,3 +8087,19 @@ body {
 .brow { transition: background 0.12s ease; border-radius: 8px; }
 .brow:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
 .crow { transition: background 0.12s ease; border-radius: 8px; }
+
+/* ── Polish loop · iteration 6: Trending standings (replaces Market Pulse) ──── */
+.stand-row {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  padding: 2.5px 0;
+}
+.stand-rk { color: var(--ink-faint); font-size: 11px; text-align: center; font-variant-numeric: tabular-nums; }
+.stand-nm { color: var(--ink-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stand-w { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.stand-row.me .stand-nm,
+.stand-row.me .stand-rk,
+.stand-row.me .stand-w { color: var(--accent); font-weight: 800; }
