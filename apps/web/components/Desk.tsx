@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import {
-  AUTOFULFILL_REP,
   productionCostOf,
   SPECIALIST_REP,
   type WorldState,
@@ -165,11 +164,27 @@ function Automation() {
 
   return (
     <div className="desk-auto">
-      <div className="desk-sec">Automation · unlocked by reputation</div>
+      <div className="desk-sec">Automation</div>
 
       <div className="da-row">
         <div className="da-info">
-          <b>Procurement Specialist</b>
+          <b>Auto-Fulfill</b>
+          <span>
+            Delivers accepted orders from your vault the moment you have the stock
+            — so you never miss a contract you can cover. On by default.
+          </span>
+        </div>
+        <button
+          className={`da-toggle ${a.autoFulfill ? "on" : ""}`}
+          onClick={() => setDeskAutomation({ autoFulfill: !a.autoFulfill })}
+        >
+          {a.autoFulfill ? "On" : "Off"}
+        </button>
+      </div>
+
+      <div className="da-row">
+        <div className="da-info">
+          <b>Specialist</b>
           <span>
             Auto-negotiates every offer — holds a margin floor over source value,
             accepts at/above it, walks if the buyer can&apos;t reach it.
@@ -199,23 +214,6 @@ function Automation() {
           </div>
         ) : (
           <span className="da-lock">Unlocks at rep {SPECIALIST_REP}</span>
-        )}
-      </div>
-
-      <div className="da-row">
-        <div className="da-info">
-          <b>Auto-Fulfill</b>
-          <span>Delivers accepted orders from your vault the moment you have the stock.</span>
-        </div>
-        {rep >= AUTOFULFILL_REP ? (
-          <button
-            className={`da-toggle ${a.autoFulfill ? "on" : ""}`}
-            onClick={() => setDeskAutomation({ autoFulfill: !a.autoFulfill })}
-          >
-            {a.autoFulfill ? "On" : "Off"}
-          </button>
-        ) : (
-          <span className="da-lock">Unlocks at rep {AUTOFULFILL_REP}</span>
         )}
       </div>
     </div>

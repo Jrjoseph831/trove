@@ -218,7 +218,7 @@ export function freshState(): WorldState {
     listed: {},
     orders: [],
     reputation: 0,
-    deskAuto: { specialist: false, autoFulfill: false, minMargin: 0.1 },
+    deskAuto: { specialist: false, autoFulfill: true, minMargin: 0.1 },
     lastOrderAt: 0,
     ledger: emptyLedger(),
     reports: [],
