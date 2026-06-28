@@ -7974,3 +7974,18 @@ body {
   transform: translateY(1px) scale(0.99);
 }
 .est-back:active { transform: translateX(-1px); }
+
+/* ── Polish loop · iteration 2: typographic crispness + finishing details ───── */
+html { scroll-behavior: smooth; }
+body {
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+/* Gold-tinted text selection instead of the browser default blue. */
+::selection { background: color-mix(in srgb, var(--accent) 32%, transparent); color: var(--ink); }
+/* Tabular, kerned numerals everywhere money/figures appear, so columns align. */
+.lb span:last-child, .reel-row-pr, .deal-cardval, .est-cardprice, .est-pf .v,
+.cfm-row b, .est-stat .v, .deal-buy-cost {
+  font-variant-numeric: tabular-nums;
+}
