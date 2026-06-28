@@ -614,6 +614,74 @@ body {
   padding: 30px 38px 48px;
 }
 
+/* ============================================================ *
+ * BENTO — the global "embedded" standard. Every page lays content
+ * out as modular rounded card tiles in a 12-column grid (Apple
+ * keynote / bento aesthetic). One set of tokens, no per-page one-offs.
+ * ============================================================ */
+:root {
+  --bento-r: 16px;
+  --bento-gap: 16px;
+  --bento-pad: 22px;
+}
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--bento-gap);
+  align-items: start;
+}
+.bento-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--bento-r);
+  padding: var(--bento-pad);
+  position: relative;
+  min-width: 0;
+}
+.bento-card.hoverable {
+  cursor: pointer;
+  transition: border-color 0.16s ease, box-shadow 0.18s ease, transform 0.13s ease;
+}
+.bento-card.hoverable:hover {
+  border-color: var(--line-2);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+}
+.bento-card.hoverable:active {
+  transform: translateY(1px) scale(0.997);
+}
+/* tile header — lives inside the tile, not as a full-width rule */
+.bc-h {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.bc-h .t {
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.bc-h .why {
+  font-size: 11px;
+  color: var(--ink-faint);
+  letter-spacing: 0.02em;
+}
+/* span helpers — collapse to full width on narrow screens */
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-12 { grid-column: span 12; }
+@media (max-width: 1000px) {
+  .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9 {
+    grid-column: span 12;
+  }
+}
+
 /* ====================== TRENDING ====================== */
 /* Contain the front page so it reads as a focused, curated edition rather than
    a full-bleed dashboard — same centered-column treatment as Estates/Deals. */
@@ -636,7 +704,7 @@ body {
   background: var(--paper);
   border: 1px solid var(--line);
   border-top: 2px solid var(--rule);
-  border-radius: 0 0 var(--r) var(--r);
+  border-radius: var(--bento-r);
   padding: 22px 28px 26px;
 }
 .lead .paper {
@@ -803,7 +871,7 @@ body {
 .move {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 28px;
+  gap: var(--bento-gap);
   align-items: stretch;
 }
 @media (max-width: 1100px) {
@@ -814,7 +882,7 @@ body {
 .spotlight {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   padding: 26px 28px;
   display: flex;
   gap: 26px;
@@ -933,7 +1001,7 @@ body {
 .board {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   padding: 8px 20px;
   display: flex;
   flex-direction: column;
@@ -995,7 +1063,7 @@ body {
 .tile {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   padding: 18px;
   cursor: pointer;
   transition: 0.16s;
@@ -7565,10 +7633,14 @@ body {
 .brk-card {
   border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
   border-left: 4px solid var(--accent);
-  border-radius: 12px;
+  border-radius: var(--bento-r);
   background: color-mix(in srgb, var(--accent) 6%, var(--paper));
-  padding: 12px 16px;
+  padding: 14px 18px;
   margin: 0 0 14px;
+}
+/* In a bento grid the gap handles spacing — drop the standalone margin. */
+.bento > .brk-card {
+  margin: 0;
 }
 .brk-card.live {
   border-color: color-mix(in srgb, #c0563f 45%, var(--line));
@@ -8058,8 +8130,8 @@ body {
 .pulse {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: var(--r);
-  padding: 18px 18px 16px;
+  border-radius: var(--bento-r);
+  padding: 20px 20px 18px;
   display: flex;
   flex-direction: column;
 }

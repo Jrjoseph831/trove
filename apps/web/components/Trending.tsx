@@ -36,16 +36,16 @@ export function Trending() {
 
   return (
     <div className="view trend">
-      {beat && (
-        <article className={`brk-card ${beat.phase}`}>
-          <span className="brk-card-kick">⚡ {beat.kicker}</span>
-          <h3 className="brk-card-head">{beat.head}</h3>
-          <p className="brk-card-body">{beat.body}</p>
-        </article>
-      )}
+      <div className="bento">
+        {beat && (
+          <article className={`brk-card col-12 ${beat.phase}`}>
+            <span className="brk-card-kick">⚡ {beat.kicker}</span>
+            <h3 className="brk-card-head">{beat.head}</h3>
+            <p className="brk-card-body">{beat.body}</p>
+          </article>
+        )}
 
-      <div className="trend-hero">
-        <article className="lead">
+        <article className="lead col-8">
           {f && (
             <>
               <div className="paper">
@@ -79,7 +79,7 @@ export function Trending() {
           )}
         </article>
 
-        <aside className="pulse">
+        <aside className="pulse col-4">
           <div className="pulse-h">
             Standings <span className="sub">top firms · net worth</span>
           </div>
@@ -96,32 +96,32 @@ export function Trending() {
             ))}
           </div>
         </aside>
-      </div>
 
-      <div className="railrow">
-        <div className="railrow-h">
-          <span className="t">On the Move</span>
-          <span className="why">biggest shifts since the page turned</span>
-        </div>
-        <Movers />
-      </div>
+        <section className="col-12 trend-sec">
+          <div className="bc-h">
+            <span className="t">On the Move</span>
+            <span className="why">biggest shifts since the page turned</span>
+          </div>
+          <Movers />
+        </section>
 
-      <div className="railrow">
-        <div className="railrow-h">
-          <span className="t">Worth Watching</span>
-          <span className="why">marquee pieces still on the market</span>
-        </div>
-        {watching.length ? (
-          <div className="tiles">
-            {watching.map((it) => (
-              <Tile key={it.id} it={it} />
-            ))}
+        <section className="col-12 trend-sec">
+          <div className="bc-h">
+            <span className="t">Worth Watching</span>
+            <span className="why">marquee pieces still on the market</span>
           </div>
-        ) : (
-          <div className="empty">
-            Every marquee piece has been claimed. Watch for a relisting.
-          </div>
-        )}
+          {watching.length ? (
+            <div className="tiles">
+              {watching.map((it) => (
+                <Tile key={it.id} it={it} />
+              ))}
+            </div>
+          ) : (
+            <div className="empty">
+              Every marquee piece has been claimed. Watch for a relisting.
+            </div>
+          )}
+        </section>
       </div>
     </div>
   );
