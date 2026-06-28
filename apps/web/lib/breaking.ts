@@ -64,7 +64,7 @@ function toBeat(ev: MarketEvent, phase: "incoming" | "live"): BreakingBeat {
         : `${L} demand is surging now`,
     body:
       phase === "incoming"
-        ? `${cause(ev.sector)}. The floor is bracing for a move — watch the ${L} tape.`
+        ? `${cause(ev.sector)}. The market is bracing for a move — watch the ${L} tape.`
         : `${cause(ev.sector)}. Orders are pouring in across ${L}. The tape will show how far it runs.`,
   };
 }

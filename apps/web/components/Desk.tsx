@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import {
-  AUTOFULFILL_REP,
   productionCostOf,
   SPECIALIST_REP,
   type WorldState,
@@ -145,14 +144,26 @@ function PlayerOrders() {
   const heldOf = (id: number) => state.items.find((i) => i.id === id)?.owners["YOU"] ?? 0;
   return (
     <>
-      {incoming.length > 0 && <div className="desk-sec">Requests from holdings</div>}
-      {incoming.map((o) => (
-        <IncomingCard key={o.id} o={o} held={heldOf(o.itemId)} act={orderAct} />
-      ))}
-      {outgoing.length > 0 && <div className="desk-sec">Your outgoing requests</div>}
-      {outgoing.map((o) => (
-        <OutgoingCard key={o.id} o={o} cash={state.cash} act={orderAct} />
-      ))}
+      {incoming.length > 0 && (
+        <>
+          <div className="desk-sec">Requests from holdings</div>
+          <div className="desk-grid">
+            {incoming.map((o) => (
+              <IncomingCard key={o.id} o={o} held={heldOf(o.itemId)} act={orderAct} />
+            ))}
+          </div>
+        </>
+      )}
+      {outgoing.length > 0 && (
+        <>
+          <div className="desk-sec">Your outgoing requests</div>
+          <div className="desk-grid">
+            {outgoing.map((o) => (
+              <OutgoingCard key={o.id} o={o} cash={state.cash} act={orderAct} />
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 }
@@ -164,12 +175,30 @@ function Automation() {
   const a = state.deskAuto;
 
   return (
-    <div className="desk-auto">
-      <div className="desk-sec">Automation · unlocked by reputation</div>
+    <section className="bento-card desk-auto">
+      <div className="bc-h">
+        <span className="t">Automation</span>
+      </div>
 
       <div className="da-row">
         <div className="da-info">
-          <b>Procurement Specialist</b>
+          <b>Auto-Fulfill</b>
+          <span>
+            Delivers accepted orders from your vault the moment you have the stock
+            — so you never miss a contract you can cover. On by default.
+          </span>
+        </div>
+        <button
+          className={`da-toggle ${a.autoFulfill ? "on" : ""}`}
+          onClick={() => setDeskAutomation({ autoFulfill: !a.autoFulfill })}
+        >
+          {a.autoFulfill ? "On" : "Off"}
+        </button>
+      </div>
+
+      <div className="da-row">
+        <div className="da-info">
+          <b>Specialist</b>
           <span>
             Auto-negotiates every offer — holds a margin floor over source value,
             accepts at/above it, walks if the buyer can&apos;t reach it.
@@ -201,24 +230,7 @@ function Automation() {
           <span className="da-lock">Unlocks at rep {SPECIALIST_REP}</span>
         )}
       </div>
-
-      <div className="da-row">
-        <div className="da-info">
-          <b>Auto-Fulfill</b>
-          <span>Delivers accepted orders from your vault the moment you have the stock.</span>
-        </div>
-        {rep >= AUTOFULFILL_REP ? (
-          <button
-            className={`da-toggle ${a.autoFulfill ? "on" : ""}`}
-            onClick={() => setDeskAutomation({ autoFulfill: !a.autoFulfill })}
-          >
-            {a.autoFulfill ? "On" : "Off"}
-          </button>
-        ) : (
-          <span className="da-lock">Unlocks at rep {AUTOFULFILL_REP}</span>
-        )}
-      </div>
-    </div>
+    </section>
   );
 }
 
@@ -324,18 +336,16 @@ export function Desk() {
   if (mode === "live" && !signedIn) {
     return (
       <div className="view">
-        <div className="cat-head">
-          <h2 className="serif">Order Desk</h2>
-        </div>
-        <div className="empty">
-          Sign in to receive contracts from companies on the floor.{" "}
-          <button
-            className="acct"
-            style={{ width: "auto", marginTop: 10 }}
-            onClick={signIn}
-          >
-            <b>Sign in</b>
-          </button>
+        <div className="desk-wrap">
+          <div className="cat-head">
+            <h2 className="serif">Order Desk</h2>
+          </div>
+          <div className="empty">
+            Sign in to receive contracts from firms on the market.{" "}
+            <button className="acct acct-inline" onClick={signIn}>
+              <b>Sign in</b>
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -344,10 +354,12 @@ export function Desk() {
   if (!desk) {
     return (
       <div className="view">
-        <div className="cat-head">
-          <h2 className="serif">Order Desk</h2>
+        <div className="desk-wrap">
+          <div className="cat-head">
+            <h2 className="serif">Order Desk</h2>
+          </div>
+          <div className="empty">Opening the desk…</div>
         </div>
-        <div className="empty">Opening the desk…</div>
       </div>
     );
   }
@@ -357,90 +369,100 @@ export function Desk() {
 
   return (
     <div className="view">
-      <div className="cat-head">
-        <h2 className="serif">Order Desk</h2>
-        <div className="desk-rep">
-          Reputation <b>{desk.reputation}</b>
-        </div>
-      </div>
-
-      <Automation />
-
-      <PlayerOrders />
-
-      {desk.orders.length === 0 && (
-        <div className="empty">
-          No client contracts right now. Companies send work every few minutes —
-          and other holdings can order from your storefront (see Companies).
-        </div>
-      )}
-
-      {desk.orders.length > 0 && <div className="desk-sec">Client contracts</div>}
-
-      {accepted.length > 0 && <div className="desk-sec">In progress</div>}
-      {accepted.map((o) => {
-        const ready = o.held >= o.qty;
-        const makeCost = makeCostOf(state, o);
-        const profit = makeCost != null ? o.quote - makeCost : null;
-        return (
-          <div key={o.id} className="ordercard accepted">
-            <div className="oc-co">
-              {o.company}
-              <span className="oc-sector"> · {o.sector}</span>
-              <span className="oc-time"> · ⏳ {timeLeft(o.expiresAt)}</span>
-            </div>
-            <div className="oc-line">
-              <b>{o.qty.toLocaleString()} ×</b>{" "}
-              <Link href={`/item/${o.itemId}`} className="it-link">
-                {o.itemName}
-              </Link>
-              {o.youProduce && <span className="oc-make">◆ you make this</span>}
-            </div>
-            <div className="oc-meta">
-              <span>
-                Pays <b>{money(o.quote)}</b>
-                {makeCost != null && <> · ~{money(makeCost)} to make</>}
-              </span>
-              <span>
-                In vault: {o.held.toLocaleString()} / {o.qty.toLocaleString()}
-              </span>
-            </div>
-            {profit != null && (
-              <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
-                {profit >= 0 ? "Profit " : "Loss "}
-                <b>
-                  {profit >= 0 ? "+" : ""}
-                  {money(profit)}
-                </b>{" "}
-                on delivery
-              </div>
-            )}
-            <div className="oc-bar">
-              <i
-                style={{ width: `${Math.min(100, (o.held / o.qty) * 100)}%` }}
-              />
-            </div>
-            <div className="oc-actions">
-              <button
-                className="oc-fulfill"
-                disabled={!ready}
-                onClick={() => fulfillOrder(o.id)}
-              >
-                {ready
-                  ? `Fulfill · ${money(o.quote)}`
-                  : o.youProduce
-                    ? `Need ${(o.qty - o.held).toLocaleString()} more — produce or buy`
-                    : `Need ${(o.qty - o.held).toLocaleString()} more`}
-              </button>
-            </div>
+      <div className="desk-wrap">
+        <div className="cat-head">
+          <h2 className="serif">Order Desk</h2>
+          <div className="desk-rep">
+            Reputation <b>{desk.reputation}</b>
           </div>
-        );
-      })}
+        </div>
 
-      {offers.length > 0 && <div className="desk-sec">Requests · negotiate</div>}
-      {offers.map((o) => (
-        <OfferCard key={o.id} o={o} />
-      ))}
+        <Automation />
+
+        <PlayerOrders />
+
+        {desk.orders.length === 0 && (
+          <div className="empty">
+            No client contracts right now. Companies send work every few minutes —
+            and other holdings can order from your storefront (see Companies).
+          </div>
+        )}
+
+        {desk.orders.length > 0 && <div className="desk-sec">Client contracts</div>}
+
+        {accepted.length > 0 && <div className="desk-sec">In progress</div>}
+        {accepted.length > 0 && (
+          <div className="desk-grid">
+            {accepted.map((o) => {
+              const ready = o.held >= o.qty;
+              const makeCost = makeCostOf(state, o);
+              const profit = makeCost != null ? o.quote - makeCost : null;
+              return (
+                <div key={o.id} className="ordercard accepted">
+                  <div className="oc-co">
+                    {o.company}
+                    <span className="oc-sector"> · {o.sector}</span>
+                    <span className="oc-time"> · ⏳ {timeLeft(o.expiresAt)}</span>
+                  </div>
+                  <div className="oc-line">
+                    <b>{o.qty.toLocaleString()} ×</b>{" "}
+                    <Link href={`/item/${o.itemId}`} className="it-link">
+                      {o.itemName}
+                    </Link>
+                    {o.youProduce && <span className="oc-make">◆ you make this</span>}
+                  </div>
+                  <div className="oc-meta">
+                    <span>
+                      Pays <b>{money(o.quote)}</b>
+                      {makeCost != null && <> · ~{money(makeCost)} to make</>}
+                    </span>
+                    <span>
+                      In vault: {o.held.toLocaleString()} / {o.qty.toLocaleString()}
+                    </span>
+                  </div>
+                  {profit != null && (
+                    <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
+                      {profit >= 0 ? "Profit " : "Loss "}
+                      <b>
+                        {profit >= 0 ? "+" : ""}
+                        {money(profit)}
+                      </b>{" "}
+                      on delivery
+                    </div>
+                  )}
+                  <div className="oc-bar">
+                    <i
+                      style={{ width: `${Math.min(100, (o.held / o.qty) * 100)}%` }}
+                    />
+                  </div>
+                  <div className="oc-actions">
+                    <button
+                      className="oc-fulfill"
+                      disabled={!ready}
+                      onClick={() => fulfillOrder(o.id)}
+                    >
+                      {ready
+                        ? `Fulfill · ${money(o.quote)}`
+                        : o.youProduce
+                          ? `Need ${(o.qty - o.held).toLocaleString()} more — produce or buy`
+                          : `Need ${(o.qty - o.held).toLocaleString()} more`}
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {offers.length > 0 && <div className="desk-sec">Requests · negotiate</div>}
+        {offers.length > 0 && (
+          <div className="desk-grid">
+            {offers.map((o) => (
+              <OfferCard key={o.id} o={o} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

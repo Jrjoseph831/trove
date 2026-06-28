@@ -116,7 +116,7 @@ export function ReportView() {
           <h2 className="serif">Reports</h2>
         </div>
         <div className="empty">
-          No reports yet — a report is filed every time the floor flips (twice a
+          No reports yet — a report is filed every time the market flips (twice a
           Trove day). Once your floor produces or trades, a dashboard builds here.
         </div>
       </div>

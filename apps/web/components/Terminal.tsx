@@ -86,7 +86,7 @@ function BootShell() {
           <div className="tlabel">The Wire</div>
         </div>
         <div className="view">
-          <div className="empty">Opening the floor…</div>
+          <div className="empty">Opening the market…</div>
         </div>
       </div>
     </div>
@@ -184,7 +184,7 @@ function Onboarding() {
           {isRename ? "Rename your Holding" : "Establish your Holding"}
         </div>
         <p className="ob-sub">
-          Name your house on the floor — this is how you&apos;ll appear in the
+          Name your firm — this is how you&apos;ll appear in the
           standings and on every order.
         </p>
         <input
@@ -242,7 +242,7 @@ function Clock() {
   return (
     <div
       className="clock"
-      title="Trove time runs 2× real (a full day every 12 hours). The floor turns at 00:00 and 12:00."
+      title="Trove time runs 2× real (a full day every 12 hours). The market turns at 00:00 and 12:00."
     >
       <span className="clock-t">
         {hh}:{mm}

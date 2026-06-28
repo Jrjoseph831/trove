@@ -5,6 +5,7 @@ import { ArrowLeft, MapPin, TrendingUp } from "lucide-react";
 import { properties as catalog, type Property } from "@trove/data";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+import { ConfirmDeal } from "./ConfirmDeal";
 
 /** Card art lives at public/properties/<slug>.jpg (or .png from dall-e-3). Try
  *  each in turn; a category gradient + emoji stands in until one loads. */
@@ -47,6 +48,7 @@ export function PropertyMarket() {
   const [cat, setCat] = useState<(typeof CATS)[number]>("All");
   const [sort, setSort] = useState<"low" | "high" | "yield">("low");
   const [sel, setSel] = useState<number | null>(null);
+  const [confirmBuy, setConfirmBuy] = useState(false);
   // slug → which extension we're trying (index into ART_EXTS); past the end = no art.
   const [artTry, setArtTry] = useState<Record<string, number>>({});
 
@@ -183,7 +185,7 @@ export function PropertyMarket() {
               <button
                 className="est-act buy"
                 disabled={!canAfford}
-                onClick={() => buyEstate(selProp.id)}
+                onClick={() => setConfirmBuy(true)}
               >
                 {canAfford
                   ? `Buy for ${money(selProp.price)}`
@@ -192,6 +194,36 @@ export function PropertyMarket() {
             )}
           </div>
         </div>
+
+        {confirmBuy && (
+          <ConfirmDeal
+            kicker="Confirm acquisition"
+            title={`Acquire ${selProp.name}?`}
+            sub={
+              selProp.rentYield > 0
+                ? "A rental property — it pays rent every settlement and you can sell it back anytime at its current value."
+                : "An appreciation-only asset — no rent, but its value moves with the market. Sell it back anytime."
+            }
+            rows={[
+              { label: "Property", value: `${selProp.icon} ${selProp.name}` },
+              { label: "Type", value: selProp.category },
+              { label: "Price", value: money(selProp.price) },
+              {
+                label: "Rent / period",
+                value: selProp.rentYield > 0 ? `+${money(Math.round(selProp.price * selProp.rentYield))}` : "—",
+                tone: selProp.rentYield > 0 ? "up" : undefined,
+              },
+              { label: "Cash after", value: money(state.cash - selProp.price) },
+            ]}
+            confirmText={`Buy for ${money(selProp.price)}`}
+            tone="buy"
+            onConfirm={() => {
+              buyEstate(selProp.id);
+              setConfirmBuy(false);
+            }}
+            onCancel={() => setConfirmBuy(false)}
+          />
+        )}
       </div>
     );
   }

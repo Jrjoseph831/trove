@@ -614,7 +614,93 @@ body {
   padding: 30px 38px 48px;
 }
 
+/* ============================================================ *
+ * BENTO — the global "embedded" standard. Every page lays content
+ * out as modular rounded card tiles in a 12-column grid (Apple
+ * keynote / bento aesthetic). One set of tokens, no per-page one-offs.
+ * ============================================================ */
+:root {
+  --bento-r: 16px;
+  --bento-gap: 16px;
+  --bento-pad: 22px;
+}
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--bento-gap);
+  align-items: start;
+}
+.bento-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--bento-r);
+  padding: var(--bento-pad);
+  position: relative;
+  min-width: 0;
+}
+.bento-card.hoverable {
+  cursor: pointer;
+  transition: border-color 0.16s ease, box-shadow 0.18s ease, transform 0.13s ease;
+}
+.bento-card.hoverable:hover {
+  border-color: var(--line-2);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+}
+.bento-card.hoverable:active {
+  transform: translateY(1px) scale(0.997);
+}
+/* tile header — lives inside the tile, not as a full-width rule */
+.bc-h {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.bc-h .t {
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.bc-h .why {
+  font-size: 11px;
+  color: var(--ink-faint);
+  letter-spacing: 0.02em;
+}
+/* span helpers — collapse to full width on narrow screens */
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-12 { grid-column: span 12; }
+@media (max-width: 1000px) {
+  .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9 {
+    grid-column: span 12;
+  }
+}
+/* Any bento page is a centered, contained column (not full-bleed). */
+.view > .bento {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* A page header that lives as a full-width row inside the grid — gap handles
+   the spacing, so drop its standalone margin. */
+.bento > .cat-head {
+  margin-bottom: 0;
+}
+
 /* ====================== TRENDING ====================== */
+/* Contain the front page so it reads as a focused, curated edition rather than a
+   full-bleed dashboard. NB: center the inner .bento block, NOT the .view flex
+   item — auto margins on a flex:1 item absorb free space before flex-grow and
+   collapse the column to min-content. */
+.view.trend .bento {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .masthead {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -630,7 +716,7 @@ body {
   background: var(--paper);
   border: 1px solid var(--line);
   border-top: 2px solid var(--rule);
-  border-radius: 0 0 var(--r) var(--r);
+  border-radius: var(--bento-r);
   padding: 22px 28px 26px;
 }
 .lead .paper {
@@ -797,7 +883,7 @@ body {
 .move {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 28px;
+  gap: var(--bento-gap);
   align-items: stretch;
 }
 @media (max-width: 1100px) {
@@ -808,7 +894,7 @@ body {
 .spotlight {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   padding: 26px 28px;
   display: flex;
   gap: 26px;
@@ -927,7 +1013,7 @@ body {
 .board {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   padding: 8px 20px;
   display: flex;
   flex-direction: column;
@@ -989,7 +1075,7 @@ body {
 .tile {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   padding: 18px;
   cursor: pointer;
   transition: 0.16s;
@@ -1198,15 +1284,28 @@ body {
 .brand-select {
   width: 160px;
 }
+/* Catalog framed as bento: centered column, table in a flex-column tile so the
+   virtualized list scrolls INSIDE the card (the virtualizer needs a bounded
+   scroll container). */
+.cat-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.cat-table {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 180px);
+}
 .catlist {
-  height: calc(100vh - 218px);
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
   padding-top: 8px;
 }
 .cat-grid {
   display: grid;
   grid-template-columns: 1fr 332px;
-  gap: 32px;
+  gap: var(--bento-gap);
   align-items: start;
 }
 @media (max-width: 1100px) {
@@ -1333,6 +1432,45 @@ body {
 .vlisted.held {
   color: var(--ink-faint);
 }
+/* Vault header summary — gives the page a real stat line / hierarchy. */
+.vault-sum {
+  margin-left: auto;
+  display: flex;
+  align-items: baseline;
+  gap: 26px;
+}
+.vault-sum .vs {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: right;
+}
+.vault-sum .vs i {
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 700;
+}
+.vault-sum .vs b {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.vault-sum .vs.pos b {
+  color: var(--up);
+}
+.vault-sum .vs.neg b {
+  color: var(--dn);
+}
+/* Vault row action group — consistent gap, no inline margin hacks. */
+.crow-acts {
+  flex: none;
+  display: inline-flex;
+  gap: 8px;
+}
 .ed-col h3 {
   font-family: var(--font-display);
   font-size: 12px;
@@ -1346,7 +1484,7 @@ body {
 .edcard {
   background: var(--paper);
   border: 1px solid color-mix(in srgb, var(--edition) 38%, var(--line));
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   padding: 18px;
   margin-bottom: 16px;
   box-shadow: inset 0 0 0 100px color-mix(in srgb, var(--edition) 3%, transparent);
@@ -3648,10 +3786,34 @@ body {
 }
 .ordercard {
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: var(--bento-r);
   padding: 16px 18px;
   margin-bottom: 12px;
   max-width: 640px;
+}
+/* Order Desk bento layout: centered column, contracts in a 2-col tile grid. */
+.desk-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.desk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--bento-gap);
+  margin-bottom: 8px;
+}
+.desk-grid .ordercard {
+  max-width: none;
+  margin-bottom: 0;
+}
+.acct-inline {
+  width: auto;
+  margin-top: 10px;
+}
+@media (max-width: 1000px) {
+  .desk-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .ordercard.accepted {
   border-left: 3px solid var(--accent);
@@ -3678,10 +3840,15 @@ body {
   color: var(--up);
   white-space: nowrap;
 }
-/* Order Desk automation panel */
+/* Order Desk automation panel — now a full-width bento tile in the desk column */
 .desk-auto {
-  max-width: 640px;
+  max-width: none;
   margin-bottom: 18px;
+}
+/* First da-row sits right under the tile header — drop its divider line. */
+.desk-auto .da-row:first-of-type {
+  border-top: 0;
+  padding-top: 0;
 }
 .da-row {
   display: flex;
@@ -4513,6 +4680,37 @@ body {
   text-transform: uppercase;
   color: var(--ink-faint);
   margin-bottom: 8px;
+}
+/* Collapsible upgrades section (per line) — native <details> with a chevron. */
+details.bay-modules > summary.bay-sub {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+details.bay-modules > summary.bay-sub::-webkit-details-marker {
+  display: none;
+}
+details.bay-modules > summary.bay-sub::after {
+  content: "▾";
+  font-size: 9px;
+  letter-spacing: 0;
+  color: var(--ink-faint);
+  transition: transform 0.15s ease;
+}
+details.bay-modules:not([open]) > summary.bay-sub::after {
+  transform: rotate(-90deg);
+}
+details.bay-modules > summary.bay-sub:hover {
+  color: var(--ink-dim);
+}
+.bay-sub-count {
+  margin-left: auto;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  font-weight: 700;
 }
 .bay-inp {
   display: flex;
@@ -6641,15 +6839,20 @@ body {
 }
 
 /* Your-site row at the top of the directory */
+/* Generic centered page column (bento "embedded" pages that aren't a pure grid). */
+.page-col {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .site-myrow {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
-  padding: 16px 18px;
+  padding: 18px 20px;
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   background: var(--paper);
   margin-bottom: 22px;
 }
@@ -6720,7 +6923,7 @@ body {
 .site-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 14px;
+  gap: var(--bento-gap);
 }
 .site-card {
   position: relative;
@@ -6728,16 +6931,21 @@ body {
   flex-direction: column;
   gap: 6px;
   text-align: left;
-  padding: 16px 16px 14px;
+  padding: 18px 18px 16px;
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   background: var(--paper);
   cursor: pointer;
   overflow: hidden;
+  transition: border-color 0.16s ease, box-shadow 0.18s ease, transform 0.13s ease;
 }
 .site-card:hover {
   border-color: var(--line-2);
   background: var(--paper-2);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+}
+.site-card:active {
+  transform: translateY(1px) scale(0.997);
 }
 .site-card-accent {
   position: absolute;
@@ -7520,10 +7728,14 @@ body {
 .brk-card {
   border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
   border-left: 4px solid var(--accent);
-  border-radius: 12px;
+  border-radius: var(--bento-r);
   background: color-mix(in srgb, var(--accent) 6%, var(--paper));
-  padding: 12px 16px;
+  padding: 14px 18px;
   margin: 0 0 14px;
+}
+/* In a bento grid the gap handles spacing — drop the standalone margin. */
+.bento > .brk-card {
+  margin: 0;
 }
 .brk-card.live {
   border-color: color-mix(in srgb, #c0563f 45%, var(--line));
@@ -7652,8 +7864,17 @@ body {
     min-width: 0;
     margin-left: auto;
   }
-  .crow .tbtn {
-    margin-left: 0 !important;
+  .crow-acts {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+  }
+  /* Vault summary wraps under the title on narrow screens. */
+  .vault-sum {
+    margin-left: 0;
+    gap: 18px;
+  }
+  .vault-sum .vs {
+    text-align: left;
   }
 }
 
@@ -7694,7 +7915,7 @@ body {
 }
 .est-card {
   text-align: left; padding: 0; cursor: pointer; overflow: hidden;
-  background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--bento-r);
   transition: transform .14s, box-shadow .14s, border-color .14s;
   display: flex; flex-direction: column;
 }
@@ -7788,8 +8009,8 @@ body {
 }
 .deal-card {
   display: flex; align-items: center; gap: 12px; text-align: left; cursor: pointer;
-  background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
-  padding: 12px 14px; transition: transform .12s, box-shadow .12s, border-color .12s;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--bento-r);
+  padding: 14px 16px; transition: transform .12s, box-shadow .12s, border-color .12s;
 }
 .deal-card:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.14); border-color: var(--accent); }
 
@@ -7853,7 +8074,7 @@ body {
 .ma-inbox {
   border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
   background: color-mix(in srgb, var(--accent) 6%, var(--paper));
-  border-radius: 12px; padding: 12px 14px; margin-bottom: 18px;
+  border-radius: var(--bento-r); padding: 14px 16px; margin-bottom: 18px;
 }
 .ma-h { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 8px; }
 .ma-deal {
@@ -7865,7 +8086,7 @@ body {
 .ma-acts { display: flex; gap: 7px; }
 
 .ma-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
-.ma-card { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 13px 15px; }
+.ma-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--bento-r); padding: 13px 15px; }
 .ma-card-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .ma-name { font-weight: 750; font-size: 14.5px; color: var(--ink); }
 .ma-meta { font-size: 12px; color: var(--ink-dim); margin-top: 2px; }
@@ -7884,3 +8105,222 @@ body {
 .ma-yes:hover { filter: brightness(1.07); }
 .ma-no { background: var(--paper); color: var(--ink-dim); border: 1px solid var(--line); }
 .ma-no:hover { color: var(--ink); }
+
+/* Staging-only dev tools panel (M&A testing) */
+.ma-dev {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  border: 1px dashed color-mix(in srgb, var(--accent) 50%, var(--line));
+  background: color-mix(in srgb, var(--accent) 5%, var(--paper));
+  border-radius: 10px; padding: 9px 12px; margin-bottom: 16px;
+}
+.ma-dev-h { font-size: 12px; font-weight: 800; color: var(--accent); margin-right: 4px; }
+.ma-dev button {
+  border: 1px solid var(--accent); background: var(--accent); color: #fff;
+  border-radius: 8px; padding: 6px 12px; font-size: 12.5px; font-weight: 700; cursor: pointer;
+}
+.ma-dev button:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ── Acquisition confirmation screen (estates / houses / player buyouts) ───── */
+.cfm-wrap {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, 0.62); backdrop-filter: blur(3px); padding: 20px;
+}
+.cfm {
+  width: 100%; max-width: 460px;
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 16px; padding: 26px 26px 22px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+.cfm-kick {
+  font-size: 11px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent);
+}
+.cfm-title {
+  font-family: Georgia, "Times New Roman", serif; font-size: 23px;
+  margin: 6px 0 0; color: var(--ink); line-height: 1.2;
+}
+.cfm-sub { font-size: 13.5px; line-height: 1.55; color: var(--ink-dim); margin: 8px 0 0; }
+.cfm-rows { margin: 18px 0 22px; border-top: 1px solid var(--line); }
+.cfm-row {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px;
+}
+.cfm-row span { color: var(--ink-dim); }
+.cfm-row b { color: var(--ink); font-weight: 800; }
+.cfm-row b.cfm-up { color: #2e9c5e; }
+.cfm-row b.cfm-down { color: var(--danger, #d04b46); }
+.cfm-acts { display: flex; gap: 10px; }
+.cfm-cancel {
+  flex: 0 0 auto; padding: 13px 20px; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--paper); color: var(--ink-dim);
+  font-size: 14px; font-weight: 700; cursor: pointer;
+}
+.cfm-cancel:hover { color: var(--ink); }
+.cfm-go {
+  flex: 1; padding: 13px; border-radius: 12px; border: none;
+  color: #fff; font-size: 15px; font-weight: 800; cursor: pointer; transition: filter 0.12s;
+}
+.cfm-go.buy { background: var(--accent); }
+.cfm-go.sell { background: var(--danger, #d04b46); }
+.cfm-go:hover { filter: brightness(1.07); }
+
+/* Live-player firms on the unified Deal Room board */
+.deal-mono.t-live { background: linear-gradient(135deg,#1f7a4d,#34c27a); color: #06140d; }
+.deal-livetag { color: #2fbf73; font-weight: 800; font-size: 11px; letter-spacing: .03em; }
+.deal-sub .deal-livetag { font-size: 12px; }
+.deal-offerbox { display: flex; gap: 10px; margin-top: 6px; }
+.deal-offerbox .ma-input { flex: 1; }
+.deal-offerbox .est-act { flex: 0 0 auto; width: auto; padding: 12px 18px; }
+
+/* Live-player marker on the unified leaderboard */
+.lb-live, .reel-row .lb-live { color: #2fbf73; font-size: 9px; margin-right: 5px; vertical-align: middle; }
+
+/* ── Polish loop · iteration 1: consistent, tactile button feel ───────────────
+   A unified interaction layer so primary/secondary buttons feel crafted, not
+   static — smooth transitions everywhere, a subtle press on the action buttons. */
+.est-act, .cfm-go, .cfm-cancel, .deal-buy, .deal-sell, .ma-yes, .ma-no,
+.ma-offer, .deal-tabs button, .est-chip, .est-sort, .da-toggle, .est-back,
+.ma-dev button, .deal-card, .est-card, .ma-card {
+  transition: transform 0.13s ease, filter 0.13s ease, background 0.13s ease,
+    border-color 0.13s ease, color 0.13s ease, box-shadow 0.16s ease;
+}
+.est-act:active:not(:disabled),
+.cfm-go:active,
+.deal-buy:active:not(:disabled),
+.deal-sell:active,
+.ma-yes:active,
+.ma-offer:active,
+.ma-dev button:active:not(:disabled) {
+  transform: translateY(1px) scale(0.99);
+}
+.est-back:active { transform: translateX(-1px); }
+
+/* ── Polish loop · iteration 2: typographic crispness + finishing details ───── */
+html { scroll-behavior: smooth; }
+body {
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+/* Gold-tinted text selection instead of the browser default blue. */
+::selection { background: color-mix(in srgb, var(--accent) 32%, transparent); color: var(--ink); }
+/* Tabular, kerned numerals everywhere money/figures appear, so columns align. */
+.lb span:last-child, .reel-row-pr, .deal-cardval, .est-cardprice, .est-pf .v,
+.cfm-row b, .est-stat .v, .deal-buy-cost {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Polish loop · iteration 3: Trending hero + Market Pulse ──────────────────
+   A balanced hero: the Wire headline beside a live sector-demand snapshot, so
+   the page leads with purpose and fills the width cohesively. */
+.trend-hero {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 34px;
+}
+.trend-hero .lead { height: 100%; }
+.pulse {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--bento-r);
+  padding: 20px 20px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.pulse-h {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.pulse-h .sub {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.pulse-list { display: flex; flex-direction: column; gap: 9px; }
+.pulse-row {
+  display: grid;
+  grid-template-columns: 84px 1fr 50px;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+}
+.pulse-nm { color: var(--ink-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pulse-bar { height: 6px; background: var(--line); border-radius: 999px; overflow: hidden; }
+.pulse-bar i { display: block; height: 100%; border-radius: 999px; }
+.pulse-bar i.up { background: #2e9c5e; }
+.pulse-bar i.down { background: var(--danger, #d04b46); }
+.pulse-pct { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.pulse-pct.up { color: #2e9c5e; }
+.pulse-pct.down { color: var(--danger, #d04b46); }
+@media (max-width: 860px) { .trend-hero { grid-template-columns: 1fr; } }
+
+/* ── Polish loop · iteration 4: "On the Move" spotlight refinement ────────────
+   Give the featured mover real presence so the card doesn't read empty: a
+   tinted media focal point, a tighter frame, and a proper price/change pill. */
+.spotlight { min-height: 150px; }
+.spot-media {
+  width: 104px;
+  height: 104px;
+  background:
+    radial-gradient(120% 120% at 30% 18%,
+      color-mix(in srgb, var(--accent) 16%, var(--paper-2)), var(--paper-2));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.spot-body .nm { font-size: 21px; letter-spacing: -0.01em; line-height: 1.15; }
+.spot-price .pr {
+  font-size: 30px;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.spot-price .chg {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 7px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.spot-price .chg.pos { background: color-mix(in srgb, #2e9c5e 15%, transparent); color: #2e9c5e; }
+.spot-price .chg.neg { background: color-mix(in srgb, var(--danger, #d04b46) 15%, transparent); color: var(--danger, #d04b46); }
+
+/* ── Polish loop · iteration 5: cohesive card elevation on Trending ───────────
+   Clickable cards lifted flatly (no depth). Give tiles + the spotlight a soft
+   shadow on hover, and the mover rows a subtle highlight — one consistent,
+   premium interaction language across the page. */
+.tile:hover { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16); }
+.spotlight { transition: border-color 0.15s ease, box-shadow 0.18s ease, transform 0.13s ease; }
+.spotlight:hover { border-color: var(--line-2); box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16); }
+.spotlight:active { transform: translateY(1px) scale(0.997); }
+.brow { transition: background 0.12s ease; border-radius: 8px; }
+.brow:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
+.crow { transition: background 0.12s ease; border-radius: 8px; }
+
+/* ── Polish loop · iteration 6: Trending standings (replaces Market Pulse) ──── */
+.stand-row {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  padding: 2.5px 0;
+}
+.stand-rk { color: var(--ink-faint); font-size: 11px; text-align: center; font-variant-numeric: tabular-nums; }
+.stand-nm { color: var(--ink-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stand-w { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.stand-row.me .stand-nm,
+.stand-row.me .stand-rk,
+.stand-row.me .stand-w { color: var(--accent); font-weight: 800; }

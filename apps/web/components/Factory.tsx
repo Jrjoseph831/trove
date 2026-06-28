@@ -438,8 +438,13 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
         );
       })()}
 
-      <div className="bay-modules">
-        <div className="bay-sub">Upgrades — engineer the line</div>
+      <details className="bay-modules" open>
+        <summary className="bay-sub">
+          Upgrades — engineer the line
+          {f.modules.length > 0 && (
+            <span className="bay-sub-count">{f.modules.length} installed</span>
+          )}
+        </summary>
         <div className="modcard-grid">
           {MODULES.map((m) => {
             const installed = f.modules.includes(m.id);
@@ -485,7 +490,7 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
             );
           })}
         </div>
-      </div>
+      </details>
 
       <div className="bay-foot">
         <button className="fl-demolish" onClick={() => demolishLine(f.id)}>

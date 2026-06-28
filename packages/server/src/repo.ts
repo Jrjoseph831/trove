@@ -301,7 +301,7 @@ export interface Player {
 const FRESH_INFRA: Infra = { power: false, router: false, qc: false };
 const FRESH_DESKAUTO: DeskAuto = {
   specialist: false,
-  autoFulfill: false,
+  autoFulfill: true,
   minMargin: 0.1,
 };
 

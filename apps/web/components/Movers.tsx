@@ -51,7 +51,7 @@ export function Movers() {
   }, [frozen.length]);
 
   if (frozen.length === 0) {
-    return <div className="empty">The floor is still. Nothing has moved yet.</div>;
+    return <div className="empty">The market is still. Nothing has moved yet.</div>;
   }
 
   const safeIdx = idx % frozen.length;

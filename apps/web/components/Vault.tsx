@@ -13,13 +13,47 @@ export function Vault() {
   const lim = creditLimit(state);
   const avail = Math.max(0, lim - state.debt);
 
+  const holdingsValue = mine.reduce((s, it) => s + it.value * held(it, "YOU"), 0);
+  const unrealized = mine.reduce(
+    (s, it) => s + (it.value - (it.buyAt ?? it.value)) * held(it, "YOU"),
+    0,
+  );
+
   return (
     <div className="view">
-      <div className="cat-head">
-        <h2 className="serif">My Vault</h2>
-      </div>
-      <div className="cat-grid">
-        <div>
+      <div className="bento">
+        <header className="cat-head col-12">
+          <h2 className="serif">My Vault</h2>
+          {mine.length > 0 && (
+            <div className="vault-sum">
+              <span className="vs">
+                <i>Holdings</i>
+                <b>{mine.length}</b>
+              </span>
+              <span className="vs">
+                <i>Market value</i>
+                <b>{money(holdingsValue)}</b>
+              </span>
+              <span className={`vs ${unrealized >= 0 ? "pos" : "neg"}`}>
+                <i>Unrealized</i>
+                <b>
+                  {unrealized >= 0 ? "+" : ""}
+                  {money(unrealized)}
+                </b>
+              </span>
+            </div>
+          )}
+        </header>
+
+        <section className="bento-card col-8">
+          <div className="bc-h">
+            <span className="t">Holdings</span>
+            {mine.length > 0 && (
+              <span className="why">
+                {mine.length} position{mine.length > 1 ? "s" : ""}
+              </span>
+            )}
+          </div>
           {mine.length === 0 ? (
             <div className="empty">
               Empty. Read the front page, then acquire something.
@@ -61,74 +95,72 @@ export function Vault() {
                     {pl >= 0 ? "+" : ""}
                     {money(pl)}
                   </span>
-                  {produced > 0 && (
-                    <button
-                      className={`tbtn ${listed ? "" : "sell"}`}
-                      style={{ marginLeft: 12 }}
-                      title={
-                        listed
-                          ? "Listed for passive sale — click to hold instead"
-                          : "Held (not selling) — click to list for passive sale"
-                      }
-                      onClick={() => setListing(it.id, !listed)}
-                    >
-                      {listed ? "Unlist" : "List"}
-                    </button>
-                  )}
-                  {bought > 0 && (
-                    <button
-                      className="tbtn sell"
-                      style={{ marginLeft: 8 }}
-                      title="Sell a bought unit at market"
-                      onClick={() => sell(it.id)}
-                    >
-                      Let go
-                    </button>
+                  {(produced > 0 || bought > 0) && (
+                    <span className="crow-acts">
+                      {produced > 0 && (
+                        <button
+                          className={`tbtn ${listed ? "" : "sell"}`}
+                          title={
+                            listed
+                              ? "Listed for passive sale — click to hold instead"
+                              : "Held (not selling) — click to list for passive sale"
+                          }
+                          onClick={() => setListing(it.id, !listed)}
+                        >
+                          {listed ? "Unlist" : "List"}
+                        </button>
+                      )}
+                      {bought > 0 && (
+                        <button
+                          className="tbtn sell"
+                          title="Sell a bought unit at market"
+                          onClick={() => sell(it.id)}
+                        >
+                          Let go
+                        </button>
+                      )}
+                    </span>
                   )}
                 </div>
               );
             })
           )}
-        </div>
+        </section>
 
-        <div className="stack">
-          <div className="glasspanel">
-            <div className="panel-h">Credit Line</div>
-            <div className="debtctl">
-              <div className="line">
-                <span>Borrowed</span>
-                <b>{money(state.debt)}</b>
-              </div>
-              <div className="meter">
-                <i
-                  style={{
-                    width: `${lim ? Math.min(100, (state.debt / lim) * 100) : 0}%`,
-                  }}
-                />
-              </div>
-              <div className="line">
-                <span>Available {money(avail)}</span>
-                <span>0.05%/cycle</span>
-              </div>
-              <div className="dbtns">
-                <button
-                  className="borrow"
-                  disabled={avail <= 0}
-                  onClick={doBorrow}
-                >
-                  Borrow $5k
-                </button>
-                <button
-                  className="repay"
-                  disabled={state.debt <= 0 || state.cash <= 0}
-                  onClick={doRepay}
-                >
-                  Repay $5k
-                </button>
-              </div>
+        <aside className="bento-card col-4">
+          <div className="bc-h">
+            <span className="t">Credit Line</span>
+          </div>
+          <div className="debtctl">
+            <div className="line">
+              <span>Borrowed</span>
+              <b>{money(state.debt)}</b>
+            </div>
+            <div className="meter">
+              <i
+                style={{
+                  width: `${lim ? Math.min(100, (state.debt / lim) * 100) : 0}%`,
+                }}
+              />
+            </div>
+            <div className="line">
+              <span>Available {money(avail)}</span>
+              <span>0.05%/cycle</span>
+            </div>
+            <div className="dbtns">
+              <button className="borrow" disabled={avail <= 0} onClick={doBorrow}>
+                Borrow $5k
+              </button>
+              <button
+                className="repay"
+                disabled={state.debt <= 0 || state.cash <= 0}
+                onClick={doRepay}
+              >
+                Repay $5k
+              </button>
             </div>
           </div>
-        </div>
+        </aside>
       </div>
     </div>
   );

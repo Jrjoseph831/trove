@@ -8,6 +8,10 @@ export const API_BASE =
   process.env.NEXT_PUBLIC_TROVE_API ??
   "https://gxk49f7clg.execute-api.us-east-1.amazonaws.com";
 
+/** True when pointed at the isolated staging world (beta.trove.ceo) — gates the
+ *  staging-only dev tools. Prod uses the default API, so this is false there. */
+export const IS_STAGING = API_BASE.includes("x5p7r5nsh4");
+
 /** Cognito Hosted-UI domain (no trailing slash). */
 export const COGNITO_DOMAIN =
   process.env.NEXT_PUBLIC_COGNITO_DOMAIN ??

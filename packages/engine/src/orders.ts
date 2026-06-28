@@ -22,15 +22,18 @@ import { listedUnitPrice } from "./pricing";
 import { rand } from "./rng";
 import type { DeskAuto, Order, RuntimeItem, Trader, WorldState } from "./types";
 
-// ── Order Desk automation (rep-gated) ────────────────────────────────────────
-export const SPECIALIST_REP = 15; // Procurement Specialist unlocks here
-export const AUTOFULFILL_REP = 25; // Auto-Fulfill unlocks here
+// ── Order Desk automation ────────────────────────────────────────────────────
+// Auto-Fulfill is FREE (it only delivers goods you already hold on a contract
+// you already accepted — pure safety net, so it's the first thing on). The
+// Specialist (auto-accept) commits you to deals, so it's earned with reputation.
+export const SPECIALIST_REP = 15; // Specialist (auto-accept) unlocks here
+export const AUTOFULFILL_REP = 0; // Auto-Fulfill is available from the start
 
 /** Update desk-automation settings (margin clamped to a sane band). */
 export function setDeskAuto(state: WorldState, patch: Partial<DeskAuto>): void {
   const cur = state.deskAuto ?? {
     specialist: false,
-    autoFulfill: false,
+    autoFulfill: true, // free safety net — on by default
     minMargin: 0.1,
   };
   state.deskAuto = { ...cur, ...patch };

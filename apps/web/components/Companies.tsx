@@ -18,7 +18,7 @@ import { useTrove } from "@/lib/trove";
 
 const SECTION_LABELS: Record<SiteSectionId, string> = {
   masthead: "Masthead",
-  about: "About / The House",
+  about: "About / The Firm",
   storefront: "Storefront",
   standing: "Market Standing",
   contact: "Contact · Bulk orders",
@@ -72,7 +72,7 @@ export function Companies() {
           <h2 className="serif">Companies</h2>
         </div>
         <div className="empty">
-          Company websites are a live-world feature — sign in on the live floor to
+          Company websites are a live-world feature — sign in on the live market to
           build your storefront and browse others.
         </div>
       </div>
@@ -224,7 +224,7 @@ function dominantSectors(
     .slice(0, 3);
 }
 
-// ── One unified directory: every company on the floor ───────────────────────
+// ── One unified directory: every firm on the market ───────────────────────
 function Directory({
   hasSite,
   published,
@@ -254,11 +254,12 @@ function Directory({
 
   return (
     <div className="view">
-      <div className="cat-head">
-        <h2 className="serif">Companies</h2>
-      </div>
+      <div className="page-col">
+        <div className="cat-head">
+          <h2 className="serif">Companies</h2>
+        </div>
 
-      <div className="site-myrow">
+        <div className="site-myrow">
         <div className="site-myinfo">
           <span className="site-mylab">Your company</span>
           {hasSite ? (
@@ -288,11 +289,11 @@ function Directory({
         </div>
       </div>
 
-      <div className="site-dirhead">The Directory · every company on the floor</div>
+      <div className="site-dirhead">The Directory · every firm on the market</div>
       {entries === null ? (
         <div className="empty">Loading the directory…</div>
       ) : entries.length === 0 ? (
-        <div className="empty">No companies on the floor yet.</div>
+        <div className="empty">No firms on the market yet.</div>
       ) : (
         <div className="site-grid">
           {entries.map((e) => (
@@ -313,6 +314,7 @@ function Directory({
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 }
@@ -416,7 +418,7 @@ function SiteView({
   const displayName = isHouse ? site.name : manufacturingName(site.name);
   const eyebrow = isHouse
     ? site.sector
-      ? `${label(site.sector)} · Institutional house`
+      ? `${label(site.sector)} · Institutional firm`
       : "Broad-market index"
     : `${label(site.sector)} · Manufacturing`;
   const canRequest = !owner && !isHouse && !!site.handle;
@@ -450,8 +452,8 @@ function SiteView({
           if (sec.id === "about" && sec.on && !isHouse)
             return (
               <section className="site-sec" key="about">
-                <h2 className="site-h">The House</h2>
-                <p className="site-about">{site.about || "A house of the Trove floor."}</p>
+                <h2 className="site-h">The Firm</h2>
+                <p className="site-about">{site.about || "A firm on the Trove market."}</p>
               </section>
             );
           if (sec.id === "standing")
@@ -464,7 +466,7 @@ function SiteView({
                     <span className="ss-v">{money(site.netWorth)}</span>
                   </div>
                   <div>
-                    <span className="ss-lab">Floor rank</span>
+                    <span className="ss-lab">Market rank</span>
                     <span className="ss-v">
                       {site.standing.rank ? `#${site.standing.rank}` : "—"}
                     </span>
@@ -734,7 +736,7 @@ function Builder({ onDone }: { onDone: () => void }) {
               value={tagline}
               maxLength={120}
               onChange={(e) => setTagline(e.target.value)}
-              placeholder="One line about your house"
+              placeholder="One line about your firm"
             />
           </label>
 
@@ -829,7 +831,7 @@ function Builder({ onDone }: { onDone: () => void }) {
               if (s.id === "about")
                 return (
                   <section className="site-sec" key="about">
-                    <h2 className="site-h">The House</h2>
+                    <h2 className="site-h">The Firm</h2>
                     <p className="site-about">{about || "Your story goes here."}</p>
                   </section>
                 );

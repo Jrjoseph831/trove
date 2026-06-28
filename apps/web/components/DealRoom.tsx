@@ -4,9 +4,11 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, TrendingUp } from "lucide-react";
 import { companies as lore, sectors } from "@trove/data";
 import { companyValuation } from "@trove/engine";
-import { fetchCompanies, type DirEntry } from "@/lib/api";
+import { devAction, fetchCompanies, type DirEntry } from "@/lib/api";
+import { IS_STAGING } from "@/lib/config";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+import { ConfirmDeal } from "./ConfirmDeal";
 
 const secName = (s: string | null | undefined) =>
   s ? ((sectors as Record<string, { name?: string }>)[s]?.name ?? s) : "Index";
@@ -24,36 +26,82 @@ const initials = (name: string) =>
     .map((w) => w[0]!.toUpperCase()).join("") || "·";
 
 interface Row {
+  key: string;
   name: string;
   sector: string | null;
+  live: boolean; // a real player's firm
+  handle?: string; // buyout target (live firms)
+  val: number;
   tier: string;
   income: number;
-  val: number;
   stake: number;
 }
 
 export function DealRoom() {
-  const { state, buyStakeIn, sellStakeIn } = useTrove();
-  const [view, setView] = useState<"houses" | "players">("houses");
+  const { state, desk, buyStakeIn, sellStakeIn, requestBuyout, orders, orderAct } = useTrove();
   const [sec, setSec] = useState("All");
   const [sort, setSort] = useState<"val" | "div" | "mine">("val");
-  const [sel, setSel] = useState<string | null>(null);
+  const [sel, setSel] = useState<string | null>(null); // selected row key
+  const [dir, setDir] = useState<DirEntry[] | null>(null);
+
+  // confirmations
+  const [pendingPct, setPendingPct] = useState<number | null>(null); // house stake
+  const [bid, setBid] = useState("");
+  const [pending, setPending] = useState<
+    | { kind: "offer"; handle: string; name: string; price: number }
+    | { kind: "sell"; id: string; buyer: string; price: number }
+    | null
+  >(null);
+
+  // staging dev tools
+  const [devPrice, setDevPrice] = useState("5000000");
+  const [devBusy, setDevBusy] = useState(false);
+  const runDev = async (action: string, extra: Record<string, number> = {}) => {
+    setDevBusy(true);
+    await devAction({ action, ...extra });
+    if (typeof window !== "undefined") window.location.reload();
+  };
+
+  useEffect(() => {
+    let alive = true;
+    fetchCompanies()
+      .then((e) => alive && setDir(e))
+      .catch(() => alive && setDir([]));
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   const stakes = state.stakes ?? {};
+  const myName = desk?.name?.trim();
 
-  const rows = useMemo<Row[]>(
-    () =>
-      state.traders.map((t) => ({
-        name: t.name,
-        sector: t.bias,
-        tier: t.tier ?? "mid",
-        income: t.income ?? 0,
-        val: companyValuation(state, t.name),
-        stake: stakes[t.name] ?? 0,
-      })),
+  const rows = useMemo<Row[]>(() => {
+    const ai: Row[] = state.traders.map((t) => ({
+      key: t.name,
+      name: t.name,
+      sector: t.bias,
+      live: false,
+      val: companyValuation(state, t.name),
+      tier: t.tier ?? "mid",
+      income: t.income ?? 0,
+      stake: stakes[t.name] ?? 0,
+    }));
+    const live: Row[] = (dir ?? [])
+      .filter((e) => e.kind === "player" && e.name !== myName)
+      .map((e) => ({
+        key: `p:${e.handle}`,
+        name: e.name,
+        sector: e.sector || null,
+        live: true,
+        handle: e.handle,
+        val: e.netWorth,
+        tier: "live",
+        income: 0,
+        stake: 0,
+      }));
+    return [...ai, ...live];
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [state, state.cycle],
-  );
+  }, [state, state.cycle, dir, myName]);
 
   const mine = rows.filter((r) => r.stake > 0);
   const stakeVal = mine.reduce((a, r) => a + r.stake * r.val, 0);
@@ -76,9 +124,86 @@ export function DealRoom() {
     );
   }, [rows, sec, sort]);
 
-  const selRow = sel ? rows.find((r) => r.name === sel) : null;
+  const incoming = (orders?.incoming ?? []).filter((o) => o.kind === "buyout");
+  const outgoing = (orders?.outgoing ?? []).filter((o) => o.kind === "buyout");
 
-  // ── Full-screen company file ────────────────────────────────────────────────
+  const selRow = sel ? rows.find((r) => r.key === sel) : null;
+
+  // ── Live-firm (player) acquisition file ─────────────────────────────────────
+  if (selRow?.live) {
+    const openOffer = () => {
+      const price = Math.round(Number(bid));
+      if (Number.isFinite(price) && price > 0 && selRow.handle)
+        setPending({ kind: "offer", handle: selRow.handle, name: selRow.name, price });
+    };
+    return (
+      <div className="view deals">
+        <button className="est-back" onClick={() => setSel(null)}>
+          <ArrowLeft size={15} /> All firms
+        </button>
+        <div className="deal-file">
+          <div className="deal-fhead">
+            <span className="deal-mono t-live">{initials(selRow.name)}</span>
+            <div>
+              <h1 className="est-h1">{selRow.name}</h1>
+              <div className="deal-sub">
+                {secName(selRow.sector)} · <span className="deal-livetag">● LIVE PLAYER</span>
+              </div>
+            </div>
+          </div>
+          <div className="est-stats">
+            <div className="est-stat">
+              <span className="k">Net worth</span>
+              <span className="v">{money(selRow.val)}</span>
+            </div>
+            <div className="est-stat">
+              <span className="k">Deal type</span>
+              <span className="v">Full buyout</span>
+            </div>
+          </div>
+          <p className="est-blurb">
+            Acquire this firm outright. They must accept — you both negotiate the
+            price. On a deal you absorb their lines, properties, stakes &amp;
+            holdings, and they cash out.
+          </p>
+          <div className="deal-offerbox">
+            <input
+              className="ma-input"
+              type="number"
+              value={bid}
+              onChange={(e) => setBid(e.target.value)}
+              placeholder={`Your offer ($) — net worth ${money(selRow.val)}`}
+            />
+            <button className="est-act buy" onClick={openOffer}>
+              Make buyout offer
+            </button>
+          </div>
+        </div>
+        {pending?.kind === "offer" && (
+          <ConfirmDeal
+            kicker="Confirm offer"
+            title={`Offer to acquire ${pending.name}?`}
+            sub="A consensual buyout. They can accept, counter, or decline. If they accept, you absorb their entire firm and they cash out."
+            rows={[
+              { label: "Target", value: pending.name },
+              { label: "Your offer", value: money(pending.price) },
+            ]}
+            confirmText={`Send offer · ${money(pending.price)}`}
+            tone="buy"
+            onConfirm={async () => {
+              const ok = await requestBuyout(pending.handle, pending.price);
+              if (ok) setBid("");
+              setPending(null);
+              setSel(null);
+            }}
+            onCancel={() => setPending(null)}
+          />
+        )}
+      </div>
+    );
+  }
+
+  // ── AI firm file (equity stakes) ────────────────────────────────────────────
   if (selRow) {
     const c = (lore as Record<string, any>)[selRow.name];
     const profile = c?.events?.find((e: any) => e.kind === "profile") ?? c?.events?.[0];
@@ -87,7 +212,7 @@ export function DealRoom() {
       <button
         className="deal-buy"
         disabled={state.cash < buy * selRow.val || selRow.stake >= 0.9999}
-        onClick={() => buyStakeIn(selRow.name, buy)}
+        onClick={() => setPendingPct(buy)}
       >
         {label}
         <span className="deal-buy-cost">{money(Math.round(buy * selRow.val))}</span>
@@ -96,9 +221,8 @@ export function DealRoom() {
     return (
       <div className="view deals">
         <button className="est-back" onClick={() => setSel(null)}>
-          <ArrowLeft size={15} /> All companies
+          <ArrowLeft size={15} /> All firms
         </button>
-
         <div className="deal-file">
           <div className="deal-fhead">
             <span className={`deal-mono t-${selRow.tier}`}>{initials(selRow.name)}</span>
@@ -112,7 +236,6 @@ export function DealRoom() {
             </div>
             {selRow.stake >= 0.9999 && <span className="deal-ctrl-tag">◆ You control this</span>}
           </div>
-
           <div className="est-stats">
             <div className="est-stat">
               <span className="k">Valuation</span>
@@ -133,12 +256,10 @@ export function DealRoom() {
               </span>
             </div>
           </div>
-
           {profile?.body && <p className="est-blurb">{profile.body}</p>}
           {c?.personality?.trait && (
-            <p className="deal-trait">House style: {c.personality.trait}.</p>
+            <p className="deal-trait">Firm style: {c.personality.trait}.</p>
           )}
-
           <div className="deal-actions">
             <div className="deal-buyrow">
               {controls(0.05, "Buy 5%")}
@@ -147,10 +268,7 @@ export function DealRoom() {
             </div>
             {selRow.stake > 0 && (
               <div className="deal-sellrow">
-                <button
-                  className="deal-sell"
-                  onClick={() => sellStakeIn(selRow.name, selRow.stake * 0.25)}
-                >
+                <button className="deal-sell" onClick={() => sellStakeIn(selRow.name, selRow.stake * 0.25)}>
                   Trim 25%
                 </button>
                 <button
@@ -166,21 +284,54 @@ export function DealRoom() {
             )}
           </div>
           <p className="est-note">
-            AI shares trade at market. Negotiated buyouts of real players&apos; firms
-            come with live multiplayer.
+            Shares trade at market — buy in anytime. A live player&apos;s whole firm
+            is acquired by negotiated buyout.
           </p>
         </div>
+        {pendingPct != null && (
+          <ConfirmDeal
+            kicker="Confirm acquisition"
+            title={
+              selRow.stake + pendingPct >= 0.999
+                ? `Take control of ${selRow.name}?`
+                : `Buy ${pct(pendingPct)} of ${selRow.name}?`
+            }
+            sub="An equity stake pays a share of this firm's income every settlement and counts toward your net worth. Sell back anytime at market."
+            rows={[
+              { label: "Firm", value: selRow.name },
+              {
+                label: "Stake",
+                value:
+                  pct(pendingPct) +
+                  (selRow.stake > 0 ? ` → ${pct(Math.min(1, selRow.stake + pendingPct))} owned` : ""),
+              },
+              { label: "Cost", value: money(Math.round(pendingPct * selRow.val)) },
+              {
+                label: "Dividends / period",
+                value: `+${money(Math.round(pendingPct * selRow.income))}`,
+                tone: "up",
+              },
+            ]}
+            confirmText={`Buy for ${money(Math.round(pendingPct * selRow.val))}`}
+            tone="buy"
+            onConfirm={() => {
+              buyStakeIn(selRow.name, pendingPct);
+              setPendingPct(null);
+            }}
+            onCancel={() => setPendingPct(null)}
+          />
+        )}
       </div>
     );
   }
 
-  // ── The floor ───────────────────────────────────────────────────────────────
+  // ── The board: every firm, live or not, on one list ─────────────────────────
   return (
     <div className="view deals">
       <header className="est-head">
         <div>
           <h2 className="est-title">The Deal Room</h2>
-          <p className="est-sub">Buy into the houses on the floor. Collect dividends. Take control.</p>
+          <p className="est-sub">Buy into firms, collect dividends, take control — or acquire a rival outright.</p>
         </div>
         <div className="est-portfolio">
           <div className="est-pf">
@@ -198,101 +349,28 @@ export function DealRoom() {
         </div>
       </header>
 
-      <div className="deal-tabs">
-        <button className={view === "houses" ? "on" : ""} onClick={() => setView("houses")}>
-          AI Houses
-        </button>
-        <button className={view === "players" ? "on" : ""} onClick={() => setView("players")}>
-          Live Players (M&amp;A)
-        </button>
-      </div>
-
-      {view === "players" ? (
-        <LivePlayers />
-      ) : (
-        <>
-      <div className="est-filters">
-        <div className="est-chips">
-          {secChips.map((c) => (
-            <button key={c} className={`est-chip ${sec === c ? "on" : ""}`} onClick={() => setSec(c)}>
-              {c}
-            </button>
-          ))}
-        </div>
-        <select
-          className="est-sort"
-          value={sort}
-          onChange={(e) => setSort(e.target.value as typeof sort)}
-        >
-          <option value="val">Biggest valuation</option>
-          <option value="div">Highest income</option>
-          <option value="mine">My stakes first</option>
-        </select>
-      </div>
-
-      <div className="deal-grid">
-        {list.map((r) => (
-          <button key={r.name} className="deal-card" onClick={() => setSel(r.name)}>
-            <span className={`deal-mono t-${r.tier}`}>{initials(r.name)}</span>
-            <div className="deal-cardmain">
-              <div className="deal-cardname">{r.name}</div>
-              <div className="deal-cardmeta">
-                {secName(r.sector)} · {TIER_LABEL[r.tier] ?? r.tier}
-              </div>
-            </div>
-            <div className="deal-cardright">
-              <div className="deal-cardval">{money(r.val)}</div>
-              {r.stake > 0 ? (
-                <div className="deal-cardstake">◆ {pct(r.stake)} owned</div>
-              ) : (
-                <div className="deal-cardincome">
-                  <TrendingUp size={11} /> +{money(r.income)}/per
-                </div>
-              )}
-            </div>
+      {IS_STAGING && (
+        <div className="ma-dev">
+          <span className="ma-dev-h">🧪 Staging tools</span>
+          <button disabled={devBusy} onClick={() => runDev("fund", { amount: 50_000_000 })}>
+            Fund +$50M
           </button>
-        ))}
-      </div>
-        </>
+          <input
+            className="ma-input"
+            type="number"
+            value={devPrice}
+            onChange={(e) => setDevPrice(e.target.value)}
+            style={{ maxWidth: 150 }}
+          />
+          <button
+            disabled={devBusy}
+            onClick={() => runDev("offer-me", { price: Math.round(Number(devPrice) || 1_000_000) })}
+          >
+            Send me a buyout offer
+          </button>
+        </div>
       )}
-    </div>
-  );
-}
 
-// ── Live-player M&A: acquire another player's entire firm (consensual) ────────
-function LivePlayers() {
-  const { desk, requestBuyout, orders, orderAct } = useTrove();
-  const [dir, setDir] = useState<DirEntry[] | null>(null);
-  const [openTo, setOpenTo] = useState<string | null>(null);
-  const [bid, setBid] = useState("");
-
-  useEffect(() => {
-    let alive = true;
-    fetchCompanies()
-      .then((e) => alive && setDir(e))
-      .catch(() => alive && setDir([]));
-    return () => {
-      alive = false;
-    };
-  }, []);
-
-  const myName = desk?.name?.trim();
-  const targets = (dir ?? []).filter((e) => e.kind === "player" && e.name !== myName);
-  const incoming = (orders?.incoming ?? []).filter((o) => o.kind === "buyout");
-  const outgoing = (orders?.outgoing ?? []).filter((o) => o.kind === "buyout");
-
-  const send = async (handle: string) => {
-    const price = Math.round(Number(bid));
-    if (!Number.isFinite(price) || price <= 0) return;
-    const ok = await requestBuyout(handle, price);
-    if (ok) {
-      setOpenTo(null);
-      setBid("");
-    }
-  };
-
-  return (
-    <div className="ma-wrap">
       {(incoming.length > 0 || outgoing.length > 0) && (
         <div className="ma-inbox">
           <div className="ma-h">Deals on the table</div>
@@ -304,7 +382,10 @@ function LivePlayers() {
               </span>
               {o.turn === "seller" && (
                 <span className="ma-acts">
-                  <button className="ma-yes" onClick={() => orderAct(o.id, "accept")}>
+                  <button
+                    className="ma-yes"
+                    onClick={() => setPending({ kind: "sell", id: o.id, buyer: o.buyerName, price: o.price })}
+                  >
                     Sell for {money(o.price)}
                   </button>
                   <button
@@ -344,51 +425,68 @@ function LivePlayers() {
         </div>
       )}
 
-      <div className="ma-sub">
-        Acquire a rival&apos;s entire firm. They must accept — you both negotiate
-        the price. On a deal, you absorb their lines, properties, stakes &amp;
-        holdings; they cash out.
+      <div className="est-filters">
+        <div className="est-chips">
+          {secChips.map((c) => (
+            <button key={c} className={`est-chip ${sec === c ? "on" : ""}`} onClick={() => setSec(c)}>
+              {c}
+            </button>
+          ))}
+        </div>
+        <select className="est-sort" value={sort} onChange={(e) => setSort(e.target.value as typeof sort)}>
+          <option value="val">Biggest first</option>
+          <option value="div">Highest income</option>
+          <option value="mine">My stakes first</option>
+        </select>
       </div>
 
-      {dir === null ? (
-        <div className="empty">Loading the floor…</div>
-      ) : targets.length === 0 ? (
-        <div className="empty">No other player firms on the floor yet.</div>
-      ) : (
-        <div className="ma-grid">
-          {targets.map((t) => (
-            <div className="ma-card" key={t.handle}>
-              <div className="ma-card-top">
-                <div>
-                  <div className="ma-name">{t.name}</div>
-                  <div className="ma-meta">Net worth {money(t.netWorth)}</div>
-                </div>
-                {openTo !== t.handle && (
-                  <button className="ma-offer" onClick={() => { setOpenTo(t.handle); setBid(String(t.netWorth)); }}>
-                    Make offer
-                  </button>
-                )}
+      <div className="deal-grid">
+        {list.map((r) => (
+          <button key={r.key} className="deal-card" onClick={() => setSel(r.key)}>
+            <span className={`deal-mono t-${r.tier}`}>{initials(r.name)}</span>
+            <div className="deal-cardmain">
+              <div className="deal-cardname">
+                {r.name}
+                {r.live && <span className="deal-livetag"> ● LIVE</span>}
               </div>
-              {openTo === t.handle && (
-                <div className="ma-form">
-                  <input
-                    className="ma-input"
-                    type="number"
-                    value={bid}
-                    onChange={(e) => setBid(e.target.value)}
-                    placeholder="Your offer ($)"
-                  />
-                  <button className="ma-yes" onClick={() => send(t.handle)}>
-                    Send offer
-                  </button>
-                  <button className="ma-no" onClick={() => setOpenTo(null)}>
-                    Cancel
-                  </button>
+              <div className="deal-cardmeta">
+                {secName(r.sector)}
+                {!r.live && ` · ${TIER_LABEL[r.tier] ?? r.tier}`}
+              </div>
+            </div>
+            <div className="deal-cardright">
+              <div className="deal-cardval">{money(r.val)}</div>
+              {r.stake > 0 ? (
+                <div className="deal-cardstake">◆ {pct(r.stake)} owned</div>
+              ) : r.live ? (
+                <div className="deal-cardincome">buyout</div>
+              ) : (
+                <div className="deal-cardincome">
+                  <TrendingUp size={11} /> +{money(r.income)}/per
                 </div>
               )}
             </div>
-          ))}
-        </div>
+          </button>
+        ))}
+      </div>
+
+      {pending?.kind === "sell" && (
+        <ConfirmDeal
+          kicker="Confirm sale"
+          title="Sell your entire firm?"
+          sub="You'll hand over everything — lines, properties, stakes & holdings — to the buyer and cash out. This can't be undone."
+          rows={[
+            { label: "Buyer", value: pending.buyer },
+            { label: "You receive", value: money(pending.price), tone: "up" },
+          ]}
+          confirmText={`Sell for ${money(pending.price)}`}
+          tone="sell"
+          onConfirm={async () => {
+            await orderAct(pending.id, "accept");
+            setPending(null);
+          }}
+          onCancel={() => setPending(null)}
+        />
       )}
     </div>
   );
