@@ -7954,3 +7954,23 @@ body {
 
 /* Live-player marker on the unified leaderboard */
 .lb-live, .reel-row .lb-live { color: #2fbf73; font-size: 9px; margin-right: 5px; vertical-align: middle; }
+
+/* ── Polish loop · iteration 1: consistent, tactile button feel ───────────────
+   A unified interaction layer so primary/secondary buttons feel crafted, not
+   static — smooth transitions everywhere, a subtle press on the action buttons. */
+.est-act, .cfm-go, .cfm-cancel, .deal-buy, .deal-sell, .ma-yes, .ma-no,
+.ma-offer, .deal-tabs button, .est-chip, .est-sort, .da-toggle, .est-back,
+.ma-dev button, .deal-card, .est-card, .ma-card {
+  transition: transform 0.13s ease, filter 0.13s ease, background 0.13s ease,
+    border-color 0.13s ease, color 0.13s ease, box-shadow 0.16s ease;
+}
+.est-act:active:not(:disabled),
+.cfm-go:active,
+.deal-buy:active:not(:disabled),
+.deal-sell:active,
+.ma-yes:active,
+.ma-offer:active,
+.ma-dev button:active:not(:disabled) {
+  transform: translateY(1px) scale(0.99);
+}
+.est-back:active { transform: translateX(-1px); }

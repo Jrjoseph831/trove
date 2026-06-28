@@ -56,7 +56,7 @@ export function ItemDetail({ item }: { item: Item }) {
           <div className="item-price">
             <span className="lp">List price</span>
             <span className="amt">{money(item.base)}</span>
-            <span className="note">floor price moves with demand</span>
+            <span className="note">price moves with demand</span>
           </div>
 
           <p className="item-lede">{lede}</p>

@@ -129,7 +129,7 @@ export function Trending() {
         </div>
 
         <div className="glasspanel">
-          <div className="panel-h">Floor Activity</div>
+          <div className="panel-h">Market Activity</div>
           <div className="log">
             {state.log.length ? (
               state.log.slice(0, 9).map((l, i) => (
