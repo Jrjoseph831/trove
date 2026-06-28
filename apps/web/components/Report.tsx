@@ -112,12 +112,14 @@ export function ReportView() {
   if (days.length === 0) {
     return (
       <div className="view">
-        <div className="cat-head">
-          <h2 className="serif">Reports</h2>
-        </div>
-        <div className="empty">
-          No reports yet — a report is filed every time the market flips (twice a
-          Trove day). Once your floor produces or trades, a dashboard builds here.
+        <div className="page-col">
+          <div className="cat-head">
+            <h2 className="serif">Reports</h2>
+          </div>
+          <div className="empty">
+            No reports yet — a report is filed every time the market flips (twice a
+            Trove day). Once you produce or trade, a dashboard builds here.
+          </div>
         </div>
       </div>
     );
@@ -160,6 +162,7 @@ export function ReportView() {
 
   return (
     <div className="view">
+      <div className="page-col">
       <div className="cat-head">
         <h2 className="serif">Reports</h2>
         <div className="rep-now">
@@ -343,6 +346,7 @@ export function ReportView() {
           </div>
         );
       })()}
+      </div>
     </div>
   );
 }

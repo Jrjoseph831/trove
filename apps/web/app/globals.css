@@ -6425,13 +6425,14 @@ details.bay-modules > summary.bay-sub:hover {
 .kpi-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  margin-bottom: 14px;
+  gap: var(--bento-gap);
+  margin-bottom: var(--bento-gap);
 }
 .kpi {
+  background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 12px 14px;
+  border-radius: var(--bento-r);
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -6453,10 +6454,11 @@ details.bay-modules > summary.bay-sub:hover {
 }
 /* dashboard cards */
 .dash-card {
+  background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 14px 16px;
-  margin-bottom: 12px;
+  border-radius: var(--bento-r);
+  padding: 18px 20px;
+  margin-bottom: var(--bento-gap);
 }
 .dash-h {
   font-size: 10px;
@@ -6496,7 +6498,7 @@ details.bay-modules > summary.bay-sub:hover {
 .dash-panels {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 12px;
+  gap: var(--bento-gap);
 }
 /* revenue bars */
 .bar-row {
