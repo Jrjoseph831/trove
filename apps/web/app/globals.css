@@ -8042,3 +8042,36 @@ body {
 .pulse-pct.up { color: #2e9c5e; }
 .pulse-pct.down { color: var(--danger, #d04b46); }
 @media (max-width: 860px) { .trend-hero { grid-template-columns: 1fr; } }
+
+/* ── Polish loop · iteration 4: "On the Move" spotlight refinement ────────────
+   Give the featured mover real presence so the card doesn't read empty: a
+   tinted media focal point, a tighter frame, and a proper price/change pill. */
+.spotlight { min-height: 150px; }
+.spot-media {
+  width: 104px;
+  height: 104px;
+  background:
+    radial-gradient(120% 120% at 30% 18%,
+      color-mix(in srgb, var(--accent) 16%, var(--paper-2)), var(--paper-2));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.spot-body .nm { font-size: 21px; letter-spacing: -0.01em; line-height: 1.15; }
+.spot-price .pr {
+  font-size: 30px;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.spot-price .chg {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 7px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.spot-price .chg.pos { background: color-mix(in srgb, #2e9c5e 15%, transparent); color: #2e9c5e; }
+.spot-price .chg.neg { background: color-mix(in srgb, var(--danger, #d04b46) 15%, transparent); color: var(--danger, #d04b46); }
