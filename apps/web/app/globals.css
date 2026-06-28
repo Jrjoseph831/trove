@@ -3773,10 +3773,34 @@ body {
 }
 .ordercard {
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: var(--bento-r);
   padding: 16px 18px;
   margin-bottom: 12px;
   max-width: 640px;
+}
+/* Order Desk bento layout: centered column, contracts in a 2-col tile grid. */
+.desk-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.desk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--bento-gap);
+  margin-bottom: 8px;
+}
+.desk-grid .ordercard {
+  max-width: none;
+  margin-bottom: 0;
+}
+.acct-inline {
+  width: auto;
+  margin-top: 10px;
+}
+@media (max-width: 1000px) {
+  .desk-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .ordercard.accepted {
   border-left: 3px solid var(--accent);
@@ -3803,10 +3827,15 @@ body {
   color: var(--up);
   white-space: nowrap;
 }
-/* Order Desk automation panel */
+/* Order Desk automation panel — now a full-width bento tile in the desk column */
 .desk-auto {
-  max-width: 640px;
+  max-width: none;
   margin-bottom: 18px;
+}
+/* First da-row sits right under the tile header — drop its divider line. */
+.desk-auto .da-row:first-of-type {
+  border-top: 0;
+  padding-top: 0;
 }
 .da-row {
   display: flex;
