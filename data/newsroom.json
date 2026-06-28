@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-27T18:31:07.274Z",
+  "generatedAt": "2026-06-28T01:01:24.949Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Blackton Industries Tops Forecasts as Halvern Volumes Surge",
+      "body": "Blackton posted quarterly revenue of 1.84 billion, up 22% year over year, with retooled plants running near full capacity for the Halvern Motors contract. CEO Mara Mercer credited the overhaul push but warned that overtime costs trimmed margins to 11.3%. The company raised its full-year delivery guidance for the second time this year.",
+      "cycle": 82528,
+      "dur": 2
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Brunmark Motors Splits Out Power Unit to Steady Veyra Supply",
+      "body": "Reeling from a bruising quarter, Brunmark moved its Power & Storage operation into a standalone unit with its own supply chain and dedicated cell lines. Yvette Calder said the carve-out would 'stop the Veyra ramp from starving the rest of the house,' and named pack production as the top fix. The reorganization affects roughly 2,600 staff across three plants.",
+      "cycle": 82528,
+      "dur": 2
+    },
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Brunridge Works Names New Chief to Steer Three-Pillar Structure",
+      "body": "After overseeing the consolidation of five divisions into three pillars, Petra Wold will step back to a chairmanship as Halia Brennt takes the chief executive seat. Brennt, who led the Devices pillar through the reshuffle, inherits a leaner organization tasked with proving the new structure can lift margins. Wold said the handover had been planned to 'finish one chapter and let the next begin clean.'",
+      "cycle": 82528,
+      "dur": 2
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Drustcraft Edges Past Estimates on New Platform Ramp",
+      "body": "Drustcraft reported revenue of 412 million, modestly ahead of expectations as its fastener slot on the new vehicle platform began shipping in volume. Cora Fenn noted steady demand and a fully booked order pipeline for the next two quarters. Margins held firm at 14.6%.",
+      "cycle": 82528,
+      "dur": 1
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Erretmark Works Buys Engine Atelier Sorne to Pair With Velmonte",
+      "body": "Continuing Aurelia Garr's buying spree, Erretmark acquired bespoke engine atelier Sorne for an undisclosed sum, slotting it alongside recently purchased coachbuilder Velmonte. The pairing gives Erretmark in-house control of both bodywork and powertrain for its low-volume commissions. Garr said the goal is 'a car built entirely under one roof for clients who count in dozens, not thousands.'",
+      "cycle": 82528,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Greywater Grid Signs Landmark Storage Pact to Anchor New Compute Campus",
+      "body": "Greywater inked a 12-year, 4.1 billion agreement to supply storage and balancing capacity for a sprawling compute campus, the largest contract in the company's history. The deal leans on the record-density cells revealed at the Halloran Facility, with first banks due online within 18 months. Vale Halloran called it 'the moment Greywater stops selling power and starts selling certainty.'",
+      "cycle": 82528,
+      "dur": 8
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Ironcrestton Turns Award Buzz Into the Carrow Atelier Line",
+      "body": "Riding its Artisan's Circle sweep, Ironcrestton launched the Carrow Atelier collection, a tightly limited run of fine goods showcasing the techniques that earned the honors. Sable Carrow staged a single-night unveiling that drew a waitlist exceeding the production run of 300 pieces. The house said allocations would favor existing patrons before any wider release.",
+      "cycle": 82528,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Thronehaus & Co. Debuts Caldwynn-Powered Regent Tourbillon",
+      "body": "Fresh off its acquisition of movement specialist Caldwynn, Thronehaus unveiled the Regent Tourbillon, the first timepiece to house an in-built Caldwynn caliber. Priced at 240,000 per piece and capped at 75 units, the launch marks Cora Dray's push to control the craft end-to-end. Early allocations sold out within the first showing in the maison's flagship salon.",
+      "cycle": 82528,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -149,16 +229,6 @@
       "head": "Thaldale Group CEO Sable Wold Steps Down After Boardroom Clash",
       "body": "Sable Wold resigned abruptly after 41 years leading the value-tool maker, following reported disagreements with the board over an aggressive overseas expansion plan. The company named operations chief Renna Voss as interim chief executive, pledging continuity for its budget-conscious customers. Shares wobbled on the surprise departure before steadying.",
       "cycle": 82522,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Kessel Drive Debuts Long-Range Touring Vehicle in Splashy Reveal",
-      "body": "Kessel Drive pulled the covers off its flagship 'Meridian' touring model, paired with a new high-capacity storage cell promising 30% longer service life. CEO Dorian Brandt staged the launch before 2,000 guests, claiming pre-orders topped 6,500 units within 48 hours — the company's biggest rollout in a decade.",
-      "cycle": 82520,
       "dur": 8
     }
   ]

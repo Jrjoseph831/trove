@@ -335,7 +335,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82528,
     "events": [
       {
         "cycle": 0,
@@ -363,6 +363,16 @@
         "body": "To deliver on the Halvern deal, Blackton Industries announced a sweeping reorganization of its three plants, consolidating brake lines and shifting suspension work to a single hub. Mara Mercer admitted the shuffle would be 'rough for a quarter' but necessary for scale. The turbulent retooling temporarily slowed other orders.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82528,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Blackton Industries Tops Forecasts as Halvern Volumes Surge",
+        "body": "Blackton posted quarterly revenue of 1.84 billion, up 22% year over year, with retooled plants running near full capacity for the Halvern Motors contract. CEO Mara Mercer credited the overhaul push but warned that overtime costs trimmed margins to 11.3%. The company raised its full-year delivery guidance for the second time this year.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -550,7 +560,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82528,
     "events": [
       {
         "cycle": 0,
@@ -579,6 +589,16 @@
         "effects": {
           "automotive": -0.13
         }
+      },
+      {
+        "cycle": 82528,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Brunmark Motors Splits Out Power Unit to Steady Veyra Supply",
+        "body": "Reeling from a bruising quarter, Brunmark moved its Power & Storage operation into a standalone unit with its own supply chain and dedicated cell lines. Yvette Calder said the carve-out would 'stop the Veyra ramp from starving the rest of the house,' and named pack production as the top fix. The reorganization affects roughly 2,600 staff across three plants.",
+        "effects": {
+          "automotive": -0.13
+        }
       }
     ]
   },
@@ -586,14 +606,14 @@
     "aiOwned": true,
     "homeSector": "consumer",
     "founded": 1916,
-    "ceo": "Petra Wold",
-    "ceoSince": 1916,
+    "ceo": "Halia Brennt",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.53,
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82528,
     "events": [
       {
         "cycle": 0,
@@ -612,6 +632,14 @@
         "effects": {
           "consumer": -0.13
         }
+      },
+      {
+        "cycle": 82528,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Brunridge Works Names New Chief to Steer Three-Pillar Structure",
+        "body": "After overseeing the consolidation of five divisions into three pillars, Petra Wold will step back to a chairmanship as Halia Brennt takes the chief executive seat. Brennt, who led the Devices pillar through the reshuffle, inherits a leaner organization tasked with proving the new structure can lift margins. Wold said the handover had been planned to 'finish one chapter and let the next begin clean.'",
+        "effects": {}
       }
     ]
   },
@@ -1224,7 +1252,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82517,
+    "lastEventCycle": 82528,
     "events": [
       {
         "cycle": 0,
@@ -1242,6 +1270,16 @@
         "body": "Drustcraft secured a role as primary fastener and clip supplier for an upcoming light-truck platform, a contract worth an estimated 310 million over its run. Cora Fenn said the win reflects years of quiet reliability that finally opened a marquee account.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82528,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drustcraft Edges Past Estimates on New Platform Ramp",
+        "body": "Drustcraft reported revenue of 412 million, modestly ahead of expectations as its fastener slot on the new vehicle platform began shipping in volume. Cora Fenn noted steady demand and a fully booked order pipeline for the next two quarters. Margins held firm at 14.6%.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -1356,7 +1394,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82518,
+    "lastEventCycle": 82528,
     "events": [
       {
         "cycle": 0,
@@ -1372,6 +1410,16 @@
         "size": "standard",
         "head": "Erretmark Works Acquires Coachbuilder Velmonte in Cash Deal",
         "body": "Restless as ever, Aurelia Garr has folded boutique coachbuilder Velmonte into Erretmark Works for an undisclosed sum believed to exceed 90 million credits. The move adds hand-finished body lines aimed at the firm's low-volume luxury vehicles, with Garr promising 'fewer cars, made better.' It is Erretmark's third acquisition in eighteen months.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82528,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Erretmark Works Buys Engine Atelier Sorne to Pair With Velmonte",
+        "body": "Continuing Aurelia Garr's buying spree, Erretmark acquired bespoke engine atelier Sorne for an undisclosed sum, slotting it alongside recently purchased coachbuilder Velmonte. The pairing gives Erretmark in-house control of both bodywork and powertrain for its low-volume commissions. Garr said the goal is 'a car built entirely under one roof for clients who count in dozens, not thousands.'",
         "effects": {
           "automotive": 0.13
         }
@@ -1630,7 +1678,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82518,
+    "lastEventCycle": 82528,
     "events": [
       {
         "cycle": 0,
@@ -1646,6 +1694,16 @@
         "size": "major",
         "head": "Greywater Grid Claims Record Storage Density at Halloran Facility",
         "body": "Greywater Grid says its new Halloran storage array sustained peak discharge at nearly double the density of its prior generation, a figure Vale Halloran called 'a line in the sand for the whole sector.' The company plans to pair the banks with its compute halls to smooth demand spikes, targeting commercial rollout within the year. Independent verification is pending, but Halloran has already booked a press tour.",
+        "effects": {
+          "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82528,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Greywater Grid Signs Landmark Storage Pact to Anchor New Compute Campus",
+        "body": "Greywater inked a 12-year, 4.1 billion agreement to supply storage and balancing capacity for a sprawling compute campus, the largest contract in the company's history. The deal leans on the record-density cells revealed at the Halloran Facility, with first banks due online within 18 months. Vale Halloran called it 'the moment Greywater stops selling power and starts selling certainty.'",
         "effects": {
           "energy": 0.22
         }
@@ -2150,7 +2208,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82520,
+    "lastEventCycle": 82528,
     "events": [
       {
         "cycle": 0,
@@ -2166,6 +2224,16 @@
         "size": "standard",
         "head": "Ironcrestton Sweeps Coveted Artisan's Circle Honors",
         "body": "Ironcrestton took three of five top prizes at this year's Artisan's Circle gala, including Object of the Year for its hand-finished travel case. CEO Sable Carrow, never shy of a stage, declared the wins 'proof that the few who notice are noticing us.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82528,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Ironcrestton Turns Award Buzz Into the Carrow Atelier Line",
+        "body": "Riding its Artisan's Circle sweep, Ironcrestton launched the Carrow Atelier collection, a tightly limited run of fine goods showcasing the techniques that earned the honors. Sable Carrow staged a single-night unveiling that drew a waitlist exceeding the production run of 300 pieces. The house said allocations would favor existing patrons before any wider release.",
         "effects": {
           "luxury": 0.13
         }
@@ -3023,7 +3091,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82528,
     "events": [
       {
         "cycle": 0,
@@ -3039,6 +3107,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Acquires Movement Specialist Caldwynn",
         "body": "Cora Dray brought movement-maker Caldwynn into the Thronehaus fold, securing rare in-house complication expertise. The acquisition lets the house cut its reliance on outside workshops. Dray said she is 'collecting craftsmen, not just companies.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82528,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Thronehaus & Co. Debuts Caldwynn-Powered Regent Tourbillon",
+        "body": "Fresh off its acquisition of movement specialist Caldwynn, Thronehaus unveiled the Regent Tourbillon, the first timepiece to house an in-built Caldwynn caliber. Priced at 240,000 per piece and capped at 75 units, the launch marks Cora Dray's push to control the craft end-to-end. Early allocations sold out within the first showing in the maison's flagship salon.",
         "effects": {
           "luxury": 0.13
         }
