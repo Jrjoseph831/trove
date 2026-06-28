@@ -116,6 +116,7 @@ export function Catalog() {
 
   return (
     <div className="view">
+      <div className="cat-wrap">
       <div className="cat-head">
         <h2 className="serif">Catalog</h2>
         <div className="seg">
@@ -169,7 +170,11 @@ export function Catalog() {
       </div>
 
       <div className="cat-grid">
-        <div>
+        <section className="bento-card cat-table">
+          <div className="bc-h">
+            <span className="t">Market</span>
+            <span className="why">live commodity prices · click a column to sort</span>
+          </div>
           <div className="thead">
             {(
               [
@@ -280,10 +285,12 @@ export function Catalog() {
               </div>
             </div>
           )}
-        </div>
+        </section>
 
-        <div className="ed-col">
-          <h3>Collectible Editions</h3>
+        <aside className="ed-col">
+          <div className="bc-h">
+            <span className="t">Collectible Editions</span>
+          </div>
           {editions.length ? (
             editions.map((it) => {
               const d = it.value - it.prevValue;
@@ -330,7 +337,8 @@ export function Catalog() {
           ) : (
             <div className="empty">No editions match. They may all be claimed.</div>
           )}
-        </div>
+        </aside>
+      </div>
       </div>
 
       {bulkItem && (
