@@ -8,6 +8,7 @@ import { devAction, fetchCompanies, type DirEntry } from "@/lib/api";
 import { IS_STAGING } from "@/lib/config";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+import { ConfirmDeal } from "./ConfirmDeal";
 
 const secName = (s: string | null | undefined) =>
   s ? ((sectors as Record<string, { name?: string }>)[s]?.name ?? s) : "Index";
@@ -39,6 +40,7 @@ export function DealRoom() {
   const [sec, setSec] = useState("All");
   const [sort, setSort] = useState<"val" | "div" | "mine">("val");
   const [sel, setSel] = useState<string | null>(null);
+  const [pendingPct, setPendingPct] = useState<number | null>(null);
 
   const stakes = state.stakes ?? {};
 
@@ -88,7 +90,7 @@ export function DealRoom() {
       <button
         className="deal-buy"
         disabled={state.cash < buy * selRow.val || selRow.stake >= 0.9999}
-        onClick={() => buyStakeIn(selRow.name, buy)}
+        onClick={() => setPendingPct(buy)}
       >
         {label}
         <span className="deal-buy-cost">{money(Math.round(buy * selRow.val))}</span>
@@ -167,10 +169,44 @@ export function DealRoom() {
             )}
           </div>
           <p className="est-note">
-            AI shares trade at market. Negotiated buyouts of real players&apos; firms
-            come with live multiplayer.
+            Shares trade at market — buy in anytime. Acquiring a live player&apos;s
+            whole firm is negotiated under Live Players.
           </p>
         </div>
+
+        {pendingPct != null && (
+          <ConfirmDeal
+            kicker="Confirm acquisition"
+            title={
+              selRow.stake + pendingPct >= 0.999
+                ? `Take control of ${selRow.name}?`
+                : `Buy ${pct(pendingPct)} of ${selRow.name}?`
+            }
+            sub="An equity stake pays a share of this firm's income every settlement and counts toward your net worth. Sell back anytime at market."
+            rows={[
+              { label: "Firm", value: selRow.name },
+              {
+                label: "Stake",
+                value:
+                  pct(pendingPct) +
+                  (selRow.stake > 0 ? ` → ${pct(Math.min(1, selRow.stake + pendingPct))} owned` : ""),
+              },
+              { label: "Cost", value: money(Math.round(pendingPct * selRow.val)) },
+              {
+                label: "Dividends / period",
+                value: `+${money(Math.round(pendingPct * selRow.income))}`,
+                tone: "up",
+              },
+            ]}
+            confirmText={`Buy for ${money(Math.round(pendingPct * selRow.val))}`}
+            tone="buy"
+            onConfirm={() => {
+              buyStakeIn(selRow.name, pendingPct);
+              setPendingPct(null);
+            }}
+            onCancel={() => setPendingPct(null)}
+          />
+        )}
       </div>
     );
   }
@@ -201,7 +237,7 @@ export function DealRoom() {
 
       <div className="deal-tabs">
         <button className={view === "houses" ? "on" : ""} onClick={() => setView("houses")}>
-          AI Houses
+          Houses
         </button>
         <button className={view === "players" ? "on" : ""} onClick={() => setView("players")}>
           Live Players (M&amp;A)
@@ -266,6 +302,11 @@ function LivePlayers() {
   const [dir, setDir] = useState<DirEntry[] | null>(null);
   const [openTo, setOpenTo] = useState<string | null>(null);
   const [bid, setBid] = useState("");
+  const [pending, setPending] = useState<
+    | { kind: "offer"; handle: string; name: string; price: number }
+    | { kind: "sell"; id: string; buyer: string; price: number }
+    | null
+  >(null);
   const [devPrice, setDevPrice] = useState("5000000");
   const [devBusy, setDevBusy] = useState(false);
 
@@ -290,14 +331,23 @@ function LivePlayers() {
   const incoming = (orders?.incoming ?? []).filter((o) => o.kind === "buyout");
   const outgoing = (orders?.outgoing ?? []).filter((o) => o.kind === "buyout");
 
-  const send = async (handle: string) => {
+  const openOffer = (handle: string, name: string) => {
     const price = Math.round(Number(bid));
     if (!Number.isFinite(price) || price <= 0) return;
-    const ok = await requestBuyout(handle, price);
-    if (ok) {
-      setOpenTo(null);
-      setBid("");
+    setPending({ kind: "offer", handle, name, price });
+  };
+  const confirmPending = async () => {
+    if (!pending) return;
+    if (pending.kind === "offer") {
+      const ok = await requestBuyout(pending.handle, pending.price);
+      if (ok) {
+        setOpenTo(null);
+        setBid("");
+      }
+    } else {
+      await orderAct(pending.id, "accept");
     }
+    setPending(null);
   };
 
   return (
@@ -335,7 +385,12 @@ function LivePlayers() {
               </span>
               {o.turn === "seller" && (
                 <span className="ma-acts">
-                  <button className="ma-yes" onClick={() => orderAct(o.id, "accept")}>
+                  <button
+                    className="ma-yes"
+                    onClick={() =>
+                      setPending({ kind: "sell", id: o.id, buyer: o.buyerName, price: o.price })
+                    }
+                  >
                     Sell for {money(o.price)}
                   </button>
                   <button
@@ -409,7 +464,7 @@ function LivePlayers() {
                     onChange={(e) => setBid(e.target.value)}
                     placeholder="Your offer ($)"
                   />
-                  <button className="ma-yes" onClick={() => send(t.handle)}>
+                  <button className="ma-yes" onClick={() => openOffer(t.handle, t.name)}>
                     Send offer
                   </button>
                   <button className="ma-no" onClick={() => setOpenTo(null)}>
@@ -420,6 +475,37 @@ function LivePlayers() {
             </div>
           ))}
         </div>
+      )}
+
+      {pending?.kind === "offer" && (
+        <ConfirmDeal
+          kicker="Confirm offer"
+          title={`Offer to acquire ${pending.name}?`}
+          sub="A consensual buyout. They can accept, counter, or decline. If they accept, you absorb their entire firm — lines, properties, stakes & holdings — and they cash out."
+          rows={[
+            { label: "Target", value: pending.name },
+            { label: "Your offer", value: money(pending.price) },
+          ]}
+          confirmText={`Send offer · ${money(pending.price)}`}
+          tone="buy"
+          onConfirm={confirmPending}
+          onCancel={() => setPending(null)}
+        />
+      )}
+      {pending?.kind === "sell" && (
+        <ConfirmDeal
+          kicker="Confirm sale"
+          title="Sell your entire firm?"
+          sub="You'll hand over everything — lines, properties, stakes & holdings — to the buyer and cash out. This can't be undone."
+          rows={[
+            { label: "Buyer", value: pending.buyer },
+            { label: "You receive", value: money(pending.price), tone: "up" },
+          ]}
+          confirmText={`Sell for ${money(pending.price)}`}
+          tone="sell"
+          onConfirm={confirmPending}
+          onCancel={() => setPending(null)}
+        />
       )}
     </div>
   );

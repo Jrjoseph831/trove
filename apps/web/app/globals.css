@@ -7898,3 +7898,48 @@ body {
   border-radius: 8px; padding: 6px 12px; font-size: 12.5px; font-weight: 700; cursor: pointer;
 }
 .ma-dev button:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ── Acquisition confirmation screen (estates / houses / player buyouts) ───── */
+.cfm-wrap {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, 0.62); backdrop-filter: blur(3px); padding: 20px;
+}
+.cfm {
+  width: 100%; max-width: 460px;
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 16px; padding: 26px 26px 22px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+.cfm-kick {
+  font-size: 11px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent);
+}
+.cfm-title {
+  font-family: Georgia, "Times New Roman", serif; font-size: 23px;
+  margin: 6px 0 0; color: var(--ink); line-height: 1.2;
+}
+.cfm-sub { font-size: 13.5px; line-height: 1.55; color: var(--ink-dim); margin: 8px 0 0; }
+.cfm-rows { margin: 18px 0 22px; border-top: 1px solid var(--line); }
+.cfm-row {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px;
+}
+.cfm-row span { color: var(--ink-dim); }
+.cfm-row b { color: var(--ink); font-weight: 800; }
+.cfm-row b.cfm-up { color: #2e9c5e; }
+.cfm-row b.cfm-down { color: var(--danger, #d04b46); }
+.cfm-acts { display: flex; gap: 10px; }
+.cfm-cancel {
+  flex: 0 0 auto; padding: 13px 20px; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--paper); color: var(--ink-dim);
+  font-size: 14px; font-weight: 700; cursor: pointer;
+}
+.cfm-cancel:hover { color: var(--ink); }
+.cfm-go {
+  flex: 1; padding: 13px; border-radius: 12px; border: none;
+  color: #fff; font-size: 15px; font-weight: 800; cursor: pointer; transition: filter 0.12s;
+}
+.cfm-go.buy { background: var(--accent); }
+.cfm-go.sell { background: var(--danger, #d04b46); }
+.cfm-go:hover { filter: brightness(1.07); }
