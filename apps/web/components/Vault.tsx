@@ -21,30 +21,39 @@ export function Vault() {
 
   return (
     <div className="view">
-      <div className="cat-head">
-        <h2 className="serif">My Vault</h2>
-        {mine.length > 0 && (
-          <div className="vault-sum">
-            <span className="vs">
-              <i>Holdings</i>
-              <b>{mine.length}</b>
-            </span>
-            <span className="vs">
-              <i>Market value</i>
-              <b>{money(holdingsValue)}</b>
-            </span>
-            <span className={`vs ${unrealized >= 0 ? "pos" : "neg"}`}>
-              <i>Unrealized</i>
-              <b>
-                {unrealized >= 0 ? "+" : ""}
-                {money(unrealized)}
-              </b>
-            </span>
+      <div className="bento">
+        <header className="cat-head col-12">
+          <h2 className="serif">My Vault</h2>
+          {mine.length > 0 && (
+            <div className="vault-sum">
+              <span className="vs">
+                <i>Holdings</i>
+                <b>{mine.length}</b>
+              </span>
+              <span className="vs">
+                <i>Market value</i>
+                <b>{money(holdingsValue)}</b>
+              </span>
+              <span className={`vs ${unrealized >= 0 ? "pos" : "neg"}`}>
+                <i>Unrealized</i>
+                <b>
+                  {unrealized >= 0 ? "+" : ""}
+                  {money(unrealized)}
+                </b>
+              </span>
+            </div>
+          )}
+        </header>
+
+        <section className="bento-card col-8">
+          <div className="bc-h">
+            <span className="t">Holdings</span>
+            {mine.length > 0 && (
+              <span className="why">
+                {mine.length} position{mine.length > 1 ? "s" : ""}
+              </span>
+            )}
           </div>
-        )}
-      </div>
-      <div className="cat-grid">
-        <div>
           {mine.length === 0 ? (
             <div className="empty">
               Empty. Read the front page, then acquire something.
@@ -116,46 +125,42 @@ export function Vault() {
               );
             })
           )}
-        </div>
+        </section>
 
-        <div className="stack">
-          <div className="glasspanel">
-            <div className="panel-h">Credit Line</div>
-            <div className="debtctl">
-              <div className="line">
-                <span>Borrowed</span>
-                <b>{money(state.debt)}</b>
-              </div>
-              <div className="meter">
-                <i
-                  style={{
-                    width: `${lim ? Math.min(100, (state.debt / lim) * 100) : 0}%`,
-                  }}
-                />
-              </div>
-              <div className="line">
-                <span>Available {money(avail)}</span>
-                <span>0.05%/cycle</span>
-              </div>
-              <div className="dbtns">
-                <button
-                  className="borrow"
-                  disabled={avail <= 0}
-                  onClick={doBorrow}
-                >
-                  Borrow $5k
-                </button>
-                <button
-                  className="repay"
-                  disabled={state.debt <= 0 || state.cash <= 0}
-                  onClick={doRepay}
-                >
-                  Repay $5k
-                </button>
-              </div>
+        <aside className="bento-card col-4">
+          <div className="bc-h">
+            <span className="t">Credit Line</span>
+          </div>
+          <div className="debtctl">
+            <div className="line">
+              <span>Borrowed</span>
+              <b>{money(state.debt)}</b>
+            </div>
+            <div className="meter">
+              <i
+                style={{
+                  width: `${lim ? Math.min(100, (state.debt / lim) * 100) : 0}%`,
+                }}
+              />
+            </div>
+            <div className="line">
+              <span>Available {money(avail)}</span>
+              <span>0.05%/cycle</span>
+            </div>
+            <div className="dbtns">
+              <button className="borrow" disabled={avail <= 0} onClick={doBorrow}>
+                Borrow $5k
+              </button>
+              <button
+                className="repay"
+                disabled={state.debt <= 0 || state.cash <= 0}
+                onClick={doRepay}
+              >
+                Repay $5k
+              </button>
             </div>
           </div>
-        </div>
+        </aside>
       </div>
     </div>
   );

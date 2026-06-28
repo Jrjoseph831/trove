@@ -681,6 +681,16 @@ body {
     grid-column: span 12;
   }
 }
+/* Any bento page is a centered, contained column (not full-bleed). */
+.view > .bento {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* A page header that lives as a full-width row inside the grid — gap handles
+   the spacing, so drop its standalone margin. */
+.bento > .cat-head {
+  margin-bottom: 0;
+}
 
 /* ====================== TRENDING ====================== */
 /* Contain the front page so it reads as a focused, curated edition rather than a
