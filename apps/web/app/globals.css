@@ -6826,15 +6826,20 @@ details.bay-modules > summary.bay-sub:hover {
 }
 
 /* Your-site row at the top of the directory */
+/* Generic centered page column (bento "embedded" pages that aren't a pure grid). */
+.page-col {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .site-myrow {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
-  padding: 16px 18px;
+  padding: 18px 20px;
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   background: var(--paper);
   margin-bottom: 22px;
 }
@@ -6905,7 +6910,7 @@ details.bay-modules > summary.bay-sub:hover {
 .site-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 14px;
+  gap: var(--bento-gap);
 }
 .site-card {
   position: relative;
@@ -6913,16 +6918,21 @@ details.bay-modules > summary.bay-sub:hover {
   flex-direction: column;
   gap: 6px;
   text-align: left;
-  padding: 16px 16px 14px;
+  padding: 18px 18px 16px;
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: var(--bento-r);
   background: var(--paper);
   cursor: pointer;
   overflow: hidden;
+  transition: border-color 0.16s ease, box-shadow 0.18s ease, transform 0.13s ease;
 }
 .site-card:hover {
   border-color: var(--line-2);
   background: var(--paper-2);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+}
+.site-card:active {
+  transform: translateY(1px) scale(0.997);
 }
 .site-card-accent {
   position: absolute;

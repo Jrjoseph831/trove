@@ -254,11 +254,12 @@ function Directory({
 
   return (
     <div className="view">
-      <div className="cat-head">
-        <h2 className="serif">Companies</h2>
-      </div>
+      <div className="page-col">
+        <div className="cat-head">
+          <h2 className="serif">Companies</h2>
+        </div>
 
-      <div className="site-myrow">
+        <div className="site-myrow">
         <div className="site-myinfo">
           <span className="site-mylab">Your company</span>
           {hasSite ? (
@@ -313,6 +314,7 @@ function Directory({
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 }
