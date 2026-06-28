@@ -1333,6 +1333,45 @@ body {
 .vlisted.held {
   color: var(--ink-faint);
 }
+/* Vault header summary — gives the page a real stat line / hierarchy. */
+.vault-sum {
+  margin-left: auto;
+  display: flex;
+  align-items: baseline;
+  gap: 26px;
+}
+.vault-sum .vs {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: right;
+}
+.vault-sum .vs i {
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 700;
+}
+.vault-sum .vs b {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.vault-sum .vs.pos b {
+  color: var(--up);
+}
+.vault-sum .vs.neg b {
+  color: var(--dn);
+}
+/* Vault row action group — consistent gap, no inline margin hacks. */
+.crow-acts {
+  flex: none;
+  display: inline-flex;
+  gap: 8px;
+}
 .ed-col h3 {
   font-family: var(--font-display);
   font-size: 12px;
@@ -7652,8 +7691,17 @@ body {
     min-width: 0;
     margin-left: auto;
   }
-  .crow .tbtn {
-    margin-left: 0 !important;
+  .crow-acts {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+  }
+  /* Vault summary wraps under the title on narrow screens. */
+  .vault-sum {
+    margin-left: 0;
+    gap: 18px;
+  }
+  .vault-sum .vs {
+    text-align: left;
   }
 }
 

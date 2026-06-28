@@ -13,10 +13,35 @@ export function Vault() {
   const lim = creditLimit(state);
   const avail = Math.max(0, lim - state.debt);
 
+  const holdingsValue = mine.reduce((s, it) => s + it.value * held(it, "YOU"), 0);
+  const unrealized = mine.reduce(
+    (s, it) => s + (it.value - (it.buyAt ?? it.value)) * held(it, "YOU"),
+    0,
+  );
+
   return (
     <div className="view">
       <div className="cat-head">
         <h2 className="serif">My Vault</h2>
+        {mine.length > 0 && (
+          <div className="vault-sum">
+            <span className="vs">
+              <i>Holdings</i>
+              <b>{mine.length}</b>
+            </span>
+            <span className="vs">
+              <i>Market value</i>
+              <b>{money(holdingsValue)}</b>
+            </span>
+            <span className={`vs ${unrealized >= 0 ? "pos" : "neg"}`}>
+              <i>Unrealized</i>
+              <b>
+                {unrealized >= 0 ? "+" : ""}
+                {money(unrealized)}
+              </b>
+            </span>
+          </div>
+        )}
       </div>
       <div className="cat-grid">
         <div>
@@ -61,29 +86,31 @@ export function Vault() {
                     {pl >= 0 ? "+" : ""}
                     {money(pl)}
                   </span>
-                  {produced > 0 && (
-                    <button
-                      className={`tbtn ${listed ? "" : "sell"}`}
-                      style={{ marginLeft: 12 }}
-                      title={
-                        listed
-                          ? "Listed for passive sale — click to hold instead"
-                          : "Held (not selling) — click to list for passive sale"
-                      }
-                      onClick={() => setListing(it.id, !listed)}
-                    >
-                      {listed ? "Unlist" : "List"}
-                    </button>
-                  )}
-                  {bought > 0 && (
-                    <button
-                      className="tbtn sell"
-                      style={{ marginLeft: 8 }}
-                      title="Sell a bought unit at market"
-                      onClick={() => sell(it.id)}
-                    >
-                      Let go
-                    </button>
+                  {(produced > 0 || bought > 0) && (
+                    <span className="crow-acts">
+                      {produced > 0 && (
+                        <button
+                          className={`tbtn ${listed ? "" : "sell"}`}
+                          title={
+                            listed
+                              ? "Listed for passive sale — click to hold instead"
+                              : "Held (not selling) — click to list for passive sale"
+                          }
+                          onClick={() => setListing(it.id, !listed)}
+                        >
+                          {listed ? "Unlist" : "List"}
+                        </button>
+                      )}
+                      {bought > 0 && (
+                        <button
+                          className="tbtn sell"
+                          title="Sell a bought unit at market"
+                          onClick={() => sell(it.id)}
+                        >
+                          Let go
+                        </button>
+                      )}
+                    </span>
                   )}
                 </div>
               );
