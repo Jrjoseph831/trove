@@ -7989,3 +7989,56 @@ body {
 .cfm-row b, .est-stat .v, .deal-buy-cost {
   font-variant-numeric: tabular-nums;
 }
+
+/* ── Polish loop · iteration 3: Trending hero + Market Pulse ──────────────────
+   A balanced hero: the Wire headline beside a live sector-demand snapshot, so
+   the page leads with purpose and fills the width cohesively. */
+.trend-hero {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 34px;
+}
+.trend-hero .lead { height: 100%; }
+.pulse {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+}
+.pulse-h {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.pulse-h .sub {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.pulse-list { display: flex; flex-direction: column; gap: 9px; }
+.pulse-row {
+  display: grid;
+  grid-template-columns: 84px 1fr 50px;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+}
+.pulse-nm { color: var(--ink-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pulse-bar { height: 6px; background: var(--line); border-radius: 999px; overflow: hidden; }
+.pulse-bar i { display: block; height: 100%; border-radius: 999px; }
+.pulse-bar i.up { background: #2e9c5e; }
+.pulse-bar i.down { background: var(--danger, #d04b46); }
+.pulse-pct { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.pulse-pct.up { color: #2e9c5e; }
+.pulse-pct.down { color: var(--danger, #d04b46); }
+@media (max-width: 860px) { .trend-hero { grid-template-columns: 1fr; } }

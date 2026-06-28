@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { held } from "@trove/engine";
+import { sectorKeys, sectorLabel } from "@trove/data";
 import { breakingBeat } from "@/lib/breaking";
 import { money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
@@ -28,6 +29,11 @@ export function Trending() {
 
   const mine = state.items.filter((i) => held(i, "YOU") > 0);
 
+  // Sector demand snapshot — the hottest first. Reads as a market pulse.
+  const pulse = [...sectorKeys]
+    .map((s) => ({ s, idx: state.sectorIdx[s] ?? 1 }))
+    .sort((a, b) => b.idx - a.idx);
+
   return (
     <div className="view">
       {beat && (
@@ -37,7 +43,9 @@ export function Trending() {
           <p className="brk-card-body">{beat.body}</p>
         </article>
       )}
-      <article className="lead lead-wide">
+
+      <div className="trend-hero">
+        <article className="lead">
           {f && (
             <>
               <div className="paper">
@@ -69,7 +77,33 @@ export function Trending() {
               </div>
             </>
           )}
-      </article>
+        </article>
+
+        <aside className="pulse">
+          <div className="pulse-h">
+            Market Pulse <span className="sub">sector demand now</span>
+          </div>
+          <div className="pulse-list">
+            {pulse.map(({ s, idx }) => {
+              const dev = (idx - 1) * 100;
+              const up = dev >= 0;
+              const w = Math.min(100, Math.max(6, Math.abs(dev) * 7));
+              return (
+                <div className="pulse-row" key={s}>
+                  <span className="pulse-nm">{sectorLabel(s)}</span>
+                  <span className="pulse-bar">
+                    <i className={up ? "up" : "down"} style={{ width: `${w}%` }} />
+                  </span>
+                  <span className={`pulse-pct ${up ? "up" : "down"}`}>
+                    {up ? "+" : ""}
+                    {dev.toFixed(1)}%
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </aside>
+      </div>
 
       <div className="railrow">
         <div className="railrow-h">
