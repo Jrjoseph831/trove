@@ -8075,3 +8075,15 @@ body {
 }
 .spot-price .chg.pos { background: color-mix(in srgb, #2e9c5e 15%, transparent); color: #2e9c5e; }
 .spot-price .chg.neg { background: color-mix(in srgb, var(--danger, #d04b46) 15%, transparent); color: var(--danger, #d04b46); }
+
+/* ── Polish loop · iteration 5: cohesive card elevation on Trending ───────────
+   Clickable cards lifted flatly (no depth). Give tiles + the spotlight a soft
+   shadow on hover, and the mover rows a subtle highlight — one consistent,
+   premium interaction language across the page. */
+.tile:hover { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16); }
+.spotlight { transition: border-color 0.15s ease, box-shadow 0.18s ease, transform 0.13s ease; }
+.spotlight:hover { border-color: var(--line-2); box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16); }
+.spotlight:active { transform: translateY(1px) scale(0.997); }
+.brow { transition: background 0.12s ease; border-radius: 8px; }
+.brow:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
+.crow { transition: background 0.12s ease; border-radius: 8px; }
