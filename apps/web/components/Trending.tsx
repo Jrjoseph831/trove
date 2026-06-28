@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { held } from "@trove/engine";
 import { breakingBeat } from "@/lib/breaking";
 import { money } from "@/lib/format";
-import { ItemIcon } from "@/lib/icons";
 import { impliedSectors } from "@/lib/ui";
 import { useLeaderboard } from "@/lib/useLeaderboard";
 import { useTrove } from "@/lib/trove";
@@ -27,8 +25,6 @@ export function Trending() {
     .sort((a, b) => b.value - a.value)
     .slice(0, 4);
 
-  const mine = state.items.filter((i) => held(i, "YOU") > 0);
-
   // Standings beside the headline — competitive context (observable), not a
   // give-away sector readout. Top firms + you.
   const myLabel = desk?.name?.trim() || "Your Holding";
@@ -39,7 +35,7 @@ export function Trending() {
     standTop.some((e) => e.id === "YOU") || !meRow ? standTop : [...standTop, meRow];
 
   return (
-    <div className="view">
+    <div className="view trend">
       {beat && (
         <article className={`brk-card ${beat.phase}`}>
           <span className="brk-card-kick">⚡ {beat.kicker}</span>
@@ -126,54 +122,6 @@ export function Trending() {
             Every marquee piece has been claimed. Watch for a relisting.
           </div>
         )}
-      </div>
-
-      <div className="twoup">
-        <div className="glasspanel">
-          <div className="panel-h">
-            Your Vault{" "}
-            <span className="sub">{mine.length ? `${mine.length} holdings` : ""}</span>
-          </div>
-          {mine.length ? (
-            mine.slice(0, 6).map((it) => {
-              const q = held(it, "YOU");
-              const pl = it.value - (it.buyAt ?? it.value);
-              return (
-                <div className="crow" key={it.id}>
-                  <ItemIcon it={it} size={18} className="ic" />
-                  <span className="nm">
-                    <span className="bd">{it.brand}</span>
-                    {it.name}
-                    {q > 1 ? ` ×${q}` : ""}
-                  </span>
-                  <span className="pr">{money(it.value * q)}</span>
-                  <span className={`chg ${pl >= 0 ? "pos" : "neg"}`}>
-                    {pl >= 0 ? "+" : ""}
-                    {money(pl)}
-                  </span>
-                </div>
-              );
-            })
-          ) : (
-            <div className="empty">Empty. Read the page, then acquire something.</div>
-          )}
-        </div>
-
-        <div className="glasspanel">
-          <div className="panel-h">Market Activity</div>
-          <div className="log">
-            {state.log.length ? (
-              state.log.slice(0, 9).map((l, i) => (
-                <div key={i}>
-                  <span className="who">{l.who}</span> {l.verb}{" "}
-                  <span className="it">{l.it}</span>
-                </div>
-              ))
-            ) : (
-              <div className="empty">Quiet.</div>
-            )}
-          </div>
-        </div>
       </div>
     </div>
   );

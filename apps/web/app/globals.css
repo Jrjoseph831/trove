@@ -615,6 +615,12 @@ body {
 }
 
 /* ====================== TRENDING ====================== */
+/* Contain the front page so it reads as a focused, curated edition rather than
+   a full-bleed dashboard — same centered-column treatment as Estates/Deals. */
+.view.trend {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .masthead {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
