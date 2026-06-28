@@ -328,7 +328,7 @@ export function Desk() {
           <h2 className="serif">Order Desk</h2>
         </div>
         <div className="empty">
-          Sign in to receive contracts from companies on the floor.{" "}
+          Sign in to receive contracts from firms on the market.{" "}
           <button
             className="acct"
             style={{ width: "auto", marginTop: 10 }}

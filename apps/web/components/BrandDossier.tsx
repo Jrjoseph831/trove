@@ -25,7 +25,7 @@ export function BrandDossier({
     <div className="dossier-wrap">
       <div className="dossier-top">
         <Link href="/" className="backlink">
-          ← The Floor
+          ← The Market
         </Link>
         <span className="dossier-mark">TROVE</span>
       </div>
@@ -42,8 +42,8 @@ export function BrandDossier({
 
         <div className="dossier-grid">
           <section className="dossier-house">
-            <h2 className="dossier-h">The House</h2>
-            <p>{lore?.story ?? "A house of the Trove floor."}</p>
+            <h2 className="dossier-h">The Firm</h2>
+            <p>{lore?.story ?? "A firm on the Trove market."}</p>
 
             <h2 className="dossier-h" style={{ marginTop: 28 }}>
               What They Make
@@ -62,7 +62,7 @@ export function BrandDossier({
             <h2 className="dossier-h">Market Standing</h2>
             <dl className="standing">
               <div>
-                <dt>Pieces on the floor</dt>
+                <dt>Pieces on the market</dt>
                 <dd>{s.count}</dd>
               </div>
               <div>
@@ -88,13 +88,13 @@ export function BrandDossier({
             </dl>
             <div className="houseindex">
               <div className="houseindex-top">
-                <span>House valuation index</span>
+                <span>Firm valuation index</span>
                 <span className="num">{s.houseIndex}</span>
               </div>
               <div className="hi-bar">
                 <i style={{ width: `${s.houseIndex}%` }} />
               </div>
-              <div className="hi-note">vs the whole floor (0–100)</div>
+              <div className="hi-note">vs the whole market (0–100)</div>
             </div>
             <div className="dossier-sectors">
               {sectorLabels(brand.sectors).map((l) => (
@@ -126,7 +126,7 @@ export function BrandDossier({
 
         {events.length > 0 && (
           <section className="dossier-news">
-            <h2 className="dossier-h">Latest from the House</h2>
+            <h2 className="dossier-h">Latest from the firm</h2>
             {events.map((e, i) => (
               <article className="dossier-event" key={i}>
                 <span className={`ev-kind ${e.size}`}>{e.kind.replace(/_/g, " ")}</span>
@@ -138,7 +138,7 @@ export function BrandDossier({
         )}
 
         <Link href={`/?brand=${slug}`} className="floor-cta">
-          View all {s.count} pieces on the floor →
+          View all {s.count} pieces on the market →
         </Link>
       </div>
     </div>

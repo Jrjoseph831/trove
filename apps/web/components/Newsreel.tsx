@@ -38,7 +38,8 @@ import {
   type AdTone,
   type SectorKey,
 } from "@trove/data";
-import { netWorth, type WorldState } from "@trove/engine";
+import { type WorldState } from "@trove/engine";
+import { useLeaderboard } from "@/lib/useLeaderboard";
 import { money, pctChange } from "@/lib/format";
 import { moversByAbsMove } from "@/lib/ui";
 import { createAmbient } from "@/lib/ambient";
@@ -196,8 +197,9 @@ export function Wheel({
   embedded?: boolean;
   onClose?: () => void;
 }) {
-  const { state, desk } = useTrove();
+  const { state, desk, mode: appMode } = useTrove();
   const myLabel = desk?.name?.trim() || "Your Holding";
+  const board = useLeaderboard(state, appMode, myLabel);
   const stateRef = useRef(state);
   stateRef.current = state;
   const loopRef = useRef(0);
@@ -402,7 +404,7 @@ export function Wheel({
             <div className="reel-ident">
               <Newspaper size={44} />
               <div className="reel-ident-name">TROVE NEWS NETWORK</div>
-              <div className="reel-ident-sub">The floor, around the clock</div>
+              <div className="reel-ident-sub">The market, around the clock</div>
             </div>
           )}
 
@@ -450,20 +452,14 @@ export function Wheel({
               <div className="reel-panel-h">Standings</div>
               <div className="reel-list">
                 {(() => {
-                  const ranked = [
-                    { id: "YOU", label: myLabel, w: netWorth(state, "YOU") },
-                    ...state.traders.map((t) => ({ id: t.name, label: t.name, w: netWorth(state, t.name) })),
-                  ]
-                    .sort((a, b) => b.w - a.w)
-                    .map((e, i) => ({ ...e, rank: i + 1 }));
-                  const top = ranked.slice(0, 10);
-                  const rows = top.some((e) => e.id === "YOU")
-                    ? top
-                    : [...top, ranked.find((e) => e.id === "YOU")!];
+                  const top = board.slice(0, 10);
+                  const me = board.find((e) => e.id === "YOU");
+                  const rows = top.some((e) => e.id === "YOU") ? top : me ? [...top, me] : top;
                   return rows.map((e) => (
                     <div className={`reel-row ${e.id === "YOU" ? "me" : ""}`} key={e.id}>
                       <span className="reel-row-nm">
                         <span className="rk">{e.rank}</span>
+                        {e.live && e.id !== "YOU" && <span className="lb-live">●</span>}
                         {e.label}
                       </span>
                       <span className="reel-row-pr">{money(e.w)}</span>

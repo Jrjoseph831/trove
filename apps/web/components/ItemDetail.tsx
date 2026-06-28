@@ -22,7 +22,7 @@ export function ItemDetail({ item }: { item: Item }) {
   return (
     <div className="itempage-inner">
       <nav className="item-bread">
-        <Link href="/">The Floor</Link>
+        <Link href="/">The Market</Link>
         <span>/</span>
         <Link href={`/brand/${slug}`}>{item.brand}</Link>
         <span>/</span>
@@ -67,7 +67,7 @@ export function ItemDetail({ item }: { item: Item }) {
             href={`/?q=${encodeURIComponent(item.name)}&hl=${item.id}`}
             className="item-cta"
           >
-            Find it on the floor →
+            Find it on the market →
           </Link>
         </div>
       </div>
@@ -140,7 +140,7 @@ export function ItemDetail({ item }: { item: Item }) {
       )}
 
       <Link href="/" className="item-back">
-        ← Back to the floor
+        ← Back to the market
       </Link>
     </div>
   );

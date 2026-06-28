@@ -3,9 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { Radio } from "lucide-react";
 import { news as newsBank } from "@trove/data";
-import { netWorth } from "@trove/engine";
 import { breakingBeat } from "@/lib/breaking";
 import { firmBeat } from "@/lib/firmnews";
+import { useLeaderboard } from "@/lib/useLeaderboard";
 import { money } from "@/lib/format";
 import { tnnLive } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
@@ -13,7 +13,7 @@ import type { WireStory } from "./Broadcast";
 import { Newsreel, Wheel } from "./Newsreel";
 
 export function Wire() {
-  const { state, desk } = useTrove();
+  const { state, desk, mode } = useTrove();
   const [studioOpen, setStudioOpen] = useState(false);
   // The telegraphed market-event Breaking beat — refreshed on its own clock.
   const [now, setNow] = useState(() => Date.now());
@@ -51,23 +51,14 @@ export function Wire() {
   const cards = stories.slice(1, 9);
   const tape = cards.length ? cards : stories;
 
-  // The player's own row shows their Holding name (not "YOU"); the internal id
-  // stays "YOU" for the net-worth lookup and the highlight. With 100 firms on the
-  // floor, show the top 12 — but always include YOU (with your true rank).
+  // One unified board: you + every firm + (live) every other real player. Shows
+  // the top 12, but always includes you (with your true rank). Your own row shows
+  // your Holding name; live players get a marker.
   const myLabel = desk?.name?.trim() || "Your Holding";
-  const board = useMemo(() => {
-    const ranked = [
-      { id: "YOU", label: myLabel, w: netWorth(state, "YOU") },
-      ...state.traders.map((t) => ({ id: t.name, label: t.name, w: netWorth(state, t.name) })),
-    ]
-      .sort((a, b) => b.w - a.w)
-      .map((e, i) => ({ ...e, rank: i + 1 }));
-    const top = ranked.slice(0, 12);
-    return top.some((e) => e.id === "YOU")
-      ? top
-      : [...top, ranked.find((e) => e.id === "YOU")!];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state, state.cycle, myLabel]);
+  const ranked = useLeaderboard(state, mode, myLabel);
+  const top = ranked.slice(0, 12);
+  const me = ranked.find((e) => e.id === "YOU");
+  const board = top.some((e) => e.id === "YOU") ? top : me ? [...top, me] : top;
 
   return (
     <div className="view wire">
@@ -134,6 +125,7 @@ export function Wire() {
               <div className={`lb ${e.id === "YOU" ? "me" : ""}`} key={e.id}>
                 <span>
                   <span className="rk">{e.rank}</span>
+                  {e.live && e.id !== "YOU" && <span className="lb-live">●</span>}
                   {e.label}
                 </span>
                 <span>{money(e.w)}</span>

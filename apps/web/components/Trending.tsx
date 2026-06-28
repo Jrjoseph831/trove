@@ -48,7 +48,7 @@ export function Trending() {
               <h1>{f.head}</h1>
               <p>{f.body}</p>
               <div className="implied">
-                On the floor:{" "}
+                On the market:{" "}
                 {ups.length === 0 && dns.length === 0 ? (
                   "A quiet session. Prices drift on their own."
                 ) : (
@@ -82,7 +82,7 @@ export function Trending() {
       <div className="railrow">
         <div className="railrow-h">
           <span className="t">Worth Watching</span>
-          <span className="why">marquee pieces still on the floor</span>
+          <span className="why">marquee pieces still on the market</span>
         </div>
         {watching.length ? (
           <div className="tiles">

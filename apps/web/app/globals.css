@@ -7943,3 +7943,14 @@ body {
 .cfm-go.buy { background: var(--accent); }
 .cfm-go.sell { background: var(--danger, #d04b46); }
 .cfm-go:hover { filter: brightness(1.07); }
+
+/* Live-player firms on the unified Deal Room board */
+.deal-mono.t-live { background: linear-gradient(135deg,#1f7a4d,#34c27a); color: #06140d; }
+.deal-livetag { color: #2fbf73; font-weight: 800; font-size: 11px; letter-spacing: .03em; }
+.deal-sub .deal-livetag { font-size: 12px; }
+.deal-offerbox { display: flex; gap: 10px; margin-top: 6px; }
+.deal-offerbox .ma-input { flex: 1; }
+.deal-offerbox .est-act { flex: 0 0 auto; width: auto; padding: 12px 18px; }
+
+/* Live-player marker on the unified leaderboard */
+.lb-live, .reel-row .lb-live { color: #2fbf73; font-size: 9px; margin-right: 5px; vertical-align: middle; }
