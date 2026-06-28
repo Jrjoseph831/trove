@@ -261,7 +261,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82529,
     "events": [
       {
         "cycle": 0,
@@ -288,6 +288,16 @@
         "head": "Blackhold Names New Operations Chief to Steer Greycliff",
         "body": "With the Greycliff build straining its ranks, Blackhold appointed veteran builder Tomas Vren as chief operating officer to manage delivery. Mira Marrow said the hire frees her to 'court capital while Tomas pours concrete.' The move signals how seriously the house is treating the high-stakes project.",
         "effects": {}
+      },
+      {
+        "cycle": 82529,
+        "kind": "outage",
+        "size": "standard",
+        "head": "Blackhold Grid Fault Knocks Out Greycliff Test Bank Hours After Launch",
+        "body": "A thermal fault in the newly commissioned Greycliff storage array forced an emergency shutdown of three test cells late Tuesday, cutting supply to two regional substations for roughly four hours. New Operations Chief Lena Voss said the trip was contained and no permanent damage occurred, but CEO Tomas Vren faced sharp questions over whether the aggressive build timeline outpaced safety checks. Blackhold pledged a full review before bringing the bank back online.",
+        "effects": {
+          "energy": -0.13
+        }
       }
     ]
   },
@@ -852,14 +862,14 @@
     "aiOwned": true,
     "homeSector": "manufacturing",
     "founded": 1931,
-    "ceo": "Mara Fenn",
-    "ceoSince": 1931,
+    "ceo": "Halden Roe",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.59,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82516,
+    "lastEventCycle": 82529,
     "events": [
       {
         "cycle": 0,
@@ -878,6 +888,14 @@
         "effects": {
           "manufacturing": -0.22
         }
+      },
+      {
+        "cycle": 82529,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Carrowforge CEO Mara Fenn Steps Down Amid Testing-Records Probe",
+        "body": "Mara Fenn, who led Carrowforge for nearly a century, resigned Wednesday as investigators widened their inquiry into falsified machine-testing certificates spanning three product lines. The board named longtime quality director Halden Roe as interim chief, vowing a clean-sheet audit of every certification issued in the past five years. Shares of the manufacturer have been battered since the probe surfaced.",
+        "effects": {}
       }
     ]
   },
@@ -892,7 +910,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82516,
+    "lastEventCycle": 82529,
     "events": [
       {
         "cycle": 0,
@@ -908,6 +926,16 @@
         "size": "standard",
         "head": "Carrowwell Posts Record Quarter as Material Handling Orders Surge",
         "body": "CEO Theo Thorne reported revenue of $1.4 billion, up 11% year over year, driven by strong demand for conveyor and lift systems amid rival Carrowforge's troubles. The auto parts division also rebounded after a soft prior quarter. Thorne announced a modest capacity boost at two plants to meet the inflow.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82529,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Carrowwell Breaks Ground on New Material Handling Plant",
+        "body": "Riding last quarter's record orders, Carrowwell unveiled plans for a 600,000-square-foot assembly plant in the Eastmere industrial corridor, expected to add 1,400 jobs by 2028. CEO Theo Thorne framed the move as a measured response to surging conveyor and lift demand rather than a gamble, noting the facility is already 40% pre-booked. Construction begins next quarter.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -1077,7 +1105,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82524,
+    "lastEventCycle": 82529,
     "events": [
       {
         "cycle": 0,
@@ -1106,6 +1134,16 @@
         "effects": {
           "technology": 0.22
         }
+      },
+      {
+        "cycle": 82529,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Castlestone Earnings Surge on Vellmont-Era Order Book",
+        "body": "Castlestone reported quarterly revenue up 31% as deliveries under its landmark supply agreement began flowing, with compute backlog reaching a record 18-month horizon. CEO Iris Garr touted margins fattened by the high-end Vellmont line but warned that meeting demand would require a costly capacity push. Operating profit beat consensus by a wide margin.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -1120,7 +1158,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82517,
+    "lastEventCycle": 82529,
     "events": [
       {
         "cycle": 0,
@@ -1138,6 +1176,16 @@
         "body": "Cranecraft signed a five-year agreement to supply raw spun fiber to a consortium of apparel mills, a deal estimated at 240 million per year. Mira Garr called the arrangement a natural extension of the company's field-to-loom model, locking in steady volume through the next harvest cycles.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82529,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Posts Steady Gains as Textile Contract Ramps",
+        "body": "Cranecraft delivered modest single-digit revenue growth this quarter as shipments under its multi-year Garment Belt deal began contributing meaningfully. CEO Mira Garr credited disciplined loom utilization and stable farm-equipment demand for the result. The company reaffirmed its full-year outlook.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -1774,7 +1822,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82519,
+    "lastEventCycle": 82529,
     "events": [
       {
         "cycle": 0,
@@ -1792,6 +1840,16 @@
         "body": "Iris Marrow staged a sold-out reveal for the Meridian Tourbillon, a limited run of 250 pieces priced from $480,000, calling it 'the finest movement we have ever signed our name to.' The launch caps an aggressive year of brand pushes, with Marrow betting the high-margin line will reshape Halcrest's standing at the top of the timepiece market.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82529,
+        "kind": "award",
+        "size": "flash",
+        "head": "Halcrest Meridian Tourbillon Takes Top Honor at Crown Watch Salon",
+        "body": "The Meridian Tourbillon, Halcrest's costliest release in decades, won the Grand Complication prize at the annual Crown Watch Salon, beating a crowded field of rivals. CEO Iris Marrow called the trophy proof that 'patience and price can still share a wrist.' The maker said the recognition has lengthened its waiting list.",
+        "effects": {
+          "luxury": 0.06
         }
       }
     ]
@@ -1840,7 +1898,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82519,
+    "lastEventCycle": 82529,
     "events": [
       {
         "cycle": 0,
@@ -1858,6 +1916,16 @@
         "body": "Halcyon reported quarterly revenue of $1.34 billion, up 9% year-on-year, with operating margin widening to 14.2% on improved fiber costs. CEO Dorian Ashby credited steady gains in sealed-shipping orders and confirmed two new regional distribution hubs would open before year-end.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82529,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Halcyon Industries Adds Automated Line at Northgate Hub",
+        "body": "Halcyon Industries quietly commissioned a second high-speed packaging line at its Northgate distribution hub, lifting regional capacity by an estimated 20%. CEO Dorian Ashby said the addition supports rising volumes without straining margins, consistent with the firm's steady expansion approach. No major headcount changes were announced.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -2251,7 +2319,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82520,
+    "lastEventCycle": 82529,
     "events": [
       {
         "cycle": 0,
@@ -2269,6 +2337,16 @@
         "body": "Kessel Drive pulled the covers off its flagship 'Meridian' touring model, paired with a new high-capacity storage cell promising 30% longer service life. CEO Dorian Brandt staged the launch before 2,000 guests, claiming pre-orders topped 6,500 units within 48 hours — the company's biggest rollout in a decade.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82529,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Kessel Drive Lands Fleet Order for Long-Range Touring Line",
+        "body": "Kessel Drive secured a 12,000-unit order from a national coach operator for its newly launched long-range touring vehicle, its biggest single fleet commitment in years. CEO Dorian Brandt called it validation of the splashy reveal, promising first deliveries within nine months. The deal includes a multi-year service and battery-storage maintenance package.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
