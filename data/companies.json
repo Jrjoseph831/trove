@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82532,
     "events": [
       {
         "cycle": 0,
@@ -26,6 +26,16 @@
         "size": "standard",
         "head": "Aldouscraft Lands Grid-Modernization Supply Contract",
         "body": "Aldouscraft Mfg. has been named primary cable supplier for the Verrin Valley transmission upgrade, a five-year agreement valued at 340 million credits. CEO Soren Ashby called the award 'a natural fit for our high-tension lines,' noting the contract will keep the Eastfield plant at full capacity through 1934.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82532,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aldouscraft Posts Solid Quarter as Grid Contract Ramps",
+        "body": "Aldouscraft Mfg. reported revenue up 14% on early deliveries under its grid-modernization supply contract, with wire and cable volumes hitting their highest level in six years. CEO Soren Ashby credited disciplined backlog management and steady mill utilization. The firm reaffirmed full-year guidance, citing multi-year visibility from the contract.",
         "effects": {
           "construction": 0.13
         }
@@ -76,7 +86,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82532,
     "events": [
       {
         "cycle": 0,
@@ -92,6 +102,16 @@
         "size": "standard",
         "head": "Aldousmont Posts Stronger-Than-Expected Quarter on Sterile Goods Demand",
         "body": "Aldousmont & Sons reported quarterly revenue of 88 million credits, up 9 percent year-over-year, led by surging hospital orders for single-use surgical kits. Dunmore Calder credited tighter sterilization standards across the care sector for the durable demand.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82532,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aldousmont & Sons Wins Multi-Region Hospital Supply Agreement",
+        "body": "Aldousmont & Sons signed a three-year agreement to supply sterile consumables to the Carrowmere Health network, covering 41 facilities and an estimated 90 million units annually. CEO Dunmore Calder said the deal builds on last quarter's demand surge and will be served from existing packaging lines. Terms were not disclosed, but the firm expects the contract to anchor steady volume through 1985.",
         "effects": {
           "medical": 0.13
         }
@@ -504,7 +524,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82525,
+    "lastEventCycle": 82532,
     "events": [
       {
         "cycle": 0,
@@ -532,6 +552,16 @@
         "body": "Bruncrest Works reported quarterly revenue of 612 million, up 23 percent, driven by the first full shipments under its Meridian Exchange supply agreement. CEO Petra Veldt told reporters the compute backlog now stretches eleven months and hinted at a second production line. Margins widened to 31 percent as the Meridian volume absorbed fixed plant costs.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82532,
+        "kind": "expansion",
+        "size": "major",
+        "head": "Bruncrest Works to Build Sprawling Compute Campus on Meridian Demand",
+        "body": "CEO Petra Veldt announced a 1.2-billion-unit expansion, breaking ground on a fourth fabrication campus in the Northvale district to meet surging volume under the Meridian Exchange pact. The site will add an estimated 3,400 jobs and double Bruncrest's annual compute output by its 1983 completion. Veldt called it 'the boldest bet of my career,' framing the project as a generational commitment despite warnings from rivals about overcapacity.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -1261,7 +1291,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82517,
+    "lastEventCycle": 82532,
     "events": [
       {
         "cycle": 0,
@@ -1280,6 +1310,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82532,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Cranegrove Secures Inland Corridor Earthworks Contract",
+        "body": "Cranegrove won a competitive bid for grading and excavation across the new Inland Corridor logistics route, a contract valued at roughly 310 million units over two years. CEO Vale Calder said the firm's recently opened third depot positions it to deliver without overextending crews. The win deepens Cranegrove's foothold in a region where rivals have stumbled.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -1294,7 +1334,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82517,
+    "lastEventCycle": 82532,
     "events": [
       {
         "cycle": 0,
@@ -1310,6 +1350,16 @@
         "size": "standard",
         "head": "Drayton Freight Debuts Modular Pallet-Lift System",
         "body": "Drayton Freight rolled out its Featherlift modular handling units, designed to reconfigure for oversized and irregular loads on a single floor. Emil Holt described the launch as one of his bolder bets, targeting warehouses that currently juggle multiple specialized machines.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82532,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drayton Freight Lands Fleet Order for Modular Pallet-Lift System",
+        "body": "Drayton Freight signed its largest single order to date, supplying its modular pallet-lift system to the Vantor Distribution chain across 22 warehouses. CEO Emil Holt called the deal validation of the modular design's flexibility and quick deployment. Deliveries begin next quarter, with optional expansion tied to performance milestones.",
         "effects": {
           "logistics": 0.13
         }
@@ -1684,7 +1734,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82518,
+    "lastEventCycle": 82532,
     "events": [
       {
         "cycle": 0,
@@ -1702,6 +1752,16 @@
         "body": "Forgegrave Industries has launched its Pallet-Runner line of low-profile material handlers, designed for tight-aisle distribution centers. Petra Thorne said early field units logged zero dropped loads across 40,000 lifts in trials, underscoring the company's 'lift heavy, drop nothing' standard. Deliveries to anchor logistics clients begin next month.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82532,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Forgegrave Edges Past Estimates on Pallet-Runner Uptake",
+        "body": "Forgegrave Industries reported quarterly revenue up 7%, modestly beating expectations as early orders for its Pallet-Runner series outpaced internal forecasts. CEO Petra Thorne noted strong interest from mid-size distribution centers. Margins held steady amid stable component costs.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -2208,7 +2268,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82519,
+    "lastEventCycle": 82532,
     "events": [
       {
         "cycle": 0,
@@ -2224,6 +2284,16 @@
         "size": "standard",
         "head": "Hesperforge Supply Patents Higher-Yield Structural Beam Process",
         "body": "Sable Halloran announced a new rolling process that cuts material waste on structural beams by an estimated 11% while improving load tolerance. The company has filed patents in multiple markets and will pilot the method at its Korran mill, with Halloran calling it 'the kind of bold step we make once a decade.'",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82532,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Hesperforge Rolls Out High-Yield Beam Line From New Patent",
+        "body": "Hesperforge Supply began commercial production of its patented structural beams, claiming an 18% material-yield improvement and lower weight per span. CEO Sable Halloran said initial output is committed to three regional builders, with capacity expanding through next year. The launch marks Hesperforge's first major product line built entirely on in-house process patents.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -2902,7 +2972,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82521,
+    "lastEventCycle": 82532,
     "events": [
       {
         "cycle": 0,
@@ -2920,6 +2990,16 @@
         "body": "Regulators opened a review of Marrowstone's earthmoving operations following a partial embankment collapse at the Dellow Ridge cut that injured two workers. CEO Bram Halloran said the firm 'is cooperating fully and has paused grading at the site,' while internal crews assess slope stability. No fatalities were reported, but the probe could delay the $90 million highway job by weeks.",
         "effects": {
           "construction": -0.13
+        }
+      },
+      {
+        "cycle": 82532,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Marrowstone Build Sued Over Embankment Collapse as Probe Widens",
+        "body": "A coalition of contractors and a neighboring property owner filed a 240-million-unit suit against Marrowstone Build, alleging negligent shoring practices led to last month's embankment collapse. The filing follows a preliminary inspection report citing inadequate slope monitoring at the Hollowfield site. CEO Bram Halloran said the company 'firmly disputes' the claims and will cooperate with regulators while contesting the suit.",
+        "effects": {
+          "construction": -0.22
         }
       }
     ]

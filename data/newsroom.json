@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-28T18:31:09.084Z",
+  "generatedAt": "2026-06-29T01:02:10.218Z",
   "beats": [
+    {
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Aldouscraft Posts Solid Quarter as Grid Contract Ramps",
+      "body": "Aldouscraft Mfg. reported revenue up 14% on early deliveries under its grid-modernization supply contract, with wire and cable volumes hitting their highest level in six years. CEO Soren Ashby credited disciplined backlog management and steady mill utilization. The firm reaffirmed full-year guidance, citing multi-year visibility from the contract.",
+      "cycle": 82532,
+      "dur": 2
+    },
+    {
+      "company": "Aldousmont & Sons",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Aldousmont & Sons Wins Multi-Region Hospital Supply Agreement",
+      "body": "Aldousmont & Sons signed a three-year agreement to supply sterile consumables to the Carrowmere Health network, covering 41 facilities and an estimated 90 million units annually. CEO Dunmore Calder said the deal builds on last quarter's demand surge and will be served from existing packaging lines. Terms were not disclosed, but the firm expects the contract to anchor steady volume through 1985.",
+      "cycle": 82532,
+      "dur": 2
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "major",
+      "head": "Bruncrest Works to Build Sprawling Compute Campus on Meridian Demand",
+      "body": "CEO Petra Veldt announced a 1.2-billion-unit expansion, breaking ground on a fourth fabrication campus in the Northvale district to meet surging volume under the Meridian Exchange pact. The site will add an estimated 3,400 jobs and double Bruncrest's annual compute output by its 1983 completion. Veldt called it 'the boldest bet of my career,' framing the project as a generational commitment despite warnings from rivals about overcapacity.",
+      "cycle": 82532,
+      "dur": 8
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Cranegrove Secures Inland Corridor Earthworks Contract",
+      "body": "Cranegrove won a competitive bid for grading and excavation across the new Inland Corridor logistics route, a contract valued at roughly 310 million units over two years. CEO Vale Calder said the firm's recently opened third depot positions it to deliver without overextending crews. The win deepens Cranegrove's foothold in a region where rivals have stumbled.",
+      "cycle": 82532,
+      "dur": 2
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drayton Freight Lands Fleet Order for Modular Pallet-Lift System",
+      "body": "Drayton Freight signed its largest single order to date, supplying its modular pallet-lift system to the Vantor Distribution chain across 22 warehouses. CEO Emil Holt called the deal validation of the modular design's flexibility and quick deployment. Deliveries begin next quarter, with optional expansion tied to performance milestones.",
+      "cycle": 82532,
+      "dur": 2
+    },
+    {
+      "company": "Forgegrave Industries",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Forgegrave Edges Past Estimates on Pallet-Runner Uptake",
+      "body": "Forgegrave Industries reported quarterly revenue up 7%, modestly beating expectations as early orders for its Pallet-Runner series outpaced internal forecasts. CEO Petra Thorne noted strong interest from mid-size distribution centers. Margins held steady amid stable component costs.",
+      "cycle": 82532,
+      "dur": 1
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Hesperforge Rolls Out High-Yield Beam Line From New Patent",
+      "body": "Hesperforge Supply began commercial production of its patented structural beams, claiming an 18% material-yield improvement and lower weight per span. CEO Sable Halloran said initial output is committed to three regional builders, with capacity expanding through next year. The launch marks Hesperforge's first major product line built entirely on in-house process patents.",
+      "cycle": 82532,
+      "dur": 2
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Marrowstone Build Sued Over Embankment Collapse as Probe Widens",
+      "body": "A coalition of contractors and a neighboring property owner filed a 240-million-unit suit against Marrowstone Build, alleging negligent shoring practices led to last month's embankment collapse. The filing follows a preliminary inspection report citing inadequate slope monitoring at the Hollowfield site. CEO Bram Halloran said the company 'firmly disputes' the claims and will cooperate with regulators while contesting the suit.",
+      "cycle": 82532,
+      "dur": 8
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -10,16 +90,6 @@
       "body": "Mira Thorne raised full-year output guidance after Hollowmere's fully-owned storage fields delivered a 14 percent jump in dispatchable capacity. Quarterly revenue reached $2.1 billion, beating consensus by $180 million, with management citing record availability through peak demand. Thorne hinted at fresh acquisition talks, noting the balance sheet 'has room to move.'",
       "cycle": 82531,
       "dur": 2
-    },
-    {
-      "company": "Caldercraft Holdings",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Caldercraft Holdings Rolls Out Reinforced Tradesman Tool Line",
-      "body": "Vale Fenn introduced the Tradesman Pro hand-tool range, the first product refresh to draw textile-reinforced grips from the company's expanded mills. The line spans 38 hardware items aimed at professional users and ships to retailers next month. Fenn described it as 'a steady step, the way we prefer them.'",
-      "cycle": 82531,
-      "dur": 1
     },
     {
       "company": "Castlehold",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "flash",
-      "head": "Korrwright Works Velloux Heritage Series Wins Carrowmore Craft Prize",
-      "body": "The Velloux Heritage Series took top honors in the enamel-dial category at the annual Carrowmore Craft Prize, the first such recognition since Korrwright absorbed Velloux. Judges praised the restored kiln-firing technique recovered from Velloux's archives. Dunmore Carrow called the award 'proof the heritage was worth buying.'",
-      "cycle": 82531,
-      "dur": 1
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "expansion",
@@ -79,16 +139,6 @@
       "head": "Lhaus Industries Breaks Ground on Second Driveline Line at Ferrlands",
       "body": "Cole Brandt confirmed a $410 million expansion at the Ferrlands plant, doubling axle output to meet commitments under the Marwick Motors pact. The addition is expected to add 1,200 jobs by the second quarter and lift Korrick Axle capacity by roughly 60 percent. Brandt told reporters the firm is 'already scouting the next bolt-on,' fueling speculation of further driveline deals.",
       "cycle": 82531,
-      "dur": 2
-    },
-    {
-      "company": "Brunforge Holdings",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Brunforge Holdings Folds Vellan Lines Into New Home Division",
-      "body": "Brunforge formally integrated Vellan & Co. into a newly created Home & Table division, combining tableware, household goods and fine goods under one banner. CEO Kestrel Bramm said the consolidation should yield $22 million in annual cost savings by 2028 and open shared retail channels. The quiet reorganization reflects Bramm's steady acquire-and-integrate approach.",
-      "cycle": 82530,
       "dur": 2
     },
     {
@@ -102,36 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Carrowcyon & Sons Lifts Margins as Transit Lighting Deal Ramps",
-      "body": "The household-goods house reported quarterly revenue up 11% to $218 million, with lighting volumes climbing as the regional transit contract entered full installation. CEO Cole Brandt credited disciplined sourcing and steady household demand, raising the full-year outlook modestly. Management noted lighting now accounts for nearly a third of segment sales.",
-      "cycle": 82530,
-      "dur": 2
-    },
-    {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drossware Industries Secures National Packaging Contract With Grocer Alliance",
-      "body": "Building on its strong quarter, Drossware signed a multi-year packaging supply agreement with the Fennmark Grocers Alliance covering more than 900 stores. CEO Nadia Wold pegged the deal's value near $140 million and said it locks in volume for its newest sustainable packaging plant. Wold called it proof that 'the unglamorous keeps the shelves stocked.'",
-      "cycle": 82530,
-      "dur": 2
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Gromford Works Extends Aurelian Line With Limited Caldwyck Edition",
-      "body": "Capitalizing on its new flagship atelier, Gromford Works unveiled a 200-piece Aurelian Caldwyck Edition timepiece priced from $58,000, with engraving exclusive to the boutique. CEO Mira Ashby said pre-orders for the run filled within the opening week. The launch deepens the house's push into top-tier collector demand following its Piece of the Year honor.",
-      "cycle": 82530,
-      "dur": 2
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "restructure",
@@ -140,16 +160,6 @@
       "body": "Newly installed chief Dahlia Renn announced a sweeping restructuring that cuts Northgate's planned capacity by 40% and folds two regional compute units into a single division, alongside roughly 1,200 job reductions. Renn framed the move as 'clearing the wreckage' of the overrun, taking a further $310 million charge while pledging the trimmed campus will reach first output by mid-2027. The board signaled patience, but several units now report directly to Renn as she consolidates control.",
       "cycle": 82530,
       "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Halhold Works Wins Regional Hospital Network Supply Agreement for Verity Line",
-      "body": "The Meridian Health consortium named Halhold Works its primary bedside-monitoring supplier in a five-year deal covering 28 facilities, a vote of confidence following the Verity redesign. CEO Nadia Brandt said the agreement is valued near $94 million and includes a service contract for the new display modules. The win marks a recovery milestone after the earlier recall.",
-      "cycle": 82530,
-      "dur": 2
     },
     {
       "company": "Carrowforge",
@@ -209,26 +219,6 @@
       "head": "Lhaus Industries Strikes Landmark Driveline Pact With Vehicle Giant Marwick Motors",
       "body": "Lhaus Industries has signed a seven-year, 1.4-billion supply agreement to fit Korrick-built axles and drivelines across Marwick Motors' entire hauler range. CEO Cole Brandt called it 'the deal the Korrick acquisition was built for,' noting the reopened Ferrlands plant will run at full capacity by spring. The contract instantly makes Lhaus the largest independent driveline supplier in the region.",
       "cycle": 82525,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Castlestone Signs Landmark Supply Agreement After Vellmont Record",
-      "body": "Riding momentum from its record at the Vellmont Showcase, Castlestone inked a $2.1 billion, five-year compute supply deal with Harrowgate Networks, its largest contract ever. CEO Iris Garr called it 'proof the carving holds under load,' pledging dedicated capacity at two plants. Shares of attention turned sharply as rivals scrambled to respond.",
-      "cycle": 82524,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Halhold Systems Names New Chief as Aldous Departs Amid Northgate Fallout",
-      "body": "Following the cost overruns that triggered last quarter's charge, longtime CEO Cora Aldous has stepped down, ending a turbulent 50-year tenure. The board appointed veteran operations chief Dahlia Renn to stabilize the troubled Northgate campus and restore confidence. Renn pledged a full review of the project's budget within ninety days.",
-      "cycle": 82524,
       "dur": 8
     }
   ]
