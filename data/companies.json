@@ -53,7 +53,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82533,
     "events": [
       {
         "cycle": 0,
@@ -71,6 +71,16 @@
         "body": "Aldouscyon introduced its Meridian series of warm-output bulbs, rated for 12,000 hours of service. Petra Mercer said early retail orders covered three regional chains, with broader distribution expected by the spring buying season.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82533,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aldouscyon Secures Citywide Streetlight Conversion in Vereldt",
+        "body": "Aldouscyon has signed a 12-year supply agreement with the Vereldt municipal works office to convert roughly 84,000 public lamps to its Long-Life Filament range. CEO Petra Mercer said the deal locks in steady replacement revenue and builds on early filament sales, with first installations slated for the spring works season.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -873,7 +883,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82533,
     "events": [
       {
         "cycle": 0,
@@ -889,6 +899,16 @@
         "size": "standard",
         "head": "Calderworks Tops Forecasts as Urban Building Demand Holds",
         "body": "Calderworks Holdings reported quarterly profit of 122 million credits, beating expectations on strong structural-material shipments to three metro construction projects. Kestrel Halloran said the firm is weighing capacity additions but will move only as committed orders justify the outlay.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82533,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Calderworks Named Primary Supplier for Tessen Ridge Towers",
+        "body": "Calderworks Holdings won the structural materials contract for the four-tower Tessen Ridge development, valued at an estimated 310 million. CEO Kestrel Halloran said sustained urban demand, reflected in last quarter's beat, gave the firm confidence to commit dedicated pour capacity through 2029.",
         "effects": {
           "construction": 0.13
         }
@@ -2035,7 +2055,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82519,
+    "lastEventCycle": 82533,
     "events": [
       {
         "cycle": 0,
@@ -2051,6 +2071,16 @@
         "size": "standard",
         "head": "Halcrow & Vance Lands Earthmoving Contract for Vetask Basin Project",
         "body": "Mira Skarn secured a $610 million multi-year deal to supply and operate excavation fleets for the Veask Basin water-management works, beating two rival bidders. The contract guarantees minimum equipment-hours through 2031 and includes an option for fleet expansion that Skarn described as 'patience finally paying its dividend.'",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82533,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrow & Vance Tops Estimates as Vetask Work Ramps",
+        "body": "Halcrow & Vance reported quarterly revenue of 188 million, ahead of the 171 million forecast, as early mobilization on the Vetask Basin project accelerated billing. CEO Mira Skarn credited disciplined fleet utilization and said excavation volumes should peak through the next two quarters.",
         "effects": {
           "construction": 0.13
         }
@@ -2311,7 +2341,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82519,
+    "lastEventCycle": 82533,
     "events": [
       {
         "cycle": 0,
@@ -2327,6 +2357,16 @@
         "size": "flash",
         "head": "Holtforge Group Posts Steady Quarter on Firm Cable Demand",
         "body": "Holtforge reported revenue of $792 million, modestly ahead of guidance, with wire and cable shipments holding flat-to-positive across all regions. CEO Yvette Bramm reaffirmed the full-year outlook and noted no change to capital plans.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82533,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Holtforge Group Introduces Reinforced Marine Cable Line",
+        "body": "Holtforge Group launched a corrosion-resistant marine cable series aimed at harbor and offshore installations. CEO Yvette Bramm said the line answers steady inquiries from coastal contractors and complements the firm's core wire business without disrupting existing capacity.",
         "effects": {
           "construction": 0.06
         }
@@ -2562,7 +2602,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82520,
+    "lastEventCycle": 82533,
     "events": [
       {
         "cycle": 0,
@@ -2578,6 +2618,16 @@
         "size": "standard",
         "head": "Kesselgrove Co. Posts Quiet Record Quarter on Machine Demand",
         "body": "Kesselgrove reported quarterly revenue of $84 million, up 11% year-on-year, driven by orders for its precision press lines. CEO Orla Steg credited 'steady, unglamorous discipline,' adding that the order backlog now stretches into next spring.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82533,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Kesselgrove Co. Debuts Modular Press Platform After Quiet Development",
+        "body": "Kesselgrove Co. revealed a modular industrial press platform that lets buyers reconfigure tooling in hours rather than days, the product of a multi-year internal program. CEO Orla Steg said early factory trials cut changeover downtime by 40 percent, positioning the platform to extend the firm's record machine-demand run.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -2628,7 +2678,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82520,
+    "lastEventCycle": 82533,
     "events": [
       {
         "cycle": 0,
@@ -2644,6 +2694,16 @@
         "size": "standard",
         "head": "Korrworks Wins Port Authority Handling Contract",
         "body": "Korrworks secured a contract to supply forklifts and conveyor systems to the Brevald Port Authority, valued at an estimated $22 million over three years. CEO Rhys Throne said the win positions the company to bid on two adjacent terminal upgrades expected next year.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82533,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrworks Opens Second Handling Depot Near Brae Harbor",
+        "body": "Korrworks broke ground on a 40,000-square-meter handling depot adjacent to the Brae Harbor freight corridor, expanding capacity to serve its new Port Authority contract. CEO Rhys Throne said the facility will add 220 jobs and shorten turnaround times on bulk transfers by an estimated third once operational next year.",
         "effects": {
           "logistics": 0.13
         }
@@ -2939,7 +2999,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82521,
+    "lastEventCycle": 82533,
     "events": [
       {
         "cycle": 0,
@@ -2957,6 +3017,16 @@
         "body": "Marrowmoor reported quarterly revenue of $612 million, up 9% year over year, with margins lifted by its in-house cleaning and linen operations. CEO Dorian Steg credited 'disciplined cost control and a few rooms more sold each night,' and reaffirmed plans to add 1,400 rooms across two regions. The result beat internal guidance by a modest margin.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82533,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Adds Two Property Servicing Contracts",
+        "body": "Marrowmoor Holdings extended its cleaning and household-goods supply operations to two regional hotel chains totaling 1,400 rooms. CEO Dorian Steg described the additions as a continuation of the quiet occupancy-driven growth that fueled last quarter's beat.",
+        "effects": {
+          "hospitality": 0.06
         }
       }
     ]
@@ -3378,7 +3448,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82522,
+    "lastEventCycle": 82533,
     "events": [
       {
         "cycle": 0,
@@ -3395,6 +3465,16 @@
         "head": "Thaldale Group CEO Sable Wold Steps Down After Boardroom Clash",
         "body": "Sable Wold resigned abruptly after 41 years leading the value-tool maker, following reported disagreements with the board over an aggressive overseas expansion plan. The company named operations chief Renna Voss as interim chief executive, pledging continuity for its budget-conscious customers. Shares wobbled on the surprise departure before steadying.",
         "effects": {}
+      },
+      {
+        "cycle": 82533,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Thaldale Group Unveils Turnaround Plan Under New CEO Renna Voss",
+        "body": "Newly installed CEO Renna Voss announced a sweeping restructuring that will consolidate Thaldale's hand-tool and fastener lines into three regional hubs, closing two aging workshops. Voss framed the move as cleaning up after the boardroom turmoil that pushed out predecessor Sable Wold, projecting 18 million in annual savings despite a one-time charge of 25 million.",
+        "effects": {
+          "consumer": -0.13
+        }
       }
     ]
   },
