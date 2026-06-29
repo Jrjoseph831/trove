@@ -1559,7 +1559,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82518,
+    "lastEventCycle": 82534,
     "events": [
       {
         "cycle": 0,
@@ -1575,6 +1575,16 @@
         "size": "standard",
         "head": "Dunmorewright Lands Twin-Tower District Contract Worth 340 Million",
         "body": "Dunmorewright Industries has secured the earthmoving and full plumbing package for the Halvers Bay mixed-use development, a 340 million credit award spanning four years. CEO Emil Skarn called it 'a job that starts in the dirt and finishes at the tap,' noting the firm will field its largest single excavation crew in a decade. Site clearing begins next quarter.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82534,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Dunmorewright Lifts Margins as Twin-Tower Work Ramps Up",
+        "body": "Dunmorewright posted operating profit of 96 million, ahead of estimates, as earthmoving crews mobilized on its 340-million Twin-Tower District contract. Emil Skarn highlighted steady plumbing and fixtures demand and reaffirmed full-year guidance. The order book now stands at a record 1.4 billion.",
         "effects": {
           "construction": 0.13
         }
@@ -2721,7 +2731,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82521,
+    "lastEventCycle": 82534,
     "events": [
       {
         "cycle": 0,
@@ -2737,6 +2747,16 @@
         "size": "standard",
         "head": "Korrwright Group Lands Frame Contract for Verant Tower Cluster",
         "body": "Korrwright will supply structural beams and an estimated 4,200 miles of wire and cable for the six-tower Verant district development, a deal valued at $1.8 billion over four years. CEO Halden Fenn called the win 'the kind of anchor project that fills a decade,' noting deliveries begin next quarter. The contract edges out two rival suppliers who had held the regional account since the 1930s.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82534,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Group Posts Strong Quarter as Verant Frame Work Begins",
+        "body": "Korrwright reported revenue of 1.2 billion, up 14% year-on-year, with structural materials orders climbing as steel framing for the Verant Tower Cluster moved into early delivery. Halden Fenn credited disciplined input contracts and noted wire and cable backlogs now stretch eleven months. Margins widened to 18.3% on firmer pricing.",
         "effects": {
           "construction": 0.13
         }
@@ -2966,7 +2986,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82521,
+    "lastEventCycle": 82534,
     "events": [
       {
         "cycle": 0,
@@ -2982,6 +3002,16 @@
         "size": "flash",
         "head": "Marrowcyon Rolls Out Hardwear Fixture Line for Rentals",
         "body": "Marrowcyon introduced its Hardwear series of corrosion-resistant faucets and valve sets aimed at high-turnover rental housing, priced about 15% below its premium range. CEO Theo Orne said early orders from two property-management chains were 'steady, as expected.' The line ships nationwide within the month.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82534,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Edges Past Estimates on Rental Fixture Uptake",
+        "body": "Marrowcyon reported a modest beat with quarterly revenue of 740 million, helped by early traction in its Hardwear rental-fixture line. Theo Orne noted steady apparel sales and described demand as 'reliable rather than flashy.' Guidance was left unchanged.",
         "effects": {
           "consumer": 0.06
         }
@@ -3309,14 +3339,14 @@
     "aiOwned": true,
     "homeSector": "logistics",
     "founded": 1959,
-    "ceo": "Lena Calder",
-    "ceoSince": 1959,
+    "ceo": "Marek Tovin",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.58,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82522,
+    "lastEventCycle": 82534,
     "events": [
       {
         "cycle": 0,
@@ -3335,6 +3365,14 @@
         "effects": {
           "logistics": -0.13
         }
+      },
+      {
+        "cycle": 82534,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Skarnvale Ousts Lena Calder After Second Straight Stumble",
+        "body": "Skarnvale's board removed chief executive Lena Calder following a turbulent year capped by missed freight targets and a 9% slide in handling volumes. The company named operations veteran Marek Tovin to steady its material-handling division and review its cost base. Shares had drifted lower for three consecutive quarters amid investor frustration.",
+        "effects": {}
       }
     ]
   },
@@ -3349,7 +3387,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82522,
+    "lastEventCycle": 82534,
     "events": [
       {
         "cycle": 0,
@@ -3365,6 +3403,16 @@
         "size": "standard",
         "head": "Steg Tooling Tops Forecasts on Auto-Parts Surge",
         "body": "Steg Tooling posted quarterly revenue of $390 million, up 14% year over year, beating estimates as auto-parts and fastener volumes climbed. CEO Iris Vossen credited disciplined inventory management and new contracts with three vehicle assemblers. The firm raised its full-year outlook modestly.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82534,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Steg Tooling Opens Second Fastener Plant to Meet Auto Demand",
+        "body": "Steg Tooling broke ground on a 180-million fastener and fixings facility, doubling capacity after auto-parts orders outran existing lines. Iris Vossen said the plant would add 600 jobs and come online within eighteen months. The move follows a quarter in which the company topped forecasts on surging vehicle-component sales.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -3598,7 +3646,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82527,
+    "lastEventCycle": 82534,
     "events": [
       {
         "cycle": 0,
@@ -3624,6 +3672,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Folds Bellmont Into New Leather Atelier",
         "body": "Following its acquisition, Varnvale & Sons has opened a dedicated leathercraft atelier at its Harrowgate flagship, retaining 140 Bellmont artisans under master craftsman Edmund Crale. Bram Wold framed the move as the start of a 'house of houses,' with leather goods set to debut alongside the spring timepiece line. The company is committing £18 million to retool the workshop floors.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82534,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale & Sons Debuts First Bellmont-Crafted Timepiece Collection",
+        "body": "Varnvale unveiled the Meridian line, its first series pairing in-house movements with leatherwork from the newly folded Bellmont atelier. Bram Wold said the collection, priced from 4,200, marks the start of a broader push to integrate fine goods across its houses. Initial production was capped at 3,000 pieces.",
         "effects": {
           "luxury": 0.13
         }
@@ -3793,7 +3851,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82523,
+    "lastEventCycle": 82534,
     "events": [
       {
         "cycle": 0,
@@ -3809,6 +3867,16 @@
         "size": "major",
         "head": "Vossenspire Holdings hit by cascading grid failure across two regions",
         "body": "A substation fault triggered rolling blackouts affecting an estimated 1.2 million customers for up to 14 hours, the worst disruption in the company's history. CEO Kestrel Calder apologized publicly and pledged an independent review, while regulators opened an inquiry into maintenance records. The company warned of compensation costs and possible penalties weighing on the current quarter.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82534,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Regulators Open Probe Into Vossenspire After Two-Region Blackout",
+        "body": "Energy authorities launched a formal investigation into Vossenspire Holdings over last month's cascading grid failure that left two regions dark for nearly eleven hours. Kestrel Calder pledged full cooperation and announced an external review of power and storage controls. The company faces potential penalties and mandated infrastructure upgrades.",
         "effects": {
           "energy": -0.22
         }
@@ -3968,7 +4036,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82524,
+    "lastEventCycle": 82534,
     "events": [
       {
         "cycle": 0,
@@ -3986,6 +4054,16 @@
         "body": "Woldmark introduced its Halcyon server family, promising 35% better throughput per rack than its prior generation. CEO Cole Carrow took the stage personally, declaring the launch 'the boring revolution our customers actually asked for.' Volume shipments are slated for early next quarter.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82534,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Woldmark Wins Landmark Halcyon Supply Pact Worth 2.1 Billion",
+        "body": "Woldmark signed a five-year agreement to supply its newly launched Halcyon compute line to data infrastructure operator Brennan Yards, in a deal valued at 2.1 billion. Cole Carrow called it the largest single order in company history and said three new fabrication shifts would be added to meet demand. Delivery begins next quarter.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]

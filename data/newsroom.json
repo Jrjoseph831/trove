@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-29T07:54:38.705Z",
+  "generatedAt": "2026-06-29T13:37:57.039Z",
   "beats": [
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Dunmorewright Lifts Margins as Twin-Tower Work Ramps Up",
+      "body": "Dunmorewright posted operating profit of 96 million, ahead of estimates, as earthmoving crews mobilized on its 340-million Twin-Tower District contract. Emil Skarn highlighted steady plumbing and fixtures demand and reaffirmed full-year guidance. The order book now stands at a record 1.4 billion.",
+      "cycle": 82534,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrwright Group Posts Strong Quarter as Verant Frame Work Begins",
+      "body": "Korrwright reported revenue of 1.2 billion, up 14% year-on-year, with structural materials orders climbing as steel framing for the Verant Tower Cluster moved into early delivery. Halden Fenn credited disciplined input contracts and noted wire and cable backlogs now stretch eleven months. Margins widened to 18.3% on firmer pricing.",
+      "cycle": 82534,
+      "dur": 2
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowcyon Edges Past Estimates on Rental Fixture Uptake",
+      "body": "Marrowcyon reported a modest beat with quarterly revenue of 740 million, helped by early traction in its Hardwear rental-fixture line. Theo Orne noted steady apparel sales and described demand as 'reliable rather than flashy.' Guidance was left unchanged.",
+      "cycle": 82534,
+      "dur": 1
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Skarnvale Ousts Lena Calder After Second Straight Stumble",
+      "body": "Skarnvale's board removed chief executive Lena Calder following a turbulent year capped by missed freight targets and a 9% slide in handling volumes. The company named operations veteran Marek Tovin to steady its material-handling division and review its cost base. Shares had drifted lower for three consecutive quarters amid investor frustration.",
+      "cycle": 82534,
+      "dur": 8
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Steg Tooling Opens Second Fastener Plant to Meet Auto Demand",
+      "body": "Steg Tooling broke ground on a 180-million fastener and fixings facility, doubling capacity after auto-parts orders outran existing lines. Iris Vossen said the plant would add 600 jobs and come online within eighteen months. The move follows a quarter in which the company topped forecasts on surging vehicle-component sales.",
+      "cycle": 82534,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Varnvale & Sons Debuts First Bellmont-Crafted Timepiece Collection",
+      "body": "Varnvale unveiled the Meridian line, its first series pairing in-house movements with leatherwork from the newly folded Bellmont atelier. Bram Wold said the collection, priced from 4,200, marks the start of a broader push to integrate fine goods across its houses. Initial production was capped at 3,000 pieces.",
+      "cycle": 82534,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Regulators Open Probe Into Vossenspire After Two-Region Blackout",
+      "body": "Energy authorities launched a formal investigation into Vossenspire Holdings over last month's cascading grid failure that left two regions dark for nearly eleven hours. Kestrel Calder pledged full cooperation and announced an external review of power and storage controls. The company faces potential penalties and mandated infrastructure upgrades.",
+      "cycle": 82534,
+      "dur": 8
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Woldmark Wins Landmark Halcyon Supply Pact Worth 2.1 Billion",
+      "body": "Woldmark signed a five-year agreement to supply its newly launched Halcyon compute line to data infrastructure operator Brennan Yards, in a deal valued at 2.1 billion. Cole Carrow called it the largest single order in company history and said three new fabrication shifts would be added to meet demand. Delivery begins next quarter.",
+      "cycle": 82534,
+      "dur": 8
+    },
     {
       "company": "Aldouscyon",
       "sector": "consumer",
@@ -32,16 +112,6 @@
       "dur": 2
     },
     {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Holtforge Group Introduces Reinforced Marine Cable Line",
-      "body": "Holtforge Group launched a corrosion-resistant marine cable series aimed at harbor and offshore installations. CEO Yvette Bramm said the line answers steady inquiries from coastal contractors and complements the firm's core wire business without disrupting existing capacity.",
-      "cycle": 82533,
-      "dur": 1
-    },
-    {
       "company": "Kesselgrove Co.",
       "sector": "manufacturing",
       "kind": "breakthrough",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Adds Two Property Servicing Contracts",
-      "body": "Marrowmoor Holdings extended its cleaning and household-goods supply operations to two regional hotel chains totaling 1,400 rooms. CEO Dorian Steg described the additions as a continuation of the quiet occupancy-driven growth that fueled last quarter's beat.",
-      "cycle": 82533,
-      "dur": 1
-    },
-    {
       "company": "Thaldale Group",
       "sector": "consumer",
       "kind": "restructure",
@@ -79,26 +139,6 @@
       "head": "Thaldale Group Unveils Turnaround Plan Under New CEO Renna Voss",
       "body": "Newly installed CEO Renna Voss announced a sweeping restructuring that will consolidate Thaldale's hand-tool and fastener lines into three regional hubs, closing two aging workshops. Voss framed the move as cleaning up after the boardroom turmoil that pushed out predecessor Sable Wold, projecting 18 million in annual savings despite a one-time charge of 25 million.",
       "cycle": 82533,
-      "dur": 2
-    },
-    {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aldouscraft Posts Solid Quarter as Grid Contract Ramps",
-      "body": "Aldouscraft Mfg. reported revenue up 14% on early deliveries under its grid-modernization supply contract, with wire and cable volumes hitting their highest level in six years. CEO Soren Ashby credited disciplined backlog management and steady mill utilization. The firm reaffirmed full-year guidance, citing multi-year visibility from the contract.",
-      "cycle": 82532,
-      "dur": 2
-    },
-    {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Aldousmont & Sons Wins Multi-Region Hospital Supply Agreement",
-      "body": "Aldousmont & Sons signed a three-year agreement to supply sterile consumables to the Carrowmere Health network, covering 41 facilities and an estimated 90 million units annually. CEO Dunmore Calder said the deal builds on last quarter's demand surge and will be served from existing packaging lines. Terms were not disclosed, but the firm expects the contract to anchor steady volume through 1985.",
-      "cycle": 82532,
       "dur": 2
     },
     {
@@ -110,36 +150,6 @@
       "body": "CEO Petra Veldt announced a 1.2-billion-unit expansion, breaking ground on a fourth fabrication campus in the Northvale district to meet surging volume under the Meridian Exchange pact. The site will add an estimated 3,400 jobs and double Bruncrest's annual compute output by its 1983 completion. Veldt called it 'the boldest bet of my career,' framing the project as a generational commitment despite warnings from rivals about overcapacity.",
       "cycle": 82532,
       "dur": 8
-    },
-    {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Cranegrove Secures Inland Corridor Earthworks Contract",
-      "body": "Cranegrove won a competitive bid for grading and excavation across the new Inland Corridor logistics route, a contract valued at roughly 310 million units over two years. CEO Vale Calder said the firm's recently opened third depot positions it to deliver without overextending crews. The win deepens Cranegrove's foothold in a region where rivals have stumbled.",
-      "cycle": 82532,
-      "dur": 2
-    },
-    {
-      "company": "Drayton Freight",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drayton Freight Lands Fleet Order for Modular Pallet-Lift System",
-      "body": "Drayton Freight signed its largest single order to date, supplying its modular pallet-lift system to the Vantor Distribution chain across 22 warehouses. CEO Emil Holt called the deal validation of the modular design's flexibility and quick deployment. Deliveries begin next quarter, with optional expansion tied to performance milestones.",
-      "cycle": 82532,
-      "dur": 2
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Hesperforge Rolls Out High-Yield Beam Line From New Patent",
-      "body": "Hesperforge Supply began commercial production of its patented structural beams, claiming an 18% material-yield improvement and lower weight per span. CEO Sable Halloran said initial output is committed to three regional builders, with capacity expanding through next year. The launch marks Hesperforge's first major product line built entirely on in-house process patents.",
-      "cycle": 82532,
-      "dur": 2
     },
     {
       "company": "Marrowstone Build",
