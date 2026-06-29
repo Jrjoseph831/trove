@@ -139,7 +139,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82516,
+    "lastEventCycle": 82535,
     "events": [
       {
         "cycle": 0,
@@ -157,6 +157,16 @@
         "body": "CEO Mira Ashby introduced the 'Endurance' collection at the company's flagship showroom, featuring reinforced workwear backed by a 20-year repair guarantee. The line carries a premium price point but targets a growing market of buyers tired of disposable apparel. Initial wholesale orders covered 340 retail partners across four regions.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82535,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldousspire Group Edges Past Forecasts on Strong Heirloom Denim Debut",
+        "body": "Aldousspire reported quarterly sales of 96 million, narrowly beating expectations as the Heirloom Denim Line sold through its first production run within nine weeks. CEO Mira Ashby credited the brand's lifetime-repair guarantee for driving repeat interest. The company plans a modest second run while keeping inventory tight.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -491,7 +501,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82527,
+    "lastEventCycle": 82535,
     "events": [
       {
         "cycle": 0,
@@ -519,6 +529,16 @@
         "body": "Bruncraft posted quarterly revenue of £612 million, up 14% year on year, with the Foundry City Runabout clearing its first production run weeks ahead of schedule. Orla Marrow told reporters that order books for the compact were 'comfortably full into next year' and hinted at a second assembly line. Margins widened on stronger parts pricing.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82535,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Bruncraft Industries Strikes Fleet Deal to Supply 12,000 Runabouts to Halvenport Transit",
+        "body": "Bruncraft has signed a five-year agreement to deliver 12,000 Foundry City Runabouts to the Halvenport Transit Authority, its largest single fleet order on record at an estimated 840 million. CEO Orla Marrow called the deal 'the beginning of a wider municipal push,' hinting at talks with three additional regional authorities. The first 2,000 units are slated for delivery by spring.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -830,7 +850,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82527,
+    "lastEventCycle": 82535,
     "events": [
       {
         "cycle": 0,
@@ -868,6 +888,16 @@
         "body": "Calderforge announced it will decommission the original Embergate compute hall, source of last month's cooling failure, and redirect workloads to its newer second hall. Nadia Throne pledged £55 million toward modern cooling systems and a phased migration over six months. The company conceded the older hall had been 'running past its years.'",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82535,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Calderforge Opens Next-Generation Stormwell Hall to Replace Retired Embergate Capacity",
+        "body": "Calderforge brought its new Stormwell compute hall online, restoring and exceeding the capacity lost when the aging Embergate facility was retired after last quarter's cooling failure. CEO Nadia Throne said Stormwell features a redundant liquid-cooling system 'designed so a single fault can never take a hall offline again.' The facility represents a 520 million investment and triples Embergate's former throughput.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -1731,7 +1761,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82519,
+    "lastEventCycle": 82535,
     "events": [
       {
         "cycle": 0,
@@ -1749,6 +1779,16 @@
         "body": "CEO Theo Vossen confirmed a $240 million build-out at the Drennt Works facility, adding two cold-forming lines and an automated coating bay expected to lift fastener output by roughly 18% annually. The expansion follows three consecutive quarters of order backlog in the auto-parts division, and Vossen said full capacity should be reached within fourteen months.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82535,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Fennvale Mfg. Beats Guidance as Fastener Demand Holds Firm",
+        "body": "Fennvale posted quarterly revenue of 188 million, modestly ahead of guidance, supported by sustained auto-parts orders and early output from its third fastener line at Drennt Works. CEO Theo Vossen said the new line is ramping 'ahead of schedule' and should reach full capacity within two quarters. Margins improved slightly on better materials pricing.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -2212,7 +2252,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82530,
+    "lastEventCycle": 82535,
     "events": [
       {
         "cycle": 0,
@@ -2258,6 +2298,16 @@
         "size": "standard",
         "head": "Halhold Works Wins Regional Hospital Network Supply Agreement for Verity Line",
         "body": "The Meridian Health consortium named Halhold Works its primary bedside-monitoring supplier in a five-year deal covering 28 facilities, a vote of confidence following the Verity redesign. CEO Nadia Brandt said the agreement is valued near $94 million and includes a service contract for the new display modules. The win marks a recovery milestone after the earlier recall.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82535,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Works Debuts Verity Pro Bedside Suite for Critical Care",
+        "body": "Building on the redesigned Verity line, Halhold unveiled the Verity Pro suite, integrating patient monitoring with its medical-grade wire and cable systems into a single bedside console. CEO Nadia Brandt said the launch targets intensive-care wards and follows 'overwhelming demand' from the regional hospital network signed last quarter. Initial units ship within 60 days, with pricing starting at 18,500 per console.",
         "effects": {
           "technology": 0.13
         }
@@ -2933,7 +2983,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82527,
+    "lastEventCycle": 82535,
     "events": [
       {
         "cycle": 0,
@@ -2971,6 +3021,16 @@
         "body": "Marlgear signed a £240 million framework with manufacturing conglomerate Carrow Group to supply 90 Atlas Industrial Presses across eleven plants over three years, the largest order in the company's history. Halden Vossen called it 'the day the working floor changed hands,' staking Marlgear's expansion plans on the deal. Shares of the Drennan Mills supply chain are expected to ramp through next quarter.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82535,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Marlgear Supply Posts Record Quarter as Atlas Backlog Swells",
+        "body": "Marlgear reported quarterly revenue of 1.2 billion, up 31% year over year, driven entirely by Atlas Industrial Press demand from the Drennan and Carrow contracts. The order backlog now stretches 14 months, prompting CEO Halden Vossen to declare the press line 'the most important machine we have ever built.' Vossen also teased a second assembly site to ease the bottleneck.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -3148,7 +3208,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82521,
+    "lastEventCycle": 82535,
     "events": [
       {
         "cycle": 0,
@@ -3166,6 +3226,16 @@
         "body": "Ornewright Supply unveiled a 480,000-square-foot distribution hub in Caldmere to shorten delivery windows for farm inputs and jansan goods across the eastern corridor. CEO Rhys Throne said the site 'lets us reach a customer the same day we used to need two.' The hub adds about 250 jobs at full capacity.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82535,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Ornewright Supply Wins Multi-Year Farm Inputs Contract With Caldmere Growers Co-op",
+        "body": "Ornewright secured a three-year supply agreement with the Caldmere Growers Co-operative, valued near 210 million, leveraging its newly opened regional hub. The deal covers seed, fertilizer, and crop-care lines for more than 400 member farms. CEO Rhys Throne said the hub had 'paid for itself faster than projected,' signaling appetite for similar pacts in neighboring districts.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -3937,7 +4007,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82523,
+    "lastEventCycle": 82535,
     "events": [
       {
         "cycle": 0,
@@ -3955,6 +4025,16 @@
         "body": "The 480,000-square-foot facility expands the company's plumbing and food-service reach into the northern corridor, adding an estimated 350 jobs. CEO Bram Thorne said the hub trims average delivery times by a full day for contractors in the region. The investment totals roughly $145 million.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82535,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Vossenstead Supply Adds Plumbing Fittings Warehouse Adjacent to New Hub",
+        "body": "Vossenstead opened a dedicated fittings warehouse beside its recently completed third distribution hub, expanding cold-storage and fixtures capacity by 40%. CEO Bram Thorne described the move as 'a quiet step to keep pace with steady demand' across both its food service and plumbing lines. The facility is expected to add roughly 60 positions.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]

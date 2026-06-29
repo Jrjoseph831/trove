@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-29T13:37:57.039Z",
+  "generatedAt": "2026-06-29T18:47:44.739Z",
   "beats": [
+    {
+      "company": "Aldousspire Group",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldousspire Group Edges Past Forecasts on Strong Heirloom Denim Debut",
+      "body": "Aldousspire reported quarterly sales of 96 million, narrowly beating expectations as the Heirloom Denim Line sold through its first production run within nine weeks. CEO Mira Ashby credited the brand's lifetime-repair guarantee for driving repeat interest. The company plans a modest second run while keeping inventory tight.",
+      "cycle": 82535,
+      "dur": 1
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Bruncraft Industries Strikes Fleet Deal to Supply 12,000 Runabouts to Halvenport Transit",
+      "body": "Bruncraft has signed a five-year agreement to deliver 12,000 Foundry City Runabouts to the Halvenport Transit Authority, its largest single fleet order on record at an estimated 840 million. CEO Orla Marrow called the deal 'the beginning of a wider municipal push,' hinting at talks with three additional regional authorities. The first 2,000 units are slated for delivery by spring.",
+      "cycle": 82535,
+      "dur": 8
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Calderforge Opens Next-Generation Stormwell Hall to Replace Retired Embergate Capacity",
+      "body": "Calderforge brought its new Stormwell compute hall online, restoring and exceeding the capacity lost when the aging Embergate facility was retired after last quarter's cooling failure. CEO Nadia Throne said Stormwell features a redundant liquid-cooling system 'designed so a single fault can never take a hall offline again.' The facility represents a 520 million investment and triples Embergate's former throughput.",
+      "cycle": 82535,
+      "dur": 2
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Fennvale Mfg. Beats Guidance as Fastener Demand Holds Firm",
+      "body": "Fennvale posted quarterly revenue of 188 million, modestly ahead of guidance, supported by sustained auto-parts orders and early output from its third fastener line at Drennt Works. CEO Theo Vossen said the new line is ramping 'ahead of schedule' and should reach full capacity within two quarters. Margins improved slightly on better materials pricing.",
+      "cycle": 82535,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halhold Works Debuts Verity Pro Bedside Suite for Critical Care",
+      "body": "Building on the redesigned Verity line, Halhold unveiled the Verity Pro suite, integrating patient monitoring with its medical-grade wire and cable systems into a single bedside console. CEO Nadia Brandt said the launch targets intensive-care wards and follows 'overwhelming demand' from the regional hospital network signed last quarter. Initial units ship within 60 days, with pricing starting at 18,500 per console.",
+      "cycle": 82535,
+      "dur": 2
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Marlgear Supply Posts Record Quarter as Atlas Backlog Swells",
+      "body": "Marlgear reported quarterly revenue of 1.2 billion, up 31% year over year, driven entirely by Atlas Industrial Press demand from the Drennan and Carrow contracts. The order backlog now stretches 14 months, prompting CEO Halden Vossen to declare the press line 'the most important machine we have ever built.' Vossen also teased a second assembly site to ease the bottleneck.",
+      "cycle": 82535,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Ornewright Supply Wins Multi-Year Farm Inputs Contract With Caldmere Growers Co-op",
+      "body": "Ornewright secured a three-year supply agreement with the Caldmere Growers Co-operative, valued near 210 million, leveraging its newly opened regional hub. The deal covers seed, fertilizer, and crop-care lines for more than 400 member farms. CEO Rhys Throne said the hub had 'paid for itself faster than projected,' signaling appetite for similar pacts in neighboring districts.",
+      "cycle": 82535,
+      "dur": 2
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Vossenstead Supply Adds Plumbing Fittings Warehouse Adjacent to New Hub",
+      "body": "Vossenstead opened a dedicated fittings warehouse beside its recently completed third distribution hub, expanding cold-storage and fixtures capacity by 40%. CEO Bram Thorne described the move as 'a quiet step to keep pace with steady demand' across both its food service and plumbing lines. The facility is expected to add roughly 60 positions.",
+      "cycle": 82535,
+      "dur": 1
+    },
     {
       "company": "Dunmorewright Industries",
       "sector": "construction",
@@ -20,16 +100,6 @@
       "body": "Korrwright reported revenue of 1.2 billion, up 14% year-on-year, with structural materials orders climbing as steel framing for the Verant Tower Cluster moved into early delivery. Halden Fenn credited disciplined input contracts and noted wire and cable backlogs now stretch eleven months. Margins widened to 18.3% on firmer pricing.",
       "cycle": 82534,
       "dur": 2
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowcyon Edges Past Estimates on Rental Fixture Uptake",
-      "body": "Marrowcyon reported a modest beat with quarterly revenue of 740 million, helped by early traction in its Hardwear rental-fixture line. Theo Orne noted steady apparel sales and described demand as 'reliable rather than flashy.' Guidance was left unchanged.",
-      "cycle": 82534,
-      "dur": 1
     },
     {
       "company": "Skarnvale",
@@ -80,66 +150,6 @@
       "body": "Woldmark signed a five-year agreement to supply its newly launched Halcyon compute line to data infrastructure operator Brennan Yards, in a deal valued at 2.1 billion. Cole Carrow called it the largest single order in company history and said three new fabrication shifts would be added to meet demand. Delivery begins next quarter.",
       "cycle": 82534,
       "dur": 8
-    },
-    {
-      "company": "Aldouscyon",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Aldouscyon Secures Citywide Streetlight Conversion in Vereldt",
-      "body": "Aldouscyon has signed a 12-year supply agreement with the Vereldt municipal works office to convert roughly 84,000 public lamps to its Long-Life Filament range. CEO Petra Mercer said the deal locks in steady replacement revenue and builds on early filament sales, with first installations slated for the spring works season.",
-      "cycle": 82533,
-      "dur": 2
-    },
-    {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Calderworks Named Primary Supplier for Tessen Ridge Towers",
-      "body": "Calderworks Holdings won the structural materials contract for the four-tower Tessen Ridge development, valued at an estimated 310 million. CEO Kestrel Halloran said sustained urban demand, reflected in last quarter's beat, gave the firm confidence to commit dedicated pour capacity through 2029.",
-      "cycle": 82533,
-      "dur": 2
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcrow & Vance Tops Estimates as Vetask Work Ramps",
-      "body": "Halcrow & Vance reported quarterly revenue of 188 million, ahead of the 171 million forecast, as early mobilization on the Vetask Basin project accelerated billing. CEO Mira Skarn credited disciplined fleet utilization and said excavation volumes should peak through the next two quarters.",
-      "cycle": 82533,
-      "dur": 2
-    },
-    {
-      "company": "Kesselgrove Co.",
-      "sector": "manufacturing",
-      "kind": "breakthrough",
-      "size": "standard",
-      "head": "Kesselgrove Co. Debuts Modular Press Platform After Quiet Development",
-      "body": "Kesselgrove Co. revealed a modular industrial press platform that lets buyers reconfigure tooling in hours rather than days, the product of a multi-year internal program. CEO Orla Steg said early factory trials cut changeover downtime by 40 percent, positioning the platform to extend the firm's record machine-demand run.",
-      "cycle": 82533,
-      "dur": 2
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Korrworks Opens Second Handling Depot Near Brae Harbor",
-      "body": "Korrworks broke ground on a 40,000-square-meter handling depot adjacent to the Brae Harbor freight corridor, expanding capacity to serve its new Port Authority contract. CEO Rhys Throne said the facility will add 220 jobs and shorten turnaround times on bulk transfers by an estimated third once operational next year.",
-      "cycle": 82533,
-      "dur": 2
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Thaldale Group Unveils Turnaround Plan Under New CEO Renna Voss",
-      "body": "Newly installed CEO Renna Voss announced a sweeping restructuring that will consolidate Thaldale's hand-tool and fastener lines into three regional hubs, closing two aging workshops. Voss framed the move as cleaning up after the boardroom turmoil that pushed out predecessor Sable Wold, projecting 18 million in annual savings despite a one-time charge of 25 million.",
-      "cycle": 82533,
-      "dur": 2
     },
     {
       "company": "Bruncrest Works",
@@ -209,26 +219,6 @@
       "head": "Greywater Grid Signs Landmark Storage Pact to Anchor New Compute Campus",
       "body": "Greywater inked a 12-year, 4.1 billion agreement to supply storage and balancing capacity for a sprawling compute campus, the largest contract in the company's history. The deal leans on the record-density cells revealed at the Halloran Facility, with first banks due online within 18 months. Vale Halloran called it 'the moment Greywater stops selling power and starts selling certainty.'",
       "cycle": 82528,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Marlgear Supply Lands Landmark Atlas Order From Carrow Group",
-      "body": "Marlgear signed a £240 million framework with manufacturing conglomerate Carrow Group to supply 90 Atlas Industrial Presses across eleven plants over three years, the largest order in the company's history. Halden Vossen called it 'the day the working floor changed hands,' staking Marlgear's expansion plans on the deal. Shares of the Drennan Mills supply chain are expected to ramp through next quarter.",
-      "cycle": 82527,
-      "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Varnvale House Sued Over Ember Capsule Sourcing Disclosures",
-      "body": "A consumer coalition filed suit against Varnvale House, alleging the Ember Fine-Goods Capsule was marketed with origin claims the company could not substantiate. The complaint seeks £30 million and pulls directly from the scandal that erupted weeks ago; Petra Holt called the action 'opportunistic' but confirmed the capsule has been pulled from select counters pending review. An independent audit of suppliers is underway.",
-      "cycle": 82527,
       "dur": 8
     }
   ]
