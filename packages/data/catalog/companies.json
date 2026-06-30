@@ -362,7 +362,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82538,
     "events": [
       {
         "cycle": 0,
@@ -378,6 +378,16 @@
         "size": "flash",
         "head": "Blackmoor Adds Assembly Line at Holloway Works",
         "body": "Blackmoor commissioned a second assembly bay at its Holloway facility to handle rising orders for its heavy tillage equipment. Soren Dray framed the move as a measured response to a multi-year backlog, declining to forecast beyond current commitments.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82538,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Blackmoor Rolls Out Updated Holloway Seed-Drill Range",
+        "body": "Soren Dray introduced a refreshed line of seed drills assembled on the newly added Holloway line, emphasizing durability and serviceability over flash. The range targets long-tenure farm operators and carries Blackmoor's standard decade-long parts guarantee. Dray said early dealer interest was 'steady, as we like it.'",
         "effects": {
           "agriculture": 0.06
         }
@@ -458,7 +468,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82531,
+    "lastEventCycle": 82538,
     "events": [
       {
         "cycle": 0,
@@ -504,6 +514,16 @@
         "size": "standard",
         "head": "Boreas Power Lifts Annual Guidance as Hollowmere Runs at Full Tilt",
         "body": "Mira Thorne raised full-year output guidance after Hollowmere's fully-owned storage fields delivered a 14 percent jump in dispatchable capacity. Quarterly revenue reached $2.1 billion, beating consensus by $180 million, with management citing record availability through peak demand. Thorne hinted at fresh acquisition talks, noting the balance sheet 'has room to move.'",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82538,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Boreas Power Breaks Ground on Hollowmere Expansion Phase Two",
+        "body": "Mira Thorne announced a $1.9 billion buildout that will nearly double storage capacity at the wholly owned Hollowmere fields. The phase, slated for completion in 26 months, follows three straight quarters of guidance lifts and locks in long-term supply contracts with regional grid operators. Thorne hinted further bolt-on acquisitions could follow.",
         "effects": {
           "energy": 0.13
         }
@@ -574,7 +594,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82532,
+    "lastEventCycle": 82538,
     "events": [
       {
         "cycle": 0,
@@ -612,6 +632,16 @@
         "body": "CEO Petra Veldt announced a 1.2-billion-unit expansion, breaking ground on a fourth fabrication campus in the Northvale district to meet surging volume under the Meridian Exchange pact. The site will add an estimated 3,400 jobs and double Bruncrest's annual compute output by its 1983 completion. Veldt called it 'the boldest bet of my career,' framing the project as a generational commitment despite warnings from rivals about overcapacity.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82538,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Bruncrest Works Reels as Meridian Pact Probe Alleges Inflated Demand Figures",
+        "body": "Shares of Bruncrest tumbled after disclosures suggested the landmark Meridian Exchange contract relied on demand projections that internal documents flag as overstated. Petra Veldt, known for bold public bets, faces board scrutiny over whether the sprawling compute campus was greenlit on shaky volumes. An independent review has been launched, and Meridian said it is 'reassessing the relationship.'",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -670,7 +700,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82528,
+    "lastEventCycle": 82538,
     "events": [
       {
         "cycle": 0,
@@ -708,6 +738,16 @@
         "body": "Reeling from a bruising quarter, Brunmark moved its Power & Storage operation into a standalone unit with its own supply chain and dedicated cell lines. Yvette Calder said the carve-out would 'stop the Veyra ramp from starving the rest of the house,' and named pack production as the top fix. The reorganization affects roughly 2,600 staff across three plants.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82538,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunmark Motors Rebounds as Veyra Output Hits Stride",
+        "body": "Yvette Calder reported quarterly deliveries of 41,000 Veyra compacts, beating internal targets after the Power unit split stabilized pack supply. Margins recovered 180 basis points sequentially, and Calder said the standalone power division has cleared its order backlog. The turnaround eased concerns raised during the bruising ramp earlier this year.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -2259,7 +2299,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82530,
+    "lastEventCycle": 82538,
     "events": [
       {
         "cycle": 0,
@@ -2305,6 +2345,16 @@
         "body": "Newly installed chief Dahlia Renn announced a sweeping restructuring that cuts Northgate's planned capacity by 40% and folds two regional compute units into a single division, alongside roughly 1,200 job reductions. Renn framed the move as 'clearing the wreckage' of the overrun, taking a further $310 million charge while pledging the trimmed campus will reach first output by mid-2027. The board signaled patience, but several units now report directly to Renn as she consolidates control.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82538,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Systems Debuts Slimmed-Down Northgate Compute Tier",
+        "body": "CEO Dahlia Renn unveiled the Northgate Lite platform, a pared-back compute line built around the reset strategy after last quarter's overruns. The unit ships at a 22% lower price point than the original Northgate spec, and Renn told reporters the first 4,000 racks are already committed to early customers. Analysts called it a credible first step toward steadying the troubled program.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -2975,7 +3025,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82531,
+    "lastEventCycle": 82538,
     "events": [
       {
         "cycle": 0,
@@ -3023,6 +3073,16 @@
         "body": "Cole Brandt confirmed a $410 million expansion at the Ferrlands plant, doubling axle output to meet commitments under the Marwick Motors pact. The addition is expected to add 1,200 jobs by the second quarter and lift Korrick Axle capacity by roughly 60 percent. Brandt told reporters the firm is 'already scouting the next bolt-on,' fueling speculation of further driveline deals.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82538,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Lhaus Industries Acquires Power Rival Voss Cell in $6.4B Cash-and-Stock Deal",
+        "body": "Cole Brandt capped his acquisitive streak by buying battery maker Voss Cell, adding 12 gigawatt-hours of annual storage capacity and folding it into the Power & Storage arm. The deal, valued at $6.4 billion, pairs Voss's cell chemistry with the Ferrlands driveline expansion to create an integrated vehicle-and-energy supplier. Brandt framed the purchase as 'the spine of the next decade' for Lhaus.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -3392,7 +3452,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82522,
+    "lastEventCycle": 82538,
     "events": [
       {
         "cycle": 0,
@@ -3410,6 +3470,16 @@
         "body": "The 116-year-old toolmaker introduced its Heirloom Pro range, a 40-piece collection of wrenches, chisels and hammers backed by a lifetime replacement guarantee. CEO Cole Fenn said the line targets working tradespeople willing to pay a premium, with units priced 30% above the company's standard catalog. First shipments reach 4,200 hardware outlets next month.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82538,
+        "kind": "award",
+        "size": "flash",
+        "head": "Palettstone & Sons Wins Craftsmen's Guild Tool of the Year for Heirloom Pro",
+        "body": "The Heirloom Pro hand-tool line took top honors at the annual Craftsmen's Guild awards, cited for balance and longevity. Cole Fenn accepted the prize and noted the line has outsold its launch forecast by roughly 30%. The recognition burnishes Palettstone's heritage-quality positioning.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -3458,7 +3528,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82522,
+    "lastEventCycle": 82538,
     "events": [
       {
         "cycle": 0,
@@ -3476,6 +3546,16 @@
         "body": "The structural materials maker began construction on a 540,000-square-foot fastener facility in the Calderbridge industrial corridor, a $215 million investment expected to add 600 jobs. CEO Quinn Fenn said demand from high-rise contractors had stretched existing capacity to its limit. The plant is slated to open in 18 months.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82538,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrove & Sons Edges Past Estimates on Fastener Demand",
+        "body": "Quinn Fenn reported a modest revenue beat as the new fastener plant ramped ahead of schedule, contributing first shipments late in the quarter. Structural materials orders held steady amid firm regional construction activity. Fenn reiterated a cautious but opportunistic full-year outlook.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]

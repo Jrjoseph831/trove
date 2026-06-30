@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-30T07:26:53.947Z",
+  "generatedAt": "2026-06-30T12:49:05.640Z",
   "beats": [
+    {
+      "company": "Blackmoor",
+      "sector": "agriculture",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Blackmoor Rolls Out Updated Holloway Seed-Drill Range",
+      "body": "Soren Dray introduced a refreshed line of seed drills assembled on the newly added Holloway line, emphasizing durability and serviceability over flash. The range targets long-tenure farm operators and carries Blackmoor's standard decade-long parts guarantee. Dray said early dealer interest was 'steady, as we like it.'",
+      "cycle": 82538,
+      "dur": 1
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Boreas Power Breaks Ground on Hollowmere Expansion Phase Two",
+      "body": "Mira Thorne announced a $1.9 billion buildout that will nearly double storage capacity at the wholly owned Hollowmere fields. The phase, slated for completion in 26 months, follows three straight quarters of guidance lifts and locks in long-term supply contracts with regional grid operators. Thorne hinted further bolt-on acquisitions could follow.",
+      "cycle": 82538,
+      "dur": 2
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Bruncrest Works Reels as Meridian Pact Probe Alleges Inflated Demand Figures",
+      "body": "Shares of Bruncrest tumbled after disclosures suggested the landmark Meridian Exchange contract relied on demand projections that internal documents flag as overstated. Petra Veldt, known for bold public bets, faces board scrutiny over whether the sprawling compute campus was greenlit on shaky volumes. An independent review has been launched, and Meridian said it is 'reassessing the relationship.'",
+      "cycle": 82538,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunmark Motors Rebounds as Veyra Output Hits Stride",
+      "body": "Yvette Calder reported quarterly deliveries of 41,000 Veyra compacts, beating internal targets after the Power unit split stabilized pack supply. Margins recovered 180 basis points sequentially, and Calder said the standalone power division has cleared its order backlog. The turnaround eased concerns raised during the bruising ramp earlier this year.",
+      "cycle": 82538,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halhold Systems Debuts Slimmed-Down Northgate Compute Tier",
+      "body": "CEO Dahlia Renn unveiled the Northgate Lite platform, a pared-back compute line built around the reset strategy after last quarter's overruns. The unit ships at a 22% lower price point than the original Northgate spec, and Renn told reporters the first 4,000 racks are already committed to early customers. Analysts called it a credible first step toward steadying the troubled program.",
+      "cycle": 82538,
+      "dur": 2
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Lhaus Industries Acquires Power Rival Voss Cell in $6.4B Cash-and-Stock Deal",
+      "body": "Cole Brandt capped his acquisitive streak by buying battery maker Voss Cell, adding 12 gigawatt-hours of annual storage capacity and folding it into the Power & Storage arm. The deal, valued at $6.4 billion, pairs Voss's cell chemistry with the Ferrlands driveline expansion to create an integrated vehicle-and-energy supplier. Brandt framed the purchase as 'the spine of the next decade' for Lhaus.",
+      "cycle": 82538,
+      "dur": 8
+    },
+    {
+      "company": "Palettstone & Sons",
+      "sector": "consumer",
+      "kind": "award",
+      "size": "flash",
+      "head": "Palettstone & Sons Wins Craftsmen's Guild Tool of the Year for Heirloom Pro",
+      "body": "The Heirloom Pro hand-tool line took top honors at the annual Craftsmen's Guild awards, cited for balance and longevity. Cole Fenn accepted the prize and noted the line has outsold its launch forecast by roughly 30%. The recognition burnishes Palettstone's heritage-quality positioning.",
+      "cycle": 82538,
+      "dur": 1
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Skarngrove & Sons Edges Past Estimates on Fastener Demand",
+      "body": "Quinn Fenn reported a modest revenue beat as the new fastener plant ramped ahead of schedule, contributing first shipments late in the quarter. Structural materials orders held steady amid firm regional construction activity. Fenn reiterated a cautious but opportunistic full-year outlook.",
+      "cycle": 82538,
+      "dur": 1
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -52,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Edges Past Estimates on Steady Institutional Demand",
-      "body": "Ornewright Goods posted revenue of 88 million, modestly ahead of forecasts, helped by ramping volumes under the Hallowfield Hospitals contract. CEO Petra Veldt cited resilient cleaning and food-service orders and reaffirmed full-year guidance. The company added two regional accounts in its jansan division.",
-      "cycle": 82537,
-      "dur": 1
-    },
-    {
       "company": "Thronehaus & Co.",
       "sector": "luxury",
       "kind": "major_deal",
@@ -90,46 +160,6 @@
       "body": "Riding a record order book, Iris Garr announced a 4.2 billion-unit buildout of two new compute campuses at Harrowfield and Dunmere, together adding an estimated 60 percent to Castlestone's output capacity. Garr, characteristically bullish, told staff the expansion would be 'fully lit within eighteen months' and pledged 3,400 new hires. Critics note the aggressive timeline rests on supply commitments still ramping.",
       "cycle": 82536,
       "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Fennmoor Secures Hospital Network Contract for Larkspur Diagnostics",
-      "body": "Dorian Brandt landed a five-year supply agreement with the Caldwell Health consortium, placing Larkspur-branded diagnostics across 47 facilities in a deal valued at 510 million units. The win validates Fennmoor's recent acquisition strategy, with Brandt hinting at 'further bolt-ons in imaging' on the earnings call. Deliveries begin next quarter.",
-      "cycle": 82536,
-      "dur": 2
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Stegforge Lands Multi-Year Supply Deal on New Heavy-Machinery Alloy",
-      "body": "Building on its recent alloy breakthrough, Stegforge signed a 390 million-unit agreement to supply the new long-life material to farm-equipment maker Brunsfeld over four years. Aurelia Steg called the contract 'proof that durability sells itself,' adding capacity at the firm's Greythorn foundry to meet committed volumes. The deal marks Stegforge's largest single materials order in a decade.",
-      "cycle": 82536,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Varnvale House Posts Softer Quarter as Ember Fallout Lingers",
-      "body": "Quarterly revenue fell 9 percent against guidance as the Ember sourcing lawsuit weighed on demand and legal costs climbed to 24 million units. Petra Holt struck a defiant tone, vowing to 'fight every line of the complaint' and pledging an independent sourcing audit by year-end. Fine-goods bookings outside the Ember line held steady, cushioning the miss.",
-      "cycle": 82536,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Vossenspire Supply Buys Timepiece Specialist Aldecourt",
-      "body": "Quinn Marrow continued the firm's acquisition streak with the purchase of heritage movement-maker Aldecourt for a reported 680 million units, folding its workshops into the Vossenspire timepiece division. The deal pairs Aldecourt's in-house calibers with the recently acquired Renmark coachbuilding arm, signaling Marrow's push to control craft at both ends of the catalogue. Integration is expected to span two years.",
-      "cycle": 82536,
-      "dur": 2
     },
     {
       "company": "Bruncraft Industries",
@@ -199,26 +229,6 @@
       "head": "Castlehold Faces Probe Over Withheld Saltmere Fault Reports",
       "body": "Regulators opened an inquiry after internal documents suggested Castlehold knew of structural weaknesses at Saltmere Banks before last season's storm failures. The disclosures, surfacing weeks after the unit was spun into a standalone entity, have prompted calls for an independent review of Soren Skarn's leadership. Shares slid sharply as Skarn defended the restructure as 'transparent, not evasive.'",
       "cycle": 82531,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Brunstone & Sons Posts Steep Loss as Ardent Recall Costs Mount",
-      "body": "The automaker reported a quarterly loss of $268 million, citing recall logistics, pack replacements and halted Ardent deliveries that gutted vehicle revenue. CEO Sable Veldt acknowledged the heating fault had 'cost us a year' but vowed a re-engineered pack would return the hauler to roads by spring. Shares of confidence wavered as Veldt confirmed deliveries remain frozen pending certification.",
-      "cycle": 82530,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Halhold Systems Slashes Northgate Scope as Renn Resets Compute Strategy",
-      "body": "Newly installed chief Dahlia Renn announced a sweeping restructuring that cuts Northgate's planned capacity by 40% and folds two regional compute units into a single division, alongside roughly 1,200 job reductions. Renn framed the move as 'clearing the wreckage' of the overrun, taking a further $310 million charge while pledging the trimmed campus will reach first output by mid-2027. The board signaled patience, but several units now report directly to Renn as she consolidates control.",
-      "cycle": 82530,
       "dur": 8
     }
   ]
