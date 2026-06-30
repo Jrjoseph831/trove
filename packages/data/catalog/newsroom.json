@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-06-29T18:47:44.739Z",
+  "generatedAt": "2026-06-30T00:59:07.813Z",
   "beats": [
     {
-      "company": "Aldousspire Group",
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "major",
+      "head": "Castlestone Breaks Ground on Twin Compute Campuses to Meet Vellmont Backlog",
+      "body": "Riding a record order book, Iris Garr announced a 4.2 billion-unit buildout of two new compute campuses at Harrowfield and Dunmere, together adding an estimated 60 percent to Castlestone's output capacity. Garr, characteristically bullish, told staff the expansion would be 'fully lit within eighteen months' and pledged 3,400 new hires. Critics note the aggressive timeline rests on supply commitments still ramping.",
+      "cycle": 82536,
+      "dur": 8
+    },
+    {
+      "company": "Dunmorestone",
       "sector": "consumer",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldousspire Group Edges Past Forecasts on Strong Heirloom Denim Debut",
-      "body": "Aldousspire reported quarterly sales of 96 million, narrowly beating expectations as the Heirloom Denim Line sold through its first production run within nine weeks. CEO Mira Ashby credited the brand's lifetime-repair guarantee for driving repeat interest. The company plans a modest second run while keeping inventory tight.",
-      "cycle": 82535,
+      "head": "Dunmorestone Steadies After Recall as Plumbing Margins Hold",
+      "body": "Despite the faucet cartridge recall, Dunmorestone reported quarterly earnings modestly ahead of expectations, helped by resilient food-service equipment sales. Orla Mercer credited 'swift containment and honest communication' for limiting reputational damage, noting recall costs landed near the low end of estimates. The replaced cartridge line has resumed full shipment.",
+      "cycle": 82536,
       "dur": 1
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Fennmoor Secures Hospital Network Contract for Larkspur Diagnostics",
+      "body": "Dorian Brandt landed a five-year supply agreement with the Caldwell Health consortium, placing Larkspur-branded diagnostics across 47 facilities in a deal valued at 510 million units. The win validates Fennmoor's recent acquisition strategy, with Brandt hinting at 'further bolt-ons in imaging' on the earnings call. Deliveries begin next quarter.",
+      "cycle": 82536,
+      "dur": 2
+    },
+    {
+      "company": "Hearthstone Group",
+      "sector": "hospitality",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Hearthstone Group Extends Refillable Range Into Household Goods",
+      "body": "Following the launch of its jansan concentrate line, Hearthstone introduced a refillable household-goods series spanning surface kits and storage essentials. Aurelia Aldous framed the rollout as 'a natural next step for customers already on the refill habit,' targeting hospitality and home channels alike. Early retail placement is set for the coming quarter.",
+      "cycle": 82536,
+      "dur": 1
+    },
+    {
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Holtware Co. Adds Retail Footprint Behind Lifetime-Warranty Push",
+      "body": "Holtware will widen distribution of its lifetime-warranty hand tools into 1,200 additional outlets following stronger-than-expected early sell-through. Aurelia Dray described the move as 'measured but timely,' citing repeat-purchase data that exceeded internal forecasts. The expansion adds modest warehouse capacity at the Larne hub.",
+      "cycle": 82536,
+      "dur": 1
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Stegforge Lands Multi-Year Supply Deal on New Heavy-Machinery Alloy",
+      "body": "Building on its recent alloy breakthrough, Stegforge signed a 390 million-unit agreement to supply the new long-life material to farm-equipment maker Brunsfeld over four years. Aurelia Steg called the contract 'proof that durability sells itself,' adding capacity at the firm's Greythorn foundry to meet committed volumes. The deal marks Stegforge's largest single materials order in a decade.",
+      "cycle": 82536,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Varnvale House Posts Softer Quarter as Ember Fallout Lingers",
+      "body": "Quarterly revenue fell 9 percent against guidance as the Ember sourcing lawsuit weighed on demand and legal costs climbed to 24 million units. Petra Holt struck a defiant tone, vowing to 'fight every line of the complaint' and pledging an independent sourcing audit by year-end. Fine-goods bookings outside the Ember line held steady, cushioning the miss.",
+      "cycle": 82536,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Vossenspire Supply Buys Timepiece Specialist Aldecourt",
+      "body": "Quinn Marrow continued the firm's acquisition streak with the purchase of heritage movement-maker Aldecourt for a reported 680 million units, folding its workshops into the Vossenspire timepiece division. The deal pairs Aldecourt's in-house calibers with the recently acquired Renmark coachbuilding arm, signaling Marrow's push to control craft at both ends of the catalogue. Integration is expected to span two years.",
+      "cycle": 82536,
+      "dur": 2
     },
     {
       "company": "Bruncraft Industries",
@@ -30,16 +100,6 @@
       "body": "Calderforge brought its new Stormwell compute hall online, restoring and exceeding the capacity lost when the aging Embergate facility was retired after last quarter's cooling failure. CEO Nadia Throne said Stormwell features a redundant liquid-cooling system 'designed so a single fault can never take a hall offline again.' The facility represents a 520 million investment and triples Embergate's former throughput.",
       "cycle": 82535,
       "dur": 2
-    },
-    {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Fennvale Mfg. Beats Guidance as Fastener Demand Holds Firm",
-      "body": "Fennvale posted quarterly revenue of 188 million, modestly ahead of guidance, supported by sustained auto-parts orders and early output from its third fastener line at Drennt Works. CEO Theo Vossen said the new line is ramping 'ahead of schedule' and should reach full capacity within two quarters. Margins improved slightly on better materials pricing.",
-      "cycle": 82535,
-      "dur": 1
     },
     {
       "company": "Halhold Works",
@@ -72,36 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Vossenstead Supply Adds Plumbing Fittings Warehouse Adjacent to New Hub",
-      "body": "Vossenstead opened a dedicated fittings warehouse beside its recently completed third distribution hub, expanding cold-storage and fixtures capacity by 40%. CEO Bram Thorne described the move as 'a quiet step to keep pace with steady demand' across both its food service and plumbing lines. The facility is expected to add roughly 60 positions.",
-      "cycle": 82535,
-      "dur": 1
-    },
-    {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Dunmorewright Lifts Margins as Twin-Tower Work Ramps Up",
-      "body": "Dunmorewright posted operating profit of 96 million, ahead of estimates, as earthmoving crews mobilized on its 340-million Twin-Tower District contract. Emil Skarn highlighted steady plumbing and fixtures demand and reaffirmed full-year guidance. The order book now stands at a record 1.4 billion.",
-      "cycle": 82534,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Korrwright Group Posts Strong Quarter as Verant Frame Work Begins",
-      "body": "Korrwright reported revenue of 1.2 billion, up 14% year-on-year, with structural materials orders climbing as steel framing for the Verant Tower Cluster moved into early delivery. Halden Fenn credited disciplined input contracts and noted wire and cable backlogs now stretch eleven months. Margins widened to 18.3% on firmer pricing.",
-      "cycle": 82534,
-      "dur": 2
-    },
-    {
       "company": "Skarnvale",
       "sector": "logistics",
       "kind": "leadership_change",
@@ -110,26 +140,6 @@
       "body": "Skarnvale's board removed chief executive Lena Calder following a turbulent year capped by missed freight targets and a 9% slide in handling volumes. The company named operations veteran Marek Tovin to steady its material-handling division and review its cost base. Shares had drifted lower for three consecutive quarters amid investor frustration.",
       "cycle": 82534,
       "dur": 8
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Steg Tooling Opens Second Fastener Plant to Meet Auto Demand",
-      "body": "Steg Tooling broke ground on a 180-million fastener and fixings facility, doubling capacity after auto-parts orders outran existing lines. Iris Vossen said the plant would add 600 jobs and come online within eighteen months. The move follows a quarter in which the company topped forecasts on surging vehicle-component sales.",
-      "cycle": 82534,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Varnvale & Sons Debuts First Bellmont-Crafted Timepiece Collection",
-      "body": "Varnvale unveiled the Meridian line, its first series pairing in-house movements with leatherwork from the newly folded Bellmont atelier. Bram Wold said the collection, priced from 4,200, marks the start of a broader push to integrate fine goods across its houses. Initial production was capped at 3,000 pieces.",
-      "cycle": 82534,
-      "dur": 2
     },
     {
       "company": "Vossenspire Holdings",
@@ -209,16 +219,6 @@
       "head": "Carrowforge CEO Mara Fenn Steps Down Amid Testing-Records Probe",
       "body": "Mara Fenn, who led Carrowforge for nearly a century, resigned Wednesday as investigators widened their inquiry into falsified machine-testing certificates spanning three product lines. The board named longtime quality director Halden Roe as interim chief, vowing a clean-sheet audit of every certification issued in the past five years. Shares of the manufacturer have been battered since the probe surfaced.",
       "cycle": 82529,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Greywater Grid Signs Landmark Storage Pact to Anchor New Compute Campus",
-      "body": "Greywater inked a 12-year, 4.1 billion agreement to supply storage and balancing capacity for a sprawling compute campus, the largest contract in the company's history. The deal leans on the record-density cells revealed at the Halloran Facility, with first banks due online within 18 months. Vale Halloran called it 'the moment Greywater stops selling power and starts selling certainty.'",
-      "cycle": 82528,
       "dur": 8
     }
   ]

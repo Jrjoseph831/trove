@@ -1245,7 +1245,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82529,
+    "lastEventCycle": 82536,
     "events": [
       {
         "cycle": 0,
@@ -1283,6 +1283,16 @@
         "body": "Castlestone reported quarterly revenue up 31% as deliveries under its landmark supply agreement began flowing, with compute backlog reaching a record 18-month horizon. CEO Iris Garr touted margins fattened by the high-end Vellmont line but warned that meeting demand would require a costly capacity push. Operating profit beat consensus by a wide margin.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82536,
+        "kind": "expansion",
+        "size": "major",
+        "head": "Castlestone Breaks Ground on Twin Compute Campuses to Meet Vellmont Backlog",
+        "body": "Riding a record order book, Iris Garr announced a 4.2 billion-unit buildout of two new compute campuses at Harrowfield and Dunmere, together adding an estimated 60 percent to Castlestone's output capacity. Garr, characteristically bullish, told staff the expansion would be 'fully lit within eighteen months' and pledged 3,400 new hires. Critics note the aggressive timeline rests on supply commitments still ramping.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -1556,7 +1566,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82517,
+    "lastEventCycle": 82536,
     "events": [
       {
         "cycle": 0,
@@ -1574,6 +1584,16 @@
         "body": "Dunmorestone issued a voluntary recall of roughly 60,000 plumbing cartridges after reports of premature seal failure in select kitchen fixtures. Orla Mercer said the move was precautionary and consistent with the company's 'kept honest' promise, with free replacements offered to affected buyers.",
         "effects": {
           "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82536,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Dunmorestone Steadies After Recall as Plumbing Margins Hold",
+        "body": "Despite the faucet cartridge recall, Dunmorestone reported quarterly earnings modestly ahead of expectations, helped by resilient food-service equipment sales. Orla Mercer credited 'swift containment and honest communication' for limiting reputational damage, noting recall costs landed near the low end of estimates. The replaced cartridge line has resumed full shipment.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -1718,7 +1738,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82527,
+    "lastEventCycle": 82536,
     "events": [
       {
         "cycle": 0,
@@ -1744,6 +1764,16 @@
         "size": "standard",
         "head": "Fennmoor Debuts Larkspur-Branded Diagnostics Line",
         "body": "Fennmoor launched its first medical product since acquiring Larkspur Medical, a benchtop diagnostics unit aimed at regional clinics and priced to undercut incumbents. Dorian Brandt said the integration 'moved faster than anyone expected,' with Larkspur's lab team now embedded in Fennmoor's device division. The company is targeting 1,200 unit placements in the first year.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82536,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Fennmoor Secures Hospital Network Contract for Larkspur Diagnostics",
+        "body": "Dorian Brandt landed a five-year supply agreement with the Caldwell Health consortium, placing Larkspur-branded diagnostics across 47 facilities in a deal valued at 510 million units. The win validates Fennmoor's recent acquisition strategy, with Brandt hinting at 'further bolt-ons in imaging' on the earnings call. Deliveries begin next quarter.",
         "effects": {
           "technology": 0.13
         }
@@ -2325,7 +2355,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82519,
+    "lastEventCycle": 82536,
     "events": [
       {
         "cycle": 0,
@@ -2341,6 +2371,16 @@
         "size": "flash",
         "head": "Hearthstone Group Rolls Out Refillable Jansan Concentrate Range",
         "body": "Aurelia Aldous introduced a refillable concentrate system across the company's commercial cleaning line, aimed at lowering packaging weight and shipping costs for institutional buyers. Initial distribution covers the hospitality and facilities segments, with household versions slated for a later phase.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82536,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Hearthstone Group Extends Refillable Range Into Household Goods",
+        "body": "Following the launch of its jansan concentrate line, Hearthstone introduced a refillable household-goods series spanning surface kits and storage essentials. Aurelia Aldous framed the rollout as 'a natural next step for customers already on the refill habit,' targeting hospitality and home channels alike. Early retail placement is set for the coming quarter.",
         "effects": {
           "hospitality": 0.06
         }
@@ -2510,7 +2550,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82520,
+    "lastEventCycle": 82536,
     "events": [
       {
         "cycle": 0,
@@ -2528,6 +2568,16 @@
         "body": "Holtware introduced its new 'Ironhold' series of wrenches and pliers, backed by an unconditional replacement pledge. CEO Aurelia Dray said early orders from regional hardware chains exceeded 40,000 units, framing the launch as 'a calculated bet that durability still sells.'",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82536,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Holtware Co. Adds Retail Footprint Behind Lifetime-Warranty Push",
+        "body": "Holtware will widen distribution of its lifetime-warranty hand tools into 1,200 additional outlets following stronger-than-expected early sell-through. Aurelia Dray described the move as 'measured but timely,' citing repeat-purchase data that exceeded internal forecasts. The expansion adds modest warehouse capacity at the Larne hub.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -3500,7 +3550,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82522,
+    "lastEventCycle": 82536,
     "events": [
       {
         "cycle": 0,
@@ -3516,6 +3566,16 @@
         "size": "standard",
         "head": "Stegforge Debuts Longer-Lasting Alloy for Heavy Machinery",
         "body": "Stegforge announced a new wear-resistant steel alloy that lab tests show extends component life by up to 40% under heavy load. CEO Aurelia Steg said the material will first appear in the company's farm-equipment gearboxes before reaching industrial machine lines. Patents covering the process have been filed in nine jurisdictions.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82536,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Stegforge Lands Multi-Year Supply Deal on New Heavy-Machinery Alloy",
+        "body": "Building on its recent alloy breakthrough, Stegforge signed a 390 million-unit agreement to supply the new long-life material to farm-equipment maker Brunsfeld over four years. Aurelia Steg called the contract 'proof that durability sells itself,' adding capacity at the firm's Greythorn foundry to meet committed volumes. The deal marks Stegforge's largest single materials order in a decade.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -3769,7 +3829,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82527,
+    "lastEventCycle": 82536,
     "events": [
       {
         "cycle": 0,
@@ -3807,6 +3867,16 @@
         "body": "A consumer coalition filed suit against Varnvale House, alleging the Ember Fine-Goods Capsule was marketed with origin claims the company could not substantiate. The complaint seeks £30 million and pulls directly from the scandal that erupted weeks ago; Petra Holt called the action 'opportunistic' but confirmed the capsule has been pulled from select counters pending review. An independent audit of suppliers is underway.",
         "effects": {
           "luxury": -0.22
+        }
+      },
+      {
+        "cycle": 82536,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Varnvale House Posts Softer Quarter as Ember Fallout Lingers",
+        "body": "Quarterly revenue fell 9 percent against guidance as the Ember sourcing lawsuit weighed on demand and legal costs climbed to 24 million units. Petra Holt struck a defiant tone, vowing to 'fight every line of the complaint' and pledging an independent sourcing audit by year-end. Fine-goods bookings outside the Ember line held steady, cushioning the miss.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -3964,7 +4034,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82527,
+    "lastEventCycle": 82536,
     "events": [
       {
         "cycle": 0,
@@ -3990,6 +4060,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Unveils Renmark-Built Tourer",
         "body": "Vossenspire revealed the Renmark Grand Tourer, the first vehicle built on the coachbuilder it acquired earlier this year, pairing hand-finished bodywork with its in-house drivetrain. Quinn Marrow positioned the £140,000 tourer as proof the Renmark deal 'already earns its keep.' Initial allocation is capped at 300 units.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82536,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vossenspire Supply Buys Timepiece Specialist Aldecourt",
+        "body": "Quinn Marrow continued the firm's acquisition streak with the purchase of heritage movement-maker Aldecourt for a reported 680 million units, folding its workshops into the Vossenspire timepiece division. The deal pairs Aldecourt's in-house calibers with the recently acquired Renmark coachbuilding arm, signaling Marrow's push to control craft at both ends of the catalogue. Integration is expected to span two years.",
         "effects": {
           "luxury": 0.13
         }
