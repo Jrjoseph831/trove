@@ -278,7 +278,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82516,
+    "lastEventCycle": 82539,
     "events": [
       {
         "cycle": 0,
@@ -297,6 +297,16 @@
         "effects": {
           "medical": 0.06
         }
+      },
+      {
+        "cycle": 82539,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Posts Modest Beat on Replacement-Parts Demand",
+        "body": "Ashbystead Holdings edged past estimates again, with quarterly revenue of $312 million lifted by steady hospital orders for diagnostic-equipment replacement parts. Cora Holt pointed to consistent service-contract renewals as the quiet engine behind the result. Management reaffirmed a cautious full-year outlook.",
+        "effects": {
+          "medical": 0.06
+        }
       }
     ]
   },
@@ -311,7 +321,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82529,
+    "lastEventCycle": 82539,
     "events": [
       {
         "cycle": 0,
@@ -345,6 +355,16 @@
         "size": "standard",
         "head": "Blackhold Grid Fault Knocks Out Greycliff Test Bank Hours After Launch",
         "body": "A thermal fault in the newly commissioned Greycliff storage array forced an emergency shutdown of three test cells late Tuesday, cutting supply to two regional substations for roughly four hours. New Operations Chief Lena Voss said the trip was contained and no permanent damage occurred, but CEO Tomas Vren faced sharp questions over whether the aggressive build timeline outpaced safety checks. Blackhold pledged a full review before bringing the bank back online.",
+        "effects": {
+          "energy": -0.13
+        }
+      },
+      {
+        "cycle": 82539,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Regulators Open Safety Review of Blackhold's Greycliff Test Bank",
+        "body": "Days after a grid fault darkened the Greycliff test bank hours into operation, the regional energy authority has launched a formal safety review of the storage build's commissioning practices. Tomas Vren said Blackhold 'welcomes the scrutiny' but acknowledged the inquiry could delay the next 200-megawatt phase by up to two quarters. New operations chief Renna Cole is leading an internal fault audit running in parallel.",
         "effects": {
           "energy": -0.13
         }
@@ -1210,14 +1230,14 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1971,
-    "ceo": "Soren Skarn",
-    "ceoSince": 1971,
+    "ceo": "Maren Voss",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.76,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82531,
+    "lastEventCycle": 82539,
     "events": [
       {
         "cycle": 0,
@@ -1266,6 +1286,14 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82539,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Castlehold's Skarn Steps Down as Saltmere Fault-Reporting Probe Widens",
+        "body": "Soren Skarn, who led Castlehold for more than five decades, has resigned as the investigation into withheld Saltmere fault reports expanded to cover senior management disclosures. The board named former Saltmere unit head Maren Voss as chief executive, tasking her with a full disclosure overhaul and cooperation with regulators. Shares of confidence in the firm's governance had eroded steadily since the storm-season faults first surfaced.",
+        "effects": {}
       }
     ]
   },
@@ -1548,7 +1576,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82528,
+    "lastEventCycle": 82539,
     "events": [
       {
         "cycle": 0,
@@ -1576,6 +1604,16 @@
         "body": "Drustcraft reported revenue of 412 million, modestly ahead of expectations as its fastener slot on the new vehicle platform began shipping in volume. Cora Fenn noted steady demand and a fully booked order pipeline for the next two quarters. Margins held firm at 14.6%.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82539,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Drustcraft Adds Production Line to Meet New Vehicle-Platform Demand",
+        "body": "With its fastener supply slot ramping faster than expected, Drustcraft is investing $48 million in a new automated fastening line at its eastern plant to lift capacity by 25 percent. Cora Fenn called the move 'a measured bet on a platform that's clearly outrunning its launch forecasts.' The expansion is expected to create around 140 jobs and reach full output within a year.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -2054,7 +2092,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82528,
+    "lastEventCycle": 82539,
     "events": [
       {
         "cycle": 0,
@@ -2082,6 +2120,16 @@
         "body": "Greywater inked a 12-year, 4.1 billion agreement to supply storage and balancing capacity for a sprawling compute campus, the largest contract in the company's history. The deal leans on the record-density cells revealed at the Halloran Facility, with first banks due online within 18 months. Vale Halloran called it 'the moment Greywater stops selling power and starts selling certainty.'",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82539,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Greywater Grid Tops Forecasts as Compute-Campus Pact Lifts Backlog",
+        "body": "Greywater Grid reported quarterly revenue of $1.42 billion, up 11 percent and ahead of guidance, with the new compute-campus storage pact adding $640 million to its multi-year backlog. Vale Halloran credited the record-density rollout at the Halloran Facility for margin gains, citing storage gross margin up 230 basis points. The company raised its full-year outlook for the second time this year.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -2681,7 +2729,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82520,
+    "lastEventCycle": 82539,
     "events": [
       {
         "cycle": 0,
@@ -2697,6 +2745,16 @@
         "size": "flash",
         "head": "Ironcrestcrest Supply Opens Third Fixtures Warehouse",
         "body": "The lighting house quietly commissioned a new 90,000-square-foot distribution hub in the Marlow district to serve western retailers. CEO Dorian Garr said the facility would trim delivery times by two days without raising shelf prices.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82539,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Introduces Value Workshop Lighting Range",
+        "body": "Ironcrestcrest Supply has launched a no-frills workshop and utility fixtures range aimed at small contractors, priced roughly 15 percent below its core catalog. Dorian Garr said the line leverages stock now flowing through the recently opened third warehouse. The release stays close to the firm's bright-rooms, fair-prices positioning.",
         "effects": {
           "consumer": 0.06
         }
@@ -2972,7 +3030,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82531,
+    "lastEventCycle": 82539,
     "events": [
       {
         "cycle": 0,
@@ -3010,6 +3068,16 @@
         "body": "The Velloux Heritage Series took top honors in the enamel-dial category at the annual Carrowmore Craft Prize, the first such recognition since Korrwright absorbed Velloux. Judges praised the restored kiln-firing technique recovered from Velloux's archives. Dunmore Carrow called the award 'proof the heritage was worth buying.'",
         "effects": {
           "luxury": 0.06
+        }
+      },
+      {
+        "cycle": 82539,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrwright Works Folds Velloux Dial Craft Into New Heritage Atelier",
+        "body": "Riding three straight wins of acclaim, Dunmore Carrow has authorized a dedicated Heritage Atelier in the Carrowmore district to house Velloux's restored dial presses alongside Korrwright's master finishers. The 40,000-square-foot site will lift annual hand-finished output by roughly 18 percent and consolidate two formerly separate workshops. Carrow called it 'the natural next acquisition of space, now that we own the talent.'",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -3891,7 +3959,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82523,
+    "lastEventCycle": 82539,
     "events": [
       {
         "cycle": 0,
@@ -3909,6 +3977,16 @@
         "body": "The new Contour series replaces foam inserts with pressed-fiber casings rated for heavier electronics and glassware. CEO Halden Vossen said early adopters reported a 9% drop in transit damage during pilot runs. The line enters general availability next month at parity pricing.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82539,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vantor Lines Lands Multi-Year Packaging Contract With National Glassware Retailer",
+        "body": "Vantor Lines has signed a four-year supply agreement to provide its recyclable molded-fiber protective line to a national glassware and homewares retailer, a deal estimated at $85 million in total value. Halden Vossen said the win validates the fragile-goods line launched earlier this year and will fill capacity at two regional plants. Rollout begins next quarter across the retailer's distribution network.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
