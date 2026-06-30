@@ -182,7 +182,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82527,
+    "lastEventCycle": 82537,
     "events": [
       {
         "cycle": 0,
@@ -220,6 +220,16 @@
         "body": "Flush with fresh backing, Aperture Compute began construction on a second Dawnmere facility built around its faster interconnect, targeting a 60% lift in capacity. Halden Dray promised first racks online within nine months and teased customer pilots already lined up. The £200 million build will add roughly 400 jobs to the region.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82537,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Aperture Compute Unveils Dawnmere Interconnect, Cutting Latency by Half",
+        "body": "At a packed event, CEO Halden Dray launched the production Dawnmere interconnect, claiming a 51 percent latency reduction over the prior generation and shipments beginning next quarter. Three major data-center operators have signed as launch customers, with combined commitments exceeding 600 million. The second Dawnmere site is being fast-tracked to meet what Dray called 'unrelenting' demand.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -385,7 +395,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82528,
+    "lastEventCycle": 82537,
     "events": [
       {
         "cycle": 0,
@@ -421,6 +431,16 @@
         "size": "standard",
         "head": "Blackton Industries Tops Forecasts as Halvern Volumes Surge",
         "body": "Blackton posted quarterly revenue of 1.84 billion, up 22% year over year, with retooled plants running near full capacity for the Halvern Motors contract. CEO Mara Mercer credited the overhaul push but warned that overtime costs trimmed margins to 11.3%. The company raised its full-year delivery guidance for the second time this year.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82537,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Blackton Industries Adds Second Line to Keep Pace With Halvern Orders",
+        "body": "Riding surging Halvern Motors volumes, Blackton Industries announced a 65 million expansion adding a second stamping line at its Mercer Works plant. CEO Mara Mercer said the move lifts auto-parts output capacity by 40 percent and supports a recently extended supply commitment. Hiring for 180 roles begins immediately.",
         "effects": {
           "automotive": 0.13
         }
@@ -737,14 +757,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1894,
-    "ceo": "Sable Veldt",
-    "ceoSince": 1894,
+    "ceo": "Royce Lambourne",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.81,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82530,
+    "lastEventCycle": 82537,
     "events": [
       {
         "cycle": 0,
@@ -793,6 +813,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82537,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Brunstone & Sons Ousts CEO Sable Veldt as Ardent Crisis Deepens",
+        "body": "The Brunstone board removed long-serving chief Sable Veldt following the costly Ardent Hauler recall and a second straight quarter of losses. Veldt, known for bold public bets, will be succeeded by turnaround executive Royce Lambourne, who pledged a full review of the power-pack program and a restructured warranty reserve. Shares had shed roughly a third of their value since the heating probe began.",
+        "effects": {}
       }
     ]
   },
@@ -2029,7 +2057,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82530,
+    "lastEventCycle": 82537,
     "events": [
       {
         "cycle": 0,
@@ -2075,6 +2103,16 @@
         "size": "standard",
         "head": "Gromford Works Extends Aurelian Line With Limited Caldwyck Edition",
         "body": "Capitalizing on its new flagship atelier, Gromford Works unveiled a 200-piece Aurelian Caldwyck Edition timepiece priced from $58,000, with engraving exclusive to the boutique. CEO Mira Ashby said pre-orders for the run filled within the opening week. The launch deepens the house's push into top-tier collector demand following its Piece of the Year honor.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82537,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Gromford Works Posts Record Quarter as Aurelian Demand Outpaces Supply",
+        "body": "Gromford Works reported quarterly revenue of 142 million, up 31 percent year over year, with the Aurelian line and its Caldwyck Edition accounting for nearly half of fine goods sales. CEO Mira Ashby said the Caldwyck atelier is already booked through next season and hinted at a third Aurelian variant. Margins widened to 38 percent on the strength of premium pricing.",
         "effects": {
           "luxury": 0.13
         }
@@ -2626,7 +2664,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82528,
+    "lastEventCycle": 82537,
     "events": [
       {
         "cycle": 0,
@@ -2652,6 +2690,16 @@
         "size": "standard",
         "head": "Ironcrestton Turns Award Buzz Into the Carrow Atelier Line",
         "body": "Riding its Artisan's Circle sweep, Ironcrestton launched the Carrow Atelier collection, a tightly limited run of fine goods showcasing the techniques that earned the honors. Sable Carrow staged a single-night unveiling that drew a waitlist exceeding the production run of 300 pieces. The house said allocations would favor existing patrons before any wider release.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82537,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Ironcrestton Opens Carrow Atelier Showroom to Court New Clientele",
+        "body": "Building on its Artisan's Circle sweep, Ironcrestton opened a flagship showroom dedicated to the Carrow Atelier line, its first standalone retail space. CEO Sable Carrow said early waitlists for the collection prompted the rapid rollout, with two additional locations under consideration. The space showcases bespoke commissions alongside the award-winning core range.",
         "effects": {
           "luxury": 0.13
         }
@@ -3225,7 +3273,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82521,
+    "lastEventCycle": 82537,
     "events": [
       {
         "cycle": 0,
@@ -3243,6 +3291,16 @@
         "body": "Ornewright Goods secured a three-year, $210 million deal to stock cleaning supplies, food-service goods, and consumables across Hallowfield's 22-hospital network. CEO Petra Veldt called it 'a straightforward fit for what we already do well.' Deliveries begin in the spring under a centralized restocking arrangement.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82537,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Edges Past Estimates on Steady Institutional Demand",
+        "body": "Ornewright Goods posted revenue of 88 million, modestly ahead of forecasts, helped by ramping volumes under the Hallowfield Hospitals contract. CEO Petra Veldt cited resilient cleaning and food-service orders and reaffirmed full-year guidance. The company added two regional accounts in its jansan division.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -3667,7 +3725,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82528,
+    "lastEventCycle": 82537,
     "events": [
       {
         "cycle": 0,
@@ -3693,6 +3751,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Debuts Caldwynn-Powered Regent Tourbillon",
         "body": "Fresh off its acquisition of movement specialist Caldwynn, Thronehaus unveiled the Regent Tourbillon, the first timepiece to house an in-built Caldwynn caliber. Priced at 240,000 per piece and capped at 75 units, the launch marks Cora Dray's push to control the craft end-to-end. Early allocations sold out within the first showing in the maison's flagship salon.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82537,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Thronehaus & Co. Buys Dial Maker Verreil to Bring Craft In-House",
+        "body": "Restless as ever, CEO Cora Dray announced the acquisition of enamel-dial specialist Verreil for an undisclosed sum, the second purchase in under a year following Caldwynn. The deal secures the artisan dials used in the Regent Tourbillon and removes a key supplier bottleneck. Analysts see Thronehaus assembling a fully vertical timepiece operation.",
         "effects": {
           "luxury": 0.13
         }
@@ -3925,7 +3993,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82524,
+    "lastEventCycle": 82537,
     "events": [
       {
         "cycle": 0,
@@ -3941,6 +4009,16 @@
         "size": "standard",
         "head": "Vencyon Lands Multi-Year Supply Pact with Drenfield Distribution",
         "body": "Vencyon will outfit Drenfield Distribution's twelve regional hubs with conveyor and palletizing systems under a four-year, $310 million agreement. CEO Iris Halloran called it 'the kind of measured bet that keeps floors moving for a decade.' First installations begin at the Caldwater hub next quarter.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82537,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vencyon Opens New Distribution Hub to Anchor Drenfield Pact",
+        "body": "Vencyon cut the ribbon on a 400,000-square-foot material-handling hub near Drenfield, a 90 million investment expected to add 320 jobs. CEO Iris Halloran said the facility doubles regional throughput capacity and was built specifically to service the multi-year Drenfield Distribution agreement. Operations begin ramping next month.",
         "effects": {
           "logistics": 0.13
         }

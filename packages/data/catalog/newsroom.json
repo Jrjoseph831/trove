@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-06-30T00:59:07.813Z",
+  "generatedAt": "2026-06-30T07:26:53.947Z",
   "beats": [
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Aperture Compute Unveils Dawnmere Interconnect, Cutting Latency by Half",
+      "body": "At a packed event, CEO Halden Dray launched the production Dawnmere interconnect, claiming a 51 percent latency reduction over the prior generation and shipments beginning next quarter. Three major data-center operators have signed as launch customers, with combined commitments exceeding 600 million. The second Dawnmere site is being fast-tracked to meet what Dray called 'unrelenting' demand.",
+      "cycle": 82537,
+      "dur": 8
+    },
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Blackton Industries Adds Second Line to Keep Pace With Halvern Orders",
+      "body": "Riding surging Halvern Motors volumes, Blackton Industries announced a 65 million expansion adding a second stamping line at its Mercer Works plant. CEO Mara Mercer said the move lifts auto-parts output capacity by 40 percent and supports a recently extended supply commitment. Hiring for 180 roles begins immediately.",
+      "cycle": 82537,
+      "dur": 2
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Brunstone & Sons Ousts CEO Sable Veldt as Ardent Crisis Deepens",
+      "body": "The Brunstone board removed long-serving chief Sable Veldt following the costly Ardent Hauler recall and a second straight quarter of losses. Veldt, known for bold public bets, will be succeeded by turnaround executive Royce Lambourne, who pledged a full review of the power-pack program and a restructured warranty reserve. Shares had shed roughly a third of their value since the heating probe began.",
+      "cycle": 82537,
+      "dur": 8
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Gromford Works Posts Record Quarter as Aurelian Demand Outpaces Supply",
+      "body": "Gromford Works reported quarterly revenue of 142 million, up 31 percent year over year, with the Aurelian line and its Caldwyck Edition accounting for nearly half of fine goods sales. CEO Mira Ashby said the Caldwyck atelier is already booked through next season and hinted at a third Aurelian variant. Margins widened to 38 percent on the strength of premium pricing.",
+      "cycle": 82537,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Ironcrestton Opens Carrow Atelier Showroom to Court New Clientele",
+      "body": "Building on its Artisan's Circle sweep, Ironcrestton opened a flagship showroom dedicated to the Carrow Atelier line, its first standalone retail space. CEO Sable Carrow said early waitlists for the collection prompted the rapid rollout, with two additional locations under consideration. The space showcases bespoke commissions alongside the award-winning core range.",
+      "cycle": 82537,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Edges Past Estimates on Steady Institutional Demand",
+      "body": "Ornewright Goods posted revenue of 88 million, modestly ahead of forecasts, helped by ramping volumes under the Hallowfield Hospitals contract. CEO Petra Veldt cited resilient cleaning and food-service orders and reaffirmed full-year guidance. The company added two regional accounts in its jansan division.",
+      "cycle": 82537,
+      "dur": 1
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Thronehaus & Co. Buys Dial Maker Verreil to Bring Craft In-House",
+      "body": "Restless as ever, CEO Cora Dray announced the acquisition of enamel-dial specialist Verreil for an undisclosed sum, the second purchase in under a year following Caldwynn. The deal secures the artisan dials used in the Regent Tourbillon and removes a key supplier bottleneck. Analysts see Thronehaus assembling a fully vertical timepiece operation.",
+      "cycle": 82537,
+      "dur": 2
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Vencyon Opens New Distribution Hub to Anchor Drenfield Pact",
+      "body": "Vencyon cut the ribbon on a 400,000-square-foot material-handling hub near Drenfield, a 90 million investment expected to add 320 jobs. CEO Iris Halloran said the facility doubles regional throughput capacity and was built specifically to service the multi-year Drenfield Distribution agreement. Operations begin ramping next month.",
+      "cycle": 82537,
+      "dur": 2
+    },
     {
       "company": "Castlestone",
       "sector": "technology",
@@ -12,16 +92,6 @@
       "dur": 8
     },
     {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Dunmorestone Steadies After Recall as Plumbing Margins Hold",
-      "body": "Despite the faucet cartridge recall, Dunmorestone reported quarterly earnings modestly ahead of expectations, helped by resilient food-service equipment sales. Orla Mercer credited 'swift containment and honest communication' for limiting reputational damage, noting recall costs landed near the low end of estimates. The replaced cartridge line has resumed full shipment.",
-      "cycle": 82536,
-      "dur": 1
-    },
-    {
       "company": "Fennmoor",
       "sector": "technology",
       "kind": "major_deal",
@@ -30,26 +100,6 @@
       "body": "Dorian Brandt landed a five-year supply agreement with the Caldwell Health consortium, placing Larkspur-branded diagnostics across 47 facilities in a deal valued at 510 million units. The win validates Fennmoor's recent acquisition strategy, with Brandt hinting at 'further bolt-ons in imaging' on the earnings call. Deliveries begin next quarter.",
       "cycle": 82536,
       "dur": 2
-    },
-    {
-      "company": "Hearthstone Group",
-      "sector": "hospitality",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Hearthstone Group Extends Refillable Range Into Household Goods",
-      "body": "Following the launch of its jansan concentrate line, Hearthstone introduced a refillable household-goods series spanning surface kits and storage essentials. Aurelia Aldous framed the rollout as 'a natural next step for customers already on the refill habit,' targeting hospitality and home channels alike. Early retail placement is set for the coming quarter.",
-      "cycle": 82536,
-      "dur": 1
-    },
-    {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Holtware Co. Adds Retail Footprint Behind Lifetime-Warranty Push",
-      "body": "Holtware will widen distribution of its lifetime-warranty hand tools into 1,200 additional outlets following stronger-than-expected early sell-through. Aurelia Dray described the move as 'measured but timely,' citing repeat-purchase data that exceeded internal forecasts. The expansion adds modest warehouse capacity at the Larne hub.",
-      "cycle": 82536,
-      "dur": 1
     },
     {
       "company": "Stegforge",
@@ -90,46 +140,6 @@
       "body": "Bruncraft has signed a five-year agreement to deliver 12,000 Foundry City Runabouts to the Halvenport Transit Authority, its largest single fleet order on record at an estimated 840 million. CEO Orla Marrow called the deal 'the beginning of a wider municipal push,' hinting at talks with three additional regional authorities. The first 2,000 units are slated for delivery by spring.",
       "cycle": 82535,
       "dur": 8
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Calderforge Opens Next-Generation Stormwell Hall to Replace Retired Embergate Capacity",
-      "body": "Calderforge brought its new Stormwell compute hall online, restoring and exceeding the capacity lost when the aging Embergate facility was retired after last quarter's cooling failure. CEO Nadia Throne said Stormwell features a redundant liquid-cooling system 'designed so a single fault can never take a hall offline again.' The facility represents a 520 million investment and triples Embergate's former throughput.",
-      "cycle": 82535,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Halhold Works Debuts Verity Pro Bedside Suite for Critical Care",
-      "body": "Building on the redesigned Verity line, Halhold unveiled the Verity Pro suite, integrating patient monitoring with its medical-grade wire and cable systems into a single bedside console. CEO Nadia Brandt said the launch targets intensive-care wards and follows 'overwhelming demand' from the regional hospital network signed last quarter. Initial units ship within 60 days, with pricing starting at 18,500 per console.",
-      "cycle": 82535,
-      "dur": 2
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Marlgear Supply Posts Record Quarter as Atlas Backlog Swells",
-      "body": "Marlgear reported quarterly revenue of 1.2 billion, up 31% year over year, driven entirely by Atlas Industrial Press demand from the Drennan and Carrow contracts. The order backlog now stretches 14 months, prompting CEO Halden Vossen to declare the press line 'the most important machine we have ever built.' Vossen also teased a second assembly site to ease the bottleneck.",
-      "cycle": 82535,
-      "dur": 2
-    },
-    {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Ornewright Supply Wins Multi-Year Farm Inputs Contract With Caldmere Growers Co-op",
-      "body": "Ornewright secured a three-year supply agreement with the Caldmere Growers Co-operative, valued near 210 million, leveraging its newly opened regional hub. The deal covers seed, fertilizer, and crop-care lines for more than 400 member farms. CEO Rhys Throne said the hub had 'paid for itself faster than projected,' signaling appetite for similar pacts in neighboring districts.",
-      "cycle": 82535,
-      "dur": 2
     },
     {
       "company": "Skarnvale",
@@ -209,16 +219,6 @@
       "head": "Halhold Systems Slashes Northgate Scope as Renn Resets Compute Strategy",
       "body": "Newly installed chief Dahlia Renn announced a sweeping restructuring that cuts Northgate's planned capacity by 40% and folds two regional compute units into a single division, alongside roughly 1,200 job reductions. Renn framed the move as 'clearing the wreckage' of the overrun, taking a further $310 million charge while pledging the trimmed campus will reach first output by mid-2027. The board signaled patience, but several units now report directly to Renn as she consolidates control.",
       "cycle": 82530,
-      "dur": 8
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Carrowforge CEO Mara Fenn Steps Down Amid Testing-Records Probe",
-      "body": "Mara Fenn, who led Carrowforge for nearly a century, resigned Wednesday as investigators widened their inquiry into falsified machine-testing certificates spanning three product lines. The board named longtime quality director Halden Roe as interim chief, vowing a clean-sheet audit of every certification issued in the past five years. Shares of the manufacturer have been battered since the probe surfaced.",
-      "cycle": 82529,
       "dur": 8
     }
   ]
