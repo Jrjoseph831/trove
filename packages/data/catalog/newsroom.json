@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-01T07:39:10.041Z",
+  "generatedAt": "2026-07-01T13:04:27.518Z",
   "beats": [
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Bruncraft Industries Buys Coachline Plant to Scale Runabout Output",
+      "body": "Bruncraft Industries acquired the shuttered Coachline assembly plant near Halvenport for an undisclosed sum, aiming to add roughly 40,000 units of annual Runabout capacity to meet the transit fleet order. CEO Orla Marrow, true to her acquisitive streak, said the deal 'turns a backlog into a promise we can actually keep.' Production is expected to begin within nine months after retooling.",
+      "cycle": 82542,
+      "dur": 2
+    },
+    {
+      "company": "Castle Devices",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Castle Devices Expands National Clinic Pact to Cover Surgical Consumables",
+      "body": "Castle Devices broadened its long-term supply pact with the National Clinic Group to include a new surgical consumables category, adding an estimated 120 million in annual volume. CEO Bram Calder called the expansion 'a natural next step for a partner that already trusts our shipments,' emphasizing continuity of the existing terms.",
+      "cycle": 82542,
+      "dur": 2
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Castlestone Slips as Campus Buildout Costs Outrun Vellmont Revenue",
+      "body": "Castlestone reported quarterly margins of 18%, down from 26% a year earlier, as construction and staffing costs at its twin Compute campuses ran ahead of recognized revenue from the Vellmont backlog. CEO Iris Garr defended the spend as 'the price of never missing another order,' but the results fell short of the elevated forecasts set after recent record quarters. Management guided to a recovery once the first campus reaches full output next year.",
+      "cycle": 82542,
+      "dur": 2
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Marlgear Supply Faces Regulatory Probe Over Atlas Machine Failures at Drennan Mills",
+      "body": "A safety authority opened a formal investigation into Marlgear Supply's flagship Atlas industrial machines after three reported mechanical failures at Drennan Mills, one causing a serious floor injury. CEO Halden Vossen, who days earlier had touted a record quarter on the swelling Atlas backlog, said the company would 'cooperate fully and pause no shipments unless the data demands it' — a stance that drew immediate scrutiny given the open injury report. Carrow Group said it is reviewing the status of its landmark order pending the probe's findings.",
+      "cycle": 82542,
+      "dur": 8
+    },
+    {
+      "company": "Skarngrave",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Skarngrave Edges Past Estimates on Sterilization Contract Ramp",
+      "body": "Skarngrave posted a modest revenue rise of 6% for the quarter, lifted by the early stages of its five-year sterilization supply contract. CEO Orla Dray noted that renewal rates across the Cleaning and Jansan lines held steady at 94%, keeping the medical house on its familiar dependable footing.",
+      "cycle": 82542,
+      "dur": 1
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Wrengrove Group Named Sole Consumables Supplier to Thornbury Hospital Network",
+      "body": "Wrengrove Group signed a four-year agreement to supply medical consumables across the 22-facility Thornbury Hospital Network, a deal the company values at over 300 million. CEO Rhys Vossen said the newly added second line at the Easton plant was 'the reason we could say yes,' framing the win as a payoff on recent expansion. Deliveries begin next quarter.",
+      "cycle": 82542,
+      "dur": 2
+    },
+    {
+      "company": "Wrenhaus",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Wrenhaus Tops Forecasts as Brackenfield Fixtures Ship",
+      "body": "Wrenhaus reported revenue up 9% for the quarter as initial shipments under the Brackenfield Development contract began flowing. CEO Quinn Thorne kept guidance conservative, citing disciplined pacing on the project rollout through the coming year.",
+      "cycle": 82542,
+      "dur": 1
+    },
+    {
+      "company": "Wrenspire",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Wrenspire Rolls Out Everyroom Household Line Across Marlowe Region",
+      "body": "Wrenspire introduced its Everyroom private-label household goods range, launching first through the recently opened Marlowe distribution center. CEO Theo Aldous said the line consolidates several existing categories under one banner to 'sharpen shelf presence without adding shelf clutter.'",
+      "cycle": 82542,
+      "dur": 1
+    },
     {
       "company": "Ardent Health",
       "sector": "medical",
@@ -30,16 +110,6 @@
       "body": "Carrowwell debuted its Meridian modular conveyor and sortation system, the first product built at its newly opened material handling plant. CEO Theo Thorne said the line lets warehouses scale throughput in configurable blocks, targeting mid-size operators priced out of custom installs. Early orders from two regional distributors have already booked out first-quarter capacity.",
       "cycle": 82541,
       "dur": 2
-    },
-    {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Edges Past Estimates as Farm Equipment Demand Firms",
-      "body": "Cranecraft reported a modest quarterly beat, with farm equipment sales rising 4% alongside the ramping textile contract. CEO Mira Garr noted steady replacement demand across the grain belt and reaffirmed full-year guidance. The results extend a quiet streak of dependable, incremental gains for the house.",
-      "cycle": 82541,
-      "dur": 1
     },
     {
       "company": "Halhold Works",
@@ -72,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Wold & Bramm",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Wold & Bramm Opens Second Showroom to Carry Heritage Lighting Line",
-      "body": "Wold & Bramm quietly opened a flagship showroom in the Halden design district, doubling its retail footprint. CEO Mara Marrow said the space will anchor the recently launched heritage lighting collection, which has outsold internal projections since its trade debut. The disciplined expansion is funded entirely from operating cash.",
-      "cycle": 82541,
-      "dur": 1
-    },
-    {
       "company": "Carrowforge",
       "sector": "manufacturing",
       "kind": "restructure",
@@ -92,26 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Erretmark Works Unveils Coach-Built Flagship Fusing Velmonte and Sorne Craft",
-      "body": "The Erretmark Regenta, priced from $412,000, is the first model to combine Velmonte's hand-formed bodywork with Sorne's bespoke twelve-cylinder atelier engine. Aurelia Garr called the limited run of 250 cars 'the reason we bought them both,' with the entire first-year allocation already spoken for by existing clients.",
-      "cycle": 82540,
-      "dur": 2
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halcyon Industries Opens Second Hub in Southport to Meet Demand",
-      "body": "The $95 million Southport facility adds 400,000 square feet of packaging capacity and 220 jobs, mirroring the automated line installed at Northgate. Dorian Ashby framed the move as 'measured growth,' with the site expected to reach full output within two quarters.",
-      "cycle": 82540,
-      "dur": 2
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "major_deal",
@@ -120,36 +160,6 @@
       "body": "The multi-year agreement pairs 18,000 long-range touring vehicles with Kessel's stationary storage units across a national courier network's depots. Dorian Brandt, flanked by press at the Halloran plant, called it 'the biggest single order in our history,' pushing the company to add a third assembly shift.",
       "cycle": 82540,
       "dur": 8
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Maison & Vale Acquires Household-Goods Maker Corran Linens",
-      "body": "Rhys Kessler added Corran Linens in a $310 million deal, broadening the group beyond cleaning into premium household textiles. Kessler said the purchase 'completes the room,' pairing Sundle's professional supplies with Corran's linens under a single hospitality banner.",
-      "cycle": 82540,
-      "dur": 2
-    },
-    {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Stegreach Launches Sealed Fixture Line for Wet and Underground Sites",
-      "body": "The new Grippan LX range combines corrosion-resistant fasteners and enclosed lighting rated for tunnel and coastal use, targeting the transit projects fueling recent orders. Halden Ashby said early interest from three infrastructure contractors had already filled the first production batch.",
-      "cycle": 82540,
-      "dur": 2
-    },
-    {
-      "company": "Veldtreach & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Veldtreach & Sons Posts Record Quarter as Coastal Works Ramp Up",
-      "body": "Revenue climbed 22% to $940 million as the $1.6 billion reclamation contract moved into full excavation phase. Petra Steg credited disciplined scheduling and a doubled earthmover fleet, raising full-year guidance modestly.",
-      "cycle": 82540,
-      "dur": 2
     },
     {
       "company": "Castlehold",
@@ -219,36 +229,6 @@
       "head": "Bruncraft Industries Strikes Fleet Deal to Supply 12,000 Runabouts to Halvenport Transit",
       "body": "Bruncraft has signed a five-year agreement to deliver 12,000 Foundry City Runabouts to the Halvenport Transit Authority, its largest single fleet order on record at an estimated 840 million. CEO Orla Marrow called the deal 'the beginning of a wider municipal push,' hinting at talks with three additional regional authorities. The first 2,000 units are slated for delivery by spring.",
       "cycle": 82535,
-      "dur": 8
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Skarnvale Ousts Lena Calder After Second Straight Stumble",
-      "body": "Skarnvale's board removed chief executive Lena Calder following a turbulent year capped by missed freight targets and a 9% slide in handling volumes. The company named operations veteran Marek Tovin to steady its material-handling division and review its cost base. Shares had drifted lower for three consecutive quarters amid investor frustration.",
-      "cycle": 82534,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Regulators Open Probe Into Vossenspire After Two-Region Blackout",
-      "body": "Energy authorities launched a formal investigation into Vossenspire Holdings over last month's cascading grid failure that left two regions dark for nearly eleven hours. Kestrel Calder pledged full cooperation and announced an external review of power and storage controls. The company faces potential penalties and mandated infrastructure upgrades.",
-      "cycle": 82534,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Woldmark Wins Landmark Halcyon Supply Pact Worth 2.1 Billion",
-      "body": "Woldmark signed a five-year agreement to supply its newly launched Halcyon compute line to data infrastructure operator Brennan Yards, in a deal valued at 2.1 billion. Cole Carrow called it the largest single order in company history and said three new fabrication shifts would be added to meet demand. Delivery begins next quarter.",
-      "cycle": 82534,
       "dur": 8
     }
   ]

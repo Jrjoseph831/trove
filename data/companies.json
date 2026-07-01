@@ -571,7 +571,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82535,
+    "lastEventCycle": 82542,
     "events": [
       {
         "cycle": 0,
@@ -609,6 +609,16 @@
         "body": "Bruncraft has signed a five-year agreement to deliver 12,000 Foundry City Runabouts to the Halvenport Transit Authority, its largest single fleet order on record at an estimated 840 million. CEO Orla Marrow called the deal 'the beginning of a wider municipal push,' hinting at talks with three additional regional authorities. The first 2,000 units are slated for delivery by spring.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82542,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Bruncraft Industries Buys Coachline Plant to Scale Runabout Output",
+        "body": "Bruncraft Industries acquired the shuttered Coachline assembly plant near Halvenport for an undisclosed sum, aiming to add roughly 40,000 units of annual Runabout capacity to meet the transit fleet order. CEO Orla Marrow, true to her acquisitive streak, said the deal 'turns a backlog into a promise we can actually keep.' Production is expected to begin within nine months after retooling.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -1211,7 +1221,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82516,
+    "lastEventCycle": 82542,
     "events": [
       {
         "cycle": 0,
@@ -1229,6 +1239,16 @@
         "body": "CEO Bram Calder confirmed a five-year extension to supply sterile consumables to the Brightwell clinic network, valued at roughly $96 million. The renewal preserves the firm's largest recurring revenue stream with no change in pricing. Calder described it as 'business as usual, which is exactly the point.'",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82542,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Castle Devices Expands National Clinic Pact to Cover Surgical Consumables",
+        "body": "Castle Devices broadened its long-term supply pact with the National Clinic Group to include a new surgical consumables category, adding an estimated 120 million in annual volume. CEO Bram Calder called the expansion 'a natural next step for a partner that already trusts our shipments,' emphasizing continuity of the existing terms.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -1381,7 +1401,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82536,
+    "lastEventCycle": 82542,
     "events": [
       {
         "cycle": 0,
@@ -1429,6 +1449,16 @@
         "body": "Riding a record order book, Iris Garr announced a 4.2 billion-unit buildout of two new compute campuses at Harrowfield and Dunmere, together adding an estimated 60 percent to Castlestone's output capacity. Garr, characteristically bullish, told staff the expansion would be 'fully lit within eighteen months' and pledged 3,400 new hires. Critics note the aggressive timeline rests on supply commitments still ramping.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82542,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Castlestone Slips as Campus Buildout Costs Outrun Vellmont Revenue",
+        "body": "Castlestone reported quarterly margins of 18%, down from 26% a year earlier, as construction and staffing costs at its twin Compute campuses ran ahead of recognized revenue from the Vellmont backlog. CEO Iris Garr defended the spend as 'the price of never missing another order,' but the results fell short of the elevated forecasts set after recent record quarters. Management guided to a recovery once the first campus reaches full output next year.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -3319,7 +3349,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82535,
+    "lastEventCycle": 82542,
     "events": [
       {
         "cycle": 0,
@@ -3367,6 +3397,16 @@
         "body": "Marlgear reported quarterly revenue of 1.2 billion, up 31% year over year, driven entirely by Atlas Industrial Press demand from the Drennan and Carrow contracts. The order backlog now stretches 14 months, prompting CEO Halden Vossen to declare the press line 'the most important machine we have ever built.' Vossen also teased a second assembly site to ease the bottleneck.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82542,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Marlgear Supply Faces Regulatory Probe Over Atlas Machine Failures at Drennan Mills",
+        "body": "A safety authority opened a formal investigation into Marlgear Supply's flagship Atlas industrial machines after three reported mechanical failures at Drennan Mills, one causing a serious floor injury. CEO Halden Vossen, who days earlier had touted a record quarter on the swelling Atlas backlog, said the company would 'cooperate fully and pause no shipments unless the data demands it' — a stance that drew immediate scrutiny given the open injury report. Carrow Group said it is reviewing the status of its landmark order pending the probe's findings.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -3683,7 +3723,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82522,
+    "lastEventCycle": 82542,
     "events": [
       {
         "cycle": 0,
@@ -3701,6 +3741,16 @@
         "body": "Skarngrave secured a $310 million agreement to supply sterilization equipment and Jansan consumables to the Meridian Health Network's 88 facilities. CEO Orla Dray called the deal 'steady work for steady people,' noting it replaces a rival incumbent after a competitive bid. Deliveries begin in the first quarter.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82542,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrave Edges Past Estimates on Sterilization Contract Ramp",
+        "body": "Skarngrave posted a modest revenue rise of 6% for the quarter, lifted by the early stages of its five-year sterilization supply contract. CEO Orla Dray noted that renewal rates across the Cleaning and Jansan lines held steady at 94%, keeping the medical house on its familiar dependable footing.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -4635,7 +4685,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82524,
+    "lastEventCycle": 82542,
     "events": [
       {
         "cycle": 0,
@@ -4654,6 +4704,16 @@
         "effects": {
           "medical": 0.06
         }
+      },
+      {
+        "cycle": 82542,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Wrengrove Group Named Sole Consumables Supplier to Thornbury Hospital Network",
+        "body": "Wrengrove Group signed a four-year agreement to supply medical consumables across the 22-facility Thornbury Hospital Network, a deal the company values at over 300 million. CEO Rhys Vossen said the newly added second line at the Easton plant was 'the reason we could say yes,' framing the win as a payoff on recent expansion. Deliveries begin next quarter.",
+        "effects": {
+          "medical": 0.13
+        }
       }
     ]
   },
@@ -4668,7 +4728,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82524,
+    "lastEventCycle": 82542,
     "events": [
       {
         "cycle": 0,
@@ -4687,6 +4747,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82542,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wrenhaus Tops Forecasts as Brackenfield Fixtures Ship",
+        "body": "Wrenhaus reported revenue up 9% for the quarter as initial shipments under the Brackenfield Development contract began flowing. CEO Quinn Thorne kept guidance conservative, citing disciplined pacing on the project rollout through the coming year.",
+        "effects": {
+          "construction": 0.06
+        }
       }
     ]
   },
@@ -4701,7 +4771,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82524,
+    "lastEventCycle": 82542,
     "events": [
       {
         "cycle": 0,
@@ -4717,6 +4787,16 @@
         "size": "flash",
         "head": "Wrenspire Opens New Distribution Center in Marlowe",
         "body": "Wrenspire cut the ribbon on a 600,000-square-foot Marlowe distribution center serving its household and apparel lines. CEO Theo Aldous said the site 'stocks every room a little faster.' The facility is expected to shorten regional delivery times by two days.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82542,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Wrenspire Rolls Out Everyroom Household Line Across Marlowe Region",
+        "body": "Wrenspire introduced its Everyroom private-label household goods range, launching first through the recently opened Marlowe distribution center. CEO Theo Aldous said the line consolidates several existing categories under one banner to 'sharpen shelf presence without adding shelf clutter.'",
         "effects": {
           "consumer": 0.06
         }
