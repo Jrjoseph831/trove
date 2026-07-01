@@ -627,14 +627,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1979,
-    "ceo": "Petra Veldt",
-    "ceoSince": 1979,
+    "ceo": "Corwin Hale",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.85,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82538,
+    "lastEventCycle": 82543,
     "events": [
       {
         "cycle": 0,
@@ -683,6 +683,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82543,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Bruncrest Works Ousts Petra Veldt as Meridian Demand Probe Escalates",
+        "body": "The board removed Petra Veldt after 46 years at the helm as investigators expanded the inquiry into allegedly inflated Meridian demand figures used to justify the new campus. Veldt's departure comes amid a suspension of campus construction and a restatement review of two prior quarters. The company named turnaround veteran Corwin Hale as interim chief executive.",
+        "effects": {}
       }
     ]
   },
@@ -854,7 +862,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82537,
+    "lastEventCycle": 82543,
     "events": [
       {
         "cycle": 0,
@@ -911,6 +919,16 @@
         "head": "Brunstone & Sons Ousts CEO Sable Veldt as Ardent Crisis Deepens",
         "body": "The Brunstone board removed long-serving chief Sable Veldt following the costly Ardent Hauler recall and a second straight quarter of losses. Veldt, known for bold public bets, will be succeeded by turnaround executive Royce Lambourne, who pledged a full review of the power-pack program and a restructured warranty reserve. Shares had shed roughly a third of their value since the heating probe began.",
         "effects": {}
+      },
+      {
+        "cycle": 82543,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Brunstone & Sons Kills Ardent Line, Cuts 2,000 Jobs in Sweeping Reset",
+        "body": "New CEO Royce Lambourne announced the permanent discontinuation of the Ardent Hauler and a 15% workforce reduction, roughly 2,000 roles, as the company retrenches around its Power & Storage unit. Lambourne pledged a redesigned pack architecture and a fresh vehicle platform by 2028, calling the recall 'a failure we will not repeat.' The company took a further charge to close Ardent tooling and settle supplier contracts.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -1264,7 +1282,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82516,
+    "lastEventCycle": 82543,
     "events": [
       {
         "cycle": 0,
@@ -1282,6 +1300,16 @@
         "body": "CEO Sable Brandt unveiled an updated modular tray line designed to cut sterilization cycle times for hospital operating rooms. The launch was deliberately limited to three pilot facilities for evaluation before broader rollout. Brandt emphasized the company's preference for 'proving it quietly before promising it loudly.'",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82543,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Castlegear Group Wins Multi-Hospital Supply Pact for Tray System",
+        "body": "Sable Brandt secured a five-year agreement to supply its new surgical instrument tray system across the 22-hospital Ellendale Health network. The contract, valued near 118 million, includes consumables replenishment and staff training. Brandt called it 'a measured step that plays to our strengths,' with rollout beginning at flagship facilities this quarter.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -2245,7 +2273,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82537,
+    "lastEventCycle": 82543,
     "events": [
       {
         "cycle": 0,
@@ -2304,6 +2332,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82543,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Launches Aurelian Noir to Sustain Demand Surge",
+        "body": "Chasing its record quarter, Mira Ashby debuted the Aurelian Noir, a blackened-case variant capped at 300 pieces and priced roughly 40% above the base line. Ashby said early reservations covered more than half the run within days of the Caldwyck flagship's preview event. The launch deepens Gromford's bet that Aurelian scarcity can keep margins climbing.",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -2318,7 +2356,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82529,
+    "lastEventCycle": 82543,
     "events": [
       {
         "cycle": 0,
@@ -2346,6 +2384,16 @@
         "body": "The Meridian Tourbillon, Halcrest's costliest release in decades, won the Grand Complication prize at the annual Crown Watch Salon, beating a crowded field of rivals. CEO Iris Marrow called the trophy proof that 'patience and price can still share a wrist.' The maker said the recognition has lengthened its waiting list.",
         "effects": {
           "luxury": 0.06
+        }
+      },
+      {
+        "cycle": 82543,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcrest Rides Meridian Triumph Into New Salon on Vireo Row",
+        "body": "Fresh off the Crown Watch Salon honor, Iris Marrow announced a 4,200-square-foot maison on Vireo Row, the company's first new boutique in eleven years. Marrow framed the move as 'answering the demand the Meridian created,' with a private atelier reserved for Tourbillon commissions. The location is slated to open within two quarters and will house a restoration workshop.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -2457,7 +2505,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82538,
+    "lastEventCycle": 82543,
     "events": [
       {
         "cycle": 0,
@@ -2511,6 +2559,16 @@
         "size": "standard",
         "head": "Halhold Systems Debuts Slimmed-Down Northgate Compute Tier",
         "body": "CEO Dahlia Renn unveiled the Northgate Lite platform, a pared-back compute line built around the reset strategy after last quarter's overruns. The unit ships at a 22% lower price point than the original Northgate spec, and Renn told reporters the first 4,000 racks are already committed to early customers. Analysts called it a credible first step toward steadying the troubled program.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82543,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halhold Systems Lands Anchor Client for Reworked Northgate Tier",
+        "body": "Dahlia Renn secured a multi-year supply agreement with logistics operator Fenwick Grid, the first major win for the slimmed-down Northgate compute tier. The deal, reported near 340 million over three years, validates Renn's decision to narrow the product's scope after the earlier fallout. Delivery begins next quarter under fixed capacity commitments.",
         "effects": {
           "technology": 0.13
         }
@@ -3508,7 +3566,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82532,
+    "lastEventCycle": 82543,
     "events": [
       {
         "cycle": 0,
@@ -3536,6 +3594,16 @@
         "body": "A coalition of contractors and a neighboring property owner filed a 240-million-unit suit against Marrowstone Build, alleging negligent shoring practices led to last month's embankment collapse. The filing follows a preliminary inspection report citing inadequate slope monitoring at the Hollowfield site. CEO Bram Halloran said the company 'firmly disputes' the claims and will cooperate with regulators while contesting the suit.",
         "effects": {
           "construction": -0.22
+        }
+      },
+      {
+        "cycle": 82543,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Marrowstone Build Draws Second Site Order as Embankment Probe Widens",
+        "body": "Regulators issued a stop-work order at Marrowstone's Dellmoor excavation after inspectors flagged shoring deficiencies mirroring those at the collapsed embankment. Bram Halloran said the firm would voluntarily halt three additional sites for internal review, adding independent geotechnical auditors to every active project. The widening scrutiny threatens roughly 90 million in near-term contract milestones.",
+        "effects": {
+          "construction": -0.13
         }
       }
     ]
@@ -4238,14 +4306,14 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1893,
-    "ceo": "Petra Holt",
-    "ceoSince": 1893,
+    "ceo": "Marisol Venn",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.71,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82536,
+    "lastEventCycle": 82543,
     "events": [
       {
         "cycle": 0,
@@ -4294,6 +4362,14 @@
         "effects": {
           "luxury": -0.13
         }
+      },
+      {
+        "cycle": 82543,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Varnvale House Ousts Petra Holt as Ember Sourcing Scandal Deepens",
+        "body": "After 132 years of family stewardship, the board removed Petra Holt following a third consecutive disappointing quarter and mounting legal exposure over Ember capsule sourcing claims. Directors appointed former compliance chief Marisol Venn to steady the house, pledging a full audit of supplier disclosures and a settlement framework for the pending suit. Venn said restoring 'the truth of every claim we make' would be her first priority.",
+        "effects": {}
       }
     ]
   },
