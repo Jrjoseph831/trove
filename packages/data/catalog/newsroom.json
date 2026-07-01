@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-06-30T18:44:01.533Z",
+  "generatedAt": "2026-07-01T01:02:19.754Z",
   "beats": [
     {
-      "company": "Ashbystead Holdings",
-      "sector": "medical",
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "restructure",
+      "size": "major",
+      "head": "New Carrowforge Chief Roe Launches Sweeping Overhaul After Testing Scandal",
+      "body": "In his first major action, Halden Roe announced the closure of the Dell Valley testing site, a rebuilt quality division, and a $180 million write-down tied to recalled machine lines. Roe pledged independent audits of every product line, calling the cleanup 'painful but non-negotiable' for restoring buyer trust.",
+      "cycle": 82540,
+      "dur": 8
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Erretmark Works Unveils Coach-Built Flagship Fusing Velmonte and Sorne Craft",
+      "body": "The Erretmark Regenta, priced from $412,000, is the first model to combine Velmonte's hand-formed bodywork with Sorne's bespoke twelve-cylinder atelier engine. Aurelia Garr called the limited run of 250 cars 'the reason we bought them both,' with the entire first-year allocation already spoken for by existing clients.",
+      "cycle": 82540,
+      "dur": 2
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Ashbystead Holdings Posts Modest Beat on Replacement-Parts Demand",
-      "body": "Ashbystead Holdings edged past estimates again, with quarterly revenue of $312 million lifted by steady hospital orders for diagnostic-equipment replacement parts. Cora Holt pointed to consistent service-contract renewals as the quiet engine behind the result. Management reaffirmed a cautious full-year outlook.",
-      "cycle": 82539,
+      "head": "Greenmarsh Agro Edges Past Estimates on Steady Input Sales",
+      "body": "The slow-release soil blend contributed to a 6% rise in inputs revenue, lifting quarterly profit to $112 million. Petra Kessler kept guidance unchanged, noting adoption 'builds over seasons, not quarters.'",
+      "cycle": 82540,
       "dur": 1
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Halcyon Industries Opens Second Hub in Southport to Meet Demand",
+      "body": "The $95 million Southport facility adds 400,000 square feet of packaging capacity and 220 jobs, mirroring the automated line installed at Northgate. Dorian Ashby framed the move as 'measured growth,' with the site expected to reach full output within two quarters.",
+      "cycle": 82540,
+      "dur": 2
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Kessel Drive Signs $3.2 Billion National Fleet Pact for Touring and Storage Lines",
+      "body": "The multi-year agreement pairs 18,000 long-range touring vehicles with Kessel's stationary storage units across a national courier network's depots. Dorian Brandt, flanked by press at the Halloran plant, called it 'the biggest single order in our history,' pushing the company to add a third assembly shift.",
+      "cycle": 82540,
+      "dur": 8
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Maison & Vale Acquires Household-Goods Maker Corran Linens",
+      "body": "Rhys Kessler added Corran Linens in a $310 million deal, broadening the group beyond cleaning into premium household textiles. Kessler said the purchase 'completes the room,' pairing Sundle's professional supplies with Corran's linens under a single hospitality banner.",
+      "cycle": 82540,
+      "dur": 2
+    },
+    {
+      "company": "Stegreach",
+      "sector": "construction",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Stegreach Launches Sealed Fixture Line for Wet and Underground Sites",
+      "body": "The new Grippan LX range combines corrosion-resistant fasteners and enclosed lighting rated for tunnel and coastal use, targeting the transit projects fueling recent orders. Halden Ashby said early interest from three infrastructure contractors had already filled the first production batch.",
+      "cycle": 82540,
+      "dur": 2
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Veldtreach & Sons Posts Record Quarter as Coastal Works Ramp Up",
+      "body": "Revenue climbed 22% to $940 million as the $1.6 billion reclamation contract moved into full excavation phase. Petra Steg credited disciplined scheduling and a doubled earthmover fleet, raising full-year guidance modestly.",
+      "cycle": 82540,
+      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -52,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Ironcrestcrest Supply",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Ironcrestcrest Supply Introduces Value Workshop Lighting Range",
-      "body": "Ironcrestcrest Supply has launched a no-frills workshop and utility fixtures range aimed at small contractors, priced roughly 15 percent below its core catalog. Dorian Garr said the line leverages stock now flowing through the recently opened third warehouse. The release stays close to the firm's bright-rooms, fair-prices positioning.",
-      "cycle": 82539,
-      "dur": 1
-    },
-    {
       "company": "Korrwright Works",
       "sector": "luxury",
       "kind": "expansion",
@@ -82,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Boreas Power Breaks Ground on Hollowmere Expansion Phase Two",
-      "body": "Mira Thorne announced a $1.9 billion buildout that will nearly double storage capacity at the wholly owned Hollowmere fields. The phase, slated for completion in 26 months, follows three straight quarters of guidance lifts and locks in long-term supply contracts with regional grid operators. Thorne hinted further bolt-on acquisitions could follow.",
-      "cycle": 82538,
-      "dur": 2
-    },
-    {
       "company": "Bruncrest Works",
       "sector": "technology",
       "kind": "scandal",
@@ -100,26 +150,6 @@
       "body": "Shares of Bruncrest tumbled after disclosures suggested the landmark Meridian Exchange contract relied on demand projections that internal documents flag as overstated. Petra Veldt, known for bold public bets, faces board scrutiny over whether the sprawling compute campus was greenlit on shaky volumes. An independent review has been launched, and Meridian said it is 'reassessing the relationship.'",
       "cycle": 82538,
       "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Brunmark Motors Rebounds as Veyra Output Hits Stride",
-      "body": "Yvette Calder reported quarterly deliveries of 41,000 Veyra compacts, beating internal targets after the Power unit split stabilized pack supply. Margins recovered 180 basis points sequentially, and Calder said the standalone power division has cleared its order backlog. The turnaround eased concerns raised during the bruising ramp earlier this year.",
-      "cycle": 82538,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Halhold Systems Debuts Slimmed-Down Northgate Compute Tier",
-      "body": "CEO Dahlia Renn unveiled the Northgate Lite platform, a pared-back compute line built around the reset strategy after last quarter's overruns. The unit ships at a 22% lower price point than the original Northgate spec, and Renn told reporters the first 4,000 racks are already committed to early customers. Analysts called it a credible first step toward steadying the troubled program.",
-      "cycle": 82538,
-      "dur": 2
     },
     {
       "company": "Lhaus Industries",
@@ -199,26 +229,6 @@
       "head": "Woldmark Wins Landmark Halcyon Supply Pact Worth 2.1 Billion",
       "body": "Woldmark signed a five-year agreement to supply its newly launched Halcyon compute line to data infrastructure operator Brennan Yards, in a deal valued at 2.1 billion. Cole Carrow called it the largest single order in company history and said three new fabrication shifts would be added to meet demand. Delivery begins next quarter.",
       "cycle": 82534,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "major",
-      "head": "Bruncrest Works to Build Sprawling Compute Campus on Meridian Demand",
-      "body": "CEO Petra Veldt announced a 1.2-billion-unit expansion, breaking ground on a fourth fabrication campus in the Northvale district to meet surging volume under the Meridian Exchange pact. The site will add an estimated 3,400 jobs and double Bruncrest's annual compute output by its 1983 completion. Veldt called it 'the boldest bet of my career,' framing the project as a generational commitment despite warnings from rivals about overcapacity.",
-      "cycle": 82532,
-      "dur": 8
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Marrowstone Build Sued Over Embankment Collapse as Probe Widens",
-      "body": "A coalition of contractors and a neighboring property owner filed a 240-million-unit suit against Marrowstone Build, alleging negligent shoring practices led to last month's embankment collapse. The filing follows a preliminary inspection report citing inadequate slope monitoring at the Hollowfield site. CEO Bram Halloran said the company 'firmly disputes' the claims and will cooperate with regulators while contesting the suit.",
-      "cycle": 82532,
       "dur": 8
     }
   ]

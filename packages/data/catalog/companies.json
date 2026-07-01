@@ -1087,7 +1087,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82529,
+    "lastEventCycle": 82540,
     "events": [
       {
         "cycle": 0,
@@ -1114,6 +1114,16 @@
         "head": "Carrowforge CEO Mara Fenn Steps Down Amid Testing-Records Probe",
         "body": "Mara Fenn, who led Carrowforge for nearly a century, resigned Wednesday as investigators widened their inquiry into falsified machine-testing certificates spanning three product lines. The board named longtime quality director Halden Roe as interim chief, vowing a clean-sheet audit of every certification issued in the past five years. Shares of the manufacturer have been battered since the probe surfaced.",
         "effects": {}
+      },
+      {
+        "cycle": 82540,
+        "kind": "restructure",
+        "size": "major",
+        "head": "New Carrowforge Chief Roe Launches Sweeping Overhaul After Testing Scandal",
+        "body": "In his first major action, Halden Roe announced the closure of the Dell Valley testing site, a rebuilt quality division, and a $180 million write-down tied to recalled machine lines. Roe pledged independent audits of every product line, calling the cleanup 'painful but non-negotiable' for restoring buyer trust.",
+        "effects": {
+          "manufacturing": -0.22
+        }
       }
     ]
   },
@@ -1758,7 +1768,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82528,
+    "lastEventCycle": 82540,
     "events": [
       {
         "cycle": 0,
@@ -1784,6 +1794,16 @@
         "size": "standard",
         "head": "Erretmark Works Buys Engine Atelier Sorne to Pair With Velmonte",
         "body": "Continuing Aurelia Garr's buying spree, Erretmark acquired bespoke engine atelier Sorne for an undisclosed sum, slotting it alongside recently purchased coachbuilder Velmonte. The pairing gives Erretmark in-house control of both bodywork and powertrain for its low-volume commissions. Garr said the goal is 'a car built entirely under one roof for clients who count in dozens, not thousands.'",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82540,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Erretmark Works Unveils Coach-Built Flagship Fusing Velmonte and Sorne Craft",
+        "body": "The Erretmark Regenta, priced from $412,000, is the first model to combine Velmonte's hand-formed bodywork with Sorne's bespoke twelve-cylinder atelier engine. Aurelia Garr called the limited run of 250 cars 'the reason we bought them both,' with the entire first-year allocation already spoken for by existing clients.",
         "effects": {
           "automotive": 0.13
         }
@@ -2059,7 +2079,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82518,
+    "lastEventCycle": 82540,
     "events": [
       {
         "cycle": 0,
@@ -2075,6 +2095,16 @@
         "size": "flash",
         "head": "Greenmarsh Agro Introduces Slow-Release Soil Input Blend",
         "body": "Greenmarsh Agro has rolled out a new slow-release fertilizer formulation aimed at multi-season croplands. Petra Kessler said field trials showed steadier nutrient delivery across a full growing cycle, fitting the firm's 'furrow to full barn' philosophy. The blend ships first to long-standing grain customers.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82540,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Greenmarsh Agro Edges Past Estimates on Steady Input Sales",
+        "body": "The slow-release soil blend contributed to a 6% rise in inputs revenue, lifting quarterly profit to $112 million. Petra Kessler kept guidance unchanged, noting adoption 'builds over seasons, not quarters.'",
         "effects": {
           "agriculture": 0.06
         }
@@ -2304,7 +2334,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82529,
+    "lastEventCycle": 82540,
     "events": [
       {
         "cycle": 0,
@@ -2332,6 +2362,16 @@
         "body": "Halcyon Industries quietly commissioned a second high-speed packaging line at its Northgate distribution hub, lifting regional capacity by an estimated 20%. CEO Dorian Ashby said the addition supports rising volumes without straining margins, consistent with the firm's steady expansion approach. No major headcount changes were announced.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82540,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcyon Industries Opens Second Hub in Southport to Meet Demand",
+        "body": "The $95 million Southport facility adds 400,000 square feet of packaging capacity and 220 jobs, mirroring the automated line installed at Northgate. Dorian Ashby framed the move as 'measured growth,' with the site expected to reach full output within two quarters.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -2825,7 +2865,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82529,
+    "lastEventCycle": 82540,
     "events": [
       {
         "cycle": 0,
@@ -2853,6 +2893,16 @@
         "body": "Kessel Drive secured a 12,000-unit order from a national coach operator for its newly launched long-range touring vehicle, its biggest single fleet commitment in years. CEO Dorian Brandt called it validation of the splashy reveal, promising first deliveries within nine months. The deal includes a multi-year service and battery-storage maintenance package.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82540,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Kessel Drive Signs $3.2 Billion National Fleet Pact for Touring and Storage Lines",
+        "body": "The multi-year agreement pairs 18,000 long-range touring vehicles with Kessel's stationary storage units across a national courier network's depots. Dorian Brandt, flanked by press at the Halloran plant, called it 'the biggest single order in our history,' pushing the company to add a third assembly shift.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -3166,7 +3216,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82530,
+    "lastEventCycle": 82540,
     "events": [
       {
         "cycle": 0,
@@ -3194,6 +3244,16 @@
         "body": "Following its Sundle Werks acquisition, Maison & Vale launched a 14-product professional cleaning line aimed at hotels and serviced residences. CEO Rhys Kessler said the range pairs Sundle's formulations with Maison & Vale's hospitality distribution. Initial rollout targets the company's existing managed-property clients.",
         "effects": {
           "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82540,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Maison & Vale Acquires Household-Goods Maker Corran Linens",
+        "body": "Rhys Kessler added Corran Linens in a $310 million deal, broadening the group beyond cleaning into premium household textiles. Kessler said the purchase 'completes the room,' pairing Sundle's professional supplies with Corran's linens under a single hospitality banner.",
+        "effects": {
+          "hospitality": 0.13
         }
       }
     ]
@@ -3799,7 +3859,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82522,
+    "lastEventCycle": 82540,
     "events": [
       {
         "cycle": 0,
@@ -3815,6 +3875,16 @@
         "size": "standard",
         "head": "Stegreach Lands Wiring Contract for Major Transit Project",
         "body": "Stegreach won a $185 million contract to supply wire, cable and lighting for the Eastmere regional transit expansion. CEO Halden Ashby called it 'the kind of bold swing that pays off,' noting the deal spans four years and 60 station sites. Material deliveries start this spring.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82540,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Stegreach Launches Sealed Fixture Line for Wet and Underground Sites",
+        "body": "The new Grippan LX range combines corrosion-resistant fasteners and enclosed lighting rated for tunnel and coastal use, targeting the transit projects fueling recent orders. Halden Ashby said early interest from three infrastructure contractors had already filled the first production batch.",
         "effects": {
           "construction": 0.13
         }
@@ -4118,7 +4188,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82523,
+    "lastEventCycle": 82540,
     "events": [
       {
         "cycle": 0,
@@ -4136,6 +4206,16 @@
         "body": "The construction house will supply and operate earthmoving fleets for a decade-long harbor-expansion project spanning 40 kilometers of shoreline. CEO Petra Steg called it 'the largest single undertaking in our books,' requiring a 30% expansion of the heavy-equipment division. Mobilization begins within 90 days, with first dredging milestones set for next year.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82540,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Veldtreach & Sons Posts Record Quarter as Coastal Works Ramp Up",
+        "body": "Revenue climbed 22% to $940 million as the $1.6 billion reclamation contract moved into full excavation phase. Petra Steg credited disciplined scheduling and a doubled earthmover fleet, raising full-year guidance modestly.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
