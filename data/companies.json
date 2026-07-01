@@ -245,7 +245,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82515,
+    "lastEventCycle": 82541,
     "events": [
       {
         "cycle": 0,
@@ -261,6 +261,16 @@
         "size": "standard",
         "head": "Ardent Unveils Next-Generation Diagnostic Imaging Platform",
         "body": "After seven years in development, Ardent Health has cleared certification on its Lumen scanning system, which cuts imaging time by roughly a third. Orla Halloran, characteristically patient, said deployment would begin with two teaching hospitals before any wider commitment.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82541,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Ardent Health Secures Academic Medical Center Rollout for New Imaging Platform",
+        "body": "Ardent Health signed a phased agreement to install its next-generation diagnostic imaging platform across the six-hospital Kelvorne Academic Health System. CEO Orla Halloran said the multi-year deployment reflects the platform's early clinical validation and Ardent's characteristic patience in bringing it to market. Financial terms were not disclosed, though the rollout begins with two flagship sites this year.",
         "effects": {
           "medical": 0.13
         }
@@ -783,7 +793,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82528,
+    "lastEventCycle": 82541,
     "events": [
       {
         "cycle": 0,
@@ -810,6 +820,16 @@
         "head": "Brunridge Works Names New Chief to Steer Three-Pillar Structure",
         "body": "After overseeing the consolidation of five divisions into three pillars, Petra Wold will step back to a chairmanship as Halia Brennt takes the chief executive seat. Brennt, who led the Devices pillar through the reshuffle, inherits a leaner organization tasked with proving the new structure can lift margins. Wold said the handover had been planned to 'finish one chapter and let the next begin clean.'",
         "effects": {}
+      },
+      {
+        "cycle": 82541,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunridge Works Tops Forecasts in First Report Under Three-Pillar Structure",
+        "body": "Brunridge Works posted quarterly revenue of $2.1 billion, up 9% year over year, in its debut results since consolidating into three pillars. CEO Halia Brennt credited streamlined overhead in the Home Essentials pillar and stronger Apparel margins for the beat. Management raised full-year guidance modestly, calling the restructure 'ahead of schedule.'",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -1138,7 +1158,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82529,
+    "lastEventCycle": 82541,
     "events": [
       {
         "cycle": 0,
@@ -1164,6 +1184,16 @@
         "size": "standard",
         "head": "Carrowwell Breaks Ground on New Material Handling Plant",
         "body": "Riding last quarter's record orders, Carrowwell unveiled plans for a 600,000-square-foot assembly plant in the Eastmere industrial corridor, expected to add 1,400 jobs by 2028. CEO Theo Thorne framed the move as a measured response to surging conveyor and lift demand rather than a gamble, noting the facility is already 40% pre-booked. Construction begins next quarter.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82541,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Carrowwell Unveils Modular Warehouse Automation Line at New Material Handling Plant",
+        "body": "Carrowwell debuted its Meridian modular conveyor and sortation system, the first product built at its newly opened material handling plant. CEO Theo Thorne said the line lets warehouses scale throughput in configurable blocks, targeting mid-size operators priced out of custom installs. Early orders from two regional distributors have already booked out first-quarter capacity.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -1414,7 +1444,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82529,
+    "lastEventCycle": 82541,
     "events": [
       {
         "cycle": 0,
@@ -1440,6 +1470,16 @@
         "size": "flash",
         "head": "Cranecraft Posts Steady Gains as Textile Contract Ramps",
         "body": "Cranecraft delivered modest single-digit revenue growth this quarter as shipments under its multi-year Garment Belt deal began contributing meaningfully. CEO Mira Garr credited disciplined loom utilization and stable farm-equipment demand for the result. The company reaffirmed its full-year outlook.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82541,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Edges Past Estimates as Farm Equipment Demand Firms",
+        "body": "Cranecraft reported a modest quarterly beat, with farm equipment sales rising 4% alongside the ramping textile contract. CEO Mira Garr noted steady replacement demand across the grain belt and reaffirmed full-year guidance. The results extend a quiet streak of dependable, incremental gains for the house.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -2458,7 +2498,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82535,
+    "lastEventCycle": 82541,
     "events": [
       {
         "cycle": 0,
@@ -2516,6 +2556,16 @@
         "body": "Building on the redesigned Verity line, Halhold unveiled the Verity Pro suite, integrating patient monitoring with its medical-grade wire and cable systems into a single bedside console. CEO Nadia Brandt said the launch targets intensive-care wards and follows 'overwhelming demand' from the regional hospital network signed last quarter. Initial units ship within 60 days, with pricing starting at 18,500 per console.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82541,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Regulators Open Safety Probe Into Halhold's Verity Pro Bedside Suite",
+        "body": "The National Device Safety Board has launched a formal review of Halhold's newly launched Verity Pro suite after three hospitals reported intermittent alarm failures in critical-care units. CEO Nadia Brandt confirmed Halhold has paused new Verity Pro shipments and is cooperating fully, though the freshly signed regional hospital network agreement now hangs in question. Shares of the turbulent house came under heavy pressure as the review widened to the entire Verity line.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -3547,7 +3597,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82521,
+    "lastEventCycle": 82541,
     "events": [
       {
         "cycle": 0,
@@ -3563,6 +3613,16 @@
         "size": "standard",
         "head": "Palettstead Debuts Reusable Crate System for Cold-Chain Shippers",
         "body": "Palettstead launched ReCircle, a returnable insulated crate program designed for perishable and pharmaceutical freight, with the first 200,000 units entering circulation this quarter. CEO Orla Marrow described it as 'a steady idea with a bold rollout,' citing two grocery distributors already signed on. The company projects the line could cover 8% of its packaging volume within two years.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82541,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Palettstead Lands National Grocery Chain for Reusable Cold-Chain Rollout",
+        "body": "Palettstead Holdings signed a three-year agreement to supply its new reusable crate system to FreshRow Markets across 340 distribution points. CEO Orla Marrow said the deal is expected to divert roughly 18 million single-use containers annually, with initial deployment beginning next quarter. The contract marks the largest single order for the crate line since its debut.",
         "effects": {
           "logistics": 0.13
         }
@@ -4072,7 +4132,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82534,
+    "lastEventCycle": 82541,
     "events": [
       {
         "cycle": 0,
@@ -4108,6 +4168,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Debuts First Bellmont-Crafted Timepiece Collection",
         "body": "Varnvale unveiled the Meridian line, its first series pairing in-house movements with leatherwork from the newly folded Bellmont atelier. Bram Wold said the collection, priced from 4,200, marks the start of a broader push to integrate fine goods across its houses. Initial production was capped at 3,000 pieces.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82541,
+        "kind": "award",
+        "size": "standard",
+        "head": "Varnvale's First Bellmont Timepiece Named Collection of the Year at Geldst Salon",
+        "body": "The debut Bellmont-crafted collection took top honors at the Geldst Horological Salon, a rare win for a first-year line. Judges cited the hand-stitched leather integration as 'a genuine marriage of two crafts,' vindicating CEO Bram Wold's aggressive Bellmont acquisition. Varnvale said the flagship piece has already sold out its initial 400-unit run.",
         "effects": {
           "luxury": 0.13
         }
@@ -4479,7 +4549,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82523,
+    "lastEventCycle": 82541,
     "events": [
       {
         "cycle": 0,
@@ -4497,6 +4567,16 @@
         "body": "The Halden range pairs brass fittings with warm-tone fixtures, targeting mid-market households and boutique hospitality clients. CEO Mara Marrow said pre-orders already cover the first production run of 60,000 units. The line anchors a broader push into coordinated room sets rolling out through the year.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82541,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wold & Bramm Opens Second Showroom to Carry Heritage Lighting Line",
+        "body": "Wold & Bramm quietly opened a flagship showroom in the Halden design district, doubling its retail footprint. CEO Mara Marrow said the space will anchor the recently launched heritage lighting collection, which has outsold internal projections since its trade debut. The disciplined expansion is funded entirely from operating cash.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
