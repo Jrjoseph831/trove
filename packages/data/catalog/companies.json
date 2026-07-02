@@ -331,7 +331,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82539,
+    "lastEventCycle": 82547,
     "events": [
       {
         "cycle": 0,
@@ -377,6 +377,16 @@
         "body": "Days after a grid fault darkened the Greycliff test bank hours into operation, the regional energy authority has launched a formal safety review of the storage build's commissioning practices. Tomas Vren said Blackhold 'welcomes the scrutiny' but acknowledged the inquiry could delay the next 200-megawatt phase by up to two quarters. New operations chief Renna Cole is leading an internal fault audit running in parallel.",
         "effects": {
           "energy": -0.13
+        }
+      },
+      {
+        "cycle": 82547,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Blackhold Faces Backlash as Greycliff Safety Filings Come Under Question",
+        "body": "The regulatory review of Blackhold's Greycliff test bank has widened after documents surfaced suggesting internal load warnings were downplayed before the launch-day fault. CEO Tomas Vren, in the role less than a year, faces mounting pressure as two board members reportedly demand an independent audit. The company's shares of confidence have eroded sharply amid calls for a full accounting of the outage timeline.",
+        "effects": {
+          "energy": -0.22
         }
       }
     ]
@@ -973,7 +983,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82531,
+    "lastEventCycle": 82547,
     "events": [
       {
         "cycle": 0,
@@ -999,6 +1009,16 @@
         "size": "flash",
         "head": "Caldercraft Holdings Rolls Out Reinforced Tradesman Tool Line",
         "body": "Vale Fenn introduced the Tradesman Pro hand-tool range, the first product refresh to draw textile-reinforced grips from the company's expanded mills. The line spans 38 hardware items aimed at professional users and ships to retailers next month. Fenn described it as 'a steady step, the way we prefer them.'",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82547,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Caldercraft Holdings Beats on Tradesman Tool Line Rollout",
+        "body": "Caldercraft edged past expectations as its Reinforced Tradesman line sold through initial stock faster than planned, lifting hardware revenue 7 percent. CEO Vale Fenn credited the second textile mill for easing input bottlenecks across the household and tool divisions. Guidance held steady with a note of measured optimism.",
         "effects": {
           "consumer": 0.06
         }
@@ -2156,7 +2176,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82532,
+    "lastEventCycle": 82547,
     "events": [
       {
         "cycle": 0,
@@ -2182,6 +2202,16 @@
         "size": "flash",
         "head": "Forgegrave Edges Past Estimates on Pallet-Runner Uptake",
         "body": "Forgegrave Industries reported quarterly revenue up 7%, modestly beating expectations as early orders for its Pallet-Runner series outpaced internal forecasts. CEO Petra Thorne noted strong interest from mid-size distribution centers. Margins held steady amid stable component costs.",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82547,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Forgegrave Industries Lifts Full-Year Outlook as Pallet-Runner Orders Build",
+        "body": "Forgegrave nudged its annual guidance higher after the Pallet-Runner Series drew repeat orders from three mid-sized warehouse operators. CEO Petra Thorne credited steady, unspectacular execution, with backlog now covering the next two quarters. The revision was modest but marks the second consecutive lift.",
         "effects": {
           "logistics": 0.06
         }
@@ -2252,7 +2282,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82518,
+    "lastEventCycle": 82547,
     "events": [
       {
         "cycle": 0,
@@ -2268,6 +2298,16 @@
         "size": "standard",
         "head": "Garrweave Mills Signs Decade-Long Fiber Supply Pact",
         "body": "Garrweave Mills has entered a ten-year raw textile supply agreement with a consortium of garment houses, locking in volumes through the next decade. Lorne Veldt, true to his long-horizon style, framed the deal as 'planting for a harvest most won't wait around to see.' Terms guarantee a baseline annual tonnage with price collars tied to fiber yields.",
+        "effects": {
+          "textiles": 0.13
+        }
+      },
+      {
+        "cycle": 82547,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Garrweave Mills Reopens Dormant Northfield Spinning Line to Meet Pact Demand",
+        "body": "To honor its ten-year fiber supply commitment, Garrweave Mills is restarting its long-idle Northfield spinning facility, adding an estimated 90 jobs. CEO Lorne Veldt framed the reopening as a decade-scale investment rather than a quick response, with full ramp-up expected over eighteen months. The line will primarily feed the raw-textile volumes promised under last quarter's pact.",
         "effects": {
           "textiles": 0.13
         }
@@ -3194,7 +3234,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82533,
+    "lastEventCycle": 82547,
     "events": [
       {
         "cycle": 0,
@@ -3220,6 +3260,16 @@
         "size": "standard",
         "head": "Kesselgrove Co. Debuts Modular Press Platform After Quiet Development",
         "body": "Kesselgrove Co. revealed a modular industrial press platform that lets buyers reconfigure tooling in hours rather than days, the product of a multi-year internal program. CEO Orla Steg said early factory trials cut changeover downtime by 40 percent, positioning the platform to extend the firm's record machine-demand run.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82547,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Kesselgrove Co. Signs Multi-Plant Order for Modular Press Platform",
+        "body": "Kesselgrove landed its first large deployment of the new Modular Press Platform, a 156 million agreement to outfit four fabrication plants for an industrial customer. CEO Orla Steg said the order validates the platform's quiet development phase, with initial units shipping next quarter. The deal converts the recent breakthrough into concrete revenue.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -3323,7 +3373,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82534,
+    "lastEventCycle": 82547,
     "events": [
       {
         "cycle": 0,
@@ -3351,6 +3401,16 @@
         "body": "Korrwright reported revenue of 1.2 billion, up 14% year-on-year, with structural materials orders climbing as steel framing for the Verant Tower Cluster moved into early delivery. Halden Fenn credited disciplined input contracts and noted wire and cable backlogs now stretch eleven months. Margins widened to 18.3% on firmer pricing.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82547,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Korrwright Group Wins Full Wire-and-Cable Mandate for Verant Cluster",
+        "body": "Building on its frame contract, Korrwright has secured the entire structural wiring and cabling package for all six Verant Tower buildings, a deal valued at roughly 480 million and stretching four years. CEO Halden Fenn called it the largest single-site award in the group's century-long history, consolidating both of Korrwright's core lines under one project. Analysts note the win effectively ties the firm's fortunes to Verant's construction timeline through 2029.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -4081,14 +4141,14 @@
     "aiOwned": true,
     "homeSector": "logistics",
     "founded": 1959,
-    "ceo": "Marek Tovin",
+    "ceo": "Dorn Vaskell",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.58,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82534,
+    "lastEventCycle": 82547,
     "events": [
       {
         "cycle": 0,
@@ -4114,6 +4174,14 @@
         "size": "major",
         "head": "Skarnvale Ousts Lena Calder After Second Straight Stumble",
         "body": "Skarnvale's board removed chief executive Lena Calder following a turbulent year capped by missed freight targets and a 9% slide in handling volumes. The company named operations veteran Marek Tovin to steady its material-handling division and review its cost base. Shares had drifted lower for three consecutive quarters amid investor frustration.",
+        "effects": {}
+      },
+      {
+        "cycle": 82547,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Skarnvale Elevates Dorn Vaskell to Steady Ship After Calder Exit",
+        "body": "With founder-era discipline the priority, Skarnvale has promoted logistics veteran Dorn Vaskell to chief operating officer, reporting directly to CEO Marek Tovin. The move follows two consecutive stumbles under ousted deputy Lena Calder, with Vaskell tasked to renegotiate freight contracts blamed for the recent margin squeeze. Insiders describe Tovin's mandate as blunt: fix costs by the next reporting cycle or face deeper cuts.",
         "effects": {}
       }
     ]
@@ -4825,7 +4893,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82535,
+    "lastEventCycle": 82547,
     "events": [
       {
         "cycle": 0,
@@ -4853,6 +4921,16 @@
         "body": "Vossenstead opened a dedicated fittings warehouse beside its recently completed third distribution hub, expanding cold-storage and fixtures capacity by 40%. CEO Bram Thorne described the move as 'a quiet step to keep pace with steady demand' across both its food service and plumbing lines. The facility is expected to add roughly 60 positions.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82547,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenstead Supply Posts Record Quarter as Twin Hubs Come Online",
+        "body": "Vossenstead reported quarterly revenue up 14 percent to 312 million, with the newly paired distribution hub and plumbing warehouse driving faster fulfillment on both fittings and food-service lines. CEO Bram Thorne kept guidance conservative but noted margins improved as the two facilities began sharing logistics. The disciplined expansion strategy is now visibly feeding the bottom line.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]

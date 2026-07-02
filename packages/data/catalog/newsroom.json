@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-02T14:06:02.492Z",
+  "generatedAt": "2026-07-02T19:27:29.908Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Blackhold Faces Backlash as Greycliff Safety Filings Come Under Question",
+      "body": "The regulatory review of Blackhold's Greycliff test bank has widened after documents surfaced suggesting internal load warnings were downplayed before the launch-day fault. CEO Tomas Vren, in the role less than a year, faces mounting pressure as two board members reportedly demand an independent audit. The company's shares of confidence have eroded sharply amid calls for a full accounting of the outage timeline.",
+      "cycle": 82547,
+      "dur": 8
+    },
+    {
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Caldercraft Holdings Beats on Tradesman Tool Line Rollout",
+      "body": "Caldercraft edged past expectations as its Reinforced Tradesman line sold through initial stock faster than planned, lifting hardware revenue 7 percent. CEO Vale Fenn credited the second textile mill for easing input bottlenecks across the household and tool divisions. Guidance held steady with a note of measured optimism.",
+      "cycle": 82547,
+      "dur": 1
+    },
+    {
+      "company": "Forgegrave Industries",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Forgegrave Industries Lifts Full-Year Outlook as Pallet-Runner Orders Build",
+      "body": "Forgegrave nudged its annual guidance higher after the Pallet-Runner Series drew repeat orders from three mid-sized warehouse operators. CEO Petra Thorne credited steady, unspectacular execution, with backlog now covering the next two quarters. The revision was modest but marks the second consecutive lift.",
+      "cycle": 82547,
+      "dur": 1
+    },
+    {
+      "company": "Garrweave Mills",
+      "sector": "textiles",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Garrweave Mills Reopens Dormant Northfield Spinning Line to Meet Pact Demand",
+      "body": "To honor its ten-year fiber supply commitment, Garrweave Mills is restarting its long-idle Northfield spinning facility, adding an estimated 90 jobs. CEO Lorne Veldt framed the reopening as a decade-scale investment rather than a quick response, with full ramp-up expected over eighteen months. The line will primarily feed the raw-textile volumes promised under last quarter's pact.",
+      "cycle": 82547,
+      "dur": 2
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Kesselgrove Co. Signs Multi-Plant Order for Modular Press Platform",
+      "body": "Kesselgrove landed its first large deployment of the new Modular Press Platform, a 156 million agreement to outfit four fabrication plants for an industrial customer. CEO Orla Steg said the order validates the platform's quiet development phase, with initial units shipping next quarter. The deal converts the recent breakthrough into concrete revenue.",
+      "cycle": 82547,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Korrwright Group Wins Full Wire-and-Cable Mandate for Verant Cluster",
+      "body": "Building on its frame contract, Korrwright has secured the entire structural wiring and cabling package for all six Verant Tower buildings, a deal valued at roughly 480 million and stretching four years. CEO Halden Fenn called it the largest single-site award in the group's century-long history, consolidating both of Korrwright's core lines under one project. Analysts note the win effectively ties the firm's fortunes to Verant's construction timeline through 2029.",
+      "cycle": 82547,
+      "dur": 8
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Skarnvale Elevates Dorn Vaskell to Steady Ship After Calder Exit",
+      "body": "With founder-era discipline the priority, Skarnvale has promoted logistics veteran Dorn Vaskell to chief operating officer, reporting directly to CEO Marek Tovin. The move follows two consecutive stumbles under ousted deputy Lena Calder, with Vaskell tasked to renegotiate freight contracts blamed for the recent margin squeeze. Insiders describe Tovin's mandate as blunt: fix costs by the next reporting cycle or face deeper cuts.",
+      "cycle": 82547,
+      "dur": 2
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenstead Supply Posts Record Quarter as Twin Hubs Come Online",
+      "body": "Vossenstead reported quarterly revenue up 14 percent to 312 million, with the newly paired distribution hub and plumbing warehouse driving faster fulfillment on both fittings and food-service lines. CEO Bram Thorne kept guidance conservative but noted margins improved as the two facilities began sharing logistics. The disciplined expansion strategy is now visibly feeding the bottom line.",
+      "cycle": 82547,
+      "dur": 2
+    },
     {
       "company": "Blackton Industries",
       "sector": "automotive",
@@ -59,76 +139,6 @@
       "head": "Hesperforge Supply Signs Framework Deal to Feed Coastal Bridgeworks Program",
       "body": "The manufacturer secured a multi-year framework to supply high-yield beams for a large coastal infrastructure program, with initial commitments valued near $310 million. Sable Halloran said the deal validates the new patented line and locks in demand through the decade's midpoint.",
       "cycle": 82546,
-      "dur": 2
-    },
-    {
-      "company": "Holtgate Group",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Group Posts Steady Gains on Uniform Guild Volumes",
-      "body": "The textile house reported modestly higher revenue as shipments under its Uniform Makers Guild pact ramped on schedule. Dorian Throne described the quarter as \"exactly what we planned,\" with mill utilization edging up to 88%.",
-      "cycle": 82546,
-      "dur": 1
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Marrowcyon Widens Hardwear Fixture Line Into New Regional Markets",
-      "body": "The consumer house extended distribution of its Hardwear rental fixtures to two additional regions after stronger-than-expected landlord uptake. Theo Orne said the rollout adds modest capacity without new plant investment, keeping the line's steady margin profile intact.",
-      "cycle": 82546,
-      "dur": 1
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Calderforge Rebounds as Stormwell Hall Lifts Quarterly Compute Output",
-      "body": "Calderforge reported quarterly revenue of $9.2B, up 14% year-over-year, as the new Stormwell Hall came online ahead of schedule and absorbed workloads lost during the Embergate shutdown. CEO Nadia Throne credited the recovery to a 'clean break from legacy infrastructure,' though she warned that ramp-up costs would weigh on margins into next quarter.",
-      "cycle": 82545,
-      "dur": 2
-    },
-    {
-      "company": "Castlestead",
-      "sector": "agriculture",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Castlestead Wins Multi-Year Supply Deal With Cooperative Harrowfield Growers",
-      "body": "Castlestead signed a four-year agreement to supply farm inputs and low-till seeders to the 1,200-member Harrowfield Growers cooperative. CEO Aurelia Calder said the deal, estimated at $190M, validates the recently launched seeder line and reflects rising demand for equipment suited to compacted soils.",
-      "cycle": 82545,
-      "dur": 2
-    },
-    {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Drossware Industries Adds Packaging Capacity to Meet Grocer Alliance Demand",
-      "body": "Drossware Industries broke ground on a fourth packaging facility in the Halden corridor to service its national Grocer Alliance contract. CEO Nadia Wold said the $280M plant would add 20% to corrugated output and create roughly 600 jobs, describing packaging as 'the quiet engine' behind the company's recent results.",
-      "cycle": 82545,
-      "dur": 2
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrworks Signs Regional Handling Deal With Rail Operator Merrick Line",
-      "body": "Korrworks secured a five-year contract to manage material handling across four Merrick Line freight terminals, its first move into rail-adjacent logistics. CEO Rhys Throne said the agreement, worth an estimated $210M over its term, dovetails with the recently opened Brae Harbor depot to form a connected coastal-to-inland corridor.",
-      "cycle": 82545,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Lhaus Industries Folds Voss Cell Into New Power & Storage Division",
-      "body": "Following its $6.4B acquisition, Lhaus Industries announced it will consolidate Voss Cell operations into a dedicated Power & Storage unit led out of the Ferrlands campus. CEO Cole Brandt said the reorganization would cut roughly 900 overlapping roles but retain Voss Cell's core cell-chemistry team, targeting $340M in annual synergies by 1955.",
-      "cycle": 82545,
       "dur": 2
     },
     {
@@ -239,16 +249,6 @@
       "head": "Kessel Drive Signs $3.2 Billion National Fleet Pact for Touring and Storage Lines",
       "body": "The multi-year agreement pairs 18,000 long-range touring vehicles with Kessel's stationary storage units across a national courier network's depots. Dorian Brandt, flanked by press at the Halloran plant, called it 'the biggest single order in our history,' pushing the company to add a third assembly shift.",
       "cycle": 82540,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Castlehold's Skarn Steps Down as Saltmere Fault-Reporting Probe Widens",
-      "body": "Soren Skarn, who led Castlehold for more than five decades, has resigned as the investigation into withheld Saltmere fault reports expanded to cover senior management disclosures. The board named former Saltmere unit head Maren Voss as chief executive, tasking her with a full disclosure overhaul and cooperation with regulators. Shares of confidence in the firm's governance had eroded steadily since the storm-season faults first surfaced.",
-      "cycle": 82539,
       "dur": 8
     }
   ]
