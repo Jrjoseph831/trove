@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-02T09:16:10.358Z",
+  "generatedAt": "2026-07-02T14:06:02.492Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "standard",
+      "head": "Blackton Industries Recalls Halvern Component Batch Over Weld Defect",
+      "body": "The automaker pulled roughly 84,000 units of a Halvern-line bracket after inspectors flagged inconsistent welds tied to the rapid second-line ramp. CEO Mara Mercer called the move precautionary but conceded the recall would dent near-term margins, warning of a one-time charge in the coming quarter.",
+      "cycle": 82546,
+      "dur": 2
+    },
+    {
+      "company": "Brunforge Holdings",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunforge Holdings Beats as Vellan Tableware Lifts New Home Division",
+      "body": "Quarterly revenue rose 11% year over year, with the freshly integrated Vellan lines contributing above management's own targets. Kestrel Bramm credited disciplined channel expansion and said the Home division could turn a full-year profit ahead of schedule.",
+      "cycle": 82546,
+      "dur": 2
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Carrowcyon & Sons Opens Second Lighting Works to Serve Transit Backlog",
+      "body": "The house broke ground on a 140,000-square-foot facility to keep pace with orders under its regional transit contract, adding an estimated 220 roles. CEO Cole Brandt said the site should reach full output within eighteen months and hinted at eyeing adjacent municipal contracts.",
+      "cycle": 82546,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Castlehold Names Outsider Ivo Reneth as CEO as Voss Exits Amid Saltmere Fallout",
+      "body": "Maren Voss resigned after the Saltmere fault-reporting probe implicated the executive suite, capping a turbulent tenure begun only in 2026. The board tapped former grid-operator chief Ivo Reneth to steady the company, pledging a full external audit of storm-season disclosures and a rebuilt safety office.",
+      "cycle": 82546,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Regulators Order Halhold to Suspend Verity Pro Shipments Pending Review",
+      "body": "Authorities escalated the probe into the Verity Pro bedside suite, ordering a shipment halt after reports of intermittent alarm failures across three hospital sites. CEO Nadia Brandt said the company would cooperate fully and issue a firmware fix, but the hospital-network agreement now hangs in the balance.",
+      "cycle": 82546,
+      "dur": 8
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Hesperforge Supply Signs Framework Deal to Feed Coastal Bridgeworks Program",
+      "body": "The manufacturer secured a multi-year framework to supply high-yield beams for a large coastal infrastructure program, with initial commitments valued near $310 million. Sable Halloran said the deal validates the new patented line and locks in demand through the decade's midpoint.",
+      "cycle": 82546,
+      "dur": 2
+    },
+    {
+      "company": "Holtgate Group",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Group Posts Steady Gains on Uniform Guild Volumes",
+      "body": "The textile house reported modestly higher revenue as shipments under its Uniform Makers Guild pact ramped on schedule. Dorian Throne described the quarter as \"exactly what we planned,\" with mill utilization edging up to 88%.",
+      "cycle": 82546,
+      "dur": 1
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Marrowcyon Widens Hardwear Fixture Line Into New Regional Markets",
+      "body": "The consumer house extended distribution of its Hardwear rental fixtures to two additional regions after stronger-than-expected landlord uptake. Theo Orne said the rollout adds modest capacity without new plant investment, keeping the line's steady margin profile intact.",
+      "cycle": 82546,
+      "dur": 1
+    },
     {
       "company": "Calderforge",
       "sector": "technology",
@@ -32,16 +112,6 @@
       "dur": 2
     },
     {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Garrware Posts Steady Quarter as Marrow Valley Plant Ramps Up",
-      "body": "Garrware reported a 9% rise in quarterly revenue as its third Marrow Valley plant reached full capacity and the Halloway & Pace contract began shipping. CEO Orla Holt kept guidance unchanged, noting the company's order book remains 'comfortably full through year-end.'",
-      "cycle": 82545,
-      "dur": 1
-    },
-    {
       "company": "Korrworks",
       "sector": "logistics",
       "kind": "major_deal",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Signs Property Servicing Deal in Ashford District",
-      "body": "Marrowmoor Holdings added a servicing contract covering three mid-scale properties in the Ashford District, extending its steady expansion. CEO Dorian Steg said the deal fits the company's 'measured, contract-by-contract' growth model and brings its serviced-room count above 14,000.",
-      "cycle": 82545,
-      "dur": 1
-    },
-    {
       "company": "Thronehaus & Co.",
       "sector": "luxury",
       "kind": "product_launch",
@@ -80,26 +140,6 @@
       "body": "Thronehaus & Co. debuted its Sovereign line, the first collection built entirely from vertically owned components — Caldwynn movements paired with Verreil dials. CEO Cora Dray called it 'the culmination of three years of acquisition,' with the flagship Sovereign Perpetual priced at $148,000 and limited to 250 pieces. The launch marks the house's most ambitious release since 1890.",
       "cycle": 82545,
       "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Boreas Power Snaps Up Rival Storage Operator Calderwick Fields",
-      "body": "Fresh off the Hollowmere expansion, Mira Thorne unveiled a 780 million cash-and-stock deal for Calderwick Fields, adding four operational storage sites and a pipeline of grid contracts. Thorne framed the purchase as 'stitching the map together,' bringing Boreas's total managed storage capacity up by roughly a third. The board approved the deal unanimously, with completion expected next quarter.",
-      "cycle": 82544,
-      "dur": 2
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fenncyon Lifts Full-Year Outlook as Eastfield Depots Fill Fast",
-      "body": "Fenncyon reported quarterly revenue up 18 percent, driven by higher-than-anticipated utilization at its new Eastfield rental depots, which hit 84 percent occupancy within their first two quarters. Nadia Ashby raised full-year guidance modestly, noting that rental now accounts for nearly half of divisional earnings. She struck a cautious note on new capital spending, saying the firm would 'let the depots prove themselves before we build the next batch.'",
-      "cycle": 82544,
-      "dur": 2
     },
     {
       "company": "Fennmoor",
@@ -112,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Thaldale Group Misses Targets as Turnaround Costs Bite",
-      "body": "Thaldale posted a quarterly loss of 62 million, wider than expected, as restructuring charges and plant retooling under Renna Voss's turnaround plan hit harder than forecast. Voss defended the numbers as 'the price of fixing what was broken,' pointing to a 12 percent rise in tool unit shipments even as margins slipped. Some board members privately voiced impatience, echoing the tensions that pushed out predecessor Sable Wold.",
-      "cycle": 82544,
-      "dur": 2
-    },
-    {
       "company": "Vossenspire Holdings",
       "sector": "energy",
       "kind": "leadership_change",
@@ -130,16 +160,6 @@
       "body": "The board removed Kestrel Calder following the two-region blackout and the regulatory probe that followed, ending a turbulent tenure marked by aggressive expansion and mounting reliability concerns. Directors named grid-hardening veteran Halden Roe as chief executive, tasking him with restoring regulator confidence and overhauling maintenance practices. Roe pledged an immediate independent safety review and a freeze on new capacity until 'the lights stay on without exception.'",
       "cycle": 82544,
       "dur": 8
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Vossenspire Supply Folds Aldecourt and Renmark Into New Heritage Division",
-      "body": "Quinn Marrow announced a sweeping reorganization that consolidates the recently acquired Aldecourt timepiece works and Renmark coachbuilding under a single Heritage Division, targeting 90 million in shared tooling and distribution savings. Marrow named longtime lieutenant Isolde Reyne to lead the unit, calling it 'the spine of everything we buy next.' Analysts noted the move signals Vossenspire is pausing its acquisition spree to digest a year of rapid dealmaking.",
-      "cycle": 82544,
-      "dur": 2
     },
     {
       "company": "Woldmark",
@@ -229,26 +249,6 @@
       "head": "Castlehold's Skarn Steps Down as Saltmere Fault-Reporting Probe Widens",
       "body": "Soren Skarn, who led Castlehold for more than five decades, has resigned as the investigation into withheld Saltmere fault reports expanded to cover senior management disclosures. The board named former Saltmere unit head Maren Voss as chief executive, tasking her with a full disclosure overhaul and cooperation with regulators. Shares of confidence in the firm's governance had eroded steadily since the storm-season faults first surfaced.",
       "cycle": 82539,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Bruncrest Works Reels as Meridian Pact Probe Alleges Inflated Demand Figures",
-      "body": "Shares of Bruncrest tumbled after disclosures suggested the landmark Meridian Exchange contract relied on demand projections that internal documents flag as overstated. Petra Veldt, known for bold public bets, faces board scrutiny over whether the sprawling compute campus was greenlit on shaky volumes. An independent review has been launched, and Meridian said it is 'reassessing the relationship.'",
-      "cycle": 82538,
-      "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Lhaus Industries Acquires Power Rival Voss Cell in $6.4B Cash-and-Stock Deal",
-      "body": "Cole Brandt capped his acquisitive streak by buying battery maker Voss Cell, adding 12 gigawatt-hours of annual storage capacity and folding it into the Power & Storage arm. The deal, valued at $6.4 billion, pairs Voss's cell chemistry with the Ferrlands driveline expansion to create an integrated vehicle-and-energy supplier. Brandt framed the purchase as 'the spine of the next decade' for Lhaus.",
-      "cycle": 82538,
       "dur": 8
     }
   ]

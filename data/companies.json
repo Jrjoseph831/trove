@@ -435,7 +435,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82537,
+    "lastEventCycle": 82546,
     "events": [
       {
         "cycle": 0,
@@ -483,6 +483,16 @@
         "body": "Riding surging Halvern Motors volumes, Blackton Industries announced a 65 million expansion adding a second stamping line at its Mercer Works plant. CEO Mara Mercer said the move lifts auto-parts output capacity by 40 percent and supports a recently extended supply commitment. Hiring for 180 roles begins immediately.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82546,
+        "kind": "recall",
+        "size": "standard",
+        "head": "Blackton Industries Recalls Halvern Component Batch Over Weld Defect",
+        "body": "The automaker pulled roughly 84,000 units of a Halvern-line bracket after inspectors flagged inconsistent welds tied to the rapid second-line ramp. CEO Mara Mercer called the move precautionary but conceded the recall would dent near-term margins, warning of a one-time charge in the coming quarter.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -715,7 +725,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82530,
+    "lastEventCycle": 82546,
     "events": [
       {
         "cycle": 0,
@@ -741,6 +751,16 @@
         "size": "standard",
         "head": "Brunforge Holdings Folds Vellan Lines Into New Home Division",
         "body": "Brunforge formally integrated Vellan & Co. into a newly created Home & Table division, combining tableware, household goods and fine goods under one banner. CEO Kestrel Bramm said the consolidation should yield $22 million in annual cost savings by 2028 and open shared retail channels. The quiet reorganization reflects Bramm's steady acquire-and-integrate approach.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82546,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunforge Holdings Beats as Vellan Tableware Lifts New Home Division",
+        "body": "Quarterly revenue rose 11% year over year, with the freshly integrated Vellan lines contributing above management's own targets. Kestrel Bramm credited disciplined channel expansion and said the Home division could turn a full-year profit ahead of schedule.",
         "effects": {
           "consumer": 0.13
         }
@@ -1112,7 +1132,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82530,
+    "lastEventCycle": 82546,
     "events": [
       {
         "cycle": 0,
@@ -1138,6 +1158,16 @@
         "size": "standard",
         "head": "Carrowcyon & Sons Lifts Margins as Transit Lighting Deal Ramps",
         "body": "The household-goods house reported quarterly revenue up 11% to $218 million, with lighting volumes climbing as the regional transit contract entered full installation. CEO Cole Brandt credited disciplined sourcing and steady household demand, raising the full-year outlook modestly. Management noted lighting now accounts for nearly a third of segment sales.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82546,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Opens Second Lighting Works to Serve Transit Backlog",
+        "body": "The house broke ground on a 140,000-square-foot facility to keep pace with orders under its regional transit contract, adding an estimated 220 roles. CEO Cole Brandt said the site should reach full output within eighteen months and hinted at eyeing adjacent municipal contracts.",
         "effects": {
           "consumer": 0.13
         }
@@ -1338,14 +1368,14 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1971,
-    "ceo": "Maren Voss",
+    "ceo": "Ivo Reneth",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.76,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82539,
+    "lastEventCycle": 82546,
     "events": [
       {
         "cycle": 0,
@@ -1401,6 +1431,14 @@
         "size": "major",
         "head": "Castlehold's Skarn Steps Down as Saltmere Fault-Reporting Probe Widens",
         "body": "Soren Skarn, who led Castlehold for more than five decades, has resigned as the investigation into withheld Saltmere fault reports expanded to cover senior management disclosures. The board named former Saltmere unit head Maren Voss as chief executive, tasking her with a full disclosure overhaul and cooperation with regulators. Shares of confidence in the firm's governance had eroded steadily since the storm-season faults first surfaced.",
+        "effects": {}
+      },
+      {
+        "cycle": 82546,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Castlehold Names Outsider Ivo Reneth as CEO as Voss Exits Amid Saltmere Fallout",
+        "body": "Maren Voss resigned after the Saltmere fault-reporting probe implicated the executive suite, capping a turbulent tenure begun only in 2026. The board tapped former grid-operator chief Ivo Reneth to steady the company, pledging a full external audit of storm-season disclosures and a rebuilt safety office.",
         "effects": {}
       }
     ]
@@ -2656,7 +2694,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82541,
+    "lastEventCycle": 82546,
     "events": [
       {
         "cycle": 0,
@@ -2725,6 +2763,16 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82546,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Regulators Order Halhold to Suspend Verity Pro Shipments Pending Review",
+        "body": "Authorities escalated the probe into the Verity Pro bedside suite, ordering a shipment halt after reports of intermittent alarm failures across three hospital sites. CEO Nadia Brandt said the company would cooperate fully and issue a firmware fix, but the hospital-network agreement now hangs in the balance.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -2782,7 +2830,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82532,
+    "lastEventCycle": 82546,
     "events": [
       {
         "cycle": 0,
@@ -2808,6 +2856,16 @@
         "size": "standard",
         "head": "Hesperforge Rolls Out High-Yield Beam Line From New Patent",
         "body": "Hesperforge Supply began commercial production of its patented structural beams, claiming an 18% material-yield improvement and lower weight per span. CEO Sable Halloran said initial output is committed to three regional builders, with capacity expanding through next year. The launch marks Hesperforge's first major product line built entirely on in-house process patents.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82546,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Hesperforge Supply Signs Framework Deal to Feed Coastal Bridgeworks Program",
+        "body": "The manufacturer secured a multi-year framework to supply high-yield beams for a large coastal infrastructure program, with initial commitments valued near $310 million. Sable Halloran said the deal validates the new patented line and locks in demand through the decade's midpoint.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -2901,7 +2959,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82520,
+    "lastEventCycle": 82546,
     "events": [
       {
         "cycle": 0,
@@ -2919,6 +2977,16 @@
         "body": "Holtgate confirmed a four-year agreement to supply 12 million yards of base cloth annually to the Eastfield Uniform Consortium. CEO Dorian Throne called the deal 'the kind of steady work we were built for,' noting it secures roughly 18% of Holtgate's mill capacity through 1951.",
         "effects": {
           "textiles": 0.13
+        }
+      },
+      {
+        "cycle": 82546,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Group Posts Steady Gains on Uniform Guild Volumes",
+        "body": "The textile house reported modestly higher revenue as shipments under its Uniform Makers Guild pact ramped on schedule. Dorian Throne described the quarter as \"exactly what we planned,\" with mill utilization edging up to 88%.",
+        "effects": {
+          "textiles": 0.06
         }
       }
     ]
@@ -3570,7 +3638,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82534,
+    "lastEventCycle": 82546,
     "events": [
       {
         "cycle": 0,
@@ -3596,6 +3664,16 @@
         "size": "flash",
         "head": "Marrowcyon Edges Past Estimates on Rental Fixture Uptake",
         "body": "Marrowcyon reported a modest beat with quarterly revenue of 740 million, helped by early traction in its Hardwear rental-fixture line. Theo Orne noted steady apparel sales and described demand as 'reliable rather than flashy.' Guidance was left unchanged.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82546,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Marrowcyon Widens Hardwear Fixture Line Into New Regional Markets",
+        "body": "The consumer house extended distribution of its Hardwear rental fixtures to two additional regions after stronger-than-expected landlord uptake. Theo Orne said the rollout adds modest capacity without new plant investment, keeping the line's steady margin profile intact.",
         "effects": {
           "consumer": 0.06
         }
