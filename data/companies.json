@@ -498,7 +498,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82538,
+    "lastEventCycle": 82544,
     "events": [
       {
         "cycle": 0,
@@ -554,6 +554,16 @@
         "size": "standard",
         "head": "Boreas Power Breaks Ground on Hollowmere Expansion Phase Two",
         "body": "Mira Thorne announced a $1.9 billion buildout that will nearly double storage capacity at the wholly owned Hollowmere fields. The phase, slated for completion in 26 months, follows three straight quarters of guidance lifts and locks in long-term supply contracts with regional grid operators. Thorne hinted further bolt-on acquisitions could follow.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82544,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Boreas Power Snaps Up Rival Storage Operator Calderwick Fields",
+        "body": "Fresh off the Hollowmere expansion, Mira Thorne unveiled a 780 million cash-and-stock deal for Calderwick Fields, adding four operational storage sites and a pipeline of grid contracts. Thorne framed the purchase as 'stitching the map together,' bringing Boreas's total managed storage capacity up by roughly a third. The board approved the deal unanimously, with completion expected next quarter.",
         "effects": {
           "energy": 0.13
         }
@@ -1919,7 +1929,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82531,
+    "lastEventCycle": 82544,
     "events": [
       {
         "cycle": 0,
@@ -1948,6 +1958,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82544,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fenncyon Lifts Full-Year Outlook as Eastfield Depots Fill Fast",
+        "body": "Fenncyon reported quarterly revenue up 18 percent, driven by higher-than-anticipated utilization at its new Eastfield rental depots, which hit 84 percent occupancy within their first two quarters. Nadia Ashby raised full-year guidance modestly, noting that rental now accounts for nearly half of divisional earnings. She struck a cautious note on new capital spending, saying the firm would 'let the depots prove themselves before we build the next batch.'",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -1962,7 +1982,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82536,
+    "lastEventCycle": 82544,
     "events": [
       {
         "cycle": 0,
@@ -2000,6 +2020,16 @@
         "body": "Dorian Brandt landed a five-year supply agreement with the Caldwell Health consortium, placing Larkspur-branded diagnostics across 47 facilities in a deal valued at 510 million units. The win validates Fennmoor's recent acquisition strategy, with Brandt hinting at 'further bolt-ons in imaging' on the earnings call. Deliveries begin next quarter.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82544,
+        "kind": "breakthrough",
+        "size": "major",
+        "head": "Fennmoor's Larkspur Unit Clears Rapid Diagnostics Milestone",
+        "body": "Fennmoor announced that its Larkspur diagnostics platform achieved certification for a new panel that returns results in under eight minutes, a step that could reshape bedside testing across its contracted hospital network. Dorian Brandt called it 'the reason we bought Larkspur in the first place,' projecting 400 million in incremental annual revenue within three years. The company said rollout to partner hospitals begins immediately.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -4080,7 +4110,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82533,
+    "lastEventCycle": 82544,
     "events": [
       {
         "cycle": 0,
@@ -4104,6 +4134,16 @@
         "size": "standard",
         "head": "Thaldale Group Unveils Turnaround Plan Under New CEO Renna Voss",
         "body": "Newly installed CEO Renna Voss announced a sweeping restructuring that will consolidate Thaldale's hand-tool and fastener lines into three regional hubs, closing two aging workshops. Voss framed the move as cleaning up after the boardroom turmoil that pushed out predecessor Sable Wold, projecting 18 million in annual savings despite a one-time charge of 25 million.",
+        "effects": {
+          "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82544,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Thaldale Group Misses Targets as Turnaround Costs Bite",
+        "body": "Thaldale posted a quarterly loss of 62 million, wider than expected, as restructuring charges and plant retooling under Renna Voss's turnaround plan hit harder than forecast. Voss defended the numbers as 'the price of fixing what was broken,' pointing to a 12 percent rise in tool unit shipments even as margins slipped. Some board members privately voiced impatience, echoing the tensions that pushed out predecessor Sable Wold.",
         "effects": {
           "consumer": -0.13
         }
@@ -4174,7 +4214,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82523,
+    "lastEventCycle": 82544,
     "events": [
       {
         "cycle": 0,
@@ -4192,6 +4232,16 @@
         "body": "The agreement covers seed treatments and soil amendments across an estimated 3.4 million acres, valued at roughly $880 million over its term. CEO Kestrel Fenn said the deal extends a relationship some member farms have held for three generations. Deliveries begin with the spring planting cycle.",
         "effects": {
           "agriculture": 0.13
+        }
+      },
+      {
+        "cycle": 82544,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Tillage & Co. Opens New Blending Facility to Serve Grain Cooperatives",
+        "body": "Tillage & Co. commissioned a modest fertilizer blending plant near its cooperative partners, a 45 million investment aimed at shortening delivery times under its five-year supply pact. Kestrel Fenn said the site would let the company 'be there when the planting window opens, not a week late.' The facility is expected to serve roughly 300 member farms at full capacity.",
+        "effects": {
+          "agriculture": 0.06
         }
       }
     ]
@@ -4496,14 +4546,14 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1979,
-    "ceo": "Kestrel Calder",
-    "ceoSince": 1979,
+    "ceo": "Halden Roe",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.58,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82534,
+    "lastEventCycle": 82544,
     "events": [
       {
         "cycle": 0,
@@ -4532,6 +4582,14 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82544,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Vossenspire Holdings CEO Kestrel Calder Ousted Amid Blackout Fallout",
+        "body": "The board removed Kestrel Calder following the two-region blackout and the regulatory probe that followed, ending a turbulent tenure marked by aggressive expansion and mounting reliability concerns. Directors named grid-hardening veteran Halden Roe as chief executive, tasking him with restoring regulator confidence and overhauling maintenance practices. Roe pledged an immediate independent safety review and a freeze on new capacity until 'the lights stay on without exception.'",
+        "effects": {}
       }
     ]
   },
@@ -4546,7 +4604,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82536,
+    "lastEventCycle": 82544,
     "events": [
       {
         "cycle": 0,
@@ -4584,6 +4642,16 @@
         "body": "Quinn Marrow continued the firm's acquisition streak with the purchase of heritage movement-maker Aldecourt for a reported 680 million units, folding its workshops into the Vossenspire timepiece division. The deal pairs Aldecourt's in-house calibers with the recently acquired Renmark coachbuilding arm, signaling Marrow's push to control craft at both ends of the catalogue. Integration is expected to span two years.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82544,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Vossenspire Supply Folds Aldecourt and Renmark Into New Heritage Division",
+        "body": "Quinn Marrow announced a sweeping reorganization that consolidates the recently acquired Aldecourt timepiece works and Renmark coachbuilding under a single Heritage Division, targeting 90 million in shared tooling and distribution savings. Marrow named longtime lieutenant Isolde Reyne to lead the unit, calling it 'the spine of everything we buy next.' Analysts noted the move signals Vossenspire is pausing its acquisition spree to digest a year of rapid dealmaking.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -4718,7 +4786,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82534,
+    "lastEventCycle": 82544,
     "events": [
       {
         "cycle": 0,
@@ -4744,6 +4812,16 @@
         "size": "major",
         "head": "Woldmark Wins Landmark Halcyon Supply Pact Worth 2.1 Billion",
         "body": "Woldmark signed a five-year agreement to supply its newly launched Halcyon compute line to data infrastructure operator Brennan Yards, in a deal valued at 2.1 billion. Cole Carrow called it the largest single order in company history and said three new fabrication shifts would be added to meet demand. Delivery begins next quarter.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82544,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Woldmark Blows Past Forecasts as Halcyon Orders Surge",
+        "body": "Woldmark reported quarterly revenue of 3.4 billion, up 41 percent, crediting an unexpected wave of follow-on orders tied to its 2.1 billion Halcyon supply pact. Cole Carrow told a packed briefing that Halcyon backlogs now stretch eighteen months and pledged to triple output capacity, a characteristically bold vow that lifted the whole compute sector. The company raised full-year guidance for the second time in six months.",
         "effects": {
           "technology": 0.22
         }
