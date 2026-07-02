@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-02T00:58:27.907Z",
+  "generatedAt": "2026-07-02T09:16:10.358Z",
   "beats": [
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Calderforge Rebounds as Stormwell Hall Lifts Quarterly Compute Output",
+      "body": "Calderforge reported quarterly revenue of $9.2B, up 14% year-over-year, as the new Stormwell Hall came online ahead of schedule and absorbed workloads lost during the Embergate shutdown. CEO Nadia Throne credited the recovery to a 'clean break from legacy infrastructure,' though she warned that ramp-up costs would weigh on margins into next quarter.",
+      "cycle": 82545,
+      "dur": 2
+    },
+    {
+      "company": "Castlestead",
+      "sector": "agriculture",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Castlestead Wins Multi-Year Supply Deal With Cooperative Harrowfield Growers",
+      "body": "Castlestead signed a four-year agreement to supply farm inputs and low-till seeders to the 1,200-member Harrowfield Growers cooperative. CEO Aurelia Calder said the deal, estimated at $190M, validates the recently launched seeder line and reflects rising demand for equipment suited to compacted soils.",
+      "cycle": 82545,
+      "dur": 2
+    },
+    {
+      "company": "Drossware Industries",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Drossware Industries Adds Packaging Capacity to Meet Grocer Alliance Demand",
+      "body": "Drossware Industries broke ground on a fourth packaging facility in the Halden corridor to service its national Grocer Alliance contract. CEO Nadia Wold said the $280M plant would add 20% to corrugated output and create roughly 600 jobs, describing packaging as 'the quiet engine' behind the company's recent results.",
+      "cycle": 82545,
+      "dur": 2
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Garrware Posts Steady Quarter as Marrow Valley Plant Ramps Up",
+      "body": "Garrware reported a 9% rise in quarterly revenue as its third Marrow Valley plant reached full capacity and the Halloway & Pace contract began shipping. CEO Orla Holt kept guidance unchanged, noting the company's order book remains 'comfortably full through year-end.'",
+      "cycle": 82545,
+      "dur": 1
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Korrworks Signs Regional Handling Deal With Rail Operator Merrick Line",
+      "body": "Korrworks secured a five-year contract to manage material handling across four Merrick Line freight terminals, its first move into rail-adjacent logistics. CEO Rhys Throne said the agreement, worth an estimated $210M over its term, dovetails with the recently opened Brae Harbor depot to form a connected coastal-to-inland corridor.",
+      "cycle": 82545,
+      "dur": 2
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Lhaus Industries Folds Voss Cell Into New Power & Storage Division",
+      "body": "Following its $6.4B acquisition, Lhaus Industries announced it will consolidate Voss Cell operations into a dedicated Power & Storage unit led out of the Ferrlands campus. CEO Cole Brandt said the reorganization would cut roughly 900 overlapping roles but retain Voss Cell's core cell-chemistry team, targeting $340M in annual synergies by 1955.",
+      "cycle": 82545,
+      "dur": 2
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Marrowmoor Holdings Signs Property Servicing Deal in Ashford District",
+      "body": "Marrowmoor Holdings added a servicing contract covering three mid-scale properties in the Ashford District, extending its steady expansion. CEO Dorian Steg said the deal fits the company's 'measured, contract-by-contract' growth model and brings its serviced-room count above 14,000.",
+      "cycle": 82545,
+      "dur": 1
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Thronehaus & Co. Unveils Fully In-House Sovereign Collection",
+      "body": "Thronehaus & Co. debuted its Sovereign line, the first collection built entirely from vertically owned components — Caldwynn movements paired with Verreil dials. CEO Cora Dray called it 'the culmination of three years of acquisition,' with the flagship Sovereign Perpetual priced at $148,000 and limited to 250 pieces. The launch marks the house's most ambitious release since 1890.",
+      "cycle": 82545,
+      "dur": 8
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -40,16 +120,6 @@
       "body": "Thaldale posted a quarterly loss of 62 million, wider than expected, as restructuring charges and plant retooling under Renna Voss's turnaround plan hit harder than forecast. Voss defended the numbers as 'the price of fixing what was broken,' pointing to a 12 percent rise in tool unit shipments even as margins slipped. Some board members privately voiced impatience, echoing the tensions that pushed out predecessor Sable Wold.",
       "cycle": 82544,
       "dur": 2
-    },
-    {
-      "company": "Tillage & Co.",
-      "sector": "agriculture",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Tillage & Co. Opens New Blending Facility to Serve Grain Cooperatives",
-      "body": "Tillage & Co. commissioned a modest fertilizer blending plant near its cooperative partners, a 45 million investment aimed at shortening delivery times under its five-year supply pact. Kestrel Fenn said the site would let the company 'be there when the planting window opens, not a week late.' The facility is expected to serve roughly 300 member farms at full capacity.",
-      "cycle": 82544,
-      "dur": 1
     },
     {
       "company": "Vossenspire Holdings",
@@ -100,56 +170,6 @@
       "body": "New CEO Royce Lambourne announced the permanent discontinuation of the Ardent Hauler and a 15% workforce reduction, roughly 2,000 roles, as the company retrenches around its Power & Storage unit. Lambourne pledged a redesigned pack architecture and a fresh vehicle platform by 2028, calling the recall 'a failure we will not repeat.' The company took a further charge to close Ardent tooling and settle supplier contracts.",
       "cycle": 82543,
       "dur": 8
-    },
-    {
-      "company": "Castlegear Group",
-      "sector": "medical",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Castlegear Group Wins Multi-Hospital Supply Pact for Tray System",
-      "body": "Sable Brandt secured a five-year agreement to supply its new surgical instrument tray system across the 22-hospital Ellendale Health network. The contract, valued near 118 million, includes consumables replenishment and staff training. Brandt called it 'a measured step that plays to our strengths,' with rollout beginning at flagship facilities this quarter.",
-      "cycle": 82543,
-      "dur": 2
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Gromford Works Launches Aurelian Noir to Sustain Demand Surge",
-      "body": "Chasing its record quarter, Mira Ashby debuted the Aurelian Noir, a blackened-case variant capped at 300 pieces and priced roughly 40% above the base line. Ashby said early reservations covered more than half the run within days of the Caldwyck flagship's preview event. The launch deepens Gromford's bet that Aurelian scarcity can keep margins climbing.",
-      "cycle": 82543,
-      "dur": 2
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halcrest Rides Meridian Triumph Into New Salon on Vireo Row",
-      "body": "Fresh off the Crown Watch Salon honor, Iris Marrow announced a 4,200-square-foot maison on Vireo Row, the company's first new boutique in eleven years. Marrow framed the move as 'answering the demand the Meridian created,' with a private atelier reserved for Tourbillon commissions. The location is slated to open within two quarters and will house a restoration workshop.",
-      "cycle": 82543,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Halhold Systems Lands Anchor Client for Reworked Northgate Tier",
-      "body": "Dahlia Renn secured a multi-year supply agreement with logistics operator Fenwick Grid, the first major win for the slimmed-down Northgate compute tier. The deal, reported near 340 million over three years, validates Renn's decision to narrow the product's scope after the earlier fallout. Delivery begins next quarter under fixed capacity commitments.",
-      "cycle": 82543,
-      "dur": 2
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "safety_probe",
-      "size": "standard",
-      "head": "Marrowstone Build Draws Second Site Order as Embankment Probe Widens",
-      "body": "Regulators issued a stop-work order at Marrowstone's Dellmoor excavation after inspectors flagged shoring deficiencies mirroring those at the collapsed embankment. Bram Halloran said the firm would voluntarily halt three additional sites for internal review, adding independent geotechnical auditors to every active project. The widening scrutiny threatens roughly 90 million in near-term contract milestones.",
-      "cycle": 82543,
-      "dur": 2
     },
     {
       "company": "Varnvale House",
@@ -229,26 +249,6 @@
       "head": "Lhaus Industries Acquires Power Rival Voss Cell in $6.4B Cash-and-Stock Deal",
       "body": "Cole Brandt capped his acquisitive streak by buying battery maker Voss Cell, adding 12 gigawatt-hours of annual storage capacity and folding it into the Power & Storage arm. The deal, valued at $6.4 billion, pairs Voss's cell chemistry with the Ferrlands driveline expansion to create an integrated vehicle-and-energy supplier. Brandt framed the purchase as 'the spine of the next decade' for Lhaus.",
       "cycle": 82538,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Aperture Compute Unveils Dawnmere Interconnect, Cutting Latency by Half",
-      "body": "At a packed event, CEO Halden Dray launched the production Dawnmere interconnect, claiming a 51 percent latency reduction over the prior generation and shipments beginning next quarter. Three major data-center operators have signed as launch customers, with combined commitments exceeding 600 million. The second Dawnmere site is being fast-tracked to meet what Dray called 'unrelenting' demand.",
-      "cycle": 82537,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Brunstone & Sons Ousts CEO Sable Veldt as Ardent Crisis Deepens",
-      "body": "The Brunstone board removed long-serving chief Sable Veldt following the costly Ardent Hauler recall and a second straight quarter of losses. Veldt, known for bold public bets, will be succeeded by turnaround executive Royce Lambourne, who pledged a full review of the power-pack program and a restructured warranty reserve. Shares had shed roughly a third of their value since the heating probe began.",
-      "cycle": 82537,
       "dur": 8
     }
   ]
