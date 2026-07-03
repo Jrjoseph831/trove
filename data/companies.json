@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82532,
+    "lastEventCycle": 82549,
     "events": [
       {
         "cycle": 0,
@@ -39,6 +39,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82549,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Aldouscraft Mfg. Adds High-Capacity Feeder Line for Grid Buildout",
+        "body": "Soren Ashby introduced a heavier-gauge feeder cable aimed at the grid-modernization work now ramping under Aldouscraft's supply contract. The line targets substation and trunk applications where the existing contract has driven repeat orders. The launch is a quiet extension rather than a new direction for the steady manufacturer.",
+        "effects": {
+          "construction": 0.06
+        }
       }
     ]
   },
@@ -53,7 +63,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82533,
+    "lastEventCycle": 82549,
     "events": [
       {
         "cycle": 0,
@@ -79,6 +89,16 @@
         "size": "standard",
         "head": "Aldouscyon Secures Citywide Streetlight Conversion in Vereldt",
         "body": "Aldouscyon has signed a 12-year supply agreement with the Vereldt municipal works office to convert roughly 84,000 public lamps to its Long-Life Filament range. CEO Petra Mercer said the deal locks in steady replacement revenue and builds on early filament sales, with first installations slated for the spring works season.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82549,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aldouscyon Wins Second Municipal Conversion Contract in Thornbury",
+        "body": "Building on the Vereldt streetlight win, Petra Mercer secured a 55 million agreement to convert Thornbury's municipal lighting to the long-life filament range over three years. The deal extends Aldouscyon's public-sector pipeline and validates its 'sell the light, not the fixture' service model. Mercer said talks with two further municipalities are underway.",
         "effects": {
           "consumer": 0.13
         }
@@ -674,7 +694,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82543,
+    "lastEventCycle": 82549,
     "events": [
       {
         "cycle": 0,
@@ -731,6 +751,16 @@
         "head": "Bruncrest Works Ousts Petra Veldt as Meridian Demand Probe Escalates",
         "body": "The board removed Petra Veldt after 46 years at the helm as investigators expanded the inquiry into allegedly inflated Meridian demand figures used to justify the new campus. Veldt's departure comes amid a suspension of campus construction and a restatement review of two prior quarters. The company named turnaround veteran Corwin Hale as interim chief executive.",
         "effects": {}
+      },
+      {
+        "cycle": 82549,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Bruncrest Works Sued by Meridian Partners Over Collapsed Compute Pact",
+        "body": "The Meridian consortium filed a 480 million claim alleging Bruncrest misrepresented demand to secure campus commitments, escalating the fallout that felled former chief Petra Veldt. CEO Corwin Hale, who took the reins amid the probe, called the suit 'without merit' but confirmed the flagship campus buildout is now paused. The filing seeks return of advance payments and damages tied to stalled construction.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -1716,7 +1746,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82532,
+    "lastEventCycle": 82549,
     "events": [
       {
         "cycle": 0,
@@ -1742,6 +1772,16 @@
         "size": "standard",
         "head": "Drayton Freight Lands Fleet Order for Modular Pallet-Lift System",
         "body": "Drayton Freight signed its largest single order to date, supplying its modular pallet-lift system to the Vantor Distribution chain across 22 warehouses. CEO Emil Holt called the deal validation of the modular design's flexibility and quick deployment. Deliveries begin next quarter, with optional expansion tied to performance milestones.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82549,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Drayton Freight Opens Second Assembly Plant to Meet Pallet-Lift Orders",
+        "body": "Emil Holt greenlit a 90 million plant in the Harrow corridor to double output of the modular pallet-lift system after the recent fleet order strained capacity. The facility will add roughly 400 jobs and begin production within nine months. Holt called it a measured bet on 'orders we can already see on the books.'",
         "effects": {
           "logistics": 0.13
         }
@@ -2461,7 +2501,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82543,
+    "lastEventCycle": 82549,
     "events": [
       {
         "cycle": 0,
@@ -2529,6 +2569,16 @@
         "body": "Chasing its record quarter, Mira Ashby debuted the Aurelian Noir, a blackened-case variant capped at 300 pieces and priced roughly 40% above the base line. Ashby said early reservations covered more than half the run within days of the Caldwyck flagship's preview event. The launch deepens Gromford's bet that Aurelian scarcity can keep margins climbing.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82549,
+        "kind": "recall",
+        "size": "standard",
+        "head": "Gromford Works Recalls Aurelian Noir Units Over Clasp Defect",
+        "body": "Mira Ashby's headline-grabbing Aurelian Noir hit a snag as Gromford pulled roughly 6,200 units after reports of a failing case clasp on the limited run. The company will offer free replacements and said the fault traces to a hardened alloy batch rushed to meet the demand surge. Ashby framed it as a 'precautionary sweep,' but the recall dents momentum from three straight product wins.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -2703,7 +2753,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82543,
+    "lastEventCycle": 82549,
     "events": [
       {
         "cycle": 0,
@@ -2767,6 +2817,16 @@
         "size": "standard",
         "head": "Halhold Systems Lands Anchor Client for Reworked Northgate Tier",
         "body": "Dahlia Renn secured a multi-year supply agreement with logistics operator Fenwick Grid, the first major win for the slimmed-down Northgate compute tier. The deal, reported near 340 million over three years, validates Renn's decision to narrow the product's scope after the earlier fallout. Delivery begins next quarter under fixed capacity commitments.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82549,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halhold Systems Tops Forecasts as Northgate Anchor Deal Fuels Rebound",
+        "body": "Dahlia Renn's slimmed-down Northgate tier drove quarterly compute revenue up 22 percent to 1.1 billion, beating guidance after last year's painful reset. The anchor client signed in the prior quarter accounted for nearly a third of new capacity bookings. Renn told the call the reworked strategy had 'found its floor,' though margins remain thin as she funds a second buildout phase.",
         "effects": {
           "technology": 0.13
         }
@@ -2973,7 +3033,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82533,
+    "lastEventCycle": 82549,
     "events": [
       {
         "cycle": 0,
@@ -2999,6 +3059,16 @@
         "size": "flash",
         "head": "Holtforge Group Introduces Reinforced Marine Cable Line",
         "body": "Holtforge Group launched a corrosion-resistant marine cable series aimed at harbor and offshore installations. CEO Yvette Bramm said the line answers steady inquiries from coastal contractors and complements the firm's core wire business without disrupting existing capacity.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82549,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtforge Group Edges Past Estimates on Marine Cable Uptake",
+        "body": "Yvette Bramm's steady operation posted a modest 4 percent revenue lift to 612 million, aided by early orders for the new reinforced marine cable line. Management reaffirmed full-year guidance and flagged firm demand from coastal infrastructure buyers. The quarter continues Holtforge's run of low-drama, dependable results.",
         "effects": {
           "construction": 0.06
         }
@@ -4606,7 +4676,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82541,
+    "lastEventCycle": 82549,
     "events": [
       {
         "cycle": 0,
@@ -4654,6 +4724,16 @@
         "body": "The debut Bellmont-crafted collection took top honors at the Geldst Horological Salon, a rare win for a first-year line. Judges cited the hand-stitched leather integration as 'a genuine marriage of two crafts,' vindicating CEO Bram Wold's aggressive Bellmont acquisition. Varnvale said the flagship piece has already sold out its initial 400-unit run.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82549,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Varnvale & Sons Acquires Historic Corveau Dial Foundry in Landmark Deal",
+        "body": "Bram Wold has agreed to buy the century-old Corveau dial foundry for a reported 340 million, vertically integrating the enamel and guilloché work that had lifted the award-winning Bellmont collection. The purchase hands Varnvale exclusive control of a supplier long shared with rival houses and marks Wold's fourth acquisition in eighteen months. Analysts see it as a bid to lock in craftsmanship as timepiece demand tightens supply industry-wide.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
