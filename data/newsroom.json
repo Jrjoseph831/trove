@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-02T19:27:29.908Z",
+  "generatedAt": "2026-07-03T03:26:55.990Z",
   "beats": [
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Aperture Compute Beats as Dawnmere Interconnect Orders Flood In",
+      "body": "Aperture Compute posted quarterly revenue of 1.28 billion, up 34 percent, driven by early Dawnmere Interconnect shipments that outpaced internal forecasts by roughly 20 percent. CEO Halden Dray touted a doubling of order backlog and confirmed the second Dawnmere site will open ahead of schedule. Margins widened as the halved-latency design commanded premium pricing across data-center clients.",
+      "cycle": 82548,
+      "dur": 2
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Brunmark Motors Unveils Veyra Long-Range as Flagship of Reworked Lineup",
+      "body": "Riding stabilized output, Brunmark Motors debuted the Veyra Long-Range, boasting a 40 percent range gain and drawing on the recently spun-out power unit for its new cell pack. CEO Yvette Calder called it 'the vehicle the restructure was built for,' targeting 90,000 units in the first year. The launch marks Brunmark's most ambitious release in a decade, though skeptics point to the company's history of turbulent ramps.",
+      "cycle": 82548,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Castlestone Plunges as Twin-Campus Costs Swamp Vellmont Order Book",
+      "body": "Castlestone reported a quarterly loss of 310 million, its first in over a decade, as buildout overruns on both compute campuses ballooned to nearly double initial estimates. CEO Iris Garr defended the spending as 'the price of not blinking,' but conceded the Vellmont backlog is converting to revenue slower than projected. The company suspended forward guidance amid mounting pressure over the aggressive expansion.",
+      "cycle": 82548,
+      "dur": 8
+    },
+    {
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Drustcyon Industries Opens Coastal Anchor Line to Serve Growing Backlog",
+      "body": "Drustcyon Industries has commissioned a dedicated production line for its corrosion-resistant anchors, adding 55 million in capacity to meet demand from the coastal supply deal and new inquiries. CEO Aurelia Kessler said the facility positions the firm to bid on marine and offshore projects previously out of reach. The move builds directly on the breakthrough anchor that anchored last quarter's headline contract.",
+      "cycle": 82548,
+      "dur": 2
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Halcrow & Vance Wins Extension and Second Phase of Vetask Basin Work",
+      "body": "Halcrow & Vance secured a 220 million second-phase award on the Vetask Basin project after strong early progress, extending its earthmoving mandate through the decade's end. CEO Mira Skarn said the client's confidence reflected 'work delivered without drama,' and confirmed additional fleet deployment to the site. The extension roughly doubles the firm's committed backlog on the project.",
+      "cycle": 82548,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "scandal",
+      "size": "standard",
+      "head": "Ironcrestton Faces Backlash Over Carrow Atelier Sourcing Claims",
+      "body": "A trade publication alleges that select Carrow Atelier pieces marketed as fully in-house were finished by outside subcontractors, contradicting Ironcrestton's 'single-bench' promise. CEO Sable Carrow issued a rapid statement pledging a full provenance audit, though at least two Artisan's Circle jurors have publicly requested clarification. The controversy has cast a shadow over the showroom's high-profile launch.",
+      "cycle": 82548,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Korrwright Works Secures Exclusive Movement Supply Pact for Heritage Atelier",
+      "body": "Korrwright Works has signed a five-year exclusivity agreement with escapement specialist Loewen & Fisk, locking up rare hairspring alloys for its new Heritage Atelier at a reported 42 million per annum. CEO Dunmore Carrow called the deal 'the connective tissue between the Velloux acquisition and everything that follows,' hinting at further vertical purchases. Analysts note the pact removes a key supply bottleneck that had capped Velloux output.",
+      "cycle": 82548,
+      "dur": 2
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Steg Tooling Edges Past Forecasts as Second Plant Ramps Cleanly",
+      "body": "Steg Tooling reported a 9 percent revenue rise to 486 million, with the newly opened fastener plant reaching 70 percent utilization months ahead of plan. CEO Iris Vossen credited disciplined onboarding and steady auto-parts demand, reaffirming full-year guidance without fanfare. The result extends a quiet streak of forecast beats.",
+      "cycle": 82548,
+      "dur": 1
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -10,26 +90,6 @@
       "body": "The regulatory review of Blackhold's Greycliff test bank has widened after documents surfaced suggesting internal load warnings were downplayed before the launch-day fault. CEO Tomas Vren, in the role less than a year, faces mounting pressure as two board members reportedly demand an independent audit. The company's shares of confidence have eroded sharply amid calls for a full accounting of the outage timeline.",
       "cycle": 82547,
       "dur": 8
-    },
-    {
-      "company": "Caldercraft Holdings",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Caldercraft Holdings Beats on Tradesman Tool Line Rollout",
-      "body": "Caldercraft edged past expectations as its Reinforced Tradesman line sold through initial stock faster than planned, lifting hardware revenue 7 percent. CEO Vale Fenn credited the second textile mill for easing input bottlenecks across the household and tool divisions. Guidance held steady with a note of measured optimism.",
-      "cycle": 82547,
-      "dur": 1
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Forgegrave Industries Lifts Full-Year Outlook as Pallet-Runner Orders Build",
-      "body": "Forgegrave nudged its annual guidance higher after the Pallet-Runner Series drew repeat orders from three mid-sized warehouse operators. CEO Petra Thorne credited steady, unspectacular execution, with backlog now covering the next two quarters. The revision was modest but marks the second consecutive lift.",
-      "cycle": 82547,
-      "dur": 1
     },
     {
       "company": "Garrweave Mills",
@@ -82,36 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "standard",
-      "head": "Blackton Industries Recalls Halvern Component Batch Over Weld Defect",
-      "body": "The automaker pulled roughly 84,000 units of a Halvern-line bracket after inspectors flagged inconsistent welds tied to the rapid second-line ramp. CEO Mara Mercer called the move precautionary but conceded the recall would dent near-term margins, warning of a one-time charge in the coming quarter.",
-      "cycle": 82546,
-      "dur": 2
-    },
-    {
-      "company": "Brunforge Holdings",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Brunforge Holdings Beats as Vellan Tableware Lifts New Home Division",
-      "body": "Quarterly revenue rose 11% year over year, with the freshly integrated Vellan lines contributing above management's own targets. Kestrel Bramm credited disciplined channel expansion and said the Home division could turn a full-year profit ahead of schedule.",
-      "cycle": 82546,
-      "dur": 2
-    },
-    {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Carrowcyon & Sons Opens Second Lighting Works to Serve Transit Backlog",
-      "body": "The house broke ground on a 140,000-square-foot facility to keep pace with orders under its regional transit contract, adding an estimated 220 roles. CEO Cole Brandt said the site should reach full output within eighteen months and hinted at eyeing adjacent municipal contracts.",
-      "cycle": 82546,
-      "dur": 2
-    },
-    {
       "company": "Castlehold",
       "sector": "energy",
       "kind": "leadership_change",
@@ -130,16 +160,6 @@
       "body": "Authorities escalated the probe into the Verity Pro bedside suite, ordering a shipment halt after reports of intermittent alarm failures across three hospital sites. CEO Nadia Brandt said the company would cooperate fully and issue a firmware fix, but the hospital-network agreement now hangs in the balance.",
       "cycle": 82546,
       "dur": 8
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Hesperforge Supply Signs Framework Deal to Feed Coastal Bridgeworks Program",
-      "body": "The manufacturer secured a multi-year framework to supply high-yield beams for a large coastal infrastructure program, with initial commitments valued near $310 million. Sable Halloran said the deal validates the new patented line and locks in demand through the decade's midpoint.",
-      "cycle": 82546,
-      "dur": 2
     },
     {
       "company": "Thronehaus & Co.",
@@ -229,26 +249,6 @@
       "head": "Regulators Open Safety Probe Into Halhold's Verity Pro Bedside Suite",
       "body": "The National Device Safety Board has launched a formal review of Halhold's newly launched Verity Pro suite after three hospitals reported intermittent alarm failures in critical-care units. CEO Nadia Brandt confirmed Halhold has paused new Verity Pro shipments and is cooperating fully, though the freshly signed regional hospital network agreement now hangs in question. Shares of the turbulent house came under heavy pressure as the review widened to the entire Verity line.",
       "cycle": 82541,
-      "dur": 8
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "restructure",
-      "size": "major",
-      "head": "New Carrowforge Chief Roe Launches Sweeping Overhaul After Testing Scandal",
-      "body": "In his first major action, Halden Roe announced the closure of the Dell Valley testing site, a rebuilt quality division, and a $180 million write-down tied to recalled machine lines. Roe pledged independent audits of every product line, calling the cleanup 'painful but non-negotiable' for restoring buyer trust.",
-      "cycle": 82540,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Kessel Drive Signs $3.2 Billion National Fleet Pact for Touring and Storage Lines",
-      "body": "The multi-year agreement pairs 18,000 long-range touring vehicles with Kessel's stationary storage units across a national courier network's depots. Dorian Brandt, flanked by press at the Halloran plant, called it 'the biggest single order in our history,' pushing the company to add a third assembly shift.",
-      "cycle": 82540,
       "dur": 8
     }
   ]
