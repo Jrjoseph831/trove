@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-03T09:21:33.578Z",
+  "generatedAt": "2026-07-03T14:09:49.671Z",
   "beats": [
     {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
       "kind": "product_launch",
+      "size": "major",
+      "head": "Brunstone & Sons Bets the House on Meridian Line in Post-Ardent Relaunch",
+      "body": "CEO Royce Lambourne unveiled the Meridian vehicle and paired storage platform as the centerpiece of Brunstone's reset, staking the company's recovery on a single flagship program after the Ardent collapse. Lambourne committed 900 million to the launch and told reporters the line 'is the whole comeback, and I've said as much to the board.' The move drew scrutiny given the 2,000 recent job cuts, but Lambourne insisted the leaner structure was built expressly to carry Meridian.",
+      "cycle": 82550,
+      "dur": 8
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Cranegrove Beats Estimates as Inland Corridor Earthworks Hit Full Stride",
+      "body": "Cranegrove reported quarterly revenue of 512 million, up 14 percent, crediting steady utilization across its three depots and the ramp of the Inland Corridor contract. CEO Vale Calder emphasized on-schedule delivery and margins holding near 19 percent, calling the quarter 'unremarkable in the best possible way.' The company reaffirmed its measured expansion plan without raising guidance.",
+      "cycle": 82550,
+      "dur": 2
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Dunmorewright Wins Riverside Civic Complex Package Worth 210 Million",
+      "body": "Dunmorewright Industries secured the earthworks and plumbing package for the Riverside civic complex, a 210-million award that stacks atop its ongoing Twin-Tower District work. CEO Emil Skarn said the combined backlog now stretches past three years, giving the firm 'a rare stretch of visibility.' Site preparation is slated to begin next quarter alongside the twin-tower ramp.",
+      "cycle": 82550,
+      "dur": 2
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Erretmark Works Tops Forecasts as Coach-Built Flagship Draws Premium Orders",
+      "body": "Erretmark Works reported a stronger-than-expected quarter, with the Velmonte-Sorne flagship commanding order books that CEO Aurelia Garr said were 'sold out into next year.' Revenue rose 11 percent to 1.4 billion, and Garr signaled the integration of both acquisitions is now fully absorbed into margins. She hinted at further shopping, noting 'the wallet is far from closed.'",
+      "cycle": 82550,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Greywater Grid Rolls Out Modular Storage Blocks Built Around Record-Density Cells",
+      "body": "Vale Halloran took the stage at the Halloran Facility to unveil the Meridian storage block, a stackable unit built on the company's record-density cells and pitched at compute campuses ramping under recent pacts. Halloran said first units ship next quarter, with a stated goal of shaving deployment time by roughly 40 percent. The reveal leaned heavily on the momentum from the anchor campus deal, which Halloran called 'just the opening frame.'",
+      "cycle": 82550,
+      "dur": 2
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Kessel Drive Faces Regulatory Probe Into Touring-Line Storage Packs",
+      "body": "Regulators opened a formal safety probe into the storage packs powering Kessel Drive's long-range touring line following reports of thermal incidents in fleet units. The inquiry lands weeks after the 3.2-billion national fleet pact, and CEO Dorian Brandt pledged 'full cooperation' while stopping short of any pause in deliveries. The company said it was reviewing pack data across the deployed fleet as the probe gets underway.",
+      "cycle": 82550,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
+      "kind": "expansion",
       "size": "flash",
-      "head": "Aldouscraft Mfg. Adds High-Capacity Feeder Line for Grid Buildout",
-      "body": "Soren Ashby introduced a heavier-gauge feeder cable aimed at the grid-modernization work now ramping under Aldouscraft's supply contract. The line targets substation and trunk applications where the existing contract has driven repeat orders. The launch is a quiet extension rather than a new direction for the steady manufacturer.",
-      "cycle": 82549,
+      "head": "Ornewright Supply Adds Food Service Line to Caldmere Hub",
+      "body": "Ornewright Supply expanded its new Caldmere distribution hub with a dedicated food-service wing, broadening beyond the farm-inputs work anchored by the Growers Co-op deal. CEO Rhys Throne framed the addition as capturing 'demand already moving through the region,' with the wing expected to serve regional kitchens by next season. The buildout adds roughly 60 positions at the site.",
+      "cycle": 82550,
       "dur": 1
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Stegforge Breaks Ground on Alloy Plant to Meet Machinery-Supply Demand",
+      "body": "Stegforge began construction on a dedicated foundry to scale output of its longer-lasting heavy-machinery alloy, backing the multi-year supply deal signed earlier this year. CEO Aurelia Steg said the 280-million plant would roughly double alloy capacity when it comes online in two years, describing it as 'the plodding kind of investment we prefer.' The facility is expected to add 340 permanent jobs.",
+      "cycle": 82550,
+      "dur": 2
     },
     {
       "company": "Aldouscyon",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtforge Group Edges Past Estimates on Marine Cable Uptake",
-      "body": "Yvette Bramm's steady operation posted a modest 4 percent revenue lift to 612 million, aided by early orders for the new reinforced marine cable line. Management reaffirmed full-year guidance and flagged firm demand from coastal infrastructure buyers. The quarter continues Holtforge's run of low-drama, dependable results.",
-      "cycle": 82549,
-      "dur": 1
-    },
-    {
       "company": "Varnvale & Sons",
       "sector": "luxury",
       "kind": "major_deal",
@@ -80,16 +140,6 @@
       "body": "Bram Wold has agreed to buy the century-old Corveau dial foundry for a reported 340 million, vertically integrating the enamel and guilloché work that had lifted the award-winning Bellmont collection. The purchase hands Varnvale exclusive control of a supplier long shared with rival houses and marks Wold's fourth acquisition in eighteen months. Analysts see it as a bid to lock in craftsmanship as timepiece demand tightens supply industry-wide.",
       "cycle": 82549,
       "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aperture Compute Beats as Dawnmere Interconnect Orders Flood In",
-      "body": "Aperture Compute posted quarterly revenue of 1.28 billion, up 34 percent, driven by early Dawnmere Interconnect shipments that outpaced internal forecasts by roughly 20 percent. CEO Halden Dray touted a doubling of order backlog and confirmed the second Dawnmere site will open ahead of schedule. Margins widened as the halved-latency design commanded premium pricing across data-center clients.",
-      "cycle": 82548,
-      "dur": 2
     },
     {
       "company": "Brunmark Motors",
@@ -110,46 +160,6 @@
       "body": "Castlestone reported a quarterly loss of 310 million, its first in over a decade, as buildout overruns on both compute campuses ballooned to nearly double initial estimates. CEO Iris Garr defended the spending as 'the price of not blinking,' but conceded the Vellmont backlog is converting to revenue slower than projected. The company suspended forward guidance amid mounting pressure over the aggressive expansion.",
       "cycle": 82548,
       "dur": 8
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Drustcyon Industries Opens Coastal Anchor Line to Serve Growing Backlog",
-      "body": "Drustcyon Industries has commissioned a dedicated production line for its corrosion-resistant anchors, adding 55 million in capacity to meet demand from the coastal supply deal and new inquiries. CEO Aurelia Kessler said the facility positions the firm to bid on marine and offshore projects previously out of reach. The move builds directly on the breakthrough anchor that anchored last quarter's headline contract.",
-      "cycle": 82548,
-      "dur": 2
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Halcrow & Vance Wins Extension and Second Phase of Vetask Basin Work",
-      "body": "Halcrow & Vance secured a 220 million second-phase award on the Vetask Basin project after strong early progress, extending its earthmoving mandate through the decade's end. CEO Mira Skarn said the client's confidence reflected 'work delivered without drama,' and confirmed additional fleet deployment to the site. The extension roughly doubles the firm's committed backlog on the project.",
-      "cycle": 82548,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "scandal",
-      "size": "standard",
-      "head": "Ironcrestton Faces Backlash Over Carrow Atelier Sourcing Claims",
-      "body": "A trade publication alleges that select Carrow Atelier pieces marketed as fully in-house were finished by outside subcontractors, contradicting Ironcrestton's 'single-bench' promise. CEO Sable Carrow issued a rapid statement pledging a full provenance audit, though at least two Artisan's Circle jurors have publicly requested clarification. The controversy has cast a shadow over the showroom's high-profile launch.",
-      "cycle": 82548,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrwright Works Secures Exclusive Movement Supply Pact for Heritage Atelier",
-      "body": "Korrwright Works has signed a five-year exclusivity agreement with escapement specialist Loewen & Fisk, locking up rare hairspring alloys for its new Heritage Atelier at a reported 42 million per annum. CEO Dunmore Carrow called the deal 'the connective tissue between the Velloux acquisition and everything that follows,' hinting at further vertical purchases. Analysts note the pact removes a key supply bottleneck that had capped Velloux output.",
-      "cycle": 82548,
-      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -259,16 +269,6 @@
       "head": "Varnvale House Ousts Petra Holt as Ember Sourcing Scandal Deepens",
       "body": "After 132 years of family stewardship, the board removed Petra Holt following a third consecutive disappointing quarter and mounting legal exposure over Ember capsule sourcing claims. Directors appointed former compliance chief Marisol Venn to steady the house, pledging a full audit of supplier disclosures and a settlement framework for the pending suit. Venn said restoring 'the truth of every claim we make' would be her first priority.",
       "cycle": 82543,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Marlgear Supply Faces Regulatory Probe Over Atlas Machine Failures at Drennan Mills",
-      "body": "A safety authority opened a formal investigation into Marlgear Supply's flagship Atlas industrial machines after three reported mechanical failures at Drennan Mills, one causing a serious floor injury. CEO Halden Vossen, who days earlier had touted a record quarter on the swelling Atlas backlog, said the company would 'cooperate fully and pause no shipments unless the data demands it' — a stance that drew immediate scrutiny given the open injury report. Carrow Group said it is reviewing the status of its landmark order pending the probe's findings.",
-      "cycle": 82542,
       "dur": 8
     }
   ]
