@@ -116,7 +116,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82532,
+    "lastEventCycle": 82551,
     "events": [
       {
         "cycle": 0,
@@ -142,6 +142,16 @@
         "size": "standard",
         "head": "Aldousmont & Sons Wins Multi-Region Hospital Supply Agreement",
         "body": "Aldousmont & Sons signed a three-year agreement to supply sterile consumables to the Carrowmere Health network, covering 41 facilities and an estimated 90 million units annually. CEO Dunmore Calder said the deal builds on last quarter's demand surge and will be served from existing packaging lines. Terms were not disclosed, but the firm expects the contract to anchor steady volume through 1985.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82551,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Aldousmont & Sons Launches Peel-Free Sterile Wrap for High-Volume Wards",
+        "body": "Aldousmont introduced its Clearline sterile wrap, a single-motion opening system aimed at cutting prep time in busy surgical suites. CEO Dunmore Calder said early adopters across three hospital networks reported measurable reductions in handling waste. The line enters full production next quarter with pricing held near existing consumable tiers.",
         "effects": {
           "medical": 0.13
         }
@@ -2253,7 +2263,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82535,
+    "lastEventCycle": 82551,
     "events": [
       {
         "cycle": 0,
@@ -2281,6 +2291,16 @@
         "body": "Fennvale posted quarterly revenue of 188 million, modestly ahead of guidance, supported by sustained auto-parts orders and early output from its third fastener line at Drennt Works. CEO Theo Vossen said the new line is ramping 'ahead of schedule' and should reach full capacity within two quarters. Margins improved slightly on better materials pricing.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82551,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Fennvale Mfg. Wins Fastener Supply Contract for Auto Assembly Program",
+        "body": "Fennvale landed a supply agreement to provide fasteners and fixings for a new vehicle assembly program, tapping capacity from its third Drennt Works line. CEO Theo Vossen said the contract validates the recent expansion and locks in volume through the program's lifecycle. Deliveries begin next quarter.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -2750,7 +2770,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82540,
+    "lastEventCycle": 82551,
     "events": [
       {
         "cycle": 0,
@@ -2786,6 +2806,16 @@
         "size": "standard",
         "head": "Halcyon Industries Opens Second Hub in Southport to Meet Demand",
         "body": "The $95 million Southport facility adds 400,000 square feet of packaging capacity and 220 jobs, mirroring the automated line installed at Northgate. Dorian Ashby framed the move as 'measured growth,' with the site expected to reach full output within two quarters.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82551,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcyon Industries Beats Again as Dual-Hub Network Lifts Throughput",
+        "body": "Halcyon posted quarterly revenue of $296M, ahead of guidance, as the new Southport hub and automated Northgate line boosted packaging output. CEO Dorian Ashby said utilization climbed steadily through the period and raised the full-year outlook modestly. Operating margins expanded on the automation gains.",
         "effects": {
           "logistics": 0.13
         }
@@ -3477,7 +3507,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82520,
+    "lastEventCycle": 82551,
     "events": [
       {
         "cycle": 0,
@@ -3493,6 +3523,16 @@
         "size": "flash",
         "head": "Korrgrave Mfg. Adds Acreage to Northern Input Plant",
         "body": "Korrgrave broke ground on a modest extension to its Hartwell fertilizer works, adding capacity for the coming planting cycle. CEO Aurelia Halloran described the move as 'one more season's worth of certainty for the growers who count on us.'",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82551,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Korrgrave Mfg. Nudges Past Estimates as Northern Plant Ramps",
+        "body": "Korrgrave reported quarterly revenue of $412M, a touch above forecasts, as the recently expanded northern input plant began contributing volume. CEO Aurelia Halloran credited steady seasonal ordering and cautioned that full capacity gains would arrive gradually. Margins held flat against input costs.",
         "effects": {
           "agriculture": 0.06
         }
@@ -3689,7 +3729,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82545,
+    "lastEventCycle": 82551,
     "events": [
       {
         "cycle": 0,
@@ -3757,6 +3797,16 @@
         "body": "Following its $6.4B acquisition, Lhaus Industries announced it will consolidate Voss Cell operations into a dedicated Power & Storage unit led out of the Ferrlands campus. CEO Cole Brandt said the reorganization would cut roughly 900 overlapping roles but retain Voss Cell's core cell-chemistry team, targeting $340M in annual synergies by 1955.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82551,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Lhaus Industries Unveils First Cell Pack From New Power & Storage Division",
+        "body": "Lhaus rolled out the Voss-badged HX series, its first storage product engineered since folding in the acquired unit. CEO Cole Brandt said the pack targets fleet and grid buyers and that a driveline-integrated variant is already in testing at Ferrlands. Initial shipments are slated for two regional distributors.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -4822,14 +4872,14 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1893,
-    "ceo": "Marisol Venn",
+    "ceo": "Idris Calloway",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.71,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82543,
+    "lastEventCycle": 82551,
     "events": [
       {
         "cycle": 0,
@@ -4885,6 +4935,14 @@
         "size": "major",
         "head": "Varnvale House Ousts Petra Holt as Ember Sourcing Scandal Deepens",
         "body": "After 132 years of family stewardship, the board removed Petra Holt following a third consecutive disappointing quarter and mounting legal exposure over Ember capsule sourcing claims. Directors appointed former compliance chief Marisol Venn to steady the house, pledging a full audit of supplier disclosures and a settlement framework for the pending suit. Venn said restoring 'the truth of every claim we make' would be her first priority.",
+        "effects": {}
+      },
+      {
+        "cycle": 82551,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Varnvale House Names Outsider Idris Calloway CEO to Steady Ember Fallout",
+        "body": "Marisol Venn stepped down as chief executive amid ongoing scrutiny over Ember Capsule sourcing, with the board appointing former luxury-group operator Idris Calloway to lead a reset. Calloway pledged a full supply-chain audit and a pause on new capsule releases while litigation proceeds. Shares had shed roughly a third of their value across the scandal's arc.",
         "effects": {}
       }
     ]
@@ -4986,7 +5044,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82524,
+    "lastEventCycle": 82551,
     "events": [
       {
         "cycle": 0,
@@ -5002,6 +5060,16 @@
         "size": "flash",
         "head": "Venline & Sons Edges Past Quarterly Estimates on Steady Demand",
         "body": "The medical-consumables maker reported revenue of $1.42 billion, modestly ahead of forecasts, with margins holding flat year over year. CEO Mara Garr credited 'patient, predictable replenishment cycles' across hospital clients. The company reaffirmed its full-year outlook.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82551,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Venline & Sons Adds Cleanroom Capacity at Marden Facility",
+        "body": "Venline committed $88M to a modest cleanroom buildout at its Marden plant, adding two packaging lines for sterile consumables. CEO Mara Garr framed the move as measured capacity to meet contracted volumes without straining the balance sheet. Commissioning is expected over the next 18 months.",
         "effects": {
           "medical": 0.06
         }
@@ -5186,7 +5254,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82523,
+    "lastEventCycle": 82551,
     "events": [
       {
         "cycle": 0,
@@ -5204,6 +5272,16 @@
         "body": "Quarterly profit rose 3% to $312 million, helped by steady demand for replacement parts and maintenance contracts. CEO Quinn Skarn pointed to disciplined inventory management rather than new orders. Guidance was left unchanged for the remainder of the year.",
         "effects": {
           "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82551,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vossenwright Holdings Signs Long-Term Equipment Servicing Pact With Regional Co-op",
+        "body": "Vossenwright secured a multi-year maintenance and parts agreement covering a large farming cooperative's tractor and implement fleet. CEO Quinn Skarn said the deal deepens the company's recurring service revenue, its steadiest earnings line. Terms were undisclosed but described as spanning five years with renewal options.",
+        "effects": {
+          "agriculture": 0.13
         }
       }
     ]
