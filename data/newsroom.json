@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-03T19:26:06.009Z",
+  "generatedAt": "2026-07-04T03:19:59.165Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Boreas Power Seals $3.8B Grid-Storage Pact Anchored by Calderwick Fleet",
+      "body": "Boreas Power struck a landmark 15-year agreement to supply firmed capacity to the Vant_ regional grid operator, valued at $3.8 billion and underpinned by the freshly acquired Calderwick storage assets. Mira Thorne framed the deal as validation of the buying spree, with Hollowmere Phase Two output already earmarked against it. Deliveries begin next year, cementing Boreas as the region's largest independent storage supplier.",
+      "cycle": 82552,
+      "dur": 8
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Bruncraft Industries Launches Runabout Cargo to Widen Fleet Lineup",
+      "body": "Fresh off the Coachline acquisition, Bruncraft unveiled the Runabout Cargo, a van-bodied variant pitched squarely at delivery and trades customers. Orla Marrow said the Coachline plant will handle initial builds, targeting 40,000 units in the first year. Halvenport Transit has already signaled interest in a light-utility follow-on order.",
+      "cycle": 82552,
+      "dur": 2
+    },
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Calderworks Opens Regional Kiln to Feed Tessen Ridge Demand",
+      "body": "Calderworks Holdings brought a new $210 million structural-materials plant online near Tessen Ridge to secure supply for the towers project and surrounding builds. Kestrel Halloran said the facility adds 30% to regional output and positions the firm for further tenders in the corridor. Management reaffirmed steady demand across urban markets.",
+      "cycle": 82552,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Halhold Works Rocked as Internal Memos Show Verity Pro Warnings Ignored",
+      "body": "Leaked internal documents revealed that Halhold engineers flagged the Verity Pro's monitoring faults months before launch, contradicting Nadia Brandt's public assurances during the safety review. Two board members have called for an independent inquiry as several hospitals suspend existing contracts. The company faces mounting scrutiny alongside the ongoing shipment suspension.",
+      "cycle": 82552,
+      "dur": 8
+    },
+    {
+      "company": "Holtgate Cloth",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Cloth Posts Steady Quarter on Renewed Supply Pact",
+      "body": "Holtgate Cloth reported modest revenue growth of 4% to $286 million, with the recently renewed raw-textile pact providing predictable order flow. Dorian Carrow reiterated the company's preference for long relationships over rapid expansion. Margins held firm on stable fiber costs.",
+      "cycle": 82552,
+      "dur": 1
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "recall",
+      "size": "major",
+      "head": "Marlgear Supply Recalls Atlas Line as Drennan Probe Widens",
+      "body": "Marlgear announced a full recall of roughly 6,200 Atlas industrial machines after regulators linked the Drennan Mills failures to a defective drive assembly. Halden Vossen took an unusually public stance, pledging free retrofits and a $120 million charge while insisting the Carrow Group order will still ship on a revised timeline. Shares had already been under pressure since the probe opened.",
+      "cycle": 82552,
+      "dur": 8
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vencyon Beats on Margins as Drenfield Hub Ramps Ahead of Plan",
+      "body": "Vencyon reported quarterly revenue of $1.42 billion, up 11%, with operating margin widening to 16.3% as the new Drenfield hub reached full throughput two quarters early. CEO Iris Halloran credited disciplined rollout of the material-handling fleet and hinted at a second anchor client in advanced talks. The company nudged full-year guidance upward.",
+      "cycle": 82552,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Vossenspire Supply Debuts Heritage Collection Pairing Renmark and Aldecourt",
+      "body": "The newly formed Heritage Division launched its first co-branded release: a limited Renmark Tourer accompanied by a matched Aldecourt timepiece, priced from $310,000 as a set. Quinn Marrow said just 250 pairings will be produced, calling the launch proof that the restructuring has created something greater than its parts. Early allocations to flagship boutiques are said to be spoken for.",
+      "cycle": 82552,
+      "dur": 2
+    },
     {
       "company": "Aldousmont & Sons",
       "sector": "medical",
@@ -32,16 +112,6 @@
       "dur": 2
     },
     {
-      "company": "Korrgrave Mfg.",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Korrgrave Mfg. Nudges Past Estimates as Northern Plant Ramps",
-      "body": "Korrgrave reported quarterly revenue of $412M, a touch above forecasts, as the recently expanded northern input plant began contributing volume. CEO Aurelia Halloran credited steady seasonal ordering and cautioned that full capacity gains would arrive gradually. Margins held flat against input costs.",
-      "cycle": 82551,
-      "dur": 1
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "product_launch",
@@ -60,16 +130,6 @@
       "body": "Marisol Venn stepped down as chief executive amid ongoing scrutiny over Ember Capsule sourcing, with the board appointing former luxury-group operator Idris Calloway to lead a reset. Calloway pledged a full supply-chain audit and a pause on new capsule releases while litigation proceeds. Shares had shed roughly a third of their value across the scandal's arc.",
       "cycle": 82551,
       "dur": 8
-    },
-    {
-      "company": "Venline & Sons",
-      "sector": "medical",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Venline & Sons Adds Cleanroom Capacity at Marden Facility",
-      "body": "Venline committed $88M to a modest cleanroom buildout at its Marden plant, adding two packaging lines for sterile consumables. CEO Mara Garr framed the move as measured capacity to meet contracted volumes without straining the balance sheet. Commissioning is expected over the next 18 months.",
-      "cycle": 82551,
-      "dur": 1
     },
     {
       "company": "Vossenwright Holdings",
@@ -92,46 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Cranegrove Beats Estimates as Inland Corridor Earthworks Hit Full Stride",
-      "body": "Cranegrove reported quarterly revenue of 512 million, up 14 percent, crediting steady utilization across its three depots and the ramp of the Inland Corridor contract. CEO Vale Calder emphasized on-schedule delivery and margins holding near 19 percent, calling the quarter 'unremarkable in the best possible way.' The company reaffirmed its measured expansion plan without raising guidance.",
-      "cycle": 82550,
-      "dur": 2
-    },
-    {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Dunmorewright Wins Riverside Civic Complex Package Worth 210 Million",
-      "body": "Dunmorewright Industries secured the earthworks and plumbing package for the Riverside civic complex, a 210-million award that stacks atop its ongoing Twin-Tower District work. CEO Emil Skarn said the combined backlog now stretches past three years, giving the firm 'a rare stretch of visibility.' Site preparation is slated to begin next quarter alongside the twin-tower ramp.",
-      "cycle": 82550,
-      "dur": 2
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Erretmark Works Tops Forecasts as Coach-Built Flagship Draws Premium Orders",
-      "body": "Erretmark Works reported a stronger-than-expected quarter, with the Velmonte-Sorne flagship commanding order books that CEO Aurelia Garr said were 'sold out into next year.' Revenue rose 11 percent to 1.4 billion, and Garr signaled the integration of both acquisitions is now fully absorbed into margins. She hinted at further shopping, noting 'the wallet is far from closed.'",
-      "cycle": 82550,
-      "dur": 2
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Greywater Grid Rolls Out Modular Storage Blocks Built Around Record-Density Cells",
-      "body": "Vale Halloran took the stage at the Halloran Facility to unveil the Meridian storage block, a stackable unit built on the company's record-density cells and pitched at compute campuses ramping under recent pacts. Halloran said first units ship next quarter, with a stated goal of shaving deployment time by roughly 40 percent. The reveal leaned heavily on the momentum from the anchor campus deal, which Halloran called 'just the opening frame.'",
-      "cycle": 82550,
-      "dur": 2
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "safety_probe",
@@ -140,16 +160,6 @@
       "body": "Regulators opened a formal safety probe into the storage packs powering Kessel Drive's long-range touring line following reports of thermal incidents in fleet units. The inquiry lands weeks after the 3.2-billion national fleet pact, and CEO Dorian Brandt pledged 'full cooperation' while stopping short of any pause in deliveries. The company said it was reviewing pack data across the deployed fleet as the probe gets underway.",
       "cycle": 82550,
       "dur": 8
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Stegforge Breaks Ground on Alloy Plant to Meet Machinery-Supply Demand",
-      "body": "Stegforge began construction on a dedicated foundry to scale output of its longer-lasting heavy-machinery alloy, backing the multi-year supply deal signed earlier this year. CEO Aurelia Steg said the 280-million plant would roughly double alloy capacity when it comes online in two years, describing it as 'the plodding kind of investment we prefer.' The facility is expected to add 340 permanent jobs.",
-      "cycle": 82550,
-      "dur": 2
     },
     {
       "company": "Bruncrest Works",
@@ -239,36 +249,6 @@
       "head": "Thronehaus & Co. Unveils Fully In-House Sovereign Collection",
       "body": "Thronehaus & Co. debuted its Sovereign line, the first collection built entirely from vertically owned components — Caldwynn movements paired with Verreil dials. CEO Cora Dray called it 'the culmination of three years of acquisition,' with the flagship Sovereign Perpetual priced at $148,000 and limited to 250 pieces. The launch marks the house's most ambitious release since 1890.",
       "cycle": 82545,
-      "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "breakthrough",
-      "size": "major",
-      "head": "Fennmoor's Larkspur Unit Clears Rapid Diagnostics Milestone",
-      "body": "Fennmoor announced that its Larkspur diagnostics platform achieved certification for a new panel that returns results in under eight minutes, a step that could reshape bedside testing across its contracted hospital network. Dorian Brandt called it 'the reason we bought Larkspur in the first place,' projecting 400 million in incremental annual revenue within three years. The company said rollout to partner hospitals begins immediately.",
-      "cycle": 82544,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Vossenspire Holdings CEO Kestrel Calder Ousted Amid Blackout Fallout",
-      "body": "The board removed Kestrel Calder following the two-region blackout and the regulatory probe that followed, ending a turbulent tenure marked by aggressive expansion and mounting reliability concerns. Directors named grid-hardening veteran Halden Roe as chief executive, tasking him with restoring regulator confidence and overhauling maintenance practices. Roe pledged an immediate independent safety review and a freeze on new capacity until 'the lights stay on without exception.'",
-      "cycle": 82544,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "major",
-      "head": "Woldmark Blows Past Forecasts as Halcyon Orders Surge",
-      "body": "Woldmark reported quarterly revenue of 3.4 billion, up 41 percent, crediting an unexpected wave of follow-on orders tied to its 2.1 billion Halcyon supply pact. Cole Carrow told a packed briefing that Halcyon backlogs now stretch eighteen months and pledged to triple output capacity, a characteristically bold vow that lifted the whole compute sector. The company raised full-year guidance for the second time in six months.",
-      "cycle": 82544,
       "dur": 8
     }
   ]

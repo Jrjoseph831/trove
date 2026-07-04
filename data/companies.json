@@ -558,7 +558,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82544,
+    "lastEventCycle": 82552,
     "events": [
       {
         "cycle": 0,
@@ -627,6 +627,16 @@
         "effects": {
           "energy": 0.13
         }
+      },
+      {
+        "cycle": 82552,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Boreas Power Seals $3.8B Grid-Storage Pact Anchored by Calderwick Fleet",
+        "body": "Boreas Power struck a landmark 15-year agreement to supply firmed capacity to the Vant_ regional grid operator, valued at $3.8 billion and underpinned by the freshly acquired Calderwick storage assets. Mira Thorne framed the deal as validation of the buying spree, with Hollowmere Phase Two output already earmarked against it. Deliveries begin next year, cementing Boreas as the region's largest independent storage supplier.",
+        "effects": {
+          "energy": 0.22
+        }
       }
     ]
   },
@@ -641,7 +651,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82542,
+    "lastEventCycle": 82552,
     "events": [
       {
         "cycle": 0,
@@ -687,6 +697,16 @@
         "size": "standard",
         "head": "Bruncraft Industries Buys Coachline Plant to Scale Runabout Output",
         "body": "Bruncraft Industries acquired the shuttered Coachline assembly plant near Halvenport for an undisclosed sum, aiming to add roughly 40,000 units of annual Runabout capacity to meet the transit fleet order. CEO Orla Marrow, true to her acquisitive streak, said the deal 'turns a backlog into a promise we can actually keep.' Production is expected to begin within nine months after retooling.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82552,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Bruncraft Industries Launches Runabout Cargo to Widen Fleet Lineup",
+        "body": "Fresh off the Coachline acquisition, Bruncraft unveiled the Runabout Cargo, a van-bodied variant pitched squarely at delivery and trades customers. Orla Marrow said the Coachline plant will handle initial builds, targeting 40,000 units in the first year. Halvenport Transit has already signaled interest in a light-utility follow-on order.",
         "effects": {
           "automotive": 0.13
         }
@@ -1179,7 +1199,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82533,
+    "lastEventCycle": 82552,
     "events": [
       {
         "cycle": 0,
@@ -1205,6 +1225,16 @@
         "size": "standard",
         "head": "Calderworks Named Primary Supplier for Tessen Ridge Towers",
         "body": "Calderworks Holdings won the structural materials contract for the four-tower Tessen Ridge development, valued at an estimated 310 million. CEO Kestrel Halloran said sustained urban demand, reflected in last quarter's beat, gave the firm confidence to commit dedicated pour capacity through 2029.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82552,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Calderworks Opens Regional Kiln to Feed Tessen Ridge Demand",
+        "body": "Calderworks Holdings brought a new $210 million structural-materials plant online near Tessen Ridge to secure supply for the towers project and surrounding builds. Kestrel Halloran said the facility adds 30% to regional output and positions the firm for further tenders in the corridor. Management reaffirmed steady demand across urban markets.",
         "effects": {
           "construction": 0.13
         }
@@ -2924,7 +2954,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82546,
+    "lastEventCycle": 82552,
     "events": [
       {
         "cycle": 0,
@@ -3000,6 +3030,16 @@
         "size": "major",
         "head": "Regulators Order Halhold to Suspend Verity Pro Shipments Pending Review",
         "body": "Authorities escalated the probe into the Verity Pro bedside suite, ordering a shipment halt after reports of intermittent alarm failures across three hospital sites. CEO Nadia Brandt said the company would cooperate fully and issue a firmware fix, but the hospital-network agreement now hangs in the balance.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82552,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Halhold Works Rocked as Internal Memos Show Verity Pro Warnings Ignored",
+        "body": "Leaked internal documents revealed that Halhold engineers flagged the Verity Pro's monitoring faults months before launch, contradicting Nadia Brandt's public assurances during the safety review. Two board members have called for an independent inquiry as several hospitals suspend existing contracts. The company faces mounting scrutiny alongside the ongoing shipment suspension.",
         "effects": {
           "technology": -0.22
         }
@@ -3166,7 +3206,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82519,
+    "lastEventCycle": 82552,
     "events": [
       {
         "cycle": 0,
@@ -3182,6 +3222,16 @@
         "size": "flash",
         "head": "Holtgate Cloth Renews Long-Term Raw Textile Supply Pact",
         "body": "Dorian Carrow confirmed a quiet five-year renewal with a major garment-mill customer, securing baseline volumes that account for roughly a fifth of Holtgate's annual output. Carrow declined to disclose pricing but said the agreement 'keeps the looms predictable,' consistent with the firm's conservative posture.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82552,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Cloth Posts Steady Quarter on Renewed Supply Pact",
+        "body": "Holtgate Cloth reported modest revenue growth of 4% to $286 million, with the recently renewed raw-textile pact providing predictable order flow. Dorian Carrow reiterated the company's preference for long relationships over rapid expansion. Margins held firm on stable fiber costs.",
         "effects": {
           "textiles": 0.06
         }
@@ -3875,7 +3925,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82542,
+    "lastEventCycle": 82552,
     "events": [
       {
         "cycle": 0,
@@ -3931,6 +3981,16 @@
         "size": "major",
         "head": "Marlgear Supply Faces Regulatory Probe Over Atlas Machine Failures at Drennan Mills",
         "body": "A safety authority opened a formal investigation into Marlgear Supply's flagship Atlas industrial machines after three reported mechanical failures at Drennan Mills, one causing a serious floor injury. CEO Halden Vossen, who days earlier had touted a record quarter on the swelling Atlas backlog, said the company would 'cooperate fully and pause no shipments unless the data demands it' — a stance that drew immediate scrutiny given the open injury report. Carrow Group said it is reviewing the status of its landmark order pending the probe's findings.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82552,
+        "kind": "recall",
+        "size": "major",
+        "head": "Marlgear Supply Recalls Atlas Line as Drennan Probe Widens",
+        "body": "Marlgear announced a full recall of roughly 6,200 Atlas industrial machines after regulators linked the Drennan Mills failures to a defective drive assembly. Halden Vossen took an unusually public stance, pledging free retrofits and a $120 million charge while insisting the Carrow Group order will still ship on a revised timeline. Shares had already been under pressure since the probe opened.",
         "effects": {
           "technology": -0.22
         }
@@ -5001,7 +5061,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82537,
+    "lastEventCycle": 82552,
     "events": [
       {
         "cycle": 0,
@@ -5027,6 +5087,16 @@
         "size": "standard",
         "head": "Vencyon Opens New Distribution Hub to Anchor Drenfield Pact",
         "body": "Vencyon cut the ribbon on a 400,000-square-foot material-handling hub near Drenfield, a 90 million investment expected to add 320 jobs. CEO Iris Halloran said the facility doubles regional throughput capacity and was built specifically to service the multi-year Drenfield Distribution agreement. Operations begin ramping next month.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82552,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vencyon Beats on Margins as Drenfield Hub Ramps Ahead of Plan",
+        "body": "Vencyon reported quarterly revenue of $1.42 billion, up 11%, with operating margin widening to 16.3% as the new Drenfield hub reached full throughput two quarters early. CEO Iris Halloran credited disciplined rollout of the material-handling fleet and hinted at a second anchor client in advanced talks. The company nudged full-year guidance upward.",
         "effects": {
           "logistics": 0.13
         }
@@ -5138,7 +5208,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82544,
+    "lastEventCycle": 82552,
     "events": [
       {
         "cycle": 0,
@@ -5186,6 +5256,16 @@
         "body": "Quinn Marrow announced a sweeping reorganization that consolidates the recently acquired Aldecourt timepiece works and Renmark coachbuilding under a single Heritage Division, targeting 90 million in shared tooling and distribution savings. Marrow named longtime lieutenant Isolde Reyne to lead the unit, calling it 'the spine of everything we buy next.' Analysts noted the move signals Vossenspire is pausing its acquisition spree to digest a year of rapid dealmaking.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82552,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vossenspire Supply Debuts Heritage Collection Pairing Renmark and Aldecourt",
+        "body": "The newly formed Heritage Division launched its first co-branded release: a limited Renmark Tourer accompanied by a matched Aldecourt timepiece, priced from $310,000 as a set. Quinn Marrow said just 250 pairings will be produced, calling the launch proof that the restructuring has created something greater than its parts. Early allocations to flagship boutiques are said to be spoken for.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
