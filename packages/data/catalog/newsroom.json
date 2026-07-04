@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-04T13:37:26.352Z",
+  "generatedAt": "2026-07-04T19:16:57.643Z",
   "beats": [
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Brunridge Works Launches Cross-Pillar Home Bundle Under New Structure",
+      "body": "Brunridge unveiled a bundled home range spanning its cleaning, devices, and fine-goods pillars, the first product to draw on all three units since the restructure. CEO Halia Brennt said the integrated line is meant to prove the three-pillar model can share design and packaging costs. Initial rollout covers a limited assortment, with a broader catalog slated for next season.",
+      "cycle": 82555,
+      "dur": 2
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Carrowwell Wins Fleet Order for Modular Warehouse Automation Line",
+      "body": "Carrowwell secured a 380 million order to outfit a national distribution operator's facilities with its newly launched modular automation systems. CEO Theo Thorne said the win validates the product bet made at the new material-handling plant, with deliveries beginning next quarter. The contract carries options that could extend its value over three years.",
+      "cycle": 82555,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Regulators Order Full Saltmere Shutdown as Castlehold Probe Turns Criminal",
+      "body": "The national energy authority has ordered Castlehold to idle the entire Saltmere storage complex pending a criminal referral over the withheld fault reports, pulling an estimated 900 megawatts of capacity offline. New CEO Ivo Reneth said the company will 'cooperate fully' while warning of a material charge against the current quarter, with cleanup and remediation costs still being tallied. Two former reporting officers have been named in the referral.",
+      "cycle": 82555,
+      "dur": 8
+    },
+    {
+      "company": "Cranecraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Cranecraft Posts Modest Beat as Dual Segments Hold Steady",
+      "body": "Cranecraft reported quarterly revenue of 448 million, a touch above expectations, with textile and farm-equipment demand both contributing steadily. CEO Mira Garr said the garment-belt supply contract continues to ramp on schedule with no supply disruptions. The company held its full-year outlook unchanged.",
+      "cycle": 82555,
+      "dur": 1
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Drustcraft Debuts Corrosion-Resistant Fastener Series for New Platform",
+      "body": "Drustcraft introduced its Endura-grade fastener line, engineered with a proprietary coating rated for 15-year service life in high-heat drivetrain zones. CEO Cora Fenn said the series builds directly on the vehicle-platform slot won last quarter, with initial output earmarked for the same customer. Early volumes cover roughly 40 part numbers, with a second tranche planned for the following year.",
+      "cycle": 82555,
+      "dur": 2
+    },
+    {
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Holtware Co. Tops Estimates as Lifetime-Warranty Line Drives Traffic",
+      "body": "Holtware posted quarterly revenue of 612 million, up 9 percent, crediting the lifetime-warranty hand tool line for lifting store footfall and average basket size. CEO Aurelia Dray said warranty-claim rates have run below internal projections, easing early cost concerns. The company reaffirmed its retail expansion targets for the year.",
+      "cycle": 82555,
+      "dur": 2
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Vantor Lines Opens Second Molded-Fiber Plant to Serve Glassware Contract",
+      "body": "Vantor Lines has commissioned a second molded-fiber facility, adding capacity to fulfill its multi-year national glassware contract without straining existing lines. CEO Halden Vossen said the plant lifts recyclable-packaging output by roughly 35 percent and creates 210 positions. The site is expected to reach full run-rate within two quarters.",
+      "cycle": 82555,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Woldmark Seals 4.6 Billion Halcyon Deal, Its Largest Ever",
+      "body": "Woldmark announced a five-year, 4.6 billion supply agreement to furnish Halcyon compute units to a consortium of national data operators, more than doubling its prior record pact. CEO Cole Carrow called it 'the moment Halcyon becomes the backbone,' and said the firm will bring a third assembly site online to meet delivery schedules. The deal includes multi-year service and refresh commitments.",
+      "cycle": 82555,
+      "dur": 8
+    },
     {
       "company": "Carrowforge",
       "sector": "manufacturing",
@@ -32,16 +112,6 @@
       "dur": 2
     },
     {
-      "company": "Hearthstone Group",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Hearthstone Group Lifts Margins as Refillable Range Gains Traction",
-      "body": "Aurelia Aldous reported that the refillable concentrate and household lines now account for 22% of segment sales, helping push quarterly operating margin up 1.4 points. Repeat orders from hospitality clients drove the gain, with revenue landing at 448 million. Aldous said the refill program would extend to two new product categories next year.",
-      "cycle": 82554,
-      "dur": 1
-    },
-    {
       "company": "Maison & Vale",
       "sector": "hospitality",
       "kind": "major_deal",
@@ -50,16 +120,6 @@
       "body": "Rhys Kessler unveiled a five-year, 340 million-unit supply agreement to stock cleaning and household lines across the Meridian Suites chain's 1,200 properties, marrying the freshly integrated Sundle Werks and Corran Linens ranges under one contract. Kessler said the pact validates his rapid acquisition spree, projecting the deal alone would add roughly 18% to annual revenue. Analysts noted it is the largest single order in the company's 86-year history.",
       "cycle": 82554,
       "dur": 8
-    },
-    {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Posts Another Quiet Quarter Ahead of Forecast",
-      "body": "Petra Veldt reported quarterly revenue of 610 million, edging 3% past guidance on continued strength in institutional cleaning and food-service orders. The Hallowfield Hospitals contract contributed its first full quarter of billings, lifting the jansan segment. Veldt reaffirmed full-year targets without revision.",
-      "cycle": 82554,
-      "dur": 1
     },
     {
       "company": "Skarngrove & Sons",
@@ -179,26 +239,6 @@
       "head": "Castlestone Plunges as Twin-Campus Costs Swamp Vellmont Order Book",
       "body": "Castlestone reported a quarterly loss of 310 million, its first in over a decade, as buildout overruns on both compute campuses ballooned to nearly double initial estimates. CEO Iris Garr defended the spending as 'the price of not blinking,' but conceded the Vellmont backlog is converting to revenue slower than projected. The company suspended forward guidance amid mounting pressure over the aggressive expansion.",
       "cycle": 82548,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Blackhold Faces Backlash as Greycliff Safety Filings Come Under Question",
-      "body": "The regulatory review of Blackhold's Greycliff test bank has widened after documents surfaced suggesting internal load warnings were downplayed before the launch-day fault. CEO Tomas Vren, in the role less than a year, faces mounting pressure as two board members reportedly demand an independent audit. The company's shares of confidence have eroded sharply amid calls for a full accounting of the outage timeline.",
-      "cycle": 82547,
-      "dur": 8
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Korrwright Group Wins Full Wire-and-Cable Mandate for Verant Cluster",
-      "body": "Building on its frame contract, Korrwright has secured the entire structural wiring and cabling package for all six Verant Tower buildings, a deal valued at roughly 480 million and stretching four years. CEO Halden Fenn called it the largest single-site award in the group's century-long history, consolidating both of Korrwright's core lines under one project. Analysts note the win effectively ties the firm's fortunes to Verant's construction timeline through 2029.",
-      "cycle": 82547,
       "dur": 8
     }
   ]

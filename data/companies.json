@@ -931,7 +931,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82541,
+    "lastEventCycle": 82555,
     "events": [
       {
         "cycle": 0,
@@ -965,6 +965,16 @@
         "size": "standard",
         "head": "Brunridge Works Tops Forecasts in First Report Under Three-Pillar Structure",
         "body": "Brunridge Works posted quarterly revenue of $2.1 billion, up 9% year over year, in its debut results since consolidating into three pillars. CEO Halia Brennt credited streamlined overhead in the Home Essentials pillar and stronger Apparel margins for the beat. Management raised full-year guidance modestly, calling the restructure 'ahead of schedule.'",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82555,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunridge Works Launches Cross-Pillar Home Bundle Under New Structure",
+        "body": "Brunridge unveiled a bundled home range spanning its cleaning, devices, and fine-goods pillars, the first product to draw on all three units since the restructure. CEO Halia Brennt said the integrated line is meant to prove the three-pillar model can share design and packaging costs. Initial rollout covers a limited assortment, with a broader catalog slated for next season.",
         "effects": {
           "consumer": 0.13
         }
@@ -1366,7 +1376,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82541,
+    "lastEventCycle": 82555,
     "events": [
       {
         "cycle": 0,
@@ -1402,6 +1412,16 @@
         "size": "standard",
         "head": "Carrowwell Unveils Modular Warehouse Automation Line at New Material Handling Plant",
         "body": "Carrowwell debuted its Meridian modular conveyor and sortation system, the first product built at its newly opened material handling plant. CEO Theo Thorne said the line lets warehouses scale throughput in configurable blocks, targeting mid-size operators priced out of custom installs. Early orders from two regional distributors have already booked out first-quarter capacity.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82555,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Carrowwell Wins Fleet Order for Modular Warehouse Automation Line",
+        "body": "Carrowwell secured a 380 million order to outfit a national distribution operator's facilities with its newly launched modular automation systems. CEO Theo Thorne said the win validates the product bet made at the new material-handling plant, with deliveries beginning next quarter. The contract carries options that could extend its value over three years.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -1505,7 +1525,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82546,
+    "lastEventCycle": 82555,
     "events": [
       {
         "cycle": 0,
@@ -1570,6 +1590,16 @@
         "head": "Castlehold Names Outsider Ivo Reneth as CEO as Voss Exits Amid Saltmere Fallout",
         "body": "Maren Voss resigned after the Saltmere fault-reporting probe implicated the executive suite, capping a turbulent tenure begun only in 2026. The board tapped former grid-operator chief Ivo Reneth to steady the company, pledging a full external audit of storm-season disclosures and a rebuilt safety office.",
         "effects": {}
+      },
+      {
+        "cycle": 82555,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Regulators Order Full Saltmere Shutdown as Castlehold Probe Turns Criminal",
+        "body": "The national energy authority has ordered Castlehold to idle the entire Saltmere storage complex pending a criminal referral over the withheld fault reports, pulling an estimated 900 megawatts of capacity offline. New CEO Ivo Reneth said the company will 'cooperate fully' while warning of a material charge against the current quarter, with cleanup and remediation costs still being tallied. Two former reporting officers have been named in the referral.",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },
@@ -1718,7 +1748,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82541,
+    "lastEventCycle": 82555,
     "events": [
       {
         "cycle": 0,
@@ -1754,6 +1784,16 @@
         "size": "flash",
         "head": "Cranecraft Edges Past Estimates as Farm Equipment Demand Firms",
         "body": "Cranecraft reported a modest quarterly beat, with farm equipment sales rising 4% alongside the ramping textile contract. CEO Mira Garr noted steady replacement demand across the grain belt and reaffirmed full-year guidance. The results extend a quiet streak of dependable, incremental gains for the house.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82555,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Posts Modest Beat as Dual Segments Hold Steady",
+        "body": "Cranecraft reported quarterly revenue of 448 million, a touch above expectations, with textile and farm-equipment demand both contributing steadily. CEO Mira Garr said the garment-belt supply contract continues to ramp on schedule with no supply disruptions. The company held its full-year outlook unchanged.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -1930,7 +1970,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82539,
+    "lastEventCycle": 82555,
     "events": [
       {
         "cycle": 0,
@@ -1966,6 +2006,16 @@
         "size": "standard",
         "head": "Drustcraft Adds Production Line to Meet New Vehicle-Platform Demand",
         "body": "With its fastener supply slot ramping faster than expected, Drustcraft is investing $48 million in a new automated fastening line at its eastern plant to lift capacity by 25 percent. Cora Fenn called the move 'a measured bet on a platform that's clearly outrunning its launch forecasts.' The expansion is expected to create around 140 jobs and reach full output within a year.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82555,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Drustcraft Debuts Corrosion-Resistant Fastener Series for New Platform",
+        "body": "Drustcraft introduced its Endura-grade fastener line, engineered with a proprietary coating rated for 15-year service life in high-heat drivetrain zones. CEO Cora Fenn said the series builds directly on the vehicle-platform slot won last quarter, with initial output earmarked for the same customer. Early volumes cover roughly 40 part numbers, with a second tranche planned for the following year.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -3330,7 +3380,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82536,
+    "lastEventCycle": 82555,
     "events": [
       {
         "cycle": 0,
@@ -3358,6 +3408,16 @@
         "body": "Holtware will widen distribution of its lifetime-warranty hand tools into 1,200 additional outlets following stronger-than-expected early sell-through. Aurelia Dray described the move as 'measured but timely,' citing repeat-purchase data that exceeded internal forecasts. The expansion adds modest warehouse capacity at the Larne hub.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82555,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtware Co. Tops Estimates as Lifetime-Warranty Line Drives Traffic",
+        "body": "Holtware posted quarterly revenue of 612 million, up 9 percent, crediting the lifetime-warranty hand tool line for lifting store footfall and average basket size. CEO Aurelia Dray said warranty-claim rates have run below internal projections, easing early cost concerns. The company reaffirmed its retail expansion targets for the year.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -4901,7 +4961,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82539,
+    "lastEventCycle": 82555,
     "events": [
       {
         "cycle": 0,
@@ -4927,6 +4987,16 @@
         "size": "standard",
         "head": "Vantor Lines Lands Multi-Year Packaging Contract With National Glassware Retailer",
         "body": "Vantor Lines has signed a four-year supply agreement to provide its recyclable molded-fiber protective line to a national glassware and homewares retailer, a deal estimated at $85 million in total value. Halden Vossen said the win validates the fragile-goods line launched earlier this year and will fill capacity at two regional plants. Rollout begins next quarter across the retailer's distribution network.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82555,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vantor Lines Opens Second Molded-Fiber Plant to Serve Glassware Contract",
+        "body": "Vantor Lines has commissioned a second molded-fiber facility, adding capacity to fulfill its multi-year national glassware contract without straining existing lines. CEO Halden Vossen said the plant lifts recyclable-packaging output by roughly 35 percent and creates 210 positions. The site is expected to reach full run-rate within two quarters.",
         "effects": {
           "logistics": 0.13
         }
@@ -5498,7 +5568,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82544,
+    "lastEventCycle": 82555,
     "events": [
       {
         "cycle": 0,
@@ -5534,6 +5604,16 @@
         "size": "major",
         "head": "Woldmark Blows Past Forecasts as Halcyon Orders Surge",
         "body": "Woldmark reported quarterly revenue of 3.4 billion, up 41 percent, crediting an unexpected wave of follow-on orders tied to its 2.1 billion Halcyon supply pact. Cole Carrow told a packed briefing that Halcyon backlogs now stretch eighteen months and pledged to triple output capacity, a characteristically bold vow that lifted the whole compute sector. The company raised full-year guidance for the second time in six months.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82555,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Woldmark Seals 4.6 Billion Halcyon Deal, Its Largest Ever",
+        "body": "Woldmark announced a five-year, 4.6 billion supply agreement to furnish Halcyon compute units to a consortium of national data operators, more than doubling its prior record pact. CEO Cole Carrow called it 'the moment Halcyon becomes the backbone,' and said the firm will bring a third assembly site online to meet delivery schedules. The deal includes multi-year service and refresh commitments.",
         "effects": {
           "technology": 0.22
         }
