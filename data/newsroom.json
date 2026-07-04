@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-04T03:19:59.165Z",
+  "generatedAt": "2026-07-04T13:37:26.352Z",
   "beats": [
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "safety_probe",
+      "size": "standard",
+      "head": "Regulators Reopen Carrowforge Files as Overhaul Draws Fresh Scrutiny",
+      "body": "Inspectors from the Industrial Standards Board launched a follow-up review of Carrowforge's lathe and press lines, seeking to confirm that Halden Roe's overhaul actually corrected the falsified-testing practices flagged under Mara Fenn. Roe pledged full cooperation and said all 14 affected machine families had been re-certified, though the probe froze shipments on two contested product lines. Shares wobbled as customers awaited the board's verdict.",
+      "cycle": 82554,
+      "dur": 2
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Castlestone Board Ousts Iris Garr as Twin-Campus Losses Mount",
+      "body": "After two straight quarters of losses tied to the twin compute campuses, Castlestone's board removed founder-era chief Iris Garr and named operations veteran Dale Voss to steady the buildout. Voss inherits a strained Vellmont order book and pledged an immediate cost review that could slow one campus's fit-out. The abrupt exit ends Garr's 46-year tenure marked by bold, public bets.",
+      "cycle": 82554,
+      "dur": 8
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Fennmoor Buys Sensor Maker Threll to Feed Larkspur Diagnostics Line",
+      "body": "Dorian Brandt announced the 220 million acquisition of Threll Instruments, a specialist in micro-fluidic sensors that already supply the Larkspur diagnostics platform. Brandt framed the deal as securing the supply chain behind Larkspur's recent rapid-testing milestone, adding that Threll's 340 staff would fold into the medical unit. It marks Fennmoor's third bolt-on purchase in two years.",
+      "cycle": 82554,
+      "dur": 2
+    },
+    {
+      "company": "Hearthstone Group",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Hearthstone Group Lifts Margins as Refillable Range Gains Traction",
+      "body": "Aurelia Aldous reported that the refillable concentrate and household lines now account for 22% of segment sales, helping push quarterly operating margin up 1.4 points. Repeat orders from hospitality clients drove the gain, with revenue landing at 448 million. Aldous said the refill program would extend to two new product categories next year.",
+      "cycle": 82554,
+      "dur": 1
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Maison & Vale Lands Continental Hotel-Group Supply Deal for Combined Portfolio",
+      "body": "Rhys Kessler unveiled a five-year, 340 million-unit supply agreement to stock cleaning and household lines across the Meridian Suites chain's 1,200 properties, marrying the freshly integrated Sundle Werks and Corran Linens ranges under one contract. Kessler said the pact validates his rapid acquisition spree, projecting the deal alone would add roughly 18% to annual revenue. Analysts noted it is the largest single order in the company's 86-year history.",
+      "cycle": 82554,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Posts Another Quiet Quarter Ahead of Forecast",
+      "body": "Petra Veldt reported quarterly revenue of 610 million, edging 3% past guidance on continued strength in institutional cleaning and food-service orders. The Hallowfield Hospitals contract contributed its first full quarter of billings, lifting the jansan segment. Veldt reaffirmed full-year targets without revision.",
+      "cycle": 82554,
+      "dur": 1
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Skarngrove & Sons Secures Fastener Supply Deal for Kelvarn Bridge Program",
+      "body": "Quinn Fenn signed a three-year agreement to supply structural fasteners and fixings for the multi-span Kelvarn crossing works, an order valued near 95 million. Fenn said output from the newly opened fastener plant would be dedicated largely to the contract, timing the expansion to the win. The deal locks in a meaningful share of the plant's first-year capacity.",
+      "cycle": 82554,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "standard",
+      "head": "Thronehaus Sovereign Collection Takes Top Honor at Verrand Watch Salon",
+      "body": "The in-house Sovereign Collection won the Grande Complication prize at the annual Verrand Salon, a first for Thronehaus since it brought dial-making in-house via the Verreil purchase. Cora Dray called the award vindication of the vertical-integration strategy, noting order books for the Regent Tourbillon had lengthened to 14 months. The recognition burnished the maison's push into fully self-made movements.",
+      "cycle": 82554,
+      "dur": 2
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -10,26 +90,6 @@
       "body": "Boreas Power struck a landmark 15-year agreement to supply firmed capacity to the Vant_ regional grid operator, valued at $3.8 billion and underpinned by the freshly acquired Calderwick storage assets. Mira Thorne framed the deal as validation of the buying spree, with Hollowmere Phase Two output already earmarked against it. Deliveries begin next year, cementing Boreas as the region's largest independent storage supplier.",
       "cycle": 82552,
       "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Bruncraft Industries Launches Runabout Cargo to Widen Fleet Lineup",
-      "body": "Fresh off the Coachline acquisition, Bruncraft unveiled the Runabout Cargo, a van-bodied variant pitched squarely at delivery and trades customers. Orla Marrow said the Coachline plant will handle initial builds, targeting 40,000 units in the first year. Halvenport Transit has already signaled interest in a light-utility follow-on order.",
-      "cycle": 82552,
-      "dur": 2
-    },
-    {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Calderworks Opens Regional Kiln to Feed Tessen Ridge Demand",
-      "body": "Calderworks Holdings brought a new $210 million structural-materials plant online near Tessen Ridge to secure supply for the towers project and surrounding builds. Kestrel Halloran said the facility adds 30% to regional output and positions the firm for further tenders in the corridor. Management reaffirmed steady demand across urban markets.",
-      "cycle": 82552,
-      "dur": 2
     },
     {
       "company": "Halhold Works",
@@ -42,16 +102,6 @@
       "dur": 8
     },
     {
-      "company": "Holtgate Cloth",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Cloth Posts Steady Quarter on Renewed Supply Pact",
-      "body": "Holtgate Cloth reported modest revenue growth of 4% to $286 million, with the recently renewed raw-textile pact providing predictable order flow. Dorian Carrow reiterated the company's preference for long relationships over rapid expansion. Margins held firm on stable fiber costs.",
-      "cycle": 82552,
-      "dur": 1
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "recall",
@@ -62,66 +112,6 @@
       "dur": 8
     },
     {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vencyon Beats on Margins as Drenfield Hub Ramps Ahead of Plan",
-      "body": "Vencyon reported quarterly revenue of $1.42 billion, up 11%, with operating margin widening to 16.3% as the new Drenfield hub reached full throughput two quarters early. CEO Iris Halloran credited disciplined rollout of the material-handling fleet and hinted at a second anchor client in advanced talks. The company nudged full-year guidance upward.",
-      "cycle": 82552,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Vossenspire Supply Debuts Heritage Collection Pairing Renmark and Aldecourt",
-      "body": "The newly formed Heritage Division launched its first co-branded release: a limited Renmark Tourer accompanied by a matched Aldecourt timepiece, priced from $310,000 as a set. Quinn Marrow said just 250 pairings will be produced, calling the launch proof that the restructuring has created something greater than its parts. Early allocations to flagship boutiques are said to be spoken for.",
-      "cycle": 82552,
-      "dur": 2
-    },
-    {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Aldousmont & Sons Launches Peel-Free Sterile Wrap for High-Volume Wards",
-      "body": "Aldousmont introduced its Clearline sterile wrap, a single-motion opening system aimed at cutting prep time in busy surgical suites. CEO Dunmore Calder said early adopters across three hospital networks reported measurable reductions in handling waste. The line enters full production next quarter with pricing held near existing consumable tiers.",
-      "cycle": 82551,
-      "dur": 2
-    },
-    {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Fennvale Mfg. Wins Fastener Supply Contract for Auto Assembly Program",
-      "body": "Fennvale landed a supply agreement to provide fasteners and fixings for a new vehicle assembly program, tapping capacity from its third Drennt Works line. CEO Theo Vossen said the contract validates the recent expansion and locks in volume through the program's lifecycle. Deliveries begin next quarter.",
-      "cycle": 82551,
-      "dur": 2
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcyon Industries Beats Again as Dual-Hub Network Lifts Throughput",
-      "body": "Halcyon posted quarterly revenue of $296M, ahead of guidance, as the new Southport hub and automated Northgate line boosted packaging output. CEO Dorian Ashby said utilization climbed steadily through the period and raised the full-year outlook modestly. Operating margins expanded on the automation gains.",
-      "cycle": 82551,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Lhaus Industries Unveils First Cell Pack From New Power & Storage Division",
-      "body": "Lhaus rolled out the Voss-badged HX series, its first storage product engineered since folding in the acquired unit. CEO Cole Brandt said the pack targets fleet and grid buyers and that a driveline-integrated variant is already in testing at Ferrlands. Initial shipments are slated for two regional distributors.",
-      "cycle": 82551,
-      "dur": 2
-    },
-    {
       "company": "Varnvale House",
       "sector": "luxury",
       "kind": "leadership_change",
@@ -130,16 +120,6 @@
       "body": "Marisol Venn stepped down as chief executive amid ongoing scrutiny over Ember Capsule sourcing, with the board appointing former luxury-group operator Idris Calloway to lead a reset. Calloway pledged a full supply-chain audit and a pause on new capsule releases while litigation proceeds. Shares had shed roughly a third of their value across the scandal's arc.",
       "cycle": 82551,
       "dur": 8
-    },
-    {
-      "company": "Vossenwright Holdings",
-      "sector": "agriculture",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Vossenwright Holdings Signs Long-Term Equipment Servicing Pact With Regional Co-op",
-      "body": "Vossenwright secured a multi-year maintenance and parts agreement covering a large farming cooperative's tractor and implement fleet. CEO Quinn Skarn said the deal deepens the company's recurring service revenue, its steadiest earnings line. Terms were undisclosed but described as spanning five years with renewal options.",
-      "cycle": 82551,
-      "dur": 2
     },
     {
       "company": "Brunstone & Sons",
@@ -219,36 +199,6 @@
       "head": "Korrwright Group Wins Full Wire-and-Cable Mandate for Verant Cluster",
       "body": "Building on its frame contract, Korrwright has secured the entire structural wiring and cabling package for all six Verant Tower buildings, a deal valued at roughly 480 million and stretching four years. CEO Halden Fenn called it the largest single-site award in the group's century-long history, consolidating both of Korrwright's core lines under one project. Analysts note the win effectively ties the firm's fortunes to Verant's construction timeline through 2029.",
       "cycle": 82547,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Castlehold Names Outsider Ivo Reneth as CEO as Voss Exits Amid Saltmere Fallout",
-      "body": "Maren Voss resigned after the Saltmere fault-reporting probe implicated the executive suite, capping a turbulent tenure begun only in 2026. The board tapped former grid-operator chief Ivo Reneth to steady the company, pledging a full external audit of storm-season disclosures and a rebuilt safety office.",
-      "cycle": 82546,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Regulators Order Halhold to Suspend Verity Pro Shipments Pending Review",
-      "body": "Authorities escalated the probe into the Verity Pro bedside suite, ordering a shipment halt after reports of intermittent alarm failures across three hospital sites. CEO Nadia Brandt said the company would cooperate fully and issue a firmware fix, but the hospital-network agreement now hangs in the balance.",
-      "cycle": 82546,
-      "dur": 8
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Thronehaus & Co. Unveils Fully In-House Sovereign Collection",
-      "body": "Thronehaus & Co. debuted its Sovereign line, the first collection built entirely from vertically owned components — Caldwynn movements paired with Verreil dials. CEO Cora Dray called it 'the culmination of three years of acquisition,' with the flagship Sovereign Perpetual priced at $148,000 and limited to 250 pieces. The launch marks the house's most ambitious release since 1890.",
-      "cycle": 82545,
       "dur": 8
     }
   ]

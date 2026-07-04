@@ -1305,7 +1305,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82540,
+    "lastEventCycle": 82554,
     "events": [
       {
         "cycle": 0,
@@ -1341,6 +1341,16 @@
         "body": "In his first major action, Halden Roe announced the closure of the Dell Valley testing site, a rebuilt quality division, and a $180 million write-down tied to recalled machine lines. Roe pledged independent audits of every product line, calling the cleanup 'painful but non-negotiable' for restoring buyer trust.",
         "effects": {
           "manufacturing": -0.22
+        }
+      },
+      {
+        "cycle": 82554,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Regulators Reopen Carrowforge Files as Overhaul Draws Fresh Scrutiny",
+        "body": "Inspectors from the Industrial Standards Board launched a follow-up review of Carrowforge's lathe and press lines, seeking to confirm that Halden Roe's overhaul actually corrected the falsified-testing practices flagged under Mara Fenn. Roe pledged full cooperation and said all 14 affected machine families had been re-certified, though the probe froze shipments on two contested product lines. Shares wobbled as customers awaited the board's verdict.",
+        "effects": {
+          "manufacturing": -0.13
         }
       }
     ]
@@ -1610,14 +1620,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1979,
-    "ceo": "Iris Garr",
-    "ceoSince": 1979,
+    "ceo": "Dale Voss",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.87,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82548,
+    "lastEventCycle": 82554,
     "events": [
       {
         "cycle": 0,
@@ -1686,6 +1696,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82554,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Castlestone Board Ousts Iris Garr as Twin-Campus Losses Mount",
+        "body": "After two straight quarters of losses tied to the twin compute campuses, Castlestone's board removed founder-era chief Iris Garr and named operations veteran Dale Voss to steady the buildout. Voss inherits a strained Vellmont order book and pledged an immediate cost review that could slow one campus's fit-out. The abrupt exit ends Garr's 46-year tenure marked by bold, public bets.",
+        "effects": {}
       }
     ]
   },
@@ -2230,7 +2248,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82544,
+    "lastEventCycle": 82554,
     "events": [
       {
         "cycle": 0,
@@ -2278,6 +2296,16 @@
         "body": "Fennmoor announced that its Larkspur diagnostics platform achieved certification for a new panel that returns results in under eight minutes, a step that could reshape bedside testing across its contracted hospital network. Dorian Brandt called it 'the reason we bought Larkspur in the first place,' projecting 400 million in incremental annual revenue within three years. The company said rollout to partner hospitals begins immediately.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82554,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Fennmoor Buys Sensor Maker Threll to Feed Larkspur Diagnostics Line",
+        "body": "Dorian Brandt announced the 220 million acquisition of Threll Instruments, a specialist in micro-fluidic sensors that already supply the Larkspur diagnostics platform. Brandt framed the deal as securing the supply chain behind Larkspur's recent rapid-testing milestone, adding that Threll's 340 staff would fold into the medical unit. It marks Fennmoor's third bolt-on purchase in two years.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -3057,7 +3085,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82536,
+    "lastEventCycle": 82554,
     "events": [
       {
         "cycle": 0,
@@ -3083,6 +3111,16 @@
         "size": "flash",
         "head": "Hearthstone Group Extends Refillable Range Into Household Goods",
         "body": "Following the launch of its jansan concentrate line, Hearthstone introduced a refillable household-goods series spanning surface kits and storage essentials. Aurelia Aldous framed the rollout as 'a natural next step for customers already on the refill habit,' targeting hospitality and home channels alike. Early retail placement is set for the coming quarter.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82554,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Hearthstone Group Lifts Margins as Refillable Range Gains Traction",
+        "body": "Aurelia Aldous reported that the refillable concentrate and household lines now account for 22% of segment sales, helping push quarterly operating margin up 1.4 points. Repeat orders from hospitality clients drove the gain, with revenue landing at 448 million. Aldous said the refill program would extend to two new product categories next year.",
         "effects": {
           "hospitality": 0.06
         }
@@ -3872,7 +3910,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82540,
+    "lastEventCycle": 82554,
     "events": [
       {
         "cycle": 0,
@@ -3910,6 +3948,16 @@
         "body": "Rhys Kessler added Corran Linens in a $310 million deal, broadening the group beyond cleaning into premium household textiles. Kessler said the purchase 'completes the room,' pairing Sundle's professional supplies with Corran's linens under a single hospitality banner.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82554,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Maison & Vale Lands Continental Hotel-Group Supply Deal for Combined Portfolio",
+        "body": "Rhys Kessler unveiled a five-year, 340 million-unit supply agreement to stock cleaning and household lines across the Meridian Suites chain's 1,200 properties, marrying the freshly integrated Sundle Werks and Corran Linens ranges under one contract. Kessler said the pact validates his rapid acquisition spree, projecting the deal alone would add roughly 18% to annual revenue. Analysts noted it is the largest single order in the company's 86-year history.",
+        "effects": {
+          "hospitality": 0.22
         }
       }
     ]
@@ -4167,7 +4215,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82537,
+    "lastEventCycle": 82554,
     "events": [
       {
         "cycle": 0,
@@ -4193,6 +4241,16 @@
         "size": "flash",
         "head": "Ornewright Goods Edges Past Estimates on Steady Institutional Demand",
         "body": "Ornewright Goods posted revenue of 88 million, modestly ahead of forecasts, helped by ramping volumes under the Hallowfield Hospitals contract. CEO Petra Veldt cited resilient cleaning and food-service orders and reaffirmed full-year guidance. The company added two regional accounts in its jansan division.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82554,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Posts Another Quiet Quarter Ahead of Forecast",
+        "body": "Petra Veldt reported quarterly revenue of 610 million, edging 3% past guidance on continued strength in institutional cleaning and food-service orders. The Hallowfield Hospitals contract contributed its first full quarter of billings, lifting the jansan segment. Veldt reaffirmed full-year targets without revision.",
         "effects": {
           "consumer": 0.06
         }
@@ -4392,7 +4450,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82538,
+    "lastEventCycle": 82554,
     "events": [
       {
         "cycle": 0,
@@ -4420,6 +4478,16 @@
         "body": "Quinn Fenn reported a modest revenue beat as the new fastener plant ramped ahead of schedule, contributing first shipments late in the quarter. Structural materials orders held steady amid firm regional construction activity. Fenn reiterated a cautious but opportunistic full-year outlook.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82554,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Skarngrove & Sons Secures Fastener Supply Deal for Kelvarn Bridge Program",
+        "body": "Quinn Fenn signed a three-year agreement to supply structural fasteners and fixings for the multi-span Kelvarn crossing works, an order valued near 95 million. Fenn said output from the newly opened fastener plant would be dedicated largely to the contract, timing the expansion to the win. The deal locks in a meaningful share of the plant's first-year capacity.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -4717,7 +4785,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82545,
+    "lastEventCycle": 82554,
     "events": [
       {
         "cycle": 0,
@@ -4765,6 +4833,16 @@
         "body": "Thronehaus & Co. debuted its Sovereign line, the first collection built entirely from vertically owned components — Caldwynn movements paired with Verreil dials. CEO Cora Dray called it 'the culmination of three years of acquisition,' with the flagship Sovereign Perpetual priced at $148,000 and limited to 250 pieces. The launch marks the house's most ambitious release since 1890.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82554,
+        "kind": "award",
+        "size": "standard",
+        "head": "Thronehaus Sovereign Collection Takes Top Honor at Verrand Watch Salon",
+        "body": "The in-house Sovereign Collection won the Grande Complication prize at the annual Verrand Salon, a first for Thronehaus since it brought dial-making in-house via the Verreil purchase. Cora Dray called the award vindication of the vertical-integration strategy, noting order books for the Regent Tourbillon had lengthened to 14 months. The recognition burnished the maison's push into fully self-made movements.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
