@@ -391,7 +391,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82547,
+    "lastEventCycle": 82558,
     "events": [
       {
         "cycle": 0,
@@ -445,6 +445,16 @@
         "size": "major",
         "head": "Blackhold Faces Backlash as Greycliff Safety Filings Come Under Question",
         "body": "The regulatory review of Blackhold's Greycliff test bank has widened after documents surfaced suggesting internal load warnings were downplayed before the launch-day fault. CEO Tomas Vren, in the role less than a year, faces mounting pressure as two board members reportedly demand an independent audit. The company's shares of confidence have eroded sharply amid calls for a full accounting of the outage timeline.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82558,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Blackhold Hit With Investor Suit Over Greycliff Safety Filings",
+        "body": "A consortium of institutional shareholders filed a $1.9B suit accusing Blackhold of misstating the readiness of its Greycliff test bank ahead of launch. The filing cites internal documents suggesting Tomas Vren's team fast-tracked certification despite unresolved fault warnings, hours before the grid failure that took the bank offline. Blackhold called the claims 'meritless' but confirmed regulators had expanded their review to include the disputed filings.",
         "effects": {
           "energy": -0.22
         }
@@ -588,7 +598,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82552,
+    "lastEventCycle": 82558,
     "events": [
       {
         "cycle": 0,
@@ -666,6 +676,16 @@
         "body": "Boreas Power struck a landmark 15-year agreement to supply firmed capacity to the Vant_ regional grid operator, valued at $3.8 billion and underpinned by the freshly acquired Calderwick storage assets. Mira Thorne framed the deal as validation of the buying spree, with Hollowmere Phase Two output already earmarked against it. Deliveries begin next year, cementing Boreas as the region's largest independent storage supplier.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82558,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Boreas Power Fast-Tracks Hollowmere Phase Three as Storage Demand Climbs",
+        "body": "Riding momentum from the Calderwick-anchored grid-storage pact, Mira Thorne greenlit an accelerated Phase Three at Hollowmere, adding 900 MWh of capacity ahead of schedule. The $1.1B outlay brings total committed spend at the site above $3B and reflects Thorne's acquisitive push to consolidate regional storage. Boreas said early commissioning could begin within nine months.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -898,7 +918,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82548,
+    "lastEventCycle": 82558,
     "events": [
       {
         "cycle": 0,
@@ -956,6 +976,16 @@
         "body": "Riding stabilized output, Brunmark Motors debuted the Veyra Long-Range, boasting a 40 percent range gain and drawing on the recently spun-out power unit for its new cell pack. CEO Yvette Calder called it 'the vehicle the restructure was built for,' targeting 90,000 units in the first year. The launch marks Brunmark's most ambitious release in a decade, though skeptics point to the company's history of turbulent ramps.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82558,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunmark Motors Beats Again as Veyra Long-Range Orders Surge",
+        "body": "Yvette Calder reported quarterly revenue of $4.2B, up 14% year over year, driven by strong pre-orders for the Veyra Long-Range flagship. The reworked lineup and steadied power unit helped margins expand 220 basis points, marking a second consecutive quarter of gains. Calder raised full-year guidance but cautioned that battery input costs remained a wildcard.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -3132,7 +3162,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82552,
+    "lastEventCycle": 82558,
     "events": [
       {
         "cycle": 0,
@@ -3218,6 +3248,16 @@
         "size": "major",
         "head": "Halhold Works Rocked as Internal Memos Show Verity Pro Warnings Ignored",
         "body": "Leaked internal documents revealed that Halhold engineers flagged the Verity Pro's monitoring faults months before launch, contradicting Nadia Brandt's public assurances during the safety review. Two board members have called for an independent inquiry as several hospitals suspend existing contracts. The company faces mounting scrutiny alongside the ongoing shipment suspension.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82558,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Halhold Works Sued by Hospitals Over Verity Pro Suite Failures",
+        "body": "A coalition of care networks filed suit against Halhold seeking $1.3B in damages, alleging the shelved Verity Pro bedside suite caused monitoring failures now tied to the ignored internal warnings. The complaint leans heavily on leaked memos showing Nadia Brandt's team pressed ahead despite flagged defects. Halhold faces mounting pressure as the regulatory shipment suspension enters its second month with no clear reinstatement timeline.",
         "effects": {
           "technology": -0.22
         }
@@ -3987,7 +4027,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82551,
+    "lastEventCycle": 82558,
     "events": [
       {
         "cycle": 0,
@@ -4065,6 +4105,16 @@
         "body": "Lhaus rolled out the Voss-badged HX series, its first storage product engineered since folding in the acquired unit. CEO Cole Brandt said the pack targets fleet and grid buyers and that a driveline-integrated variant is already in testing at Ferrlands. Initial shipments are slated for two regional distributors.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82558,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Lhaus Industries Lands $9B Fleet Supply Pact for New Cell Packs",
+        "body": "Cole Brandt secured a landmark five-year agreement to supply cell packs from the newly formed Power & Storage division to a major commercial fleet operator, valued at up to $9B. The deal validates the $6.4B Voss Cell acquisition and positions Lhaus as a top-tier supplier beyond its traditional auto-parts base. Brandt said the division was already fielding inquiries that could double its order book by year-end.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -4279,7 +4329,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82545,
+    "lastEventCycle": 82558,
     "events": [
       {
         "cycle": 0,
@@ -4318,6 +4368,16 @@
         "effects": {
           "hospitality": 0.06
         }
+      },
+      {
+        "cycle": 82558,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Extends Servicing Footprint With Millbrook Contract",
+        "body": "Marrowmoor added a multi-year property-servicing contract covering a cluster of Millbrook hospitality sites, its third such win this quarter. Dorian Steg said the deal fit the company's disciplined strategy of stacking recurring cleaning and household-goods revenue in adjacent districts. The contract is expected to add roughly $40M in annualized revenue.",
+        "effects": {
+          "hospitality": 0.06
+        }
       }
     ]
   },
@@ -4332,7 +4392,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82543,
+    "lastEventCycle": 82558,
     "events": [
       {
         "cycle": 0,
@@ -4368,6 +4428,16 @@
         "size": "standard",
         "head": "Marrowstone Build Draws Second Site Order as Embankment Probe Widens",
         "body": "Regulators issued a stop-work order at Marrowstone's Dellmoor excavation after inspectors flagged shoring deficiencies mirroring those at the collapsed embankment. Bram Halloran said the firm would voluntarily halt three additional sites for internal review, adding independent geotechnical auditors to every active project. The widening scrutiny threatens roughly 90 million in near-term contract milestones.",
+        "effects": {
+          "construction": -0.13
+        }
+      },
+      {
+        "cycle": 82558,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Marrowstone Build Overhauls Safety Division as Embankment Fallout Deepens",
+        "body": "Bram Halloran announced a sweeping reorganization of Marrowstone's site-safety operations, creating a standalone Compliance & Ground Works unit reporting directly to his office. The move follows two regulatory site orders and a pending suit tied to the Greymarsh embankment collapse, and comes alongside the departure of two regional operations chiefs. Halloran framed the restructure as 'getting ahead of the findings rather than behind them.'",
         "effects": {
           "construction": -0.13
         }
@@ -5465,7 +5535,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82544,
+    "lastEventCycle": 82558,
     "events": [
       {
         "cycle": 0,
@@ -5501,6 +5571,14 @@
         "size": "major",
         "head": "Vossenspire Holdings CEO Kestrel Calder Ousted Amid Blackout Fallout",
         "body": "The board removed Kestrel Calder following the two-region blackout and the regulatory probe that followed, ending a turbulent tenure marked by aggressive expansion and mounting reliability concerns. Directors named grid-hardening veteran Halden Roe as chief executive, tasking him with restoring regulator confidence and overhauling maintenance practices. Roe pledged an immediate independent safety review and a freeze on new capacity until 'the lights stay on without exception.'",
+        "effects": {}
+      },
+      {
+        "cycle": 82558,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Vossenspire Names Halden Roe Permanent CEO to Steer Blackout Recovery",
+        "body": "The Vossenspire board confirmed interim chief Halden Roe as permanent CEO, tasking him with rebuilding regulator confidence after the two-region blackout that ended Kestrel Calder's tenure. Roe pledged $600M toward grid-hardening upgrades and a new independent reliability office over the next 18 months. Analysts noted the appointment ends weeks of leadership uncertainty at the turbulent house.",
         "effects": {}
       }
     ]
