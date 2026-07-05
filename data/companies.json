@@ -169,7 +169,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82535,
+    "lastEventCycle": 82556,
     "events": [
       {
         "cycle": 0,
@@ -197,6 +197,16 @@
         "body": "Aldousspire reported quarterly sales of 96 million, narrowly beating expectations as the Heirloom Denim Line sold through its first production run within nine weeks. CEO Mira Ashby credited the brand's lifetime-repair guarantee for driving repeat interest. The company plans a modest second run while keeping inventory tight.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82556,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Aldousspire Group Extends Heirloom Denim Success Into Outerwear Category",
+        "body": "Buoyed by the Heirloom Denim debut, Aldousspire Group announced it will broaden the Heirloom label into rugged outerwear, opening a dedicated production wing this autumn. CEO Mira Ashby said the expansion reflects 'measured confidence' following the line's strong reception, with initial jackets slated to reach shelves before the winter season.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -485,7 +495,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82546,
+    "lastEventCycle": 82556,
     "events": [
       {
         "cycle": 0,
@@ -543,6 +553,16 @@
         "body": "The automaker pulled roughly 84,000 units of a Halvern-line bracket after inspectors flagged inconsistent welds tied to the rapid second-line ramp. CEO Mara Mercer called the move precautionary but conceded the recall would dent near-term margins, warning of a one-time charge in the coming quarter.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82556,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Blackton Industries Under Formal Safety Probe as Halvern Weld Concerns Spread",
+        "body": "Regulators at the Motorworks Safety Board opened a formal investigation into Blackton's Halvern components after additional weld failures were reported beyond the original recalled batch. CEO Mara Mercer confirmed the second production line has been paused while inspectors review the entire Halvern run, a setback estimated to cost the firm 40 million in delayed orders. The probe casts doubt on the rapid expansion Mercer championed just months ago.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -2086,7 +2106,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82536,
+    "lastEventCycle": 82556,
     "events": [
       {
         "cycle": 0,
@@ -2112,6 +2132,16 @@
         "size": "flash",
         "head": "Dunmorestone Steadies After Recall as Plumbing Margins Hold",
         "body": "Despite the faucet cartridge recall, Dunmorestone reported quarterly earnings modestly ahead of expectations, helped by resilient food-service equipment sales. Orla Mercer credited 'swift containment and honest communication' for limiting reputational damage, noting recall costs landed near the low end of estimates. The replaced cartridge line has resumed full shipment.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82556,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Dunmorestone Reports Quiet, Solid Quarter as Food Service Orders Firm Up",
+        "body": "Dunmorestone edged past modest expectations with food-service equipment orders rising 6 percent, offsetting a flat plumbing segment. CEO Orla Mercer described the quarter as 'unremarkable in the best way,' noting the earlier faucet-cartridge recall is now fully behind the company.",
         "effects": {
           "consumer": 0.06
         }
@@ -2679,7 +2709,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82549,
+    "lastEventCycle": 82556,
     "events": [
       {
         "cycle": 0,
@@ -2758,6 +2788,16 @@
         "effects": {
           "luxury": -0.13
         }
+      },
+      {
+        "cycle": 82556,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Gromford Works Faces Backlash as Aurelian Noir Recall Widens Amid Concealment Claims",
+        "body": "Documents surfaced this week suggesting Gromford Works knew of the Aurelian Noir clasp defect months before the initial recall, prompting fierce criticism from luxury retailers. CEO Mira Ashby, known for her headline-chasing style, now confronts an inquiry from the Guild of Fine Merchants, while the recall count has swelled to 22,000 units. Two flagship boutiques have suspended new orders pending the outcome.",
+        "effects": {
+          "luxury": -0.22
+        }
       }
     ]
   },
@@ -2772,7 +2812,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82543,
+    "lastEventCycle": 82556,
     "events": [
       {
         "cycle": 0,
@@ -2808,6 +2848,16 @@
         "size": "standard",
         "head": "Halcrest Rides Meridian Triumph Into New Salon on Vireo Row",
         "body": "Fresh off the Crown Watch Salon honor, Iris Marrow announced a 4,200-square-foot maison on Vireo Row, the company's first new boutique in eleven years. Marrow framed the move as 'answering the demand the Meridian created,' with a private atelier reserved for Tourbillon commissions. The location is slated to open within two quarters and will house a restoration workshop.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82556,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrest Posts Strong Quarter as Meridian Momentum Fills New Vireo Row Salon",
+        "body": "Halcrest reported quarterly revenue up 27 percent, crediting sustained interest in the Meridian Tourbillon and brisk foot traffic at its Vireo Row salon. CEO Iris Marrow said the salon exceeded first-quarter targets by a wide margin, though she cautioned that the costly tourbillon program keeps margins 'deliberately thin.'",
         "effects": {
           "luxury": 0.13
         }
@@ -3804,7 +3854,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82548,
+    "lastEventCycle": 82556,
     "events": [
       {
         "cycle": 0,
@@ -3860,6 +3910,16 @@
         "size": "standard",
         "head": "Korrwright Works Secures Exclusive Movement Supply Pact for Heritage Atelier",
         "body": "Korrwright Works has signed a five-year exclusivity agreement with escapement specialist Loewen & Fisk, locking up rare hairspring alloys for its new Heritage Atelier at a reported 42 million per annum. CEO Dunmore Carrow called the deal 'the connective tissue between the Velloux acquisition and everything that follows,' hinting at further vertical purchases. Analysts note the pact removes a key supply bottleneck that had capped Velloux output.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82556,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Korrwright Works Debuts Velloux Atelier Series, First Line From New Heritage Workshop",
+        "body": "Korrwright Works unveiled the Velloux Atelier Series, the inaugural collection produced entirely at its recently consolidated Heritage Atelier. CEO Dunmore Carrow said the movement-supply pact secured earlier this year enabled a limited run of 1,200 pieces, each priced above the prior Heritage tier. Early demand from three key salons has already reserved half the initial allotment.",
         "effects": {
           "luxury": 0.13
         }
@@ -4424,7 +4484,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82538,
+    "lastEventCycle": 82556,
     "events": [
       {
         "cycle": 0,
@@ -4452,6 +4512,16 @@
         "body": "The Heirloom Pro hand-tool line took top honors at the annual Craftsmen's Guild awards, cited for balance and longevity. Cole Fenn accepted the prize and noted the line has outsold its launch forecast by roughly 30%. The recognition burnishes Palettstone's heritage-quality positioning.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82556,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Palettstone & Sons Lands Supply Deal to Stock Heirloom Pro in Regional Hardware Chain",
+        "body": "Palettstone & Sons has signed a multi-year agreement to place its award-winning Heirloom Pro line across 340 stores of the Corvale Hardware co-op. CEO Cole Fenn called the pact 'the widest reach the Heirloom name has ever had,' projecting the deal could lift annual unit volumes by roughly 18 percent.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -4563,7 +4633,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82523,
+    "lastEventCycle": 82556,
     "events": [
       {
         "cycle": 0,
@@ -4581,6 +4651,16 @@
         "body": "The medical supplier reported revenue of $2.1 billion, up 4% year over year, with operating margins widening to 22%. CEO Yvette Aldous credited multi-year hospital contracts and a deliberate refusal to chase volatile spot orders. Management reaffirmed full-year guidance, citing 'the same boxes, the same beds.'",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82556,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Skarnstone Industries Adds Warehouse Capacity to Shore Up Consumables Supply",
+        "body": "Skarnstone Industries broke ground on a modest distribution annex near its main facility to expand storage for its medical-consumables lines. CEO Yvette Aldous framed the move as a long-horizon step, adding capacity to serve hospital contracts 'for the next fifteen years, not the next fifteen months.'",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]

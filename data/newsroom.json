@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-04T19:16:57.643Z",
+  "generatedAt": "2026-07-05T03:36:00.214Z",
   "beats": [
+    {
+      "company": "Aldousspire Group",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Aldousspire Group Extends Heirloom Denim Success Into Outerwear Category",
+      "body": "Buoyed by the Heirloom Denim debut, Aldousspire Group announced it will broaden the Heirloom label into rugged outerwear, opening a dedicated production wing this autumn. CEO Mira Ashby said the expansion reflects 'measured confidence' following the line's strong reception, with initial jackets slated to reach shelves before the winter season.",
+      "cycle": 82556,
+      "dur": 2
+    },
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Blackton Industries Under Formal Safety Probe as Halvern Weld Concerns Spread",
+      "body": "Regulators at the Motorworks Safety Board opened a formal investigation into Blackton's Halvern components after additional weld failures were reported beyond the original recalled batch. CEO Mara Mercer confirmed the second production line has been paused while inspectors review the entire Halvern run, a setback estimated to cost the firm 40 million in delayed orders. The probe casts doubt on the rapid expansion Mercer championed just months ago.",
+      "cycle": 82556,
+      "dur": 8
+    },
+    {
+      "company": "Dunmorestone",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Dunmorestone Reports Quiet, Solid Quarter as Food Service Orders Firm Up",
+      "body": "Dunmorestone edged past modest expectations with food-service equipment orders rising 6 percent, offsetting a flat plumbing segment. CEO Orla Mercer described the quarter as 'unremarkable in the best way,' noting the earlier faucet-cartridge recall is now fully behind the company.",
+      "cycle": 82556,
+      "dur": 1
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Gromford Works Faces Backlash as Aurelian Noir Recall Widens Amid Concealment Claims",
+      "body": "Documents surfaced this week suggesting Gromford Works knew of the Aurelian Noir clasp defect months before the initial recall, prompting fierce criticism from luxury retailers. CEO Mira Ashby, known for her headline-chasing style, now confronts an inquiry from the Guild of Fine Merchants, while the recall count has swelled to 22,000 units. Two flagship boutiques have suspended new orders pending the outcome.",
+      "cycle": 82556,
+      "dur": 8
+    },
+    {
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halcrest Posts Strong Quarter as Meridian Momentum Fills New Vireo Row Salon",
+      "body": "Halcrest reported quarterly revenue up 27 percent, crediting sustained interest in the Meridian Tourbillon and brisk foot traffic at its Vireo Row salon. CEO Iris Marrow said the salon exceeded first-quarter targets by a wide margin, though she cautioned that the costly tourbillon program keeps margins 'deliberately thin.'",
+      "cycle": 82556,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Korrwright Works Debuts Velloux Atelier Series, First Line From New Heritage Workshop",
+      "body": "Korrwright Works unveiled the Velloux Atelier Series, the inaugural collection produced entirely at its recently consolidated Heritage Atelier. CEO Dunmore Carrow said the movement-supply pact secured earlier this year enabled a limited run of 1,200 pieces, each priced above the prior Heritage tier. Early demand from three key salons has already reserved half the initial allotment.",
+      "cycle": 82556,
+      "dur": 2
+    },
+    {
+      "company": "Palettstone & Sons",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Palettstone & Sons Lands Supply Deal to Stock Heirloom Pro in Regional Hardware Chain",
+      "body": "Palettstone & Sons has signed a multi-year agreement to place its award-winning Heirloom Pro line across 340 stores of the Corvale Hardware co-op. CEO Cole Fenn called the pact 'the widest reach the Heirloom name has ever had,' projecting the deal could lift annual unit volumes by roughly 18 percent.",
+      "cycle": 82556,
+      "dur": 2
+    },
+    {
+      "company": "Skarnstone Industries",
+      "sector": "medical",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Skarnstone Industries Adds Warehouse Capacity to Shore Up Consumables Supply",
+      "body": "Skarnstone Industries broke ground on a modest distribution annex near its main facility to expand storage for its medical-consumables lines. CEO Yvette Aldous framed the move as a long-horizon step, adding capacity to serve hospital contracts 'for the next fifteen years, not the next fifteen months.'",
+      "cycle": 82556,
+      "dur": 1
+    },
     {
       "company": "Brunridge Works",
       "sector": "consumer",
@@ -30,16 +110,6 @@
       "body": "The national energy authority has ordered Castlehold to idle the entire Saltmere storage complex pending a criminal referral over the withheld fault reports, pulling an estimated 900 megawatts of capacity offline. New CEO Ivo Reneth said the company will 'cooperate fully' while warning of a material charge against the current quarter, with cleanup and remediation costs still being tallied. Two former reporting officers have been named in the referral.",
       "cycle": 82555,
       "dur": 8
-    },
-    {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Posts Modest Beat as Dual Segments Hold Steady",
-      "body": "Cranecraft reported quarterly revenue of 448 million, a touch above expectations, with textile and farm-equipment demand both contributing steadily. CEO Mira Garr said the garment-belt supply contract continues to ramp on schedule with no supply disruptions. The company held its full-year outlook unchanged.",
-      "cycle": 82555,
-      "dur": 1
     },
     {
       "company": "Drustcraft",
@@ -82,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "safety_probe",
-      "size": "standard",
-      "head": "Regulators Reopen Carrowforge Files as Overhaul Draws Fresh Scrutiny",
-      "body": "Inspectors from the Industrial Standards Board launched a follow-up review of Carrowforge's lathe and press lines, seeking to confirm that Halden Roe's overhaul actually corrected the falsified-testing practices flagged under Mara Fenn. Roe pledged full cooperation and said all 14 affected machine families had been re-certified, though the probe froze shipments on two contested product lines. Shares wobbled as customers awaited the board's verdict.",
-      "cycle": 82554,
-      "dur": 2
-    },
-    {
       "company": "Castlestone",
       "sector": "technology",
       "kind": "leadership_change",
@@ -102,16 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Fennmoor Buys Sensor Maker Threll to Feed Larkspur Diagnostics Line",
-      "body": "Dorian Brandt announced the 220 million acquisition of Threll Instruments, a specialist in micro-fluidic sensors that already supply the Larkspur diagnostics platform. Brandt framed the deal as securing the supply chain behind Larkspur's recent rapid-testing milestone, adding that Threll's 340 staff would fold into the medical unit. It marks Fennmoor's third bolt-on purchase in two years.",
-      "cycle": 82554,
-      "dur": 2
-    },
-    {
       "company": "Maison & Vale",
       "sector": "hospitality",
       "kind": "major_deal",
@@ -120,26 +170,6 @@
       "body": "Rhys Kessler unveiled a five-year, 340 million-unit supply agreement to stock cleaning and household lines across the Meridian Suites chain's 1,200 properties, marrying the freshly integrated Sundle Werks and Corran Linens ranges under one contract. Kessler said the pact validates his rapid acquisition spree, projecting the deal alone would add roughly 18% to annual revenue. Analysts noted it is the largest single order in the company's 86-year history.",
       "cycle": 82554,
       "dur": 8
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Skarngrove & Sons Secures Fastener Supply Deal for Kelvarn Bridge Program",
-      "body": "Quinn Fenn signed a three-year agreement to supply structural fasteners and fixings for the multi-span Kelvarn crossing works, an order valued near 95 million. Fenn said output from the newly opened fastener plant would be dedicated largely to the contract, timing the expansion to the win. The deal locks in a meaningful share of the plant's first-year capacity.",
-      "cycle": 82554,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "standard",
-      "head": "Thronehaus Sovereign Collection Takes Top Honor at Verrand Watch Salon",
-      "body": "The in-house Sovereign Collection won the Grande Complication prize at the annual Verrand Salon, a first for Thronehaus since it brought dial-making in-house via the Verreil purchase. Cora Dray called the award vindication of the vertical-integration strategy, noting order books for the Regent Tourbillon had lengthened to 14 months. The recognition burnished the maison's push into fully self-made movements.",
-      "cycle": 82554,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -219,26 +249,6 @@
       "head": "Varnvale & Sons Acquires Historic Corveau Dial Foundry in Landmark Deal",
       "body": "Bram Wold has agreed to buy the century-old Corveau dial foundry for a reported 340 million, vertically integrating the enamel and guilloché work that had lifted the award-winning Bellmont collection. The purchase hands Varnvale exclusive control of a supplier long shared with rival houses and marks Wold's fourth acquisition in eighteen months. Analysts see it as a bid to lock in craftsmanship as timepiece demand tightens supply industry-wide.",
       "cycle": 82549,
-      "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Brunmark Motors Unveils Veyra Long-Range as Flagship of Reworked Lineup",
-      "body": "Riding stabilized output, Brunmark Motors debuted the Veyra Long-Range, boasting a 40 percent range gain and drawing on the recently spun-out power unit for its new cell pack. CEO Yvette Calder called it 'the vehicle the restructure was built for,' targeting 90,000 units in the first year. The launch marks Brunmark's most ambitious release in a decade, though skeptics point to the company's history of turbulent ramps.",
-      "cycle": 82548,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Castlestone Plunges as Twin-Campus Costs Swamp Vellmont Order Book",
-      "body": "Castlestone reported a quarterly loss of 310 million, its first in over a decade, as buildout overruns on both compute campuses ballooned to nearly double initial estimates. CEO Iris Garr defended the spending as 'the price of not blinking,' but conceded the Vellmont backlog is converting to revenue slower than projected. The company suspended forward guidance amid mounting pressure over the aggressive expansion.",
-      "cycle": 82548,
       "dur": 8
     }
   ]
