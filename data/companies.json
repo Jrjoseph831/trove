@@ -222,7 +222,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82548,
+    "lastEventCycle": 82557,
     "events": [
       {
         "cycle": 0,
@@ -280,6 +280,16 @@
         "body": "Aperture Compute posted quarterly revenue of 1.28 billion, up 34 percent, driven by early Dawnmere Interconnect shipments that outpaced internal forecasts by roughly 20 percent. CEO Halden Dray touted a doubling of order backlog and confirmed the second Dawnmere site will open ahead of schedule. Margins widened as the halved-latency design commanded premium pricing across data-center clients.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82557,
+        "kind": "breakthrough",
+        "size": "major",
+        "head": "Aperture Compute Unveils Dawnmere II Interconnect, Setting New Industry Latency Record",
+        "body": "Halden Dray took the stage to reveal the Dawnmere II interconnect, which he claimed cuts latency another 60% over its record-setting predecessor while halving power draw. The headline-grabbing launch drew immediate interest from three major clients, and Dray declared Aperture had 'redrawn the map' for high-performance compute delivery.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -744,7 +754,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82549,
+    "lastEventCycle": 82557,
     "events": [
       {
         "cycle": 0,
@@ -808,6 +818,16 @@
         "size": "major",
         "head": "Bruncrest Works Sued by Meridian Partners Over Collapsed Compute Pact",
         "body": "The Meridian consortium filed a 480 million claim alleging Bruncrest misrepresented demand to secure campus commitments, escalating the fallout that felled former chief Petra Veldt. CEO Corwin Hale, who took the reins amid the probe, called the suit 'without merit' but confirmed the flagship campus buildout is now paused. The filing seeks return of advance payments and damages tied to stalled construction.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82557,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Bruncrest Works Slashes Guidance and Exits Meridian Segment in Sweeping Overhaul",
+        "body": "Corwin Hale unveiled a drastic restructuring that abandons the entire Meridian compute segment, writes down $1.1 billion in assets, and cuts 3,400 jobs as the demand-inflation scandal and lawsuit continue to bleed the company. Hale, who inherited the crisis, called it 'the only path to survive,' pledging to rebuild around a leaner audited-demand core while investor confidence remains badly shaken.",
         "effects": {
           "technology": -0.22
         }
@@ -1012,7 +1032,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82550,
+    "lastEventCycle": 82557,
     "events": [
       {
         "cycle": 0,
@@ -1089,6 +1109,16 @@
         "effects": {
           "automotive": 0.22
         }
+      },
+      {
+        "cycle": 82557,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Brunstone & Sons Craters as Meridian Line Launch Falls Flat",
+        "body": "Royce Lambourne's all-in bet on the Meridian line unraveled as first-quarter deliveries came in 45% below target, driving a $620 million loss and a fresh guidance cut. With the Ardent shutdown still fresh and cash reserves tightening, Lambourne faced pointed questions about whether the company misjudged demand for the relaunch it staked its future on.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -1156,7 +1186,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82545,
+    "lastEventCycle": 82557,
     "events": [
       {
         "cycle": 0,
@@ -1212,6 +1242,16 @@
         "size": "standard",
         "head": "Calderforge Rebounds as Stormwell Hall Lifts Quarterly Compute Output",
         "body": "Calderforge reported quarterly revenue of $9.2B, up 14% year-over-year, as the new Stormwell Hall came online ahead of schedule and absorbed workloads lost during the Embergate shutdown. CEO Nadia Throne credited the recovery to a 'clean break from legacy infrastructure,' though she warned that ramp-up costs would weigh on margins into next quarter.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82557,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Calderforge Breaks Ground on Third Stormwell Wing Amid Surging Demand",
+        "body": "Fresh off the Stormwell Hall rebound, Nadia Throne announced a $2.4 billion expansion adding a third wing to the flagship facility, targeting a 40% capacity increase by late next year. The move doubles down on the site that rescued the company after the Embergate outage, though analysts note the aggressive timeline carries execution risk given Throne's history of turbulent rollouts.",
         "effects": {
           "technology": 0.13
         }
@@ -2991,7 +3031,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82549,
+    "lastEventCycle": 82557,
     "events": [
       {
         "cycle": 0,
@@ -3065,6 +3105,16 @@
         "size": "standard",
         "head": "Halhold Systems Tops Forecasts as Northgate Anchor Deal Fuels Rebound",
         "body": "Dahlia Renn's slimmed-down Northgate tier drove quarterly compute revenue up 22 percent to 1.1 billion, beating guidance after last year's painful reset. The anchor client signed in the prior quarter accounted for nearly a third of new capacity bookings. Renn told the call the reworked strategy had 'found its floor,' though margins remain thin as she funds a second buildout phase.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82557,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halhold Systems Signs Second Major Northgate Client in Multi-Year Pact",
+        "body": "Dahlia Renn confirmed a $780 million, five-year agreement with logistics group Vantrel to expand Northgate tier capacity, following the anchor deal that fueled last quarter's beat. The win cements Northgate as Halhold's growth engine, with Renn promising two more tier variants by year-end to capture mid-market clients priced out of premium compute.",
         "effects": {
           "technology": 0.13
         }
@@ -4874,7 +4924,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82544,
+    "lastEventCycle": 82557,
     "events": [
       {
         "cycle": 0,
@@ -4910,6 +4960,16 @@
         "body": "Thaldale posted a quarterly loss of 62 million, wider than expected, as restructuring charges and plant retooling under Renna Voss's turnaround plan hit harder than forecast. Voss defended the numbers as 'the price of fixing what was broken,' pointing to a 12 percent rise in tool unit shipments even as margins slipped. Some board members privately voiced impatience, echoing the tensions that pushed out predecessor Sable Wold.",
         "effects": {
           "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82557,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Thaldale Group Returns to Growth as Voss Turnaround Gains Traction",
+        "body": "Renna Voss reported the first quarterly beat of her tenure, with revenue up 7% and turnaround costs finally tapering after two painful quarters. The Hardware & Tools maker credited streamlined production and the shuttering of underperforming lines, though Voss cautioned that full margin recovery remains 'a few quarters out.'",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -5094,7 +5154,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82549,
+    "lastEventCycle": 82557,
     "events": [
       {
         "cycle": 0,
@@ -5152,6 +5212,16 @@
         "body": "Bram Wold has agreed to buy the century-old Corveau dial foundry for a reported 340 million, vertically integrating the enamel and guilloché work that had lifted the award-winning Bellmont collection. The purchase hands Varnvale exclusive control of a supplier long shared with rival houses and marks Wold's fourth acquisition in eighteen months. Analysts see it as a bid to lock in craftsmanship as timepiece demand tightens supply industry-wide.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82557,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale & Sons Unveils First Timepieces Powered by Newly Acquired Corveau Dials",
+        "body": "Bram Wold debuted the Corveau-Bellmont line, the first collection to integrate dials from the historic foundry acquired months earlier, with pieces starting at $48,000. The launch fuses Bellmont craftsmanship with Corveau's storied dialwork, and Wold hinted the acquisition would let Varnvale triple limited-edition output over the next two years.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -5246,7 +5316,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82540,
+    "lastEventCycle": 82557,
     "events": [
       {
         "cycle": 0,
@@ -5272,6 +5342,16 @@
         "size": "standard",
         "head": "Veldtreach & Sons Posts Record Quarter as Coastal Works Ramp Up",
         "body": "Revenue climbed 22% to $940 million as the $1.6 billion reclamation contract moved into full excavation phase. Petra Steg credited disciplined scheduling and a doubled earthmover fleet, raising full-year guidance modestly.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82557,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Veldtreach & Sons Adds $900 Million Highland Reservoir Contract to Order Book",
+        "body": "Petra Steg secured a $900 million earthmoving contract for the Highland reservoir project, extending the firm's backlog to a record 26 months. The steady win builds on the momentum of the coastal reclamation works, with Steg noting the two projects would run concurrently and lift fleet utilization to near-full capacity.",
         "effects": {
           "construction": 0.13
         }

@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-05T03:36:00.214Z",
+  "generatedAt": "2026-07-05T08:55:43.319Z",
   "beats": [
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "breakthrough",
+      "size": "major",
+      "head": "Aperture Compute Unveils Dawnmere II Interconnect, Setting New Industry Latency Record",
+      "body": "Halden Dray took the stage to reveal the Dawnmere II interconnect, which he claimed cuts latency another 60% over its record-setting predecessor while halving power draw. The headline-grabbing launch drew immediate interest from three major clients, and Dray declared Aperture had 'redrawn the map' for high-performance compute delivery.",
+      "cycle": 82557,
+      "dur": 8
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Bruncrest Works Slashes Guidance and Exits Meridian Segment in Sweeping Overhaul",
+      "body": "Corwin Hale unveiled a drastic restructuring that abandons the entire Meridian compute segment, writes down $1.1 billion in assets, and cuts 3,400 jobs as the demand-inflation scandal and lawsuit continue to bleed the company. Hale, who inherited the crisis, called it 'the only path to survive,' pledging to rebuild around a leaner audited-demand core while investor confidence remains badly shaken.",
+      "cycle": 82557,
+      "dur": 8
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Brunstone & Sons Craters as Meridian Line Launch Falls Flat",
+      "body": "Royce Lambourne's all-in bet on the Meridian line unraveled as first-quarter deliveries came in 45% below target, driving a $620 million loss and a fresh guidance cut. With the Ardent shutdown still fresh and cash reserves tightening, Lambourne faced pointed questions about whether the company misjudged demand for the relaunch it staked its future on.",
+      "cycle": 82557,
+      "dur": 8
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Calderforge Breaks Ground on Third Stormwell Wing Amid Surging Demand",
+      "body": "Fresh off the Stormwell Hall rebound, Nadia Throne announced a $2.4 billion expansion adding a third wing to the flagship facility, targeting a 40% capacity increase by late next year. The move doubles down on the site that rescued the company after the Embergate outage, though analysts note the aggressive timeline carries execution risk given Throne's history of turbulent rollouts.",
+      "cycle": 82557,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Halhold Systems Signs Second Major Northgate Client in Multi-Year Pact",
+      "body": "Dahlia Renn confirmed a $780 million, five-year agreement with logistics group Vantrel to expand Northgate tier capacity, following the anchor deal that fueled last quarter's beat. The win cements Northgate as Halhold's growth engine, with Renn promising two more tier variants by year-end to capture mid-market clients priced out of premium compute.",
+      "cycle": 82557,
+      "dur": 2
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Thaldale Group Returns to Growth as Voss Turnaround Gains Traction",
+      "body": "Renna Voss reported the first quarterly beat of her tenure, with revenue up 7% and turnaround costs finally tapering after two painful quarters. The Hardware & Tools maker credited streamlined production and the shuttering of underperforming lines, though Voss cautioned that full margin recovery remains 'a few quarters out.'",
+      "cycle": 82557,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Varnvale & Sons Unveils First Timepieces Powered by Newly Acquired Corveau Dials",
+      "body": "Bram Wold debuted the Corveau-Bellmont line, the first collection to integrate dials from the historic foundry acquired months earlier, with pieces starting at $48,000. The launch fuses Bellmont craftsmanship with Corveau's storied dialwork, and Wold hinted the acquisition would let Varnvale triple limited-edition output over the next two years.",
+      "cycle": 82557,
+      "dur": 2
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Veldtreach & Sons Adds $900 Million Highland Reservoir Contract to Order Book",
+      "body": "Petra Steg secured a $900 million earthmoving contract for the Highland reservoir project, extending the firm's backlog to a record 26 months. The steady win builds on the momentum of the coastal reclamation works, with Steg noting the two projects would run concurrently and lift fleet utilization to near-full capacity.",
+      "cycle": 82557,
+      "dur": 2
+    },
     {
       "company": "Aldousspire Group",
       "sector": "consumer",
@@ -20,16 +100,6 @@
       "body": "Regulators at the Motorworks Safety Board opened a formal investigation into Blackton's Halvern components after additional weld failures were reported beyond the original recalled batch. CEO Mara Mercer confirmed the second production line has been paused while inspectors review the entire Halvern run, a setback estimated to cost the firm 40 million in delayed orders. The probe casts doubt on the rapid expansion Mercer championed just months ago.",
       "cycle": 82556,
       "dur": 8
-    },
-    {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Dunmorestone Reports Quiet, Solid Quarter as Food Service Orders Firm Up",
-      "body": "Dunmorestone edged past modest expectations with food-service equipment orders rising 6 percent, offsetting a flat plumbing segment. CEO Orla Mercer described the quarter as 'unremarkable in the best way,' noting the earlier faucet-cartridge recall is now fully behind the company.",
-      "cycle": 82556,
-      "dur": 1
     },
     {
       "company": "Gromford Works",
@@ -72,36 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Skarnstone Industries",
-      "sector": "medical",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Skarnstone Industries Adds Warehouse Capacity to Shore Up Consumables Supply",
-      "body": "Skarnstone Industries broke ground on a modest distribution annex near its main facility to expand storage for its medical-consumables lines. CEO Yvette Aldous framed the move as a long-horizon step, adding capacity to serve hospital contracts 'for the next fifteen years, not the next fifteen months.'",
-      "cycle": 82556,
-      "dur": 1
-    },
-    {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunridge Works Launches Cross-Pillar Home Bundle Under New Structure",
-      "body": "Brunridge unveiled a bundled home range spanning its cleaning, devices, and fine-goods pillars, the first product to draw on all three units since the restructure. CEO Halia Brennt said the integrated line is meant to prove the three-pillar model can share design and packaging costs. Initial rollout covers a limited assortment, with a broader catalog slated for next season.",
-      "cycle": 82555,
-      "dur": 2
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Carrowwell Wins Fleet Order for Modular Warehouse Automation Line",
-      "body": "Carrowwell secured a 380 million order to outfit a national distribution operator's facilities with its newly launched modular automation systems. CEO Theo Thorne said the win validates the product bet made at the new material-handling plant, with deliveries beginning next quarter. The contract carries options that could extend its value over three years.",
-      "cycle": 82555,
-      "dur": 2
-    },
-    {
       "company": "Castlehold",
       "sector": "energy",
       "kind": "safety_probe",
@@ -110,36 +150,6 @@
       "body": "The national energy authority has ordered Castlehold to idle the entire Saltmere storage complex pending a criminal referral over the withheld fault reports, pulling an estimated 900 megawatts of capacity offline. New CEO Ivo Reneth said the company will 'cooperate fully' while warning of a material charge against the current quarter, with cleanup and remediation costs still being tallied. Two former reporting officers have been named in the referral.",
       "cycle": 82555,
       "dur": 8
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Drustcraft Debuts Corrosion-Resistant Fastener Series for New Platform",
-      "body": "Drustcraft introduced its Endura-grade fastener line, engineered with a proprietary coating rated for 15-year service life in high-heat drivetrain zones. CEO Cora Fenn said the series builds directly on the vehicle-platform slot won last quarter, with initial output earmarked for the same customer. Early volumes cover roughly 40 part numbers, with a second tranche planned for the following year.",
-      "cycle": 82555,
-      "dur": 2
-    },
-    {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Holtware Co. Tops Estimates as Lifetime-Warranty Line Drives Traffic",
-      "body": "Holtware posted quarterly revenue of 612 million, up 9 percent, crediting the lifetime-warranty hand tool line for lifting store footfall and average basket size. CEO Aurelia Dray said warranty-claim rates have run below internal projections, easing early cost concerns. The company reaffirmed its retail expansion targets for the year.",
-      "cycle": 82555,
-      "dur": 2
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Vantor Lines Opens Second Molded-Fiber Plant to Serve Glassware Contract",
-      "body": "Vantor Lines has commissioned a second molded-fiber facility, adding capacity to fulfill its multi-year national glassware contract without straining existing lines. CEO Halden Vossen said the plant lifts recyclable-packaging output by roughly 35 percent and creates 210 positions. The site is expected to reach full run-rate within two quarters.",
-      "cycle": 82555,
-      "dur": 2
     },
     {
       "company": "Woldmark",
@@ -229,26 +239,6 @@
       "head": "Kessel Drive Faces Regulatory Probe Into Touring-Line Storage Packs",
       "body": "Regulators opened a formal safety probe into the storage packs powering Kessel Drive's long-range touring line following reports of thermal incidents in fleet units. The inquiry lands weeks after the 3.2-billion national fleet pact, and CEO Dorian Brandt pledged 'full cooperation' while stopping short of any pause in deliveries. The company said it was reviewing pack data across the deployed fleet as the probe gets underway.",
       "cycle": 82550,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Bruncrest Works Sued by Meridian Partners Over Collapsed Compute Pact",
-      "body": "The Meridian consortium filed a 480 million claim alleging Bruncrest misrepresented demand to secure campus commitments, escalating the fallout that felled former chief Petra Veldt. CEO Corwin Hale, who took the reins amid the probe, called the suit 'without merit' but confirmed the flagship campus buildout is now paused. The filing seeks return of advance payments and damages tied to stalled construction.",
-      "cycle": 82549,
-      "dur": 8
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Varnvale & Sons Acquires Historic Corveau Dial Foundry in Landmark Deal",
-      "body": "Bram Wold has agreed to buy the century-old Corveau dial foundry for a reported 340 million, vertically integrating the enamel and guilloché work that had lifted the award-winning Bellmont collection. The purchase hands Varnvale exclusive control of a supplier long shared with rival houses and marks Wold's fourth acquisition in eighteen months. Analysts see it as a bid to lock in craftsmanship as timepiece demand tightens supply industry-wide.",
-      "cycle": 82549,
       "dur": 8
     }
   ]
