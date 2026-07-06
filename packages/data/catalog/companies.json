@@ -701,7 +701,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82552,
+    "lastEventCycle": 82561,
     "events": [
       {
         "cycle": 0,
@@ -759,6 +759,16 @@
         "body": "Fresh off the Coachline acquisition, Bruncraft unveiled the Runabout Cargo, a van-bodied variant pitched squarely at delivery and trades customers. Orla Marrow said the Coachline plant will handle initial builds, targeting 40,000 units in the first year. Halvenport Transit has already signaled interest in a light-utility follow-on order.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82561,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Bruncraft Industries Seals Landmark 40,000-Vehicle Order With Continental Freightways",
+        "body": "Bruncraft has clinched its largest contract in decades, agreeing to supply 40,000 Runabout Cargo vans to Continental Freightways over five years in a deal valued near 2.1 billion. Orla Marrow said the freshly acquired Coachline plant would run at full tilt to meet delivery schedules beginning next quarter. The order cements Bruncraft as the dominant commercial-vehicle supplier in the northern corridor.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -1352,7 +1362,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82546,
+    "lastEventCycle": 82561,
     "events": [
       {
         "cycle": 0,
@@ -1390,6 +1400,16 @@
         "body": "The house broke ground on a 140,000-square-foot facility to keep pace with orders under its regional transit contract, adding an estimated 220 roles. CEO Cole Brandt said the site should reach full output within eighteen months and hinted at eyeing adjacent municipal contracts.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82561,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Carrowcyon & Sons Introduces Low-Draw Transit Lighting Series",
+        "body": "Carrowcyon rolled out its Meridian series, a line of energy-efficient fixtures aimed at the transit contracts fueling its recent growth. Cole Brandt said the range cuts power consumption by nearly a fifth over prior models while meeting the durability standards demanded by rail operators. The launch leans on the second lighting works opened earlier this year.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -4916,7 +4936,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82547,
+    "lastEventCycle": 82561,
     "events": [
       {
         "cycle": 0,
@@ -4951,6 +4971,16 @@
         "head": "Skarnvale Elevates Dorn Vaskell to Steady Ship After Calder Exit",
         "body": "With founder-era discipline the priority, Skarnvale has promoted logistics veteran Dorn Vaskell to chief operating officer, reporting directly to CEO Marek Tovin. The move follows two consecutive stumbles under ousted deputy Lena Calder, with Vaskell tasked to renegotiate freight contracts blamed for the recent margin squeeze. Insiders describe Tovin's mandate as blunt: fix costs by the next reporting cycle or face deeper cuts.",
         "effects": {}
+      },
+      {
+        "cycle": 82561,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Vaskell Unveils Sweeping Overhaul to Slash Skarnvale Freight Costs",
+        "body": "In his first major move since taking the helm, Dorn Vaskell announced a consolidation of Skarnvale's regional depots from nine down to five, targeting 140 million in annual savings. The plan will shift material-handling assembly toward the flagship Corvane facility and cut roughly 600 roles across underperforming sites. Vaskell framed the move as 'painful but necessary' to reverse two quarters of losses.",
+        "effects": {
+          "logistics": -0.13
+        }
       }
     ]
   },
@@ -5081,7 +5111,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82540,
+    "lastEventCycle": 82561,
     "events": [
       {
         "cycle": 0,
@@ -5107,6 +5137,16 @@
         "size": "standard",
         "head": "Stegreach Launches Sealed Fixture Line for Wet and Underground Sites",
         "body": "The new Grippan LX range combines corrosion-resistant fasteners and enclosed lighting rated for tunnel and coastal use, targeting the transit projects fueling recent orders. Halden Ashby said early interest from three infrastructure contractors had already filled the first production batch.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82561,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Stegreach Beats Forecasts as Transit Wiring and Sealed Fixtures Ship",
+        "body": "Stegreach posted quarterly revenue of 780 million, up 11 percent, driven by ramping deliveries on the major transit wiring contract and strong early orders for its new sealed fixture line. Halden Ashby credited disciplined execution across the fasteners and cable segments for the margin gain. The company nudged its full-year outlook higher.",
         "effects": {
           "construction": 0.13
         }
@@ -5734,7 +5774,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82552,
+    "lastEventCycle": 82561,
     "events": [
       {
         "cycle": 0,
@@ -5792,6 +5832,16 @@
         "body": "The newly formed Heritage Division launched its first co-branded release: a limited Renmark Tourer accompanied by a matched Aldecourt timepiece, priced from $310,000 as a set. Quinn Marrow said just 250 pairings will be produced, calling the launch proof that the restructuring has created something greater than its parts. Early allocations to flagship boutiques are said to be spoken for.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82561,
+        "kind": "award",
+        "size": "flash",
+        "head": "Vossenspire Heritage Collection Wins Grand Prize at Elberran Design Salon",
+        "body": "The debut Heritage Collection took top honors at the annual Elberran Design Salon, with judges praising the Renmark-Aldecourt pairing for 'restraint and craft.' The recognition arrives just months after Quinn Marrow folded the two houses into a single division. Vossenspire said early demand for the collection has outpaced initial production runs.",
+        "effects": {
+          "luxury": 0.06
         }
       }
     ]
@@ -6029,7 +6079,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82542,
+    "lastEventCycle": 82561,
     "events": [
       {
         "cycle": 0,
@@ -6058,6 +6108,16 @@
         "effects": {
           "medical": 0.13
         }
+      },
+      {
+        "cycle": 82561,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Wrengrove Group Breaks Ground on Third Consumables Plant Near Thornbury",
+        "body": "Backed by the Thornbury sole-supplier contract, Wrengrove will invest 220 million in a new consumables facility sited close to the hospital network it now serves. Rhys Vossen said the plant would shorten delivery times and add capacity for 300 million units annually once fully online in 2028. The move extends a steady expansion streak for the medical supplier.",
+        "effects": {
+          "medical": 0.13
+        }
       }
     ]
   },
@@ -6072,7 +6132,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82542,
+    "lastEventCycle": 82561,
     "events": [
       {
         "cycle": 0,
@@ -6101,6 +6161,16 @@
         "effects": {
           "construction": 0.06
         }
+      },
+      {
+        "cycle": 82561,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Wrenhaus Wins Fixture Package for Calderhythe Riverside Project",
+        "body": "Wrenhaus secured the plumbing and fixtures supply for the 4,000-unit Calderhythe Riverside development in a contract worth an estimated 180 million. Quinn Thorne said the win builds directly on the firm's on-time record at Brackenfield. Deliveries are slated to begin in the second half of the year.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -6115,7 +6185,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82542,
+    "lastEventCycle": 82561,
     "events": [
       {
         "cycle": 0,
@@ -6143,6 +6213,16 @@
         "body": "Wrenspire introduced its Everyroom private-label household goods range, launching first through the recently opened Marlowe distribution center. CEO Theo Aldous said the line consolidates several existing categories under one banner to 'sharpen shelf presence without adding shelf clutter.'",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82561,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Wrenspire Extends Everyroom Rollout Into Three New Regions",
+        "body": "Following a strong Marlowe debut, Wrenspire is expanding its Everyroom household line into the Halvect, Denmoor, and Ashfield regions, supported by a new cross-dock facility in Denmoor. Theo Aldous said the measured rollout mirrors the company's approach of proving demand before scaling. The expansion adds roughly 400 stocking points to the network.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
