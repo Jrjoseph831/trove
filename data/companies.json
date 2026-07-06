@@ -2282,7 +2282,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82550,
+    "lastEventCycle": 82560,
     "events": [
       {
         "cycle": 0,
@@ -2331,6 +2331,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82560,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Erretmark Works Opens Coach-Building Wing to Scale Flagship Output",
+        "body": "Erretmark expanded its Velmonte plant with a dedicated coach-building wing, aiming to lift flagship capacity from 12 to 30 units per month. CEO Aurelia Garr said premium order backlogs justified the $210 million outlay, integrating the recently acquired Sorne engine craft on-site. The move deepens Erretmark's bet on the high-margin bespoke segment.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -2345,7 +2355,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82544,
+    "lastEventCycle": 82560,
     "events": [
       {
         "cycle": 0,
@@ -2383,6 +2393,16 @@
         "body": "Fenncyon reported quarterly revenue up 18 percent, driven by higher-than-anticipated utilization at its new Eastfield rental depots, which hit 84 percent occupancy within their first two quarters. Nadia Ashby raised full-year guidance modestly, noting that rental now accounts for nearly half of divisional earnings. She struck a cautious note on new capital spending, saying the firm would 'let the depots prove themselves before we build the next batch.'",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82560,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Fenncyon Wins $1.9 Billion Earthmoving Contract for Eastfield Corridor Rail Project",
+        "body": "Fenncyon secured the flagship equipment supply and rental contract for the multi-year Eastfield Corridor rail build, valued at $1.9 billion over four years. CEO Nadia Ashby said the deal validates the depot network expansion, with 340 machines slated for phased deployment. The win locks in Fenncyon's largest single backlog on record.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -3719,7 +3739,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82550,
+    "lastEventCycle": 82560,
     "events": [
       {
         "cycle": 0,
@@ -3765,6 +3785,16 @@
         "size": "major",
         "head": "Kessel Drive Faces Regulatory Probe Into Touring-Line Storage Packs",
         "body": "Regulators opened a formal safety probe into the storage packs powering Kessel Drive's long-range touring line following reports of thermal incidents in fleet units. The inquiry lands weeks after the 3.2-billion national fleet pact, and CEO Dorian Brandt pledged 'full cooperation' while stopping short of any pause in deliveries. The company said it was reviewing pack data across the deployed fleet as the probe gets underway.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82560,
+        "kind": "recall",
+        "size": "major",
+        "head": "Kessel Drive Recalls Touring-Line Storage Packs as Probe Confirms Overheating Risk",
+        "body": "Kessel Drive issued a recall covering an estimated 48,000 storage packs across its Touring line after regulators confirmed an overheating defect. The action threatens deliveries under the recently signed $3.2 billion national fleet pact, with CEO Dorian Brandt pledging free replacements and a redesigned pack by next quarter. Analysts flagged potential penalties tied to fleet delivery timelines.",
         "effects": {
           "automotive": -0.22
         }
@@ -4253,7 +4283,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82552,
+    "lastEventCycle": 82560,
     "events": [
       {
         "cycle": 0,
@@ -4322,6 +4352,16 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82560,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Marlgear Supply Rocked as Internal Memos Reveal Atlas Defects Were Flagged Before Launch",
+        "body": "Leaked internal documents show Marlgear engineers warned of Atlas machine load failures months before the Drennan Mills incidents, raising questions over CEO Halden Vossen's handling of the launch. The disclosures widen the ongoing probe and prompted a board review of executive oversight. Marlgear said it is cooperating fully but did not address the timeline of the warnings.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -4336,7 +4376,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82546,
+    "lastEventCycle": 82560,
     "events": [
       {
         "cycle": 0,
@@ -4374,6 +4414,16 @@
         "body": "The consumer house extended distribution of its Hardwear rental fixtures to two additional regions after stronger-than-expected landlord uptake. Theo Orne said the rollout adds modest capacity without new plant investment, keeping the line's steady margin profile intact.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82560,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Marrowcyon Extends Hardwear Into Apparel-Grade Workwear Line",
+        "body": "Marrowcyon unveiled a rugged workwear range built to pair with its Hardwear fixture business, targeting the same rental and trade customers. CEO Theo Orne said the crossover line leverages existing regional distribution and early orders from three midsize rental operators. The launch marks Marrowcyon's first meaningful bridge between its apparel and fixtures segments.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -4915,7 +4965,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82548,
+    "lastEventCycle": 82560,
     "events": [
       {
         "cycle": 0,
@@ -4953,6 +5003,16 @@
         "body": "Steg Tooling reported a 9 percent revenue rise to 486 million, with the newly opened fastener plant reaching 70 percent utilization months ahead of plan. CEO Iris Vossen credited disciplined onboarding and steady auto-parts demand, reaffirming full-year guidance without fanfare. The result extends a quiet streak of forecast beats.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82560,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Steg Tooling Signs Multi-Year Fastener Supply Pact With Two Assembly Partners",
+        "body": "Steg Tooling locked in a three-year supply agreement to provide fasteners and fixings to two auto assembly plants, underpinning demand at its second facility. CEO Iris Vossen said the contracts secure roughly 40% of the new plant's capacity through 2028. The deal reflects Steg's steady push to convert surging auto-parts demand into committed volume.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -5747,7 +5807,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82547,
+    "lastEventCycle": 82560,
     "events": [
       {
         "cycle": 0,
@@ -5783,6 +5843,16 @@
         "size": "standard",
         "head": "Vossenstead Supply Posts Record Quarter as Twin Hubs Come Online",
         "body": "Vossenstead reported quarterly revenue up 14 percent to 312 million, with the newly paired distribution hub and plumbing warehouse driving faster fulfillment on both fittings and food-service lines. CEO Bram Thorne kept guidance conservative but noted margins improved as the two facilities began sharing logistics. The disciplined expansion strategy is now visibly feeding the bottom line.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82560,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenstead Supply Extends Streak as Plumbing Warehouse Boosts Margins",
+        "body": "Vossenstead posted a fourth consecutive quarter of gains, with revenue up 11% and operating margin widening 130 basis points as the plumbing fittings warehouse reached full throughput. CEO Bram Thorne credited disciplined inventory turns across the twin-hub network. The company nudged its annual outlook higher but declined to signal further hub investment.",
         "effects": {
           "consumer": 0.13
         }
@@ -5843,7 +5913,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82541,
+    "lastEventCycle": 82560,
     "events": [
       {
         "cycle": 0,
@@ -5869,6 +5939,16 @@
         "size": "flash",
         "head": "Wold & Bramm Opens Second Showroom to Carry Heritage Lighting Line",
         "body": "Wold & Bramm quietly opened a flagship showroom in the Halden design district, doubling its retail footprint. CEO Mara Marrow said the space will anchor the recently launched heritage lighting collection, which has outsold internal projections since its trade debut. The disciplined expansion is funded entirely from operating cash.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82560,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wold & Bramm Posts Solid Quarter as Heritage Lighting Lifts Showroom Traffic",
+        "body": "Wold & Bramm reported a 7% revenue rise, driven by strong sell-through of the heritage lighting collection at its two showrooms. CEO Mara Marrow said footfall at the second location outpaced early projections. The company reaffirmed a measured expansion pace for the year ahead.",
         "effects": {
           "consumer": 0.06
         }

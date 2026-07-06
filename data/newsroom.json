@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-05T19:20:40.794Z",
+  "generatedAt": "2026-07-06T03:43:01.631Z",
   "beats": [
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Erretmark Works Opens Coach-Building Wing to Scale Flagship Output",
+      "body": "Erretmark expanded its Velmonte plant with a dedicated coach-building wing, aiming to lift flagship capacity from 12 to 30 units per month. CEO Aurelia Garr said premium order backlogs justified the $210 million outlay, integrating the recently acquired Sorne engine craft on-site. The move deepens Erretmark's bet on the high-margin bespoke segment.",
+      "cycle": 82560,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Fenncyon Wins $1.9 Billion Earthmoving Contract for Eastfield Corridor Rail Project",
+      "body": "Fenncyon secured the flagship equipment supply and rental contract for the multi-year Eastfield Corridor rail build, valued at $1.9 billion over four years. CEO Nadia Ashby said the deal validates the depot network expansion, with 340 machines slated for phased deployment. The win locks in Fenncyon's largest single backlog on record.",
+      "cycle": 82560,
+      "dur": 8
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "major",
+      "head": "Kessel Drive Recalls Touring-Line Storage Packs as Probe Confirms Overheating Risk",
+      "body": "Kessel Drive issued a recall covering an estimated 48,000 storage packs across its Touring line after regulators confirmed an overheating defect. The action threatens deliveries under the recently signed $3.2 billion national fleet pact, with CEO Dorian Brandt pledging free replacements and a redesigned pack by next quarter. Analysts flagged potential penalties tied to fleet delivery timelines.",
+      "cycle": 82560,
+      "dur": 8
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Marlgear Supply Rocked as Internal Memos Reveal Atlas Defects Were Flagged Before Launch",
+      "body": "Leaked internal documents show Marlgear engineers warned of Atlas machine load failures months before the Drennan Mills incidents, raising questions over CEO Halden Vossen's handling of the launch. The disclosures widen the ongoing probe and prompted a board review of executive oversight. Marlgear said it is cooperating fully but did not address the timeline of the warnings.",
+      "cycle": 82560,
+      "dur": 8
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Marrowcyon Extends Hardwear Into Apparel-Grade Workwear Line",
+      "body": "Marrowcyon unveiled a rugged workwear range built to pair with its Hardwear fixture business, targeting the same rental and trade customers. CEO Theo Orne said the crossover line leverages existing regional distribution and early orders from three midsize rental operators. The launch marks Marrowcyon's first meaningful bridge between its apparel and fixtures segments.",
+      "cycle": 82560,
+      "dur": 2
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Steg Tooling Signs Multi-Year Fastener Supply Pact With Two Assembly Partners",
+      "body": "Steg Tooling locked in a three-year supply agreement to provide fasteners and fixings to two auto assembly plants, underpinning demand at its second facility. CEO Iris Vossen said the contracts secure roughly 40% of the new plant's capacity through 2028. The deal reflects Steg's steady push to convert surging auto-parts demand into committed volume.",
+      "cycle": 82560,
+      "dur": 2
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenstead Supply Extends Streak as Plumbing Warehouse Boosts Margins",
+      "body": "Vossenstead posted a fourth consecutive quarter of gains, with revenue up 11% and operating margin widening 130 basis points as the plumbing fittings warehouse reached full throughput. CEO Bram Thorne credited disciplined inventory turns across the twin-hub network. The company nudged its annual outlook higher but declined to signal further hub investment.",
+      "cycle": 82560,
+      "dur": 2
+    },
+    {
+      "company": "Wold & Bramm",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Wold & Bramm Posts Solid Quarter as Heritage Lighting Lifts Showroom Traffic",
+      "body": "Wold & Bramm reported a 7% revenue rise, driven by strong sell-through of the heritage lighting collection at its two showrooms. CEO Mara Marrow said footfall at the second location outpaced early projections. The company reaffirmed a measured expansion pace for the year ahead.",
+      "cycle": 82560,
+      "dur": 1
+    },
     {
       "company": "Greywater Grid",
       "sector": "energy",
@@ -20,16 +100,6 @@
       "body": "Hesperforge signed a supplemental agreement to supply protective raw textiles alongside its structural beams for the Coastal Bridgeworks program, valued at 95 million over three years. Sable Halloran said the dual-material deal validates the firm's push into cross-category supply. High-yield beam output remains the primary revenue driver at 60 percent of volume.",
       "cycle": 82559,
       "dur": 2
-    },
-    {
-      "company": "Ironcrestcrest Supply",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Ironcrestcrest Supply Extends Value Range With Dimmable Workshop Fixtures",
-      "body": "Building on its workshop lighting debut, Ironcrestcrest added a dimmable variant priced under 30 per unit to broaden the value line. Dorian Garr said early orders from independent hardware retailers exceeded internal targets by 15 percent. The company reaffirmed its measured, margin-focused approach.",
-      "cycle": 82559,
-      "dur": 1
     },
     {
       "company": "Ironcrestton",
@@ -92,26 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Boreas Power Fast-Tracks Hollowmere Phase Three as Storage Demand Climbs",
-      "body": "Riding momentum from the Calderwick-anchored grid-storage pact, Mira Thorne greenlit an accelerated Phase Three at Hollowmere, adding 900 MWh of capacity ahead of schedule. The $1.1B outlay brings total committed spend at the site above $3B and reflects Thorne's acquisitive push to consolidate regional storage. Boreas said early commissioning could begin within nine months.",
-      "cycle": 82558,
-      "dur": 2
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Brunmark Motors Beats Again as Veyra Long-Range Orders Surge",
-      "body": "Yvette Calder reported quarterly revenue of $4.2B, up 14% year over year, driven by strong pre-orders for the Veyra Long-Range flagship. The reworked lineup and steadied power unit helped margins expand 220 basis points, marking a second consecutive quarter of gains. Calder raised full-year guidance but cautioned that battery input costs remained a wildcard.",
-      "cycle": 82558,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "lawsuit",
@@ -130,26 +180,6 @@
       "body": "Cole Brandt secured a landmark five-year agreement to supply cell packs from the newly formed Power & Storage division to a major commercial fleet operator, valued at up to $9B. The deal validates the $6.4B Voss Cell acquisition and positions Lhaus as a top-tier supplier beyond its traditional auto-parts base. Brandt said the division was already fielding inquiries that could double its order book by year-end.",
       "cycle": 82558,
       "dur": 8
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Marrowstone Build Overhauls Safety Division as Embankment Fallout Deepens",
-      "body": "Bram Halloran announced a sweeping reorganization of Marrowstone's site-safety operations, creating a standalone Compliance & Ground Works unit reporting directly to his office. The move follows two regulatory site orders and a pending suit tied to the Greymarsh embankment collapse, and comes alongside the departure of two regional operations chiefs. Halloran framed the restructure as 'getting ahead of the findings rather than behind them.'",
-      "cycle": 82558,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Vossenspire Names Halden Roe Permanent CEO to Steer Blackout Recovery",
-      "body": "The Vossenspire board confirmed interim chief Halden Roe as permanent CEO, tasking him with rebuilding regulator confidence after the two-region blackout that ended Kestrel Calder's tenure. Roe pledged $600M toward grid-hardening upgrades and a new independent reliability office over the next 18 months. Analysts noted the appointment ends weeks of leadership uncertainty at the turbulent house.",
-      "cycle": 82558,
-      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -239,36 +269,6 @@
       "head": "Maison & Vale Lands Continental Hotel-Group Supply Deal for Combined Portfolio",
       "body": "Rhys Kessler unveiled a five-year, 340 million-unit supply agreement to stock cleaning and household lines across the Meridian Suites chain's 1,200 properties, marrying the freshly integrated Sundle Werks and Corran Linens ranges under one contract. Kessler said the pact validates his rapid acquisition spree, projecting the deal alone would add roughly 18% to annual revenue. Analysts noted it is the largest single order in the company's 86-year history.",
       "cycle": 82554,
-      "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Boreas Power Seals $3.8B Grid-Storage Pact Anchored by Calderwick Fleet",
-      "body": "Boreas Power struck a landmark 15-year agreement to supply firmed capacity to the Vant_ regional grid operator, valued at $3.8 billion and underpinned by the freshly acquired Calderwick storage assets. Mira Thorne framed the deal as validation of the buying spree, with Hollowmere Phase Two output already earmarked against it. Deliveries begin next year, cementing Boreas as the region's largest independent storage supplier.",
-      "cycle": 82552,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Halhold Works Rocked as Internal Memos Show Verity Pro Warnings Ignored",
-      "body": "Leaked internal documents revealed that Halhold engineers flagged the Verity Pro's monitoring faults months before launch, contradicting Nadia Brandt's public assurances during the safety review. Two board members have called for an independent inquiry as several hospitals suspend existing contracts. The company faces mounting scrutiny alongside the ongoing shipment suspension.",
-      "cycle": 82552,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "recall",
-      "size": "major",
-      "head": "Marlgear Supply Recalls Atlas Line as Drennan Probe Widens",
-      "body": "Marlgear announced a full recall of roughly 6,200 Atlas industrial machines after regulators linked the Drennan Mills failures to a defective drive assembly. Halden Vossen took an unusually public stance, pledging free retrofits and a $120 million charge while insisting the Carrow Group order will still ship on a revised timeline. Shares had already been under pressure since the probe opened.",
-      "cycle": 82552,
       "dur": 8
     }
   ]
