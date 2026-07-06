@@ -1193,7 +1193,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82547,
+    "lastEventCycle": 82563,
     "events": [
       {
         "cycle": 0,
@@ -1229,6 +1229,16 @@
         "size": "flash",
         "head": "Caldercraft Holdings Beats on Tradesman Tool Line Rollout",
         "body": "Caldercraft edged past expectations as its Reinforced Tradesman line sold through initial stock faster than planned, lifting hardware revenue 7 percent. CEO Vale Fenn credited the second textile mill for easing input bottlenecks across the household and tool divisions. Guidance held steady with a note of measured optimism.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82563,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Caldercraft Holdings Posts Steady Quarter as Tool and Textile Lines Balance Out",
+        "body": "Caldercraft edged past estimates with revenue up 6% year over year, split evenly between the Tradesman tool line and its expanded textile mills. CEO Vale Fenn described the quarter as unremarkable in the best way, with the second mill now easing prior supply bottlenecks. Guidance was left unchanged.",
         "effects": {
           "consumer": 0.06
         }
@@ -2181,7 +2191,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82548,
+    "lastEventCycle": 82563,
     "events": [
       {
         "cycle": 0,
@@ -2217,6 +2227,16 @@
         "size": "standard",
         "head": "Drustcyon Industries Opens Coastal Anchor Line to Serve Growing Backlog",
         "body": "Drustcyon Industries has commissioned a dedicated production line for its corrosion-resistant anchors, adding 55 million in capacity to meet demand from the coastal supply deal and new inquiries. CEO Aurelia Kessler said the facility positions the firm to bid on marine and offshore projects previously out of reach. The move builds directly on the breakthrough anchor that anchored last quarter's headline contract.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82563,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcyon Beats as Coastal Anchor Line Runs at Capacity",
+        "body": "Drustcyon reported quarterly revenue growth of 15%, driven by its corrosion-resistant coastal anchor now running near full utilization. CEO Aurelia Kessler said the backlog remains firm and hinted the company is weighing a second production shift to capture opportunistic demand. Margins improved on better fixed-cost absorption at the new line.",
         "effects": {
           "construction": 0.13
         }
@@ -2476,7 +2496,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82554,
+    "lastEventCycle": 82563,
     "events": [
       {
         "cycle": 0,
@@ -2534,6 +2554,16 @@
         "body": "Dorian Brandt announced the 220 million acquisition of Threll Instruments, a specialist in micro-fluidic sensors that already supply the Larkspur diagnostics platform. Brandt framed the deal as securing the supply chain behind Larkspur's recent rapid-testing milestone, adding that Threll's 340 staff would fold into the medical unit. It marks Fennmoor's third bolt-on purchase in two years.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82563,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Fennmoor Launches Larkspur One Diagnostics System Built on Threll Sensors",
+        "body": "Fennmoor unveiled Larkspur One, its flagship rapid-diagnostics platform integrating the recently acquired Threll sensor technology, with launch orders spanning three hospital networks. CEO Dorian Brandt called it the payoff of an aggressive acquisition streak, projecting the medical unit could double its revenue contribution within two years. The company also signaled further deal appetite to broaden the Larkspur ecosystem.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -2602,7 +2632,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82547,
+    "lastEventCycle": 82563,
     "events": [
       {
         "cycle": 0,
@@ -2640,6 +2670,16 @@
         "body": "Forgegrave nudged its annual guidance higher after the Pallet-Runner Series drew repeat orders from three mid-sized warehouse operators. CEO Petra Thorne credited steady, unspectacular execution, with backlog now covering the next two quarters. The revision was modest but marks the second consecutive lift.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82563,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Forgegrave Adds Pallet-Runner Dock Module for High-Turnover Warehouses",
+        "body": "Forgegrave introduced a dock-integration module extending its Pallet-Runner Series to loading-bay operations, targeting distribution centers with heavy throughput. CEO Petra Thorne said early pilot sites reported roughly 12% faster bay cycle times. The module ships in staged availability over the coming quarters.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -2761,7 +2801,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82540,
+    "lastEventCycle": 82563,
     "events": [
       {
         "cycle": 0,
@@ -2789,6 +2829,16 @@
         "body": "The slow-release soil blend contributed to a 6% rise in inputs revenue, lifting quarterly profit to $112 million. Petra Kessler kept guidance unchanged, noting adoption 'builds over seasons, not quarters.'",
         "effects": {
           "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82563,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Greenmarsh Agro Signs Regional Supply Pact for Slow-Release Soil Blend",
+        "body": "Greenmarsh secured a three-year agreement to supply its slow-release input blend across the Vellmont growing district, covering an estimated 40,000 hectares. CEO Petra Kessler said the deal validates years of quiet field trials and locks in steady input volume through multiple seasons. Terms were undisclosed, but the company expects gradual shipment ramp rather than an immediate spike.",
+        "effects": {
+          "agriculture": 0.13
         }
       }
     ]
@@ -3890,7 +3940,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82547,
+    "lastEventCycle": 82563,
     "events": [
       {
         "cycle": 0,
@@ -3926,6 +3976,16 @@
         "size": "standard",
         "head": "Kesselgrove Co. Signs Multi-Plant Order for Modular Press Platform",
         "body": "Kesselgrove landed its first large deployment of the new Modular Press Platform, a 156 million agreement to outfit four fabrication plants for an industrial customer. CEO Orla Steg said the order validates the platform's quiet development phase, with initial units shipping next quarter. The deal converts the recent breakthrough into concrete revenue.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82563,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Kesselgrove Co. Lifts Margins as Modular Press Orders Convert to Revenue",
+        "body": "Kesselgrove reported quarterly operating margin of 21.4%, up from 18.9% a year earlier, as multi-plant Modular Press deliveries began booking. CEO Orla Steg credited disciplined production scheduling and noted the platform's order backlog now stretches into the following fiscal year. The company reaffirmed its measured capacity-expansion plan without raising capital targets.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -4696,7 +4756,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82550,
+    "lastEventCycle": 82563,
     "events": [
       {
         "cycle": 0,
@@ -4734,6 +4794,16 @@
         "body": "Ornewright Supply expanded its new Caldmere distribution hub with a dedicated food-service wing, broadening beyond the farm-inputs work anchored by the Growers Co-op deal. CEO Rhys Throne framed the addition as capturing 'demand already moving through the region,' with the wing expected to serve regional kitchens by next season. The buildout adds roughly 60 positions at the site.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82563,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Ornewright Supply Wins Regional Food Service Contract Anchored at Caldmere Hub",
+        "body": "Ornewright secured a multi-year food service supply contract with a Caldmere institutional catering group, filling capacity at its newly added hub line. CEO Rhys Throne said the win rounds out the hub's three-category footprint across cleaning, farm inputs, and food service. The company expects the contract to lift hub utilization above 80% within two quarters.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -5126,7 +5196,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82550,
+    "lastEventCycle": 82563,
     "events": [
       {
         "cycle": 0,
@@ -5162,6 +5232,16 @@
         "size": "standard",
         "head": "Stegforge Breaks Ground on Alloy Plant to Meet Machinery-Supply Demand",
         "body": "Stegforge began construction on a dedicated foundry to scale output of its longer-lasting heavy-machinery alloy, backing the multi-year supply deal signed earlier this year. CEO Aurelia Steg said the 280-million plant would roughly double alloy capacity when it comes online in two years, describing it as 'the plodding kind of investment we prefer.' The facility is expected to add 340 permanent jobs.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82563,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Stegforge Extends Alloy Supply Reach With Structural Materials Framework",
+        "body": "Stegforge signed a framework agreement pairing its long-life machinery alloy with structural-materials supply for a major construction consortium. CEO Aurelia Steg said the arrangement broadens the alloy plant's customer base beyond heavy machinery as the new line ramps. Initial deliveries begin once the plant reaches phased output.",
         "effects": {
           "manufacturing": 0.13
         }

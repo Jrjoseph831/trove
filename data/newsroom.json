@@ -1,25 +1,85 @@
 {
-  "generatedAt": "2026-07-06T15:37:42.873Z",
+  "generatedAt": "2026-07-06T20:00:55.419Z",
   "beats": [
     {
-      "company": "Blackmoor",
-      "sector": "agriculture",
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Blackmoor Posts Firm Quarter as Holloway Seed-Drill Orders Build",
-      "body": "The farm-equipment maker reported orders for its updated Holloway seed-drill range running ahead of internal targets, helping revenue tick up 6 percent. CEO Soren Dray credited the new Holloway Works assembly line for shortening delivery times to under eight weeks. The company reaffirmed its long-standing dividend and offered no change to its cautious full-year guidance.",
-      "cycle": 82562,
+      "head": "Caldercraft Holdings Posts Steady Quarter as Tool and Textile Lines Balance Out",
+      "body": "Caldercraft edged past estimates with revenue up 6% year over year, split evenly between the Tradesman tool line and its expanded textile mills. CEO Vale Fenn described the quarter as unremarkable in the best way, with the second mill now easing prior supply bottlenecks. Guidance was left unchanged.",
+      "cycle": 82563,
       "dur": 1
     },
     {
-      "company": "Brunforge Holdings",
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drustcyon Beats as Coastal Anchor Line Runs at Capacity",
+      "body": "Drustcyon reported quarterly revenue growth of 15%, driven by its corrosion-resistant coastal anchor now running near full utilization. CEO Aurelia Kessler said the backlog remains firm and hinted the company is weighing a second production shift to capture opportunistic demand. Margins improved on better fixed-cost absorption at the new line.",
+      "cycle": 82563,
+      "dur": 2
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Fennmoor Launches Larkspur One Diagnostics System Built on Threll Sensors",
+      "body": "Fennmoor unveiled Larkspur One, its flagship rapid-diagnostics platform integrating the recently acquired Threll sensor technology, with launch orders spanning three hospital networks. CEO Dorian Brandt called it the payoff of an aggressive acquisition streak, projecting the medical unit could double its revenue contribution within two years. The company also signaled further deal appetite to broaden the Larkspur ecosystem.",
+      "cycle": 82563,
+      "dur": 8
+    },
+    {
+      "company": "Forgegrave Industries",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Forgegrave Adds Pallet-Runner Dock Module for High-Turnover Warehouses",
+      "body": "Forgegrave introduced a dock-integration module extending its Pallet-Runner Series to loading-bay operations, targeting distribution centers with heavy throughput. CEO Petra Thorne said early pilot sites reported roughly 12% faster bay cycle times. The module ships in staged availability over the coming quarters.",
+      "cycle": 82563,
+      "dur": 2
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Greenmarsh Agro Signs Regional Supply Pact for Slow-Release Soil Blend",
+      "body": "Greenmarsh secured a three-year agreement to supply its slow-release input blend across the Vellmont growing district, covering an estimated 40,000 hectares. CEO Petra Kessler said the deal validates years of quiet field trials and locks in steady input volume through multiple seasons. Terms were undisclosed, but the company expects gradual shipment ramp rather than an immediate spike.",
+      "cycle": 82563,
+      "dur": 2
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Kesselgrove Co. Lifts Margins as Modular Press Orders Convert to Revenue",
+      "body": "Kesselgrove reported quarterly operating margin of 21.4%, up from 18.9% a year earlier, as multi-plant Modular Press deliveries began booking. CEO Orla Steg credited disciplined production scheduling and noted the platform's order backlog now stretches into the following fiscal year. The company reaffirmed its measured capacity-expansion plan without raising capital targets.",
+      "cycle": 82563,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Supply",
       "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Brunforge Extends New Home Division With Vellan Kitchenware Range",
-      "body": "Brunforge Holdings broadened its New Home division by adding a Vellan-branded kitchenware line, building on the tableware assets acquired earlier this year. CEO Kestrel Bramm said the extension leans on existing distribution and required only modest tooling investment. Management expects the range to reach retail shelves before the holiday buying period.",
-      "cycle": 82562,
-      "dur": 1
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Ornewright Supply Wins Regional Food Service Contract Anchored at Caldmere Hub",
+      "body": "Ornewright secured a multi-year food service supply contract with a Caldmere institutional catering group, filling capacity at its newly added hub line. CEO Rhys Throne said the win rounds out the hub's three-category footprint across cleaning, farm inputs, and food service. The company expects the contract to lift hub utilization above 80% within two quarters.",
+      "cycle": 82563,
+      "dur": 2
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Stegforge Extends Alloy Supply Reach With Structural Materials Framework",
+      "body": "Stegforge signed a framework agreement pairing its long-life machinery alloy with structural-materials supply for a major construction consortium. CEO Aurelia Steg said the arrangement broadens the alloy plant's customer base beyond heavy machinery as the new line ramps. Initial deliveries begin once the plant reaches phased output.",
+      "cycle": 82563,
+      "dur": 2
     },
     {
       "company": "Castlestone",
@@ -40,16 +100,6 @@
       "body": "Drossware Industries reported quarterly revenue up 11 percent, crediting the ramp of its recently added packaging capacity now running near 90 percent utilization on Grocer Alliance orders. CEO Nadia Wold noted that margins improved as the new lines absorbed fixed costs, and hinted the company was studying whether to extend similar supply terms into its cleaning and lighting segments. Management raised its full-year outlook modestly.",
       "cycle": 82562,
       "dur": 2
-    },
-    {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Garrware Adds Second Line at Marrow Valley to Serve Halloway & Pace",
-      "body": "The logistics house commissioned a second packaging line at its Marrow Valley plant, lifting site capacity by an estimated 22 percent to meet volumes under the multi-year Halloway & Pace grocer contract. CEO Orla Holt described the addition as a measured step rather than a bet, funded entirely from internal cash. Full ramp is expected by the close of next quarter.",
-      "cycle": 82562,
-      "dur": 1
     },
     {
       "company": "Gromford Works",
@@ -90,56 +140,6 @@
       "body": "Bruncraft has clinched its largest contract in decades, agreeing to supply 40,000 Runabout Cargo vans to Continental Freightways over five years in a deal valued near 2.1 billion. Orla Marrow said the freshly acquired Coachline plant would run at full tilt to meet delivery schedules beginning next quarter. The order cements Bruncraft as the dominant commercial-vehicle supplier in the northern corridor.",
       "cycle": 82561,
       "dur": 8
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Vaskell Unveils Sweeping Overhaul to Slash Skarnvale Freight Costs",
-      "body": "In his first major move since taking the helm, Dorn Vaskell announced a consolidation of Skarnvale's regional depots from nine down to five, targeting 140 million in annual savings. The plan will shift material-handling assembly toward the flagship Corvane facility and cut roughly 600 roles across underperforming sites. Vaskell framed the move as 'painful but necessary' to reverse two quarters of losses.",
-      "cycle": 82561,
-      "dur": 2
-    },
-    {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Stegreach Beats Forecasts as Transit Wiring and Sealed Fixtures Ship",
-      "body": "Stegreach posted quarterly revenue of 780 million, up 11 percent, driven by ramping deliveries on the major transit wiring contract and strong early orders for its new sealed fixture line. Halden Ashby credited disciplined execution across the fasteners and cable segments for the margin gain. The company nudged its full-year outlook higher.",
-      "cycle": 82561,
-      "dur": 2
-    },
-    {
-      "company": "Wrengrove Group",
-      "sector": "medical",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Wrengrove Group Breaks Ground on Third Consumables Plant Near Thornbury",
-      "body": "Backed by the Thornbury sole-supplier contract, Wrengrove will invest 220 million in a new consumables facility sited close to the hospital network it now serves. Rhys Vossen said the plant would shorten delivery times and add capacity for 300 million units annually once fully online in 2028. The move extends a steady expansion streak for the medical supplier.",
-      "cycle": 82561,
-      "dur": 2
-    },
-    {
-      "company": "Wrenhaus",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Wrenhaus Wins Fixture Package for Calderhythe Riverside Project",
-      "body": "Wrenhaus secured the plumbing and fixtures supply for the 4,000-unit Calderhythe Riverside development in a contract worth an estimated 180 million. Quinn Thorne said the win builds directly on the firm's on-time record at Brackenfield. Deliveries are slated to begin in the second half of the year.",
-      "cycle": 82561,
-      "dur": 2
-    },
-    {
-      "company": "Wrenspire",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Wrenspire Extends Everyroom Rollout Into Three New Regions",
-      "body": "Following a strong Marlowe debut, Wrenspire is expanding its Everyroom household line into the Halvect, Denmoor, and Ashfield regions, supported by a new cross-dock facility in Denmoor. Theo Aldous said the measured rollout mirrors the company's approach of proving demand before scaling. The expansion adds roughly 400 stocking points to the network.",
-      "cycle": 82561,
-      "dur": 2
     },
     {
       "company": "Fenncyon",
@@ -269,26 +269,6 @@
       "head": "Gromford Works Faces Backlash as Aurelian Noir Recall Widens Amid Concealment Claims",
       "body": "Documents surfaced this week suggesting Gromford Works knew of the Aurelian Noir clasp defect months before the initial recall, prompting fierce criticism from luxury retailers. CEO Mira Ashby, known for her headline-chasing style, now confronts an inquiry from the Guild of Fine Merchants, while the recall count has swelled to 22,000 units. Two flagship boutiques have suspended new orders pending the outcome.",
       "cycle": 82556,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Regulators Order Full Saltmere Shutdown as Castlehold Probe Turns Criminal",
-      "body": "The national energy authority has ordered Castlehold to idle the entire Saltmere storage complex pending a criminal referral over the withheld fault reports, pulling an estimated 900 megawatts of capacity offline. New CEO Ivo Reneth said the company will 'cooperate fully' while warning of a material charge against the current quarter, with cleanup and remediation costs still being tallied. Two former reporting officers have been named in the referral.",
-      "cycle": 82555,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Woldmark Seals 4.6 Billion Halcyon Deal, Its Largest Ever",
-      "body": "Woldmark announced a five-year, 4.6 billion supply agreement to furnish Halcyon compute units to a consortium of national data operators, more than doubling its prior record pact. CEO Cole Carrow called it 'the moment Halcyon becomes the backbone,' and said the firm will bring a third assembly site online to meet delivery schedules. The deal includes multi-year service and refresh commitments.",
-      "cycle": 82555,
       "dur": 8
     }
   ]
