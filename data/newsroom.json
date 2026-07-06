@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-06T10:27:16.035Z",
+  "generatedAt": "2026-07-06T15:37:42.873Z",
   "beats": [
+    {
+      "company": "Blackmoor",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Blackmoor Posts Firm Quarter as Holloway Seed-Drill Orders Build",
+      "body": "The farm-equipment maker reported orders for its updated Holloway seed-drill range running ahead of internal targets, helping revenue tick up 6 percent. CEO Soren Dray credited the new Holloway Works assembly line for shortening delivery times to under eight weeks. The company reaffirmed its long-standing dividend and offered no change to its cautious full-year guidance.",
+      "cycle": 82562,
+      "dur": 1
+    },
+    {
+      "company": "Brunforge Holdings",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Brunforge Extends New Home Division With Vellan Kitchenware Range",
+      "body": "Brunforge Holdings broadened its New Home division by adding a Vellan-branded kitchenware line, building on the tableware assets acquired earlier this year. CEO Kestrel Bramm said the extension leans on existing distribution and required only modest tooling investment. Management expects the range to reach retail shelves before the holiday buying period.",
+      "cycle": 82562,
+      "dur": 1
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Castlestone Names Turnaround Veteran Pell Karsh as CEO, Voss Steps Aside",
+      "body": "Dale Voss will exit the chief executive role effective immediately, capping a turbulent stretch marked by the Vellmont order shortfall and twin-campus overruns that erased roughly 18 percent of annual profit. The board named restructuring specialist Pell Karsh, formerly of the compute division at Halden Systems, to steady operations and review the stalled second campus. Karsh said his first 90 days would focus on cost discipline and renegotiating the Vellmont delivery schedule.",
+      "cycle": 82562,
+      "dur": 8
+    },
+    {
+      "company": "Drossware Industries",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drossware Beats Again as Grocer Alliance Volumes Fill New Capacity",
+      "body": "Drossware Industries reported quarterly revenue up 11 percent, crediting the ramp of its recently added packaging capacity now running near 90 percent utilization on Grocer Alliance orders. CEO Nadia Wold noted that margins improved as the new lines absorbed fixed costs, and hinted the company was studying whether to extend similar supply terms into its cleaning and lighting segments. Management raised its full-year outlook modestly.",
+      "cycle": 82562,
+      "dur": 2
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Garrware Adds Second Line at Marrow Valley to Serve Halloway & Pace",
+      "body": "The logistics house commissioned a second packaging line at its Marrow Valley plant, lifting site capacity by an estimated 22 percent to meet volumes under the multi-year Halloway & Pace grocer contract. CEO Orla Holt described the addition as a measured step rather than a bet, funded entirely from internal cash. Full ramp is expected by the close of next quarter.",
+      "cycle": 82562,
+      "dur": 1
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Gromford Works Sued Over Aurelian Noir Clasp as Regulators Widen Concealment Inquiry",
+      "body": "A coalition of buyers filed suit alleging Gromford Works knew of the Aurelian Noir clasp defect months before the recall and continued shipments, seeking damages tied to more than 40,000 affected units. The Verrand product-safety board has formally expanded its inquiry into internal communications, and two senior quality officers have been placed on leave. CEO Mira Ashby, long the face of the brand's rapid launches, offered a public apology but stopped short of accepting the concealment claims.",
+      "cycle": 82562,
+      "dur": 8
+    },
+    {
+      "company": "Skarngrave",
+      "sector": "medical",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Skarngrave Launches Low-Temperature Sterilizer Line for Sensitive Instruments",
+      "body": "The medical house introduced its Verlan-S sterilizer range, designed for heat-sensitive endoscopic and optical instruments, targeting hospital procurement cycles beginning next season. CEO Orla Dray said early pilot placements at three regional health networks validated cycle times roughly 30 percent faster than the outgoing model. The launch complements the five-year sterilization supply contract now ramping.",
+      "cycle": 82562,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Thronehaus & Co. Acquires Casing Specialist Aldren to Deepen In-House Craft",
+      "body": "Fresh off its Sovereign Collection award, Thronehaus struck a deal to buy case-and-bracelet maker Aldren for a reported sum near 240 million, bringing another key component under one roof. CEO Cora Dray said vertical control now spans dials, movements, and casings, insulating the house from supplier bottlenecks. The purchase is expected to close within two quarters pending review.",
+      "cycle": 82562,
+      "dur": 2
+    },
     {
       "company": "Bruncraft Industries",
       "sector": "automotive",
@@ -10,16 +90,6 @@
       "body": "Bruncraft has clinched its largest contract in decades, agreeing to supply 40,000 Runabout Cargo vans to Continental Freightways over five years in a deal valued near 2.1 billion. Orla Marrow said the freshly acquired Coachline plant would run at full tilt to meet delivery schedules beginning next quarter. The order cements Bruncraft as the dominant commercial-vehicle supplier in the northern corridor.",
       "cycle": 82561,
       "dur": 8
-    },
-    {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Carrowcyon & Sons Introduces Low-Draw Transit Lighting Series",
-      "body": "Carrowcyon rolled out its Meridian series, a line of energy-efficient fixtures aimed at the transit contracts fueling its recent growth. Cole Brandt said the range cuts power consumption by nearly a fifth over prior models while meeting the durability standards demanded by rail operators. The launch leans on the second lighting works opened earlier this year.",
-      "cycle": 82561,
-      "dur": 1
     },
     {
       "company": "Skarnvale",
@@ -40,16 +110,6 @@
       "body": "Stegreach posted quarterly revenue of 780 million, up 11 percent, driven by ramping deliveries on the major transit wiring contract and strong early orders for its new sealed fixture line. Halden Ashby credited disciplined execution across the fasteners and cable segments for the margin gain. The company nudged its full-year outlook higher.",
       "cycle": 82561,
       "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "flash",
-      "head": "Vossenspire Heritage Collection Wins Grand Prize at Elberran Design Salon",
-      "body": "The debut Heritage Collection took top honors at the annual Elberran Design Salon, with judges praising the Renmark-Aldecourt pairing for 'restraint and craft.' The recognition arrives just months after Quinn Marrow folded the two houses into a single division. Vossenspire said early demand for the collection has outpaced initial production runs.",
-      "cycle": 82561,
-      "dur": 1
     },
     {
       "company": "Wrengrove Group",
@@ -82,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Erretmark Works Opens Coach-Building Wing to Scale Flagship Output",
-      "body": "Erretmark expanded its Velmonte plant with a dedicated coach-building wing, aiming to lift flagship capacity from 12 to 30 units per month. CEO Aurelia Garr said premium order backlogs justified the $210 million outlay, integrating the recently acquired Sorne engine craft on-site. The move deepens Erretmark's bet on the high-margin bespoke segment.",
-      "cycle": 82560,
-      "dur": 2
-    },
-    {
       "company": "Fenncyon",
       "sector": "construction",
       "kind": "major_deal",
@@ -120,36 +170,6 @@
       "body": "Leaked internal documents show Marlgear engineers warned of Atlas machine load failures months before the Drennan Mills incidents, raising questions over CEO Halden Vossen's handling of the launch. The disclosures widen the ongoing probe and prompted a board review of executive oversight. Marlgear said it is cooperating fully but did not address the timeline of the warnings.",
       "cycle": 82560,
       "dur": 8
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Marrowcyon Extends Hardwear Into Apparel-Grade Workwear Line",
-      "body": "Marrowcyon unveiled a rugged workwear range built to pair with its Hardwear fixture business, targeting the same rental and trade customers. CEO Theo Orne said the crossover line leverages existing regional distribution and early orders from three midsize rental operators. The launch marks Marrowcyon's first meaningful bridge between its apparel and fixtures segments.",
-      "cycle": 82560,
-      "dur": 2
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Steg Tooling Signs Multi-Year Fastener Supply Pact With Two Assembly Partners",
-      "body": "Steg Tooling locked in a three-year supply agreement to provide fasteners and fixings to two auto assembly plants, underpinning demand at its second facility. CEO Iris Vossen said the contracts secure roughly 40% of the new plant's capacity through 2028. The deal reflects Steg's steady push to convert surging auto-parts demand into committed volume.",
-      "cycle": 82560,
-      "dur": 2
-    },
-    {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenstead Supply Extends Streak as Plumbing Warehouse Boosts Margins",
-      "body": "Vossenstead posted a fourth consecutive quarter of gains, with revenue up 11% and operating margin widening 130 basis points as the plumbing fittings warehouse reached full throughput. CEO Bram Thorne credited disciplined inventory turns across the twin-hub network. The company nudged its annual outlook higher but declined to signal further hub investment.",
-      "cycle": 82560,
-      "dur": 2
     },
     {
       "company": "Greywater Grid",
@@ -269,26 +289,6 @@
       "head": "Woldmark Seals 4.6 Billion Halcyon Deal, Its Largest Ever",
       "body": "Woldmark announced a five-year, 4.6 billion supply agreement to furnish Halcyon compute units to a consortium of national data operators, more than doubling its prior record pact. CEO Cole Carrow called it 'the moment Halcyon becomes the backbone,' and said the firm will bring a third assembly site online to meet delivery schedules. The deal includes multi-year service and refresh commitments.",
       "cycle": 82555,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Castlestone Board Ousts Iris Garr as Twin-Campus Losses Mount",
-      "body": "After two straight quarters of losses tied to the twin compute campuses, Castlestone's board removed founder-era chief Iris Garr and named operations veteran Dale Voss to steady the buildout. Voss inherits a strained Vellmont order book and pledged an immediate cost review that could slow one campus's fit-out. The abrupt exit ends Garr's 46-year tenure marked by bold, public bets.",
-      "cycle": 82554,
-      "dur": 8
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Maison & Vale Lands Continental Hotel-Group Supply Deal for Combined Portfolio",
-      "body": "Rhys Kessler unveiled a five-year, 340 million-unit supply agreement to stock cleaning and household lines across the Meridian Suites chain's 1,200 properties, marrying the freshly integrated Sundle Werks and Corran Linens ranges under one contract. Kessler said the pact validates his rapid acquisition spree, projecting the deal alone would add roughly 18% to annual revenue. Analysts noted it is the largest single order in the company's 86-year history.",
-      "cycle": 82554,
       "dur": 8
     }
   ]

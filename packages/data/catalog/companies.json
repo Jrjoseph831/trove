@@ -472,7 +472,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82538,
+    "lastEventCycle": 82562,
     "events": [
       {
         "cycle": 0,
@@ -498,6 +498,16 @@
         "size": "flash",
         "head": "Blackmoor Rolls Out Updated Holloway Seed-Drill Range",
         "body": "Soren Dray introduced a refreshed line of seed drills assembled on the newly added Holloway line, emphasizing durability and serviceability over flash. The range targets long-tenure farm operators and carries Blackmoor's standard decade-long parts guarantee. Dray said early dealer interest was 'steady, as we like it.'",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82562,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Blackmoor Posts Firm Quarter as Holloway Seed-Drill Orders Build",
+        "body": "The farm-equipment maker reported orders for its updated Holloway seed-drill range running ahead of internal targets, helping revenue tick up 6 percent. CEO Soren Dray credited the new Holloway Works assembly line for shortening delivery times to under eight weeks. The company reaffirmed its long-standing dividend and offered no change to its cautious full-year guidance.",
         "effects": {
           "agriculture": 0.06
         }
@@ -875,7 +885,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82546,
+    "lastEventCycle": 82562,
     "events": [
       {
         "cycle": 0,
@@ -913,6 +923,16 @@
         "body": "Quarterly revenue rose 11% year over year, with the freshly integrated Vellan lines contributing above management's own targets. Kestrel Bramm credited disciplined channel expansion and said the Home division could turn a full-year profit ahead of schedule.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82562,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Brunforge Extends New Home Division With Vellan Kitchenware Range",
+        "body": "Brunforge Holdings broadened its New Home division by adding a Vellan-branded kitchenware line, building on the tableware assets acquired earlier this year. CEO Kestrel Bramm said the extension leans on existing distribution and required only modest tooling investment. Management expects the range to reach retail shelves before the holiday buying period.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -1760,14 +1780,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1979,
-    "ceo": "Dale Voss",
+    "ceo": "Pell Karsh",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.87,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82554,
+    "lastEventCycle": 82562,
     "events": [
       {
         "cycle": 0,
@@ -1843,6 +1863,14 @@
         "size": "major",
         "head": "Castlestone Board Ousts Iris Garr as Twin-Campus Losses Mount",
         "body": "After two straight quarters of losses tied to the twin compute campuses, Castlestone's board removed founder-era chief Iris Garr and named operations veteran Dale Voss to steady the buildout. Voss inherits a strained Vellmont order book and pledged an immediate cost review that could slow one campus's fit-out. The abrupt exit ends Garr's 46-year tenure marked by bold, public bets.",
+        "effects": {}
+      },
+      {
+        "cycle": 82562,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Castlestone Names Turnaround Veteran Pell Karsh as CEO, Voss Steps Aside",
+        "body": "Dale Voss will exit the chief executive role effective immediately, capping a turbulent stretch marked by the Vellmont order shortfall and twin-campus overruns that erased roughly 18 percent of annual profit. The board named restructuring specialist Pell Karsh, formerly of the compute division at Halden Systems, to steady operations and review the stalled second campus. Karsh said his first 90 days would focus on cost discipline and renegotiating the Vellmont delivery schedule.",
         "effects": {}
       }
     ]
@@ -2027,7 +2055,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82545,
+    "lastEventCycle": 82562,
     "events": [
       {
         "cycle": 0,
@@ -2063,6 +2091,16 @@
         "size": "standard",
         "head": "Drossware Industries Adds Packaging Capacity to Meet Grocer Alliance Demand",
         "body": "Drossware Industries broke ground on a fourth packaging facility in the Halden corridor to service its national Grocer Alliance contract. CEO Nadia Wold said the $280M plant would add 20% to corrugated output and create roughly 600 jobs, describing packaging as 'the quiet engine' behind the company's recent results.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82562,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drossware Beats Again as Grocer Alliance Volumes Fill New Capacity",
+        "body": "Drossware Industries reported quarterly revenue up 11 percent, crediting the ramp of its recently added packaging capacity now running near 90 percent utilization on Grocer Alliance orders. CEO Nadia Wold noted that margins improved as the new lines absorbed fixed costs, and hinted the company was studying whether to extend similar supply terms into its cleaning and lighting segments. Management raised its full-year outlook modestly.",
         "effects": {
           "consumer": 0.13
         }
@@ -2617,7 +2655,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82545,
+    "lastEventCycle": 82562,
     "events": [
       {
         "cycle": 0,
@@ -2653,6 +2691,16 @@
         "size": "flash",
         "head": "Garrware Posts Steady Quarter as Marrow Valley Plant Ramps Up",
         "body": "Garrware reported a 9% rise in quarterly revenue as its third Marrow Valley plant reached full capacity and the Halloway & Pace contract began shipping. CEO Orla Holt kept guidance unchanged, noting the company's order book remains 'comfortably full through year-end.'",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82562,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Garrware Adds Second Line at Marrow Valley to Serve Halloway & Pace",
+        "body": "The logistics house commissioned a second packaging line at its Marrow Valley plant, lifting site capacity by an estimated 22 percent to meet volumes under the multi-year Halloway & Pace grocer contract. CEO Orla Holt described the addition as a measured step rather than a bet, funded entirely from internal cash. Full ramp is expected by the close of next quarter.",
         "effects": {
           "logistics": 0.06
         }
@@ -2829,7 +2877,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82556,
+    "lastEventCycle": 82562,
     "events": [
       {
         "cycle": 0,
@@ -2915,6 +2963,16 @@
         "size": "major",
         "head": "Gromford Works Faces Backlash as Aurelian Noir Recall Widens Amid Concealment Claims",
         "body": "Documents surfaced this week suggesting Gromford Works knew of the Aurelian Noir clasp defect months before the initial recall, prompting fierce criticism from luxury retailers. CEO Mira Ashby, known for her headline-chasing style, now confronts an inquiry from the Guild of Fine Merchants, while the recall count has swelled to 22,000 units. Two flagship boutiques have suspended new orders pending the outcome.",
+        "effects": {
+          "luxury": -0.22
+        }
+      },
+      {
+        "cycle": 82562,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Gromford Works Sued Over Aurelian Noir Clasp as Regulators Widen Concealment Inquiry",
+        "body": "A coalition of buyers filed suit alleging Gromford Works knew of the Aurelian Noir clasp defect months before the recall and continued shipments, seeking damages tied to more than 40,000 affected units. The Verrand product-safety board has formally expanded its inquiry into internal communications, and two senior quality officers have been placed on leave. CEO Mira Ashby, long the face of the brand's rapid launches, offered a public apology but stopped short of accepting the concealment claims.",
         "effects": {
           "luxury": -0.22
         }
@@ -4797,7 +4855,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82542,
+    "lastEventCycle": 82562,
     "events": [
       {
         "cycle": 0,
@@ -4825,6 +4883,16 @@
         "body": "Skarngrave posted a modest revenue rise of 6% for the quarter, lifted by the early stages of its five-year sterilization supply contract. CEO Orla Dray noted that renewal rates across the Cleaning and Jansan lines held steady at 94%, keeping the medical house on its familiar dependable footing.",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82562,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Skarngrave Launches Low-Temperature Sterilizer Line for Sensitive Instruments",
+        "body": "The medical house introduced its Verlan-S sterilizer range, designed for heat-sensitive endoscopic and optical instruments, targeting hospital procurement cycles beginning next season. CEO Orla Dray said early pilot placements at three regional health networks validated cycle times roughly 30 percent faster than the outgoing model. The launch complements the five-year sterilization supply contract now ramping.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -5225,7 +5293,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82554,
+    "lastEventCycle": 82562,
     "events": [
       {
         "cycle": 0,
@@ -5281,6 +5349,16 @@
         "size": "standard",
         "head": "Thronehaus Sovereign Collection Takes Top Honor at Verrand Watch Salon",
         "body": "The in-house Sovereign Collection won the Grande Complication prize at the annual Verrand Salon, a first for Thronehaus since it brought dial-making in-house via the Verreil purchase. Cora Dray called the award vindication of the vertical-integration strategy, noting order books for the Regent Tourbillon had lengthened to 14 months. The recognition burnished the maison's push into fully self-made movements.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82562,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Thronehaus & Co. Acquires Casing Specialist Aldren to Deepen In-House Craft",
+        "body": "Fresh off its Sovereign Collection award, Thronehaus struck a deal to buy case-and-bracelet maker Aldren for a reported sum near 240 million, bringing another key component under one roof. CEO Cora Dray said vertical control now spans dials, movements, and casings, insulating the house from supplier bottlenecks. The purchase is expected to close within two quarters pending review.",
         "effects": {
           "luxury": 0.13
         }
