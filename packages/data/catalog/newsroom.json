@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-07T09:45:54.120Z",
+  "generatedAt": "2026-07-07T14:39:22.994Z",
   "beats": [
     {
-      "company": "Aldouscyon",
-      "sector": "consumer",
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldouscyon Posts Steady Gains on Municipal Conversion Momentum",
-      "body": "Aldouscyon reported revenue of $310M, up 8%, as the Vereldt and Thornbury streetlight contracts moved into billing phases. CEO Petra Mercer said the long-life filament range and municipal pipeline offer 'predictable, low-drama growth' for the year ahead. The company reaffirmed its full-year guidance.",
-      "cycle": 82565,
+      "head": "Aldouscraft Mfg. Posts Steady Gains as Feeder Line Reaches Full Output",
+      "body": "Aldouscraft reported modest revenue growth as its new high-capacity feeder line hit full production, supporting the ongoing grid-modernization contract. Soren Ashby noted the line is running slightly ahead of schedule with no supply disruptions. The quiet maker kept guidance unchanged.",
+      "cycle": 82566,
       "dur": 1
+    },
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Aperture Compute Signs 1.4-Billion Dawnmere II Rollout With Regional Backbone Operator",
+      "body": "Halden Dray secured a 1.4-billion agreement to supply Dawnmere II interconnects across the Merrow backbone network, the largest single order since the record-setting launch. The multi-year deal locks in Aperture's latency-leading hardware for a network handling a growing share of inland compute traffic. Dray called it 'proof the record wasn't a stunt.'",
+      "cycle": 82566,
+      "dur": 2
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "outage",
+      "size": "standard",
+      "head": "Calderforge Halts Stormwell Hall After Cooling-Loop Failure",
+      "body": "A cooling-loop rupture forced Calderforge to idle roughly a third of its Stormwell Hall compute capacity for four days, disrupting output just as the third wing nears completion. Nadia Throne said crews restored full operation over the weekend and pledged a redundancy retrofit across all Stormwell lines. The stoppage lands during the house's steepest demand stretch in years.",
+      "cycle": 82566,
+      "dur": 2
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Cranegrove Wins Second Inland Corridor Package in 620-Million Award",
+      "body": "Cranegrove secured a 620-million follow-on earthworks package extending the Inland Corridor project into its northern spur, building on the contract now at full stride. Vale Calder said the disciplined win keeps all three Earthmoving depots at near-full utilization through the next two years. The award cements Cranegrove as the corridor's primary earthmoving supplier.",
+      "cycle": 82566,
+      "dur": 2
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drayton Freight Tops Estimates as Second Plant Clears Pallet-Lift Backlog",
+      "body": "Drayton Freight beat quarterly forecasts with revenue up 14 percent after its second assembly plant cut lead times on the Modular Pallet-Lift System nearly in half. Emil Holt credited steady fleet reorders and said the backlog that dogged prior quarters is now 'comfortably in hand.' The steady house reaffirmed its full-year outlook.",
+      "cycle": 82566,
+      "dur": 2
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drustcraft Lands Multi-Year Fastener Supply Pact for Expanded Vehicle Platform",
+      "body": "Drustcraft signed a multi-year agreement to supply its corrosion-resistant fastener series across a second, higher-volume variant of the new vehicle platform, worth an estimated 340 million over four years. Cora Fenn said the deal validates the added production line and the platform-specific fastener bet. Deliveries begin next quarter.",
+      "cycle": 82566,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Varnvale & Sons Buys Bellmont Master Casemaker in 880-Million Vertical Play",
+      "body": "Restless as ever, Bram Wold has folded the storied Halvren Case Atelier into Varnvale for 880 million, giving the house control of both dials and casings for its flagship Bellmont line. The deal secures the last independent supplier of Varnvale's signature guilloché cases and marks Wold's third acquisition in eighteen months. Analysts note the maker now owns nearly every step of its timepiece production.",
+      "cycle": 82566,
+      "dur": 8
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Woldmark Slips as Halcyon Delivery Costs Bite Into Margins",
+      "body": "Woldmark posted quarterly earnings below forecasts as the cost of ramping its 4.6-billion Halcyon commitment ran hotter than guided, trimming operating margin by 3.2 points. Cole Carrow defended the spending as 'the price of the biggest book we've ever carried,' but the shortfall unsettled a house that had beaten expectations three quarters running. Delivery timelines on the flagship pact remain unchanged.",
+      "cycle": 82566,
+      "dur": 2
     },
     {
       "company": "Blackton Industries",
@@ -102,26 +172,6 @@
       "dur": 8
     },
     {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcrow & Vance Raises Full-Year Outlook as Vetask Second Phase Ramps",
-      "body": "Halcrow & Vance lifted its annual guidance after second-phase Vetask Basin work drove earthmoving revenue up 18 percent year over year. CEO Mira Skarn credited disciplined scheduling and said the backlog now stretches into 2029, giving 'unusual visibility for this stage of a cycle.'",
-      "cycle": 82564,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Halhold Systems Unveils Northgate Ultra Tier to Meet Surging Client Demand",
-      "body": "Building on two anchor pacts, Halhold Systems introduced Northgate Ultra, a higher-density compute tier chief executive Dahlia Renn called 'the natural next step for clients outgrowing standard capacity.' The company said early commitments already cover roughly 40 percent of first-year output, with deliveries beginning next quarter.",
-      "cycle": 82564,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "leadership_change",
@@ -130,16 +180,6 @@
       "body": "After more than five decades at the helm, Nadia Brandt was removed by the board amid mounting hospital litigation and the ongoing regulatory freeze on Verity Pro. Directors named turnaround specialist Gunnar Vale to lead a full safety and governance review, calling the change 'necessary to restore trust with clinicians and regulators.'",
       "cycle": 82564,
       "dur": 8
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Vencyon Adds Second Regional Hub as Drenfield Volumes Outpace Forecasts",
-      "body": "Citing stronger-than-planned throughput at its first Drenfield hub, Vencyon announced a second facility to absorb overflow material-handling volume. CEO Iris Halloran said the $120 million investment reflects 'confidence that the Drenfield partnership is deeper than a single contract.'",
-      "cycle": 82564,
-      "dur": 2
     },
     {
       "company": "Fennmoor",
@@ -229,36 +269,6 @@
       "head": "Varnvale House Bets Comeback on Bold New Meridian Timepiece Collection",
       "body": "In his first major move, Idris Calloway staked Varnvale's recovery on the Meridian collection, a fully re-sourced line of timepieces launched with a splashy 60 million campaign meant to close the book on the Ember scandal. Every component is now traced through a newly certified supplier registry, addressing the failures that toppled his predecessor. Calloway called it 'a clean slate, publicly earned,' with pre-orders reportedly filling within days.",
       "cycle": 82559,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Blackhold Hit With Investor Suit Over Greycliff Safety Filings",
-      "body": "A consortium of institutional shareholders filed a $1.9B suit accusing Blackhold of misstating the readiness of its Greycliff test bank ahead of launch. The filing cites internal documents suggesting Tomas Vren's team fast-tracked certification despite unresolved fault warnings, hours before the grid failure that took the bank offline. Blackhold called the claims 'meritless' but confirmed regulators had expanded their review to include the disputed filings.",
-      "cycle": 82558,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Halhold Works Sued by Hospitals Over Verity Pro Suite Failures",
-      "body": "A coalition of care networks filed suit against Halhold seeking $1.3B in damages, alleging the shelved Verity Pro bedside suite caused monitoring failures now tied to the ignored internal warnings. The complaint leans heavily on leaked memos showing Nadia Brandt's team pressed ahead despite flagged defects. Halhold faces mounting pressure as the regulatory shipment suspension enters its second month with no clear reinstatement timeline.",
-      "cycle": 82558,
-      "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Lhaus Industries Lands $9B Fleet Supply Pact for New Cell Packs",
-      "body": "Cole Brandt secured a landmark five-year agreement to supply cell packs from the newly formed Power & Storage division to a major commercial fleet operator, valued at up to $9B. The deal validates the $6.4B Voss Cell acquisition and positions Lhaus as a top-tier supplier beyond its traditional auto-parts base. Brandt said the division was already fielding inquiries that could double its order book by year-end.",
-      "cycle": 82558,
       "dur": 8
     }
   ]

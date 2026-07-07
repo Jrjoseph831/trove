@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82549,
+    "lastEventCycle": 82566,
     "events": [
       {
         "cycle": 0,
@@ -46,6 +46,16 @@
         "size": "flash",
         "head": "Aldouscraft Mfg. Adds High-Capacity Feeder Line for Grid Buildout",
         "body": "Soren Ashby introduced a heavier-gauge feeder cable aimed at the grid-modernization work now ramping under Aldouscraft's supply contract. The line targets substation and trunk applications where the existing contract has driven repeat orders. The launch is a quiet extension rather than a new direction for the steady manufacturer.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82566,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscraft Mfg. Posts Steady Gains as Feeder Line Reaches Full Output",
+        "body": "Aldouscraft reported modest revenue growth as its new high-capacity feeder line hit full production, supporting the ongoing grid-modernization contract. Soren Ashby noted the line is running slightly ahead of schedule with no supply disruptions. The quiet maker kept guidance unchanged.",
         "effects": {
           "construction": 0.06
         }
@@ -232,7 +242,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82557,
+    "lastEventCycle": 82566,
     "events": [
       {
         "cycle": 0,
@@ -300,6 +310,16 @@
         "body": "Halden Dray took the stage to reveal the Dawnmere II interconnect, which he claimed cuts latency another 60% over its record-setting predecessor while halving power draw. The headline-grabbing launch drew immediate interest from three major clients, and Dray declared Aperture had 'redrawn the map' for high-performance compute delivery.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82566,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aperture Compute Signs 1.4-Billion Dawnmere II Rollout With Regional Backbone Operator",
+        "body": "Halden Dray secured a 1.4-billion agreement to supply Dawnmere II interconnects across the Merrow backbone network, the largest single order since the record-setting launch. The multi-year deal locks in Aperture's latency-leading hardware for a network handling a growing share of inland compute traffic. Dray called it 'proof the record wasn't a stunt.'",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -1316,7 +1336,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82557,
+    "lastEventCycle": 82566,
     "events": [
       {
         "cycle": 0,
@@ -1384,6 +1404,16 @@
         "body": "Fresh off the Stormwell Hall rebound, Nadia Throne announced a $2.4 billion expansion adding a third wing to the flagship facility, targeting a 40% capacity increase by late next year. The move doubles down on the site that rescued the company after the Embergate outage, though analysts note the aggressive timeline carries execution risk given Throne's history of turbulent rollouts.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82566,
+        "kind": "outage",
+        "size": "standard",
+        "head": "Calderforge Halts Stormwell Hall After Cooling-Loop Failure",
+        "body": "A cooling-loop rupture forced Calderforge to idle roughly a third of its Stormwell Hall compute capacity for four days, disrupting output just as the third wing nears completion. Nadia Throne said crews restored full operation over the weekend and pledged a redundancy retrofit across all Stormwell lines. The stoppage lands during the house's steepest demand stretch in years.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -2029,7 +2059,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82550,
+    "lastEventCycle": 82566,
     "events": [
       {
         "cycle": 0,
@@ -2068,6 +2098,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82566,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Cranegrove Wins Second Inland Corridor Package in 620-Million Award",
+        "body": "Cranegrove secured a 620-million follow-on earthworks package extending the Inland Corridor project into its northern spur, building on the contract now at full stride. Vale Calder said the disciplined win keeps all three Earthmoving depots at near-full utilization through the next two years. The award cements Cranegrove as the corridor's primary earthmoving supplier.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -2082,7 +2122,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82549,
+    "lastEventCycle": 82566,
     "events": [
       {
         "cycle": 0,
@@ -2118,6 +2158,16 @@
         "size": "standard",
         "head": "Drayton Freight Opens Second Assembly Plant to Meet Pallet-Lift Orders",
         "body": "Emil Holt greenlit a 90 million plant in the Harrow corridor to double output of the modular pallet-lift system after the recent fleet order strained capacity. The facility will add roughly 400 jobs and begin production within nine months. Holt called it a measured bet on 'orders we can already see on the books.'",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82566,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drayton Freight Tops Estimates as Second Plant Clears Pallet-Lift Backlog",
+        "body": "Drayton Freight beat quarterly forecasts with revenue up 14 percent after its second assembly plant cut lead times on the Modular Pallet-Lift System nearly in half. Emil Holt credited steady fleet reorders and said the backlog that dogged prior quarters is now 'comfortably in hand.' The steady house reaffirmed its full-year outlook.",
         "effects": {
           "logistics": 0.13
         }
@@ -2198,7 +2248,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82555,
+    "lastEventCycle": 82566,
     "events": [
       {
         "cycle": 0,
@@ -2244,6 +2294,16 @@
         "size": "standard",
         "head": "Drustcraft Debuts Corrosion-Resistant Fastener Series for New Platform",
         "body": "Drustcraft introduced its Endura-grade fastener line, engineered with a proprietary coating rated for 15-year service life in high-heat drivetrain zones. CEO Cora Fenn said the series builds directly on the vehicle-platform slot won last quarter, with initial output earmarked for the same customer. Early volumes cover roughly 40 part numbers, with a second tranche planned for the following year.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82566,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drustcraft Lands Multi-Year Fastener Supply Pact for Expanded Vehicle Platform",
+        "body": "Drustcraft signed a multi-year agreement to supply its corrosion-resistant fastener series across a second, higher-volume variant of the new vehicle platform, worth an estimated 340 million over four years. Cora Fenn said the deal validates the added production line and the platform-specific fastener bet. Deliveries begin next quarter.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -5700,7 +5760,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82557,
+    "lastEventCycle": 82566,
     "events": [
       {
         "cycle": 0,
@@ -5768,6 +5828,16 @@
         "body": "Bram Wold debuted the Corveau-Bellmont line, the first collection to integrate dials from the historic foundry acquired months earlier, with pieces starting at $48,000. The launch fuses Bellmont craftsmanship with Corveau's storied dialwork, and Wold hinted the acquisition would let Varnvale triple limited-edition output over the next two years.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82566,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Varnvale & Sons Buys Bellmont Master Casemaker in 880-Million Vertical Play",
+        "body": "Restless as ever, Bram Wold has folded the storied Halvren Case Atelier into Varnvale for 880 million, giving the house control of both dials and casings for its flagship Bellmont line. The deal secures the last independent supplier of Varnvale's signature guilloché cases and marks Wold's third acquisition in eighteen months. Analysts note the maker now owns nearly every step of its timepiece production.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -6332,7 +6402,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82555,
+    "lastEventCycle": 82566,
     "events": [
       {
         "cycle": 0,
@@ -6380,6 +6450,16 @@
         "body": "Woldmark announced a five-year, 4.6 billion supply agreement to furnish Halcyon compute units to a consortium of national data operators, more than doubling its prior record pact. CEO Cole Carrow called it 'the moment Halcyon becomes the backbone,' and said the firm will bring a third assembly site online to meet delivery schedules. The deal includes multi-year service and refresh commitments.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82566,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Woldmark Slips as Halcyon Delivery Costs Bite Into Margins",
+        "body": "Woldmark posted quarterly earnings below forecasts as the cost of ramping its 4.6-billion Halcyon commitment ran hotter than guided, trimming operating margin by 3.2 points. Cole Carrow defended the spending as 'the price of the biggest book we've ever carried,' but the shortfall unsettled a house that had beaten expectations three quarters running. Delivery timelines on the flagship pact remain unchanged.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
