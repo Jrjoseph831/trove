@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-07T14:39:22.994Z",
+  "generatedAt": "2026-07-07T19:58:17.471Z",
   "beats": [
     {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Blackhold Craters as Greycliff Suit and Halted Test Bank Gut Quarterly Results",
+      "body": "Blackhold reported a quarterly loss of $214 million, swinging from a slim profit a year earlier, as the suspended Greycliff test bank stripped projected storage revenue and legal reserves ballooned to $90 million. CEO Tomas Vren conceded the Greycliff timeline had 'slipped indefinitely' and withdrew full-year guidance. The investor suit over safety filings now moves to discovery, with three institutional backers reportedly weighing whether to join.",
+      "cycle": 82567,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Brunmark Motors Adds Second Veyra Line at Halt Ridge to Clear Order Backlog",
+      "body": "Riding surging Veyra Long-Range demand, CEO Yvette Calder announced a $480 million second assembly line at the Halt Ridge complex, targeting an additional 120,000 units annually by late next year. Calder said backlog now stretches past nine months and the expansion would add roughly 1,100 jobs. The company reaffirmed its raised full-year delivery outlook.",
+      "cycle": 82567,
+      "dur": 2
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Carrowforge Splits Testing Unit Into Independent Division as Roe Answers Regulators",
+      "body": "CEO Halden Roe carved out Carrowforge's certification and testing operations into a standalone division, Carrowforge Assurance, reporting directly to the board rather than plant management. The move, which Roe called a 'clean firewall,' follows the reopened regulatory files and shifts roughly 340 staff under new compliance chief Dara Welt. Analysts noted the reorganization adds near-term cost but may narrow the scope of the ongoing probe.",
+      "cycle": 82567,
+      "dur": 2
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Castlestone's Karsh Halts Second Campus, Cuts 900 Jobs in Sweeping Turnaround",
+      "body": "New CEO Pell Karsh froze construction on the second Vellmont campus and eliminated 900 roles, roughly 12% of staff, as part of a $1.1 billion writedown aimed at stemming the twin-campus losses. Karsh said the company would consolidate compute output at the completed site and refocus on the Vellmont order book rather than expansion. He pledged a return to positive cash flow within four quarters.",
+      "cycle": 82567,
+      "dur": 8
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldouscraft Mfg. Posts Steady Gains as Feeder Line Reaches Full Output",
-      "body": "Aldouscraft reported modest revenue growth as its new high-capacity feeder line hit full production, supporting the ongoing grid-modernization contract. Soren Ashby noted the line is running slightly ahead of schedule with no supply disruptions. The quiet maker kept guidance unchanged.",
-      "cycle": 82566,
+      "head": "Fennvale Mfg. Edges Past Estimates as New Fastener Contract Ramps",
+      "body": "Fennvale Mfg. reported quarterly revenue of $196 million, modestly ahead of guidance, as early shipments under its auto-assembly fastener contract began flowing. CEO Theo Vossen said the third Drennt Works line remained on schedule for commissioning next quarter. Management held its steady full-year outlook unchanged.",
+      "cycle": 82567,
       "dur": 1
+    },
+    {
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halcrest Extends Meridian Line With Limited Vireo Edition Unveiled on the Row",
+      "body": "Halcrest debuted the Meridian Vireo, a 200-piece limited series priced from $48,000, staged at its new Vireo Row salon to build on the collection's Crown Salon win. CEO Iris Marrow said the edition's hand-finished movement had a two-year waitlist before formal release. The launch continues Halcrest's momentum after a strong quarter filled the flagship salon.",
+      "cycle": 82567,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "lawsuit",
+      "size": "standard",
+      "head": "Ironcrestton Sued Over Carrow Atelier Origin Claims as Buyers Seek Refunds",
+      "body": "A group of Carrow Atelier clients filed suit against Ironcrestton, alleging that origin labels on premium goods misrepresented their sourcing, seeking $60 million in refunds and damages. The complaint builds on the regulator scrutiny of the atelier's provenance claims and names CEO Sable Carrow in marketing statements. Carrow said the company 'stands fully behind' its labeling and would contest the claims.",
+      "cycle": 82567,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Varnvale House Steadies as Meridian Collection Lifts First Post-Scandal Quarter",
+      "body": "Varnvale House posted a 14% revenue rise to $312 million, its first clean beat since the Ember sourcing scandal, driven by strong sell-through of the new Meridian timepiece line. CEO Idris Calloway credited tightened supplier audits and said Meridian pre-orders had already sold out two boutiques' allocations. Margins remained pressured by the cost of the overhauled sourcing program.",
+      "cycle": 82567,
+      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -92,16 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Boreas Power Tops Estimates as Calderwick Integration Lifts Storage Revenue",
-      "body": "Boreas reported storage-segment revenue up 27% to $890M, driven by the Calderwick Fields fleet and early Hollowmere Phase Three output. CEO Mira Thorne said integration synergies arrived ahead of schedule and hinted at further consolidation, adding the company is 'actively reviewing two more targets.' Compute-segment results were flat as capacity was reallocated toward grid contracts.",
-      "cycle": 82565,
-      "dur": 2
-    },
-    {
       "company": "Castlehold",
       "sector": "energy",
       "kind": "scandal",
@@ -110,46 +170,6 @@
       "body": "Prosecutors unsealed charges against three former Castlehold engineers and ex-operations chief Darel Skarn, alleging systematic falsification of Saltmere fault-reporting records dating back to 2023. CEO Ivo Reneth pledged full cooperation and announced a $420M charge to cover legal reserves and remediation, calling the disclosures 'a wound we will not hide from.' Shares slid as the company confirmed Saltmere will remain offline through at least next year.",
       "cycle": 82565,
       "dur": 8
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcyon Industries Posts Record Margins as Northgate Automation Ramps",
-      "body": "Halcyon reported quarterly revenue of $1.24B, up 11% year-over-year, with operating margin widening to 18.6% as the automated Northgate line reached full capacity. CEO Dorian Ashby credited the dual-hub network and disciplined cost control, noting throughput rose 14% without added headcount. The company nudged its full-year outlook higher.",
-      "cycle": 82565,
-      "dur": 2
-    },
-    {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Holtforge Group Wins Offshore Wind Cable Contract Worth $540M",
-      "body": "Holtforge secured a multi-year contract to supply reinforced marine cable for the Fenwick offshore array, validating its recent product line push. CEO Yvette Bramm called it 'the largest single order in our history' and said the marine range now represents a durable growth pillar. Deliveries begin next quarter and run through 2029.",
-      "cycle": 82565,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Lhaus Industries Breaks Ground on Dedicated Cell-Pack Plant to Feed $9B Fleet Pact",
-      "body": "Lhaus committed $1.6B to a new Power & Storage facility at Merrow Bend, designed to produce 30 GWh of cell packs annually once fully online in 2028. CEO Cole Brandt said the plant would secure supply for the recently signed fleet pact and 'leave room for the next three deals we haven't announced yet.' The site is expected to add roughly 900 jobs.",
-      "cycle": 82565,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Maison & Vale Beats as Corran Linens and Hotel Deal Boost Combined Portfolio",
-      "body": "Maison & Vale posted revenue of $760M, up 19%, with the Corran Linens acquisition and continental hotel-group supply deal both contributing ahead of plan. CEO Rhys Kessler said cross-selling the Sundle cleaning range into household-goods accounts drove margin gains and signaled appetite for further bolt-on buys. Household Goods is now the fastest-growing segment.",
-      "cycle": 82565,
-      "dur": 2
     },
     {
       "company": "Bruncrest Works",
@@ -249,26 +269,6 @@
       "head": "Marlgear Supply Rocked as Internal Memos Reveal Atlas Defects Were Flagged Before Launch",
       "body": "Leaked internal documents show Marlgear engineers warned of Atlas machine load failures months before the Drennan Mills incidents, raising questions over CEO Halden Vossen's handling of the launch. The disclosures widen the ongoing probe and prompted a board review of executive oversight. Marlgear said it is cooperating fully but did not address the timeline of the warnings.",
       "cycle": 82560,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Greywater Grid Seals Second Compute Campus in Sweeping Regional Power Pact",
-      "body": "Greywater Grid announced a landmark 1.2 billion agreement to anchor a second compute campus in the Dunmoor region, doubling its committed storage capacity and locking in a 15-year power supply framework. Vale Halloran, never shy of the spotlight, declared the deal 'the largest energy commitment in the house's history' and said modular storage blocks would be deployed at record scale. The pact lifts total backlog past 3 billion.",
-      "cycle": 82559,
-      "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Varnvale House Bets Comeback on Bold New Meridian Timepiece Collection",
-      "body": "In his first major move, Idris Calloway staked Varnvale's recovery on the Meridian collection, a fully re-sourced line of timepieces launched with a splashy 60 million campaign meant to close the book on the Ember scandal. Every component is now traced through a newly certified supplier registry, addressing the failures that toppled his predecessor. Calloway called it 'a clean slate, publicly earned,' with pre-orders reportedly filling within days.",
-      "cycle": 82559,
       "dur": 8
     }
   ]

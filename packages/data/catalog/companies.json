@@ -431,7 +431,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82558,
+    "lastEventCycle": 82567,
     "events": [
       {
         "cycle": 0,
@@ -495,6 +495,16 @@
         "size": "major",
         "head": "Blackhold Hit With Investor Suit Over Greycliff Safety Filings",
         "body": "A consortium of institutional shareholders filed a $1.9B suit accusing Blackhold of misstating the readiness of its Greycliff test bank ahead of launch. The filing cites internal documents suggesting Tomas Vren's team fast-tracked certification despite unresolved fault warnings, hours before the grid failure that took the bank offline. Blackhold called the claims 'meritless' but confirmed regulators had expanded their review to include the disputed filings.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82567,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Blackhold Craters as Greycliff Suit and Halted Test Bank Gut Quarterly Results",
+        "body": "Blackhold reported a quarterly loss of $214 million, swinging from a slim profit a year earlier, as the suspended Greycliff test bank stripped projected storage revenue and legal reserves ballooned to $90 million. CEO Tomas Vren conceded the Greycliff timeline had 'slipped indefinitely' and withdrew full-year guidance. The investor suit over safety filings now moves to discovery, with three institutional backers reportedly weighing whether to join.",
         "effects": {
           "energy": -0.22
         }
@@ -1018,7 +1028,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82558,
+    "lastEventCycle": 82567,
     "events": [
       {
         "cycle": 0,
@@ -1084,6 +1094,16 @@
         "size": "standard",
         "head": "Brunmark Motors Beats Again as Veyra Long-Range Orders Surge",
         "body": "Yvette Calder reported quarterly revenue of $4.2B, up 14% year over year, driven by strong pre-orders for the Veyra Long-Range flagship. The reworked lineup and steadied power unit helped margins expand 220 basis points, marking a second consecutive quarter of gains. Calder raised full-year guidance but cautioned that battery input costs remained a wildcard.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82567,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunmark Motors Adds Second Veyra Line at Halt Ridge to Clear Order Backlog",
+        "body": "Riding surging Veyra Long-Range demand, CEO Yvette Calder announced a $480 million second assembly line at the Halt Ridge complex, targeting an additional 120,000 units annually by late next year. Calder said backlog now stretches past nine months and the expansion would add roughly 1,100 jobs. The company reaffirmed its raised full-year delivery outlook.",
         "effects": {
           "automotive": 0.13
         }
@@ -1545,7 +1565,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82554,
+    "lastEventCycle": 82567,
     "events": [
       {
         "cycle": 0,
@@ -1589,6 +1609,16 @@
         "size": "standard",
         "head": "Regulators Reopen Carrowforge Files as Overhaul Draws Fresh Scrutiny",
         "body": "Inspectors from the Industrial Standards Board launched a follow-up review of Carrowforge's lathe and press lines, seeking to confirm that Halden Roe's overhaul actually corrected the falsified-testing practices flagged under Mara Fenn. Roe pledged full cooperation and said all 14 affected machine families had been re-certified, though the probe froze shipments on two contested product lines. Shares wobbled as customers awaited the board's verdict.",
+        "effects": {
+          "manufacturing": -0.13
+        }
+      },
+      {
+        "cycle": 82567,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Carrowforge Splits Testing Unit Into Independent Division as Roe Answers Regulators",
+        "body": "CEO Halden Roe carved out Carrowforge's certification and testing operations into a standalone division, Carrowforge Assurance, reporting directly to the board rather than plant management. The move, which Roe called a 'clean firewall,' follows the reopened regulatory files and shifts roughly 340 staff under new compliance chief Dara Welt. Analysts noted the reorganization adds near-term cost but may narrow the scope of the ongoing probe.",
         "effects": {
           "manufacturing": -0.13
         }
@@ -1897,7 +1927,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82562,
+    "lastEventCycle": 82567,
     "events": [
       {
         "cycle": 0,
@@ -1982,6 +2012,16 @@
         "head": "Castlestone Names Turnaround Veteran Pell Karsh as CEO, Voss Steps Aside",
         "body": "Dale Voss will exit the chief executive role effective immediately, capping a turbulent stretch marked by the Vellmont order shortfall and twin-campus overruns that erased roughly 18 percent of annual profit. The board named restructuring specialist Pell Karsh, formerly of the compute division at Halden Systems, to steady operations and review the stalled second campus. Karsh said his first 90 days would focus on cost discipline and renegotiating the Vellmont delivery schedule.",
         "effects": {}
+      },
+      {
+        "cycle": 82567,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Castlestone's Karsh Halts Second Campus, Cuts 900 Jobs in Sweeping Turnaround",
+        "body": "New CEO Pell Karsh froze construction on the second Vellmont campus and eliminated 900 roles, roughly 12% of staff, as part of a $1.1 billion writedown aimed at stemming the twin-campus losses. Karsh said the company would consolidate compute output at the completed site and refocus on the Vellmont order book rather than expansion. He pledged a return to positive cash flow within four quarters.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -2709,7 +2749,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82551,
+    "lastEventCycle": 82567,
     "events": [
       {
         "cycle": 0,
@@ -2747,6 +2787,16 @@
         "body": "Fennvale landed a supply agreement to provide fasteners and fixings for a new vehicle assembly program, tapping capacity from its third Drennt Works line. CEO Theo Vossen said the contract validates the recent expansion and locks in volume through the program's lifecycle. Deliveries begin next quarter.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82567,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Fennvale Mfg. Edges Past Estimates as New Fastener Contract Ramps",
+        "body": "Fennvale Mfg. reported quarterly revenue of $196 million, modestly ahead of guidance, as early shipments under its auto-assembly fastener contract began flowing. CEO Theo Vossen said the third Drennt Works line remained on schedule for commissioning next quarter. Management held its steady full-year outlook unchanged.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -3170,7 +3220,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82556,
+    "lastEventCycle": 82567,
     "events": [
       {
         "cycle": 0,
@@ -3216,6 +3266,16 @@
         "size": "standard",
         "head": "Halcrest Posts Strong Quarter as Meridian Momentum Fills New Vireo Row Salon",
         "body": "Halcrest reported quarterly revenue up 27 percent, crediting sustained interest in the Meridian Tourbillon and brisk foot traffic at its Vireo Row salon. CEO Iris Marrow said the salon exceeded first-quarter targets by a wide margin, though she cautioned that the costly tourbillon program keeps margins 'deliberately thin.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82567,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halcrest Extends Meridian Line With Limited Vireo Edition Unveiled on the Row",
+        "body": "Halcrest debuted the Meridian Vireo, a 200-piece limited series priced from $48,000, staged at its new Vireo Row salon to build on the collection's Crown Salon win. CEO Iris Marrow said the edition's hand-finished movement had a two-year waitlist before formal release. The launch continues Halcrest's momentum after a strong quarter filled the flagship salon.",
         "effects": {
           "luxury": 0.13
         }
@@ -3972,7 +4032,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82559,
+    "lastEventCycle": 82567,
     "events": [
       {
         "cycle": 0,
@@ -4028,6 +4088,16 @@
         "size": "standard",
         "head": "Ironcrestton Draws Regulator Scrutiny Over Carrow Atelier Origin Labels",
         "body": "The Consumer Standards Board opened a formal inquiry into whether Carrow Atelier pieces were accurately labeled as regionally handcrafted, following the sourcing backlash. Sable Carrow, defiant as ever, called the probe 'a distraction from craftsmanship' while pledging full cooperation. The line generated roughly 140 million in first-quarter sales before the questions surfaced.",
+        "effects": {
+          "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82567,
+        "kind": "lawsuit",
+        "size": "standard",
+        "head": "Ironcrestton Sued Over Carrow Atelier Origin Claims as Buyers Seek Refunds",
+        "body": "A group of Carrow Atelier clients filed suit against Ironcrestton, alleging that origin labels on premium goods misrepresented their sourcing, seeking $60 million in refunds and damages. The complaint builds on the regulator scrutiny of the atelier's provenance claims and names CEO Sable Carrow in marketing statements. Carrow said the company 'stands fully behind' its labeling and would contest the claims.",
         "effects": {
           "luxury": -0.13
         }
@@ -5853,7 +5923,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82559,
+    "lastEventCycle": 82567,
     "events": [
       {
         "cycle": 0,
@@ -5927,6 +5997,16 @@
         "body": "In his first major move, Idris Calloway staked Varnvale's recovery on the Meridian collection, a fully re-sourced line of timepieces launched with a splashy 60 million campaign meant to close the book on the Ember scandal. Every component is now traced through a newly certified supplier registry, addressing the failures that toppled his predecessor. Calloway called it 'a clean slate, publicly earned,' with pre-orders reportedly filling within days.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82567,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Varnvale House Steadies as Meridian Collection Lifts First Post-Scandal Quarter",
+        "body": "Varnvale House posted a 14% revenue rise to $312 million, its first clean beat since the Ember sourcing scandal, driven by strong sell-through of the new Meridian timepiece line. CEO Idris Calloway credited tightened supplier audits and said Meridian pre-orders had already sold out two boutiques' allocations. Margins remained pressured by the cost of the overhauled sourcing program.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
