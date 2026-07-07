@@ -63,7 +63,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82549,
+    "lastEventCycle": 82565,
     "events": [
       {
         "cycle": 0,
@@ -101,6 +101,16 @@
         "body": "Building on the Vereldt streetlight win, Petra Mercer secured a 55 million agreement to convert Thornbury's municipal lighting to the long-life filament range over three years. The deal extends Aldouscyon's public-sector pipeline and validates its 'sell the light, not the fixture' service model. Mercer said talks with two further municipalities are underway.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82565,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscyon Posts Steady Gains on Municipal Conversion Momentum",
+        "body": "Aldouscyon reported revenue of $310M, up 8%, as the Vereldt and Thornbury streetlight contracts moved into billing phases. CEO Petra Mercer said the long-life filament range and municipal pipeline offer 'predictable, low-drama growth' for the year ahead. The company reaffirmed its full-year guidance.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -535,7 +545,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82556,
+    "lastEventCycle": 82565,
     "events": [
       {
         "cycle": 0,
@@ -604,6 +614,16 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82565,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Blackton Industries Sued by Halvern as Weld Defect Fallout Escalates",
+        "body": "Halvern filed a $650M suit against Blackton, alleging the defective weld batch forced a costly production halt and breached supply warranties. CEO Mara Mercer disputed the figure but confirmed Blackton has set aside $180M in reserves as the safety probe continues. The dispute threatens a contract that accounts for nearly a third of Blackton's annual revenue.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -618,7 +638,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82558,
+    "lastEventCycle": 82565,
     "events": [
       {
         "cycle": 0,
@@ -704,6 +724,16 @@
         "size": "standard",
         "head": "Boreas Power Fast-Tracks Hollowmere Phase Three as Storage Demand Climbs",
         "body": "Riding momentum from the Calderwick-anchored grid-storage pact, Mira Thorne greenlit an accelerated Phase Three at Hollowmere, adding 900 MWh of capacity ahead of schedule. The $1.1B outlay brings total committed spend at the site above $3B and reflects Thorne's acquisitive push to consolidate regional storage. Boreas said early commissioning could begin within nine months.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82565,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Boreas Power Tops Estimates as Calderwick Integration Lifts Storage Revenue",
+        "body": "Boreas reported storage-segment revenue up 27% to $890M, driven by the Calderwick Fields fleet and early Hollowmere Phase Three output. CEO Mira Thorne said integration synergies arrived ahead of schedule and hinted at further consolidation, adding the company is 'actively reviewing two more targets.' Compute-segment results were flat as capacity was reallocated toward grid contracts.",
         "effects": {
           "energy": 0.13
         }
@@ -1695,7 +1725,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82555,
+    "lastEventCycle": 82565,
     "events": [
       {
         "cycle": 0,
@@ -1767,6 +1797,16 @@
         "size": "major",
         "head": "Regulators Order Full Saltmere Shutdown as Castlehold Probe Turns Criminal",
         "body": "The national energy authority has ordered Castlehold to idle the entire Saltmere storage complex pending a criminal referral over the withheld fault reports, pulling an estimated 900 megawatts of capacity offline. New CEO Ivo Reneth said the company will 'cooperate fully' while warning of a material charge against the current quarter, with cleanup and remediation costs still being tallied. Two former reporting officers have been named in the referral.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82565,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Castlehold Rocked as Saltmere Indictments Name Former Executives Over Falsified Fault Logs",
+        "body": "Prosecutors unsealed charges against three former Castlehold engineers and ex-operations chief Darel Skarn, alleging systematic falsification of Saltmere fault-reporting records dating back to 2023. CEO Ivo Reneth pledged full cooperation and announced a $420M charge to cover legal reserves and remediation, calling the disclosures 'a wound we will not hide from.' Shares slid as the company confirmed Saltmere will remain offline through at least next year.",
         "effects": {
           "energy": -0.22
         }
@@ -3196,7 +3236,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82551,
+    "lastEventCycle": 82565,
     "events": [
       {
         "cycle": 0,
@@ -3242,6 +3282,16 @@
         "size": "standard",
         "head": "Halcyon Industries Beats Again as Dual-Hub Network Lifts Throughput",
         "body": "Halcyon posted quarterly revenue of $296M, ahead of guidance, as the new Southport hub and automated Northgate line boosted packaging output. CEO Dorian Ashby said utilization climbed steadily through the period and raised the full-year outlook modestly. Operating margins expanded on the automation gains.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82565,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcyon Industries Posts Record Margins as Northgate Automation Ramps",
+        "body": "Halcyon reported quarterly revenue of $1.24B, up 11% year-over-year, with operating margin widening to 18.6% as the automated Northgate line reached full capacity. CEO Dorian Ashby credited the dual-hub network and disciplined cost control, noting throughput rose 14% without added headcount. The company nudged its full-year outlook higher.",
         "effects": {
           "logistics": 0.13
         }
@@ -3607,7 +3657,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82549,
+    "lastEventCycle": 82565,
     "events": [
       {
         "cycle": 0,
@@ -3645,6 +3695,16 @@
         "body": "Yvette Bramm's steady operation posted a modest 4 percent revenue lift to 612 million, aided by early orders for the new reinforced marine cable line. Management reaffirmed full-year guidance and flagged firm demand from coastal infrastructure buyers. The quarter continues Holtforge's run of low-drama, dependable results.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82565,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Holtforge Group Wins Offshore Wind Cable Contract Worth $540M",
+        "body": "Holtforge secured a multi-year contract to supply reinforced marine cable for the Fenwick offshore array, validating its recent product line push. CEO Yvette Bramm called it 'the largest single order in our history' and said the marine range now represents a durable growth pillar. Deliveries begin next quarter and run through 2029.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -4323,7 +4383,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82558,
+    "lastEventCycle": 82565,
     "events": [
       {
         "cycle": 0,
@@ -4412,6 +4472,16 @@
         "effects": {
           "automotive": 0.22
         }
+      },
+      {
+        "cycle": 82565,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Lhaus Industries Breaks Ground on Dedicated Cell-Pack Plant to Feed $9B Fleet Pact",
+        "body": "Lhaus committed $1.6B to a new Power & Storage facility at Merrow Bend, designed to produce 30 GWh of cell packs annually once fully online in 2028. CEO Cole Brandt said the plant would secure supply for the recently signed fleet pact and 'leave room for the next three deals we haven't announced yet.' The site is expected to add roughly 900 jobs.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -4426,7 +4496,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82554,
+    "lastEventCycle": 82565,
     "events": [
       {
         "cycle": 0,
@@ -4474,6 +4544,16 @@
         "body": "Rhys Kessler unveiled a five-year, 340 million-unit supply agreement to stock cleaning and household lines across the Meridian Suites chain's 1,200 properties, marrying the freshly integrated Sundle Werks and Corran Linens ranges under one contract. Kessler said the pact validates his rapid acquisition spree, projecting the deal alone would add roughly 18% to annual revenue. Analysts noted it is the largest single order in the company's 86-year history.",
         "effects": {
           "hospitality": 0.22
+        }
+      },
+      {
+        "cycle": 82565,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Maison & Vale Beats as Corran Linens and Hotel Deal Boost Combined Portfolio",
+        "body": "Maison & Vale posted revenue of $760M, up 19%, with the Corran Linens acquisition and continental hotel-group supply deal both contributing ahead of plan. CEO Rhys Kessler said cross-selling the Sundle cleaning range into household-goods accounts drove margin gains and signaled appetite for further bolt-on buys. Household Goods is now the fastest-growing segment.",
+        "effects": {
+          "hospitality": 0.13
         }
       }
     ]
