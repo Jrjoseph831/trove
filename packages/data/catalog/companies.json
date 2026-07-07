@@ -348,7 +348,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82539,
+    "lastEventCycle": 82564,
     "events": [
       {
         "cycle": 0,
@@ -374,6 +374,16 @@
         "size": "flash",
         "head": "Ashbystead Holdings Posts Modest Beat on Replacement-Parts Demand",
         "body": "Ashbystead Holdings edged past estimates again, with quarterly revenue of $312 million lifted by steady hospital orders for diagnostic-equipment replacement parts. Cora Holt pointed to consistent service-contract renewals as the quiet engine behind the result. Management reaffirmed a cautious full-year outlook.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82564,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Notches Another Quiet Beat on Steady Hospital Orders",
+        "body": "Ashbystead Holdings edged past expectations again, with revenue up 4 percent on durable replacement-parts and service demand. CEO Cora Holt reaffirmed the company's conservative outlook, noting margins held firm 'without any need to chase growth we can't sustain.'",
         "effects": {
           "medical": 0.06
         }
@@ -794,7 +804,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82557,
+    "lastEventCycle": 82564,
     "events": [
       {
         "cycle": 0,
@@ -868,6 +878,16 @@
         "size": "major",
         "head": "Bruncrest Works Slashes Guidance and Exits Meridian Segment in Sweeping Overhaul",
         "body": "Corwin Hale unveiled a drastic restructuring that abandons the entire Meridian compute segment, writes down $1.1 billion in assets, and cuts 3,400 jobs as the demand-inflation scandal and lawsuit continue to bleed the company. Hale, who inherited the crisis, called it 'the only path to survive,' pledging to rebuild around a leaner audited-demand core while investor confidence remains badly shaken.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82564,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Bruncrest Works Plunges as Post-Meridian Overhaul Fails to Stem Losses",
+        "body": "Bruncrest Works reported a quarterly loss of $310 million, far wider than expected, as the exit from its Meridian segment left a revenue hole the reset has yet to fill. CEO Corwin Hale conceded the turnaround was 'moving slower than I promised,' warning of a second round of cost cuts as the Meridian lawsuit grinds on.",
         "effects": {
           "technology": -0.22
         }
@@ -1092,7 +1112,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82557,
+    "lastEventCycle": 82564,
     "events": [
       {
         "cycle": 0,
@@ -1176,6 +1196,16 @@
         "size": "major",
         "head": "Brunstone & Sons Craters as Meridian Line Launch Falls Flat",
         "body": "Royce Lambourne's all-in bet on the Meridian line unraveled as first-quarter deliveries came in 45% below target, driving a $620 million loss and a fresh guidance cut. With the Ardent shutdown still fresh and cash reserves tightening, Lambourne faced pointed questions about whether the company misjudged demand for the relaunch it staked its future on.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82564,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Brunstone & Sons Guts Meridian Line and Replaces CEO in Emergency Reset",
+        "body": "Weeks after the Meridian launch flopped, Brunstone & Sons said it would halt Meridian production, take a $480 million writedown, and cut a further 3,500 jobs. Royce Lambourne will step aside as part of the overhaul, with the board handing operational control to a stabilization committee while it searches for permanent leadership.",
         "effects": {
           "automotive": -0.22
         }
@@ -3103,7 +3133,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82548,
+    "lastEventCycle": 82564,
     "events": [
       {
         "cycle": 0,
@@ -3139,6 +3169,16 @@
         "size": "standard",
         "head": "Halcrow & Vance Wins Extension and Second Phase of Vetask Basin Work",
         "body": "Halcrow & Vance secured a 220 million second-phase award on the Vetask Basin project after strong early progress, extending its earthmoving mandate through the decade's end. CEO Mira Skarn said the client's confidence reflected 'work delivered without drama,' and confirmed additional fleet deployment to the site. The extension roughly doubles the firm's committed backlog on the project.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82564,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrow & Vance Raises Full-Year Outlook as Vetask Second Phase Ramps",
+        "body": "Halcrow & Vance lifted its annual guidance after second-phase Vetask Basin work drove earthmoving revenue up 18 percent year over year. CEO Mira Skarn credited disciplined scheduling and said the backlog now stretches into 2029, giving 'unusual visibility for this stage of a cycle.'",
         "effects": {
           "construction": 0.13
         }
@@ -3219,7 +3259,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82557,
+    "lastEventCycle": 82564,
     "events": [
       {
         "cycle": 0,
@@ -3306,6 +3346,16 @@
         "effects": {
           "technology": 0.13
         }
+      },
+      {
+        "cycle": 82564,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Systems Unveils Northgate Ultra Tier to Meet Surging Client Demand",
+        "body": "Building on two anchor pacts, Halhold Systems introduced Northgate Ultra, a higher-density compute tier chief executive Dahlia Renn called 'the natural next step for clients outgrowing standard capacity.' The company said early commitments already cover roughly 40 percent of first-year output, with deliveries beginning next quarter.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -3313,14 +3363,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1971,
-    "ceo": "Nadia Brandt",
-    "ceoSince": 1971,
+    "ceo": "Gunnar Vale",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.89,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82558,
+    "lastEventCycle": 82564,
     "events": [
       {
         "cycle": 0,
@@ -3419,6 +3469,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82564,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Works Ousts Nadia Brandt as Verity Pro Fallout Reaches Boardroom",
+        "body": "After more than five decades at the helm, Nadia Brandt was removed by the board amid mounting hospital litigation and the ongoing regulatory freeze on Verity Pro. Directors named turnaround specialist Gunnar Vale to lead a full safety and governance review, calling the change 'necessary to restore trust with clinicians and regulators.'",
+        "effects": {}
       }
     ]
   },
@@ -4172,7 +4230,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82556,
+    "lastEventCycle": 82564,
     "events": [
       {
         "cycle": 0,
@@ -4240,6 +4298,16 @@
         "body": "Korrwright Works unveiled the Velloux Atelier Series, the inaugural collection produced entirely at its recently consolidated Heritage Atelier. CEO Dunmore Carrow said the movement-supply pact secured earlier this year enabled a limited run of 1,200 pieces, each priced above the prior Heritage tier. Early demand from three key salons has already reserved half the initial allotment.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82564,
+        "kind": "award",
+        "size": "flash",
+        "head": "Korrwright Works' Velloux Atelier Series Named Timepiece of the Year by Chronard Guild",
+        "body": "The debut line from Korrwright's new Heritage Atelier took top honors at the Chronard Guild awards, with judges praising the revived Velloux dial craft. Chief executive Dunmore Carrow said the recognition 'validates every acquisition we've made to bring this workshop under one roof.'",
+        "effects": {
+          "luxury": 0.06
         }
       }
     ]
@@ -5777,7 +5845,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82552,
+    "lastEventCycle": 82564,
     "events": [
       {
         "cycle": 0,
@@ -5813,6 +5881,16 @@
         "size": "standard",
         "head": "Vencyon Beats on Margins as Drenfield Hub Ramps Ahead of Plan",
         "body": "Vencyon reported quarterly revenue of $1.42 billion, up 11%, with operating margin widening to 16.3% as the new Drenfield hub reached full throughput two quarters early. CEO Iris Halloran credited disciplined rollout of the material-handling fleet and hinted at a second anchor client in advanced talks. The company nudged full-year guidance upward.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82564,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vencyon Adds Second Regional Hub as Drenfield Volumes Outpace Forecasts",
+        "body": "Citing stronger-than-planned throughput at its first Drenfield hub, Vencyon announced a second facility to absorb overflow material-handling volume. CEO Iris Halloran said the $120 million investment reflects 'confidence that the Drenfield partnership is deeper than a single contract.'",
         "effects": {
           "logistics": 0.13
         }
