@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-08T02:50:37.095Z",
+  "generatedAt": "2026-07-08T08:32:09.539Z",
   "beats": [
+    {
+      "company": "Aldousmont & Sons",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldousmont & Sons Posts Steady Gains as Peel-Free Wrap Ramps",
+      "body": "Dunmore Calder reported a 6 percent revenue rise, with the new peel-free sterile wrap contributing meaningfully in its first full quarter. The multi-region hospital agreement continues to underpin volumes across sterile consumables. Calder described the results as 'exactly the quiet progress we planned for.'",
+      "cycle": 82569,
+      "dur": 1
+    },
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Brunridge Works Secures National Retail Shelf Deal for Three-Pillar Range",
+      "body": "Halia Brennt announced a two-year agreement placing Brunridge's cleaning, apparel, and fine-goods lines across 1,200 retail locations under the Meldon Retail banner. The deal is projected to add 90 million in annual revenue and validates the cross-pillar bundling strategy launched last quarter. Brennt said the structure 'is finally showing what it was built to do.'",
+      "cycle": 82569,
+      "dur": 2
+    },
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Calderworks Tops Forecasts as New Kiln Lifts Tessen Ridge Output",
+      "body": "Kestrel Halloran reported quarterly revenue up 9 percent, crediting the recently opened regional kiln for easing supply constraints on the Tessen Ridge Towers package. Structural-materials shipments hit a record for the period. Halloran hinted the company is 'watching for the next opening' as urban building demand holds firm.",
+      "cycle": 82569,
+      "dur": 2
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Dunmorewright Opens New Fabrication Yard to Serve Twin-Tower and Riverside Backlog",
+      "body": "Emil Skarn confirmed a 65 million commitment to a new heavy-fabrication yard near the Riverside site, adding roughly 400 positions across earthmoving and plumbing units. The facility is designed to shorten lead times on the company's swelling 550 million contract backlog. Skarn called the move 'a measured bet on work we already have in hand.'",
+      "cycle": 82569,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Halhold Works Unveils Sweeping Overhaul as New Chief Vale Takes Control",
+      "body": "Gunnar Vale announced a full restructuring that splits the troubled Verity Pro medical-equipment unit into a ring-fenced division and cuts 900 roles company-wide. Vale set aside 260 million to settle the hospital litigation and pledged an independent safety audit of all device lines. The plan drew a mixed reception amid warnings the transition period will be 'painful and turbulent.'",
+      "cycle": 82569,
+      "dur": 8
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Marlgear Supply Hit With Class Action as Drennan Mills Injuries Mount",
+      "body": "A consortium of plaintiffs filed a class action seeking 480 million in damages, citing the leaked memos showing Atlas defects were flagged before launch. Halden Vossen, whose public defense of the line drew scrutiny, now faces calls from three major shareholders for an independent board review. Regulators signaled the safety probe could escalate to formal charges.",
+      "cycle": 82569,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Delivers Another Steady Quarter on Institutional Demand",
+      "body": "Petra Veldt reported results just ahead of estimates, with the Hallowfield Hospitals contract and food-service volumes providing reliable ballast. Margins held flat as input costs stabilized. Veldt reaffirmed guidance, noting the company 'sees no reason to chase excitement.'",
+      "cycle": 82569,
+      "dur": 1
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Thaldale Group Extends Rebound as Hardware Margins Widen",
+      "body": "Renna Voss posted a second consecutive quarter of growth, with operating margin climbing to 11.4 percent from 7.1 percent a year earlier. The turnaround plan's cost cuts have now been fully absorbed, and Voss raised full-year guidance for the first time since taking the helm. Analysts noted the turbulent early quarters appear to be behind the company.",
+      "cycle": 82569,
+      "dur": 2
+    },
     {
       "company": "Ardent Health",
       "sector": "medical",
@@ -92,26 +172,6 @@
       "dur": 8
     },
     {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Brunmark Motors Adds Second Veyra Line at Halt Ridge to Clear Order Backlog",
-      "body": "Riding surging Veyra Long-Range demand, CEO Yvette Calder announced a $480 million second assembly line at the Halt Ridge complex, targeting an additional 120,000 units annually by late next year. Calder said backlog now stretches past nine months and the expansion would add roughly 1,100 jobs. The company reaffirmed its raised full-year delivery outlook.",
-      "cycle": 82567,
-      "dur": 2
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Carrowforge Splits Testing Unit Into Independent Division as Roe Answers Regulators",
-      "body": "CEO Halden Roe carved out Carrowforge's certification and testing operations into a standalone division, Carrowforge Assurance, reporting directly to the board rather than plant management. The move, which Roe called a 'clean firewall,' follows the reopened regulatory files and shifts roughly 340 staff under new compliance chief Dara Welt. Analysts noted the reorganization adds near-term cost but may narrow the scope of the ongoing probe.",
-      "cycle": 82567,
-      "dur": 2
-    },
-    {
       "company": "Castlestone",
       "sector": "technology",
       "kind": "restructure",
@@ -120,36 +180,6 @@
       "body": "New CEO Pell Karsh froze construction on the second Vellmont campus and eliminated 900 roles, roughly 12% of staff, as part of a $1.1 billion writedown aimed at stemming the twin-campus losses. Karsh said the company would consolidate compute output at the completed site and refocus on the Vellmont order book rather than expansion. He pledged a return to positive cash flow within four quarters.",
       "cycle": 82567,
       "dur": 8
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Halcrest Extends Meridian Line With Limited Vireo Edition Unveiled on the Row",
-      "body": "Halcrest debuted the Meridian Vireo, a 200-piece limited series priced from $48,000, staged at its new Vireo Row salon to build on the collection's Crown Salon win. CEO Iris Marrow said the edition's hand-finished movement had a two-year waitlist before formal release. The launch continues Halcrest's momentum after a strong quarter filled the flagship salon.",
-      "cycle": 82567,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "lawsuit",
-      "size": "standard",
-      "head": "Ironcrestton Sued Over Carrow Atelier Origin Claims as Buyers Seek Refunds",
-      "body": "A group of Carrow Atelier clients filed suit against Ironcrestton, alleging that origin labels on premium goods misrepresented their sourcing, seeking $60 million in refunds and damages. The complaint builds on the regulator scrutiny of the atelier's provenance claims and names CEO Sable Carrow in marketing statements. Carrow said the company 'stands fully behind' its labeling and would contest the claims.",
-      "cycle": 82567,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Varnvale House Steadies as Meridian Collection Lifts First Post-Scandal Quarter",
-      "body": "Varnvale House posted a 14% revenue rise to $312 million, its first clean beat since the Ember sourcing scandal, driven by strong sell-through of the new Meridian timepiece line. CEO Idris Calloway credited tightened supplier audits and said Meridian pre-orders had already sold out two boutiques' allocations. Margins remained pressured by the cost of the overhauled sourcing program.",
-      "cycle": 82567,
-      "dur": 2
     },
     {
       "company": "Varnvale & Sons",
@@ -239,16 +269,6 @@
       "head": "Gromford Works Sued Over Aurelian Noir Clasp as Regulators Widen Concealment Inquiry",
       "body": "A coalition of buyers filed suit alleging Gromford Works knew of the Aurelian Noir clasp defect months before the recall and continued shipments, seeking damages tied to more than 40,000 affected units. The Verrand product-safety board has formally expanded its inquiry into internal communications, and two senior quality officers have been placed on leave. CEO Mira Ashby, long the face of the brand's rapid launches, offered a public apology but stopped short of accepting the concealment claims.",
       "cycle": 82562,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Bruncraft Industries Seals Landmark 40,000-Vehicle Order With Continental Freightways",
-      "body": "Bruncraft has clinched its largest contract in decades, agreeing to supply 40,000 Runabout Cargo vans to Continental Freightways over five years in a deal valued near 2.1 billion. Orla Marrow said the freshly acquired Coachline plant would run at full tilt to meet delivery schedules beginning next quarter. The order cements Bruncraft as the dominant commercial-vehicle supplier in the northern corridor.",
-      "cycle": 82561,
       "dur": 8
     }
   ]
