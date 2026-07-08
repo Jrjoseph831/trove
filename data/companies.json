@@ -688,7 +688,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82565,
+    "lastEventCycle": 82571,
     "events": [
       {
         "cycle": 0,
@@ -786,6 +786,16 @@
         "body": "Boreas reported storage-segment revenue up 27% to $890M, driven by the Calderwick Fields fleet and early Hollowmere Phase Three output. CEO Mira Thorne said integration synergies arrived ahead of schedule and hinted at further consolidation, adding the company is 'actively reviewing two more targets.' Compute-segment results were flat as capacity was reallocated toward grid contracts.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82571,
+        "kind": "expansion",
+        "size": "major",
+        "head": "Boreas Power Breaks Ground on $5.2B Compute-and-Storage Campus at Hollowmere",
+        "body": "Mira Thorne unveiled the house's most ambitious project to date, pairing a massive compute complex with grid-scale storage at the expanded Hollowmere site. The build folds in the momentum from Calderwick integration and Phase Three, targeting first power within 18 months and creating an estimated 2,400 permanent roles. Thorne said Boreas was 'done waiting for demand to slow down, because it won't.'",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -1230,7 +1240,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82564,
+    "lastEventCycle": 82571,
     "events": [
       {
         "cycle": 0,
@@ -1326,6 +1336,16 @@
         "body": "Weeks after the Meridian launch flopped, Brunstone & Sons said it would halt Meridian production, take a $480 million writedown, and cut a further 3,500 jobs. Royce Lambourne will step aside as part of the overhaul, with the board handing operational control to a stabilization committee while it searches for permanent leadership.",
         "effects": {
           "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82571,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunstone & Sons Pivots to Storage With Debut of Lambourne-Era Vault Cells",
+        "body": "Fresh off the emergency reset, new CEO Royce Lambourne steered the house away from vehicles and toward its Power & Storage arm, unveiling the Vault modular battery line. The launch leans on Brunstone's steadier storage business rather than another consumer-facing gamble, with initial capacity of 120,000 units earmarked for commercial buyers. Analysts framed it as a deliberately smaller bet after the Meridian collapse.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -1767,7 +1787,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82542,
+    "lastEventCycle": 82571,
     "events": [
       {
         "cycle": 0,
@@ -1795,6 +1815,16 @@
         "body": "Castle Devices broadened its long-term supply pact with the National Clinic Group to include a new surgical consumables category, adding an estimated 120 million in annual volume. CEO Bram Calder called the expansion 'a natural next step for a partner that already trusts our shipments,' emphasizing continuity of the existing terms.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82571,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castle Devices Posts Steady Quarter on Expanded Clinic Volumes",
+        "body": "The medical supplier reported revenue of $612M, up 6% year over year, driven by the broadened surgical consumables pact with National Clinic Group. Bram Calder credited 'orders arriving on time, every time,' with margins holding flat as expected. The results extended Castle's long record of unremarkable but dependable growth.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -2764,7 +2794,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82563,
+    "lastEventCycle": 82571,
     "events": [
       {
         "cycle": 0,
@@ -2832,6 +2862,16 @@
         "body": "Fennmoor unveiled Larkspur One, its flagship rapid-diagnostics platform integrating the recently acquired Threll sensor technology, with launch orders spanning three hospital networks. CEO Dorian Brandt called it the payoff of an aggressive acquisition streak, projecting the medical unit could double its revenue contribution within two years. The company also signaled further deal appetite to broaden the Larkspur ecosystem.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82571,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Fennmoor Signs Hospital Network Rollout for Larkspur One Diagnostics System",
+        "body": "Dorian Brandt landed a multi-site deployment pact placing the Threll-sensor-based Larkspur One across a 22-hospital network, valued at roughly $310M over five years. The deal validates the recent product launch and pulls the acquired sensor unit into steady recurring revenue. Brandt signaled appetite for further tuck-in buys to widen the diagnostics platform.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -4566,7 +4606,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82564,
+    "lastEventCycle": 82571,
     "events": [
       {
         "cycle": 0,
@@ -4644,6 +4684,16 @@
         "body": "The debut line from Korrwright's new Heritage Atelier took top honors at the Chronard Guild awards, with judges praising the revived Velloux dial craft. Chief executive Dunmore Carrow said the recognition 'validates every acquisition we've made to bring this workshop under one roof.'",
         "effects": {
           "luxury": 0.06
+        }
+      },
+      {
+        "cycle": 82571,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Korrwright Works Buys Rival Heritage Maker Sennfeld in Landmark Deal",
+        "body": "Dunmore Carrow announced the $2.1B acquisition of storied competitor Sennfeld Chronometers, folding its ateliers and movement archive into the Velloux operation. The purchase, Korrwright's largest ever, doubles its skilled watchmaker headcount and secures a century of proprietary complications. Carrow said the combined house would 'define the top of the market,' capping a run that began with the Velloux launch and its Timepiece of the Year win.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -5011,7 +5061,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82558,
+    "lastEventCycle": 82571,
     "events": [
       {
         "cycle": 0,
@@ -5059,6 +5109,16 @@
         "body": "Marrowmoor added a multi-year property-servicing contract covering a cluster of Millbrook hospitality sites, its third such win this quarter. Dorian Steg said the deal fit the company's disciplined strategy of stacking recurring cleaning and household-goods revenue in adjacent districts. The contract is expected to add roughly $40M in annualized revenue.",
         "effects": {
           "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82571,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Marrowmoor Holdings Crosses 100-Contract Mark With Riverside Cluster Win",
+        "body": "Dorian Steg's quiet buildout reached a milestone as the house signed a cluster of five servicing contracts across the Riverside precinct, pushing its active book past 100 properties. The deals add an estimated $48M in annual recurring revenue and deepen Marrowmoor's Cleaning & Jansan supply pipeline. Steg reiterated his preference for 'growth you barely notice until it's everywhere.'",
+        "effects": {
+          "hospitality": 0.13
         }
       }
     ]
@@ -5326,7 +5386,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82556,
+    "lastEventCycle": 82571,
     "events": [
       {
         "cycle": 0,
@@ -5362,6 +5422,16 @@
         "size": "standard",
         "head": "Palettstone & Sons Lands Supply Deal to Stock Heirloom Pro in Regional Hardware Chain",
         "body": "Palettstone & Sons has signed a multi-year agreement to place its award-winning Heirloom Pro line across 340 stores of the Corvale Hardware co-op. CEO Cole Fenn called the pact 'the widest reach the Heirloom name has ever had,' projecting the deal could lift annual unit volumes by roughly 18 percent.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82571,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Palettstone & Sons Extends Heirloom Pro to National Chain After Strong Regional Sell-Through",
+        "body": "Building on brisk regional numbers, Cole Fenn secured a national shelf-placement deal putting the award-winning Heirloom Pro line in more than 800 stores. The agreement is expected to roughly triple annual unit volume for the range, with Palettstone adding a second production shift to meet demand. Fenn called the regional pilot 'the proof we needed to go wide.'",
         "effects": {
           "consumer": 0.13
         }
@@ -5847,7 +5917,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82562,
+    "lastEventCycle": 82571,
     "events": [
       {
         "cycle": 0,
@@ -5913,6 +5983,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Acquires Casing Specialist Aldren to Deepen In-House Craft",
         "body": "Fresh off its Sovereign Collection award, Thronehaus struck a deal to buy case-and-bracelet maker Aldren for a reported sum near 240 million, bringing another key component under one roof. CEO Cora Dray said vertical control now spans dials, movements, and casings, insulating the house from supplier bottlenecks. The purchase is expected to close within two quarters pending review.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82571,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Thronehaus & Co. Opens Aldren-Backed Casing Foundry in Verrand",
+        "body": "Cora Dray cut the ribbon on a 40,000-square-foot casing foundry built around the newly acquired Aldren team, consolidating shell and bracelet work under one roof. The site is projected to lift in-house component output by roughly 35% within its first year and marks the first physical footprint added since the Sovereign Collection launch. Dray called it 'the next hungry step,' hinting at further supplier acquisitions to follow.",
         "effects": {
           "luxury": 0.13
         }
