@@ -887,14 +887,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1979,
-    "ceo": "Corwin Hale",
+    "ceo": "Ines Marlow",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.85,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82564,
+    "lastEventCycle": 82570,
     "events": [
       {
         "cycle": 0,
@@ -981,6 +981,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82570,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Bruncrest Works Ousts CEO Corwin Hale as Losses Mount and Board Loses Patience",
+        "body": "Bruncrest Works' board removed CEO Corwin Hale after a fourth consecutive disappointing quarter, ending a turbulent tenure marked by the collapsed Meridian pact and a costly overhaul. The company named turnaround veteran Ines Marlow as chief executive, tasking her with stabilizing finances and settling the outstanding Meridian litigation. Shares had shed nearly 60% of their value since the Meridian dispute erupted.",
+        "effects": {}
       }
     ]
   },
@@ -2610,7 +2618,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82560,
+    "lastEventCycle": 82570,
     "events": [
       {
         "cycle": 0,
@@ -2666,6 +2674,16 @@
         "size": "standard",
         "head": "Erretmark Works Opens Coach-Building Wing to Scale Flagship Output",
         "body": "Erretmark expanded its Velmonte plant with a dedicated coach-building wing, aiming to lift flagship capacity from 12 to 30 units per month. CEO Aurelia Garr said premium order backlogs justified the $210 million outlay, integrating the recently acquired Sorne engine craft on-site. The move deepens Erretmark's bet on the high-margin bespoke segment.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82570,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Erretmark Works Acquires Sorne Coachworks to Lock In Flagship Craftsmanship",
+        "body": "Erretmark Works agreed to acquire longtime partner Sorne Coachworks for $640 million, bringing the artisan bodywork behind its coach-built flagship fully in-house. CEO Aurelia Garr said the deal secures scarce craftsman talent and protects margins as premium flagship orders continue to outpace supply. The purchase fits Garr's acquisitive streak and expands Erretmark's high-end vehicle capacity.",
         "effects": {
           "automotive": 0.13
         }
@@ -3527,7 +3545,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82564,
+    "lastEventCycle": 82570,
     "events": [
       {
         "cycle": 0,
@@ -3621,6 +3639,16 @@
         "size": "standard",
         "head": "Halhold Systems Unveils Northgate Ultra Tier to Meet Surging Client Demand",
         "body": "Building on two anchor pacts, Halhold Systems introduced Northgate Ultra, a higher-density compute tier chief executive Dahlia Renn called 'the natural next step for clients outgrowing standard capacity.' The company said early commitments already cover roughly 40 percent of first-year output, with deliveries beginning next quarter.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82570,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halhold Systems Adds Third Northgate Campus to Chase Client Backlog",
+        "body": "Halhold Systems announced a $2.1 billion buildout of a third Northgate compute campus, citing a client waitlist that now stretches into next year following the Ultra Tier launch. CEO Dahlia Renn said capacity constraints, not demand, remain the sole bottleneck, and pledged first racks online within nine months. The move roughly doubles Halhold's committed compute footprint.",
         "effects": {
           "technology": 0.13
         }
@@ -4223,7 +4251,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82560,
+    "lastEventCycle": 82570,
     "events": [
       {
         "cycle": 0,
@@ -4279,6 +4307,16 @@
         "size": "major",
         "head": "Kessel Drive Recalls Touring-Line Storage Packs as Probe Confirms Overheating Risk",
         "body": "Kessel Drive issued a recall covering an estimated 48,000 storage packs across its Touring line after regulators confirmed an overheating defect. The action threatens deliveries under the recently signed $3.2 billion national fleet pact, with CEO Dorian Brandt pledging free replacements and a redesigned pack by next quarter. Analysts flagged potential penalties tied to fleet delivery timelines.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82570,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Kessel Drive Sued as Fleet Client Alleges Breach Over Recalled Storage Packs",
+        "body": "The national fleet operator behind Kessel Drive's $3.2 billion touring pact filed suit, alleging breach of contract and seeking damages after the overheating-driven recall grounded thousands of units. CEO Dorian Brandt vowed to fight the claim while accelerating a redesigned storage pack he said would be 'faster and safer than anything on the road.' The dispute threatens the largest deal in the company's history.",
         "effects": {
           "automotive": -0.22
         }
@@ -5036,7 +5074,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82558,
+    "lastEventCycle": 82570,
     "events": [
       {
         "cycle": 0,
@@ -5084,6 +5122,16 @@
         "body": "Bram Halloran announced a sweeping reorganization of Marrowstone's site-safety operations, creating a standalone Compliance & Ground Works unit reporting directly to his office. The move follows two regulatory site orders and a pending suit tied to the Greymarsh embankment collapse, and comes alongside the departure of two regional operations chiefs. Halloran framed the restructure as 'getting ahead of the findings rather than behind them.'",
         "effects": {
           "construction": -0.13
+        }
+      },
+      {
+        "cycle": 82570,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Marrowstone Build Hit With $310 Million Judgment in Embankment Collapse Case",
+        "body": "A tribunal ordered Marrowstone Build to pay $310 million in damages over the embankment collapse, finding the company liable for inadequate site inspections despite its recent safety-division overhaul. CEO Bram Halloran said the firm would appeal portions of the ruling while honoring victim compensation immediately. The judgment marks the costliest single liability in the company's century-long history.",
+        "effects": {
+          "construction": -0.22
         }
       }
     ]
@@ -5384,7 +5432,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82554,
+    "lastEventCycle": 82570,
     "events": [
       {
         "cycle": 0,
@@ -5420,6 +5468,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Secures Fastener Supply Deal for Kelvarn Bridge Program",
         "body": "Quinn Fenn signed a three-year agreement to supply structural fasteners and fixings for the multi-span Kelvarn crossing works, an order valued near 95 million. Fenn said output from the newly opened fastener plant would be dedicated largely to the contract, timing the expansion to the win. The deal locks in a meaningful share of the plant's first-year capacity.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82570,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarngrove & Sons Beats Again as Kelvarn Bridge Orders Lift Structural Demand",
+        "body": "Skarngrove & Sons posted quarterly revenue of $1.4 billion, up 11% year-over-year, as the Kelvarn Bridge program drove volume across both fastener and structural-materials lines. CEO Quinn Fenn credited the new fastener plant, now ramping ahead of schedule, and flagged an expanding order book across regional infrastructure projects. Margins widened to 18.2% as pricing held firm on structural steel.",
         "effects": {
           "construction": 0.13
         }
@@ -5925,7 +5983,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82555,
+    "lastEventCycle": 82570,
     "events": [
       {
         "cycle": 0,
@@ -5963,6 +6021,16 @@
         "body": "Vantor Lines has commissioned a second molded-fiber facility, adding capacity to fulfill its multi-year national glassware contract without straining existing lines. CEO Halden Vossen said the plant lifts recyclable-packaging output by roughly 35 percent and creates 210 positions. The site is expected to reach full run-rate within two quarters.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82570,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Nudges Past Estimates as Molded-Fiber Volumes Climb",
+        "body": "Vantor Lines reported steady quarterly earnings, with revenue up 6% as the second molded-fiber plant lifted output for its national glassware contract. CEO Halden Vossen said breakage-related returns fell to record lows, strengthening renewal talks with additional fragile-goods retailers. Guidance was left unchanged.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -6329,7 +6397,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82558,
+    "lastEventCycle": 82570,
     "events": [
       {
         "cycle": 0,
@@ -6374,6 +6442,16 @@
         "head": "Vossenspire Names Halden Roe Permanent CEO to Steer Blackout Recovery",
         "body": "The Vossenspire board confirmed interim chief Halden Roe as permanent CEO, tasking him with rebuilding regulator confidence after the two-region blackout that ended Kestrel Calder's tenure. Roe pledged $600M toward grid-hardening upgrades and a new independent reliability office over the next 18 months. Analysts noted the appointment ends weeks of leadership uncertainty at the turbulent house.",
         "effects": {}
+      },
+      {
+        "cycle": 82570,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Vossenspire Slapped With Record Fine as Blackout Probe Finds Deferred Maintenance",
+        "body": "Regulators concluded their investigation into the two-region blackout, levying a $480 million penalty and citing years of deferred grid maintenance and understaffed control rooms. The findings directly implicate cost-cutting under the prior leadership, intensifying pressure on new CEO Halden Roe, who called the report 'a hard but necessary reckoning.' Vossenspire agreed to a binding three-year remediation plan under external oversight.",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },

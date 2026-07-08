@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-08T08:32:09.539Z",
+  "generatedAt": "2026-07-08T14:14:17.728Z",
   "beats": [
     {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Bruncrest Works Ousts CEO Corwin Hale as Losses Mount and Board Loses Patience",
+      "body": "Bruncrest Works' board removed CEO Corwin Hale after a fourth consecutive disappointing quarter, ending a turbulent tenure marked by the collapsed Meridian pact and a costly overhaul. The company named turnaround veteran Ines Marlow as chief executive, tasking her with stabilizing finances and settling the outstanding Meridian litigation. Shares had shed nearly 60% of their value since the Meridian dispute erupted.",
+      "cycle": 82570,
+      "dur": 8
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Erretmark Works Acquires Sorne Coachworks to Lock In Flagship Craftsmanship",
+      "body": "Erretmark Works agreed to acquire longtime partner Sorne Coachworks for $640 million, bringing the artisan bodywork behind its coach-built flagship fully in-house. CEO Aurelia Garr said the deal secures scarce craftsman talent and protects margins as premium flagship orders continue to outpace supply. The purchase fits Garr's acquisitive streak and expands Erretmark's high-end vehicle capacity.",
+      "cycle": 82570,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Halhold Systems Adds Third Northgate Campus to Chase Client Backlog",
+      "body": "Halhold Systems announced a $2.1 billion buildout of a third Northgate compute campus, citing a client waitlist that now stretches into next year following the Ultra Tier launch. CEO Dahlia Renn said capacity constraints, not demand, remain the sole bottleneck, and pledged first racks online within nine months. The move roughly doubles Halhold's committed compute footprint.",
+      "cycle": 82570,
+      "dur": 2
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Kessel Drive Sued as Fleet Client Alleges Breach Over Recalled Storage Packs",
+      "body": "The national fleet operator behind Kessel Drive's $3.2 billion touring pact filed suit, alleging breach of contract and seeking damages after the overheating-driven recall grounded thousands of units. CEO Dorian Brandt vowed to fight the claim while accelerating a redesigned storage pack he said would be 'faster and safer than anything on the road.' The dispute threatens the largest deal in the company's history.",
+      "cycle": 82570,
+      "dur": 8
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Marrowstone Build Hit With $310 Million Judgment in Embankment Collapse Case",
+      "body": "A tribunal ordered Marrowstone Build to pay $310 million in damages over the embankment collapse, finding the company liable for inadequate site inspections despite its recent safety-division overhaul. CEO Bram Halloran said the firm would appeal portions of the ruling while honoring victim compensation immediately. The judgment marks the costliest single liability in the company's century-long history.",
+      "cycle": 82570,
+      "dur": 8
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Skarngrove & Sons Beats Again as Kelvarn Bridge Orders Lift Structural Demand",
+      "body": "Skarngrove & Sons posted quarterly revenue of $1.4 billion, up 11% year-over-year, as the Kelvarn Bridge program drove volume across both fastener and structural-materials lines. CEO Quinn Fenn credited the new fastener plant, now ramping ahead of schedule, and flagged an expanding order book across regional infrastructure projects. Margins widened to 18.2% as pricing held firm on structural steel.",
+      "cycle": 82570,
+      "dur": 2
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldousmont & Sons Posts Steady Gains as Peel-Free Wrap Ramps",
-      "body": "Dunmore Calder reported a 6 percent revenue rise, with the new peel-free sterile wrap contributing meaningfully in its first full quarter. The multi-region hospital agreement continues to underpin volumes across sterile consumables. Calder described the results as 'exactly the quiet progress we planned for.'",
-      "cycle": 82569,
+      "head": "Vantor Lines Nudges Past Estimates as Molded-Fiber Volumes Climb",
+      "body": "Vantor Lines reported steady quarterly earnings, with revenue up 6% as the second molded-fiber plant lifted output for its national glassware contract. CEO Halden Vossen said breakage-related returns fell to record lows, strengthening renewal talks with additional fragile-goods retailers. Guidance was left unchanged.",
+      "cycle": 82570,
       "dur": 1
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Vossenspire Slapped With Record Fine as Blackout Probe Finds Deferred Maintenance",
+      "body": "Regulators concluded their investigation into the two-region blackout, levying a $480 million penalty and citing years of deferred grid maintenance and understaffed control rooms. The findings directly implicate cost-cutting under the prior leadership, intensifying pressure on new CEO Halden Roe, who called the report 'a hard but necessary reckoning.' Vossenspire agreed to a binding three-year remediation plan under external oversight.",
+      "cycle": 82570,
+      "dur": 8
     },
     {
       "company": "Brunridge Works",
@@ -62,16 +132,6 @@
       "dur": 8
     },
     {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Delivers Another Steady Quarter on Institutional Demand",
-      "body": "Petra Veldt reported results just ahead of estimates, with the Hallowfield Hospitals contract and food-service volumes providing reliable ballast. Margins held flat as input costs stabilized. Veldt reaffirmed guidance, noting the company 'sees no reason to chase excitement.'",
-      "cycle": 82569,
-      "dur": 1
-    },
-    {
       "company": "Thaldale Group",
       "sector": "consumer",
       "kind": "earnings_beat",
@@ -79,46 +139,6 @@
       "head": "Thaldale Group Extends Rebound as Hardware Margins Widen",
       "body": "Renna Voss posted a second consecutive quarter of growth, with operating margin climbing to 11.4 percent from 7.1 percent a year earlier. The turnaround plan's cost cuts have now been fully absorbed, and Voss raised full-year guidance for the first time since taking the helm. Analysts noted the turbulent early quarters appear to be behind the company.",
       "cycle": 82569,
-      "dur": 2
-    },
-    {
-      "company": "Ardent Health",
-      "sector": "medical",
-      "kind": "breakthrough",
-      "size": "standard",
-      "head": "Ardent Health Clears Regulatory Review for Expanded Imaging Platform Uses",
-      "body": "Ardent Health received regulatory clearance to broaden its next-generation imaging platform into cardiac and neurological applications, opening a market it estimates at 120 million marks annually. CEO Orla Halloran, true to her long-horizon style, said the phased rollout would follow the ongoing academic medical center deployment. Additional clearances are expected over the next two years.",
-      "cycle": 82568,
-      "dur": 2
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Bruncraft Industries Acquires Halveston Axle Works to Secure Runabout Supply",
-      "body": "Continuing Orla Marrow's acquisitive streak, Bruncraft bought Halveston Axle Works for 78 million marks to bring key drivetrain components in-house ahead of the 40,000-vehicle Continental Freightways order. The deal adds two plants and roughly 900 workers. Marrow said vertical integration would protect delivery timelines as Runabout Cargo volumes climb.",
-      "cycle": 82568,
-      "dur": 2
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Carrowwell Lifts Full-Year Outlook as Automation Backlog Swells",
-      "body": "Carrowwell beat estimates with quarterly revenue of 512 million marks, driven by the fleet order for its modular warehouse automation line and firm demand across auto parts. CEO Theo Thorne raised the full-year outlook, citing an automation backlog now stretching past 14 months. The Material Handling segment posted its strongest quarter since the new plant opened.",
-      "cycle": 82568,
-      "dur": 2
-    },
-    {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Cranecraft Signs Multi-Year Textile Supply Deal With Northern Mills Consortium",
-      "body": "Cranecraft secured a four-year raw textiles supply agreement with the Northern Mills Consortium, valued at roughly 96 million marks over its term. CEO Mira Garr described the pact as a natural extension of the ramping textile contract that has anchored recent results. Deliveries are set to begin next quarter alongside steady farm equipment output.",
-      "cycle": 82568,
       "dur": 2
     },
     {
@@ -140,26 +160,6 @@
       "body": "After 128 years of famously restless leadership, Mira Ashby stepped down under board pressure as the concealment inquiry deepened and the Aurelian Noir recall topped 60,000 units. The board named longtime operations chief Delphine Vaugh to steer the house through the widening regulatory probe, promising an internal review of every timepiece line. Vaugh takes over with a settlement fund reportedly reaching 40 million marks.",
       "cycle": 82568,
       "dur": 8
-    },
-    {
-      "company": "Tillage & Co.",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Tillage & Co. Posts Firm Quarter as Blending Facility Ramps to Full Output",
-      "body": "Tillage & Co. reported revenue up 9% to 214 million marks, crediting steady throughput from its new blending facility and reliable draw from the grain cooperative pact. CEO Kestrel Fenn kept guidance unchanged, noting margins held even as input costs edged higher. Cooperative order volumes rose 6% over the prior season.",
-      "cycle": 82568,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Vossenspire Supply Acquires Calderon Motorworks to Broaden Heritage Line",
-      "body": "Fresh off its Elberran Design Salon win, Vossenspire bought the storied Calderon Motorworks for 145 million marks to expand its Heritage Division into hand-built vehicles. CEO Quinn Marrow said Calderon's coachbuilding pedigree would pair naturally with the Renmark and Aldecourt marques. The acquisition adds a flagship workshop and an order book of bespoke commissions.",
-      "cycle": 82568,
-      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -249,26 +249,6 @@
       "head": "Fennmoor Launches Larkspur One Diagnostics System Built on Threll Sensors",
       "body": "Fennmoor unveiled Larkspur One, its flagship rapid-diagnostics platform integrating the recently acquired Threll sensor technology, with launch orders spanning three hospital networks. CEO Dorian Brandt called it the payoff of an aggressive acquisition streak, projecting the medical unit could double its revenue contribution within two years. The company also signaled further deal appetite to broaden the Larkspur ecosystem.",
       "cycle": 82563,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Castlestone Names Turnaround Veteran Pell Karsh as CEO, Voss Steps Aside",
-      "body": "Dale Voss will exit the chief executive role effective immediately, capping a turbulent stretch marked by the Vellmont order shortfall and twin-campus overruns that erased roughly 18 percent of annual profit. The board named restructuring specialist Pell Karsh, formerly of the compute division at Halden Systems, to steady operations and review the stalled second campus. Karsh said his first 90 days would focus on cost discipline and renegotiating the Vellmont delivery schedule.",
-      "cycle": 82562,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Gromford Works Sued Over Aurelian Noir Clasp as Regulators Widen Concealment Inquiry",
-      "body": "A coalition of buyers filed suit alleging Gromford Works knew of the Aurelian Noir clasp defect months before the recall and continued shipments, seeking damages tied to more than 40,000 affected units. The Verrand product-safety board has formally expanded its inquiry into internal communications, and two senior quality officers have been placed on leave. CEO Mira Ashby, long the face of the brand's rapid launches, offered a public apology but stopped short of accepting the concealment claims.",
-      "cycle": 82562,
       "dur": 8
     }
   ]
