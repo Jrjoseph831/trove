@@ -335,7 +335,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82541,
+    "lastEventCycle": 82568,
     "events": [
       {
         "cycle": 0,
@@ -361,6 +361,16 @@
         "size": "standard",
         "head": "Ardent Health Secures Academic Medical Center Rollout for New Imaging Platform",
         "body": "Ardent Health signed a phased agreement to install its next-generation diagnostic imaging platform across the six-hospital Kelvorne Academic Health System. CEO Orla Halloran said the multi-year deployment reflects the platform's early clinical validation and Ardent's characteristic patience in bringing it to market. Financial terms were not disclosed, though the rollout begins with two flagship sites this year.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82568,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Ardent Health Clears Regulatory Review for Expanded Imaging Platform Uses",
+        "body": "Ardent Health received regulatory clearance to broaden its next-generation imaging platform into cardiac and neurological applications, opening a market it estimates at 120 million marks annually. CEO Orla Halloran, true to her long-horizon style, said the phased rollout would follow the ongoing academic medical center deployment. Additional clearances are expected over the next two years.",
         "effects": {
           "medical": 0.13
         }
@@ -781,7 +791,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82561,
+    "lastEventCycle": 82568,
     "events": [
       {
         "cycle": 0,
@@ -849,6 +859,16 @@
         "body": "Bruncraft has clinched its largest contract in decades, agreeing to supply 40,000 Runabout Cargo vans to Continental Freightways over five years in a deal valued near 2.1 billion. Orla Marrow said the freshly acquired Coachline plant would run at full tilt to meet delivery schedules beginning next quarter. The order cements Bruncraft as the dominant commercial-vehicle supplier in the northern corridor.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82568,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Bruncraft Industries Acquires Halveston Axle Works to Secure Runabout Supply",
+        "body": "Continuing Orla Marrow's acquisitive streak, Bruncraft bought Halveston Axle Works for 78 million marks to bring key drivetrain components in-house ahead of the 40,000-vehicle Continental Freightways order. The deal adds two plants and roughly 900 workers. Marrow said vertical integration would protect delivery timelines as Runabout Cargo volumes climb.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -1636,7 +1656,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82555,
+    "lastEventCycle": 82568,
     "events": [
       {
         "cycle": 0,
@@ -1682,6 +1702,16 @@
         "size": "standard",
         "head": "Carrowwell Wins Fleet Order for Modular Warehouse Automation Line",
         "body": "Carrowwell secured a 380 million order to outfit a national distribution operator's facilities with its newly launched modular automation systems. CEO Theo Thorne said the win validates the product bet made at the new material-handling plant, with deliveries beginning next quarter. The contract carries options that could extend its value over three years.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82568,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowwell Lifts Full-Year Outlook as Automation Backlog Swells",
+        "body": "Carrowwell beat estimates with quarterly revenue of 512 million marks, driven by the fleet order for its modular warehouse automation line and firm demand across auto parts. CEO Theo Thorne raised the full-year outlook, citing an automation backlog now stretching past 14 months. The Material Handling segment posted its strongest quarter since the new plant opened.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -2036,7 +2066,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82555,
+    "lastEventCycle": 82568,
     "events": [
       {
         "cycle": 0,
@@ -2084,6 +2114,16 @@
         "body": "Cranecraft reported quarterly revenue of 448 million, a touch above expectations, with textile and farm-equipment demand both contributing steadily. CEO Mira Garr said the garment-belt supply contract continues to ramp on schedule with no supply disruptions. The company held its full-year outlook unchanged.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82568,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Cranecraft Signs Multi-Year Textile Supply Deal With Northern Mills Consortium",
+        "body": "Cranecraft secured a four-year raw textiles supply agreement with the Northern Mills Consortium, valued at roughly 96 million marks over its term. CEO Mira Garr described the pact as a natural extension of the ramping textile contract that has anchored recent results. Deliveries are set to begin next quarter alongside steady farm equipment output.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -3034,7 +3074,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82559,
+    "lastEventCycle": 82568,
     "events": [
       {
         "cycle": 0,
@@ -3093,6 +3133,16 @@
         "effects": {
           "energy": 0.22
         }
+      },
+      {
+        "cycle": 82568,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Greywater Grid Lands Sweeping Multi-Region Power-and-Compute Contract Worth 1.2 Billion Marks",
+        "body": "Greywater Grid unveiled its largest deal ever, a 1.2-billion-mark agreement to build and supply three compute campuses paired with dedicated storage across four regions. CEO Vale Halloran called it a defining moment that roughly doubles the company's committed backlog. The buildout will lean on Greywater's record-density storage blocks and span the next five years.",
+        "effects": {
+          "energy": 0.22
+        }
       }
     ]
   },
@@ -3100,14 +3150,14 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1897,
-    "ceo": "Mira Ashby",
-    "ceoSince": 1897,
+    "ceo": "Delphine Vaugh",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.85,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82562,
+    "lastEventCycle": 82568,
     "events": [
       {
         "cycle": 0,
@@ -3206,6 +3256,14 @@
         "effects": {
           "luxury": -0.22
         }
+      },
+      {
+        "cycle": 82568,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Gromford Works Ousts Mira Ashby as Board Moves to Contain Aurelian Noir Fallout",
+        "body": "After 128 years of famously restless leadership, Mira Ashby stepped down under board pressure as the concealment inquiry deepened and the Aurelian Noir recall topped 60,000 units. The board named longtime operations chief Delphine Vaugh to steer the house through the widening regulatory probe, promising an internal review of every timepiece line. Vaugh takes over with a settlement fund reportedly reaching 40 million marks.",
+        "effects": {}
       }
     ]
   },
@@ -5734,7 +5792,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82544,
+    "lastEventCycle": 82568,
     "events": [
       {
         "cycle": 0,
@@ -5762,6 +5820,16 @@
         "body": "Tillage & Co. commissioned a modest fertilizer blending plant near its cooperative partners, a 45 million investment aimed at shortening delivery times under its five-year supply pact. Kestrel Fenn said the site would let the company 'be there when the planting window opens, not a week late.' The facility is expected to serve roughly 300 member farms at full capacity.",
         "effects": {
           "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82568,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Tillage & Co. Posts Firm Quarter as Blending Facility Ramps to Full Output",
+        "body": "Tillage & Co. reported revenue up 9% to 214 million marks, crediting steady throughput from its new blending facility and reliable draw from the grain cooperative pact. CEO Kestrel Fenn kept guidance unchanged, noting margins held even as input costs edged higher. Cooperative order volumes rose 6% over the prior season.",
+        "effects": {
+          "agriculture": 0.13
         }
       }
     ]
@@ -6240,7 +6308,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82561,
+    "lastEventCycle": 82568,
     "events": [
       {
         "cycle": 0,
@@ -6308,6 +6376,16 @@
         "body": "The debut Heritage Collection took top honors at the annual Elberran Design Salon, with judges praising the Renmark-Aldecourt pairing for 'restraint and craft.' The recognition arrives just months after Quinn Marrow folded the two houses into a single division. Vossenspire said early demand for the collection has outpaced initial production runs.",
         "effects": {
           "luxury": 0.06
+        }
+      },
+      {
+        "cycle": 82568,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vossenspire Supply Acquires Calderon Motorworks to Broaden Heritage Line",
+        "body": "Fresh off its Elberran Design Salon win, Vossenspire bought the storied Calderon Motorworks for 145 million marks to expand its Heritage Division into hand-built vehicles. CEO Quinn Marrow said Calderon's coachbuilding pedigree would pair naturally with the Renmark and Aldecourt marques. The acquisition adds a flagship workshop and an order book of bespoke commissions.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]

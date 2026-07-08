@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-07T19:58:17.471Z",
+  "generatedAt": "2026-07-08T02:50:37.095Z",
   "beats": [
+    {
+      "company": "Ardent Health",
+      "sector": "medical",
+      "kind": "breakthrough",
+      "size": "standard",
+      "head": "Ardent Health Clears Regulatory Review for Expanded Imaging Platform Uses",
+      "body": "Ardent Health received regulatory clearance to broaden its next-generation imaging platform into cardiac and neurological applications, opening a market it estimates at 120 million marks annually. CEO Orla Halloran, true to her long-horizon style, said the phased rollout would follow the ongoing academic medical center deployment. Additional clearances are expected over the next two years.",
+      "cycle": 82568,
+      "dur": 2
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Bruncraft Industries Acquires Halveston Axle Works to Secure Runabout Supply",
+      "body": "Continuing Orla Marrow's acquisitive streak, Bruncraft bought Halveston Axle Works for 78 million marks to bring key drivetrain components in-house ahead of the 40,000-vehicle Continental Freightways order. The deal adds two plants and roughly 900 workers. Marrow said vertical integration would protect delivery timelines as Runabout Cargo volumes climb.",
+      "cycle": 82568,
+      "dur": 2
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowwell Lifts Full-Year Outlook as Automation Backlog Swells",
+      "body": "Carrowwell beat estimates with quarterly revenue of 512 million marks, driven by the fleet order for its modular warehouse automation line and firm demand across auto parts. CEO Theo Thorne raised the full-year outlook, citing an automation backlog now stretching past 14 months. The Material Handling segment posted its strongest quarter since the new plant opened.",
+      "cycle": 82568,
+      "dur": 2
+    },
+    {
+      "company": "Cranecraft",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Cranecraft Signs Multi-Year Textile Supply Deal With Northern Mills Consortium",
+      "body": "Cranecraft secured a four-year raw textiles supply agreement with the Northern Mills Consortium, valued at roughly 96 million marks over its term. CEO Mira Garr described the pact as a natural extension of the ramping textile contract that has anchored recent results. Deliveries are set to begin next quarter alongside steady farm equipment output.",
+      "cycle": 82568,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Greywater Grid Lands Sweeping Multi-Region Power-and-Compute Contract Worth 1.2 Billion Marks",
+      "body": "Greywater Grid unveiled its largest deal ever, a 1.2-billion-mark agreement to build and supply three compute campuses paired with dedicated storage across four regions. CEO Vale Halloran called it a defining moment that roughly doubles the company's committed backlog. The buildout will lean on Greywater's record-density storage blocks and span the next five years.",
+      "cycle": 82568,
+      "dur": 8
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Gromford Works Ousts Mira Ashby as Board Moves to Contain Aurelian Noir Fallout",
+      "body": "After 128 years of famously restless leadership, Mira Ashby stepped down under board pressure as the concealment inquiry deepened and the Aurelian Noir recall topped 60,000 units. The board named longtime operations chief Delphine Vaugh to steer the house through the widening regulatory probe, promising an internal review of every timepiece line. Vaugh takes over with a settlement fund reportedly reaching 40 million marks.",
+      "cycle": 82568,
+      "dur": 8
+    },
+    {
+      "company": "Tillage & Co.",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Tillage & Co. Posts Firm Quarter as Blending Facility Ramps to Full Output",
+      "body": "Tillage & Co. reported revenue up 9% to 214 million marks, crediting steady throughput from its new blending facility and reliable draw from the grain cooperative pact. CEO Kestrel Fenn kept guidance unchanged, noting margins held even as input costs edged higher. Cooperative order volumes rose 6% over the prior season.",
+      "cycle": 82568,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Vossenspire Supply Acquires Calderon Motorworks to Broaden Heritage Line",
+      "body": "Fresh off its Elberran Design Salon win, Vossenspire bought the storied Calderon Motorworks for 145 million marks to expand its Heritage Division into hand-built vehicles. CEO Quinn Marrow said Calderon's coachbuilding pedigree would pair naturally with the Renmark and Aldecourt marques. The acquisition adds a flagship workshop and an order book of bespoke commissions.",
+      "cycle": 82568,
+      "dur": 2
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -42,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Fennvale Mfg. Edges Past Estimates as New Fastener Contract Ramps",
-      "body": "Fennvale Mfg. reported quarterly revenue of $196 million, modestly ahead of guidance, as early shipments under its auto-assembly fastener contract began flowing. CEO Theo Vossen said the third Drennt Works line remained on schedule for commissioning next quarter. Management held its steady full-year outlook unchanged.",
-      "cycle": 82567,
-      "dur": 1
-    },
-    {
       "company": "Halcrest",
       "sector": "luxury",
       "kind": "product_launch",
@@ -82,56 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Aperture Compute Signs 1.4-Billion Dawnmere II Rollout With Regional Backbone Operator",
-      "body": "Halden Dray secured a 1.4-billion agreement to supply Dawnmere II interconnects across the Merrow backbone network, the largest single order since the record-setting launch. The multi-year deal locks in Aperture's latency-leading hardware for a network handling a growing share of inland compute traffic. Dray called it 'proof the record wasn't a stunt.'",
-      "cycle": 82566,
-      "dur": 2
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "outage",
-      "size": "standard",
-      "head": "Calderforge Halts Stormwell Hall After Cooling-Loop Failure",
-      "body": "A cooling-loop rupture forced Calderforge to idle roughly a third of its Stormwell Hall compute capacity for four days, disrupting output just as the third wing nears completion. Nadia Throne said crews restored full operation over the weekend and pledged a redundancy retrofit across all Stormwell lines. The stoppage lands during the house's steepest demand stretch in years.",
-      "cycle": 82566,
-      "dur": 2
-    },
-    {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Cranegrove Wins Second Inland Corridor Package in 620-Million Award",
-      "body": "Cranegrove secured a 620-million follow-on earthworks package extending the Inland Corridor project into its northern spur, building on the contract now at full stride. Vale Calder said the disciplined win keeps all three Earthmoving depots at near-full utilization through the next two years. The award cements Cranegrove as the corridor's primary earthmoving supplier.",
-      "cycle": 82566,
-      "dur": 2
-    },
-    {
-      "company": "Drayton Freight",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drayton Freight Tops Estimates as Second Plant Clears Pallet-Lift Backlog",
-      "body": "Drayton Freight beat quarterly forecasts with revenue up 14 percent after its second assembly plant cut lead times on the Modular Pallet-Lift System nearly in half. Emil Holt credited steady fleet reorders and said the backlog that dogged prior quarters is now 'comfortably in hand.' The steady house reaffirmed its full-year outlook.",
-      "cycle": 82566,
-      "dur": 2
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drustcraft Lands Multi-Year Fastener Supply Pact for Expanded Vehicle Platform",
-      "body": "Drustcraft signed a multi-year agreement to supply its corrosion-resistant fastener series across a second, higher-volume variant of the new vehicle platform, worth an estimated 340 million over four years. Cora Fenn said the deal validates the added production line and the platform-specific fastener bet. Deliveries begin next quarter.",
-      "cycle": 82566,
-      "dur": 2
-    },
-    {
       "company": "Varnvale & Sons",
       "sector": "luxury",
       "kind": "major_deal",
@@ -140,16 +160,6 @@
       "body": "Restless as ever, Bram Wold has folded the storied Halvren Case Atelier into Varnvale for 880 million, giving the house control of both dials and casings for its flagship Bellmont line. The deal secures the last independent supplier of Varnvale's signature guilloché cases and marks Wold's third acquisition in eighteen months. Analysts note the maker now owns nearly every step of its timepiece production.",
       "cycle": 82566,
       "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Woldmark Slips as Halcyon Delivery Costs Bite Into Margins",
-      "body": "Woldmark posted quarterly earnings below forecasts as the cost of ramping its 4.6-billion Halcyon commitment ran hotter than guided, trimming operating margin by 3.2 points. Cole Carrow defended the spending as 'the price of the biggest book we've ever carried,' but the shortfall unsettled a house that had beaten expectations three quarters running. Delivery timelines on the flagship pact remain unchanged.",
-      "cycle": 82566,
-      "dur": 2
     },
     {
       "company": "Blackton Industries",
@@ -239,36 +249,6 @@
       "head": "Bruncraft Industries Seals Landmark 40,000-Vehicle Order With Continental Freightways",
       "body": "Bruncraft has clinched its largest contract in decades, agreeing to supply 40,000 Runabout Cargo vans to Continental Freightways over five years in a deal valued near 2.1 billion. Orla Marrow said the freshly acquired Coachline plant would run at full tilt to meet delivery schedules beginning next quarter. The order cements Bruncraft as the dominant commercial-vehicle supplier in the northern corridor.",
       "cycle": 82561,
-      "dur": 8
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Fenncyon Wins $1.9 Billion Earthmoving Contract for Eastfield Corridor Rail Project",
-      "body": "Fenncyon secured the flagship equipment supply and rental contract for the multi-year Eastfield Corridor rail build, valued at $1.9 billion over four years. CEO Nadia Ashby said the deal validates the depot network expansion, with 340 machines slated for phased deployment. The win locks in Fenncyon's largest single backlog on record.",
-      "cycle": 82560,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "major",
-      "head": "Kessel Drive Recalls Touring-Line Storage Packs as Probe Confirms Overheating Risk",
-      "body": "Kessel Drive issued a recall covering an estimated 48,000 storage packs across its Touring line after regulators confirmed an overheating defect. The action threatens deliveries under the recently signed $3.2 billion national fleet pact, with CEO Dorian Brandt pledging free replacements and a redesigned pack by next quarter. Analysts flagged potential penalties tied to fleet delivery timelines.",
-      "cycle": 82560,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Marlgear Supply Rocked as Internal Memos Reveal Atlas Defects Were Flagged Before Launch",
-      "body": "Leaked internal documents show Marlgear engineers warned of Atlas machine load failures months before the Drennan Mills incidents, raising questions over CEO Halden Vossen's handling of the launch. The disclosures widen the ongoing probe and prompted a board review of executive oversight. Marlgear said it is cooperating fully but did not address the timeline of the warnings.",
-      "cycle": 82560,
       "dur": 8
     }
   ]
