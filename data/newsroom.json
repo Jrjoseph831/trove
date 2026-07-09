@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-09T03:28:05.250Z",
+  "generatedAt": "2026-07-09T09:47:27.256Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Blackton Industries Swings to Loss as Halvern Weld Crisis Guts Quarter",
+      "body": "Blackton reported a 268-million quarterly loss, hammered by recall costs, legal reserves of 190 million tied to the Halvern suit, and a sharp drop in component orders. Mara Mercer suspended full-year guidance and announced a plant idling as regulators pressed forward with their safety probe, sending the worst result in the company's modern history.",
+      "cycle": 82573,
+      "dur": 8
+    },
+    {
+      "company": "Castlestead",
+      "sector": "agriculture",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Castlestead Adds Nutrient-Blend Farm Inputs to Pair With Low-Till Line",
+      "body": "Castlestead introduced a soil-conditioning input blend designed to complement its low-till seeders on compacted ground, rolling out first to Harrowfield cooperative members. Aurelia Calder framed the launch as a measured extension rather than a new bet, with wider availability planned for next season.",
+      "cycle": 82573,
+      "dur": 1
+    },
+    {
+      "company": "Dunmorestone",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Dunmorestone Wins Regional Cafeteria Supply Contract for Food Service Arm",
+      "body": "Dunmorestone signed a three-year deal to supply prepared meal service and fixtures to a network of institutional cafeterias, valued at roughly 155 million. Orla Mercer said the contract builds on firming Food Service orders and further distances the company from last year's faucet cartridge recall.",
+      "cycle": 82573,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Gromford Works Names Turnaround Veteran Corin Aldwych as Chief Executive",
+      "body": "Gromford Works appointed Corin Aldwych as CEO, tasking the former restructuring chief with steering the house out of the Aurelian Noir clasp scandal and pending litigation. Interim leader Delphine Vaugh will step back to a board advisory role after months of firefighting, as Aldwych pledged a full clasp redesign and independent quality review.",
+      "cycle": 82573,
+      "dur": 2
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Hesperforge Breaks Ground on Second Beam Mill to Meet Bridgeworks Demand",
+      "body": "Hesperforge Supply committed 340 million to a second high-yield beam mill near the coastal corridor, targeting first output within 20 months. Sable Halloran said the plant would nearly double structural output tied to the Bridgeworks framework deals, adding some 600 jobs at full ramp.",
+      "cycle": 82573,
+      "dur": 2
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowcyon Tops Estimates as Workwear Debut Lifts Apparel Segment",
+      "body": "Marrowcyon posted quarterly revenue of 1.32 billion, modestly ahead of forecasts, with the new Hardwear apparel-grade workwear line contributing 41 million in its first full quarter. Theo Orne said fixture rentals and workwear together offset softer regional demand, keeping margins steady near 14 percent.",
+      "cycle": 82573,
+      "dur": 1
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Skarnvale Posts First Profit Under Vaskell as Freight Overhaul Bites",
+      "body": "Skarnvale reported quarterly operating income of 214 million, reversing a 47-million loss a year earlier, as Dorn Vaskell's cost overhaul trimmed freight expenses by roughly 18 percent. Vaskell credited consolidated depot routing and a leaner Material Handling lineup, though he warned that a second phase of cuts would test the network through the coming year.",
+      "cycle": 82573,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Varnvale & Sons Debuts Fully In-House Timepiece Built on Corveau and Bellmont Craft",
+      "body": "Varnvale & Sons unveiled the Meridian line, its first collection assembled entirely from newly acquired Corveau dials and Bellmont cases, priced from 12,400. Bram Wold called it proof of the firm's vertical strategy, with initial production capped at 3,000 pieces to protect margins as demand tests the integration.",
+      "cycle": 82573,
+      "dur": 2
+    },
     {
       "company": "Castlegear Group",
       "sector": "medical",
@@ -20,16 +100,6 @@
       "body": "Hearthstone reported quarterly revenue up 11% with operating margins widening for a third straight period, crediting rising reorder rates on its refillable Jansan and household ranges. Aurelia Aldous said institutional accounts now make up nearly a third of concentrate volumes. The company nudged its full-year outlook higher.",
       "cycle": 82572,
       "dur": 2
-    },
-    {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Holtware Co. Extends Lifetime Warranty to New Power-Tool Range",
-      "body": "Holtware broadened its flagship guarantee to a debut line of corded and cordless power tools, marking its first move beyond hand tools. Aurelia Dray said the range targets the same tradespeople driving showroom traffic, with initial stocking across the recently expanded retail footprint. Pricing sits modestly above competing tiers.",
-      "cycle": 82572,
-      "dur": 1
     },
     {
       "company": "Korrworks",
@@ -72,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Vossenstead Supply Breaks Ground on Third Distribution Hub",
-      "body": "Vossenstead began construction on a third hub sited between its existing food-service and plumbing operations, a $95M project intended to shorten regional delivery routes. Bram Thorne said the site preserves the twin-hub efficiencies while adding capacity ahead of demand. Completion is targeted within eighteen months.",
-      "cycle": 82572,
-      "dur": 1
-    },
-    {
       "company": "Boreas Power",
       "sector": "energy",
       "kind": "expansion",
@@ -92,26 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunstone & Sons Pivots to Storage With Debut of Lambourne-Era Vault Cells",
-      "body": "Fresh off the emergency reset, new CEO Royce Lambourne steered the house away from vehicles and toward its Power & Storage arm, unveiling the Vault modular battery line. The launch leans on Brunstone's steadier storage business rather than another consumer-facing gamble, with initial capacity of 120,000 units earmarked for commercial buyers. Analysts framed it as a deliberately smaller bet after the Meridian collapse.",
-      "cycle": 82571,
-      "dur": 2
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Fennmoor Signs Hospital Network Rollout for Larkspur One Diagnostics System",
-      "body": "Dorian Brandt landed a multi-site deployment pact placing the Threll-sensor-based Larkspur One across a 22-hospital network, valued at roughly $310M over five years. The deal validates the recent product launch and pulls the acquired sensor unit into steady recurring revenue. Brandt signaled appetite for further tuck-in buys to widen the diagnostics platform.",
-      "cycle": 82571,
-      "dur": 2
-    },
-    {
       "company": "Korrwright Works",
       "sector": "luxury",
       "kind": "major_deal",
@@ -120,36 +160,6 @@
       "body": "Dunmore Carrow announced the $2.1B acquisition of storied competitor Sennfeld Chronometers, folding its ateliers and movement archive into the Velloux operation. The purchase, Korrwright's largest ever, doubles its skilled watchmaker headcount and secures a century of proprietary complications. Carrow said the combined house would 'define the top of the market,' capping a run that began with the Velloux launch and its Timepiece of the Year win.",
       "cycle": 82571,
       "dur": 8
-    },
-    {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Marrowmoor Holdings Crosses 100-Contract Mark With Riverside Cluster Win",
-      "body": "Dorian Steg's quiet buildout reached a milestone as the house signed a cluster of five servicing contracts across the Riverside precinct, pushing its active book past 100 properties. The deals add an estimated $48M in annual recurring revenue and deepen Marrowmoor's Cleaning & Jansan supply pipeline. Steg reiterated his preference for 'growth you barely notice until it's everywhere.'",
-      "cycle": 82571,
-      "dur": 2
-    },
-    {
-      "company": "Palettstone & Sons",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Palettstone & Sons Extends Heirloom Pro to National Chain After Strong Regional Sell-Through",
-      "body": "Building on brisk regional numbers, Cole Fenn secured a national shelf-placement deal putting the award-winning Heirloom Pro line in more than 800 stores. The agreement is expected to roughly triple annual unit volume for the range, with Palettstone adding a second production shift to meet demand. Fenn called the regional pilot 'the proof we needed to go wide.'",
-      "cycle": 82571,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Thronehaus & Co. Opens Aldren-Backed Casing Foundry in Verrand",
-      "body": "Cora Dray cut the ribbon on a 40,000-square-foot casing foundry built around the newly acquired Aldren team, consolidating shell and bracelet work under one roof. The site is projected to lift in-house component output by roughly 35% within its first year and marks the first physical footprint added since the Sovereign Collection launch. Dray called it 'the next hungry step,' hinting at further supplier acquisitions to follow.",
-      "cycle": 82571,
-      "dur": 2
     },
     {
       "company": "Bruncrest Works",
@@ -259,26 +269,6 @@
       "head": "Varnvale & Sons Buys Bellmont Master Casemaker in 880-Million Vertical Play",
       "body": "Restless as ever, Bram Wold has folded the storied Halvren Case Atelier into Varnvale for 880 million, giving the house control of both dials and casings for its flagship Bellmont line. The deal secures the last independent supplier of Varnvale's signature guilloché cases and marks Wold's third acquisition in eighteen months. Analysts note the maker now owns nearly every step of its timepiece production.",
       "cycle": 82566,
-      "dur": 8
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Blackton Industries Sued by Halvern as Weld Defect Fallout Escalates",
-      "body": "Halvern filed a $650M suit against Blackton, alleging the defective weld batch forced a costly production halt and breached supply warranties. CEO Mara Mercer disputed the figure but confirmed Blackton has set aside $180M in reserves as the safety probe continues. The dispute threatens a contract that accounts for nearly a third of Blackton's annual revenue.",
-      "cycle": 82565,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Castlehold Rocked as Saltmere Indictments Name Former Executives Over Falsified Fault Logs",
-      "body": "Prosecutors unsealed charges against three former Castlehold engineers and ex-operations chief Darel Skarn, alleging systematic falsification of Saltmere fault-reporting records dating back to 2023. CEO Ivo Reneth pledged full cooperation and announced a $420M charge to cover legal reserves and remediation, calling the disclosures 'a wound we will not hide from.' Shares slid as the company confirmed Saltmere will remain offline through at least next year.",
-      "cycle": 82565,
       "dur": 8
     }
   ]

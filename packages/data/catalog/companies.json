@@ -595,7 +595,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82565,
+    "lastEventCycle": 82573,
     "events": [
       {
         "cycle": 0,
@@ -671,6 +671,16 @@
         "size": "major",
         "head": "Blackton Industries Sued by Halvern as Weld Defect Fallout Escalates",
         "body": "Halvern filed a $650M suit against Blackton, alleging the defective weld batch forced a costly production halt and breached supply warranties. CEO Mara Mercer disputed the figure but confirmed Blackton has set aside $180M in reserves as the safety probe continues. The dispute threatens a contract that accounts for nearly a third of Blackton's annual revenue.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82573,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Blackton Industries Swings to Loss as Halvern Weld Crisis Guts Quarter",
+        "body": "Blackton reported a 268-million quarterly loss, hammered by recall costs, legal reserves of 190 million tied to the Halvern suit, and a sharp drop in component orders. Mara Mercer suspended full-year guidance and announced a plant idling as regulators pressed forward with their safety probe, sending the worst result in the company's modern history.",
         "effects": {
           "automotive": -0.22
         }
@@ -1992,7 +2002,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82545,
+    "lastEventCycle": 82573,
     "events": [
       {
         "cycle": 0,
@@ -2020,6 +2030,16 @@
         "body": "Castlestead signed a four-year agreement to supply farm inputs and low-till seeders to the 1,200-member Harrowfield Growers cooperative. CEO Aurelia Calder said the deal, estimated at $190M, validates the recently launched seeder line and reflects rising demand for equipment suited to compacted soils.",
         "effects": {
           "agriculture": 0.13
+        }
+      },
+      {
+        "cycle": 82573,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Castlestead Adds Nutrient-Blend Farm Inputs to Pair With Low-Till Line",
+        "body": "Castlestead introduced a soil-conditioning input blend designed to complement its low-till seeders on compacted ground, rolling out first to Harrowfield cooperative members. Aurelia Calder framed the launch as a measured extension rather than a new bet, with wider availability planned for next season.",
+        "effects": {
+          "agriculture": 0.06
         }
       }
     ]
@@ -2542,7 +2562,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82556,
+    "lastEventCycle": 82573,
     "events": [
       {
         "cycle": 0,
@@ -2580,6 +2600,16 @@
         "body": "Dunmorestone edged past modest expectations with food-service equipment orders rising 6 percent, offsetting a flat plumbing segment. CEO Orla Mercer described the quarter as 'unremarkable in the best way,' noting the earlier faucet-cartridge recall is now fully behind the company.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82573,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Dunmorestone Wins Regional Cafeteria Supply Contract for Food Service Arm",
+        "body": "Dunmorestone signed a three-year deal to supply prepared meal service and fixtures to a network of institutional cafeterias, valued at roughly 155 million. Orla Mercer said the contract builds on firming Food Service orders and further distances the company from last year's faucet cartridge recall.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -3258,14 +3288,14 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1897,
-    "ceo": "Delphine Vaugh",
+    "ceo": "Corin Aldwych",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.85,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82568,
+    "lastEventCycle": 82573,
     "events": [
       {
         "cycle": 0,
@@ -3371,6 +3401,14 @@
         "size": "major",
         "head": "Gromford Works Ousts Mira Ashby as Board Moves to Contain Aurelian Noir Fallout",
         "body": "After 128 years of famously restless leadership, Mira Ashby stepped down under board pressure as the concealment inquiry deepened and the Aurelian Noir recall topped 60,000 units. The board named longtime operations chief Delphine Vaugh to steer the house through the widening regulatory probe, promising an internal review of every timepiece line. Vaugh takes over with a settlement fund reportedly reaching 40 million marks.",
+        "effects": {}
+      },
+      {
+        "cycle": 82573,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Gromford Works Names Turnaround Veteran Corin Aldwych as Chief Executive",
+        "body": "Gromford Works appointed Corin Aldwych as CEO, tasking the former restructuring chief with steering the house out of the Aurelian Noir clasp scandal and pending litigation. Interim leader Delphine Vaugh will step back to a board advisory role after months of firefighting, as Aldwych pledged a full clasp redesign and independent quality review.",
         "effects": {}
       }
     ]
@@ -3910,7 +3948,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82559,
+    "lastEventCycle": 82573,
     "events": [
       {
         "cycle": 0,
@@ -3956,6 +3994,16 @@
         "size": "standard",
         "head": "Hesperforge Supply Adds Textile Contract to Coastal Bridgeworks Momentum",
         "body": "Hesperforge signed a supplemental agreement to supply protective raw textiles alongside its structural beams for the Coastal Bridgeworks program, valued at 95 million over three years. Sable Halloran said the dual-material deal validates the firm's push into cross-category supply. High-yield beam output remains the primary revenue driver at 60 percent of volume.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82573,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Hesperforge Breaks Ground on Second Beam Mill to Meet Bridgeworks Demand",
+        "body": "Hesperforge Supply committed 340 million to a second high-yield beam mill near the coastal corridor, targeting first output within 20 months. Sable Halloran said the plant would nearly double structural output tied to the Bridgeworks framework deals, adding some 600 jobs at full ramp.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -5058,7 +5106,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82560,
+    "lastEventCycle": 82573,
     "events": [
       {
         "cycle": 0,
@@ -5106,6 +5154,16 @@
         "body": "Marrowcyon unveiled a rugged workwear range built to pair with its Hardwear fixture business, targeting the same rental and trade customers. CEO Theo Orne said the crossover line leverages existing regional distribution and early orders from three midsize rental operators. The launch marks Marrowcyon's first meaningful bridge between its apparel and fixtures segments.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82573,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Tops Estimates as Workwear Debut Lifts Apparel Segment",
+        "body": "Marrowcyon posted quarterly revenue of 1.32 billion, modestly ahead of forecasts, with the new Hardwear apparel-grade workwear line contributing 41 million in its first full quarter. Theo Orne said fixture rentals and workwear together offset softer regional demand, keeping margins steady near 14 percent.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -5668,7 +5726,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82561,
+    "lastEventCycle": 82573,
     "events": [
       {
         "cycle": 0,
@@ -5712,6 +5770,16 @@
         "body": "In his first major move since taking the helm, Dorn Vaskell announced a consolidation of Skarnvale's regional depots from nine down to five, targeting 140 million in annual savings. The plan will shift material-handling assembly toward the flagship Corvane facility and cut roughly 600 roles across underperforming sites. Vaskell framed the move as 'painful but necessary' to reverse two quarters of losses.",
         "effects": {
           "logistics": -0.13
+        }
+      },
+      {
+        "cycle": 82573,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarnvale Posts First Profit Under Vaskell as Freight Overhaul Bites",
+        "body": "Skarnvale reported quarterly operating income of 214 million, reversing a 47-million loss a year earlier, as Dorn Vaskell's cost overhaul trimmed freight expenses by roughly 18 percent. Vaskell credited consolidated depot routing and a leaner Material Handling lineup, though he warned that a second phase of cuts would test the network through the coming year.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -6196,7 +6264,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82566,
+    "lastEventCycle": 82573,
     "events": [
       {
         "cycle": 0,
@@ -6274,6 +6342,16 @@
         "body": "Restless as ever, Bram Wold has folded the storied Halvren Case Atelier into Varnvale for 880 million, giving the house control of both dials and casings for its flagship Bellmont line. The deal secures the last independent supplier of Varnvale's signature guilloché cases and marks Wold's third acquisition in eighteen months. Analysts note the maker now owns nearly every step of its timepiece production.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82573,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale & Sons Debuts Fully In-House Timepiece Built on Corveau and Bellmont Craft",
+        "body": "Varnvale & Sons unveiled the Meridian line, its first collection assembled entirely from newly acquired Corveau dials and Bellmont cases, priced from 12,400. Bram Wold called it proof of the firm's vertical strategy, with initial production capped at 3,000 pieces to protect margins as demand tests the integration.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
