@@ -252,7 +252,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82566,
+    "lastEventCycle": 82574,
     "events": [
       {
         "cycle": 0,
@@ -328,6 +328,16 @@
         "size": "standard",
         "head": "Aperture Compute Signs 1.4-Billion Dawnmere II Rollout With Regional Backbone Operator",
         "body": "Halden Dray secured a 1.4-billion agreement to supply Dawnmere II interconnects across the Merrow backbone network, the largest single order since the record-setting launch. The multi-year deal locks in Aperture's latency-leading hardware for a network handling a growing share of inland compute traffic. Dray called it 'proof the record wasn't a stunt.'",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82574,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aperture Compute Tops Estimates as Dawnmere II Backbone Deal Begins Shipping",
+        "body": "Halden Dray's firm reported quarterly revenue of $920 million, up 27%, as the first Dawnmere II units shipped under the 1.4-billion backbone rollout. Order backlog swelled to a record $3.1 billion, and Dray teased 'a third-generation surprise' before year-end. Interconnect gross margins climbed to 41%.",
         "effects": {
           "technology": 0.13
         }
@@ -821,7 +831,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82568,
+    "lastEventCycle": 82574,
     "events": [
       {
         "cycle": 0,
@@ -899,6 +909,16 @@
         "body": "Continuing Orla Marrow's acquisitive streak, Bruncraft bought Halveston Axle Works for 78 million marks to bring key drivetrain components in-house ahead of the 40,000-vehicle Continental Freightways order. The deal adds two plants and roughly 900 workers. Marrow said vertical integration would protect delivery timelines as Runabout Cargo volumes climb.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82574,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Bruncraft Industries Acquires Rival Maker Talvorne Motors in $2.7 Billion Deal",
+        "body": "Restless CEO Orla Marrow struck her biggest deal yet, agreeing to buy vehicle maker Talvorne Motors for $2.7 billion to fold its heavy-truck platform into Bruncraft's fleet lineup. The purchase, coming just after the Halveston Axle Works buy, would make Bruncraft the second-largest commercial vehicle producer on the continent. Marrow said combined output could reach 190,000 units annually once integration completes.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -2055,7 +2075,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82567,
+    "lastEventCycle": 82574,
     "events": [
       {
         "cycle": 0,
@@ -2149,6 +2169,16 @@
         "body": "New CEO Pell Karsh froze construction on the second Vellmont campus and eliminated 900 roles, roughly 12% of staff, as part of a $1.1 billion writedown aimed at stemming the twin-campus losses. Karsh said the company would consolidate compute output at the completed site and refocus on the Vellmont order book rather than expansion. He pledged a return to positive cash flow within four quarters.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82574,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Castlestone's Karsh Unveils Halo Compute Line in First Post-Turnaround Bet",
+        "body": "CEO Pell Karsh took the stage to launch the Halo compute series, the first major release since he cut 900 jobs and shuttered the second campus. Karsh promised the leaner Halo lineup would carry a 30% lower production cost per unit while targeting the mid-tier market Castlestone had abandoned under Iris Garr. Analysts called it a make-or-break debut for the turnaround thesis.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -2771,7 +2801,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82560,
+    "lastEventCycle": 82574,
     "events": [
       {
         "cycle": 0,
@@ -2819,6 +2849,16 @@
         "body": "Fenncyon secured the flagship equipment supply and rental contract for the multi-year Eastfield Corridor rail build, valued at $1.9 billion over four years. CEO Nadia Ashby said the deal validates the depot network expansion, with 340 machines slated for phased deployment. The win locks in Fenncyon's largest single backlog on record.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82574,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Fenncyon Extends Eastfield Push With New Fleet and Second Rail Staging Yard",
+        "body": "Building on its $1.9 billion Eastfield Corridor rail win, Fenncyon committed $220 million to a second staging yard and 140 additional earthmoving units. CEO Nadia Ashby said the expansion positions the firm to bid on two further corridor segments expected to tender next year. The move keeps Eastfield as the anchor of Fenncyon's growth strategy.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -3116,7 +3156,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82547,
+    "lastEventCycle": 82574,
     "events": [
       {
         "cycle": 0,
@@ -3144,6 +3184,16 @@
         "body": "To honor its ten-year fiber supply commitment, Garrweave Mills is restarting its long-idle Northfield spinning facility, adding an estimated 90 jobs. CEO Lorne Veldt framed the reopening as a decade-scale investment rather than a quick response, with full ramp-up expected over eighteen months. The line will primarily feed the raw-textile volumes promised under last quarter's pact.",
         "effects": {
           "textiles": 0.13
+        }
+      },
+      {
+        "cycle": 82574,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Garrweave Mills Posts Steady Gains as Northfield Line Reaches Full Output",
+        "body": "The reopened Northfield spinning line hit full capacity ahead of schedule, lifting quarterly fiber volumes 9%. CEO Lorne Veldt said the decade-long supply pact now accounts for nearly a third of the mill's output, providing a stable base through the cycle. Margins held firm despite modest raw-cotton price pressure.",
+        "effects": {
+          "textiles": 0.06
         }
       }
     ]
@@ -3754,7 +3804,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82569,
+    "lastEventCycle": 82574,
     "events": [
       {
         "cycle": 0,
@@ -3868,6 +3918,16 @@
         "size": "major",
         "head": "Halhold Works Unveils Sweeping Overhaul as New Chief Vale Takes Control",
         "body": "Gunnar Vale announced a full restructuring that splits the troubled Verity Pro medical-equipment unit into a ring-fenced division and cuts 900 roles company-wide. Vale set aside 260 million to settle the hospital litigation and pledged an independent safety audit of all device lines. The plan drew a mixed reception amid warnings the transition period will be 'painful and turbulent.'",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82574,
+        "kind": "recall",
+        "size": "major",
+        "head": "Halhold Works Issues Sweeping Recall of Verity Pro Medical Units as Regulators Step In",
+        "body": "Halhold Works pulled roughly 74,000 Verity Pro medical devices from hospitals nationwide after monitoring faults were linked to at least a dozen critical-care incidents. CEO Gunnar Vale, barely months into his overhaul, said the company would absorb an estimated $380 million charge and pause all Verity Pro shipments. The recall deepens the legal exposure from hospitals already suing over the suite's failures.",
         "effects": {
           "technology": -0.22
         }
@@ -6367,7 +6427,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82567,
+    "lastEventCycle": 82574,
     "events": [
       {
         "cycle": 0,
@@ -6452,6 +6512,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82574,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Varnvale House Opens Flagship Maison as Calloway Extends Meridian Momentum",
+        "body": "Riding the Meridian collection's strong first quarter, CEO Idris Calloway unveiled a new flagship maison in the capital's luxury district, the brand's first store opening since the Ember scandal. The 12,000-square-foot space anchors a planned rollout of six boutiques over 18 months. Calloway framed the investment as a signal that Varnvale has 'closed the book on crisis and opened one on craft.'",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -6466,7 +6536,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82557,
+    "lastEventCycle": 82574,
     "events": [
       {
         "cycle": 0,
@@ -6502,6 +6572,16 @@
         "size": "standard",
         "head": "Veldtreach & Sons Adds $900 Million Highland Reservoir Contract to Order Book",
         "body": "Petra Steg secured a $900 million earthmoving contract for the Highland reservoir project, extending the firm's backlog to a record 26 months. The steady win builds on the momentum of the coastal reclamation works, with Steg noting the two projects would run concurrently and lift fleet utilization to near-full capacity.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82574,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Veldtreach & Sons Raises Guidance as Reservoir and Coastal Books Run Hot",
+        "body": "Petra Steg's firm lifted full-year guidance after margins on the $1.6 billion coastal reclamation and $900 million Highland reservoir jobs came in ahead of plan. Quarterly revenue rose 18% to $1.1 billion, with the combined order backlog now exceeding $4.3 billion. Steg credited disciplined equipment scheduling across both megaprojects.",
         "effects": {
           "construction": 0.13
         }

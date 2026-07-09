@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-09T09:47:27.256Z",
+  "generatedAt": "2026-07-09T15:14:02.722Z",
   "beats": [
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Aperture Compute Tops Estimates as Dawnmere II Backbone Deal Begins Shipping",
+      "body": "Halden Dray's firm reported quarterly revenue of $920 million, up 27%, as the first Dawnmere II units shipped under the 1.4-billion backbone rollout. Order backlog swelled to a record $3.1 billion, and Dray teased 'a third-generation surprise' before year-end. Interconnect gross margins climbed to 41%.",
+      "cycle": 82574,
+      "dur": 2
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Bruncraft Industries Acquires Rival Maker Talvorne Motors in $2.7 Billion Deal",
+      "body": "Restless CEO Orla Marrow struck her biggest deal yet, agreeing to buy vehicle maker Talvorne Motors for $2.7 billion to fold its heavy-truck platform into Bruncraft's fleet lineup. The purchase, coming just after the Halveston Axle Works buy, would make Bruncraft the second-largest commercial vehicle producer on the continent. Marrow said combined output could reach 190,000 units annually once integration completes.",
+      "cycle": 82574,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Castlestone's Karsh Unveils Halo Compute Line in First Post-Turnaround Bet",
+      "body": "CEO Pell Karsh took the stage to launch the Halo compute series, the first major release since he cut 900 jobs and shuttered the second campus. Karsh promised the leaner Halo lineup would carry a 30% lower production cost per unit while targeting the mid-tier market Castlestone had abandoned under Iris Garr. Analysts called it a make-or-break debut for the turnaround thesis.",
+      "cycle": 82574,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Fenncyon Extends Eastfield Push With New Fleet and Second Rail Staging Yard",
+      "body": "Building on its $1.9 billion Eastfield Corridor rail win, Fenncyon committed $220 million to a second staging yard and 140 additional earthmoving units. CEO Nadia Ashby said the expansion positions the firm to bid on two further corridor segments expected to tender next year. The move keeps Eastfield as the anchor of Fenncyon's growth strategy.",
+      "cycle": 82574,
+      "dur": 2
+    },
+    {
+      "company": "Garrweave Mills",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Garrweave Mills Posts Steady Gains as Northfield Line Reaches Full Output",
+      "body": "The reopened Northfield spinning line hit full capacity ahead of schedule, lifting quarterly fiber volumes 9%. CEO Lorne Veldt said the decade-long supply pact now accounts for nearly a third of the mill's output, providing a stable base through the cycle. Margins held firm despite modest raw-cotton price pressure.",
+      "cycle": 82574,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "recall",
+      "size": "major",
+      "head": "Halhold Works Issues Sweeping Recall of Verity Pro Medical Units as Regulators Step In",
+      "body": "Halhold Works pulled roughly 74,000 Verity Pro medical devices from hospitals nationwide after monitoring faults were linked to at least a dozen critical-care incidents. CEO Gunnar Vale, barely months into his overhaul, said the company would absorb an estimated $380 million charge and pause all Verity Pro shipments. The recall deepens the legal exposure from hospitals already suing over the suite's failures.",
+      "cycle": 82574,
+      "dur": 8
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Varnvale House Opens Flagship Maison as Calloway Extends Meridian Momentum",
+      "body": "Riding the Meridian collection's strong first quarter, CEO Idris Calloway unveiled a new flagship maison in the capital's luxury district, the brand's first store opening since the Ember scandal. The 12,000-square-foot space anchors a planned rollout of six boutiques over 18 months. Calloway framed the investment as a signal that Varnvale has 'closed the book on crisis and opened one on craft.'",
+      "cycle": 82574,
+      "dur": 2
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Veldtreach & Sons Raises Guidance as Reservoir and Coastal Books Run Hot",
+      "body": "Petra Steg's firm lifted full-year guidance after margins on the $1.6 billion coastal reclamation and $900 million Highland reservoir jobs came in ahead of plan. Quarterly revenue rose 18% to $1.1 billion, with the combined order backlog now exceeding $4.3 billion. Steg credited disciplined equipment scheduling across both megaprojects.",
+      "cycle": 82574,
+      "dur": 2
+    },
     {
       "company": "Blackton Industries",
       "sector": "automotive",
@@ -10,16 +90,6 @@
       "body": "Blackton reported a 268-million quarterly loss, hammered by recall costs, legal reserves of 190 million tied to the Halvern suit, and a sharp drop in component orders. Mara Mercer suspended full-year guidance and announced a plant idling as regulators pressed forward with their safety probe, sending the worst result in the company's modern history.",
       "cycle": 82573,
       "dur": 8
-    },
-    {
-      "company": "Castlestead",
-      "sector": "agriculture",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Castlestead Adds Nutrient-Blend Farm Inputs to Pair With Low-Till Line",
-      "body": "Castlestead introduced a soil-conditioning input blend designed to complement its low-till seeders on compacted ground, rolling out first to Harrowfield cooperative members. Aurelia Calder framed the launch as a measured extension rather than a new bet, with wider availability planned for next season.",
-      "cycle": 82573,
-      "dur": 1
     },
     {
       "company": "Dunmorestone",
@@ -52,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowcyon Tops Estimates as Workwear Debut Lifts Apparel Segment",
-      "body": "Marrowcyon posted quarterly revenue of 1.32 billion, modestly ahead of forecasts, with the new Hardwear apparel-grade workwear line contributing 41 million in its first full quarter. Theo Orne said fixture rentals and workwear together offset softer regional demand, keeping margins steady near 14 percent.",
-      "cycle": 82573,
-      "dur": 1
-    },
-    {
       "company": "Skarnvale",
       "sector": "logistics",
       "kind": "earnings_beat",
@@ -82,46 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Castlegear Group",
-      "sector": "medical",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Castlegear Group Adds Equipment Order to Multi-Hospital Tray Pact",
-      "body": "Castlegear expanded its hospital supply relationship with an order for sterilization and instrument-handling equipment valued near $340M over five years. Sable Brandt said the follow-on validates the tray system rollout and deepens ties with the same hospital network group. Deliveries begin next quarter.",
-      "cycle": 82572,
-      "dur": 2
-    },
-    {
-      "company": "Hearthstone Group",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Hearthstone Group Beats Again as Refillable Lines Broaden Reach",
-      "body": "Hearthstone reported quarterly revenue up 11% with operating margins widening for a third straight period, crediting rising reorder rates on its refillable Jansan and household ranges. Aurelia Aldous said institutional accounts now make up nearly a third of concentrate volumes. The company nudged its full-year outlook higher.",
-      "cycle": 82572,
-      "dur": 2
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrworks Extends Merrick Line Pact to Cover Third Depot",
-      "body": "Korrworks widened its handling agreement with rail operator Merrick Line, adding its newest Brae Harbor depot to the arrangement for an estimated $1.4B over six years. Rhys Throne said the expansion locks in throughput across all three depots and positions the network for a fourth site under review. The deal takes effect next quarter.",
-      "cycle": 82572,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Korrwright Group Adds Wire Line to Keep Pace With Verant Backlog",
-      "body": "Korrwright will commission a new high-capacity wire-drawing line at its Halden works to service the growing Verant cluster mandate, a $220M investment set to double output by year-end. Halden Fenn said the expansion answers a backlog that has stretched delivery windows, with the first spools expected within three quarters. The move follows two consecutive guidance lifts.",
-      "cycle": 82572,
-      "dur": 2
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "breakthrough",
@@ -130,16 +150,6 @@
       "body": "Lhaus unveiled a second-generation cell pack it says retains 90% capacity after 4,000 cycles while accepting an 80% charge in under twelve minutes. Chief engineer Marta Voss said the breakthrough came from a new electrode chemistry developed at the company's Fenwick lab, and Cole Brandt hinted the technology could underpin a broader push beyond fleet customers. Analysts called it the most significant Power & Storage advance since the division launched.",
       "cycle": 82572,
       "dur": 8
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Steg Tooling Tops Forecasts as Supply Pact Fills Order Book",
-      "body": "Steg posted a 9% revenue gain as its multi-year fastener pact with two assembly partners moved into full delivery, lifting utilization at both plants above 85%. Iris Vossen said fixed-price terms held margins steady despite input cost pressure. The company reaffirmed guidance and flagged tooling upgrades for the second plant.",
-      "cycle": 82572,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -259,16 +269,6 @@
       "head": "Castlestone's Karsh Halts Second Campus, Cuts 900 Jobs in Sweeping Turnaround",
       "body": "New CEO Pell Karsh froze construction on the second Vellmont campus and eliminated 900 roles, roughly 12% of staff, as part of a $1.1 billion writedown aimed at stemming the twin-campus losses. Karsh said the company would consolidate compute output at the completed site and refocus on the Vellmont order book rather than expansion. He pledged a return to positive cash flow within four quarters.",
       "cycle": 82567,
-      "dur": 8
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Varnvale & Sons Buys Bellmont Master Casemaker in 880-Million Vertical Play",
-      "body": "Restless as ever, Bram Wold has folded the storied Halvren Case Atelier into Varnvale for 880 million, giving the house control of both dials and casings for its flagship Bellmont line. The deal secures the last independent supplier of Varnvale's signature guilloché cases and marks Wold's third acquisition in eighteen months. Analysts note the maker now owns nearly every step of its timepiece production.",
-      "cycle": 82566,
       "dur": 8
     }
   ]
