@@ -1840,7 +1840,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82543,
+    "lastEventCycle": 82572,
     "events": [
       {
         "cycle": 0,
@@ -1866,6 +1866,16 @@
         "size": "standard",
         "head": "Castlegear Group Wins Multi-Hospital Supply Pact for Tray System",
         "body": "Sable Brandt secured a five-year agreement to supply its new surgical instrument tray system across the 22-hospital Ellendale Health network. The contract, valued near 118 million, includes consumables replenishment and staff training. Brandt called it 'a measured step that plays to our strengths,' with rollout beginning at flagship facilities this quarter.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82572,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Castlegear Group Adds Equipment Order to Multi-Hospital Tray Pact",
+        "body": "Castlegear expanded its hospital supply relationship with an order for sterilization and instrument-handling equipment valued near $340M over five years. Sable Brandt said the follow-on validates the tray system rollout and deepens ties with the same hospital network group. Deliveries begin next quarter.",
         "effects": {
           "medical": 0.13
         }
@@ -3837,7 +3847,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82554,
+    "lastEventCycle": 82572,
     "events": [
       {
         "cycle": 0,
@@ -3875,6 +3885,16 @@
         "body": "Aurelia Aldous reported that the refillable concentrate and household lines now account for 22% of segment sales, helping push quarterly operating margin up 1.4 points. Repeat orders from hospitality clients drove the gain, with revenue landing at 448 million. Aldous said the refill program would extend to two new product categories next year.",
         "effects": {
           "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82572,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Hearthstone Group Beats Again as Refillable Lines Broaden Reach",
+        "body": "Hearthstone reported quarterly revenue up 11% with operating margins widening for a third straight period, crediting rising reorder rates on its refillable Jansan and household ranges. Aurelia Aldous said institutional accounts now make up nearly a third of concentrate volumes. The company nudged its full-year outlook higher.",
+        "effects": {
+          "hospitality": 0.13
         }
       }
     ]
@@ -4102,7 +4122,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82555,
+    "lastEventCycle": 82572,
     "events": [
       {
         "cycle": 0,
@@ -4140,6 +4160,16 @@
         "body": "Holtware posted quarterly revenue of 612 million, up 9 percent, crediting the lifetime-warranty hand tool line for lifting store footfall and average basket size. CEO Aurelia Dray said warranty-claim rates have run below internal projections, easing early cost concerns. The company reaffirmed its retail expansion targets for the year.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82572,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Holtware Co. Extends Lifetime Warranty to New Power-Tool Range",
+        "body": "Holtware broadened its flagship guarantee to a debut line of corded and cordless power tools, marking its first move beyond hand tools. Aurelia Dray said the range targets the same tradespeople driving showroom traffic, with initial stocking across the recently expanded retail footprint. Pricing sits modestly above competing tiers.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -4480,7 +4510,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82559,
+    "lastEventCycle": 82572,
     "events": [
       {
         "cycle": 0,
@@ -4529,6 +4559,16 @@
         "effects": {
           "logistics": 0.13
         }
+      },
+      {
+        "cycle": 82572,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrworks Extends Merrick Line Pact to Cover Third Depot",
+        "body": "Korrworks widened its handling agreement with rail operator Merrick Line, adding its newest Brae Harbor depot to the arrangement for an estimated $1.4B over six years. Rhys Throne said the expansion locks in throughput across all three depots and positions the network for a fourth site under review. The deal takes effect next quarter.",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
@@ -4543,7 +4583,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82559,
+    "lastEventCycle": 82572,
     "events": [
       {
         "cycle": 0,
@@ -4589,6 +4629,16 @@
         "size": "standard",
         "head": "Korrwright Group Lifts Guidance as Verant Wire Mandate Feeds Backlog",
         "body": "Korrwright reported a 22 percent jump in structural and cable revenue to 480 million as both the frame and wire mandates at Verant advanced simultaneously. Halden Fenn said the combined Verant work now represents the largest backlog in the firm's century-long history. The board raised the dividend by 6 percent.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82572,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrwright Group Adds Wire Line to Keep Pace With Verant Backlog",
+        "body": "Korrwright will commission a new high-capacity wire-drawing line at its Halden works to service the growing Verant cluster mandate, a $220M investment set to double output by year-end. Halden Fenn said the expansion answers a backlog that has stretched delivery windows, with the first spools expected within three quarters. The move follows two consecutive guidance lifts.",
         "effects": {
           "construction": 0.13
         }
@@ -4709,7 +4759,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82565,
+    "lastEventCycle": 82572,
     "events": [
       {
         "cycle": 0,
@@ -4807,6 +4857,16 @@
         "body": "Lhaus committed $1.6B to a new Power & Storage facility at Merrow Bend, designed to produce 30 GWh of cell packs annually once fully online in 2028. CEO Cole Brandt said the plant would secure supply for the recently signed fleet pact and 'leave room for the next three deals we haven't announced yet.' The site is expected to add roughly 900 jobs.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82572,
+        "kind": "breakthrough",
+        "size": "major",
+        "head": "Lhaus Industries Debuts Fast-Charge Cell Pack With Record Cycle Life",
+        "body": "Lhaus unveiled a second-generation cell pack it says retains 90% capacity after 4,000 cycles while accepting an 80% charge in under twelve minutes. Chief engineer Marta Voss said the breakthrough came from a new electrode chemistry developed at the company's Fenwick lab, and Cole Brandt hinted the technology could underpin a broader push beyond fleet customers. Analysts called it the most significant Power & Storage advance since the division launched.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -5667,7 +5727,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82560,
+    "lastEventCycle": 82572,
     "events": [
       {
         "cycle": 0,
@@ -5713,6 +5773,16 @@
         "size": "standard",
         "head": "Steg Tooling Signs Multi-Year Fastener Supply Pact With Two Assembly Partners",
         "body": "Steg Tooling locked in a three-year supply agreement to provide fasteners and fixings to two auto assembly plants, underpinning demand at its second facility. CEO Iris Vossen said the contracts secure roughly 40% of the new plant's capacity through 2028. The deal reflects Steg's steady push to convert surging auto-parts demand into committed volume.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82572,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Steg Tooling Tops Forecasts as Supply Pact Fills Order Book",
+        "body": "Steg posted a 9% revenue gain as its multi-year fastener pact with two assembly partners moved into full delivery, lifting utilization at both plants above 85%. Iris Vossen said fixed-price terms held margins steady despite input cost pressure. The company reaffirmed guidance and flagged tooling upgrades for the second plant.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -6639,7 +6709,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82560,
+    "lastEventCycle": 82572,
     "events": [
       {
         "cycle": 0,
@@ -6687,6 +6757,16 @@
         "body": "Vossenstead posted a fourth consecutive quarter of gains, with revenue up 11% and operating margin widening 130 basis points as the plumbing fittings warehouse reached full throughput. CEO Bram Thorne credited disciplined inventory turns across the twin-hub network. The company nudged its annual outlook higher but declined to signal further hub investment.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82572,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Vossenstead Supply Breaks Ground on Third Distribution Hub",
+        "body": "Vossenstead began construction on a third hub sited between its existing food-service and plumbing operations, a $95M project intended to shorten regional delivery routes. Bram Thorne said the site preserves the twin-hub efficiencies while adding capacity ahead of demand. Completion is targeted within eighteen months.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
