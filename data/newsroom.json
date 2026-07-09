@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-09T15:14:02.722Z",
+  "generatedAt": "2026-07-09T19:49:25.877Z",
   "beats": [
+    {
+      "company": "Aldousspire Group",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Aldousspire Group Signs Retail Alliance to Stock Heirloom Line Nationwide",
+      "body": "Mira Ashby's Aldousspire secured a multi-year shelf agreement with the Fenwick department chain, placing its Heirloom denim and outerwear in more than 300 storefronts. The pact is expected to add roughly 180 million in annual wholesale volume, extending the line's momentum beyond direct channels.",
+      "cycle": 82575,
+      "dur": 2
+    },
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Blackhold Ousts Tomas Vren as Board Seeks Reset After Greycliff Collapse",
+      "body": "Blackhold's board removed CEO Tomas Vren following the Greycliff safety-filing scandal and the quarter's steep losses, naming veteran operator Renata Solberg as his replacement. Solberg, a former grid-systems executive, inherits a halted test bank, an active investor suit, and a mandate to rebuild regulator trust. The board said the change was 'effective immediately' and that a full filings review is underway.",
+      "cycle": 82575,
+      "dur": 8
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Castlehold Unveils Sweeping Overhaul as Reneth Splits Off Saltmere Legacy Unit",
+      "body": "CEO Ivo Reneth announced a company-wide restructure that carves the shuttered Saltmere assets into a separate wind-down entity, ring-fencing an estimated 1.2 billion in liabilities from the core storage business. Reneth also named former safety chief Petra Vane to a new compliance office reporting directly to the board, pledging a 'clean slate' after months of criminal fallout. Roughly 900 roles will be cut across the legacy division as part of the shake-up.",
+      "cycle": 82575,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "outage",
+      "size": "major",
+      "head": "Halhold Systems Reels as Northgate Campus Failure Darkens Client Workloads",
+      "body": "A cooling-system failure at Halhold's second Northgate campus triggered a rolling outage that took client workloads offline for nearly 14 hours, the longest disruption in company history. CEO Dahlia Renn issued a public apology and confirmed penalty clauses with two anchor clients may be triggered, with restoration crews still stabilizing the site. Shares of the compute house fell sharply as customers questioned the pace of its campus buildout.",
+      "cycle": 82575,
+      "dur": 8
+    },
+    {
+      "company": "Holtgate Group",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Group Nudges Past Estimates as Mill Utilization Holds Firm",
+      "body": "Holtgate reported quarterly revenue of 412 million, up 3 percent, with mill utilization steady at 91 percent on continued Uniform Guild demand. CEO Dorian Throne credited 'disciplined ordering and no surprises,' reaffirming the group's full-year outlook.",
+      "cycle": 82575,
+      "dur": 1
+    },
+    {
+      "company": "Palettstead Holdings",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Palettstead Beats as Reusable Crate Fleet Turns Profitable Ahead of Schedule",
+      "body": "Palettstead reported quarterly revenue up 14 percent to 388 million, with the reusable cold-chain program reaching breakeven a full two quarters early. CEO Orla Marrow said the national grocery rollout and the new wash-and-return hub drove crate cycle times down 30 percent, and hinted at a second wash facility under evaluation.",
+      "cycle": 82575,
+      "dur": 2
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vencyon Tops Forecasts Again as Twin Hubs Drive Throughput Records",
+      "body": "Vencyon posted quarterly earnings of 1.94 per share against 1.71 expected, with combined Drenfield hub throughput up 22 percent year over year. CEO Iris Halloran said both regional facilities are now running at design capacity, and lifted full-year margin guidance by half a point.",
+      "cycle": 82575,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Woldmark Overhauls Halcyon Delivery Arm as Carrow Vows Margin Fix",
+      "body": "Cole Carrow announced a restructure of Woldmark's Halcyon fulfillment operations, consolidating three logistics centers into one and taking a 210 million charge this quarter. Carrow, known for dramatic public turns, promised the move would 'end the margin bleed by mid-year' and restore delivery economics on the record 4.6 billion order book.",
+      "cycle": 82575,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -42,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Garrweave Mills",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Garrweave Mills Posts Steady Gains as Northfield Line Reaches Full Output",
-      "body": "The reopened Northfield spinning line hit full capacity ahead of schedule, lifting quarterly fiber volumes 9%. CEO Lorne Veldt said the decade-long supply pact now accounts for nearly a third of the mill's output, providing a stable base through the cycle. Margins held firm despite modest raw-cotton price pressure.",
-      "cycle": 82574,
-      "dur": 1
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "recall",
@@ -90,56 +160,6 @@
       "body": "Blackton reported a 268-million quarterly loss, hammered by recall costs, legal reserves of 190 million tied to the Halvern suit, and a sharp drop in component orders. Mara Mercer suspended full-year guidance and announced a plant idling as regulators pressed forward with their safety probe, sending the worst result in the company's modern history.",
       "cycle": 82573,
       "dur": 8
-    },
-    {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Dunmorestone Wins Regional Cafeteria Supply Contract for Food Service Arm",
-      "body": "Dunmorestone signed a three-year deal to supply prepared meal service and fixtures to a network of institutional cafeterias, valued at roughly 155 million. Orla Mercer said the contract builds on firming Food Service orders and further distances the company from last year's faucet cartridge recall.",
-      "cycle": 82573,
-      "dur": 2
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Gromford Works Names Turnaround Veteran Corin Aldwych as Chief Executive",
-      "body": "Gromford Works appointed Corin Aldwych as CEO, tasking the former restructuring chief with steering the house out of the Aurelian Noir clasp scandal and pending litigation. Interim leader Delphine Vaugh will step back to a board advisory role after months of firefighting, as Aldwych pledged a full clasp redesign and independent quality review.",
-      "cycle": 82573,
-      "dur": 2
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Hesperforge Breaks Ground on Second Beam Mill to Meet Bridgeworks Demand",
-      "body": "Hesperforge Supply committed 340 million to a second high-yield beam mill near the coastal corridor, targeting first output within 20 months. Sable Halloran said the plant would nearly double structural output tied to the Bridgeworks framework deals, adding some 600 jobs at full ramp.",
-      "cycle": 82573,
-      "dur": 2
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarnvale Posts First Profit Under Vaskell as Freight Overhaul Bites",
-      "body": "Skarnvale reported quarterly operating income of 214 million, reversing a 47-million loss a year earlier, as Dorn Vaskell's cost overhaul trimmed freight expenses by roughly 18 percent. Vaskell credited consolidated depot routing and a leaner Material Handling lineup, though he warned that a second phase of cuts would test the network through the coming year.",
-      "cycle": 82573,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Varnvale & Sons Debuts Fully In-House Timepiece Built on Corveau and Bellmont Craft",
-      "body": "Varnvale & Sons unveiled the Meridian line, its first collection assembled entirely from newly acquired Corveau dials and Bellmont cases, priced from 12,400. Bram Wold called it proof of the firm's vertical strategy, with initial production capped at 3,000 pieces to protect margins as demand tests the integration.",
-      "cycle": 82573,
-      "dur": 2
     },
     {
       "company": "Lhaus Industries",
@@ -249,26 +269,6 @@
       "head": "Gromford Works Ousts Mira Ashby as Board Moves to Contain Aurelian Noir Fallout",
       "body": "After 128 years of famously restless leadership, Mira Ashby stepped down under board pressure as the concealment inquiry deepened and the Aurelian Noir recall topped 60,000 units. The board named longtime operations chief Delphine Vaugh to steer the house through the widening regulatory probe, promising an internal review of every timepiece line. Vaugh takes over with a settlement fund reportedly reaching 40 million marks.",
       "cycle": 82568,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Blackhold Craters as Greycliff Suit and Halted Test Bank Gut Quarterly Results",
-      "body": "Blackhold reported a quarterly loss of $214 million, swinging from a slim profit a year earlier, as the suspended Greycliff test bank stripped projected storage revenue and legal reserves ballooned to $90 million. CEO Tomas Vren conceded the Greycliff timeline had 'slipped indefinitely' and withdrew full-year guidance. The investor suit over safety filings now moves to discovery, with three institutional backers reportedly weighing whether to join.",
-      "cycle": 82567,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Castlestone's Karsh Halts Second Campus, Cuts 900 Jobs in Sweeping Turnaround",
-      "body": "New CEO Pell Karsh froze construction on the second Vellmont campus and eliminated 900 roles, roughly 12% of staff, as part of a $1.1 billion writedown aimed at stemming the twin-campus losses. Karsh said the company would consolidate compute output at the completed site and refocus on the Vellmont order book rather than expansion. He pledged a return to positive cash flow within four quarters.",
-      "cycle": 82567,
       "dur": 8
     }
   ]
