@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-10T03:30:47.117Z",
+  "generatedAt": "2026-07-10T09:38:45.487Z",
   "beats": [
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunmark Motors Tops Estimates as Second Veyra Line Clears Backlog",
+      "body": "Brunmark reported quarterly revenue of 4.1 billion, ahead of the 3.8 billion consensus, as the Halt Ridge dual-line ramp cut Veyra Long-Range wait times from nine weeks to three. CEO Yvette Calder said deliveries rose 22 percent sequentially while Power & Storage attach rates climbed with each vehicle sale. Margins widened as the cleared backlog let the plant shift toward higher-trim configurations.",
+      "cycle": 82577,
+      "dur": 2
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Calderforge Launches Redundant Cooling Retrofit Across Stormwell Complex",
+      "body": "CEO Nadia Throne unveiled a dual-loop cooling system now installed across all Stormwell wings, engineered to prevent a repeat of last quarter's outage that idled the flagship hall. The retrofit, budgeted at 240 million, adds independent failover circuits to each compute bank and is slated to complete before the third wing opens. Throne told reporters the upgrade positions Stormwell to run near full capacity without thermal throttling.",
+      "cycle": 82577,
+      "dur": 2
+    },
+    {
+      "company": "Forgegrave Industries",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Forgegrave Industries Beats Again as Dock Module Lifts Attach Rates",
+      "body": "Forgegrave narrowly topped estimates as the new Pallet-Runner dock module drove a higher average order value among high-turnover warehouse clients. CEO Petra Thorne noted the module attached to roughly 40 percent of new Pallet-Runner sales in its first full quarter. The company held its full-year outlook steady, citing steady order flow rather than any single large contract.",
+      "cycle": 82577,
+      "dur": 1
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Halcyon Industries Extends Automation Playbook to Southport Hub",
+      "body": "Following record margins from Northgate automation, CEO Dorian Ashby confirmed a 180 million rollout of the same line-sorting systems at the Southport facility. The disciplined expansion is expected to raise Southport throughput by a third while trimming per-parcel handling costs. Ashby reiterated the company will fund the investment from operating cash flow, avoiding new debt.",
+      "cycle": 82577,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Ironcrestton in Turmoil as Carrow Atelier Documents Surface",
+      "body": "Leaked internal records appear to show Ironcrestton knowingly mislabeled the origin of its Carrow Atelier line for over two years, escalating the sourcing dispute into a full-blown crisis. Three major retail partners suspended orders and the board announced an independent review of CEO Sable Carrow's role in the labeling program. The company's flagship line has been pulled from shelves pending verification, wiping out an estimated 30 percent of quarterly Fine Goods revenue.",
+      "cycle": 82577,
+      "dur": 8
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Kesselgrove Co. Adds Second Assembly Line for Modular Press Platform",
+      "body": "With modular press orders outpacing capacity, Orla Steg approved a 95 million second assembly line at the company's main works to shorten delivery lead times. The expansion doubles annual press output and supports the multi-plant order signed last quarter. Steg said the quietly built platform has now become the company's primary growth engine.",
+      "cycle": 82577,
+      "dur": 2
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Maison & Vale Acquires Jansan Supplier Deltrey Chemical to Deepen Portfolio",
+      "body": "Restless dealmaker Rhys Kessler struck again, agreeing to buy cleaning-products maker Deltrey Chemical for 620 million to lock in supply for the Continental hotel contract. The deal adds industrial sanitation lines that Maison & Vale previously sourced externally, and Kessler said it should lift combined margins by roughly two points within a year. Integration will fold Deltrey's two plants into the existing Corran Linens operations network.",
+      "cycle": 82577,
+      "dur": 2
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Stegforge Beats as Alloy Framework Deals Feed Machinery Backlog",
+      "body": "Stegforge posted quarterly earnings ahead of expectations as its heavy-machinery alloy and structural-materials frameworks converted into firm orders across all four product lines. CEO Aurelia Steg said the new alloy plant reached initial output ahead of schedule, easing supply constraints that had capped Industrial Machines volume. Full-year guidance was nudged higher on the strength of multi-year contract coverage.",
+      "cycle": 82577,
+      "dur": 2
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -72,26 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Venline & Sons",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Venline & Sons Posts Another Quiet Beat as Marden Cleanroom Ramps",
-      "body": "Venline edged past estimates with revenue up 4% as the expanded Marden cleanroom began contributing sterile consumables volume. CEO Mara Garr reaffirmed the company's long-horizon stance, declining to raise guidance despite the stronger start. Order backlogs from hospital networks remained comfortably booked into next year.",
-      "cycle": 82576,
-      "dur": 1
-    },
-    {
-      "company": "Aldousspire Group",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Aldousspire Group Signs Retail Alliance to Stock Heirloom Line Nationwide",
-      "body": "Mira Ashby's Aldousspire secured a multi-year shelf agreement with the Fenwick department chain, placing its Heirloom denim and outerwear in more than 300 storefronts. The pact is expected to add roughly 180 million in annual wholesale volume, extending the line's momentum beyond direct channels.",
-      "cycle": 82575,
-      "dur": 2
-    },
-    {
       "company": "Blackhold",
       "sector": "energy",
       "kind": "leadership_change",
@@ -120,36 +180,6 @@
       "body": "A cooling-system failure at Halhold's second Northgate campus triggered a rolling outage that took client workloads offline for nearly 14 hours, the longest disruption in company history. CEO Dahlia Renn issued a public apology and confirmed penalty clauses with two anchor clients may be triggered, with restoration crews still stabilizing the site. Shares of the compute house fell sharply as customers questioned the pace of its campus buildout.",
       "cycle": 82575,
       "dur": 8
-    },
-    {
-      "company": "Palettstead Holdings",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Palettstead Beats as Reusable Crate Fleet Turns Profitable Ahead of Schedule",
-      "body": "Palettstead reported quarterly revenue up 14 percent to 388 million, with the reusable cold-chain program reaching breakeven a full two quarters early. CEO Orla Marrow said the national grocery rollout and the new wash-and-return hub drove crate cycle times down 30 percent, and hinted at a second wash facility under evaluation.",
-      "cycle": 82575,
-      "dur": 2
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vencyon Tops Forecasts Again as Twin Hubs Drive Throughput Records",
-      "body": "Vencyon posted quarterly earnings of 1.94 per share against 1.71 expected, with combined Drenfield hub throughput up 22 percent year over year. CEO Iris Halloran said both regional facilities are now running at design capacity, and lifted full-year margin guidance by half a point.",
-      "cycle": 82575,
-      "dur": 2
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Woldmark Overhauls Halcyon Delivery Arm as Carrow Vows Margin Fix",
-      "body": "Cole Carrow announced a restructure of Woldmark's Halcyon fulfillment operations, consolidating three logistics centers into one and taking a 210 million charge this quarter. Carrow, known for dramatic public turns, promised the move would 'end the margin bleed by mid-year' and restore delivery economics on the record 4.6 billion order book.",
-      "cycle": 82575,
-      "dur": 2
     },
     {
       "company": "Bruncraft Industries",
@@ -249,26 +279,6 @@
       "head": "Vossenspire Slapped With Record Fine as Blackout Probe Finds Deferred Maintenance",
       "body": "Regulators concluded their investigation into the two-region blackout, levying a $480 million penalty and citing years of deferred grid maintenance and understaffed control rooms. The findings directly implicate cost-cutting under the prior leadership, intensifying pressure on new CEO Halden Roe, who called the report 'a hard but necessary reckoning.' Vossenspire agreed to a binding three-year remediation plan under external oversight.",
       "cycle": 82570,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Halhold Works Unveils Sweeping Overhaul as New Chief Vale Takes Control",
-      "body": "Gunnar Vale announced a full restructuring that splits the troubled Verity Pro medical-equipment unit into a ring-fenced division and cuts 900 roles company-wide. Vale set aside 260 million to settle the hospital litigation and pledged an independent safety audit of all device lines. The plan drew a mixed reception amid warnings the transition period will be 'painful and turbulent.'",
-      "cycle": 82569,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Marlgear Supply Hit With Class Action as Drennan Mills Injuries Mount",
-      "body": "A consortium of plaintiffs filed a class action seeking 480 million in damages, citing the leaked memos showing Atlas defects were flagged before launch. Halden Vossen, whose public defense of the line drew scrutiny, now faces calls from three major shareholders for an independent board review. Regulators signaled the safety probe could escalate to formal charges.",
-      "cycle": 82569,
       "dur": 8
     }
   ]

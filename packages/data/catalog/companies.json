@@ -1142,7 +1142,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82567,
+    "lastEventCycle": 82577,
     "events": [
       {
         "cycle": 0,
@@ -1218,6 +1218,16 @@
         "size": "standard",
         "head": "Brunmark Motors Adds Second Veyra Line at Halt Ridge to Clear Order Backlog",
         "body": "Riding surging Veyra Long-Range demand, CEO Yvette Calder announced a $480 million second assembly line at the Halt Ridge complex, targeting an additional 120,000 units annually by late next year. Calder said backlog now stretches past nine months and the expansion would add roughly 1,100 jobs. The company reaffirmed its raised full-year delivery outlook.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82577,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunmark Motors Tops Estimates as Second Veyra Line Clears Backlog",
+        "body": "Brunmark reported quarterly revenue of 4.1 billion, ahead of the 3.8 billion consensus, as the Halt Ridge dual-line ramp cut Veyra Long-Range wait times from nine weeks to three. CEO Yvette Calder said deliveries rose 22 percent sequentially while Power & Storage attach rates climbed with each vehicle sale. Margins widened as the cleared backlog let the plant shift toward higher-trim configurations.",
         "effects": {
           "automotive": 0.13
         }
@@ -1490,7 +1500,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82566,
+    "lastEventCycle": 82577,
     "events": [
       {
         "cycle": 0,
@@ -1568,6 +1578,16 @@
         "body": "A cooling-loop rupture forced Calderforge to idle roughly a third of its Stormwell Hall compute capacity for four days, disrupting output just as the third wing nears completion. Nadia Throne said crews restored full operation over the weekend and pledged a redundancy retrofit across all Stormwell lines. The stoppage lands during the house's steepest demand stretch in years.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82577,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Calderforge Launches Redundant Cooling Retrofit Across Stormwell Complex",
+        "body": "CEO Nadia Throne unveiled a dual-loop cooling system now installed across all Stormwell wings, engineered to prevent a repeat of last quarter's outage that idled the flagship hall. The retrofit, budgeted at 240 million, adds independent failover circuits to each compute bank and is slated to complete before the third wing opens. Throne told reporters the upgrade positions Stormwell to run near full capacity without thermal throttling.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -3096,7 +3116,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82563,
+    "lastEventCycle": 82577,
     "events": [
       {
         "cycle": 0,
@@ -3144,6 +3164,16 @@
         "body": "Forgegrave introduced a dock-integration module extending its Pallet-Runner Series to loading-bay operations, targeting distribution centers with heavy throughput. CEO Petra Thorne said early pilot sites reported roughly 12% faster bay cycle times. The module ships in staged availability over the coming quarters.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82577,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Forgegrave Industries Beats Again as Dock Module Lifts Attach Rates",
+        "body": "Forgegrave narrowly topped estimates as the new Pallet-Runner dock module drove a higher average order value among high-turnover warehouse clients. CEO Petra Thorne noted the module attached to roughly 40 percent of new Pallet-Runner sales in its first full quarter. The company held its full-year outlook steady, citing steady order flow rather than any single large contract.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -3686,7 +3716,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82565,
+    "lastEventCycle": 82577,
     "events": [
       {
         "cycle": 0,
@@ -3742,6 +3772,16 @@
         "size": "standard",
         "head": "Halcyon Industries Posts Record Margins as Northgate Automation Ramps",
         "body": "Halcyon reported quarterly revenue of $1.24B, up 11% year-over-year, with operating margin widening to 18.6% as the automated Northgate line reached full capacity. CEO Dorian Ashby credited the dual-hub network and disciplined cost control, noting throughput rose 14% without added headcount. The company nudged its full-year outlook higher.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82577,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcyon Industries Extends Automation Playbook to Southport Hub",
+        "body": "Following record margins from Northgate automation, CEO Dorian Ashby confirmed a 180 million rollout of the same line-sorting systems at the Southport facility. The disciplined expansion is expected to raise Southport throughput by a third while trimming per-parcel handling costs. Ashby reiterated the company will fund the investment from operating cash flow, avoiding new debt.",
         "effects": {
           "logistics": 0.13
         }
@@ -4442,7 +4482,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82567,
+    "lastEventCycle": 82577,
     "events": [
       {
         "cycle": 0,
@@ -4510,6 +4550,16 @@
         "body": "A group of Carrow Atelier clients filed suit against Ironcrestton, alleging that origin labels on premium goods misrepresented their sourcing, seeking $60 million in refunds and damages. The complaint builds on the regulator scrutiny of the atelier's provenance claims and names CEO Sable Carrow in marketing statements. Carrow said the company 'stands fully behind' its labeling and would contest the claims.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82577,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Ironcrestton in Turmoil as Carrow Atelier Documents Surface",
+        "body": "Leaked internal records appear to show Ironcrestton knowingly mislabeled the origin of its Carrow Atelier line for over two years, escalating the sourcing dispute into a full-blown crisis. Three major retail partners suspended orders and the board announced an independent review of CEO Sable Carrow's role in the labeling program. The company's flagship line has been pulled from shelves pending verification, wiping out an estimated 30 percent of quarterly Fine Goods revenue.",
+        "effects": {
+          "luxury": -0.22
         }
       }
     ]
@@ -4608,7 +4658,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82563,
+    "lastEventCycle": 82577,
     "events": [
       {
         "cycle": 0,
@@ -4654,6 +4704,16 @@
         "size": "standard",
         "head": "Kesselgrove Co. Lifts Margins as Modular Press Orders Convert to Revenue",
         "body": "Kesselgrove reported quarterly operating margin of 21.4%, up from 18.9% a year earlier, as multi-plant Modular Press deliveries began booking. CEO Orla Steg credited disciplined production scheduling and noted the platform's order backlog now stretches into the following fiscal year. The company reaffirmed its measured capacity-expansion plan without raising capital targets.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82577,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Kesselgrove Co. Adds Second Assembly Line for Modular Press Platform",
+        "body": "With modular press orders outpacing capacity, Orla Steg approved a 95 million second assembly line at the company's main works to shorten delivery lead times. The expansion doubles annual press output and supports the multi-plant order signed last quarter. Steg said the quietly built platform has now become the company's primary growth engine.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -5086,7 +5146,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82565,
+    "lastEventCycle": 82577,
     "events": [
       {
         "cycle": 0,
@@ -5142,6 +5202,16 @@
         "size": "standard",
         "head": "Maison & Vale Beats as Corran Linens and Hotel Deal Boost Combined Portfolio",
         "body": "Maison & Vale posted revenue of $760M, up 19%, with the Corran Linens acquisition and continental hotel-group supply deal both contributing ahead of plan. CEO Rhys Kessler said cross-selling the Sundle cleaning range into household-goods accounts drove margin gains and signaled appetite for further bolt-on buys. Household Goods is now the fastest-growing segment.",
+        "effects": {
+          "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82577,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Maison & Vale Acquires Jansan Supplier Deltrey Chemical to Deepen Portfolio",
+        "body": "Restless dealmaker Rhys Kessler struck again, agreeing to buy cleaning-products maker Deltrey Chemical for 620 million to lock in supply for the Continental hotel contract. The deal adds industrial sanitation lines that Maison & Vale previously sourced externally, and Kessler said it should lift combined margins by roughly two points within a year. Integration will fold Deltrey's two plants into the existing Corran Linens operations network.",
         "effects": {
           "hospitality": 0.13
         }
@@ -6054,7 +6124,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82563,
+    "lastEventCycle": 82577,
     "events": [
       {
         "cycle": 0,
@@ -6100,6 +6170,16 @@
         "size": "standard",
         "head": "Stegforge Extends Alloy Supply Reach With Structural Materials Framework",
         "body": "Stegforge signed a framework agreement pairing its long-life machinery alloy with structural-materials supply for a major construction consortium. CEO Aurelia Steg said the arrangement broadens the alloy plant's customer base beyond heavy machinery as the new line ramps. Initial deliveries begin once the plant reaches phased output.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82577,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Stegforge Beats as Alloy Framework Deals Feed Machinery Backlog",
+        "body": "Stegforge posted quarterly earnings ahead of expectations as its heavy-machinery alloy and structural-materials frameworks converted into firm orders across all four product lines. CEO Aurelia Steg said the new alloy plant reached initial output ahead of schedule, easing supply constraints that had capped Industrial Machines volume. Full-year guidance was nudged higher on the strength of multi-year contract coverage.",
         "effects": {
           "manufacturing": 0.13
         }
