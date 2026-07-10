@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-10T14:30:43.781Z",
+  "generatedAt": "2026-07-10T19:36:03.242Z",
   "beats": [
+    {
+      "company": "Brunforge Holdings",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Brunforge Holdings Edges Past Estimates as Home Division Broadens",
+      "body": "Brunforge reported quarterly revenue of 4.21 billion, narrowly ahead of the 4.15 billion consensus, with the New Home Division contributing its strongest quarter yet. CEO Kestrel Bramm credited steady Vellan kitchenware uptake and disciplined cost control across the Devices and Household lines. The company reaffirmed its full-year outlook.",
+      "cycle": 82579,
+      "dur": 1
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Castlestone Returns to Growth as Halo Compute Orders Beat First-Quarter Targets",
+      "body": "Castlestone posted its first revenue gain in five quarters, with Halo Compute bookings topping internal targets by roughly 18 percent. CEO Pell Karsh framed the result as vindication of the turnaround, though he cautioned that the halted second campus had trimmed capacity headroom. Restructuring charges of 140 million narrowed the reported profit.",
+      "cycle": 82579,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Gromford Works Debuts Meridian Timepiece Line as Aldwych Pushes Past Aurelian Noir",
+      "body": "New chief Corin Aldwych unveiled the Meridian collection of skeleton-dial watches at a flagship event in Halbrook, calling it a 'clean page' for the embattled house. The launch arrives with the Aurelian Noir clasp litigation still unresolved, and Aldwych pledged full material disclosure on every Meridian piece. Analysts noted the aggressive timeline, with 12 references shipping within six weeks.",
+      "cycle": 82579,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Halhold Works Faces Formal Safety Probe as Verity Pro Failures Tied to Patient Incidents",
+      "body": "National regulators opened a formal safety investigation into Halhold Works after linking at least nine patient-harm reports to the recalled Verity Pro medical units. CEO Gunnar Vale said the company would 'cooperate without reservation,' but internal testing records dating to the prior leadership are now subject to subpoena. Shares in the technology house came under heavy pressure as the probe threatened its Medical Equipment licenses.",
+      "cycle": 82579,
+      "dur": 8
+    },
+    {
+      "company": "Stegreach",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Stegreach Wins Wire and Fixings Package for Riverport Freight Terminal",
+      "body": "Stegreach secured a multi-year supply contract for the Riverport freight terminal, covering wire, cable and structural fasteners across the site. CEO Halden Ashby valued the award in the low hundreds of millions and said it builds directly on the transit wiring momentum. Deliveries are slated to begin next quarter.",
+      "cycle": 82579,
+      "dur": 2
+    },
+    {
+      "company": "Wold & Bramm",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Wold & Bramm Extends Heritage Lighting Into Third Regional Showroom",
+      "body": "Wold & Bramm confirmed a third showroom in the Caldwell district, continuing the measured rollout of its Heritage lighting line. CEO Mara Marrow said the openings track demonstrated demand rather than speculative growth. The location will carry the full lighting range alongside the group's household goods.",
+      "cycle": 82579,
+      "dur": 1
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Wrengrove Group Beats as Thornbury Supply Deal Lifts Consumables Volumes",
+      "body": "Wrengrove reported consumables shipments up 14 percent, driven by the sole-supplier arrangement with the Thornbury Hospital Network. CEO Rhys Vossen said the third plant remains on schedule and within budget. Margins held steady despite raw-material cost pressure.",
+      "cycle": 82579,
+      "dur": 1
+    },
+    {
+      "company": "Wrenhaus",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Wrenhaus Adds Fabrication Capacity to Meet Riverside Fixture Demand",
+      "body": "Wrenhaus announced a modest expansion at its Calderhythe fabrication site to keep pace with orders from the Riverside project. CEO Quinn Thorne said the added line would support both current contracts and future development bids. The investment is being funded from operating cash.",
+      "cycle": 82579,
+      "dur": 1
+    },
     {
       "company": "Brunstone & Sons",
       "sector": "automotive",
@@ -22,16 +102,6 @@
       "dur": 2
     },
     {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Drustcraft Lifts Full-Year Outlook as Platform Fastener Volumes Climb",
-      "body": "Drustcraft raised its annual guidance after corrosion-resistant fastener shipments ran 15% ahead of plan through the third quarter. Cora Fenn credited the steady ramp of the new production line, noting the multi-year supply pact is 'delivering exactly the predictable demand we built it for.'",
-      "cycle": 82578,
-      "dur": 1
-    },
-    {
       "company": "Greywater Grid",
       "sector": "energy",
       "kind": "outage",
@@ -40,16 +110,6 @@
       "body": "A cascading fault at Greywater's flagship eastern compute campus knocked out service for 31 hours, forcing partial rolling curtailments across two regions tied to its 1.2-billion-mark contract. Vale Halloran pledged a full independent review and emergency capacity credits, but at least one regional authority has invoked penalty clauses estimated near 90 million marks.",
       "cycle": 82578,
       "dur": 8
-    },
-    {
-      "company": "Ironcrestcrest Supply",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Ironcrestcrest Supply Opens Fourth Warehouse to Serve Growing Value Range",
-      "body": "Ironcrestcrest quietly commissioned a fourth fixtures warehouse, adding 40,000 square meters of distribution space to keep pace with its expanding Workshop Lighting line. Dorian Garr said the site will shorten delivery times across the northern trade region and support 'measured, self-funded growth' without new borrowing.",
-      "cycle": 82578,
-      "dur": 1
     },
     {
       "company": "Korrwright Works",
@@ -82,36 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Brunmark Motors Tops Estimates as Second Veyra Line Clears Backlog",
-      "body": "Brunmark reported quarterly revenue of 4.1 billion, ahead of the 3.8 billion consensus, as the Halt Ridge dual-line ramp cut Veyra Long-Range wait times from nine weeks to three. CEO Yvette Calder said deliveries rose 22 percent sequentially while Power & Storage attach rates climbed with each vehicle sale. Margins widened as the cleared backlog let the plant shift toward higher-trim configurations.",
-      "cycle": 82577,
-      "dur": 2
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Calderforge Launches Redundant Cooling Retrofit Across Stormwell Complex",
-      "body": "CEO Nadia Throne unveiled a dual-loop cooling system now installed across all Stormwell wings, engineered to prevent a repeat of last quarter's outage that idled the flagship hall. The retrofit, budgeted at 240 million, adds independent failover circuits to each compute bank and is slated to complete before the third wing opens. Throne told reporters the upgrade positions Stormwell to run near full capacity without thermal throttling.",
-      "cycle": 82577,
-      "dur": 2
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halcyon Industries Extends Automation Playbook to Southport Hub",
-      "body": "Following record margins from Northgate automation, CEO Dorian Ashby confirmed a 180 million rollout of the same line-sorting systems at the Southport facility. The disciplined expansion is expected to raise Southport throughput by a third while trimming per-parcel handling costs. Ashby reiterated the company will fund the investment from operating cash flow, avoiding new debt.",
-      "cycle": 82577,
-      "dur": 2
-    },
-    {
       "company": "Ironcrestton",
       "sector": "luxury",
       "kind": "scandal",
@@ -120,36 +150,6 @@
       "body": "Leaked internal records appear to show Ironcrestton knowingly mislabeled the origin of its Carrow Atelier line for over two years, escalating the sourcing dispute into a full-blown crisis. Three major retail partners suspended orders and the board announced an independent review of CEO Sable Carrow's role in the labeling program. The company's flagship line has been pulled from shelves pending verification, wiping out an estimated 30 percent of quarterly Fine Goods revenue.",
       "cycle": 82577,
       "dur": 8
-    },
-    {
-      "company": "Kesselgrove Co.",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Kesselgrove Co. Adds Second Assembly Line for Modular Press Platform",
-      "body": "With modular press orders outpacing capacity, Orla Steg approved a 95 million second assembly line at the company's main works to shorten delivery lead times. The expansion doubles annual press output and supports the multi-plant order signed last quarter. Steg said the quietly built platform has now become the company's primary growth engine.",
-      "cycle": 82577,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Maison & Vale Acquires Jansan Supplier Deltrey Chemical to Deepen Portfolio",
-      "body": "Restless dealmaker Rhys Kessler struck again, agreeing to buy cleaning-products maker Deltrey Chemical for 620 million to lock in supply for the Continental hotel contract. The deal adds industrial sanitation lines that Maison & Vale previously sourced externally, and Kessler said it should lift combined margins by roughly two points within a year. Integration will fold Deltrey's two plants into the existing Corran Linens operations network.",
-      "cycle": 82577,
-      "dur": 2
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Stegforge Beats as Alloy Framework Deals Feed Machinery Backlog",
-      "body": "Stegforge posted quarterly earnings ahead of expectations as its heavy-machinery alloy and structural-materials frameworks converted into firm orders across all four product lines. CEO Aurelia Steg said the new alloy plant reached initial output ahead of schedule, easing supply constraints that had capped Industrial Machines volume. Full-year guidance was nudged higher on the strength of multi-year contract coverage.",
-      "cycle": 82577,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -249,26 +249,6 @@
       "head": "Lhaus Industries Debuts Fast-Charge Cell Pack With Record Cycle Life",
       "body": "Lhaus unveiled a second-generation cell pack it says retains 90% capacity after 4,000 cycles while accepting an 80% charge in under twelve minutes. Chief engineer Marta Voss said the breakthrough came from a new electrode chemistry developed at the company's Fenwick lab, and Cole Brandt hinted the technology could underpin a broader push beyond fleet customers. Analysts called it the most significant Power & Storage advance since the division launched.",
       "cycle": 82572,
-      "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "expansion",
-      "size": "major",
-      "head": "Boreas Power Breaks Ground on $5.2B Compute-and-Storage Campus at Hollowmere",
-      "body": "Mira Thorne unveiled the house's most ambitious project to date, pairing a massive compute complex with grid-scale storage at the expanded Hollowmere site. The build folds in the momentum from Calderwick integration and Phase Three, targeting first power within 18 months and creating an estimated 2,400 permanent roles. Thorne said Boreas was 'done waiting for demand to slow down, because it won't.'",
-      "cycle": 82571,
-      "dur": 8
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Korrwright Works Buys Rival Heritage Maker Sennfeld in Landmark Deal",
-      "body": "Dunmore Carrow announced the $2.1B acquisition of storied competitor Sennfeld Chronometers, folding its ateliers and movement archive into the Velloux operation. The purchase, Korrwright's largest ever, doubles its skilled watchmaker headcount and secures a century of proprietary complications. Carrow said the combined house would 'define the top of the market,' capping a run that began with the Velloux launch and its Timepiece of the Year win.",
-      "cycle": 82571,
       "dur": 8
     }
   ]

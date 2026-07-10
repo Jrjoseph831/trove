@@ -1079,7 +1079,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82562,
+    "lastEventCycle": 82579,
     "events": [
       {
         "cycle": 0,
@@ -1125,6 +1125,16 @@
         "size": "flash",
         "head": "Brunforge Extends New Home Division With Vellan Kitchenware Range",
         "body": "Brunforge Holdings broadened its New Home division by adding a Vellan-branded kitchenware line, building on the tableware assets acquired earlier this year. CEO Kestrel Bramm said the extension leans on existing distribution and required only modest tooling investment. Management expects the range to reach retail shelves before the holiday buying period.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82579,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Brunforge Holdings Edges Past Estimates as Home Division Broadens",
+        "body": "Brunforge reported quarterly revenue of 4.21 billion, narrowly ahead of the 4.15 billion consensus, with the New Home Division contributing its strongest quarter yet. CEO Kestrel Bramm credited steady Vellan kitchenware uptake and disciplined cost control across the Devices and Household lines. The company reaffirmed its full-year outlook.",
         "effects": {
           "consumer": 0.06
         }
@@ -2171,7 +2181,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82574,
+    "lastEventCycle": 82579,
     "events": [
       {
         "cycle": 0,
@@ -2273,6 +2283,16 @@
         "size": "standard",
         "head": "Castlestone's Karsh Unveils Halo Compute Line in First Post-Turnaround Bet",
         "body": "CEO Pell Karsh took the stage to launch the Halo compute series, the first major release since he cut 900 jobs and shuttered the second campus. Karsh promised the leaner Halo lineup would carry a 30% lower production cost per unit while targeting the mid-tier market Castlestone had abandoned under Iris Garr. Analysts called it a make-or-break debut for the turnaround thesis.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82579,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Castlestone Returns to Growth as Halo Compute Orders Beat First-Quarter Targets",
+        "body": "Castlestone posted its first revenue gain in five quarters, with Halo Compute bookings topping internal targets by roughly 18 percent. CEO Pell Karsh framed the result as vindication of the turnaround, though he cautioned that the halted second campus had trimmed capacity headroom. Restructuring charges of 140 million narrowed the reported profit.",
         "effects": {
           "technology": 0.13
         }
@@ -3491,7 +3511,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82573,
+    "lastEventCycle": 82579,
     "events": [
       {
         "cycle": 0,
@@ -3606,6 +3626,16 @@
         "head": "Gromford Works Names Turnaround Veteran Corin Aldwych as Chief Executive",
         "body": "Gromford Works appointed Corin Aldwych as CEO, tasking the former restructuring chief with steering the house out of the Aurelian Noir clasp scandal and pending litigation. Interim leader Delphine Vaugh will step back to a board advisory role after months of firefighting, as Aldwych pledged a full clasp redesign and independent quality review.",
         "effects": {}
+      },
+      {
+        "cycle": 82579,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Debuts Meridian Timepiece Line as Aldwych Pushes Past Aurelian Noir",
+        "body": "New chief Corin Aldwych unveiled the Meridian collection of skeleton-dial watches at a flagship event in Halbrook, calling it a 'clean page' for the embattled house. The launch arrives with the Aurelian Noir clasp litigation still unresolved, and Aldwych pledged full material disclosure on every Meridian piece. Analysts noted the aggressive timeline, with 12 references shipping within six weeks.",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -3970,7 +4000,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82574,
+    "lastEventCycle": 82579,
     "events": [
       {
         "cycle": 0,
@@ -4094,6 +4124,16 @@
         "size": "major",
         "head": "Halhold Works Issues Sweeping Recall of Verity Pro Medical Units as Regulators Step In",
         "body": "Halhold Works pulled roughly 74,000 Verity Pro medical devices from hospitals nationwide after monitoring faults were linked to at least a dozen critical-care incidents. CEO Gunnar Vale, barely months into his overhaul, said the company would absorb an estimated $380 million charge and pause all Verity Pro shipments. The recall deepens the legal exposure from hospitals already suing over the suite's failures.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82579,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Halhold Works Faces Formal Safety Probe as Verity Pro Failures Tied to Patient Incidents",
+        "body": "National regulators opened a formal safety investigation into Halhold Works after linking at least nine patient-harm reports to the recalled Verity Pro medical units. CEO Gunnar Vale said the company would 'cooperate without reservation,' but internal testing records dating to the prior leadership are now subject to subpoena. Shares in the technology house came under heavy pressure as the probe threatened its Medical Equipment licenses.",
         "effects": {
           "technology": -0.22
         }
@@ -6267,7 +6307,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82561,
+    "lastEventCycle": 82579,
     "events": [
       {
         "cycle": 0,
@@ -6303,6 +6343,16 @@
         "size": "standard",
         "head": "Stegreach Beats Forecasts as Transit Wiring and Sealed Fixtures Ship",
         "body": "Stegreach posted quarterly revenue of 780 million, up 11 percent, driven by ramping deliveries on the major transit wiring contract and strong early orders for its new sealed fixture line. Halden Ashby credited disciplined execution across the fasteners and cable segments for the margin gain. The company nudged its full-year outlook higher.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82579,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Stegreach Wins Wire and Fixings Package for Riverport Freight Terminal",
+        "body": "Stegreach secured a multi-year supply contract for the Riverport freight terminal, covering wire, cable and structural fasteners across the site. CEO Halden Ashby valued the award in the low hundreds of millions and said it builds directly on the transit wiring momentum. Deliveries are slated to begin next quarter.",
         "effects": {
           "construction": 0.13
         }
@@ -7289,7 +7339,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82560,
+    "lastEventCycle": 82579,
     "events": [
       {
         "cycle": 0,
@@ -7325,6 +7375,16 @@
         "size": "flash",
         "head": "Wold & Bramm Posts Solid Quarter as Heritage Lighting Lifts Showroom Traffic",
         "body": "Wold & Bramm reported a 7% revenue rise, driven by strong sell-through of the heritage lighting collection at its two showrooms. CEO Mara Marrow said footfall at the second location outpaced early projections. The company reaffirmed a measured expansion pace for the year ahead.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82579,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wold & Bramm Extends Heritage Lighting Into Third Regional Showroom",
+        "body": "Wold & Bramm confirmed a third showroom in the Caldwell district, continuing the measured rollout of its Heritage lighting line. CEO Mara Marrow said the openings track demonstrated demand rather than speculative growth. The location will carry the full lighting range alongside the group's household goods.",
         "effects": {
           "consumer": 0.06
         }
@@ -7425,7 +7485,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82561,
+    "lastEventCycle": 82579,
     "events": [
       {
         "cycle": 0,
@@ -7464,6 +7524,16 @@
         "effects": {
           "medical": 0.13
         }
+      },
+      {
+        "cycle": 82579,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wrengrove Group Beats as Thornbury Supply Deal Lifts Consumables Volumes",
+        "body": "Wrengrove reported consumables shipments up 14 percent, driven by the sole-supplier arrangement with the Thornbury Hospital Network. CEO Rhys Vossen said the third plant remains on schedule and within budget. Margins held steady despite raw-material cost pressure.",
+        "effects": {
+          "medical": 0.06
+        }
       }
     ]
   },
@@ -7478,7 +7548,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82561,
+    "lastEventCycle": 82579,
     "events": [
       {
         "cycle": 0,
@@ -7516,6 +7586,16 @@
         "body": "Wrenhaus secured the plumbing and fixtures supply for the 4,000-unit Calderhythe Riverside development in a contract worth an estimated 180 million. Quinn Thorne said the win builds directly on the firm's on-time record at Brackenfield. Deliveries are slated to begin in the second half of the year.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82579,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wrenhaus Adds Fabrication Capacity to Meet Riverside Fixture Demand",
+        "body": "Wrenhaus announced a modest expansion at its Calderhythe fabrication site to keep pace with orders from the Riverside project. CEO Quinn Thorne said the added line would support both current contracts and future development bids. The investment is being funded from operating cash.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
