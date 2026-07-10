@@ -726,7 +726,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82571,
+    "lastEventCycle": 82576,
     "events": [
       {
         "cycle": 0,
@@ -832,6 +832,16 @@
         "size": "major",
         "head": "Boreas Power Breaks Ground on $5.2B Compute-and-Storage Campus at Hollowmere",
         "body": "Mira Thorne unveiled the house's most ambitious project to date, pairing a massive compute complex with grid-scale storage at the expanded Hollowmere site. The build folds in the momentum from Calderwick integration and Phase Three, targeting first power within 18 months and creating an estimated 2,400 permanent roles. Thorne said Boreas was 'done waiting for demand to slow down, because it won't.'",
+        "effects": {
+          "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82576,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Boreas Power Lands Landmark Storage Supply Pact Anchoring Hollowmere Campus",
+        "body": "Boreas signed a ten-year, $3.4B agreement to supply Power & Storage capacity to a consortium of regional grid operators, effectively pre-selling much of the Hollowmere campus output. CEO Mira Thorne called it 'the cornerstone that de-risks Phase Three,' and said the deal opens the door to a follow-on Compute allocation for the same partners. The pact locks in demand years ahead of the campus coming online.",
         "effects": {
           "energy": 0.22
         }
@@ -952,7 +962,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82570,
+    "lastEventCycle": 82576,
     "events": [
       {
         "cycle": 0,
@@ -1046,6 +1056,14 @@
         "size": "major",
         "head": "Bruncrest Works Ousts CEO Corwin Hale as Losses Mount and Board Loses Patience",
         "body": "Bruncrest Works' board removed CEO Corwin Hale after a fourth consecutive disappointing quarter, ending a turbulent tenure marked by the collapsed Meridian pact and a costly overhaul. The company named turnaround veteran Ines Marlow as chief executive, tasking her with stabilizing finances and settling the outstanding Meridian litigation. Shares had shed nearly 60% of their value since the Meridian dispute erupted.",
+        "effects": {}
+      },
+      {
+        "cycle": 82576,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Bruncrest Works Names Ines Marlow CEO in Bid to Halt the Bleeding",
+        "body": "The board tapped former operations chief Ines Marlow to succeed the ousted Corwin Hale, betting her turnaround record can stabilize a Compute unit that has burned through cash since the Meridian exit. In her first address, Marlow pledged a 'no-sacred-cows' review and hinted at deeper cuts to the Compute portfolio within ninety days. Investors welcomed the clarity but flagged execution risk given three leadership shifts in eighteen months.",
         "effects": {}
       }
     ]
@@ -1628,7 +1646,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82561,
+    "lastEventCycle": 82576,
     "events": [
       {
         "cycle": 0,
@@ -1676,6 +1694,16 @@
         "body": "Carrowcyon rolled out its Meridian series, a line of energy-efficient fixtures aimed at the transit contracts fueling its recent growth. Cole Brandt said the range cuts power consumption by nearly a fifth over prior models while meeting the durability standards demanded by rail operators. The launch leans on the second lighting works opened earlier this year.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82576,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Beats as Second Lighting Works Clears Transit Backlog",
+        "body": "Quarterly operating margin widened to 18.4% as the new works ramped faster than expected, clearing roughly 70% of the Transit Lighting backlog. CEO Cole Brandt said the Low-Draw series is now the company's best-selling line by volume, and hinted at extending it to municipal customers. Household Goods held steady, cushioning the mix shift toward lighting.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -2421,7 +2449,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82562,
+    "lastEventCycle": 82576,
     "events": [
       {
         "cycle": 0,
@@ -2467,6 +2495,16 @@
         "size": "standard",
         "head": "Drossware Beats Again as Grocer Alliance Volumes Fill New Capacity",
         "body": "Drossware Industries reported quarterly revenue up 11 percent, crediting the ramp of its recently added packaging capacity now running near 90 percent utilization on Grocer Alliance orders. CEO Nadia Wold noted that margins improved as the new lines absorbed fixed costs, and hinted the company was studying whether to extend similar supply terms into its cleaning and lighting segments. Management raised its full-year outlook modestly.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82576,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drossware Extends Streak as Grocer Alliance Volumes Hold Firm",
+        "body": "Drossware posted its fourth consecutive beat, with revenue up 9% as national packaging volumes for the Grocer Alliance stayed near capacity. CEO Nadia Wold noted the Cleaning & Jansan segment also firmed, offsetting softer Apparel Goods. Management raised full-year guidance modestly, citing steady reorder patterns across the alliance's regions.",
         "effects": {
           "consumer": 0.13
         }
@@ -3121,7 +3159,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82562,
+    "lastEventCycle": 82576,
     "events": [
       {
         "cycle": 0,
@@ -3169,6 +3207,16 @@
         "body": "The logistics house commissioned a second packaging line at its Marrow Valley plant, lifting site capacity by an estimated 22 percent to meet volumes under the multi-year Halloway & Pace grocer contract. CEO Orla Holt described the addition as a measured step rather than a bet, funded entirely from internal cash. Full ramp is expected by the close of next quarter.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82576,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Garrware Extends Halloway & Pace Deal to Cover Northern Depots",
+        "body": "Garrware widened its packaging contract with grocer Halloway & Pace to supply eleven additional northern distribution depots, adding an estimated $140M over the term. CEO Orla Holt said the second Marrow Valley line, now near full utilization, gives the company room to absorb the volume without new capital. The expanded scope deepens a relationship that already anchors Garrware's largest revenue stream.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -5111,7 +5159,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82569,
+    "lastEventCycle": 82576,
     "events": [
       {
         "cycle": 0,
@@ -5197,6 +5245,16 @@
         "size": "major",
         "head": "Marlgear Supply Hit With Class Action as Drennan Mills Injuries Mount",
         "body": "A consortium of plaintiffs filed a class action seeking 480 million in damages, citing the leaked memos showing Atlas defects were flagged before launch. Halden Vossen, whose public defense of the line drew scrutiny, now faces calls from three major shareholders for an independent board review. Regulators signaled the safety probe could escalate to formal charges.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82576,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Marlgear Supply Faces Federal Safety Probe as Drennan Findings Spread to Industrial Line",
+        "body": "Regulators opened a formal safety investigation spanning both the recalled Atlas Devices and Marlgear's Industrial Machines catalog, after Drennan Mills documents suggested defect testing gaps beyond a single product. CEO Halden Vossen, defiant in a combative briefing, insisted the issues were 'contained and overstated,' rattling investors already reeling from the class action. The probe could freeze new shipments pending audit, threatening the company's core order book.",
         "effects": {
           "technology": -0.22
         }
@@ -5496,7 +5554,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82563,
+    "lastEventCycle": 82576,
     "events": [
       {
         "cycle": 0,
@@ -5542,6 +5600,16 @@
         "size": "standard",
         "head": "Ornewright Supply Wins Regional Food Service Contract Anchored at Caldmere Hub",
         "body": "Ornewright secured a multi-year food service supply contract with a Caldmere institutional catering group, filling capacity at its newly added hub line. CEO Rhys Throne said the win rounds out the hub's three-category footprint across cleaning, farm inputs, and food service. The company expects the contract to lift hub utilization above 80% within two quarters.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82576,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Ornewright Supply Breaks Ground on Second Caldmere Hub Expansion",
+        "body": "Ornewright committed $88M to a second phase at its Caldmere hub, adding Farm Inputs blending capacity and a dedicated food service warehouse to serve both anchor contracts. CEO Rhys Throne said the co-op and regional food service deals together now justify running the hub around the clock. Completion is targeted within fourteen months.",
         "effects": {
           "consumer": 0.13
         }
@@ -6730,7 +6798,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82551,
+    "lastEventCycle": 82576,
     "events": [
       {
         "cycle": 0,
@@ -6756,6 +6824,16 @@
         "size": "flash",
         "head": "Venline & Sons Adds Cleanroom Capacity at Marden Facility",
         "body": "Venline committed $88M to a modest cleanroom buildout at its Marden plant, adding two packaging lines for sterile consumables. CEO Mara Garr framed the move as measured capacity to meet contracted volumes without straining the balance sheet. Commissioning is expected over the next 18 months.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82576,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Venline & Sons Posts Another Quiet Beat as Marden Cleanroom Ramps",
+        "body": "Venline edged past estimates with revenue up 4% as the expanded Marden cleanroom began contributing sterile consumables volume. CEO Mara Garr reaffirmed the company's long-horizon stance, declining to raise guidance despite the stronger start. Order backlogs from hospital networks remained comfortably booked into next year.",
         "effects": {
           "medical": 0.06
         }

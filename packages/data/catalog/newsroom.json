@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-09T19:49:25.877Z",
+  "generatedAt": "2026-07-10T03:30:47.117Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Boreas Power Lands Landmark Storage Supply Pact Anchoring Hollowmere Campus",
+      "body": "Boreas signed a ten-year, $3.4B agreement to supply Power & Storage capacity to a consortium of regional grid operators, effectively pre-selling much of the Hollowmere campus output. CEO Mira Thorne called it 'the cornerstone that de-risks Phase Three,' and said the deal opens the door to a follow-on Compute allocation for the same partners. The pact locks in demand years ahead of the campus coming online.",
+      "cycle": 82576,
+      "dur": 8
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Bruncrest Works Names Ines Marlow CEO in Bid to Halt the Bleeding",
+      "body": "The board tapped former operations chief Ines Marlow to succeed the ousted Corwin Hale, betting her turnaround record can stabilize a Compute unit that has burned through cash since the Meridian exit. In her first address, Marlow pledged a 'no-sacred-cows' review and hinted at deeper cuts to the Compute portfolio within ninety days. Investors welcomed the clarity but flagged execution risk given three leadership shifts in eighteen months.",
+      "cycle": 82576,
+      "dur": 8
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowcyon & Sons Beats as Second Lighting Works Clears Transit Backlog",
+      "body": "Quarterly operating margin widened to 18.4% as the new works ramped faster than expected, clearing roughly 70% of the Transit Lighting backlog. CEO Cole Brandt said the Low-Draw series is now the company's best-selling line by volume, and hinted at extending it to municipal customers. Household Goods held steady, cushioning the mix shift toward lighting.",
+      "cycle": 82576,
+      "dur": 2
+    },
+    {
+      "company": "Drossware Industries",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drossware Extends Streak as Grocer Alliance Volumes Hold Firm",
+      "body": "Drossware posted its fourth consecutive beat, with revenue up 9% as national packaging volumes for the Grocer Alliance stayed near capacity. CEO Nadia Wold noted the Cleaning & Jansan segment also firmed, offsetting softer Apparel Goods. Management raised full-year guidance modestly, citing steady reorder patterns across the alliance's regions.",
+      "cycle": 82576,
+      "dur": 2
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Garrware Extends Halloway & Pace Deal to Cover Northern Depots",
+      "body": "Garrware widened its packaging contract with grocer Halloway & Pace to supply eleven additional northern distribution depots, adding an estimated $140M over the term. CEO Orla Holt said the second Marrow Valley line, now near full utilization, gives the company room to absorb the volume without new capital. The expanded scope deepens a relationship that already anchors Garrware's largest revenue stream.",
+      "cycle": 82576,
+      "dur": 2
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Marlgear Supply Faces Federal Safety Probe as Drennan Findings Spread to Industrial Line",
+      "body": "Regulators opened a formal safety investigation spanning both the recalled Atlas Devices and Marlgear's Industrial Machines catalog, after Drennan Mills documents suggested defect testing gaps beyond a single product. CEO Halden Vossen, defiant in a combative briefing, insisted the issues were 'contained and overstated,' rattling investors already reeling from the class action. The probe could freeze new shipments pending audit, threatening the company's core order book.",
+      "cycle": 82576,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Ornewright Supply Breaks Ground on Second Caldmere Hub Expansion",
+      "body": "Ornewright committed $88M to a second phase at its Caldmere hub, adding Farm Inputs blending capacity and a dedicated food service warehouse to serve both anchor contracts. CEO Rhys Throne said the co-op and regional food service deals together now justify running the hub around the clock. Completion is targeted within fourteen months.",
+      "cycle": 82576,
+      "dur": 2
+    },
+    {
+      "company": "Venline & Sons",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Venline & Sons Posts Another Quiet Beat as Marden Cleanroom Ramps",
+      "body": "Venline edged past estimates with revenue up 4% as the expanded Marden cleanroom began contributing sterile consumables volume. CEO Mara Garr reaffirmed the company's long-horizon stance, declining to raise guidance despite the stronger start. Order backlogs from hospital networks remained comfortably booked into next year.",
+      "cycle": 82576,
+      "dur": 1
+    },
     {
       "company": "Aldousspire Group",
       "sector": "consumer",
@@ -42,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Holtgate Group",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Group Nudges Past Estimates as Mill Utilization Holds Firm",
-      "body": "Holtgate reported quarterly revenue of 412 million, up 3 percent, with mill utilization steady at 91 percent on continued Uniform Guild demand. CEO Dorian Throne credited 'disciplined ordering and no surprises,' reaffirming the group's full-year outlook.",
-      "cycle": 82575,
-      "dur": 1
-    },
-    {
       "company": "Palettstead Holdings",
       "sector": "logistics",
       "kind": "earnings_beat",
@@ -82,16 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aperture Compute Tops Estimates as Dawnmere II Backbone Deal Begins Shipping",
-      "body": "Halden Dray's firm reported quarterly revenue of $920 million, up 27%, as the first Dawnmere II units shipped under the 1.4-billion backbone rollout. Order backlog swelled to a record $3.1 billion, and Dray teased 'a third-generation surprise' before year-end. Interconnect gross margins climbed to 41%.",
-      "cycle": 82574,
-      "dur": 2
-    },
-    {
       "company": "Bruncraft Industries",
       "sector": "automotive",
       "kind": "major_deal",
@@ -102,26 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Castlestone's Karsh Unveils Halo Compute Line in First Post-Turnaround Bet",
-      "body": "CEO Pell Karsh took the stage to launch the Halo compute series, the first major release since he cut 900 jobs and shuttered the second campus. Karsh promised the leaner Halo lineup would carry a 30% lower production cost per unit while targeting the mid-tier market Castlestone had abandoned under Iris Garr. Analysts called it a make-or-break debut for the turnaround thesis.",
-      "cycle": 82574,
-      "dur": 2
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Fenncyon Extends Eastfield Push With New Fleet and Second Rail Staging Yard",
-      "body": "Building on its $1.9 billion Eastfield Corridor rail win, Fenncyon committed $220 million to a second staging yard and 140 additional earthmoving units. CEO Nadia Ashby said the expansion positions the firm to bid on two further corridor segments expected to tender next year. The move keeps Eastfield as the anchor of Fenncyon's growth strategy.",
-      "cycle": 82574,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "recall",
@@ -130,26 +170,6 @@
       "body": "Halhold Works pulled roughly 74,000 Verity Pro medical devices from hospitals nationwide after monitoring faults were linked to at least a dozen critical-care incidents. CEO Gunnar Vale, barely months into his overhaul, said the company would absorb an estimated $380 million charge and pause all Verity Pro shipments. The recall deepens the legal exposure from hospitals already suing over the suite's failures.",
       "cycle": 82574,
       "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Varnvale House Opens Flagship Maison as Calloway Extends Meridian Momentum",
-      "body": "Riding the Meridian collection's strong first quarter, CEO Idris Calloway unveiled a new flagship maison in the capital's luxury district, the brand's first store opening since the Ember scandal. The 12,000-square-foot space anchors a planned rollout of six boutiques over 18 months. Calloway framed the investment as a signal that Varnvale has 'closed the book on crisis and opened one on craft.'",
-      "cycle": 82574,
-      "dur": 2
-    },
-    {
-      "company": "Veldtreach & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Veldtreach & Sons Raises Guidance as Reservoir and Coastal Books Run Hot",
-      "body": "Petra Steg's firm lifted full-year guidance after margins on the $1.6 billion coastal reclamation and $900 million Highland reservoir jobs came in ahead of plan. Quarterly revenue rose 18% to $1.1 billion, with the combined order backlog now exceeding $4.3 billion. Steg credited disciplined equipment scheduling across both megaprojects.",
-      "cycle": 82574,
-      "dur": 2
     },
     {
       "company": "Blackton Industries",
@@ -249,26 +269,6 @@
       "head": "Marlgear Supply Hit With Class Action as Drennan Mills Injuries Mount",
       "body": "A consortium of plaintiffs filed a class action seeking 480 million in damages, citing the leaked memos showing Atlas defects were flagged before launch. Halden Vossen, whose public defense of the line drew scrutiny, now faces calls from three major shareholders for an independent board review. Regulators signaled the safety probe could escalate to formal charges.",
       "cycle": 82569,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Greywater Grid Lands Sweeping Multi-Region Power-and-Compute Contract Worth 1.2 Billion Marks",
-      "body": "Greywater Grid unveiled its largest deal ever, a 1.2-billion-mark agreement to build and supply three compute campuses paired with dedicated storage across four regions. CEO Vale Halloran called it a defining moment that roughly doubles the company's committed backlog. The buildout will lean on Greywater's record-density storage blocks and span the next five years.",
-      "cycle": 82568,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Gromford Works Ousts Mira Ashby as Board Moves to Contain Aurelian Noir Fallout",
-      "body": "After 128 years of famously restless leadership, Mira Ashby stepped down under board pressure as the concealment inquiry deepened and the Aurelian Noir recall topped 60,000 units. The board named longtime operations chief Delphine Vaugh to steer the house through the widening regulatory probe, promising an internal review of every timepiece line. Vaugh takes over with a settlement fund reportedly reaching 40 million marks.",
-      "cycle": 82568,
       "dur": 8
     }
   ]
