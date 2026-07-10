@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-10T09:38:45.487Z",
+  "generatedAt": "2026-07-10T14:30:43.781Z",
   "beats": [
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunstone & Sons Rebounds as Vault Cell Orders Outrun Forecasts",
+      "body": "Brunstone posted quarterly revenue of 3.1 billion marks, up 22% on the prior period, as demand for its Lambourne-era Vault Cells filled two full production shifts. Royce Lambourne, prone to grand pronouncements, called it 'the first clean quarter since the reset' but warned margins remain thin until the second cell line opens next spring.",
+      "cycle": 82578,
+      "dur": 2
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "lawsuit",
+      "size": "standard",
+      "head": "Carrowforge Sued by Former Testing Chief Over Scandal-Era Dismissals",
+      "body": "Ex-testing director Marla Vesk filed suit alleging she was made a scapegoat during the overhaul, seeking 22 million marks and claiming Halden Roe's independent-division split 'buried the true chain of accountability.' Roe rejected the claim as 'a distraction from real reform,' but the filing threatens to reopen questions regulators had only recently set aside.",
+      "cycle": 82578,
+      "dur": 2
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Drustcraft Lifts Full-Year Outlook as Platform Fastener Volumes Climb",
+      "body": "Drustcraft raised its annual guidance after corrosion-resistant fastener shipments ran 15% ahead of plan through the third quarter. Cora Fenn credited the steady ramp of the new production line, noting the multi-year supply pact is 'delivering exactly the predictable demand we built it for.'",
+      "cycle": 82578,
+      "dur": 1
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "outage",
+      "size": "major",
+      "head": "Greywater Grid Compute Campus Goes Dark, Disrupting Regional Power Pact",
+      "body": "A cascading fault at Greywater's flagship eastern compute campus knocked out service for 31 hours, forcing partial rolling curtailments across two regions tied to its 1.2-billion-mark contract. Vale Halloran pledged a full independent review and emergency capacity credits, but at least one regional authority has invoked penalty clauses estimated near 90 million marks.",
+      "cycle": 82578,
+      "dur": 8
+    },
+    {
+      "company": "Ironcrestcrest Supply",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Ironcrestcrest Supply Opens Fourth Warehouse to Serve Growing Value Range",
+      "body": "Ironcrestcrest quietly commissioned a fourth fixtures warehouse, adding 40,000 square meters of distribution space to keep pace with its expanding Workshop Lighting line. Dorian Garr said the site will shorten delivery times across the northern trade region and support 'measured, self-funded growth' without new borrowing.",
+      "cycle": 82578,
+      "dur": 1
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Korrwright Works Folds Sennfeld Atelier Into Unified Heritage Division",
+      "body": "Dunmore Carrow announced Sennfeld's storied workshop will be merged into a single Korrwright Heritage Division, consolidating three ateliers and cutting an estimated 140 back-office roles. Carrow framed the move as 'protecting two centuries of craft under one roof,' though guild observers noted the pace of integration has unsettled Sennfeld's veteran finishers.",
+      "cycle": 82578,
+      "dur": 2
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Lhaus Industries Signs $14B Second Fleet Pact on Strength of Fast-Charge Packs",
+      "body": "Building on its record cycle-life breakthrough, Lhaus landed a 14-billion-mark, seven-year agreement to supply cell packs to a major commercial hauler consortium. Cole Brandt said the win validates the dedicated cell-pack plant now nearing completion, and confirmed Lhaus will break ground on a second facility to meet combined demand from both fleet contracts.",
+      "cycle": 82578,
+      "dur": 8
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Vossenspire Supply Unveils First Calderon-Built Grand Tourer Under Heritage Badge",
+      "body": "Just eight months after acquiring Calderon Motorworks, Vossenspire debuted the Aldecourt GTR, a limited run of 250 hand-assembled tourers priced from 480,000 marks. Quinn Marrow told the unveiling crowd the model 'proves the Calderon deal was never about factories, but about souls,' hinting that two further coachbuilt lines are already in development.",
+      "cycle": 82578,
+      "dur": 2
+    },
     {
       "company": "Brunmark Motors",
       "sector": "automotive",
@@ -20,16 +100,6 @@
       "body": "CEO Nadia Throne unveiled a dual-loop cooling system now installed across all Stormwell wings, engineered to prevent a repeat of last quarter's outage that idled the flagship hall. The retrofit, budgeted at 240 million, adds independent failover circuits to each compute bank and is slated to complete before the third wing opens. Throne told reporters the upgrade positions Stormwell to run near full capacity without thermal throttling.",
       "cycle": 82577,
       "dur": 2
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Forgegrave Industries Beats Again as Dock Module Lifts Attach Rates",
-      "body": "Forgegrave narrowly topped estimates as the new Pallet-Runner dock module drove a higher average order value among high-turnover warehouse clients. CEO Petra Thorne noted the module attached to roughly 40 percent of new Pallet-Runner sales in its first full quarter. The company held its full-year outlook steady, citing steady order flow rather than any single large contract.",
-      "cycle": 82577,
-      "dur": 1
     },
     {
       "company": "Halcyon Industries",
@@ -102,36 +172,6 @@
       "dur": 8
     },
     {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Carrowcyon & Sons Beats as Second Lighting Works Clears Transit Backlog",
-      "body": "Quarterly operating margin widened to 18.4% as the new works ramped faster than expected, clearing roughly 70% of the Transit Lighting backlog. CEO Cole Brandt said the Low-Draw series is now the company's best-selling line by volume, and hinted at extending it to municipal customers. Household Goods held steady, cushioning the mix shift toward lighting.",
-      "cycle": 82576,
-      "dur": 2
-    },
-    {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drossware Extends Streak as Grocer Alliance Volumes Hold Firm",
-      "body": "Drossware posted its fourth consecutive beat, with revenue up 9% as national packaging volumes for the Grocer Alliance stayed near capacity. CEO Nadia Wold noted the Cleaning & Jansan segment also firmed, offsetting softer Apparel Goods. Management raised full-year guidance modestly, citing steady reorder patterns across the alliance's regions.",
-      "cycle": 82576,
-      "dur": 2
-    },
-    {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Garrware Extends Halloway & Pace Deal to Cover Northern Depots",
-      "body": "Garrware widened its packaging contract with grocer Halloway & Pace to supply eleven additional northern distribution depots, adding an estimated $140M over the term. CEO Orla Holt said the second Marrow Valley line, now near full utilization, gives the company room to absorb the volume without new capital. The expanded scope deepens a relationship that already anchors Garrware's largest revenue stream.",
-      "cycle": 82576,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "safety_probe",
@@ -140,16 +180,6 @@
       "body": "Regulators opened a formal safety investigation spanning both the recalled Atlas Devices and Marlgear's Industrial Machines catalog, after Drennan Mills documents suggested defect testing gaps beyond a single product. CEO Halden Vossen, defiant in a combative briefing, insisted the issues were 'contained and overstated,' rattling investors already reeling from the class action. The probe could freeze new shipments pending audit, threatening the company's core order book.",
       "cycle": 82576,
       "dur": 8
-    },
-    {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Ornewright Supply Breaks Ground on Second Caldmere Hub Expansion",
-      "body": "Ornewright committed $88M to a second phase at its Caldmere hub, adding Farm Inputs blending capacity and a dedicated food service warehouse to serve both anchor contracts. CEO Rhys Throne said the co-op and regional food service deals together now justify running the hub around the clock. Completion is targeted within fourteen months.",
-      "cycle": 82576,
-      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -239,46 +269,6 @@
       "head": "Korrwright Works Buys Rival Heritage Maker Sennfeld in Landmark Deal",
       "body": "Dunmore Carrow announced the $2.1B acquisition of storied competitor Sennfeld Chronometers, folding its ateliers and movement archive into the Velloux operation. The purchase, Korrwright's largest ever, doubles its skilled watchmaker headcount and secures a century of proprietary complications. Carrow said the combined house would 'define the top of the market,' capping a run that began with the Velloux launch and its Timepiece of the Year win.",
       "cycle": 82571,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Bruncrest Works Ousts CEO Corwin Hale as Losses Mount and Board Loses Patience",
-      "body": "Bruncrest Works' board removed CEO Corwin Hale after a fourth consecutive disappointing quarter, ending a turbulent tenure marked by the collapsed Meridian pact and a costly overhaul. The company named turnaround veteran Ines Marlow as chief executive, tasking her with stabilizing finances and settling the outstanding Meridian litigation. Shares had shed nearly 60% of their value since the Meridian dispute erupted.",
-      "cycle": 82570,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Kessel Drive Sued as Fleet Client Alleges Breach Over Recalled Storage Packs",
-      "body": "The national fleet operator behind Kessel Drive's $3.2 billion touring pact filed suit, alleging breach of contract and seeking damages after the overheating-driven recall grounded thousands of units. CEO Dorian Brandt vowed to fight the claim while accelerating a redesigned storage pack he said would be 'faster and safer than anything on the road.' The dispute threatens the largest deal in the company's history.",
-      "cycle": 82570,
-      "dur": 8
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Marrowstone Build Hit With $310 Million Judgment in Embankment Collapse Case",
-      "body": "A tribunal ordered Marrowstone Build to pay $310 million in damages over the embankment collapse, finding the company liable for inadequate site inspections despite its recent safety-division overhaul. CEO Bram Halloran said the firm would appeal portions of the ruling while honoring victim compensation immediately. The judgment marks the costliest single liability in the company's century-long history.",
-      "cycle": 82570,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Vossenspire Slapped With Record Fine as Blackout Probe Finds Deferred Maintenance",
-      "body": "Regulators concluded their investigation into the two-region blackout, levying a $480 million penalty and citing years of deferred grid maintenance and understaffed control rooms. The findings directly implicate cost-cutting under the prior leadership, intensifying pressure on new CEO Halden Roe, who called the report 'a hard but necessary reckoning.' Vossenspire agreed to a binding three-year remediation plan under external oversight.",
-      "cycle": 82570,
       "dur": 8
     }
   ]

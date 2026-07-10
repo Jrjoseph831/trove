@@ -1316,7 +1316,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82571,
+    "lastEventCycle": 82578,
     "events": [
       {
         "cycle": 0,
@@ -1420,6 +1420,16 @@
         "size": "standard",
         "head": "Brunstone & Sons Pivots to Storage With Debut of Lambourne-Era Vault Cells",
         "body": "Fresh off the emergency reset, new CEO Royce Lambourne steered the house away from vehicles and toward its Power & Storage arm, unveiling the Vault modular battery line. The launch leans on Brunstone's steadier storage business rather than another consumer-facing gamble, with initial capacity of 120,000 units earmarked for commercial buyers. Analysts framed it as a deliberately smaller bet after the Meridian collapse.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82578,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunstone & Sons Rebounds as Vault Cell Orders Outrun Forecasts",
+        "body": "Brunstone posted quarterly revenue of 3.1 billion marks, up 22% on the prior period, as demand for its Lambourne-era Vault Cells filled two full production shifts. Royce Lambourne, prone to grand pronouncements, called it 'the first clean quarter since the reset' but warned margins remain thin until the second cell line opens next spring.",
         "effects": {
           "automotive": 0.13
         }
@@ -1739,7 +1749,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82567,
+    "lastEventCycle": 82578,
     "events": [
       {
         "cycle": 0,
@@ -1793,6 +1803,16 @@
         "size": "standard",
         "head": "Carrowforge Splits Testing Unit Into Independent Division as Roe Answers Regulators",
         "body": "CEO Halden Roe carved out Carrowforge's certification and testing operations into a standalone division, Carrowforge Assurance, reporting directly to the board rather than plant management. The move, which Roe called a 'clean firewall,' follows the reopened regulatory files and shifts roughly 340 staff under new compliance chief Dara Welt. Analysts noted the reorganization adds near-term cost but may narrow the scope of the ongoing probe.",
+        "effects": {
+          "manufacturing": -0.13
+        }
+      },
+      {
+        "cycle": 82578,
+        "kind": "lawsuit",
+        "size": "standard",
+        "head": "Carrowforge Sued by Former Testing Chief Over Scandal-Era Dismissals",
+        "body": "Ex-testing director Marla Vesk filed suit alleging she was made a scapegoat during the overhaul, seeking 22 million marks and claiming Halden Roe's independent-division split 'buried the true chain of accountability.' Roe rejected the claim as 'a distraction from real reform,' but the filing threatens to reopen questions regulators had only recently set aside.",
         "effects": {
           "manufacturing": -0.13
         }
@@ -2542,7 +2562,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82566,
+    "lastEventCycle": 82578,
     "events": [
       {
         "cycle": 0,
@@ -2600,6 +2620,16 @@
         "body": "Drustcraft signed a multi-year agreement to supply its corrosion-resistant fastener series across a second, higher-volume variant of the new vehicle platform, worth an estimated 340 million over four years. Cora Fenn said the deal validates the added production line and the platform-specific fastener bet. Deliveries begin next quarter.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82578,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drustcraft Lifts Full-Year Outlook as Platform Fastener Volumes Climb",
+        "body": "Drustcraft raised its annual guidance after corrosion-resistant fastener shipments ran 15% ahead of plan through the third quarter. Cora Fenn credited the steady ramp of the new production line, noting the multi-year supply pact is 'delivering exactly the predictable demand we built it for.'",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -3368,7 +3398,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82568,
+    "lastEventCycle": 82578,
     "events": [
       {
         "cycle": 0,
@@ -3436,6 +3466,16 @@
         "body": "Greywater Grid unveiled its largest deal ever, a 1.2-billion-mark agreement to build and supply three compute campuses paired with dedicated storage across four regions. CEO Vale Halloran called it a defining moment that roughly doubles the company's committed backlog. The buildout will lean on Greywater's record-density storage blocks and span the next five years.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82578,
+        "kind": "outage",
+        "size": "major",
+        "head": "Greywater Grid Compute Campus Goes Dark, Disrupting Regional Power Pact",
+        "body": "A cascading fault at Greywater's flagship eastern compute campus knocked out service for 31 hours, forcing partial rolling curtailments across two regions tied to its 1.2-billion-mark contract. Vale Halloran pledged a full independent review and emergency capacity credits, but at least one regional authority has invoked penalty clauses estimated near 90 million marks.",
+        "effects": {
+          "energy": -0.22
         }
       }
     ]
@@ -4429,7 +4469,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82559,
+    "lastEventCycle": 82578,
     "events": [
       {
         "cycle": 0,
@@ -4465,6 +4505,16 @@
         "size": "flash",
         "head": "Ironcrestcrest Supply Extends Value Range With Dimmable Workshop Fixtures",
         "body": "Building on its workshop lighting debut, Ironcrestcrest added a dimmable variant priced under 30 per unit to broaden the value line. Dorian Garr said early orders from independent hardware retailers exceeded internal targets by 15 percent. The company reaffirmed its measured, margin-focused approach.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82578,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Opens Fourth Warehouse to Serve Growing Value Range",
+        "body": "Ironcrestcrest quietly commissioned a fourth fixtures warehouse, adding 40,000 square meters of distribution space to keep pace with its expanding Workshop Lighting line. Dorian Garr said the site will shorten delivery times across the northern trade region and support 'measured, self-funded growth' without new borrowing.",
         "effects": {
           "consumer": 0.06
         }
@@ -4920,7 +4970,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82571,
+    "lastEventCycle": 82578,
     "events": [
       {
         "cycle": 0,
@@ -5009,6 +5059,16 @@
         "effects": {
           "luxury": 0.22
         }
+      },
+      {
+        "cycle": 82578,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Korrwright Works Folds Sennfeld Atelier Into Unified Heritage Division",
+        "body": "Dunmore Carrow announced Sennfeld's storied workshop will be merged into a single Korrwright Heritage Division, consolidating three ateliers and cutting an estimated 140 back-office roles. Carrow framed the move as 'protecting two centuries of craft under one roof,' though guild observers noted the pace of integration has unsettled Sennfeld's veteran finishers.",
+        "effects": {
+          "luxury": -0.13
+        }
       }
     ]
   },
@@ -5023,7 +5083,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82572,
+    "lastEventCycle": 82578,
     "events": [
       {
         "cycle": 0,
@@ -5129,6 +5189,16 @@
         "size": "major",
         "head": "Lhaus Industries Debuts Fast-Charge Cell Pack With Record Cycle Life",
         "body": "Lhaus unveiled a second-generation cell pack it says retains 90% capacity after 4,000 cycles while accepting an 80% charge in under twelve minutes. Chief engineer Marta Voss said the breakthrough came from a new electrode chemistry developed at the company's Fenwick lab, and Cole Brandt hinted the technology could underpin a broader push beyond fleet customers. Analysts called it the most significant Power & Storage advance since the division launched.",
+        "effects": {
+          "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82578,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Lhaus Industries Signs $14B Second Fleet Pact on Strength of Fast-Charge Packs",
+        "body": "Building on its record cycle-life breakthrough, Lhaus landed a 14-billion-mark, seven-year agreement to supply cell packs to a major commercial hauler consortium. Cole Brandt said the win validates the dedicated cell-pack plant now nearing completion, and confirmed Lhaus will break ground on a second facility to meet combined demand from both fleet contracts.",
         "effects": {
           "automotive": 0.22
         }
@@ -7000,7 +7070,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82568,
+    "lastEventCycle": 82578,
     "events": [
       {
         "cycle": 0,
@@ -7076,6 +7146,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Acquires Calderon Motorworks to Broaden Heritage Line",
         "body": "Fresh off its Elberran Design Salon win, Vossenspire bought the storied Calderon Motorworks for 145 million marks to expand its Heritage Division into hand-built vehicles. CEO Quinn Marrow said Calderon's coachbuilding pedigree would pair naturally with the Renmark and Aldecourt marques. The acquisition adds a flagship workshop and an order book of bespoke commissions.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82578,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vossenspire Supply Unveils First Calderon-Built Grand Tourer Under Heritage Badge",
+        "body": "Just eight months after acquiring Calderon Motorworks, Vossenspire debuted the Aldecourt GTR, a limited run of 250 hand-assembled tourers priced from 480,000 marks. Quinn Marrow told the unveiling crowd the model 'proves the Calderon deal was never about factories, but about souls,' hinting that two further coachbuilt lines are already in development.",
         "effects": {
           "luxury": 0.13
         }
