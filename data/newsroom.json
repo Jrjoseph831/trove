@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-10T19:36:03.242Z",
+  "generatedAt": "2026-07-11T02:46:50.525Z",
   "beats": [
     {
-      "company": "Brunforge Holdings",
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Drustcyon Wins Landmark Harbor Authority Framework on Corrosion Anchor Strength",
+      "body": "Drustcyon secured a five-year framework agreement with the Meridian Harbor Authority valued at 340 million, its largest single contract on record. Aurelia Kessler said the deal, anchored by the corrosion-resistant fastener line, would keep the new coastal facility at full utilization through the decade. Kessler noted the win came against two established rivals after a competitive tender.",
+      "cycle": 82580,
+      "dur": 8
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Erretmark Works Beats as Sorne-Backed Flagship Clears Record Order Backlog",
+      "body": "Erretmark posted revenue of 296 million, up 22%, with the coach-built flagship accounting for nearly half of vehicle profit. Aurelia Garr said the Sorne Coachworks integration had cut bespoke build times by six weeks while preserving hand-finish quality. Garr said the flagship order book now stretches 14 months out.",
+      "cycle": 82580,
+      "dur": 2
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Fennmoor Opens Second Larkspur Production Line to Meet Hospital Rollout Demand",
+      "body": "Fennmoor commissioned a second Larkspur One assembly line at its Threll-integrated plant, adding capacity for 4,000 diagnostics units annually. Dorian Brandt said the expansion answers backlog from the recently signed hospital network rollout, which is now live in 22 facilities. Brandt confirmed a follow-on Larkspur imaging module is in advanced development.",
+      "cycle": 82580,
+      "dur": 2
+    },
+    {
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Halcrest Unveils Meridian Grand Complication, Iris Marrow's Boldest Bet Yet",
+      "body": "Iris Marrow took the Vireo Row stage to reveal the Meridian Grand Complication, a perpetual-calendar minute repeater priced at 480,000 and capped at 60 pieces. Marrow called it 'the summit of everything the Meridian line has climbed toward,' a striking escalation from the earlier limited Vireo Edition. Order books opened the same evening with a two-year waiting list already forming among salon clientele.",
+      "cycle": 82580,
+      "dur": 8
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halcrow & Vance Tops Estimates Again as Vetask Basin Nears Peak Output",
+      "body": "Halcrow & Vance reported earthmoving revenue of 168 million, beating consensus by 9%, with the Vetask Basin second phase now running at planned capacity. Mira Skarn said fleet utilization hit a multi-year high and reaffirmed the raised full-year outlook. Skarn flagged that early client discussions had begun around a potential third phase.",
+      "cycle": 82580,
+      "dur": 2
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Kessel Drive Rocked as Internal Memos Suggest Storage Pack Risk Was Flagged Early",
+      "body": "Documents surfaced in the fleet-client lawsuit indicate Kessel Drive engineers had raised overheating concerns about Touring-Line storage packs months before the recall. Dorian Brandt faces mounting pressure as regulators reopened the case to examine whether disclosures were delayed. Two additional fleet operators have signaled intent to join the litigation, and the board has commissioned an independent review.",
+      "cycle": 82580,
+      "dur": 8
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Thronehaus & Co. Beats as Aldren Foundry Lifts Margins on In-House Casing",
+      "body": "Thronehaus posted quarterly revenue of 214 million, up 18% year on year, crediting the Verrand casing foundry for trimming external supplier costs. Cora Dray said in-house production of Sovereign Collection cases had lifted gross margin by roughly three points. Dray hinted the acquisitive streak is not over, citing 'several conversations' around dial and movement specialists.",
+      "cycle": 82580,
+      "dur": 2
+    },
+    {
+      "company": "Wrenspire",
       "sector": "consumer",
       "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Brunforge Holdings Edges Past Estimates as Home Division Broadens",
-      "body": "Brunforge reported quarterly revenue of 4.21 billion, narrowly ahead of the 4.15 billion consensus, with the New Home Division contributing its strongest quarter yet. CEO Kestrel Bramm credited steady Vellan kitchenware uptake and disciplined cost control across the Devices and Household lines. The company reaffirmed its full-year outlook.",
-      "cycle": 82579,
-      "dur": 1
+      "size": "standard",
+      "head": "Wrenspire Beats Quietly as Everyroom Expansion Drives Household Segment Growth",
+      "body": "Wrenspire reported revenue of 512 million, up 11%, with the Everyroom household line now the fastest-growing segment across its four new regions. Theo Aldous credited disciplined distribution buildout from the Marlowe hub for keeping fulfillment costs flat despite the wider footprint. Aldous said further regional entries would proceed 'only as the logistics support them.'",
+      "cycle": 82580,
+      "dur": 2
     },
     {
       "company": "Castlestone",
@@ -52,56 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Wold & Bramm",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Wold & Bramm Extends Heritage Lighting Into Third Regional Showroom",
-      "body": "Wold & Bramm confirmed a third showroom in the Caldwell district, continuing the measured rollout of its Heritage lighting line. CEO Mara Marrow said the openings track demonstrated demand rather than speculative growth. The location will carry the full lighting range alongside the group's household goods.",
-      "cycle": 82579,
-      "dur": 1
-    },
-    {
-      "company": "Wrengrove Group",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Wrengrove Group Beats as Thornbury Supply Deal Lifts Consumables Volumes",
-      "body": "Wrengrove reported consumables shipments up 14 percent, driven by the sole-supplier arrangement with the Thornbury Hospital Network. CEO Rhys Vossen said the third plant remains on schedule and within budget. Margins held steady despite raw-material cost pressure.",
-      "cycle": 82579,
-      "dur": 1
-    },
-    {
-      "company": "Wrenhaus",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Wrenhaus Adds Fabrication Capacity to Meet Riverside Fixture Demand",
-      "body": "Wrenhaus announced a modest expansion at its Calderhythe fabrication site to keep pace with orders from the Riverside project. CEO Quinn Thorne said the added line would support both current contracts and future development bids. The investment is being funded from operating cash.",
-      "cycle": 82579,
-      "dur": 1
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Brunstone & Sons Rebounds as Vault Cell Orders Outrun Forecasts",
-      "body": "Brunstone posted quarterly revenue of 3.1 billion marks, up 22% on the prior period, as demand for its Lambourne-era Vault Cells filled two full production shifts. Royce Lambourne, prone to grand pronouncements, called it 'the first clean quarter since the reset' but warned margins remain thin until the second cell line opens next spring.",
-      "cycle": 82578,
-      "dur": 2
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "lawsuit",
-      "size": "standard",
-      "head": "Carrowforge Sued by Former Testing Chief Over Scandal-Era Dismissals",
-      "body": "Ex-testing director Marla Vesk filed suit alleging she was made a scapegoat during the overhaul, seeking 22 million marks and claiming Halden Roe's independent-division split 'buried the true chain of accountability.' Roe rejected the claim as 'a distraction from real reform,' but the filing threatens to reopen questions regulators had only recently set aside.",
-      "cycle": 82578,
-      "dur": 2
-    },
-    {
       "company": "Greywater Grid",
       "sector": "energy",
       "kind": "outage",
@@ -112,16 +132,6 @@
       "dur": 8
     },
     {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Korrwright Works Folds Sennfeld Atelier Into Unified Heritage Division",
-      "body": "Dunmore Carrow announced Sennfeld's storied workshop will be merged into a single Korrwright Heritage Division, consolidating three ateliers and cutting an estimated 140 back-office roles. Carrow framed the move as 'protecting two centuries of craft under one roof,' though guild observers noted the pace of integration has unsettled Sennfeld's veteran finishers.",
-      "cycle": 82578,
-      "dur": 2
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "major_deal",
@@ -130,16 +140,6 @@
       "body": "Building on its record cycle-life breakthrough, Lhaus landed a 14-billion-mark, seven-year agreement to supply cell packs to a major commercial hauler consortium. Cole Brandt said the win validates the dedicated cell-pack plant now nearing completion, and confirmed Lhaus will break ground on a second facility to meet combined demand from both fleet contracts.",
       "cycle": 82578,
       "dur": 8
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Vossenspire Supply Unveils First Calderon-Built Grand Tourer Under Heritage Badge",
-      "body": "Just eight months after acquiring Calderon Motorworks, Vossenspire debuted the Aldecourt GTR, a limited run of 250 hand-assembled tourers priced from 480,000 marks. Quinn Marrow told the unveiling crowd the model 'proves the Calderon deal was never about factories, but about souls,' hinting that two further coachbuilt lines are already in development.",
-      "cycle": 82578,
-      "dur": 2
     },
     {
       "company": "Ironcrestton",
@@ -239,16 +239,6 @@
       "head": "Blackton Industries Swings to Loss as Halvern Weld Crisis Guts Quarter",
       "body": "Blackton reported a 268-million quarterly loss, hammered by recall costs, legal reserves of 190 million tied to the Halvern suit, and a sharp drop in component orders. Mara Mercer suspended full-year guidance and announced a plant idling as regulators pressed forward with their safety probe, sending the worst result in the company's modern history.",
       "cycle": 82573,
-      "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "breakthrough",
-      "size": "major",
-      "head": "Lhaus Industries Debuts Fast-Charge Cell Pack With Record Cycle Life",
-      "body": "Lhaus unveiled a second-generation cell pack it says retains 90% capacity after 4,000 cycles while accepting an 80% charge in under twelve minutes. Chief engineer Marta Voss said the breakthrough came from a new electrode chemistry developed at the company's Fenwick lab, and Cole Brandt hinted the technology could underpin a broader push beyond fleet customers. Analysts called it the most significant Power & Storage advance since the division launched.",
-      "cycle": 82572,
       "dur": 8
     }
   ]

@@ -2665,7 +2665,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82563,
+    "lastEventCycle": 82580,
     "events": [
       {
         "cycle": 0,
@@ -2713,6 +2713,16 @@
         "body": "Drustcyon reported quarterly revenue growth of 15%, driven by its corrosion-resistant coastal anchor now running near full utilization. CEO Aurelia Kessler said the backlog remains firm and hinted the company is weighing a second production shift to capture opportunistic demand. Margins improved on better fixed-cost absorption at the new line.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82580,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Drustcyon Wins Landmark Harbor Authority Framework on Corrosion Anchor Strength",
+        "body": "Drustcyon secured a five-year framework agreement with the Meridian Harbor Authority valued at 340 million, its largest single contract on record. Aurelia Kessler said the deal, anchored by the corrosion-resistant fastener line, would keep the new coastal facility at full utilization through the decade. Kessler noted the win came against two established rivals after a competitive tender.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -2854,7 +2864,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82570,
+    "lastEventCycle": 82580,
     "events": [
       {
         "cycle": 0,
@@ -2920,6 +2930,16 @@
         "size": "standard",
         "head": "Erretmark Works Acquires Sorne Coachworks to Lock In Flagship Craftsmanship",
         "body": "Erretmark Works agreed to acquire longtime partner Sorne Coachworks for $640 million, bringing the artisan bodywork behind its coach-built flagship fully in-house. CEO Aurelia Garr said the deal secures scarce craftsman talent and protects margins as premium flagship orders continue to outpace supply. The purchase fits Garr's acquisitive streak and expands Erretmark's high-end vehicle capacity.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82580,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Erretmark Works Beats as Sorne-Backed Flagship Clears Record Order Backlog",
+        "body": "Erretmark posted revenue of 296 million, up 22%, with the coach-built flagship accounting for nearly half of vehicle profit. Aurelia Garr said the Sorne Coachworks integration had cut bespoke build times by six weeks while preserving hand-finish quality. Garr said the flagship order book now stretches 14 months out.",
         "effects": {
           "automotive": 0.13
         }
@@ -3010,7 +3030,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82571,
+    "lastEventCycle": 82580,
     "events": [
       {
         "cycle": 0,
@@ -3086,6 +3106,16 @@
         "size": "standard",
         "head": "Fennmoor Signs Hospital Network Rollout for Larkspur One Diagnostics System",
         "body": "Dorian Brandt landed a multi-site deployment pact placing the Threll-sensor-based Larkspur One across a 22-hospital network, valued at roughly $310M over five years. The deal validates the recent product launch and pulls the acquired sensor unit into steady recurring revenue. Brandt signaled appetite for further tuck-in buys to widen the diagnostics platform.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82580,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Fennmoor Opens Second Larkspur Production Line to Meet Hospital Rollout Demand",
+        "body": "Fennmoor commissioned a second Larkspur One assembly line at its Threll-integrated plant, adding capacity for 4,000 diagnostics units annually. Dorian Brandt said the expansion answers backlog from the recently signed hospital network rollout, which is now live in 22 facilities. Brandt confirmed a follow-on Larkspur imaging module is in advanced development.",
         "effects": {
           "technology": 0.13
         }
@@ -3650,7 +3680,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82567,
+    "lastEventCycle": 82580,
     "events": [
       {
         "cycle": 0,
@@ -3709,6 +3739,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82580,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Halcrest Unveils Meridian Grand Complication, Iris Marrow's Boldest Bet Yet",
+        "body": "Iris Marrow took the Vireo Row stage to reveal the Meridian Grand Complication, a perpetual-calendar minute repeater priced at 480,000 and capped at 60 pieces. Marrow called it 'the summit of everything the Meridian line has climbed toward,' a striking escalation from the earlier limited Vireo Edition. Order books opened the same evening with a two-year waiting list already forming among salon clientele.",
+        "effects": {
+          "luxury": 0.22
+        }
       }
     ]
   },
@@ -3723,7 +3763,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82564,
+    "lastEventCycle": 82580,
     "events": [
       {
         "cycle": 0,
@@ -3769,6 +3809,16 @@
         "size": "standard",
         "head": "Halcrow & Vance Raises Full-Year Outlook as Vetask Second Phase Ramps",
         "body": "Halcrow & Vance lifted its annual guidance after second-phase Vetask Basin work drove earthmoving revenue up 18 percent year over year. CEO Mira Skarn credited disciplined scheduling and said the backlog now stretches into 2029, giving 'unusual visibility for this stage of a cycle.'",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82580,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrow & Vance Tops Estimates Again as Vetask Basin Nears Peak Output",
+        "body": "Halcrow & Vance reported earthmoving revenue of 168 million, beating consensus by 9%, with the Vetask Basin second phase now running at planned capacity. Mira Skarn said fleet utilization hit a multi-year high and reaffirmed the raised full-year outlook. Skarn flagged that early client discussions had begun around a potential third phase.",
         "effects": {
           "construction": 0.13
         }
@@ -4665,7 +4715,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82570,
+    "lastEventCycle": 82580,
     "events": [
       {
         "cycle": 0,
@@ -4731,6 +4781,16 @@
         "size": "major",
         "head": "Kessel Drive Sued as Fleet Client Alleges Breach Over Recalled Storage Packs",
         "body": "The national fleet operator behind Kessel Drive's $3.2 billion touring pact filed suit, alleging breach of contract and seeking damages after the overheating-driven recall grounded thousands of units. CEO Dorian Brandt vowed to fight the claim while accelerating a redesigned storage pack he said would be 'faster and safer than anything on the road.' The dispute threatens the largest deal in the company's history.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82580,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Kessel Drive Rocked as Internal Memos Suggest Storage Pack Risk Was Flagged Early",
+        "body": "Documents surfaced in the fleet-client lawsuit indicate Kessel Drive engineers had raised overheating concerns about Touring-Line storage packs months before the recall. Dorian Brandt faces mounting pressure as regulators reopened the case to examine whether disclosures were delayed. Two additional fleet operators have signaled intent to join the litigation, and the board has commissioned an independent review.",
         "effects": {
           "automotive": -0.22
         }
@@ -6441,7 +6501,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82571,
+    "lastEventCycle": 82580,
     "events": [
       {
         "cycle": 0,
@@ -6517,6 +6577,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Opens Aldren-Backed Casing Foundry in Verrand",
         "body": "Cora Dray cut the ribbon on a 40,000-square-foot casing foundry built around the newly acquired Aldren team, consolidating shell and bracelet work under one roof. The site is projected to lift in-house component output by roughly 35% within its first year and marks the first physical footprint added since the Sovereign Collection launch. Dray called it 'the next hungry step,' hinting at further supplier acquisitions to follow.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82580,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Thronehaus & Co. Beats as Aldren Foundry Lifts Margins on In-House Casing",
+        "body": "Thronehaus posted quarterly revenue of 214 million, up 18% year on year, crediting the Verrand casing foundry for trimming external supplier costs. Cora Dray said in-house production of Sovereign Collection cases had lifted gross margin by roughly three points. Dray hinted the acquisitive streak is not over, citing 'several conversations' around dial and movement specialists.",
         "effects": {
           "luxury": 0.13
         }
@@ -7611,7 +7681,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82561,
+    "lastEventCycle": 82580,
     "events": [
       {
         "cycle": 0,
@@ -7647,6 +7717,16 @@
         "size": "standard",
         "head": "Wrenspire Extends Everyroom Rollout Into Three New Regions",
         "body": "Following a strong Marlowe debut, Wrenspire is expanding its Everyroom household line into the Halvect, Denmoor, and Ashfield regions, supported by a new cross-dock facility in Denmoor. Theo Aldous said the measured rollout mirrors the company's approach of proving demand before scaling. The expansion adds roughly 400 stocking points to the network.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82580,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Wrenspire Beats Quietly as Everyroom Expansion Drives Household Segment Growth",
+        "body": "Wrenspire reported revenue of 512 million, up 11%, with the Everyroom household line now the fastest-growing segment across its four new regions. Theo Aldous credited disciplined distribution buildout from the Marlowe hub for keeping fulfillment costs flat despite the wider footprint. Aldous said further regional entries would proceed 'only as the logistics support them.'",
         "effects": {
           "consumer": 0.13
         }
