@@ -73,7 +73,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82565,
+    "lastEventCycle": 82581,
     "events": [
       {
         "cycle": 0,
@@ -121,6 +121,16 @@
         "body": "Aldouscyon reported revenue of $310M, up 8%, as the Vereldt and Thornbury streetlight contracts moved into billing phases. CEO Petra Mercer said the long-life filament range and municipal pipeline offer 'predictable, low-drama growth' for the year ahead. The company reaffirmed its full-year guidance.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82581,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aldouscyon Lands Third Municipal Conversion With Coastal City of Marren",
+        "body": "Aldouscyon extended its streetlight conversion streak by winning a contract to modernize the coastal city of Marren, its third municipal award in under a year. Petra Mercer said the phased rollout would cover some 22,000 fixtures over three years, building on the template established in Vereldt and Thornbury. The steady pipeline continues to underpin the lighting maker's dependable growth.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -859,7 +869,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82574,
+    "lastEventCycle": 82581,
     "events": [
       {
         "cycle": 0,
@@ -947,6 +957,16 @@
         "body": "Restless CEO Orla Marrow struck her biggest deal yet, agreeing to buy vehicle maker Talvorne Motors for $2.7 billion to fold its heavy-truck platform into Bruncraft's fleet lineup. The purchase, coming just after the Halveston Axle Works buy, would make Bruncraft the second-largest commercial vehicle producer on the continent. Marrow said combined output could reach 190,000 units annually once integration completes.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82581,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Bruncraft Industries Launches Integration Push to Absorb Talvorne Motors",
+        "body": "Following its $2.7-billion Talvorne acquisition, Bruncraft detailed a consolidation plan that will merge overlapping assembly lines and retire the Talvorne runabout badge in favor of a unified Bruncraft lineup. Orla Marrow projected $180 million in annual savings by combining the Halveston axle supply with Talvorne's plants, though the plan includes closing two redundant facilities. Union representatives requested talks over affected workers.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -1457,7 +1477,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82563,
+    "lastEventCycle": 82581,
     "events": [
       {
         "cycle": 0,
@@ -1503,6 +1523,16 @@
         "size": "flash",
         "head": "Caldercraft Holdings Posts Steady Quarter as Tool and Textile Lines Balance Out",
         "body": "Caldercraft edged past estimates with revenue up 6% year over year, split evenly between the Tradesman tool line and its expanded textile mills. CEO Vale Fenn described the quarter as unremarkable in the best way, with the second mill now easing prior supply bottlenecks. Guidance was left unchanged.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82581,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Caldercraft Holdings Adds Weatherproof Line to Household Goods Range",
+        "body": "Caldercraft rolled out a modest expansion of its Household Goods segment with a weatherproof storage and container line aimed at outdoor and workshop use. Vale Fenn framed the launch as a natural extension of the Tradesman brand, targeting the same tradespeople already buying the reinforced tool range. The company expects the line to contribute incrementally without disrupting its steady margin profile.",
         "effects": {
           "consumer": 0.06
         }
@@ -2310,7 +2340,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82568,
+    "lastEventCycle": 82581,
     "events": [
       {
         "cycle": 0,
@@ -2368,6 +2398,16 @@
         "body": "Cranecraft secured a four-year raw textiles supply agreement with the Northern Mills Consortium, valued at roughly 96 million marks over its term. CEO Mira Garr described the pact as a natural extension of the ramping textile contract that has anchored recent results. Deliveries are set to begin next quarter alongside steady farm equipment output.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82581,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Posts Slim Beat as Northern Mills Deal Begins to Flow",
+        "body": "Cranecraft edged past estimates again as early volumes from its multi-year textile supply agreement with the Northern Mills Consortium began hitting the books. Mira Garr credited stable farm equipment orders and the ramping textile contract for the quarter's dependable result. The company reaffirmed its full-year outlook without raising guidance.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -3919,7 +3959,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82575,
+    "lastEventCycle": 82581,
     "events": [
       {
         "cycle": 0,
@@ -4035,6 +4075,16 @@
         "body": "A cooling-system failure at Halhold's second Northgate campus triggered a rolling outage that took client workloads offline for nearly 14 hours, the longest disruption in company history. CEO Dahlia Renn issued a public apology and confirmed penalty clauses with two anchor clients may be triggered, with restoration crews still stabilizing the site. Shares of the compute house fell sharply as customers questioned the pace of its campus buildout.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82581,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Halhold Systems Overhauls Campus Operations After Northgate Failure",
+        "body": "Dahlia Renn announced a sweeping reorganization of Halhold's compute division, splitting site reliability into a standalone unit and pledging $220 million in redundant power and cooling upgrades across all three Northgate campuses. The restructuring follows last month's outage that darkened client workloads for eleven hours, and includes the departure of two senior operations directors. Renn conceded the company 'grew faster than its foundations,' vowing tighter controls before the next capacity push.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -5993,7 +6043,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82562,
+    "lastEventCycle": 82581,
     "events": [
       {
         "cycle": 0,
@@ -6031,6 +6081,16 @@
         "body": "The medical house introduced its Verlan-S sterilizer range, designed for heat-sensitive endoscopic and optical instruments, targeting hospital procurement cycles beginning next season. CEO Orla Dray said early pilot placements at three regional health networks validated cycle times roughly 30 percent faster than the outgoing model. The launch complements the five-year sterilization supply contract now ramping.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82581,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrave Posts Reliable Quarter as Low-Temperature Line Gains Early Traction",
+        "body": "Skarngrave met and modestly beat expectations as hospitals began adopting its new low-temperature sterilizer line for heat-sensitive instruments. Orla Dray highlighted the steady ramp of the five-year sterilization contract alongside firm demand across cleaning and jansan products. The company held its outlook, characteristically declining to raise guidance despite the encouraging launch.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -6430,7 +6490,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82569,
+    "lastEventCycle": 82581,
     "events": [
       {
         "cycle": 0,
@@ -6484,6 +6544,16 @@
         "size": "standard",
         "head": "Thaldale Group Extends Rebound as Hardware Margins Widen",
         "body": "Renna Voss posted a second consecutive quarter of growth, with operating margin climbing to 11.4 percent from 7.1 percent a year earlier. The turnaround plan's cost cuts have now been fully absorbed, and Voss raised full-year guidance for the first time since taking the helm. Analysts noted the turbulent early quarters appear to be behind the company.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82581,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Thaldale Group Opens New Fastening Plant as Voss Doubles Down on Rebound",
+        "body": "Emboldened by three straight strong quarters, Renna Voss unveiled a $310-million fastening and fixtures plant intended to lift Thaldale's hardware output by roughly a third. Voss said the expansion would 'convert momentum into permanent capacity,' though the aggressive spend drew questions given how recently the turnaround cleared its cost overhang. Production is slated to begin within eighteen months.",
         "effects": {
           "consumer": 0.13
         }
@@ -6720,7 +6790,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82573,
+    "lastEventCycle": 82581,
     "events": [
       {
         "cycle": 0,
@@ -6808,6 +6878,16 @@
         "body": "Varnvale & Sons unveiled the Meridian line, its first collection assembled entirely from newly acquired Corveau dials and Bellmont cases, priced from 12,400. Bram Wold called it proof of the firm's vertical strategy, with initial production capped at 3,000 pieces to protect margins as demand tests the integration.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82581,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Varnvale & Sons Acquires Heritage Jeweler Duquesne in $1.4-Billion Reach Into Fine Goods",
+        "body": "Bram Wold has struck again, folding storied gem house Duquesne et Fils into the Varnvale empire for $1.4 billion in a move that pairs the newly integrated timepiece works with a marquee jewelry name. Wold called it 'the final pillar of a truly complete luxury house,' pointing to Duquesne's stone-cutting ateliers as the crown of a two-year acquisition spree. Analysts note the deal pushes Varnvale's total buyout spending past $5 billion since the Corveau purchase.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
