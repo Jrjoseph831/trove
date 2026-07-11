@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-11T07:59:20.547Z",
+  "generatedAt": "2026-07-11T13:23:10.776Z",
   "beats": [
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Aperture Compute Lands $3.2 Billion Dawnmere II Deal With Continental Carrier",
+      "body": "Aperture signed its largest contract ever, a $3.2 billion multi-year agreement to supply Dawnmere II interconnect hardware across a continental carrier's backbone network. CEO Halden Dray called it 'the biggest infrastructure win in our history,' saying the deal effectively doubles the company's committed order book and cements Dawnmere II as the industry standard.",
+      "cycle": 82582,
+      "dur": 8
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Bruncrest Works Unveils Sweeping Overhaul as Marlow Slashes Product Lines",
+      "body": "In her first major move, CEO Ines Marlow announced plans to cut the compute portfolio by 40% and consolidate three facilities into a single flagship plant, targeting $220 million in annual savings. Marlow told staff the company would 'stop trying to be everything' and stake its recovery on a narrow high-margin server line, a gamble that drew mixed reactions from the board.",
+      "cycle": 82582,
+      "dur": 2
+    },
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Brunridge Works Opens Second Distribution Hub to Feed National Shelf Deal",
+      "body": "Brunridge broke ground on a $180 million distribution center to supply its newly won national retail placement across all three pillars. CEO Halia Brennt said the hub would cut delivery times by roughly half and support projected volume growth as the cross-pillar home bundle rolls out to additional regions.",
+      "cycle": 82582,
+      "dur": 2
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Cranegrove Beats as Inland Corridor Packages Drive Margin Expansion",
+      "body": "Cranegrove reported operating margins of 18%, up from 15% a year earlier, as both Inland Corridor earthworks packages ran ahead of schedule. CEO Vale Calder credited disciplined cost control and hinted the firm is quietly evaluating a third bid in the corridor program.",
+      "cycle": 82582,
+      "dur": 2
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Holtforge Group Posts Record Quarter as Offshore Wind Cable Backlog Swells",
+      "body": "Holtforge reported quarterly revenue of $1.12 billion, up 14% year-over-year, with the marine and offshore wind cable segments accounting for nearly a third of total sales. CEO Yvette Bramm noted the order backlog has grown to $1.9 billion following the recent offshore contract win, and reaffirmed full-year guidance without further comment.",
+      "cycle": 82582,
+      "dur": 2
+    },
+    {
+      "company": "Korrgrave Mfg.",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Korrgrave Mfg. Delivers Steady Gains as Northern Plant Reaches Full Output",
+      "body": "Korrgrave posted a modest 4% rise in seasonal input sales, with the expanded Northern facility now running at full capacity ahead of the planting window. CEO Aurelia Halloran characterized the results as 'exactly on plan,' declining to raise guidance.",
+      "cycle": 82582,
+      "dur": 1
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Marrowstone Build CEO Bram Halloran Steps Down in Wake of Embankment Judgment",
+      "body": "Bram Halloran, who led Marrowstone since 1924, resigned Tuesday as the board sought a clean break following the $310 million collapse judgment and a widening safety probe. The company named longtime operations chief Delphine Vaugh as his successor, tasking her with restoring regulator confidence and settling remaining site orders.",
+      "cycle": 82582,
+      "dur": 8
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Varnvale House Reels as Sourcing Claims Cast Shadow Over Meridian Revival",
+      "body": "Reports surfaced alleging that Varnvale misrepresented the provenance of materials in its flagship Meridian timepiece line, prompting an internal review and a sharp rebuke from luxury retail partners. CEO Idris Calloway, who staked the house's comeback on the collection, called the claims 'deeply damaging' and pledged a full audit, though two boutique accounts have already suspended orders.",
+      "cycle": 82582,
+      "dur": 8
+    },
     {
       "company": "Aldouscyon",
       "sector": "consumer",
@@ -22,26 +102,6 @@
       "dur": 2
     },
     {
-      "company": "Caldercraft Holdings",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Caldercraft Holdings Adds Weatherproof Line to Household Goods Range",
-      "body": "Caldercraft rolled out a modest expansion of its Household Goods segment with a weatherproof storage and container line aimed at outdoor and workshop use. Vale Fenn framed the launch as a natural extension of the Tradesman brand, targeting the same tradespeople already buying the reinforced tool range. The company expects the line to contribute incrementally without disrupting its steady margin profile.",
-      "cycle": 82581,
-      "dur": 1
-    },
-    {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Posts Slim Beat as Northern Mills Deal Begins to Flow",
-      "body": "Cranecraft edged past estimates again as early volumes from its multi-year textile supply agreement with the Northern Mills Consortium began hitting the books. Mira Garr credited stable farm equipment orders and the ramping textile contract for the quarter's dependable result. The company reaffirmed its full-year outlook without raising guidance.",
-      "cycle": 82581,
-      "dur": 1
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "restructure",
@@ -50,16 +110,6 @@
       "body": "Dahlia Renn announced a sweeping reorganization of Halhold's compute division, splitting site reliability into a standalone unit and pledging $220 million in redundant power and cooling upgrades across all three Northgate campuses. The restructuring follows last month's outage that darkened client workloads for eleven hours, and includes the departure of two senior operations directors. Renn conceded the company 'grew faster than its foundations,' vowing tighter controls before the next capacity push.",
       "cycle": 82581,
       "dur": 2
-    },
-    {
-      "company": "Skarngrave",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Skarngrave Posts Reliable Quarter as Low-Temperature Line Gains Early Traction",
-      "body": "Skarngrave met and modestly beat expectations as hospitals began adopting its new low-temperature sterilizer line for heat-sensitive instruments. Orla Dray highlighted the steady ramp of the five-year sterilization contract alongside firm demand across cleaning and jansan products. The company held its outlook, characteristically declining to raise guidance despite the encouraging launch.",
-      "cycle": 82581,
-      "dur": 1
     },
     {
       "company": "Thaldale Group",
@@ -92,26 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Erretmark Works Beats as Sorne-Backed Flagship Clears Record Order Backlog",
-      "body": "Erretmark posted revenue of 296 million, up 22%, with the coach-built flagship accounting for nearly half of vehicle profit. Aurelia Garr said the Sorne Coachworks integration had cut bespoke build times by six weeks while preserving hand-finish quality. Garr said the flagship order book now stretches 14 months out.",
-      "cycle": 82580,
-      "dur": 2
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Fennmoor Opens Second Larkspur Production Line to Meet Hospital Rollout Demand",
-      "body": "Fennmoor commissioned a second Larkspur One assembly line at its Threll-integrated plant, adding capacity for 4,000 diagnostics units annually. Dorian Brandt said the expansion answers backlog from the recently signed hospital network rollout, which is now live in 22 facilities. Brandt confirmed a follow-on Larkspur imaging module is in advanced development.",
-      "cycle": 82580,
-      "dur": 2
-    },
-    {
       "company": "Halcrest",
       "sector": "luxury",
       "kind": "product_launch",
@@ -122,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcrow & Vance Tops Estimates Again as Vetask Basin Nears Peak Output",
-      "body": "Halcrow & Vance reported earthmoving revenue of 168 million, beating consensus by 9%, with the Vetask Basin second phase now running at planned capacity. Mira Skarn said fleet utilization hit a multi-year high and reaffirmed the raised full-year outlook. Skarn flagged that early client discussions had begun around a potential third phase.",
-      "cycle": 82580,
-      "dur": 2
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "scandal",
@@ -140,26 +160,6 @@
       "body": "Documents surfaced in the fleet-client lawsuit indicate Kessel Drive engineers had raised overheating concerns about Touring-Line storage packs months before the recall. Dorian Brandt faces mounting pressure as regulators reopened the case to examine whether disclosures were delayed. Two additional fleet operators have signaled intent to join the litigation, and the board has commissioned an independent review.",
       "cycle": 82580,
       "dur": 8
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Thronehaus & Co. Beats as Aldren Foundry Lifts Margins on In-House Casing",
-      "body": "Thronehaus posted quarterly revenue of 214 million, up 18% year on year, crediting the Verrand casing foundry for trimming external supplier costs. Cora Dray said in-house production of Sovereign Collection cases had lifted gross margin by roughly three points. Dray hinted the acquisitive streak is not over, citing 'several conversations' around dial and movement specialists.",
-      "cycle": 82580,
-      "dur": 2
-    },
-    {
-      "company": "Wrenspire",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Wrenspire Beats Quietly as Everyroom Expansion Drives Household Segment Growth",
-      "body": "Wrenspire reported revenue of 512 million, up 11%, with the Everyroom household line now the fastest-growing segment across its four new regions. Theo Aldous credited disciplined distribution buildout from the Marlowe hub for keeping fulfillment costs flat despite the wider footprint. Aldous said further regional entries would proceed 'only as the logistics support them.'",
-      "cycle": 82580,
-      "dur": 2
     },
     {
       "company": "Halhold Works",
@@ -259,26 +259,6 @@
       "head": "Halhold Systems Reels as Northgate Campus Failure Darkens Client Workloads",
       "body": "A cooling-system failure at Halhold's second Northgate campus triggered a rolling outage that took client workloads offline for nearly 14 hours, the longest disruption in company history. CEO Dahlia Renn issued a public apology and confirmed penalty clauses with two anchor clients may be triggered, with restoration crews still stabilizing the site. Shares of the compute house fell sharply as customers questioned the pace of its campus buildout.",
       "cycle": 82575,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Bruncraft Industries Acquires Rival Maker Talvorne Motors in $2.7 Billion Deal",
-      "body": "Restless CEO Orla Marrow struck her biggest deal yet, agreeing to buy vehicle maker Talvorne Motors for $2.7 billion to fold its heavy-truck platform into Bruncraft's fleet lineup. The purchase, coming just after the Halveston Axle Works buy, would make Bruncraft the second-largest commercial vehicle producer on the continent. Marrow said combined output could reach 190,000 units annually once integration completes.",
-      "cycle": 82574,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "recall",
-      "size": "major",
-      "head": "Halhold Works Issues Sweeping Recall of Verity Pro Medical Units as Regulators Step In",
-      "body": "Halhold Works pulled roughly 74,000 Verity Pro medical devices from hospitals nationwide after monitoring faults were linked to at least a dozen critical-care incidents. CEO Gunnar Vale, barely months into his overhaul, said the company would absorb an estimated $380 million charge and pause all Verity Pro shipments. The recall deepens the legal exposure from hospitals already suing over the suite's failures.",
-      "cycle": 82574,
       "dur": 8
     }
   ]

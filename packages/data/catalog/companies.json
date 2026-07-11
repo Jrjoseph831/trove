@@ -272,7 +272,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82574,
+    "lastEventCycle": 82582,
     "events": [
       {
         "cycle": 0,
@@ -360,6 +360,16 @@
         "body": "Halden Dray's firm reported quarterly revenue of $920 million, up 27%, as the first Dawnmere II units shipped under the 1.4-billion backbone rollout. Order backlog swelled to a record $3.1 billion, and Dray teased 'a third-generation surprise' before year-end. Interconnect gross margins climbed to 41%.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82582,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Aperture Compute Lands $3.2 Billion Dawnmere II Deal With Continental Carrier",
+        "body": "Aperture signed its largest contract ever, a $3.2 billion multi-year agreement to supply Dawnmere II interconnect hardware across a continental carrier's backbone network. CEO Halden Dray called it 'the biggest infrastructure win in our history,' saying the deal effectively doubles the company's committed order book and cements Dawnmere II as the industry standard.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -982,7 +992,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82576,
+    "lastEventCycle": 82582,
     "events": [
       {
         "cycle": 0,
@@ -1085,6 +1095,16 @@
         "head": "Bruncrest Works Names Ines Marlow CEO in Bid to Halt the Bleeding",
         "body": "The board tapped former operations chief Ines Marlow to succeed the ousted Corwin Hale, betting her turnaround record can stabilize a Compute unit that has burned through cash since the Meridian exit. In her first address, Marlow pledged a 'no-sacred-cows' review and hinted at deeper cuts to the Compute portfolio within ninety days. Investors welcomed the clarity but flagged execution risk given three leadership shifts in eighteen months.",
         "effects": {}
+      },
+      {
+        "cycle": 82582,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Bruncrest Works Unveils Sweeping Overhaul as Marlow Slashes Product Lines",
+        "body": "In her first major move, CEO Ines Marlow announced plans to cut the compute portfolio by 40% and consolidate three facilities into a single flagship plant, targeting $220 million in annual savings. Marlow told staff the company would 'stop trying to be everything' and stake its recovery on a narrow high-margin server line, a gamble that drew mixed reactions from the board.",
+        "effects": {
+          "technology": -0.13
+        }
       }
     ]
   },
@@ -1275,7 +1295,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82569,
+    "lastEventCycle": 82582,
     "events": [
       {
         "cycle": 0,
@@ -1329,6 +1349,16 @@
         "size": "standard",
         "head": "Brunridge Works Secures National Retail Shelf Deal for Three-Pillar Range",
         "body": "Halia Brennt announced a two-year agreement placing Brunridge's cleaning, apparel, and fine-goods lines across 1,200 retail locations under the Meldon Retail banner. The deal is projected to add 90 million in annual revenue and validates the cross-pillar bundling strategy launched last quarter. Brennt said the structure 'is finally showing what it was built to do.'",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82582,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunridge Works Opens Second Distribution Hub to Feed National Shelf Deal",
+        "body": "Brunridge broke ground on a $180 million distribution center to supply its newly won national retail placement across all three pillars. CEO Halia Brennt said the hub would cut delivery times by roughly half and support projected volume growth as the cross-pillar home bundle rolls out to additional regions.",
         "effects": {
           "consumer": 0.13
         }
@@ -2423,7 +2453,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82566,
+    "lastEventCycle": 82582,
     "events": [
       {
         "cycle": 0,
@@ -2469,6 +2499,16 @@
         "size": "standard",
         "head": "Cranegrove Wins Second Inland Corridor Package in 620-Million Award",
         "body": "Cranegrove secured a 620-million follow-on earthworks package extending the Inland Corridor project into its northern spur, building on the contract now at full stride. Vale Calder said the disciplined win keeps all three Earthmoving depots at near-full utilization through the next two years. The award cements Cranegrove as the corridor's primary earthmoving supplier.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82582,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Cranegrove Beats as Inland Corridor Packages Drive Margin Expansion",
+        "body": "Cranegrove reported operating margins of 18%, up from 15% a year earlier, as both Inland Corridor earthworks packages ran ahead of schedule. CEO Vale Calder credited disciplined cost control and hinted the firm is quietly evaluating a third bid in the corridor program.",
         "effects": {
           "construction": 0.13
         }
@@ -4387,7 +4427,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82565,
+    "lastEventCycle": 82582,
     "events": [
       {
         "cycle": 0,
@@ -4433,6 +4473,16 @@
         "size": "standard",
         "head": "Holtforge Group Wins Offshore Wind Cable Contract Worth $540M",
         "body": "Holtforge secured a multi-year contract to supply reinforced marine cable for the Fenwick offshore array, validating its recent product line push. CEO Yvette Bramm called it 'the largest single order in our history' and said the marine range now represents a durable growth pillar. Deliveries begin next quarter and run through 2029.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82582,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtforge Group Posts Record Quarter as Offshore Wind Cable Backlog Swells",
+        "body": "Holtforge reported quarterly revenue of $1.12 billion, up 14% year-over-year, with the marine and offshore wind cable segments accounting for nearly a third of total sales. CEO Yvette Bramm noted the order backlog has grown to $1.9 billion following the recent offshore contract win, and reaffirmed full-year guidance without further comment.",
         "effects": {
           "construction": 0.13
         }
@@ -4931,7 +4981,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82551,
+    "lastEventCycle": 82582,
     "events": [
       {
         "cycle": 0,
@@ -4957,6 +5007,16 @@
         "size": "flash",
         "head": "Korrgrave Mfg. Nudges Past Estimates as Northern Plant Ramps",
         "body": "Korrgrave reported quarterly revenue of $412M, a touch above forecasts, as the recently expanded northern input plant began contributing volume. CEO Aurelia Halloran credited steady seasonal ordering and cautioned that full capacity gains would arrive gradually. Margins held flat against input costs.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82582,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Korrgrave Mfg. Delivers Steady Gains as Northern Plant Reaches Full Output",
+        "body": "Korrgrave posted a modest 4% rise in seasonal input sales, with the expanded Northern facility now running at full capacity ahead of the planting window. CEO Aurelia Halloran characterized the results as 'exactly on plan,' declining to raise guidance.",
         "effects": {
           "agriculture": 0.06
         }
@@ -5701,14 +5761,14 @@
     "aiOwned": true,
     "homeSector": "construction",
     "founded": 1924,
-    "ceo": "Bram Halloran",
-    "ceoSince": 1924,
+    "ceo": "Delphine Vaugh",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.56,
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82570,
+    "lastEventCycle": 82582,
     "events": [
       {
         "cycle": 0,
@@ -5767,6 +5827,14 @@
         "effects": {
           "construction": -0.22
         }
+      },
+      {
+        "cycle": 82582,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Marrowstone Build CEO Bram Halloran Steps Down in Wake of Embankment Judgment",
+        "body": "Bram Halloran, who led Marrowstone since 1924, resigned Tuesday as the board sought a clean break following the $310 million collapse judgment and a widening safety probe. The company named longtime operations chief Delphine Vaugh as his successor, tasking her with restoring regulator confidence and settling remaining site orders.",
+        "effects": {}
       }
     ]
   },
@@ -6903,7 +6971,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82574,
+    "lastEventCycle": 82582,
     "events": [
       {
         "cycle": 0,
@@ -6997,6 +7065,16 @@
         "body": "Riding the Meridian collection's strong first quarter, CEO Idris Calloway unveiled a new flagship maison in the capital's luxury district, the brand's first store opening since the Ember scandal. The 12,000-square-foot space anchors a planned rollout of six boutiques over 18 months. Calloway framed the investment as a signal that Varnvale has 'closed the book on crisis and opened one on craft.'",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82582,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Varnvale House Reels as Sourcing Claims Cast Shadow Over Meridian Revival",
+        "body": "Reports surfaced alleging that Varnvale misrepresented the provenance of materials in its flagship Meridian timepiece line, prompting an internal review and a sharp rebuke from luxury retail partners. CEO Idris Calloway, who staked the house's comeback on the collection, called the claims 'deeply damaging' and pledged a full audit, though two boutique accounts have already suspended orders.",
+        "effects": {
+          "luxury": -0.22
         }
       }
     ]
