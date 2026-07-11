@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82566,
+    "lastEventCycle": 82583,
     "events": [
       {
         "cycle": 0,
@@ -58,6 +58,16 @@
         "body": "Aldouscraft reported modest revenue growth as its new high-capacity feeder line hit full production, supporting the ongoing grid-modernization contract. Soren Ashby noted the line is running slightly ahead of schedule with no supply disruptions. The quiet maker kept guidance unchanged.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82583,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aldouscraft Mfg. Wins Multi-Year Feeder Cable Supply Award for Grid Expansion",
+        "body": "Aldouscraft secured a multi-year supply award to provide high-capacity feeder cable for a regional grid buildout, valued at roughly $220M. CEO Soren Ashby said the contract locks in demand for the recently commissioned feeder line through the decade. Deliveries begin in the coming quarter under a phased schedule.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -636,14 +646,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1939,
-    "ceo": "Mara Mercer",
-    "ceoSince": 1939,
+    "ceo": "Dorian Vale",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82573,
+    "lastEventCycle": 82583,
     "events": [
       {
         "cycle": 0,
@@ -732,6 +742,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82583,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Blackton Industries Ousts Mara Mercer as Halvern Weld Crisis Forces Board Shakeup",
+        "body": "The Blackton board removed CEO Mara Mercer after mounting losses and the escalating Halvern lawsuit tied to weld defects, installing veteran operations chief Dorian Vale as her successor. Vale pledged an immediate quality overhaul and settlement talks with Halvern, whose suit seeks damages exceeding $400M. Three additional board seats were also reshuffled amid investor pressure.",
+        "effects": {}
       }
     ]
   },
@@ -746,7 +764,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82576,
+    "lastEventCycle": 82583,
     "events": [
       {
         "cycle": 0,
@@ -864,6 +882,16 @@
         "body": "Boreas signed a ten-year, $3.4B agreement to supply Power & Storage capacity to a consortium of regional grid operators, effectively pre-selling much of the Hollowmere campus output. CEO Mira Thorne called it 'the cornerstone that de-risks Phase Three,' and said the deal opens the door to a follow-on Compute allocation for the same partners. The pact locks in demand years ahead of the campus coming online.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82583,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Boreas Power Adds Second Anchor Tenant to Hollowmere Compute Campus",
+        "body": "Boreas signed a multi-year capacity agreement with an unnamed enterprise customer to occupy a second block of the Hollowmere campus, worth an estimated $1.8B over its term. CEO Mira Thorne said the deal fills nearly 60% of planned compute capacity a full year ahead of the site's completion. Construction remains on schedule for phased openings beginning next year.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -1900,7 +1928,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82568,
+    "lastEventCycle": 82583,
     "events": [
       {
         "cycle": 0,
@@ -1956,6 +1984,16 @@
         "size": "standard",
         "head": "Carrowwell Lifts Full-Year Outlook as Automation Backlog Swells",
         "body": "Carrowwell beat estimates with quarterly revenue of 512 million marks, driven by the fleet order for its modular warehouse automation line and firm demand across auto parts. CEO Theo Thorne raised the full-year outlook, citing an automation backlog now stretching past 14 months. The Material Handling segment posted its strongest quarter since the new plant opened.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82583,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Carrowwell Adds Third Shift and Expands Automation Plant to Clear Backlog",
+        "body": "Facing a swelling order book, Carrowwell will add a third production shift and a 90,000-square-foot annex to its Material Handling plant, a roughly $140M commitment. CEO Theo Thorne said the expansion targets an 18-month backlog on the modular warehouse automation line. Hiring for some 320 plant roles begins next quarter.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -2079,7 +2117,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82575,
+    "lastEventCycle": 82583,
     "events": [
       {
         "cycle": 0,
@@ -2173,6 +2211,16 @@
         "body": "CEO Ivo Reneth announced a company-wide restructure that carves the shuttered Saltmere assets into a separate wind-down entity, ring-fencing an estimated 1.2 billion in liabilities from the core storage business. Reneth also named former safety chief Petra Vane to a new compliance office reporting directly to the board, pledging a 'clean slate' after months of criminal fallout. Roughly 900 roles will be cut across the legacy division as part of the shake-up.",
         "effects": {
           "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82583,
+        "kind": "lawsuit",
+        "size": "standard",
+        "head": "Castlehold Faces Investor Suit Over Saltmere Disclosures as Cleanup Costs Mount",
+        "body": "A group of shareholders filed suit alleging Castlehold concealed the scope of Saltmere's fault-log falsification before the criminal probe surfaced, seeking recovery of losses tied to the shutdown. CEO Ivo Reneth called the claims 'misdirected' and pointed to the recent split-off of the Saltmere legacy unit as evidence of accountability. Remediation and legal reserves now total an estimated $310M.",
+        "effects": {
+          "energy": -0.13
         }
       }
     ]
@@ -2526,7 +2574,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82566,
+    "lastEventCycle": 82583,
     "events": [
       {
         "cycle": 0,
@@ -2574,6 +2622,16 @@
         "body": "Drayton Freight beat quarterly forecasts with revenue up 14 percent after its second assembly plant cut lead times on the Modular Pallet-Lift System nearly in half. Emil Holt credited steady fleet reorders and said the backlog that dogged prior quarters is now 'comfortably in hand.' The steady house reaffirmed its full-year outlook.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82583,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drayton Freight Edges Higher as Pallet-Lift Servicing Revenue Climbs",
+        "body": "Drayton posted a modest beat as recurring servicing income from its installed pallet-lift base offset softer new-order intake. CEO Emil Holt noted margins improved 40 basis points on higher utilization across both assembly plants. Management held full-year guidance steady.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -3213,7 +3271,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82567,
+    "lastEventCycle": 82583,
     "events": [
       {
         "cycle": 0,
@@ -3259,6 +3317,16 @@
         "size": "flash",
         "head": "Fennvale Mfg. Edges Past Estimates as New Fastener Contract Ramps",
         "body": "Fennvale Mfg. reported quarterly revenue of $196 million, modestly ahead of guidance, as early shipments under its auto-assembly fastener contract began flowing. CEO Theo Vossen said the third Drennt Works line remained on schedule for commissioning next quarter. Management held its steady full-year outlook unchanged.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82583,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Fennvale Mfg. Opens Compact Fastener Line to Support Auto Program Ramp",
+        "body": "Fennvale commissioned a small dedicated production cell to meet rising volumes under its auto-assembly fastener contract, adding roughly 45 jobs. CEO Theo Vossen described the move as a disciplined step to protect delivery reliability rather than a broad capacity push. The cell reaches full output within two quarters.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -7524,7 +7592,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82551,
+    "lastEventCycle": 82583,
     "events": [
       {
         "cycle": 0,
@@ -7550,6 +7618,16 @@
         "size": "standard",
         "head": "Vossenwright Holdings Signs Long-Term Equipment Servicing Pact With Regional Co-op",
         "body": "Vossenwright secured a multi-year maintenance and parts agreement covering a large farming cooperative's tractor and implement fleet. CEO Quinn Skarn said the deal deepens the company's recurring service revenue, its steadiest earnings line. Terms were undisclosed but described as spanning five years with renewal options.",
+        "effects": {
+          "agriculture": 0.13
+        }
+      },
+      {
+        "cycle": 82583,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vossenwright Holdings Rolls Out Next-Generation Seeder Aimed at Fuel Savings",
+        "body": "The company introduced its Meridian-series precision seeder, promising a 12% reduction in fuel use per acre and tighter row spacing for its co-op customers. CEO Quinn Skarn framed the launch as a measured extension of Vossenwright's servicing partnerships rather than a bid for rapid share gains. Initial units ship to regional co-op members already under the long-term servicing pact.",
         "effects": {
           "agriculture": 0.13
         }

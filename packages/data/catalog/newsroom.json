@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-11T13:23:10.776Z",
+  "generatedAt": "2026-07-11T19:06:36.227Z",
   "beats": [
+    {
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Aldouscraft Mfg. Wins Multi-Year Feeder Cable Supply Award for Grid Expansion",
+      "body": "Aldouscraft secured a multi-year supply award to provide high-capacity feeder cable for a regional grid buildout, valued at roughly $220M. CEO Soren Ashby said the contract locks in demand for the recently commissioned feeder line through the decade. Deliveries begin in the coming quarter under a phased schedule.",
+      "cycle": 82583,
+      "dur": 2
+    },
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Blackton Industries Ousts Mara Mercer as Halvern Weld Crisis Forces Board Shakeup",
+      "body": "The Blackton board removed CEO Mara Mercer after mounting losses and the escalating Halvern lawsuit tied to weld defects, installing veteran operations chief Dorian Vale as her successor. Vale pledged an immediate quality overhaul and settlement talks with Halvern, whose suit seeks damages exceeding $400M. Three additional board seats were also reshuffled amid investor pressure.",
+      "cycle": 82583,
+      "dur": 8
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Boreas Power Adds Second Anchor Tenant to Hollowmere Compute Campus",
+      "body": "Boreas signed a multi-year capacity agreement with an unnamed enterprise customer to occupy a second block of the Hollowmere campus, worth an estimated $1.8B over its term. CEO Mira Thorne said the deal fills nearly 60% of planned compute capacity a full year ahead of the site's completion. Construction remains on schedule for phased openings beginning next year.",
+      "cycle": 82583,
+      "dur": 2
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Carrowwell Adds Third Shift and Expands Automation Plant to Clear Backlog",
+      "body": "Facing a swelling order book, Carrowwell will add a third production shift and a 90,000-square-foot annex to its Material Handling plant, a roughly $140M commitment. CEO Theo Thorne said the expansion targets an 18-month backlog on the modular warehouse automation line. Hiring for some 320 plant roles begins next quarter.",
+      "cycle": 82583,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "lawsuit",
+      "size": "standard",
+      "head": "Castlehold Faces Investor Suit Over Saltmere Disclosures as Cleanup Costs Mount",
+      "body": "A group of shareholders filed suit alleging Castlehold concealed the scope of Saltmere's fault-log falsification before the criminal probe surfaced, seeking recovery of losses tied to the shutdown. CEO Ivo Reneth called the claims 'misdirected' and pointed to the recent split-off of the Saltmere legacy unit as evidence of accountability. Remediation and legal reserves now total an estimated $310M.",
+      "cycle": 82583,
+      "dur": 2
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Drayton Freight Edges Higher as Pallet-Lift Servicing Revenue Climbs",
+      "body": "Drayton posted a modest beat as recurring servicing income from its installed pallet-lift base offset softer new-order intake. CEO Emil Holt noted margins improved 40 basis points on higher utilization across both assembly plants. Management held full-year guidance steady.",
+      "cycle": 82583,
+      "dur": 1
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Fennvale Mfg. Opens Compact Fastener Line to Support Auto Program Ramp",
+      "body": "Fennvale commissioned a small dedicated production cell to meet rising volumes under its auto-assembly fastener contract, adding roughly 45 jobs. CEO Theo Vossen described the move as a disciplined step to protect delivery reliability rather than a broad capacity push. The cell reaches full output within two quarters.",
+      "cycle": 82583,
+      "dur": 1
+    },
+    {
+      "company": "Vossenwright Holdings",
+      "sector": "agriculture",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Vossenwright Holdings Rolls Out Next-Generation Seeder Aimed at Fuel Savings",
+      "body": "The company introduced its Meridian-series precision seeder, promising a 12% reduction in fuel use per acre and tighter row spacing for its co-op customers. CEO Quinn Skarn framed the launch as a measured extension of Vossenwright's servicing partnerships rather than a bid for rapid share gains. Initial units ship to regional co-op members already under the long-term servicing pact.",
+      "cycle": 82583,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -52,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Korrgrave Mfg.",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Korrgrave Mfg. Delivers Steady Gains as Northern Plant Reaches Full Output",
-      "body": "Korrgrave posted a modest 4% rise in seasonal input sales, with the expanded Northern facility now running at full capacity ahead of the planting window. CEO Aurelia Halloran characterized the results as 'exactly on plan,' declining to raise guidance.",
-      "cycle": 82582,
-      "dur": 1
-    },
-    {
       "company": "Marrowstone Build",
       "sector": "construction",
       "kind": "leadership_change",
@@ -80,46 +150,6 @@
       "body": "Reports surfaced alleging that Varnvale misrepresented the provenance of materials in its flagship Meridian timepiece line, prompting an internal review and a sharp rebuke from luxury retail partners. CEO Idris Calloway, who staked the house's comeback on the collection, called the claims 'deeply damaging' and pledged a full audit, though two boutique accounts have already suspended orders.",
       "cycle": 82582,
       "dur": 8
-    },
-    {
-      "company": "Aldouscyon",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Aldouscyon Lands Third Municipal Conversion With Coastal City of Marren",
-      "body": "Aldouscyon extended its streetlight conversion streak by winning a contract to modernize the coastal city of Marren, its third municipal award in under a year. Petra Mercer said the phased rollout would cover some 22,000 fixtures over three years, building on the template established in Vereldt and Thornbury. The steady pipeline continues to underpin the lighting maker's dependable growth.",
-      "cycle": 82581,
-      "dur": 2
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Bruncraft Industries Launches Integration Push to Absorb Talvorne Motors",
-      "body": "Following its $2.7-billion Talvorne acquisition, Bruncraft detailed a consolidation plan that will merge overlapping assembly lines and retire the Talvorne runabout badge in favor of a unified Bruncraft lineup. Orla Marrow projected $180 million in annual savings by combining the Halveston axle supply with Talvorne's plants, though the plan includes closing two redundant facilities. Union representatives requested talks over affected workers.",
-      "cycle": 82581,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Halhold Systems Overhauls Campus Operations After Northgate Failure",
-      "body": "Dahlia Renn announced a sweeping reorganization of Halhold's compute division, splitting site reliability into a standalone unit and pledging $220 million in redundant power and cooling upgrades across all three Northgate campuses. The restructuring follows last month's outage that darkened client workloads for eleven hours, and includes the departure of two senior operations directors. Renn conceded the company 'grew faster than its foundations,' vowing tighter controls before the next capacity push.",
-      "cycle": 82581,
-      "dur": 2
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Thaldale Group Opens New Fastening Plant as Voss Doubles Down on Rebound",
-      "body": "Emboldened by three straight strong quarters, Renna Voss unveiled a $310-million fastening and fixtures plant intended to lift Thaldale's hardware output by roughly a third. Voss said the expansion would 'convert momentum into permanent capacity,' though the aggressive spend drew questions given how recently the turnaround cleared its cost overhang. Production is slated to begin within eighteen months.",
-      "cycle": 82581,
-      "dur": 2
     },
     {
       "company": "Varnvale & Sons",
@@ -229,36 +259,6 @@
       "head": "Marlgear Supply Faces Federal Safety Probe as Drennan Findings Spread to Industrial Line",
       "body": "Regulators opened a formal safety investigation spanning both the recalled Atlas Devices and Marlgear's Industrial Machines catalog, after Drennan Mills documents suggested defect testing gaps beyond a single product. CEO Halden Vossen, defiant in a combative briefing, insisted the issues were 'contained and overstated,' rattling investors already reeling from the class action. The probe could freeze new shipments pending audit, threatening the company's core order book.",
       "cycle": 82576,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Blackhold Ousts Tomas Vren as Board Seeks Reset After Greycliff Collapse",
-      "body": "Blackhold's board removed CEO Tomas Vren following the Greycliff safety-filing scandal and the quarter's steep losses, naming veteran operator Renata Solberg as his replacement. Solberg, a former grid-systems executive, inherits a halted test bank, an active investor suit, and a mandate to rebuild regulator trust. The board said the change was 'effective immediately' and that a full filings review is underway.",
-      "cycle": 82575,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Castlehold Unveils Sweeping Overhaul as Reneth Splits Off Saltmere Legacy Unit",
-      "body": "CEO Ivo Reneth announced a company-wide restructure that carves the shuttered Saltmere assets into a separate wind-down entity, ring-fencing an estimated 1.2 billion in liabilities from the core storage business. Reneth also named former safety chief Petra Vane to a new compliance office reporting directly to the board, pledging a 'clean slate' after months of criminal fallout. Roughly 900 roles will be cut across the legacy division as part of the shake-up.",
-      "cycle": 82575,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "outage",
-      "size": "major",
-      "head": "Halhold Systems Reels as Northgate Campus Failure Darkens Client Workloads",
-      "body": "A cooling-system failure at Halhold's second Northgate campus triggered a rolling outage that took client workloads offline for nearly 14 hours, the longest disruption in company history. CEO Dahlia Renn issued a public apology and confirmed penalty clauses with two anchor clients may be triggered, with restoration crews still stabilizing the site. Shares of the compute house fell sharply as customers questioned the pace of its campus buildout.",
-      "cycle": 82575,
       "dur": 8
     }
   ]
