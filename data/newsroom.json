@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-12T08:20:49.220Z",
+  "generatedAt": "2026-07-12T13:23:39.891Z",
   "beats": [
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Brunmark Motors Unveils Veyra S Performance Platform in Bold Model Expansion",
+      "body": "The automaker revealed the Veyra S, a high-output variant paired with a new in-house power-and-storage pack promising 40 percent more range, targeting deliveries within nine months. CEO Yvette Calder staked the company's next phase on the launch, pledging a 480 million retooling of both Halt Ridge lines even as she warned the aggressive timeline leaves 'little margin for error.'",
+      "cycle": 82586,
+      "dur": 8
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Calderforge Rebounds With Strong Quarter as Stormwell Comes Fully Back Online",
+      "body": "The compute house beat estimates with revenue of 340 million after all Stormwell wings resumed full operation following the redundant cooling retrofit. CEO Nadia Throne said utilization hit 94 percent across the complex, and the third wing remains on track to open ahead of schedule, though she cautioned that demand is 'running hotter than our floor space.'",
+      "cycle": 82586,
+      "dur": 2
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Dunmorewright Beats as Riverside Civic Package Drives Plumbing and Earthmoving Volumes",
+      "body": "The construction group topped forecasts with quarterly earnings of 71 million, lifted by the ramp on the 210 million Riverside Civic Complex. CEO Emil Skarn noted the new fabrication yard is now running two shifts, and said plumbing and fixtures orders had outpaced earthmoving for the first time in several quarters.",
+      "cycle": 82586,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Ironcrestton CEO Sable Carrow Steps Down as Board Names Outside Successor Amid Origin Scandal",
+      "body": "Sable Carrow resigned effective immediately as the fallout from the Carrow Atelier origin-labeling documents widened, with the board appointing former compliance chief Wren Adler to steady the luxury house. Adler pledged an independent audit of all origin claims and a refund program for affected buyers, saying Ironcrestton 'must rebuild the trust its name once guaranteed.'",
+      "cycle": 82586,
+      "dur": 8
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Korrwright Works Debuts Sennfeld Revival Line Under Unified Heritage Division",
+      "body": "The luxury timepiece maker unveiled the Sennfeld Revival, a 12-model collection blending the acquired atelier's tourbillon craft with Korrwright's Velloux movement, priced from 38,000. CEO Dunmore Carrow called the launch 'proof the folding-in worked,' with initial allocations already committed to flagship boutiques in three markets.",
+      "cycle": 82586,
+      "dur": 2
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Marrowmoor Holdings Posts Record Quarter as Contract Base Fuels Recurring Revenue",
+      "body": "The hospitality-servicing group reported quarterly revenue of 148 million, up 19 percent year on year, crediting steady margins across its 100-plus servicing agreements. CEO Dorian Steg, at the helm since 1962, said the recently won Riverside cluster contributed for a full quarter for the first time, with cleaning and household-goods volumes both climbing at a disciplined pace.",
+      "cycle": 82586,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Skarngrove & Sons Adds Structural-Materials Capacity to Feed Kelvarn Bridge Pipeline",
+      "body": "The construction supplier committed 62 million to a new rolling line at its Harrowfield works, aimed at meeting sustained demand from the multi-phase Kelvarn Bridge program. CEO Quinn Fenn said the expansion should lift structural output roughly 30 percent once commissioned next year, calling it 'a measured bet on a backlog we can see clearly.'",
+      "cycle": 82586,
+      "dur": 2
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Vantor Lines Wins National Grocery Packaging Contract in Category Expansion",
+      "body": "The logistics and packaging firm secured a four-year agreement to supply molded-fiber produce trays to a national grocery chain, its first move beyond glassware. CEO Halden Vossen said the deal, estimated at 90 million over its term, will run largely through the newly opened second molded-fiber plant, with excess capacity absorbing the volume without further build-out.",
+      "cycle": 82586,
+      "dur": 2
+    },
     {
       "company": "Brunstone & Sons",
       "sector": "automotive",
@@ -22,16 +102,6 @@
       "dur": 2
     },
     {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "flash",
-      "head": "Gromford Works' Meridian Line Wins Top Honor at Guild Design Salon",
-      "body": "The Meridian Timepiece collection took the top craftsmanship prize at the annual Guild Design Salon, an early validation of Corin Aldwych's push to move Gromford past the Aurelian Noir scandal. Aldwych, ever eager for headlines, called the award 'the turning of the page.' The recognition lifts sentiment as the house rebuilds its fine-goods reputation.",
-      "cycle": 82585,
-      "dur": 1
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "lawsuit",
@@ -40,16 +110,6 @@
       "body": "A consolidated class action was filed against Halhold Works on behalf of clinics and patients affected by the Verity Pro recall, seeking more than $600M in damages tied to the medical unit malfunctions. Gunnar Vale acknowledged the suit as 'a defining test' and set aside a $180M reserve, though analysts warn the figure may climb as the parallel safety probe continues. Shares of the turbulent house have shed roughly a third of their value since the recall began.",
       "cycle": 82585,
       "dur": 8
-    },
-    {
-      "company": "Holtgate Cloth",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Cloth Posts Another Steady Quarter as Supply Pact Holds",
-      "body": "Holtgate Cloth reported modest revenue growth of 3%, with margins steady on the strength of its renewed long-term raw textile pact. Dorian Carrow, in his customary understated remarks, said the century-old house 'sees no reason to chase noise.' Volumes were flat but stable across all major mill lines.",
-      "cycle": 82585,
-      "dur": 1
     },
     {
       "company": "Lhaus Industries",
@@ -82,36 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Blackhold Turns to Outsider Renata Solberg's First Full Strategy After Vren Exit",
-      "body": "Newly installed chief Renata Solberg laid out a 90-day plan to wall off the Greycliff liabilities into a managed unit and restart a scaled-down test bank under external oversight. The board granted her authority to write down roughly 210 million against the halted program, a move analysts called painful but clarifying.",
-      "cycle": 82584,
-      "dur": 2
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Korrworks Lifts Full-Year View as Merrick Line Volumes Compound",
-      "body": "Handling throughput across the three-depot Merrick network rose 11 percent, prompting CEO Rhys Throne to raise annual guidance for the second time this year. Throne flagged early talks to add automated sortation at the newest depot, calling the rail pact 'a platform, not a ceiling.'",
-      "cycle": 82584,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Korrwright Group Beats as New Wire Line Clears Verant Backlog Faster",
-      "body": "The added wire line cut Verant delivery lead times from 20 to 13 weeks, helping quarterly earnings top estimates by 6 percent. CEO Halden Fenn said the cluster mandate is now roughly 60 percent delivered, with structural-materials orders beginning to trail in behind the cable work.",
-      "cycle": 82584,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "lawsuit",
@@ -120,16 +150,6 @@
       "body": "State attorneys from six jurisdictions joined the federal probe into a consolidated complaint alleging Marlgear shipped Atlas devices and Drennan Mills machines despite documented defect warnings. Regulators are seeking upward of 900 million in penalties and a mandatory recall, and CEO Halden Vossen's combative public statements were cited as evidence of 'reckless disregard,' sending the case toward trial rather than settlement.",
       "cycle": 82584,
       "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Vossenspire Unveils Redundant Grid-Storage Platform in Post-Blackout Reset",
-      "body": "CEO Halden Roe introduced the Sentinel storage line, built around dual-path failover and continuous condition monitoring meant to answer the deferred-maintenance findings. The rollout targets 400 megawatt-hours of installed capacity across three restored substations by year-end, with Roe framing it as proof the recovery is 'no longer about apology, but architecture.'",
-      "cycle": 82584,
-      "dur": 2
     },
     {
       "company": "Blackton Industries",
@@ -219,26 +239,6 @@
       "head": "Halhold Works Faces Formal Safety Probe as Verity Pro Failures Tied to Patient Incidents",
       "body": "National regulators opened a formal safety investigation into Halhold Works after linking at least nine patient-harm reports to the recalled Verity Pro medical units. CEO Gunnar Vale said the company would 'cooperate without reservation,' but internal testing records dating to the prior leadership are now subject to subpoena. Shares in the technology house came under heavy pressure as the probe threatened its Medical Equipment licenses.",
       "cycle": 82579,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "outage",
-      "size": "major",
-      "head": "Greywater Grid Compute Campus Goes Dark, Disrupting Regional Power Pact",
-      "body": "A cascading fault at Greywater's flagship eastern compute campus knocked out service for 31 hours, forcing partial rolling curtailments across two regions tied to its 1.2-billion-mark contract. Vale Halloran pledged a full independent review and emergency capacity credits, but at least one regional authority has invoked penalty clauses estimated near 90 million marks.",
-      "cycle": 82578,
-      "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Lhaus Industries Signs $14B Second Fleet Pact on Strength of Fast-Charge Packs",
-      "body": "Building on its record cycle-life breakthrough, Lhaus landed a 14-billion-mark, seven-year agreement to supply cell packs to a major commercial hauler consortium. Cole Brandt said the win validates the dedicated cell-pack plant now nearing completion, and confirmed Lhaus will break ground on a second facility to meet combined demand from both fleet contracts.",
-      "cycle": 82578,
       "dur": 8
     }
   ]

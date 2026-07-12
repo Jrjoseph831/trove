@@ -1238,7 +1238,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82577,
+    "lastEventCycle": 82586,
     "events": [
       {
         "cycle": 0,
@@ -1326,6 +1326,16 @@
         "body": "Brunmark reported quarterly revenue of 4.1 billion, ahead of the 3.8 billion consensus, as the Halt Ridge dual-line ramp cut Veyra Long-Range wait times from nine weeks to three. CEO Yvette Calder said deliveries rose 22 percent sequentially while Power & Storage attach rates climbed with each vehicle sale. Margins widened as the cleared backlog let the plant shift toward higher-trim configurations.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82586,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Brunmark Motors Unveils Veyra S Performance Platform in Bold Model Expansion",
+        "body": "The automaker revealed the Veyra S, a high-output variant paired with a new in-house power-and-storage pack promising 40 percent more range, targeting deliveries within nine months. CEO Yvette Calder staked the company's next phase on the launch, pledging a 480 million retooling of both Halt Ridge lines even as she warned the aggressive timeline leaves 'little margin for error.'",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -1636,7 +1646,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82577,
+    "lastEventCycle": 82586,
     "events": [
       {
         "cycle": 0,
@@ -1722,6 +1732,16 @@
         "size": "standard",
         "head": "Calderforge Launches Redundant Cooling Retrofit Across Stormwell Complex",
         "body": "CEO Nadia Throne unveiled a dual-loop cooling system now installed across all Stormwell wings, engineered to prevent a repeat of last quarter's outage that idled the flagship hall. The retrofit, budgeted at 240 million, adds independent failover circuits to each compute bank and is slated to complete before the third wing opens. Throne told reporters the upgrade positions Stormwell to run near full capacity without thermal throttling.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82586,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderforge Rebounds With Strong Quarter as Stormwell Comes Fully Back Online",
+        "body": "The compute house beat estimates with revenue of 340 million after all Stormwell wings resumed full operation following the redundant cooling retrofit. CEO Nadia Throne said utilization hit 94 percent across the complex, and the third wing remains on track to open ahead of schedule, though she cautioned that demand is 'running hotter than our floor space.'",
         "effects": {
           "technology": 0.13
         }
@@ -2977,7 +2997,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82569,
+    "lastEventCycle": 82586,
     "events": [
       {
         "cycle": 0,
@@ -3023,6 +3043,16 @@
         "size": "standard",
         "head": "Dunmorewright Opens New Fabrication Yard to Serve Twin-Tower and Riverside Backlog",
         "body": "Emil Skarn confirmed a 65 million commitment to a new heavy-fabrication yard near the Riverside site, adding roughly 400 positions across earthmoving and plumbing units. The facility is designed to shorten lead times on the company's swelling 550 million contract backlog. Skarn called the move 'a measured bet on work we already have in hand.'",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82586,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Dunmorewright Beats as Riverside Civic Package Drives Plumbing and Earthmoving Volumes",
+        "body": "The construction group topped forecasts with quarterly earnings of 71 million, lifted by the ramp on the 210 million Riverside Civic Complex. CEO Emil Skarn noted the new fabrication yard is now running two shifts, and said plumbing and fixtures orders had outpaced earthmoving for the first time in several quarters.",
         "effects": {
           "construction": 0.13
         }
@@ -4851,14 +4881,14 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1921,
-    "ceo": "Sable Carrow",
-    "ceoSince": 1921,
+    "ceo": "Wren Adler",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82577,
+    "lastEventCycle": 82586,
     "events": [
       {
         "cycle": 0,
@@ -4937,6 +4967,14 @@
         "effects": {
           "luxury": -0.22
         }
+      },
+      {
+        "cycle": 82586,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Ironcrestton CEO Sable Carrow Steps Down as Board Names Outside Successor Amid Origin Scandal",
+        "body": "Sable Carrow resigned effective immediately as the fallout from the Carrow Atelier origin-labeling documents widened, with the board appointing former compliance chief Wren Adler to steady the luxury house. Adler pledged an independent audit of all origin claims and a refund program for affected buyers, saying Ironcrestton 'must rebuild the trust its name once guaranteed.'",
+        "effects": {}
       }
     ]
   },
@@ -5336,7 +5374,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82578,
+    "lastEventCycle": 82586,
     "events": [
       {
         "cycle": 0,
@@ -5434,6 +5472,16 @@
         "body": "Dunmore Carrow announced Sennfeld's storied workshop will be merged into a single Korrwright Heritage Division, consolidating three ateliers and cutting an estimated 140 back-office roles. Carrow framed the move as 'protecting two centuries of craft under one roof,' though guild observers noted the pace of integration has unsettled Sennfeld's veteran finishers.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82586,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Korrwright Works Debuts Sennfeld Revival Line Under Unified Heritage Division",
+        "body": "The luxury timepiece maker unveiled the Sennfeld Revival, a 12-model collection blending the acquired atelier's tourbillon craft with Korrwright's Velloux movement, priced from 38,000. CEO Dunmore Carrow called the launch 'proof the folding-in worked,' with initial allocations already committed to flagship boutiques in three markets.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -5871,7 +5919,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82571,
+    "lastEventCycle": 82586,
     "events": [
       {
         "cycle": 0,
@@ -5927,6 +5975,16 @@
         "size": "standard",
         "head": "Marrowmoor Holdings Crosses 100-Contract Mark With Riverside Cluster Win",
         "body": "Dorian Steg's quiet buildout reached a milestone as the house signed a cluster of five servicing contracts across the Riverside precinct, pushing its active book past 100 properties. The deals add an estimated $48M in annual recurring revenue and deepen Marrowmoor's Cleaning & Jansan supply pipeline. Steg reiterated his preference for 'growth you barely notice until it's everywhere.'",
+        "effects": {
+          "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82586,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Marrowmoor Holdings Posts Record Quarter as Contract Base Fuels Recurring Revenue",
+        "body": "The hospitality-servicing group reported quarterly revenue of 148 million, up 19 percent year on year, crediting steady margins across its 100-plus servicing agreements. CEO Dorian Steg, at the helm since 1962, said the recently won Riverside cluster contributed for a full quarter for the first time, with cleaning and household-goods volumes both climbing at a disciplined pace.",
         "effects": {
           "hospitality": 0.13
         }
@@ -6360,7 +6418,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82570,
+    "lastEventCycle": 82586,
     "events": [
       {
         "cycle": 0,
@@ -6406,6 +6464,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Beats Again as Kelvarn Bridge Orders Lift Structural Demand",
         "body": "Skarngrove & Sons posted quarterly revenue of $1.4 billion, up 11% year-over-year, as the Kelvarn Bridge program drove volume across both fastener and structural-materials lines. CEO Quinn Fenn credited the new fastener plant, now ramping ahead of schedule, and flagged an expanding order book across regional infrastructure projects. Margins widened to 18.2% as pricing held firm on structural steel.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82586,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Skarngrove & Sons Adds Structural-Materials Capacity to Feed Kelvarn Bridge Pipeline",
+        "body": "The construction supplier committed 62 million to a new rolling line at its Harrowfield works, aimed at meeting sustained demand from the multi-phase Kelvarn Bridge program. CEO Quinn Fenn said the expansion should lift structural output roughly 30 percent once commissioned next year, calling it 'a measured bet on a backlog we can see clearly.'",
         "effects": {
           "construction": 0.13
         }
@@ -6991,7 +7059,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82570,
+    "lastEventCycle": 82586,
     "events": [
       {
         "cycle": 0,
@@ -7039,6 +7107,16 @@
         "body": "Vantor Lines reported steady quarterly earnings, with revenue up 6% as the second molded-fiber plant lifted output for its national glassware contract. CEO Halden Vossen said breakage-related returns fell to record lows, strengthening renewal talks with additional fragile-goods retailers. Guidance was left unchanged.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82586,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vantor Lines Wins National Grocery Packaging Contract in Category Expansion",
+        "body": "The logistics and packaging firm secured a four-year agreement to supply molded-fiber produce trays to a national grocery chain, its first move beyond glassware. CEO Halden Vossen said the deal, estimated at 90 million over its term, will run largely through the newly opened second molded-fiber plant, with excess capacity absorbing the volume without further build-out.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
