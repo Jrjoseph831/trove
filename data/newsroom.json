@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-12T02:54:57.606Z",
+  "generatedAt": "2026-07-12T08:20:49.220Z",
   "beats": [
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Brunstone & Sons Lands Grid-Scale Vault Cell Order Worth $1.8B",
+      "body": "Royce Lambourne unveiled a $1.8B contract to supply Vault Cells to a regional utility consortium, the largest single order since his emergency reset last year. Lambourne, never shy of the spotlight, framed the deal as proof that the storage pivot 'has fully replaced' the gutted Meridian line. Deliveries begin next quarter and run through 2029.",
+      "cycle": 82585,
+      "dur": 2
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Castlestone Extends Halo Line With High-Density Compute Tier",
+      "body": "Building on its post-turnaround momentum, Castlestone launched Halo Ultra, a high-density compute tier aimed at large data operators, with Pell Karsh promising 40% more throughput per rack. The bold-swinging chief said early commitments already cover the first two production runs. The launch marks Castlestone's second major bet since Karsh halted the second campus and cut 900 jobs.",
+      "cycle": 82585,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "flash",
+      "head": "Gromford Works' Meridian Line Wins Top Honor at Guild Design Salon",
+      "body": "The Meridian Timepiece collection took the top craftsmanship prize at the annual Guild Design Salon, an early validation of Corin Aldwych's push to move Gromford past the Aurelian Noir scandal. Aldwych, ever eager for headlines, called the award 'the turning of the page.' The recognition lifts sentiment as the house rebuilds its fine-goods reputation.",
+      "cycle": 82585,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Halhold Works Hit With Class Action Over Verity Pro Failures as Damages Sought Top $600M",
+      "body": "A consolidated class action was filed against Halhold Works on behalf of clinics and patients affected by the Verity Pro recall, seeking more than $600M in damages tied to the medical unit malfunctions. Gunnar Vale acknowledged the suit as 'a defining test' and set aside a $180M reserve, though analysts warn the figure may climb as the parallel safety probe continues. Shares of the turbulent house have shed roughly a third of their value since the recall began.",
+      "cycle": 82585,
+      "dur": 8
+    },
+    {
+      "company": "Holtgate Cloth",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Cloth Posts Another Steady Quarter as Supply Pact Holds",
+      "body": "Holtgate Cloth reported modest revenue growth of 3%, with margins steady on the strength of its renewed long-term raw textile pact. Dorian Carrow, in his customary understated remarks, said the century-old house 'sees no reason to chase noise.' Volumes were flat but stable across all major mill lines.",
+      "cycle": 82585,
+      "dur": 1
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Lhaus Industries Adds Third Cell-Pack Line as Fleet Backlog Swells to $23B",
+      "body": "Cole Brandt announced a $2.1B expansion of the flagship cell-pack complex, adding a third line to keep pace with a combined fleet backlog now topping $23B across two pacts. The restless chief also confirmed talks to acquire a regional power-storage supplier, saying Lhaus 'cannot build fast enough' to meet demand. The new line is expected to reach volume output within 14 months.",
+      "cycle": 82585,
+      "dur": 2
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenstead Supply Stretches Winning Streak to Four Quarters",
+      "body": "Bram Thorne reported another record period, with revenue up 11% as the food-service arm gained share and plumbing margins held firm. The disciplined chief credited tight cost control and the ramp of the twin hubs, noting the third distribution hub remains on schedule and on budget. Vossenstead lifted its full-year outlook modestly.",
+      "cycle": 82585,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Woldmark Rebounds as Halcyon Delivery Overhaul Restores Margins",
+      "body": "Woldmark returned to profit growth, with gross margins recovering 4 points after Cole Carrow's overhaul of the Halcyon delivery arm cut logistics costs. Carrow, known for bold public swings, declared the margin fix 'done ahead of schedule' and hinted at pursuing a follow-on deal larger than the record $4.6B Halcyon pact. Delivery timelines on Halcyon are now back within contracted windows.",
+      "cycle": 82585,
+      "dur": 2
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -10,16 +90,6 @@
       "body": "Newly installed chief Renata Solberg laid out a 90-day plan to wall off the Greycliff liabilities into a managed unit and restart a scaled-down test bank under external oversight. The board granted her authority to write down roughly 210 million against the halted program, a move analysts called painful but clarifying.",
       "cycle": 82584,
       "dur": 2
-    },
-    {
-      "company": "Blackmoor",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Blackmoor Nudges Ahead as Holloway Seed-Drill Backlog Extends",
-      "body": "The 118-year-old equipment maker reported quarterly revenue up 4 percent, with the updated Holloway range now carrying a 14-week order backlog. CEO Soren Dray reiterated the firm's unhurried stance, noting the second assembly line will not run at full tilt until spring demand confirms itself.",
-      "cycle": 82584,
-      "dur": 1
     },
     {
       "company": "Korrworks",
@@ -52,26 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Extends Streak With Another In-Line, Slightly-Ahead Quarter",
-      "body": "The consumer-goods steady hand beat estimates by a hair on 3 percent sales growth, led again by institutional cleaning and food-service contracts. CEO Petra Veldt offered no fireworks, reaffirming full-year guidance and noting renewals across its largest janitorial accounts.",
-      "cycle": 82584,
-      "dur": 1
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Steg Tooling Beats Again as Fastener Pact Steadies Volumes",
-      "body": "The disciplined parts maker posted its third consecutive beat, with the multi-year supply pact filling 70 percent of second-plant capacity. CEO Iris Vossen kept guidance conservative, citing 'no reason to run ahead of what the contracts already promise.'",
-      "cycle": 82584,
-      "dur": 1
-    },
-    {
       "company": "Vossenspire Holdings",
       "sector": "energy",
       "kind": "product_launch",
@@ -79,16 +129,6 @@
       "head": "Vossenspire Unveils Redundant Grid-Storage Platform in Post-Blackout Reset",
       "body": "CEO Halden Roe introduced the Sentinel storage line, built around dual-path failover and continuous condition monitoring meant to answer the deferred-maintenance findings. The rollout targets 400 megawatt-hours of installed capacity across three restored substations by year-end, with Roe framing it as proof the recovery is 'no longer about apology, but architecture.'",
       "cycle": 82584,
-      "dur": 2
-    },
-    {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Aldouscraft Mfg. Wins Multi-Year Feeder Cable Supply Award for Grid Expansion",
-      "body": "Aldouscraft secured a multi-year supply award to provide high-capacity feeder cable for a regional grid buildout, valued at roughly $220M. CEO Soren Ashby said the contract locks in demand for the recently commissioned feeder line through the decade. Deliveries begin in the coming quarter under a phased schedule.",
-      "cycle": 82583,
       "dur": 2
     },
     {
@@ -100,46 +140,6 @@
       "body": "The Blackton board removed CEO Mara Mercer after mounting losses and the escalating Halvern lawsuit tied to weld defects, installing veteran operations chief Dorian Vale as her successor. Vale pledged an immediate quality overhaul and settlement talks with Halvern, whose suit seeks damages exceeding $400M. Three additional board seats were also reshuffled amid investor pressure.",
       "cycle": 82583,
       "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Boreas Power Adds Second Anchor Tenant to Hollowmere Compute Campus",
-      "body": "Boreas signed a multi-year capacity agreement with an unnamed enterprise customer to occupy a second block of the Hollowmere campus, worth an estimated $1.8B over its term. CEO Mira Thorne said the deal fills nearly 60% of planned compute capacity a full year ahead of the site's completion. Construction remains on schedule for phased openings beginning next year.",
-      "cycle": 82583,
-      "dur": 2
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Carrowwell Adds Third Shift and Expands Automation Plant to Clear Backlog",
-      "body": "Facing a swelling order book, Carrowwell will add a third production shift and a 90,000-square-foot annex to its Material Handling plant, a roughly $140M commitment. CEO Theo Thorne said the expansion targets an 18-month backlog on the modular warehouse automation line. Hiring for some 320 plant roles begins next quarter.",
-      "cycle": 82583,
-      "dur": 2
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "lawsuit",
-      "size": "standard",
-      "head": "Castlehold Faces Investor Suit Over Saltmere Disclosures as Cleanup Costs Mount",
-      "body": "A group of shareholders filed suit alleging Castlehold concealed the scope of Saltmere's fault-log falsification before the criminal probe surfaced, seeking recovery of losses tied to the shutdown. CEO Ivo Reneth called the claims 'misdirected' and pointed to the recent split-off of the Saltmere legacy unit as evidence of accountability. Remediation and legal reserves now total an estimated $310M.",
-      "cycle": 82583,
-      "dur": 2
-    },
-    {
-      "company": "Vossenwright Holdings",
-      "sector": "agriculture",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Vossenwright Holdings Rolls Out Next-Generation Seeder Aimed at Fuel Savings",
-      "body": "The company introduced its Meridian-series precision seeder, promising a 12% reduction in fuel use per acre and tighter row spacing for its co-op customers. CEO Quinn Skarn framed the launch as a measured extension of Vossenwright's servicing partnerships rather than a bid for rapid share gains. Initial units ship to regional co-op members already under the long-term servicing pact.",
-      "cycle": 82583,
-      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -239,16 +239,6 @@
       "head": "Lhaus Industries Signs $14B Second Fleet Pact on Strength of Fast-Charge Packs",
       "body": "Building on its record cycle-life breakthrough, Lhaus landed a 14-billion-mark, seven-year agreement to supply cell packs to a major commercial hauler consortium. Cole Brandt said the win validates the dedicated cell-pack plant now nearing completion, and confirmed Lhaus will break ground on a second facility to meet combined demand from both fleet contracts.",
       "cycle": 82578,
-      "dur": 8
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Ironcrestton in Turmoil as Carrow Atelier Documents Surface",
-      "body": "Leaked internal records appear to show Ironcrestton knowingly mislabeled the origin of its Carrow Atelier line for over two years, escalating the sourcing dispute into a full-blown crisis. Three major retail partners suspended orders and the board announced an independent review of CEO Sable Carrow's role in the labeling program. The company's flagship line has been pulled from shelves pending verification, wiping out an estimated 30 percent of quarterly Fine Goods revenue.",
-      "cycle": 82577,
       "dur": 8
     }
   ]

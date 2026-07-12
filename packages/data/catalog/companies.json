@@ -1422,7 +1422,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82578,
+    "lastEventCycle": 82585,
     "events": [
       {
         "cycle": 0,
@@ -1536,6 +1536,16 @@
         "size": "standard",
         "head": "Brunstone & Sons Rebounds as Vault Cell Orders Outrun Forecasts",
         "body": "Brunstone posted quarterly revenue of 3.1 billion marks, up 22% on the prior period, as demand for its Lambourne-era Vault Cells filled two full production shifts. Royce Lambourne, prone to grand pronouncements, called it 'the first clean quarter since the reset' but warned margins remain thin until the second cell line opens next spring.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82585,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Brunstone & Sons Lands Grid-Scale Vault Cell Order Worth $1.8B",
+        "body": "Royce Lambourne unveiled a $1.8B contract to supply Vault Cells to a regional utility consortium, the largest single order since his emergency reset last year. Lambourne, never shy of the spotlight, framed the deal as proof that the storage pivot 'has fully replaced' the gutted Meridian line. Deliveries begin next quarter and run through 2029.",
         "effects": {
           "automotive": 0.13
         }
@@ -2307,7 +2317,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82579,
+    "lastEventCycle": 82585,
     "events": [
       {
         "cycle": 0,
@@ -2419,6 +2429,16 @@
         "size": "standard",
         "head": "Castlestone Returns to Growth as Halo Compute Orders Beat First-Quarter Targets",
         "body": "Castlestone posted its first revenue gain in five quarters, with Halo Compute bookings topping internal targets by roughly 18 percent. CEO Pell Karsh framed the result as vindication of the turnaround, though he cautioned that the halted second campus had trimmed capacity headroom. Restructuring charges of 140 million narrowed the reported profit.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82585,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Castlestone Extends Halo Line With High-Density Compute Tier",
+        "body": "Building on its post-turnaround momentum, Castlestone launched Halo Ultra, a high-density compute tier aimed at large data operators, with Pell Karsh promising 40% more throughput per rack. The bold-swinging chief said early commitments already cover the first two production runs. The launch marks Castlestone's second major bet since Karsh halted the second campus and cut 900 jobs.",
         "effects": {
           "technology": 0.13
         }
@@ -3707,7 +3727,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82579,
+    "lastEventCycle": 82585,
     "events": [
       {
         "cycle": 0,
@@ -3831,6 +3851,16 @@
         "body": "New chief Corin Aldwych unveiled the Meridian collection of skeleton-dial watches at a flagship event in Halbrook, calling it a 'clean page' for the embattled house. The launch arrives with the Aurelian Noir clasp litigation still unresolved, and Aldwych pledged full material disclosure on every Meridian piece. Analysts noted the aggressive timeline, with 12 references shipping within six weeks.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82585,
+        "kind": "award",
+        "size": "flash",
+        "head": "Gromford Works' Meridian Line Wins Top Honor at Guild Design Salon",
+        "body": "The Meridian Timepiece collection took the top craftsmanship prize at the annual Guild Design Salon, an early validation of Corin Aldwych's push to move Gromford past the Aurelian Noir scandal. Aldwych, ever eager for headlines, called the award 'the turning of the page.' The recognition lifts sentiment as the house rebuilds its fine-goods reputation.",
+        "effects": {
+          "luxury": 0.06
         }
       }
     ]
@@ -4226,7 +4256,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82579,
+    "lastEventCycle": 82585,
     "events": [
       {
         "cycle": 0,
@@ -4360,6 +4390,16 @@
         "size": "major",
         "head": "Halhold Works Faces Formal Safety Probe as Verity Pro Failures Tied to Patient Incidents",
         "body": "National regulators opened a formal safety investigation into Halhold Works after linking at least nine patient-harm reports to the recalled Verity Pro medical units. CEO Gunnar Vale said the company would 'cooperate without reservation,' but internal testing records dating to the prior leadership are now subject to subpoena. Shares in the technology house came under heavy pressure as the probe threatened its Medical Equipment licenses.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82585,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Halhold Works Hit With Class Action Over Verity Pro Failures as Damages Sought Top $600M",
+        "body": "A consolidated class action was filed against Halhold Works on behalf of clinics and patients affected by the Verity Pro recall, seeking more than $600M in damages tied to the medical unit malfunctions. Gunnar Vale acknowledged the suit as 'a defining test' and set aside a $180M reserve, though analysts warn the figure may climb as the parallel safety probe continues. Shares of the turbulent house have shed roughly a third of their value since the recall began.",
         "effects": {
           "technology": -0.22
         }
@@ -4586,7 +4626,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82552,
+    "lastEventCycle": 82585,
     "events": [
       {
         "cycle": 0,
@@ -4612,6 +4652,16 @@
         "size": "flash",
         "head": "Holtgate Cloth Posts Steady Quarter on Renewed Supply Pact",
         "body": "Holtgate Cloth reported modest revenue growth of 4% to $286 million, with the recently renewed raw-textile pact providing predictable order flow. Dorian Carrow reiterated the company's preference for long relationships over rapid expansion. Margins held firm on stable fiber costs.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82585,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Cloth Posts Another Steady Quarter as Supply Pact Holds",
+        "body": "Holtgate Cloth reported modest revenue growth of 3%, with margins steady on the strength of its renewed long-term raw textile pact. Dorian Carrow, in his customary understated remarks, said the century-old house 'sees no reason to chase noise.' Volumes were flat but stable across all major mill lines.",
         "effects": {
           "textiles": 0.06
         }
@@ -5399,7 +5449,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82578,
+    "lastEventCycle": 82585,
     "events": [
       {
         "cycle": 0,
@@ -5517,6 +5567,16 @@
         "body": "Building on its record cycle-life breakthrough, Lhaus landed a 14-billion-mark, seven-year agreement to supply cell packs to a major commercial hauler consortium. Cole Brandt said the win validates the dedicated cell-pack plant now nearing completion, and confirmed Lhaus will break ground on a second facility to meet combined demand from both fleet contracts.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82585,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Lhaus Industries Adds Third Cell-Pack Line as Fleet Backlog Swells to $23B",
+        "body": "Cole Brandt announced a $2.1B expansion of the flagship cell-pack complex, adding a third line to keep pace with a combined fleet backlog now topping $23B across two pacts. The restless chief also confirmed talks to acquire a regional power-storage supplier, saying Lhaus 'cannot build fast enough' to meet demand. The new line is expected to reach volume output within 14 months.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -7597,7 +7657,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82572,
+    "lastEventCycle": 82585,
     "events": [
       {
         "cycle": 0,
@@ -7655,6 +7715,16 @@
         "body": "Vossenstead began construction on a third hub sited between its existing food-service and plumbing operations, a $95M project intended to shorten regional delivery routes. Bram Thorne said the site preserves the twin-hub efficiencies while adding capacity ahead of demand. Completion is targeted within eighteen months.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82585,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenstead Supply Stretches Winning Streak to Four Quarters",
+        "body": "Bram Thorne reported another record period, with revenue up 11% as the food-service arm gained share and plumbing margins held firm. The disciplined chief credited tight cost control and the ramp of the twin hubs, noting the third distribution hub remains on schedule and on budget. Vossenstead lifted its full-year outlook modestly.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -7786,7 +7856,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82575,
+    "lastEventCycle": 82585,
     "events": [
       {
         "cycle": 0,
@@ -7854,6 +7924,16 @@
         "body": "Cole Carrow announced a restructure of Woldmark's Halcyon fulfillment operations, consolidating three logistics centers into one and taking a 210 million charge this quarter. Carrow, known for dramatic public turns, promised the move would 'end the margin bleed by mid-year' and restore delivery economics on the record 4.6 billion order book.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82585,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Woldmark Rebounds as Halcyon Delivery Overhaul Restores Margins",
+        "body": "Woldmark returned to profit growth, with gross margins recovering 4 points after Cole Carrow's overhaul of the Halcyon delivery arm cut logistics costs. Carrow, known for bold public swings, declared the margin fix 'done ahead of schedule' and hinted at pursuing a follow-on deal larger than the record $4.6B Halcyon pact. Delivery timelines on Halcyon are now back within contracted windows.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
