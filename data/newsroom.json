@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-12T13:23:39.891Z",
+  "generatedAt": "2026-07-12T19:08:28.987Z",
   "beats": [
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Calderworks Wins Second Anchor Contract for Tessen Ridge Phase Two",
+      "body": "Building on its role as primary supplier for the first towers, Calderworks secured a 275 million structural materials contract for Tessen Ridge's second phase, locking in demand for its new regional kiln through 2029. CEO Kestrel Halloran said the deal validates the kiln investment while keeping the firm's characteristically cautious debt profile intact.",
+      "cycle": 82587,
+      "dur": 2
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Greenmarsh Agro Nudges Past Estimates as Soil Blend Adoption Widens",
+      "body": "Greenmarsh reported quarterly revenue of 412 million, roughly 3 percent above consensus, driven by steady reorders of its slow-release soil blend under the new regional pact. CEO Petra Kessler reiterated the company's patient stance, noting that repeat purchase rates matter more than headline growth over her preferred multi-season horizon.",
+      "cycle": 82587,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "outage",
+      "size": "major",
+      "head": "Halhold Systems Hit by Second Northgate Blackout, Client Contracts in Question",
+      "body": "Barely a quarter after its restructure, Halhold suffered a cascading power and cooling failure that darkened two of its three Northgate campuses for nearly nine hours, disrupting workloads for at least forty enterprise clients. Two anchor customers have invoked exit clauses, and CEO Dahlia Renn faces mounting pressure as the overhaul she championed fails its first major stress test.",
+      "cycle": 82587,
+      "dur": 8
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Marrowcyon Broadens Workwear Line With Weatherproof Hardwear Range",
+      "body": "Following a strong apparel-grade debut, Marrowcyon rolled out a weatherproof extension of its Hardwear workwear line targeting outdoor trades. CEO Theo Orne described the launch as a measured expansion of a proven segment, forecasting modest but reliable contribution to the apparel division through the year.",
+      "cycle": 82587,
+      "dur": 1
+    },
+    {
+      "company": "Palettstone & Sons",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Palettstone & Sons Posts Record Quarter on National Heirloom Pro Rollout",
+      "body": "The national chain rollout lifted Palettstone revenue 18 percent year-over-year to 336 million, its strongest quarter in the company's 117-year history. CEO Cole Fenn credited disciplined inventory management and hinted at a companion mid-tier line to capture shoppers priced out of the award-winning Heirloom Pro.",
+      "cycle": 82587,
+      "dur": 2
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Skarnvale Bets on Momentum, Opens Automated Freight Terminal at Braeloch",
+      "body": "Fresh off its first profitable quarter, Skarnvale committed 240 million to a sprawling Braeloch terminal designed to handle 1.8 million pallet-moves annually. CEO Dorn Vaskell framed the expansion as proof the freight overhaul is more than cost-cutting, though some board members privately warned the aggressive timeline echoes the turbulence that preceded predecessor Calder's exit.",
+      "cycle": 82587,
+      "dur": 2
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Vencyon Greenlights Third Hub as Twin-Site Throughput Records Hold",
+      "body": "With Drenfield and its second regional hub running above forecast, Vencyon approved a 190 million third facility positioned to serve western freight corridors. CEO Iris Halloran, known for infrequent bold strokes, called the move a calculated response to sustained volume rather than a change in the company's steady playbook.",
+      "cycle": 82587,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Vossenspire Supply Strikes 900M Distribution Pact to Take Calderon Grand Tourer Global",
+      "body": "Vossenspire secured an exclusive nine-figure distribution agreement spanning eleven luxury markets for its Heritage-badged Calderon grand tourer, with first deliveries slated for the coming winter season. CEO Quinn Marrow called it 'the cornerstone of a decade-long ambition,' committing to double Calderon Motorworks output within two years to meet projected demand.",
+      "cycle": 82587,
+      "dur": 8
+    },
     {
       "company": "Brunmark Motors",
       "sector": "automotive",
@@ -82,26 +162,6 @@
       "dur": 2
     },
     {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Brunstone & Sons Lands Grid-Scale Vault Cell Order Worth $1.8B",
-      "body": "Royce Lambourne unveiled a $1.8B contract to supply Vault Cells to a regional utility consortium, the largest single order since his emergency reset last year. Lambourne, never shy of the spotlight, framed the deal as proof that the storage pivot 'has fully replaced' the gutted Meridian line. Deliveries begin next quarter and run through 2029.",
-      "cycle": 82585,
-      "dur": 2
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Castlestone Extends Halo Line With High-Density Compute Tier",
-      "body": "Building on its post-turnaround momentum, Castlestone launched Halo Ultra, a high-density compute tier aimed at large data operators, with Pell Karsh promising 40% more throughput per rack. The bold-swinging chief said early commitments already cover the first two production runs. The launch marks Castlestone's second major bet since Karsh halted the second campus and cut 900 jobs.",
-      "cycle": 82585,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "lawsuit",
@@ -110,36 +170,6 @@
       "body": "A consolidated class action was filed against Halhold Works on behalf of clinics and patients affected by the Verity Pro recall, seeking more than $600M in damages tied to the medical unit malfunctions. Gunnar Vale acknowledged the suit as 'a defining test' and set aside a $180M reserve, though analysts warn the figure may climb as the parallel safety probe continues. Shares of the turbulent house have shed roughly a third of their value since the recall began.",
       "cycle": 82585,
       "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Lhaus Industries Adds Third Cell-Pack Line as Fleet Backlog Swells to $23B",
-      "body": "Cole Brandt announced a $2.1B expansion of the flagship cell-pack complex, adding a third line to keep pace with a combined fleet backlog now topping $23B across two pacts. The restless chief also confirmed talks to acquire a regional power-storage supplier, saying Lhaus 'cannot build fast enough' to meet demand. The new line is expected to reach volume output within 14 months.",
-      "cycle": 82585,
-      "dur": 2
-    },
-    {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenstead Supply Stretches Winning Streak to Four Quarters",
-      "body": "Bram Thorne reported another record period, with revenue up 11% as the food-service arm gained share and plumbing margins held firm. The disciplined chief credited tight cost control and the ramp of the twin hubs, noting the third distribution hub remains on schedule and on budget. Vossenstead lifted its full-year outlook modestly.",
-      "cycle": 82585,
-      "dur": 2
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Woldmark Rebounds as Halcyon Delivery Overhaul Restores Margins",
-      "body": "Woldmark returned to profit growth, with gross margins recovering 4 points after Cole Carrow's overhaul of the Halcyon delivery arm cut logistics costs. Carrow, known for bold public swings, declared the margin fix 'done ahead of schedule' and hinted at pursuing a follow-on deal larger than the record $4.6B Halcyon pact. Delivery timelines on Halcyon are now back within contracted windows.",
-      "cycle": 82585,
-      "dur": 2
     },
     {
       "company": "Marlgear Supply",
@@ -229,16 +259,6 @@
       "head": "Kessel Drive Rocked as Internal Memos Suggest Storage Pack Risk Was Flagged Early",
       "body": "Documents surfaced in the fleet-client lawsuit indicate Kessel Drive engineers had raised overheating concerns about Touring-Line storage packs months before the recall. Dorian Brandt faces mounting pressure as regulators reopened the case to examine whether disclosures were delayed. Two additional fleet operators have signaled intent to join the litigation, and the board has commissioned an independent review.",
       "cycle": 82580,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Halhold Works Faces Formal Safety Probe as Verity Pro Failures Tied to Patient Incidents",
-      "body": "National regulators opened a formal safety investigation into Halhold Works after linking at least nine patient-harm reports to the recalled Verity Pro medical units. CEO Gunnar Vale said the company would 'cooperate without reservation,' but internal testing records dating to the prior leadership are now subject to subpoena. Shares in the technology house came under heavy pressure as the probe threatened its Medical Equipment licenses.",
-      "cycle": 82579,
       "dur": 8
     }
   ]

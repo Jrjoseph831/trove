@@ -1759,7 +1759,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82569,
+    "lastEventCycle": 82587,
     "events": [
       {
         "cycle": 0,
@@ -1805,6 +1805,16 @@
         "size": "standard",
         "head": "Calderworks Tops Forecasts as New Kiln Lifts Tessen Ridge Output",
         "body": "Kestrel Halloran reported quarterly revenue up 9 percent, crediting the recently opened regional kiln for easing supply constraints on the Tessen Ridge Towers package. Structural-materials shipments hit a record for the period. Halloran hinted the company is 'watching for the next opening' as urban building demand holds firm.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82587,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Calderworks Wins Second Anchor Contract for Tessen Ridge Phase Two",
+        "body": "Building on its role as primary supplier for the first towers, Calderworks secured a 275 million structural materials contract for Tessen Ridge's second phase, locking in demand for its new regional kiln through 2029. CEO Kestrel Halloran said the deal validates the kiln investment while keeping the firm's characteristically cautious debt profile intact.",
         "effects": {
           "construction": 0.13
         }
@@ -3611,7 +3621,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82563,
+    "lastEventCycle": 82587,
     "events": [
       {
         "cycle": 0,
@@ -3649,6 +3659,16 @@
         "body": "Greenmarsh secured a three-year agreement to supply its slow-release input blend across the Vellmont growing district, covering an estimated 40,000 hectares. CEO Petra Kessler said the deal validates years of quiet field trials and locks in steady input volume through multiple seasons. Terms were undisclosed, but the company expects gradual shipment ramp rather than an immediate spike.",
         "effects": {
           "agriculture": 0.13
+        }
+      },
+      {
+        "cycle": 82587,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Greenmarsh Agro Nudges Past Estimates as Soil Blend Adoption Widens",
+        "body": "Greenmarsh reported quarterly revenue of 412 million, roughly 3 percent above consensus, driven by steady reorders of its slow-release soil blend under the new regional pact. CEO Petra Kessler reiterated the company's patient stance, noting that repeat purchase rates matter more than headline growth over her preferred multi-season horizon.",
+        "effects": {
+          "agriculture": 0.06
         }
       }
     ]
@@ -4145,7 +4165,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82581,
+    "lastEventCycle": 82587,
     "events": [
       {
         "cycle": 0,
@@ -4271,6 +4291,16 @@
         "body": "Dahlia Renn announced a sweeping reorganization of Halhold's compute division, splitting site reliability into a standalone unit and pledging $220 million in redundant power and cooling upgrades across all three Northgate campuses. The restructuring follows last month's outage that darkened client workloads for eleven hours, and includes the departure of two senior operations directors. Renn conceded the company 'grew faster than its foundations,' vowing tighter controls before the next capacity push.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82587,
+        "kind": "outage",
+        "size": "major",
+        "head": "Halhold Systems Hit by Second Northgate Blackout, Client Contracts in Question",
+        "body": "Barely a quarter after its restructure, Halhold suffered a cascading power and cooling failure that darkened two of its three Northgate campuses for nearly nine hours, disrupting workloads for at least forty enterprise clients. Two anchor customers have invoked exit clauses, and CEO Dahlia Renn faces mounting pressure as the overhaul she championed fails its first major stress test.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -5846,7 +5876,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82573,
+    "lastEventCycle": 82587,
     "events": [
       {
         "cycle": 0,
@@ -5902,6 +5932,16 @@
         "size": "flash",
         "head": "Marrowcyon Tops Estimates as Workwear Debut Lifts Apparel Segment",
         "body": "Marrowcyon posted quarterly revenue of 1.32 billion, modestly ahead of forecasts, with the new Hardwear apparel-grade workwear line contributing 41 million in its first full quarter. Theo Orne said fixture rentals and workwear together offset softer regional demand, keeping margins steady near 14 percent.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82587,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Marrowcyon Broadens Workwear Line With Weatherproof Hardwear Range",
+        "body": "Following a strong apparel-grade debut, Marrowcyon rolled out a weatherproof extension of its Hardwear workwear line targeting outdoor trades. CEO Theo Orne described the launch as a measured expansion of a proven segment, forecasting modest but reliable contribution to the apparel division through the year.",
         "effects": {
           "consumer": 0.06
         }
@@ -6292,7 +6332,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82571,
+    "lastEventCycle": 82587,
     "events": [
       {
         "cycle": 0,
@@ -6338,6 +6378,16 @@
         "size": "standard",
         "head": "Palettstone & Sons Extends Heirloom Pro to National Chain After Strong Regional Sell-Through",
         "body": "Building on brisk regional numbers, Cole Fenn secured a national shelf-placement deal putting the award-winning Heirloom Pro line in more than 800 stores. The agreement is expected to roughly triple annual unit volume for the range, with Palettstone adding a second production shift to meet demand. Fenn called the regional pilot 'the proof we needed to go wide.'",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82587,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Palettstone & Sons Posts Record Quarter on National Heirloom Pro Rollout",
+        "body": "The national chain rollout lifted Palettstone revenue 18 percent year-over-year to 336 million, its strongest quarter in the company's 117-year history. CEO Cole Fenn credited disciplined inventory management and hinted at a companion mid-tier line to capture shoppers priced out of the award-winning Heirloom Pro.",
         "effects": {
           "consumer": 0.13
         }
@@ -6534,7 +6584,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82573,
+    "lastEventCycle": 82587,
     "events": [
       {
         "cycle": 0,
@@ -6586,6 +6636,16 @@
         "size": "standard",
         "head": "Skarnvale Posts First Profit Under Vaskell as Freight Overhaul Bites",
         "body": "Skarnvale reported quarterly operating income of 214 million, reversing a 47-million loss a year earlier, as Dorn Vaskell's cost overhaul trimmed freight expenses by roughly 18 percent. Vaskell credited consolidated depot routing and a leaner Material Handling lineup, though he warned that a second phase of cuts would test the network through the coming year.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82587,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Skarnvale Bets on Momentum, Opens Automated Freight Terminal at Braeloch",
+        "body": "Fresh off its first profitable quarter, Skarnvale committed 240 million to a sprawling Braeloch terminal designed to handle 1.8 million pallet-moves annually. CEO Dorn Vaskell framed the expansion as proof the freight overhaul is more than cost-cutting, though some board members privately warned the aggressive timeline echoes the turbulence that preceded predecessor Calder's exit.",
         "effects": {
           "logistics": 0.13
         }
@@ -7427,7 +7487,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82575,
+    "lastEventCycle": 82587,
     "events": [
       {
         "cycle": 0,
@@ -7483,6 +7543,16 @@
         "size": "standard",
         "head": "Vencyon Tops Forecasts Again as Twin Hubs Drive Throughput Records",
         "body": "Vencyon posted quarterly earnings of 1.94 per share against 1.71 expected, with combined Drenfield hub throughput up 22 percent year over year. CEO Iris Halloran said both regional facilities are now running at design capacity, and lifted full-year margin guidance by half a point.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82587,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vencyon Greenlights Third Hub as Twin-Site Throughput Records Hold",
+        "body": "With Drenfield and its second regional hub running above forecast, Vencyon approved a 190 million third facility positioned to serve western freight corridors. CEO Iris Halloran, known for infrequent bold strokes, called the move a calculated response to sustained volume rather than a change in the company's steady playbook.",
         "effects": {
           "logistics": 0.13
         }
@@ -7632,7 +7702,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82578,
+    "lastEventCycle": 82587,
     "events": [
       {
         "cycle": 0,
@@ -7720,6 +7790,16 @@
         "body": "Just eight months after acquiring Calderon Motorworks, Vossenspire debuted the Aldecourt GTR, a limited run of 250 hand-assembled tourers priced from 480,000 marks. Quinn Marrow told the unveiling crowd the model 'proves the Calderon deal was never about factories, but about souls,' hinting that two further coachbuilt lines are already in development.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82587,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Vossenspire Supply Strikes 900M Distribution Pact to Take Calderon Grand Tourer Global",
+        "body": "Vossenspire secured an exclusive nine-figure distribution agreement spanning eleven luxury markets for its Heritage-badged Calderon grand tourer, with first deliveries slated for the coming winter season. CEO Quinn Marrow called it 'the cornerstone of a decade-long ambition,' committing to double Calderon Motorworks output within two years to meet projected demand.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
