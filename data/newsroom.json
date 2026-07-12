@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-11T19:06:36.227Z",
+  "generatedAt": "2026-07-12T02:54:57.606Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Blackhold Turns to Outsider Renata Solberg's First Full Strategy After Vren Exit",
+      "body": "Newly installed chief Renata Solberg laid out a 90-day plan to wall off the Greycliff liabilities into a managed unit and restart a scaled-down test bank under external oversight. The board granted her authority to write down roughly 210 million against the halted program, a move analysts called painful but clarifying.",
+      "cycle": 82584,
+      "dur": 2
+    },
+    {
+      "company": "Blackmoor",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Blackmoor Nudges Ahead as Holloway Seed-Drill Backlog Extends",
+      "body": "The 118-year-old equipment maker reported quarterly revenue up 4 percent, with the updated Holloway range now carrying a 14-week order backlog. CEO Soren Dray reiterated the firm's unhurried stance, noting the second assembly line will not run at full tilt until spring demand confirms itself.",
+      "cycle": 82584,
+      "dur": 1
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrworks Lifts Full-Year View as Merrick Line Volumes Compound",
+      "body": "Handling throughput across the three-depot Merrick network rose 11 percent, prompting CEO Rhys Throne to raise annual guidance for the second time this year. Throne flagged early talks to add automated sortation at the newest depot, calling the rail pact 'a platform, not a ceiling.'",
+      "cycle": 82584,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrwright Group Beats as New Wire Line Clears Verant Backlog Faster",
+      "body": "The added wire line cut Verant delivery lead times from 20 to 13 weeks, helping quarterly earnings top estimates by 6 percent. CEO Halden Fenn said the cluster mandate is now roughly 60 percent delivered, with structural-materials orders beginning to trail in behind the cable work.",
+      "cycle": 82584,
+      "dur": 2
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Marlgear Supply Faces Combined Federal Action and Multi-State Suit Over Atlas and Drennan Lines",
+      "body": "State attorneys from six jurisdictions joined the federal probe into a consolidated complaint alleging Marlgear shipped Atlas devices and Drennan Mills machines despite documented defect warnings. Regulators are seeking upward of 900 million in penalties and a mandatory recall, and CEO Halden Vossen's combative public statements were cited as evidence of 'reckless disregard,' sending the case toward trial rather than settlement.",
+      "cycle": 82584,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Extends Streak With Another In-Line, Slightly-Ahead Quarter",
+      "body": "The consumer-goods steady hand beat estimates by a hair on 3 percent sales growth, led again by institutional cleaning and food-service contracts. CEO Petra Veldt offered no fireworks, reaffirming full-year guidance and noting renewals across its largest janitorial accounts.",
+      "cycle": 82584,
+      "dur": 1
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Steg Tooling Beats Again as Fastener Pact Steadies Volumes",
+      "body": "The disciplined parts maker posted its third consecutive beat, with the multi-year supply pact filling 70 percent of second-plant capacity. CEO Iris Vossen kept guidance conservative, citing 'no reason to run ahead of what the contracts already promise.'",
+      "cycle": 82584,
+      "dur": 1
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Vossenspire Unveils Redundant Grid-Storage Platform in Post-Blackout Reset",
+      "body": "CEO Halden Roe introduced the Sentinel storage line, built around dual-path failover and continuous condition monitoring meant to answer the deferred-maintenance findings. The rollout targets 400 megawatt-hours of installed capacity across three restored substations by year-end, with Roe framing it as proof the recovery is 'no longer about apology, but architecture.'",
+      "cycle": 82584,
+      "dur": 2
+    },
     {
       "company": "Aldouscraft Mfg.",
       "sector": "construction",
@@ -52,26 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Drayton Freight",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Drayton Freight Edges Higher as Pallet-Lift Servicing Revenue Climbs",
-      "body": "Drayton posted a modest beat as recurring servicing income from its installed pallet-lift base offset softer new-order intake. CEO Emil Holt noted margins improved 40 basis points on higher utilization across both assembly plants. Management held full-year guidance steady.",
-      "cycle": 82583,
-      "dur": 1
-    },
-    {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Fennvale Mfg. Opens Compact Fastener Line to Support Auto Program Ramp",
-      "body": "Fennvale commissioned a small dedicated production cell to meet rising volumes under its auto-assembly fastener contract, adding roughly 45 jobs. CEO Theo Vossen described the move as a disciplined step to protect delivery reliability rather than a broad capacity push. The cell reaches full output within two quarters.",
-      "cycle": 82583,
-      "dur": 1
-    },
-    {
       "company": "Vossenwright Holdings",
       "sector": "agriculture",
       "kind": "product_launch",
@@ -90,46 +150,6 @@
       "body": "Aperture signed its largest contract ever, a $3.2 billion multi-year agreement to supply Dawnmere II interconnect hardware across a continental carrier's backbone network. CEO Halden Dray called it 'the biggest infrastructure win in our history,' saying the deal effectively doubles the company's committed order book and cements Dawnmere II as the industry standard.",
       "cycle": 82582,
       "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Bruncrest Works Unveils Sweeping Overhaul as Marlow Slashes Product Lines",
-      "body": "In her first major move, CEO Ines Marlow announced plans to cut the compute portfolio by 40% and consolidate three facilities into a single flagship plant, targeting $220 million in annual savings. Marlow told staff the company would 'stop trying to be everything' and stake its recovery on a narrow high-margin server line, a gamble that drew mixed reactions from the board.",
-      "cycle": 82582,
-      "dur": 2
-    },
-    {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Brunridge Works Opens Second Distribution Hub to Feed National Shelf Deal",
-      "body": "Brunridge broke ground on a $180 million distribution center to supply its newly won national retail placement across all three pillars. CEO Halia Brennt said the hub would cut delivery times by roughly half and support projected volume growth as the cross-pillar home bundle rolls out to additional regions.",
-      "cycle": 82582,
-      "dur": 2
-    },
-    {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Cranegrove Beats as Inland Corridor Packages Drive Margin Expansion",
-      "body": "Cranegrove reported operating margins of 18%, up from 15% a year earlier, as both Inland Corridor earthworks packages ran ahead of schedule. CEO Vale Calder credited disciplined cost control and hinted the firm is quietly evaluating a third bid in the corridor program.",
-      "cycle": 82582,
-      "dur": 2
-    },
-    {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Holtforge Group Posts Record Quarter as Offshore Wind Cable Backlog Swells",
-      "body": "Holtforge reported quarterly revenue of $1.12 billion, up 14% year-over-year, with the marine and offshore wind cable segments accounting for nearly a third of total sales. CEO Yvette Bramm noted the order backlog has grown to $1.9 billion following the recent offshore contract win, and reaffirmed full-year guidance without further comment.",
-      "cycle": 82582,
-      "dur": 2
     },
     {
       "company": "Marrowstone Build",
@@ -229,36 +249,6 @@
       "head": "Ironcrestton in Turmoil as Carrow Atelier Documents Surface",
       "body": "Leaked internal records appear to show Ironcrestton knowingly mislabeled the origin of its Carrow Atelier line for over two years, escalating the sourcing dispute into a full-blown crisis. Three major retail partners suspended orders and the board announced an independent review of CEO Sable Carrow's role in the labeling program. The company's flagship line has been pulled from shelves pending verification, wiping out an estimated 30 percent of quarterly Fine Goods revenue.",
       "cycle": 82577,
-      "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Boreas Power Lands Landmark Storage Supply Pact Anchoring Hollowmere Campus",
-      "body": "Boreas signed a ten-year, $3.4B agreement to supply Power & Storage capacity to a consortium of regional grid operators, effectively pre-selling much of the Hollowmere campus output. CEO Mira Thorne called it 'the cornerstone that de-risks Phase Three,' and said the deal opens the door to a follow-on Compute allocation for the same partners. The pact locks in demand years ahead of the campus coming online.",
-      "cycle": 82576,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Bruncrest Works Names Ines Marlow CEO in Bid to Halt the Bleeding",
-      "body": "The board tapped former operations chief Ines Marlow to succeed the ousted Corwin Hale, betting her turnaround record can stabilize a Compute unit that has burned through cash since the Meridian exit. In her first address, Marlow pledged a 'no-sacred-cows' review and hinted at deeper cuts to the Compute portfolio within ninety days. Investors welcomed the clarity but flagged execution risk given three leadership shifts in eighteen months.",
-      "cycle": 82576,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Marlgear Supply Faces Federal Safety Probe as Drennan Findings Spread to Industrial Line",
-      "body": "Regulators opened a formal safety investigation spanning both the recalled Atlas Devices and Marlgear's Industrial Machines catalog, after Drennan Mills documents suggested defect testing gaps beyond a single product. CEO Halden Vossen, defiant in a combative briefing, insisted the issues were 'contained and overstated,' rattling investors already reeling from the class action. The probe could freeze new shipments pending audit, threatening the company's core order book.",
-      "cycle": 82576,
       "dur": 8
     }
   ]

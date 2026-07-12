@@ -501,7 +501,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82575,
+    "lastEventCycle": 82584,
     "events": [
       {
         "cycle": 0,
@@ -586,6 +586,14 @@
         "head": "Blackhold Ousts Tomas Vren as Board Seeks Reset After Greycliff Collapse",
         "body": "Blackhold's board removed CEO Tomas Vren following the Greycliff safety-filing scandal and the quarter's steep losses, naming veteran operator Renata Solberg as his replacement. Solberg, a former grid-systems executive, inherits a halted test bank, an active investor suit, and a mandate to rebuild regulator trust. The board said the change was 'effective immediately' and that a full filings review is underway.",
         "effects": {}
+      },
+      {
+        "cycle": 82584,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Blackhold Turns to Outsider Renata Solberg's First Full Strategy After Vren Exit",
+        "body": "Newly installed chief Renata Solberg laid out a 90-day plan to wall off the Greycliff liabilities into a managed unit and restart a scaled-down test bank under external oversight. The board granted her authority to write down roughly 210 million against the halted program, a move analysts called painful but clarifying.",
+        "effects": {}
       }
     ]
   },
@@ -600,7 +608,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82562,
+    "lastEventCycle": 82584,
     "events": [
       {
         "cycle": 0,
@@ -636,6 +644,16 @@
         "size": "flash",
         "head": "Blackmoor Posts Firm Quarter as Holloway Seed-Drill Orders Build",
         "body": "The farm-equipment maker reported orders for its updated Holloway seed-drill range running ahead of internal targets, helping revenue tick up 6 percent. CEO Soren Dray credited the new Holloway Works assembly line for shortening delivery times to under eight weeks. The company reaffirmed its long-standing dividend and offered no change to its cautious full-year guidance.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82584,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Blackmoor Nudges Ahead as Holloway Seed-Drill Backlog Extends",
+        "body": "The 118-year-old equipment maker reported quarterly revenue up 4 percent, with the updated Holloway range now carrying a 14-week order backlog. CEO Soren Dray reiterated the firm's unhurried stance, noting the second assembly line will not run at full tilt until spring demand confirms itself.",
         "effects": {
           "agriculture": 0.06
         }
@@ -5102,7 +5120,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82572,
+    "lastEventCycle": 82584,
     "events": [
       {
         "cycle": 0,
@@ -5161,6 +5179,16 @@
         "effects": {
           "logistics": 0.13
         }
+      },
+      {
+        "cycle": 82584,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrworks Lifts Full-Year View as Merrick Line Volumes Compound",
+        "body": "Handling throughput across the three-depot Merrick network rose 11 percent, prompting CEO Rhys Throne to raise annual guidance for the second time this year. Throne flagged early talks to add automated sortation at the newest depot, calling the rail pact 'a platform, not a ceiling.'",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
@@ -5175,7 +5203,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82572,
+    "lastEventCycle": 82584,
     "events": [
       {
         "cycle": 0,
@@ -5231,6 +5259,16 @@
         "size": "standard",
         "head": "Korrwright Group Adds Wire Line to Keep Pace With Verant Backlog",
         "body": "Korrwright will commission a new high-capacity wire-drawing line at its Halden works to service the growing Verant cluster mandate, a $220M investment set to double output by year-end. Halden Fenn said the expansion answers a backlog that has stretched delivery windows, with the first spools expected within three quarters. The move follows two consecutive guidance lifts.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82584,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Group Beats as New Wire Line Clears Verant Backlog Faster",
+        "body": "The added wire line cut Verant delivery lead times from 20 to 13 weeks, helping quarterly earnings top estimates by 6 percent. CEO Halden Fenn said the cluster mandate is now roughly 60 percent delivered, with structural-materials orders beginning to trail in behind the cable work.",
         "effects": {
           "construction": 0.13
         }
@@ -5577,7 +5615,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82576,
+    "lastEventCycle": 82584,
     "events": [
       {
         "cycle": 0,
@@ -5673,6 +5711,16 @@
         "size": "major",
         "head": "Marlgear Supply Faces Federal Safety Probe as Drennan Findings Spread to Industrial Line",
         "body": "Regulators opened a formal safety investigation spanning both the recalled Atlas Devices and Marlgear's Industrial Machines catalog, after Drennan Mills documents suggested defect testing gaps beyond a single product. CEO Halden Vossen, defiant in a combative briefing, insisted the issues were 'contained and overstated,' rattling investors already reeling from the class action. The probe could freeze new shipments pending audit, threatening the company's core order book.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82584,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Marlgear Supply Faces Combined Federal Action and Multi-State Suit Over Atlas and Drennan Lines",
+        "body": "State attorneys from six jurisdictions joined the federal probe into a consolidated complaint alleging Marlgear shipped Atlas devices and Drennan Mills machines despite documented defect warnings. Regulators are seeking upward of 900 million in penalties and a mandatory recall, and CEO Halden Vossen's combative public statements were cited as evidence of 'reckless disregard,' sending the case toward trial rather than settlement.",
         "effects": {
           "technology": -0.22
         }
@@ -5917,7 +5965,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82569,
+    "lastEventCycle": 82584,
     "events": [
       {
         "cycle": 0,
@@ -5963,6 +6011,16 @@
         "size": "flash",
         "head": "Ornewright Goods Delivers Another Steady Quarter on Institutional Demand",
         "body": "Petra Veldt reported results just ahead of estimates, with the Hallowfield Hospitals contract and food-service volumes providing reliable ballast. Margins held flat as input costs stabilized. Veldt reaffirmed guidance, noting the company 'sees no reason to chase excitement.'",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82584,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Extends Streak With Another In-Line, Slightly-Ahead Quarter",
+        "body": "The consumer-goods steady hand beat estimates by a hair on 3 percent sales growth, led again by institutional cleaning and food-service contracts. CEO Petra Veldt offered no fireworks, reaffirming full-year guidance and noting renewals across its largest janitorial accounts.",
         "effects": {
           "consumer": 0.06
         }
@@ -6417,7 +6475,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82572,
+    "lastEventCycle": 82584,
     "events": [
       {
         "cycle": 0,
@@ -6475,6 +6533,16 @@
         "body": "Steg posted a 9% revenue gain as its multi-year fastener pact with two assembly partners moved into full delivery, lifting utilization at both plants above 85%. Iris Vossen said fixed-price terms held margins steady despite input cost pressure. The company reaffirmed guidance and flagged tooling upgrades for the second plant.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82584,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Steg Tooling Beats Again as Fastener Pact Steadies Volumes",
+        "body": "The disciplined parts maker posted its third consecutive beat, with the multi-year supply pact filling 70 percent of second-plant capacity. CEO Iris Vossen kept guidance conservative, citing 'no reason to run ahead of what the contracts already promise.'",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -7347,7 +7415,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82570,
+    "lastEventCycle": 82584,
     "events": [
       {
         "cycle": 0,
@@ -7401,6 +7469,16 @@
         "body": "Regulators concluded their investigation into the two-region blackout, levying a $480 million penalty and citing years of deferred grid maintenance and understaffed control rooms. The findings directly implicate cost-cutting under the prior leadership, intensifying pressure on new CEO Halden Roe, who called the report 'a hard but necessary reckoning.' Vossenspire agreed to a binding three-year remediation plan under external oversight.",
         "effects": {
           "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82584,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vossenspire Unveils Redundant Grid-Storage Platform in Post-Blackout Reset",
+        "body": "CEO Halden Roe introduced the Sentinel storage line, built around dual-path failover and continuous condition monitoring meant to answer the deferred-maintenance findings. The rollout targets 400 megawatt-hours of installed capacity across three restored substations by year-end, with Roe framing it as proof the recovery is 'no longer about apology, but architecture.'",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
