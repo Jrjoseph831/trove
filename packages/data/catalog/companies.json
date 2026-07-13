@@ -1492,7 +1492,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82585,
+    "lastEventCycle": 82591,
     "events": [
       {
         "cycle": 0,
@@ -1618,6 +1618,16 @@
         "body": "Royce Lambourne unveiled a $1.8B contract to supply Vault Cells to a regional utility consortium, the largest single order since his emergency reset last year. Lambourne, never shy of the spotlight, framed the deal as proof that the storage pivot 'has fully replaced' the gutted Meridian line. Deliveries begin next quarter and run through 2029.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82591,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Brunstone & Sons Unveils Vault Cell Pro as Lambourne Doubles Down on Storage",
+        "body": "CEO Royce Lambourne took the stage to launch Vault Cell Pro, a higher-density grid module claiming a 30% capacity gain per unit and a nine-year service warranty. Lambourne framed the release as proof the storage pivot is the company's future, pledging to convert two vehicle lines to cell production. Early commitments were said to build on the recent $1.8B grid-scale order.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -2785,7 +2795,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82576,
+    "lastEventCycle": 82591,
     "events": [
       {
         "cycle": 0,
@@ -2843,6 +2853,16 @@
         "body": "Drossware posted its fourth consecutive beat, with revenue up 9% as national packaging volumes for the Grocer Alliance stayed near capacity. CEO Nadia Wold noted the Cleaning & Jansan segment also firmed, offsetting softer Apparel Goods. Management raised full-year guidance modestly, citing steady reorder patterns across the alliance's regions.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82591,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Drossware Industries Signs $900M Multi-Category Pact With Grocer Alliance",
+        "body": "Drossware has locked in a four-year, $900M supply agreement with the Grocer Alliance spanning packaging, cleaning and jansan, and private-label lighting for store fixtures. CEO Nadia Wold called it the broadest single commitment in the company's history, converting a volume relationship into a full-category partnership. The deal is expected to underpin roughly a fifth of annual revenue through its term.",
+        "effects": {
+          "consumer": 0.22
         }
       }
     ]
@@ -3024,7 +3044,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82573,
+    "lastEventCycle": 82591,
     "events": [
       {
         "cycle": 0,
@@ -3070,6 +3090,16 @@
         "size": "standard",
         "head": "Dunmorestone Wins Regional Cafeteria Supply Contract for Food Service Arm",
         "body": "Dunmorestone signed a three-year deal to supply prepared meal service and fixtures to a network of institutional cafeterias, valued at roughly 155 million. Orla Mercer said the contract builds on firming Food Service orders and further distances the company from last year's faucet cartridge recall.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82591,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Dunmorestone Opens Dedicated Food Service Kitchen to Fulfill Cafeteria Contract",
+        "body": "Dunmorestone has opened a dedicated production kitchen to serve its newly won regional cafeteria supply contract, a $48M facility expected to reach full throughput within two quarters. CEO Orla Mercer said the plumbing and fixtures arm remains the steady earner while food service becomes the growth lever. The company reiterated its quiet, margin-first approach following last year's recall recovery.",
         "effects": {
           "consumer": 0.13
         }
@@ -3605,7 +3635,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82576,
+    "lastEventCycle": 82591,
     "events": [
       {
         "cycle": 0,
@@ -3661,6 +3691,16 @@
         "size": "standard",
         "head": "Garrware Extends Halloway & Pace Deal to Cover Northern Depots",
         "body": "Garrware widened its packaging contract with grocer Halloway & Pace to supply eleven additional northern distribution depots, adding an estimated $140M over the term. CEO Orla Holt said the second Marrow Valley line, now near full utilization, gives the company room to absorb the volume without new capital. The expanded scope deepens a relationship that already anchors Garrware's largest revenue stream.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82591,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Garrware Commits to Third Marrow Valley Line as Northern Depot Volumes Climb",
+        "body": "Garrware will add a third production line at Marrow Valley, a $210M outlay expected to lift plant output by roughly 40% once commissioned late next year. CEO Orla Holt tied the move directly to firming order flow from the extended Halloway & Pace northern depot network. The build continues the disciplined, capacity-led strategy that has defined Holt's long tenure.",
         "effects": {
           "logistics": 0.13
         }
@@ -4046,7 +4086,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82580,
+    "lastEventCycle": 82591,
     "events": [
       {
         "cycle": 0,
@@ -4114,6 +4154,16 @@
         "body": "Iris Marrow took the Vireo Row stage to reveal the Meridian Grand Complication, a perpetual-calendar minute repeater priced at 480,000 and capped at 60 pieces. Marrow called it 'the summit of everything the Meridian line has climbed toward,' a striking escalation from the earlier limited Vireo Edition. Order books opened the same evening with a two-year waiting list already forming among salon clientele.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82591,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrest Posts Record Salon Sales as Meridian Grand Complication Sells Out",
+        "body": "Halcrest reported quarterly revenue of $146M, a company record, after the Meridian Grand Complication sold through its initial allocation within weeks. CEO Iris Marrow said waitlists at the Vireo Row salon now stretch past a year for the top-tier pieces. The result vindicated Marrow's decision to anchor the collection around a single high-margin flagship.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -6384,7 +6434,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82576,
+    "lastEventCycle": 82591,
     "events": [
       {
         "cycle": 0,
@@ -6440,6 +6490,16 @@
         "size": "standard",
         "head": "Ornewright Supply Breaks Ground on Second Caldmere Hub Expansion",
         "body": "Ornewright committed $88M to a second phase at its Caldmere hub, adding Farm Inputs blending capacity and a dedicated food service warehouse to serve both anchor contracts. CEO Rhys Throne said the co-op and regional food service deals together now justify running the hub around the clock. Completion is targeted within fourteen months.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82591,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Ornewright Supply Beats as Caldmere Food Service Contract Fills Fresh Capacity",
+        "body": "Ornewright posted quarterly revenue of $684M, up 11% year over year, as the anchored regional food service contract absorbed volume from the first Caldmere hub expansion. CEO Rhys Throne said the second hub build remains on schedule, with framing complete on the primary warehouse block. Margins held steady despite elevated farm-input freight costs.",
         "effects": {
           "consumer": 0.13
         }
@@ -6944,7 +7004,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82577,
+    "lastEventCycle": 82591,
     "events": [
       {
         "cycle": 0,
@@ -7000,6 +7060,16 @@
         "size": "standard",
         "head": "Stegforge Beats as Alloy Framework Deals Feed Machinery Backlog",
         "body": "Stegforge posted quarterly earnings ahead of expectations as its heavy-machinery alloy and structural-materials frameworks converted into firm orders across all four product lines. CEO Aurelia Steg said the new alloy plant reached initial output ahead of schedule, easing supply constraints that had capped Industrial Machines volume. Full-year guidance was nudged higher on the strength of multi-year contract coverage.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82591,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Stegforge Adds Second Furnace at Alloy Plant to Clear Machinery Backlog",
+        "body": "Stegforge is installing a second furnace at its new alloy plant, a $175M investment aimed at unclogging a machinery order backlog that has stretched delivery windows to nine months. CEO Aurelia Steg said the added melt capacity will also feed the structural-materials framework signed earlier this year. Commissioning is targeted for the second half of next year.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -7274,7 +7344,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82568,
+    "lastEventCycle": 82591,
     "events": [
       {
         "cycle": 0,
@@ -7312,6 +7382,16 @@
         "body": "Tillage & Co. reported revenue up 9% to 214 million marks, crediting steady throughput from its new blending facility and reliable draw from the grain cooperative pact. CEO Kestrel Fenn kept guidance unchanged, noting margins held even as input costs edged higher. Cooperative order volumes rose 6% over the prior season.",
         "effects": {
           "agriculture": 0.13
+        }
+      },
+      {
+        "cycle": 82591,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Tillage & Co. Delivers Another Dependable Quarter as Blending Runs Full",
+        "body": "Tillage & Co. reported revenue of $312M, up 4% year over year, with the new blending facility holding at full output through peak season. CEO Kestrel Fenn noted the five-year grain-cooperative pact continued to smooth demand across the quarter. Guidance was left unchanged.",
+        "effects": {
+          "agriculture": 0.06
         }
       }
     ]
