@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-13T09:31:11.251Z",
+  "generatedAt": "2026-07-13T14:38:12.580Z",
   "beats": [
     {
-      "company": "Ashbystead Holdings",
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Aperture Compute Smashes Estimates as Dawnmere II Deals Fuel Record Revenue",
+      "body": "Aperture posted quarterly revenue of $1.9 billion, up 34% year over year, as shipments against the $3.2 billion continental carrier deal began ramping. CEO Halden Dray raised full-year guidance and teased a next-generation Dawnmere III platform 'closer than the market thinks.' Backlog now stretches beyond two years across backbone and carrier clients.",
+      "cycle": 82590,
+      "dur": 2
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Drustcraft Wins Landmark Auto-Parts Award to Supply Two Global Vehicle Lines",
+      "body": "Drustcraft secured an eight-year supply agreement valued at roughly $2.1 billion to provide auto parts and fastening systems across two vehicle programs, its largest contract in a century. CEO Cora Fenn called the win 'a generational step,' confirming a new dedicated plant will be built to meet volumes beginning next year. The deal roughly doubles Drustcraft's committed forward order book.",
+      "cycle": 82590,
+      "dur": 8
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Erretmark Works Unveils Sorne-Crafted Grand Flagship to Extend Backlog Run",
+      "body": "Erretmark launched its most expensive vehicle yet, the coach-built Aurelian series, hand-finished at the recently acquired Sorne wing and priced from $480,000. CEO Aurelia Garr said early allocation is already spoken for through the next 14 months, framing the launch as proof the Sorne deal is paying off. The company expects the halo line to lift brand pricing across its broader range.",
+      "cycle": 82590,
+      "dur": 2
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halcyon Industries Beats Again as Southport Automation Clears First Full Quarter",
+      "body": "Halcyon posted operating margins of 21.4%, a fresh company record, as the Southport hub's automation ramp landed ahead of schedule. CEO Dorian Ashby said dual-hub throughput rose 9% and hinted at a fourth automated site under evaluation. Packaging volumes climbed on strength from grocery and industrial clients.",
+      "cycle": 82590,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Halhold Works Ousts Gunnar Vale as Board Moves to Contain Verity Pro Fallout",
+      "body": "Halhold's board removed CEO Gunnar Vale following mounting pressure from the recall, safety probe, and $600M-plus class action tied to Verity Pro medical units. Incoming chief Lena Faircloth, a former quality-and-compliance executive, pledged an immediate top-to-bottom review of the medical division and a settlement framework for affected claimants. Shares of the wire, devices, and equipment maker have been battered through the ordeal.",
+      "cycle": 82590,
+      "dur": 8
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Kessel Drive Plunges Into Quarterly Loss as Recall and Legal Costs Mount",
+      "body": "Kessel Drive reported a $290 million quarterly loss, its first in years, as recall remediation, the fleet-client suit, and reputational damage from leaked memos hammered results. CEO Dorian Brandt conceded the touring-line storage crisis had 'cost more than we projected,' as vehicle order cancellations climbed and a regulator widened its inquiry. Management withdrew full-year guidance.",
+      "cycle": 82590,
+      "dur": 8
+    },
+    {
+      "company": "Skarnstone Industries",
       "sector": "medical",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Ashbystead Holdings Extends Streak With Fourth Straight Quiet Beat",
-      "body": "Ashbystead edged past targets again, reporting a 3.1 percent revenue gain on durable hospital demand and steady replacement-parts orders. Cora Holt reaffirmed guidance and declined to signal any change in the company's measured approach. Analysts noted the run of small, dependable beats now spans a full year.",
-      "cycle": 82589,
+      "head": "Skarnstone Industries Holds Line as New Warehouse Trims Backorders",
+      "body": "Skarnstone reported quarterly revenue of $412 million, up 3% year over year, with fulfillment lead times narrowing after last quarter's warehouse addition came online. CEO Yvette Aldous credited disciplined restocking, noting consumables demand from clinics and hospital groups remained 'reliable, if unspectacular.' Management reaffirmed full-year guidance without raising it.",
+      "cycle": 82590,
       "dur": 1
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Varnvale House Sued by Regulators as Sourcing Scandal Escalates to Formal Charges",
+      "body": "Prosecutors filed suit against Varnvale House alleging false provenance claims tied to the Meridian Collection, seeking penalties that could exceed $340 million. CEO Idris Calloway, defiant in a televised statement, vowed to 'fight every line of this,' even as three flagship retail partners suspended Meridian orders. The action deepens the crisis just quarters after Calloway staged the line's revival.",
+      "cycle": 82590,
+      "dur": 8
     },
     {
       "company": "Boreas Power",
@@ -82,36 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "standard",
-      "head": "Bruncraft Industries Recalls 140,000 Runabouts Over Halveston Axle Defect",
-      "body": "The automaker issued a voluntary recall of roughly 140,000 Runabout units after a batch of axles from newly acquired Halveston Axle Works showed premature wear under load testing. CEO Orla Marrow said the fault surfaced during post-acquisition quality integration and pledged free repairs, estimating a one-time charge of up to $85 million.",
-      "cycle": 82588,
-      "dur": 2
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Bruncrest Works Slides as Marlow's Cuts Bite Into Quarterly Sales",
-      "body": "Revenue fell 18% to $1.04 billion as the discontinued product lines dragged top-line figures faster than restructuring savings could offset. Chief executive Ines Marlow defended the pain as 'the cost of a clean foundation,' promising the compute division would return to growth within three quarters even as margins remain under pressure.",
-      "cycle": 82588,
-      "dur": 2
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fenncyon Beats and Raises Again as Eastfield Corridor Hits Full Stride",
-      "body": "The earthmoving maker posted revenue of $2.4 billion, up 22%, as the $1.9-billion Eastfield rail contract entered peak activity across both staging yards. CEO Nadia Ashby lifted full-year guidance for a second consecutive quarter and hinted at bidding on an adjacent highway package expected to tender next year.",
-      "cycle": 82588,
-      "dur": 2
-    },
-    {
       "company": "Fennmoor",
       "sector": "technology",
       "kind": "breakthrough",
@@ -130,16 +170,6 @@
       "body": "In its most ambitious move yet, the house agreed to combine with cleaning-and-household rival Ostley in a deal valuing the target at $2.2 billion, creating the continent's largest jansan and household-goods supplier. CEO Rhys Kessler said Deltrey Chemical and Corran Linens would be folded alongside Ostley's brands, though regulators in two regions signaled early scrutiny of the combined market share.",
       "cycle": 82588,
       "dur": 8
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Varnvale & Sons Consolidates Corveau, Bellmont and Duquesne Under New Maisons Division",
-      "body": "Following a $2.3-billion acquisition spree, the luxury house unified its casemaking, movement and jewelry operations into a single Varnvale Maisons division to streamline its newly vertical supply chain. CEO Bram Wold appointed longtime deputy Sabine Reuther to head the division, acknowledging integration costs would weigh on near-term margins.",
-      "cycle": 82588,
-      "dur": 2
     },
     {
       "company": "Halhold Systems",
@@ -209,36 +239,6 @@
       "head": "Blackton Industries Ousts Mara Mercer as Halvern Weld Crisis Forces Board Shakeup",
       "body": "The Blackton board removed CEO Mara Mercer after mounting losses and the escalating Halvern lawsuit tied to weld defects, installing veteran operations chief Dorian Vale as her successor. Vale pledged an immediate quality overhaul and settlement talks with Halvern, whose suit seeks damages exceeding $400M. Three additional board seats were also reshuffled amid investor pressure.",
       "cycle": 82583,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Aperture Compute Lands $3.2 Billion Dawnmere II Deal With Continental Carrier",
-      "body": "Aperture signed its largest contract ever, a $3.2 billion multi-year agreement to supply Dawnmere II interconnect hardware across a continental carrier's backbone network. CEO Halden Dray called it 'the biggest infrastructure win in our history,' saying the deal effectively doubles the company's committed order book and cements Dawnmere II as the industry standard.",
-      "cycle": 82582,
-      "dur": 8
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Marrowstone Build CEO Bram Halloran Steps Down in Wake of Embankment Judgment",
-      "body": "Bram Halloran, who led Marrowstone since 1924, resigned Tuesday as the board sought a clean break following the $310 million collapse judgment and a widening safety probe. The company named longtime operations chief Delphine Vaugh as his successor, tasking her with restoring regulator confidence and settling remaining site orders.",
-      "cycle": 82582,
-      "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Varnvale House Reels as Sourcing Claims Cast Shadow Over Meridian Revival",
-      "body": "Reports surfaced alleging that Varnvale misrepresented the provenance of materials in its flagship Meridian timepiece line, prompting an internal review and a sharp rebuke from luxury retail partners. CEO Idris Calloway, who staked the house's comeback on the collection, called the claims 'deeply damaging' and pledged a full audit, though two boutique accounts have already suspended orders.",
-      "cycle": 82582,
       "dur": 8
     }
   ]

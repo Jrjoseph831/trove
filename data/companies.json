@@ -292,7 +292,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82582,
+    "lastEventCycle": 82590,
     "events": [
       {
         "cycle": 0,
@@ -390,6 +390,16 @@
         "body": "Aperture signed its largest contract ever, a $3.2 billion multi-year agreement to supply Dawnmere II interconnect hardware across a continental carrier's backbone network. CEO Halden Dray called it 'the biggest infrastructure win in our history,' saying the deal effectively doubles the company's committed order book and cements Dawnmere II as the industry standard.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82590,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aperture Compute Smashes Estimates as Dawnmere II Deals Fuel Record Revenue",
+        "body": "Aperture posted quarterly revenue of $1.9 billion, up 34% year over year, as shipments against the $3.2 billion continental carrier deal began ramping. CEO Halden Dray raised full-year guidance and teased a next-generation Dawnmere III platform 'closer than the market thinks.' Backlog now stretches beyond two years across backbone and carrier clients.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -2848,7 +2858,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82578,
+    "lastEventCycle": 82590,
     "events": [
       {
         "cycle": 0,
@@ -2916,6 +2926,16 @@
         "body": "Drustcraft raised its annual guidance after corrosion-resistant fastener shipments ran 15% ahead of plan through the third quarter. Cora Fenn credited the steady ramp of the new production line, noting the multi-year supply pact is 'delivering exactly the predictable demand we built it for.'",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82590,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Drustcraft Wins Landmark Auto-Parts Award to Supply Two Global Vehicle Lines",
+        "body": "Drustcraft secured an eight-year supply agreement valued at roughly $2.1 billion to provide auto parts and fastening systems across two vehicle programs, its largest contract in a century. CEO Cora Fenn called the win 'a generational step,' confirming a new dedicated plant will be built to meet volumes beginning next year. The deal roughly doubles Drustcraft's committed forward order book.",
+        "effects": {
+          "manufacturing": 0.22
         }
       }
     ]
@@ -3140,7 +3160,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82580,
+    "lastEventCycle": 82590,
     "events": [
       {
         "cycle": 0,
@@ -3216,6 +3236,16 @@
         "size": "standard",
         "head": "Erretmark Works Beats as Sorne-Backed Flagship Clears Record Order Backlog",
         "body": "Erretmark posted revenue of 296 million, up 22%, with the coach-built flagship accounting for nearly half of vehicle profit. Aurelia Garr said the Sorne Coachworks integration had cut bespoke build times by six weeks while preserving hand-finish quality. Garr said the flagship order book now stretches 14 months out.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82590,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Erretmark Works Unveils Sorne-Crafted Grand Flagship to Extend Backlog Run",
+        "body": "Erretmark launched its most expensive vehicle yet, the coach-built Aurelian series, hand-finished at the recently acquired Sorne wing and priced from $480,000. CEO Aurelia Garr said early allocation is already spoken for through the next 14 months, framing the launch as proof the Sorne deal is paying off. The company expects the halo line to lift brand pricing across its broader range.",
         "effects": {
           "automotive": 0.13
         }
@@ -4172,7 +4202,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82577,
+    "lastEventCycle": 82590,
     "events": [
       {
         "cycle": 0,
@@ -4238,6 +4268,16 @@
         "size": "standard",
         "head": "Halcyon Industries Extends Automation Playbook to Southport Hub",
         "body": "Following record margins from Northgate automation, CEO Dorian Ashby confirmed a 180 million rollout of the same line-sorting systems at the Southport facility. The disciplined expansion is expected to raise Southport throughput by a third while trimming per-parcel handling costs. Ashby reiterated the company will fund the investment from operating cash flow, avoiding new debt.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82590,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcyon Industries Beats Again as Southport Automation Clears First Full Quarter",
+        "body": "Halcyon posted operating margins of 21.4%, a fresh company record, as the Southport hub's automation ramp landed ahead of schedule. CEO Dorian Ashby said dual-hub throughput rose 9% and hinted at a fourth automated site under evaluation. Packaging volumes climbed on strength from grocery and industrial clients.",
         "effects": {
           "logistics": 0.13
         }
@@ -4399,14 +4439,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1971,
-    "ceo": "Gunnar Vale",
+    "ceo": "Lena Faircloth",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.89,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82585,
+    "lastEventCycle": 82590,
     "events": [
       {
         "cycle": 0,
@@ -4553,6 +4593,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82590,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Works Ousts Gunnar Vale as Board Moves to Contain Verity Pro Fallout",
+        "body": "Halhold's board removed CEO Gunnar Vale following mounting pressure from the recall, safety probe, and $600M-plus class action tied to Verity Pro medical units. Incoming chief Lena Faircloth, a former quality-and-compliance executive, pledged an immediate top-to-bottom review of the medical division and a settlement framework for affected claimants. Shares of the wire, devices, and equipment maker have been battered through the ordeal.",
+        "effects": {}
       }
     ]
   },
@@ -5139,7 +5187,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82580,
+    "lastEventCycle": 82590,
     "events": [
       {
         "cycle": 0,
@@ -5215,6 +5263,16 @@
         "size": "major",
         "head": "Kessel Drive Rocked as Internal Memos Suggest Storage Pack Risk Was Flagged Early",
         "body": "Documents surfaced in the fleet-client lawsuit indicate Kessel Drive engineers had raised overheating concerns about Touring-Line storage packs months before the recall. Dorian Brandt faces mounting pressure as regulators reopened the case to examine whether disclosures were delayed. Two additional fleet operators have signaled intent to join the litigation, and the board has commissioned an independent review.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82590,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Kessel Drive Plunges Into Quarterly Loss as Recall and Legal Costs Mount",
+        "body": "Kessel Drive reported a $290 million quarterly loss, its first in years, as recall remediation, the fleet-client suit, and reputational damage from leaked memos hammered results. CEO Dorian Brandt conceded the touring-line storage crisis had 'cost more than we projected,' as vehicle order cancellations climbed and a regulator widened its inquiry. Management withdrew full-year guidance.",
         "effects": {
           "automotive": -0.22
         }
@@ -6671,7 +6729,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82556,
+    "lastEventCycle": 82590,
     "events": [
       {
         "cycle": 0,
@@ -6697,6 +6755,16 @@
         "size": "flash",
         "head": "Skarnstone Industries Adds Warehouse Capacity to Shore Up Consumables Supply",
         "body": "Skarnstone Industries broke ground on a modest distribution annex near its main facility to expand storage for its medical-consumables lines. CEO Yvette Aldous framed the move as a long-horizon step, adding capacity to serve hospital contracts 'for the next fifteen years, not the next fifteen months.'",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82590,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarnstone Industries Holds Line as New Warehouse Trims Backorders",
+        "body": "Skarnstone reported quarterly revenue of $412 million, up 3% year over year, with fulfillment lead times narrowing after last quarter's warehouse addition came online. CEO Yvette Aldous credited disciplined restocking, noting consumables demand from clinics and hospital groups remained 'reliable, if unspectacular.' Management reaffirmed full-year guidance without raising it.",
         "effects": {
           "medical": 0.06
         }
@@ -7455,7 +7523,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82582,
+    "lastEventCycle": 82590,
     "events": [
       {
         "cycle": 0,
@@ -7557,6 +7625,16 @@
         "size": "major",
         "head": "Varnvale House Reels as Sourcing Claims Cast Shadow Over Meridian Revival",
         "body": "Reports surfaced alleging that Varnvale misrepresented the provenance of materials in its flagship Meridian timepiece line, prompting an internal review and a sharp rebuke from luxury retail partners. CEO Idris Calloway, who staked the house's comeback on the collection, called the claims 'deeply damaging' and pledged a full audit, though two boutique accounts have already suspended orders.",
+        "effects": {
+          "luxury": -0.22
+        }
+      },
+      {
+        "cycle": 82590,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Varnvale House Sued by Regulators as Sourcing Scandal Escalates to Formal Charges",
+        "body": "Prosecutors filed suit against Varnvale House alleging false provenance claims tied to the Meridian Collection, seeking penalties that could exceed $340 million. CEO Idris Calloway, defiant in a televised statement, vowed to 'fight every line of this,' even as three flagship retail partners suspended Meridian orders. The action deepens the crisis just quarters after Calloway staged the line's revival.",
         "effects": {
           "luxury": -0.22
         }
