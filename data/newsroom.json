@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-13T02:56:37.092Z",
+  "generatedAt": "2026-07-13T09:31:11.251Z",
   "beats": [
     {
-      "company": "Aldousmont & Sons",
+      "company": "Ashbystead Holdings",
       "sector": "medical",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldousmont & Sons Edges Higher as Multi-Region Contract Volumes Settle In",
-      "body": "The medical consumables house reported quarterly revenue of $612 million, up 4.1% year-on-year, with the peel-free wrap line now representing roughly a fifth of ward-supply sales. Chief executive Dunmore Calder credited steady reorder rates across the multi-region hospital agreement and reaffirmed full-year guidance without fanfare.",
-      "cycle": 82588,
+      "head": "Ashbystead Holdings Extends Streak With Fourth Straight Quiet Beat",
+      "body": "Ashbystead edged past targets again, reporting a 3.1 percent revenue gain on durable hospital demand and steady replacement-parts orders. Cora Holt reaffirmed guidance and declined to signal any change in the company's measured approach. Analysts noted the run of small, dependable beats now spans a full year.",
+      "cycle": 82589,
       "dur": 1
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Boreas Power Signs Third Hollowmere Tenant in $680M Compute Commitment",
+      "body": "Boreas locked in a third anchor tenant for the Hollowmere campus under a ten-year, 680 million mark compute-and-power agreement. Mira Thorne said the site is now more than 70 percent pre-leased ahead of its first phase opening. The deal deepens Boreas's shift toward long-dated capacity contracts.",
+      "cycle": 82589,
+      "dur": 2
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Carrowforge Rocked as Leaked Files Show Testing Results Altered Before Overhaul",
+      "body": "Internal documents surfaced this week appear to show test data on Carrowforge machines was revised prior to sign-off, directly contradicting Halden Roe's earlier assurances to regulators. The former testing chief, already suing over his dismissal, is now cooperating with investigators, and two board members have called for an independent inquiry. Shares in the machinery maker tumbled as customers paused pending orders.",
+      "cycle": 82589,
+      "dur": 8
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Greywater Grid Slumps as Outage Fallout Triggers Penalty Clauses and Guidance Cut",
+      "body": "Greywater posted quarterly revenue of 1.4 billion marks, well short of forecasts, after the darkened campus tripped contractual penalties across the multi-region pact. Vale Halloran conceded that make-good credits and emergency repairs shaved an estimated 210 million marks from results and slashed full-year guidance. The company said two anchor clients have opened contract reviews pending a reliability audit.",
+      "cycle": 82589,
+      "dur": 8
+    },
+    {
+      "company": "Hearthstone Group",
+      "sector": "hospitality",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Hearthstone Group Opens Refill Depot Network Across Three New Regions",
+      "body": "Hearthstone said it will bring its refillable range to a further 900 retail points via a new hub-and-depot logistics model, backed by a 120 million mark investment. Aurelia Aldous framed the move as answering demand that has outrun the company's current distribution footprint. The rollout is expected to complete over 18 months.",
+      "cycle": 82589,
+      "dur": 2
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Hesperforge Supply Rolls Out Marine-Grade Beam Line as Second Mill Comes Online",
+      "body": "Hesperforge unveiled a corrosion-resistant structural beam engineered specifically for coastal spans, with first output already routed to the Bridgeworks program. Sable Halloran said the new mill's initial line will run at roughly 40 percent capacity through commissioning before ramping into next year. The launch cements Hesperforge as the anchor supplier for the region's bridge buildout.",
+      "cycle": 82589,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Thronehaus & Co. Debuts Verrand Collection Built Entirely on In-House Casings",
+      "body": "Cora Dray introduced the Verrand line, a run of 1,200 numbered timepieces showcasing the Aldren foundry's first fully vertically integrated cases. The series carries a starting price of 48,000 marks and sold through its initial allocation to boutiques within a week. Dray hinted the foundry's spare capacity could open the door to supplying rival makers.",
+      "cycle": 82589,
+      "dur": 2
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Veldtreach & Sons Wins $2.1B Highland Corridor Program in Largest-Ever Award",
+      "body": "Veldtreach secured a sweeping 2.1 billion mark contract to grade and prepare a 90-kilometer highland transport corridor, the biggest single award in the firm's history. Petra Steg called it a generational commitment that will require a fleet expansion and roughly 1,400 new field hires. The win nearly doubles the company's forward order book alongside its reservoir and coastal work.",
+      "cycle": 82589,
+      "dur": 8
     },
     {
       "company": "Bruncraft Industries",
@@ -52,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "award",
-      "size": "flash",
-      "head": "Holtware Co. Power-Tool Range Takes Top Honors at Homecraft Design Review",
-      "body": "The new lifetime-warranty power-tool line won the annual Homecraft Institute's Durability Award, cited for a 30% longer bench-tested motor life than category peers. CEO Aurelia Dray called the recognition 'validation of the warranty bet,' noting foot traffic at newer retail sites remained elevated through the quarter.",
-      "cycle": 82588,
-      "dur": 1
-    },
-    {
       "company": "Maison & Vale",
       "sector": "hospitality",
       "kind": "major_deal",
@@ -82,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Calderworks Wins Second Anchor Contract for Tessen Ridge Phase Two",
-      "body": "Building on its role as primary supplier for the first towers, Calderworks secured a 275 million structural materials contract for Tessen Ridge's second phase, locking in demand for its new regional kiln through 2029. CEO Kestrel Halloran said the deal validates the kiln investment while keeping the firm's characteristically cautious debt profile intact.",
-      "cycle": 82587,
-      "dur": 2
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "outage",
@@ -100,36 +150,6 @@
       "body": "Barely a quarter after its restructure, Halhold suffered a cascading power and cooling failure that darkened two of its three Northgate campuses for nearly nine hours, disrupting workloads for at least forty enterprise clients. Two anchor customers have invoked exit clauses, and CEO Dahlia Renn faces mounting pressure as the overhaul she championed fails its first major stress test.",
       "cycle": 82587,
       "dur": 8
-    },
-    {
-      "company": "Palettstone & Sons",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Palettstone & Sons Posts Record Quarter on National Heirloom Pro Rollout",
-      "body": "The national chain rollout lifted Palettstone revenue 18 percent year-over-year to 336 million, its strongest quarter in the company's 117-year history. CEO Cole Fenn credited disciplined inventory management and hinted at a companion mid-tier line to capture shoppers priced out of the award-winning Heirloom Pro.",
-      "cycle": 82587,
-      "dur": 2
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Skarnvale Bets on Momentum, Opens Automated Freight Terminal at Braeloch",
-      "body": "Fresh off its first profitable quarter, Skarnvale committed 240 million to a sprawling Braeloch terminal designed to handle 1.8 million pallet-moves annually. CEO Dorn Vaskell framed the expansion as proof the freight overhaul is more than cost-cutting, though some board members privately warned the aggressive timeline echoes the turbulence that preceded predecessor Calder's exit.",
-      "cycle": 82587,
-      "dur": 2
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Vencyon Greenlights Third Hub as Twin-Site Throughput Records Hold",
-      "body": "With Drenfield and its second regional hub running above forecast, Vencyon approved a 190 million third facility positioned to serve western freight corridors. CEO Iris Halloran, known for infrequent bold strokes, called the move a calculated response to sustained volume rather than a change in the company's steady playbook.",
-      "cycle": 82587,
-      "dur": 2
     },
     {
       "company": "Vossenspire Supply",
@@ -219,16 +239,6 @@
       "head": "Varnvale House Reels as Sourcing Claims Cast Shadow Over Meridian Revival",
       "body": "Reports surfaced alleging that Varnvale misrepresented the provenance of materials in its flagship Meridian timepiece line, prompting an internal review and a sharp rebuke from luxury retail partners. CEO Idris Calloway, who staked the house's comeback on the collection, called the claims 'deeply damaging' and pledged a full audit, though two boutique accounts have already suspended orders.",
       "cycle": 82582,
-      "dur": 8
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Varnvale & Sons Acquires Heritage Jeweler Duquesne in $1.4-Billion Reach Into Fine Goods",
-      "body": "Bram Wold has struck again, folding storied gem house Duquesne et Fils into the Varnvale empire for $1.4 billion in a move that pairs the newly integrated timepiece works with a marquee jewelry name. Wold called it 'the final pillar of a truly complete luxury house,' pointing to Duquesne's stone-cutting ateliers as the crown of a two-year acquisition spree. Analysts note the deal pushes Varnvale's total buyout spending past $5 billion since the Corveau purchase.",
-      "cycle": 82581,
       "dur": 8
     }
   ]

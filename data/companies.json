@@ -458,7 +458,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82564,
+    "lastEventCycle": 82589,
     "events": [
       {
         "cycle": 0,
@@ -494,6 +494,16 @@
         "size": "flash",
         "head": "Ashbystead Holdings Notches Another Quiet Beat on Steady Hospital Orders",
         "body": "Ashbystead Holdings edged past expectations again, with revenue up 4 percent on durable replacement-parts and service demand. CEO Cora Holt reaffirmed the company's conservative outlook, noting margins held firm 'without any need to chase growth we can't sustain.'",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82589,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Extends Streak With Fourth Straight Quiet Beat",
+        "body": "Ashbystead edged past targets again, reporting a 3.1 percent revenue gain on durable hospital demand and steady replacement-parts orders. Cora Holt reaffirmed guidance and declined to signal any change in the company's measured approach. Analysts noted the run of small, dependable beats now spans a full year.",
         "effects": {
           "medical": 0.06
         }
@@ -792,7 +802,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82583,
+    "lastEventCycle": 82589,
     "events": [
       {
         "cycle": 0,
@@ -918,6 +928,16 @@
         "size": "standard",
         "head": "Boreas Power Adds Second Anchor Tenant to Hollowmere Compute Campus",
         "body": "Boreas signed a multi-year capacity agreement with an unnamed enterprise customer to occupy a second block of the Hollowmere campus, worth an estimated $1.8B over its term. CEO Mira Thorne said the deal fills nearly 60% of planned compute capacity a full year ahead of the site's completion. Construction remains on schedule for phased openings beginning next year.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82589,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Boreas Power Signs Third Hollowmere Tenant in $680M Compute Commitment",
+        "body": "Boreas locked in a third anchor tenant for the Hollowmere campus under a ten-year, 680 million mark compute-and-power agreement. Mira Thorne said the site is now more than 70 percent pre-leased ahead of its first phase opening. The deal deepens Boreas's shift toward long-dated capacity contracts.",
         "effects": {
           "energy": 0.13
         }
@@ -1935,7 +1955,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82578,
+    "lastEventCycle": 82589,
     "events": [
       {
         "cycle": 0,
@@ -2001,6 +2021,16 @@
         "body": "Ex-testing director Marla Vesk filed suit alleging she was made a scapegoat during the overhaul, seeking 22 million marks and claiming Halden Roe's independent-division split 'buried the true chain of accountability.' Roe rejected the claim as 'a distraction from real reform,' but the filing threatens to reopen questions regulators had only recently set aside.",
         "effects": {
           "manufacturing": -0.13
+        }
+      },
+      {
+        "cycle": 82589,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Carrowforge Rocked as Leaked Files Show Testing Results Altered Before Overhaul",
+        "body": "Internal documents surfaced this week appear to show test data on Carrowforge machines was revised prior to sign-off, directly contradicting Halden Roe's earlier assurances to regulators. The former testing chief, already suing over his dismissal, is now cooperating with investigators, and two board members have called for an independent inquiry. Shares in the machinery maker tumbled as customers paused pending orders.",
+        "effects": {
+          "manufacturing": -0.22
         }
       }
     ]
@@ -3734,7 +3764,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82578,
+    "lastEventCycle": 82589,
     "events": [
       {
         "cycle": 0,
@@ -3810,6 +3840,16 @@
         "size": "major",
         "head": "Greywater Grid Compute Campus Goes Dark, Disrupting Regional Power Pact",
         "body": "A cascading fault at Greywater's flagship eastern compute campus knocked out service for 31 hours, forcing partial rolling curtailments across two regions tied to its 1.2-billion-mark contract. Vale Halloran pledged a full independent review and emergency capacity credits, but at least one regional authority has invoked penalty clauses estimated near 90 million marks.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82589,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Greywater Grid Slumps as Outage Fallout Triggers Penalty Clauses and Guidance Cut",
+        "body": "Greywater posted quarterly revenue of 1.4 billion marks, well short of forecasts, after the darkened campus tripped contractual penalties across the multi-region pact. Vale Halloran conceded that make-good credits and emergency repairs shaved an estimated 210 million marks from results and slashed full-year guidance. The company said two anchor clients have opened contract reviews pending a reliability audit.",
         "effects": {
           "energy": -0.22
         }
@@ -4527,7 +4567,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82572,
+    "lastEventCycle": 82589,
     "events": [
       {
         "cycle": 0,
@@ -4576,6 +4616,16 @@
         "effects": {
           "hospitality": 0.13
         }
+      },
+      {
+        "cycle": 82589,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Hearthstone Group Opens Refill Depot Network Across Three New Regions",
+        "body": "Hearthstone said it will bring its refillable range to a further 900 retail points via a new hub-and-depot logistics model, backed by a 120 million mark investment. Aurelia Aldous framed the move as answering demand that has outrun the company's current distribution footprint. The rollout is expected to complete over 18 months.",
+        "effects": {
+          "hospitality": 0.13
+        }
       }
     ]
   },
@@ -4590,7 +4640,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82573,
+    "lastEventCycle": 82589,
     "events": [
       {
         "cycle": 0,
@@ -4646,6 +4696,16 @@
         "size": "standard",
         "head": "Hesperforge Breaks Ground on Second Beam Mill to Meet Bridgeworks Demand",
         "body": "Hesperforge Supply committed 340 million to a second high-yield beam mill near the coastal corridor, targeting first output within 20 months. Sable Halloran said the plant would nearly double structural output tied to the Bridgeworks framework deals, adding some 600 jobs at full ramp.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82589,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Hesperforge Supply Rolls Out Marine-Grade Beam Line as Second Mill Comes Online",
+        "body": "Hesperforge unveiled a corrosion-resistant structural beam engineered specifically for coastal spans, with first output already routed to the Bridgeworks program. Sable Halloran said the new mill's initial line will run at roughly 40 percent capacity through commissioning before ramping into next year. The launch cements Hesperforge as the anchor supplier for the region's bridge buildout.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -7033,7 +7093,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82580,
+    "lastEventCycle": 82589,
     "events": [
       {
         "cycle": 0,
@@ -7119,6 +7179,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Beats as Aldren Foundry Lifts Margins on In-House Casing",
         "body": "Thronehaus posted quarterly revenue of 214 million, up 18% year on year, crediting the Verrand casing foundry for trimming external supplier costs. Cora Dray said in-house production of Sovereign Collection cases had lifted gross margin by roughly three points. Dray hinted the acquisitive streak is not over, citing 'several conversations' around dial and movement specialists.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82589,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Thronehaus & Co. Debuts Verrand Collection Built Entirely on In-House Casings",
+        "body": "Cora Dray introduced the Verrand line, a run of 1,200 numbered timepieces showcasing the Aldren foundry's first fully vertically integrated cases. The series carries a starting price of 48,000 marks and sold through its initial allocation to boutiques within a week. Dray hinted the foundry's spare capacity could open the door to supplying rival makers.",
         "effects": {
           "luxury": 0.13
         }
@@ -7504,7 +7574,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82574,
+    "lastEventCycle": 82589,
     "events": [
       {
         "cycle": 0,
@@ -7552,6 +7622,16 @@
         "body": "Petra Steg's firm lifted full-year guidance after margins on the $1.6 billion coastal reclamation and $900 million Highland reservoir jobs came in ahead of plan. Quarterly revenue rose 18% to $1.1 billion, with the combined order backlog now exceeding $4.3 billion. Steg credited disciplined equipment scheduling across both megaprojects.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82589,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Veldtreach & Sons Wins $2.1B Highland Corridor Program in Largest-Ever Award",
+        "body": "Veldtreach secured a sweeping 2.1 billion mark contract to grade and prepare a 90-kilometer highland transport corridor, the biggest single award in the firm's history. Petra Steg called it a generational commitment that will require a fleet expansion and roughly 1,400 new field hires. The win nearly doubles the company's forward order book alongside its reservoir and coastal work.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
