@@ -156,7 +156,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82569,
+    "lastEventCycle": 82588,
     "events": [
       {
         "cycle": 0,
@@ -202,6 +202,16 @@
         "size": "flash",
         "head": "Aldousmont & Sons Posts Steady Gains as Peel-Free Wrap Ramps",
         "body": "Dunmore Calder reported a 6 percent revenue rise, with the new peel-free sterile wrap contributing meaningfully in its first full quarter. The multi-region hospital agreement continues to underpin volumes across sterile consumables. Calder described the results as 'exactly the quiet progress we planned for.'",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82588,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldousmont & Sons Edges Higher as Multi-Region Contract Volumes Settle In",
+        "body": "The medical consumables house reported quarterly revenue of $612 million, up 4.1% year-on-year, with the peel-free wrap line now representing roughly a fifth of ward-supply sales. Chief executive Dunmore Calder credited steady reorder rates across the multi-region hospital agreement and reaffirmed full-year guidance without fanfare.",
         "effects": {
           "medical": 0.06
         }
@@ -925,7 +935,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82581,
+    "lastEventCycle": 82588,
     "events": [
       {
         "cycle": 0,
@@ -1024,6 +1034,16 @@
         "effects": {
           "automotive": -0.13
         }
+      },
+      {
+        "cycle": 82588,
+        "kind": "recall",
+        "size": "standard",
+        "head": "Bruncraft Industries Recalls 140,000 Runabouts Over Halveston Axle Defect",
+        "body": "The automaker issued a voluntary recall of roughly 140,000 Runabout units after a batch of axles from newly acquired Halveston Axle Works showed premature wear under load testing. CEO Orla Marrow said the fault surfaced during post-acquisition quality integration and pledged free repairs, estimating a one-time charge of up to $85 million.",
+        "effects": {
+          "automotive": -0.13
+        }
       }
     ]
   },
@@ -1038,7 +1058,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82582,
+    "lastEventCycle": 82588,
     "events": [
       {
         "cycle": 0,
@@ -1148,6 +1168,16 @@
         "size": "standard",
         "head": "Bruncrest Works Unveils Sweeping Overhaul as Marlow Slashes Product Lines",
         "body": "In her first major move, CEO Ines Marlow announced plans to cut the compute portfolio by 40% and consolidate three facilities into a single flagship plant, targeting $220 million in annual savings. Marlow told staff the company would 'stop trying to be everything' and stake its recovery on a narrow high-margin server line, a gamble that drew mixed reactions from the board.",
+        "effects": {
+          "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82588,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Bruncrest Works Slides as Marlow's Cuts Bite Into Quarterly Sales",
+        "body": "Revenue fell 18% to $1.04 billion as the discontinued product lines dragged top-line figures faster than restructuring savings could offset. Chief executive Ines Marlow defended the pain as 'the cost of a clean foundation,' promising the compute division would return to growth within three quarters even as margins remain under pressure.",
         "effects": {
           "technology": -0.13
         }
@@ -3173,7 +3203,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82574,
+    "lastEventCycle": 82588,
     "events": [
       {
         "cycle": 0,
@@ -3232,6 +3262,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82588,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fenncyon Beats and Raises Again as Eastfield Corridor Hits Full Stride",
+        "body": "The earthmoving maker posted revenue of $2.4 billion, up 22%, as the $1.9-billion Eastfield rail contract entered peak activity across both staging yards. CEO Nadia Ashby lifted full-year guidance for a second consecutive quarter and hinted at bidding on an adjacent highway package expected to tender next year.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -3246,7 +3286,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82580,
+    "lastEventCycle": 82588,
     "events": [
       {
         "cycle": 0,
@@ -3334,6 +3374,16 @@
         "body": "Fennmoor commissioned a second Larkspur One assembly line at its Threll-integrated plant, adding capacity for 4,000 diagnostics units annually. Dorian Brandt said the expansion answers backlog from the recently signed hospital network rollout, which is now live in 22 facilities. Brandt confirmed a follow-on Larkspur imaging module is in advanced development.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82588,
+        "kind": "breakthrough",
+        "size": "major",
+        "head": "Fennmoor Unveils Threll-Powered Sensor That Halves Larkspur Diagnostic Times",
+        "body": "The technology house revealed a next-generation Threll sensor that cuts Larkspur One test cycles by 48% while improving detection sensitivity, a milestone that could reshape high-throughput hospital labs. CEO Dorian Brandt said the breakthrough had already drawn expansion interest from the existing hospital-network partner, with a validated commercial version slated for the coming year.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -4792,7 +4842,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82572,
+    "lastEventCycle": 82588,
     "events": [
       {
         "cycle": 0,
@@ -4838,6 +4888,16 @@
         "size": "flash",
         "head": "Holtware Co. Extends Lifetime Warranty to New Power-Tool Range",
         "body": "Holtware broadened its flagship guarantee to a debut line of corded and cordless power tools, marking its first move beyond hand tools. Aurelia Dray said the range targets the same tradespeople driving showroom traffic, with initial stocking across the recently expanded retail footprint. Pricing sits modestly above competing tiers.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82588,
+        "kind": "award",
+        "size": "flash",
+        "head": "Holtware Co. Power-Tool Range Takes Top Honors at Homecraft Design Review",
+        "body": "The new lifetime-warranty power-tool line won the annual Homecraft Institute's Durability Award, cited for a 30% longer bench-tested motor life than category peers. CEO Aurelia Dray called the recognition 'validation of the warranty bet,' noting foot traffic at newer retail sites remained elevated through the quarter.",
         "effects": {
           "consumer": 0.06
         }
@@ -5670,7 +5730,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82577,
+    "lastEventCycle": 82588,
     "events": [
       {
         "cycle": 0,
@@ -5738,6 +5798,16 @@
         "body": "Restless dealmaker Rhys Kessler struck again, agreeing to buy cleaning-products maker Deltrey Chemical for 620 million to lock in supply for the Continental hotel contract. The deal adds industrial sanitation lines that Maison & Vale previously sourced externally, and Kessler said it should lift combined margins by roughly two points within a year. Integration will fold Deltrey's two plants into the existing Corran Linens operations network.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82588,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Maison & Vale Seals $2.2-Billion Merger With Rival Ostley Hospitality Group",
+        "body": "In its most ambitious move yet, the house agreed to combine with cleaning-and-household rival Ostley in a deal valuing the target at $2.2 billion, creating the continent's largest jansan and household-goods supplier. CEO Rhys Kessler said Deltrey Chemical and Corran Linens would be folded alongside Ostley's brands, though regulators in two regions signaled early scrutiny of the combined market share.",
+        "effects": {
+          "hospitality": 0.22
         }
       }
     ]
@@ -7192,7 +7262,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82581,
+    "lastEventCycle": 82588,
     "events": [
       {
         "cycle": 0,
@@ -7290,6 +7360,16 @@
         "body": "Bram Wold has struck again, folding storied gem house Duquesne et Fils into the Varnvale empire for $1.4 billion in a move that pairs the newly integrated timepiece works with a marquee jewelry name. Wold called it 'the final pillar of a truly complete luxury house,' pointing to Duquesne's stone-cutting ateliers as the crown of a two-year acquisition spree. Analysts note the deal pushes Varnvale's total buyout spending past $5 billion since the Corveau purchase.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82588,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Varnvale & Sons Consolidates Corveau, Bellmont and Duquesne Under New Maisons Division",
+        "body": "Following a $2.3-billion acquisition spree, the luxury house unified its casemaking, movement and jewelry operations into a single Varnvale Maisons division to streamline its newly vertical supply chain. CEO Bram Wold appointed longtime deputy Sabine Reuther to head the division, acknowledging integration costs would weigh on near-term margins.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]

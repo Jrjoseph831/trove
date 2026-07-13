@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-12T19:08:28.987Z",
+  "generatedAt": "2026-07-13T02:56:37.092Z",
   "beats": [
+    {
+      "company": "Aldousmont & Sons",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldousmont & Sons Edges Higher as Multi-Region Contract Volumes Settle In",
+      "body": "The medical consumables house reported quarterly revenue of $612 million, up 4.1% year-on-year, with the peel-free wrap line now representing roughly a fifth of ward-supply sales. Chief executive Dunmore Calder credited steady reorder rates across the multi-region hospital agreement and reaffirmed full-year guidance without fanfare.",
+      "cycle": 82588,
+      "dur": 1
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "standard",
+      "head": "Bruncraft Industries Recalls 140,000 Runabouts Over Halveston Axle Defect",
+      "body": "The automaker issued a voluntary recall of roughly 140,000 Runabout units after a batch of axles from newly acquired Halveston Axle Works showed premature wear under load testing. CEO Orla Marrow said the fault surfaced during post-acquisition quality integration and pledged free repairs, estimating a one-time charge of up to $85 million.",
+      "cycle": 82588,
+      "dur": 2
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Bruncrest Works Slides as Marlow's Cuts Bite Into Quarterly Sales",
+      "body": "Revenue fell 18% to $1.04 billion as the discontinued product lines dragged top-line figures faster than restructuring savings could offset. Chief executive Ines Marlow defended the pain as 'the cost of a clean foundation,' promising the compute division would return to growth within three quarters even as margins remain under pressure.",
+      "cycle": 82588,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fenncyon Beats and Raises Again as Eastfield Corridor Hits Full Stride",
+      "body": "The earthmoving maker posted revenue of $2.4 billion, up 22%, as the $1.9-billion Eastfield rail contract entered peak activity across both staging yards. CEO Nadia Ashby lifted full-year guidance for a second consecutive quarter and hinted at bidding on an adjacent highway package expected to tender next year.",
+      "cycle": 82588,
+      "dur": 2
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "breakthrough",
+      "size": "major",
+      "head": "Fennmoor Unveils Threll-Powered Sensor That Halves Larkspur Diagnostic Times",
+      "body": "The technology house revealed a next-generation Threll sensor that cuts Larkspur One test cycles by 48% while improving detection sensitivity, a milestone that could reshape high-throughput hospital labs. CEO Dorian Brandt said the breakthrough had already drawn expansion interest from the existing hospital-network partner, with a validated commercial version slated for the coming year.",
+      "cycle": 82588,
+      "dur": 8
+    },
+    {
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "award",
+      "size": "flash",
+      "head": "Holtware Co. Power-Tool Range Takes Top Honors at Homecraft Design Review",
+      "body": "The new lifetime-warranty power-tool line won the annual Homecraft Institute's Durability Award, cited for a 30% longer bench-tested motor life than category peers. CEO Aurelia Dray called the recognition 'validation of the warranty bet,' noting foot traffic at newer retail sites remained elevated through the quarter.",
+      "cycle": 82588,
+      "dur": 1
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Maison & Vale Seals $2.2-Billion Merger With Rival Ostley Hospitality Group",
+      "body": "In its most ambitious move yet, the house agreed to combine with cleaning-and-household rival Ostley in a deal valuing the target at $2.2 billion, creating the continent's largest jansan and household-goods supplier. CEO Rhys Kessler said Deltrey Chemical and Corran Linens would be folded alongside Ostley's brands, though regulators in two regions signaled early scrutiny of the combined market share.",
+      "cycle": 82588,
+      "dur": 8
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Varnvale & Sons Consolidates Corveau, Bellmont and Duquesne Under New Maisons Division",
+      "body": "Following a $2.3-billion acquisition spree, the luxury house unified its casemaking, movement and jewelry operations into a single Varnvale Maisons division to streamline its newly vertical supply chain. CEO Bram Wold appointed longtime deputy Sabine Reuther to head the division, acknowledging integration costs would weigh on near-term margins.",
+      "cycle": 82588,
+      "dur": 2
+    },
     {
       "company": "Calderworks Holdings",
       "sector": "construction",
@@ -12,16 +92,6 @@
       "dur": 2
     },
     {
-      "company": "Greenmarsh Agro",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Greenmarsh Agro Nudges Past Estimates as Soil Blend Adoption Widens",
-      "body": "Greenmarsh reported quarterly revenue of 412 million, roughly 3 percent above consensus, driven by steady reorders of its slow-release soil blend under the new regional pact. CEO Petra Kessler reiterated the company's patient stance, noting that repeat purchase rates matter more than headline growth over her preferred multi-season horizon.",
-      "cycle": 82587,
-      "dur": 1
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "outage",
@@ -30,16 +100,6 @@
       "body": "Barely a quarter after its restructure, Halhold suffered a cascading power and cooling failure that darkened two of its three Northgate campuses for nearly nine hours, disrupting workloads for at least forty enterprise clients. Two anchor customers have invoked exit clauses, and CEO Dahlia Renn faces mounting pressure as the overhaul she championed fails its first major stress test.",
       "cycle": 82587,
       "dur": 8
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Marrowcyon Broadens Workwear Line With Weatherproof Hardwear Range",
-      "body": "Following a strong apparel-grade debut, Marrowcyon rolled out a weatherproof extension of its Hardwear workwear line targeting outdoor trades. CEO Theo Orne described the launch as a measured expansion of a proven segment, forecasting modest but reliable contribution to the apparel division through the year.",
-      "cycle": 82587,
-      "dur": 1
     },
     {
       "company": "Palettstone & Sons",
@@ -92,26 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Calderforge Rebounds With Strong Quarter as Stormwell Comes Fully Back Online",
-      "body": "The compute house beat estimates with revenue of 340 million after all Stormwell wings resumed full operation following the redundant cooling retrofit. CEO Nadia Throne said utilization hit 94 percent across the complex, and the third wing remains on track to open ahead of schedule, though she cautioned that demand is 'running hotter than our floor space.'",
-      "cycle": 82586,
-      "dur": 2
-    },
-    {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Dunmorewright Beats as Riverside Civic Package Drives Plumbing and Earthmoving Volumes",
-      "body": "The construction group topped forecasts with quarterly earnings of 71 million, lifted by the ramp on the 210 million Riverside Civic Complex. CEO Emil Skarn noted the new fabrication yard is now running two shifts, and said plumbing and fixtures orders had outpaced earthmoving for the first time in several quarters.",
-      "cycle": 82586,
-      "dur": 2
-    },
-    {
       "company": "Ironcrestton",
       "sector": "luxury",
       "kind": "leadership_change",
@@ -120,46 +160,6 @@
       "body": "Sable Carrow resigned effective immediately as the fallout from the Carrow Atelier origin-labeling documents widened, with the board appointing former compliance chief Wren Adler to steady the luxury house. Adler pledged an independent audit of all origin claims and a refund program for affected buyers, saying Ironcrestton 'must rebuild the trust its name once guaranteed.'",
       "cycle": 82586,
       "dur": 8
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Korrwright Works Debuts Sennfeld Revival Line Under Unified Heritage Division",
-      "body": "The luxury timepiece maker unveiled the Sennfeld Revival, a 12-model collection blending the acquired atelier's tourbillon craft with Korrwright's Velloux movement, priced from 38,000. CEO Dunmore Carrow called the launch 'proof the folding-in worked,' with initial allocations already committed to flagship boutiques in three markets.",
-      "cycle": 82586,
-      "dur": 2
-    },
-    {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Marrowmoor Holdings Posts Record Quarter as Contract Base Fuels Recurring Revenue",
-      "body": "The hospitality-servicing group reported quarterly revenue of 148 million, up 19 percent year on year, crediting steady margins across its 100-plus servicing agreements. CEO Dorian Steg, at the helm since 1962, said the recently won Riverside cluster contributed for a full quarter for the first time, with cleaning and household-goods volumes both climbing at a disciplined pace.",
-      "cycle": 82586,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Skarngrove & Sons Adds Structural-Materials Capacity to Feed Kelvarn Bridge Pipeline",
-      "body": "The construction supplier committed 62 million to a new rolling line at its Harrowfield works, aimed at meeting sustained demand from the multi-phase Kelvarn Bridge program. CEO Quinn Fenn said the expansion should lift structural output roughly 30 percent once commissioned next year, calling it 'a measured bet on a backlog we can see clearly.'",
-      "cycle": 82586,
-      "dur": 2
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Vantor Lines Wins National Grocery Packaging Contract in Category Expansion",
-      "body": "The logistics and packaging firm secured a four-year agreement to supply molded-fiber produce trays to a national grocery chain, its first move beyond glassware. CEO Halden Vossen said the deal, estimated at 90 million over its term, will run largely through the newly opened second molded-fiber plant, with excess capacity absorbing the volume without further build-out.",
-      "cycle": 82586,
-      "dur": 2
     },
     {
       "company": "Halhold Works",
@@ -229,36 +229,6 @@
       "head": "Varnvale & Sons Acquires Heritage Jeweler Duquesne in $1.4-Billion Reach Into Fine Goods",
       "body": "Bram Wold has struck again, folding storied gem house Duquesne et Fils into the Varnvale empire for $1.4 billion in a move that pairs the newly integrated timepiece works with a marquee jewelry name. Wold called it 'the final pillar of a truly complete luxury house,' pointing to Duquesne's stone-cutting ateliers as the crown of a two-year acquisition spree. Analysts note the deal pushes Varnvale's total buyout spending past $5 billion since the Corveau purchase.",
       "cycle": 82581,
-      "dur": 8
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Drustcyon Wins Landmark Harbor Authority Framework on Corrosion Anchor Strength",
-      "body": "Drustcyon secured a five-year framework agreement with the Meridian Harbor Authority valued at 340 million, its largest single contract on record. Aurelia Kessler said the deal, anchored by the corrosion-resistant fastener line, would keep the new coastal facility at full utilization through the decade. Kessler noted the win came against two established rivals after a competitive tender.",
-      "cycle": 82580,
-      "dur": 8
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Halcrest Unveils Meridian Grand Complication, Iris Marrow's Boldest Bet Yet",
-      "body": "Iris Marrow took the Vireo Row stage to reveal the Meridian Grand Complication, a perpetual-calendar minute repeater priced at 480,000 and capped at 60 pieces. Marrow called it 'the summit of everything the Meridian line has climbed toward,' a striking escalation from the earlier limited Vireo Edition. Order books opened the same evening with a two-year waiting list already forming among salon clientele.",
-      "cycle": 82580,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Kessel Drive Rocked as Internal Memos Suggest Storage Pack Risk Was Flagged Early",
-      "body": "Documents surfaced in the fleet-client lawsuit indicate Kessel Drive engineers had raised overheating concerns about Touring-Line storage packs months before the recall. Dorian Brandt faces mounting pressure as regulators reopened the case to examine whether disclosures were delayed. Two additional fleet operators have signaled intent to join the litigation, and the board has commissioned an independent review.",
-      "cycle": 82580,
       "dur": 8
     }
   ]
