@@ -425,7 +425,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82568,
+    "lastEventCycle": 82594,
     "events": [
       {
         "cycle": 0,
@@ -461,6 +461,16 @@
         "size": "standard",
         "head": "Ardent Health Clears Regulatory Review for Expanded Imaging Platform Uses",
         "body": "Ardent Health received regulatory clearance to broaden its next-generation imaging platform into cardiac and neurological applications, opening a market it estimates at 120 million marks annually. CEO Orla Halloran, true to her long-horizon style, said the phased rollout would follow the ongoing academic medical center deployment. Additional clearances are expected over the next two years.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82594,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Ardent Health Signs National Hospital Network to Expand Imaging Platform Deployment",
+        "body": "Ardent secured a rollout agreement with the Vantage Care hospital network covering 38 facilities, building on the platform's recent regulatory clearance for expanded uses. The multi-year deal is Ardent's broadest commercial footprint yet for the diagnostic line. Orla Halloran, characteristically measured, said phased installation would run through the next two years to protect service quality.",
         "effects": {
           "medical": 0.13
         }
@@ -1116,7 +1126,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82588,
+    "lastEventCycle": 82594,
     "events": [
       {
         "cycle": 0,
@@ -1239,6 +1249,16 @@
         "effects": {
           "technology": -0.13
         }
+      },
+      {
+        "cycle": 82594,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Bruncrest Works Bets on Leaner Lineup With Debut of Streamlined Aria Compute Series",
+        "body": "Ines Marlow introduced the Aria series, a pared-down compute line she framed as the payoff from her controversial product cuts. The launch narrows Bruncrest to three core configurations aimed at cost-conscious buyers, with Marlow promising faster shipping and thinner overhead. Early orders will test whether her aggressive overhaul can restart growth after last quarter's sales slide.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -1253,7 +1273,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82579,
+    "lastEventCycle": 82594,
     "events": [
       {
         "cycle": 0,
@@ -1312,6 +1332,16 @@
         "effects": {
           "consumer": 0.06
         }
+      },
+      {
+        "cycle": 82594,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunforge Holdings Opens Dedicated Home Division Flagship as Vellan Range Scales",
+        "body": "Brunforge inaugurated its first standalone Home Division flagship, consolidating the Vellan tableware and kitchenware lines under one retail concept. Kestrel Bramm framed the move as a disciplined next step, citing steady division margins rather than a reach for headline growth. The company plans two additional locations over the coming year if early sell-through holds.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -1326,7 +1356,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82586,
+    "lastEventCycle": 82594,
     "events": [
       {
         "cycle": 0,
@@ -1424,6 +1454,16 @@
         "body": "The automaker revealed the Veyra S, a high-output variant paired with a new in-house power-and-storage pack promising 40 percent more range, targeting deliveries within nine months. CEO Yvette Calder staked the company's next phase on the launch, pledging a 480 million retooling of both Halt Ridge lines even as she warned the aggressive timeline leaves 'little margin for error.'",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82594,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Brunmark Motors Faces Regulatory Probe Into Veyra S Battery Packs After Fire Reports",
+        "body": "Regulators opened a formal investigation into the Veyra S performance platform following six reported thermal incidents tied to its Power & Storage packs. Yvette Calder said Brunmark is cooperating fully and has paused new Veyra S deliveries pending internal testing, though she stopped short of a recall. The probe casts a shadow over what had been the company's boldest model expansion in years.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -2624,7 +2664,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82581,
+    "lastEventCycle": 82594,
     "events": [
       {
         "cycle": 0,
@@ -2690,6 +2730,16 @@
         "size": "flash",
         "head": "Cranecraft Posts Slim Beat as Northern Mills Deal Begins to Flow",
         "body": "Cranecraft edged past estimates again as early volumes from its multi-year textile supply agreement with the Northern Mills Consortium began hitting the books. Mira Garr credited stable farm equipment orders and the ramping textile contract for the quarter's dependable result. The company reaffirmed its full-year outlook without raising guidance.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82594,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Edges Out Estimates as Northern Mills Volumes Steady",
+        "body": "Cranecraft posted a narrow quarterly beat as textile shipments under the Northern Mills Consortium deal reached full run-rate. Farm equipment held flat amid a soft seasonal window, leaving textiles as the quarter's modest driver. CEO Mira Garr reaffirmed full-year guidance without changes.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -3620,7 +3670,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82577,
+    "lastEventCycle": 82594,
     "events": [
       {
         "cycle": 0,
@@ -3678,6 +3728,16 @@
         "body": "Forgegrave narrowly topped estimates as the new Pallet-Runner dock module drove a higher average order value among high-turnover warehouse clients. CEO Petra Thorne noted the module attached to roughly 40 percent of new Pallet-Runner sales in its first full quarter. The company held its full-year outlook steady, citing steady order flow rather than any single large contract.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82594,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Forgegrave Industries Wins Fleet Contract to Outfit Meridian Freight's Regional Hubs",
+        "body": "Forgegrave has signed a 640M agreement to supply Pallet-Runner units and Dock Modules across twelve of Meridian Freight's regional distribution hubs over three years. CEO Petra Thorne called the deal a natural extension of rising attach rates, noting the modules had already proven out at high-turnover sites. Installations begin next quarter with the first four hubs online by year-end.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -8176,7 +8236,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82587,
+    "lastEventCycle": 82594,
     "events": [
       {
         "cycle": 0,
@@ -8272,6 +8332,16 @@
         "size": "major",
         "head": "Vossenspire Supply Strikes 900M Distribution Pact to Take Calderon Grand Tourer Global",
         "body": "Vossenspire secured an exclusive nine-figure distribution agreement spanning eleven luxury markets for its Heritage-badged Calderon grand tourer, with first deliveries slated for the coming winter season. CEO Quinn Marrow called it 'the cornerstone of a decade-long ambition,' committing to double Calderon Motorworks output within two years to meet projected demand.",
+        "effects": {
+          "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82594,
+        "kind": "expansion",
+        "size": "major",
+        "head": "Vossenspire Supply Acquires Halden Chronometrics in 1.4B Push to Reshape Timepiece Arm",
+        "body": "Restless as ever, Quinn Marrow unveiled the 1.4B purchase of storied movement-maker Halden Chronometrics, the firm's largest deal in decades. The acquisition brings in-house mechanical expertise Vossenspire had long outsourced, and Marrow said Halden's workshops would anchor a new ultra-premium tier alongside the surging Calderon vehicle line. Integration is expected to strain near-term margins even as it deepens the heritage portfolio.",
         "effects": {
           "luxury": 0.22
         }
@@ -8488,7 +8558,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82585,
+    "lastEventCycle": 82594,
     "events": [
       {
         "cycle": 0,
@@ -8564,6 +8634,16 @@
         "size": "standard",
         "head": "Woldmark Rebounds as Halcyon Delivery Overhaul Restores Margins",
         "body": "Woldmark returned to profit growth, with gross margins recovering 4 points after Cole Carrow's overhaul of the Halcyon delivery arm cut logistics costs. Carrow, known for bold public swings, declared the margin fix 'done ahead of schedule' and hinted at pursuing a follow-on deal larger than the record $4.6B Halcyon pact. Delivery timelines on Halcyon are now back within contracted windows.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82594,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Woldmark Extends Recovery as Halcyon Margins Hold for Second Quarter",
+        "body": "Woldmark reported a second straight quarter of margin improvement in its Halcyon delivery arm, with operating margin up 3.1 points from the trough. Cole Carrow, never shy about a victory lap, declared the turnaround \"locked in\" and hinted at reinvesting savings into a new compute tier. Analysts noted revenue growth remains modest even as profitability firms.",
         "effects": {
           "technology": 0.13
         }
