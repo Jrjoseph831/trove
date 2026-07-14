@@ -850,7 +850,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82589,
+    "lastEventCycle": 82595,
     "events": [
       {
         "cycle": 0,
@@ -989,6 +989,16 @@
         "effects": {
           "energy": 0.13
         }
+      },
+      {
+        "cycle": 82595,
+        "kind": "expansion",
+        "size": "major",
+        "head": "Boreas Power Commits $1.9 Billion to Double Hollowmere Campus After Full Tenant Lease-Up",
+        "body": "With all initial capacity leased, Boreas Power announced a $1.9-billion phase-two buildout to double Hollowmere's compute and storage footprint. CEO Mira Thorne said demand from waitlisted customers justified the largest single-site commitment in the company's history. The expansion adds 900 megawatts of storage-backed capacity, with first tenants slated to move in within eighteen months.",
+        "effects": {
+          "energy": 0.22
+        }
       }
     ]
   },
@@ -1003,7 +1013,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82588,
+    "lastEventCycle": 82595,
     "events": [
       {
         "cycle": 0,
@@ -1111,6 +1121,16 @@
         "body": "The automaker issued a voluntary recall of roughly 140,000 Runabout units after a batch of axles from newly acquired Halveston Axle Works showed premature wear under load testing. CEO Orla Marrow said the fault surfaced during post-acquisition quality integration and pledged free repairs, estimating a one-time charge of up to $85 million.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82595,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Regulators Open Formal Safety Probe Into Bruncraft Runabout Axles Beyond Recalled Units",
+        "body": "Federal safety authorities opened a formal investigation into whether the Halveston axle defect extends past the 140,000 recalled Runabouts, potentially covering an additional 300,000 vehicles. Investigators cited a rise in complaints logged during Bruncraft's Talvorne integration. CEO Orla Marrow pledged full cooperation but warned the probe could disrupt near-term production schedules.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -1479,7 +1499,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82582,
+    "lastEventCycle": 82595,
     "events": [
       {
         "cycle": 0,
@@ -1543,6 +1563,16 @@
         "size": "standard",
         "head": "Brunridge Works Opens Second Distribution Hub to Feed National Shelf Deal",
         "body": "Brunridge broke ground on a $180 million distribution center to supply its newly won national retail placement across all three pillars. CEO Halia Brennt said the hub would cut delivery times by roughly half and support projected volume growth as the cross-pillar home bundle rolls out to additional regions.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82595,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunridge Works Tops Estimates as National Shelf Deal Ramps",
+        "body": "Brunridge Works posted quarterly revenue of $410 million, up 18 percent, as its three-pillar range filled shelves nationwide. CEO Halia Brennt credited the second distribution hub for keeping fill rates above 96 percent through the launch surge. The company nudged its full-year outlook higher on continued cross-pillar bundle demand.",
         "effects": {
           "consumer": 0.13
         }
@@ -1784,7 +1814,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82586,
+    "lastEventCycle": 82595,
     "events": [
       {
         "cycle": 0,
@@ -1880,6 +1910,16 @@
         "size": "standard",
         "head": "Calderforge Rebounds With Strong Quarter as Stormwell Comes Fully Back Online",
         "body": "The compute house beat estimates with revenue of 340 million after all Stormwell wings resumed full operation following the redundant cooling retrofit. CEO Nadia Throne said utilization hit 94 percent across the complex, and the third wing remains on track to open ahead of schedule, though she cautioned that demand is 'running hotter than our floor space.'",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82595,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Calderforge Breaks Ground on Fourth Stormwell Data Hall After Recovery",
+        "body": "Buoyed by its post-outage rebound, Calderforge committed $520 million to a fourth Stormwell data hall, expanding capacity by roughly 30 percent. CEO Nadia Throne said the new hall would carry the redundant cooling architecture developed during last quarter's retrofit as standard. Site preparation begins next month with commissioning targeted for the following year.",
         "effects": {
           "technology": 0.13
         }
@@ -2144,7 +2184,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82583,
+    "lastEventCycle": 82595,
     "events": [
       {
         "cycle": 0,
@@ -2212,6 +2252,16 @@
         "body": "Facing a swelling order book, Carrowwell will add a third production shift and a 90,000-square-foot annex to its Material Handling plant, a roughly $140M commitment. CEO Theo Thorne said the expansion targets an 18-month backlog on the modular warehouse automation line. Hiring for some 320 plant roles begins next quarter.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82595,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Carrowwell Signs $1.1-Billion Multi-Year Automation Pact With National Logistics Network",
+        "body": "Carrowwell secured its largest-ever contract, a $1.1-billion agreement to supply modular warehouse automation across 40 logistics sites over four years. CEO Theo Thorne said the deal transforms the automation unit from a growth line into the company's anchor business. The recently expanded plant and new third shift will be dedicated primarily to fulfilling the rollout.",
+        "effects": {
+          "manufacturing": 0.22
         }
       }
     ]
@@ -3079,7 +3129,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82580,
+    "lastEventCycle": 82595,
     "events": [
       {
         "cycle": 0,
@@ -3137,6 +3187,16 @@
         "body": "Drustcyon secured a five-year framework agreement with the Meridian Harbor Authority valued at 340 million, its largest single contract on record. Aurelia Kessler said the deal, anchored by the corrosion-resistant fastener line, would keep the new coastal facility at full utilization through the decade. Kessler noted the win came against two established rivals after a competitive tender.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82595,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcyon Beats Again as Harbor Authority Framework Fills Order Book",
+        "body": "Drustcyon reported earnings up 22 percent, with the coastal anchor line and new Harbor Authority framework driving a record $95-million quarter. CEO Aurelia Kessler said corrosion-anchor volumes now represent nearly a third of Fasteners revenue. The company signaled it may add a second coastal line if backlog holds through the year.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -5284,7 +5344,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82586,
+    "lastEventCycle": 82595,
     "events": [
       {
         "cycle": 0,
@@ -5371,6 +5431,16 @@
         "head": "Ironcrestton CEO Sable Carrow Steps Down as Board Names Outside Successor Amid Origin Scandal",
         "body": "Sable Carrow resigned effective immediately as the fallout from the Carrow Atelier origin-labeling documents widened, with the board appointing former compliance chief Wren Adler to steady the luxury house. Adler pledged an independent audit of all origin claims and a refund program for affected buyers, saying Ironcrestton 'must rebuild the trust its name once guaranteed.'",
         "effects": {}
+      },
+      {
+        "cycle": 82595,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "New Ironcrestton Chief Launches Sweeping Origin-Verification Overhaul",
+        "body": "Incoming CEO Dara Vetch unveiled a full audit of Ironcrestton's supply chain, pledging documented provenance for every Fine Good sold after the Carrow atelier scandal. The plan folds the tarnished Carrow line into a new 'Verified Origin' program and sets aside $60 million for refunds and relabeling. Vetch called it 'the only way to earn back a buyer's trust.'",
+        "effects": {
+          "luxury": -0.13
+        }
       }
     ]
   },
@@ -7696,7 +7766,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82588,
+    "lastEventCycle": 82595,
     "events": [
       {
         "cycle": 0,
@@ -7804,6 +7874,16 @@
         "body": "Following a $2.3-billion acquisition spree, the luxury house unified its casemaking, movement and jewelry operations into a single Varnvale Maisons division to streamline its newly vertical supply chain. CEO Bram Wold appointed longtime deputy Sabine Reuther to head the division, acknowledging integration costs would weigh on near-term margins.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82595,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale & Sons Unveils First Maisons-Division Collection Blending Duquesne and Corveau",
+        "body": "The newly formed Maisons division debuted a 24-piece collection pairing Duquesne jeweling with Corveau timepiece movements, priced from $9,000 to $180,000. CEO Bram Wold framed the launch as proof the $1.4-billion Duquesne acquisition could yield unified craft rather than a loose portfolio. Initial allocations to flagship boutiques are already spoken for.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]

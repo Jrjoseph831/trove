@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-14T13:48:08.234Z",
+  "generatedAt": "2026-07-14T19:22:48.187Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "expansion",
+      "size": "major",
+      "head": "Boreas Power Commits $1.9 Billion to Double Hollowmere Campus After Full Tenant Lease-Up",
+      "body": "With all initial capacity leased, Boreas Power announced a $1.9-billion phase-two buildout to double Hollowmere's compute and storage footprint. CEO Mira Thorne said demand from waitlisted customers justified the largest single-site commitment in the company's history. The expansion adds 900 megawatts of storage-backed capacity, with first tenants slated to move in within eighteen months.",
+      "cycle": 82595,
+      "dur": 8
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Regulators Open Formal Safety Probe Into Bruncraft Runabout Axles Beyond Recalled Units",
+      "body": "Federal safety authorities opened a formal investigation into whether the Halveston axle defect extends past the 140,000 recalled Runabouts, potentially covering an additional 300,000 vehicles. Investigators cited a rise in complaints logged during Bruncraft's Talvorne integration. CEO Orla Marrow pledged full cooperation but warned the probe could disrupt near-term production schedules.",
+      "cycle": 82595,
+      "dur": 8
+    },
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunridge Works Tops Estimates as National Shelf Deal Ramps",
+      "body": "Brunridge Works posted quarterly revenue of $410 million, up 18 percent, as its three-pillar range filled shelves nationwide. CEO Halia Brennt credited the second distribution hub for keeping fill rates above 96 percent through the launch surge. The company nudged its full-year outlook higher on continued cross-pillar bundle demand.",
+      "cycle": 82595,
+      "dur": 2
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Calderforge Breaks Ground on Fourth Stormwell Data Hall After Recovery",
+      "body": "Buoyed by its post-outage rebound, Calderforge committed $520 million to a fourth Stormwell data hall, expanding capacity by roughly 30 percent. CEO Nadia Throne said the new hall would carry the redundant cooling architecture developed during last quarter's retrofit as standard. Site preparation begins next month with commissioning targeted for the following year.",
+      "cycle": 82595,
+      "dur": 2
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Carrowwell Signs $1.1-Billion Multi-Year Automation Pact With National Logistics Network",
+      "body": "Carrowwell secured its largest-ever contract, a $1.1-billion agreement to supply modular warehouse automation across 40 logistics sites over four years. CEO Theo Thorne said the deal transforms the automation unit from a growth line into the company's anchor business. The recently expanded plant and new third shift will be dedicated primarily to fulfilling the rollout.",
+      "cycle": 82595,
+      "dur": 8
+    },
+    {
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drustcyon Beats Again as Harbor Authority Framework Fills Order Book",
+      "body": "Drustcyon reported earnings up 22 percent, with the coastal anchor line and new Harbor Authority framework driving a record $95-million quarter. CEO Aurelia Kessler said corrosion-anchor volumes now represent nearly a third of Fasteners revenue. The company signaled it may add a second coastal line if backlog holds through the year.",
+      "cycle": 82595,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "New Ironcrestton Chief Launches Sweeping Origin-Verification Overhaul",
+      "body": "Incoming CEO Dara Vetch unveiled a full audit of Ironcrestton's supply chain, pledging documented provenance for every Fine Good sold after the Carrow atelier scandal. The plan folds the tarnished Carrow line into a new 'Verified Origin' program and sets aside $60 million for refunds and relabeling. Vetch called it 'the only way to earn back a buyer's trust.'",
+      "cycle": 82595,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Varnvale & Sons Unveils First Maisons-Division Collection Blending Duquesne and Corveau",
+      "body": "The newly formed Maisons division debuted a 24-piece collection pairing Duquesne jeweling with Corveau timepiece movements, priced from $9,000 to $180,000. CEO Bram Wold framed the launch as proof the $1.4-billion Duquesne acquisition could yield unified craft rather than a loose portfolio. Initial allocations to flagship boutiques are already spoken for.",
+      "cycle": 82595,
+      "dur": 2
+    },
     {
       "company": "Ardent Health",
       "sector": "medical",
@@ -42,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Edges Out Estimates as Northern Mills Volumes Steady",
-      "body": "Cranecraft posted a narrow quarterly beat as textile shipments under the Northern Mills Consortium deal reached full run-rate. Farm equipment held flat amid a soft seasonal window, leaving textiles as the quarter's modest driver. CEO Mira Garr reaffirmed full-year guidance without changes.",
-      "cycle": 82594,
-      "dur": 1
-    },
-    {
       "company": "Forgegrave Industries",
       "sector": "logistics",
       "kind": "major_deal",
@@ -82,26 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Aldousspire Group",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aldousspire Group Lifts Guidance as Nationwide Heirloom Rollout Outpaces Plan",
-      "body": "The consumer maker raised full-year targets after the Heirloom retail alliance drove same-quarter apparel sales up 11% to $840 million. CEO Mira Ashby credited faster-than-expected shelf placement and strong outerwear attach rates for the beat. The company added a second production run to meet holiday demand.",
-      "cycle": 82593,
-      "dur": 2
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Blackhold Unveils Revamped Storage Platform in Solberg's First Strategic Push",
-      "body": "New CEO Renata Solberg debuted the redesigned Meridian storage bank, replacing the halted test unit that had dragged results and clouded the Greycliff dispute. The launch anchors a $400 million capital plan aimed at rebuilding confidence after the Vren-era collapse. Solberg said initial deployment sites would come online next quarter.",
-      "cycle": 82593,
-      "dur": 2
-    },
-    {
       "company": "Blackton Industries",
       "sector": "automotive",
       "kind": "leadership_change",
@@ -110,16 +160,6 @@
       "body": "The board appointed Cassian Rode, former chief of a rival parts group, to succeed ousted Mara Mercer, tasking him with steadying operations after the Halvern weld crisis erased last quarter's earnings. Rode pledged a $180 million overhaul of the company's welding and quality-control lines and said he would seek early mediation in the Halvern suit. Departing chairman Dorian Vale will remain on the board through year-end.",
       "cycle": 82593,
       "dur": 8
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Halcrow & Vance Lands Adjacent Corridor Contract as Vetask Success Opens New Work",
-      "body": "The firm won a $290 million contract to build access corridors neighboring the Vetask Basin, leveraging its peaking output there to edge out competitors. CEO Mira Skarn said crews and equipment would redeploy directly from the finishing basin phase, minimizing idle time. The award extends the company's regional pipeline into a third consecutive year.",
-      "cycle": 82593,
-      "dur": 2
     },
     {
       "company": "Halhold Systems",
@@ -132,16 +172,6 @@
       "dur": 8
     },
     {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Korrwright Works Beats as Sennfeld Revival Line Drives Heritage Division Sales",
-      "body": "Quarterly revenue rose 14% to $612 million, powered by strong early demand for the Sennfeld Revival timepieces launched under the unified Heritage Division. CEO Dunmore Carrow said waitlists on flagship models had cleared expectations and hinted at further acquisitions in the coming year. Margins widened as integration savings from the Sennfeld deal began to land.",
-      "cycle": 82593,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "recall",
@@ -150,16 +180,6 @@
       "body": "The company pulled roughly 1.4 million units across its Atlas device and Drennan industrial ranges, its largest recall on record, after federal investigators flagged overheating faults tied to mounting injury claims. CEO Halden Vossen called the move \"painful but necessary\" and set aside $220 million for remediation. Shipments of both lines are suspended pending redesign.",
       "cycle": 82593,
       "dur": 8
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Marrowstone Build Elevates Delphine Vaugh to CEO After Halloran Exit",
-      "body": "The board confirmed Delphine Vaugh, previously operations chief, to permanently lead the earthmoving maker following Bram Halloran's departure over the $310 million embankment judgment. Vaugh outlined a measured plan to settle remaining claims while pursuing selective bids on stalled infrastructure work. She emphasized that the overhauled safety division would report directly to her office.",
-      "cycle": 82593,
-      "dur": 2
     },
     {
       "company": "Castlestone",
@@ -279,26 +299,6 @@
       "head": "Veldtreach & Sons Wins $2.1B Highland Corridor Program in Largest-Ever Award",
       "body": "Veldtreach secured a sweeping 2.1 billion mark contract to grade and prepare a 90-kilometer highland transport corridor, the biggest single award in the firm's history. Petra Steg called it a generational commitment that will require a fleet expansion and roughly 1,400 new field hires. The win nearly doubles the company's forward order book alongside its reservoir and coastal work.",
       "cycle": 82589,
-      "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "breakthrough",
-      "size": "major",
-      "head": "Fennmoor Unveils Threll-Powered Sensor That Halves Larkspur Diagnostic Times",
-      "body": "The technology house revealed a next-generation Threll sensor that cuts Larkspur One test cycles by 48% while improving detection sensitivity, a milestone that could reshape high-throughput hospital labs. CEO Dorian Brandt said the breakthrough had already drawn expansion interest from the existing hospital-network partner, with a validated commercial version slated for the coming year.",
-      "cycle": 82588,
-      "dur": 8
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Maison & Vale Seals $2.2-Billion Merger With Rival Ostley Hospitality Group",
-      "body": "In its most ambitious move yet, the house agreed to combine with cleaning-and-household rival Ostley in a deal valuing the target at $2.2 billion, creating the continent's largest jansan and household-goods supplier. CEO Rhys Kessler said Deltrey Chemical and Corran Linens would be folded alongside Ostley's brands, though regulators in two regions signaled early scrutiny of the combined market share.",
-      "cycle": 82588,
       "dur": 8
     }
   ]
