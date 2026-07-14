@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-14T02:37:30.457Z",
+  "generatedAt": "2026-07-14T08:09:08.880Z",
   "beats": [
+    {
+      "company": "Aldousspire Group",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Aldousspire Group Lifts Guidance as Nationwide Heirloom Rollout Outpaces Plan",
+      "body": "The consumer maker raised full-year targets after the Heirloom retail alliance drove same-quarter apparel sales up 11% to $840 million. CEO Mira Ashby credited faster-than-expected shelf placement and strong outerwear attach rates for the beat. The company added a second production run to meet holiday demand.",
+      "cycle": 82593,
+      "dur": 2
+    },
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Blackhold Unveils Revamped Storage Platform in Solberg's First Strategic Push",
+      "body": "New CEO Renata Solberg debuted the redesigned Meridian storage bank, replacing the halted test unit that had dragged results and clouded the Greycliff dispute. The launch anchors a $400 million capital plan aimed at rebuilding confidence after the Vren-era collapse. Solberg said initial deployment sites would come online next quarter.",
+      "cycle": 82593,
+      "dur": 2
+    },
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Blackton Industries Names Turnaround Veteran Cassian Rode as CEO to Lead Halvern Recovery",
+      "body": "The board appointed Cassian Rode, former chief of a rival parts group, to succeed ousted Mara Mercer, tasking him with steadying operations after the Halvern weld crisis erased last quarter's earnings. Rode pledged a $180 million overhaul of the company's welding and quality-control lines and said he would seek early mediation in the Halvern suit. Departing chairman Dorian Vale will remain on the board through year-end.",
+      "cycle": 82593,
+      "dur": 8
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Halcrow & Vance Lands Adjacent Corridor Contract as Vetask Success Opens New Work",
+      "body": "The firm won a $290 million contract to build access corridors neighboring the Vetask Basin, leveraging its peaking output there to edge out competitors. CEO Mira Skarn said crews and equipment would redeploy directly from the finishing basin phase, minimizing idle time. The award extends the company's regional pipeline into a third consecutive year.",
+      "cycle": 82593,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Halhold Systems Rocked as Internal Memo Reveals Northgate Warnings Were Ignored",
+      "body": "Leaked documents show engineers flagged failing power infrastructure at the Northgate campus months before the twin blackouts, contradicting management's public assurances. CEO Dahlia Renn faces a widening client exodus, with three major accounts moving to terminate contracts and a board committee opening an internal review. Analysts estimate exposure at over $150 million in lost commitments.",
+      "cycle": 82593,
+      "dur": 8
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrwright Works Beats as Sennfeld Revival Line Drives Heritage Division Sales",
+      "body": "Quarterly revenue rose 14% to $612 million, powered by strong early demand for the Sennfeld Revival timepieces launched under the unified Heritage Division. CEO Dunmore Carrow said waitlists on flagship models had cleared expectations and hinted at further acquisitions in the coming year. Margins widened as integration savings from the Sennfeld deal began to land.",
+      "cycle": 82593,
+      "dur": 2
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "recall",
+      "size": "major",
+      "head": "Marlgear Supply Orders Sweeping Recall of Atlas and Drennan Lines Amid Regulator Pressure",
+      "body": "The company pulled roughly 1.4 million units across its Atlas device and Drennan industrial ranges, its largest recall on record, after federal investigators flagged overheating faults tied to mounting injury claims. CEO Halden Vossen called the move \"painful but necessary\" and set aside $220 million for remediation. Shipments of both lines are suspended pending redesign.",
+      "cycle": 82593,
+      "dur": 8
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Marrowstone Build Elevates Delphine Vaugh to CEO After Halloran Exit",
+      "body": "The board confirmed Delphine Vaugh, previously operations chief, to permanently lead the earthmoving maker following Bram Halloran's departure over the $310 million embankment judgment. Vaugh outlined a measured plan to settle remaining claims while pursuing selective bids on stalled infrastructure work. She emphasized that the overhauled safety division would report directly to her office.",
+      "cycle": 82593,
+      "dur": 2
+    },
     {
       "company": "Carrowcyon & Sons",
       "sector": "consumer",
@@ -40,16 +120,6 @@
       "body": "Gromford Works unveiled a 22,000-square-foot flagship boutique in the Harwick luxury district, its first company-owned retail space, backed by a $85M rollout plan for six more locations. Aldwych said the Meridian line's Salon win had 'doubled inbound demand' and justified taking distribution in-house.",
       "cycle": 82592,
       "dur": 2
-    },
-    {
-      "company": "Kesselgrove Co.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Kesselgrove Co. Edges Past Estimates as Second Line Ramps Cleanly",
-      "body": "Kesselgrove reported quarterly earnings of $3.12 a share against a $2.95 consensus, aided by faster-than-expected output from its new modular press assembly line. Steg reaffirmed full-year guidance, citing 'orderly conversion' of the multi-plant backlog.",
-      "cycle": 82592,
-      "dur": 1
     },
     {
       "company": "Lhaus Industries",
@@ -100,56 +170,6 @@
       "body": "Drossware has locked in a four-year, $900M supply agreement with the Grocer Alliance spanning packaging, cleaning and jansan, and private-label lighting for store fixtures. CEO Nadia Wold called it the broadest single commitment in the company's history, converting a volume relationship into a full-category partnership. The deal is expected to underpin roughly a fifth of annual revenue through its term.",
       "cycle": 82591,
       "dur": 8
-    },
-    {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Dunmorestone Opens Dedicated Food Service Kitchen to Fulfill Cafeteria Contract",
-      "body": "Dunmorestone has opened a dedicated production kitchen to serve its newly won regional cafeteria supply contract, a $48M facility expected to reach full throughput within two quarters. CEO Orla Mercer said the plumbing and fixtures arm remains the steady earner while food service becomes the growth lever. The company reiterated its quiet, margin-first approach following last year's recall recovery.",
-      "cycle": 82591,
-      "dur": 2
-    },
-    {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Garrware Commits to Third Marrow Valley Line as Northern Depot Volumes Climb",
-      "body": "Garrware will add a third production line at Marrow Valley, a $210M outlay expected to lift plant output by roughly 40% once commissioned late next year. CEO Orla Holt tied the move directly to firming order flow from the extended Halloway & Pace northern depot network. The build continues the disciplined, capacity-led strategy that has defined Holt's long tenure.",
-      "cycle": 82591,
-      "dur": 2
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcrest Posts Record Salon Sales as Meridian Grand Complication Sells Out",
-      "body": "Halcrest reported quarterly revenue of $146M, a company record, after the Meridian Grand Complication sold through its initial allocation within weeks. CEO Iris Marrow said waitlists at the Vireo Row salon now stretch past a year for the top-tier pieces. The result vindicated Marrow's decision to anchor the collection around a single high-margin flagship.",
-      "cycle": 82591,
-      "dur": 2
-    },
-    {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Ornewright Supply Beats as Caldmere Food Service Contract Fills Fresh Capacity",
-      "body": "Ornewright posted quarterly revenue of $684M, up 11% year over year, as the anchored regional food service contract absorbed volume from the first Caldmere hub expansion. CEO Rhys Throne said the second hub build remains on schedule, with framing complete on the primary warehouse block. Margins held steady despite elevated farm-input freight costs.",
-      "cycle": 82591,
-      "dur": 2
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Stegforge Adds Second Furnace at Alloy Plant to Clear Machinery Backlog",
-      "body": "Stegforge is installing a second furnace at its new alloy plant, a $175M investment aimed at unclogging a machinery order backlog that has stretched delivery windows to nine months. CEO Aurelia Steg said the added melt capacity will also feed the structural-materials framework signed earlier this year. Commissioning is targeted for the second half of next year.",
-      "cycle": 82591,
-      "dur": 2
     },
     {
       "company": "Drustcraft",
@@ -279,16 +299,6 @@
       "head": "Ironcrestton CEO Sable Carrow Steps Down as Board Names Outside Successor Amid Origin Scandal",
       "body": "Sable Carrow resigned effective immediately as the fallout from the Carrow Atelier origin-labeling documents widened, with the board appointing former compliance chief Wren Adler to steady the luxury house. Adler pledged an independent audit of all origin claims and a refund program for affected buyers, saying Ironcrestton 'must rebuild the trust its name once guaranteed.'",
       "cycle": 82586,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Halhold Works Hit With Class Action Over Verity Pro Failures as Damages Sought Top $600M",
-      "body": "A consolidated class action was filed against Halhold Works on behalf of clinics and patients affected by the Verity Pro recall, seeking more than $600M in damages tied to the medical unit malfunctions. Gunnar Vale acknowledged the suit as 'a defining test' and set aside a $180M reserve, though analysts warn the figure may climb as the parallel safety probe continues. Shares of the turbulent house have shed roughly a third of their value since the recall began.",
-      "cycle": 82585,
       "dur": 8
     }
   ]

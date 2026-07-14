@@ -229,7 +229,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82575,
+    "lastEventCycle": 82593,
     "events": [
       {
         "cycle": 0,
@@ -275,6 +275,16 @@
         "size": "standard",
         "head": "Aldousspire Group Signs Retail Alliance to Stock Heirloom Line Nationwide",
         "body": "Mira Ashby's Aldousspire secured a multi-year shelf agreement with the Fenwick department chain, placing its Heirloom denim and outerwear in more than 300 storefronts. The pact is expected to add roughly 180 million in annual wholesale volume, extending the line's momentum beyond direct channels.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82593,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aldousspire Group Lifts Guidance as Nationwide Heirloom Rollout Outpaces Plan",
+        "body": "The consumer maker raised full-year targets after the Heirloom retail alliance drove same-quarter apparel sales up 11% to $840 million. CEO Mira Ashby credited faster-than-expected shelf placement and strong outerwear attach rates for the beat. The company added a second production run to meet holiday demand.",
         "effects": {
           "consumer": 0.13
         }
@@ -531,7 +541,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82584,
+    "lastEventCycle": 82593,
     "events": [
       {
         "cycle": 0,
@@ -624,6 +634,16 @@
         "head": "Blackhold Turns to Outsider Renata Solberg's First Full Strategy After Vren Exit",
         "body": "Newly installed chief Renata Solberg laid out a 90-day plan to wall off the Greycliff liabilities into a managed unit and restart a scaled-down test bank under external oversight. The board granted her authority to write down roughly 210 million against the halted program, a move analysts called painful but clarifying.",
         "effects": {}
+      },
+      {
+        "cycle": 82593,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Blackhold Unveils Revamped Storage Platform in Solberg's First Strategic Push",
+        "body": "New CEO Renata Solberg debuted the redesigned Meridian storage bank, replacing the halted test unit that had dragged results and clouded the Greycliff dispute. The launch anchors a $400 million capital plan aimed at rebuilding confidence after the Vren-era collapse. Solberg said initial deployment sites would come online next quarter.",
+        "effects": {
+          "energy": 0.13
+        }
       }
     ]
   },
@@ -694,14 +714,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1939,
-    "ceo": "Dorian Vale",
+    "ceo": "Cassian Rode",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82583,
+    "lastEventCycle": 82593,
     "events": [
       {
         "cycle": 0,
@@ -797,6 +817,14 @@
         "size": "major",
         "head": "Blackton Industries Ousts Mara Mercer as Halvern Weld Crisis Forces Board Shakeup",
         "body": "The Blackton board removed CEO Mara Mercer after mounting losses and the escalating Halvern lawsuit tied to weld defects, installing veteran operations chief Dorian Vale as her successor. Vale pledged an immediate quality overhaul and settlement talks with Halvern, whose suit seeks damages exceeding $400M. Three additional board seats were also reshuffled amid investor pressure.",
+        "effects": {}
+      },
+      {
+        "cycle": 82593,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Blackton Industries Names Turnaround Veteran Cassian Rode as CEO to Lead Halvern Recovery",
+        "body": "The board appointed Cassian Rode, former chief of a rival parts group, to succeed ousted Mara Mercer, tasking him with steadying operations after the Halvern weld crisis erased last quarter's earnings. Rode pledged a $180 million overhaul of the company's welding and quality-control lines and said he would seek early mediation in the Halvern suit. Departing chairman Dorian Vale will remain on the board through year-end.",
         "effects": {}
       }
     ]
@@ -4219,7 +4247,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82580,
+    "lastEventCycle": 82593,
     "events": [
       {
         "cycle": 0,
@@ -4275,6 +4303,16 @@
         "size": "standard",
         "head": "Halcrow & Vance Tops Estimates Again as Vetask Basin Nears Peak Output",
         "body": "Halcrow & Vance reported earthmoving revenue of 168 million, beating consensus by 9%, with the Vetask Basin second phase now running at planned capacity. Mira Skarn said fleet utilization hit a multi-year high and reaffirmed the raised full-year outlook. Skarn flagged that early client discussions had begun around a potential third phase.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82593,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halcrow & Vance Lands Adjacent Corridor Contract as Vetask Success Opens New Work",
+        "body": "The firm won a $290 million contract to build access corridors neighboring the Vetask Basin, leveraging its peaking output there to edge out competitors. CEO Mira Skarn said crews and equipment would redeploy directly from the finishing basin phase, minimizing idle time. The award extends the company's regional pipeline into a third consecutive year.",
         "effects": {
           "construction": 0.13
         }
@@ -4385,7 +4423,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82587,
+    "lastEventCycle": 82593,
     "events": [
       {
         "cycle": 0,
@@ -4519,6 +4557,16 @@
         "size": "major",
         "head": "Halhold Systems Hit by Second Northgate Blackout, Client Contracts in Question",
         "body": "Barely a quarter after its restructure, Halhold suffered a cascading power and cooling failure that darkened two of its three Northgate campuses for nearly nine hours, disrupting workloads for at least forty enterprise clients. Two anchor customers have invoked exit clauses, and CEO Dahlia Renn faces mounting pressure as the overhaul she championed fails its first major stress test.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82593,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Halhold Systems Rocked as Internal Memo Reveals Northgate Warnings Were Ignored",
+        "body": "Leaked documents show engineers flagged failing power infrastructure at the Northgate campus months before the twin blackouts, contradicting management's public assurances. CEO Dahlia Renn faces a widening client exodus, with three major accounts moving to terminate contracts and a board committee opening an internal review. Analysts estimate exposure at over $150 million in lost commitments.",
         "effects": {
           "technology": -0.22
         }
@@ -5682,7 +5730,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82586,
+    "lastEventCycle": 82593,
     "events": [
       {
         "cycle": 0,
@@ -5788,6 +5836,16 @@
         "size": "standard",
         "head": "Korrwright Works Debuts Sennfeld Revival Line Under Unified Heritage Division",
         "body": "The luxury timepiece maker unveiled the Sennfeld Revival, a 12-model collection blending the acquired atelier's tourbillon craft with Korrwright's Velloux movement, priced from 38,000. CEO Dunmore Carrow called the launch 'proof the folding-in worked,' with initial allocations already committed to flagship boutiques in three markets.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82593,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Works Beats as Sennfeld Revival Line Drives Heritage Division Sales",
+        "body": "Quarterly revenue rose 14% to $612 million, powered by strong early demand for the Sennfeld Revival timepieces launched under the unified Heritage Division. CEO Dunmore Carrow said waitlists on flagship models had cleared expectations and hinted at further acquisitions in the coming year. Margins widened as integration savings from the Sennfeld deal began to land.",
         "effects": {
           "luxury": 0.13
         }
@@ -6051,7 +6109,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82584,
+    "lastEventCycle": 82593,
     "events": [
       {
         "cycle": 0,
@@ -6157,6 +6215,16 @@
         "size": "major",
         "head": "Marlgear Supply Faces Combined Federal Action and Multi-State Suit Over Atlas and Drennan Lines",
         "body": "State attorneys from six jurisdictions joined the federal probe into a consolidated complaint alleging Marlgear shipped Atlas devices and Drennan Mills machines despite documented defect warnings. Regulators are seeking upward of 900 million in penalties and a mandatory recall, and CEO Halden Vossen's combative public statements were cited as evidence of 'reckless disregard,' sending the case toward trial rather than settlement.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82593,
+        "kind": "recall",
+        "size": "major",
+        "head": "Marlgear Supply Orders Sweeping Recall of Atlas and Drennan Lines Amid Regulator Pressure",
+        "body": "The company pulled roughly 1.4 million units across its Atlas device and Drennan industrial ranges, its largest recall on record, after federal investigators flagged overheating faults tied to mounting injury claims. CEO Halden Vossen called the move \"painful but necessary\" and set aside $220 million for remediation. Shipments of both lines are suspended pending redesign.",
         "effects": {
           "technology": -0.22
         }
@@ -6340,7 +6408,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82582,
+    "lastEventCycle": 82593,
     "events": [
       {
         "cycle": 0,
@@ -6406,6 +6474,14 @@
         "size": "major",
         "head": "Marrowstone Build CEO Bram Halloran Steps Down in Wake of Embankment Judgment",
         "body": "Bram Halloran, who led Marrowstone since 1924, resigned Tuesday as the board sought a clean break following the $310 million collapse judgment and a widening safety probe. The company named longtime operations chief Delphine Vaugh as his successor, tasking her with restoring regulator confidence and settling remaining site orders.",
+        "effects": {}
+      },
+      {
+        "cycle": 82593,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Marrowstone Build Elevates Delphine Vaugh to CEO After Halloran Exit",
+        "body": "The board confirmed Delphine Vaugh, previously operations chief, to permanently lead the earthmoving maker following Bram Halloran's departure over the $310 million embankment judgment. Vaugh outlined a measured plan to settle remaining claims while pursuing selective bids on stalled infrastructure work. She emphasized that the overhauled safety division would report directly to her office.",
         "effects": {}
       }
     ]
