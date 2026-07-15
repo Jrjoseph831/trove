@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-15T02:35:33.063Z",
+  "generatedAt": "2026-07-15T08:14:07.349Z",
   "beats": [
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "major",
+      "head": "Castlestone Smashes Estimates as National Data Grid Pact Powers Record Quarter",
+      "body": "Castlestone reported quarterly revenue of $4.2B, up 71% year over year, as first deliveries under the $9.5B National Data Grid contract began recognizing. CEO Pell Karsh declared the quarter 'the moment Halo went from a product to an infrastructure,' and lifted full-year guidance by roughly 18%. High-density tier orders alone contributed $1.1B, prompting management to flag capacity expansion at two fabrication sites.",
+      "cycle": 82597,
+      "dur": 8
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Cranegrove Wins Third Inland Corridor Package in 740-Million Award",
+      "body": "Cranegrove secured the third and largest Inland Corridor package to date, a 740-million contract covering earthworks across the northern spur. CEO Vale Calder said the award extends the company's committed backlog into a fourth year and reflects 'delivery discipline the client can count on.' The win brings total Inland Corridor bookings above 2 billion since the program began.",
+      "cycle": 82597,
+      "dur": 2
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Korrworks Opens Fourth Depot as Merrick Line Corridor Reaches Capacity",
+      "body": "Korrworks confirmed the launch of a fourth depot at Halden Junction, adding 340,000 square feet of handling capacity along the Merrick Line corridor. CEO Rhys Throne framed the move as 'seizing a corridor that keeps filling faster than we can build,' noting the new site is already 60% pre-committed to existing rail volumes. The company expects the depot to reach full throughput within two quarters.",
+      "cycle": 82597,
+      "dur": 2
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Lhaus Industries Breaks Ground on Fourth Cell-Pack Line to Clear Record Backlog",
+      "body": "Lhaus began construction on a fourth cell-pack line at its Torren works, a $1.8B investment aimed at servicing a backlog that has swelled past $50B after its record deal. CEO Cole Brandt said the added capacity would 'take delivery risk off the table' for fleet customers waiting into next year. The line is targeted to reach volume output within 14 months.",
+      "cycle": 82597,
+      "dur": 2
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Marrowmoor Holdings Adds Eastgate Cluster to Growing Contract Base",
+      "body": "Marrowmoor signed a cluster of servicing contracts across the Eastgate district, extending its recurring-revenue footprint by an estimated eight sites. CEO Dorian Steg said the additions fit the company's steady 'contract-by-contract' expansion approach without straining operations. The win nudges the total contract base further past its recent 100-contract milestone.",
+      "cycle": 82597,
+      "dur": 1
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "outage",
+      "size": "standard",
+      "head": "Skarnvale's New Braeloch Terminal Hit by Multi-Day Systems Failure",
+      "body": "Skarnvale's flagship automated freight terminal at Braeloch suffered a control-systems failure that halted sorting for nearly three days, backing up shipments across its eastern network. CEO Dorn Vaskell called the disruption 'unacceptable for a site meant to define our future' and pledged an independent review of the terminal's commissioning. Analysts warned the outage could dent the momentum narrative built on the site's launch.",
+      "cycle": 82597,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Varnvale House Ousts Calloway as Board Moves to Contain Sourcing Crisis",
+      "body": "Varnvale's board removed CEO Idris Calloway with immediate effect amid escalating regulatory charges over its Meridian sourcing claims, appointing veteran operator Maren Feldt to steady the house. Feldt pledged a 'full and independent audit of every supply line' and suspended the disputed Meridian collections pending review. Shares of the luxury maison have shed roughly a third of their value since the scandal broke.",
+      "cycle": 82597,
+      "dur": 8
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Wrengrove Group Tops Forecasts as Third Plant Nears First Output",
+      "body": "Wrengrove posted a 12% rise in consumables revenue, crediting sustained Thornbury network volumes and early efficiency gains ahead of its third plant's commissioning. CEO Rhys Vossen said the new facility remains on schedule for initial production next quarter, adding roughly 25% to group capacity. Management reaffirmed full-year targets and noted a modest uptick in gross margin to 34.1%.",
+      "cycle": 82597,
+      "dur": 2
+    },
     {
       "company": "Aldouscyon",
       "sector": "consumer",
@@ -12,16 +92,6 @@
       "dur": 2
     },
     {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "award",
-      "size": "flash",
-      "head": "Fennmoor's Threll Sensor Wins Industry Diagnostics Innovation Prize",
-      "body": "The Larkspur One diagnostics platform earned the annual Meridian Medical Technology Award for its Threll-powered sensor, cited for halving test turnaround in clinical settings. CEO Dorian Brandt said recognition should accelerate conversations with two additional hospital networks. The honor caps a busy stretch of rollout and capacity expansion for the unit.",
-      "cycle": 82596,
-      "dur": 1
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "restructure",
@@ -30,16 +100,6 @@
       "body": "New CEO Lena Faircloth announced the discontinuation of the entire Verity Pro medical line and a $340M charge to fund a full redesign under a rebuilt quality division. The plan cuts roughly 900 roles across two plants and installs former Fennmoor engineer Sana Roeper as chief quality officer, with a pledged independent oversight board reporting quarterly. Faircloth called it 'a painful reset that buys us a future.'",
       "cycle": 82596,
       "dur": 8
-    },
-    {
-      "company": "Ironcrestcrest Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ironcrestcrest Supply Tops Estimates as Value Range Drives Volume",
-      "body": "Ironcrestcrest reported quarterly revenue up 11% as the Value Workshop lighting range and its dimmable fixtures gained shelf space at regional hardware chains. CEO Dorian Garr credited the fourth warehouse for shortening delivery times and easing seasonal stockouts. Margins held steady despite input-cost pressure.",
-      "cycle": 82596,
-      "dur": 1
     },
     {
       "company": "Korrwright Group",
@@ -72,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vossenstead Supply Extends Streak to Five Quarters as Hub Ramps",
-      "body": "Vossenstead posted its fifth straight quarterly beat, with the newly opened third distribution hub beginning to contribute to plumbing and food-service volumes. CEO Bram Thorne noted margins ticked up as the hub reduced freight costs across the northern region. Guidance was nudged higher for the balance of the year.",
-      "cycle": 82596,
-      "dur": 1
-    },
-    {
       "company": "Boreas Power",
       "sector": "energy",
       "kind": "expansion",
@@ -102,26 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Brunridge Works Tops Estimates as National Shelf Deal Ramps",
-      "body": "Brunridge Works posted quarterly revenue of $410 million, up 18 percent, as its three-pillar range filled shelves nationwide. CEO Halia Brennt credited the second distribution hub for keeping fill rates above 96 percent through the launch surge. The company nudged its full-year outlook higher on continued cross-pillar bundle demand.",
-      "cycle": 82595,
-      "dur": 2
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Calderforge Breaks Ground on Fourth Stormwell Data Hall After Recovery",
-      "body": "Buoyed by its post-outage rebound, Calderforge committed $520 million to a fourth Stormwell data hall, expanding capacity by roughly 30 percent. CEO Nadia Throne said the new hall would carry the redundant cooling architecture developed during last quarter's retrofit as standard. Site preparation begins next month with commissioning targeted for the following year.",
-      "cycle": 82595,
-      "dur": 2
-    },
-    {
       "company": "Carrowwell",
       "sector": "manufacturing",
       "kind": "major_deal",
@@ -130,36 +160,6 @@
       "body": "Carrowwell secured its largest-ever contract, a $1.1-billion agreement to supply modular warehouse automation across 40 logistics sites over four years. CEO Theo Thorne said the deal transforms the automation unit from a growth line into the company's anchor business. The recently expanded plant and new third shift will be dedicated primarily to fulfilling the rollout.",
       "cycle": 82595,
       "dur": 8
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drustcyon Beats Again as Harbor Authority Framework Fills Order Book",
-      "body": "Drustcyon reported earnings up 22 percent, with the coastal anchor line and new Harbor Authority framework driving a record $95-million quarter. CEO Aurelia Kessler said corrosion-anchor volumes now represent nearly a third of Fasteners revenue. The company signaled it may add a second coastal line if backlog holds through the year.",
-      "cycle": 82595,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "New Ironcrestton Chief Launches Sweeping Origin-Verification Overhaul",
-      "body": "Incoming CEO Dara Vetch unveiled a full audit of Ironcrestton's supply chain, pledging documented provenance for every Fine Good sold after the Carrow atelier scandal. The plan folds the tarnished Carrow line into a new 'Verified Origin' program and sets aside $60 million for refunds and relabeling. Vetch called it 'the only way to earn back a buyer's trust.'",
-      "cycle": 82595,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Varnvale & Sons Unveils First Maisons-Division Collection Blending Duquesne and Corveau",
-      "body": "The newly formed Maisons division debuted a 24-piece collection pairing Duquesne jeweling with Corveau timepiece movements, priced from $9,000 to $180,000. CEO Bram Wold framed the launch as proof the $1.4-billion Duquesne acquisition could yield unified craft rather than a loose portfolio. Initial allocations to flagship boutiques are already spoken for.",
-      "cycle": 82595,
-      "dur": 2
     },
     {
       "company": "Brunmark Motors",

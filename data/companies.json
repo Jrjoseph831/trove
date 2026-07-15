@@ -2575,7 +2575,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82592,
+    "lastEventCycle": 82597,
     "events": [
       {
         "cycle": 0,
@@ -2710,6 +2710,16 @@
         "effects": {
           "technology": 0.22
         }
+      },
+      {
+        "cycle": 82597,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Castlestone Smashes Estimates as National Data Grid Pact Powers Record Quarter",
+        "body": "Castlestone reported quarterly revenue of $4.2B, up 71% year over year, as first deliveries under the $9.5B National Data Grid contract began recognizing. CEO Pell Karsh declared the quarter 'the moment Halo went from a product to an infrastructure,' and lifted full-year guidance by roughly 18%. High-density tier orders alone contributed $1.1B, prompting management to flag capacity expansion at two fabrication sites.",
+        "effects": {
+          "technology": 0.22
+        }
       }
     ]
   },
@@ -2817,7 +2827,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82582,
+    "lastEventCycle": 82597,
     "events": [
       {
         "cycle": 0,
@@ -2873,6 +2883,16 @@
         "size": "standard",
         "head": "Cranegrove Beats as Inland Corridor Packages Drive Margin Expansion",
         "body": "Cranegrove reported operating margins of 18%, up from 15% a year earlier, as both Inland Corridor earthworks packages ran ahead of schedule. CEO Vale Calder credited disciplined cost control and hinted the firm is quietly evaluating a third bid in the corridor program.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82597,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Cranegrove Wins Third Inland Corridor Package in 740-Million Award",
+        "body": "Cranegrove secured the third and largest Inland Corridor package to date, a 740-million contract covering earthworks across the northern spur. CEO Vale Calder said the award extends the company's committed backlog into a fourth year and reflects 'delivery discipline the client can count on.' The win brings total Inland Corridor bookings above 2 billion since the program began.",
         "effects": {
           "construction": 0.13
         }
@@ -5734,7 +5754,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82584,
+    "lastEventCycle": 82597,
     "events": [
       {
         "cycle": 0,
@@ -5800,6 +5820,16 @@
         "size": "standard",
         "head": "Korrworks Lifts Full-Year View as Merrick Line Volumes Compound",
         "body": "Handling throughput across the three-depot Merrick network rose 11 percent, prompting CEO Rhys Throne to raise annual guidance for the second time this year. Throne flagged early talks to add automated sortation at the newest depot, calling the rail pact 'a platform, not a ceiling.'",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82597,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrworks Opens Fourth Depot as Merrick Line Corridor Reaches Capacity",
+        "body": "Korrworks confirmed the launch of a fourth depot at Halden Junction, adding 340,000 square feet of handling capacity along the Merrick Line corridor. CEO Rhys Throne framed the move as 'seizing a corridor that keeps filling faster than we can build,' noting the new site is already 60% pre-committed to existing rail volumes. The company expects the depot to reach full throughput within two quarters.",
         "effects": {
           "logistics": 0.13
         }
@@ -6043,7 +6073,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82592,
+    "lastEventCycle": 82597,
     "events": [
       {
         "cycle": 0,
@@ -6181,6 +6211,16 @@
         "body": "Lhaus signed a supply-and-licensing pact valued at up to $31B to furnish fast-charge cell packs to a coalition of regional transit operators, lifting its total backlog past $54B. Brandt said the agreement 'locks in a decade of demand' and would require a fourth production line to be announced within months.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82597,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Lhaus Industries Breaks Ground on Fourth Cell-Pack Line to Clear Record Backlog",
+        "body": "Lhaus began construction on a fourth cell-pack line at its Torren works, a $1.8B investment aimed at servicing a backlog that has swelled past $50B after its record deal. CEO Cole Brandt said the added capacity would 'take delivery risk off the table' for fleet customers waiting into next year. The line is targeted to reach volume output within 14 months.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -6505,7 +6545,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82586,
+    "lastEventCycle": 82597,
     "events": [
       {
         "cycle": 0,
@@ -6573,6 +6613,16 @@
         "body": "The hospitality-servicing group reported quarterly revenue of 148 million, up 19 percent year on year, crediting steady margins across its 100-plus servicing agreements. CEO Dorian Steg, at the helm since 1962, said the recently won Riverside cluster contributed for a full quarter for the first time, with cleaning and household-goods volumes both climbing at a disciplined pace.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82597,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Adds Eastgate Cluster to Growing Contract Base",
+        "body": "Marrowmoor signed a cluster of servicing contracts across the Eastgate district, extending its recurring-revenue footprint by an estimated eight sites. CEO Dorian Steg said the additions fit the company's steady 'contract-by-contract' expansion approach without straining operations. The win nudges the total contract base further past its recent 100-contract milestone.",
+        "effects": {
+          "hospitality": 0.06
         }
       }
     ]
@@ -7168,7 +7218,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82587,
+    "lastEventCycle": 82597,
     "events": [
       {
         "cycle": 0,
@@ -7232,6 +7282,16 @@
         "body": "Fresh off its first profitable quarter, Skarnvale committed 240 million to a sprawling Braeloch terminal designed to handle 1.8 million pallet-moves annually. CEO Dorn Vaskell framed the expansion as proof the freight overhaul is more than cost-cutting, though some board members privately warned the aggressive timeline echoes the turbulence that preceded predecessor Calder's exit.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82597,
+        "kind": "outage",
+        "size": "standard",
+        "head": "Skarnvale's New Braeloch Terminal Hit by Multi-Day Systems Failure",
+        "body": "Skarnvale's flagship automated freight terminal at Braeloch suffered a control-systems failure that halted sorting for nearly three days, backing up shipments across its eastern network. CEO Dorn Vaskell called the disruption 'unacceptable for a site meant to define our future' and pledged an independent review of the terminal's commissioning. Analysts warned the outage could dent the momentum narrative built on the site's launch.",
+        "effects": {
+          "logistics": -0.13
         }
       }
     ]
@@ -7962,14 +8022,14 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1893,
-    "ceo": "Idris Calloway",
+    "ceo": "Maren Feldt",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.71,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82590,
+    "lastEventCycle": 82597,
     "events": [
       {
         "cycle": 0,
@@ -8084,6 +8144,14 @@
         "effects": {
           "luxury": -0.22
         }
+      },
+      {
+        "cycle": 82597,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Varnvale House Ousts Calloway as Board Moves to Contain Sourcing Crisis",
+        "body": "Varnvale's board removed CEO Idris Calloway with immediate effect amid escalating regulatory charges over its Meridian sourcing claims, appointing veteran operator Maren Feldt to steady the house. Feldt pledged a 'full and independent audit of every supply line' and suspended the disputed Meridian collections pending review. Shares of the luxury maison have shed roughly a third of their value since the scandal broke.",
+        "effects": {}
       }
     ]
   },
@@ -8821,7 +8889,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82579,
+    "lastEventCycle": 82597,
     "events": [
       {
         "cycle": 0,
@@ -8869,6 +8937,16 @@
         "body": "Wrengrove reported consumables shipments up 14 percent, driven by the sole-supplier arrangement with the Thornbury Hospital Network. CEO Rhys Vossen said the third plant remains on schedule and within budget. Margins held steady despite raw-material cost pressure.",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82597,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Wrengrove Group Tops Forecasts as Third Plant Nears First Output",
+        "body": "Wrengrove posted a 12% rise in consumables revenue, crediting sustained Thornbury network volumes and early efficiency gains ahead of its third plant's commissioning. CEO Rhys Vossen said the new facility remains on schedule for initial production next quarter, adding roughly 25% to group capacity. Management reaffirmed full-year targets and noted a modest uptick in gross margin to 34.1%.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
