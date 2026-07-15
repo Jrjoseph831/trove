@@ -83,7 +83,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82581,
+    "lastEventCycle": 82596,
     "events": [
       {
         "cycle": 0,
@@ -139,6 +139,16 @@
         "size": "standard",
         "head": "Aldouscyon Lands Third Municipal Conversion With Coastal City of Marren",
         "body": "Aldouscyon extended its streetlight conversion streak by winning a contract to modernize the coastal city of Marren, its third municipal award in under a year. Petra Mercer said the phased rollout would cover some 22,000 fixtures over three years, building on the template established in Vereldt and Thornbury. The steady pipeline continues to underpin the lighting maker's dependable growth.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82596,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aldouscyon Lifts Full-Year Outlook on Three-City Conversion Pipeline",
+        "body": "Aldouscyon raised its annual guidance after the Marren, Thornbury, and prior municipal contracts pushed the conversion backlog to a record. CEO Petra Mercer reported operating margin expansion of 140 basis points on improved installation scheduling. The company said it is in early talks with two further municipalities.",
         "effects": {
           "consumer": 0.13
         }
@@ -3544,7 +3554,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82588,
+    "lastEventCycle": 82596,
     "events": [
       {
         "cycle": 0,
@@ -3642,6 +3652,16 @@
         "body": "The technology house revealed a next-generation Threll sensor that cuts Larkspur One test cycles by 48% while improving detection sensitivity, a milestone that could reshape high-throughput hospital labs. CEO Dorian Brandt said the breakthrough had already drawn expansion interest from the existing hospital-network partner, with a validated commercial version slated for the coming year.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82596,
+        "kind": "award",
+        "size": "flash",
+        "head": "Fennmoor's Threll Sensor Wins Industry Diagnostics Innovation Prize",
+        "body": "The Larkspur One diagnostics platform earned the annual Meridian Medical Technology Award for its Threll-powered sensor, cited for halving test turnaround in clinical settings. CEO Dorian Brandt said recognition should accelerate conversations with two additional hospital networks. The honor caps a busy stretch of rollout and capacity expansion for the unit.",
+        "effects": {
+          "technology": 0.06
         }
       }
     ]
@@ -4704,7 +4724,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82590,
+    "lastEventCycle": 82596,
     "events": [
       {
         "cycle": 0,
@@ -4859,6 +4879,16 @@
         "head": "Halhold Works Ousts Gunnar Vale as Board Moves to Contain Verity Pro Fallout",
         "body": "Halhold's board removed CEO Gunnar Vale following mounting pressure from the recall, safety probe, and $600M-plus class action tied to Verity Pro medical units. Incoming chief Lena Faircloth, a former quality-and-compliance executive, pledged an immediate top-to-bottom review of the medical division and a settlement framework for affected claimants. Shares of the wire, devices, and equipment maker have been battered through the ordeal.",
         "effects": {}
+      },
+      {
+        "cycle": 82596,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Halhold Works to Wind Down Verity Pro Line as Faircloth Unveils Sweeping Medical Overhaul",
+        "body": "New CEO Lena Faircloth announced the discontinuation of the entire Verity Pro medical line and a $340M charge to fund a full redesign under a rebuilt quality division. The plan cuts roughly 900 roles across two plants and installs former Fennmoor engineer Sana Roeper as chief quality officer, with a pledged independent oversight board reporting quarterly. Faircloth called it 'a painful reset that buys us a future.'",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -5281,7 +5311,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82578,
+    "lastEventCycle": 82596,
     "events": [
       {
         "cycle": 0,
@@ -5327,6 +5357,16 @@
         "size": "flash",
         "head": "Ironcrestcrest Supply Opens Fourth Warehouse to Serve Growing Value Range",
         "body": "Ironcrestcrest quietly commissioned a fourth fixtures warehouse, adding 40,000 square meters of distribution space to keep pace with its expanding Workshop Lighting line. Dorian Garr said the site will shorten delivery times across the northern trade region and support 'measured, self-funded growth' without new borrowing.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82596,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Tops Estimates as Value Range Drives Volume",
+        "body": "Ironcrestcrest reported quarterly revenue up 11% as the Value Workshop lighting range and its dimmable fixtures gained shelf space at regional hardware chains. CEO Dorian Garr credited the fourth warehouse for shortening delivery times and easing seasonal stockouts. Margins held steady despite input-cost pressure.",
         "effects": {
           "consumer": 0.06
         }
@@ -5777,7 +5817,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82584,
+    "lastEventCycle": 82596,
     "events": [
       {
         "cycle": 0,
@@ -5843,6 +5883,16 @@
         "size": "standard",
         "head": "Korrwright Group Beats as New Wire Line Clears Verant Backlog Faster",
         "body": "The added wire line cut Verant delivery lead times from 20 to 13 weeks, helping quarterly earnings top estimates by 6 percent. CEO Halden Fenn said the cluster mandate is now roughly 60 percent delivered, with structural-materials orders beginning to trail in behind the cable work.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82596,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrwright Group Signs Follow-On Wire Contract as Verant Extends Through 2031",
+        "body": "Korrwright secured a renewal and expansion of its Verant supply arrangement valued near $210M, locking in structural-materials and wire volumes for six additional years. CEO Halden Fenn said the deal underpins utilization at the new wire line and supports a modest dividend lift. Management reaffirmed full-year guidance on the strengthened backlog.",
         "effects": {
           "construction": 0.13
         }
@@ -7197,7 +7247,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82584,
+    "lastEventCycle": 82596,
     "events": [
       {
         "cycle": 0,
@@ -7265,6 +7315,16 @@
         "body": "The disciplined parts maker posted its third consecutive beat, with the multi-year supply pact filling 70 percent of second-plant capacity. CEO Iris Vossen kept guidance conservative, citing 'no reason to run ahead of what the contracts already promise.'",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82596,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Steg Tooling Adds Fastener Capacity in Kelmar to Support Growing Order Book",
+        "body": "Iris Vossen approved a $95M expansion of the Kelmar fastener works, adding two production cells expected to lift output by roughly 18% by late next year. The move follows three consecutive quarters of order growth tied to Steg's assembly-partner pacts. Vossen described the build as 'disciplined capacity matched to signed demand.'",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -7517,7 +7577,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82589,
+    "lastEventCycle": 82596,
     "events": [
       {
         "cycle": 0,
@@ -7613,6 +7673,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Debuts Verrand Collection Built Entirely on In-House Casings",
         "body": "Cora Dray introduced the Verrand line, a run of 1,200 numbered timepieces showcasing the Aldren foundry's first fully vertically integrated cases. The series carries a starting price of 48,000 marks and sold through its initial allocation to boutiques within a week. Dray hinted the foundry's spare capacity could open the door to supplying rival makers.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82596,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Thronehaus & Co. Beats as Verrand Collection Sells Through Ahead of Plan",
+        "body": "Thronehaus reported gross margin at a decade high after the in-house Verrand Collection cleared initial allocations faster than expected, lifting average selling prices. CEO Cora Dray said the Aldren-backed foundry is now running near full capacity and hinted at a second collection built on the same casings. Revenue rose 9% year over year.",
         "effects": {
           "luxury": 0.13
         }
@@ -8439,7 +8509,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82585,
+    "lastEventCycle": 82596,
     "events": [
       {
         "cycle": 0,
@@ -8507,6 +8577,16 @@
         "body": "Bram Thorne reported another record period, with revenue up 11% as the food-service arm gained share and plumbing margins held firm. The disciplined chief credited tight cost control and the ramp of the twin hubs, noting the third distribution hub remains on schedule and on budget. Vossenstead lifted its full-year outlook modestly.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82596,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenstead Supply Extends Streak to Five Quarters as Hub Ramps",
+        "body": "Vossenstead posted its fifth straight quarterly beat, with the newly opened third distribution hub beginning to contribute to plumbing and food-service volumes. CEO Bram Thorne noted margins ticked up as the hub reduced freight costs across the northern region. Guidance was nudged higher for the balance of the year.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
