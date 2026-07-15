@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-15T13:46:53.462Z",
+  "generatedAt": "2026-07-15T19:14:31.630Z",
   "beats": [
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Aperture Compute Signs $5.1 Billion Dawnmere III Expansion With Second Carrier",
+      "body": "Halden Dray unveiled a $5.1 billion Dawnmere III agreement Wednesday, adding a second continental carrier and roughly doubling committed backbone volume through 2031. The deal folds in an option for regional edge sites, and management said early shipments would begin next quarter. Dray called it 'the biggest single order in the house's history' at a packed briefing.",
+      "cycle": 82599,
+      "dur": 8
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Regulators Open Formal Safety Probe Into Castlehold's Saltmere Storage Sites",
+      "body": "A national energy regulator opened a formal investigation Friday into containment failures at Castlehold's Saltmere legacy storage facilities, escalating a crisis that has already produced a $1.9 billion cleanup bill and an investor suit. Ivo Reneth said the company is 'fully cooperating' but declined to estimate potential penalties. Two Saltmere sites were ordered offline pending inspection.",
+      "cycle": 82599,
+      "dur": 8
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Drayton Freight Launches Heavy-Duty Pallet-Lift Line for High-Volume Depots",
+      "body": "Emil Holt introduced the Drayton HL series, a heavier-rated pallet-lift platform aimed at high-throughput distribution depots, with first units shipping next month. The line extends servicing revenue streams that have driven recent quarters and carries a longer maintenance contract. Early orders came from two existing regional customers.",
+      "cycle": 82599,
+      "dur": 2
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Fennvale Mfg. Edges Past Estimates as Auto Fastener Program Reaches Full Ramp",
+      "body": "Fennvale reported revenue up 7% and a slight beat as its compact fastener line reached full output for the auto assembly program. Theo Vossen said yields improved through the quarter and the auto-parts segment held steady. The company reaffirmed its measured expansion plans.",
+      "cycle": 82599,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Halhold Systems Ousts Dahlia Renn as Board Moves to Contain Northgate Fallout",
+      "body": "The Halhold board removed CEO Dahlia Renn on Thursday, capping weeks of turmoil after leaked memos showed Northgate blackout warnings had been dismissed. Director Marcus Vell will serve as chair of a transition committee while operations veteran Sela Marchetti steps in to steady client relations, three of which had threatened to void contracts. The company also disclosed a $410 million charge tied to service credits and remediation.",
+      "cycle": 82599,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Logs Another Steady Beat on Jansan and Food-Service Demand",
+      "body": "Ornewright reported revenue of $488 million, a hair above consensus, extending its long run of in-line-to-slightly-ahead quarters. Petra Veldt credited resilient institutional cleaning and food-service orders, with farm inputs flat. Guidance was reaffirmed.",
+      "cycle": 82599,
+      "dur": 1
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vencyon Tops Forecasts as Third Hub Nears First Volumes",
+      "body": "Vencyon posted throughput up 14% year-over-year and beat estimates as its Drenfield twin sites sustained record handling rates. Iris Halloran said the third hub remains on schedule to begin partial operations next quarter, with early customer commitments already covering half its planned capacity. The company nudged its full-year outlook higher.",
+      "cycle": 82599,
+      "dur": 2
+    },
+    {
+      "company": "Wrenhaus",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Wrenhaus Beats Again as Riverside Fixture Shipments Hit Full Stride",
+      "body": "Wrenhaus reported quarterly revenue of $612 million, up 9% and modestly ahead of forecasts, as Calderhythe Riverside fixture deliveries reached peak volume. Quinn Thorne noted the new Brackenfield fabrication capacity is running near full utilization with no disruption. Margins held steady on disciplined input costs.",
+      "cycle": 82599,
+      "dur": 2
+    },
     {
       "company": "Brunstone & Sons",
       "sector": "automotive",
@@ -10,16 +90,6 @@
       "body": "Regulators opened a formal review after a handful of Vault Cell Pro units showed elevated thermal readings during grid-scale field trials. Lambourne, characteristically defiant, told reporters the incidents were 'isolated and overstated' and pledged an internal audit of the 12,000-unit deployment. Analysts note the probe lands just weeks after the $1.8B grid order that anchored the storage pivot.",
       "cycle": 82598,
       "dur": 2
-    },
-    {
-      "company": "Caldercraft Holdings",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Caldercraft Holdings Edges Ahead as Weatherproof Range Finds Early Buyers",
-      "body": "The new weatherproof household line contributed a modest 4% lift to the consumer segment in its first full quarter. Fenn described uptake as 'encouraging but early,' with tool and textile lines again providing a steady base. Overall revenue came in just above consensus at 512 million marks.",
-      "cycle": 82598,
-      "dur": 1
     },
     {
       "company": "Castle Devices",
@@ -72,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Wold & Bramm",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Wold & Bramm Posts Another Solid Quarter as Third Showroom Ramps",
-      "body": "The recently opened third regional showroom reached break-even ahead of schedule, lifting Heritage Lighting volumes 8%. Marrow reiterated a measured expansion pace, saying a fourth location remains 'under study, not committed.' Household Goods held flat as lighting carried the quarter.",
-      "cycle": 82598,
-      "dur": 1
-    },
-    {
       "company": "Castlestone",
       "sector": "technology",
       "kind": "earnings_beat",
@@ -92,46 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Cranegrove Wins Third Inland Corridor Package in 740-Million Award",
-      "body": "Cranegrove secured the third and largest Inland Corridor package to date, a 740-million contract covering earthworks across the northern spur. CEO Vale Calder said the award extends the company's committed backlog into a fourth year and reflects 'delivery discipline the client can count on.' The win brings total Inland Corridor bookings above 2 billion since the program began.",
-      "cycle": 82597,
-      "dur": 2
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Korrworks Opens Fourth Depot as Merrick Line Corridor Reaches Capacity",
-      "body": "Korrworks confirmed the launch of a fourth depot at Halden Junction, adding 340,000 square feet of handling capacity along the Merrick Line corridor. CEO Rhys Throne framed the move as 'seizing a corridor that keeps filling faster than we can build,' noting the new site is already 60% pre-committed to existing rail volumes. The company expects the depot to reach full throughput within two quarters.",
-      "cycle": 82597,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Lhaus Industries Breaks Ground on Fourth Cell-Pack Line to Clear Record Backlog",
-      "body": "Lhaus began construction on a fourth cell-pack line at its Torren works, a $1.8B investment aimed at servicing a backlog that has swelled past $50B after its record deal. CEO Cole Brandt said the added capacity would 'take delivery risk off the table' for fleet customers waiting into next year. The line is targeted to reach volume output within 14 months.",
-      "cycle": 82597,
-      "dur": 2
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "outage",
-      "size": "standard",
-      "head": "Skarnvale's New Braeloch Terminal Hit by Multi-Day Systems Failure",
-      "body": "Skarnvale's flagship automated freight terminal at Braeloch suffered a control-systems failure that halted sorting for nearly three days, backing up shipments across its eastern network. CEO Dorn Vaskell called the disruption 'unacceptable for a site meant to define our future' and pledged an independent review of the terminal's commissioning. Analysts warned the outage could dent the momentum narrative built on the site's launch.",
-      "cycle": 82597,
-      "dur": 2
-    },
-    {
       "company": "Varnvale House",
       "sector": "luxury",
       "kind": "leadership_change",
@@ -140,16 +160,6 @@
       "body": "Varnvale's board removed CEO Idris Calloway with immediate effect amid escalating regulatory charges over its Meridian sourcing claims, appointing veteran operator Maren Feldt to steady the house. Feldt pledged a 'full and independent audit of every supply line' and suspended the disputed Meridian collections pending review. Shares of the luxury maison have shed roughly a third of their value since the scandal broke.",
       "cycle": 82597,
       "dur": 8
-    },
-    {
-      "company": "Wrengrove Group",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Wrengrove Group Tops Forecasts as Third Plant Nears First Output",
-      "body": "Wrengrove posted a 12% rise in consumables revenue, crediting sustained Thornbury network volumes and early efficiency gains ahead of its third plant's commissioning. CEO Rhys Vossen said the new facility remains on schedule for initial production next quarter, adding roughly 25% to group capacity. Management reaffirmed full-year targets and noted a modest uptick in gross margin to 34.1%.",
-      "cycle": 82597,
-      "dur": 2
     },
     {
       "company": "Halhold Works",
@@ -269,26 +279,6 @@
       "head": "Thaldale Group Reels as Probe Alleges Inflated Fastening-Plant Output Figures",
       "body": "An internal review has found that production and shipment volumes at the newly opened fastening plant were overstated in recent disclosures, wiping out much of the reported rebound. Voss ordered the audit expanded and suspended two operations executives, while the board retained outside counsel to review 'the accuracy of prior statements.'",
       "cycle": 82592,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Brunstone & Sons Unveils Vault Cell Pro as Lambourne Doubles Down on Storage",
-      "body": "CEO Royce Lambourne took the stage to launch Vault Cell Pro, a higher-density grid module claiming a 30% capacity gain per unit and a nine-year service warranty. Lambourne framed the release as proof the storage pivot is the company's future, pledging to convert two vehicle lines to cell production. Early commitments were said to build on the recent $1.8B grid-scale order.",
-      "cycle": 82591,
-      "dur": 8
-    },
-    {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Drossware Industries Signs $900M Multi-Category Pact With Grocer Alliance",
-      "body": "Drossware has locked in a four-year, $900M supply agreement with the Grocer Alliance spanning packaging, cleaning and jansan, and private-label lighting for store fixtures. CEO Nadia Wold called it the broadest single commitment in the company's history, converting a volume relationship into a full-category partnership. The deal is expected to underpin roughly a fifth of annual revenue through its term.",
-      "cycle": 82591,
       "dur": 8
     }
   ]
