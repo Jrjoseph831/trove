@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-15T08:14:07.349Z",
+  "generatedAt": "2026-07-15T13:46:53.462Z",
   "beats": [
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "standard",
+      "head": "Brunstone & Sons Faces Regulatory Review Over Vault Cell Pro Thermal Reports",
+      "body": "Regulators opened a formal review after a handful of Vault Cell Pro units showed elevated thermal readings during grid-scale field trials. Lambourne, characteristically defiant, told reporters the incidents were 'isolated and overstated' and pledged an internal audit of the 12,000-unit deployment. Analysts note the probe lands just weeks after the $1.8B grid order that anchored the storage pivot.",
+      "cycle": 82598,
+      "dur": 2
+    },
+    {
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Caldercraft Holdings Edges Ahead as Weatherproof Range Finds Early Buyers",
+      "body": "The new weatherproof household line contributed a modest 4% lift to the consumer segment in its first full quarter. Fenn described uptake as 'encouraging but early,' with tool and textile lines again providing a steady base. Overall revenue came in just above consensus at 512 million marks.",
+      "cycle": 82598,
+      "dur": 1
+    },
+    {
+      "company": "Castle Devices",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Castle Devices Wins Regional Hospital Network Supply Contract",
+      "body": "Calder secured a five-year consumables agreement with the Merrick Regional Hospital Network valued at roughly 380 million marks. The deal broadens Castle's base beyond the National Clinic Group pact and covers both standard and surgical consumables. Calder called it 'steady, predictable work — exactly what we're built for.'",
+      "cycle": 82598,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Greywater Grid Launches Sweeping Overhaul as Outage Fallout Deepens",
+      "body": "Following penalty clauses and a slashed guidance, Halloran unveiled a restructuring that splits the compute and power divisions into separately managed units and cuts 900 roles. The company will write down 260 million marks tied to the failed campus and appoint an independent reliability board. Halloran conceded the multi-region contract remains 'under strain' as clients weigh their options.",
+      "cycle": 82598,
+      "dur": 8
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Gromford Works Tops Estimates as Meridian Sales Fuel Flagship Traffic",
+      "body": "Quarterly revenue rose 19% to 340 million marks, driven by Meridian Timepiece demand and strong foot traffic at the newly opened flagship salon. Aldwych credited the award-season buzz and hinted at a limited Meridian complication series before year-end. Fine Goods margins held steady despite raw-metal cost pressure.",
+      "cycle": 82598,
+      "dur": 2
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Holtforge Group Breaks Ground on New Marine Cable Plant to Clear Backlog",
+      "body": "Bramm announced a 210-million-mark facility dedicated to offshore wind cable production, aimed at working down a backlog now stretching into 2028. The plant is expected to add roughly 400 jobs and lift annual marine cable capacity by 35%. Bramm framed the move as 'meeting demand we already have on the books.'",
+      "cycle": 82598,
+      "dur": 2
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Maison & Vale Misses as Ostley Merger Costs Weigh on Margins",
+      "body": "Integration expenses from the $2.2-billion Ostley tie-up pushed quarterly profit 14% below expectations, despite revenue climbing to 1.9 billion marks. Kessler acknowledged the merger was 'proving heavier to digest than modeled' but defended the combined footprint. Overlapping Jansan operations from the Deltrey acquisition added to near-term redundancy costs.",
+      "cycle": 82598,
+      "dur": 2
+    },
+    {
+      "company": "Wold & Bramm",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Wold & Bramm Posts Another Solid Quarter as Third Showroom Ramps",
+      "body": "The recently opened third regional showroom reached break-even ahead of schedule, lifting Heritage Lighting volumes 8%. Marrow reiterated a measured expansion pace, saying a fourth location remains 'under study, not committed.' Household Goods held flat as lighting carried the quarter.",
+      "cycle": 82598,
+      "dur": 1
+    },
     {
       "company": "Castlestone",
       "sector": "technology",
@@ -42,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Adds Eastgate Cluster to Growing Contract Base",
-      "body": "Marrowmoor signed a cluster of servicing contracts across the Eastgate district, extending its recurring-revenue footprint by an estimated eight sites. CEO Dorian Steg said the additions fit the company's steady 'contract-by-contract' expansion approach without straining operations. The win nudges the total contract base further past its recent 100-contract milestone.",
-      "cycle": 82597,
-      "dur": 1
-    },
-    {
       "company": "Skarnvale",
       "sector": "logistics",
       "kind": "outage",
@@ -82,16 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Aldouscyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aldouscyon Lifts Full-Year Outlook on Three-City Conversion Pipeline",
-      "body": "Aldouscyon raised its annual guidance after the Marren, Thornbury, and prior municipal contracts pushed the conversion backlog to a record. CEO Petra Mercer reported operating margin expansion of 140 basis points on improved installation scheduling. The company said it is in early talks with two further municipalities.",
-      "cycle": 82596,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "restructure",
@@ -100,36 +160,6 @@
       "body": "New CEO Lena Faircloth announced the discontinuation of the entire Verity Pro medical line and a $340M charge to fund a full redesign under a rebuilt quality division. The plan cuts roughly 900 roles across two plants and installs former Fennmoor engineer Sana Roeper as chief quality officer, with a pledged independent oversight board reporting quarterly. Faircloth called it 'a painful reset that buys us a future.'",
       "cycle": 82596,
       "dur": 8
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrwright Group Signs Follow-On Wire Contract as Verant Extends Through 2031",
-      "body": "Korrwright secured a renewal and expansion of its Verant supply arrangement valued near $210M, locking in structural-materials and wire volumes for six additional years. CEO Halden Fenn said the deal underpins utilization at the new wire line and supports a modest dividend lift. Management reaffirmed full-year guidance on the strengthened backlog.",
-      "cycle": 82596,
-      "dur": 2
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Steg Tooling Adds Fastener Capacity in Kelmar to Support Growing Order Book",
-      "body": "Iris Vossen approved a $95M expansion of the Kelmar fastener works, adding two production cells expected to lift output by roughly 18% by late next year. The move follows three consecutive quarters of order growth tied to Steg's assembly-partner pacts. Vossen described the build as 'disciplined capacity matched to signed demand.'",
-      "cycle": 82596,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Thronehaus & Co. Beats as Verrand Collection Sells Through Ahead of Plan",
-      "body": "Thronehaus reported gross margin at a decade high after the in-house Verrand Collection cleared initial allocations faster than expected, lifting average selling prices. CEO Cora Dray said the Aldren-backed foundry is now running near full capacity and hinted at a second collection built on the same casings. Revenue rose 9% year over year.",
-      "cycle": 82596,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -259,46 +289,6 @@
       "head": "Drossware Industries Signs $900M Multi-Category Pact With Grocer Alliance",
       "body": "Drossware has locked in a four-year, $900M supply agreement with the Grocer Alliance spanning packaging, cleaning and jansan, and private-label lighting for store fixtures. CEO Nadia Wold called it the broadest single commitment in the company's history, converting a volume relationship into a full-category partnership. The deal is expected to underpin roughly a fifth of annual revenue through its term.",
       "cycle": 82591,
-      "dur": 8
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Drustcraft Wins Landmark Auto-Parts Award to Supply Two Global Vehicle Lines",
-      "body": "Drustcraft secured an eight-year supply agreement valued at roughly $2.1 billion to provide auto parts and fastening systems across two vehicle programs, its largest contract in a century. CEO Cora Fenn called the win 'a generational step,' confirming a new dedicated plant will be built to meet volumes beginning next year. The deal roughly doubles Drustcraft's committed forward order book.",
-      "cycle": 82590,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Halhold Works Ousts Gunnar Vale as Board Moves to Contain Verity Pro Fallout",
-      "body": "Halhold's board removed CEO Gunnar Vale following mounting pressure from the recall, safety probe, and $600M-plus class action tied to Verity Pro medical units. Incoming chief Lena Faircloth, a former quality-and-compliance executive, pledged an immediate top-to-bottom review of the medical division and a settlement framework for affected claimants. Shares of the wire, devices, and equipment maker have been battered through the ordeal.",
-      "cycle": 82590,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Kessel Drive Plunges Into Quarterly Loss as Recall and Legal Costs Mount",
-      "body": "Kessel Drive reported a $290 million quarterly loss, its first in years, as recall remediation, the fleet-client suit, and reputational damage from leaked memos hammered results. CEO Dorian Brandt conceded the touring-line storage crisis had 'cost more than we projected,' as vehicle order cancellations climbed and a regulator widened its inquiry. Management withdrew full-year guidance.",
-      "cycle": 82590,
-      "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Varnvale House Sued by Regulators as Sourcing Scandal Escalates to Formal Charges",
-      "body": "Prosecutors filed suit against Varnvale House alleging false provenance claims tied to the Meridian Collection, seeking penalties that could exceed $340 million. CEO Idris Calloway, defiant in a televised statement, vowed to 'fight every line of this,' even as three flagship retail partners suspended Meridian orders. The action deepens the crisis just quarters after Calloway staged the line's revival.",
-      "cycle": 82590,
       "dur": 8
     }
   ]

@@ -1600,7 +1600,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82591,
+    "lastEventCycle": 82598,
     "events": [
       {
         "cycle": 0,
@@ -1737,6 +1737,16 @@
         "effects": {
           "automotive": 0.22
         }
+      },
+      {
+        "cycle": 82598,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Brunstone & Sons Faces Regulatory Review Over Vault Cell Pro Thermal Reports",
+        "body": "Regulators opened a formal review after a handful of Vault Cell Pro units showed elevated thermal readings during grid-scale field trials. Lambourne, characteristically defiant, told reporters the incidents were 'isolated and overstated' and pledged an internal audit of the 12,000-unit deployment. Analysts note the probe lands just weeks after the $1.8B grid order that anchored the storage pivot.",
+        "effects": {
+          "automotive": -0.13
+        }
       }
     ]
   },
@@ -1751,7 +1761,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82581,
+    "lastEventCycle": 82598,
     "events": [
       {
         "cycle": 0,
@@ -1807,6 +1817,16 @@
         "size": "flash",
         "head": "Caldercraft Holdings Adds Weatherproof Line to Household Goods Range",
         "body": "Caldercraft rolled out a modest expansion of its Household Goods segment with a weatherproof storage and container line aimed at outdoor and workshop use. Vale Fenn framed the launch as a natural extension of the Tradesman brand, targeting the same tradespeople already buying the reinforced tool range. The company expects the line to contribute incrementally without disrupting its steady margin profile.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82598,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Caldercraft Holdings Edges Ahead as Weatherproof Range Finds Early Buyers",
+        "body": "The new weatherproof household line contributed a modest 4% lift to the consumer segment in its first full quarter. Fenn described uptake as 'encouraging but early,' with tool and textile lines again providing a steady base. Overall revenue came in just above consensus at 512 million marks.",
         "effects": {
           "consumer": 0.06
         }
@@ -2287,7 +2307,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82571,
+    "lastEventCycle": 82598,
     "events": [
       {
         "cycle": 0,
@@ -2325,6 +2345,16 @@
         "body": "The medical supplier reported revenue of $612M, up 6% year over year, driven by the broadened surgical consumables pact with National Clinic Group. Bram Calder credited 'orders arriving on time, every time,' with margins holding flat as expected. The results extended Castle's long record of unremarkable but dependable growth.",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82598,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Castle Devices Wins Regional Hospital Network Supply Contract",
+        "body": "Calder secured a five-year consumables agreement with the Merrick Regional Hospital Network valued at roughly 380 million marks. The deal broadens Castle's base beyond the National Clinic Group pact and covers both standard and surgical consumables. Calder called it 'steady, predictable work — exactly what we're built for.'",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -4052,7 +4082,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82589,
+    "lastEventCycle": 82598,
     "events": [
       {
         "cycle": 0,
@@ -4141,6 +4171,16 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82598,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Greywater Grid Launches Sweeping Overhaul as Outage Fallout Deepens",
+        "body": "Following penalty clauses and a slashed guidance, Halloran unveiled a restructuring that splits the compute and power divisions into separately managed units and cuts 900 roles. The company will write down 260 million marks tied to the failed campus and appoint an independent reliability board. Halloran conceded the multi-region contract remains 'under strain' as clients weigh their options.",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },
@@ -4155,7 +4195,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82592,
+    "lastEventCycle": 82598,
     "events": [
       {
         "cycle": 0,
@@ -4297,6 +4337,16 @@
         "size": "standard",
         "head": "Gromford Works Opens Flagship Salon as Aldwych Rides Meridian Momentum",
         "body": "Gromford Works unveiled a 22,000-square-foot flagship boutique in the Harwick luxury district, its first company-owned retail space, backed by a $85M rollout plan for six more locations. Aldwych said the Meridian line's Salon win had 'doubled inbound demand' and justified taking distribution in-house.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82598,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Gromford Works Tops Estimates as Meridian Sales Fuel Flagship Traffic",
+        "body": "Quarterly revenue rose 19% to 340 million marks, driven by Meridian Timepiece demand and strong foot traffic at the newly opened flagship salon. Aldwych credited the award-season buzz and hinted at a limited Meridian complication series before year-end. Fine Goods margins held steady despite raw-metal cost pressure.",
         "effects": {
           "luxury": 0.13
         }
@@ -5079,7 +5129,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82582,
+    "lastEventCycle": 82598,
     "events": [
       {
         "cycle": 0,
@@ -5135,6 +5185,16 @@
         "size": "standard",
         "head": "Holtforge Group Posts Record Quarter as Offshore Wind Cable Backlog Swells",
         "body": "Holtforge reported quarterly revenue of $1.12 billion, up 14% year-over-year, with the marine and offshore wind cable segments accounting for nearly a third of total sales. CEO Yvette Bramm noted the order backlog has grown to $1.9 billion following the recent offshore contract win, and reaffirmed full-year guidance without further comment.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82598,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Holtforge Group Breaks Ground on New Marine Cable Plant to Clear Backlog",
+        "body": "Bramm announced a 210-million-mark facility dedicated to offshore wind cable production, aimed at working down a backlog now stretching into 2028. The plant is expected to add roughly 400 jobs and lift annual marine cable capacity by 35%. Bramm framed the move as 'meeting demand we already have on the books.'",
         "effects": {
           "construction": 0.13
         }
@@ -6236,7 +6296,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82588,
+    "lastEventCycle": 82598,
     "events": [
       {
         "cycle": 0,
@@ -6314,6 +6374,16 @@
         "body": "In its most ambitious move yet, the house agreed to combine with cleaning-and-household rival Ostley in a deal valuing the target at $2.2 billion, creating the continent's largest jansan and household-goods supplier. CEO Rhys Kessler said Deltrey Chemical and Corran Linens would be folded alongside Ostley's brands, though regulators in two regions signaled early scrutiny of the combined market share.",
         "effects": {
           "hospitality": 0.22
+        }
+      },
+      {
+        "cycle": 82598,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Maison & Vale Misses as Ostley Merger Costs Weigh on Margins",
+        "body": "Integration expenses from the $2.2-billion Ostley tie-up pushed quarterly profit 14% below expectations, despite revenue climbing to 1.9 billion marks. Kessler acknowledged the merger was 'proving heavier to digest than modeled' but defended the combined footprint. Overlapping Jansan operations from the Deltrey acquisition added to near-term redundancy costs.",
+        "effects": {
+          "hospitality": -0.13
         }
       }
     ]
@@ -8723,7 +8793,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82579,
+    "lastEventCycle": 82598,
     "events": [
       {
         "cycle": 0,
@@ -8769,6 +8839,16 @@
         "size": "flash",
         "head": "Wold & Bramm Extends Heritage Lighting Into Third Regional Showroom",
         "body": "Wold & Bramm confirmed a third showroom in the Caldwell district, continuing the measured rollout of its Heritage lighting line. CEO Mara Marrow said the openings track demonstrated demand rather than speculative growth. The location will carry the full lighting range alongside the group's household goods.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82598,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wold & Bramm Posts Another Solid Quarter as Third Showroom Ramps",
+        "body": "The recently opened third regional showroom reached break-even ahead of schedule, lifting Heritage Lighting volumes 8%. Marrow reiterated a measured expansion pace, saying a fourth location remains 'under study, not committed.' Household Goods held flat as lighting carried the quarter.",
         "effects": {
           "consumer": 0.06
         }
