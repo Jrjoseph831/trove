@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-15T19:14:31.630Z",
+  "generatedAt": "2026-07-16T02:44:04.104Z",
   "beats": [
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Carrowforge Faces Class Action From Machine Buyers Over Altered Test Records",
+      "body": "A consolidated class action was filed against Carrowforge on behalf of more than 600 industrial customers who allege they purchased machines certified with falsified safety data. Plaintiffs are seeking upwards of 900 million crowns in damages and replacement costs, deepening the crisis for CEO Halden Roe as the earlier testing-chief suit remains unresolved.",
+      "cycle": 82600,
+      "dur": 8
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "award",
+      "size": "flash",
+      "head": "Erretmark Works Grand Flagship Named Coachbuilt Vehicle of the Year",
+      "body": "The Sorne-crafted Grand Flagship took top honors at the Continental Motoring Guild awards, cited for its hand-finished cabin and drivetrain refinement. CEO Aurelia Garr said the recognition validates the Sorne Coachworks acquisition, with the flagship's order backlog now stretching past 20 months.",
+      "cycle": 82600,
+      "dur": 1
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Kessel Drive Ousts Dorian Brandt as Recall Fallout Forces Boardroom Reset",
+      "body": "Kessel Drive's board voted to remove longtime CEO Dorian Brandt after mounting recall and legal costs and revelations that storage-pack risks were flagged internally. The board named turnaround specialist Neave Corliss as chief executive, tasking her with stabilizing finances and settling the fleet-client litigation.",
+      "cycle": 82600,
+      "dur": 8
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Korrwright Works Acquires Vellhorn Movements to Secure In-House Escapements",
+      "body": "Korrwright Works announced the 340 million-crown purchase of Vellhorn Movements, a specialist escapement maker, bringing a key supplier under the Unified Heritage Division. CEO Dunmore Carrow said the deal 'ends our dependence on outside calibers' and will feed directly into the expanding Sennfeld Revival line.",
+      "cycle": 82600,
+      "dur": 2
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Marrowcyon Tops Estimates Again as Weatherproof Workwear Range Scales",
+      "body": "Marrowcyon reported a 14% year-over-year rise in apparel revenue to 1.1 billion crowns, ahead of forecasts, driven by strong uptake of its weatherproof Hardwear range. CEO Theo Orne noted the plumbing and fixtures segment held steady, giving the company a balanced base as workwear becomes its fastest-growing line.",
+      "cycle": 82600,
+      "dur": 2
+    },
+    {
+      "company": "Stegreach",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Stegreach Edges Past Estimates as Riverport Fixings Deliveries Begin",
+      "body": "Stegreach reported quarterly revenue of 812 million crowns, narrowly above the 795 million consensus, as initial shipments under the Riverport Freight Terminal package began booking. CEO Halden Ashby credited steady demand for sealed fixtures and transit wiring, and reaffirmed full-year guidance without raising it.",
+      "cycle": 82600,
+      "dur": 1
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Vossenspire Lands Landmark Grid-Storage Supply Pact With Northern Utilities Consortium",
+      "body": "Vossenspire Holdings has signed a nine-year, 4.1 billion-crown agreement to supply its Redundant Grid-Storage Platform to a consortium of five regional utilities. CEO Halden Roe framed the deal as proof the post-blackout reset has won back institutional confidence, though the contract carries strict uptime penalties tied to the very reliability failures that triggered last year's probe.",
+      "cycle": 82600,
+      "dur": 8
+    },
+    {
+      "company": "Wrenspire",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Wrenspire Opens Fourth Everyroom Distribution Hub as Household Push Widens",
+      "body": "Wrenspire confirmed a new 220 million-crown distribution hub in the Calderwaite region, its fourth dedicated to the Everyroom household line. CEO Theo Aldous said the facility will shorten restock times across the northern markets and support planned Everyroom entries into the food-service channel next year.",
+      "cycle": 82600,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -32,16 +112,6 @@
       "dur": 2
     },
     {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Fennvale Mfg. Edges Past Estimates as Auto Fastener Program Reaches Full Ramp",
-      "body": "Fennvale reported revenue up 7% and a slight beat as its compact fastener line reached full output for the auto assembly program. Theo Vossen said yields improved through the quarter and the auto-parts segment held steady. The company reaffirmed its measured expansion plans.",
-      "cycle": 82599,
-      "dur": 1
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "leadership_change",
@@ -50,16 +120,6 @@
       "body": "The Halhold board removed CEO Dahlia Renn on Thursday, capping weeks of turmoil after leaked memos showed Northgate blackout warnings had been dismissed. Director Marcus Vell will serve as chair of a transition committee while operations veteran Sela Marchetti steps in to steady client relations, three of which had threatened to void contracts. The company also disclosed a $410 million charge tied to service credits and remediation.",
       "cycle": 82599,
       "dur": 8
-    },
-    {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Logs Another Steady Beat on Jansan and Food-Service Demand",
-      "body": "Ornewright reported revenue of $488 million, a hair above consensus, extending its long run of in-line-to-slightly-ahead quarters. Petra Veldt credited resilient institutional cleaning and food-service orders, with farm inputs flat. Guidance was reaffirmed.",
-      "cycle": 82599,
-      "dur": 1
     },
     {
       "company": "Vencyon",
@@ -82,26 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "standard",
-      "head": "Brunstone & Sons Faces Regulatory Review Over Vault Cell Pro Thermal Reports",
-      "body": "Regulators opened a formal review after a handful of Vault Cell Pro units showed elevated thermal readings during grid-scale field trials. Lambourne, characteristically defiant, told reporters the incidents were 'isolated and overstated' and pledged an internal audit of the 12,000-unit deployment. Analysts note the probe lands just weeks after the $1.8B grid order that anchored the storage pivot.",
-      "cycle": 82598,
-      "dur": 2
-    },
-    {
-      "company": "Castle Devices",
-      "sector": "medical",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Castle Devices Wins Regional Hospital Network Supply Contract",
-      "body": "Calder secured a five-year consumables agreement with the Merrick Regional Hospital Network valued at roughly 380 million marks. The deal broadens Castle's base beyond the National Clinic Group pact and covers both standard and surgical consumables. Calder called it 'steady, predictable work — exactly what we're built for.'",
-      "cycle": 82598,
-      "dur": 2
-    },
-    {
       "company": "Greywater Grid",
       "sector": "energy",
       "kind": "restructure",
@@ -110,36 +150,6 @@
       "body": "Following penalty clauses and a slashed guidance, Halloran unveiled a restructuring that splits the compute and power divisions into separately managed units and cuts 900 roles. The company will write down 260 million marks tied to the failed campus and appoint an independent reliability board. Halloran conceded the multi-region contract remains 'under strain' as clients weigh their options.",
       "cycle": 82598,
       "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Gromford Works Tops Estimates as Meridian Sales Fuel Flagship Traffic",
-      "body": "Quarterly revenue rose 19% to 340 million marks, driven by Meridian Timepiece demand and strong foot traffic at the newly opened flagship salon. Aldwych credited the award-season buzz and hinted at a limited Meridian complication series before year-end. Fine Goods margins held steady despite raw-metal cost pressure.",
-      "cycle": 82598,
-      "dur": 2
-    },
-    {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Holtforge Group Breaks Ground on New Marine Cable Plant to Clear Backlog",
-      "body": "Bramm announced a 210-million-mark facility dedicated to offshore wind cable production, aimed at working down a backlog now stretching into 2028. The plant is expected to add roughly 400 jobs and lift annual marine cable capacity by 35%. Bramm framed the move as 'meeting demand we already have on the books.'",
-      "cycle": 82598,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Maison & Vale Misses as Ostley Merger Costs Weigh on Margins",
-      "body": "Integration expenses from the $2.2-billion Ostley tie-up pushed quarterly profit 14% below expectations, despite revenue climbing to 1.9 billion marks. Kessler acknowledged the merger was 'proving heavier to digest than modeled' but defended the combined footprint. Overlapping Jansan operations from the Deltrey acquisition added to near-term redundancy costs.",
-      "cycle": 82598,
-      "dur": 2
     },
     {
       "company": "Castlestone",
@@ -249,36 +259,6 @@
       "head": "Marlgear Supply Orders Sweeping Recall of Atlas and Drennan Lines Amid Regulator Pressure",
       "body": "The company pulled roughly 1.4 million units across its Atlas device and Drennan industrial ranges, its largest recall on record, after federal investigators flagged overheating faults tied to mounting injury claims. CEO Halden Vossen called the move \"painful but necessary\" and set aside $220 million for remediation. Shipments of both lines are suspended pending redesign.",
       "cycle": 82593,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Castlestone Wins Landmark $9.5B Compute Supply Pact for National Data Grid",
-      "body": "Castlestone secured a five-year, $9.5B agreement to supply Halo high-density compute racks across a nationwide grid buildout, the largest contract in the company's history. Karsh called it 'the moment the turnaround becomes a growth story,' with initial deliveries slated to begin next quarter and full ramp by 2029.",
-      "cycle": 82592,
-      "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Lhaus Industries Clinches $31B Cell-Pack Deal, Its Largest Ever",
-      "body": "Lhaus signed a supply-and-licensing pact valued at up to $31B to furnish fast-charge cell packs to a coalition of regional transit operators, lifting its total backlog past $54B. Brandt said the agreement 'locks in a decade of demand' and would require a fourth production line to be announced within months.",
-      "cycle": 82592,
-      "dur": 8
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Thaldale Group Reels as Probe Alleges Inflated Fastening-Plant Output Figures",
-      "body": "An internal review has found that production and shipment volumes at the newly opened fastening plant were overstated in recent disclosures, wiping out much of the reported rebound. Voss ordered the audit expanded and suspended two operations executives, while the board retained outside counsel to review 'the accuracy of prior statements.'",
-      "cycle": 82592,
       "dur": 8
     }
   ]

@@ -2133,7 +2133,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82589,
+    "lastEventCycle": 82600,
     "events": [
       {
         "cycle": 0,
@@ -2207,6 +2207,16 @@
         "size": "major",
         "head": "Carrowforge Rocked as Leaked Files Show Testing Results Altered Before Overhaul",
         "body": "Internal documents surfaced this week appear to show test data on Carrowforge machines was revised prior to sign-off, directly contradicting Halden Roe's earlier assurances to regulators. The former testing chief, already suing over his dismissal, is now cooperating with investigators, and two board members have called for an independent inquiry. Shares in the machinery maker tumbled as customers paused pending orders.",
+        "effects": {
+          "manufacturing": -0.22
+        }
+      },
+      {
+        "cycle": 82600,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Carrowforge Faces Class Action From Machine Buyers Over Altered Test Records",
+        "body": "A consolidated class action was filed against Carrowforge on behalf of more than 600 industrial customers who allege they purchased machines certified with falsified safety data. Plaintiffs are seeking upwards of 900 million crowns in damages and replacement costs, deepening the crisis for CEO Halden Roe as the earlier testing-chief suit remains unresolved.",
         "effects": {
           "manufacturing": -0.22
         }
@@ -3448,7 +3458,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82590,
+    "lastEventCycle": 82600,
     "events": [
       {
         "cycle": 0,
@@ -3536,6 +3546,16 @@
         "body": "Erretmark launched its most expensive vehicle yet, the coach-built Aurelian series, hand-finished at the recently acquired Sorne wing and priced from $480,000. CEO Aurelia Garr said early allocation is already spoken for through the next 14 months, framing the launch as proof the Sorne deal is paying off. The company expects the halo line to lift brand pricing across its broader range.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82600,
+        "kind": "award",
+        "size": "flash",
+        "head": "Erretmark Works Grand Flagship Named Coachbuilt Vehicle of the Year",
+        "body": "The Sorne-crafted Grand Flagship took top honors at the Continental Motoring Guild awards, cited for its hand-finished cabin and drivetrain refinement. CEO Aurelia Garr said the recognition validates the Sorne Coachworks acquisition, with the flagship's order backlog now stretching past 20 months.",
+        "effects": {
+          "automotive": 0.06
         }
       }
     ]
@@ -5616,14 +5636,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1936,
-    "ceo": "Dorian Brandt",
-    "ceoSince": 1936,
+    "ceo": "Neave Corliss",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.62,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82590,
+    "lastEventCycle": 82600,
     "events": [
       {
         "cycle": 0,
@@ -5712,6 +5732,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82600,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Kessel Drive Ousts Dorian Brandt as Recall Fallout Forces Boardroom Reset",
+        "body": "Kessel Drive's board voted to remove longtime CEO Dorian Brandt after mounting recall and legal costs and revelations that storage-pack risks were flagged internally. The board named turnaround specialist Neave Corliss as chief executive, tasking her with stabilizing finances and settling the fleet-client litigation.",
+        "effects": {}
       }
     ]
   },
@@ -6048,7 +6076,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82593,
+    "lastEventCycle": 82600,
     "events": [
       {
         "cycle": 0,
@@ -6164,6 +6192,16 @@
         "size": "standard",
         "head": "Korrwright Works Beats as Sennfeld Revival Line Drives Heritage Division Sales",
         "body": "Quarterly revenue rose 14% to $612 million, powered by strong early demand for the Sennfeld Revival timepieces launched under the unified Heritage Division. CEO Dunmore Carrow said waitlists on flagship models had cleared expectations and hinted at further acquisitions in the coming year. Margins widened as integration savings from the Sennfeld deal began to land.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82600,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrwright Works Acquires Vellhorn Movements to Secure In-House Escapements",
+        "body": "Korrwright Works announced the 340 million-crown purchase of Vellhorn Movements, a specialist escapement maker, bringing a key supplier under the Unified Heritage Division. CEO Dunmore Carrow said the deal 'ends our dependence on outside calibers' and will feed directly into the expanding Sennfeld Revival line.",
         "effects": {
           "luxury": 0.13
         }
@@ -6580,7 +6618,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82587,
+    "lastEventCycle": 82600,
     "events": [
       {
         "cycle": 0,
@@ -6648,6 +6686,16 @@
         "body": "Following a strong apparel-grade debut, Marrowcyon rolled out a weatherproof extension of its Hardwear workwear line targeting outdoor trades. CEO Theo Orne described the launch as a measured expansion of a proven segment, forecasting modest but reliable contribution to the apparel division through the year.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82600,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Marrowcyon Tops Estimates Again as Weatherproof Workwear Range Scales",
+        "body": "Marrowcyon reported a 14% year-over-year rise in apparel revenue to 1.1 billion crowns, ahead of forecasts, driven by strong uptake of its weatherproof Hardwear range. CEO Theo Orne noted the plumbing and fixtures segment held steady, giving the company a balanced base as workwear becomes its fastest-growing line.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -7611,7 +7659,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82579,
+    "lastEventCycle": 82600,
     "events": [
       {
         "cycle": 0,
@@ -7659,6 +7707,16 @@
         "body": "Stegreach secured a multi-year supply contract for the Riverport freight terminal, covering wire, cable and structural fasteners across the site. CEO Halden Ashby valued the award in the low hundreds of millions and said it builds directly on the transit wiring momentum. Deliveries are slated to begin next quarter.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82600,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Stegreach Edges Past Estimates as Riverport Fixings Deliveries Begin",
+        "body": "Stegreach reported quarterly revenue of 812 million crowns, narrowly above the 795 million consensus, as initial shipments under the Riverport Freight Terminal package began booking. CEO Halden Ashby credited steady demand for sealed fixtures and transit wiring, and reaffirmed full-year guidance without raising it.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -8513,7 +8571,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82584,
+    "lastEventCycle": 82600,
     "events": [
       {
         "cycle": 0,
@@ -8577,6 +8635,16 @@
         "body": "CEO Halden Roe introduced the Sentinel storage line, built around dual-path failover and continuous condition monitoring meant to answer the deferred-maintenance findings. The rollout targets 400 megawatt-hours of installed capacity across three restored substations by year-end, with Roe framing it as proof the recovery is 'no longer about apology, but architecture.'",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82600,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Vossenspire Lands Landmark Grid-Storage Supply Pact With Northern Utilities Consortium",
+        "body": "Vossenspire Holdings has signed a nine-year, 4.1 billion-crown agreement to supply its Redundant Grid-Storage Platform to a consortium of five regional utilities. CEO Halden Roe framed the deal as proof the post-blackout reset has won back institutional confidence, though the contract carries strict uptime penalties tied to the very reliability failures that triggered last year's probe.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -9183,7 +9251,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82580,
+    "lastEventCycle": 82600,
     "events": [
       {
         "cycle": 0,
@@ -9229,6 +9297,16 @@
         "size": "standard",
         "head": "Wrenspire Beats Quietly as Everyroom Expansion Drives Household Segment Growth",
         "body": "Wrenspire reported revenue of 512 million, up 11%, with the Everyroom household line now the fastest-growing segment across its four new regions. Theo Aldous credited disciplined distribution buildout from the Marlowe hub for keeping fulfillment costs flat despite the wider footprint. Aldous said further regional entries would proceed 'only as the logistics support them.'",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82600,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Wrenspire Opens Fourth Everyroom Distribution Hub as Household Push Widens",
+        "body": "Wrenspire confirmed a new 220 million-crown distribution hub in the Calderwaite region, its fourth dedicated to the Everyroom household line. CEO Theo Aldous said the facility will shorten restock times across the northern markets and support planned Everyroom entries into the food-service channel next year.",
         "effects": {
           "consumer": 0.13
         }
