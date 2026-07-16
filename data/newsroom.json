@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-16T08:17:16.427Z",
+  "generatedAt": "2026-07-16T13:55:45.980Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Blackhold Secures $1.1-Billion Grid-Storage Order in Solberg's Signature Win",
+      "body": "Blackhold announced a $1.1B multi-site contract to deploy its revamped storage platform for the Northreach utility consortium, the largest single order in company history. CEO Renata Solberg called it proof that the reset following the Greycliff collapse has restored customer confidence, with first installations due within nine months. The award more than doubles Blackhold's contracted backlog.",
+      "cycle": 82602,
+      "dur": 8
+    },
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "standard",
+      "head": "Blackton Industries Faces Regulatory Probe Into Halvern Weld Defects",
+      "body": "A federal safety agency opened a formal investigation into the Halvern weld failures, covering an estimated 240,000 suspension components shipped over two years. CEO Cassian Rode said the company is cooperating fully and has already retooled the affected line, but warned the probe could bring penalties or an expanded recall. Shares of key customers were said to be reviewing their supplier terms.",
+      "cycle": 82602,
+      "dur": 2
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Boreas Power Tops Estimates as Hollowmere Lease Revenue Flows In",
+      "body": "Boreas reported quarterly revenue of $1.24B, ahead of the $1.16B consensus, driven by contracted payments from its four Hollowmere anchor tenants coming fully online. CEO Mira Thorne said power-and-storage utilization at the campus hit 91%, and reaffirmed the $1.9B expansion timeline. Management flagged rising interconnection costs as the only near-term drag.",
+      "cycle": 82602,
+      "dur": 2
+    },
+    {
+      "company": "Castlestead",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castlestead Edges Ahead as Low-Till and Nutrient-Blend Lines Pair Up",
+      "body": "Castlestead reported a modest beat with revenue of $890M against $865M expected, helped by attach rates on nutrient blends sold alongside its low-till seeders. CEO Aurelia Calder said the Harrowfield cooperative deal delivered steady early volumes and repeat farm-input orders. Guidance was reaffirmed with a cautious note on planting-season weather.",
+      "cycle": 82602,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halhold Works Debuts Aveline Diagnostic Platform as Faircloth Bids to Turn Page on Verity Pro",
+      "body": "Halhold unveiled Aveline, a modular diagnostic imaging system it calls the cornerstone of its rebuilt medical division, with first shipments slated for the next two quarters. CEO Lena Faircloth said the platform underwent 14 months of independent validation before launch, an explicit contrast to the Verity Pro rollout. Analysts noted the launch does little to resolve the pending $600M class action but signals the overhaul is moving from cuts to product.",
+      "cycle": 82602,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrave",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Skarngrave Lands Hospital-Network Sterilization Contract Worth Up to $420M",
+      "body": "Skarngrave signed a five-year agreement to supply low-temperature sterilizers and consumables across the 38-hospital Merrow Health system, with a stated ceiling of $420M. CEO Orla Dray said the deal validates the sensitive-instrument line launched last year and locks in recurring consumables revenue. Deliveries begin next quarter under a phased installation schedule.",
+      "cycle": 82602,
+      "dur": 2
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vantor Lines Beats Modestly as Grocery Contract Begins Shipping",
+      "body": "Vantor posted earnings of $0.71 a share versus the $0.68 expected, with molded-fiber output from both plants running near capacity. CEO Halden Vossen said the national grocery packaging contract contributed its first partial quarter of volume and should ramp fully by mid-year. The company held its full-year guidance unchanged.",
+      "cycle": 82602,
+      "dur": 1
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Varnvale & Sons Opens Flagship Maisons Boutique to Showcase Combined Houses",
+      "body": "Varnvale opened a 22,000-square-foot flagship on Aldermere Row dedicated to its Maisons division, housing Corveau, Bellmont and Duquesne under one roof. CEO Bram Wold said the boutique is the first of six planned openings and is meant to lift fine-goods margins toward the group's timepiece levels. The company reported early-quarter Maisons sell-through running ahead of internal targets.",
+      "cycle": 82602,
+      "dur": 2
+    },
     {
       "company": "Bruncrest Works",
       "sector": "technology",
@@ -40,16 +120,6 @@
       "body": "Halcyon announced a 210M automation rollout at its Eastmere packaging hub, replicating the systems that lifted margins at Northgate and Southport. CEO Dorian Ashby said the phased buildout would complete within four quarters and target similar throughput gains. The logistics packager now has three of its five major hubs on the automation playbook.",
       "cycle": 82601,
       "dur": 2
-    },
-    {
-      "company": "Holtgate Group",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Group Edges Ahead Again on Firm Uniform Guild Demand",
-      "body": "Holtgate reported a modest 3% revenue gain to 480M, with mill utilization holding near 88% on sustained Uniform Makers Guild volumes. CEO Dorian Throne credited stable raw-fiber costs and disciplined scheduling for the incremental beat. The results extend the textile maker's run of quiet, consistent quarters.",
-      "cycle": 82601,
-      "dur": 1
     },
     {
       "company": "Marlgear Supply",
@@ -102,26 +172,6 @@
       "dur": 8
     },
     {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrwright Works Acquires Vellhorn Movements to Secure In-House Escapements",
-      "body": "Korrwright Works announced the 340 million-crown purchase of Vellhorn Movements, a specialist escapement maker, bringing a key supplier under the Unified Heritage Division. CEO Dunmore Carrow said the deal 'ends our dependence on outside calibers' and will feed directly into the expanding Sennfeld Revival line.",
-      "cycle": 82600,
-      "dur": 2
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Marrowcyon Tops Estimates Again as Weatherproof Workwear Range Scales",
-      "body": "Marrowcyon reported a 14% year-over-year rise in apparel revenue to 1.1 billion crowns, ahead of forecasts, driven by strong uptake of its weatherproof Hardwear range. CEO Theo Orne noted the plumbing and fixtures segment held steady, giving the company a balanced base as workwear becomes its fastest-growing line.",
-      "cycle": 82600,
-      "dur": 2
-    },
-    {
       "company": "Vossenspire Holdings",
       "sector": "energy",
       "kind": "major_deal",
@@ -130,16 +180,6 @@
       "body": "Vossenspire Holdings has signed a nine-year, 4.1 billion-crown agreement to supply its Redundant Grid-Storage Platform to a consortium of five regional utilities. CEO Halden Roe framed the deal as proof the post-blackout reset has won back institutional confidence, though the contract carries strict uptime penalties tied to the very reliability failures that triggered last year's probe.",
       "cycle": 82600,
       "dur": 8
-    },
-    {
-      "company": "Wrenspire",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Wrenspire Opens Fourth Everyroom Distribution Hub as Household Push Widens",
-      "body": "Wrenspire confirmed a new 220 million-crown distribution hub in the Calderwaite region, its fourth dedicated to the Everyroom household line. CEO Theo Aldous said the facility will shorten restock times across the northern markets and support planned Everyroom entries into the food-service channel next year.",
-      "cycle": 82600,
-      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -239,26 +279,6 @@
       "head": "Carrowwell Signs $1.1-Billion Multi-Year Automation Pact With National Logistics Network",
       "body": "Carrowwell secured its largest-ever contract, a $1.1-billion agreement to supply modular warehouse automation across 40 logistics sites over four years. CEO Theo Thorne said the deal transforms the automation unit from a growth line into the company's anchor business. The recently expanded plant and new third shift will be dedicated primarily to fulfilling the rollout.",
       "cycle": 82595,
-      "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Brunmark Motors Faces Regulatory Probe Into Veyra S Battery Packs After Fire Reports",
-      "body": "Regulators opened a formal investigation into the Veyra S performance platform following six reported thermal incidents tied to its Power & Storage packs. Yvette Calder said Brunmark is cooperating fully and has paused new Veyra S deliveries pending internal testing, though she stopped short of a recall. The probe casts a shadow over what had been the company's boldest model expansion in years.",
-      "cycle": 82594,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "major",
-      "head": "Vossenspire Supply Acquires Halden Chronometrics in 1.4B Push to Reshape Timepiece Arm",
-      "body": "Restless as ever, Quinn Marrow unveiled the 1.4B purchase of storied movement-maker Halden Chronometrics, the firm's largest deal in decades. The acquisition brings in-house mechanical expertise Vossenspire had long outsourced, and Marrow said Halden's workshops would anchor a new ultra-premium tier alongside the surging Calderon vehicle line. Integration is expected to strain near-term margins even as it deepens the heritage portfolio.",
-      "cycle": 82594,
       "dur": 8
     }
   ]

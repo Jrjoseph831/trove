@@ -571,7 +571,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82593,
+    "lastEventCycle": 82602,
     "events": [
       {
         "cycle": 0,
@@ -674,6 +674,16 @@
         "effects": {
           "energy": 0.13
         }
+      },
+      {
+        "cycle": 82602,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Blackhold Secures $1.1-Billion Grid-Storage Order in Solberg's Signature Win",
+        "body": "Blackhold announced a $1.1B multi-site contract to deploy its revamped storage platform for the Northreach utility consortium, the largest single order in company history. CEO Renata Solberg called it proof that the reset following the Greycliff collapse has restored customer confidence, with first installations due within nine months. The award more than doubles Blackhold's contracted backlog.",
+        "effects": {
+          "energy": 0.22
+        }
       }
     ]
   },
@@ -751,7 +761,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82593,
+    "lastEventCycle": 82602,
     "events": [
       {
         "cycle": 0,
@@ -856,6 +866,16 @@
         "head": "Blackton Industries Names Turnaround Veteran Cassian Rode as CEO to Lead Halvern Recovery",
         "body": "The board appointed Cassian Rode, former chief of a rival parts group, to succeed ousted Mara Mercer, tasking him with steadying operations after the Halvern weld crisis erased last quarter's earnings. Rode pledged a $180 million overhaul of the company's welding and quality-control lines and said he would seek early mediation in the Halvern suit. Departing chairman Dorian Vale will remain on the board through year-end.",
         "effects": {}
+      },
+      {
+        "cycle": 82602,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Blackton Industries Faces Regulatory Probe Into Halvern Weld Defects",
+        "body": "A federal safety agency opened a formal investigation into the Halvern weld failures, covering an estimated 240,000 suspension components shipped over two years. CEO Cassian Rode said the company is cooperating fully and has already retooled the affected line, but warned the probe could bring penalties or an expanded recall. Shares of key customers were said to be reviewing their supplier terms.",
+        "effects": {
+          "automotive": -0.13
+        }
       }
     ]
   },
@@ -870,7 +890,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82595,
+    "lastEventCycle": 82602,
     "events": [
       {
         "cycle": 0,
@@ -1018,6 +1038,16 @@
         "body": "With all initial capacity leased, Boreas Power announced a $1.9-billion phase-two buildout to double Hollowmere's compute and storage footprint. CEO Mira Thorne said demand from waitlisted customers justified the largest single-site commitment in the company's history. The expansion adds 900 megawatts of storage-backed capacity, with first tenants slated to move in within eighteen months.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82602,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Boreas Power Tops Estimates as Hollowmere Lease Revenue Flows In",
+        "body": "Boreas reported quarterly revenue of $1.24B, ahead of the $1.16B consensus, driven by contracted payments from its four Hollowmere anchor tenants coming fully online. CEO Mira Thorne said power-and-storage utilization at the campus hit 91%, and reaffirmed the $1.9B expansion timeline. Management flagged rising interconnection costs as the only near-term drag.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -2602,7 +2632,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82573,
+    "lastEventCycle": 82602,
     "events": [
       {
         "cycle": 0,
@@ -2638,6 +2668,16 @@
         "size": "flash",
         "head": "Castlestead Adds Nutrient-Blend Farm Inputs to Pair With Low-Till Line",
         "body": "Castlestead introduced a soil-conditioning input blend designed to complement its low-till seeders on compacted ground, rolling out first to Harrowfield cooperative members. Aurelia Calder framed the launch as a measured extension rather than a new bet, with wider availability planned for next season.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82602,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlestead Edges Ahead as Low-Till and Nutrient-Blend Lines Pair Up",
+        "body": "Castlestead reported a modest beat with revenue of $890M against $865M expected, helped by attach rates on nutrient blends sold alongside its low-till seeders. CEO Aurelia Calder said the Harrowfield cooperative deal delivered steady early volumes and repeat farm-input orders. Guidance was reaffirmed with a cautious note on planting-season weather.",
         "effects": {
           "agriculture": 0.06
         }
@@ -4902,7 +4942,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82596,
+    "lastEventCycle": 82602,
     "events": [
       {
         "cycle": 0,
@@ -5066,6 +5106,16 @@
         "body": "New CEO Lena Faircloth announced the discontinuation of the entire Verity Pro medical line and a $340M charge to fund a full redesign under a rebuilt quality division. The plan cuts roughly 900 roles across two plants and installs former Fennmoor engineer Sana Roeper as chief quality officer, with a pledged independent oversight board reporting quarterly. Faircloth called it 'a painful reset that buys us a future.'",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82602,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Works Debuts Aveline Diagnostic Platform as Faircloth Bids to Turn Page on Verity Pro",
+        "body": "Halhold unveiled Aveline, a modular diagnostic imaging system it calls the cornerstone of its rebuilt medical division, with first shipments slated for the next two quarters. CEO Lena Faircloth said the platform underwent 14 months of independent validation before launch, an explicit contrast to the Verity Pro rollout. Analysts noted the launch does little to resolve the pending $600M class action but signals the overhaul is moving from cuts to product.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -7265,7 +7315,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82581,
+    "lastEventCycle": 82602,
     "events": [
       {
         "cycle": 0,
@@ -7313,6 +7363,16 @@
         "body": "Skarngrave met and modestly beat expectations as hospitals began adopting its new low-temperature sterilizer line for heat-sensitive instruments. Orla Dray highlighted the steady ramp of the five-year sterilization contract alongside firm demand across cleaning and jansan products. The company held its outlook, characteristically declining to raise guidance despite the encouraging launch.",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82602,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Skarngrave Lands Hospital-Network Sterilization Contract Worth Up to $420M",
+        "body": "Skarngrave signed a five-year agreement to supply low-temperature sterilizers and consumables across the 38-hospital Merrow Health system, with a stated ceiling of $420M. CEO Orla Dray said the deal validates the sensitive-instrument line launched last year and locks in recurring consumables revenue. Deliveries begin next quarter under a phased installation schedule.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -8079,7 +8139,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82586,
+    "lastEventCycle": 82602,
     "events": [
       {
         "cycle": 0,
@@ -8138,6 +8198,16 @@
         "effects": {
           "logistics": 0.13
         }
+      },
+      {
+        "cycle": 82602,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Beats Modestly as Grocery Contract Begins Shipping",
+        "body": "Vantor posted earnings of $0.71 a share versus the $0.68 expected, with molded-fiber output from both plants running near capacity. CEO Halden Vossen said the national grocery packaging contract contributed its first partial quarter of volume and should ramp fully by mid-year. The company held its full-year guidance unchanged.",
+        "effects": {
+          "logistics": 0.06
+        }
       }
     ]
   },
@@ -8152,7 +8222,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82595,
+    "lastEventCycle": 82602,
     "events": [
       {
         "cycle": 0,
@@ -8268,6 +8338,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Unveils First Maisons-Division Collection Blending Duquesne and Corveau",
         "body": "The newly formed Maisons division debuted a 24-piece collection pairing Duquesne jeweling with Corveau timepiece movements, priced from $9,000 to $180,000. CEO Bram Wold framed the launch as proof the $1.4-billion Duquesne acquisition could yield unified craft rather than a loose portfolio. Initial allocations to flagship boutiques are already spoken for.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82602,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Varnvale & Sons Opens Flagship Maisons Boutique to Showcase Combined Houses",
+        "body": "Varnvale opened a 22,000-square-foot flagship on Aldermere Row dedicated to its Maisons division, housing Corveau, Bellmont and Duquesne under one roof. CEO Bram Wold said the boutique is the first of six planned openings and is meant to lift fine-goods margins toward the group's timepiece levels. The company reported early-quarter Maisons sell-through running ahead of internal targets.",
         "effects": {
           "luxury": 0.13
         }
