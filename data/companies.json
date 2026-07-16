@@ -1166,7 +1166,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82594,
+    "lastEventCycle": 82601,
     "events": [
       {
         "cycle": 0,
@@ -1296,6 +1296,16 @@
         "size": "standard",
         "head": "Bruncrest Works Bets on Leaner Lineup With Debut of Streamlined Aria Compute Series",
         "body": "Ines Marlow introduced the Aria series, a pared-down compute line she framed as the payoff from her controversial product cuts. The launch narrows Bruncrest to three core configurations aimed at cost-conscious buyers, with Marlow promising faster shipping and thinner overhead. Early orders will test whether her aggressive overhaul can restart growth after last quarter's sales slide.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82601,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Bruncrest Works Rebounds as Streamlined Aria Series Fuels Margin Recovery",
+        "body": "Bruncrest reported quarterly revenue of 2.3B, up 11% sequentially, with operating margins expanding 340 basis points as the leaner Aria Compute lineup carried lower production overhead. CEO Ines Marlow declared the overhaul 'vindicated,' touting the fewest product SKUs in a decade while unit shipments climbed 7%. Analysts noted the beat marks the first upside surprise since Marlow's restructure began.",
         "effects": {
           "technology": 0.13
         }
@@ -2390,7 +2400,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82572,
+    "lastEventCycle": 82601,
     "events": [
       {
         "cycle": 0,
@@ -2426,6 +2436,16 @@
         "size": "standard",
         "head": "Castlegear Group Adds Equipment Order to Multi-Hospital Tray Pact",
         "body": "Castlegear expanded its hospital supply relationship with an order for sterilization and instrument-handling equipment valued near $340M over five years. Sable Brandt said the follow-on validates the tray system rollout and deepens ties with the same hospital network group. Deliveries begin next quarter.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82601,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Castlegear Group Tops Estimates as Tray System and Equipment Orders Convert to Revenue",
+        "body": "Castlegear posted revenue of 1.1B, up 6% year on year, as the multi-hospital tray pact and its equipment addendum began shipping in volume. CEO Sable Brandt highlighted a 92% reorder rate on consumables tied to the tray system, calling the recurring stream 'the foundation of steady growth.' The medical supplier reaffirmed its full-year outlook.",
         "effects": {
           "medical": 0.13
         }
@@ -3136,7 +3156,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82590,
+    "lastEventCycle": 82601,
     "events": [
       {
         "cycle": 0,
@@ -3214,6 +3234,16 @@
         "body": "Drustcraft secured an eight-year supply agreement valued at roughly $2.1 billion to provide auto parts and fastening systems across two vehicle programs, its largest contract in a century. CEO Cora Fenn called the win 'a generational step,' confirming a new dedicated plant will be built to meet volumes beginning next year. The deal roughly doubles Drustcraft's committed forward order book.",
         "effects": {
           "manufacturing": 0.22
+        }
+      },
+      {
+        "cycle": 82601,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Drustcraft Breaks Ground on New Plant to Serve Twin Global Vehicle Lines",
+        "body": "Drustcraft committed 380M to a dedicated auto-parts facility supporting the two global vehicle lines it won last quarter, with production targeted for late 2027. CEO Cora Fenn said the plant would add roughly 900 jobs and lift auto-parts capacity by a third. The move underscores Drustcraft's pivot toward higher-value components alongside its fastener core.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -4600,7 +4630,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82590,
+    "lastEventCycle": 82601,
     "events": [
       {
         "cycle": 0,
@@ -4676,6 +4706,16 @@
         "size": "standard",
         "head": "Halcyon Industries Beats Again as Southport Automation Clears First Full Quarter",
         "body": "Halcyon posted operating margins of 21.4%, a fresh company record, as the Southport hub's automation ramp landed ahead of schedule. CEO Dorian Ashby said dual-hub throughput rose 9% and hinted at a fourth automated site under evaluation. Packaging volumes climbed on strength from grocery and industrial clients.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82601,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcyon Industries Brings Automation Blueprint to Third Site at Eastmere",
+        "body": "Halcyon announced a 210M automation rollout at its Eastmere packaging hub, replicating the systems that lifted margins at Northgate and Southport. CEO Dorian Ashby said the phased buildout would complete within four quarters and target similar throughput gains. The logistics packager now has three of its five major hubs on the automation playbook.",
         "effects": {
           "logistics": 0.13
         }
@@ -5333,7 +5373,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82575,
+    "lastEventCycle": 82601,
     "events": [
       {
         "cycle": 0,
@@ -5369,6 +5409,16 @@
         "size": "flash",
         "head": "Holtgate Group Nudges Past Estimates as Mill Utilization Holds Firm",
         "body": "Holtgate reported quarterly revenue of 412 million, up 3 percent, with mill utilization steady at 91 percent on continued Uniform Guild demand. CEO Dorian Throne credited 'disciplined ordering and no surprises,' reaffirming the group's full-year outlook.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82601,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Group Edges Ahead Again on Firm Uniform Guild Demand",
+        "body": "Holtgate reported a modest 3% revenue gain to 480M, with mill utilization holding near 88% on sustained Uniform Makers Guild volumes. CEO Dorian Throne credited stable raw-fiber costs and disciplined scheduling for the incremental beat. The results extend the textile maker's run of quiet, consistent quarters.",
         "effects": {
           "textiles": 0.06
         }
@@ -6485,7 +6535,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82593,
+    "lastEventCycle": 82601,
     "events": [
       {
         "cycle": 0,
@@ -6601,6 +6651,16 @@
         "size": "major",
         "head": "Marlgear Supply Orders Sweeping Recall of Atlas and Drennan Lines Amid Regulator Pressure",
         "body": "The company pulled roughly 1.4 million units across its Atlas device and Drennan industrial ranges, its largest recall on record, after federal investigators flagged overheating faults tied to mounting injury claims. CEO Halden Vossen called the move \"painful but necessary\" and set aside $220 million for remediation. Shipments of both lines are suspended pending redesign.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82601,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Marlgear Supply Reels as Internal Memos Reveal Executives Knew of Drennan Defects for Years",
+        "body": "Disclosed court filings show Marlgear leadership was warned of failure risks in the Atlas and Drennan lines as early as 2021, yet delayed action until regulators intervened. The revelations sent shares to a multi-year low and prompted the board to open an independent review of CEO Halden Vossen's handling of the crisis. Two state attorneys general signaled they would broaden their existing suits to pursue punitive claims.",
         "effects": {
           "technology": -0.22
         }
@@ -7268,7 +7328,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82586,
+    "lastEventCycle": 82601,
     "events": [
       {
         "cycle": 0,
@@ -7324,6 +7384,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Adds Structural-Materials Capacity to Feed Kelvarn Bridge Pipeline",
         "body": "The construction supplier committed 62 million to a new rolling line at its Harrowfield works, aimed at meeting sustained demand from the multi-phase Kelvarn Bridge program. CEO Quinn Fenn said the expansion should lift structural output roughly 30 percent once commissioned next year, calling it 'a measured bet on a backlog we can see clearly.'",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82601,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Skarngrove & Sons Extends Kelvarn Work With Second-Phase Structural Contract",
+        "body": "Skarngrove secured a 620M follow-on award covering structural materials for the Kelvarn Bridge program's northern approach spans, extending its supply role through 2031. CEO Quinn Fenn said the newly expanded capacity, brought online last quarter, would absorb the added volume without further capital outlay. The win deepens Skarngrove's position as the program's dominant materials supplier.",
         "effects": {
           "construction": 0.13
         }
@@ -8660,7 +8730,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82594,
+    "lastEventCycle": 82601,
     "events": [
       {
         "cycle": 0,
@@ -8768,6 +8838,16 @@
         "body": "Restless as ever, Quinn Marrow unveiled the 1.4B purchase of storied movement-maker Halden Chronometrics, the firm's largest deal in decades. The acquisition brings in-house mechanical expertise Vossenspire had long outsourced, and Marrow said Halden's workshops would anchor a new ultra-premium tier alongside the surging Calderon vehicle line. Integration is expected to strain near-term margins even as it deepens the heritage portfolio.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82601,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vossenspire Supply Debuts First Timepiece From Newly Acquired Halden Chronometrics",
+        "body": "Vossenspire unveiled the Meridian Perpetual, the first watch developed since its 1.4B Halden Chronometrics acquisition, priced from 48,000 and limited to 500 pieces. CEO Quinn Marrow framed the launch as proof the integration is already yielding product, pairing Halden's movement expertise with Vossenspire's heritage badge. The company said initial allocations were fully spoken for by distribution partners.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]

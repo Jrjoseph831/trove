@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-16T02:44:04.104Z",
+  "generatedAt": "2026-07-16T08:17:16.427Z",
   "beats": [
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Bruncrest Works Rebounds as Streamlined Aria Series Fuels Margin Recovery",
+      "body": "Bruncrest reported quarterly revenue of 2.3B, up 11% sequentially, with operating margins expanding 340 basis points as the leaner Aria Compute lineup carried lower production overhead. CEO Ines Marlow declared the overhaul 'vindicated,' touting the fewest product SKUs in a decade while unit shipments climbed 7%. Analysts noted the beat marks the first upside surprise since Marlow's restructure began.",
+      "cycle": 82601,
+      "dur": 2
+    },
+    {
+      "company": "Castlegear Group",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Castlegear Group Tops Estimates as Tray System and Equipment Orders Convert to Revenue",
+      "body": "Castlegear posted revenue of 1.1B, up 6% year on year, as the multi-hospital tray pact and its equipment addendum began shipping in volume. CEO Sable Brandt highlighted a 92% reorder rate on consumables tied to the tray system, calling the recurring stream 'the foundation of steady growth.' The medical supplier reaffirmed its full-year outlook.",
+      "cycle": 82601,
+      "dur": 2
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Drustcraft Breaks Ground on New Plant to Serve Twin Global Vehicle Lines",
+      "body": "Drustcraft committed 380M to a dedicated auto-parts facility supporting the two global vehicle lines it won last quarter, with production targeted for late 2027. CEO Cora Fenn said the plant would add roughly 900 jobs and lift auto-parts capacity by a third. The move underscores Drustcraft's pivot toward higher-value components alongside its fastener core.",
+      "cycle": 82601,
+      "dur": 2
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Halcyon Industries Brings Automation Blueprint to Third Site at Eastmere",
+      "body": "Halcyon announced a 210M automation rollout at its Eastmere packaging hub, replicating the systems that lifted margins at Northgate and Southport. CEO Dorian Ashby said the phased buildout would complete within four quarters and target similar throughput gains. The logistics packager now has three of its five major hubs on the automation playbook.",
+      "cycle": 82601,
+      "dur": 2
+    },
+    {
+      "company": "Holtgate Group",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Group Edges Ahead Again on Firm Uniform Guild Demand",
+      "body": "Holtgate reported a modest 3% revenue gain to 480M, with mill utilization holding near 88% on sustained Uniform Makers Guild volumes. CEO Dorian Throne credited stable raw-fiber costs and disciplined scheduling for the incremental beat. The results extend the textile maker's run of quiet, consistent quarters.",
+      "cycle": 82601,
+      "dur": 1
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Marlgear Supply Reels as Internal Memos Reveal Executives Knew of Drennan Defects for Years",
+      "body": "Disclosed court filings show Marlgear leadership was warned of failure risks in the Atlas and Drennan lines as early as 2021, yet delayed action until regulators intervened. The revelations sent shares to a multi-year low and prompted the board to open an independent review of CEO Halden Vossen's handling of the crisis. Two state attorneys general signaled they would broaden their existing suits to pursue punitive claims.",
+      "cycle": 82601,
+      "dur": 8
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Skarngrove & Sons Extends Kelvarn Work With Second-Phase Structural Contract",
+      "body": "Skarngrove secured a 620M follow-on award covering structural materials for the Kelvarn Bridge program's northern approach spans, extending its supply role through 2031. CEO Quinn Fenn said the newly expanded capacity, brought online last quarter, would absorb the added volume without further capital outlay. The win deepens Skarngrove's position as the program's dominant materials supplier.",
+      "cycle": 82601,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Vossenspire Supply Debuts First Timepiece From Newly Acquired Halden Chronometrics",
+      "body": "Vossenspire unveiled the Meridian Perpetual, the first watch developed since its 1.4B Halden Chronometrics acquisition, priced from 48,000 and limited to 500 pieces. CEO Quinn Marrow framed the launch as proof the integration is already yielding product, pairing Halden's movement expertise with Vossenspire's heritage badge. The company said initial allocations were fully spoken for by distribution partners.",
+      "cycle": 82601,
+      "dur": 2
+    },
     {
       "company": "Carrowforge",
       "sector": "manufacturing",
@@ -10,16 +90,6 @@
       "body": "A consolidated class action was filed against Carrowforge on behalf of more than 600 industrial customers who allege they purchased machines certified with falsified safety data. Plaintiffs are seeking upwards of 900 million crowns in damages and replacement costs, deepening the crisis for CEO Halden Roe as the earlier testing-chief suit remains unresolved.",
       "cycle": 82600,
       "dur": 8
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "award",
-      "size": "flash",
-      "head": "Erretmark Works Grand Flagship Named Coachbuilt Vehicle of the Year",
-      "body": "The Sorne-crafted Grand Flagship took top honors at the Continental Motoring Guild awards, cited for its hand-finished cabin and drivetrain refinement. CEO Aurelia Garr said the recognition validates the Sorne Coachworks acquisition, with the flagship's order backlog now stretching past 20 months.",
-      "cycle": 82600,
-      "dur": 1
     },
     {
       "company": "Kessel Drive",
@@ -50,16 +120,6 @@
       "body": "Marrowcyon reported a 14% year-over-year rise in apparel revenue to 1.1 billion crowns, ahead of forecasts, driven by strong uptake of its weatherproof Hardwear range. CEO Theo Orne noted the plumbing and fixtures segment held steady, giving the company a balanced base as workwear becomes its fastest-growing line.",
       "cycle": 82600,
       "dur": 2
-    },
-    {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Stegreach Edges Past Estimates as Riverport Fixings Deliveries Begin",
-      "body": "Stegreach reported quarterly revenue of 812 million crowns, narrowly above the 795 million consensus, as initial shipments under the Riverport Freight Terminal package began booking. CEO Halden Ashby credited steady demand for sealed fixtures and transit wiring, and reaffirmed full-year guidance without raising it.",
-      "cycle": 82600,
-      "dur": 1
     },
     {
       "company": "Vossenspire Holdings",
@@ -102,16 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Drayton Freight",
-      "sector": "logistics",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Drayton Freight Launches Heavy-Duty Pallet-Lift Line for High-Volume Depots",
-      "body": "Emil Holt introduced the Drayton HL series, a heavier-rated pallet-lift platform aimed at high-throughput distribution depots, with first units shipping next month. The line extends servicing revenue streams that have driven recent quarters and carries a longer maintenance contract. Early orders came from two existing regional customers.",
-      "cycle": 82599,
-      "dur": 2
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "leadership_change",
@@ -120,26 +170,6 @@
       "body": "The Halhold board removed CEO Dahlia Renn on Thursday, capping weeks of turmoil after leaked memos showed Northgate blackout warnings had been dismissed. Director Marcus Vell will serve as chair of a transition committee while operations veteran Sela Marchetti steps in to steady client relations, three of which had threatened to void contracts. The company also disclosed a $410 million charge tied to service credits and remediation.",
       "cycle": 82599,
       "dur": 8
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vencyon Tops Forecasts as Third Hub Nears First Volumes",
-      "body": "Vencyon posted throughput up 14% year-over-year and beat estimates as its Drenfield twin sites sustained record handling rates. Iris Halloran said the third hub remains on schedule to begin partial operations next quarter, with early customer commitments already covering half its planned capacity. The company nudged its full-year outlook higher.",
-      "cycle": 82599,
-      "dur": 2
-    },
-    {
-      "company": "Wrenhaus",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Wrenhaus Beats Again as Riverside Fixture Shipments Hit Full Stride",
-      "body": "Wrenhaus reported quarterly revenue of $612 million, up 9% and modestly ahead of forecasts, as Calderhythe Riverside fixture deliveries reached peak volume. Quinn Thorne noted the new Brackenfield fabrication capacity is running near full utilization with no disruption. Margins held steady on disciplined input costs.",
-      "cycle": 82599,
-      "dur": 2
     },
     {
       "company": "Greywater Grid",
@@ -229,36 +259,6 @@
       "head": "Vossenspire Supply Acquires Halden Chronometrics in 1.4B Push to Reshape Timepiece Arm",
       "body": "Restless as ever, Quinn Marrow unveiled the 1.4B purchase of storied movement-maker Halden Chronometrics, the firm's largest deal in decades. The acquisition brings in-house mechanical expertise Vossenspire had long outsourced, and Marrow said Halden's workshops would anchor a new ultra-premium tier alongside the surging Calderon vehicle line. Integration is expected to strain near-term margins even as it deepens the heritage portfolio.",
       "cycle": 82594,
-      "dur": 8
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Blackton Industries Names Turnaround Veteran Cassian Rode as CEO to Lead Halvern Recovery",
-      "body": "The board appointed Cassian Rode, former chief of a rival parts group, to succeed ousted Mara Mercer, tasking him with steadying operations after the Halvern weld crisis erased last quarter's earnings. Rode pledged a $180 million overhaul of the company's welding and quality-control lines and said he would seek early mediation in the Halvern suit. Departing chairman Dorian Vale will remain on the board through year-end.",
-      "cycle": 82593,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Halhold Systems Rocked as Internal Memo Reveals Northgate Warnings Were Ignored",
-      "body": "Leaked documents show engineers flagged failing power infrastructure at the Northgate campus months before the twin blackouts, contradicting management's public assurances. CEO Dahlia Renn faces a widening client exodus, with three major accounts moving to terminate contracts and a board committee opening an internal review. Analysts estimate exposure at over $150 million in lost commitments.",
-      "cycle": 82593,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "recall",
-      "size": "major",
-      "head": "Marlgear Supply Orders Sweeping Recall of Atlas and Drennan Lines Amid Regulator Pressure",
-      "body": "The company pulled roughly 1.4 million units across its Atlas device and Drennan industrial ranges, its largest recall on record, after federal investigators flagged overheating faults tied to mounting injury claims. CEO Halden Vossen called the move \"painful but necessary\" and set aside $220 million for remediation. Shipments of both lines are suspended pending redesign.",
-      "cycle": 82593,
       "dur": 8
     }
   ]
