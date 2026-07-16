@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-16T13:55:45.980Z",
+  "generatedAt": "2026-07-16T19:14:34.450Z",
   "beats": [
+    {
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Aldouscraft Mfg. Adds Third Extrusion Line to Meet Grid Cable Commitments",
+      "body": "Aldouscraft committed $210 million to a third high-capacity extrusion line at its Hartwell plant, aimed squarely at fulfilling its multi-year feeder cable award. CEO Soren Ashby said the line would lift annual conductor output by roughly 28% once fully commissioned next year. Management framed the move as measured capacity-matching rather than speculative buildout.",
+      "cycle": 82603,
+      "dur": 2
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "major",
+      "head": "Bruncraft Widens Recall to 610,000 Vehicles as Axle Probe Expands",
+      "body": "Bruncraft dramatically expanded its recall to 610,000 Runabout and Talvorne-badged units after regulators found the Halveston axle defect extended well beyond the original batch. CEO Orla Marrow estimated remediation costs at $480 million and suspended two Talvorne production lines mid-integration. The scope has rattled confidence in Bruncraft's aggressive absorption of Talvorne Motors.",
+      "cycle": 82603,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "major",
+      "head": "Brunmark Recalls Entire Veyra S Fleet as Battery Probe Turns Serious",
+      "body": "Brunmark ordered a full recall of all 96,000 Veyra S units after regulators linked the battery-pack fires to a cell-seal defect, escalating from the earlier probe. CEO Yvette Calder halted Veyra S deliveries and set aside $620 million for pack replacements and inspections. The turbulence overshadows the platform's ambitious launch just months ago.",
+      "cycle": 82603,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Castlestone Lands $14B Compute Framework, Doubling Down on National Data Grid",
+      "body": "Castlestone signed a $14 billion multi-phase framework to supply the second and third build stages of the National Data Grid, its largest commitment on record. CEO Pell Karsh called it \"the deal that defines the decade,\" pledging two new fabrication halls and a tripling of the Halo high-density tier. Skeptics questioned whether Castlestone can scale delivery without straining its balance sheet after back-to-back record awards.",
+      "cycle": 82603,
+      "dur": 8
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Fenncyon Wins $900M Extension for Eastfield Corridor's Northern Spur",
+      "body": "Building on its Eastfield momentum, Fenncyon secured a $900 million extension covering the corridor's Northern Spur earthworks and grading. CEO Nadia Ashby said the award leverages the second staging yard opened earlier this year, avoiding fresh capital outlay. The extension pushes Fenncyon's committed Eastfield backlog past $3.7 billion.",
+      "cycle": 82603,
+      "dur": 2
+    },
+    {
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halcrest Opens Flagship Salon Row Boutique Alongside Meridian Petite Debut",
+      "body": "Riding the sold-out Grand Complication, Iris Marrow unveiled the Meridian Petite, a slimmer entry into the celebrated line, at a new flagship boutique on the Row. The Petite starts at a fraction of the Grand Complication's price, aimed at broadening Halcrest's clientele without diluting its exclusivity. Marrow said the boutique doubles the house's direct salon footprint.",
+      "cycle": 82603,
+      "dur": 2
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Hesperforge Beats as Marine-Grade Beam Line Fills Second Mill's Order Book",
+      "body": "Hesperforge topped estimates with quarterly revenue of $1.4 billion, up 19%, as the new marine-grade beam line ran near capacity from launch. CEO Sable Halloran credited the Coastal Bridgeworks pipeline and said the second mill reached breakeven ahead of schedule. Textile contracts added a steady secondary lift to margins.",
+      "cycle": 82603,
+      "dur": 2
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Lhaus Misses as Fourth-Line Startup Costs Bite Into Margins",
+      "body": "Lhaus fell short of estimates despite record revenue, as commissioning costs for its fourth cell-pack line compressed margins to 8.2% from 12.5% a year earlier. CEO Cole Brandt defended the aggressive buildout, insisting the $31B backlog justifies near-term pain. Analysts flagged rising leverage as Lhaus stacks capacity faster than deliveries convert to cash.",
+      "cycle": 82603,
+      "dur": 2
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -32,16 +112,6 @@
       "dur": 2
     },
     {
-      "company": "Castlestead",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Castlestead Edges Ahead as Low-Till and Nutrient-Blend Lines Pair Up",
-      "body": "Castlestead reported a modest beat with revenue of $890M against $865M expected, helped by attach rates on nutrient blends sold alongside its low-till seeders. CEO Aurelia Calder said the Harrowfield cooperative deal delivered steady early volumes and repeat farm-input orders. Guidance was reaffirmed with a cautious note on planting-season weather.",
-      "cycle": 82602,
-      "dur": 1
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "product_launch",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Beats Modestly as Grocery Contract Begins Shipping",
-      "body": "Vantor posted earnings of $0.71 a share versus the $0.68 expected, with molded-fiber output from both plants running near capacity. CEO Halden Vossen said the national grocery packaging contract contributed its first partial quarter of volume and should ramp fully by mid-year. The company held its full-year guidance unchanged.",
-      "cycle": 82602,
-      "dur": 1
-    },
-    {
       "company": "Varnvale & Sons",
       "sector": "luxury",
       "kind": "expansion",
@@ -79,46 +139,6 @@
       "head": "Varnvale & Sons Opens Flagship Maisons Boutique to Showcase Combined Houses",
       "body": "Varnvale opened a 22,000-square-foot flagship on Aldermere Row dedicated to its Maisons division, housing Corveau, Bellmont and Duquesne under one roof. CEO Bram Wold said the boutique is the first of six planned openings and is meant to lift fine-goods margins toward the group's timepiece levels. The company reported early-quarter Maisons sell-through running ahead of internal targets.",
       "cycle": 82602,
-      "dur": 2
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Bruncrest Works Rebounds as Streamlined Aria Series Fuels Margin Recovery",
-      "body": "Bruncrest reported quarterly revenue of 2.3B, up 11% sequentially, with operating margins expanding 340 basis points as the leaner Aria Compute lineup carried lower production overhead. CEO Ines Marlow declared the overhaul 'vindicated,' touting the fewest product SKUs in a decade while unit shipments climbed 7%. Analysts noted the beat marks the first upside surprise since Marlow's restructure began.",
-      "cycle": 82601,
-      "dur": 2
-    },
-    {
-      "company": "Castlegear Group",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Castlegear Group Tops Estimates as Tray System and Equipment Orders Convert to Revenue",
-      "body": "Castlegear posted revenue of 1.1B, up 6% year on year, as the multi-hospital tray pact and its equipment addendum began shipping in volume. CEO Sable Brandt highlighted a 92% reorder rate on consumables tied to the tray system, calling the recurring stream 'the foundation of steady growth.' The medical supplier reaffirmed its full-year outlook.",
-      "cycle": 82601,
-      "dur": 2
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Drustcraft Breaks Ground on New Plant to Serve Twin Global Vehicle Lines",
-      "body": "Drustcraft committed 380M to a dedicated auto-parts facility supporting the two global vehicle lines it won last quarter, with production targeted for late 2027. CEO Cora Fenn said the plant would add roughly 900 jobs and lift auto-parts capacity by a third. The move underscores Drustcraft's pivot toward higher-value components alongside its fastener core.",
-      "cycle": 82601,
-      "dur": 2
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halcyon Industries Brings Automation Blueprint to Third Site at Eastmere",
-      "body": "Halcyon announced a 210M automation rollout at its Eastmere packaging hub, replicating the systems that lifted margins at Northgate and Southport. CEO Dorian Ashby said the phased buildout would complete within four quarters and target similar throughput gains. The logistics packager now has three of its five major hubs on the automation playbook.",
-      "cycle": 82601,
       "dur": 2
     },
     {
@@ -130,26 +150,6 @@
       "body": "Disclosed court filings show Marlgear leadership was warned of failure risks in the Atlas and Drennan lines as early as 2021, yet delayed action until regulators intervened. The revelations sent shares to a multi-year low and prompted the board to open an independent review of CEO Halden Vossen's handling of the crisis. Two state attorneys general signaled they would broaden their existing suits to pursue punitive claims.",
       "cycle": 82601,
       "dur": 8
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Skarngrove & Sons Extends Kelvarn Work With Second-Phase Structural Contract",
-      "body": "Skarngrove secured a 620M follow-on award covering structural materials for the Kelvarn Bridge program's northern approach spans, extending its supply role through 2031. CEO Quinn Fenn said the newly expanded capacity, brought online last quarter, would absorb the added volume without further capital outlay. The win deepens Skarngrove's position as the program's dominant materials supplier.",
-      "cycle": 82601,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Vossenspire Supply Debuts First Timepiece From Newly Acquired Halden Chronometrics",
-      "body": "Vossenspire unveiled the Meridian Perpetual, the first watch developed since its 1.4B Halden Chronometrics acquisition, priced from 48,000 and limited to 500 pieces. CEO Quinn Marrow framed the launch as proof the integration is already yielding product, pairing Halden's movement expertise with Vossenspire's heritage badge. The company said initial allocations were fully spoken for by distribution partners.",
-      "cycle": 82601,
-      "dur": 2
     },
     {
       "company": "Carrowforge",
@@ -249,36 +249,6 @@
       "head": "Halhold Works to Wind Down Verity Pro Line as Faircloth Unveils Sweeping Medical Overhaul",
       "body": "New CEO Lena Faircloth announced the discontinuation of the entire Verity Pro medical line and a $340M charge to fund a full redesign under a rebuilt quality division. The plan cuts roughly 900 roles across two plants and installs former Fennmoor engineer Sana Roeper as chief quality officer, with a pledged independent oversight board reporting quarterly. Faircloth called it 'a painful reset that buys us a future.'",
       "cycle": 82596,
-      "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "expansion",
-      "size": "major",
-      "head": "Boreas Power Commits $1.9 Billion to Double Hollowmere Campus After Full Tenant Lease-Up",
-      "body": "With all initial capacity leased, Boreas Power announced a $1.9-billion phase-two buildout to double Hollowmere's compute and storage footprint. CEO Mira Thorne said demand from waitlisted customers justified the largest single-site commitment in the company's history. The expansion adds 900 megawatts of storage-backed capacity, with first tenants slated to move in within eighteen months.",
-      "cycle": 82595,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Regulators Open Formal Safety Probe Into Bruncraft Runabout Axles Beyond Recalled Units",
-      "body": "Federal safety authorities opened a formal investigation into whether the Halveston axle defect extends past the 140,000 recalled Runabouts, potentially covering an additional 300,000 vehicles. Investigators cited a rise in complaints logged during Bruncraft's Talvorne integration. CEO Orla Marrow pledged full cooperation but warned the probe could disrupt near-term production schedules.",
-      "cycle": 82595,
-      "dur": 8
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Carrowwell Signs $1.1-Billion Multi-Year Automation Pact With National Logistics Network",
-      "body": "Carrowwell secured its largest-ever contract, a $1.1-billion agreement to supply modular warehouse automation across 40 logistics sites over four years. CEO Theo Thorne said the deal transforms the automation unit from a growth line into the company's anchor business. The recently expanded plant and new third shift will be dedicated primarily to fulfilling the rollout.",
-      "cycle": 82595,
       "dur": 8
     }
   ]

@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82583,
+    "lastEventCycle": 82603,
     "events": [
       {
         "cycle": 0,
@@ -66,6 +66,16 @@
         "size": "standard",
         "head": "Aldouscraft Mfg. Wins Multi-Year Feeder Cable Supply Award for Grid Expansion",
         "body": "Aldouscraft secured a multi-year supply award to provide high-capacity feeder cable for a regional grid buildout, valued at roughly $220M. CEO Soren Ashby said the contract locks in demand for the recently commissioned feeder line through the decade. Deliveries begin in the coming quarter under a phased schedule.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82603,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Aldouscraft Mfg. Adds Third Extrusion Line to Meet Grid Cable Commitments",
+        "body": "Aldouscraft committed $210 million to a third high-capacity extrusion line at its Hartwell plant, aimed squarely at fulfilling its multi-year feeder cable award. CEO Soren Ashby said the line would lift annual conductor output by roughly 28% once fully commissioned next year. Management framed the move as measured capacity-matching rather than speculative buildout.",
         "effects": {
           "construction": 0.13
         }
@@ -1063,7 +1073,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82595,
+    "lastEventCycle": 82603,
     "events": [
       {
         "cycle": 0,
@@ -1179,6 +1189,16 @@
         "size": "major",
         "head": "Regulators Open Formal Safety Probe Into Bruncraft Runabout Axles Beyond Recalled Units",
         "body": "Federal safety authorities opened a formal investigation into whether the Halveston axle defect extends past the 140,000 recalled Runabouts, potentially covering an additional 300,000 vehicles. Investigators cited a rise in complaints logged during Bruncraft's Talvorne integration. CEO Orla Marrow pledged full cooperation but warned the probe could disrupt near-term production schedules.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82603,
+        "kind": "recall",
+        "size": "major",
+        "head": "Bruncraft Widens Recall to 610,000 Vehicles as Axle Probe Expands",
+        "body": "Bruncraft dramatically expanded its recall to 610,000 Runabout and Talvorne-badged units after regulators found the Halveston axle defect extended well beyond the original batch. CEO Orla Marrow estimated remediation costs at $480 million and suspended two Talvorne production lines mid-integration. The scope has rattled confidence in Bruncraft's aggressive absorption of Talvorne Motors.",
         "effects": {
           "automotive": -0.22
         }
@@ -1436,7 +1456,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82594,
+    "lastEventCycle": 82603,
     "events": [
       {
         "cycle": 0,
@@ -1542,6 +1562,16 @@
         "size": "major",
         "head": "Brunmark Motors Faces Regulatory Probe Into Veyra S Battery Packs After Fire Reports",
         "body": "Regulators opened a formal investigation into the Veyra S performance platform following six reported thermal incidents tied to its Power & Storage packs. Yvette Calder said Brunmark is cooperating fully and has paused new Veyra S deliveries pending internal testing, though she stopped short of a recall. The probe casts a shadow over what had been the company's boldest model expansion in years.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82603,
+        "kind": "recall",
+        "size": "major",
+        "head": "Brunmark Recalls Entire Veyra S Fleet as Battery Probe Turns Serious",
+        "body": "Brunmark ordered a full recall of all 96,000 Veyra S units after regulators linked the battery-pack fires to a cell-seal defect, escalating from the earlier probe. CEO Yvette Calder halted Veyra S deliveries and set aside $620 million for pack replacements and inspections. The turbulence overshadows the platform's ambitious launch just months ago.",
         "effects": {
           "automotive": -0.22
         }
@@ -2695,7 +2725,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82597,
+    "lastEventCycle": 82603,
     "events": [
       {
         "cycle": 0,
@@ -2837,6 +2867,16 @@
         "size": "major",
         "head": "Castlestone Smashes Estimates as National Data Grid Pact Powers Record Quarter",
         "body": "Castlestone reported quarterly revenue of $4.2B, up 71% year over year, as first deliveries under the $9.5B National Data Grid contract began recognizing. CEO Pell Karsh declared the quarter 'the moment Halo went from a product to an infrastructure,' and lifted full-year guidance by roughly 18%. High-density tier orders alone contributed $1.1B, prompting management to flag capacity expansion at two fabrication sites.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82603,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Castlestone Lands $14B Compute Framework, Doubling Down on National Data Grid",
+        "body": "Castlestone signed a $14 billion multi-phase framework to supply the second and third build stages of the National Data Grid, its largest commitment on record. CEO Pell Karsh called it \"the deal that defines the decade,\" pledging two new fabrication halls and a tripling of the Halo high-density tier. Skeptics questioned whether Castlestone can scale delivery without straining its balance sheet after back-to-back record awards.",
         "effects": {
           "technology": 0.22
         }
@@ -3641,7 +3681,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82588,
+    "lastEventCycle": 82603,
     "events": [
       {
         "cycle": 0,
@@ -3707,6 +3747,16 @@
         "size": "standard",
         "head": "Fenncyon Beats and Raises Again as Eastfield Corridor Hits Full Stride",
         "body": "The earthmoving maker posted revenue of $2.4 billion, up 22%, as the $1.9-billion Eastfield rail contract entered peak activity across both staging yards. CEO Nadia Ashby lifted full-year guidance for a second consecutive quarter and hinted at bidding on an adjacent highway package expected to tender next year.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82603,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Fenncyon Wins $900M Extension for Eastfield Corridor's Northern Spur",
+        "body": "Building on its Eastfield momentum, Fenncyon secured a $900 million extension covering the corridor's Northern Spur earthworks and grading. CEO Nadia Ashby said the award leverages the second staging yard opened earlier this year, avoiding fresh capital outlay. The extension pushes Fenncyon's committed Eastfield backlog past $3.7 billion.",
         "effects": {
           "construction": 0.13
         }
@@ -4494,7 +4544,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82591,
+    "lastEventCycle": 82603,
     "events": [
       {
         "cycle": 0,
@@ -4570,6 +4620,16 @@
         "size": "standard",
         "head": "Halcrest Posts Record Salon Sales as Meridian Grand Complication Sells Out",
         "body": "Halcrest reported quarterly revenue of $146M, a company record, after the Meridian Grand Complication sold through its initial allocation within weeks. CEO Iris Marrow said waitlists at the Vireo Row salon now stretch past a year for the top-tier pieces. The result vindicated Marrow's decision to anchor the collection around a single high-margin flagship.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82603,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halcrest Opens Flagship Salon Row Boutique Alongside Meridian Petite Debut",
+        "body": "Riding the sold-out Grand Complication, Iris Marrow unveiled the Meridian Petite, a slimmer entry into the celebrated line, at a new flagship boutique on the Row. The Petite starts at a fraction of the Grand Complication's price, aimed at broadening Halcrest's clientele without diluting its exclusivity. Marrow said the boutique doubles the house's direct salon footprint.",
         "effects": {
           "luxury": 0.13
         }
@@ -5204,7 +5264,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82589,
+    "lastEventCycle": 82603,
     "events": [
       {
         "cycle": 0,
@@ -5270,6 +5330,16 @@
         "size": "standard",
         "head": "Hesperforge Supply Rolls Out Marine-Grade Beam Line as Second Mill Comes Online",
         "body": "Hesperforge unveiled a corrosion-resistant structural beam engineered specifically for coastal spans, with first output already routed to the Bridgeworks program. Sable Halloran said the new mill's initial line will run at roughly 40 percent capacity through commissioning before ramping into next year. The launch cements Hesperforge as the anchor supplier for the region's bridge buildout.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82603,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Hesperforge Beats as Marine-Grade Beam Line Fills Second Mill's Order Book",
+        "body": "Hesperforge topped estimates with quarterly revenue of $1.4 billion, up 19%, as the new marine-grade beam line ran near capacity from launch. CEO Sable Halloran credited the Coastal Bridgeworks pipeline and said the second mill reached breakeven ahead of schedule. Textile contracts added a steady secondary lift to margins.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -6319,7 +6389,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82597,
+    "lastEventCycle": 82603,
     "events": [
       {
         "cycle": 0,
@@ -6467,6 +6537,16 @@
         "body": "Lhaus began construction on a fourth cell-pack line at its Torren works, a $1.8B investment aimed at servicing a backlog that has swelled past $50B after its record deal. CEO Cole Brandt said the added capacity would 'take delivery risk off the table' for fleet customers waiting into next year. The line is targeted to reach volume output within 14 months.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82603,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Lhaus Misses as Fourth-Line Startup Costs Bite Into Margins",
+        "body": "Lhaus fell short of estimates despite record revenue, as commissioning costs for its fourth cell-pack line compressed margins to 8.2% from 12.5% a year earlier. CEO Cole Brandt defended the aggressive buildout, insisting the $31B backlog justifies near-term pain. Analysts flagged rising leverage as Lhaus stacks capacity faster than deliveries convert to cash.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
