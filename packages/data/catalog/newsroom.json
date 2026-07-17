@@ -1,24 +1,84 @@
 {
-  "generatedAt": "2026-07-17T08:12:33.283Z",
+  "generatedAt": "2026-07-17T13:42:05.908Z",
   "beats": [
     {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Castlehold Slashes Guidance as Saltmere Bill Tops $3.1B and Regulators Weigh Site Shutdowns",
+      "body": "Castlehold reported a wider-than-expected quarterly loss and cut full-year guidance after Saltmere cleanup and liability provisions ballooned to $3.1B. The ongoing safety probe now includes a possible suspension order on two of the four Saltmere storage sites, which together hold nearly 40% of the company's capacity. CEO Ivo Reneth acknowledged the firm is exploring asset sales to shore up its balance sheet.",
+      "cycle": 82606,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Halhold Systems Names Turnaround Veteran Corin Vale as CEO; Marchetti Steps Down Amid Northgate Reckoning",
+      "body": "The board appointed Corin Vale, formerly head of infrastructure at a rival compute house, to replace Sela Marchetti, whose two-year tenure ended after the twin Northgate blackouts and the memo scandal. Vale inherits an estimated $340M in contested client credits and a review of every Halhold data facility, pledging a 90-day reliability audit. Three anchor clients have paused renewals pending the outcome.",
+      "cycle": 82606,
+      "dur": 8
+    },
+    {
+      "company": "Hearthstone Group",
+      "sector": "hospitality",
       "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Hearthstone Group Beats as Refill Depot Network Drives Household Goods Growth",
+      "body": "Hearthstone reported revenue of $1.24B, above the $1.19B estimate, with the newly opened refill depots contributing faster-than-expected volumes across the three new regions. Refillable lines now account for nearly a third of household goods sales. CEO Aurelia Aldous raised full-year margin guidance by half a point.",
+      "cycle": 82606,
+      "dur": 2
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "expansion",
       "size": "flash",
-      "head": "Aldousmont & Sons Posts Another Steady Quarter as Peel-Free Wrap Holds Share",
-      "body": "Dunmore Calder reported modest revenue growth of 4 percent, with the peel-free sterile wrap sustaining adoption across high-volume wards and the multi-region contracts now fully bedded in. Margins held flat as input costs stayed contained. Calder offered a characteristically restrained outlook, guiding to 'continued steady performance' for the coming period.",
-      "cycle": 82605,
+      "head": "Kesselgrove Co. Expands Modular Press Line With New Tooling Bay",
+      "body": "Kesselgrove opened a dedicated tooling bay at its main plant to shorten changeover times on the modular press platform, a $31M investment. CEO Orla Steg said the addition should lift second-line output by roughly 12% while keeping the order book flowing cleanly.",
+      "cycle": 82606,
       "dur": 1
     },
     {
-      "company": "Blackmoor",
-      "sector": "agriculture",
+      "company": "Korrwright Works",
+      "sector": "luxury",
       "kind": "product_launch",
+      "size": "standard",
+      "head": "Korrwright Works Unveils First Timepieces Built on In-House Vellhorn Escapements",
+      "body": "Korrwright debuted its Meridian collection, the first line to feature escapements from the recently acquired Vellhorn Movements, priced from $8,400. CEO Dunmore Carrow said full vertical integration cuts reliance on outside suppliers and improves margins on the heritage division's flagship pieces. Initial allocations to boutiques are already spoken for.",
+      "cycle": 82606,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
+      "kind": "expansion",
       "size": "flash",
-      "head": "Blackmoor Adds Wide-Row Variant to Holloway Seed-Drill Line",
-      "body": "Soren Dray introduced a wide-row configuration of the Holloway seed-drill aimed at larger acreage operations, extending the range that has anchored recent quarters. The variant enters limited field trials this season ahead of a broader rollout. Dray characterized the move as 'a natural step, not a leap,' consistent with the firm's long-horizon approach.",
-      "cycle": 82605,
+      "head": "Ornewright Supply Adds Cold-Chain Line at Caldmere as Food Service Volumes Climb",
+      "body": "The company installed a dedicated refrigerated distribution line at its second Caldmere hub to meet rising food service demand under the regional contract. The $46M addition is expected to lift throughput by about 18% once fully online this fall. CEO Rhys Throne said the move keeps capacity ahead of committed orders.",
+      "cycle": 82606,
+      "dur": 1
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Stegforge Locks Multi-Year Structural Materials Deal With Rail Consortium",
+      "body": "Stegforge signed a four-year framework to supply structural alloys and beams to the Verrun rail consortium, valued at roughly $780M over the term. The agreement leans on the newly commissioned second furnace and slots directly into the machinery backlog, with first deliveries scheduled next quarter. CEO Aurelia Steg called it a natural extension of the alloy strategy.",
+      "cycle": 82606,
+      "dur": 2
+    },
+    {
+      "company": "Venline & Sons",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Venline & Sons Logs Modest Beat as Marden Cleanroom Reaches Full Utilization",
+      "body": "The medical consumables maker reported quarterly revenue of $612M, edging past the $605M consensus, with the Marden cleanroom now running at capacity. CEO Mara Garr credited durable demand for sterile packaging and reaffirmed the company's unhurried expansion cadence.",
+      "cycle": 82606,
       "dur": 1
     },
     {
@@ -102,26 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Gromford Works Extends Meridian Line With Limited Skeleton Timepiece Series",
-      "body": "Corin Aldwych unveiled the Meridian Skeleton, a 500-unit limited run showcasing an exposed movement priced at nearly triple the base collection. The launch anchors the flagship salon's holiday calendar, with Aldwych touting waitlists at three of the four regional boutiques.",
-      "cycle": 82604,
-      "dur": 2
-    },
-    {
-      "company": "Palettstone & Sons",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Palettstone & Sons Unveils Heirloom Pro Precision Set to Build on National Momentum",
-      "body": "Building on the record national rollout, Cole Fenn introduced a nine-piece Heirloom Pro Precision Set aimed at finish carpenters and hobbyists, priced at a 20 percent premium to the flagship line. The company said pre-orders from its national chain partner covered the first production run within two weeks, with initial shelf placement slated for 1,400 stores.",
-      "cycle": 82604,
-      "dur": 2
-    },
-    {
       "company": "Thaldale Group",
       "sector": "consumer",
       "kind": "lawsuit",
@@ -130,16 +170,6 @@
       "body": "A group of shareholders filed suit against Thaldale and CEO Renna Voss, alleging the company knowingly overstated fastening-plant production to sustain its rebound narrative. The complaint seeks damages tied to the share decline since the probe surfaced, and an independent audit committee has been formed to review three quarters of output reporting.",
       "cycle": 82604,
       "dur": 8
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Thronehaus & Co. Acquires Specialty Dial Maker to Deepen In-House Control",
-      "body": "Restless as ever, Cora Dray struck a deal to acquire Halvern Dialworks, a boutique dial manufacturer, for an undisclosed sum estimated near 55 million. The purchase extends Thronehaus's vertical integration beyond the Aldren Foundry casings and is expected to feed the fast-selling Verrand collection with proprietary dials by next year.",
-      "cycle": 82604,
-      "dur": 2
     },
     {
       "company": "Woldmark",
@@ -259,16 +289,6 @@
       "head": "Halhold Systems Ousts Dahlia Renn as Board Moves to Contain Northgate Fallout",
       "body": "The Halhold board removed CEO Dahlia Renn on Thursday, capping weeks of turmoil after leaked memos showed Northgate blackout warnings had been dismissed. Director Marcus Vell will serve as chair of a transition committee while operations veteran Sela Marchetti steps in to steady client relations, three of which had threatened to void contracts. The company also disclosed a $410 million charge tied to service credits and remediation.",
       "cycle": 82599,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Greywater Grid Launches Sweeping Overhaul as Outage Fallout Deepens",
-      "body": "Following penalty clauses and a slashed guidance, Halloran unveiled a restructuring that splits the compute and power divisions into separately managed units and cuts 900 roles. The company will write down 260 million marks tied to the failed campus and appoint an independent reliability board. Halloran conceded the multi-region contract remains 'under strain' as clients weigh their options.",
-      "cycle": 82598,
       "dur": 8
     }
   ]

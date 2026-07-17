@@ -2563,7 +2563,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82599,
+    "lastEventCycle": 82606,
     "events": [
       {
         "cycle": 0,
@@ -2685,6 +2685,16 @@
         "size": "major",
         "head": "Regulators Open Formal Safety Probe Into Castlehold's Saltmere Storage Sites",
         "body": "A national energy regulator opened a formal investigation Friday into containment failures at Castlehold's Saltmere legacy storage facilities, escalating a crisis that has already produced a $1.9 billion cleanup bill and an investor suit. Ivo Reneth said the company is 'fully cooperating' but declined to estimate potential penalties. Two Saltmere sites were ordered offline pending inspection.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82606,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Castlehold Slashes Guidance as Saltmere Bill Tops $3.1B and Regulators Weigh Site Shutdowns",
+        "body": "Castlehold reported a wider-than-expected quarterly loss and cut full-year guidance after Saltmere cleanup and liability provisions ballooned to $3.1B. The ongoing safety probe now includes a possible suspension order on two of the four Saltmere storage sites, which together hold nearly 40% of the company's capacity. CEO Ivo Reneth acknowledged the firm is exploring asset sales to shore up its balance sheet.",
         "effects": {
           "energy": -0.22
         }
@@ -4916,14 +4926,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1972,
-    "ceo": "Sela Marchetti",
+    "ceo": "Corin Vale",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.86,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82599,
+    "lastEventCycle": 82606,
     "events": [
       {
         "cycle": 0,
@@ -5077,6 +5087,14 @@
         "size": "major",
         "head": "Halhold Systems Ousts Dahlia Renn as Board Moves to Contain Northgate Fallout",
         "body": "The Halhold board removed CEO Dahlia Renn on Thursday, capping weeks of turmoil after leaked memos showed Northgate blackout warnings had been dismissed. Director Marcus Vell will serve as chair of a transition committee while operations veteran Sela Marchetti steps in to steady client relations, three of which had threatened to void contracts. The company also disclosed a $410 million charge tied to service credits and remediation.",
+        "effects": {}
+      },
+      {
+        "cycle": 82606,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Systems Names Turnaround Veteran Corin Vale as CEO; Marchetti Steps Down Amid Northgate Reckoning",
+        "body": "The board appointed Corin Vale, formerly head of infrastructure at a rival compute house, to replace Sela Marchetti, whose two-year tenure ended after the twin Northgate blackouts and the memo scandal. Vale inherits an estimated $340M in contested client credits and a review of every Halhold data facility, pledging a 90-day reliability audit. Three anchor clients have paused renewals pending the outcome.",
         "effects": {}
       }
     ]
@@ -5281,7 +5299,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82589,
+    "lastEventCycle": 82606,
     "events": [
       {
         "cycle": 0,
@@ -5337,6 +5355,16 @@
         "size": "standard",
         "head": "Hearthstone Group Opens Refill Depot Network Across Three New Regions",
         "body": "Hearthstone said it will bring its refillable range to a further 900 retail points via a new hub-and-depot logistics model, backed by a 120 million mark investment. Aurelia Aldous framed the move as answering demand that has outrun the company's current distribution footprint. The rollout is expected to complete over 18 months.",
+        "effects": {
+          "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82606,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Hearthstone Group Beats as Refill Depot Network Drives Household Goods Growth",
+        "body": "Hearthstone reported revenue of $1.24B, above the $1.19B estimate, with the newly opened refill depots contributing faster-than-expected volumes across the three new regions. Refillable lines now account for nearly a third of household goods sales. CEO Aurelia Aldous raised full-year margin guidance by half a point.",
         "effects": {
           "hospitality": 0.13
         }
@@ -6034,7 +6062,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82592,
+    "lastEventCycle": 82606,
     "events": [
       {
         "cycle": 0,
@@ -6100,6 +6128,16 @@
         "size": "flash",
         "head": "Kesselgrove Co. Edges Past Estimates as Second Line Ramps Cleanly",
         "body": "Kesselgrove reported quarterly earnings of $3.12 a share against a $2.95 consensus, aided by faster-than-expected output from its new modular press assembly line. Steg reaffirmed full-year guidance, citing 'orderly conversion' of the multi-plant backlog.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82606,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Kesselgrove Co. Expands Modular Press Line With New Tooling Bay",
+        "body": "Kesselgrove opened a dedicated tooling bay at its main plant to shorten changeover times on the modular press platform, a $31M investment. CEO Orla Steg said the addition should lift second-line output by roughly 12% while keeping the order book flowing cleanly.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -6356,7 +6394,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82600,
+    "lastEventCycle": 82606,
     "events": [
       {
         "cycle": 0,
@@ -6482,6 +6520,16 @@
         "size": "standard",
         "head": "Korrwright Works Acquires Vellhorn Movements to Secure In-House Escapements",
         "body": "Korrwright Works announced the 340 million-crown purchase of Vellhorn Movements, a specialist escapement maker, bringing a key supplier under the Unified Heritage Division. CEO Dunmore Carrow said the deal 'ends our dependence on outside calibers' and will feed directly into the expanding Sennfeld Revival line.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82606,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Korrwright Works Unveils First Timepieces Built on In-House Vellhorn Escapements",
+        "body": "Korrwright debuted its Meridian collection, the first line to feature escapements from the recently acquired Vellhorn Movements, priced from $8,400. CEO Dunmore Carrow said full vertical integration cuts reliance on outside suppliers and improves margins on the heritage division's flagship pieces. Initial allocations to boutiques are already spoken for.",
         "effects": {
           "luxury": 0.13
         }
@@ -7276,7 +7324,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82591,
+    "lastEventCycle": 82606,
     "events": [
       {
         "cycle": 0,
@@ -7344,6 +7392,16 @@
         "body": "Ornewright posted quarterly revenue of $684M, up 11% year over year, as the anchored regional food service contract absorbed volume from the first Caldmere hub expansion. CEO Rhys Throne said the second hub build remains on schedule, with framing complete on the primary warehouse block. Margins held steady despite elevated farm-input freight costs.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82606,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Ornewright Supply Adds Cold-Chain Line at Caldmere as Food Service Volumes Climb",
+        "body": "The company installed a dedicated refrigerated distribution line at its second Caldmere hub to meet rising food service demand under the regional contract. The $46M addition is expected to lift throughput by about 18% once fully online this fall. CEO Rhys Throne said the move keeps capacity ahead of committed orders.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -7906,7 +7964,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82591,
+    "lastEventCycle": 82606,
     "events": [
       {
         "cycle": 0,
@@ -7972,6 +8030,16 @@
         "size": "standard",
         "head": "Stegforge Adds Second Furnace at Alloy Plant to Clear Machinery Backlog",
         "body": "Stegforge is installing a second furnace at its new alloy plant, a $175M investment aimed at unclogging a machinery order backlog that has stretched delivery windows to nine months. CEO Aurelia Steg said the added melt capacity will also feed the structural-materials framework signed earlier this year. Commissioning is targeted for the second half of next year.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82606,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Stegforge Locks Multi-Year Structural Materials Deal With Rail Consortium",
+        "body": "Stegforge signed a four-year framework to supply structural alloys and beams to the Verrun rail consortium, valued at roughly $780M over the term. The agreement leans on the newly commissioned second furnace and slots directly into the machinery backlog, with first deliveries scheduled next quarter. CEO Aurelia Steg called it a natural extension of the alloy strategy.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -8898,7 +8966,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82576,
+    "lastEventCycle": 82606,
     "events": [
       {
         "cycle": 0,
@@ -8934,6 +9002,16 @@
         "size": "flash",
         "head": "Venline & Sons Posts Another Quiet Beat as Marden Cleanroom Ramps",
         "body": "Venline edged past estimates with revenue up 4% as the expanded Marden cleanroom began contributing sterile consumables volume. CEO Mara Garr reaffirmed the company's long-horizon stance, declining to raise guidance despite the stronger start. Order backlogs from hospital networks remained comfortably booked into next year.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82606,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Venline & Sons Logs Modest Beat as Marden Cleanroom Reaches Full Utilization",
+        "body": "The medical consumables maker reported quarterly revenue of $612M, edging past the $605M consensus, with the Marden cleanroom now running at capacity. CEO Mara Garr credited durable demand for sterile packaging and reaffirmed the company's unhurried expansion cadence.",
         "effects": {
           "medical": 0.06
         }
