@@ -3495,7 +3495,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82586,
+    "lastEventCycle": 82604,
     "events": [
       {
         "cycle": 0,
@@ -3553,6 +3553,16 @@
         "body": "The construction group topped forecasts with quarterly earnings of 71 million, lifted by the ramp on the 210 million Riverside Civic Complex. CEO Emil Skarn noted the new fabrication yard is now running two shifts, and said plumbing and fixtures orders had outpaced earthmoving for the first time in several quarters.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82604,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Dunmorewright Lands 340 Million Harborfront Infrastructure Contract in Largest-Ever Award",
+        "body": "Emil Skarn secured the Harborfront redevelopment package, a 340 million commitment spanning drainage, earthmoving and fixture installation across a four-year build. The win, Dunmorewright's largest on record, pushes the total backlog past 800 million and prompted management to signal a second shift at the new fabrication yard.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -3774,7 +3784,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82596,
+    "lastEventCycle": 82604,
     "events": [
       {
         "cycle": 0,
@@ -3882,6 +3892,16 @@
         "body": "The Larkspur One diagnostics platform earned the annual Meridian Medical Technology Award for its Threll-powered sensor, cited for halving test turnaround in clinical settings. CEO Dorian Brandt said recognition should accelerate conversations with two additional hospital networks. The honor caps a busy stretch of rollout and capacity expansion for the unit.",
         "effects": {
           "technology": 0.06
+        }
+      },
+      {
+        "cycle": 82604,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Fennmoor Signs Landmark Hospital Network Deal to Deploy Threll Sensors Nationwide",
+        "body": "Dorian Brandt secured a multi-year agreement to install award-winning Threll-powered sensors across a 60-hospital network, a contract valued at 280 million over five years. The deal marks Fennmoor's largest medical-equipment commitment to date and prompted the company to commit to a third Larkspur production line to meet the deployment schedule.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -4146,7 +4166,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82574,
+    "lastEventCycle": 82604,
     "events": [
       {
         "cycle": 0,
@@ -4182,6 +4202,16 @@
         "size": "flash",
         "head": "Garrweave Mills Posts Steady Gains as Northfield Line Reaches Full Output",
         "body": "The reopened Northfield spinning line hit full capacity ahead of schedule, lifting quarterly fiber volumes 9%. CEO Lorne Veldt said the decade-long supply pact now accounts for nearly a third of the mill's output, providing a stable base through the cycle. Margins held firm despite modest raw-cotton price pressure.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82604,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Garrweave Mills Edges Higher as Northfield Line Sustains Full Output",
+        "body": "Lorne Veldt reported another quarter of steady gains, with the reopened Northfield spinning line holding full capacity against the decade-long fiber pact. Management reaffirmed its long-horizon guidance and noted modest yield improvements from routine equipment tuning.",
         "effects": {
           "textiles": 0.06
         }
@@ -4375,7 +4405,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82598,
+    "lastEventCycle": 82604,
     "events": [
       {
         "cycle": 0,
@@ -4527,6 +4557,16 @@
         "size": "standard",
         "head": "Gromford Works Tops Estimates as Meridian Sales Fuel Flagship Traffic",
         "body": "Quarterly revenue rose 19% to 340 million marks, driven by Meridian Timepiece demand and strong foot traffic at the newly opened flagship salon. Aldwych credited the award-season buzz and hinted at a limited Meridian complication series before year-end. Fine Goods margins held steady despite raw-metal cost pressure.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82604,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Extends Meridian Line With Limited Skeleton Timepiece Series",
+        "body": "Corin Aldwych unveiled the Meridian Skeleton, a 500-unit limited run showcasing an exposed movement priced at nearly triple the base collection. The launch anchors the flagship salon's holiday calendar, with Aldwych touting waitlists at three of the four regional boutiques.",
         "effects": {
           "luxury": 0.13
         }
@@ -7322,7 +7362,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82587,
+    "lastEventCycle": 82604,
     "events": [
       {
         "cycle": 0,
@@ -7378,6 +7418,16 @@
         "size": "standard",
         "head": "Palettstone & Sons Posts Record Quarter on National Heirloom Pro Rollout",
         "body": "The national chain rollout lifted Palettstone revenue 18 percent year-over-year to 336 million, its strongest quarter in the company's 117-year history. CEO Cole Fenn credited disciplined inventory management and hinted at a companion mid-tier line to capture shoppers priced out of the award-winning Heirloom Pro.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82604,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Palettstone & Sons Unveils Heirloom Pro Precision Set to Build on National Momentum",
+        "body": "Building on the record national rollout, Cole Fenn introduced a nine-piece Heirloom Pro Precision Set aimed at finish carpenters and hobbyists, priced at a 20 percent premium to the flagship line. The company said pre-orders from its national chain partner covered the first production run within two weeks, with initial shelf placement slated for 1,400 stores.",
         "effects": {
           "consumer": 0.13
         }
@@ -7942,7 +7992,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82592,
+    "lastEventCycle": 82604,
     "events": [
       {
         "cycle": 0,
@@ -8019,6 +8069,16 @@
         "effects": {
           "consumer": -0.22
         }
+      },
+      {
+        "cycle": 82604,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Thaldale Group Hit With Investor Lawsuit Over Alleged Fastening-Plant Output Claims",
+        "body": "A group of shareholders filed suit against Thaldale and CEO Renna Voss, alleging the company knowingly overstated fastening-plant production to sustain its rebound narrative. The complaint seeks damages tied to the share decline since the probe surfaced, and an independent audit committee has been formed to review three quarters of output reporting.",
+        "effects": {
+          "consumer": -0.22
+        }
       }
     ]
   },
@@ -8033,7 +8093,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82596,
+    "lastEventCycle": 82604,
     "events": [
       {
         "cycle": 0,
@@ -8139,6 +8199,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Beats as Verrand Collection Sells Through Ahead of Plan",
         "body": "Thronehaus reported gross margin at a decade high after the in-house Verrand Collection cleared initial allocations faster than expected, lifting average selling prices. CEO Cora Dray said the Aldren-backed foundry is now running near full capacity and hinted at a second collection built on the same casings. Revenue rose 9% year over year.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82604,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Thronehaus & Co. Acquires Specialty Dial Maker to Deepen In-House Control",
+        "body": "Restless as ever, Cora Dray struck a deal to acquire Halvern Dialworks, a boutique dial manufacturer, for an undisclosed sum estimated near 55 million. The purchase extends Thronehaus's vertical integration beyond the Aldren Foundry casings and is expected to feed the fast-selling Verrand collection with proprietary dials by next year.",
         "effects": {
           "luxury": 0.13
         }
@@ -9242,7 +9312,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82594,
+    "lastEventCycle": 82604,
     "events": [
       {
         "cycle": 0,
@@ -9330,6 +9400,16 @@
         "body": "Woldmark reported a second straight quarter of margin improvement in its Halcyon delivery arm, with operating margin up 3.1 points from the trough. Cole Carrow, never shy about a victory lap, declared the turnaround \"locked in\" and hinted at reinvesting savings into a new compute tier. Analysts noted revenue growth remains modest even as profitability firms.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82604,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Woldmark Debuts Halcyon 2 Compute Platform in Carrow's Biggest Bet Since Overhaul",
+        "body": "With margins stabilized, Cole Carrow launched the Halcyon 2 platform, a full generational refresh promising 40 percent higher throughput and a rebuilt delivery pipeline forged during the restructure. Carrow framed the release as the payoff of two years of margin discipline, though the company acknowledged a heavy ramp of upfront costs through the next two quarters.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
