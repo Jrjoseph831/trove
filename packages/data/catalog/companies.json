@@ -176,7 +176,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82588,
+    "lastEventCycle": 82605,
     "events": [
       {
         "cycle": 0,
@@ -232,6 +232,16 @@
         "size": "flash",
         "head": "Aldousmont & Sons Edges Higher as Multi-Region Contract Volumes Settle In",
         "body": "The medical consumables house reported quarterly revenue of $612 million, up 4.1% year-on-year, with the peel-free wrap line now representing roughly a fifth of ward-supply sales. Chief executive Dunmore Calder credited steady reorder rates across the multi-region hospital agreement and reaffirmed full-year guidance without fanfare.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82605,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldousmont & Sons Posts Another Steady Quarter as Peel-Free Wrap Holds Share",
+        "body": "Dunmore Calder reported modest revenue growth of 4 percent, with the peel-free sterile wrap sustaining adoption across high-volume wards and the multi-region contracts now fully bedded in. Margins held flat as input costs stayed contained. Calder offered a characteristically restrained outlook, guiding to 'continued steady performance' for the coming period.",
         "effects": {
           "medical": 0.06
         }
@@ -708,7 +718,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82584,
+    "lastEventCycle": 82605,
     "events": [
       {
         "cycle": 0,
@@ -754,6 +764,16 @@
         "size": "flash",
         "head": "Blackmoor Nudges Ahead as Holloway Seed-Drill Backlog Extends",
         "body": "The 118-year-old equipment maker reported quarterly revenue up 4 percent, with the updated Holloway range now carrying a 14-week order backlog. CEO Soren Dray reiterated the firm's unhurried stance, noting the second assembly line will not run at full tilt until spring demand confirms itself.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82605,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Blackmoor Adds Wide-Row Variant to Holloway Seed-Drill Line",
+        "body": "Soren Dray introduced a wide-row configuration of the Holloway seed-drill aimed at larger acreage operations, extending the range that has anchored recent quarters. The variant enters limited field trials this season ahead of a broader rollout. Dray characterized the move as 'a natural step, not a leap,' consistent with the firm's long-horizon approach.",
         "effects": {
           "agriculture": 0.06
         }
@@ -1924,7 +1944,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82595,
+    "lastEventCycle": 82605,
     "events": [
       {
         "cycle": 0,
@@ -2033,6 +2053,16 @@
         "effects": {
           "technology": 0.13
         }
+      },
+      {
+        "cycle": 82605,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Calderforge Lands Landmark Multi-Year Capacity Pact for Entire Stormwell Fourth Hall",
+        "body": "Nadia Throne unveiled a decade-long capacity agreement that pre-commits the whole fourth Stormwell data hall to a consortium of enterprise clients before its 2026 completion, a deal she valued at 3.4 billion. The arrangement locks in baseline revenue through 2035 and includes early-access provisions tied to the redundant cooling systems installed after last year's outage. Throne called it 'the payoff for rebuilding stronger,' though some board members privately flagged concentration risk in a single anchor bloc.",
+        "effects": {
+          "technology": 0.22
+        }
       }
     ]
   },
@@ -2047,7 +2077,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82587,
+    "lastEventCycle": 82605,
     "events": [
       {
         "cycle": 0,
@@ -2103,6 +2133,16 @@
         "size": "standard",
         "head": "Calderworks Wins Second Anchor Contract for Tessen Ridge Phase Two",
         "body": "Building on its role as primary supplier for the first towers, Calderworks secured a 275 million structural materials contract for Tessen Ridge's second phase, locking in demand for its new regional kiln through 2029. CEO Kestrel Halloran said the deal validates the kiln investment while keeping the firm's characteristically cautious debt profile intact.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82605,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderworks Beats Again as Tessen Ridge Phase Two Contracts Fuel Record Kiln Output",
+        "body": "Kestrel Halloran reported quarterly revenue of 890 million, up 14 percent year over year, as the two Phase Two anchor contracts pulled the regional kiln to near-full utilization. Structural-materials margins widened on firmer pricing and steady input costs. Halloran signaled the firm is 'studying' a second kiln line but stopped short of committing capital this quarter.",
         "effects": {
           "construction": 0.13
         }
@@ -4083,7 +4123,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82591,
+    "lastEventCycle": 82605,
     "events": [
       {
         "cycle": 0,
@@ -4149,6 +4189,16 @@
         "size": "standard",
         "head": "Garrware Commits to Third Marrow Valley Line as Northern Depot Volumes Climb",
         "body": "Garrware will add a third production line at Marrow Valley, a $210M outlay expected to lift plant output by roughly 40% once commissioned late next year. CEO Orla Holt tied the move directly to firming order flow from the extended Halloway & Pace northern depot network. The build continues the disciplined, capacity-led strategy that has defined Holt's long tenure.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82605,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Garrware Signs New Anchor Client as Marrow Valley Third Line Comes Online",
+        "body": "Orla Holt confirmed a five-year packaging contract with regional distributor Venn & Croft, timed to the startup of the third Marrow Valley line. The deal is expected to add roughly 190 million in annual volume and diversifies Garrware beyond its Halloway & Pace anchor. Holt reiterated her disciplined stance, noting the new line is already committed at 70 percent capacity.",
         "effects": {
           "logistics": 0.13
         }
@@ -5596,7 +5646,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82588,
+    "lastEventCycle": 82605,
     "events": [
       {
         "cycle": 0,
@@ -5654,6 +5704,16 @@
         "body": "The new lifetime-warranty power-tool line won the annual Homecraft Institute's Durability Award, cited for a 30% longer bench-tested motor life than category peers. CEO Aurelia Dray called the recognition 'validation of the warranty bet,' noting foot traffic at newer retail sites remained elevated through the quarter.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82605,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Holtware Co. Opens Second Fulfillment Center to Meet Lifetime-Warranty Demand",
+        "body": "Aurelia Dray announced a 180,000-square-foot fulfillment hub in the Dellmark corridor to handle surging traffic from the award-winning power-tool range. The site adds roughly 320 jobs and is expected to cut regional delivery windows by two days. Dray framed the move as 'measured capacity to match the warranty promise,' noting the warranty line now drives nearly a third of total volume.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -5742,7 +5802,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82595,
+    "lastEventCycle": 82605,
     "events": [
       {
         "cycle": 0,
@@ -5838,6 +5898,16 @@
         "body": "Incoming CEO Dara Vetch unveiled a full audit of Ironcrestton's supply chain, pledging documented provenance for every Fine Good sold after the Carrow atelier scandal. The plan folds the tarnished Carrow line into a new 'Verified Origin' program and sets aside $60 million for refunds and relabeling. Vetch called it 'the only way to earn back a buyer's trust.'",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82605,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Ironcrestton Debuts First Fully Traced Collection Under New Origin Standard",
+        "body": "CEO Wren Adler introduced the Meridian Line, the house's first product range carrying end-to-end origin certification born from the post-Carrow verification overhaul. Each piece ships with a documented provenance ledger, and Adler said pre-orders had already covered 40 percent of the initial 12,000-unit run. Analysts view the launch as the first real test of whether the scandal-era reforms can convert into renewed demand.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -8515,7 +8585,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82597,
+    "lastEventCycle": 82605,
     "events": [
       {
         "cycle": 0,
@@ -8638,6 +8708,16 @@
         "head": "Varnvale House Ousts Calloway as Board Moves to Contain Sourcing Crisis",
         "body": "Varnvale's board removed CEO Idris Calloway with immediate effect amid escalating regulatory charges over its Meridian sourcing claims, appointing veteran operator Maren Feldt to steady the house. Feldt pledged a 'full and independent audit of every supply line' and suspended the disputed Meridian collections pending review. Shares of the luxury maison have shed roughly a third of their value since the scandal broke.",
         "effects": {}
+      },
+      {
+        "cycle": 82605,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Varnvale House Hit With Investor Suit as Sourcing Charges Widen and Losses Mount",
+        "body": "Days after ousting Calloway, Varnvale faces a fresh investor class action alleging that leadership concealed known sourcing defects during the Meridian revival, compounding the earlier regulatory charges. The complaint seeks 260 million in damages and cites internal timelines showing warnings ignored for months. Interim chief Maren Feldt suspended the entire Meridian Timepiece line pending review, warning the quarter would show 'a material loss.'",
+        "effects": {
+          "luxury": -0.22
+        }
       }
     ]
   },

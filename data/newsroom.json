@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-17T02:46:36.394Z",
+  "generatedAt": "2026-07-17T08:12:33.283Z",
   "beats": [
+    {
+      "company": "Aldousmont & Sons",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldousmont & Sons Posts Another Steady Quarter as Peel-Free Wrap Holds Share",
+      "body": "Dunmore Calder reported modest revenue growth of 4 percent, with the peel-free sterile wrap sustaining adoption across high-volume wards and the multi-region contracts now fully bedded in. Margins held flat as input costs stayed contained. Calder offered a characteristically restrained outlook, guiding to 'continued steady performance' for the coming period.",
+      "cycle": 82605,
+      "dur": 1
+    },
+    {
+      "company": "Blackmoor",
+      "sector": "agriculture",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Blackmoor Adds Wide-Row Variant to Holloway Seed-Drill Line",
+      "body": "Soren Dray introduced a wide-row configuration of the Holloway seed-drill aimed at larger acreage operations, extending the range that has anchored recent quarters. The variant enters limited field trials this season ahead of a broader rollout. Dray characterized the move as 'a natural step, not a leap,' consistent with the firm's long-horizon approach.",
+      "cycle": 82605,
+      "dur": 1
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Calderforge Lands Landmark Multi-Year Capacity Pact for Entire Stormwell Fourth Hall",
+      "body": "Nadia Throne unveiled a decade-long capacity agreement that pre-commits the whole fourth Stormwell data hall to a consortium of enterprise clients before its 2026 completion, a deal she valued at 3.4 billion. The arrangement locks in baseline revenue through 2035 and includes early-access provisions tied to the redundant cooling systems installed after last year's outage. Throne called it 'the payoff for rebuilding stronger,' though some board members privately flagged concentration risk in a single anchor bloc.",
+      "cycle": 82605,
+      "dur": 8
+    },
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Calderworks Beats Again as Tessen Ridge Phase Two Contracts Fuel Record Kiln Output",
+      "body": "Kestrel Halloran reported quarterly revenue of 890 million, up 14 percent year over year, as the two Phase Two anchor contracts pulled the regional kiln to near-full utilization. Structural-materials margins widened on firmer pricing and steady input costs. Halloran signaled the firm is 'studying' a second kiln line but stopped short of committing capital this quarter.",
+      "cycle": 82605,
+      "dur": 2
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Garrware Signs New Anchor Client as Marrow Valley Third Line Comes Online",
+      "body": "Orla Holt confirmed a five-year packaging contract with regional distributor Venn & Croft, timed to the startup of the third Marrow Valley line. The deal is expected to add roughly 190 million in annual volume and diversifies Garrware beyond its Halloway & Pace anchor. Holt reiterated her disciplined stance, noting the new line is already committed at 70 percent capacity.",
+      "cycle": 82605,
+      "dur": 2
+    },
+    {
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Holtware Co. Opens Second Fulfillment Center to Meet Lifetime-Warranty Demand",
+      "body": "Aurelia Dray announced a 180,000-square-foot fulfillment hub in the Dellmark corridor to handle surging traffic from the award-winning power-tool range. The site adds roughly 320 jobs and is expected to cut regional delivery windows by two days. Dray framed the move as 'measured capacity to match the warranty promise,' noting the warranty line now drives nearly a third of total volume.",
+      "cycle": 82605,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Ironcrestton Debuts First Fully Traced Collection Under New Origin Standard",
+      "body": "CEO Wren Adler introduced the Meridian Line, the house's first product range carrying end-to-end origin certification born from the post-Carrow verification overhaul. Each piece ships with a documented provenance ledger, and Adler said pre-orders had already covered 40 percent of the initial 12,000-unit run. Analysts view the launch as the first real test of whether the scandal-era reforms can convert into renewed demand.",
+      "cycle": 82605,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Varnvale House Hit With Investor Suit as Sourcing Charges Widen and Losses Mount",
+      "body": "Days after ousting Calloway, Varnvale faces a fresh investor class action alleging that leadership concealed known sourcing defects during the Meridian revival, compounding the earlier regulatory charges. The complaint seeks 260 million in damages and cites internal timelines showing warnings ignored for months. Interim chief Maren Feldt suspended the entire Meridian Timepiece line pending review, warning the quarter would show 'a material loss.'",
+      "cycle": 82605,
+      "dur": 8
+    },
     {
       "company": "Dunmorewright Industries",
       "sector": "construction",
@@ -20,16 +100,6 @@
       "body": "Dorian Brandt secured a multi-year agreement to install award-winning Threll-powered sensors across a 60-hospital network, a contract valued at 280 million over five years. The deal marks Fennmoor's largest medical-equipment commitment to date and prompted the company to commit to a third Larkspur production line to meet the deployment schedule.",
       "cycle": 82604,
       "dur": 8
-    },
-    {
-      "company": "Garrweave Mills",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Garrweave Mills Edges Higher as Northfield Line Sustains Full Output",
-      "body": "Lorne Veldt reported another quarter of steady gains, with the reopened Northfield spinning line holding full capacity against the decade-long fiber pact. Management reaffirmed its long-horizon guidance and noted modest yield improvements from routine equipment tuning.",
-      "cycle": 82604,
-      "dur": 1
     },
     {
       "company": "Gromford Works",
@@ -82,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Aldouscraft Mfg. Adds Third Extrusion Line to Meet Grid Cable Commitments",
-      "body": "Aldouscraft committed $210 million to a third high-capacity extrusion line at its Hartwell plant, aimed squarely at fulfilling its multi-year feeder cable award. CEO Soren Ashby said the line would lift annual conductor output by roughly 28% once fully commissioned next year. Management framed the move as measured capacity-matching rather than speculative buildout.",
-      "cycle": 82603,
-      "dur": 2
-    },
-    {
       "company": "Bruncraft Industries",
       "sector": "automotive",
       "kind": "recall",
@@ -120,46 +180,6 @@
       "body": "Castlestone signed a $14 billion multi-phase framework to supply the second and third build stages of the National Data Grid, its largest commitment on record. CEO Pell Karsh called it \"the deal that defines the decade,\" pledging two new fabrication halls and a tripling of the Halo high-density tier. Skeptics questioned whether Castlestone can scale delivery without straining its balance sheet after back-to-back record awards.",
       "cycle": 82603,
       "dur": 8
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Fenncyon Wins $900M Extension for Eastfield Corridor's Northern Spur",
-      "body": "Building on its Eastfield momentum, Fenncyon secured a $900 million extension covering the corridor's Northern Spur earthworks and grading. CEO Nadia Ashby said the award leverages the second staging yard opened earlier this year, avoiding fresh capital outlay. The extension pushes Fenncyon's committed Eastfield backlog past $3.7 billion.",
-      "cycle": 82603,
-      "dur": 2
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Halcrest Opens Flagship Salon Row Boutique Alongside Meridian Petite Debut",
-      "body": "Riding the sold-out Grand Complication, Iris Marrow unveiled the Meridian Petite, a slimmer entry into the celebrated line, at a new flagship boutique on the Row. The Petite starts at a fraction of the Grand Complication's price, aimed at broadening Halcrest's clientele without diluting its exclusivity. Marrow said the boutique doubles the house's direct salon footprint.",
-      "cycle": 82603,
-      "dur": 2
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Hesperforge Beats as Marine-Grade Beam Line Fills Second Mill's Order Book",
-      "body": "Hesperforge topped estimates with quarterly revenue of $1.4 billion, up 19%, as the new marine-grade beam line ran near capacity from launch. CEO Sable Halloran credited the Coastal Bridgeworks pipeline and said the second mill reached breakeven ahead of schedule. Textile contracts added a steady secondary lift to margins.",
-      "cycle": 82603,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Lhaus Misses as Fourth-Line Startup Costs Bite Into Margins",
-      "body": "Lhaus fell short of estimates despite record revenue, as commissioning costs for its fourth cell-pack line compressed margins to 8.2% from 12.5% a year earlier. CEO Cole Brandt defended the aggressive buildout, insisting the $31B backlog justifies near-term pain. Analysts flagged rising leverage as Lhaus stacks capacity faster than deliveries convert to cash.",
-      "cycle": 82603,
-      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -249,26 +269,6 @@
       "head": "Greywater Grid Launches Sweeping Overhaul as Outage Fallout Deepens",
       "body": "Following penalty clauses and a slashed guidance, Halloran unveiled a restructuring that splits the compute and power divisions into separately managed units and cuts 900 roles. The company will write down 260 million marks tied to the failed campus and appoint an independent reliability board. Halloran conceded the multi-region contract remains 'under strain' as clients weigh their options.",
       "cycle": 82598,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "major",
-      "head": "Castlestone Smashes Estimates as National Data Grid Pact Powers Record Quarter",
-      "body": "Castlestone reported quarterly revenue of $4.2B, up 71% year over year, as first deliveries under the $9.5B National Data Grid contract began recognizing. CEO Pell Karsh declared the quarter 'the moment Halo went from a product to an infrastructure,' and lifted full-year guidance by roughly 18%. High-density tier orders alone contributed $1.1B, prompting management to flag capacity expansion at two fabrication sites.",
-      "cycle": 82597,
-      "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Varnvale House Ousts Calloway as Board Moves to Contain Sourcing Crisis",
-      "body": "Varnvale's board removed CEO Idris Calloway with immediate effect amid escalating regulatory charges over its Meridian sourcing claims, appointing veteran operator Maren Feldt to steady the house. Feldt pledged a 'full and independent audit of every supply line' and suspended the disputed Meridian collections pending review. Shares of the luxury maison have shed roughly a third of their value since the scandal broke.",
-      "cycle": 82597,
       "dur": 8
     }
   ]
