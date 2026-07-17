@@ -332,7 +332,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82599,
+    "lastEventCycle": 82607,
     "events": [
       {
         "cycle": 0,
@@ -448,6 +448,16 @@
         "size": "major",
         "head": "Aperture Compute Signs $5.1 Billion Dawnmere III Expansion With Second Carrier",
         "body": "Halden Dray unveiled a $5.1 billion Dawnmere III agreement Wednesday, adding a second continental carrier and roughly doubling committed backbone volume through 2031. The deal folds in an option for regional edge sites, and management said early shipments would begin next quarter. Dray called it 'the biggest single order in the house's history' at a packed briefing.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82607,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Aperture Compute Posts Record Quarter as Dawnmere Backlog Tops $12 Billion",
+        "body": "Aperture Compute reported record quarterly revenue of $4.3 billion, up 38% year-on-year, as Dawnmere II and III deployments accelerated and total contracted backlog crossed $12 billion. Halden Dray raised full-year guidance and teased a fourth carrier in advanced talks, sending confidence around the Dawnmere program to new highs.",
         "effects": {
           "technology": 0.22
         }
@@ -1236,7 +1246,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82601,
+    "lastEventCycle": 82607,
     "events": [
       {
         "cycle": 0,
@@ -1376,6 +1386,16 @@
         "size": "standard",
         "head": "Bruncrest Works Rebounds as Streamlined Aria Series Fuels Margin Recovery",
         "body": "Bruncrest reported quarterly revenue of 2.3B, up 11% sequentially, with operating margins expanding 340 basis points as the leaner Aria Compute lineup carried lower production overhead. CEO Ines Marlow declared the overhaul 'vindicated,' touting the fewest product SKUs in a decade while unit shipments climbed 7%. Analysts noted the beat marks the first upside surprise since Marlow's restructure began.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82607,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Bruncrest Works Wins Regional Data Campus Order for Aria Compute Racks",
+        "body": "Bruncrest Works secured a $640 million multi-site contract to supply Aria Compute racks to a regional infrastructure operator, its largest win since the lineup's debut. Ines Marlow framed the deal as proof her leaner strategy was gaining commercial traction, with deliveries slated across four quarters starting next spring.",
         "effects": {
           "technology": 0.13
         }
@@ -1700,7 +1720,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82598,
+    "lastEventCycle": 82607,
     "events": [
       {
         "cycle": 0,
@@ -1846,6 +1866,16 @@
         "body": "Regulators opened a formal review after a handful of Vault Cell Pro units showed elevated thermal readings during grid-scale field trials. Lambourne, characteristically defiant, told reporters the incidents were 'isolated and overstated' and pledged an internal audit of the 12,000-unit deployment. Analysts note the probe lands just weeks after the $1.8B grid order that anchored the storage pivot.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82607,
+        "kind": "recall",
+        "size": "major",
+        "head": "Brunstone & Sons Recalls Vault Cell Pro as Regulators Confirm Thermal Fault",
+        "body": "Brunstone & Sons announced a global recall of roughly 240,000 Vault Cell Pro units after regulators verified a thermal-runaway defect linked to a supplier cell coating. Royce Lambourne, who had staked the company's storage push on the product, said the recall would cost an estimated $420 million and vowed a redesigned unit within six months. The $1.8B grid-scale order remains under review pending replacement hardware.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -2160,7 +2190,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82592,
+    "lastEventCycle": 82607,
     "events": [
       {
         "cycle": 0,
@@ -2226,6 +2256,16 @@
         "size": "standard",
         "head": "Carrowcyon & Sons Debuts Modular Household Lighting Range for Retail Push",
         "body": "Carrowcyon introduced the Hearthline series, a snap-together residential lighting range aimed at broadening beyond its transit contracts. Brandt said the line targets $200M in first-year consumer sales and leverages the low-draw technology proven in the transit rollout.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82607,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Beats as Modular Lighting Range Drives Retail Gains",
+        "body": "Carrowcyon & Sons reported quarterly earnings ahead of expectations, with revenue up 6.1% as the new modular household lighting range secured shelf space across major retail chains. Cole Brandt said reorder rates had exceeded internal targets and hinted at an expanded household-goods pairing for the range later this year.",
         "effects": {
           "consumer": 0.13
         }
@@ -2944,7 +2984,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82594,
+    "lastEventCycle": 82607,
     "events": [
       {
         "cycle": 0,
@@ -3020,6 +3060,16 @@
         "size": "flash",
         "head": "Cranecraft Edges Out Estimates as Northern Mills Volumes Steady",
         "body": "Cranecraft posted a narrow quarterly beat as textile shipments under the Northern Mills Consortium deal reached full run-rate. Farm equipment held flat amid a soft seasonal window, leaving textiles as the quarter's modest driver. CEO Mira Garr reaffirmed full-year guidance without changes.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82607,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Posts Third Straight Beat as Farm Equipment Orders Firm",
+        "body": "Cranecraft edged past estimates again, with quarterly revenue up 3.4% as steady Northern Mills textile volumes were joined by firmer farm-equipment bookings ahead of planting season. Mira Garr reaffirmed guidance and noted order backlogs remained comfortably filled through the next two quarters.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -4345,14 +4395,14 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1983,
-    "ceo": "Vale Halloran",
-    "ceoSince": 1983,
+    "ceo": "Dorne Whitaker",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.64,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82598,
+    "lastEventCycle": 82607,
     "events": [
       {
         "cycle": 0,
@@ -4451,6 +4501,14 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82607,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Greywater Grid Ousts Vale Halloran as Board Seeks Steadier Hand After Outage Crisis",
+        "body": "Greywater Grid's board removed longtime chief Vale Halloran, citing the need for stability after the campus outage triggered penalty clauses, a guidance cut and a sweeping overhaul. Incoming CEO Dorne Whitaker, previously a utility operations veteran, pledged to prioritize reliability and rebuild the strained regional power pact. Shares steadied on the announcement.",
+        "effects": {}
       }
     ]
   },
@@ -4747,7 +4805,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82593,
+    "lastEventCycle": 82607,
     "events": [
       {
         "cycle": 0,
@@ -4813,6 +4871,16 @@
         "size": "standard",
         "head": "Halcrow & Vance Lands Adjacent Corridor Contract as Vetask Success Opens New Work",
         "body": "The firm won a $290 million contract to build access corridors neighboring the Vetask Basin, leveraging its peaking output there to edge out competitors. CEO Mira Skarn said crews and equipment would redeploy directly from the finishing basin phase, minimizing idle time. The award extends the company's regional pipeline into a third consecutive year.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82607,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrow & Vance Lifts Outlook Again as Corridor Contract Adds to Vetask Momentum",
+        "body": "Halcrow & Vance topped estimates for a fourth consecutive quarter and raised full-year guidance, citing peak Vetask Basin output and early revenue from the newly won adjacent corridor contract. Mira Skarn said combined project pipelines now stretched into 2029, with earthmoving fleet utilization near record levels.",
         "effects": {
           "construction": 0.13
         }
@@ -5110,7 +5178,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82602,
+    "lastEventCycle": 82607,
     "events": [
       {
         "cycle": 0,
@@ -5282,6 +5350,16 @@
         "size": "standard",
         "head": "Halhold Works Debuts Aveline Diagnostic Platform as Faircloth Bids to Turn Page on Verity Pro",
         "body": "Halhold unveiled Aveline, a modular diagnostic imaging system it calls the cornerstone of its rebuilt medical division, with first shipments slated for the next two quarters. CEO Lena Faircloth said the platform underwent 14 months of independent validation before launch, an explicit contrast to the Verity Pro rollout. Analysts noted the launch does little to resolve the pending $600M class action but signals the overhaul is moving from cuts to product.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82607,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halhold Works Lands Hospital Network Contract for Aveline Platform",
+        "body": "Halhold Works signed a $310 million agreement to roll out its Aveline Diagnostic Platform across a 22-site hospital network, its first major medical win since the Verity Pro wind-down. Lena Faircloth called the deal a turning point, saying it validated the overhaul and would anchor recurring service revenue. Installations begin next quarter.",
         "effects": {
           "technology": 0.13
         }
