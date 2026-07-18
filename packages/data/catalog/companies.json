@@ -3728,7 +3728,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82600,
+    "lastEventCycle": 82610,
     "events": [
       {
         "cycle": 0,
@@ -3826,6 +3826,16 @@
         "body": "The Sorne-crafted Grand Flagship took top honors at the Continental Motoring Guild awards, cited for its hand-finished cabin and drivetrain refinement. CEO Aurelia Garr said the recognition validates the Sorne Coachworks acquisition, with the flagship's order backlog now stretching past 20 months.",
         "effects": {
           "automotive": 0.06
+        }
+      },
+      {
+        "cycle": 82610,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Erretmark Works Expands Sorne Coachbuilding Atelier to Widen Flagship Output",
+        "body": "Riding its Vehicle-of-the-Year win, Erretmark added a second Sorne-crafted assembly hall to nearly double bespoke flagship capacity. CEO Aurelia Garr said the $220-million expansion answers a backlog that now stretches past 18 months.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -4593,7 +4603,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82604,
+    "lastEventCycle": 82610,
     "events": [
       {
         "cycle": 0,
@@ -4757,6 +4767,16 @@
         "body": "Corin Aldwych unveiled the Meridian Skeleton, a 500-unit limited run showcasing an exposed movement priced at nearly triple the base collection. The launch anchors the flagship salon's holiday calendar, with Aldwych touting waitlists at three of the four regional boutiques.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82610,
+        "kind": "award",
+        "size": "flash",
+        "head": "Gromford Works Meridian Skeleton Series Earns Horological Design Honor",
+        "body": "The limited Meridian skeleton line took a design commendation at the annual Timepiece Guild showcase, adding shine to Corin Aldwych's momentum run. The recognition arrives as the small-batch series nears sell-through just weeks after launch.",
+        "effects": {
+          "luxury": 0.06
         }
       }
     ]
@@ -6099,7 +6119,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82600,
+    "lastEventCycle": 82610,
     "events": [
       {
         "cycle": 0,
@@ -6196,6 +6216,16 @@
         "head": "Kessel Drive Ousts Dorian Brandt as Recall Fallout Forces Boardroom Reset",
         "body": "Kessel Drive's board voted to remove longtime CEO Dorian Brandt after mounting recall and legal costs and revelations that storage-pack risks were flagged internally. The board named turnaround specialist Neave Corliss as chief executive, tasking her with stabilizing finances and settling the fleet-client litigation.",
         "effects": {}
+      },
+      {
+        "cycle": 82610,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Kessel Drive Faces Formal Regulatory Probe Into Storage Pack Failures",
+        "body": "Regulators opened a formal safety investigation into Kessel Drive's storage packs, seeking internal records tied to the memos that surfaced last quarter. New CEO Neave Corliss pledged full cooperation and paused two Power & Storage shipments, but the probe deepens a crisis that already cost Kessel its former chief and pushed it into loss.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -6356,7 +6386,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82597,
+    "lastEventCycle": 82610,
     "events": [
       {
         "cycle": 0,
@@ -6435,6 +6465,16 @@
         "effects": {
           "logistics": 0.13
         }
+      },
+      {
+        "cycle": 82610,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Korrworks Lands Landmark Cross-Region Handling Pact Beyond Merrick Corridor",
+        "body": "Korrworks signed a $1.4-billion multi-year Material Handling agreement extending its network into two new regional corridors, its largest contract to date and a decisive move past its Merrick concentration. CEO Rhys Throne called it 'the diversification we've been building toward for a decade,' with depot buildout to follow across three fresh sites.",
+        "effects": {
+          "logistics": 0.22
+        }
       }
     ]
   },
@@ -6449,7 +6489,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82596,
+    "lastEventCycle": 82610,
     "events": [
       {
         "cycle": 0,
@@ -6525,6 +6565,16 @@
         "size": "standard",
         "head": "Korrwright Group Signs Follow-On Wire Contract as Verant Extends Through 2031",
         "body": "Korrwright secured a renewal and expansion of its Verant supply arrangement valued near $210M, locking in structural-materials and wire volumes for six additional years. CEO Halden Fenn said the deal underpins utilization at the new wire line and supports a modest dividend lift. Management reaffirmed full-year guidance on the strengthened backlog.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82610,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrwright Group Breaks Ground on Structural Materials Plant to Anchor Verant Corridor",
+        "body": "Korrwright committed $340 million to a new Structural Materials facility near the Verant corridor, positioning it to bundle materials with its extended wire contract through 2031. CEO Halden Fenn framed the move as 'meeting Verant where it is heading, not where it stands,' with first output slated for late next year.",
         "effects": {
           "construction": 0.13
         }
@@ -6878,7 +6928,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82598,
+    "lastEventCycle": 82610,
     "events": [
       {
         "cycle": 0,
@@ -6964,6 +7014,16 @@
         "size": "standard",
         "head": "Maison & Vale Misses as Ostley Merger Costs Weigh on Margins",
         "body": "Integration expenses from the $2.2-billion Ostley tie-up pushed quarterly profit 14% below expectations, despite revenue climbing to 1.9 billion marks. Kessler acknowledged the merger was 'proving heavier to digest than modeled' but defended the combined footprint. Overlapping Jansan operations from the Deltrey acquisition added to near-term redundancy costs.",
+        "effects": {
+          "hospitality": -0.13
+        }
+      },
+      {
+        "cycle": 82610,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Maison & Vale Folds Deltrey and Ostley Units Into Streamlined Jansan Division",
+        "body": "Seeking to stem the margin pressure that dragged on last quarter, Maison & Vale consolidated Deltrey Chemical and legacy Ostley operations into a single Jansan division, cutting an estimated 900 overlapping roles. CEO Rhys Kessler said the reorganization targets $180 million in annual savings and should restore margins by mid-year.",
         "effects": {
           "hospitality": -0.13
         }
@@ -7225,7 +7285,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82597,
+    "lastEventCycle": 82610,
     "events": [
       {
         "cycle": 0,
@@ -7301,6 +7361,16 @@
         "size": "flash",
         "head": "Marrowmoor Holdings Adds Eastgate Cluster to Growing Contract Base",
         "body": "Marrowmoor signed a cluster of servicing contracts across the Eastgate district, extending its recurring-revenue footprint by an estimated eight sites. CEO Dorian Steg said the additions fit the company's steady 'contract-by-contract' expansion approach without straining operations. The win nudges the total contract base further past its recent 100-contract milestone.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82610,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Extends Streak With Steady Contract-Base Gains",
+        "body": "Marrowmoor logged another quarter of recurring-revenue growth as its Riverside and Eastgate clusters ramped to full billing. CEO Dorian Steg reaffirmed guidance, noting retention across the contract base held above 96%.",
         "effects": {
           "hospitality": 0.06
         }
@@ -8716,7 +8786,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82602,
+    "lastEventCycle": 82610,
     "events": [
       {
         "cycle": 0,
@@ -8842,6 +8912,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Opens Flagship Maisons Boutique to Showcase Combined Houses",
         "body": "Varnvale opened a 22,000-square-foot flagship on Aldermere Row dedicated to its Maisons division, housing Corveau, Bellmont and Duquesne under one roof. CEO Bram Wold said the boutique is the first of six planned openings and is meant to lift fine-goods margins toward the group's timepiece levels. The company reported early-quarter Maisons sell-through running ahead of internal targets.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82610,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Varnvale & Sons Beats as Maisons Flagship Lifts Timepiece Sales",
+        "body": "Varnvale posted a 14% revenue gain, crediting strong foot traffic at its new Maisons boutique and robust demand for combined Duquesne-Corveau pieces. CEO Bram Wold pointed to Timepieces as the standout, with the division up 22% year over year.",
         "effects": {
           "luxury": 0.13
         }
