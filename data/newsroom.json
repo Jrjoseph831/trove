@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-17T19:13:06.377Z",
+  "generatedAt": "2026-07-18T02:37:29.625Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Boreas Power Lands $2.4B Anchor Tenant to Fill Expanded Hollowmere Campus",
+      "body": "Boreas signed a 15-year, $2.4 billion commitment with grid-services firm Corriden to occupy nearly the entire second phase of the doubled Hollowmere campus, effectively pre-leasing the $1.9B expansion before completion. CEO Mira Thorne called it 'the deal that validates the whole thesis,' and hinted at a third campus site under evaluation. The agreement lifts contracted campus revenue past $4 billion.",
+      "cycle": 82608,
+      "dur": 8
+    },
+    {
+      "company": "Dunmorestone",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Dunmorestone Posts Steady Gains as New Cafeteria Kitchen Ramps Up",
+      "body": "Dunmorestone reported a 7% revenue increase to $188 million, led by first full-quarter contributions from its dedicated food-service kitchen fulfilling the regional cafeteria contract. CEO Orla Mercer described the quarter as 'exactly on plan,' with plumbing and fixtures holding flat. Margins ticked up slightly on kitchen efficiency.",
+      "cycle": 82608,
+      "dur": 1
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Lhaus Industries Rebounds as Fourth Cell-Pack Line Reaches Full Output",
+      "body": "Lhaus topped estimates with revenue of $9.8 billion, as the fourth cell-pack line ramped to full capacity and startup costs that dented prior margins rolled off. CEO Cole Brandt said the record backlog behind the $31B deal is now clearing 'faster than modeled,' with operating margin recovering to 14%. The company reaffirmed plans to evaluate a fifth line.",
+      "cycle": 82608,
+      "dur": 2
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Marlgear Supply Ousts Vossen as CEO as Board Moves to Contain Drennan Fallout",
+      "body": "Halden Vossen, chief since 1974, stepped down under board pressure as the combined federal action and Drennan-defect scandal deepened, with the company setting aside $1.2 billion for legal and recall costs. The board named outside restructuring specialist Adele Ferran to lead a governance overhaul and rebuild regulator trust. Shares of the technology house have been battered through the ordeal.",
+      "cycle": 82608,
+      "dur": 8
+    },
+    {
+      "company": "Palettstead Holdings",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Palettstead Edges Past Estimates as Cold-Chain Network Scales to Two Chains",
+      "body": "Palettstead reported quarterly revenue up 11% to $214 million, with reusable cold-chain volumes rising after onboarding its second national grocery chain. CEO Orla Marrow said the wash-and-return hub is now running above 80% utilization. The company nudged full-year guidance modestly higher.",
+      "cycle": 82608,
+      "dur": 1
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Skarnvale Overhauls Braeloch Operations, Replaces Terminal Chief After Outage",
+      "body": "Following the multi-day systems failure, Skarnvale announced a management shake-up at Braeloch, installing veteran operator Renna Kolt as terminal director and pledging $60 million in redundancy upgrades. CEO Dorn Vaskell acknowledged the launch was 'rushed in places' but insisted throughput targets remain intact for the second half. The facility returned to full capacity last week.",
+      "cycle": 82608,
+      "dur": 2
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Veldtreach & Sons Adds Third Excavation Fleet to Staff Swelling Highland Corridor Program",
+      "body": "The construction house committed $340 million to a new heavy-fleet depot near the Highland Corridor site, adding roughly 900 machines and 1,200 field crew to service its record backlog. CEO Petra Steg said the buildout would keep pace with 'the largest simultaneous workload in the firm's history,' spanning the $2.1B corridor and the $900M reservoir programs. Deliveries begin next quarter.",
+      "cycle": 82608,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Vossenspire Supply Unveils Calderon Grand Tourer Special Edition to Cap Global Rollout",
+      "body": "Riding its $900M global distribution pact, Vossenspire debuted a limited 250-unit Calderon 'Meridian' edition priced at $410,000, pairing the tourer with a matched Halden Chronometrics timepiece. CEO Quinn Marrow said early allocations across three continents sold through within days. The bundle marks the first cross-selling between the vehicle and newly acquired timepiece arms.",
+      "cycle": 82608,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -40,16 +120,6 @@
       "body": "Carrowcyon & Sons reported quarterly earnings ahead of expectations, with revenue up 6.1% as the new modular household lighting range secured shelf space across major retail chains. Cole Brandt said reorder rates had exceeded internal targets and hinted at an expanded household-goods pairing for the range later this year.",
       "cycle": 82607,
       "dur": 2
-    },
-    {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Posts Third Straight Beat as Farm Equipment Orders Firm",
-      "body": "Cranecraft edged past estimates again, with quarterly revenue up 3.4% as steady Northern Mills textile volumes were joined by firmer farm-equipment bookings ahead of planting season. Mira Garr reaffirmed guidance and noted order backlogs remained comfortably filled through the next two quarters.",
-      "cycle": 82607,
-      "dur": 1
     },
     {
       "company": "Greywater Grid",
@@ -100,36 +170,6 @@
       "body": "The board appointed Corin Vale, formerly head of infrastructure at a rival compute house, to replace Sela Marchetti, whose two-year tenure ended after the twin Northgate blackouts and the memo scandal. Vale inherits an estimated $340M in contested client credits and a review of every Halhold data facility, pledging a 90-day reliability audit. Three anchor clients have paused renewals pending the outcome.",
       "cycle": 82606,
       "dur": 8
-    },
-    {
-      "company": "Hearthstone Group",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Hearthstone Group Beats as Refill Depot Network Drives Household Goods Growth",
-      "body": "Hearthstone reported revenue of $1.24B, above the $1.19B estimate, with the newly opened refill depots contributing faster-than-expected volumes across the three new regions. Refillable lines now account for nearly a third of household goods sales. CEO Aurelia Aldous raised full-year margin guidance by half a point.",
-      "cycle": 82606,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Korrwright Works Unveils First Timepieces Built on In-House Vellhorn Escapements",
-      "body": "Korrwright debuted its Meridian collection, the first line to feature escapements from the recently acquired Vellhorn Movements, priced from $8,400. CEO Dunmore Carrow said full vertical integration cuts reliance on outside suppliers and improves margins on the heritage division's flagship pieces. Initial allocations to boutiques are already spoken for.",
-      "cycle": 82606,
-      "dur": 2
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Stegforge Locks Multi-Year Structural Materials Deal With Rail Consortium",
-      "body": "Stegforge signed a four-year framework to supply structural alloys and beams to the Verrun rail consortium, valued at roughly $780M over the term. The agreement leans on the newly commissioned second furnace and slots directly into the machinery backlog, with first deliveries scheduled next quarter. CEO Aurelia Steg called it a natural extension of the alloy strategy.",
-      "cycle": 82606,
-      "dur": 2
     },
     {
       "company": "Calderforge",
@@ -239,36 +279,6 @@
       "head": "Marlgear Supply Reels as Internal Memos Reveal Executives Knew of Drennan Defects for Years",
       "body": "Disclosed court filings show Marlgear leadership was warned of failure risks in the Atlas and Drennan lines as early as 2021, yet delayed action until regulators intervened. The revelations sent shares to a multi-year low and prompted the board to open an independent review of CEO Halden Vossen's handling of the crisis. Two state attorneys general signaled they would broaden their existing suits to pursue punitive claims.",
       "cycle": 82601,
-      "dur": 8
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Carrowforge Faces Class Action From Machine Buyers Over Altered Test Records",
-      "body": "A consolidated class action was filed against Carrowforge on behalf of more than 600 industrial customers who allege they purchased machines certified with falsified safety data. Plaintiffs are seeking upwards of 900 million crowns in damages and replacement costs, deepening the crisis for CEO Halden Roe as the earlier testing-chief suit remains unresolved.",
-      "cycle": 82600,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Kessel Drive Ousts Dorian Brandt as Recall Fallout Forces Boardroom Reset",
-      "body": "Kessel Drive's board voted to remove longtime CEO Dorian Brandt after mounting recall and legal costs and revelations that storage-pack risks were flagged internally. The board named turnaround specialist Neave Corliss as chief executive, tasking her with stabilizing finances and settling the fleet-client litigation.",
-      "cycle": 82600,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Vossenspire Lands Landmark Grid-Storage Supply Pact With Northern Utilities Consortium",
-      "body": "Vossenspire Holdings has signed a nine-year, 4.1 billion-crown agreement to supply its Redundant Grid-Storage Platform to a consortium of five regional utilities. CEO Halden Roe framed the deal as proof the post-blackout reset has won back institutional confidence, though the contract carries strict uptime penalties tied to the very reliability failures that triggered last year's probe.",
-      "cycle": 82600,
       "dur": 8
     }
   ]

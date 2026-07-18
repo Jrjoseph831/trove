@@ -930,7 +930,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82602,
+    "lastEventCycle": 82608,
     "events": [
       {
         "cycle": 0,
@@ -1088,6 +1088,16 @@
         "body": "Boreas reported quarterly revenue of $1.24B, ahead of the $1.16B consensus, driven by contracted payments from its four Hollowmere anchor tenants coming fully online. CEO Mira Thorne said power-and-storage utilization at the campus hit 91%, and reaffirmed the $1.9B expansion timeline. Management flagged rising interconnection costs as the only near-term drag.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82608,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Boreas Power Lands $2.4B Anchor Tenant to Fill Expanded Hollowmere Campus",
+        "body": "Boreas signed a 15-year, $2.4 billion commitment with grid-services firm Corriden to occupy nearly the entire second phase of the doubled Hollowmere campus, effectively pre-leasing the $1.9B expansion before completion. CEO Mira Thorne called it 'the deal that validates the whole thesis,' and hinted at a third campus site under evaluation. The agreement lifts contracted campus revenue past $4 billion.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -3522,7 +3532,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82591,
+    "lastEventCycle": 82608,
     "events": [
       {
         "cycle": 0,
@@ -3580,6 +3590,16 @@
         "body": "Dunmorestone has opened a dedicated production kitchen to serve its newly won regional cafeteria supply contract, a $48M facility expected to reach full throughput within two quarters. CEO Orla Mercer said the plumbing and fixtures arm remains the steady earner while food service becomes the growth lever. The company reiterated its quiet, margin-first approach following last year's recall recovery.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82608,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Dunmorestone Posts Steady Gains as New Cafeteria Kitchen Ramps Up",
+        "body": "Dunmorestone reported a 7% revenue increase to $188 million, led by first full-quarter contributions from its dedicated food-service kitchen fulfilling the regional cafeteria contract. CEO Orla Mercer described the quarter as 'exactly on plan,' with plumbing and fixtures holding flat. Margins ticked up slightly on kitchen efficiency.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -6625,7 +6645,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82603,
+    "lastEventCycle": 82608,
     "events": [
       {
         "cycle": 0,
@@ -6784,6 +6804,16 @@
         "effects": {
           "automotive": -0.13
         }
+      },
+      {
+        "cycle": 82608,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Lhaus Industries Rebounds as Fourth Cell-Pack Line Reaches Full Output",
+        "body": "Lhaus topped estimates with revenue of $9.8 billion, as the fourth cell-pack line ramped to full capacity and startup costs that dented prior margins rolled off. CEO Cole Brandt said the record backlog behind the $31B deal is now clearing 'faster than modeled,' with operating margin recovering to 14%. The company reaffirmed plans to evaluate a fifth line.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -6894,14 +6924,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1974,
-    "ceo": "Halden Vossen",
-    "ceoSince": 1974,
+    "ceo": "Adele Ferran",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.71,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82601,
+    "lastEventCycle": 82608,
     "events": [
       {
         "cycle": 0,
@@ -7030,6 +7060,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82608,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Marlgear Supply Ousts Vossen as CEO as Board Moves to Contain Drennan Fallout",
+        "body": "Halden Vossen, chief since 1974, stepped down under board pressure as the combined federal action and Drennan-defect scandal deepened, with the company setting aside $1.2 billion for legal and recall costs. The board named outside restructuring specialist Adele Ferran to lead a governance overhaul and rebuild regulator trust. Shares of the technology house have been battered through the ordeal.",
+        "effects": {}
       }
     ]
   },
@@ -7495,7 +7533,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82592,
+    "lastEventCycle": 82608,
     "events": [
       {
         "cycle": 0,
@@ -7553,6 +7591,16 @@
         "body": "Palettstead signed a $410M multi-year deal to extend its reusable cold-chain crate program to a second national grocery chain, doubling addressable volume for its wash-and-return hubs. Marrow said the win validates the model and may trigger a second hub opening in the eastern corridor.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82608,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Palettstead Edges Past Estimates as Cold-Chain Network Scales to Two Chains",
+        "body": "Palettstead reported quarterly revenue up 11% to $214 million, with reusable cold-chain volumes rising after onboarding its second national grocery chain. CEO Orla Marrow said the wash-and-return hub is now running above 80% utilization. The company nudged full-year guidance modestly higher.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -7860,7 +7908,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82597,
+    "lastEventCycle": 82608,
     "events": [
       {
         "cycle": 0,
@@ -7932,6 +7980,16 @@
         "size": "standard",
         "head": "Skarnvale's New Braeloch Terminal Hit by Multi-Day Systems Failure",
         "body": "Skarnvale's flagship automated freight terminal at Braeloch suffered a control-systems failure that halted sorting for nearly three days, backing up shipments across its eastern network. CEO Dorn Vaskell called the disruption 'unacceptable for a site meant to define our future' and pledged an independent review of the terminal's commissioning. Analysts warned the outage could dent the momentum narrative built on the site's launch.",
+        "effects": {
+          "logistics": -0.13
+        }
+      },
+      {
+        "cycle": 82608,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Skarnvale Overhauls Braeloch Operations, Replaces Terminal Chief After Outage",
+        "body": "Following the multi-day systems failure, Skarnvale announced a management shake-up at Braeloch, installing veteran operator Renna Kolt as terminal director and pledging $60 million in redundancy upgrades. CEO Dorn Vaskell acknowledged the launch was 'rushed in places' but insisted throughput targets remain intact for the second half. The facility returned to full capacity last week.",
         "effects": {
           "logistics": -0.13
         }
@@ -8878,7 +8936,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82589,
+    "lastEventCycle": 82608,
     "events": [
       {
         "cycle": 0,
@@ -8936,6 +8994,16 @@
         "body": "Veldtreach secured a sweeping 2.1 billion mark contract to grade and prepare a 90-kilometer highland transport corridor, the biggest single award in the firm's history. Petra Steg called it a generational commitment that will require a fleet expansion and roughly 1,400 new field hires. The win nearly doubles the company's forward order book alongside its reservoir and coastal work.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82608,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Veldtreach & Sons Adds Third Excavation Fleet to Staff Swelling Highland Corridor Program",
+        "body": "The construction house committed $340 million to a new heavy-fleet depot near the Highland Corridor site, adding roughly 900 machines and 1,200 field crew to service its record backlog. CEO Petra Steg said the buildout would keep pace with 'the largest simultaneous workload in the firm's history,' spanning the $2.1B corridor and the $900M reservoir programs. Deliveries begin next quarter.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -9196,7 +9264,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82601,
+    "lastEventCycle": 82608,
     "events": [
       {
         "cycle": 0,
@@ -9312,6 +9380,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Debuts First Timepiece From Newly Acquired Halden Chronometrics",
         "body": "Vossenspire unveiled the Meridian Perpetual, the first watch developed since its 1.4B Halden Chronometrics acquisition, priced from 48,000 and limited to 500 pieces. CEO Quinn Marrow framed the launch as proof the integration is already yielding product, pairing Halden's movement expertise with Vossenspire's heritage badge. The company said initial allocations were fully spoken for by distribution partners.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82608,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vossenspire Supply Unveils Calderon Grand Tourer Special Edition to Cap Global Rollout",
+        "body": "Riding its $900M global distribution pact, Vossenspire debuted a limited 250-unit Calderon 'Meridian' edition priced at $410,000, pairing the tourer with a matched Halden Chronometrics timepiece. CEO Quinn Marrow said early allocations across three continents sold through within days. The bundle marks the first cross-selling between the vehicle and newly acquired timepiece arms.",
         "effects": {
           "luxury": 0.13
         }
