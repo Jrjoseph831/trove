@@ -601,7 +601,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82602,
+    "lastEventCycle": 82611,
     "events": [
       {
         "cycle": 0,
@@ -713,6 +713,16 @@
         "body": "Blackhold announced a $1.1B multi-site contract to deploy its revamped storage platform for the Northreach utility consortium, the largest single order in company history. CEO Renata Solberg called it proof that the reset following the Greycliff collapse has restored customer confidence, with first installations due within nine months. The award more than doubles Blackhold's contracted backlog.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82611,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Blackhold Tops Estimates as Grid-Storage Backlog Converts to Revenue",
+        "body": "Blackhold posted quarterly revenue of $840 million, up 22% year over year, as deliveries against its $1.1-billion grid-storage order began recognizing. Chief executive Renata Solberg said the revamped storage platform now accounts for over half of new bookings, though she cautioned that margins remain 'lumpy' during the ramp. The beat marks Solberg's first clean quarter since taking over from Vren.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -1423,7 +1433,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82594,
+    "lastEventCycle": 82611,
     "events": [
       {
         "cycle": 0,
@@ -1492,6 +1502,16 @@
         "effects": {
           "consumer": 0.13
         }
+      },
+      {
+        "cycle": 82611,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Brunforge Edges Higher Again as Vellan Flagship Lifts Home Sales",
+        "body": "Brunforge Holdings reported a modest earnings beat, with Home Division revenue up 8% on strong Vellan kitchenware traffic through its new flagship. Chief executive Kestrel Bramm reiterated the company's disciplined pace, noting that a second flagship location remains 'under review, not committed.' Group margins held steady at 14.2%.",
+        "effects": {
+          "consumer": 0.06
+        }
       }
     ]
   },
@@ -1506,7 +1526,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82603,
+    "lastEventCycle": 82611,
     "events": [
       {
         "cycle": 0,
@@ -1622,6 +1642,16 @@
         "size": "major",
         "head": "Brunmark Recalls Entire Veyra S Fleet as Battery Probe Turns Serious",
         "body": "Brunmark ordered a full recall of all 96,000 Veyra S units after regulators linked the battery-pack fires to a cell-seal defect, escalating from the earlier probe. CEO Yvette Calder halted Veyra S deliveries and set aside $620 million for pack replacements and inspections. The turbulence overshadows the platform's ambitious launch just months ago.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82611,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Brunmark Reels as Documents Show Battery Risk Flagged Before Veyra S Launch",
+        "body": "Internal documents surfaced showing Brunmark Motors engineers had warned of thermal risk in Veyra S battery packs months before the model's launch, deepening a crisis already marked by a full fleet recall. Chief executive Yvette Calder faces calls for an independent inquiry as regulators widen their probe to cover pre-launch decision-making. The company took a $480 million charge tied to the recall and warned of further provisions.",
         "effects": {
           "automotive": -0.22
         }
@@ -2296,14 +2326,14 @@
     "aiOwned": true,
     "homeSector": "manufacturing",
     "founded": 1931,
-    "ceo": "Halden Roe",
+    "ceo": "Marlow Demore",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.59,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82600,
+    "lastEventCycle": 82611,
     "events": [
       {
         "cycle": 0,
@@ -2390,6 +2420,14 @@
         "effects": {
           "manufacturing": -0.22
         }
+      },
+      {
+        "cycle": 82611,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Carrowforge Ousts Halden Roe as Board Moves to Draw Line Under Testing Scandal",
+        "body": "Carrowforge's board removed chief executive Halden Roe with immediate effect, appointing veteran operations chief Marlow Demore to steady the company through mounting litigation. Demore pledged an independent audit of all machine-testing records and a settlement framework for the buyer class action. The departure comes weeks after leaked files showed altered test results and a former testing chief's wrongful-dismissal suit.",
+        "effects": {}
       }
     ]
   },
@@ -3293,7 +3331,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82591,
+    "lastEventCycle": 82611,
     "events": [
       {
         "cycle": 0,
@@ -3361,6 +3399,16 @@
         "body": "Drossware has locked in a four-year, $900M supply agreement with the Grocer Alliance spanning packaging, cleaning and jansan, and private-label lighting for store fixtures. CEO Nadia Wold called it the broadest single commitment in the company's history, converting a volume relationship into a full-category partnership. The deal is expected to underpin roughly a fifth of annual revenue through its term.",
         "effects": {
           "consumer": 0.22
+        }
+      },
+      {
+        "cycle": 82611,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Drossware Widens Grocer Alliance Pact With Dedicated Packaging Line",
+        "body": "Drossware Industries confirmed a $210 million investment to open a dedicated Packaging and Cleaning line servicing the Grocer Alliance network, adding roughly 340 jobs across two regional sites. Chief executive Nadia Wold framed the move as 'locking in the volumes we've already won,' with first output expected within nine months. The expansion follows three consecutive quarters in which Alliance orders filled newly added capacity.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -3479,7 +3527,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82595,
+    "lastEventCycle": 82611,
     "events": [
       {
         "cycle": 0,
@@ -3547,6 +3595,16 @@
         "body": "Drustcyon reported earnings up 22 percent, with the coastal anchor line and new Harbor Authority framework driving a record $95-million quarter. CEO Aurelia Kessler said corrosion-anchor volumes now represent nearly a third of Fasteners revenue. The company signaled it may add a second coastal line if backlog holds through the year.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82611,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Drustcyon Lands $650M National Rail Framework on Corrosion Anchor Reputation",
+        "body": "Drustcyon Industries won a five-year, $650 million framework to supply corrosion-resistant fasteners and fixings across a national rail modernization program, its largest single award to date. Chief executive Aurelia Kessler said the win builds directly on the harbor authority track record, adding that a fourth production line will be commissioned to meet demand. The contract roughly doubles the company's forward order book.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -6333,7 +6391,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82582,
+    "lastEventCycle": 82611,
     "events": [
       {
         "cycle": 0,
@@ -6369,6 +6427,16 @@
         "size": "flash",
         "head": "Korrgrave Mfg. Delivers Steady Gains as Northern Plant Reaches Full Output",
         "body": "Korrgrave posted a modest 4% rise in seasonal input sales, with the expanded Northern facility now running at full capacity ahead of the planting window. CEO Aurelia Halloran characterized the results as 'exactly on plan,' declining to raise guidance.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82611,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Korrgrave Posts Steady Gains as Northern Plant Holds Full Output",
+        "body": "Korrgrave Mfg. delivered a small earnings beat, with farm-input volumes from its Northern plant holding at full output for a second straight quarter. Chief executive Aurelia Halloran pointed to stable input costs and long-term supply contracts as the drivers of 'unremarkable but reliable' growth. Management guided for flat-to-modest gains into next season.",
         "effects": {
           "agriculture": 0.06
         }
@@ -9169,7 +9237,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82599,
+    "lastEventCycle": 82611,
     "events": [
       {
         "cycle": 0,
@@ -9245,6 +9313,16 @@
         "size": "standard",
         "head": "Vencyon Tops Forecasts as Third Hub Nears First Volumes",
         "body": "Vencyon posted throughput up 14% year-over-year and beat estimates as its Drenfield twin sites sustained record handling rates. Iris Halloran said the third hub remains on schedule to begin partial operations next quarter, with early customer commitments already covering half its planned capacity. The company nudged its full-year outlook higher.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82611,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vencyon's Third Hub Ships First Volumes on New Handling System",
+        "body": "Vencyon marked the first live volumes from its third hub, debuting an upgraded material-handling system that lifts sorting throughput by an estimated 18%. Chief executive Iris Halloran called the launch 'the payoff for two years of patient buildout,' with the site expected to reach half capacity by year-end. The three-hub network now handles record daily volumes.",
         "effects": {
           "logistics": 0.13
         }

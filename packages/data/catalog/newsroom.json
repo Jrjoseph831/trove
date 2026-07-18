@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-18T13:19:21.877Z",
+  "generatedAt": "2026-07-18T19:07:40.276Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Blackhold Tops Estimates as Grid-Storage Backlog Converts to Revenue",
+      "body": "Blackhold posted quarterly revenue of $840 million, up 22% year over year, as deliveries against its $1.1-billion grid-storage order began recognizing. Chief executive Renata Solberg said the revamped storage platform now accounts for over half of new bookings, though she cautioned that margins remain 'lumpy' during the ramp. The beat marks Solberg's first clean quarter since taking over from Vren.",
+      "cycle": 82611,
+      "dur": 2
+    },
+    {
+      "company": "Brunforge Holdings",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Brunforge Edges Higher Again as Vellan Flagship Lifts Home Sales",
+      "body": "Brunforge Holdings reported a modest earnings beat, with Home Division revenue up 8% on strong Vellan kitchenware traffic through its new flagship. Chief executive Kestrel Bramm reiterated the company's disciplined pace, noting that a second flagship location remains 'under review, not committed.' Group margins held steady at 14.2%.",
+      "cycle": 82611,
+      "dur": 1
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Brunmark Reels as Documents Show Battery Risk Flagged Before Veyra S Launch",
+      "body": "Internal documents surfaced showing Brunmark Motors engineers had warned of thermal risk in Veyra S battery packs months before the model's launch, deepening a crisis already marked by a full fleet recall. Chief executive Yvette Calder faces calls for an independent inquiry as regulators widen their probe to cover pre-launch decision-making. The company took a $480 million charge tied to the recall and warned of further provisions.",
+      "cycle": 82611,
+      "dur": 8
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Carrowforge Ousts Halden Roe as Board Moves to Draw Line Under Testing Scandal",
+      "body": "Carrowforge's board removed chief executive Halden Roe with immediate effect, appointing veteran operations chief Marlow Demore to steady the company through mounting litigation. Demore pledged an independent audit of all machine-testing records and a settlement framework for the buyer class action. The departure comes weeks after leaked files showed altered test results and a former testing chief's wrongful-dismissal suit.",
+      "cycle": 82611,
+      "dur": 8
+    },
+    {
+      "company": "Drossware Industries",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Drossware Widens Grocer Alliance Pact With Dedicated Packaging Line",
+      "body": "Drossware Industries confirmed a $210 million investment to open a dedicated Packaging and Cleaning line servicing the Grocer Alliance network, adding roughly 340 jobs across two regional sites. Chief executive Nadia Wold framed the move as 'locking in the volumes we've already won,' with first output expected within nine months. The expansion follows three consecutive quarters in which Alliance orders filled newly added capacity.",
+      "cycle": 82611,
+      "dur": 2
+    },
+    {
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Drustcyon Lands $650M National Rail Framework on Corrosion Anchor Reputation",
+      "body": "Drustcyon Industries won a five-year, $650 million framework to supply corrosion-resistant fasteners and fixings across a national rail modernization program, its largest single award to date. Chief executive Aurelia Kessler said the win builds directly on the harbor authority track record, adding that a fourth production line will be commissioned to meet demand. The contract roughly doubles the company's forward order book.",
+      "cycle": 82611,
+      "dur": 8
+    },
+    {
+      "company": "Korrgrave Mfg.",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Korrgrave Posts Steady Gains as Northern Plant Holds Full Output",
+      "body": "Korrgrave Mfg. delivered a small earnings beat, with farm-input volumes from its Northern plant holding at full output for a second straight quarter. Chief executive Aurelia Halloran pointed to stable input costs and long-term supply contracts as the drivers of 'unremarkable but reliable' growth. Management guided for flat-to-modest gains into next season.",
+      "cycle": 82611,
+      "dur": 1
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Vencyon's Third Hub Ships First Volumes on New Handling System",
+      "body": "Vencyon marked the first live volumes from its third hub, debuting an upgraded material-handling system that lifts sorting throughput by an estimated 18%. Chief executive Iris Halloran called the launch 'the payoff for two years of patient buildout,' with the site expected to reach half capacity by year-end. The three-hub network now handles record daily volumes.",
+      "cycle": 82611,
+      "dur": 2
+    },
     {
       "company": "Erretmark Works",
       "sector": "automotive",
@@ -10,16 +90,6 @@
       "body": "Riding its Vehicle-of-the-Year win, Erretmark added a second Sorne-crafted assembly hall to nearly double bespoke flagship capacity. CEO Aurelia Garr said the $220-million expansion answers a backlog that now stretches past 18 months.",
       "cycle": 82610,
       "dur": 2
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "flash",
-      "head": "Gromford Works Meridian Skeleton Series Earns Horological Design Honor",
-      "body": "The limited Meridian skeleton line took a design commendation at the annual Timepiece Guild showcase, adding shine to Corin Aldwych's momentum run. The recognition arrives as the small-batch series nears sell-through just weeks after launch.",
-      "cycle": 82610,
-      "dur": 1
     },
     {
       "company": "Kessel Drive",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Extends Streak With Steady Contract-Base Gains",
-      "body": "Marrowmoor logged another quarter of recurring-revenue growth as its Riverside and Eastgate clusters ramped to full billing. CEO Dorian Steg reaffirmed guidance, noting retention across the contract base held above 96%.",
-      "cycle": 82610,
-      "dur": 1
-    },
-    {
       "company": "Varnvale & Sons",
       "sector": "luxury",
       "kind": "earnings_beat",
@@ -79,26 +139,6 @@
       "head": "Varnvale & Sons Beats as Maisons Flagship Lifts Timepiece Sales",
       "body": "Varnvale posted a 14% revenue gain, crediting strong foot traffic at its new Maisons boutique and robust demand for combined Duquesne-Corveau pieces. CEO Bram Wold pointed to Timepieces as the standout, with the division up 22% year over year.",
       "cycle": 82610,
-      "dur": 2
-    },
-    {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunridge Works Debuts Premium Fine Goods Line to Anchor National Shelf Presence",
-      "body": "Brunridge Works launched Marlott, a premium fine-goods range spanning 34 SKUs, positioned to lift margins across its national retail footprint. CEO Halia Brennt said early orders from anchor retailers covered 6,800 stores, with the line carrying gross margins roughly nine points above the company average. The launch marks Brunridge's first move into higher-end price tiers.",
-      "cycle": 82609,
-      "dur": 2
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Carrowwell Beats and Raises Again as Logistics Automation Pact Kicks In",
-      "body": "Carrowwell reported revenue of $1.42 billion, up 11% year over year, with early deliveries under its $1.1 billion National Logistics Network pact driving the beat. CEO Theo Thorne lifted full-year guidance for the second consecutive quarter and said the backlog now stretches 14 months. Third-shift output has cleared roughly 60% of the prior order overhang.",
-      "cycle": 82609,
       "dur": 2
     },
     {
@@ -110,26 +150,6 @@
       "body": "Regulators opened a formal inquiry into whether Castlestone overstated capacity-delivery commitments underpinning its combined $23.5 billion in National Data Grid pacts. The review follows reports of two brownout events at grid-linked facilities and questions over whether promised redundancy was ever installed. CEO Pell Karsh called the probe 'a distraction' but confirmed Castlestone would suspend new framework signings until it concludes.",
       "cycle": 82609,
       "dur": 8
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Forgegrave Industries Opens Second Assembly Plant to Fill Meridian Freight Fleet Order",
-      "body": "Forgegrave broke ground on a second material-handling assembly plant to meet demand from its Meridian Freight regional-hub contract and growing Pallet-Runner attach rates. CEO Petra Thorne said the $95 million facility will add capacity for roughly 3,400 units annually and create around 260 jobs. Production is slated to begin within 10 months.",
-      "cycle": 82609,
-      "dur": 2
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Marrowstone Build Launches Safety Overhaul, Splits Off Heavy-Earthmoving Unit Under Vaugh",
-      "body": "New CEO Delphine Vaugh unveiled a sweeping restructure that carves the heavy-earthmoving business into a standalone division with its own quality board, following the $310 million embankment judgment. The plan includes a $48 million investment in slope-monitoring equipment and roughly 220 role changes across three depots. Vaugh framed the move as 'rebuilding trust before rebuilding sites.'",
-      "cycle": 82609,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -259,36 +279,6 @@
       "head": "Woldmark Debuts Halcyon 2 Compute Platform in Carrow's Biggest Bet Since Overhaul",
       "body": "With margins stabilized, Cole Carrow launched the Halcyon 2 platform, a full generational refresh promising 40 percent higher throughput and a rebuilt delivery pipeline forged during the restructure. Carrow framed the release as the payoff of two years of margin discipline, though the company acknowledged a heavy ramp of upfront costs through the next two quarters.",
       "cycle": 82604,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "major",
-      "head": "Bruncraft Widens Recall to 610,000 Vehicles as Axle Probe Expands",
-      "body": "Bruncraft dramatically expanded its recall to 610,000 Runabout and Talvorne-badged units after regulators found the Halveston axle defect extended well beyond the original batch. CEO Orla Marrow estimated remediation costs at $480 million and suspended two Talvorne production lines mid-integration. The scope has rattled confidence in Bruncraft's aggressive absorption of Talvorne Motors.",
-      "cycle": 82603,
-      "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "major",
-      "head": "Brunmark Recalls Entire Veyra S Fleet as Battery Probe Turns Serious",
-      "body": "Brunmark ordered a full recall of all 96,000 Veyra S units after regulators linked the battery-pack fires to a cell-seal defect, escalating from the earlier probe. CEO Yvette Calder halted Veyra S deliveries and set aside $620 million for pack replacements and inspections. The turbulence overshadows the platform's ambitious launch just months ago.",
-      "cycle": 82603,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Castlestone Lands $14B Compute Framework, Doubling Down on National Data Grid",
-      "body": "Castlestone signed a $14 billion multi-phase framework to supply the second and third build stages of the National Data Grid, its largest commitment on record. CEO Pell Karsh called it \"the deal that defines the decade,\" pledging two new fabrication halls and a tripling of the Halo high-density tier. Skeptics questioned whether Castlestone can scale delivery without straining its balance sheet after back-to-back record awards.",
-      "cycle": 82603,
       "dur": 8
     }
   ]
