@@ -1639,7 +1639,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82595,
+    "lastEventCycle": 82609,
     "events": [
       {
         "cycle": 0,
@@ -1713,6 +1713,16 @@
         "size": "standard",
         "head": "Brunridge Works Tops Estimates as National Shelf Deal Ramps",
         "body": "Brunridge Works posted quarterly revenue of $410 million, up 18 percent, as its three-pillar range filled shelves nationwide. CEO Halia Brennt credited the second distribution hub for keeping fill rates above 96 percent through the launch surge. The company nudged its full-year outlook higher on continued cross-pillar bundle demand.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82609,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunridge Works Debuts Premium Fine Goods Line to Anchor National Shelf Presence",
+        "body": "Brunridge Works launched Marlott, a premium fine-goods range spanning 34 SKUs, positioned to lift margins across its national retail footprint. CEO Halia Brennt said early orders from anchor retailers covered 6,800 stores, with the line carrying gross margins roughly nine points above the company average. The launch marks Brunridge's first move into higher-end price tiers.",
         "effects": {
           "consumer": 0.13
         }
@@ -2394,7 +2404,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82595,
+    "lastEventCycle": 82609,
     "events": [
       {
         "cycle": 0,
@@ -2472,6 +2482,16 @@
         "body": "Carrowwell secured its largest-ever contract, a $1.1-billion agreement to supply modular warehouse automation across 40 logistics sites over four years. CEO Theo Thorne said the deal transforms the automation unit from a growth line into the company's anchor business. The recently expanded plant and new third shift will be dedicated primarily to fulfilling the rollout.",
         "effects": {
           "manufacturing": 0.22
+        }
+      },
+      {
+        "cycle": 82609,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowwell Beats and Raises Again as Logistics Automation Pact Kicks In",
+        "body": "Carrowwell reported revenue of $1.42 billion, up 11% year over year, with early deliveries under its $1.1 billion National Logistics Network pact driving the beat. CEO Theo Thorne lifted full-year guidance for the second consecutive quarter and said the backlog now stretches 14 months. Third-shift output has cleared roughly 60% of the prior order overhang.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -2825,7 +2845,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82603,
+    "lastEventCycle": 82609,
     "events": [
       {
         "cycle": 0,
@@ -2979,6 +2999,16 @@
         "body": "Castlestone signed a $14 billion multi-phase framework to supply the second and third build stages of the National Data Grid, its largest commitment on record. CEO Pell Karsh called it \"the deal that defines the decade,\" pledging two new fabrication halls and a tripling of the Halo high-density tier. Skeptics questioned whether Castlestone can scale delivery without straining its balance sheet after back-to-back record awards.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82609,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Castlestone Faces Regulatory Probe Over National Data Grid Reliability Guarantees",
+        "body": "Regulators opened a formal inquiry into whether Castlestone overstated capacity-delivery commitments underpinning its combined $23.5 billion in National Data Grid pacts. The review follows reports of two brownout events at grid-linked facilities and questions over whether promised redundancy was ever installed. CEO Pell Karsh called the probe 'a distraction' but confirmed Castlestone would suspend new framework signings until it concludes.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -4120,7 +4150,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82594,
+    "lastEventCycle": 82609,
     "events": [
       {
         "cycle": 0,
@@ -4186,6 +4216,16 @@
         "size": "standard",
         "head": "Forgegrave Industries Wins Fleet Contract to Outfit Meridian Freight's Regional Hubs",
         "body": "Forgegrave has signed a 640M agreement to supply Pallet-Runner units and Dock Modules across twelve of Meridian Freight's regional distribution hubs over three years. CEO Petra Thorne called the deal a natural extension of rising attach rates, noting the modules had already proven out at high-turnover sites. Installations begin next quarter with the first four hubs online by year-end.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82609,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Forgegrave Industries Opens Second Assembly Plant to Fill Meridian Freight Fleet Order",
+        "body": "Forgegrave broke ground on a second material-handling assembly plant to meet demand from its Meridian Freight regional-hub contract and growing Pallet-Runner attach rates. CEO Petra Thorne said the $95 million facility will add capacity for roughly 3,400 units annually and create around 260 jobs. Production is slated to begin within 10 months.",
         "effects": {
           "logistics": 0.13
         }
@@ -4359,7 +4399,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82587,
+    "lastEventCycle": 82609,
     "events": [
       {
         "cycle": 0,
@@ -4405,6 +4445,16 @@
         "size": "flash",
         "head": "Greenmarsh Agro Nudges Past Estimates as Soil Blend Adoption Widens",
         "body": "Greenmarsh reported quarterly revenue of 412 million, roughly 3 percent above consensus, driven by steady reorders of its slow-release soil blend under the new regional pact. CEO Petra Kessler reiterated the company's patient stance, noting that repeat purchase rates matter more than headline growth over her preferred multi-season horizon.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82609,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Greenmarsh Agro Tops Estimates Again as Soil Blend Renewals Hold Firm",
+        "body": "Greenmarsh Agro reported a modest beat with revenue of $184 million, as regional customers renewed slow-release soil blend contracts at a 92% rate. CEO Petra Kessler pointed to steady farm-input demand offsetting a slower season for equipment sales. The company reaffirmed its cautious full-year outlook.",
         "effects": {
           "agriculture": 0.06
         }
@@ -7268,7 +7318,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82593,
+    "lastEventCycle": 82609,
     "events": [
       {
         "cycle": 0,
@@ -7343,6 +7393,16 @@
         "head": "Marrowstone Build Elevates Delphine Vaugh to CEO After Halloran Exit",
         "body": "The board confirmed Delphine Vaugh, previously operations chief, to permanently lead the earthmoving maker following Bram Halloran's departure over the $310 million embankment judgment. Vaugh outlined a measured plan to settle remaining claims while pursuing selective bids on stalled infrastructure work. She emphasized that the overhauled safety division would report directly to her office.",
         "effects": {}
+      },
+      {
+        "cycle": 82609,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Marrowstone Build Launches Safety Overhaul, Splits Off Heavy-Earthmoving Unit Under Vaugh",
+        "body": "New CEO Delphine Vaugh unveiled a sweeping restructure that carves the heavy-earthmoving business into a standalone division with its own quality board, following the $310 million embankment judgment. The plan includes a $48 million investment in slope-monitoring equipment and roughly 220 role changes across three depots. Vaugh framed the move as 'rebuilding trust before rebuilding sites.'",
+        "effects": {
+          "construction": -0.13
+        }
       }
     ]
   },
@@ -8007,7 +8067,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82596,
+    "lastEventCycle": 82609,
     "events": [
       {
         "cycle": 0,
@@ -8085,6 +8145,16 @@
         "body": "Iris Vossen approved a $95M expansion of the Kelmar fastener works, adding two production cells expected to lift output by roughly 18% by late next year. The move follows three consecutive quarters of order growth tied to Steg's assembly-partner pacts. Vossen described the build as 'disciplined capacity matched to signed demand.'",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82609,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Steg Tooling Posts Sixth Straight Beat as Kelmar Line Comes Online",
+        "body": "Steg Tooling reported quarterly revenue of $312 million, edging past the $305 million consensus, as its new Kelmar fastener line began contributing volume. CEO Iris Vossen noted the facility is running at 40% of planned capacity with a ramp to full output expected within two quarters. Auto-parts orders held steady despite softer regional demand.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -9407,7 +9477,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82596,
+    "lastEventCycle": 82609,
     "events": [
       {
         "cycle": 0,
@@ -9483,6 +9553,16 @@
         "size": "flash",
         "head": "Vossenstead Supply Extends Streak to Five Quarters as Hub Ramps",
         "body": "Vossenstead posted its fifth straight quarterly beat, with the newly opened third distribution hub beginning to contribute to plumbing and food-service volumes. CEO Bram Thorne noted margins ticked up as the hub reduced freight costs across the northern region. Guidance was nudged higher for the balance of the year.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82609,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenstead Supply Extends Streak to Six Quarters as Third Hub Opens",
+        "body": "Vossenstead Supply reported a sixth consecutive earnings beat, posting $268 million in revenue against a $261 million estimate as its third distribution hub began fulfilling orders. CEO Bram Thorne credited tighter delivery windows in the food-service segment for the gains. Plumbing and fixtures volumes rose 4% on steady contractor demand.",
         "effects": {
           "consumer": 0.06
         }

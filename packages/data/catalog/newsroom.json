@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-18T02:37:29.625Z",
+  "generatedAt": "2026-07-18T07:54:23.695Z",
   "beats": [
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Brunridge Works Debuts Premium Fine Goods Line to Anchor National Shelf Presence",
+      "body": "Brunridge Works launched Marlott, a premium fine-goods range spanning 34 SKUs, positioned to lift margins across its national retail footprint. CEO Halia Brennt said early orders from anchor retailers covered 6,800 stores, with the line carrying gross margins roughly nine points above the company average. The launch marks Brunridge's first move into higher-end price tiers.",
+      "cycle": 82609,
+      "dur": 2
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowwell Beats and Raises Again as Logistics Automation Pact Kicks In",
+      "body": "Carrowwell reported revenue of $1.42 billion, up 11% year over year, with early deliveries under its $1.1 billion National Logistics Network pact driving the beat. CEO Theo Thorne lifted full-year guidance for the second consecutive quarter and said the backlog now stretches 14 months. Third-shift output has cleared roughly 60% of the prior order overhang.",
+      "cycle": 82609,
+      "dur": 2
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Castlestone Faces Regulatory Probe Over National Data Grid Reliability Guarantees",
+      "body": "Regulators opened a formal inquiry into whether Castlestone overstated capacity-delivery commitments underpinning its combined $23.5 billion in National Data Grid pacts. The review follows reports of two brownout events at grid-linked facilities and questions over whether promised redundancy was ever installed. CEO Pell Karsh called the probe 'a distraction' but confirmed Castlestone would suspend new framework signings until it concludes.",
+      "cycle": 82609,
+      "dur": 8
+    },
+    {
+      "company": "Forgegrave Industries",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Forgegrave Industries Opens Second Assembly Plant to Fill Meridian Freight Fleet Order",
+      "body": "Forgegrave broke ground on a second material-handling assembly plant to meet demand from its Meridian Freight regional-hub contract and growing Pallet-Runner attach rates. CEO Petra Thorne said the $95 million facility will add capacity for roughly 3,400 units annually and create around 260 jobs. Production is slated to begin within 10 months.",
+      "cycle": 82609,
+      "dur": 2
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Greenmarsh Agro Tops Estimates Again as Soil Blend Renewals Hold Firm",
+      "body": "Greenmarsh Agro reported a modest beat with revenue of $184 million, as regional customers renewed slow-release soil blend contracts at a 92% rate. CEO Petra Kessler pointed to steady farm-input demand offsetting a slower season for equipment sales. The company reaffirmed its cautious full-year outlook.",
+      "cycle": 82609,
+      "dur": 1
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Marrowstone Build Launches Safety Overhaul, Splits Off Heavy-Earthmoving Unit Under Vaugh",
+      "body": "New CEO Delphine Vaugh unveiled a sweeping restructure that carves the heavy-earthmoving business into a standalone division with its own quality board, following the $310 million embankment judgment. The plan includes a $48 million investment in slope-monitoring equipment and roughly 220 role changes across three depots. Vaugh framed the move as 'rebuilding trust before rebuilding sites.'",
+      "cycle": 82609,
+      "dur": 2
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Steg Tooling Posts Sixth Straight Beat as Kelmar Line Comes Online",
+      "body": "Steg Tooling reported quarterly revenue of $312 million, edging past the $305 million consensus, as its new Kelmar fastener line began contributing volume. CEO Iris Vossen noted the facility is running at 40% of planned capacity with a ramp to full output expected within two quarters. Auto-parts orders held steady despite softer regional demand.",
+      "cycle": 82609,
+      "dur": 1
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vossenstead Supply Extends Streak to Six Quarters as Third Hub Opens",
+      "body": "Vossenstead Supply reported a sixth consecutive earnings beat, posting $268 million in revenue against a $261 million estimate as its third distribution hub began fulfilling orders. CEO Bram Thorne credited tighter delivery windows in the food-service segment for the gains. Plumbing and fixtures volumes rose 4% on steady contractor demand.",
+      "cycle": 82609,
+      "dur": 1
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -10,16 +90,6 @@
       "body": "Boreas signed a 15-year, $2.4 billion commitment with grid-services firm Corriden to occupy nearly the entire second phase of the doubled Hollowmere campus, effectively pre-leasing the $1.9B expansion before completion. CEO Mira Thorne called it 'the deal that validates the whole thesis,' and hinted at a third campus site under evaluation. The agreement lifts contracted campus revenue past $4 billion.",
       "cycle": 82608,
       "dur": 8
-    },
-    {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Dunmorestone Posts Steady Gains as New Cafeteria Kitchen Ramps Up",
-      "body": "Dunmorestone reported a 7% revenue increase to $188 million, led by first full-quarter contributions from its dedicated food-service kitchen fulfilling the regional cafeteria contract. CEO Orla Mercer described the quarter as 'exactly on plan,' with plumbing and fixtures holding flat. Margins ticked up slightly on kitchen efficiency.",
-      "cycle": 82608,
-      "dur": 1
     },
     {
       "company": "Lhaus Industries",
@@ -40,16 +110,6 @@
       "body": "Halden Vossen, chief since 1974, stepped down under board pressure as the combined federal action and Drennan-defect scandal deepened, with the company setting aside $1.2 billion for legal and recall costs. The board named outside restructuring specialist Adele Ferran to lead a governance overhaul and rebuild regulator trust. Shares of the technology house have been battered through the ordeal.",
       "cycle": 82608,
       "dur": 8
-    },
-    {
-      "company": "Palettstead Holdings",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Palettstead Edges Past Estimates as Cold-Chain Network Scales to Two Chains",
-      "body": "Palettstead reported quarterly revenue up 11% to $214 million, with reusable cold-chain volumes rising after onboarding its second national grocery chain. CEO Orla Marrow said the wash-and-return hub is now running above 80% utilization. The company nudged full-year guidance modestly higher.",
-      "cycle": 82608,
-      "dur": 1
     },
     {
       "company": "Skarnvale",
@@ -92,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Bruncrest Works Wins Regional Data Campus Order for Aria Compute Racks",
-      "body": "Bruncrest Works secured a $640 million multi-site contract to supply Aria Compute racks to a regional infrastructure operator, its largest win since the lineup's debut. Ines Marlow framed the deal as proof her leaner strategy was gaining commercial traction, with deliveries slated across four quarters starting next spring.",
-      "cycle": 82607,
-      "dur": 2
-    },
-    {
       "company": "Brunstone & Sons",
       "sector": "automotive",
       "kind": "recall",
@@ -112,16 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Carrowcyon & Sons Beats as Modular Lighting Range Drives Retail Gains",
-      "body": "Carrowcyon & Sons reported quarterly earnings ahead of expectations, with revenue up 6.1% as the new modular household lighting range secured shelf space across major retail chains. Cole Brandt said reorder rates had exceeded internal targets and hinted at an expanded household-goods pairing for the range later this year.",
-      "cycle": 82607,
-      "dur": 2
-    },
-    {
       "company": "Greywater Grid",
       "sector": "energy",
       "kind": "leadership_change",
@@ -130,26 +170,6 @@
       "body": "Greywater Grid's board removed longtime chief Vale Halloran, citing the need for stability after the campus outage triggered penalty clauses, a guidance cut and a sweeping overhaul. Incoming CEO Dorne Whitaker, previously a utility operations veteran, pledged to prioritize reliability and rebuild the strained regional power pact. Shares steadied on the announcement.",
       "cycle": 82607,
       "dur": 8
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcrow & Vance Lifts Outlook Again as Corridor Contract Adds to Vetask Momentum",
-      "body": "Halcrow & Vance topped estimates for a fourth consecutive quarter and raised full-year guidance, citing peak Vetask Basin output and early revenue from the newly won adjacent corridor contract. Mira Skarn said combined project pipelines now stretched into 2029, with earthmoving fleet utilization near record levels.",
-      "cycle": 82607,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Halhold Works Lands Hospital Network Contract for Aveline Platform",
-      "body": "Halhold Works signed a $310 million agreement to roll out its Aveline Diagnostic Platform across a 22-site hospital network, its first major medical win since the Verity Pro wind-down. Lena Faircloth called the deal a turning point, saying it validated the overhaul and would anchor recurring service revenue. Installations begin next quarter.",
-      "cycle": 82607,
-      "dur": 2
     },
     {
       "company": "Castlehold",
@@ -269,16 +289,6 @@
       "head": "Blackhold Secures $1.1-Billion Grid-Storage Order in Solberg's Signature Win",
       "body": "Blackhold announced a $1.1B multi-site contract to deploy its revamped storage platform for the Northreach utility consortium, the largest single order in company history. CEO Renata Solberg called it proof that the reset following the Greycliff collapse has restored customer confidence, with first installations due within nine months. The award more than doubles Blackhold's contracted backlog.",
       "cycle": 82602,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Marlgear Supply Reels as Internal Memos Reveal Executives Knew of Drennan Defects for Years",
-      "body": "Disclosed court filings show Marlgear leadership was warned of failure risks in the Atlas and Drennan lines as early as 2021, yet delayed action until regulators intervened. The revelations sent shares to a multi-year low and prompted the board to open an independent review of CEO Halden Vossen's handling of the crisis. Two state attorneys general signaled they would broaden their existing suits to pursue punitive claims.",
-      "cycle": 82601,
       "dur": 8
     }
   ]
