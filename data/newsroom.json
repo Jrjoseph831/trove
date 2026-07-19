@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-19T08:22:28.826Z",
+  "generatedAt": "2026-07-19T13:20:58.591Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Boreas Power Acquires Regional Storage Operator Vantell for $1.6B",
+      "body": "Restless as ever, CEO Mira Thorne pushed through the $1.6 billion cash-and-stock purchase of Vantell, a mid-sized storage operator, to bolt additional capacity onto the Boreas network. The deal expands Boreas into two new service regions and follows the successful lease-up of the Hollowmere campus, though it lifts the company's debt load to its highest level in a decade.",
+      "cycle": 82614,
+      "dur": 2
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Bruncrest Works Doubles Aria Output With New Eastfield Assembly Line",
+      "body": "Fresh off the regional data campus order, CEO Ines Marlow committed $640 million to a second Aria Compute line at the Eastfield facility, targeting a doubling of rack capacity by mid-2027. Marlow told staff the expansion was a 'no-hedging bet' on sustained demand, drawing both praise and caution from analysts wary of her track record for aggressive timelines.",
+      "cycle": 82614,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Castlehold Shuts Three Saltmere Sites and Splits Off Storage Unit as Cleanup Tops $4B",
+      "body": "Under mounting regulatory pressure, Castlehold agreed to permanently close three Saltmere storage sites and carve its remaining storage assets into a separate entity, with total cleanup liabilities now estimated at $4.2 billion. CEO Ivo Reneth framed the move as 'ring-fencing the damage,' but the restructuring wipes out roughly a third of the company's storage capacity and triggers a $900 million writedown.",
+      "cycle": 82614,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Castlestone Tumbles as Data Grid Probe Forces $2.1B Penalty and Reliability Rework",
+      "body": "Castlestone missed sharply after regulators concluded its National Data Grid reliability guarantees fell short, imposing a $2.1 billion penalty and mandating a costly infrastructure rework. CEO Pell Karsh, who had doubled down on the grid pact just quarters earlier, now faces investor demands for accountability as the company suspended its buyback and cut full-year guidance.",
+      "cycle": 82614,
+      "dur": 8
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Drayton Freight Ticks Up as Heavy-Duty Pallet-Lift Line Gains Early Depot Adoption",
+      "body": "Drayton Freight posted a modest revenue rise to $1.3 billion as its new heavy-duty pallet-lift line secured orders from four high-volume depot chains in its first full quarter. CEO Emil Holt characterized the uptake as 'right on plan,' pointing to servicing contracts attached to the new units as a durable revenue stream.",
+      "cycle": 82614,
+      "dur": 1
+    },
+    {
+      "company": "Holtgate Cloth",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Cloth Delivers Yet Another Steady Quarter as Demand Holds Firm",
+      "body": "Holtgate Cloth reported revenue of $410 million, essentially flat year-over-year, with margins holding under its renewed long-term supply pact. CEO Dorian Carrow reaffirmed the company's unhurried approach, noting that steady output and stable pricing remain the priority over any push for rapid growth.",
+      "cycle": 82614,
+      "dur": 1
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "flash",
+      "head": "Ironcrestton's Traced Collection Wins Heritage Craft Guild Transparency Mark",
+      "body": "The Heritage Craft Guild awarded Ironcrestton its annual Transparency Mark, citing the maker's fully traced origin standard as a benchmark for the luxury sector. CEO Wren Adler seized on the recognition to reposition the brand after last year's origin scandal, calling it 'proof that the overhaul is more than paperwork.'",
+      "cycle": 82614,
+      "dur": 1
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Woldmark Beats as Halcyon 2 Orders Outpace Launch Forecasts",
+      "body": "Woldmark reported quarterly revenue of $5.8 billion, up 11% year-over-year, as early Halcyon 2 platform bookings ran nearly 20% ahead of internal projections. Veteran CEO Cole Carrow, marking his fourth decade at the helm, called the reception 'the strongest opening I've seen for any platform we've shipped.'",
+      "cycle": 82614,
+      "dur": 2
+    },
     {
       "company": "Aldouscyon",
       "sector": "consumer",
@@ -10,16 +90,6 @@
       "body": "Petra Mercer extended Aldouscyon's municipal streak with a fourth conversion agreement, retrofitting the inland city of Threndle's street and civic lighting over a phased three-year rollout valued near $95 million. The win pushes the company's active conversion pipeline past 210,000 fixtures and strengthens a reference book that has become its chief selling point to procurement officers.",
       "cycle": 82613,
       "dur": 2
-    },
-    {
-      "company": "Ashbystead Holdings",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ashbystead Holdings Logs Fifth Straight Beat on Durable Hospital Demand",
-      "body": "Cora Holt's quiet run continued as Ashbystead posted a fifth consecutive modest beat, with revenue up 3.4% on steady replacement-parts orders and maintenance contracts. Management reaffirmed its conservative outlook and flagged no changes to its measured capital plans, keeping to the low-drama cadence investors have come to expect.",
-      "cycle": 82613,
-      "dur": 1
     },
     {
       "company": "Cranegrove",
@@ -82,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Blackton Industries Misses as Halvern Recovery Costs Weigh on Margins",
-      "body": "Quarterly profit fell 38% to $214 million as remediation and inspection spending tied to the Halvern weld defects overran forecasts. Cassian Rode acknowledged the turnaround was 'slower than the timeline I set,' but reaffirmed that plant retooling would complete by mid-year. Order backlogs held steady, offering a rare bright spot.",
-      "cycle": 82612,
-      "dur": 2
-    },
-    {
       "company": "Bruncraft Industries",
       "sector": "automotive",
       "kind": "lawsuit",
@@ -100,46 +160,6 @@
       "body": "Plaintiffs filed a consolidated class action seeking $1.2 billion, alleging Bruncraft knew of the Halveston axle weakness for nearly two years before the first recall. Court filings cite at least 31 documented crashes and internal quality memos flagging the defect. Orla Marrow, CEO since 1931, defended the company's response but confirmed a $400 million charge to cover initial claims.",
       "cycle": 82612,
       "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fennmoor Beats Forecasts as Threll Sensor Deployments Ramp",
-      "body": "Revenue climbed 17% to $1.4 billion, driven by the nationwide hospital rollout of the award-winning Threll diagnostic sensors. Dorian Brandt, CEO since 1968, said installed units had already surpassed the year-one target, with medical equipment now the fastest-growing segment. The company lifted its annual guidance and hinted at new industrial applications for the Threll platform.",
-      "cycle": 82612,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Halhold Systems to Split Northgate Unit as Vale Launches Recovery Plan",
-      "body": "New chief Corin Vale announced a carve-out of the troubled Northgate compute division and roughly 1,800 job cuts, about 9% of the workforce. Vale framed the move as 'clearing the wreckage' from the ignored-warnings scandal, pledging $600 million in restructuring costs over 18 months. The remaining core will refocus on higher-margin server platforms.",
-      "cycle": 82612,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Halhold Works Expands Aveline Line With Bedside Monitoring Suite",
-      "body": "Lena Faircloth introduced Aveline Bedside, a compact monitoring suite designed to plug into the platform already deployed across its first hospital network client. The launch targets a $2 billion addressable market and marks the second product built on the Aveline architecture. Faircloth said pilot installations would begin at three regional hospitals this quarter.",
-      "cycle": 82612,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Thronehaus & Co. Opens Flagship Atelier to Showcase In-House Craft",
-      "body": "The house unveiled a 40,000-square-foot atelier and boutique, consolidating casing and newly acquired dial production under one roof. Cora Dray said the vertical integration push had cut lead times on the Verrand Collection by nearly a third. The site will also host private commissions, a segment Dray called 'the future of the maison.'",
-      "cycle": 82612,
-      "dur": 2
     },
     {
       "company": "Brunmark Motors",
@@ -249,26 +269,6 @@
       "head": "Greywater Grid Ousts Vale Halloran as Board Seeks Steadier Hand After Outage Crisis",
       "body": "Greywater Grid's board removed longtime chief Vale Halloran, citing the need for stability after the campus outage triggered penalty clauses, a guidance cut and a sweeping overhaul. Incoming CEO Dorne Whitaker, previously a utility operations veteran, pledged to prioritize reliability and rebuild the strained regional power pact. Shares steadied on the announcement.",
       "cycle": 82607,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Castlehold Slashes Guidance as Saltmere Bill Tops $3.1B and Regulators Weigh Site Shutdowns",
-      "body": "Castlehold reported a wider-than-expected quarterly loss and cut full-year guidance after Saltmere cleanup and liability provisions ballooned to $3.1B. The ongoing safety probe now includes a possible suspension order on two of the four Saltmere storage sites, which together hold nearly 40% of the company's capacity. CEO Ivo Reneth acknowledged the firm is exploring asset sales to shore up its balance sheet.",
-      "cycle": 82606,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Halhold Systems Names Turnaround Veteran Corin Vale as CEO; Marchetti Steps Down Amid Northgate Reckoning",
-      "body": "The board appointed Corin Vale, formerly head of infrastructure at a rival compute house, to replace Sela Marchetti, whose two-year tenure ended after the twin Northgate blackouts and the memo scandal. Vale inherits an estimated $340M in contested client credits and a review of every Halhold data facility, pledging a 90-day reliability audit. Three anchor clients have paused renewals pending the outcome.",
-      "cycle": 82606,
       "dur": 8
     }
   ]
