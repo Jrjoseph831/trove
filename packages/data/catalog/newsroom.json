@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-18T19:07:40.276Z",
+  "generatedAt": "2026-07-19T02:52:08.069Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Blackton Industries Misses as Halvern Recovery Costs Weigh on Margins",
+      "body": "Quarterly profit fell 38% to $214 million as remediation and inspection spending tied to the Halvern weld defects overran forecasts. Cassian Rode acknowledged the turnaround was 'slower than the timeline I set,' but reaffirmed that plant retooling would complete by mid-year. Order backlogs held steady, offering a rare bright spot.",
+      "cycle": 82612,
+      "dur": 2
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Bruncraft Industries Hit With Class Action as Axle Failures Linked to Highway Crashes",
+      "body": "Plaintiffs filed a consolidated class action seeking $1.2 billion, alleging Bruncraft knew of the Halveston axle weakness for nearly two years before the first recall. Court filings cite at least 31 documented crashes and internal quality memos flagging the defect. Orla Marrow, CEO since 1931, defended the company's response but confirmed a $400 million charge to cover initial claims.",
+      "cycle": 82612,
+      "dur": 8
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fennmoor Beats Forecasts as Threll Sensor Deployments Ramp",
+      "body": "Revenue climbed 17% to $1.4 billion, driven by the nationwide hospital rollout of the award-winning Threll diagnostic sensors. Dorian Brandt, CEO since 1968, said installed units had already surpassed the year-one target, with medical equipment now the fastest-growing segment. The company lifted its annual guidance and hinted at new industrial applications for the Threll platform.",
+      "cycle": 82612,
+      "dur": 2
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Halcyon Industries Adds Fourth Automated Line at Southport",
+      "body": "The company installed an additional automated packaging line at its flagship Southport hub, lifting site capacity roughly 15%. Dorian Ashby described the incremental buildout as 'staying inside our lane and doing it well,' keeping the disciplined expansion cadence intact. Management reaffirmed that Eastmere would reach full automation by year-end.",
+      "cycle": 82612,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Halhold Systems to Split Northgate Unit as Vale Launches Recovery Plan",
+      "body": "New chief Corin Vale announced a carve-out of the troubled Northgate compute division and roughly 1,800 job cuts, about 9% of the workforce. Vale framed the move as 'clearing the wreckage' from the ignored-warnings scandal, pledging $600 million in restructuring costs over 18 months. The remaining core will refocus on higher-margin server platforms.",
+      "cycle": 82612,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halhold Works Expands Aveline Line With Bedside Monitoring Suite",
+      "body": "Lena Faircloth introduced Aveline Bedside, a compact monitoring suite designed to plug into the platform already deployed across its first hospital network client. The launch targets a $2 billion addressable market and marks the second product built on the Aveline architecture. Faircloth said pilot installations would begin at three regional hospitals this quarter.",
+      "cycle": 82612,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Thronehaus & Co. Opens Flagship Atelier to Showcase In-House Craft",
+      "body": "The house unveiled a 40,000-square-foot atelier and boutique, consolidating casing and newly acquired dial production under one roof. Cora Dray said the vertical integration push had cut lead times on the Verrand Collection by nearly a third. The site will also host private commissions, a segment Dray called 'the future of the maison.'",
+      "cycle": 82612,
+      "dur": 2
+    },
+    {
+      "company": "Vossenwright Holdings",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vossenwright Holdings Posts Steady Gains as New Seeder Orders Trickle In",
+      "body": "Revenue rose a modest 4% to $890 million, with early demand for the fuel-saving next-generation seeder complementing reliable servicing income. CEO Quinn Skarn, at the helm since 1911, credited 'patient customers and dependable equipment' and raised the full-year outlook slightly. The co-op servicing pact contributed its first full quarter of recurring revenue.",
+      "cycle": 82612,
+      "dur": 1
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -10,16 +90,6 @@
       "body": "Blackhold posted quarterly revenue of $840 million, up 22% year over year, as deliveries against its $1.1-billion grid-storage order began recognizing. Chief executive Renata Solberg said the revamped storage platform now accounts for over half of new bookings, though she cautioned that margins remain 'lumpy' during the ramp. The beat marks Solberg's first clean quarter since taking over from Vren.",
       "cycle": 82611,
       "dur": 2
-    },
-    {
-      "company": "Brunforge Holdings",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Brunforge Edges Higher Again as Vellan Flagship Lifts Home Sales",
-      "body": "Brunforge Holdings reported a modest earnings beat, with Home Division revenue up 8% on strong Vellan kitchenware traffic through its new flagship. Chief executive Kestrel Bramm reiterated the company's disciplined pace, noting that a second flagship location remains 'under review, not committed.' Group margins held steady at 14.2%.",
-      "cycle": 82611,
-      "dur": 1
     },
     {
       "company": "Brunmark Motors",
@@ -62,16 +132,6 @@
       "dur": 8
     },
     {
-      "company": "Korrgrave Mfg.",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Korrgrave Posts Steady Gains as Northern Plant Holds Full Output",
-      "body": "Korrgrave Mfg. delivered a small earnings beat, with farm-input volumes from its Northern plant holding at full output for a second straight quarter. Chief executive Aurelia Halloran pointed to stable input costs and long-term supply contracts as the drivers of 'unremarkable but reliable' growth. Management guided for flat-to-modest gains into next season.",
-      "cycle": 82611,
-      "dur": 1
-    },
-    {
       "company": "Vencyon",
       "sector": "logistics",
       "kind": "product_launch",
@@ -79,16 +139,6 @@
       "head": "Vencyon's Third Hub Ships First Volumes on New Handling System",
       "body": "Vencyon marked the first live volumes from its third hub, debuting an upgraded material-handling system that lifts sorting throughput by an estimated 18%. Chief executive Iris Halloran called the launch 'the payoff for two years of patient buildout,' with the site expected to reach half capacity by year-end. The three-hub network now handles record daily volumes.",
       "cycle": 82611,
-      "dur": 2
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Erretmark Works Expands Sorne Coachbuilding Atelier to Widen Flagship Output",
-      "body": "Riding its Vehicle-of-the-Year win, Erretmark added a second Sorne-crafted assembly hall to nearly double bespoke flagship capacity. CEO Aurelia Garr said the $220-million expansion answers a backlog that now stretches past 18 months.",
-      "cycle": 82610,
       "dur": 2
     },
     {
@@ -110,36 +160,6 @@
       "body": "Korrworks signed a $1.4-billion multi-year Material Handling agreement extending its network into two new regional corridors, its largest contract to date and a decisive move past its Merrick concentration. CEO Rhys Throne called it 'the diversification we've been building toward for a decade,' with depot buildout to follow across three fresh sites.",
       "cycle": 82610,
       "dur": 8
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Korrwright Group Breaks Ground on Structural Materials Plant to Anchor Verant Corridor",
-      "body": "Korrwright committed $340 million to a new Structural Materials facility near the Verant corridor, positioning it to bundle materials with its extended wire contract through 2031. CEO Halden Fenn framed the move as 'meeting Verant where it is heading, not where it stands,' with first output slated for late next year.",
-      "cycle": 82610,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Maison & Vale Folds Deltrey and Ostley Units Into Streamlined Jansan Division",
-      "body": "Seeking to stem the margin pressure that dragged on last quarter, Maison & Vale consolidated Deltrey Chemical and legacy Ostley operations into a single Jansan division, cutting an estimated 900 overlapping roles. CEO Rhys Kessler said the reorganization targets $180 million in annual savings and should restore margins by mid-year.",
-      "cycle": 82610,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Varnvale & Sons Beats as Maisons Flagship Lifts Timepiece Sales",
-      "body": "Varnvale posted a 14% revenue gain, crediting strong foot traffic at its new Maisons boutique and robust demand for combined Duquesne-Corveau pieces. CEO Bram Wold pointed to Timepieces as the standout, with the division up 22% year over year.",
-      "cycle": 82610,
-      "dur": 2
     },
     {
       "company": "Castlestone",
@@ -239,46 +259,6 @@
       "head": "Varnvale House Hit With Investor Suit as Sourcing Charges Widen and Losses Mount",
       "body": "Days after ousting Calloway, Varnvale faces a fresh investor class action alleging that leadership concealed known sourcing defects during the Meridian revival, compounding the earlier regulatory charges. The complaint seeks 260 million in damages and cites internal timelines showing warnings ignored for months. Interim chief Maren Feldt suspended the entire Meridian Timepiece line pending review, warning the quarter would show 'a material loss.'",
       "cycle": 82605,
-      "dur": 8
-    },
-    {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Dunmorewright Lands 340 Million Harborfront Infrastructure Contract in Largest-Ever Award",
-      "body": "Emil Skarn secured the Harborfront redevelopment package, a 340 million commitment spanning drainage, earthmoving and fixture installation across a four-year build. The win, Dunmorewright's largest on record, pushes the total backlog past 800 million and prompted management to signal a second shift at the new fabrication yard.",
-      "cycle": 82604,
-      "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Fennmoor Signs Landmark Hospital Network Deal to Deploy Threll Sensors Nationwide",
-      "body": "Dorian Brandt secured a multi-year agreement to install award-winning Threll-powered sensors across a 60-hospital network, a contract valued at 280 million over five years. The deal marks Fennmoor's largest medical-equipment commitment to date and prompted the company to commit to a third Larkspur production line to meet the deployment schedule.",
-      "cycle": 82604,
-      "dur": 8
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Thaldale Group Hit With Investor Lawsuit Over Alleged Fastening-Plant Output Claims",
-      "body": "A group of shareholders filed suit against Thaldale and CEO Renna Voss, alleging the company knowingly overstated fastening-plant production to sustain its rebound narrative. The complaint seeks damages tied to the share decline since the probe surfaced, and an independent audit committee has been formed to review three quarters of output reporting.",
-      "cycle": 82604,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Woldmark Debuts Halcyon 2 Compute Platform in Carrow's Biggest Bet Since Overhaul",
-      "body": "With margins stabilized, Cole Carrow launched the Halcyon 2 platform, a full generational refresh promising 40 percent higher throughput and a rebuilt delivery pipeline forged during the restructure. Carrow framed the release as the payoff of two years of margin discipline, though the company acknowledged a heavy ramp of upfront costs through the next two quarters.",
-      "cycle": 82604,
       "dur": 8
     }
   ]
