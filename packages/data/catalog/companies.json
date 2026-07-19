@@ -93,7 +93,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82596,
+    "lastEventCycle": 82613,
     "events": [
       {
         "cycle": 0,
@@ -159,6 +159,16 @@
         "size": "standard",
         "head": "Aldouscyon Lifts Full-Year Outlook on Three-City Conversion Pipeline",
         "body": "Aldouscyon raised its annual guidance after the Marren, Thornbury, and prior municipal contracts pushed the conversion backlog to a record. CEO Petra Mercer reported operating margin expansion of 140 basis points on improved installation scheduling. The company said it is in early talks with two further municipalities.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82613,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aldouscyon Adds Fourth City With Inland Hub of Threndle in Conversion Pact",
+        "body": "Petra Mercer extended Aldouscyon's municipal streak with a fourth conversion agreement, retrofitting the inland city of Threndle's street and civic lighting over a phased three-year rollout valued near $95 million. The win pushes the company's active conversion pipeline past 210,000 fixtures and strengthens a reference book that has become its chief selling point to procurement officers.",
         "effects": {
           "consumer": 0.13
         }
@@ -538,7 +548,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82589,
+    "lastEventCycle": 82613,
     "events": [
       {
         "cycle": 0,
@@ -584,6 +594,16 @@
         "size": "flash",
         "head": "Ashbystead Holdings Extends Streak With Fourth Straight Quiet Beat",
         "body": "Ashbystead edged past targets again, reporting a 3.1 percent revenue gain on durable hospital demand and steady replacement-parts orders. Cora Holt reaffirmed guidance and declined to signal any change in the company's measured approach. Analysts noted the run of small, dependable beats now spans a full year.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82613,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Logs Fifth Straight Beat on Durable Hospital Demand",
+        "body": "Cora Holt's quiet run continued as Ashbystead posted a fifth consecutive modest beat, with revenue up 3.4% on steady replacement-parts orders and maintenance contracts. Management reaffirmed its conservative outlook and flagged no changes to its measured capital plans, keeping to the low-drama cadence investors have come to expect.",
         "effects": {
           "medical": 0.06
         }
@@ -3185,7 +3205,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82597,
+    "lastEventCycle": 82613,
     "events": [
       {
         "cycle": 0,
@@ -3251,6 +3271,16 @@
         "size": "standard",
         "head": "Cranegrove Wins Third Inland Corridor Package in 740-Million Award",
         "body": "Cranegrove secured the third and largest Inland Corridor package to date, a 740-million contract covering earthworks across the northern spur. CEO Vale Calder said the award extends the company's committed backlog into a fourth year and reflects 'delivery discipline the client can count on.' The win brings total Inland Corridor bookings above 2 billion since the program began.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82613,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Cranegrove Beats Again as Three-Package Corridor Backlog Powers Margins",
+        "body": "Cranegrove exceeded expectations with operating margins widening 180 basis points as its trio of Inland Corridor awards moved into peak earthmoving activity. Vale Calder credited disciplined fleet utilization and a record $2.1 billion backlog, while noting the company is positioning quietly for a possible fourth corridor package tender expected next quarter.",
         "effects": {
           "construction": 0.13
         }
@@ -3444,7 +3474,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82601,
+    "lastEventCycle": 82613,
     "events": [
       {
         "cycle": 0,
@@ -3530,6 +3560,16 @@
         "size": "standard",
         "head": "Drustcraft Breaks Ground on New Plant to Serve Twin Global Vehicle Lines",
         "body": "Drustcraft committed 380M to a dedicated auto-parts facility supporting the two global vehicle lines it won last quarter, with production targeted for late 2027. CEO Cora Fenn said the plant would add roughly 900 jobs and lift auto-parts capacity by a third. The move underscores Drustcraft's pivot toward higher-value components alongside its fastener core.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82613,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcraft Beats as Twin Vehicle-Line Ramp Begins Feeding Revenue",
+        "body": "Drustcraft topped forecasts with quarterly revenue up 11% as initial shipments from its landmark two-platform auto-parts award began contributing ahead of schedule. Cora Fenn said the new plant is tracking to full commissioning by year-end and raised the low end of full-year guidance, citing firm fastener volumes across both automotive and general industrial channels.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -5761,7 +5801,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82598,
+    "lastEventCycle": 82613,
     "events": [
       {
         "cycle": 0,
@@ -5827,6 +5867,16 @@
         "size": "standard",
         "head": "Holtforge Group Breaks Ground on New Marine Cable Plant to Clear Backlog",
         "body": "Bramm announced a 210-million-mark facility dedicated to offshore wind cable production, aimed at working down a backlog now stretching into 2028. The plant is expected to add roughly 400 jobs and lift annual marine cable capacity by 35%. Bramm framed the move as 'meeting demand we already have on the books.'",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82613,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtforge Group Posts Another Record as Marine Plant Nears Startup",
+        "body": "Yvette Bramm delivered a second consecutive record quarter, with revenue up 14% on offshore wind cable deliveries and a backlog that has now swelled past $780 million. The new marine cable plant remains on schedule for commissioning early next year, which management says will ease the capacity constraints that have capped shipment volumes.",
         "effects": {
           "construction": 0.13
         }
@@ -6720,7 +6770,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82606,
+    "lastEventCycle": 82613,
     "events": [
       {
         "cycle": 0,
@@ -6858,6 +6908,16 @@
         "body": "Korrwright debuted its Meridian collection, the first line to feature escapements from the recently acquired Vellhorn Movements, priced from $8,400. CEO Dunmore Carrow said full vertical integration cuts reliance on outside suppliers and improves margins on the heritage division's flagship pieces. Initial allocations to boutiques are already spoken for.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82613,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Korrwright Works Seals $1.2B Takeover of Heritage Rival Ambrose & Sons",
+        "body": "In his boldest move in decades, Dunmore Carrow has agreed to acquire storied competitor Ambrose & Sons for $1.2 billion, folding its two-century dial-making workshops and prestige boutiques into the Korrwright stable. The deal doubles Korrwright's atelier capacity and adds the coveted Ambrose Meridian collection, though analysts note Carrow now faces the challenge of integrating three heritage brands at once. Regulators in two markets are expected to review the combination over the coming months.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -7320,7 +7380,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82600,
+    "lastEventCycle": 82613,
     "events": [
       {
         "cycle": 0,
@@ -7396,6 +7456,16 @@
         "size": "standard",
         "head": "Marrowcyon Tops Estimates Again as Weatherproof Workwear Range Scales",
         "body": "Marrowcyon reported a 14% year-over-year rise in apparel revenue to 1.1 billion crowns, ahead of forecasts, driven by strong uptake of its weatherproof Hardwear range. CEO Theo Orne noted the plumbing and fixtures segment held steady, giving the company a balanced base as workwear becomes its fastest-growing line.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82613,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Marrowcyon Extends Momentum Into Fixtures With Trade-Grade Plumbing Range",
+        "body": "Building on its workwear success, Theo Orne unveiled a trade-grade plumbing and fixtures line aimed at contractors, marking Marrowcyon's first major push in its long-quiet fixtures segment. The range launches through the same wholesale channels that carried the weatherproof Hardwear expansion, and management expects it to broaden the customer base beyond apparel buyers.",
         "effects": {
           "consumer": 0.13
         }
@@ -9077,7 +9147,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82605,
+    "lastEventCycle": 82613,
     "events": [
       {
         "cycle": 0,
@@ -9207,6 +9277,16 @@
         "size": "major",
         "head": "Varnvale House Hit With Investor Suit as Sourcing Charges Widen and Losses Mount",
         "body": "Days after ousting Calloway, Varnvale faces a fresh investor class action alleging that leadership concealed known sourcing defects during the Meridian revival, compounding the earlier regulatory charges. The complaint seeks 260 million in damages and cites internal timelines showing warnings ignored for months. Interim chief Maren Feldt suspended the entire Meridian Timepiece line pending review, warning the quarter would show 'a material loss.'",
+        "effects": {
+          "luxury": -0.22
+        }
+      },
+      {
+        "cycle": 82613,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Varnvale House Reels as Internal Documents Expose Deeper Sourcing Cover-Up",
+        "body": "A cache of internal memos surfaced this week showing that senior Varnvale executives knew of tainted supply lines years before disclosure, deepening a crisis that has already toppled former chief Calloway. Interim CEO Maren Feldt suspended two remaining division heads and pledged a full external audit, but the revelations sent boutique cancellations surging and prompted three luxury retail partners to pull the brand from shelves. Regulators signaled the formal charges could now expand to individuals.",
         "effects": {
           "luxury": -0.22
         }
