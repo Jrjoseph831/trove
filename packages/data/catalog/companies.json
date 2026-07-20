@@ -352,7 +352,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82607,
+    "lastEventCycle": 82616,
     "events": [
       {
         "cycle": 0,
@@ -480,6 +480,16 @@
         "body": "Aperture Compute reported record quarterly revenue of $4.3 billion, up 38% year-on-year, as Dawnmere II and III deployments accelerated and total contracted backlog crossed $12 billion. Halden Dray raised full-year guidance and teased a fourth carrier in advanced talks, sending confidence around the Dawnmere program to new highs.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82616,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Aperture Compute Breaks Ground on Fourth Dawnmere Campus to Meet Backlog",
+        "body": "Aperture began construction on a fourth Dawnmere-series compute campus, a $2.3 billion build meant to service a backlog that now tops $12 billion. CEO Halden Dray said the site would come online in phases starting next year, adding that 'demand isn't the problem — pouring concrete fast enough is.'",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -4293,7 +4303,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82599,
+    "lastEventCycle": 82616,
     "events": [
       {
         "cycle": 0,
@@ -4359,6 +4369,16 @@
         "size": "flash",
         "head": "Fennvale Mfg. Edges Past Estimates as Auto Fastener Program Reaches Full Ramp",
         "body": "Fennvale reported revenue up 7% and a slight beat as its compact fastener line reached full output for the auto assembly program. Theo Vossen said yields improved through the quarter and the auto-parts segment held steady. The company reaffirmed its measured expansion plans.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82616,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Fennvale Mfg. Posts Steady Beat as Fastener and Auto Programs Hold Full Ramp",
+        "body": "Fennvale reported operating income up 9% on sustained output from its compact fastener line and mature auto program. CEO Theo Vossen said the company is evaluating a modest capacity addition but would 'move only when the order book justifies it.'",
         "effects": {
           "manufacturing": 0.06
         }
@@ -4819,7 +4839,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82610,
+    "lastEventCycle": 82616,
     "events": [
       {
         "cycle": 0,
@@ -4993,6 +5013,16 @@
         "body": "The limited Meridian skeleton line took a design commendation at the annual Timepiece Guild showcase, adding shine to Corin Aldwych's momentum run. The recognition arrives as the small-batch series nears sell-through just weeks after launch.",
         "effects": {
           "luxury": 0.06
+        }
+      },
+      {
+        "cycle": 82616,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Debuts Meridian Grand Complication Ahead of Holiday Season",
+        "body": "Building on its award-winning Skeleton series, Gromford unveiled the Meridian Grand Complication, a limited run of 250 pieces priced from $48,000. CEO Corin Aldwych said pre-orders 'moved faster than production can,' and confirmed the flagship boutique would host a private unveiling to capitalize on rising foot traffic.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -7061,7 +7091,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82608,
+    "lastEventCycle": 82616,
     "events": [
       {
         "cycle": 0,
@@ -7230,6 +7260,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82616,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Lhaus Industries Acquires Rival Cell-Pack Maker Delphin in $6.4 Billion Deal",
+        "body": "Lhaus agreed to buy fellow supplier Delphin Systems for $6.4 billion, its largest acquisition in two decades, folding four additional cell-pack facilities into a network already running near capacity. CEO Cole Brandt framed the purchase as a way to 'stop building lines one at a time,' and said combined output should clear the standing backlog by next year, pending regulatory review.",
+        "effects": {
+          "automotive": 0.22
+        }
       }
     ]
   },
@@ -7357,7 +7397,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82608,
+    "lastEventCycle": 82616,
     "events": [
       {
         "cycle": 0,
@@ -7494,6 +7534,16 @@
         "head": "Marlgear Supply Ousts Vossen as CEO as Board Moves to Contain Drennan Fallout",
         "body": "Halden Vossen, chief since 1974, stepped down under board pressure as the combined federal action and Drennan-defect scandal deepened, with the company setting aside $1.2 billion for legal and recall costs. The board named outside restructuring specialist Adele Ferran to lead a governance overhaul and rebuild regulator trust. Shares of the technology house have been battered through the ordeal.",
         "effects": {}
+      },
+      {
+        "cycle": 82616,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Marlgear Supply Faces Consolidated Suit From Regulators and Buyers Over Drennan Defects",
+        "body": "A coalition of regional regulators and institutional buyers filed a consolidated action seeking more than $900 million in damages tied to the concealed Drennan defects, citing the leaked internal memos. Newly installed CEO Marisol K健 — pardon, CEO Marisol Kessler — said the company would 'not litigate the past behind closed doors' and set aside a $410 million reserve, sending its outlook into fresh uncertainty.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -7813,7 +7863,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82599,
+    "lastEventCycle": 82616,
     "events": [
       {
         "cycle": 0,
@@ -7879,6 +7929,16 @@
         "size": "flash",
         "head": "Ornewright Goods Logs Another Steady Beat on Jansan and Food-Service Demand",
         "body": "Ornewright reported revenue of $488 million, a hair above consensus, extending its long run of in-line-to-slightly-ahead quarters. Petra Veldt credited resilient institutional cleaning and food-service orders, with farm inputs flat. Guidance was reaffirmed.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82616,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Extends Streak With Yet Another Modest Beat",
+        "body": "Ornewright posted revenue of $2.1 billion, edging past estimates for the fifth consecutive quarter on steady jansan and farm-inputs demand. CEO Petra Veldt reaffirmed full-year guidance and noted institutional contract renewals remained 'unremarkable, in the best sense.'",
         "effects": {
           "consumer": 0.06
         }
@@ -9699,7 +9759,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82600,
+    "lastEventCycle": 82616,
     "events": [
       {
         "cycle": 0,
@@ -9773,6 +9833,16 @@
         "body": "Vossenspire Holdings has signed a nine-year, 4.1 billion-crown agreement to supply its Redundant Grid-Storage Platform to a consortium of five regional utilities. CEO Halden Roe framed the deal as proof the post-blackout reset has won back institutional confidence, though the contract carries strict uptime penalties tied to the very reliability failures that triggered last year's probe.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82616,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenspire Holdings Beats as Northern Utilities Pact Lifts Storage Revenue",
+        "body": "Vossenspire reported quarterly revenue of $3.8 billion, up 14% year over year, with the Northern Utilities Consortium supply pact contributing its first full quarter of grid-storage shipments. CEO Halden Roe told analysts the redundant-platform rollout is 'ahead of schedule,' though he acknowledged residual costs tied to last year's maintenance overhaul still weigh on margins.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -10293,7 +10363,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82597,
+    "lastEventCycle": 82616,
     "events": [
       {
         "cycle": 0,
@@ -10349,6 +10419,16 @@
         "size": "standard",
         "head": "Wrengrove Group Tops Forecasts as Third Plant Nears First Output",
         "body": "Wrengrove posted a 12% rise in consumables revenue, crediting sustained Thornbury network volumes and early efficiency gains ahead of its third plant's commissioning. CEO Rhys Vossen said the new facility remains on schedule for initial production next quarter, adding roughly 25% to group capacity. Management reaffirmed full-year targets and noted a modest uptick in gross margin to 34.1%.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82616,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Wrengrove Group Starts Output at Third Plant, Rolls Out Sterile Kit Line",
+        "body": "Wrengrove's third consumables plant near Thornbury began commercial production this week, anchoring the launch of a new sterile procedure-kit line aimed at the supply deal signed last year. CEO Rhys Vossen said the facility should lift total consumables capacity by roughly 30% once fully ramped over the next two quarters.",
         "effects": {
           "medical": 0.13
         }
