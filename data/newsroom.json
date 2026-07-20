@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-20T09:17:38.983Z",
+  "generatedAt": "2026-07-20T14:09:34.611Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Blackhold Wins $2.4-Billion National Grid Storage Program in Landmark Award",
+      "body": "Blackhold secured a $2.4 billion contract to supply grid-scale storage across a national reliability program, more than doubling its backlog and marking the largest award in company history. CEO Renata Solberg called it 'the moment Blackhold becomes a defining player in power storage,' though she acknowledged the program's aggressive delivery schedule will test the company's manufacturing capacity through 2029.",
+      "cycle": 82618,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Brunmark Motors Hit With Class-Action Suit Over Veyra S Battery Defects",
+      "body": "A class-action complaint filed on behalf of more than 40,000 Veyra S owners alleges Brunmark knowingly shipped defective battery packs despite internal warnings, seeking damages that analysts estimate could exceed $900 million. CEO Yvette Calder said the company will 'defend itself vigorously' but confirmed it has set aside a $300 million reserve as regulators widen their inquiry into pre-launch testing records.",
+      "cycle": 82618,
+      "dur": 8
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Dunmorewright Adds Earthmoving Fleet to Service Record Harborfront Award",
+      "body": "Dunmorewright announced a $58 million investment in additional earthmoving equipment and a second staging yard to execute its $340 million Harborfront infrastructure contract. CEO Emil Skarn said mobilization on the harbor site is already underway, with plumbing and earthmoving crews scheduled to reach peak deployment within the year.",
+      "cycle": 82618,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halhold Works Beats as Aveline Platform Drives Medical Equipment Revenue Higher",
+      "body": "Halhold Works posted quarterly revenue of $612 million, up 18% year over year, with the Aveline diagnostic and bedside monitoring lines contributing $141 million as hospital deployments accelerated. CEO Lena Faircloth said the Aveline rollout has 'decisively closed the chapter' on the troubled Verity Pro, though she cautioned that device margins remain pressured by component costs.",
+      "cycle": 82618,
+      "dur": 2
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Hesperforge Supply Signs Multi-Year Marine-Grade Beam Supply Pact With Coastal Shipyards",
+      "body": "Hesperforge secured a four-year framework agreement to supply marine-grade structural beams to a consortium of three coastal shipyards, an arrangement the company values at roughly $240 million over its term. CEO Sable Halloran said the deal 'locks in the second mill's output well into the decade' and underpins a modest expansion of the marine line's finishing capacity.",
+      "cycle": 82618,
+      "dur": 2
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Skarnvale Relaunches Braeloch Terminal With Overhauled Handling Systems",
+      "body": "Skarnvale brought its Braeloch freight terminal back to full capacity under a rebuilt material-handling system, following the multi-day outage that forced a management shakeup. CEO Dorn Vaskell said the relaunched facility has run 'eleven consecutive days without incident' and pledged staged reliability testing before ramping throughput to the site's 4,000-pallet daily target.",
+      "cycle": 82618,
+      "dur": 2
+    },
+    {
+      "company": "Stegreach",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Stegreach Nudges Ahead of Forecasts as Riverport Wiring Volumes Ramp",
+      "body": "Stegreach reported earnings modestly above guidance, with quarterly revenue of $198 million as wire, lighting, and fixings shipments to the Riverport freight terminal reached scheduled volumes. CEO Halden Ashby said the order book remains 'comfortably filled' through the next two quarters.",
+      "cycle": 82618,
+      "dur": 1
+    },
+    {
+      "company": "Wrenhaus",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Wrenhaus Opens Regional Distribution Hub to Speed Fixture Deliveries",
+      "body": "Wrenhaus commissioned a 90,000-square-foot distribution hub near the Calderhythe corridor, aimed at cutting lead times on plumbing and fixture orders by an estimated 30%. CEO Quinn Thorne framed the move as a disciplined extension of the Riverside buildout rather than a step into new markets.",
+      "cycle": 82618,
+      "dur": 1
+    },
     {
       "company": "Greywater Grid",
       "sector": "energy",
@@ -32,26 +112,6 @@
       "dur": 2
     },
     {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "award",
-      "size": "flash",
-      "head": "Skarngrove & Sons Honored for Kelvarn Bridge Structural Work",
-      "body": "The Continental Institute of Civil Engineering named Skarngrove & Sons its Materials Partner of the Year, citing zero tolerance deviations across 40,000 tonnes of structural steel supplied to the Kelvarn Bridge. Quinn Fenn accepted the citation, noting the firm has now cleared three consecutive independent quality audits.",
-      "cycle": 82617,
-      "dur": 1
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Edges Ahead as Grocery Contract Reaches Full Volume",
-      "body": "Vantor Lines reported quarterly revenue of $1.42 billion, up 6% year on year, as the national grocery packaging deal moved to full shipping cadence across all regions. Halden Vossen said molded-fiber output rose 9% and reaffirmed the year's guidance without adjustment.",
-      "cycle": 82617,
-      "dur": 1
-    },
-    {
       "company": "Varnvale & Sons",
       "sector": "luxury",
       "kind": "major_deal",
@@ -62,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Wold & Bramm",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Wold & Bramm Breaks Ground on Fourth Heritage Lighting Showroom",
-      "body": "Mara Marrow confirmed construction has begun on a fourth regional showroom, following steady foot-traffic gains at the third location. The measured rollout keeps capital spending within the firm's stated annual envelope, with an opening targeted for next year.",
-      "cycle": 82617,
-      "dur": 1
-    },
-    {
       "company": "Wrenspire",
       "sector": "consumer",
       "kind": "earnings_beat",
@@ -79,26 +129,6 @@
       "head": "Wrenspire Beats as Everyroom Network Drives Broad-Based Household Gains",
       "body": "Wrenspire posted revenue of $3.8 billion, up 7%, with the household segment leading on the strength of its four Everyroom distribution hubs. Theo Aldous highlighted improved fulfillment times and margin expansion, though he flagged modest softness in farm inputs tied to seasonal demand.",
       "cycle": 82617,
-      "dur": 2
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Aperture Compute Breaks Ground on Fourth Dawnmere Campus to Meet Backlog",
-      "body": "Aperture began construction on a fourth Dawnmere-series compute campus, a $2.3 billion build meant to service a backlog that now tops $12 billion. CEO Halden Dray said the site would come online in phases starting next year, adding that 'demand isn't the problem — pouring concrete fast enough is.'",
-      "cycle": 82616,
-      "dur": 2
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Gromford Works Debuts Meridian Grand Complication Ahead of Holiday Season",
-      "body": "Building on its award-winning Skeleton series, Gromford unveiled the Meridian Grand Complication, a limited run of 250 pieces priced from $48,000. CEO Corin Aldwych said pre-orders 'moved faster than production can,' and confirmed the flagship boutique would host a private unveiling to capitalize on rising foot traffic.",
-      "cycle": 82616,
       "dur": 2
     },
     {
@@ -120,26 +150,6 @@
       "body": "A coalition of regional regulators and institutional buyers filed a consolidated action seeking more than $900 million in damages tied to the concealed Drennan defects, citing the leaked internal memos. Newly installed CEO Marisol K健 — pardon, CEO Marisol Kessler — said the company would 'not litigate the past behind closed doors' and set aside a $410 million reserve, sending its outlook into fresh uncertainty.",
       "cycle": 82616,
       "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenspire Holdings Beats as Northern Utilities Pact Lifts Storage Revenue",
-      "body": "Vossenspire reported quarterly revenue of $3.8 billion, up 14% year over year, with the Northern Utilities Consortium supply pact contributing its first full quarter of grid-storage shipments. CEO Halden Roe told analysts the redundant-platform rollout is 'ahead of schedule,' though he acknowledged residual costs tied to last year's maintenance overhaul still weigh on margins.",
-      "cycle": 82616,
-      "dur": 2
-    },
-    {
-      "company": "Wrengrove Group",
-      "sector": "medical",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Wrengrove Group Starts Output at Third Plant, Rolls Out Sterile Kit Line",
-      "body": "Wrengrove's third consumables plant near Thornbury began commercial production this week, anchoring the launch of a new sterile procedure-kit line aimed at the supply deal signed last year. CEO Rhys Vossen said the facility should lift total consumables capacity by roughly 30% once fully ramped over the next two quarters.",
-      "cycle": 82616,
-      "dur": 2
     },
     {
       "company": "Brunstone & Sons",
@@ -239,26 +249,6 @@
       "head": "Drustcyon Lands $650M National Rail Framework on Corrosion Anchor Reputation",
       "body": "Drustcyon Industries won a five-year, $650 million framework to supply corrosion-resistant fasteners and fixings across a national rail modernization program, its largest single award to date. Chief executive Aurelia Kessler said the win builds directly on the harbor authority track record, adding that a fourth production line will be commissioned to meet demand. The contract roughly doubles the company's forward order book.",
       "cycle": 82611,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Kessel Drive Faces Formal Regulatory Probe Into Storage Pack Failures",
-      "body": "Regulators opened a formal safety investigation into Kessel Drive's storage packs, seeking internal records tied to the memos that surfaced last quarter. New CEO Neave Corliss pledged full cooperation and paused two Power & Storage shipments, but the probe deepens a crisis that already cost Kessel its former chief and pushed it into loss.",
-      "cycle": 82610,
-      "dur": 8
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Korrworks Lands Landmark Cross-Region Handling Pact Beyond Merrick Corridor",
-      "body": "Korrworks signed a $1.4-billion multi-year Material Handling agreement extending its network into two new regional corridors, its largest contract to date and a decisive move past its Merrick concentration. CEO Rhys Throne called it 'the diversification we've been building toward for a decade,' with depot buildout to follow across three fresh sites.",
-      "cycle": 82610,
       "dur": 8
     }
   ]

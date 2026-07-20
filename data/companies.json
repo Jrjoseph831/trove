@@ -641,7 +641,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82611,
+    "lastEventCycle": 82618,
     "events": [
       {
         "cycle": 0,
@@ -763,6 +763,16 @@
         "body": "Blackhold posted quarterly revenue of $840 million, up 22% year over year, as deliveries against its $1.1-billion grid-storage order began recognizing. Chief executive Renata Solberg said the revamped storage platform now accounts for over half of new bookings, though she cautioned that margins remain 'lumpy' during the ramp. The beat marks Solberg's first clean quarter since taking over from Vren.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82618,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Blackhold Wins $2.4-Billion National Grid Storage Program in Landmark Award",
+        "body": "Blackhold secured a $2.4 billion contract to supply grid-scale storage across a national reliability program, more than doubling its backlog and marking the largest award in company history. CEO Renata Solberg called it 'the moment Blackhold becomes a defining player in power storage,' though she acknowledged the program's aggressive delivery schedule will test the company's manufacturing capacity through 2029.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -1606,7 +1616,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82611,
+    "lastEventCycle": 82618,
     "events": [
       {
         "cycle": 0,
@@ -1732,6 +1742,16 @@
         "size": "major",
         "head": "Brunmark Reels as Documents Show Battery Risk Flagged Before Veyra S Launch",
         "body": "Internal documents surfaced showing Brunmark Motors engineers had warned of thermal risk in Veyra S battery packs months before the model's launch, deepening a crisis already marked by a full fleet recall. Chief executive Yvette Calder faces calls for an independent inquiry as regulators widen their probe to cover pre-launch decision-making. The company took a $480 million charge tied to the recall and warned of further provisions.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82618,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Brunmark Motors Hit With Class-Action Suit Over Veyra S Battery Defects",
+        "body": "A class-action complaint filed on behalf of more than 40,000 Veyra S owners alleges Brunmark knowingly shipped defective battery packs despite internal warnings, seeking damages that analysts estimate could exceed $900 million. CEO Yvette Calder said the company will 'defend itself vigorously' but confirmed it has set aside a $300 million reserve as regulators widen their inquiry into pre-launch testing records.",
         "effects": {
           "automotive": -0.22
         }
@@ -3861,7 +3881,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82604,
+    "lastEventCycle": 82618,
     "events": [
       {
         "cycle": 0,
@@ -3929,6 +3949,16 @@
         "body": "Emil Skarn secured the Harborfront redevelopment package, a 340 million commitment spanning drainage, earthmoving and fixture installation across a four-year build. The win, Dunmorewright's largest on record, pushes the total backlog past 800 million and prompted management to signal a second shift at the new fabrication yard.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82618,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Dunmorewright Adds Earthmoving Fleet to Service Record Harborfront Award",
+        "body": "Dunmorewright announced a $58 million investment in additional earthmoving equipment and a second staging yard to execute its $340 million Harborfront infrastructure contract. CEO Emil Skarn said mobilization on the harbor site is already underway, with plumbing and earthmoving crews scheduled to reach peak deployment within the year.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -5564,7 +5594,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82612,
+    "lastEventCycle": 82618,
     "events": [
       {
         "cycle": 0,
@@ -5759,6 +5789,16 @@
         "effects": {
           "technology": 0.13
         }
+      },
+      {
+        "cycle": 82618,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halhold Works Beats as Aveline Platform Drives Medical Equipment Revenue Higher",
+        "body": "Halhold Works posted quarterly revenue of $612 million, up 18% year over year, with the Aveline diagnostic and bedside monitoring lines contributing $141 million as hospital deployments accelerated. CEO Lena Faircloth said the Aveline rollout has 'decisively closed the chapter' on the troubled Verity Pro, though she cautioned that device margins remain pressured by component costs.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -5856,7 +5896,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82603,
+    "lastEventCycle": 82618,
     "events": [
       {
         "cycle": 0,
@@ -5932,6 +5972,16 @@
         "size": "standard",
         "head": "Hesperforge Beats as Marine-Grade Beam Line Fills Second Mill's Order Book",
         "body": "Hesperforge topped estimates with quarterly revenue of $1.4 billion, up 19%, as the new marine-grade beam line ran near capacity from launch. CEO Sable Halloran credited the Coastal Bridgeworks pipeline and said the second mill reached breakeven ahead of schedule. Textile contracts added a steady secondary lift to margins.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82618,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Hesperforge Supply Signs Multi-Year Marine-Grade Beam Supply Pact With Coastal Shipyards",
+        "body": "Hesperforge secured a four-year framework agreement to supply marine-grade structural beams to a consortium of three coastal shipyards, an arrangement the company values at roughly $240 million over its term. CEO Sable Halloran said the deal 'locks in the second mill's output well into the decade' and underpins a modest expansion of the marine line's finishing capacity.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -8464,7 +8514,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82608,
+    "lastEventCycle": 82618,
     "events": [
       {
         "cycle": 0,
@@ -8548,6 +8598,16 @@
         "body": "Following the multi-day systems failure, Skarnvale announced a management shake-up at Braeloch, installing veteran operator Renna Kolt as terminal director and pledging $60 million in redundancy upgrades. CEO Dorn Vaskell acknowledged the launch was 'rushed in places' but insisted throughput targets remain intact for the second half. The facility returned to full capacity last week.",
         "effects": {
           "logistics": -0.13
+        }
+      },
+      {
+        "cycle": 82618,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Skarnvale Relaunches Braeloch Terminal With Overhauled Handling Systems",
+        "body": "Skarnvale brought its Braeloch freight terminal back to full capacity under a rebuilt material-handling system, following the multi-day outage that forced a management shakeup. CEO Dorn Vaskell said the relaunched facility has run 'eleven consecutive days without incident' and pledged staged reliability testing before ramping throughput to the site's 4,000-pallet daily target.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -8759,7 +8819,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82600,
+    "lastEventCycle": 82618,
     "events": [
       {
         "cycle": 0,
@@ -8815,6 +8875,16 @@
         "size": "flash",
         "head": "Stegreach Edges Past Estimates as Riverport Fixings Deliveries Begin",
         "body": "Stegreach reported quarterly revenue of 812 million crowns, narrowly above the 795 million consensus, as initial shipments under the Riverport Freight Terminal package began booking. CEO Halden Ashby credited steady demand for sealed fixtures and transit wiring, and reaffirmed full-year guidance without raising it.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82618,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Stegreach Nudges Ahead of Forecasts as Riverport Wiring Volumes Ramp",
+        "body": "Stegreach reported earnings modestly above guidance, with quarterly revenue of $198 million as wire, lighting, and fixings shipments to the Riverport freight terminal reached scheduled volumes. CEO Halden Ashby said the order book remains 'comfortably filled' through the next two quarters.",
         "effects": {
           "construction": 0.06
         }
@@ -10516,7 +10586,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82599,
+    "lastEventCycle": 82618,
     "events": [
       {
         "cycle": 0,
@@ -10574,6 +10644,16 @@
         "body": "Wrenhaus reported quarterly revenue of $612 million, up 9% and modestly ahead of forecasts, as Calderhythe Riverside fixture deliveries reached peak volume. Quinn Thorne noted the new Brackenfield fabrication capacity is running near full utilization with no disruption. Margins held steady on disciplined input costs.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82618,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wrenhaus Opens Regional Distribution Hub to Speed Fixture Deliveries",
+        "body": "Wrenhaus commissioned a 90,000-square-foot distribution hub near the Calderhythe corridor, aimed at cutting lead times on plumbing and fixture orders by an estimated 30%. CEO Quinn Thorne framed the move as a disciplined extension of the Riverside buildout rather than a step into new markets.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
