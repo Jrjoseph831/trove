@@ -1193,7 +1193,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82612,
+    "lastEventCycle": 82619,
     "events": [
       {
         "cycle": 0,
@@ -1329,6 +1329,16 @@
         "size": "major",
         "head": "Bruncraft Industries Hit With Class Action as Axle Failures Linked to Highway Crashes",
         "body": "Plaintiffs filed a consolidated class action seeking $1.2 billion, alleging Bruncraft knew of the Halveston axle weakness for nearly two years before the first recall. Court filings cite at least 31 documented crashes and internal quality memos flagging the defect. Orla Marrow, CEO since 1931, defended the company's response but confirmed a $400 million charge to cover initial claims.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82619,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Internal Bruncraft Memos Show Executives Knew of Axle Defect Two Years Before Recall",
+        "body": "Documents surfaced in the class action reveal Bruncraft engineers flagged Runabout axle fatigue in reports circulated to senior leadership as early as 2023, well before the first recall. Orla Marrow faces mounting calls for accountability as regulators broaden their probe to include possible concealment. The disclosures wiped confidence across the automaker's dealer base and prompted three states to open separate inquiries.",
         "effects": {
           "automotive": -0.22
         }
@@ -3210,7 +3220,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82607,
+    "lastEventCycle": 82619,
     "events": [
       {
         "cycle": 0,
@@ -3296,6 +3306,16 @@
         "size": "flash",
         "head": "Cranecraft Posts Third Straight Beat as Farm Equipment Orders Firm",
         "body": "Cranecraft edged past estimates again, with quarterly revenue up 3.4% as steady Northern Mills textile volumes were joined by firmer farm-equipment bookings ahead of planting season. Mira Garr reaffirmed guidance and noted order backlogs remained comfortably filled through the next two quarters.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82619,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Notches Fourth Straight Beat on Steady Textile Demand",
+        "body": "Mira Garr's firm delivered a narrow beat with quarterly earnings of $312 million, edging estimates by roughly 2% as Northern Mills textile volumes held firm. Farm equipment orders remained resilient into the planting season. Garr reaffirmed guidance and made no change to capital plans.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -3974,7 +3994,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82610,
+    "lastEventCycle": 82619,
     "events": [
       {
         "cycle": 0,
@@ -4083,6 +4103,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82619,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Erretmark Works Beats as Expanded Sorne Atelier Clears Flagship Backlog Faster",
+        "body": "Aurelia Garr's coachbuilder reported revenue up 18% to $880 million, driven by accelerated delivery of the award-winning Grand Flagship following the Sorne atelier expansion. Average selling prices climbed as buyers opted for bespoke commissions. The order backlog still stretches 26 months, and Garr hinted at a second nameplate under development.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -4097,7 +4127,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82603,
+    "lastEventCycle": 82619,
     "events": [
       {
         "cycle": 0,
@@ -4173,6 +4203,16 @@
         "size": "standard",
         "head": "Fenncyon Wins $900M Extension for Eastfield Corridor's Northern Spur",
         "body": "Building on its Eastfield momentum, Fenncyon secured a $900 million extension covering the corridor's Northern Spur earthworks and grading. CEO Nadia Ashby said the award leverages the second staging yard opened earlier this year, avoiding fresh capital outlay. The extension pushes Fenncyon's committed Eastfield backlog past $3.7 billion.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82619,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fenncyon Beats Again as Northern Spur Contract Boosts Margins",
+        "body": "Nadia Ashby's crews posted quarterly revenue of $1.6 billion, up 14% year over year, as the $900M Northern Spur extension began billing ahead of schedule. Operating margin widened to 21%, and Ashby raised full-year guidance for the third consecutive period. The company cited disciplined fleet utilization across both Eastfield rail staging yards.",
         "effects": {
           "construction": 0.13
         }
@@ -6515,7 +6555,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82610,
+    "lastEventCycle": 82619,
     "events": [
       {
         "cycle": 0,
@@ -6622,6 +6662,16 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82619,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Kessel Drive Unveils Sweeping Restructure, Splitting Storage Unit and Cutting 3,400 Jobs",
+        "body": "New chief Neave Corliss announced a hard reset that carves the troubled Power & Storage division into a standalone unit and eliminates 3,400 roles, aiming for $500 million in annual cost savings. Corliss pledged an overhauled quality regime for storage packs still under regulatory probe. The move marks the boldest step yet in her bid to stabilize the loss-making automaker.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -6636,7 +6686,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82606,
+    "lastEventCycle": 82619,
     "events": [
       {
         "cycle": 0,
@@ -6712,6 +6762,16 @@
         "size": "flash",
         "head": "Kesselgrove Co. Expands Modular Press Line With New Tooling Bay",
         "body": "Kesselgrove opened a dedicated tooling bay at its main plant to shorten changeover times on the modular press platform, a $31M investment. CEO Orla Steg said the addition should lift second-line output by roughly 12% while keeping the order book flowing cleanly.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82619,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Kesselgrove Co. Tops Estimates as New Tooling Bay Lifts Press Output",
+        "body": "Orla Steg's firm posted a modest beat with earnings of $148 million as the modular press platform's new tooling bay came online without disruption. Utilization across both assembly lines reached 88%. Steg kept guidance steady and reiterated a preference for measured, self-funded growth.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -8026,7 +8086,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82606,
+    "lastEventCycle": 82619,
     "events": [
       {
         "cycle": 0,
@@ -8104,6 +8164,16 @@
         "body": "The company installed a dedicated refrigerated distribution line at its second Caldmere hub to meet rising food service demand under the regional contract. The $46M addition is expected to lift throughput by about 18% once fully online this fall. CEO Rhys Throne said the move keeps capacity ahead of committed orders.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82619,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Ornewright Supply Signs Multi-Year Food Service Deal to Fill New Caldmere Cold-Chain Line",
+        "body": "Rhys Throne secured a five-year, $640 million supply agreement with a regional grocery consortium, anchoring the newly commissioned cold-chain line at the Caldmere hub. The contract is expected to run the expanded facility near full capacity by mid-next year. Throne framed the deal as validation of the company's cautious build-ahead strategy.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -9988,7 +10058,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82608,
+    "lastEventCycle": 82619,
     "events": [
       {
         "cycle": 0,
@@ -10116,6 +10186,16 @@
         "body": "Riding its $900M global distribution pact, Vossenspire debuted a limited 250-unit Calderon 'Meridian' edition priced at $410,000, pairing the tourer with a matched Halden Chronometrics timepiece. CEO Quinn Marrow said early allocations across three continents sold through within days. The bundle marks the first cross-selling between the vehicle and newly acquired timepiece arms.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82619,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Vossenspire Supply Lands 2.1B Distribution Pact to Carry Halden Timepieces Into Marrow's Vehicle Salons",
+        "body": "Quinn Marrow struck a landmark $2.1 billion partnership placing Halden Chronometrics pieces inside Vossenspire's global network of Calderon vehicle showrooms, unifying the company's two luxury arms for the first time. Executives project the cross-selling arrangement will lift Halden's annual output by 40,000 units within three years. The deal caps an aggressive acquisition run and marks the firm's boldest bet that timepiece and vehicle buyers are the same clientele.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]

@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-20T14:09:34.611Z",
+  "generatedAt": "2026-07-20T19:45:55.430Z",
   "beats": [
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Internal Bruncraft Memos Show Executives Knew of Axle Defect Two Years Before Recall",
+      "body": "Documents surfaced in the class action reveal Bruncraft engineers flagged Runabout axle fatigue in reports circulated to senior leadership as early as 2023, well before the first recall. Orla Marrow faces mounting calls for accountability as regulators broaden their probe to include possible concealment. The disclosures wiped confidence across the automaker's dealer base and prompted three states to open separate inquiries.",
+      "cycle": 82619,
+      "dur": 8
+    },
+    {
+      "company": "Cranecraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Cranecraft Notches Fourth Straight Beat on Steady Textile Demand",
+      "body": "Mira Garr's firm delivered a narrow beat with quarterly earnings of $312 million, edging estimates by roughly 2% as Northern Mills textile volumes held firm. Farm equipment orders remained resilient into the planting season. Garr reaffirmed guidance and made no change to capital plans.",
+      "cycle": 82619,
+      "dur": 1
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Erretmark Works Beats as Expanded Sorne Atelier Clears Flagship Backlog Faster",
+      "body": "Aurelia Garr's coachbuilder reported revenue up 18% to $880 million, driven by accelerated delivery of the award-winning Grand Flagship following the Sorne atelier expansion. Average selling prices climbed as buyers opted for bespoke commissions. The order backlog still stretches 26 months, and Garr hinted at a second nameplate under development.",
+      "cycle": 82619,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fenncyon Beats Again as Northern Spur Contract Boosts Margins",
+      "body": "Nadia Ashby's crews posted quarterly revenue of $1.6 billion, up 14% year over year, as the $900M Northern Spur extension began billing ahead of schedule. Operating margin widened to 21%, and Ashby raised full-year guidance for the third consecutive period. The company cited disciplined fleet utilization across both Eastfield rail staging yards.",
+      "cycle": 82619,
+      "dur": 2
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Kessel Drive Unveils Sweeping Restructure, Splitting Storage Unit and Cutting 3,400 Jobs",
+      "body": "New chief Neave Corliss announced a hard reset that carves the troubled Power & Storage division into a standalone unit and eliminates 3,400 roles, aiming for $500 million in annual cost savings. Corliss pledged an overhauled quality regime for storage packs still under regulatory probe. The move marks the boldest step yet in her bid to stabilize the loss-making automaker.",
+      "cycle": 82619,
+      "dur": 8
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Kesselgrove Co. Tops Estimates as New Tooling Bay Lifts Press Output",
+      "body": "Orla Steg's firm posted a modest beat with earnings of $148 million as the modular press platform's new tooling bay came online without disruption. Utilization across both assembly lines reached 88%. Steg kept guidance steady and reiterated a preference for measured, self-funded growth.",
+      "cycle": 82619,
+      "dur": 1
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Ornewright Supply Signs Multi-Year Food Service Deal to Fill New Caldmere Cold-Chain Line",
+      "body": "Rhys Throne secured a five-year, $640 million supply agreement with a regional grocery consortium, anchoring the newly commissioned cold-chain line at the Caldmere hub. The contract is expected to run the expanded facility near full capacity by mid-next year. Throne framed the deal as validation of the company's cautious build-ahead strategy.",
+      "cycle": 82619,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Vossenspire Supply Lands 2.1B Distribution Pact to Carry Halden Timepieces Into Marrow's Vehicle Salons",
+      "body": "Quinn Marrow struck a landmark $2.1 billion partnership placing Halden Chronometrics pieces inside Vossenspire's global network of Calderon vehicle showrooms, unifying the company's two luxury arms for the first time. Executives project the cross-selling arrangement will lift Halden's annual output by 40,000 units within three years. The deal caps an aggressive acquisition run and marks the firm's boldest bet that timepiece and vehicle buyers are the same clientele.",
+      "cycle": 82619,
+      "dur": 8
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -62,26 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Stegreach Nudges Ahead of Forecasts as Riverport Wiring Volumes Ramp",
-      "body": "Stegreach reported earnings modestly above guidance, with quarterly revenue of $198 million as wire, lighting, and fixings shipments to the Riverport freight terminal reached scheduled volumes. CEO Halden Ashby said the order book remains 'comfortably filled' through the next two quarters.",
-      "cycle": 82618,
-      "dur": 1
-    },
-    {
-      "company": "Wrenhaus",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Wrenhaus Opens Regional Distribution Hub to Speed Fixture Deliveries",
-      "body": "Wrenhaus commissioned a 90,000-square-foot distribution hub near the Calderhythe corridor, aimed at cutting lead times on plumbing and fixture orders by an estimated 30%. CEO Quinn Thorne framed the move as a disciplined extension of the Riverside buildout rather than a step into new markets.",
-      "cycle": 82618,
-      "dur": 1
-    },
-    {
       "company": "Greywater Grid",
       "sector": "energy",
       "kind": "outage",
@@ -92,26 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Halhold Systems Completes Northgate Carve-Out as Vale Names New Core Compute Chief",
-      "body": "Corin Vale finalized the separation of the troubled Northgate unit into a standalone entity, taking a $340 million one-time charge but freeing the core compute business to refocus. Vale installed operations veteran Priya Sund to lead the streamlined division and reiterated that recovery targets remain on schedule for the next fiscal year.",
-      "cycle": 82617,
-      "dur": 2
-    },
-    {
-      "company": "Palettstone & Sons",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Palettstone & Sons Beats Again as Heirloom Pro Precision Set Sells Through Quickly",
-      "body": "Palettstone & Sons reported a second straight record quarter, with revenue up 14% as the newly launched Precision Set exceeded initial sell-through forecasts at the national chain. Cole Fenn said reorder rates prompted the firm to expand production capacity ahead of the next season.",
-      "cycle": 82617,
-      "dur": 2
-    },
-    {
       "company": "Varnvale & Sons",
       "sector": "luxury",
       "kind": "major_deal",
@@ -120,16 +160,6 @@
       "body": "Bram Wold announced a $2.1 billion agreement to acquire the 140-year-old jeweler Lenoir, folding its ateliers into the expanding Maisons division. The deal, Varnvale's largest ever, adds high-jewelry capability alongside the Duquesne and Corveau timepiece lines and is expected to close within two quarters pending regulatory review.",
       "cycle": 82617,
       "dur": 8
-    },
-    {
-      "company": "Wrenspire",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Wrenspire Beats as Everyroom Network Drives Broad-Based Household Gains",
-      "body": "Wrenspire posted revenue of $3.8 billion, up 7%, with the household segment leading on the strength of its four Everyroom distribution hubs. Theo Aldous highlighted improved fulfillment times and margin expansion, though he flagged modest softness in farm inputs tied to seasonal demand.",
-      "cycle": 82617,
-      "dur": 2
     },
     {
       "company": "Lhaus Industries",
@@ -219,36 +249,6 @@
       "head": "Bruncraft Industries Hit With Class Action as Axle Failures Linked to Highway Crashes",
       "body": "Plaintiffs filed a consolidated class action seeking $1.2 billion, alleging Bruncraft knew of the Halveston axle weakness for nearly two years before the first recall. Court filings cite at least 31 documented crashes and internal quality memos flagging the defect. Orla Marrow, CEO since 1931, defended the company's response but confirmed a $400 million charge to cover initial claims.",
       "cycle": 82612,
-      "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Brunmark Reels as Documents Show Battery Risk Flagged Before Veyra S Launch",
-      "body": "Internal documents surfaced showing Brunmark Motors engineers had warned of thermal risk in Veyra S battery packs months before the model's launch, deepening a crisis already marked by a full fleet recall. Chief executive Yvette Calder faces calls for an independent inquiry as regulators widen their probe to cover pre-launch decision-making. The company took a $480 million charge tied to the recall and warned of further provisions.",
-      "cycle": 82611,
-      "dur": 8
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Carrowforge Ousts Halden Roe as Board Moves to Draw Line Under Testing Scandal",
-      "body": "Carrowforge's board removed chief executive Halden Roe with immediate effect, appointing veteran operations chief Marlow Demore to steady the company through mounting litigation. Demore pledged an independent audit of all machine-testing records and a settlement framework for the buyer class action. The departure comes weeks after leaked files showed altered test results and a former testing chief's wrongful-dismissal suit.",
-      "cycle": 82611,
-      "dur": 8
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Drustcyon Lands $650M National Rail Framework on Corrosion Anchor Reputation",
-      "body": "Drustcyon Industries won a five-year, $650 million framework to supply corrosion-resistant fasteners and fixings across a national rail modernization program, its largest single award to date. Chief executive Aurelia Kessler said the win builds directly on the harbor authority track record, adding that a fourth production line will be commissioned to meet demand. The contract roughly doubles the company's forward order book.",
-      "cycle": 82611,
       "dur": 8
     }
   ]
