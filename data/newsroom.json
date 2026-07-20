@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-20T03:20:51.278Z",
+  "generatedAt": "2026-07-20T09:17:38.983Z",
   "beats": [
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "outage",
+      "size": "major",
+      "head": "Greywater Grid Hit by Second Major Outage as Batch Reservoir Fails During Restart",
+      "body": "A cascading fault at the Ferrow storage complex took roughly 900 megawatts of capacity offline for eleven hours, just weeks into new CEO Dorne Whitaker's tenure. Early findings point to the same reservoir-control hardware flagged in the prior incident, raising fresh questions about the depth of the ongoing overhaul; two anchor customers have invoked review clauses.",
+      "cycle": 82617,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Halhold Systems Completes Northgate Carve-Out as Vale Names New Core Compute Chief",
+      "body": "Corin Vale finalized the separation of the troubled Northgate unit into a standalone entity, taking a $340 million one-time charge but freeing the core compute business to refocus. Vale installed operations veteran Priya Sund to lead the streamlined division and reiterated that recovery targets remain on schedule for the next fiscal year.",
+      "cycle": 82617,
+      "dur": 2
+    },
+    {
+      "company": "Palettstone & Sons",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Palettstone & Sons Beats Again as Heirloom Pro Precision Set Sells Through Quickly",
+      "body": "Palettstone & Sons reported a second straight record quarter, with revenue up 14% as the newly launched Precision Set exceeded initial sell-through forecasts at the national chain. Cole Fenn said reorder rates prompted the firm to expand production capacity ahead of the next season.",
+      "cycle": 82617,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "award",
+      "size": "flash",
+      "head": "Skarngrove & Sons Honored for Kelvarn Bridge Structural Work",
+      "body": "The Continental Institute of Civil Engineering named Skarngrove & Sons its Materials Partner of the Year, citing zero tolerance deviations across 40,000 tonnes of structural steel supplied to the Kelvarn Bridge. Quinn Fenn accepted the citation, noting the firm has now cleared three consecutive independent quality audits.",
+      "cycle": 82617,
+      "dur": 1
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vantor Lines Edges Ahead as Grocery Contract Reaches Full Volume",
+      "body": "Vantor Lines reported quarterly revenue of $1.42 billion, up 6% year on year, as the national grocery packaging deal moved to full shipping cadence across all regions. Halden Vossen said molded-fiber output rose 9% and reaffirmed the year's guidance without adjustment.",
+      "cycle": 82617,
+      "dur": 1
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Varnvale & Sons to Acquire Heritage Jeweler Lenoir in Landmark Fine-Goods Deal",
+      "body": "Bram Wold announced a $2.1 billion agreement to acquire the 140-year-old jeweler Lenoir, folding its ateliers into the expanding Maisons division. The deal, Varnvale's largest ever, adds high-jewelry capability alongside the Duquesne and Corveau timepiece lines and is expected to close within two quarters pending regulatory review.",
+      "cycle": 82617,
+      "dur": 8
+    },
+    {
+      "company": "Wold & Bramm",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Wold & Bramm Breaks Ground on Fourth Heritage Lighting Showroom",
+      "body": "Mara Marrow confirmed construction has begun on a fourth regional showroom, following steady foot-traffic gains at the third location. The measured rollout keeps capital spending within the firm's stated annual envelope, with an opening targeted for next year.",
+      "cycle": 82617,
+      "dur": 1
+    },
+    {
+      "company": "Wrenspire",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Wrenspire Beats as Everyroom Network Drives Broad-Based Household Gains",
+      "body": "Wrenspire posted revenue of $3.8 billion, up 7%, with the household segment leading on the strength of its four Everyroom distribution hubs. Theo Aldous highlighted improved fulfillment times and margin expansion, though he flagged modest softness in farm inputs tied to seasonal demand.",
+      "cycle": 82617,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -10,16 +90,6 @@
       "body": "Aperture began construction on a fourth Dawnmere-series compute campus, a $2.3 billion build meant to service a backlog that now tops $12 billion. CEO Halden Dray said the site would come online in phases starting next year, adding that 'demand isn't the problem — pouring concrete fast enough is.'",
       "cycle": 82616,
       "dur": 2
-    },
-    {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Fennvale Mfg. Posts Steady Beat as Fastener and Auto Programs Hold Full Ramp",
-      "body": "Fennvale reported operating income up 9% on sustained output from its compact fastener line and mature auto program. CEO Theo Vossen said the company is evaluating a modest capacity addition but would 'move only when the order book justifies it.'",
-      "cycle": 82616,
-      "dur": 1
     },
     {
       "company": "Gromford Works",
@@ -52,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Extends Streak With Yet Another Modest Beat",
-      "body": "Ornewright posted revenue of $2.1 billion, edging past estimates for the fifth consecutive quarter on steady jansan and farm-inputs demand. CEO Petra Veldt reaffirmed full-year guidance and noted institutional contract renewals remained 'unremarkable, in the best sense.'",
-      "cycle": 82616,
-      "dur": 1
-    },
-    {
       "company": "Vossenspire Holdings",
       "sector": "energy",
       "kind": "earnings_beat",
@@ -90,36 +150,6 @@
       "body": "The board voted to remove CEO Royce Lambourne after the Vault Cell Pro recall wiped an estimated $2.1 billion from the storage division's projected revenue and triggered three separate regulatory filings. Directors named turnaround veteran Halden Crowe as chief executive, effective immediately, tasking him with rebuilding the storage unit and restoring confidence among fleet customers. Crowe pledged an independent safety overhaul and a paused product cadence \"until every cell earns its place.\"",
       "cycle": 82615,
       "dur": 8
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Calderforge Beats Again as Stormwell Fourth Hall Pact Lifts Booked Revenue",
-      "body": "Calderforge posted quarterly revenue of $4.3 billion, up 18% year over year, with the multi-year capacity pact for the fourth Stormwell hall now fully reflected in forward bookings. CEO Nadia Throne said contracted backlog reached a record $11 billion, though she cautioned that ramp costs would weigh on margins into next quarter.",
-      "cycle": 82615,
-      "dur": 2
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcrest Posts Record Half as Meridian Petite and Salon Row Flagship Drive Traffic",
-      "body": "Halcrest reported first-half revenue up 26% to $980 million, led by strong demand for the Meridian Petite and elevated foot traffic at the new Salon Row boutique. Iris Marrow said waitlists for the Meridian Grand Complication now stretch past eighteen months, and hinted at a limited follow-up complication for the collection's anniversary.",
-      "cycle": 82615,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestcrest Supply",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Ironcrestcrest Supply Adds Fifth Warehouse as Value Range Volume Climbs",
-      "body": "Ironcrestcrest opened a fifth distribution warehouse to keep pace with demand for its dimmable workshop fixtures and broader value lighting range. CEO Dorian Garr said unit volumes rose 14% over the prior year, and the new site would cut regional delivery times as the company continues its deliberate expansion.",
-      "cycle": 82615,
-      "dur": 2
     },
     {
       "company": "Thaldale Group",
@@ -229,16 +259,6 @@
       "head": "Korrworks Lands Landmark Cross-Region Handling Pact Beyond Merrick Corridor",
       "body": "Korrworks signed a $1.4-billion multi-year Material Handling agreement extending its network into two new regional corridors, its largest contract to date and a decisive move past its Merrick concentration. CEO Rhys Throne called it 'the diversification we've been building toward for a decade,' with depot buildout to follow across three fresh sites.",
       "cycle": 82610,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Castlestone Faces Regulatory Probe Over National Data Grid Reliability Guarantees",
-      "body": "Regulators opened a formal inquiry into whether Castlestone overstated capacity-delivery commitments underpinning its combined $23.5 billion in National Data Grid pacts. The review follows reports of two brownout events at grid-linked facilities and questions over whether promised redundancy was ever installed. CEO Pell Karsh called the probe 'a distraction' but confirmed Castlestone would suspend new framework signings until it concludes.",
-      "cycle": 82609,
       "dur": 8
     }
   ]

@@ -4718,7 +4718,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82607,
+    "lastEventCycle": 82617,
     "events": [
       {
         "cycle": 0,
@@ -4825,6 +4825,16 @@
         "head": "Greywater Grid Ousts Vale Halloran as Board Seeks Steadier Hand After Outage Crisis",
         "body": "Greywater Grid's board removed longtime chief Vale Halloran, citing the need for stability after the campus outage triggered penalty clauses, a guidance cut and a sweeping overhaul. Incoming CEO Dorne Whitaker, previously a utility operations veteran, pledged to prioritize reliability and rebuild the strained regional power pact. Shares steadied on the announcement.",
         "effects": {}
+      },
+      {
+        "cycle": 82617,
+        "kind": "outage",
+        "size": "major",
+        "head": "Greywater Grid Hit by Second Major Outage as Batch Reservoir Fails During Restart",
+        "body": "A cascading fault at the Ferrow storage complex took roughly 900 megawatts of capacity offline for eleven hours, just weeks into new CEO Dorne Whitaker's tenure. Early findings point to the same reservoir-control hardware flagged in the prior incident, raising fresh questions about the depth of the ongoing overhaul; two anchor customers have invoked review clauses.",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },
@@ -5357,7 +5367,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82612,
+    "lastEventCycle": 82617,
     "events": [
       {
         "cycle": 0,
@@ -5527,6 +5537,16 @@
         "size": "standard",
         "head": "Halhold Systems to Split Northgate Unit as Vale Launches Recovery Plan",
         "body": "New chief Corin Vale announced a carve-out of the troubled Northgate compute division and roughly 1,800 job cuts, about 9% of the workforce. Vale framed the move as 'clearing the wreckage' from the ignored-warnings scandal, pledging $600 million in restructuring costs over 18 months. The remaining core will refocus on higher-margin server platforms.",
+        "effects": {
+          "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82617,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Halhold Systems Completes Northgate Carve-Out as Vale Names New Core Compute Chief",
+        "body": "Corin Vale finalized the separation of the troubled Northgate unit into a standalone entity, taking a $340 million one-time charge but freeing the core compute business to refocus. Vale installed operations veteran Priya Sund to lead the streamlined division and reiterated that recovery targets remain on schedule for the next fiscal year.",
         "effects": {
           "technology": -0.13
         }
@@ -8132,7 +8152,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82604,
+    "lastEventCycle": 82617,
     "events": [
       {
         "cycle": 0,
@@ -8198,6 +8218,16 @@
         "size": "standard",
         "head": "Palettstone & Sons Unveils Heirloom Pro Precision Set to Build on National Momentum",
         "body": "Building on the record national rollout, Cole Fenn introduced a nine-piece Heirloom Pro Precision Set aimed at finish carpenters and hobbyists, priced at a 20 percent premium to the flagship line. The company said pre-orders from its national chain partner covered the first production run within two weeks, with initial shelf placement slated for 1,400 stores.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82617,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Palettstone & Sons Beats Again as Heirloom Pro Precision Set Sells Through Quickly",
+        "body": "Palettstone & Sons reported a second straight record quarter, with revenue up 14% as the newly launched Precision Set exceeded initial sell-through forecasts at the national chain. Cole Fenn said reorder rates prompted the firm to expand production capacity ahead of the next season.",
         "effects": {
           "consumer": 0.13
         }
@@ -8288,7 +8318,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82601,
+    "lastEventCycle": 82617,
     "events": [
       {
         "cycle": 0,
@@ -8356,6 +8386,16 @@
         "body": "Skarngrove secured a 620M follow-on award covering structural materials for the Kelvarn Bridge program's northern approach spans, extending its supply role through 2031. CEO Quinn Fenn said the newly expanded capacity, brought online last quarter, would absorb the added volume without further capital outlay. The win deepens Skarngrove's position as the program's dominant materials supplier.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82617,
+        "kind": "award",
+        "size": "flash",
+        "head": "Skarngrove & Sons Honored for Kelvarn Bridge Structural Work",
+        "body": "The Continental Institute of Civil Engineering named Skarngrove & Sons its Materials Partner of the Year, citing zero tolerance deviations across 40,000 tonnes of structural steel supplied to the Kelvarn Bridge. Quinn Fenn accepted the citation, noting the firm has now cleared three consecutive independent quality audits.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -9117,7 +9157,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82602,
+    "lastEventCycle": 82617,
     "events": [
       {
         "cycle": 0,
@@ -9186,6 +9226,16 @@
         "effects": {
           "logistics": 0.06
         }
+      },
+      {
+        "cycle": 82617,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Edges Ahead as Grocery Contract Reaches Full Volume",
+        "body": "Vantor Lines reported quarterly revenue of $1.42 billion, up 6% year on year, as the national grocery packaging deal moved to full shipping cadence across all regions. Halden Vossen said molded-fiber output rose 9% and reaffirmed the year's guidance without adjustment.",
+        "effects": {
+          "logistics": 0.06
+        }
       }
     ]
   },
@@ -9200,7 +9250,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82610,
+    "lastEventCycle": 82617,
     "events": [
       {
         "cycle": 0,
@@ -9338,6 +9388,16 @@
         "body": "Varnvale posted a 14% revenue gain, crediting strong foot traffic at its new Maisons boutique and robust demand for combined Duquesne-Corveau pieces. CEO Bram Wold pointed to Timepieces as the standout, with the division up 22% year over year.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82617,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Varnvale & Sons to Acquire Heritage Jeweler Lenoir in Landmark Fine-Goods Deal",
+        "body": "Bram Wold announced a $2.1 billion agreement to acquire the 140-year-old jeweler Lenoir, folding its ateliers into the expanding Maisons division. The deal, Varnvale's largest ever, adds high-jewelry capability alongside the Duquesne and Corveau timepiece lines and is expected to close within two quarters pending regulatory review.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -10167,7 +10227,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82598,
+    "lastEventCycle": 82617,
     "events": [
       {
         "cycle": 0,
@@ -10223,6 +10283,16 @@
         "size": "flash",
         "head": "Wold & Bramm Posts Another Solid Quarter as Third Showroom Ramps",
         "body": "The recently opened third regional showroom reached break-even ahead of schedule, lifting Heritage Lighting volumes 8%. Marrow reiterated a measured expansion pace, saying a fourth location remains 'under study, not committed.' Household Goods held flat as lighting carried the quarter.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82617,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wold & Bramm Breaks Ground on Fourth Heritage Lighting Showroom",
+        "body": "Mara Marrow confirmed construction has begun on a fourth regional showroom, following steady foot-traffic gains at the third location. The measured rollout keeps capital spending within the firm's stated annual envelope, with an opening targeted for next year.",
         "effects": {
           "consumer": 0.06
         }
@@ -10519,7 +10589,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82600,
+    "lastEventCycle": 82617,
     "events": [
       {
         "cycle": 0,
@@ -10575,6 +10645,16 @@
         "size": "standard",
         "head": "Wrenspire Opens Fourth Everyroom Distribution Hub as Household Push Widens",
         "body": "Wrenspire confirmed a new 220 million-crown distribution hub in the Calderwaite region, its fourth dedicated to the Everyroom household line. CEO Theo Aldous said the facility will shorten restock times across the northern markets and support planned Everyroom entries into the food-service channel next year.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82617,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Wrenspire Beats as Everyroom Network Drives Broad-Based Household Gains",
+        "body": "Wrenspire posted revenue of $3.8 billion, up 7%, with the household segment leading on the strength of its four Everyroom distribution hubs. Theo Aldous highlighted improved fulfillment times and margin expansion, though he flagged modest softness in farm inputs tied to seasonal demand.",
         "effects": {
           "consumer": 0.13
         }
