@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-21T13:54:37.675Z",
+  "generatedAt": "2026-07-21T19:25:55.870Z",
   "beats": [
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Calderworks Locks Decade-Long Tessen Ridge Supply Pact in Landmark Deal",
+      "body": "Kestrel Halloran signed a $1.4 billion, ten-year framework agreement to supply structural materials across all remaining Tessen Ridge phases through 2038, the largest single contract in Calderworks' 117-year history. The deal secures roughly 40% of the new kiln's output and includes options for a second kiln should Phase Three proceed.",
+      "cycle": 82623,
+      "dur": 8
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Carrowcyon & Sons Expands Modular Lighting Push With New Distribution Center",
+      "body": "Cole Brandt greenlit a 220,000-square-foot distribution center to keep pace with retail demand for the modular lighting range, which now stocks in over 900 storefronts. The site is slated to open within two quarters and will consolidate shipments from both lighting works under one roof.",
+      "cycle": 82623,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Halhold Systems Misses as Carve-Out Costs Weigh on Vale's First Full Quarter",
+      "body": "Halhold posted margins of 11.2%, below the 14% guided, as one-time separation charges from the Northgate exit ran to $86 million. Corin Vale defended the shortfall as \"the price of a clean balance sheet,\" pointing to firming core Compute orders that he expects to lift results next period.",
+      "cycle": 82623,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Halhold Works Faces Safety Probe Over Aveline Bedside Monitors",
+      "body": "Regulators opened a formal review of the Aveline bedside monitoring suite after hospitals reported intermittent alarm failures across three network sites. Lena Faircloth pledged full cooperation and paused new deployments pending the inquiry, a sharp reversal for the platform that drove last quarter's medical equipment gains.",
+      "cycle": 82623,
+      "dur": 8
+    },
+    {
+      "company": "Hearthstone Group",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Hearthstone Group Beats Modestly as Refill Network Matures",
+      "body": "Aurelia Aldous reported a 4% revenue uptick as the refill depot network settled into steady operation across its newest regions. Household goods volumes held firm, and the company reaffirmed its measured full-year outlook.",
+      "cycle": 82623,
+      "dur": 1
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Korrwright Group Opens Verant Corridor Plant, Ships First Structural Beams",
+      "body": "The new Verant Corridor plant rolled out its first structural beam line three weeks ahead of schedule, with initial output earmarked for corridor infrastructure work. Halden Fenn said the facility would reach full capacity of 340,000 tonnes annually by mid-cycle, tightening Korrwright's grip on the region it has supplied wire to since 2028.",
+      "cycle": 82623,
+      "dur": 2
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Marrowmoor Holdings Adds Westline Contracts to Steady Base",
+      "body": "Dorian Steg confirmed a small tuck-in of five Westline facility contracts, extending the recurring-revenue base without altering guidance. The additions bring the group's active contract count past 340, continuing its disciplined, low-drama expansion.",
+      "cycle": 82623,
+      "dur": 1
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vencyon Beats as Third Hub Ramps Toward Full Throughput",
+      "body": "Quarterly revenue rose 9% as the third hub's new handling system cleared its first full-volume quarter without disruption. Iris Halloran said the three-site network is now moving a record 2.1 million units weekly, with the newest hub already at 70% of design capacity.",
+      "cycle": 82623,
+      "dur": 2
+    },
     {
       "company": "Ardent Health",
       "sector": "medical",
@@ -62,26 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Skarngrave",
-      "sector": "medical",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Skarngrave Adds Assembly Capacity to Meet Hospital-Network Sterilizer Orders",
-      "body": "The medical equipment maker opened a second assembly line to fulfill its recent sterilization contract, boosting Low-Temperature line output by an estimated 35%. CEO Orla Dray described the expansion as 'measured and fully funded,' with no revision to the company's steady guidance.",
-      "cycle": 82622,
-      "dur": 1
-    },
-    {
-      "company": "Skarnstone Industries",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Skarnstone Industries Edges Past Forecasts as Backorders Stay Cleared",
-      "body": "The consumables maker reported a modest 3.2% revenue uptick, with CEO Yvette Aldous crediting the recently expanded warehouse network for keeping fill rates above 98%. Management reiterated its unhurried full-year outlook, citing steady institutional demand and no changes to capital plans.",
-      "cycle": 82622,
-      "dur": 1
-    },
-    {
       "company": "Blackton Industries",
       "sector": "automotive",
       "kind": "recall",
@@ -92,46 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Bruncrest Works Unveils Aria Pro Line as Marlow Bets Big on Premium Compute Tier",
-      "body": "CEO Ines Marlow took the stage in Eastfield to introduce the Aria Pro series, a higher-density rack tier that Bruncrest says delivers 40% more throughput per unit than the standard Aria line. Marlow promised the new tier would be 'the backbone of every serious campus by next year,' with first shipments slated for the coming quarter. Analysts noted the launch leans heavily on the recently expanded Eastfield capacity.",
-      "cycle": 82621,
-      "dur": 2
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "lawsuit",
-      "size": "standard",
-      "head": "Castlehold Faces Class Action Over Saltmere Cleanup as Costs Approach $4.5B",
-      "body": "A coalition of Saltmere-area claimants filed a class-action suit against Castlehold seeking damages tied to the shuttered storage sites, pushing total estimated exposure toward $4.5 billion. CEO Ivo Reneth said the newly separated storage unit is 'ring-fenced' to absorb the liabilities and vowed to contest the broadest claims. Regulators continue to monitor remediation at the three closed facilities.",
-      "cycle": 82621,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Maison & Vale Returns to Growth as Streamlined Jansan Division Lifts Margins",
-      "body": "Maison & Vale reported quarterly operating margin recovery to 11.2%, up from 7.4%, as the consolidated Jansan division began delivering the synergies promised in the Ostley deal. CEO Rhys Kessler credited '$140 million in annualized cost savings' from folding the Deltrey and Ostley units together. Household Goods volumes also stabilized after two soft quarters.",
-      "cycle": 82621,
-      "dur": 2
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Marrowstone Build Lands $610M Municipal Earthmoving Contract Under Vaugh's Split Unit",
-      "body": "Marrowstone's newly separated heavy-earthmoving arm won a $610 million multi-year municipal infrastructure package, its first major award since the post-Embankment restructuring. CEO Delphine Vaugh said the contract validates the safety overhaul, noting the client cited Marrowstone's 'rebuilt inspection regime' in the selection. Work begins next quarter across three regional sites.",
-      "cycle": 82621,
-      "dur": 2
-    },
-    {
       "company": "Varnvale House",
       "sector": "luxury",
       "kind": "leadership_change",
@@ -140,16 +160,6 @@
       "body": "After weeks of turmoil, Varnvale's board appointed Adrienne Sole, a veteran restructuring executive, as CEO with a mandate to settle the widening investor suit and rebuild sourcing controls. Sole pledged a full audit of the Timepieces supply chain and said the company would set aside $220 million for legal and remediation costs. Outgoing interim leadership will depart by month's end.",
       "cycle": 82621,
       "dur": 8
-    },
-    {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenstead Supply Notches Seventh Straight Beat as Hub Network Hits Full Stride",
-      "body": "Vossenstead extended its streak to seven quarters, posting a 9% revenue gain as all three distribution hubs ran at full utilization for the first time. CEO Bram Thorne pointed to steady Food Service demand and 'no wasted motion' across the network, raising full-year guidance modestly. Plumbing & Fixtures volumes grew a further 6% on regional contract wins.",
-      "cycle": 82621,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -249,26 +259,6 @@
       "head": "Marlgear Supply Faces Consolidated Suit From Regulators and Buyers Over Drennan Defects",
       "body": "A coalition of regional regulators and institutional buyers filed a consolidated action seeking more than $900 million in damages tied to the concealed Drennan defects, citing the leaked internal memos. Newly installed CEO Marisol K健 — pardon, CEO Marisol Kessler — said the company would 'not litigate the past behind closed doors' and set aside a $410 million reserve, sending its outlook into fresh uncertainty.",
       "cycle": 82616,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Brunstone & Sons Ousts Royce Lambourne as Board Draws Line Under Vault Cell Pro Crisis",
-      "body": "The board voted to remove CEO Royce Lambourne after the Vault Cell Pro recall wiped an estimated $2.1 billion from the storage division's projected revenue and triggered three separate regulatory filings. Directors named turnaround veteran Halden Crowe as chief executive, effective immediately, tasking him with rebuilding the storage unit and restoring confidence among fleet customers. Crowe pledged an independent safety overhaul and a paused product cadence \"until every cell earns its place.\"",
-      "cycle": 82615,
-      "dur": 8
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Thaldale Group's Renna Voss Steps Down Amid Widening Fastening-Plant Probe",
-      "body": "CEO Renna Voss resigned as the investigation into inflated fastening-plant output figures widened to include two senior operations executives, and the investor lawsuit moved toward class certification. The board appointed interim chief Marlowe Trent, a former compliance officer, who suspended all output-based bonuses and commissioned a full restatement of last year's production numbers.",
-      "cycle": 82615,
       "dur": 8
     }
   ]

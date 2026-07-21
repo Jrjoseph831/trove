@@ -2355,7 +2355,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82605,
+    "lastEventCycle": 82623,
     "events": [
       {
         "cycle": 0,
@@ -2424,6 +2424,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82623,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Calderworks Locks Decade-Long Tessen Ridge Supply Pact in Landmark Deal",
+        "body": "Kestrel Halloran signed a $1.4 billion, ten-year framework agreement to supply structural materials across all remaining Tessen Ridge phases through 2038, the largest single contract in Calderworks' 117-year history. The deal secures roughly 40% of the new kiln's output and includes options for a second kiln should Phase Three proceed.",
+        "effects": {
+          "construction": 0.22
+        }
       }
     ]
   },
@@ -2438,7 +2448,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82607,
+    "lastEventCycle": 82623,
     "events": [
       {
         "cycle": 0,
@@ -2514,6 +2524,16 @@
         "size": "standard",
         "head": "Carrowcyon & Sons Beats as Modular Lighting Range Drives Retail Gains",
         "body": "Carrowcyon & Sons reported quarterly earnings ahead of expectations, with revenue up 6.1% as the new modular household lighting range secured shelf space across major retail chains. Cole Brandt said reorder rates had exceeded internal targets and hinted at an expanded household-goods pairing for the range later this year.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82623,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Expands Modular Lighting Push With New Distribution Center",
+        "body": "Cole Brandt greenlit a 220,000-square-foot distribution center to keep pace with retail demand for the modular lighting range, which now stocks in over 900 storefronts. The site is slated to open within two quarters and will consolidate shipments from both lighting works under one roof.",
         "effects": {
           "consumer": 0.13
         }
@@ -5557,7 +5577,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82617,
+    "lastEventCycle": 82623,
     "events": [
       {
         "cycle": 0,
@@ -5740,6 +5760,16 @@
         "effects": {
           "technology": -0.13
         }
+      },
+      {
+        "cycle": 82623,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Halhold Systems Misses as Carve-Out Costs Weigh on Vale's First Full Quarter",
+        "body": "Halhold posted margins of 11.2%, below the 14% guided, as one-time separation charges from the Northgate exit ran to $86 million. Corin Vale defended the shortfall as \"the price of a clean balance sheet,\" pointing to firming core Compute orders that he expects to lift results next period.",
+        "effects": {
+          "technology": -0.13
+        }
       }
     ]
   },
@@ -5754,7 +5784,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82618,
+    "lastEventCycle": 82623,
     "events": [
       {
         "cycle": 0,
@@ -5959,6 +5989,16 @@
         "effects": {
           "technology": 0.13
         }
+      },
+      {
+        "cycle": 82623,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Halhold Works Faces Safety Probe Over Aveline Bedside Monitors",
+        "body": "Regulators opened a formal review of the Aveline bedside monitoring suite after hospitals reported intermittent alarm failures across three network sites. Lena Faircloth pledged full cooperation and paused new deployments pending the inquiry, a sharp reversal for the platform that drove last quarter's medical equipment gains.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -5973,7 +6013,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82606,
+    "lastEventCycle": 82623,
     "events": [
       {
         "cycle": 0,
@@ -6041,6 +6081,16 @@
         "body": "Hearthstone reported revenue of $1.24B, above the $1.19B estimate, with the newly opened refill depots contributing faster-than-expected volumes across the three new regions. Refillable lines now account for nearly a third of household goods sales. CEO Aurelia Aldous raised full-year margin guidance by half a point.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82623,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Hearthstone Group Beats Modestly as Refill Network Matures",
+        "body": "Aurelia Aldous reported a 4% revenue uptick as the refill depot network settled into steady operation across its newest regions. Household goods volumes held firm, and the company reaffirmed its measured full-year outlook.",
+        "effects": {
+          "hospitality": 0.06
         }
       }
     ]
@@ -7095,7 +7145,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82610,
+    "lastEventCycle": 82623,
     "events": [
       {
         "cycle": 0,
@@ -7181,6 +7231,16 @@
         "size": "standard",
         "head": "Korrwright Group Breaks Ground on Structural Materials Plant to Anchor Verant Corridor",
         "body": "Korrwright committed $340 million to a new Structural Materials facility near the Verant corridor, positioning it to bundle materials with its extended wire contract through 2031. CEO Halden Fenn framed the move as 'meeting Verant where it is heading, not where it stands,' with first output slated for late next year.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82623,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Korrwright Group Opens Verant Corridor Plant, Ships First Structural Beams",
+        "body": "The new Verant Corridor plant rolled out its first structural beam line three weeks ahead of schedule, with initial output earmarked for corridor infrastructure work. Halden Fenn said the facility would reach full capacity of 340,000 tonnes annually by mid-cycle, tightening Korrwright's grip on the region it has supplied wire to since 2028.",
         "effects": {
           "construction": 0.13
         }
@@ -7951,7 +8011,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82610,
+    "lastEventCycle": 82623,
     "events": [
       {
         "cycle": 0,
@@ -8037,6 +8097,16 @@
         "size": "flash",
         "head": "Marrowmoor Holdings Extends Streak With Steady Contract-Base Gains",
         "body": "Marrowmoor logged another quarter of recurring-revenue growth as its Riverside and Eastgate clusters ramped to full billing. CEO Dorian Steg reaffirmed guidance, noting retention across the contract base held above 96%.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82623,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Adds Westline Contracts to Steady Base",
+        "body": "Dorian Steg confirmed a small tuck-in of five Westline facility contracts, extending the recurring-revenue base without altering guidance. The additions bring the group's active contract count past 340, continuing its disciplined, low-drama expansion.",
         "effects": {
           "hospitality": 0.06
         }
@@ -10021,7 +10091,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82611,
+    "lastEventCycle": 82623,
     "events": [
       {
         "cycle": 0,
@@ -10107,6 +10177,16 @@
         "size": "standard",
         "head": "Vencyon's Third Hub Ships First Volumes on New Handling System",
         "body": "Vencyon marked the first live volumes from its third hub, debuting an upgraded material-handling system that lifts sorting throughput by an estimated 18%. Chief executive Iris Halloran called the launch 'the payoff for two years of patient buildout,' with the site expected to reach half capacity by year-end. The three-hub network now handles record daily volumes.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82623,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vencyon Beats as Third Hub Ramps Toward Full Throughput",
+        "body": "Quarterly revenue rose 9% as the third hub's new handling system cleared its first full-volume quarter without disruption. Iris Halloran said the three-site network is now moving a record 2.1 million units weekly, with the newest hub already at 70% of design capacity.",
         "effects": {
           "logistics": 0.13
         }
