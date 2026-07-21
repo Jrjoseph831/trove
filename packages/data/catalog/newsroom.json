@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-21T08:32:21.344Z",
+  "generatedAt": "2026-07-21T13:54:37.675Z",
   "beats": [
+    {
+      "company": "Ardent Health",
+      "sector": "medical",
+      "kind": "breakthrough",
+      "size": "standard",
+      "head": "Ardent Health Unveils Next-Generation Imaging Sensor Cutting Scan Times by a Third",
+      "body": "The company revealed a new detector architecture for its imaging platform that reduces scan durations by roughly 33% while improving resolution. CEO Orla Halloran said the upgrade will roll into existing national-network deployments through a staged retrofit, calling it 'the logical next chapter' of the platform's long arc.",
+      "cycle": 82622,
+      "dur": 2
+    },
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunridge Works Beats Again as Premium Fine Goods Lift Margins",
+      "body": "The consumer conglomerate topped estimates with a 7% margin expansion, driven by early strength in its new premium Fine Goods line and continued National Shelf Deal ramp. CEO Halia Brennt raised full-year guidance modestly, noting the premium tier is 'punching above its shelf space.'",
+      "cycle": 82622,
+      "dur": 2
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Carrowwell Wins $2.4-Billion Industrial Machines Contract to Reindustrialize Aging Plants",
+      "body": "In its largest deal ever, Carrowwell signed a multi-year agreement to supply Industrial Machines and Material Handling systems across a national manufacturing modernization program. CEO Theo Thorne, marking his ninth decade at the helm, called it 'a generational order,' with deliveries phased over five years and expected to add roughly 1,800 jobs.",
+      "cycle": 82622,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Castlestone Splits Data Grid Unit Into Standalone Division After Penalty Fallout",
+      "body": "CEO Pell Karsh announced a sweeping reorganization, carving the troubled National Data Grid operations into a ring-fenced division led by a dedicated reliability chief. Karsh framed the move as a 'clean-room reset,' pledging $900M toward redundancy upgrades over 18 months while insisting the core Compute business remains 'the fastest-growing engine in the sector.' Analysts noted the restructuring absorbs the reliability rework mandated by regulators.",
+      "cycle": 82622,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Gromford Works Posts Record Holiday Quarter on Meridian Grand Complication Demand",
+      "body": "The luxury house reported a 41% jump in Timepiece revenue, with the newly launched Grand Complication selling out its first allocation within weeks. CEO Corin Aldwych touted 'the strongest waitlist in the house's history' and hinted at further high-complication releases in the coming year.",
+      "cycle": 82622,
+      "dur": 2
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Korrworks Breaks Ground on Cross-Region Hub to Support Landmark Handling Pact",
+      "body": "Following its recent cross-region deal, Korrworks committed $310M to a new central sorting hub sized for volumes beyond the Merrick corridor. CEO Rhys Throne called the facility 'the backbone of the next decade,' projecting it to reach full throughput within two years.",
+      "cycle": 82622,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrave",
+      "sector": "medical",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Skarngrave Adds Assembly Capacity to Meet Hospital-Network Sterilizer Orders",
+      "body": "The medical equipment maker opened a second assembly line to fulfill its recent sterilization contract, boosting Low-Temperature line output by an estimated 35%. CEO Orla Dray described the expansion as 'measured and fully funded,' with no revision to the company's steady guidance.",
+      "cycle": 82622,
+      "dur": 1
+    },
+    {
+      "company": "Skarnstone Industries",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Skarnstone Industries Edges Past Forecasts as Backorders Stay Cleared",
+      "body": "The consumables maker reported a modest 3.2% revenue uptick, with CEO Yvette Aldous crediting the recently expanded warehouse network for keeping fill rates above 98%. Management reiterated its unhurried full-year outlook, citing steady institutional demand and no changes to capital plans.",
+      "cycle": 82622,
+      "dur": 1
+    },
     {
       "company": "Blackton Industries",
       "sector": "automotive",
@@ -52,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Steg Tooling Extends Kelmar Site With Second Fastener Cell Amid Steady Demand",
-      "body": "Steg Tooling added a second fastener production cell at its Kelmar facility, a modest $48 million outlay CEO Iris Vossen described as 'matching capacity to a durable order book.' The addition raises Kelmar's output roughly 20% and supports long-term supply pacts signed earlier in the year. Vossen reiterated the firm's preference for incremental, self-funded growth.",
-      "cycle": 82621,
-      "dur": 1
-    },
-    {
       "company": "Varnvale House",
       "sector": "luxury",
       "kind": "leadership_change",
@@ -90,66 +160,6 @@
       "body": "Boreas Power announced a defining $3.8B agreement to build and power a new large-scale compute campus adjacent to its Hollowmere site, with the newly acquired Vantell storage assets supplying grid-balancing capacity. CEO Mira Thorne called it the company's largest single commitment, projecting the campus will lift power-and-storage revenue by nearly 40% at full ramp. Construction begins next quarter, with first phase energization targeted within two years.",
       "cycle": 82620,
       "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Fennmoor Acquires Diagnostics Firm Callent Labs to Broaden Sensor Platform",
-      "body": "Fennmoor said it will acquire Callent Labs for $520M, adding fluid-analysis instruments that pair with its award-winning Threll sensor line. CEO Dorian Brandt said the deal extends Fennmoor deeper into hospital diagnostics beyond its existing national network rollout. The transaction is expected to close within six months and add to earnings by the following year.",
-      "cycle": 82620,
-      "dur": 2
-    },
-    {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Garrware Posts Record Quarter as Marrow Valley Third Line Runs at Capacity",
-      "body": "Garrware reported quarterly revenue of $3.1B, up 14% year-on-year, crediting near-full utilization of its newly commissioned Marrow Valley third line and the expanded Halloway & Pace northern volumes. CEO Orla Holt noted that packaging throughput across northern depots rose 22%, and reaffirmed a disciplined approach to further capacity additions. Operating margins widened to 18.4% as the anchor client ramped shipments ahead of schedule.",
-      "cycle": 82620,
-      "dur": 2
-    },
-    {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Holtware Co. Beats as Warranty-Backed Power Tools Drive Repeat Sales",
-      "body": "Holtware reported revenue of $890M, up 11%, as its lifetime-warranty power-tool range fueled strong repeat purchases and drove utilization at the newly opened second fulfillment center. CEO Aurelia Dray said the award-winning range now accounts for a third of consumer segment sales and hinted at selective category expansion. Gross margin improved to 34.6% on favorable product mix.",
-      "cycle": 82620,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Korrwright Works Folds Ambrose & Sons Into New Heritage Division",
-      "body": "Following its $1.2B takeover, Korrwright Works announced it will consolidate Ambrose & Sons and the acquired Vellhorn movements arm under a single Heritage Division led from the Carrow flagship workshop. CEO Dunmore Carrow said the reorganization will trim roughly 260 overlapping roles while preserving Ambrose's landmark casing atelier. The firm expects $90M in annual cost savings from combined escapement production by the second year.",
-      "cycle": 82620,
-      "dur": 2
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Stegforge Breaks Ground on Dedicated Rail Plate Mill to Serve Consortium Deal",
-      "body": "Stegforge confirmed a $410M investment in a dedicated structural plate mill to fulfill its multi-year rail consortium contract without straining existing furnaces. CEO Aurelia Steg said the facility, targeted for first output in 18 months, will add 600,000 tonnes of annual capacity and free the second alloy furnace to focus on the machinery backlog. The move underscores Steg's steady, capacity-led growth strategy.",
-      "cycle": 82620,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Thronehaus & Co. Debuts Verrand Grand Complication at Flagship Atelier",
-      "body": "Thronehaus unveiled the Verrand Grand Complication, a limited run of 150 pieces showcasing dials and movements now built entirely in-house following its recent specialty dial acquisition. CEO Cora Dray priced the flagship line from $84,000 and said pre-commitments already cover more than half the allocation. The launch anchors the new atelier's positioning as the house's craft showcase.",
-      "cycle": 82620,
-      "dur": 2
     },
     {
       "company": "Bruncraft Industries",
@@ -259,26 +269,6 @@
       "head": "Thaldale Group's Renna Voss Steps Down Amid Widening Fastening-Plant Probe",
       "body": "CEO Renna Voss resigned as the investigation into inflated fastening-plant output figures widened to include two senior operations executives, and the investor lawsuit moved toward class certification. The board appointed interim chief Marlowe Trent, a former compliance officer, who suspended all output-based bonuses and commissioned a full restatement of last year's production numbers.",
       "cycle": 82615,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Castlehold Shuts Three Saltmere Sites and Splits Off Storage Unit as Cleanup Tops $4B",
-      "body": "Under mounting regulatory pressure, Castlehold agreed to permanently close three Saltmere storage sites and carve its remaining storage assets into a separate entity, with total cleanup liabilities now estimated at $4.2 billion. CEO Ivo Reneth framed the move as 'ring-fencing the damage,' but the restructuring wipes out roughly a third of the company's storage capacity and triggers a $900 million writedown.",
-      "cycle": 82614,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Castlestone Tumbles as Data Grid Probe Forces $2.1B Penalty and Reliability Rework",
-      "body": "Castlestone missed sharply after regulators concluded its National Data Grid reliability guarantees fell short, imposing a $2.1 billion penalty and mandating a costly infrastructure rework. CEO Pell Karsh, who had doubled down on the grid pact just quarters earlier, now faces investor demands for accountability as the company suspended its buyback and cut full-year guidance.",
-      "cycle": 82614,
       "dur": 8
     }
   ]

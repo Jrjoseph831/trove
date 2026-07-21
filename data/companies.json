@@ -515,7 +515,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82594,
+    "lastEventCycle": 82622,
     "events": [
       {
         "cycle": 0,
@@ -561,6 +561,16 @@
         "size": "standard",
         "head": "Ardent Health Signs National Hospital Network to Expand Imaging Platform Deployment",
         "body": "Ardent secured a rollout agreement with the Vantage Care hospital network covering 38 facilities, building on the platform's recent regulatory clearance for expanded uses. The multi-year deal is Ardent's broadest commercial footprint yet for the diagnostic line. Orla Halloran, characteristically measured, said phased installation would run through the next two years to protect service quality.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82622,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Ardent Health Unveils Next-Generation Imaging Sensor Cutting Scan Times by a Third",
+        "body": "The company revealed a new detector architecture for its imaging platform that reduces scan durations by roughly 33% while improving resolution. CEO Orla Halloran said the upgrade will roll into existing national-network deployments through a staged retrofit, calling it 'the logical next chapter' of the platform's long arc.",
         "effects": {
           "medical": 0.13
         }
@@ -1819,7 +1829,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82609,
+    "lastEventCycle": 82622,
     "events": [
       {
         "cycle": 0,
@@ -1903,6 +1913,16 @@
         "size": "standard",
         "head": "Brunridge Works Debuts Premium Fine Goods Line to Anchor National Shelf Presence",
         "body": "Brunridge Works launched Marlott, a premium fine-goods range spanning 34 SKUs, positioned to lift margins across its national retail footprint. CEO Halia Brennt said early orders from anchor retailers covered 6,800 stores, with the line carrying gross margins roughly nine points above the company average. The launch marks Brunridge's first move into higher-end price tiers.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82622,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunridge Works Beats Again as Premium Fine Goods Lift Margins",
+        "body": "The consumer conglomerate topped estimates with a 7% margin expansion, driven by early strength in its new premium Fine Goods line and continued National Shelf Deal ramp. CEO Halia Brennt raised full-year guidance modestly, noting the premium tier is 'punching above its shelf space.'",
         "effects": {
           "consumer": 0.13
         }
@@ -2620,7 +2640,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82609,
+    "lastEventCycle": 82622,
     "events": [
       {
         "cycle": 0,
@@ -2708,6 +2728,16 @@
         "body": "Carrowwell reported revenue of $1.42 billion, up 11% year over year, with early deliveries under its $1.1 billion National Logistics Network pact driving the beat. CEO Theo Thorne lifted full-year guidance for the second consecutive quarter and said the backlog now stretches 14 months. Third-shift output has cleared roughly 60% of the prior order overhang.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82622,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Carrowwell Wins $2.4-Billion Industrial Machines Contract to Reindustrialize Aging Plants",
+        "body": "In its largest deal ever, Carrowwell signed a multi-year agreement to supply Industrial Machines and Material Handling systems across a national manufacturing modernization program. CEO Theo Thorne, marking his ninth decade at the helm, called it 'a generational order,' with deliveries phased over five years and expected to add roughly 1,800 jobs.",
+        "effects": {
+          "manufacturing": 0.22
         }
       }
     ]
@@ -3081,7 +3111,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82614,
+    "lastEventCycle": 82622,
     "events": [
       {
         "cycle": 0,
@@ -3255,6 +3285,16 @@
         "body": "Castlestone missed sharply after regulators concluded its National Data Grid reliability guarantees fell short, imposing a $2.1 billion penalty and mandating a costly infrastructure rework. CEO Pell Karsh, who had doubled down on the grid pact just quarters earlier, now faces investor demands for accountability as the company suspended its buyback and cut full-year guidance.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82622,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Castlestone Splits Data Grid Unit Into Standalone Division After Penalty Fallout",
+        "body": "CEO Pell Karsh announced a sweeping reorganization, carving the troubled National Data Grid operations into a ring-fenced division led by a dedicated reliability chief. Karsh framed the move as a 'clean-room reset,' pledging $900M toward redundancy upgrades over 18 months while insisting the core Compute business remains 'the fastest-growing engine in the sector.' Analysts noted the restructuring absorbs the reliability rework mandated by regulators.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -4989,7 +5029,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82616,
+    "lastEventCycle": 82622,
     "events": [
       {
         "cycle": 0,
@@ -5171,6 +5211,16 @@
         "size": "standard",
         "head": "Gromford Works Debuts Meridian Grand Complication Ahead of Holiday Season",
         "body": "Building on its award-winning Skeleton series, Gromford unveiled the Meridian Grand Complication, a limited run of 250 pieces priced from $48,000. CEO Corin Aldwych said pre-orders 'moved faster than production can,' and confirmed the flagship boutique would host a private unveiling to capitalize on rising foot traffic.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82622,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Gromford Works Posts Record Holiday Quarter on Meridian Grand Complication Demand",
+        "body": "The luxury house reported a 41% jump in Timepiece revenue, with the newly launched Grand Complication selling out its first allocation within weeks. CEO Corin Aldwych touted 'the strongest waitlist in the house's history' and hinted at further high-complication releases in the coming year.",
         "effects": {
           "luxury": 0.13
         }
@@ -6932,7 +6982,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82610,
+    "lastEventCycle": 82622,
     "events": [
       {
         "cycle": 0,
@@ -7020,6 +7070,16 @@
         "body": "Korrworks signed a $1.4-billion multi-year Material Handling agreement extending its network into two new regional corridors, its largest contract to date and a decisive move past its Merrick concentration. CEO Rhys Throne called it 'the diversification we've been building toward for a decade,' with depot buildout to follow across three fresh sites.",
         "effects": {
           "logistics": 0.22
+        }
+      },
+      {
+        "cycle": 82622,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrworks Breaks Ground on Cross-Region Hub to Support Landmark Handling Pact",
+        "body": "Following its recent cross-region deal, Korrworks committed $310M to a new central sorting hub sized for volumes beyond the Merrick corridor. CEO Rhys Throne called the facility 'the backbone of the next decade,' projecting it to reach full throughput within two years.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -8475,7 +8535,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82602,
+    "lastEventCycle": 82622,
     "events": [
       {
         "cycle": 0,
@@ -8533,6 +8593,16 @@
         "body": "Skarngrave signed a five-year agreement to supply low-temperature sterilizers and consumables across the 38-hospital Merrow Health system, with a stated ceiling of $420M. CEO Orla Dray said the deal validates the sensitive-instrument line launched last year and locks in recurring consumables revenue. Deliveries begin next quarter under a phased installation schedule.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82622,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Skarngrave Adds Assembly Capacity to Meet Hospital-Network Sterilizer Orders",
+        "body": "The medical equipment maker opened a second assembly line to fulfill its recent sterilization contract, boosting Low-Temperature line output by an estimated 35%. CEO Orla Dray described the expansion as 'measured and fully funded,' with no revision to the company's steady guidance.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -8641,7 +8711,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82590,
+    "lastEventCycle": 82622,
     "events": [
       {
         "cycle": 0,
@@ -8677,6 +8747,16 @@
         "size": "flash",
         "head": "Skarnstone Industries Holds Line as New Warehouse Trims Backorders",
         "body": "Skarnstone reported quarterly revenue of $412 million, up 3% year over year, with fulfillment lead times narrowing after last quarter's warehouse addition came online. CEO Yvette Aldous credited disciplined restocking, noting consumables demand from clinics and hospital groups remained 'reliable, if unspectacular.' Management reaffirmed full-year guidance without raising it.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82622,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarnstone Industries Edges Past Forecasts as Backorders Stay Cleared",
+        "body": "The consumables maker reported a modest 3.2% revenue uptick, with CEO Yvette Aldous crediting the recently expanded warehouse network for keeping fill rates above 98%. Management reiterated its unhurried full-year outlook, citing steady institutional demand and no changes to capital plans.",
         "effects": {
           "medical": 0.06
         }
