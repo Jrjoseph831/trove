@@ -871,7 +871,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82612,
+    "lastEventCycle": 82621,
     "events": [
       {
         "cycle": 0,
@@ -995,6 +995,16 @@
         "body": "Quarterly profit fell 38% to $214 million as remediation and inspection spending tied to the Halvern weld defects overran forecasts. Cassian Rode acknowledged the turnaround was 'slower than the timeline I set,' but reaffirmed that plant retooling would complete by mid-year. Order backlogs held steady, offering a rare bright spot.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82621,
+        "kind": "recall",
+        "size": "major",
+        "head": "Blackton Industries Orders 1.4-Million-Unit Recall of Halvern Parts as Weld Probe Ends",
+        "body": "Blackton confirmed a sweeping recall of roughly 1.4 million Halvern-series components after regulators concluded the weld-defect probe, with estimated repair and replacement costs of $890 million. CEO Cassian Rode called the recall 'painful but final,' insisting it closes the safety chapter that has dogged his turnaround. Shipments of the affected line are suspended pending re-tooling at two plants.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -1376,7 +1386,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82614,
+    "lastEventCycle": 82621,
     "events": [
       {
         "cycle": 0,
@@ -1536,6 +1546,16 @@
         "size": "standard",
         "head": "Bruncrest Works Doubles Aria Output With New Eastfield Assembly Line",
         "body": "Fresh off the regional data campus order, CEO Ines Marlow committed $640 million to a second Aria Compute line at the Eastfield facility, targeting a doubling of rack capacity by mid-2027. Marlow told staff the expansion was a 'no-hedging bet' on sustained demand, drawing both praise and caution from analysts wary of her track record for aggressive timelines.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82621,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Bruncrest Works Unveils Aria Pro Line as Marlow Bets Big on Premium Compute Tier",
+        "body": "CEO Ines Marlow took the stage in Eastfield to introduce the Aria Pro series, a higher-density rack tier that Bruncrest says delivers 40% more throughput per unit than the standard Aria line. Marlow promised the new tier would be 'the backbone of every serious campus by next year,' with first shipments slated for the coming quarter. Analysts noted the launch leans heavily on the recently expanded Eastfield capacity.",
         "effects": {
           "technology": 0.13
         }
@@ -2829,7 +2849,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82614,
+    "lastEventCycle": 82621,
     "events": [
       {
         "cycle": 0,
@@ -2973,6 +2993,16 @@
         "body": "Under mounting regulatory pressure, Castlehold agreed to permanently close three Saltmere storage sites and carve its remaining storage assets into a separate entity, with total cleanup liabilities now estimated at $4.2 billion. CEO Ivo Reneth framed the move as 'ring-fencing the damage,' but the restructuring wipes out roughly a third of the company's storage capacity and triggers a $900 million writedown.",
         "effects": {
           "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82621,
+        "kind": "lawsuit",
+        "size": "standard",
+        "head": "Castlehold Faces Class Action Over Saltmere Cleanup as Costs Approach $4.5B",
+        "body": "A coalition of Saltmere-area claimants filed a class-action suit against Castlehold seeking damages tied to the shuttered storage sites, pushing total estimated exposure toward $4.5 billion. CEO Ivo Reneth said the newly separated storage unit is 'ring-fenced' to absorb the liabilities and vowed to contest the broadest claims. Regulators continue to monitor remediation at the three closed facilities.",
+        "effects": {
+          "energy": -0.13
         }
       }
     ]
@@ -7474,7 +7504,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82610,
+    "lastEventCycle": 82621,
     "events": [
       {
         "cycle": 0,
@@ -7572,6 +7602,16 @@
         "body": "Seeking to stem the margin pressure that dragged on last quarter, Maison & Vale consolidated Deltrey Chemical and legacy Ostley operations into a single Jansan division, cutting an estimated 900 overlapping roles. CEO Rhys Kessler said the reorganization targets $180 million in annual savings and should restore margins by mid-year.",
         "effects": {
           "hospitality": -0.13
+        }
+      },
+      {
+        "cycle": 82621,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Maison & Vale Returns to Growth as Streamlined Jansan Division Lifts Margins",
+        "body": "Maison & Vale reported quarterly operating margin recovery to 11.2%, up from 7.4%, as the consolidated Jansan division began delivering the synergies promised in the Ostley deal. CEO Rhys Kessler credited '$140 million in annualized cost savings' from folding the Deltrey and Ostley units together. Household Goods volumes also stabilized after two soft quarters.",
+        "effects": {
+          "hospitality": 0.13
         }
       }
     ]
@@ -7954,7 +7994,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82609,
+    "lastEventCycle": 82621,
     "events": [
       {
         "cycle": 0,
@@ -8038,6 +8078,16 @@
         "body": "New CEO Delphine Vaugh unveiled a sweeping restructure that carves the heavy-earthmoving business into a standalone division with its own quality board, following the $310 million embankment judgment. The plan includes a $48 million investment in slope-monitoring equipment and roughly 220 role changes across three depots. Vaugh framed the move as 'rebuilding trust before rebuilding sites.'",
         "effects": {
           "construction": -0.13
+        }
+      },
+      {
+        "cycle": 82621,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Marrowstone Build Lands $610M Municipal Earthmoving Contract Under Vaugh's Split Unit",
+        "body": "Marrowstone's newly separated heavy-earthmoving arm won a $610 million multi-year municipal infrastructure package, its first major award since the post-Embankment restructuring. CEO Delphine Vaugh said the contract validates the safety overhaul, noting the client cited Marrowstone's 'rebuilt inspection regime' in the selection. Work begins next quarter across three regional sites.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -8753,7 +8803,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82609,
+    "lastEventCycle": 82621,
     "events": [
       {
         "cycle": 0,
@@ -8839,6 +8889,16 @@
         "size": "flash",
         "head": "Steg Tooling Posts Sixth Straight Beat as Kelmar Line Comes Online",
         "body": "Steg Tooling reported quarterly revenue of $312 million, edging past the $305 million consensus, as its new Kelmar fastener line began contributing volume. CEO Iris Vossen noted the facility is running at 40% of planned capacity with a ramp to full output expected within two quarters. Auto-parts orders held steady despite softer regional demand.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82621,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Steg Tooling Extends Kelmar Site With Second Fastener Cell Amid Steady Demand",
+        "body": "Steg Tooling added a second fastener production cell at its Kelmar facility, a modest $48 million outlay CEO Iris Vossen described as 'matching capacity to a durable order book.' The addition raises Kelmar's output roughly 20% and supports long-term supply pacts signed earlier in the year. Vossen reiterated the firm's preference for incremental, self-funded growth.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -9626,14 +9686,14 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1893,
-    "ceo": "Maren Feldt",
+    "ceo": "Adrienne Sole",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.71,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82613,
+    "lastEventCycle": 82621,
     "events": [
       {
         "cycle": 0,
@@ -9776,6 +9836,14 @@
         "effects": {
           "luxury": -0.22
         }
+      },
+      {
+        "cycle": 82621,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Varnvale House Names Restructuring Chief Adrienne Sole as CEO to Steer Post-Scandal Recovery",
+        "body": "After weeks of turmoil, Varnvale's board appointed Adrienne Sole, a veteran restructuring executive, as CEO with a mandate to settle the widening investor suit and rebuild sourcing controls. Sole pledged a full audit of the Timepieces supply chain and said the company would set aside $220 million for legal and remediation costs. Outgoing interim leadership will depart by month's end.",
+        "effects": {}
       }
     ]
   },
@@ -10291,7 +10359,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82609,
+    "lastEventCycle": 82621,
     "events": [
       {
         "cycle": 0,
@@ -10379,6 +10447,16 @@
         "body": "Vossenstead Supply reported a sixth consecutive earnings beat, posting $268 million in revenue against a $261 million estimate as its third distribution hub began fulfilling orders. CEO Bram Thorne credited tighter delivery windows in the food-service segment for the gains. Plumbing and fixtures volumes rose 4% on steady contractor demand.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82621,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenstead Supply Notches Seventh Straight Beat as Hub Network Hits Full Stride",
+        "body": "Vossenstead extended its streak to seven quarters, posting a 9% revenue gain as all three distribution hubs ran at full utilization for the first time. CEO Bram Thorne pointed to steady Food Service demand and 'no wasted motion' across the network, raising full-year guidance modestly. Plumbing & Fixtures volumes grew a further 6% on regional contract wins.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]

@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-21T02:49:10.533Z",
+  "generatedAt": "2026-07-21T08:32:21.344Z",
   "beats": [
     {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "major",
+      "head": "Blackton Industries Orders 1.4-Million-Unit Recall of Halvern Parts as Weld Probe Ends",
+      "body": "Blackton confirmed a sweeping recall of roughly 1.4 million Halvern-series components after regulators concluded the weld-defect probe, with estimated repair and replacement costs of $890 million. CEO Cassian Rode called the recall 'painful but final,' insisting it closes the safety chapter that has dogged his turnaround. Shipments of the affected line are suspended pending re-tooling at two plants.",
+      "cycle": 82621,
+      "dur": 8
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Bruncrest Works Unveils Aria Pro Line as Marlow Bets Big on Premium Compute Tier",
+      "body": "CEO Ines Marlow took the stage in Eastfield to introduce the Aria Pro series, a higher-density rack tier that Bruncrest says delivers 40% more throughput per unit than the standard Aria line. Marlow promised the new tier would be 'the backbone of every serious campus by next year,' with first shipments slated for the coming quarter. Analysts noted the launch leans heavily on the recently expanded Eastfield capacity.",
+      "cycle": 82621,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "lawsuit",
+      "size": "standard",
+      "head": "Castlehold Faces Class Action Over Saltmere Cleanup as Costs Approach $4.5B",
+      "body": "A coalition of Saltmere-area claimants filed a class-action suit against Castlehold seeking damages tied to the shuttered storage sites, pushing total estimated exposure toward $4.5 billion. CEO Ivo Reneth said the newly separated storage unit is 'ring-fenced' to absorb the liabilities and vowed to contest the broadest claims. Regulators continue to monitor remediation at the three closed facilities.",
+      "cycle": 82621,
+      "dur": 2
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
       "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Maison & Vale Returns to Growth as Streamlined Jansan Division Lifts Margins",
+      "body": "Maison & Vale reported quarterly operating margin recovery to 11.2%, up from 7.4%, as the consolidated Jansan division began delivering the synergies promised in the Ostley deal. CEO Rhys Kessler credited '$140 million in annualized cost savings' from folding the Deltrey and Ostley units together. Household Goods volumes also stabilized after two soft quarters.",
+      "cycle": 82621,
+      "dur": 2
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Marrowstone Build Lands $610M Municipal Earthmoving Contract Under Vaugh's Split Unit",
+      "body": "Marrowstone's newly separated heavy-earthmoving arm won a $610 million multi-year municipal infrastructure package, its first major award since the post-Embankment restructuring. CEO Delphine Vaugh said the contract validates the safety overhaul, noting the client cited Marrowstone's 'rebuilt inspection regime' in the selection. Work begins next quarter across three regional sites.",
+      "cycle": 82621,
+      "dur": 2
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "expansion",
       "size": "flash",
-      "head": "Aldouscraft Mfg. Edges Past Estimates as Third Extrusion Line Ramps",
-      "body": "Aldouscraft posted a modest quarterly beat, with revenue of $640M as its third extrusion line began contributing feeder cable volumes for the grid expansion award. CEO Soren Ashby said output is tracking to plan and reiterated full-year guidance without fanfare. Margins held steady at 12.1%.",
-      "cycle": 82620,
+      "head": "Steg Tooling Extends Kelmar Site With Second Fastener Cell Amid Steady Demand",
+      "body": "Steg Tooling added a second fastener production cell at its Kelmar facility, a modest $48 million outlay CEO Iris Vossen described as 'matching capacity to a durable order book.' The addition raises Kelmar's output roughly 20% and supports long-term supply pacts signed earlier in the year. Vossen reiterated the firm's preference for incremental, self-funded growth.",
+      "cycle": 82621,
       "dur": 1
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Varnvale House Names Restructuring Chief Adrienne Sole as CEO to Steer Post-Scandal Recovery",
+      "body": "After weeks of turmoil, Varnvale's board appointed Adrienne Sole, a veteran restructuring executive, as CEO with a mandate to settle the widening investor suit and rebuild sourcing controls. Sole pledged a full audit of the Timepieces supply chain and said the company would set aside $220 million for legal and remediation costs. Outgoing interim leadership will depart by month's end.",
+      "cycle": 82621,
+      "dur": 8
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenstead Supply Notches Seventh Straight Beat as Hub Network Hits Full Stride",
+      "body": "Vossenstead extended its streak to seven quarters, posting a 9% revenue gain as all three distribution hubs ran at full utilization for the first time. CEO Bram Thorne pointed to steady Food Service demand and 'no wasted motion' across the network, raising full-year guidance modestly. Plumbing & Fixtures volumes grew a further 6% on regional contract wins.",
+      "cycle": 82621,
+      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -92,26 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Erretmark Works Beats as Expanded Sorne Atelier Clears Flagship Backlog Faster",
-      "body": "Aurelia Garr's coachbuilder reported revenue up 18% to $880 million, driven by accelerated delivery of the award-winning Grand Flagship following the Sorne atelier expansion. Average selling prices climbed as buyers opted for bespoke commissions. The order backlog still stretches 26 months, and Garr hinted at a second nameplate under development.",
-      "cycle": 82619,
-      "dur": 2
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fenncyon Beats Again as Northern Spur Contract Boosts Margins",
-      "body": "Nadia Ashby's crews posted quarterly revenue of $1.6 billion, up 14% year over year, as the $900M Northern Spur extension began billing ahead of schedule. Operating margin widened to 21%, and Ashby raised full-year guidance for the third consecutive period. The company cited disciplined fleet utilization across both Eastfield rail staging yards.",
-      "cycle": 82619,
-      "dur": 2
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "restructure",
@@ -120,16 +170,6 @@
       "body": "New chief Neave Corliss announced a hard reset that carves the troubled Power & Storage division into a standalone unit and eliminates 3,400 roles, aiming for $500 million in annual cost savings. Corliss pledged an overhauled quality regime for storage packs still under regulatory probe. The move marks the boldest step yet in her bid to stabilize the loss-making automaker.",
       "cycle": 82619,
       "dur": 8
-    },
-    {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Ornewright Supply Signs Multi-Year Food Service Deal to Fill New Caldmere Cold-Chain Line",
-      "body": "Rhys Throne secured a five-year, $640 million supply agreement with a regional grocery consortium, anchoring the newly commissioned cold-chain line at the Caldmere hub. The contract is expected to run the expanded facility near full capacity by mid-next year. Throne framed the deal as validation of the company's cautious build-ahead strategy.",
-      "cycle": 82619,
-      "dur": 2
     },
     {
       "company": "Vossenspire Supply",
@@ -239,26 +279,6 @@
       "head": "Castlestone Tumbles as Data Grid Probe Forces $2.1B Penalty and Reliability Rework",
       "body": "Castlestone missed sharply after regulators concluded its National Data Grid reliability guarantees fell short, imposing a $2.1 billion penalty and mandating a costly infrastructure rework. CEO Pell Karsh, who had doubled down on the grid pact just quarters earlier, now faces investor demands for accountability as the company suspended its buyback and cut full-year guidance.",
       "cycle": 82614,
-      "dur": 8
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Korrwright Works Seals $1.2B Takeover of Heritage Rival Ambrose & Sons",
-      "body": "In his boldest move in decades, Dunmore Carrow has agreed to acquire storied competitor Ambrose & Sons for $1.2 billion, folding its two-century dial-making workshops and prestige boutiques into the Korrwright stable. The deal doubles Korrwright's atelier capacity and adds the coveted Ambrose Meridian collection, though analysts note Carrow now faces the challenge of integrating three heritage brands at once. Regulators in two markets are expected to review the combination over the coming months.",
-      "cycle": 82613,
-      "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Varnvale House Reels as Internal Documents Expose Deeper Sourcing Cover-Up",
-      "body": "A cache of internal memos surfaced this week showing that senior Varnvale executives knew of tainted supply lines years before disclosure, deepening a crisis that has already toppled former chief Calloway. Interim CEO Maren Feldt suspended two remaining division heads and pledged a full external audit, but the revelations sent boutique cancellations surging and prompted three luxury retail partners to pull the brand from shelves. Regulators signaled the formal charges could now expand to individuals.",
-      "cycle": 82613,
       "dur": 8
     }
   ]
