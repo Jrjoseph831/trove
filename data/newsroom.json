@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-20T19:45:55.430Z",
+  "generatedAt": "2026-07-21T02:49:10.533Z",
   "beats": [
+    {
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldouscraft Mfg. Edges Past Estimates as Third Extrusion Line Ramps",
+      "body": "Aldouscraft posted a modest quarterly beat, with revenue of $640M as its third extrusion line began contributing feeder cable volumes for the grid expansion award. CEO Soren Ashby said output is tracking to plan and reiterated full-year guidance without fanfare. Margins held steady at 12.1%.",
+      "cycle": 82620,
+      "dur": 1
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Boreas Power Seals $3.8B Compute Campus Partnership in Landmark Expansion",
+      "body": "Boreas Power announced a defining $3.8B agreement to build and power a new large-scale compute campus adjacent to its Hollowmere site, with the newly acquired Vantell storage assets supplying grid-balancing capacity. CEO Mira Thorne called it the company's largest single commitment, projecting the campus will lift power-and-storage revenue by nearly 40% at full ramp. Construction begins next quarter, with first phase energization targeted within two years.",
+      "cycle": 82620,
+      "dur": 8
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Fennmoor Acquires Diagnostics Firm Callent Labs to Broaden Sensor Platform",
+      "body": "Fennmoor said it will acquire Callent Labs for $520M, adding fluid-analysis instruments that pair with its award-winning Threll sensor line. CEO Dorian Brandt said the deal extends Fennmoor deeper into hospital diagnostics beyond its existing national network rollout. The transaction is expected to close within six months and add to earnings by the following year.",
+      "cycle": 82620,
+      "dur": 2
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Garrware Posts Record Quarter as Marrow Valley Third Line Runs at Capacity",
+      "body": "Garrware reported quarterly revenue of $3.1B, up 14% year-on-year, crediting near-full utilization of its newly commissioned Marrow Valley third line and the expanded Halloway & Pace northern volumes. CEO Orla Holt noted that packaging throughput across northern depots rose 22%, and reaffirmed a disciplined approach to further capacity additions. Operating margins widened to 18.4% as the anchor client ramped shipments ahead of schedule.",
+      "cycle": 82620,
+      "dur": 2
+    },
+    {
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Holtware Co. Beats as Warranty-Backed Power Tools Drive Repeat Sales",
+      "body": "Holtware reported revenue of $890M, up 11%, as its lifetime-warranty power-tool range fueled strong repeat purchases and drove utilization at the newly opened second fulfillment center. CEO Aurelia Dray said the award-winning range now accounts for a third of consumer segment sales and hinted at selective category expansion. Gross margin improved to 34.6% on favorable product mix.",
+      "cycle": 82620,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Korrwright Works Folds Ambrose & Sons Into New Heritage Division",
+      "body": "Following its $1.2B takeover, Korrwright Works announced it will consolidate Ambrose & Sons and the acquired Vellhorn movements arm under a single Heritage Division led from the Carrow flagship workshop. CEO Dunmore Carrow said the reorganization will trim roughly 260 overlapping roles while preserving Ambrose's landmark casing atelier. The firm expects $90M in annual cost savings from combined escapement production by the second year.",
+      "cycle": 82620,
+      "dur": 2
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Stegforge Breaks Ground on Dedicated Rail Plate Mill to Serve Consortium Deal",
+      "body": "Stegforge confirmed a $410M investment in a dedicated structural plate mill to fulfill its multi-year rail consortium contract without straining existing furnaces. CEO Aurelia Steg said the facility, targeted for first output in 18 months, will add 600,000 tonnes of annual capacity and free the second alloy furnace to focus on the machinery backlog. The move underscores Steg's steady, capacity-led growth strategy.",
+      "cycle": 82620,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Thronehaus & Co. Debuts Verrand Grand Complication at Flagship Atelier",
+      "body": "Thronehaus unveiled the Verrand Grand Complication, a limited run of 150 pieces showcasing dials and movements now built entirely in-house following its recent specialty dial acquisition. CEO Cora Dray priced the flagship line from $84,000 and said pre-commitments already cover more than half the allocation. The launch anchors the new atelier's positioning as the house's craft showcase.",
+      "cycle": 82620,
+      "dur": 2
+    },
     {
       "company": "Bruncraft Industries",
       "sector": "automotive",
@@ -10,16 +90,6 @@
       "body": "Documents surfaced in the class action reveal Bruncraft engineers flagged Runabout axle fatigue in reports circulated to senior leadership as early as 2023, well before the first recall. Orla Marrow faces mounting calls for accountability as regulators broaden their probe to include possible concealment. The disclosures wiped confidence across the automaker's dealer base and prompted three states to open separate inquiries.",
       "cycle": 82619,
       "dur": 8
-    },
-    {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Notches Fourth Straight Beat on Steady Textile Demand",
-      "body": "Mira Garr's firm delivered a narrow beat with quarterly earnings of $312 million, edging estimates by roughly 2% as Northern Mills textile volumes held firm. Farm equipment orders remained resilient into the planting season. Garr reaffirmed guidance and made no change to capital plans.",
-      "cycle": 82619,
-      "dur": 1
     },
     {
       "company": "Erretmark Works",
@@ -50,16 +120,6 @@
       "body": "New chief Neave Corliss announced a hard reset that carves the troubled Power & Storage division into a standalone unit and eliminates 3,400 roles, aiming for $500 million in annual cost savings. Corliss pledged an overhauled quality regime for storage packs still under regulatory probe. The move marks the boldest step yet in her bid to stabilize the loss-making automaker.",
       "cycle": 82619,
       "dur": 8
-    },
-    {
-      "company": "Kesselgrove Co.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Kesselgrove Co. Tops Estimates as New Tooling Bay Lifts Press Output",
-      "body": "Orla Steg's firm posted a modest beat with earnings of $148 million as the modular press platform's new tooling bay came online without disruption. Utilization across both assembly lines reached 88%. Steg kept guidance steady and reiterated a preference for measured, self-funded growth.",
-      "cycle": 82619,
-      "dur": 1
     },
     {
       "company": "Ornewright Supply",
@@ -100,46 +160,6 @@
       "body": "A class-action complaint filed on behalf of more than 40,000 Veyra S owners alleges Brunmark knowingly shipped defective battery packs despite internal warnings, seeking damages that analysts estimate could exceed $900 million. CEO Yvette Calder said the company will 'defend itself vigorously' but confirmed it has set aside a $300 million reserve as regulators widen their inquiry into pre-launch testing records.",
       "cycle": 82618,
       "dur": 8
-    },
-    {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Dunmorewright Adds Earthmoving Fleet to Service Record Harborfront Award",
-      "body": "Dunmorewright announced a $58 million investment in additional earthmoving equipment and a second staging yard to execute its $340 million Harborfront infrastructure contract. CEO Emil Skarn said mobilization on the harbor site is already underway, with plumbing and earthmoving crews scheduled to reach peak deployment within the year.",
-      "cycle": 82618,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halhold Works Beats as Aveline Platform Drives Medical Equipment Revenue Higher",
-      "body": "Halhold Works posted quarterly revenue of $612 million, up 18% year over year, with the Aveline diagnostic and bedside monitoring lines contributing $141 million as hospital deployments accelerated. CEO Lena Faircloth said the Aveline rollout has 'decisively closed the chapter' on the troubled Verity Pro, though she cautioned that device margins remain pressured by component costs.",
-      "cycle": 82618,
-      "dur": 2
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Hesperforge Supply Signs Multi-Year Marine-Grade Beam Supply Pact With Coastal Shipyards",
-      "body": "Hesperforge secured a four-year framework agreement to supply marine-grade structural beams to a consortium of three coastal shipyards, an arrangement the company values at roughly $240 million over its term. CEO Sable Halloran said the deal 'locks in the second mill's output well into the decade' and underpins a modest expansion of the marine line's finishing capacity.",
-      "cycle": 82618,
-      "dur": 2
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Skarnvale Relaunches Braeloch Terminal With Overhauled Handling Systems",
-      "body": "Skarnvale brought its Braeloch freight terminal back to full capacity under a rebuilt material-handling system, following the multi-day outage that forced a management shakeup. CEO Dorn Vaskell said the relaunched facility has run 'eleven consecutive days without incident' and pledged staged reliability testing before ramping throughput to the site's 4,000-pallet daily target.",
-      "cycle": 82618,
-      "dur": 2
     },
     {
       "company": "Greywater Grid",
@@ -239,16 +259,6 @@
       "head": "Varnvale House Reels as Internal Documents Expose Deeper Sourcing Cover-Up",
       "body": "A cache of internal memos surfaced this week showing that senior Varnvale executives knew of tainted supply lines years before disclosure, deepening a crisis that has already toppled former chief Calloway. Interim CEO Maren Feldt suspended two remaining division heads and pledged a full external audit, but the revelations sent boutique cancellations surging and prompted three luxury retail partners to pull the brand from shelves. Regulators signaled the formal charges could now expand to individuals.",
       "cycle": 82613,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Bruncraft Industries Hit With Class Action as Axle Failures Linked to Highway Crashes",
-      "body": "Plaintiffs filed a consolidated class action seeking $1.2 billion, alleging Bruncraft knew of the Halveston axle weakness for nearly two years before the first recall. Court filings cite at least 31 documented crashes and internal quality memos flagging the defect. Orla Marrow, CEO since 1931, defended the company's response but confirmed a $400 million charge to cover initial claims.",
-      "cycle": 82612,
       "dur": 8
     }
   ]

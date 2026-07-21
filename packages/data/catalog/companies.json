@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82603,
+    "lastEventCycle": 82620,
     "events": [
       {
         "cycle": 0,
@@ -78,6 +78,16 @@
         "body": "Aldouscraft committed $210 million to a third high-capacity extrusion line at its Hartwell plant, aimed squarely at fulfilling its multi-year feeder cable award. CEO Soren Ashby said the line would lift annual conductor output by roughly 28% once fully commissioned next year. Management framed the move as measured capacity-matching rather than speculative buildout.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82620,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscraft Mfg. Edges Past Estimates as Third Extrusion Line Ramps",
+        "body": "Aldouscraft posted a modest quarterly beat, with revenue of $640M as its third extrusion line began contributing feeder cable volumes for the grid expansion award. CEO Soren Ashby said output is tracking to plan and reiterated full-year guidance without fanfare. Margins held steady at 12.1%.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -1000,7 +1010,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82614,
+    "lastEventCycle": 82620,
     "events": [
       {
         "cycle": 0,
@@ -1178,6 +1188,16 @@
         "body": "Restless as ever, CEO Mira Thorne pushed through the $1.6 billion cash-and-stock purchase of Vantell, a mid-sized storage operator, to bolt additional capacity onto the Boreas network. The deal expands Boreas into two new service regions and follows the successful lease-up of the Hollowmere campus, though it lifts the company's debt load to its highest level in a decade.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82620,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Boreas Power Seals $3.8B Compute Campus Partnership in Landmark Expansion",
+        "body": "Boreas Power announced a defining $3.8B agreement to build and power a new large-scale compute campus adjacent to its Hollowmere site, with the newly acquired Vantell storage assets supplying grid-balancing capacity. CEO Mira Thorne called it the company's largest single commitment, projecting the campus will lift power-and-storage revenue by nearly 40% at full ramp. Construction begins next quarter, with first phase energization targeted within two years.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -4230,7 +4250,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82612,
+    "lastEventCycle": 82620,
     "events": [
       {
         "cycle": 0,
@@ -4356,6 +4376,16 @@
         "size": "standard",
         "head": "Fennmoor Beats Forecasts as Threll Sensor Deployments Ramp",
         "body": "Revenue climbed 17% to $1.4 billion, driven by the nationwide hospital rollout of the award-winning Threll diagnostic sensors. Dorian Brandt, CEO since 1968, said installed units had already surpassed the year-one target, with medical equipment now the fastest-growing segment. The company lifted its annual guidance and hinted at new industrial applications for the Threll platform.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82620,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Fennmoor Acquires Diagnostics Firm Callent Labs to Broaden Sensor Platform",
+        "body": "Fennmoor said it will acquire Callent Labs for $520M, adding fluid-analysis instruments that pair with its award-winning Threll sensor line. CEO Dorian Brandt said the deal extends Fennmoor deeper into hospital diagnostics beyond its existing national network rollout. The transaction is expected to close within six months and add to earnings by the following year.",
         "effects": {
           "technology": 0.13
         }
@@ -4559,7 +4589,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82605,
+    "lastEventCycle": 82620,
     "events": [
       {
         "cycle": 0,
@@ -4635,6 +4665,16 @@
         "size": "standard",
         "head": "Garrware Signs New Anchor Client as Marrow Valley Third Line Comes Online",
         "body": "Orla Holt confirmed a five-year packaging contract with regional distributor Venn & Croft, timed to the startup of the third Marrow Valley line. The deal is expected to add roughly 190 million in annual volume and diversifies Garrware beyond its Halloway & Pace anchor. Holt reiterated her disciplined stance, noting the new line is already committed at 70 percent capacity.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82620,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Garrware Posts Record Quarter as Marrow Valley Third Line Runs at Capacity",
+        "body": "Garrware reported quarterly revenue of $3.1B, up 14% year-on-year, crediting near-full utilization of its newly commissioned Marrow Valley third line and the expanded Halloway & Pace northern volumes. CEO Orla Holt noted that packaging throughput across northern depots rose 22%, and reaffirmed a disciplined approach to further capacity additions. Operating margins widened to 18.4% as the anchor client ramped shipments ahead of schedule.",
         "effects": {
           "logistics": 0.13
         }
@@ -6258,7 +6298,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82605,
+    "lastEventCycle": 82620,
     "events": [
       {
         "cycle": 0,
@@ -6324,6 +6364,16 @@
         "size": "standard",
         "head": "Holtware Co. Opens Second Fulfillment Center to Meet Lifetime-Warranty Demand",
         "body": "Aurelia Dray announced a 180,000-square-foot fulfillment hub in the Dellmark corridor to handle surging traffic from the award-winning power-tool range. The site adds roughly 320 jobs and is expected to cut regional delivery windows by two days. Dray framed the move as 'measured capacity to match the warranty promise,' noting the warranty line now drives nearly a third of total volume.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82620,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtware Co. Beats as Warranty-Backed Power Tools Drive Repeat Sales",
+        "body": "Holtware reported revenue of $890M, up 11%, as its lifetime-warranty power-tool range fueled strong repeat purchases and drove utilization at the newly opened second fulfillment center. CEO Aurelia Dray said the award-winning range now accounts for a third of consumer segment sales and hinted at selective category expansion. Gross margin improved to 34.6% on favorable product mix.",
         "effects": {
           "consumer": 0.13
         }
@@ -7058,7 +7108,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82613,
+    "lastEventCycle": 82620,
     "events": [
       {
         "cycle": 0,
@@ -7206,6 +7256,16 @@
         "body": "In his boldest move in decades, Dunmore Carrow has agreed to acquire storied competitor Ambrose & Sons for $1.2 billion, folding its two-century dial-making workshops and prestige boutiques into the Korrwright stable. The deal doubles Korrwright's atelier capacity and adds the coveted Ambrose Meridian collection, though analysts note Carrow now faces the challenge of integrating three heritage brands at once. Regulators in two markets are expected to review the combination over the coming months.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82620,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Korrwright Works Folds Ambrose & Sons Into New Heritage Division",
+        "body": "Following its $1.2B takeover, Korrwright Works announced it will consolidate Ambrose & Sons and the acquired Vellhorn movements arm under a single Heritage Division led from the Carrow flagship workshop. CEO Dunmore Carrow said the reorganization will trim roughly 260 overlapping roles while preserving Ambrose's landmark casing atelier. The firm expects $90M in annual cost savings from combined escapement production by the second year.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -8796,7 +8856,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82606,
+    "lastEventCycle": 82620,
     "events": [
       {
         "cycle": 0,
@@ -8872,6 +8932,16 @@
         "size": "standard",
         "head": "Stegforge Locks Multi-Year Structural Materials Deal With Rail Consortium",
         "body": "Stegforge signed a four-year framework to supply structural alloys and beams to the Verrun rail consortium, valued at roughly $780M over the term. The agreement leans on the newly commissioned second furnace and slots directly into the machinery backlog, with first deliveries scheduled next quarter. CEO Aurelia Steg called it a natural extension of the alloy strategy.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82620,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Stegforge Breaks Ground on Dedicated Rail Plate Mill to Serve Consortium Deal",
+        "body": "Stegforge confirmed a $410M investment in a dedicated structural plate mill to fulfill its multi-year rail consortium contract without straining existing furnaces. CEO Aurelia Steg said the facility, targeted for first output in 18 months, will add 600,000 tonnes of annual capacity and free the second alloy furnace to focus on the machinery backlog. The move underscores Steg's steady, capacity-led growth strategy.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -9081,7 +9151,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82612,
+    "lastEventCycle": 82620,
     "events": [
       {
         "cycle": 0,
@@ -9207,6 +9277,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Opens Flagship Atelier to Showcase In-House Craft",
         "body": "The house unveiled a 40,000-square-foot atelier and boutique, consolidating casing and newly acquired dial production under one roof. Cora Dray said the vertical integration push had cut lead times on the Verrand Collection by nearly a third. The site will also host private commissions, a segment Dray called 'the future of the maison.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82620,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Thronehaus & Co. Debuts Verrand Grand Complication at Flagship Atelier",
+        "body": "Thronehaus unveiled the Verrand Grand Complication, a limited run of 150 pieces showcasing dials and movements now built entirely in-house following its recent specialty dial acquisition. CEO Cora Dray priced the flagship line from $84,000 and said pre-commitments already cover more than half the allocation. The launch anchors the new atelier's positioning as the house's craft showcase.",
         "effects": {
           "luxury": 0.13
         }
