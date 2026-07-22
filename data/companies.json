@@ -1253,7 +1253,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82619,
+    "lastEventCycle": 82626,
     "events": [
       {
         "cycle": 0,
@@ -1402,6 +1402,16 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82626,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Regulators Open Formal Safety Probe Into Bruncraft as Memo Fallout Spreads",
+        "body": "The National Vehicle Safety Board launched a formal investigation into Bruncraft's axle handling, citing internal memos that showed executives knew of the defect for two years. Marrow faces mounting calls for her resignation as the probe could carry penalties exceeding $500M and a possible production halt at two plants.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -1416,7 +1426,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82621,
+    "lastEventCycle": 82626,
     "events": [
       {
         "cycle": 0,
@@ -1588,6 +1598,16 @@
         "body": "CEO Ines Marlow took the stage in Eastfield to introduce the Aria Pro series, a higher-density rack tier that Bruncrest says delivers 40% more throughput per unit than the standard Aria line. Marlow promised the new tier would be 'the backbone of every serious campus by next year,' with first shipments slated for the coming quarter. Analysts noted the launch leans heavily on the recently expanded Eastfield capacity.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82626,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Bruncrest Works Lands Landmark 3.4B Aria Pro Order From National Compute Consortium",
+        "body": "Bruncrest secured a multi-year contract worth up to $3.4B to supply Aria Pro racks across a national compute build-out, its largest order ever. Marlow called the win 'the payoff for betting on the premium tier' and said Eastfield would run at full capacity through the coming year to meet delivery milestones.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -3689,7 +3709,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82611,
+    "lastEventCycle": 82626,
     "events": [
       {
         "cycle": 0,
@@ -3767,6 +3787,16 @@
         "body": "Drossware Industries confirmed a $210 million investment to open a dedicated Packaging and Cleaning line servicing the Grocer Alliance network, adding roughly 340 jobs across two regional sites. Chief executive Nadia Wold framed the move as 'locking in the volumes we've already won,' with first output expected within nine months. The expansion follows three consecutive quarters in which Alliance orders filled newly added capacity.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82626,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drossware Nudges Past Estimates as Packaging Line Ramps",
+        "body": "Drossware posted a modest beat, with revenue of $2.3B as the dedicated Grocer Alliance packaging line reached two-thirds of planned throughput. Wold called the quarter 'steady' and reaffirmed full-year guidance.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -5001,14 +5031,14 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1983,
-    "ceo": "Dorne Whitaker",
+    "ceo": "Sable Renwick",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.64,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82617,
+    "lastEventCycle": 82626,
     "events": [
       {
         "cycle": 0,
@@ -5125,6 +5155,14 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82626,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Greywater Grid Taps Outsider Sable Renwick as CEO to Steady the House",
+        "body": "The board appointed veteran power operator Sable Renwick as chief executive, ending months of instability after two major outages and the departures of Halloran and interim leadership. Renwick pledged a full audit of the Batch Reservoir systems and a pause on new campus commitments until reliability is restored.",
+        "effects": {}
       }
     ]
   },
@@ -5461,7 +5499,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82607,
+    "lastEventCycle": 82626,
     "events": [
       {
         "cycle": 0,
@@ -5537,6 +5575,16 @@
         "size": "standard",
         "head": "Halcrow & Vance Lifts Outlook Again as Corridor Contract Adds to Vetask Momentum",
         "body": "Halcrow & Vance topped estimates for a fourth consecutive quarter and raised full-year guidance, citing peak Vetask Basin output and early revenue from the newly won adjacent corridor contract. Mira Skarn said combined project pipelines now stretched into 2029, with earthmoving fleet utilization near record levels.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82626,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcrow & Vance Opens Second Vetask Staging Yard to Meet Corridor Demand",
+        "body": "The house commissioned a new 40-acre equipment staging yard near the Vetask Basin, adding capacity for the freshly won adjacent corridor work. Skarn said the $120M facility would shorten mobilization times and let the firm bid on two further regional packages expected to open next quarter.",
         "effects": {
           "construction": 0.13
         }
@@ -9392,7 +9440,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82615,
+    "lastEventCycle": 82626,
     "events": [
       {
         "cycle": 0,
@@ -9487,6 +9535,16 @@
         "head": "Thaldale Group's Renna Voss Steps Down Amid Widening Fastening-Plant Probe",
         "body": "CEO Renna Voss resigned as the investigation into inflated fastening-plant output figures widened to include two senior operations executives, and the investor lawsuit moved toward class certification. The board appointed interim chief Marlowe Trent, a former compliance officer, who suspended all output-based bonuses and commissioned a full restatement of last year's production numbers.",
         "effects": {}
+      },
+      {
+        "cycle": 82626,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Thaldale Group Names Trent's Turnaround Plan, Shutters Two Fastening Plants",
+        "body": "New chief Marlowe Trent unveiled a restructuring that will close the two fastening plants at the center of the output-inflation probe and cut roughly 900 jobs. Trent said the $180M charge would 'draw a line' under the scandal and refocus the house on its core hardware and tools lines.",
+        "effects": {
+          "consumer": -0.13
+        }
       }
     ]
   },
@@ -9820,7 +9878,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82617,
+    "lastEventCycle": 82626,
     "events": [
       {
         "cycle": 0,
@@ -9968,6 +10026,16 @@
         "body": "Bram Wold announced a $2.1 billion agreement to acquire the 140-year-old jeweler Lenoir, folding its ateliers into the expanding Maisons division. The deal, Varnvale's largest ever, adds high-jewelry capability alongside the Duquesne and Corveau timepiece lines and is expected to close within two quarters pending regulatory review.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82626,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Varnvale & Sons Beats Again as Lenoir Deal Closes Ahead of Schedule",
+        "body": "Quarterly revenue rose 14% to $1.6B, with fine-goods margins lifted by the early completion of the Lenoir acquisition. Wold told analysts that Lenoir's bridal collections would fold into the Maisons flagship by spring, and hinted at a further 'complementary' target under review.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -10516,7 +10584,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82619,
+    "lastEventCycle": 82626,
     "events": [
       {
         "cycle": 0,
@@ -10654,6 +10722,16 @@
         "body": "Quinn Marrow struck a landmark $2.1 billion partnership placing Halden Chronometrics pieces inside Vossenspire's global network of Calderon vehicle showrooms, unifying the company's two luxury arms for the first time. Executives project the cross-selling arrangement will lift Halden's annual output by 40,000 units within three years. The deal caps an aggressive acquisition run and marks the firm's boldest bet that timepiece and vehicle buyers are the same clientele.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82626,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenspire Supply Tops Estimates as Halden Timepieces Fill Vehicle Salons",
+        "body": "Revenue climbed 11% to $3.4B as Halden chronometers began selling through Marrow's global vehicle salons under the 2.1B distribution pact. Marrow said cross-selling had lifted salon foot traffic 18%, and teased a co-branded dashboard timepiece for the next Calderon model year.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]

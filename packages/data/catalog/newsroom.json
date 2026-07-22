@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-22T08:32:00.971Z",
+  "generatedAt": "2026-07-22T13:59:26.681Z",
   "beats": [
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Regulators Open Formal Safety Probe Into Bruncraft as Memo Fallout Spreads",
+      "body": "The National Vehicle Safety Board launched a formal investigation into Bruncraft's axle handling, citing internal memos that showed executives knew of the defect for two years. Marrow faces mounting calls for her resignation as the probe could carry penalties exceeding $500M and a possible production halt at two plants.",
+      "cycle": 82626,
+      "dur": 8
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Bruncrest Works Lands Landmark 3.4B Aria Pro Order From National Compute Consortium",
+      "body": "Bruncrest secured a multi-year contract worth up to $3.4B to supply Aria Pro racks across a national compute build-out, its largest order ever. Marlow called the win 'the payoff for betting on the premium tier' and said Eastfield would run at full capacity through the coming year to meet delivery milestones.",
+      "cycle": 82626,
+      "dur": 8
+    },
+    {
+      "company": "Drossware Industries",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Drossware Nudges Past Estimates as Packaging Line Ramps",
+      "body": "Drossware posted a modest beat, with revenue of $2.3B as the dedicated Grocer Alliance packaging line reached two-thirds of planned throughput. Wold called the quarter 'steady' and reaffirmed full-year guidance.",
+      "cycle": 82626,
+      "dur": 1
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Greywater Grid Taps Outsider Sable Renwick as CEO to Steady the House",
+      "body": "The board appointed veteran power operator Sable Renwick as chief executive, ending months of instability after two major outages and the departures of Halloran and interim leadership. Renwick pledged a full audit of the Batch Reservoir systems and a pause on new campus commitments until reliability is restored.",
+      "cycle": 82626,
+      "dur": 8
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Halcrow & Vance Opens Second Vetask Staging Yard to Meet Corridor Demand",
+      "body": "The house commissioned a new 40-acre equipment staging yard near the Vetask Basin, adding capacity for the freshly won adjacent corridor work. Skarn said the $120M facility would shorten mobilization times and let the firm bid on two further regional packages expected to open next quarter.",
+      "cycle": 82626,
+      "dur": 2
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Thaldale Group Names Trent's Turnaround Plan, Shutters Two Fastening Plants",
+      "body": "New chief Marlowe Trent unveiled a restructuring that will close the two fastening plants at the center of the output-inflation probe and cut roughly 900 jobs. Trent said the $180M charge would 'draw a line' under the scandal and refocus the house on its core hardware and tools lines.",
+      "cycle": 82626,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Varnvale & Sons Beats Again as Lenoir Deal Closes Ahead of Schedule",
+      "body": "Quarterly revenue rose 14% to $1.6B, with fine-goods margins lifted by the early completion of the Lenoir acquisition. Wold told analysts that Lenoir's bridal collections would fold into the Maisons flagship by spring, and hinted at a further 'complementary' target under review.",
+      "cycle": 82626,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenspire Supply Tops Estimates as Halden Timepieces Fill Vehicle Salons",
+      "body": "Revenue climbed 11% to $3.4B as Halden chronometers began selling through Marrow's global vehicle salons under the 2.1B distribution pact. Marrow said cross-selling had lifted salon foot traffic 18%, and teased a co-branded dashboard timepiece for the next Calderon model year.",
+      "cycle": 82626,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -10,26 +90,6 @@
       "body": "Regulators opened a formal inquiry into Aperture Compute's Dawnmere III campus following a substation failure that forced an emergency shutdown and knocked out capacity for nearly two days. CEO Halden Dray defended the aggressive build schedule but acknowledged the fourth-campus timeline could slip as inspectors review electrical and cooling systems across all sites. Two carrier customers have requested contractual assurances on uptime guarantees.",
       "cycle": 82625,
       "dur": 8
-    },
-    {
-      "company": "Blackmoor",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Blackmoor Edges Higher as Wide-Row Drill Variant Draws Early Orders",
-      "body": "Blackmoor posted modest quarterly gains as the newly launched wide-row variant of its Holloway seed-drill line began attracting orders alongside the steady base backlog. CEO Soren Dray characterized demand as gradual but durable, consistent with the company's long-horizon approach. Full-year guidance was left intact.",
-      "cycle": 82625,
-      "dur": 1
-    },
-    {
-      "company": "Castle Devices",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Castle Devices Posts Steady Quarter as Hospital Network Volumes Kick In",
-      "body": "Castle Devices reported in-line-to-slightly-ahead results, with revenue up 8% as the recently won regional hospital network contract began contributing consumable volumes. CEO Bram Calder pointed to consistent reorder patterns across surgical and general lines. The company held its full-year guidance unchanged.",
-      "cycle": 82625,
-      "dur": 1
     },
     {
       "company": "Drustcraft",
@@ -82,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunstone & Sons Unveils Vault Cell Guard as Crowe Seeks Fresh Start After Recall",
-      "body": "New chief Halden Crowe introduced the Vault Cell Guard line at a Meridian Hall event, touting a redesigned thermal barrier and a five-year replacement warranty aimed squarely at winning back the 380,000 owners affected by the Pro recall. Crowe pledged $220 million in retooling across two plants and promised independent third-party certification before the first units ship in the fourth quarter. Analysts called it a make-or-break bet for a house still absorbing an estimated $1.1 billion in recall costs.",
-      "cycle": 82624,
-      "dur": 2
-    },
-    {
       "company": "Calderforge",
       "sector": "technology",
       "kind": "major_deal",
@@ -102,36 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Carrowforge's New Chief Demore Orders Independent Testing Rebuild",
-      "body": "Marlow Demore announced the creation of an autonomous quality-assurance division reporting directly to the board, alongside the retirement of every machine model tied to the altered-records scandal. The overhaul carries a $145 million charge and includes free re-inspection for the roughly 2,100 industrial buyers named in the pending class action. Demore said the moves were 'the price of rebuilding a name that engineers can trust again.'",
-      "cycle": 82624,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Ironcrestton Extends Origin Standard Across Entire Catalogue",
-      "body": "Fresh off its Heritage Craft Guild transparency mark, Wren Adler announced that all Ironcrestton lines will carry full origin verification by mid-2027, backed by a new $60 million tracing facility at Vellmore. The house also opened flagship showrooms in three markets to showcase the traced provenance of each piece. Adler said early demand for the first traced collection had run 30 percent ahead of plan.",
-      "cycle": 82624,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Lhaus Industries Folds Delphin Plants Into Unified Cell-Pack Network",
-      "body": "Cole Brandt confirmed the integration of Delphin's three facilities alongside Lhaus's own four lines, creating a combined footprint the company says will lift annual cell-pack output by 42 percent. The consolidation will center operations at the expanded Harrowgate campus, with Brandt naming Delphin's former operations head Ilse Marren to run the merged unit. Management reaffirmed cost-synergy targets of $310 million by 2028.",
-      "cycle": 82624,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "earnings_miss",
@@ -140,16 +160,6 @@
       "body": "New chief Adele Ferran reported a $780 million quarterly loss after booking a $650 million reserve tied to the consolidated Drennan litigation, alongside a 22 percent drop in device orders as buyers held back. Ferran suspended the dividend and warned that recovery would take 'several hard quarters,' announcing a review of the Industrial Machines unit that could lead to divestment. The house also disclosed the loss of two major distribution partners since the scandal broke.",
       "cycle": 82624,
       "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Woldmark Lifts Full-Year Outlook as Halcyon 2 Backlog Swells",
-      "body": "Cole Carrow raised guidance for the third time this year, citing a Halcyon 2 order book that has grown to a record 14-month backlog. Quarterly revenue climbed 19 percent to $2.7 billion, with margins holding despite the ramp of a second assembly line at Draymoor. Carrow said capacity, not demand, was now the constraint and hinted at further plant investment.",
-      "cycle": 82624,
-      "dur": 2
     },
     {
       "company": "Calderworks Holdings",
@@ -239,26 +249,6 @@
       "head": "Vossenspire Supply Lands 2.1B Distribution Pact to Carry Halden Timepieces Into Marrow's Vehicle Salons",
       "body": "Quinn Marrow struck a landmark $2.1 billion partnership placing Halden Chronometrics pieces inside Vossenspire's global network of Calderon vehicle showrooms, unifying the company's two luxury arms for the first time. Executives project the cross-selling arrangement will lift Halden's annual output by 40,000 units within three years. The deal caps an aggressive acquisition run and marks the firm's boldest bet that timepiece and vehicle buyers are the same clientele.",
       "cycle": 82619,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Blackhold Wins $2.4-Billion National Grid Storage Program in Landmark Award",
-      "body": "Blackhold secured a $2.4 billion contract to supply grid-scale storage across a national reliability program, more than doubling its backlog and marking the largest award in company history. CEO Renata Solberg called it 'the moment Blackhold becomes a defining player in power storage,' though she acknowledged the program's aggressive delivery schedule will test the company's manufacturing capacity through 2029.",
-      "cycle": 82618,
-      "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Brunmark Motors Hit With Class-Action Suit Over Veyra S Battery Defects",
-      "body": "A class-action complaint filed on behalf of more than 40,000 Veyra S owners alleges Brunmark knowingly shipped defective battery packs despite internal warnings, seeking damages that analysts estimate could exceed $900 million. CEO Yvette Calder said the company will 'defend itself vigorously' but confirmed it has set aside a $300 million reserve as regulators widen their inquiry into pre-launch testing records.",
-      "cycle": 82618,
       "dur": 8
     }
   ]
