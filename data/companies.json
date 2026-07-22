@@ -1940,7 +1940,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82615,
+    "lastEventCycle": 82624,
     "events": [
       {
         "cycle": 0,
@@ -2105,6 +2105,16 @@
         "head": "Brunstone & Sons Ousts Royce Lambourne as Board Draws Line Under Vault Cell Pro Crisis",
         "body": "The board voted to remove CEO Royce Lambourne after the Vault Cell Pro recall wiped an estimated $2.1 billion from the storage division's projected revenue and triggered three separate regulatory filings. Directors named turnaround veteran Halden Crowe as chief executive, effective immediately, tasking him with rebuilding the storage unit and restoring confidence among fleet customers. Crowe pledged an independent safety overhaul and a paused product cadence \"until every cell earns its place.\"",
         "effects": {}
+      },
+      {
+        "cycle": 82624,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunstone & Sons Unveils Vault Cell Guard as Crowe Seeks Fresh Start After Recall",
+        "body": "New chief Halden Crowe introduced the Vault Cell Guard line at a Meridian Hall event, touting a redesigned thermal barrier and a five-year replacement warranty aimed squarely at winning back the 380,000 owners affected by the Pro recall. Crowe pledged $220 million in retooling across two plants and promised independent third-party certification before the first units ship in the fourth quarter. Analysts called it a make-or-break bet for a house still absorbing an estimated $1.1 billion in recall costs.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -2212,7 +2222,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82615,
+    "lastEventCycle": 82624,
     "events": [
       {
         "cycle": 0,
@@ -2340,6 +2350,16 @@
         "body": "Calderforge posted quarterly revenue of $4.3 billion, up 18% year over year, with the multi-year capacity pact for the fourth Stormwell hall now fully reflected in forward bookings. CEO Nadia Throne said contracted backlog reached a record $11 billion, though she cautioned that ramp costs would weigh on margins into next quarter.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82624,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Calderforge Seals Decade-Long Anchor Pact to Fill Two Future Stormwell Halls",
+        "body": "Nadia Throne unveiled a landmark $9.2 billion agreement committing an unnamed enterprise client to the entirety of Calderforge's planned fifth and sixth Stormwell halls, years before either breaks ground. The deal locks in booked capacity through 2037 and pushes Throne to accelerate the campus master plan, with construction on the fifth hall now brought forward to next spring. It ranks as the largest single contract in the company's six-decade history.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -2551,7 +2571,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82611,
+    "lastEventCycle": 82624,
     "events": [
       {
         "cycle": 0,
@@ -2646,6 +2666,16 @@
         "head": "Carrowforge Ousts Halden Roe as Board Moves to Draw Line Under Testing Scandal",
         "body": "Carrowforge's board removed chief executive Halden Roe with immediate effect, appointing veteran operations chief Marlow Demore to steady the company through mounting litigation. Demore pledged an independent audit of all machine-testing records and a settlement framework for the buyer class action. The departure comes weeks after leaked files showed altered test results and a former testing chief's wrongful-dismissal suit.",
         "effects": {}
+      },
+      {
+        "cycle": 82624,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Carrowforge's New Chief Demore Orders Independent Testing Rebuild",
+        "body": "Marlow Demore announced the creation of an autonomous quality-assurance division reporting directly to the board, alongside the retirement of every machine model tied to the altered-records scandal. The overhaul carries a $145 million charge and includes free re-inspection for the roughly 2,100 industrial buyers named in the pending class action. Demore said the moves were 'the price of rebuilding a name that engineers can trust again.'",
+        "effects": {
+          "manufacturing": -0.13
+        }
       }
     ]
   },
@@ -5464,7 +5494,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82612,
+    "lastEventCycle": 82624,
     "events": [
       {
         "cycle": 0,
@@ -5560,6 +5590,16 @@
         "size": "flash",
         "head": "Halcyon Industries Adds Fourth Automated Line at Southport",
         "body": "The company installed an additional automated packaging line at its flagship Southport hub, lifting site capacity roughly 15%. Dorian Ashby described the incremental buildout as 'staying inside our lane and doing it well,' keeping the disciplined expansion cadence intact. Management reaffirmed that Eastmere would reach full automation by year-end.",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82624,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Halcyon Industries Posts Steady Gains as Eastmere Automation Ramps",
+        "body": "Dorian Ashby reported a fifth straight quarterly beat, with operating profit up 8 percent as the Eastmere site cleared its first partial quarter of automated output. Packaging volumes rose 6 percent across the network, and Ashby reaffirmed the measured rollout of the automation blueprint to a fourth site next year. Free cash flow held firm at $410 million.",
         "effects": {
           "logistics": 0.06
         }
@@ -6604,7 +6644,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82614,
+    "lastEventCycle": 82624,
     "events": [
       {
         "cycle": 0,
@@ -6720,6 +6760,16 @@
         "body": "The Heritage Craft Guild awarded Ironcrestton its annual Transparency Mark, citing the maker's fully traced origin standard as a benchmark for the luxury sector. CEO Wren Adler seized on the recognition to reposition the brand after last year's origin scandal, calling it 'proof that the overhaul is more than paperwork.'",
         "effects": {
           "luxury": 0.06
+        }
+      },
+      {
+        "cycle": 82624,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Ironcrestton Extends Origin Standard Across Entire Catalogue",
+        "body": "Fresh off its Heritage Craft Guild transparency mark, Wren Adler announced that all Ironcrestton lines will carry full origin verification by mid-2027, backed by a new $60 million tracing facility at Vellmore. The house also opened flagship showrooms in three markets to showcase the traced provenance of each piece. Adler said early demand for the first traced collection had run 30 percent ahead of plan.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -7431,7 +7481,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82616,
+    "lastEventCycle": 82624,
     "events": [
       {
         "cycle": 0,
@@ -7610,6 +7660,16 @@
         "effects": {
           "automotive": 0.22
         }
+      },
+      {
+        "cycle": 82624,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Lhaus Industries Folds Delphin Plants Into Unified Cell-Pack Network",
+        "body": "Cole Brandt confirmed the integration of Delphin's three facilities alongside Lhaus's own four lines, creating a combined footprint the company says will lift annual cell-pack output by 42 percent. The consolidation will center operations at the expanded Harrowgate campus, with Brandt naming Delphin's former operations head Ilse Marren to run the merged unit. Management reaffirmed cost-synergy targets of $310 million by 2028.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -7747,7 +7807,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82616,
+    "lastEventCycle": 82624,
     "events": [
       {
         "cycle": 0,
@@ -7891,6 +7951,16 @@
         "size": "major",
         "head": "Marlgear Supply Faces Consolidated Suit From Regulators and Buyers Over Drennan Defects",
         "body": "A coalition of regional regulators and institutional buyers filed a consolidated action seeking more than $900 million in damages tied to the concealed Drennan defects, citing the leaked internal memos. Newly installed CEO Marisol K健 — pardon, CEO Marisol Kessler — said the company would 'not litigate the past behind closed doors' and set aside a $410 million reserve, sending its outlook into fresh uncertainty.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82624,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Marlgear Supply Plunges to Loss as Drennan Settlement Reserve Guts Quarter",
+        "body": "New chief Adele Ferran reported a $780 million quarterly loss after booking a $650 million reserve tied to the consolidated Drennan litigation, alongside a 22 percent drop in device orders as buyers held back. Ferran suspended the dividend and warned that recovery would take 'several hard quarters,' announcing a review of the Industrial Machines unit that could lead to divestment. The house also disclosed the loss of two major distribution partners since the scandal broke.",
         "effects": {
           "technology": -0.22
         }
@@ -10778,7 +10848,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82614,
+    "lastEventCycle": 82624,
     "events": [
       {
         "cycle": 0,
@@ -10884,6 +10954,16 @@
         "size": "standard",
         "head": "Woldmark Beats as Halcyon 2 Orders Outpace Launch Forecasts",
         "body": "Woldmark reported quarterly revenue of $5.8 billion, up 11% year-over-year, as early Halcyon 2 platform bookings ran nearly 20% ahead of internal projections. Veteran CEO Cole Carrow, marking his fourth decade at the helm, called the reception 'the strongest opening I've seen for any platform we've shipped.'",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82624,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Woldmark Lifts Full-Year Outlook as Halcyon 2 Backlog Swells",
+        "body": "Cole Carrow raised guidance for the third time this year, citing a Halcyon 2 order book that has grown to a record 14-month backlog. Quarterly revenue climbed 19 percent to $2.7 billion, with margins holding despite the ramp of a second assembly line at Draymoor. Carrow said capacity, not demand, was now the constraint and hinted at further plant investment.",
         "effects": {
           "technology": 0.13
         }
