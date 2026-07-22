@@ -671,7 +671,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82618,
+    "lastEventCycle": 82627,
     "events": [
       {
         "cycle": 0,
@@ -803,6 +803,16 @@
         "body": "Blackhold secured a $2.4 billion contract to supply grid-scale storage across a national reliability program, more than doubling its backlog and marking the largest award in company history. CEO Renata Solberg called it 'the moment Blackhold becomes a defining player in power storage,' though she acknowledged the program's aggressive delivery schedule will test the company's manufacturing capacity through 2029.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82627,
+        "kind": "outage",
+        "size": "major",
+        "head": "Blackhold Grid-Storage Sites Falter as National Program Faces First Live Test",
+        "body": "Several Blackhold storage installations under the $2.4 billion national program failed to discharge during a peak-demand event, triggering localized grid instability and an emergency review by program overseers. CEO Renata Solberg acknowledged 'firmware synchronization faults' across affected units and pledged retrofits at no cost to the client. The company withheld new backlog guidance pending the review, and program officials confirmed penalty clauses are now under examination.",
+        "effects": {
+          "energy": -0.22
         }
       }
     ]
@@ -1050,7 +1060,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82620,
+    "lastEventCycle": 82627,
     "events": [
       {
         "cycle": 0,
@@ -1238,6 +1248,16 @@
         "body": "Boreas Power announced a defining $3.8B agreement to build and power a new large-scale compute campus adjacent to its Hollowmere site, with the newly acquired Vantell storage assets supplying grid-balancing capacity. CEO Mira Thorne called it the company's largest single commitment, projecting the campus will lift power-and-storage revenue by nearly 40% at full ramp. Construction begins next quarter, with first phase energization targeted within two years.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82627,
+        "kind": "funding",
+        "size": "standard",
+        "head": "Boreas Power Raises $5B War Chest as Thorne Signals More Deals Ahead",
+        "body": "Boreas Power closed a $5 billion multi-tranche bond sale, oversubscribed within hours, to fund continued expansion of its compute and storage footprint. CEO Mira Thorne told investors the capital would 'keep the pipeline moving,' pointing to at least three more campus and storage targets under review. The raise pushes gross debt to roughly $9.2 billion, a level analysts flagged as aggressive but manageable given the $3.8B partnership backlog.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -1623,7 +1643,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82611,
+    "lastEventCycle": 82627,
     "events": [
       {
         "cycle": 0,
@@ -1702,6 +1722,16 @@
         "effects": {
           "consumer": 0.06
         }
+      },
+      {
+        "cycle": 82627,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunforge Extends Vellan Home Concept to Three New Regional Flagships",
+        "body": "Brunforge Holdings announced three additional Vellan-branded flagship stores across key regional markets, building on the strong reception of its first home-division location. CEO Kestrel Bramm framed the rollout as 'deliberate, not rushed,' with each site tied to local logistics hubs to protect margins. The expansion is expected to add modestly to full-year revenue without altering the company's steady capital discipline.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -1709,14 +1739,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1919,
-    "ceo": "Yvette Calder",
-    "ceoSince": 1919,
+    "ceo": "Halvard Renn",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82618,
+    "lastEventCycle": 82627,
     "events": [
       {
         "cycle": 0,
@@ -1855,6 +1885,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82627,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Brunmark CEO Yvette Calder Steps Down as Veyra S Fallout Reaches Boardroom",
+        "body": "Yvette Calder resigned after more than a century at the helm, as the board moved to draw a line under the Veyra S battery scandal and mounting class-action liabilities. Directors named turnaround specialist Halvard Renn as chief executive, tasking him with a comprehensive safety overhaul and settlement strategy. The company set aside an additional $900 million for recall and legal costs, and suspended its dividend for the first time in decades.",
+        "effects": {}
       }
     ]
   },
@@ -3935,7 +3973,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82611,
+    "lastEventCycle": 82627,
     "events": [
       {
         "cycle": 0,
@@ -4013,6 +4051,16 @@
         "body": "Drustcyon Industries won a five-year, $650 million framework to supply corrosion-resistant fasteners and fixings across a national rail modernization program, its largest single award to date. Chief executive Aurelia Kessler said the win builds directly on the harbor authority track record, adding that a fourth production line will be commissioned to meet demand. The contract roughly doubles the company's forward order book.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82627,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Drustcyon Breaks Ground on New Coastal Foundry to Meet Framework Demand",
+        "body": "Drustcyon Industries began construction of a $280 million corrosion-resistant fastener foundry near its harbor operations, aimed at supplying both the harbor authority and $650M rail frameworks. CEO Aurelia Kessler said the plant would add roughly 30% to specialty anchor capacity when it comes online in eighteen months. The measured expansion is fully funded from operating cash flow, keeping the balance sheet unlevered.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -5177,7 +5225,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82622,
+    "lastEventCycle": 82627,
     "events": [
       {
         "cycle": 0,
@@ -5369,6 +5417,16 @@
         "size": "standard",
         "head": "Gromford Works Posts Record Holiday Quarter on Meridian Grand Complication Demand",
         "body": "The luxury house reported a 41% jump in Timepiece revenue, with the newly launched Grand Complication selling out its first allocation within weeks. CEO Corin Aldwych touted 'the strongest waitlist in the house's history' and hinted at further high-complication releases in the coming year.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82627,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Unveils Meridian Tourbillon Line to Extend Complication Run",
+        "body": "Riding record holiday demand, Gromford Works launched a Meridian tourbillon collection priced above its Grand Complication tier, targeting collectors with a limited allocation of 400 pieces. CEO Corin Aldwych staged a splashy unveiling and confirmed a waitlist opened within hours. Analysts noted the move deepens Gromford's high-margin mix but warned that rapid line extensions risk diluting the Meridian name.",
         "effects": {
           "luxury": 0.13
         }
@@ -8086,7 +8144,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82613,
+    "lastEventCycle": 82627,
     "events": [
       {
         "cycle": 0,
@@ -8172,6 +8230,16 @@
         "size": "standard",
         "head": "Marrowcyon Extends Momentum Into Fixtures With Trade-Grade Plumbing Range",
         "body": "Building on its workwear success, Theo Orne unveiled a trade-grade plumbing and fixtures line aimed at contractors, marking Marrowcyon's first major push in its long-quiet fixtures segment. The range launches through the same wholesale channels that carried the weatherproof Hardwear expansion, and management expects it to broaden the customer base beyond apparel buyers.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82627,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Marrowcyon Beats Again as Plumbing Range Clears First-Quarter Sell-In",
+        "body": "Marrowcyon reported quarterly revenue of $1.9 billion, up 11% year over year, as its trade-grade plumbing range met faster-than-expected uptake from wholesalers. CEO Theo Orne credited disciplined inventory management and steady reorders on the weatherproof workwear line. Margins held at 18.4%, and the company nudged its full-year outlook modestly higher.",
         "effects": {
           "consumer": 0.13
         }
@@ -10485,7 +10553,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82616,
+    "lastEventCycle": 82627,
     "events": [
       {
         "cycle": 0,
@@ -10569,6 +10637,16 @@
         "body": "Vossenspire reported quarterly revenue of $3.8 billion, up 14% year over year, with the Northern Utilities Consortium supply pact contributing its first full quarter of grid-storage shipments. CEO Halden Roe told analysts the redundant-platform rollout is 'ahead of schedule,' though he acknowledged residual costs tied to last year's maintenance overhaul still weigh on margins.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82627,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Vossenspire Wins $4.1B Compute-and-Storage Mandate in Roe's Biggest Bet",
+        "body": "Vossenspire Holdings secured a $4.1 billion mandate to build integrated compute and grid-storage infrastructure for a coastal data corridor, its largest contract to date. CEO Halden Roe called it a 'transformational' step beyond the Northern Utilities pact, though the deal requires heavy upfront capital and a doubling of its build workforce. The scope stretches Vossenspire into compute delivery at scale for the first time, raising execution stakes sharply.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]

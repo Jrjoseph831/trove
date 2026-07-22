@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-22T13:59:26.681Z",
+  "generatedAt": "2026-07-22T19:23:20.651Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "outage",
+      "size": "major",
+      "head": "Blackhold Grid-Storage Sites Falter as National Program Faces First Live Test",
+      "body": "Several Blackhold storage installations under the $2.4 billion national program failed to discharge during a peak-demand event, triggering localized grid instability and an emergency review by program overseers. CEO Renata Solberg acknowledged 'firmware synchronization faults' across affected units and pledged retrofits at no cost to the client. The company withheld new backlog guidance pending the review, and program officials confirmed penalty clauses are now under examination.",
+      "cycle": 82627,
+      "dur": 8
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "funding",
+      "size": "standard",
+      "head": "Boreas Power Raises $5B War Chest as Thorne Signals More Deals Ahead",
+      "body": "Boreas Power closed a $5 billion multi-tranche bond sale, oversubscribed within hours, to fund continued expansion of its compute and storage footprint. CEO Mira Thorne told investors the capital would 'keep the pipeline moving,' pointing to at least three more campus and storage targets under review. The raise pushes gross debt to roughly $9.2 billion, a level analysts flagged as aggressive but manageable given the $3.8B partnership backlog.",
+      "cycle": 82627,
+      "dur": 2
+    },
+    {
+      "company": "Brunforge Holdings",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Brunforge Extends Vellan Home Concept to Three New Regional Flagships",
+      "body": "Brunforge Holdings announced three additional Vellan-branded flagship stores across key regional markets, building on the strong reception of its first home-division location. CEO Kestrel Bramm framed the rollout as 'deliberate, not rushed,' with each site tied to local logistics hubs to protect margins. The expansion is expected to add modestly to full-year revenue without altering the company's steady capital discipline.",
+      "cycle": 82627,
+      "dur": 2
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Brunmark CEO Yvette Calder Steps Down as Veyra S Fallout Reaches Boardroom",
+      "body": "Yvette Calder resigned after more than a century at the helm, as the board moved to draw a line under the Veyra S battery scandal and mounting class-action liabilities. Directors named turnaround specialist Halvard Renn as chief executive, tasking him with a comprehensive safety overhaul and settlement strategy. The company set aside an additional $900 million for recall and legal costs, and suspended its dividend for the first time in decades.",
+      "cycle": 82627,
+      "dur": 8
+    },
+    {
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Drustcyon Breaks Ground on New Coastal Foundry to Meet Framework Demand",
+      "body": "Drustcyon Industries began construction of a $280 million corrosion-resistant fastener foundry near its harbor operations, aimed at supplying both the harbor authority and $650M rail frameworks. CEO Aurelia Kessler said the plant would add roughly 30% to specialty anchor capacity when it comes online in eighteen months. The measured expansion is fully funded from operating cash flow, keeping the balance sheet unlevered.",
+      "cycle": 82627,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Gromford Works Unveils Meridian Tourbillon Line to Extend Complication Run",
+      "body": "Riding record holiday demand, Gromford Works launched a Meridian tourbillon collection priced above its Grand Complication tier, targeting collectors with a limited allocation of 400 pieces. CEO Corin Aldwych staged a splashy unveiling and confirmed a waitlist opened within hours. Analysts noted the move deepens Gromford's high-margin mix but warned that rapid line extensions risk diluting the Meridian name.",
+      "cycle": 82627,
+      "dur": 2
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Marrowcyon Beats Again as Plumbing Range Clears First-Quarter Sell-In",
+      "body": "Marrowcyon reported quarterly revenue of $1.9 billion, up 11% year over year, as its trade-grade plumbing range met faster-than-expected uptake from wholesalers. CEO Theo Orne credited disciplined inventory management and steady reorders on the weatherproof workwear line. Margins held at 18.4%, and the company nudged its full-year outlook modestly higher.",
+      "cycle": 82627,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Vossenspire Wins $4.1B Compute-and-Storage Mandate in Roe's Biggest Bet",
+      "body": "Vossenspire Holdings secured a $4.1 billion mandate to build integrated compute and grid-storage infrastructure for a coastal data corridor, its largest contract to date. CEO Halden Roe called it a 'transformational' step beyond the Northern Utilities pact, though the deal requires heavy upfront capital and a doubling of its build workforce. The scope stretches Vossenspire into compute delivery at scale for the first time, raising execution stakes sharply.",
+      "cycle": 82627,
+      "dur": 8
+    },
     {
       "company": "Bruncraft Industries",
       "sector": "automotive",
@@ -20,16 +100,6 @@
       "body": "Bruncrest secured a multi-year contract worth up to $3.4B to supply Aria Pro racks across a national compute build-out, its largest order ever. Marlow called the win 'the payoff for betting on the premium tier' and said Eastfield would run at full capacity through the coming year to meet delivery milestones.",
       "cycle": 82626,
       "dur": 8
-    },
-    {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Drossware Nudges Past Estimates as Packaging Line Ramps",
-      "body": "Drossware posted a modest beat, with revenue of $2.3B as the dedicated Grocer Alliance packaging line reached two-thirds of planned throughput. Wold called the quarter 'steady' and reaffirmed full-year guidance.",
-      "cycle": 82626,
-      "dur": 1
     },
     {
       "company": "Greywater Grid",
@@ -90,56 +160,6 @@
       "body": "Regulators opened a formal inquiry into Aperture Compute's Dawnmere III campus following a substation failure that forced an emergency shutdown and knocked out capacity for nearly two days. CEO Halden Dray defended the aggressive build schedule but acknowledged the fourth-campus timeline could slip as inspectors review electrical and cooling systems across all sites. Two carrier customers have requested contractual assurances on uptime guarantees.",
       "cycle": 82625,
       "dur": 8
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "recall",
-      "size": "standard",
-      "head": "Drustcraft Recalls Fastener Batch Tied to Twin Vehicle-Line Supply",
-      "body": "Drustcraft issued a voluntary recall covering roughly 420,000 fasteners produced at its new plant after internal testing flagged a torque-tolerance defect in one production run. CEO Cora Fenn said the affected lots had been isolated before reaching final assembly and that the twin global vehicle-line ramp would continue on schedule. The company estimated a one-time charge of $18 million.",
-      "cycle": 82625,
-      "dur": 2
-    },
-    {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Dunmorestone Wins Multi-Site Plumbing & Fixtures Supply Award",
-      "body": "Dunmorestone secured a supply contract to outfit a regional developer's residential build-out with plumbing and fixtures, marking its largest win outside the food service arm. CEO Orla Mercer said the deal diversifies revenue as the cafeteria kitchen continues its steady ramp. The agreement is expected to phase in over the next 18 months.",
-      "cycle": 82625,
-      "dur": 2
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Forgegrave Industries Tops Estimates as Second Plant Reaches Full Output",
-      "body": "Forgegrave reported quarterly revenue of $1.84 billion, up 14% year-over-year, as its newly opened second assembly plant hit full production ahead of schedule. CEO Petra Thorne credited disciplined ramp management on the Meridian Freight fleet order, noting attach rates on dock modules held near record levels. The company modestly lifted its full-year margin outlook.",
-      "cycle": 82625,
-      "dur": 2
-    },
-    {
-      "company": "Palettstead Holdings",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Palettstead Signs Third Chain to Reusable Cold-Chain Network",
-      "body": "Palettstead added a third national grocery chain to its reusable cold-chain crate network under a five-year agreement expected to lift network volumes by roughly 30%. CEO Orla Marrow said the expansion validates the shared-fleet model and will require a modest capacity build at two regional depots. The deal extends the profitable crate fleet's reach across a growing footprint.",
-      "cycle": 82625,
-      "dur": 2
-    },
-    {
-      "company": "Veldtreach & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Veldtreach & Sons Beats as Highland Corridor Billing Accelerates",
-      "body": "Veldtreach posted earnings of $3.12 per share against expectations of $2.88, driven by faster-than-anticipated milestone billing on the $2.1 billion Highland Corridor program. CEO Petra Steg said the newly added third excavation fleet reached target utilization within the quarter, keeping the reservoir and coastal books running near capacity. Management reaffirmed elevated full-year guidance.",
-      "cycle": 82625,
-      "dur": 2
     },
     {
       "company": "Calderforge",
@@ -219,36 +239,6 @@
       "head": "Boreas Power Seals $3.8B Compute Campus Partnership in Landmark Expansion",
       "body": "Boreas Power announced a defining $3.8B agreement to build and power a new large-scale compute campus adjacent to its Hollowmere site, with the newly acquired Vantell storage assets supplying grid-balancing capacity. CEO Mira Thorne called it the company's largest single commitment, projecting the campus will lift power-and-storage revenue by nearly 40% at full ramp. Construction begins next quarter, with first phase energization targeted within two years.",
       "cycle": 82620,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Internal Bruncraft Memos Show Executives Knew of Axle Defect Two Years Before Recall",
-      "body": "Documents surfaced in the class action reveal Bruncraft engineers flagged Runabout axle fatigue in reports circulated to senior leadership as early as 2023, well before the first recall. Orla Marrow faces mounting calls for accountability as regulators broaden their probe to include possible concealment. The disclosures wiped confidence across the automaker's dealer base and prompted three states to open separate inquiries.",
-      "cycle": 82619,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Kessel Drive Unveils Sweeping Restructure, Splitting Storage Unit and Cutting 3,400 Jobs",
-      "body": "New chief Neave Corliss announced a hard reset that carves the troubled Power & Storage division into a standalone unit and eliminates 3,400 roles, aiming for $500 million in annual cost savings. Corliss pledged an overhauled quality regime for storage packs still under regulatory probe. The move marks the boldest step yet in her bid to stabilize the loss-making automaker.",
-      "cycle": 82619,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Vossenspire Supply Lands 2.1B Distribution Pact to Carry Halden Timepieces Into Marrow's Vehicle Salons",
-      "body": "Quinn Marrow struck a landmark $2.1 billion partnership placing Halden Chronometrics pieces inside Vossenspire's global network of Calderon vehicle showrooms, unifying the company's two luxury arms for the first time. Executives project the cross-selling arrangement will lift Halden's annual output by 40,000 units within three years. The deal caps an aggressive acquisition run and marks the firm's boldest bet that timepiece and vehicle buyers are the same clientele.",
-      "cycle": 82619,
       "dur": 8
     }
   ]
