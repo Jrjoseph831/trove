@@ -362,7 +362,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82616,
+    "lastEventCycle": 82625,
     "events": [
       {
         "cycle": 0,
@@ -500,6 +500,16 @@
         "body": "Aperture began construction on a fourth Dawnmere-series compute campus, a $2.3 billion build meant to service a backlog that now tops $12 billion. CEO Halden Dray said the site would come online in phases starting next year, adding that 'demand isn't the problem — pouring concrete fast enough is.'",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82625,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Aperture Compute Faces Regulatory Probe After Dawnmere III Power Fault",
+        "body": "Regulators opened a formal inquiry into Aperture Compute's Dawnmere III campus following a substation failure that forced an emergency shutdown and knocked out capacity for nearly two days. CEO Halden Dray defended the aggressive build schedule but acknowledged the fourth-campus timeline could slip as inspectors review electrical and cooling systems across all sites. Two carrier customers have requested contractual assurances on uptime guarantees.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -808,7 +818,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82605,
+    "lastEventCycle": 82625,
     "events": [
       {
         "cycle": 0,
@@ -864,6 +874,16 @@
         "size": "flash",
         "head": "Blackmoor Adds Wide-Row Variant to Holloway Seed-Drill Line",
         "body": "Soren Dray introduced a wide-row configuration of the Holloway seed-drill aimed at larger acreage operations, extending the range that has anchored recent quarters. The variant enters limited field trials this season ahead of a broader rollout. Dray characterized the move as 'a natural step, not a leap,' consistent with the firm's long-horizon approach.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82625,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Blackmoor Edges Higher as Wide-Row Drill Variant Draws Early Orders",
+        "body": "Blackmoor posted modest quarterly gains as the newly launched wide-row variant of its Holloway seed-drill line began attracting orders alongside the steady base backlog. CEO Soren Dray characterized demand as gradual but durable, consistent with the company's long-horizon approach. Full-year guidance was left intact.",
         "effects": {
           "agriculture": 0.06
         }
@@ -2803,7 +2823,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82598,
+    "lastEventCycle": 82625,
     "events": [
       {
         "cycle": 0,
@@ -2851,6 +2871,16 @@
         "body": "Calder secured a five-year consumables agreement with the Merrick Regional Hospital Network valued at roughly 380 million marks. The deal broadens Castle's base beyond the National Clinic Group pact and covers both standard and surgical consumables. Calder called it 'steady, predictable work — exactly what we're built for.'",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82625,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castle Devices Posts Steady Quarter as Hospital Network Volumes Kick In",
+        "body": "Castle Devices reported in-line-to-slightly-ahead results, with revenue up 8% as the recently won regional hospital network contract began contributing consumable volumes. CEO Bram Calder pointed to consistent reorder patterns across surgical and general lines. The company held its full-year guidance unchanged.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -3752,7 +3782,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82613,
+    "lastEventCycle": 82625,
     "events": [
       {
         "cycle": 0,
@@ -3850,6 +3880,16 @@
         "body": "Drustcraft topped forecasts with quarterly revenue up 11% as initial shipments from its landmark two-platform auto-parts award began contributing ahead of schedule. Cora Fenn said the new plant is tracking to full commissioning by year-end and raised the low end of full-year guidance, citing firm fastener volumes across both automotive and general industrial channels.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82625,
+        "kind": "recall",
+        "size": "standard",
+        "head": "Drustcraft Recalls Fastener Batch Tied to Twin Vehicle-Line Supply",
+        "body": "Drustcraft issued a voluntary recall covering roughly 420,000 fasteners produced at its new plant after internal testing flagged a torque-tolerance defect in one production run. CEO Cora Fenn said the affected lots had been isolated before reaching final assembly and that the twin global vehicle-line ramp would continue on schedule. The company estimated a one-time charge of $18 million.",
+        "effects": {
+          "manufacturing": -0.13
         }
       }
     ]
@@ -3958,7 +3998,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82608,
+    "lastEventCycle": 82625,
     "events": [
       {
         "cycle": 0,
@@ -4026,6 +4066,16 @@
         "body": "Dunmorestone reported a 7% revenue increase to $188 million, led by first full-quarter contributions from its dedicated food-service kitchen fulfilling the regional cafeteria contract. CEO Orla Mercer described the quarter as 'exactly on plan,' with plumbing and fixtures holding flat. Margins ticked up slightly on kitchen efficiency.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82625,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Dunmorestone Wins Multi-Site Plumbing & Fixtures Supply Award",
+        "body": "Dunmorestone secured a supply contract to outfit a regional developer's residential build-out with plumbing and fixtures, marking its largest win outside the food service arm. CEO Orla Mercer said the deal diversifies revenue as the cafeteria kitchen continues its steady ramp. The agreement is expected to phase in over the next 18 months.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -4616,7 +4666,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82609,
+    "lastEventCycle": 82625,
     "events": [
       {
         "cycle": 0,
@@ -4692,6 +4742,16 @@
         "size": "standard",
         "head": "Forgegrave Industries Opens Second Assembly Plant to Fill Meridian Freight Fleet Order",
         "body": "Forgegrave broke ground on a second material-handling assembly plant to meet demand from its Meridian Freight regional-hub contract and growing Pallet-Runner attach rates. CEO Petra Thorne said the $95 million facility will add capacity for roughly 3,400 units annually and create around 260 jobs. Production is slated to begin within 10 months.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82625,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Forgegrave Industries Tops Estimates as Second Plant Reaches Full Output",
+        "body": "Forgegrave reported quarterly revenue of $1.84 billion, up 14% year-over-year, as its newly opened second assembly plant hit full production ahead of schedule. CEO Petra Thorne credited disciplined ramp management on the Meridian Freight fleet order, noting attach rates on dock modules held near record levels. The company modestly lifted its full-year margin outlook.",
         "effects": {
           "logistics": 0.13
         }
@@ -8499,7 +8559,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82608,
+    "lastEventCycle": 82625,
     "events": [
       {
         "cycle": 0,
@@ -8567,6 +8627,16 @@
         "body": "Palettstead reported quarterly revenue up 11% to $214 million, with reusable cold-chain volumes rising after onboarding its second national grocery chain. CEO Orla Marrow said the wash-and-return hub is now running above 80% utilization. The company nudged full-year guidance modestly higher.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82625,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Palettstead Signs Third Chain to Reusable Cold-Chain Network",
+        "body": "Palettstead added a third national grocery chain to its reusable cold-chain crate network under a five-year agreement expected to lift network volumes by roughly 30%. CEO Orla Marrow said the expansion validates the shared-fleet model and will require a modest capacity build at two regional depots. The deal extends the profitable crate fleet's reach across a growing footprint.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -10078,7 +10148,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82608,
+    "lastEventCycle": 82625,
     "events": [
       {
         "cycle": 0,
@@ -10144,6 +10214,16 @@
         "size": "standard",
         "head": "Veldtreach & Sons Adds Third Excavation Fleet to Staff Swelling Highland Corridor Program",
         "body": "The construction house committed $340 million to a new heavy-fleet depot near the Highland Corridor site, adding roughly 900 machines and 1,200 field crew to service its record backlog. CEO Petra Steg said the buildout would keep pace with 'the largest simultaneous workload in the firm's history,' spanning the $2.1B corridor and the $900M reservoir programs. Deliveries begin next quarter.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82625,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Veldtreach & Sons Beats as Highland Corridor Billing Accelerates",
+        "body": "Veldtreach posted earnings of $3.12 per share against expectations of $2.88, driven by faster-than-anticipated milestone billing on the $2.1 billion Highland Corridor program. CEO Petra Steg said the newly added third excavation fleet reached target utilization within the quarter, keeping the reservoir and coastal books running near capacity. Management reaffirmed elevated full-year guidance.",
         "effects": {
           "construction": 0.13
         }
