@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-23T08:33:37.327Z",
+  "generatedAt": "2026-07-23T14:04:56.494Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Blackton Industries Returns to Growth as Post-Recall Costs Fade",
+      "body": "Blackton posted quarterly revenue of 2.1 billion, topping estimates, as the completed Halvern recall lifted a persistent drag on margins. CEO Cassian Rode said reworked weld-inspection standards had won back two major fleet contracts lost during the probe. Operating margin recovered to 9.4 percent from a low of 4.1 percent.",
+      "cycle": 82630,
+      "dur": 2
+    },
+    {
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Caldercraft Holdings Beats as Weatherproof Range Drives Household Sales",
+      "body": "Caldercraft topped estimates with revenue of 1.6 billion, led by strong uptake of the expanded weatherproof line and new outdoor tool storage. Vale Fenn said the range now accounts for nearly a fifth of household-goods sales, up from a standing start two quarters ago. The company lifted its full-year outlook slightly.",
+      "cycle": 82630,
+      "dur": 2
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drayton Freight Signs Multi-Depot Fleet Deal With National Distributor",
+      "body": "Emil Holt announced a 480-unit order of the new heavy-duty pallet-lift line for a national grocery distributor, the largest single order in the company's history. The four-year agreement bundles servicing and spare-parts coverage, extending Drayton's recurring-revenue base. Deliveries begin next quarter across eleven depots.",
+      "cycle": 82630,
+      "dur": 2
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Erretmark Works Acquires Veyron Marque to Add Ultra-Luxury Roadster Line",
+      "body": "Aurelia Garr confirmed the purchase of the storied Veyron marque for 3.2 billion, folding its hand-built roadster heritage into the Erretmark portfolio. Garr said the deal opens a second coachbuilt line alongside the award-winning Grand Flagship, with production to begin at a retooled Veyron facility within eighteen months. The move marks Erretmark's largest acquisition in over a decade.",
+      "cycle": 82630,
+      "dur": 8
+    },
+    {
+      "company": "Garrweave Mills",
+      "sector": "textiles",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Garrweave Mills Secures Long-Term Textile Supply Renewal With Northfield Output",
+      "body": "Lorne Veldt announced a five-year supply renewal underpinning the reopened Northfield spinning line, locking in volume through the reactivated facility. The agreement follows two quarters of sustained full output at Northfield. Veldt said the deal secures roughly a third of the mill's annual raw-textile production.",
+      "cycle": 82630,
+      "dur": 2
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Greenmarsh Agro Debuts Companion Seed Coating for Slow-Release Soil Blend",
+      "body": "Petra Kessler introduced a paired seed-coating input designed to work with the firm's established soil blend, targeting the same regional cooperatives now on renewal. The launch extends Greenmarsh's inputs franchise after two straight quarters of blend-driven beats. Field trials across 40,000 acres reported a 6 percent yield uplift over untreated plots.",
+      "cycle": 82630,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Skarngrove & Sons Edges Higher as Kelvarn Second-Phase Work Ramps",
+      "body": "Skarngrove reported a modest beat with revenue of 890 million as billings from the second-phase Kelvarn bridge contract accelerated. Quinn Fenn noted the recently added structural-materials capacity is now running near full utilization. Management reaffirmed full-year guidance.",
+      "cycle": 82630,
+      "dur": 1
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vantor Lines Holds Steady as Grocery Packaging Volumes Level Off",
+      "body": "Vantor posted a slim beat with revenue of 1.3 billion as the national grocery contract settled into a stable run-rate. Halden Vossen said attention was shifting toward renewal terms and modest efficiency gains at three packaging plants. Margins were flat quarter on quarter.",
+      "cycle": 82630,
+      "dur": 1
+    },
     {
       "company": "Castlehold",
       "sector": "energy",
@@ -42,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Holtgate Group",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Group Extends Streak With Modest Beat on Guild Renewals",
-      "body": "Dorian Throne reported a fourth straight quarter above estimates, with revenue up 3% as long-term Uniform Guild contracts renewed at firm pricing. Mill utilization held near 91%, and Throne reaffirmed full-year guidance without fanfare. The textiles house continues its reputation as a low-drama, dependable performer.",
-      "cycle": 82629,
-      "dur": 1
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "recall",
@@ -82,36 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Aldousmont & Sons Extends Peel-Free Line With Sterile Field Kits",
-      "body": "The company introduced a bundled sterile-field kit built around its Peel-Free Wrap, aimed at surgical suites seeking faster setup times. CEO Dunmore Calder framed the launch as a natural extension of a proven product rather than a new direction, projecting the kits could add roughly 6% to consumables volume over the next year. Early orders came from three of its existing multi-region hospital partners.",
-      "cycle": 82628,
-      "dur": 2
-    },
-    {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Cranegrove Opens Regional Fleet Depot to Serve Corridor Backlog",
-      "body": "Cranegrove commissioned a new earthmoving fleet and maintenance depot near the inland corridor to keep pace with its three-package backlog. CEO Vale Calder said the $210M investment would cut equipment idle time and support bids on a potential fourth corridor package. The depot is expected to reach full staffing within two quarters.",
-      "cycle": 82628,
-      "dur": 2
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Fennmoor Merges Callent Labs Into New Diagnostics Unit",
-      "body": "Fennmoor consolidated its Threll sensor business and freshly acquired Callent Labs into a single Diagnostics division, cutting an estimated 4% of overlapping roles. CEO Dorian Brandt said the structure would speed a combined sensor-and-lab platform to the hospital networks already under contract. The reorganization carries a one-time charge of about $70M.",
-      "cycle": 82628,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "recall",
@@ -120,26 +160,6 @@
       "body": "Halhold issued a voluntary recall of roughly 82,000 Aveline bedside monitors after regulators flagged intermittent alarm failures tied to the units under review. CEO Lena Faircloth acknowledged the recall would erase an estimated $190M in near-term revenue and suspend new Aveline shipments pending a firmware fix. The move came just weeks after the safety probe opened, deepening pressure on the company's flagship medical line.",
       "cycle": 82628,
       "dur": 8
-    },
-    {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Holtforge Group Starts Output at New Marine Cable Plant",
-      "body": "The Marine cable plant began commercial production on schedule, ramping toward an initial capacity of 900 kilometers of offshore cable annually. CEO Yvette Bramm said the facility should clear the bulk of the offshore wind backlog within 18 months while lowering delivery lead times. First shipments are earmarked for two contracted North Sea-style wind arrays.",
-      "cycle": 82628,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Korrwright Works Beats as Heritage Division Lifts Margins",
-      "body": "Korrwright reported a 14% revenue rise, with the newly folded Ambrose & Sons operations contributing ahead of internal targets in their first full quarter. CEO Dunmore Carrow credited shared Vellhorn escapement tooling for cutting per-unit costs across both brands. Management hinted that integration savings would free capital for further acquisitions.",
-      "cycle": 82628,
-      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -249,16 +269,6 @@
       "head": "Halhold Works Faces Safety Probe Over Aveline Bedside Monitors",
       "body": "Regulators opened a formal review of the Aveline bedside monitoring suite after hospitals reported intermittent alarm failures across three network sites. Lena Faircloth pledged full cooperation and paused new deployments pending the inquiry, a sharp reversal for the platform that drove last quarter's medical equipment gains.",
       "cycle": 82623,
-      "dur": 8
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Carrowwell Wins $2.4-Billion Industrial Machines Contract to Reindustrialize Aging Plants",
-      "body": "In its largest deal ever, Carrowwell signed a multi-year agreement to supply Industrial Machines and Material Handling systems across a national manufacturing modernization program. CEO Theo Thorne, marking his ninth decade at the helm, called it 'a generational order,' with deliveries phased over five years and expected to add roughly 1,800 jobs.",
-      "cycle": 82622,
       "dur": 8
     }
   ]

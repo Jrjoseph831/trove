@@ -921,7 +921,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82621,
+    "lastEventCycle": 82630,
     "events": [
       {
         "cycle": 0,
@@ -1055,6 +1055,16 @@
         "body": "Blackton confirmed a sweeping recall of roughly 1.4 million Halvern-series components after regulators concluded the weld-defect probe, with estimated repair and replacement costs of $890 million. CEO Cassian Rode called the recall 'painful but final,' insisting it closes the safety chapter that has dogged his turnaround. Shipments of the affected line are suspended pending re-tooling at two plants.",
         "effects": {
           "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82630,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Blackton Industries Returns to Growth as Post-Recall Costs Fade",
+        "body": "Blackton posted quarterly revenue of 2.1 billion, topping estimates, as the completed Halvern recall lifted a persistent drag on margins. CEO Cassian Rode said reworked weld-inspection standards had won back two major fleet contracts lost during the probe. Operating margin recovered to 9.4 percent from a low of 4.1 percent.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -2217,7 +2227,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82615,
+    "lastEventCycle": 82630,
     "events": [
       {
         "cycle": 0,
@@ -2295,6 +2305,16 @@
         "body": "Caldercraft added a line of weatherproof outdoor storage chests to its growing household range, extending a product family that has drawn steady early demand. CEO Vale Fenn said the additions round out the offering ahead of the peak building season without altering the company's balanced footing across tools and textiles.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82630,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Caldercraft Holdings Beats as Weatherproof Range Drives Household Sales",
+        "body": "Caldercraft topped estimates with revenue of 1.6 billion, led by strong uptake of the expanded weatherproof line and new outdoor tool storage. Vale Fenn said the range now accounts for nearly a fifth of household-goods sales, up from a standing start two quarters ago. The company lifted its full-year outlook slightly.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -3704,7 +3724,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82614,
+    "lastEventCycle": 82630,
     "events": [
       {
         "cycle": 0,
@@ -3782,6 +3802,16 @@
         "body": "Drayton Freight posted a modest revenue rise to $1.3 billion as its new heavy-duty pallet-lift line secured orders from four high-volume depot chains in its first full quarter. CEO Emil Holt characterized the uptake as 'right on plan,' pointing to servicing contracts attached to the new units as a durable revenue stream.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82630,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drayton Freight Signs Multi-Depot Fleet Deal With National Distributor",
+        "body": "Emil Holt announced a 480-unit order of the new heavy-duty pallet-lift line for a national grocery distributor, the largest single order in the company's history. The four-year agreement bundles servicing and spare-parts coverage, extending Drayton's recurring-revenue base. Deliveries begin next quarter across eleven depots.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -4312,7 +4342,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82619,
+    "lastEventCycle": 82630,
     "events": [
       {
         "cycle": 0,
@@ -4430,6 +4460,16 @@
         "body": "Aurelia Garr's coachbuilder reported revenue up 18% to $880 million, driven by accelerated delivery of the award-winning Grand Flagship following the Sorne atelier expansion. Average selling prices climbed as buyers opted for bespoke commissions. The order backlog still stretches 26 months, and Garr hinted at a second nameplate under development.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82630,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Erretmark Works Acquires Veyron Marque to Add Ultra-Luxury Roadster Line",
+        "body": "Aurelia Garr confirmed the purchase of the storied Veyron marque for 3.2 billion, folding its hand-built roadster heritage into the Erretmark portfolio. Garr said the deal opens a second coachbuilt line alongside the award-winning Grand Flagship, with production to begin at a retooled Veyron facility within eighteen months. The move marks Erretmark's largest acquisition in over a decade.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -5010,7 +5050,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82604,
+    "lastEventCycle": 82630,
     "events": [
       {
         "cycle": 0,
@@ -5059,6 +5099,16 @@
         "effects": {
           "textiles": 0.06
         }
+      },
+      {
+        "cycle": 82630,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Garrweave Mills Secures Long-Term Textile Supply Renewal With Northfield Output",
+        "body": "Lorne Veldt announced a five-year supply renewal underpinning the reopened Northfield spinning line, locking in volume through the reactivated facility. The agreement follows two quarters of sustained full output at Northfield. Veldt said the deal secures roughly a third of the mill's annual raw-textile production.",
+        "effects": {
+          "textiles": 0.13
+        }
       }
     ]
   },
@@ -5073,7 +5123,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82609,
+    "lastEventCycle": 82630,
     "events": [
       {
         "cycle": 0,
@@ -5131,6 +5181,16 @@
         "body": "Greenmarsh Agro reported a modest beat with revenue of $184 million, as regional customers renewed slow-release soil blend contracts at a 92% rate. CEO Petra Kessler pointed to steady farm-input demand offsetting a slower season for equipment sales. The company reaffirmed its cautious full-year outlook.",
         "effects": {
           "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82630,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Greenmarsh Agro Debuts Companion Seed Coating for Slow-Release Soil Blend",
+        "body": "Petra Kessler introduced a paired seed-coating input designed to work with the firm's established soil blend, targeting the same regional cooperatives now on renewal. The launch extends Greenmarsh's inputs franchise after two straight quarters of blend-driven beats. Field trials across 40,000 acres reported a 6 percent yield uplift over untreated plots.",
+        "effects": {
+          "agriculture": 0.13
         }
       }
     ]
@@ -9074,7 +9134,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82617,
+    "lastEventCycle": 82630,
     "events": [
       {
         "cycle": 0,
@@ -9150,6 +9210,16 @@
         "size": "flash",
         "head": "Skarngrove & Sons Honored for Kelvarn Bridge Structural Work",
         "body": "The Continental Institute of Civil Engineering named Skarngrove & Sons its Materials Partner of the Year, citing zero tolerance deviations across 40,000 tonnes of structural steel supplied to the Kelvarn Bridge. Quinn Fenn accepted the citation, noting the firm has now cleared three consecutive independent quality audits.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82630,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrove & Sons Edges Higher as Kelvarn Second-Phase Work Ramps",
+        "body": "Skarngrove reported a modest beat with revenue of 890 million as billings from the second-phase Kelvarn bridge contract accelerated. Quinn Fenn noted the recently added structural-materials capacity is now running near full utilization. Management reaffirmed full-year guidance.",
         "effects": {
           "construction": 0.06
         }
@@ -10003,7 +10073,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82617,
+    "lastEventCycle": 82630,
     "events": [
       {
         "cycle": 0,
@@ -10079,6 +10149,16 @@
         "size": "flash",
         "head": "Vantor Lines Edges Ahead as Grocery Contract Reaches Full Volume",
         "body": "Vantor Lines reported quarterly revenue of $1.42 billion, up 6% year on year, as the national grocery packaging deal moved to full shipping cadence across all regions. Halden Vossen said molded-fiber output rose 9% and reaffirmed the year's guidance without adjustment.",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82630,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Holds Steady as Grocery Packaging Volumes Level Off",
+        "body": "Vantor posted a slim beat with revenue of 1.3 billion as the national grocery contract settled into a stable run-rate. Halden Vossen said attention was shifting toward renewal terms and modest efficiency gains at three packaging plants. Margins were flat quarter on quarter.",
         "effects": {
           "logistics": 0.06
         }
