@@ -196,7 +196,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82605,
+    "lastEventCycle": 82628,
     "events": [
       {
         "cycle": 0,
@@ -264,6 +264,16 @@
         "body": "Dunmore Calder reported modest revenue growth of 4 percent, with the peel-free sterile wrap sustaining adoption across high-volume wards and the multi-region contracts now fully bedded in. Margins held flat as input costs stayed contained. Calder offered a characteristically restrained outlook, guiding to 'continued steady performance' for the coming period.",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82628,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Aldousmont & Sons Extends Peel-Free Line With Sterile Field Kits",
+        "body": "The company introduced a bundled sterile-field kit built around its Peel-Free Wrap, aimed at surgical suites seeking faster setup times. CEO Dunmore Calder framed the launch as a natural extension of a proven product rather than a new direction, projecting the kits could add roughly 6% to consumables volume over the next year. Early orders came from three of its existing multi-region hospital partners.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -2954,7 +2964,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82601,
+    "lastEventCycle": 82628,
     "events": [
       {
         "cycle": 0,
@@ -3002,6 +3012,16 @@
         "body": "Castlegear posted revenue of 1.1B, up 6% year on year, as the multi-hospital tray pact and its equipment addendum began shipping in volume. CEO Sable Brandt highlighted a 92% reorder rate on consumables tied to the tray system, calling the recurring stream 'the foundation of steady growth.' The medical supplier reaffirmed its full-year outlook.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82628,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlegear Group Edges Ahead as Tray and Equipment Backlog Converts",
+        "body": "Castlegear reported a modest beat, with revenue up 5% as remaining tray-system and equipment orders shipped to hospital partners. CEO Sable Brandt kept guidance unchanged, citing steady reorder patterns and no new large pacts in the pipeline. Management emphasized disciplined cost control over expansion.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -3561,7 +3581,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82613,
+    "lastEventCycle": 82628,
     "events": [
       {
         "cycle": 0,
@@ -3637,6 +3657,16 @@
         "size": "standard",
         "head": "Cranegrove Beats Again as Three-Package Corridor Backlog Powers Margins",
         "body": "Cranegrove exceeded expectations with operating margins widening 180 basis points as its trio of Inland Corridor awards moved into peak earthmoving activity. Vale Calder credited disciplined fleet utilization and a record $2.1 billion backlog, while noting the company is positioning quietly for a possible fourth corridor package tender expected next quarter.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82628,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Cranegrove Opens Regional Fleet Depot to Serve Corridor Backlog",
+        "body": "Cranegrove commissioned a new earthmoving fleet and maintenance depot near the inland corridor to keep pace with its three-package backlog. CEO Vale Calder said the $210M investment would cut equipment idle time and support bids on a potential fourth corridor package. The depot is expected to reach full staffing within two quarters.",
         "effects": {
           "construction": 0.13
         }
@@ -4498,7 +4528,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82620,
+    "lastEventCycle": 82628,
     "events": [
       {
         "cycle": 0,
@@ -4636,6 +4666,16 @@
         "body": "Fennmoor said it will acquire Callent Labs for $520M, adding fluid-analysis instruments that pair with its award-winning Threll sensor line. CEO Dorian Brandt said the deal extends Fennmoor deeper into hospital diagnostics beyond its existing national network rollout. The transaction is expected to close within six months and add to earnings by the following year.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82628,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Fennmoor Merges Callent Labs Into New Diagnostics Unit",
+        "body": "Fennmoor consolidated its Threll sensor business and freshly acquired Callent Labs into a single Diagnostics division, cutting an estimated 4% of overlapping roles. CEO Dorian Brandt said the structure would speed a combined sensor-and-lab platform to the hospital networks already under contract. The reorganization carries a one-time charge of about $70M.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -5990,7 +6030,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82623,
+    "lastEventCycle": 82628,
     "events": [
       {
         "cycle": 0,
@@ -6205,6 +6245,16 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82628,
+        "kind": "recall",
+        "size": "major",
+        "head": "Halhold Works Recalls Aveline Bedside Monitors as Probe Widens",
+        "body": "Halhold issued a voluntary recall of roughly 82,000 Aveline bedside monitors after regulators flagged intermittent alarm failures tied to the units under review. CEO Lena Faircloth acknowledged the recall would erase an estimated $190M in near-term revenue and suspend new Aveline shipments pending a firmware fix. The move came just weeks after the safety probe opened, deepening pressure on the company's flagship medical line.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -6415,7 +6465,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82613,
+    "lastEventCycle": 82628,
     "events": [
       {
         "cycle": 0,
@@ -6491,6 +6541,16 @@
         "size": "standard",
         "head": "Holtforge Group Posts Another Record as Marine Plant Nears Startup",
         "body": "Yvette Bramm delivered a second consecutive record quarter, with revenue up 14% on offshore wind cable deliveries and a backlog that has now swelled past $780 million. The new marine cable plant remains on schedule for commissioning early next year, which management says will ease the capacity constraints that have capped shipment volumes.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82628,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Holtforge Group Starts Output at New Marine Cable Plant",
+        "body": "The Marine cable plant began commercial production on schedule, ramping toward an initial capacity of 900 kilometers of offshore cable annually. CEO Yvette Bramm said the facility should clear the bulk of the offshore wind backlog within 18 months while lowering delivery lead times. First shipments are earmarked for two contracted North Sea-style wind arrays.",
         "effects": {
           "construction": 0.13
         }
@@ -7474,7 +7534,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82620,
+    "lastEventCycle": 82628,
     "events": [
       {
         "cycle": 0,
@@ -7632,6 +7692,16 @@
         "body": "Following its $1.2B takeover, Korrwright Works announced it will consolidate Ambrose & Sons and the acquired Vellhorn movements arm under a single Heritage Division led from the Carrow flagship workshop. CEO Dunmore Carrow said the reorganization will trim roughly 260 overlapping roles while preserving Ambrose's landmark casing atelier. The firm expects $90M in annual cost savings from combined escapement production by the second year.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82628,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Works Beats as Heritage Division Lifts Margins",
+        "body": "Korrwright reported a 14% revenue rise, with the newly folded Ambrose & Sons operations contributing ahead of internal targets in their first full quarter. CEO Dunmore Carrow credited shared Vellhorn escapement tooling for cutting per-unit costs across both brands. Management hinted that integration savings would free capital for further acquisitions.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -9627,7 +9697,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82620,
+    "lastEventCycle": 82628,
     "events": [
       {
         "cycle": 0,
@@ -9765,6 +9835,16 @@
         "body": "Thronehaus unveiled the Verrand Grand Complication, a limited run of 150 pieces showcasing dials and movements now built entirely in-house following its recent specialty dial acquisition. CEO Cora Dray priced the flagship line from $84,000 and said pre-commitments already cover more than half the allocation. The launch anchors the new atelier's positioning as the house's craft showcase.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82628,
+        "kind": "award",
+        "size": "flash",
+        "head": "Thronehaus & Co. Verrand Complication Takes Top Horology Prize",
+        "body": "The Verrand Grand Complication won the Guild of Meridian Watchmaking's highest annual honor, beating a field of 40 entries. CEO Cora Dray called the recognition a validation of the atelier's vertical-integration push, noting the winning piece used only in-house dials and movements. The award is expected to lift order interest at the flagship.",
+        "effects": {
+          "luxury": 0.06
         }
       }
     ]

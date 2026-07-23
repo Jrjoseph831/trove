@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-22T19:23:20.651Z",
+  "generatedAt": "2026-07-23T02:52:45.942Z",
   "beats": [
+    {
+      "company": "Aldousmont & Sons",
+      "sector": "medical",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Aldousmont & Sons Extends Peel-Free Line With Sterile Field Kits",
+      "body": "The company introduced a bundled sterile-field kit built around its Peel-Free Wrap, aimed at surgical suites seeking faster setup times. CEO Dunmore Calder framed the launch as a natural extension of a proven product rather than a new direction, projecting the kits could add roughly 6% to consumables volume over the next year. Early orders came from three of its existing multi-region hospital partners.",
+      "cycle": 82628,
+      "dur": 2
+    },
+    {
+      "company": "Castlegear Group",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castlegear Group Edges Ahead as Tray and Equipment Backlog Converts",
+      "body": "Castlegear reported a modest beat, with revenue up 5% as remaining tray-system and equipment orders shipped to hospital partners. CEO Sable Brandt kept guidance unchanged, citing steady reorder patterns and no new large pacts in the pipeline. Management emphasized disciplined cost control over expansion.",
+      "cycle": 82628,
+      "dur": 1
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Cranegrove Opens Regional Fleet Depot to Serve Corridor Backlog",
+      "body": "Cranegrove commissioned a new earthmoving fleet and maintenance depot near the inland corridor to keep pace with its three-package backlog. CEO Vale Calder said the $210M investment would cut equipment idle time and support bids on a potential fourth corridor package. The depot is expected to reach full staffing within two quarters.",
+      "cycle": 82628,
+      "dur": 2
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Fennmoor Merges Callent Labs Into New Diagnostics Unit",
+      "body": "Fennmoor consolidated its Threll sensor business and freshly acquired Callent Labs into a single Diagnostics division, cutting an estimated 4% of overlapping roles. CEO Dorian Brandt said the structure would speed a combined sensor-and-lab platform to the hospital networks already under contract. The reorganization carries a one-time charge of about $70M.",
+      "cycle": 82628,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "recall",
+      "size": "major",
+      "head": "Halhold Works Recalls Aveline Bedside Monitors as Probe Widens",
+      "body": "Halhold issued a voluntary recall of roughly 82,000 Aveline bedside monitors after regulators flagged intermittent alarm failures tied to the units under review. CEO Lena Faircloth acknowledged the recall would erase an estimated $190M in near-term revenue and suspend new Aveline shipments pending a firmware fix. The move came just weeks after the safety probe opened, deepening pressure on the company's flagship medical line.",
+      "cycle": 82628,
+      "dur": 8
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Holtforge Group Starts Output at New Marine Cable Plant",
+      "body": "The Marine cable plant began commercial production on schedule, ramping toward an initial capacity of 900 kilometers of offshore cable annually. CEO Yvette Bramm said the facility should clear the bulk of the offshore wind backlog within 18 months while lowering delivery lead times. First shipments are earmarked for two contracted North Sea-style wind arrays.",
+      "cycle": 82628,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrwright Works Beats as Heritage Division Lifts Margins",
+      "body": "Korrwright reported a 14% revenue rise, with the newly folded Ambrose & Sons operations contributing ahead of internal targets in their first full quarter. CEO Dunmore Carrow credited shared Vellhorn escapement tooling for cutting per-unit costs across both brands. Management hinted that integration savings would free capital for further acquisitions.",
+      "cycle": 82628,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "flash",
+      "head": "Thronehaus & Co. Verrand Complication Takes Top Horology Prize",
+      "body": "The Verrand Grand Complication won the Guild of Meridian Watchmaking's highest annual honor, beating a field of 40 entries. CEO Cora Dray called the recognition a validation of the atelier's vertical-integration push, noting the winning piece used only in-house dials and movements. The award is expected to lift order interest at the flagship.",
+      "cycle": 82628,
+      "dur": 1
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -112,46 +192,6 @@
       "dur": 8
     },
     {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halcrow & Vance Opens Second Vetask Staging Yard to Meet Corridor Demand",
-      "body": "The house commissioned a new 40-acre equipment staging yard near the Vetask Basin, adding capacity for the freshly won adjacent corridor work. Skarn said the $120M facility would shorten mobilization times and let the firm bid on two further regional packages expected to open next quarter.",
-      "cycle": 82626,
-      "dur": 2
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Thaldale Group Names Trent's Turnaround Plan, Shutters Two Fastening Plants",
-      "body": "New chief Marlowe Trent unveiled a restructuring that will close the two fastening plants at the center of the output-inflation probe and cut roughly 900 jobs. Trent said the $180M charge would 'draw a line' under the scandal and refocus the house on its core hardware and tools lines.",
-      "cycle": 82626,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Varnvale & Sons Beats Again as Lenoir Deal Closes Ahead of Schedule",
-      "body": "Quarterly revenue rose 14% to $1.6B, with fine-goods margins lifted by the early completion of the Lenoir acquisition. Wold told analysts that Lenoir's bridal collections would fold into the Maisons flagship by spring, and hinted at a further 'complementary' target under review.",
-      "cycle": 82626,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenspire Supply Tops Estimates as Halden Timepieces Fill Vehicle Salons",
-      "body": "Revenue climbed 11% to $3.4B as Halden chronometers began selling through Marrow's global vehicle salons under the 2.1B distribution pact. Marrow said cross-selling had lifted salon foot traffic 18%, and teased a co-branded dashboard timepiece for the next Calderon model year.",
-      "cycle": 82626,
-      "dur": 2
-    },
-    {
       "company": "Aperture Compute",
       "sector": "technology",
       "kind": "safety_probe",
@@ -229,16 +269,6 @@
       "head": "Varnvale House Names Restructuring Chief Adrienne Sole as CEO to Steer Post-Scandal Recovery",
       "body": "After weeks of turmoil, Varnvale's board appointed Adrienne Sole, a veteran restructuring executive, as CEO with a mandate to settle the widening investor suit and rebuild sourcing controls. Sole pledged a full audit of the Timepieces supply chain and said the company would set aside $220 million for legal and remediation costs. Outgoing interim leadership will depart by month's end.",
       "cycle": 82621,
-      "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Boreas Power Seals $3.8B Compute Campus Partnership in Landmark Expansion",
-      "body": "Boreas Power announced a defining $3.8B agreement to build and power a new large-scale compute campus adjacent to its Hollowmere site, with the newly acquired Vantell storage assets supplying grid-balancing capacity. CEO Mira Thorne called it the company's largest single commitment, projecting the campus will lift power-and-storage revenue by nearly 40% at full ramp. Construction begins next quarter, with first phase energization targeted within two years.",
-      "cycle": 82620,
       "dur": 8
     }
   ]
