@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-23T14:04:56.494Z",
+  "generatedAt": "2026-07-23T19:20:55.241Z",
   "beats": [
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "outage",
+      "size": "major",
+      "head": "Bruncrest Works Halts Eastfield Line as Component Shortage Threatens Aria Pro Deliveries",
+      "body": "Ines Marlow confirmed a two-week suspension of the Eastfield assembly line after a critical substrate supplier missed shipments, jeopardizing early deliveries on the $3.4 billion National Compute Consortium order. Marlow, known for bold public bets, admitted the premium Aria Pro ramp had left little inventory buffer. The company is scrambling to secure alternate supply while penalty clauses loom over the marquee contract.",
+      "cycle": 82631,
+      "dur": 8
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Brunstone & Sons Wins 4.1B Fleet Contract as Vault Cell Guard Passes Independent Trials",
+      "body": "Halden Crowe secured a five-year, $4.1 billion supply agreement with the Meridian Freight Alliance after Vault Cell Guard cleared independent thermal-safety certification with no faults flagged. The deal marks a dramatic reversal from the recall that toppled Royce Lambourne and cost the company an estimated 18% of its power-storage revenue last year. Crowe called it 'the clean slate we promised,' though he staked much of his credibility on the launch.",
+      "cycle": 82631,
+      "dur": 8
+    },
+    {
+      "company": "Castlestead",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castlestead Posts Quiet Beat as Harrowfield Supply Deal Ramps Up",
+      "body": "Aurelia Calder reported a slim 1.9% revenue gain as first shipments under the Harrowfield Growers agreement flowed alongside steady nutrient-blend sales. The company held its conservative full-year outlook, citing normal seasonal earthmoving softness. Calder made no new commitments, in keeping with her measured approach.",
+      "cycle": 82631,
+      "dur": 1
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Hesperforge Beats as Coastal Shipyard Pact Locks In Marine-Grade Backlog",
+      "body": "Sable Halloran's house topped expectations with revenue up 6.4%, driven by the multi-year marine-grade beam pact now filling both mills near capacity. The order book stretches 14 months forward, giving Hesperforge rare visibility on structural-materials demand. Halloran hinted a third mill study is underway but stopped short of committing capital.",
+      "cycle": 82631,
+      "dur": 2
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Lhaus Industries Breaks Ground on Fifth Cell-Pack Line as Brandt Chases Scale",
+      "body": "Fresh off absorbing Delphin's plants, Cole Brandt announced a $2.1 billion investment to add a fifth cell-pack line at the newly unified Halbrook complex. The move lifts targeted annual output past 40 gigawatt-hours and, Brandt told reporters, positions Lhaus to underbid rivals on volume contracts. Analysts noted the pace reflects Brandt's long habit of building faster than demand strictly requires.",
+      "cycle": 82631,
+      "dur": 2
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Maison & Vale Acquires Household-Goods Maker Calbrook in $1.8 Billion Deal",
+      "body": "Rhys Kessler, restless after finally stabilizing margins, announced the $1.8 billion purchase of Calbrook, a mid-market household-goods brand, to broaden the portfolio beyond the streamlined jansan division. Kessler framed the deal as 'the next leg,' pledging to avoid the integration costs that dragged the earlier Ostley merger. Investors watched warily given Maison & Vale's recent margin scare.",
+      "cycle": 82631,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Nudges Past Estimates Again on Steady Farm-Inputs Demand",
+      "body": "Petra Veldt's house delivered its fifth consecutive modest beat, with quarterly revenue up 2.3% and margins holding flat. Farm-input orders offset softer cleaning-and-jansan volumes, keeping the streak intact without surprises. Veldt reiterated guidance and declined to raise it.",
+      "cycle": 82631,
+      "dur": 1
+    },
+    {
+      "company": "Venline & Sons",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Venline & Sons Extends Streak With Another Modest Beat as Marden Runs at Capacity",
+      "body": "Mara Garr reported a 2.1% revenue uptick, with the fully utilized Marden cleanroom driving steady medical-consumables output. Garr flagged early planning for a possible capacity study but emphasized any decision would follow her customary multi-year horizon. Margins held firm and guidance was left unchanged.",
+      "cycle": 82631,
+      "dur": 1
+    },
     {
       "company": "Blackton Industries",
       "sector": "automotive",
@@ -62,26 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Skarngrove & Sons Edges Higher as Kelvarn Second-Phase Work Ramps",
-      "body": "Skarngrove reported a modest beat with revenue of 890 million as billings from the second-phase Kelvarn bridge contract accelerated. Quinn Fenn noted the recently added structural-materials capacity is now running near full utilization. Management reaffirmed full-year guidance.",
-      "cycle": 82630,
-      "dur": 1
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Holds Steady as Grocery Packaging Volumes Level Off",
-      "body": "Vantor posted a slim beat with revenue of 1.3 billion as the national grocery contract settled into a stable run-rate. Halden Vossen said attention was shifting toward renewal terms and modest efficiency gains at three packaging plants. Margins were flat quarter on quarter.",
-      "cycle": 82630,
-      "dur": 1
-    },
-    {
       "company": "Castlehold",
       "sector": "energy",
       "kind": "scandal",
@@ -92,36 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Castlestone Steadies as Standalone Grid Division Returns to Profit",
-      "body": "Pell Karsh reported the newly carved-out Grid Reliability division posted its first profitable quarter, helping lift group revenue 6% to $4.3B and easing memories of the $2.1B penalty. Karsh credited a reworked service framework and a leaner core compute unit, though he warned that remediation obligations will continue to weigh through next year. The result marks the first clean beat since the reliability probe erupted.",
-      "cycle": 82629,
-      "dur": 2
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halcrest Unveils Overseas Atelier as Marrow Bets on Second Salon Row",
-      "body": "Iris Marrow announced a $180M investment to open a second flagship district in the harbor quarter, complete with a working restoration atelier and private commissioning suites. The expansion follows three consecutive record halves and adds an estimated 240 master artisans over two years. Marrow called it 'the natural home for the next Meridian chapter,' teasing a grand-format follow-up to the sold-out Complication line.",
-      "cycle": 82629,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Halhold Systems Lands $900M Compute Supply Deal to Anchor Recovery",
-      "body": "Corin Vale secured a four-year, $900M contract to supply core compute capacity to a national logistics consortium, the largest single order since the Northgate carve-out. Vale framed the win as validation of the streamlined structure, projecting it will offset carve-out drag by the second half. Shares of the technology house had lagged after last quarter's miss.",
-      "cycle": 82629,
-      "dur": 2
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "recall",
@@ -130,26 +160,6 @@
       "body": "Neave Corliss confirmed the storage-pack recall has ballooned to 620,000 vehicles after regulators tied additional overheating incidents to a supplier defect, with estimated costs now topping $1.9B. Corliss vowed 'total transparency,' announcing free pack replacements and a dedicated safety command center even as the formal probe continues. It is the largest recall in the automotive house's history.",
       "cycle": 82629,
       "dur": 8
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarnvale Rebounds as Overhauled Braeloch Terminal Clears Record Throughput",
-      "body": "Dorn Vaskell reported Braeloch handled a record 1.4M units in its first full quarter since relaunch, lifting logistics revenue 9% and reversing the drag from the earlier outage. Vaskell said the new handling systems ran at 99.6% uptime and touted plans to license the platform to two secondary terminals. The result caps a turbulent recovery arc for the freshly rebuilt hub.",
-      "cycle": 82629,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Varnvale House Overhauls Sourcing Under Sole's Post-Scandal Reset",
-      "body": "Adrienne Sole unveiled a sweeping sourcing overhaul, consolidating from 40 suppliers to 12 fully audited partners and folding the Fine Goods and Timepiece units under a single integrity office. The plan carries $220M in restructuring charges but Sole pledged full third-party verification within a year to rebuild trust after the cover-up. The investor suit remains unresolved.",
-      "cycle": 82629,
-      "dur": 2
     },
     {
       "company": "Halhold Works",
@@ -249,26 +259,6 @@
       "head": "Marlgear Supply Plunges to Loss as Drennan Settlement Reserve Guts Quarter",
       "body": "New chief Adele Ferran reported a $780 million quarterly loss after booking a $650 million reserve tied to the consolidated Drennan litigation, alongside a 22 percent drop in device orders as buyers held back. Ferran suspended the dividend and warned that recovery would take 'several hard quarters,' announcing a review of the Industrial Machines unit that could lead to divestment. The house also disclosed the loss of two major distribution partners since the scandal broke.",
       "cycle": 82624,
-      "dur": 8
-    },
-    {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Calderworks Locks Decade-Long Tessen Ridge Supply Pact in Landmark Deal",
-      "body": "Kestrel Halloran signed a $1.4 billion, ten-year framework agreement to supply structural materials across all remaining Tessen Ridge phases through 2038, the largest single contract in Calderworks' 117-year history. The deal secures roughly 40% of the new kiln's output and includes options for a second kiln should Phase Three proceed.",
-      "cycle": 82623,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Halhold Works Faces Safety Probe Over Aveline Bedside Monitors",
-      "body": "Regulators opened a formal review of the Aveline bedside monitoring suite after hospitals reported intermittent alarm failures across three network sites. Lena Faircloth pledged full cooperation and paused new deployments pending the inquiry, a sharp reversal for the platform that drove last quarter's medical equipment gains.",
-      "cycle": 82623,
       "dur": 8
     }
   ]

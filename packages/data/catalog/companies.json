@@ -1466,7 +1466,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82626,
+    "lastEventCycle": 82631,
     "events": [
       {
         "cycle": 0,
@@ -1648,6 +1648,16 @@
         "body": "Bruncrest secured a multi-year contract worth up to $3.4B to supply Aria Pro racks across a national compute build-out, its largest order ever. Marlow called the win 'the payoff for betting on the premium tier' and said Eastfield would run at full capacity through the coming year to meet delivery milestones.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82631,
+        "kind": "outage",
+        "size": "major",
+        "head": "Bruncrest Works Halts Eastfield Line as Component Shortage Threatens Aria Pro Deliveries",
+        "body": "Ines Marlow confirmed a two-week suspension of the Eastfield assembly line after a critical substrate supplier missed shipments, jeopardizing early deliveries on the $3.4 billion National Compute Consortium order. Marlow, known for bold public bets, admitted the premium Aria Pro ramp had left little inventory buffer. The company is scrambling to secure alternate supply while penalty clauses loom over the marquee contract.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -2038,7 +2048,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82624,
+    "lastEventCycle": 82631,
     "events": [
       {
         "cycle": 0,
@@ -2212,6 +2222,16 @@
         "body": "New chief Halden Crowe introduced the Vault Cell Guard line at a Meridian Hall event, touting a redesigned thermal barrier and a five-year replacement warranty aimed squarely at winning back the 380,000 owners affected by the Pro recall. Crowe pledged $220 million in retooling across two plants and promised independent third-party certification before the first units ship in the fourth quarter. Analysts called it a make-or-break bet for a house still absorbing an estimated $1.1 billion in recall costs.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82631,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Brunstone & Sons Wins 4.1B Fleet Contract as Vault Cell Guard Passes Independent Trials",
+        "body": "Halden Crowe secured a five-year, $4.1 billion supply agreement with the Meridian Freight Alliance after Vault Cell Guard cleared independent thermal-safety certification with no faults flagged. The deal marks a dramatic reversal from the recall that toppled Royce Lambourne and cost the company an estimated 18% of its power-storage revenue last year. Crowe called it 'the clean slate we promised,' though he staked much of his credibility on the launch.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -3236,7 +3256,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82602,
+    "lastEventCycle": 82631,
     "events": [
       {
         "cycle": 0,
@@ -3282,6 +3302,16 @@
         "size": "flash",
         "head": "Castlestead Edges Ahead as Low-Till and Nutrient-Blend Lines Pair Up",
         "body": "Castlestead reported a modest beat with revenue of $890M against $865M expected, helped by attach rates on nutrient blends sold alongside its low-till seeders. CEO Aurelia Calder said the Harrowfield cooperative deal delivered steady early volumes and repeat farm-input orders. Guidance was reaffirmed with a cautious note on planting-season weather.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82631,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlestead Posts Quiet Beat as Harrowfield Supply Deal Ramps Up",
+        "body": "Aurelia Calder reported a slim 1.9% revenue gain as first shipments under the Harrowfield Growers agreement flowed alongside steady nutrient-blend sales. The company held its conservative full-year outlook, citing normal seasonal earthmoving softness. Calder made no new commitments, in keeping with her measured approach.",
         "effects": {
           "agriculture": 0.06
         }
@@ -6462,7 +6492,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82618,
+    "lastEventCycle": 82631,
     "events": [
       {
         "cycle": 0,
@@ -6548,6 +6578,16 @@
         "size": "standard",
         "head": "Hesperforge Supply Signs Multi-Year Marine-Grade Beam Supply Pact With Coastal Shipyards",
         "body": "Hesperforge secured a four-year framework agreement to supply marine-grade structural beams to a consortium of three coastal shipyards, an arrangement the company values at roughly $240 million over its term. CEO Sable Halloran said the deal 'locks in the second mill's output well into the decade' and underpins a modest expansion of the marine line's finishing capacity.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82631,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Hesperforge Beats as Coastal Shipyard Pact Locks In Marine-Grade Backlog",
+        "body": "Sable Halloran's house topped expectations with revenue up 6.4%, driven by the multi-year marine-grade beam pact now filling both mills near capacity. The order book stretches 14 months forward, giving Hesperforge rare visibility on structural-materials demand. Halloran hinted a third mill study is underway but stopped short of committing capital.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -7837,7 +7877,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82624,
+    "lastEventCycle": 82631,
     "events": [
       {
         "cycle": 0,
@@ -8026,6 +8066,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82631,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Lhaus Industries Breaks Ground on Fifth Cell-Pack Line as Brandt Chases Scale",
+        "body": "Fresh off absorbing Delphin's plants, Cole Brandt announced a $2.1 billion investment to add a fifth cell-pack line at the newly unified Halbrook complex. The move lifts targeted annual output past 40 gigawatt-hours and, Brandt told reporters, positions Lhaus to underbid rivals on volume contracts. Analysts noted the pace reflects Brandt's long habit of building faster than demand strictly requires.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -8040,7 +8090,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82621,
+    "lastEventCycle": 82631,
     "events": [
       {
         "cycle": 0,
@@ -8146,6 +8196,16 @@
         "size": "standard",
         "head": "Maison & Vale Returns to Growth as Streamlined Jansan Division Lifts Margins",
         "body": "Maison & Vale reported quarterly operating margin recovery to 11.2%, up from 7.4%, as the consolidated Jansan division began delivering the synergies promised in the Ostley deal. CEO Rhys Kessler credited '$140 million in annualized cost savings' from folding the Deltrey and Ostley units together. Household Goods volumes also stabilized after two soft quarters.",
+        "effects": {
+          "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82631,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Maison & Vale Acquires Household-Goods Maker Calbrook in $1.8 Billion Deal",
+        "body": "Rhys Kessler, restless after finally stabilizing margins, announced the $1.8 billion purchase of Calbrook, a mid-market household-goods brand, to broaden the portfolio beyond the streamlined jansan division. Kessler framed the deal as 'the next leg,' pledging to avoid the integration costs that dragged the earlier Ostley merger. Investors watched warily given Maison & Vale's recent margin scare.",
         "effects": {
           "hospitality": 0.13
         }
@@ -8669,7 +8729,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82616,
+    "lastEventCycle": 82631,
     "events": [
       {
         "cycle": 0,
@@ -8745,6 +8805,16 @@
         "size": "flash",
         "head": "Ornewright Goods Extends Streak With Yet Another Modest Beat",
         "body": "Ornewright posted revenue of $2.1 billion, edging past estimates for the fifth consecutive quarter on steady jansan and farm-inputs demand. CEO Petra Veldt reaffirmed full-year guidance and noted institutional contract renewals remained 'unremarkable, in the best sense.'",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82631,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Nudges Past Estimates Again on Steady Farm-Inputs Demand",
+        "body": "Petra Veldt's house delivered its fifth consecutive modest beat, with quarterly revenue up 2.3% and margins holding flat. Farm-input orders offset softer cleaning-and-jansan volumes, keeping the streak intact without surprises. Veldt reiterated guidance and declined to raise it.",
         "effects": {
           "consumer": 0.06
         }
@@ -10730,7 +10800,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82606,
+    "lastEventCycle": 82631,
     "events": [
       {
         "cycle": 0,
@@ -10776,6 +10846,16 @@
         "size": "flash",
         "head": "Venline & Sons Logs Modest Beat as Marden Cleanroom Reaches Full Utilization",
         "body": "The medical consumables maker reported quarterly revenue of $612M, edging past the $605M consensus, with the Marden cleanroom now running at capacity. CEO Mara Garr credited durable demand for sterile packaging and reaffirmed the company's unhurried expansion cadence.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82631,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Venline & Sons Extends Streak With Another Modest Beat as Marden Runs at Capacity",
+        "body": "Mara Garr reported a 2.1% revenue uptick, with the fully utilized Marden cleanroom driving steady medical-consumables output. Garr flagged early planning for a possible capacity study but emphasized any decision would follow her customary multi-year horizon. Margins held firm and guidance was left unchanged.",
         "effects": {
           "medical": 0.06
         }
