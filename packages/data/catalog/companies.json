@@ -3037,7 +3037,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82621,
+    "lastEventCycle": 82629,
     "events": [
       {
         "cycle": 0,
@@ -3192,6 +3192,16 @@
         "effects": {
           "energy": -0.13
         }
+      },
+      {
+        "cycle": 82629,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Castlehold in Crisis as Leaked Saltmere Files Show Executives Knew of Leaks for Years",
+        "body": "Internal correspondence surfaced showing Castlehold managers documented containment failures at the Saltmere sites as far back as 2022, years before disclosure, sending the cleanup exposure past $5.2B. Ivo Reneth faces mounting calls to resign as the class action expands and two regulators open coordinated inquiries into the withheld records. The company suspended two senior operations officers pending an internal review.",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },
@@ -3269,7 +3279,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82622,
+    "lastEventCycle": 82629,
     "events": [
       {
         "cycle": 0,
@@ -3453,6 +3463,16 @@
         "body": "CEO Pell Karsh announced a sweeping reorganization, carving the troubled National Data Grid operations into a ring-fenced division led by a dedicated reliability chief. Karsh framed the move as a 'clean-room reset,' pledging $900M toward redundancy upgrades over 18 months while insisting the core Compute business remains 'the fastest-growing engine in the sector.' Analysts noted the restructuring absorbs the reliability rework mandated by regulators.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82629,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Castlestone Steadies as Standalone Grid Division Returns to Profit",
+        "body": "Pell Karsh reported the newly carved-out Grid Reliability division posted its first profitable quarter, helping lift group revenue 6% to $4.3B and easing memories of the $2.1B penalty. Karsh credited a reworked service framework and a leaner core compute unit, though he warned that remediation obligations will continue to weigh through next year. The result marks the first clean beat since the reliability probe erupted.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -5484,7 +5504,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82615,
+    "lastEventCycle": 82629,
     "events": [
       {
         "cycle": 0,
@@ -5580,6 +5600,16 @@
         "size": "standard",
         "head": "Halcrest Posts Record Half as Meridian Petite and Salon Row Flagship Drive Traffic",
         "body": "Halcrest reported first-half revenue up 26% to $980 million, led by strong demand for the Meridian Petite and elevated foot traffic at the new Salon Row boutique. Iris Marrow said waitlists for the Meridian Grand Complication now stretch past eighteen months, and hinted at a limited follow-up complication for the collection's anniversary.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82629,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcrest Unveils Overseas Atelier as Marrow Bets on Second Salon Row",
+        "body": "Iris Marrow announced a $180M investment to open a second flagship district in the harbor quarter, complete with a working restoration atelier and private commissioning suites. The expansion follows three consecutive record halves and adds an estimated 240 master artisans over two years. Marrow called it 'the natural home for the next Meridian chapter,' teasing a grand-format follow-up to the sold-out Complication line.",
         "effects": {
           "luxury": 0.13
         }
@@ -5823,7 +5853,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82623,
+    "lastEventCycle": 82629,
     "events": [
       {
         "cycle": 0,
@@ -6015,6 +6045,16 @@
         "body": "Halhold posted margins of 11.2%, below the 14% guided, as one-time separation charges from the Northgate exit ran to $86 million. Corin Vale defended the shortfall as \"the price of a clean balance sheet,\" pointing to firming core Compute orders that he expects to lift results next period.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82629,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halhold Systems Lands $900M Compute Supply Deal to Anchor Recovery",
+        "body": "Corin Vale secured a four-year, $900M contract to supply core compute capacity to a national logistics consortium, the largest single order since the Northgate carve-out. Vale framed the win as validation of the streamlined structure, projecting it will offset carve-out drag by the second half. Shares of the technology house had lagged after last quarter's miss.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -6631,7 +6671,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82601,
+    "lastEventCycle": 82629,
     "events": [
       {
         "cycle": 0,
@@ -6677,6 +6717,16 @@
         "size": "flash",
         "head": "Holtgate Group Edges Ahead Again on Firm Uniform Guild Demand",
         "body": "Holtgate reported a modest 3% revenue gain to 480M, with mill utilization holding near 88% on sustained Uniform Makers Guild volumes. CEO Dorian Throne credited stable raw-fiber costs and disciplined scheduling for the incremental beat. The results extend the textile maker's run of quiet, consistent quarters.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82629,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Group Extends Streak With Modest Beat on Guild Renewals",
+        "body": "Dorian Throne reported a fourth straight quarter above estimates, with revenue up 3% as long-term Uniform Guild contracts renewed at firm pricing. Mill utilization held near 91%, and Throne reaffirmed full-year guidance without fanfare. The textiles house continues its reputation as a low-drama, dependable performer.",
         "effects": {
           "textiles": 0.06
         }
@@ -7011,7 +7061,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82619,
+    "lastEventCycle": 82629,
     "events": [
       {
         "cycle": 0,
@@ -7125,6 +7175,16 @@
         "size": "major",
         "head": "Kessel Drive Unveils Sweeping Restructure, Splitting Storage Unit and Cutting 3,400 Jobs",
         "body": "New chief Neave Corliss announced a hard reset that carves the troubled Power & Storage division into a standalone unit and eliminates 3,400 roles, aiming for $500 million in annual cost savings. Corliss pledged an overhauled quality regime for storage packs still under regulatory probe. The move marks the boldest step yet in her bid to stabilize the loss-making automaker.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82629,
+        "kind": "recall",
+        "size": "major",
+        "head": "Kessel Drive Widens Recall to 620,000 Vehicles as Storage Probe Deepens",
+        "body": "Neave Corliss confirmed the storage-pack recall has ballooned to 620,000 vehicles after regulators tied additional overheating incidents to a supplier defect, with estimated costs now topping $1.9B. Corliss vowed 'total transparency,' announcing free pack replacements and a dedicated safety command center even as the formal probe continues. It is the largest recall in the automotive house's history.",
         "effects": {
           "automotive": -0.22
         }
@@ -9170,7 +9230,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82618,
+    "lastEventCycle": 82629,
     "events": [
       {
         "cycle": 0,
@@ -9262,6 +9322,16 @@
         "size": "standard",
         "head": "Skarnvale Relaunches Braeloch Terminal With Overhauled Handling Systems",
         "body": "Skarnvale brought its Braeloch freight terminal back to full capacity under a rebuilt material-handling system, following the multi-day outage that forced a management shakeup. CEO Dorn Vaskell said the relaunched facility has run 'eleven consecutive days without incident' and pledged staged reliability testing before ramping throughput to the site's 4,000-pallet daily target.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82629,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarnvale Rebounds as Overhauled Braeloch Terminal Clears Record Throughput",
+        "body": "Dorn Vaskell reported Braeloch handled a record 1.4M units in its first full quarter since relaunch, lifting logistics revenue 9% and reversing the drag from the earlier outage. Vaskell said the new handling systems ran at 99.6% uptime and touted plans to license the platform to two secondary terminals. The result caps a turbulent recovery arc for the freshly rebuilt hub.",
         "effects": {
           "logistics": 0.13
         }
@@ -10199,7 +10269,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82621,
+    "lastEventCycle": 82629,
     "events": [
       {
         "cycle": 0,
@@ -10350,6 +10420,16 @@
         "head": "Varnvale House Names Restructuring Chief Adrienne Sole as CEO to Steer Post-Scandal Recovery",
         "body": "After weeks of turmoil, Varnvale's board appointed Adrienne Sole, a veteran restructuring executive, as CEO with a mandate to settle the widening investor suit and rebuild sourcing controls. Sole pledged a full audit of the Timepieces supply chain and said the company would set aside $220 million for legal and remediation costs. Outgoing interim leadership will depart by month's end.",
         "effects": {}
+      },
+      {
+        "cycle": 82629,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Varnvale House Overhauls Sourcing Under Sole's Post-Scandal Reset",
+        "body": "Adrienne Sole unveiled a sweeping sourcing overhaul, consolidating from 40 suppliers to 12 fully audited partners and folding the Fine Goods and Timepiece units under a single integrity office. The plan carries $220M in restructuring charges but Sole pledged full third-party verification within a year to rebuild trust after the cover-up. The investor suit remains unresolved.",
+        "effects": {
+          "luxury": -0.13
+        }
       }
     ]
   },
