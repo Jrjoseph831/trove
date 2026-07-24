@@ -1,25 +1,85 @@
 {
-  "generatedAt": "2026-07-24T02:47:54.986Z",
+  "generatedAt": "2026-07-24T08:30:03.862Z",
   "beats": [
     {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Extends Streak to Five Beats as Farm and Textile Lines Stay Balanced",
-      "body": "Cranecraft reported quarterly revenue of $412M, edging past the $405M consensus, with CEO Mira Garr crediting steady Northern Mills throughput and firm farm-equipment reorders. The company held margins flat at 18.4% and reaffirmed its full-year outlook without fanfare, marking a fifth consecutive quarter above estimates.",
-      "cycle": 82632,
-      "dur": 1
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Boreas Power Strikes $6.2B Merger With Grid Operator Halvard in Sector-Defining Move",
+      "body": "Boreas Power announced an agreed $6.2B merger with grid-scale operator Halvard Energy, deploying much of the $5B war chest and adding 3.1 gigawatts of storage capacity. CEO Mira Thorne framed the deal as 'the backbone that ties our compute campuses to firm power,' though analysts flagged the combined debt load as the largest in the company's history.",
+      "cycle": 82633,
+      "dur": 8
     },
     {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Bruncraft CEO Orla Marrow Ousted as Board Moves to Contain Axle Scandal",
+      "body": "Bruncraft's board removed CEO Orla Marrow effective immediately, citing the leadership's handling of the axle-defect memos now central to a federal safety probe. The board named turnaround veteran Dessa Corvane as CEO, tasking her with rebuilding regulator trust and steering a widening class action; shares had shed nearly a third of their value since the memos surfaced.",
+      "cycle": 82633,
+      "dur": 8
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Calderforge Breaks Ground on Fifth Stormwell Hall to Meet Booked Demand",
+      "body": "Calderforge confirmed construction has begun on a fifth Stormwell hall, a $2.4B build slated to come online in 30 months to service its decade-long anchor pacts. CEO Nadia Throne said the expansion locks in roughly 40% more capacity, though she acknowledged the aggressive timeline leaves 'little room for slippage.'",
+      "cycle": 82633,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Fenncyon Wins $1.1B Southern Loop Package as Eastfield Program Expands",
+      "body": "Fenncyon secured the $1.1B Southern Loop earthmoving package, extending its Eastfield involvement into a fourth corridor segment. CEO Nadia Ashby said the award brings the total program backlog past $4B, calling it 'a disciplined step into work we already know how to deliver.'",
+      "cycle": 82633,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Halhold Works Sued by Hospital Networks as Aveline Monitor Failures Cited in Patient Harm",
+      "body": "A coalition of seven hospital networks filed suit against Halhold Works, alleging the recalled Aveline bedside monitors delivered faulty readings tied to at least a dozen adverse patient events. The complaint seeks $780M in damages and contract voiding; CEO Lena Faircloth said the company 'strongly disputes the causation claims' but has set aside a reserve pending review.",
+      "cycle": 82633,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
       "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Fennvale Mfg. Delivers Another Quiet Beat as Auto and Fastener Volumes Hold",
-      "body": "Fennvale posted earnings of $1.32 a share against a $1.28 estimate, with Theo Vossen noting that both the auto program and compact fastener line ran at full ramp for the third straight quarter. The company nudged its capacity-utilization guidance higher and again declined to issue any promotional commentary.",
-      "cycle": 82632,
-      "dur": 1
+      "size": "standard",
+      "head": "Ornewright Supply Beats as Caldmere Cold-Chain Line Reaches Full Utilization",
+      "body": "Ornewright posted quarterly revenue of $1.3B, up 11% year-over-year, as the new Caldmere cold-chain line hit full utilization ahead of forecast. CEO Rhys Throne credited the multi-year food service deal and hinted at 'measured' evaluation of a second cold-chain site.",
+      "cycle": 82633,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Varnvale & Sons Unveils Lenoir-Crafted Timepiece Line at Maisons Flagship",
+      "body": "Varnvale debuted the Lenoir Heritage collection, its first line to combine Lenoir's jewelry ateliers with Varnvale's timepiece movements, priced from $18,000. CEO Bram Wold called the launch 'proof the acquisition was about creation, not just shelf space,' with the first 500 pieces reserved within days.",
+      "cycle": 82633,
+      "dur": 2
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenstead Supply Notches Eighth Straight Beat as Plumbing Segment Joins the Ramp",
+      "body": "Vossenstead extended its streak to eight quarters with revenue of $960M, as the plumbing and fixtures segment posted its first double-digit growth alongside the mature hub network. CEO Bram Thorne said the diversification 'reduces our reliance on any single line' while reaffirming a cautious capital plan.",
+      "cycle": 82633,
+      "dur": 2
     },
     {
       "company": "Gromford Works",
@@ -72,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Steg Tooling Marks Seventh Straight Beat as Second Kelmar Cell Ramps",
-      "body": "Steg Tooling reported $1.09 a share versus a $1.05 estimate as the newly added Kelmar fastener cell reached early production. Iris Vossen said the order book remains 'comfortably full' into next year and reiterated a preference for measured capacity additions over aggressive expansion.",
-      "cycle": 82632,
-      "dur": 1
-    },
-    {
       "company": "Bruncrest Works",
       "sector": "technology",
       "kind": "outage",
@@ -100,36 +150,6 @@
       "body": "Halden Crowe secured a five-year, $4.1 billion supply agreement with the Meridian Freight Alliance after Vault Cell Guard cleared independent thermal-safety certification with no faults flagged. The deal marks a dramatic reversal from the recall that toppled Royce Lambourne and cost the company an estimated 18% of its power-storage revenue last year. Crowe called it 'the clean slate we promised,' though he staked much of his credibility on the launch.",
       "cycle": 82631,
       "dur": 8
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Hesperforge Beats as Coastal Shipyard Pact Locks In Marine-Grade Backlog",
-      "body": "Sable Halloran's house topped expectations with revenue up 6.4%, driven by the multi-year marine-grade beam pact now filling both mills near capacity. The order book stretches 14 months forward, giving Hesperforge rare visibility on structural-materials demand. Halloran hinted a third mill study is underway but stopped short of committing capital.",
-      "cycle": 82631,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Lhaus Industries Breaks Ground on Fifth Cell-Pack Line as Brandt Chases Scale",
-      "body": "Fresh off absorbing Delphin's plants, Cole Brandt announced a $2.1 billion investment to add a fifth cell-pack line at the newly unified Halbrook complex. The move lifts targeted annual output past 40 gigawatt-hours and, Brandt told reporters, positions Lhaus to underbid rivals on volume contracts. Analysts noted the pace reflects Brandt's long habit of building faster than demand strictly requires.",
-      "cycle": 82631,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Maison & Vale Acquires Household-Goods Maker Calbrook in $1.8 Billion Deal",
-      "body": "Rhys Kessler, restless after finally stabilizing margins, announced the $1.8 billion purchase of Calbrook, a mid-market household-goods brand, to broaden the portfolio beyond the streamlined jansan division. Kessler framed the deal as 'the next leg,' pledging to avoid the integration costs that dragged the earlier Ostley merger. Investors watched warily given Maison & Vale's recent margin scare.",
-      "cycle": 82631,
-      "dur": 2
     },
     {
       "company": "Erretmark Works",
@@ -229,16 +249,6 @@
       "head": "Greywater Grid Taps Outsider Sable Renwick as CEO to Steady the House",
       "body": "The board appointed veteran power operator Sable Renwick as chief executive, ending months of instability after two major outages and the departures of Halloran and interim leadership. Renwick pledged a full audit of the Batch Reservoir systems and a pause on new campus commitments until reliability is restored.",
       "cycle": 82626,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Aperture Compute Faces Regulatory Probe After Dawnmere III Power Fault",
-      "body": "Regulators opened a formal inquiry into Aperture Compute's Dawnmere III campus following a substation failure that forced an emergency shutdown and knocked out capacity for nearly two days. CEO Halden Dray defended the aggressive build schedule but acknowledged the fourth-campus timeline could slip as inspectors review electrical and cooling systems across all sites. Two carrier customers have requested contractual assurances on uptime guarantees.",
-      "cycle": 82625,
       "dur": 8
     }
   ]

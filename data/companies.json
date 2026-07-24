@@ -1080,7 +1080,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82627,
+    "lastEventCycle": 82633,
     "events": [
       {
         "cycle": 0,
@@ -1279,6 +1279,16 @@
         "effects": {
           "energy": 0.13
         }
+      },
+      {
+        "cycle": 82633,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Boreas Power Strikes $6.2B Merger With Grid Operator Halvard in Sector-Defining Move",
+        "body": "Boreas Power announced an agreed $6.2B merger with grid-scale operator Halvard Energy, deploying much of the $5B war chest and adding 3.1 gigawatts of storage capacity. CEO Mira Thorne framed the deal as 'the backbone that ties our compute campuses to firm power,' though analysts flagged the combined debt load as the largest in the company's history.",
+        "effects": {
+          "energy": 0.22
+        }
       }
     ]
   },
@@ -1286,14 +1296,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1931,
-    "ceo": "Orla Marrow",
-    "ceoSince": 1931,
+    "ceo": "Dessa Corvane",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.75,
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82626,
+    "lastEventCycle": 82633,
     "events": [
       {
         "cycle": 0,
@@ -1452,6 +1462,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82633,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Bruncraft CEO Orla Marrow Ousted as Board Moves to Contain Axle Scandal",
+        "body": "Bruncraft's board removed CEO Orla Marrow effective immediately, citing the leadership's handling of the axle-defect memos now central to a federal safety probe. The board named turnaround veteran Dessa Corvane as CEO, tasking her with rebuilding regulator trust and steering a widening class action; shares had shed nearly a third of their value since the memos surfaced.",
+        "effects": {}
       }
     ]
   },
@@ -2350,7 +2368,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82624,
+    "lastEventCycle": 82633,
     "events": [
       {
         "cycle": 0,
@@ -2488,6 +2506,16 @@
         "body": "Nadia Throne unveiled a landmark $9.2 billion agreement committing an unnamed enterprise client to the entirety of Calderforge's planned fifth and sixth Stormwell halls, years before either breaks ground. The deal locks in booked capacity through 2037 and pushes Throne to accelerate the campus master plan, with construction on the fifth hall now brought forward to next spring. It ranks as the largest single contract in the company's six-decade history.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82633,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Calderforge Breaks Ground on Fifth Stormwell Hall to Meet Booked Demand",
+        "body": "Calderforge confirmed construction has begun on a fifth Stormwell hall, a $2.4B build slated to come online in 30 months to service its decade-long anchor pacts. CEO Nadia Throne said the expansion locks in roughly 40% more capacity, though she acknowledged the aggressive timeline leaves 'little room for slippage.'",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -4525,7 +4553,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82619,
+    "lastEventCycle": 82633,
     "events": [
       {
         "cycle": 0,
@@ -4611,6 +4639,16 @@
         "size": "standard",
         "head": "Fenncyon Beats Again as Northern Spur Contract Boosts Margins",
         "body": "Nadia Ashby's crews posted quarterly revenue of $1.6 billion, up 14% year over year, as the $900M Northern Spur extension began billing ahead of schedule. Operating margin widened to 21%, and Ashby raised full-year guidance for the third consecutive period. The company cited disciplined fleet utilization across both Eastfield rail staging yards.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82633,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Fenncyon Wins $1.1B Southern Loop Package as Eastfield Program Expands",
+        "body": "Fenncyon secured the $1.1B Southern Loop earthmoving package, extending its Eastfield involvement into a fourth corridor segment. CEO Nadia Ashby said the award brings the total program backlog past $4B, calling it 'a disciplined step into work we already know how to deliver.'",
         "effects": {
           "construction": 0.13
         }
@@ -6190,7 +6228,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82628,
+    "lastEventCycle": 82633,
     "events": [
       {
         "cycle": 0,
@@ -6412,6 +6450,16 @@
         "size": "major",
         "head": "Halhold Works Recalls Aveline Bedside Monitors as Probe Widens",
         "body": "Halhold issued a voluntary recall of roughly 82,000 Aveline bedside monitors after regulators flagged intermittent alarm failures tied to the units under review. CEO Lena Faircloth acknowledged the recall would erase an estimated $190M in near-term revenue and suspend new Aveline shipments pending a firmware fix. The move came just weeks after the safety probe opened, deepening pressure on the company's flagship medical line.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82633,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Halhold Works Sued by Hospital Networks as Aveline Monitor Failures Cited in Patient Harm",
+        "body": "A coalition of seven hospital networks filed suit against Halhold Works, alleging the recalled Aveline bedside monitors delivered faulty readings tied to at least a dozen adverse patient events. The complaint seeks $780M in damages and contract voiding; CEO Lena Faircloth said the company 'strongly disputes the causation claims' but has set aside a reserve pending review.",
         "effects": {
           "technology": -0.22
         }
@@ -8892,7 +8940,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82619,
+    "lastEventCycle": 82633,
     "events": [
       {
         "cycle": 0,
@@ -8978,6 +9026,16 @@
         "size": "standard",
         "head": "Ornewright Supply Signs Multi-Year Food Service Deal to Fill New Caldmere Cold-Chain Line",
         "body": "Rhys Throne secured a five-year, $640 million supply agreement with a regional grocery consortium, anchoring the newly commissioned cold-chain line at the Caldmere hub. The contract is expected to run the expanded facility near full capacity by mid-next year. Throne framed the deal as validation of the company's cautious build-ahead strategy.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82633,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Ornewright Supply Beats as Caldmere Cold-Chain Line Reaches Full Utilization",
+        "body": "Ornewright posted quarterly revenue of $1.3B, up 11% year-over-year, as the new Caldmere cold-chain line hit full utilization ahead of forecast. CEO Rhys Throne credited the multi-year food service deal and hinted at 'measured' evaluation of a second cold-chain site.",
         "effects": {
           "consumer": 0.13
         }
@@ -10326,7 +10384,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82626,
+    "lastEventCycle": 82633,
     "events": [
       {
         "cycle": 0,
@@ -10482,6 +10540,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Beats Again as Lenoir Deal Closes Ahead of Schedule",
         "body": "Quarterly revenue rose 14% to $1.6B, with fine-goods margins lifted by the early completion of the Lenoir acquisition. Wold told analysts that Lenoir's bridal collections would fold into the Maisons flagship by spring, and hinted at a further 'complementary' target under review.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82633,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale & Sons Unveils Lenoir-Crafted Timepiece Line at Maisons Flagship",
+        "body": "Varnvale debuted the Lenoir Heritage collection, its first line to combine Lenoir's jewelry ateliers with Varnvale's timepiece movements, priced from $18,000. CEO Bram Wold called the launch 'proof the acquisition was about creation, not just shelf space,' with the first 500 pieces reserved within days.",
         "effects": {
           "luxury": 0.13
         }
@@ -11225,7 +11293,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82621,
+    "lastEventCycle": 82633,
     "events": [
       {
         "cycle": 0,
@@ -11321,6 +11389,16 @@
         "size": "standard",
         "head": "Vossenstead Supply Notches Seventh Straight Beat as Hub Network Hits Full Stride",
         "body": "Vossenstead extended its streak to seven quarters, posting a 9% revenue gain as all three distribution hubs ran at full utilization for the first time. CEO Bram Thorne pointed to steady Food Service demand and 'no wasted motion' across the network, raising full-year guidance modestly. Plumbing & Fixtures volumes grew a further 6% on regional contract wins.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82633,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenstead Supply Notches Eighth Straight Beat as Plumbing Segment Joins the Ramp",
+        "body": "Vossenstead extended its streak to eight quarters with revenue of $960M, as the plumbing and fixtures segment posted its first double-digit growth alongside the mature hub network. CEO Bram Thorne said the diversification 'reduces our reliance on any single line' while reaffirming a cautious capital plan.",
         "effects": {
           "consumer": 0.13
         }
