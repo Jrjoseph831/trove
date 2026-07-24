@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-24T08:30:03.862Z",
+  "generatedAt": "2026-07-24T13:48:19.604Z",
   "beats": [
+    {
+      "company": "Aldouscyon",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Aldouscyon Opens Second Fixture Plant to Feed Four-City Conversion Slate",
+      "body": "Aldouscyon broke ground on a 180,000-square-foot fixture assembly plant near Threndle, its second dedicated conversion facility, to keep pace with pledged rollouts across Marren, Threndle and two prior contract cities. CEO Petra Mercer said the plant will add roughly 400 jobs and shorten lead times on municipal orders by an estimated six weeks. The company reaffirmed that all four conversions remain on their announced timelines.",
+      "cycle": 82634,
+      "dur": 2
+    },
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Aperture Compute Concealed Earlier Dawnmere III Faults, Internal Records Show",
+      "body": "Regulators reviewing the Dawnmere III power fault uncovered internal maintenance logs showing at least three prior overloads that were never disclosed, prompting accusations that CEO Halden Dray's team prioritized backlog delivery over safety reporting. The $12 billion Dawnmere backlog is now under formal review, and two operations executives were placed on leave pending the inquiry. Dray defended the company's record but acknowledged 'reporting gaps' at the fast-scaling campus.",
+      "cycle": 82634,
+      "dur": 8
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Dunmorewright Beats as Harborfront and Riverside Work Run in Parallel",
+      "body": "Dunmorewright posted a quarterly beat as the record 340 million Harborfront contract ramped alongside the ongoing Riverside civic package, lifting both earthmoving and plumbing volumes. Emil Skarn said the newly added earthmoving fleet is running near full deployment across the two sites. The company narrowed full-year guidance to the upper end of its prior range.",
+      "cycle": 82634,
+      "dur": 2
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Garrware Adds Automated Sorting to Marrow Valley Depot as Volumes Hold at Peak",
+      "body": "Garrware installed a new automated sorting stage at its Northern depot to sustain throughput now that the Marrow Valley third line is running at capacity. Orla Holt said the upgrade adds modest headroom without a full fourth line for now. The investment is expected to trim per-unit handling costs across the anchor-client volumes.",
+      "cycle": 82634,
+      "dur": 1
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Kesselgrove Co. Nudges Past Estimates as Tooling Bay Output Holds Steady",
+      "body": "Kesselgrove Co. reported quarterly results modestly ahead of expectations, with the new tooling bay sustaining the press-line gains flagged last quarter. Orla Steg held guidance unchanged, citing 'consistent, undramatic execution.' Margins ticked up 40 basis points on improved tooling utilization.",
+      "cycle": 82634,
+      "dur": 1
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Stegforge Tops Estimates as Rail Plate Mill Nears First Output",
+      "body": "Stegforge beat quarterly forecasts on strong structural materials and machinery volumes, with the dedicated rail plate mill on track for first plate by next quarter under the consortium deal. Aurelia Steg said the second alloy furnace has fully cleared the prior machinery backlog. The company lifted its structural materials outlook while keeping other segments steady.",
+      "cycle": 82634,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Vossenspire Supply Acquires Heirloom Strapmaker Corveil in 480M Vertical Push",
+      "body": "Restless as ever, Quinn Marrow struck a 480 million deal to buy Corveil, the specialty leather and metal band maker that has long supplied the Halden timepiece line. The acquisition brings strap production in-house and secures margins on the timepieces now anchoring Vossenspire's vehicle salons. Marrow called the deal 'the natural next link in the chain.'",
+      "cycle": 82634,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Woldmark Unveils Halcyon 3 Just Nine Months After Predecessor in Carrow's Boldest Gamble Yet",
+      "body": "In a move that stunned the sector, Cole Carrow rushed the Halcyon 3 compute platform to market only nine months after Halcyon 2, promising a doubling of throughput and forcing existing backlog customers to weigh switching mid-order. Critics warned the compressed cadence risks cannibalizing the still-swelling Halcyon 2 pipeline, while Carrow insisted demand justified the pace. Early pre-orders opened the same day at premium pricing.",
+      "cycle": 82634,
+      "dur": 8
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -82,16 +162,6 @@
       "dur": 2
     },
     {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "scandal",
-      "size": "standard",
-      "head": "Gromford Works Under Fire as Meridian Tourbillon Movements Traced to Undisclosed Supplier",
-      "body": "Reports surfaced that a portion of Gromford's Meridian Tourbillon movements were sourced from an outside workshop despite marketing claiming full in-house manufacture. Corin Aldwych issued a defensive statement acknowledging 'a limited transitional arrangement,' but collectors and guild observers questioned the timing of the fast-tracked launch and demanded an accounting of affected units.",
-      "cycle": 82632,
-      "dur": 2
-    },
-    {
       "company": "Ironcrestton",
       "sector": "luxury",
       "kind": "major_deal",
@@ -100,36 +170,6 @@
       "body": "In a defining move, Wren Adler announced that four rival fine-goods makers will adopt Ironcrestton's traceability framework under a licensing deal worth an estimated $220M over five years. Adler called it 'the moment provenance stops being our advantage and becomes the industry's floor,' positioning Ironcrestton as the standard-setter rather than merely a participant.",
       "cycle": 82632,
       "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Marlgear Supply Unveils Ferran Turnaround Plan, Shuttering Drennan Device Unit",
-      "body": "New CEO Adele Ferran announced a sweeping restructure that permanently retires the troubled Drennan device line and consolidates production into two Industrial Machines plants, cutting roughly 900 roles. Ferran framed the move as 'burning the wreckage down to the studs,' pledging a return to profit within four quarters despite an additional $85M in charges this period.",
-      "cycle": 82632,
-      "dur": 2
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Marrowstone Build Beats as Municipal Contract Fuels Split Earthmoving Unit",
-      "body": "First results since the $610M municipal award showed revenue up 14% to $498M, with Delphine Vaugh's carved-out heavy-earthmoving unit contributing the bulk of the upside. Vaugh said the safety overhaul had cut incident rates by a third, easing the regulatory scrutiny that shadowed predecessor Halloran's tenure.",
-      "cycle": 82632,
-      "dur": 2
-    },
-    {
-      "company": "Palettstone & Sons",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Palettstone & Sons Opens Second Heirloom Pro Plant to Chase Backorders",
-      "body": "Riding sustained sell-through on the Heirloom Pro Precision Set, Cole Fenn confirmed a $140M facility in Harrowden that will roughly double hand-tool output by next year. Fenn said current backorders stretch eleven weeks and that the plant is meant to 'convert waiting lists into sales' before rivals close the gap.",
-      "cycle": 82632,
-      "dur": 2
     },
     {
       "company": "Bruncrest Works",
@@ -219,36 +259,6 @@
       "head": "Vossenspire Wins $4.1B Compute-and-Storage Mandate in Roe's Biggest Bet",
       "body": "Vossenspire Holdings secured a $4.1 billion mandate to build integrated compute and grid-storage infrastructure for a coastal data corridor, its largest contract to date. CEO Halden Roe called it a 'transformational' step beyond the Northern Utilities pact, though the deal requires heavy upfront capital and a doubling of its build workforce. The scope stretches Vossenspire into compute delivery at scale for the first time, raising execution stakes sharply.",
       "cycle": 82627,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Regulators Open Formal Safety Probe Into Bruncraft as Memo Fallout Spreads",
-      "body": "The National Vehicle Safety Board launched a formal investigation into Bruncraft's axle handling, citing internal memos that showed executives knew of the defect for two years. Marrow faces mounting calls for her resignation as the probe could carry penalties exceeding $500M and a possible production halt at two plants.",
-      "cycle": 82626,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Bruncrest Works Lands Landmark 3.4B Aria Pro Order From National Compute Consortium",
-      "body": "Bruncrest secured a multi-year contract worth up to $3.4B to supply Aria Pro racks across a national compute build-out, its largest order ever. Marlow called the win 'the payoff for betting on the premium tier' and said Eastfield would run at full capacity through the coming year to meet delivery milestones.",
-      "cycle": 82626,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Greywater Grid Taps Outsider Sable Renwick as CEO to Steady the House",
-      "body": "The board appointed veteran power operator Sable Renwick as chief executive, ending months of instability after two major outages and the departures of Halloran and interim leadership. Renwick pledged a full audit of the Batch Reservoir systems and a pause on new campus commitments until reliability is restored.",
-      "cycle": 82626,
       "dur": 8
     }
   ]
