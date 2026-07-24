@@ -1975,7 +1975,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82622,
+    "lastEventCycle": 82635,
     "events": [
       {
         "cycle": 0,
@@ -2069,6 +2069,16 @@
         "size": "standard",
         "head": "Brunridge Works Beats Again as Premium Fine Goods Lift Margins",
         "body": "The consumer conglomerate topped estimates with a 7% margin expansion, driven by early strength in its new premium Fine Goods line and continued National Shelf Deal ramp. CEO Halia Brennt raised full-year guidance modestly, noting the premium tier is 'punching above its shelf space.'",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82635,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunridge Works Widens National Shelf Push With Two New Distribution Centers",
+        "body": "Halia Brennt announced two regional distribution centers to support the ramping national shelf deal, adding roughly 600 jobs across both sites. The expansion is expected to cut fulfillment times to major retailers by 30% and support the premium Fine Goods rollout into more markets. Brennt said the buildout keeps Brunridge ahead of shelf-space commitments through next year.",
         "effects": {
           "consumer": 0.13
         }
@@ -2866,7 +2876,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82622,
+    "lastEventCycle": 82635,
     "events": [
       {
         "cycle": 0,
@@ -2962,6 +2972,16 @@
         "size": "major",
         "head": "Carrowwell Wins $2.4-Billion Industrial Machines Contract to Reindustrialize Aging Plants",
         "body": "In its largest deal ever, Carrowwell signed a multi-year agreement to supply Industrial Machines and Material Handling systems across a national manufacturing modernization program. CEO Theo Thorne, marking his ninth decade at the helm, called it 'a generational order,' with deliveries phased over five years and expected to add roughly 1,800 jobs.",
+        "effects": {
+          "manufacturing": 0.22
+        }
+      },
+      {
+        "cycle": 82635,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Carrowwell Smashes Estimates as Twin Multibillion-Dollar Contracts Fuel Record Quarter",
+        "body": "Theo Thorne delivered a record quarter, with revenue up 24% as the $1.1 billion automation pact and $2.4 billion industrial machines contract both ran at full stride. Order backlog swelled to an all-time high of $8.9 billion, and Carrowwell raised full-year guidance for the third straight period. Thorne said the reindustrialization wave is now Carrowwell's dominant growth engine.",
         "effects": {
           "manufacturing": 0.22
         }
@@ -5928,7 +5948,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82624,
+    "lastEventCycle": 82635,
     "events": [
       {
         "cycle": 0,
@@ -6037,6 +6057,16 @@
         "effects": {
           "logistics": 0.06
         }
+      },
+      {
+        "cycle": 82635,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Halcyon Industries Posts Steady Gains as Southport Fourth Line Reaches Stride",
+        "body": "Dorian Ashby reported modest profit growth as the fourth automated line at Southport hit full utilization and Eastmere continued ramping. Operating margins ticked up 60 basis points on the automation blueprint's efficiency gains. Ashby reaffirmed guidance and described the pace as deliberate and sustainable.",
+        "effects": {
+          "logistics": 0.06
+        }
       }
     ]
   },
@@ -6051,7 +6081,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82629,
+    "lastEventCycle": 82635,
     "events": [
       {
         "cycle": 0,
@@ -6251,6 +6281,16 @@
         "size": "standard",
         "head": "Halhold Systems Lands $900M Compute Supply Deal to Anchor Recovery",
         "body": "Corin Vale secured a four-year, $900M contract to supply core compute capacity to a national logistics consortium, the largest single order since the Northgate carve-out. Vale framed the win as validation of the streamlined structure, projecting it will offset carve-out drag by the second half. Shares of the technology house had lagged after last quarter's miss.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82635,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Systems Unveils Next-Gen Compute Platform to Fulfill $900M Supply Pact",
+        "body": "Corin Vale introduced the Meridian compute line at Halhold's Northgate campus, calling it the backbone of the company's turnaround after two turbulent quarters. Core Compute chief Dala Reyes said initial units will ship to the anchor customer within 60 days, with capacity targeted to cover the full $900 million commitment by year-end. Vale framed the launch as proof the costly carve-out is finally clearing the way for growth.",
         "effects": {
           "technology": 0.13
         }
@@ -7719,7 +7759,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82623,
+    "lastEventCycle": 82635,
     "events": [
       {
         "cycle": 0,
@@ -7818,6 +7858,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82635,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrwright Group Wins $1.4B Corridor Infrastructure Package Spanning Beams and Cable",
+        "body": "Halden Fenn secured a $1.4 billion multi-year award to supply structural materials and wire for the next phase of the Verant Corridor buildout. The contract pairs the recently opened corridor plant with Korrwright's cable operations, locking in demand through 2032. Fenn called it validation of the vertically integrated bet the company placed on the corridor.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -7832,7 +7882,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82628,
+    "lastEventCycle": 82635,
     "events": [
       {
         "cycle": 0,
@@ -7998,6 +8048,16 @@
         "size": "standard",
         "head": "Korrwright Works Beats as Heritage Division Lifts Margins",
         "body": "Korrwright reported a 14% revenue rise, with the newly folded Ambrose & Sons operations contributing ahead of internal targets in their first full quarter. CEO Dunmore Carrow credited shared Vellhorn escapement tooling for cutting per-unit costs across both brands. Management hinted that integration savings would free capital for further acquisitions.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82635,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrwright Works Opens Flagship Heritage Atelier as Carrow Eyes New Markets",
+        "body": "Dunmore Carrow cut the ribbon on a restored downtown atelier that consolidates Korrwright and Ambrose & Sons craftsmanship under one roof, adding roughly 120 master watchmakers. The 40,000-square-foot facility is expected to lift annual output of high-complication timepieces by nearly a third. Carrow hinted the site is a launchpad for entry into two overseas luxury markets next year.",
         "effects": {
           "luxury": 0.13
         }
@@ -10895,7 +10955,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82623,
+    "lastEventCycle": 82635,
     "events": [
       {
         "cycle": 0,
@@ -10991,6 +11051,16 @@
         "size": "standard",
         "head": "Vencyon Beats as Third Hub Ramps Toward Full Throughput",
         "body": "Quarterly revenue rose 9% as the third hub's new handling system cleared its first full-volume quarter without disruption. Iris Halloran said the three-site network is now moving a record 2.1 million units weekly, with the newest hub already at 70% of design capacity.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82635,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vencyon Beats and Raises as Third Hub Hits Full Throughput",
+        "body": "Iris Halloran reported the third hub reached full designed throughput a quarter ahead of schedule, driving revenue up 11% and prompting Vencyon to lift full-year guidance. The company said the new handling system cut per-unit handling costs by 8% across the network. Halloran signaled a fourth site is under early evaluation but stressed no commitment yet.",
         "effects": {
           "logistics": 0.13
         }
@@ -11775,7 +11845,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82616,
+    "lastEventCycle": 82635,
     "events": [
       {
         "cycle": 0,
@@ -11841,6 +11911,16 @@
         "size": "standard",
         "head": "Wrengrove Group Starts Output at Third Plant, Rolls Out Sterile Kit Line",
         "body": "Wrengrove's third consumables plant near Thornbury began commercial production this week, anchoring the launch of a new sterile procedure-kit line aimed at the supply deal signed last year. CEO Rhys Vossen said the facility should lift total consumables capacity by roughly 30% once fully ramped over the next two quarters.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82635,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Wrengrove Group Tops Forecasts as Third Plant and Sterile Kits Scale",
+        "body": "Rhys Vossen posted an 9% revenue gain as the third plant ramped and the new sterile kit line secured its first hospital-system orders. Margins widened on higher consumables volumes tied to the Thornbury deal, and Wrengrove raised its interim dividend. Vossen said sterile kit capacity is already booked into next quarter.",
         "effects": {
           "medical": 0.13
         }
