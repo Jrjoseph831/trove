@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-23T19:20:55.241Z",
+  "generatedAt": "2026-07-24T02:47:54.986Z",
   "beats": [
+    {
+      "company": "Cranecraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Cranecraft Extends Streak to Five Beats as Farm and Textile Lines Stay Balanced",
+      "body": "Cranecraft reported quarterly revenue of $412M, edging past the $405M consensus, with CEO Mira Garr crediting steady Northern Mills throughput and firm farm-equipment reorders. The company held margins flat at 18.4% and reaffirmed its full-year outlook without fanfare, marking a fifth consecutive quarter above estimates.",
+      "cycle": 82632,
+      "dur": 1
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Fennvale Mfg. Delivers Another Quiet Beat as Auto and Fastener Volumes Hold",
+      "body": "Fennvale posted earnings of $1.32 a share against a $1.28 estimate, with Theo Vossen noting that both the auto program and compact fastener line ran at full ramp for the third straight quarter. The company nudged its capacity-utilization guidance higher and again declined to issue any promotional commentary.",
+      "cycle": 82632,
+      "dur": 1
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "scandal",
+      "size": "standard",
+      "head": "Gromford Works Under Fire as Meridian Tourbillon Movements Traced to Undisclosed Supplier",
+      "body": "Reports surfaced that a portion of Gromford's Meridian Tourbillon movements were sourced from an outside workshop despite marketing claiming full in-house manufacture. Corin Aldwych issued a defensive statement acknowledging 'a limited transitional arrangement,' but collectors and guild observers questioned the timing of the fast-tracked launch and demanded an accounting of affected units.",
+      "cycle": 82632,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Ironcrestton Signs Landmark Pact to License Origin Standard Across Luxury Houses",
+      "body": "In a defining move, Wren Adler announced that four rival fine-goods makers will adopt Ironcrestton's traceability framework under a licensing deal worth an estimated $220M over five years. Adler called it 'the moment provenance stops being our advantage and becomes the industry's floor,' positioning Ironcrestton as the standard-setter rather than merely a participant.",
+      "cycle": 82632,
+      "dur": 8
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Marlgear Supply Unveils Ferran Turnaround Plan, Shuttering Drennan Device Unit",
+      "body": "New CEO Adele Ferran announced a sweeping restructure that permanently retires the troubled Drennan device line and consolidates production into two Industrial Machines plants, cutting roughly 900 roles. Ferran framed the move as 'burning the wreckage down to the studs,' pledging a return to profit within four quarters despite an additional $85M in charges this period.",
+      "cycle": 82632,
+      "dur": 2
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Marrowstone Build Beats as Municipal Contract Fuels Split Earthmoving Unit",
+      "body": "First results since the $610M municipal award showed revenue up 14% to $498M, with Delphine Vaugh's carved-out heavy-earthmoving unit contributing the bulk of the upside. Vaugh said the safety overhaul had cut incident rates by a third, easing the regulatory scrutiny that shadowed predecessor Halloran's tenure.",
+      "cycle": 82632,
+      "dur": 2
+    },
+    {
+      "company": "Palettstone & Sons",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Palettstone & Sons Opens Second Heirloom Pro Plant to Chase Backorders",
+      "body": "Riding sustained sell-through on the Heirloom Pro Precision Set, Cole Fenn confirmed a $140M facility in Harrowden that will roughly double hand-tool output by next year. Fenn said current backorders stretch eleven weeks and that the plant is meant to 'convert waiting lists into sales' before rivals close the gap.",
+      "cycle": 82632,
+      "dur": 2
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Steg Tooling Marks Seventh Straight Beat as Second Kelmar Cell Ramps",
+      "body": "Steg Tooling reported $1.09 a share versus a $1.05 estimate as the newly added Kelmar fastener cell reached early production. Iris Vossen said the order book remains 'comfortably full' into next year and reiterated a preference for measured capacity additions over aggressive expansion.",
+      "cycle": 82632,
+      "dur": 1
+    },
     {
       "company": "Bruncrest Works",
       "sector": "technology",
@@ -20,16 +100,6 @@
       "body": "Halden Crowe secured a five-year, $4.1 billion supply agreement with the Meridian Freight Alliance after Vault Cell Guard cleared independent thermal-safety certification with no faults flagged. The deal marks a dramatic reversal from the recall that toppled Royce Lambourne and cost the company an estimated 18% of its power-storage revenue last year. Crowe called it 'the clean slate we promised,' though he staked much of his credibility on the launch.",
       "cycle": 82631,
       "dur": 8
-    },
-    {
-      "company": "Castlestead",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Castlestead Posts Quiet Beat as Harrowfield Supply Deal Ramps Up",
-      "body": "Aurelia Calder reported a slim 1.9% revenue gain as first shipments under the Harrowfield Growers agreement flowed alongside steady nutrient-blend sales. The company held its conservative full-year outlook, citing normal seasonal earthmoving softness. Calder made no new commitments, in keeping with her measured approach.",
-      "cycle": 82631,
-      "dur": 1
     },
     {
       "company": "Hesperforge Supply",
@@ -62,56 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Nudges Past Estimates Again on Steady Farm-Inputs Demand",
-      "body": "Petra Veldt's house delivered its fifth consecutive modest beat, with quarterly revenue up 2.3% and margins holding flat. Farm-input orders offset softer cleaning-and-jansan volumes, keeping the streak intact without surprises. Veldt reiterated guidance and declined to raise it.",
-      "cycle": 82631,
-      "dur": 1
-    },
-    {
-      "company": "Venline & Sons",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Venline & Sons Extends Streak With Another Modest Beat as Marden Runs at Capacity",
-      "body": "Mara Garr reported a 2.1% revenue uptick, with the fully utilized Marden cleanroom driving steady medical-consumables output. Garr flagged early planning for a possible capacity study but emphasized any decision would follow her customary multi-year horizon. Margins held firm and guidance was left unchanged.",
-      "cycle": 82631,
-      "dur": 1
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Blackton Industries Returns to Growth as Post-Recall Costs Fade",
-      "body": "Blackton posted quarterly revenue of 2.1 billion, topping estimates, as the completed Halvern recall lifted a persistent drag on margins. CEO Cassian Rode said reworked weld-inspection standards had won back two major fleet contracts lost during the probe. Operating margin recovered to 9.4 percent from a low of 4.1 percent.",
-      "cycle": 82630,
-      "dur": 2
-    },
-    {
-      "company": "Caldercraft Holdings",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Caldercraft Holdings Beats as Weatherproof Range Drives Household Sales",
-      "body": "Caldercraft topped estimates with revenue of 1.6 billion, led by strong uptake of the expanded weatherproof line and new outdoor tool storage. Vale Fenn said the range now accounts for nearly a fifth of household-goods sales, up from a standing start two quarters ago. The company lifted its full-year outlook slightly.",
-      "cycle": 82630,
-      "dur": 2
-    },
-    {
-      "company": "Drayton Freight",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drayton Freight Signs Multi-Depot Fleet Deal With National Distributor",
-      "body": "Emil Holt announced a 480-unit order of the new heavy-duty pallet-lift line for a national grocery distributor, the largest single order in the company's history. The four-year agreement bundles servicing and spare-parts coverage, extending Drayton's recurring-revenue base. Deliveries begin next quarter across eleven depots.",
-      "cycle": 82630,
-      "dur": 2
-    },
-    {
       "company": "Erretmark Works",
       "sector": "automotive",
       "kind": "major_deal",
@@ -120,26 +140,6 @@
       "body": "Aurelia Garr confirmed the purchase of the storied Veyron marque for 3.2 billion, folding its hand-built roadster heritage into the Erretmark portfolio. Garr said the deal opens a second coachbuilt line alongside the award-winning Grand Flagship, with production to begin at a retooled Veyron facility within eighteen months. The move marks Erretmark's largest acquisition in over a decade.",
       "cycle": 82630,
       "dur": 8
-    },
-    {
-      "company": "Garrweave Mills",
-      "sector": "textiles",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Garrweave Mills Secures Long-Term Textile Supply Renewal With Northfield Output",
-      "body": "Lorne Veldt announced a five-year supply renewal underpinning the reopened Northfield spinning line, locking in volume through the reactivated facility. The agreement follows two quarters of sustained full output at Northfield. Veldt said the deal secures roughly a third of the mill's annual raw-textile production.",
-      "cycle": 82630,
-      "dur": 2
-    },
-    {
-      "company": "Greenmarsh Agro",
-      "sector": "agriculture",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Greenmarsh Agro Debuts Companion Seed Coating for Slow-Release Soil Blend",
-      "body": "Petra Kessler introduced a paired seed-coating input designed to work with the firm's established soil blend, targeting the same regional cooperatives now on renewal. The launch extends Greenmarsh's inputs franchise after two straight quarters of blend-driven beats. Field trials across 40,000 acres reported a 6 percent yield uplift over untreated plots.",
-      "cycle": 82630,
-      "dur": 2
     },
     {
       "company": "Castlehold",
@@ -239,26 +239,6 @@
       "head": "Aperture Compute Faces Regulatory Probe After Dawnmere III Power Fault",
       "body": "Regulators opened a formal inquiry into Aperture Compute's Dawnmere III campus following a substation failure that forced an emergency shutdown and knocked out capacity for nearly two days. CEO Halden Dray defended the aggressive build schedule but acknowledged the fourth-campus timeline could slip as inspectors review electrical and cooling systems across all sites. Two carrier customers have requested contractual assurances on uptime guarantees.",
       "cycle": 82625,
-      "dur": 8
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Calderforge Seals Decade-Long Anchor Pact to Fill Two Future Stormwell Halls",
-      "body": "Nadia Throne unveiled a landmark $9.2 billion agreement committing an unnamed enterprise client to the entirety of Calderforge's planned fifth and sixth Stormwell halls, years before either breaks ground. The deal locks in booked capacity through 2037 and pushes Throne to accelerate the campus master plan, with construction on the fifth hall now brought forward to next spring. It ranks as the largest single contract in the company's six-decade history.",
-      "cycle": 82624,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Marlgear Supply Plunges to Loss as Drennan Settlement Reserve Guts Quarter",
-      "body": "New chief Adele Ferran reported a $780 million quarterly loss after booking a $650 million reserve tied to the consolidated Drennan litigation, alongside a 22 percent drop in device orders as buyers held back. Ferran suspended the dividend and warned that recovery would take 'several hard quarters,' announcing a review of the Industrial Machines unit that could lead to divestment. The house also disclosed the loss of two major distribution partners since the scandal broke.",
-      "cycle": 82624,
       "dur": 8
     }
   ]
