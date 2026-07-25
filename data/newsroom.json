@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-24T19:27:22.855Z",
+  "generatedAt": "2026-07-25T02:46:44.119Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Blackhold Faces Regulatory Probe as National Grid-Storage Failures Trigger Formal Review",
+      "body": "Regulators opened a formal safety investigation into Blackhold's $2.4-billion national storage program after multiple sites faltered during their first live test. The National Energy Oversight Board demanded a full audit of the firm's cell-management systems and froze new site activations pending findings. CEO Renata Solberg acknowledged the review as 'a serious moment' but insisted the underlying technology remains sound.",
+      "cycle": 82636,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Brunmark Names Turnaround Veteran Halvard Renn to Lead Post-Veyra Recovery",
+      "body": "Brunmark's board confirmed Halvard Renn as permanent CEO, ending the interim period that followed Yvette Calder's departure over the Veyra S battery scandal. Renn pledged an independent safety overhaul and a settlement framework for the class-action suit, saying the company must 'earn back every buyer we let down.' He will oversee a paused relaunch of the Veyra line targeted for next year.",
+      "cycle": 82636,
+      "dur": 2
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Castlestone Unveils Next-Gen Compute Tier as Standalone Grid Division Anchors Recovery",
+      "body": "CEO Pell Karsh introduced the Castlestone Halo compute line at the firm's Meridian showcase, pitching it as proof the reliability rework has paid off. The new tier promises 40% higher throughput and carries a three-year uptime guarantee, a direct answer to the data grid probe that cost the company $2.1 billion last year. Karsh called it 'the clean slate we earned the hard way.'",
+      "cycle": 82636,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Greywater Grid Debuts Rebuilt Reservoir System as Renwick Bets on Fresh Start",
+      "body": "CEO Sable Renwick unveiled the redesigned Batch Reservoir platform, the direct successor to the system whose failure triggered two crippling outages under prior leadership. The new architecture adds independent restart pathways and staggered failover, features Renwick called 'non-negotiable after what this house went through.' Independent auditors from Vantor Reliability signed off on the design ahead of launch.",
+      "cycle": 82636,
+      "dur": 2
+    },
+    {
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Holtware Co. Launches Cordless Range Backed by Signature Lifetime Warranty",
+      "body": "Holtware introduced its new cordless power-tool line, extending the lifetime warranty that has driven repeat sales across its award-winning range. CEO Aurelia Dray said the launch responds to strong demand at the company's two fulfillment centers, with the flagship drill and impact set priced to undercut premium rivals. Early retailer commitments cover more than 400 storefronts.",
+      "cycle": 82636,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestcrest Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ironcrestcrest Supply Posts Another Quarter of Steady Growth on Fifth-Warehouse Ramp",
+      "body": "Ironcrestcrest reported revenue up 9% as its newly opened fifth warehouse began clearing backlog in the value lighting range. CEO Dorian Garr credited disciplined inventory turns and repeat orders from mid-market retailers. Margins held firm despite higher freight costs.",
+      "cycle": 82636,
+      "dur": 1
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Korrworks Signs Second Anchor Tenant for Cross-Region Hub Before Completion",
+      "body": "Korrworks locked in a 12-year handling agreement with distributor Halvern Freight to occupy nearly a third of its still-under-construction cross-region hub. CEO Rhys Throne said the deal, valued at roughly $680 million over its term, effectively de-risks the site before its scheduled opening. The commitment brings pre-leased capacity at the hub to 55%.",
+      "cycle": 82636,
+      "dur": 2
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowmoor Holdings Extends Winning Streak as Westline Contracts Bed In",
+      "body": "Marrowmoor reported its eighth consecutive quarter of contract-base growth, with revenue up 7% as newly signed Westline accounts reached full billing. CEO Dorian Steg pointed to low client churn and steady demand for its cleaning and household supply lines. The company reaffirmed its measured expansion outlook for the year.",
+      "cycle": 82636,
+      "dur": 1
+    },
     {
       "company": "Brunridge Works",
       "sector": "consumer",
@@ -20,16 +100,6 @@
       "body": "Theo Thorne delivered a record quarter, with revenue up 24% as the $1.1 billion automation pact and $2.4 billion industrial machines contract both ran at full stride. Order backlog swelled to an all-time high of $8.9 billion, and Carrowwell raised full-year guidance for the third straight period. Thorne said the reindustrialization wave is now Carrowwell's dominant growth engine.",
       "cycle": 82635,
       "dur": 8
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Halcyon Industries Posts Steady Gains as Southport Fourth Line Reaches Stride",
-      "body": "Dorian Ashby reported modest profit growth as the fourth automated line at Southport hit full utilization and Eastmere continued ramping. Operating margins ticked up 60 basis points on the automation blueprint's efficiency gains. Ashby reaffirmed guidance and described the pace as deliberate and sustainable.",
-      "cycle": 82635,
-      "dur": 1
     },
     {
       "company": "Halhold Systems",
@@ -82,16 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Aldouscyon",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Aldouscyon Opens Second Fixture Plant to Feed Four-City Conversion Slate",
-      "body": "Aldouscyon broke ground on a 180,000-square-foot fixture assembly plant near Threndle, its second dedicated conversion facility, to keep pace with pledged rollouts across Marren, Threndle and two prior contract cities. CEO Petra Mercer said the plant will add roughly 400 jobs and shorten lead times on municipal orders by an estimated six weeks. The company reaffirmed that all four conversions remain on their announced timelines.",
-      "cycle": 82634,
-      "dur": 2
-    },
-    {
       "company": "Aperture Compute",
       "sector": "technology",
       "kind": "scandal",
@@ -100,36 +160,6 @@
       "body": "Regulators reviewing the Dawnmere III power fault uncovered internal maintenance logs showing at least three prior overloads that were never disclosed, prompting accusations that CEO Halden Dray's team prioritized backlog delivery over safety reporting. The $12 billion Dawnmere backlog is now under formal review, and two operations executives were placed on leave pending the inquiry. Dray defended the company's record but acknowledged 'reporting gaps' at the fast-scaling campus.",
       "cycle": 82634,
       "dur": 8
-    },
-    {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Dunmorewright Beats as Harborfront and Riverside Work Run in Parallel",
-      "body": "Dunmorewright posted a quarterly beat as the record 340 million Harborfront contract ramped alongside the ongoing Riverside civic package, lifting both earthmoving and plumbing volumes. Emil Skarn said the newly added earthmoving fleet is running near full deployment across the two sites. The company narrowed full-year guidance to the upper end of its prior range.",
-      "cycle": 82634,
-      "dur": 2
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Stegforge Tops Estimates as Rail Plate Mill Nears First Output",
-      "body": "Stegforge beat quarterly forecasts on strong structural materials and machinery volumes, with the dedicated rail plate mill on track for first plate by next quarter under the consortium deal. Aurelia Steg said the second alloy furnace has fully cleared the prior machinery backlog. The company lifted its structural materials outlook while keeping other segments steady.",
-      "cycle": 82634,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Vossenspire Supply Acquires Heirloom Strapmaker Corveil in 480M Vertical Push",
-      "body": "Restless as ever, Quinn Marrow struck a 480 million deal to buy Corveil, the specialty leather and metal band maker that has long supplied the Halden timepiece line. The acquisition brings strap production in-house and secures margins on the timepieces now anchoring Vossenspire's vehicle salons. Marrow called the deal 'the natural next link in the chain.'",
-      "cycle": 82634,
-      "dur": 2
     },
     {
       "company": "Woldmark",
@@ -229,16 +259,6 @@
       "head": "Kessel Drive Widens Recall to 620,000 Vehicles as Storage Probe Deepens",
       "body": "Neave Corliss confirmed the storage-pack recall has ballooned to 620,000 vehicles after regulators tied additional overheating incidents to a supplier defect, with estimated costs now topping $1.9B. Corliss vowed 'total transparency,' announcing free pack replacements and a dedicated safety command center even as the formal probe continues. It is the largest recall in the automotive house's history.",
       "cycle": 82629,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "recall",
-      "size": "major",
-      "head": "Halhold Works Recalls Aveline Bedside Monitors as Probe Widens",
-      "body": "Halhold issued a voluntary recall of roughly 82,000 Aveline bedside monitors after regulators flagged intermittent alarm failures tied to the units under review. CEO Lena Faircloth acknowledged the recall would erase an estimated $190M in near-term revenue and suspend new Aveline shipments pending a firmware fix. The move came just weeks after the safety probe opened, deepening pressure on the company's flagship medical line.",
-      "cycle": 82628,
       "dur": 8
     }
   ]

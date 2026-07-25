@@ -701,7 +701,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82627,
+    "lastEventCycle": 82636,
     "events": [
       {
         "cycle": 0,
@@ -841,6 +841,16 @@
         "size": "major",
         "head": "Blackhold Grid-Storage Sites Falter as National Program Faces First Live Test",
         "body": "Several Blackhold storage installations under the $2.4 billion national program failed to discharge during a peak-demand event, triggering localized grid instability and an emergency review by program overseers. CEO Renata Solberg acknowledged 'firmware synchronization faults' across affected units and pledged retrofits at no cost to the client. The company withheld new backlog guidance pending the review, and program officials confirmed penalty clauses are now under examination.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82636,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Blackhold Faces Regulatory Probe as National Grid-Storage Failures Trigger Formal Review",
+        "body": "Regulators opened a formal safety investigation into Blackhold's $2.4-billion national storage program after multiple sites faltered during their first live test. The National Energy Oversight Board demanded a full audit of the firm's cell-management systems and froze new site activations pending findings. CEO Renata Solberg acknowledged the review as 'a serious moment' but insisted the underlying technology remains sound.",
         "effects": {
           "energy": -0.22
         }
@@ -1814,7 +1824,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82627,
+    "lastEventCycle": 82636,
     "events": [
       {
         "cycle": 0,
@@ -1960,6 +1970,14 @@
         "size": "major",
         "head": "Brunmark CEO Yvette Calder Steps Down as Veyra S Fallout Reaches Boardroom",
         "body": "Yvette Calder resigned after more than a century at the helm, as the board moved to draw a line under the Veyra S battery scandal and mounting class-action liabilities. Directors named turnaround specialist Halvard Renn as chief executive, tasking him with a comprehensive safety overhaul and settlement strategy. The company set aside an additional $900 million for recall and legal costs, and suspended its dividend for the first time in decades.",
+        "effects": {}
+      },
+      {
+        "cycle": 82636,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Brunmark Names Turnaround Veteran Halvard Renn to Lead Post-Veyra Recovery",
+        "body": "Brunmark's board confirmed Halvard Renn as permanent CEO, ending the interim period that followed Yvette Calder's departure over the Veyra S battery scandal. Renn pledged an independent safety overhaul and a settlement framework for the class-action suit, saying the company must 'earn back every buyer we let down.' He will oversee a paused relaunch of the Veyra line targeted for next year.",
         "effects": {}
       }
     ]
@@ -3397,7 +3415,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82629,
+    "lastEventCycle": 82636,
     "events": [
       {
         "cycle": 0,
@@ -3589,6 +3607,16 @@
         "size": "standard",
         "head": "Castlestone Steadies as Standalone Grid Division Returns to Profit",
         "body": "Pell Karsh reported the newly carved-out Grid Reliability division posted its first profitable quarter, helping lift group revenue 6% to $4.3B and easing memories of the $2.1B penalty. Karsh credited a reworked service framework and a leaner core compute unit, though he warned that remediation obligations will continue to weigh through next year. The result marks the first clean beat since the reliability probe erupted.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82636,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Castlestone Unveils Next-Gen Compute Tier as Standalone Grid Division Anchors Recovery",
+        "body": "CEO Pell Karsh introduced the Castlestone Halo compute line at the firm's Meridian showcase, pitching it as proof the reliability rework has paid off. The new tier promises 40% higher throughput and carries a three-year uptime guarantee, a direct answer to the data grid probe that cost the company $2.1 billion last year. Karsh called it 'the clean slate we earned the hard way.'",
         "effects": {
           "technology": 0.13
         }
@@ -5354,7 +5382,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82626,
+    "lastEventCycle": 82636,
     "events": [
       {
         "cycle": 0,
@@ -5479,6 +5507,16 @@
         "head": "Greywater Grid Taps Outsider Sable Renwick as CEO to Steady the House",
         "body": "The board appointed veteran power operator Sable Renwick as chief executive, ending months of instability after two major outages and the departures of Halloran and interim leadership. Renwick pledged a full audit of the Batch Reservoir systems and a pause on new campus commitments until reliability is restored.",
         "effects": {}
+      },
+      {
+        "cycle": 82636,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Greywater Grid Debuts Rebuilt Reservoir System as Renwick Bets on Fresh Start",
+        "body": "CEO Sable Renwick unveiled the redesigned Batch Reservoir platform, the direct successor to the system whose failure triggered two crippling outages under prior leadership. The new architecture adds independent restart pathways and staggered failover, features Renwick called 'non-negotiable after what this house went through.' Independent auditors from Vantor Reliability signed off on the design ahead of launch.",
+        "effects": {
+          "energy": 0.13
+        }
       }
     ]
   },
@@ -7002,7 +7040,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82620,
+    "lastEventCycle": 82636,
     "events": [
       {
         "cycle": 0,
@@ -7081,6 +7119,16 @@
         "effects": {
           "consumer": 0.13
         }
+      },
+      {
+        "cycle": 82636,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Holtware Co. Launches Cordless Range Backed by Signature Lifetime Warranty",
+        "body": "Holtware introduced its new cordless power-tool line, extending the lifetime warranty that has driven repeat sales across its award-winning range. CEO Aurelia Dray said the launch responds to strong demand at the company's two fulfillment centers, with the flagship drill and impact set priced to undercut premium rivals. Early retailer commitments cover more than 400 storefronts.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -7095,7 +7143,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82615,
+    "lastEventCycle": 82636,
     "events": [
       {
         "cycle": 0,
@@ -7163,6 +7211,16 @@
         "body": "Ironcrestcrest opened a fifth distribution warehouse to keep pace with demand for its dimmable workshop fixtures and broader value lighting range. CEO Dorian Garr said unit volumes rose 14% over the prior year, and the new site would cut regional delivery times as the company continues its deliberate expansion.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82636,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Posts Another Quarter of Steady Growth on Fifth-Warehouse Ramp",
+        "body": "Ironcrestcrest reported revenue up 9% as its newly opened fifth warehouse began clearing backlog in the value lighting range. CEO Dorian Garr credited disciplined inventory turns and repeat orders from mid-market retailers. Margins held firm despite higher freight costs.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -7646,7 +7704,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82622,
+    "lastEventCycle": 82636,
     "events": [
       {
         "cycle": 0,
@@ -7742,6 +7800,16 @@
         "size": "standard",
         "head": "Korrworks Breaks Ground on Cross-Region Hub to Support Landmark Handling Pact",
         "body": "Following its recent cross-region deal, Korrworks committed $310M to a new central sorting hub sized for volumes beyond the Merrick corridor. CEO Rhys Throne called the facility 'the backbone of the next decade,' projecting it to reach full throughput within two years.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82636,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrworks Signs Second Anchor Tenant for Cross-Region Hub Before Completion",
+        "body": "Korrworks locked in a 12-year handling agreement with distributor Halvern Freight to occupy nearly a third of its still-under-construction cross-region hub. CEO Rhys Throne said the deal, valued at roughly $680 million over its term, effectively de-risks the site before its scheduled opening. The commitment brings pre-leased capacity at the hub to 55%.",
         "effects": {
           "logistics": 0.13
         }
@@ -8715,7 +8783,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82623,
+    "lastEventCycle": 82636,
     "events": [
       {
         "cycle": 0,
@@ -8811,6 +8879,16 @@
         "size": "flash",
         "head": "Marrowmoor Holdings Adds Westline Contracts to Steady Base",
         "body": "Dorian Steg confirmed a small tuck-in of five Westline facility contracts, extending the recurring-revenue base without altering guidance. The additions bring the group's active contract count past 340, continuing its disciplined, low-drama expansion.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82636,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Extends Winning Streak as Westline Contracts Bed In",
+        "body": "Marrowmoor reported its eighth consecutive quarter of contract-base growth, with revenue up 7% as newly signed Westline accounts reached full billing. CEO Dorian Steg pointed to low client churn and steady demand for its cleaning and household supply lines. The company reaffirmed its measured expansion outlook for the year.",
         "effects": {
           "hospitality": 0.06
         }
