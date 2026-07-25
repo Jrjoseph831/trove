@@ -628,7 +628,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82613,
+    "lastEventCycle": 82637,
     "events": [
       {
         "cycle": 0,
@@ -684,6 +684,16 @@
         "size": "flash",
         "head": "Ashbystead Holdings Logs Fifth Straight Beat on Durable Hospital Demand",
         "body": "Cora Holt's quiet run continued as Ashbystead posted a fifth consecutive modest beat, with revenue up 3.4% on steady replacement-parts orders and maintenance contracts. Management reaffirmed its conservative outlook and flagged no changes to its measured capital plans, keeping to the low-drama cadence investors have come to expect.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82637,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Marks Sixth Straight Beat on Steady Equipment Renewals",
+        "body": "Ashbystead Holdings reported revenue of 1.1B, edging past forecasts for a sixth consecutive quarter on routine hospital equipment renewal cycles. CEO Cora Holt, in her characteristically brief statement, credited 'consistent demand and disciplined operations.' The company reaffirmed its unchanged full-year outlook.",
         "effects": {
           "medical": 0.06
         }
@@ -1514,7 +1524,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82631,
+    "lastEventCycle": 82637,
     "events": [
       {
         "cycle": 0,
@@ -1706,6 +1716,16 @@
         "body": "Ines Marlow confirmed a two-week suspension of the Eastfield assembly line after a critical substrate supplier missed shipments, jeopardizing early deliveries on the $3.4 billion National Compute Consortium order. Marlow, known for bold public bets, admitted the premium Aria Pro ramp had left little inventory buffer. The company is scrambling to secure alternate supply while penalty clauses loom over the marquee contract.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82637,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Bruncrest Works Secures Alternate Component Supply, Restores Aria Pro Deliveries",
+        "body": "Bruncrest Works signed a 900M multi-year supply agreement with fabricator Delnor Components, resolving the shortage that idled its Eastfield line and threatened the 3.4B National Compute Consortium contract. CEO Ines Marlow said Eastfield had resumed full output within 72 hours of the deal and pledged all delayed Aria Pro units would ship by quarter's end. Shares of the volatile compute house had swung sharply during the three-week halt.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -2114,7 +2134,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82631,
+    "lastEventCycle": 82637,
     "events": [
       {
         "cycle": 0,
@@ -2298,6 +2318,16 @@
         "body": "Halden Crowe secured a five-year, $4.1 billion supply agreement with the Meridian Freight Alliance after Vault Cell Guard cleared independent thermal-safety certification with no faults flagged. The deal marks a dramatic reversal from the recall that toppled Royce Lambourne and cost the company an estimated 18% of its power-storage revenue last year. Crowe called it 'the clean slate we promised,' though he staked much of his credibility on the launch.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82637,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunstone & Sons Beats as Vault Cell Guard Ramp Drives Recovery",
+        "body": "Brunstone & Sons posted revenue of 2.7B, beating estimates, powered by early deliveries under its 4.1B fleet contract and strong Vault Cell Guard uptake. CEO Halden Crowe declared the recall era 'firmly behind us,' citing zero field-safety incidents on the new cell line since launch. The company raised full-year guidance for the first time under Crowe's tenure.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -2775,7 +2805,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82624,
+    "lastEventCycle": 82637,
     "events": [
       {
         "cycle": 0,
@@ -2877,6 +2907,16 @@
         "size": "standard",
         "head": "Carrowforge's New Chief Demore Orders Independent Testing Rebuild",
         "body": "Marlow Demore announced the creation of an autonomous quality-assurance division reporting directly to the board, alongside the retirement of every machine model tied to the altered-records scandal. The overhaul carries a $145 million charge and includes free re-inspection for the roughly 2,100 industrial buyers named in the pending class action. Demore said the moves were 'the price of rebuilding a name that engineers can trust again.'",
+        "effects": {
+          "manufacturing": -0.13
+        }
+      },
+      {
+        "cycle": 82637,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Carrowforge Posts Quarterly Miss as Testing Overhaul Bites Into Margins",
+        "body": "Carrowforge reported quarterly revenue of 1.9B, down 12% year-on-year, missing internal targets as the independent testing rebuild slowed machine certifications and delayed shipments. CEO Marlow Demore told investors the 140M rebuild program would 'weigh on results near term' but insisted the company was 'clearing the wreckage of the old regime.' Order backlogs grew to a record 620M as customers awaited re-certified units.",
         "effects": {
           "manufacturing": -0.13
         }
@@ -4744,7 +4784,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82628,
+    "lastEventCycle": 82637,
     "events": [
       {
         "cycle": 0,
@@ -4892,6 +4932,16 @@
         "body": "Fennmoor consolidated its Threll sensor business and freshly acquired Callent Labs into a single Diagnostics division, cutting an estimated 4% of overlapping roles. CEO Dorian Brandt said the structure would speed a combined sensor-and-lab platform to the hospital networks already under contract. The reorganization carries a one-time charge of about $70M.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82637,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Fennmoor Launches Threll Diagnostics Suite Built on Callent Integration",
+        "body": "Fennmoor unveiled its Threll Diagnostics Suite, a bundled sensor-and-analysis platform combining Threll hardware with newly integrated Callent Labs assays, targeting mid-size hospital networks. CEO Dorian Brandt said pilot deployments across nine facilities had already generated 85M in committed orders. The launch marks Fennmoor's first product to fully merge its device and medical lines since the Callent acquisition.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -10124,7 +10174,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82626,
+    "lastEventCycle": 82637,
     "events": [
       {
         "cycle": 0,
@@ -10228,6 +10278,16 @@
         "body": "New chief Marlowe Trent unveiled a restructuring that will close the two fastening plants at the center of the output-inflation probe and cut roughly 900 jobs. Trent said the $180M charge would 'draw a line' under the scandal and refocus the house on its core hardware and tools lines.",
         "effects": {
           "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82637,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Thaldale Group Faces Widened Investor Suit as Regulators Join Fastening Probe",
+        "body": "The investor lawsuit against Thaldale Group expanded sharply after regulators opened a formal inquiry into alleged inflated output claims at its shuttered fastening plants, with plaintiffs now seeking 480M in damages. Filings allege CEO Marlowe Trent's turnaround disclosures understated the scope of prior misstatements, a claim the company 'firmly rejects.' The escalation deepens a scandal that has already cost Thaldale two plants and its former operations chief.",
+        "effects": {
+          "consumer": -0.22
         }
       }
     ]
@@ -10765,7 +10825,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82629,
+    "lastEventCycle": 82637,
     "events": [
       {
         "cycle": 0,
@@ -10925,6 +10985,16 @@
         "body": "Adrienne Sole unveiled a sweeping sourcing overhaul, consolidating from 40 suppliers to 12 fully audited partners and folding the Fine Goods and Timepiece units under a single integrity office. The plan carries $220M in restructuring charges but Sole pledged full third-party verification within a year to rebuild trust after the cover-up. The investor suit remains unresolved.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82637,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale House Debuts Meridian Timepiece Line With Fully Traceable Sourcing",
+        "body": "Varnvale House launched its Meridian collection, the first timepiece range produced entirely under the overhauled sourcing framework introduced after last year's cover-up scandal. CEO Adrienne Sole showcased a public provenance ledger for every component and priced the flagship model at 42,000. Sole called Meridian 'proof that this house has changed,' though analysts noted early boutique orders remained modest at 60M.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -12016,7 +12086,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82618,
+    "lastEventCycle": 82637,
     "events": [
       {
         "cycle": 0,
@@ -12082,6 +12152,16 @@
         "size": "flash",
         "head": "Wrenhaus Opens Regional Distribution Hub to Speed Fixture Deliveries",
         "body": "Wrenhaus commissioned a 90,000-square-foot distribution hub near the Calderhythe corridor, aimed at cutting lead times on plumbing and fixture orders by an estimated 30%. CEO Quinn Thorne framed the move as a disciplined extension of the Riverside buildout rather than a step into new markets.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82637,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wrenhaus Beats on Distribution Hub Efficiencies and Riverside Volumes",
+        "body": "Wrenhaus reported quarterly revenue of 780M, ahead of expectations, as its new regional distribution hub trimmed delivery times and lifted fixture shipment volumes 9%. CEO Quinn Thorne pointed to improved order-to-delivery cycles and reaffirmed the company's measured expansion strategy. Operating margins ticked up to 18.4%.",
         "effects": {
           "construction": 0.06
         }
