@@ -1,14 +1,84 @@
 {
-  "generatedAt": "2026-07-25T08:08:47.964Z",
+  "generatedAt": "2026-07-25T13:37:35.126Z",
   "beats": [
     {
-      "company": "Ashbystead Holdings",
-      "sector": "medical",
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Aldouscraft Mfg. Secures Second Grid Contract to Extend Feeder Cable Supply",
+      "body": "Aldouscraft won a second multi-year feeder cable award tied to a neighboring grid expansion, adding roughly $310 million in backlog over five years. Soren Ashby said the recently added third extrusion line positions the company to absorb the volume without near-term capacity strain. The win deepens Aldouscraft's role in regional grid buildouts.",
+      "cycle": 82638,
+      "dur": 2
+    },
+    {
+      "company": "Aldousspire Group",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Aldousspire Group Opens Heirloom Concept Stores After Award-Winning Run",
+      "body": "Building on its Retailer of the Year win, Aldousspire will open 24 dedicated Heirloom concept stores over the next 18 months, its first company-owned retail footprint in decades. CEO Mira Ashby framed the move as a measured bet, noting the alliance rollout gave the company confidence to control more of its own storefronts. Initial locations target established metropolitan districts.",
+      "cycle": 82638,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Castlehold's Reneth Ousted as Board Installs Turnaround Chief Amid Saltmere Fallout",
+      "body": "The board removed Ivo Reneth after mounting pressure over the Saltmere disclosures, naming veteran restructuring executive Halden Voss as chief executive with a mandate to steady finances and settle litigation. Voss inherits cleanup and legal exposure now estimated near $5.2 billion, and pledged a full governance review within 90 days. Shares had lost more than half their value since the leaked files surfaced.",
+      "cycle": 82638,
+      "dur": 8
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Ashbystead Holdings Marks Sixth Straight Beat on Steady Equipment Renewals",
-      "body": "Ashbystead Holdings reported revenue of 1.1B, edging past forecasts for a sixth consecutive quarter on routine hospital equipment renewal cycles. CEO Cora Holt, in her characteristically brief statement, credited 'consistent demand and disciplined operations.' The company reaffirmed its unchanged full-year outlook.",
-      "cycle": 82637,
+      "head": "Drustcraft Steadies After Recall as Twin Vehicle-Line Volumes Recover",
+      "body": "Drustcraft edged past estimates as fastener shipments to its twin global vehicle lines resumed following the contained recall, with management reporting no lasting customer loss. Cora Fenn said corrective quality controls at the new plant are fully in place. Revenue rose 6% on the ramp.",
+      "cycle": 82638,
+      "dur": 1
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Gromford Works Faces Regulatory Probe Over Undisclosed Meridian Tourbillon Supplier",
+      "body": "Industry regulators opened a formal inquiry into Gromford's sourcing disclosures after reports that Meridian Tourbillon movements came from an undisclosed third party, raising authenticity and labeling questions for premium buyers. Corin Aldwych suspended new Tourbillon shipments pending review and commissioned an independent audit. The scrutiny threatens the momentum from the record holiday quarter.",
+      "cycle": 82638,
+      "dur": 8
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Lhaus Industries Misses as Cell-Pack Buildout Costs Squeeze Margins",
+      "body": "Lhaus reported quarterly profit below expectations as the rapid Delphin integration and fifth-line construction pushed capital spending and startup costs higher than guided. Margins in the cell-pack segment slipped to 9.1% from 13.4% a year earlier, though Cole Brandt insisted the scale push would pay off once new lines reach full run-rate. Vehicle and parts units held steady.",
+      "cycle": 82638,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Thronehaus & Co. Acquires Case-Making House Ferrault to Deepen In-House Craft",
+      "body": "Fresh off the Verrand's horology prize, Cora Dray struck a deal to acquire specialist case and dial maker Ferrault for an undisclosed sum, folding a longtime supplier into the atelier. The acquisition secures scarce finishing capacity as demand for complications climbs. Dray said the deal furthers her aim of keeping every step of production under one roof.",
+      "cycle": 82638,
+      "dur": 2
+    },
+    {
+      "company": "Wold & Bramm",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Wold & Bramm Delivers Steady Quarter as Fourth Showroom Nears Completion",
+      "body": "Wold & Bramm posted another in-line quarter with household goods and heritage lighting both growing modestly, and confirmed the fourth showroom remains on schedule to open next quarter. Mara Marrow reiterated the disciplined, self-funded expansion approach. Operating margin held near 15%.",
+      "cycle": 82638,
       "dur": 1
     },
     {
@@ -72,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Wrenhaus",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Wrenhaus Beats on Distribution Hub Efficiencies and Riverside Volumes",
-      "body": "Wrenhaus reported quarterly revenue of 780M, ahead of expectations, as its new regional distribution hub trimmed delivery times and lifted fixture shipment volumes 9%. CEO Quinn Thorne pointed to improved order-to-delivery cycles and reaffirmed the company's measured expansion strategy. Operating margins ticked up to 18.4%.",
-      "cycle": 82637,
-      "dur": 1
-    },
-    {
       "company": "Blackhold",
       "sector": "energy",
       "kind": "safety_probe",
@@ -90,56 +150,6 @@
       "body": "Regulators opened a formal safety investigation into Blackhold's $2.4-billion national storage program after multiple sites faltered during their first live test. The National Energy Oversight Board demanded a full audit of the firm's cell-management systems and froze new site activations pending findings. CEO Renata Solberg acknowledged the review as 'a serious moment' but insisted the underlying technology remains sound.",
       "cycle": 82636,
       "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Brunmark Names Turnaround Veteran Halvard Renn to Lead Post-Veyra Recovery",
-      "body": "Brunmark's board confirmed Halvard Renn as permanent CEO, ending the interim period that followed Yvette Calder's departure over the Veyra S battery scandal. Renn pledged an independent safety overhaul and a settlement framework for the class-action suit, saying the company must 'earn back every buyer we let down.' He will oversee a paused relaunch of the Veyra line targeted for next year.",
-      "cycle": 82636,
-      "dur": 2
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Castlestone Unveils Next-Gen Compute Tier as Standalone Grid Division Anchors Recovery",
-      "body": "CEO Pell Karsh introduced the Castlestone Halo compute line at the firm's Meridian showcase, pitching it as proof the reliability rework has paid off. The new tier promises 40% higher throughput and carries a three-year uptime guarantee, a direct answer to the data grid probe that cost the company $2.1 billion last year. Karsh called it 'the clean slate we earned the hard way.'",
-      "cycle": 82636,
-      "dur": 2
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Greywater Grid Debuts Rebuilt Reservoir System as Renwick Bets on Fresh Start",
-      "body": "CEO Sable Renwick unveiled the redesigned Batch Reservoir platform, the direct successor to the system whose failure triggered two crippling outages under prior leadership. The new architecture adds independent restart pathways and staggered failover, features Renwick called 'non-negotiable after what this house went through.' Independent auditors from Vantor Reliability signed off on the design ahead of launch.",
-      "cycle": 82636,
-      "dur": 2
-    },
-    {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Holtware Co. Launches Cordless Range Backed by Signature Lifetime Warranty",
-      "body": "Holtware introduced its new cordless power-tool line, extending the lifetime warranty that has driven repeat sales across its award-winning range. CEO Aurelia Dray said the launch responds to strong demand at the company's two fulfillment centers, with the flagship drill and impact set priced to undercut premium rivals. Early retailer commitments cover more than 400 storefronts.",
-      "cycle": 82636,
-      "dur": 2
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrworks Signs Second Anchor Tenant for Cross-Region Hub Before Completion",
-      "body": "Korrworks locked in a 12-year handling agreement with distributor Halvern Freight to occupy nearly a third of its still-under-construction cross-region hub. CEO Rhys Throne said the deal, valued at roughly $680 million over its term, effectively de-risks the site before its scheduled opening. The commitment brings pre-leased capacity at the hub to 55%.",
-      "cycle": 82636,
-      "dur": 2
     },
     {
       "company": "Carrowwell",
@@ -229,16 +239,6 @@
       "head": "Brunstone & Sons Wins 4.1B Fleet Contract as Vault Cell Guard Passes Independent Trials",
       "body": "Halden Crowe secured a five-year, $4.1 billion supply agreement with the Meridian Freight Alliance after Vault Cell Guard cleared independent thermal-safety certification with no faults flagged. The deal marks a dramatic reversal from the recall that toppled Royce Lambourne and cost the company an estimated 18% of its power-storage revenue last year. Crowe called it 'the clean slate we promised,' though he staked much of his credibility on the launch.",
       "cycle": 82631,
-      "dur": 8
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Erretmark Works Acquires Veyron Marque to Add Ultra-Luxury Roadster Line",
-      "body": "Aurelia Garr confirmed the purchase of the storied Veyron marque for 3.2 billion, folding its hand-built roadster heritage into the Erretmark portfolio. Garr said the deal opens a second coachbuilt line alongside the award-winning Grand Flagship, with production to begin at a retooled Veyron facility within eighteen months. The move marks Erretmark's largest acquisition in over a decade.",
-      "cycle": 82630,
       "dur": 8
     }
   ]

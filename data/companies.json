@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82620,
+    "lastEventCycle": 82638,
     "events": [
       {
         "cycle": 0,
@@ -88,6 +88,16 @@
         "body": "Aldouscraft posted a modest quarterly beat, with revenue of $640M as its third extrusion line began contributing feeder cable volumes for the grid expansion award. CEO Soren Ashby said output is tracking to plan and reiterated full-year guidance without fanfare. Margins held steady at 12.1%.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82638,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aldouscraft Mfg. Secures Second Grid Contract to Extend Feeder Cable Supply",
+        "body": "Aldouscraft won a second multi-year feeder cable award tied to a neighboring grid expansion, adding roughly $310 million in backlog over five years. Soren Ashby said the recently added third extrusion line positions the company to absorb the volume without near-term capacity strain. The win deepens Aldouscraft's role in regional grid buildouts.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -299,7 +309,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82615,
+    "lastEventCycle": 82638,
     "events": [
       {
         "cycle": 0,
@@ -367,6 +377,16 @@
         "body": "The Apparel Guild's annual awards recognized Aldousspire's Heirloom denim and outerwear collection for design and durability, citing its nationwide rollout. CEO Mira Ashby accepted the honor, crediting the craftsmanship behind the range while noting the company would keep expansion \"measured and true to the label.\"",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82638,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Aldousspire Group Opens Heirloom Concept Stores After Award-Winning Run",
+        "body": "Building on its Retailer of the Year win, Aldousspire will open 24 dedicated Heirloom concept stores over the next 18 months, its first company-owned retail footprint in decades. CEO Mira Ashby framed the move as a measured bet, noting the alliance rollout gave the company confidence to control more of its own storefronts. Initial locations target established metropolitan districts.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -3196,14 +3216,14 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1971,
-    "ceo": "Ivo Reneth",
+    "ceo": "Halden Voss",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.76,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82629,
+    "lastEventCycle": 82638,
     "events": [
       {
         "cycle": 0,
@@ -3368,6 +3388,14 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82638,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Castlehold's Reneth Ousted as Board Installs Turnaround Chief Amid Saltmere Fallout",
+        "body": "The board removed Ivo Reneth after mounting pressure over the Saltmere disclosures, naming veteran restructuring executive Halden Voss as chief executive with a mandate to steady finances and settle litigation. Voss inherits cleanup and legal exposure now estimated near $5.2 billion, and pledged a full governance review within 90 days. Shares had lost more than half their value since the leaked files surfaced.",
+        "effects": {}
       }
     ]
   },
@@ -4106,7 +4134,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82625,
+    "lastEventCycle": 82638,
     "events": [
       {
         "cycle": 0,
@@ -4214,6 +4242,16 @@
         "body": "Drustcraft issued a voluntary recall covering roughly 420,000 fasteners produced at its new plant after internal testing flagged a torque-tolerance defect in one production run. CEO Cora Fenn said the affected lots had been isolated before reaching final assembly and that the twin global vehicle-line ramp would continue on schedule. The company estimated a one-time charge of $18 million.",
         "effects": {
           "manufacturing": -0.13
+        }
+      },
+      {
+        "cycle": 82638,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drustcraft Steadies After Recall as Twin Vehicle-Line Volumes Recover",
+        "body": "Drustcraft edged past estimates as fastener shipments to its twin global vehicle lines resumed following the contained recall, with management reporting no lasting customer loss. Cora Fenn said corrective quality controls at the new plant are fully in place. Revenue rose 6% on the ramp.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -5581,7 +5619,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82632,
+    "lastEventCycle": 82638,
     "events": [
       {
         "cycle": 0,
@@ -5795,6 +5833,16 @@
         "body": "Reports surfaced that a portion of Gromford's Meridian Tourbillon movements were sourced from an outside workshop despite marketing claiming full in-house manufacture. Corin Aldwych issued a defensive statement acknowledging 'a limited transitional arrangement,' but collectors and guild observers questioned the timing of the fast-tracked launch and demanded an accounting of affected units.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82638,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Gromford Works Faces Regulatory Probe Over Undisclosed Meridian Tourbillon Supplier",
+        "body": "Industry regulators opened a formal inquiry into Gromford's sourcing disclosures after reports that Meridian Tourbillon movements came from an undisclosed third party, raising authenticity and labeling questions for premium buyers. Corin Aldwych suspended new Tourbillon shipments pending review and commissioned an independent audit. The scrutiny threatens the momentum from the record holiday quarter.",
+        "effects": {
+          "luxury": -0.22
         }
       }
     ]
@@ -8193,7 +8241,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82631,
+    "lastEventCycle": 82638,
     "events": [
       {
         "cycle": 0,
@@ -8391,6 +8439,16 @@
         "body": "Fresh off absorbing Delphin's plants, Cole Brandt announced a $2.1 billion investment to add a fifth cell-pack line at the newly unified Halbrook complex. The move lifts targeted annual output past 40 gigawatt-hours and, Brandt told reporters, positions Lhaus to underbid rivals on volume contracts. Analysts noted the pace reflects Brandt's long habit of building faster than demand strictly requires.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82638,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Lhaus Industries Misses as Cell-Pack Buildout Costs Squeeze Margins",
+        "body": "Lhaus reported quarterly profit below expectations as the rapid Delphin integration and fifth-line construction pushed capital spending and startup costs higher than guided. Margins in the cell-pack segment slipped to 9.1% from 13.4% a year earlier, though Cole Brandt insisted the scale push would pay off once new lines reach full run-rate. Vehicle and parts units held steady.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -10303,7 +10361,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82628,
+    "lastEventCycle": 82638,
     "events": [
       {
         "cycle": 0,
@@ -10451,6 +10509,16 @@
         "body": "The Verrand Grand Complication won the Guild of Meridian Watchmaking's highest annual honor, beating a field of 40 entries. CEO Cora Dray called the recognition a validation of the atelier's vertical-integration push, noting the winning piece used only in-house dials and movements. The award is expected to lift order interest at the flagship.",
         "effects": {
           "luxury": 0.06
+        }
+      },
+      {
+        "cycle": 82638,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Thronehaus & Co. Acquires Case-Making House Ferrault to Deepen In-House Craft",
+        "body": "Fresh off the Verrand's horology prize, Cora Dray struck a deal to acquire specialist case and dial maker Ferrault for an undisclosed sum, folding a longtime supplier into the atelier. The acquisition secures scarce finishing capacity as demand for complications climbs. Dray said the deal furthers her aim of keeping every step of production under one roof.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -11767,7 +11835,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82617,
+    "lastEventCycle": 82638,
     "events": [
       {
         "cycle": 0,
@@ -11833,6 +11901,16 @@
         "size": "flash",
         "head": "Wold & Bramm Breaks Ground on Fourth Heritage Lighting Showroom",
         "body": "Mara Marrow confirmed construction has begun on a fourth regional showroom, following steady foot-traffic gains at the third location. The measured rollout keeps capital spending within the firm's stated annual envelope, with an opening targeted for next year.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82638,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wold & Bramm Delivers Steady Quarter as Fourth Showroom Nears Completion",
+        "body": "Wold & Bramm posted another in-line quarter with household goods and heritage lighting both growing modestly, and confirmed the fourth showroom remains on schedule to open next quarter. Mara Marrow reiterated the disciplined, self-funded expansion approach. Operating margin held near 15%.",
         "effects": {
           "consumer": 0.06
         }
