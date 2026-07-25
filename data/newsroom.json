@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-25T13:37:35.126Z",
+  "generatedAt": "2026-07-25T19:09:51.194Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Blackton Industries Wins Multi-Year Supply Contract After Clearing Halvern Overhang",
+      "body": "Cassian Rode announced a four-year components deal with a major assembly group valued at roughly $680 million, the company's largest since the Halvern recall. Rode said the win reflects restored confidence following the completed weld remediation and a rebuilt quality-assurance unit. Blackton expects the contract to add meaningful volume to its two flagship plants beginning next quarter.",
+      "cycle": 82639,
+      "dur": 2
+    },
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Calderworks Beats as Tessen Ridge Supply Pact Drives Sustained Kiln Demand",
+      "body": "Kestrel Halloran reported operating profit up 12% on record structural-materials shipments feeding the Tessen Ridge Phase Two build-out. The decade-long supply pact locked in earlier now underpins a backlog stretching into the next fiscal year, prompting Calderworks to raise full-year guidance. Halloran noted the firm is evaluating a kiln capacity addition to meet the committed volumes.",
+      "cycle": 82639,
+      "dur": 2
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowcyon & Sons Beats Again as New Distribution Center Lifts Lighting Margins",
+      "body": "Cole Brandt reported quarterly revenue of $412 million, up 9% year over year, crediting the newly opened distribution center for trimming fulfillment costs across the modular lighting range. Retail sell-through climbed 14% as three national chains widened shelf space for the line. Brandt signaled the company is weighing a second product tier to capitalize on the momentum.",
+      "cycle": 82639,
+      "dur": 2
+    },
+    {
+      "company": "Forgegrave Industries",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Forgegrave Industries Extends Meridian Partnership With Add-On Hub Fleet Order",
+      "body": "Petra Thorne announced Meridian Freight has expanded its outfitting contract to cover four additional regional hubs, adding roughly $210 million to the existing order. The extension keeps Forgegrave's second assembly plant at full output through year-end and adds a modest maintenance-services component. Thorne said the deal reflects consistent delivery performance rather than any shift in the company's steady operating approach.",
+      "cycle": 82639,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Halhold Works Rocked as Internal Memos Show Aveline Monitor Flaws Known Before Launch",
+      "body": "Leaked correspondence revealed that Halhold engineers flagged voltage instability in the Aveline bedside monitors nearly a year before shipment, warnings that senior management reportedly overrode to meet a launch window. Lena Faircloth faces mounting calls from the board and hospital plaintiffs to testify, and shares tumbled 22% as three institutional partners suspended orders. The disclosure transforms what had been a product failure into a governance crisis at the heart of Halhold's medical division.",
+      "cycle": 82639,
+      "dur": 8
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Kessel Drive Plunges Into Deep Loss as Recall and Probe Costs Overwhelm Quarter",
+      "body": "Kessel Drive posted a quarterly loss of $1.1 billion, far wider than expected, as widening recall provisions and regulatory penalties tied to its storage packs battered the balance sheet. Neave Corliss conceded the restructure had not yet stemmed the bleeding, with vehicle deliveries down 31% and the newly split storage unit still absorbing warranty charges. The board has retained outside advisers to review financing options amid speculation over a capital raise.",
+      "cycle": 82639,
+      "dur": 8
+    },
+    {
+      "company": "Vossenwright Holdings",
+      "sector": "agriculture",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Vossenwright Holdings Lands Regional Fleet Order for Fuel-Saving Seeder Line",
+      "body": "Quinn Skarn confirmed a bulk order from a farming consortium covering 340 next-generation seeders, the largest single purchase of the fuel-efficient line to date. The deal, valued near $95 million, extends the earlier servicing pact into new equipment sales. Skarn characterized the order as steady validation of the company's cautious modernization strategy.",
+      "cycle": 82639,
+      "dur": 2
+    },
+    {
+      "company": "Wrenspire",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Wrenspire Extends Everyroom Reach Into Food Service With Bundled Supply Program",
+      "body": "Theo Aldous confirmed Wrenspire will pipe its Everyroom distribution network into its Food Service arm, launching a bundled supply program that pairs household and pantry deliveries for institutional buyers. The company said 1,200 regional accounts have signed on ahead of the March rollout, with a fifth hub slated to break ground by summer. Aldous framed the move as a natural widening of the network rather than a departure from Wrenspire's measured cadence.",
+      "cycle": 82639,
+      "dur": 2
+    },
     {
       "company": "Aldouscraft Mfg.",
       "sector": "construction",
@@ -30,16 +110,6 @@
       "body": "The board removed Ivo Reneth after mounting pressure over the Saltmere disclosures, naming veteran restructuring executive Halden Voss as chief executive with a mandate to steady finances and settle litigation. Voss inherits cleanup and legal exposure now estimated near $5.2 billion, and pledged a full governance review within 90 days. Shares had lost more than half their value since the leaked files surfaced.",
       "cycle": 82638,
       "dur": 8
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Drustcraft Steadies After Recall as Twin Vehicle-Line Volumes Recover",
-      "body": "Drustcraft edged past estimates as fastener shipments to its twin global vehicle lines resumed following the contained recall, with management reporting no lasting customer loss. Cora Fenn said corrective quality controls at the new plant are fully in place. Revenue rose 6% on the ramp.",
-      "cycle": 82638,
-      "dur": 1
     },
     {
       "company": "Gromford Works",
@@ -72,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Wold & Bramm",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Wold & Bramm Delivers Steady Quarter as Fourth Showroom Nears Completion",
-      "body": "Wold & Bramm posted another in-line quarter with household goods and heritage lighting both growing modestly, and confirmed the fourth showroom remains on schedule to open next quarter. Mara Marrow reiterated the disciplined, self-funded expansion approach. Operating margin held near 15%.",
-      "cycle": 82638,
-      "dur": 1
-    },
-    {
       "company": "Bruncrest Works",
       "sector": "technology",
       "kind": "major_deal",
@@ -92,36 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Brunstone & Sons Beats as Vault Cell Guard Ramp Drives Recovery",
-      "body": "Brunstone & Sons posted revenue of 2.7B, beating estimates, powered by early deliveries under its 4.1B fleet contract and strong Vault Cell Guard uptake. CEO Halden Crowe declared the recall era 'firmly behind us,' citing zero field-safety incidents on the new cell line since launch. The company raised full-year guidance for the first time under Crowe's tenure.",
-      "cycle": 82637,
-      "dur": 2
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Carrowforge Posts Quarterly Miss as Testing Overhaul Bites Into Margins",
-      "body": "Carrowforge reported quarterly revenue of 1.9B, down 12% year-on-year, missing internal targets as the independent testing rebuild slowed machine certifications and delayed shipments. CEO Marlow Demore told investors the 140M rebuild program would 'weigh on results near term' but insisted the company was 'clearing the wreckage of the old regime.' Order backlogs grew to a record 620M as customers awaited re-certified units.",
-      "cycle": 82637,
-      "dur": 2
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Fennmoor Launches Threll Diagnostics Suite Built on Callent Integration",
-      "body": "Fennmoor unveiled its Threll Diagnostics Suite, a bundled sensor-and-analysis platform combining Threll hardware with newly integrated Callent Labs assays, targeting mid-size hospital networks. CEO Dorian Brandt said pilot deployments across nine facilities had already generated 85M in committed orders. The launch marks Fennmoor's first product to fully merge its device and medical lines since the Callent acquisition.",
-      "cycle": 82637,
-      "dur": 2
-    },
-    {
       "company": "Thaldale Group",
       "sector": "consumer",
       "kind": "lawsuit",
@@ -130,16 +160,6 @@
       "body": "The investor lawsuit against Thaldale Group expanded sharply after regulators opened a formal inquiry into alleged inflated output claims at its shuttered fastening plants, with plaintiffs now seeking 480M in damages. Filings allege CEO Marlowe Trent's turnaround disclosures understated the scope of prior misstatements, a claim the company 'firmly rejects.' The escalation deepens a scandal that has already cost Thaldale two plants and its former operations chief.",
       "cycle": 82637,
       "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Varnvale House Debuts Meridian Timepiece Line With Fully Traceable Sourcing",
-      "body": "Varnvale House launched its Meridian collection, the first timepiece range produced entirely under the overhauled sourcing framework introduced after last year's cover-up scandal. CEO Adrienne Sole showcased a public provenance ledger for every component and priced the flagship model at 42,000. Sole called Meridian 'proof that this house has changed,' though analysts noted early boutique orders remained modest at 60M.",
-      "cycle": 82637,
-      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -219,26 +239,6 @@
       "head": "Ironcrestton Signs Landmark Pact to License Origin Standard Across Luxury Houses",
       "body": "In a defining move, Wren Adler announced that four rival fine-goods makers will adopt Ironcrestton's traceability framework under a licensing deal worth an estimated $220M over five years. Adler called it 'the moment provenance stops being our advantage and becomes the industry's floor,' positioning Ironcrestton as the standard-setter rather than merely a participant.",
       "cycle": 82632,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "outage",
-      "size": "major",
-      "head": "Bruncrest Works Halts Eastfield Line as Component Shortage Threatens Aria Pro Deliveries",
-      "body": "Ines Marlow confirmed a two-week suspension of the Eastfield assembly line after a critical substrate supplier missed shipments, jeopardizing early deliveries on the $3.4 billion National Compute Consortium order. Marlow, known for bold public bets, admitted the premium Aria Pro ramp had left little inventory buffer. The company is scrambling to secure alternate supply while penalty clauses loom over the marquee contract.",
-      "cycle": 82631,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Brunstone & Sons Wins 4.1B Fleet Contract as Vault Cell Guard Passes Independent Trials",
-      "body": "Halden Crowe secured a five-year, $4.1 billion supply agreement with the Meridian Freight Alliance after Vault Cell Guard cleared independent thermal-safety certification with no faults flagged. The deal marks a dramatic reversal from the recall that toppled Royce Lambourne and cost the company an estimated 18% of its power-storage revenue last year. Crowe called it 'the clean slate we promised,' though he staked much of his credibility on the launch.",
-      "cycle": 82631,
       "dur": 8
     }
   ]

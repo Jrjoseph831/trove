@@ -981,7 +981,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82630,
+    "lastEventCycle": 82639,
     "events": [
       {
         "cycle": 0,
@@ -1123,6 +1123,16 @@
         "size": "standard",
         "head": "Blackton Industries Returns to Growth as Post-Recall Costs Fade",
         "body": "Blackton posted quarterly revenue of 2.1 billion, topping estimates, as the completed Halvern recall lifted a persistent drag on margins. CEO Cassian Rode said reworked weld-inspection standards had won back two major fleet contracts lost during the probe. Operating margin recovered to 9.4 percent from a low of 4.1 percent.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82639,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Blackton Industries Wins Multi-Year Supply Contract After Clearing Halvern Overhang",
+        "body": "Cassian Rode announced a four-year components deal with a major assembly group valued at roughly $680 million, the company's largest since the Halvern recall. Rode said the win reflects restored confidence following the completed weld remediation and a rebuilt quality-assurance unit. Blackton expects the contract to add meaningful volume to its two flagship plants beginning next quarter.",
         "effects": {
           "automotive": 0.13
         }
@@ -2629,7 +2639,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82623,
+    "lastEventCycle": 82639,
     "events": [
       {
         "cycle": 0,
@@ -2708,6 +2718,16 @@
         "effects": {
           "construction": 0.22
         }
+      },
+      {
+        "cycle": 82639,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderworks Beats as Tessen Ridge Supply Pact Drives Sustained Kiln Demand",
+        "body": "Kestrel Halloran reported operating profit up 12% on record structural-materials shipments feeding the Tessen Ridge Phase Two build-out. The decade-long supply pact locked in earlier now underpins a backlog stretching into the next fiscal year, prompting Calderworks to raise full-year guidance. Halloran noted the firm is evaluating a kiln capacity addition to meet the committed volumes.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -2722,7 +2742,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82623,
+    "lastEventCycle": 82639,
     "events": [
       {
         "cycle": 0,
@@ -2808,6 +2828,16 @@
         "size": "standard",
         "head": "Carrowcyon & Sons Expands Modular Lighting Push With New Distribution Center",
         "body": "Cole Brandt greenlit a 220,000-square-foot distribution center to keep pace with retail demand for the modular lighting range, which now stocks in over 900 storefronts. The site is slated to open within two quarters and will consolidate shipments from both lighting works under one roof.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82639,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Beats Again as New Distribution Center Lifts Lighting Margins",
+        "body": "Cole Brandt reported quarterly revenue of $412 million, up 9% year over year, crediting the newly opened distribution center for trimming fulfillment costs across the modular lighting range. Retail sell-through climbed 14% as three national chains widened shelf space for the line. Brandt signaled the company is weighing a second product tier to capitalize on the momentum.",
         "effects": {
           "consumer": 0.13
         }
@@ -5098,7 +5128,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82625,
+    "lastEventCycle": 82639,
     "events": [
       {
         "cycle": 0,
@@ -5184,6 +5214,16 @@
         "size": "standard",
         "head": "Forgegrave Industries Tops Estimates as Second Plant Reaches Full Output",
         "body": "Forgegrave reported quarterly revenue of $1.84 billion, up 14% year-over-year, as its newly opened second assembly plant hit full production ahead of schedule. CEO Petra Thorne credited disciplined ramp management on the Meridian Freight fleet order, noting attach rates on dock modules held near record levels. The company modestly lifted its full-year margin outlook.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82639,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Forgegrave Industries Extends Meridian Partnership With Add-On Hub Fleet Order",
+        "body": "Petra Thorne announced Meridian Freight has expanded its outfitting contract to cover four additional regional hubs, adding roughly $210 million to the existing order. The extension keeps Forgegrave's second assembly plant at full output through year-end and adds a modest maintenance-services component. Thorne said the deal reflects consistent delivery performance rather than any shift in the company's steady operating approach.",
         "effects": {
           "logistics": 0.13
         }
@@ -6444,16 +6484,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82633,
+    "lastEventCycle": 82639,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Halhold Works — From the wire up",
-        "body": "Halhold builds across the electronic stack, from the cable on out. Wire and cable for the infrastructure, devices for the desk and the pocket, and medical equipment where a failure is unthinkable. The value tier puts capable hardware in everyone's hands, while the premium line earns the trust of clinics that cannot gamble on a reading. Few houses span the humble and the critical so comfortably. Halhold does it by treating the cheapest cable with the same seriousness as the costliest monitor.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "product_launch",
@@ -6676,6 +6708,16 @@
         "size": "major",
         "head": "Halhold Works Sued by Hospital Networks as Aveline Monitor Failures Cited in Patient Harm",
         "body": "A coalition of seven hospital networks filed suit against Halhold Works, alleging the recalled Aveline bedside monitors delivered faulty readings tied to at least a dozen adverse patient events. The complaint seeks $780M in damages and contract voiding; CEO Lena Faircloth said the company 'strongly disputes the causation claims' but has set aside a reserve pending review.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82639,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Halhold Works Rocked as Internal Memos Show Aveline Monitor Flaws Known Before Launch",
+        "body": "Leaked correspondence revealed that Halhold engineers flagged voltage instability in the Aveline bedside monitors nearly a year before shipment, warnings that senior management reportedly overrode to meet a launch window. Lena Faircloth faces mounting calls from the board and hospital plaintiffs to testify, and shares tumbled 22% as three institutional partners suspended orders. The disclosure transforms what had been a product failure into a governance crisis at the heart of Halhold's medical division.",
         "effects": {
           "technology": -0.22
         }
@@ -7485,7 +7527,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82629,
+    "lastEventCycle": 82639,
     "events": [
       {
         "cycle": 0,
@@ -7609,6 +7651,16 @@
         "size": "major",
         "head": "Kessel Drive Widens Recall to 620,000 Vehicles as Storage Probe Deepens",
         "body": "Neave Corliss confirmed the storage-pack recall has ballooned to 620,000 vehicles after regulators tied additional overheating incidents to a supplier defect, with estimated costs now topping $1.9B. Corliss vowed 'total transparency,' announcing free pack replacements and a dedicated safety command center even as the formal probe continues. It is the largest recall in the automotive house's history.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82639,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Kessel Drive Plunges Into Deep Loss as Recall and Probe Costs Overwhelm Quarter",
+        "body": "Kessel Drive posted a quarterly loss of $1.1 billion, far wider than expected, as widening recall provisions and regulatory penalties tied to its storage packs battered the balance sheet. Neave Corliss conceded the restructure had not yet stemmed the bleeding, with vehicle deliveries down 31% and the newly split storage unit still absorbing warranty charges. The board has retained outside advisers to review financing options amid speculation over a capital raise.",
         "effects": {
           "automotive": -0.22
         }
@@ -11772,7 +11824,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82612,
+    "lastEventCycle": 82639,
     "events": [
       {
         "cycle": 0,
@@ -11820,6 +11872,16 @@
         "body": "Revenue rose a modest 4% to $890 million, with early demand for the fuel-saving next-generation seeder complementing reliable servicing income. CEO Quinn Skarn, at the helm since 1911, credited 'patient customers and dependable equipment' and raised the full-year outlook slightly. The co-op servicing pact contributed its first full quarter of recurring revenue.",
         "effects": {
           "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82639,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vossenwright Holdings Lands Regional Fleet Order for Fuel-Saving Seeder Line",
+        "body": "Quinn Skarn confirmed a bulk order from a farming consortium covering 340 next-generation seeders, the largest single purchase of the fuel-efficient line to date. The deal, valued near $95 million, extends the earlier servicing pact into new equipment sales. Skarn characterized the order as steady validation of the company's cautious modernization strategy.",
+        "effects": {
+          "agriculture": 0.13
         }
       }
     ]
@@ -12257,7 +12319,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82617,
+    "lastEventCycle": 82639,
     "events": [
       {
         "cycle": 0,
@@ -12323,6 +12385,16 @@
         "size": "standard",
         "head": "Wrenspire Beats as Everyroom Network Drives Broad-Based Household Gains",
         "body": "Wrenspire posted revenue of $3.8 billion, up 7%, with the household segment leading on the strength of its four Everyroom distribution hubs. Theo Aldous highlighted improved fulfillment times and margin expansion, though he flagged modest softness in farm inputs tied to seasonal demand.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82639,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Wrenspire Extends Everyroom Reach Into Food Service With Bundled Supply Program",
+        "body": "Theo Aldous confirmed Wrenspire will pipe its Everyroom distribution network into its Food Service arm, launching a bundled supply program that pairs household and pantry deliveries for institutional buyers. The company said 1,200 regional accounts have signed on ahead of the March rollout, with a fifth hub slated to break ground by summer. Aldous framed the move as a natural widening of the network rather than a departure from Wrenspire's measured cadence.",
         "effects": {
           "consumer": 0.13
         }
