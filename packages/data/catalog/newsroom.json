@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-26T13:26:02.409Z",
+  "generatedAt": "2026-07-26T19:13:49.233Z",
   "beats": [
+    {
+      "company": "Brunforge Holdings",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunforge Holdings Extends Winning Streak as Vellan Regional Flagships Deliver",
+      "body": "Brunforge posted its fourth consecutive earnings beat, with net income of $612 million as the three new regional Vellan flagships each turned profitable within their first full quarter. CEO Kestrel Bramm said the Home division now accounts for 31% of group revenue, up from 24% a year ago. The company reaffirmed a measured pace of two to three additional flagships over the coming year.",
+      "cycle": 82643,
+      "dur": 2
+    },
+    {
+      "company": "Cranecraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Cranecraft Stretches Streak to Six Beats on Balanced Farm and Textile Demand",
+      "body": "Cranecraft reported a sixth straight earnings beat, with revenue of $256 million as farm equipment and raw textile lines both held firm. CEO Mira Garr described demand as 'orderly and predictable,' with no material changes to production or capacity plans. Margins were steady at 14.2%.",
+      "cycle": 82643,
+      "dur": 1
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Holtforge Group Posts Record Quarter as Marine Cable Plant Clears Backlog",
+      "body": "Holtforge reported record revenue of $884 million, with the new marine cable plant running at 78% of rated capacity and cutting the order backlog by nearly half in three months. CEO Yvette Bramm said lead times on subsea cable orders have fallen from 14 weeks to under nine. The plant is expected to reach full capacity within two quarters.",
+      "cycle": 82643,
+      "dur": 2
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Lhaus Industries Pauses Sixth Cell-Pack Line, Trims Buildout to Protect Margins",
+      "body": "Following last quarter's earnings miss, Lhaus announced it will delay its planned sixth cell-pack line and consolidate two underused Delphin sub-assemblies, targeting $180 million in annualized savings. CEO Cole Brandt said the moves would 'let the existing five lines earn their keep' before further expansion. The company maintained its full-year volume outlook but conceded margin recovery would take two to three quarters.",
+      "cycle": 82643,
+      "dur": 2
+    },
+    {
+      "company": "Palettstead Holdings",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Palettstead Holdings Tops Estimates as Three-Chain Cold-Chain Network Hits Full Stride",
+      "body": "Palettstead reported quarterly revenue of $1.42 billion, up 18% year over year, as its reusable cold-chain network reached steady-state volumes across all three national grocery partners. CEO Orla Marrow credited faster crate return cycles and a 9% drop in per-unit handling costs, and confirmed the network is now recovering 94% of deployed containers. Management said the third chain's onboarding completed a full quarter ahead of schedule.",
+      "cycle": 82643,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Skarngrove & Sons Wins Kelvarn Third-Phase Contract for Interchange Structures",
+      "body": "Skarngrove secured the $410 million third-phase Kelvarn contract covering elevated interchange decks and structural fastening, extending its involvement in the corridor into a fourth year. CEO Quinn Fenn said the award reflects the firm's award-winning bridge work and reliable delivery record on earlier phases. Work is scheduled to begin next quarter and run through the following year.",
+      "cycle": 82643,
+      "dur": 2
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Steg Tooling Notches Eighth Straight Beat as Kelmar Cells Run Near Capacity",
+      "body": "Steg Tooling extended its streak to eight consecutive beats, with revenue up 7% to $298 million as both Kelmar fastener cells operated above 90% utilization. CEO Iris Vossen pointed to durable demand from auto-parts customers and disciplined cost control. The company left its expansion plans unchanged, citing a preference for steady ramp over aggressive additions.",
+      "cycle": 82643,
+      "dur": 1
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Woldmark Tumbles as Halcyon 3 Rush Triggers Costly Field Failures and Guidance Cut",
+      "body": "Woldmark missed sharply, reporting a $340 million charge tied to thermal-throttling defects in early Halcyon 3 units shipped under an aggressive nine-month timeline, and slashed full-year guidance by 22%. CEO Cole Carrow acknowledged the compressed schedule 'outran our validation,' as several major customers deferred orders pending fixes. The stumble marks a stark reversal after two quarters of Halcyon-driven beats and raises questions about Carrow's rapid-launch strategy.",
+      "cycle": 82643,
+      "dur": 8
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -40,16 +120,6 @@
       "body": "Mira Skarn's firm lifted quarterly earnings 9% to $780M as the second Vetask staging yard reached operating capacity weeks early, feeding the adjacent corridor contract. Skarn signaled interest in bidding on a rumored regional interchange package, calling the current backlog 'the strongest in a decade.' The measured expansion continues to pay off without overextension.",
       "cycle": 82642,
       "dur": 2
-    },
-    {
-      "company": "Holtgate Cloth",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Cloth Logs Another Steady Quarter as Supply Pact Renews Quietly",
-      "body": "Dorian Carrow's textile house reported flat-to-modest growth with revenue at $340M, extending its unbroken run of dependable quarters. The renewed supply pact was extended a further two years on unchanged terms, drawing little fanfare. Carrow offered no new initiatives, keeping to the conservative course that has defined the firm for over a century.",
-      "cycle": 82642,
-      "dur": 1
     },
     {
       "company": "Marrowcyon",
@@ -92,26 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "outage",
-      "size": "standard",
-      "head": "Calderforge Hit by Cooling Failure That Idles Two Stormwell Halls",
-      "body": "A cooling-system fault knocked out capacity across the Stormwell Second and Third Halls for roughly 31 hours, disrupting service under Calderforge's decade-long anchor pact. Nadia Throne said backup systems limited data loss but acknowledged the outage would trigger contractual service credits this quarter. The incident raised questions about redundancy as the fifth hall rises.",
-      "cycle": 82641,
-      "dur": 2
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Erretmark Works Debuts First Veyron-Badged Roadster Under New Ultra-Luxury Line",
-      "body": "Erretmark unveiled the Veyron Aic 1, a limited-run open roadster and the first model since Aurelia Garr's marque acquisition. Production is capped at 240 units annually from the expanded Sorne atelier, with deliveries beginning next spring. The launch marks Erretmark's formal push into the ultra-luxury tier above its existing flagships.",
-      "cycle": 82641,
-      "dur": 2
-    },
-    {
       "company": "Ironcrestton",
       "sector": "luxury",
       "kind": "scandal",
@@ -120,26 +170,6 @@
       "body": "An independent review found that several houses licensing Ironcrestton's celebrated Origin Standard failed to document provenance on nearly a fifth of certified goods, undermining the transparency mark that drove Wren Adler's expansion. Adler suspended three licensees and pledged a full re-audit, but the Heritage Craft Guild opened its own inquiry into the program. The disclosure cast a shadow over the landmark cross-house licensing pact signed just weeks earlier.",
       "cycle": 82641,
       "dur": 8
-    },
-    {
-      "company": "Veldtreach & Sons",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Veldtreach & Sons Wins $850M Coastal Rail Earthworks Contract",
-      "body": "Veldtreach secured an $850M package to grade and excavate a 60-mile coastal rail corridor, its second major program alongside the ongoing Highland Corridor work. Petra Steg said the award would keep all three excavation fleets committed through 1965. The win deepens the construction house's regional backlog to record levels.",
-      "cycle": 82641,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Vossenspire Holdings Misses as $4.1B Mandate Strains Delivery Timelines",
-      "body": "Vossenspire posted quarterly revenue of $1.2B, short of the $1.35B consensus, as ramp costs on Halden Roe's massive compute-and-storage mandate outpaced booked income. Margins compressed to 11% amid overtime and supplier-expediting charges. Roe insisted the shortfall was 'a timing issue, not a demand issue,' but the turbulence rattled the storage segment's momentum.",
-      "cycle": 82641,
-      "dur": 2
     },
     {
       "company": "Bruncraft Industries",
@@ -239,16 +269,6 @@
       "head": "Blackhold Faces Regulatory Probe as National Grid-Storage Failures Trigger Formal Review",
       "body": "Regulators opened a formal safety investigation into Blackhold's $2.4-billion national storage program after multiple sites faltered during their first live test. The National Energy Oversight Board demanded a full audit of the firm's cell-management systems and froze new site activations pending findings. CEO Renata Solberg acknowledged the review as 'a serious moment' but insisted the underlying technology remains sound.",
       "cycle": 82636,
-      "dur": 8
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "major",
-      "head": "Carrowwell Smashes Estimates as Twin Multibillion-Dollar Contracts Fuel Record Quarter",
-      "body": "Theo Thorne delivered a record quarter, with revenue up 24% as the $1.1 billion automation pact and $2.4 billion industrial machines contract both ran at full stride. Order backlog swelled to an all-time high of $8.9 billion, and Carrowwell raised full-year guidance for the third straight period. Thorne said the reindustrialization wave is now Carrowwell's dominant growth engine.",
-      "cycle": 82635,
       "dur": 8
     }
   ]

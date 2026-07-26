@@ -1801,7 +1801,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82627,
+    "lastEventCycle": 82643,
     "events": [
       {
         "cycle": 0,
@@ -1887,6 +1887,16 @@
         "size": "standard",
         "head": "Brunforge Extends Vellan Home Concept to Three New Regional Flagships",
         "body": "Brunforge Holdings announced three additional Vellan-branded flagship stores across key regional markets, building on the strong reception of its first home-division location. CEO Kestrel Bramm framed the rollout as 'deliberate, not rushed,' with each site tied to local logistics hubs to protect margins. The expansion is expected to add modestly to full-year revenue without altering the company's steady capital discipline.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82643,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunforge Holdings Extends Winning Streak as Vellan Regional Flagships Deliver",
+        "body": "Brunforge posted its fourth consecutive earnings beat, with net income of $612 million as the three new regional Vellan flagships each turned profitable within their first full quarter. CEO Kestrel Bramm said the Home division now accounts for 31% of group revenue, up from 24% a year ago. The company reaffirmed a measured pace of two to three additional flagships over the coming year.",
         "effects": {
           "consumer": 0.13
         }
@@ -3782,7 +3792,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82632,
+    "lastEventCycle": 82643,
     "events": [
       {
         "cycle": 0,
@@ -3888,6 +3898,16 @@
         "size": "flash",
         "head": "Cranecraft Extends Streak to Five Beats as Farm and Textile Lines Stay Balanced",
         "body": "Cranecraft reported quarterly revenue of $412M, edging past the $405M consensus, with CEO Mira Garr crediting steady Northern Mills throughput and firm farm-equipment reorders. The company held margins flat at 18.4% and reaffirmed its full-year outlook without fanfare, marking a fifth consecutive quarter above estimates.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82643,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Stretches Streak to Six Beats on Balanced Farm and Textile Demand",
+        "body": "Cranecraft reported a sixth straight earnings beat, with revenue of $256 million as farm equipment and raw textile lines both held firm. CEO Mira Garr described demand as 'orderly and predictable,' with no material changes to production or capacity plans. Margins were steady at 14.2%.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -7061,7 +7081,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82628,
+    "lastEventCycle": 82643,
     "events": [
       {
         "cycle": 0,
@@ -7147,6 +7167,16 @@
         "size": "standard",
         "head": "Holtforge Group Starts Output at New Marine Cable Plant",
         "body": "The Marine cable plant began commercial production on schedule, ramping toward an initial capacity of 900 kilometers of offshore cable annually. CEO Yvette Bramm said the facility should clear the bulk of the offshore wind backlog within 18 months while lowering delivery lead times. First shipments are earmarked for two contracted North Sea-style wind arrays.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82643,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtforge Group Posts Record Quarter as Marine Cable Plant Clears Backlog",
+        "body": "Holtforge reported record revenue of $884 million, with the new marine cable plant running at 78% of rated capacity and cutting the order backlog by nearly half in three months. CEO Yvette Bramm said lead times on subsea cable orders have fallen from 14 weeks to under nine. The plant is expected to reach full capacity within two quarters.",
         "effects": {
           "construction": 0.13
         }
@@ -8443,7 +8473,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82638,
+    "lastEventCycle": 82643,
     "events": [
       {
         "cycle": 0,
@@ -8649,6 +8679,16 @@
         "size": "standard",
         "head": "Lhaus Industries Misses as Cell-Pack Buildout Costs Squeeze Margins",
         "body": "Lhaus reported quarterly profit below expectations as the rapid Delphin integration and fifth-line construction pushed capital spending and startup costs higher than guided. Margins in the cell-pack segment slipped to 9.1% from 13.4% a year earlier, though Cole Brandt insisted the scale push would pay off once new lines reach full run-rate. Vehicle and parts units held steady.",
+        "effects": {
+          "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82643,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Lhaus Industries Pauses Sixth Cell-Pack Line, Trims Buildout to Protect Margins",
+        "body": "Following last quarter's earnings miss, Lhaus announced it will delay its planned sixth cell-pack line and consolidate two underused Delphin sub-assemblies, targeting $180 million in annualized savings. CEO Cole Brandt said the moves would 'let the existing five lines earn their keep' before further expansion. The company maintained its full-year volume outlook but conceded margin recovery would take two to three quarters.",
         "effects": {
           "automotive": -0.13
         }
@@ -9571,7 +9611,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82625,
+    "lastEventCycle": 82643,
     "events": [
       {
         "cycle": 0,
@@ -9647,6 +9687,16 @@
         "size": "standard",
         "head": "Palettstead Signs Third Chain to Reusable Cold-Chain Network",
         "body": "Palettstead added a third national grocery chain to its reusable cold-chain crate network under a five-year agreement expected to lift network volumes by roughly 30%. CEO Orla Marrow said the expansion validates the shared-fleet model and will require a modest capacity build at two regional depots. The deal extends the profitable crate fleet's reach across a growing footprint.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82643,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Palettstead Holdings Tops Estimates as Three-Chain Cold-Chain Network Hits Full Stride",
+        "body": "Palettstead reported quarterly revenue of $1.42 billion, up 18% year over year, as its reusable cold-chain network reached steady-state volumes across all three national grocery partners. CEO Orla Marrow credited faster crate return cycles and a 9% drop in per-unit handling costs, and confirmed the network is now recovering 94% of deployed containers. Management said the third chain's onboarding completed a full quarter ahead of schedule.",
         "effects": {
           "logistics": 0.13
         }
@@ -9860,7 +9910,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82630,
+    "lastEventCycle": 82643,
     "events": [
       {
         "cycle": 0,
@@ -9948,6 +9998,16 @@
         "body": "Skarngrove reported a modest beat with revenue of 890 million as billings from the second-phase Kelvarn bridge contract accelerated. Quinn Fenn noted the recently added structural-materials capacity is now running near full utilization. Management reaffirmed full-year guidance.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82643,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Skarngrove & Sons Wins Kelvarn Third-Phase Contract for Interchange Structures",
+        "body": "Skarngrove secured the $410 million third-phase Kelvarn contract covering elevated interchange decks and structural fastening, extending its involvement in the corridor into a fourth year. CEO Quinn Fenn said the award reflects the firm's award-winning bridge work and reliable delivery record on earlier phases. Work is scheduled to begin next quarter and run through the following year.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -10155,7 +10215,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82632,
+    "lastEventCycle": 82643,
     "events": [
       {
         "cycle": 0,
@@ -10261,6 +10321,16 @@
         "size": "flash",
         "head": "Steg Tooling Marks Seventh Straight Beat as Second Kelmar Cell Ramps",
         "body": "Steg Tooling reported $1.09 a share versus a $1.05 estimate as the newly added Kelmar fastener cell reached early production. Iris Vossen said the order book remains 'comfortably full' into next year and reiterated a preference for measured capacity additions over aggressive expansion.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82643,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Steg Tooling Notches Eighth Straight Beat as Kelmar Cells Run Near Capacity",
+        "body": "Steg Tooling extended its streak to eight consecutive beats, with revenue up 7% to $298 million as both Kelmar fastener cells operated above 90% utilization. CEO Iris Vossen pointed to durable demand from auto-parts customers and disciplined cost control. The company left its expansion plans unchanged, citing a preference for steady ramp over aggressive additions.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -12230,7 +12300,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82634,
+    "lastEventCycle": 82643,
     "events": [
       {
         "cycle": 0,
@@ -12358,6 +12428,16 @@
         "body": "In a move that stunned the sector, Cole Carrow rushed the Halcyon 3 compute platform to market only nine months after Halcyon 2, promising a doubling of throughput and forcing existing backlog customers to weigh switching mid-order. Critics warned the compressed cadence risks cannibalizing the still-swelling Halcyon 2 pipeline, while Carrow insisted demand justified the pace. Early pre-orders opened the same day at premium pricing.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82643,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Woldmark Tumbles as Halcyon 3 Rush Triggers Costly Field Failures and Guidance Cut",
+        "body": "Woldmark missed sharply, reporting a $340 million charge tied to thermal-throttling defects in early Halcyon 3 units shipped under an aggressive nine-month timeline, and slashed full-year guidance by 22%. CEO Cole Carrow acknowledged the compressed schedule 'outran our validation,' as several major customers deferred orders pending fixes. The stumble marks a stark reversal after two quarters of Halcyon-driven beats and raises questions about Carrow's rapid-launch strategy.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
