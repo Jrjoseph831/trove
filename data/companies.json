@@ -1373,7 +1373,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82633,
+    "lastEventCycle": 82640,
     "events": [
       {
         "cycle": 0,
@@ -1540,6 +1540,16 @@
         "head": "Bruncraft CEO Orla Marrow Ousted as Board Moves to Contain Axle Scandal",
         "body": "Bruncraft's board removed CEO Orla Marrow effective immediately, citing the leadership's handling of the axle-defect memos now central to a federal safety probe. The board named turnaround veteran Dessa Corvane as CEO, tasking her with rebuilding regulator trust and steering a widening class action; shares had shed nearly a third of their value since the memos surfaced.",
         "effects": {}
+      },
+      {
+        "cycle": 82640,
+        "kind": "recall",
+        "size": "major",
+        "head": "Bruncraft Widens Axle Recall to 1.4 Million Vehicles as New CEO Corvane Vows Clean Break",
+        "body": "Bruncraft Industries expanded its axle recall to 1.4 million vehicles, nearly tripling the affected fleet, as newly installed CEO Dessa Corvane moved to fully expose the defect's scope rather than manage it down. Corvane pledged a full retrofit program expected to cost $600 million and said the company would cooperate completely with the ongoing safety probe. The move marks a sharp break from the concealment revealed in earlier internal memos.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -5898,7 +5908,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82629,
+    "lastEventCycle": 82640,
     "events": [
       {
         "cycle": 0,
@@ -6006,6 +6016,16 @@
         "body": "Iris Marrow announced a $180M investment to open a second flagship district in the harbor quarter, complete with a working restoration atelier and private commissioning suites. The expansion follows three consecutive record halves and adds an estimated 240 master artisans over two years. Marrow called it 'the natural home for the next Meridian chapter,' teasing a grand-format follow-up to the sold-out Complication line.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82640,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Halcrest Misses as Overseas Atelier and Second Flagship Weigh on Margins",
+        "body": "Halcrest fell short of forecasts, with operating margin down 380 basis points as heavy spending on the overseas atelier and second Salon Row flagship outpaced sales growth. CEO Iris Marrow defended the expansion as a long-term bet, though critics questioned the pace of her ambitions. Revenue still rose 6%, but rising costs turned the quarter into a stumble after a record half.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -6257,7 +6277,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82635,
+    "lastEventCycle": 82640,
     "events": [
       {
         "cycle": 0,
@@ -6469,6 +6489,16 @@
         "body": "Corin Vale introduced the Meridian compute line at Halhold's Northgate campus, calling it the backbone of the company's turnaround after two turbulent quarters. Core Compute chief Dala Reyes said initial units will ship to the anchor customer within 60 days, with capacity targeted to cover the full $900 million commitment by year-end. Vale framed the launch as proof the costly carve-out is finally clearing the way for growth.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82640,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Halhold Systems Smashes Estimates as $900M Compute Pact Powers Blowout Quarter",
+        "body": "Halhold Systems delivered a decisive turnaround, beating estimates by a wide margin as first shipments under its $900 million compute supply deal drove revenue up 41% year over year. CEO Corin Vale, whose tenure began amid carve-out losses, said the next-gen platform had ramped faster than planned and lifted full-year guidance. The result marks the strongest quarter since the company's separation.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -6735,7 +6765,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82623,
+    "lastEventCycle": 82640,
     "events": [
       {
         "cycle": 0,
@@ -6813,6 +6843,16 @@
         "body": "Aurelia Aldous reported a 4% revenue uptick as the refill depot network settled into steady operation across its newest regions. Household goods volumes held firm, and the company reaffirmed its measured full-year outlook.",
         "effects": {
           "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82640,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Hearthstone Group Rolls Out Concentrate Line Across Refill Depot Network",
+        "body": "Hearthstone Group launched its new Everclean concentrate range of cleaning and jansan products, designed to be dispensed through its maturing refill depot network across nine regions. CEO Aurelia Aldous said the line trims packaging costs and leans on infrastructure the group already built out, projecting the range could add mid-single-digit growth to the cleaning segment. Initial depot uptake has been described as encouraging.",
+        "effects": {
+          "hospitality": 0.13
         }
       }
     ]
@@ -8649,7 +8689,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82632,
+    "lastEventCycle": 82640,
     "events": [
       {
         "cycle": 0,
@@ -8815,6 +8855,16 @@
         "body": "New CEO Adele Ferran announced a sweeping restructure that permanently retires the troubled Drennan device line and consolidates production into two Industrial Machines plants, cutting roughly 900 roles. Ferran framed the move as 'burning the wreckage down to the studs,' pledging a return to profit within four quarters despite an additional $85M in charges this period.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82640,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Marlgear Supply Returns to Profit as Ferran Turnaround Takes Hold",
+        "body": "Marlgear Supply swung back to a narrow profit, its first since the Drennan device crisis, as the shuttered unit's drag cleared and industrial-machine orders stabilized. CEO Adele Ferran, never shy about a headline, called the quarter proof that her turnaround plan is working and hinted at a bold new product push in the coming months. Shares had been battered through the settlement saga.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -10201,7 +10251,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82618,
+    "lastEventCycle": 82640,
     "events": [
       {
         "cycle": 0,
@@ -10269,6 +10319,16 @@
         "body": "Stegreach reported earnings modestly above guidance, with quarterly revenue of $198 million as wire, lighting, and fixings shipments to the Riverport freight terminal reached scheduled volumes. CEO Halden Ashby said the order book remains 'comfortably filled' through the next two quarters.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82640,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Stegreach Lands Landmark Grid Modernization Contract Worth $1.2 Billion",
+        "body": "Building on its Riverport momentum, Stegreach has been named lead supplier of wire, cable, and lighting for the multi-year Eastfield grid modernization program, a $1.2 billion mandate spanning six substations. CEO Halden Ashby, in one of his signature bold moves after decades of steadier plays, said the award roughly doubles the company's cable order book and will require a new production line at its Deakin works. The deal is the largest single contract in Stegreach's history.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -10586,7 +10646,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82615,
+    "lastEventCycle": 82640,
     "events": [
       {
         "cycle": 0,
@@ -10642,6 +10702,16 @@
         "size": "flash",
         "head": "Tillage & Co. Holds Steady as Blending Facility Sustains Full Output",
         "body": "Tillage & Co. reported quarterly revenue of $612 million, in line with guidance, as its new blending facility maintained full utilization through the planting season. CEO Kestrel Fenn reaffirmed the year's outlook, pointing to firm cooperative demand and no changes to input pricing.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82640,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Tillage & Co. Posts Another Steady Quarter as Input Demand Holds Firm",
+        "body": "Tillage & Co. edged slightly past forecasts, with revenue up 2.4% as the blending facility continued running at full output and seasonal farm-input demand held firm. CEO Kestrel Fenn offered no surprises, reiterating the company's unchanged full-year guidance. Margins were flat versus the prior quarter.",
         "effects": {
           "agriculture": 0.06
         }
@@ -10762,7 +10832,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82633,
+    "lastEventCycle": 82640,
     "events": [
       {
         "cycle": 0,
@@ -10928,6 +10998,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Unveils Lenoir-Crafted Timepiece Line at Maisons Flagship",
         "body": "Varnvale debuted the Lenoir Heritage collection, its first line to combine Lenoir's jewelry ateliers with Varnvale's timepiece movements, priced from $18,000. CEO Bram Wold called the launch 'proof the acquisition was about creation, not just shelf space,' with the first 500 pieces reserved within days.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82640,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Varnvale & Sons Acquires Timepiece Movement Maker Calderon in Vertical Push",
+        "body": "Restless as ever, CEO Bram Wold has struck again, agreeing to buy specialist movement manufacturer Calderon for roughly $340 million to bring watch mechanics in-house after the success of the Lenoir line. The deal secures supply for Varnvale's expanding Timepieces division and reduces reliance on outside movement suppliers. Management expects it to close within two quarters.",
         "effects": {
           "luxury": 0.13
         }
