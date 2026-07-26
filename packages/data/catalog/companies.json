@@ -1150,7 +1150,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82633,
+    "lastEventCycle": 82641,
     "events": [
       {
         "cycle": 0,
@@ -1358,6 +1358,16 @@
         "body": "Boreas Power announced an agreed $6.2B merger with grid-scale operator Halvard Energy, deploying much of the $5B war chest and adding 3.1 gigawatts of storage capacity. CEO Mira Thorne framed the deal as 'the backbone that ties our compute campuses to firm power,' though analysts flagged the combined debt load as the largest in the company's history.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82641,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Boreas Power Unveils Sweeping Reorganization to Absorb Halvard Grid Empire",
+        "body": "Fresh off the $6.2B Halvard merger, Mira Thorne announced a top-to-bottom restructuring that splits Boreas into three divisions: Compute, Power, and a newly carved Grid Services unit built around Halvard's assets. The plan consolidates a dozen overlapping operating units and targets $700M in annual cost synergies by 1964. Analysts see the move as Thorne racing to integrate before her next acquisition.",
+        "effects": {
+          "energy": -0.22
         }
       }
     ]
@@ -2486,7 +2496,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82633,
+    "lastEventCycle": 82641,
     "events": [
       {
         "cycle": 0,
@@ -2634,6 +2644,16 @@
         "body": "Calderforge confirmed construction has begun on a fifth Stormwell hall, a $2.4B build slated to come online in 30 months to service its decade-long anchor pacts. CEO Nadia Throne said the expansion locks in roughly 40% more capacity, though she acknowledged the aggressive timeline leaves 'little room for slippage.'",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82641,
+        "kind": "outage",
+        "size": "standard",
+        "head": "Calderforge Hit by Cooling Failure That Idles Two Stormwell Halls",
+        "body": "A cooling-system fault knocked out capacity across the Stormwell Second and Third Halls for roughly 31 hours, disrupting service under Calderforge's decade-long anchor pact. Nadia Throne said backup systems limited data loss but acknowledged the outage would trigger contractual service credits this quarter. The incident raised questions about redundancy as the fifth hall rises.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -4071,7 +4091,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82626,
+    "lastEventCycle": 82641,
     "events": [
       {
         "cycle": 0,
@@ -4157,6 +4177,16 @@
         "size": "flash",
         "head": "Drossware Nudges Past Estimates as Packaging Line Ramps",
         "body": "Drossware posted a modest beat, with revenue of $2.3B as the dedicated Grocer Alliance packaging line reached two-thirds of planned throughput. Wold called the quarter 'steady' and reaffirmed full-year guidance.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82641,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Drossware Adds Lighting SKUs to Grocer Alliance Rollout",
+        "body": "Drossware extended its multi-category grocer pact once more, folding in a value lighting range set to reach 4,000 storefronts by year-end. Nadia Wold framed the addition as a low-risk bolt-on that leans on existing packaging and distribution lanes. The move rounds out three of Drossware's four consumer categories under the alliance.",
         "effects": {
           "consumer": 0.06
         }
@@ -4606,7 +4636,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82630,
+    "lastEventCycle": 82641,
     "events": [
       {
         "cycle": 0,
@@ -4734,6 +4764,16 @@
         "body": "Aurelia Garr confirmed the purchase of the storied Veyron marque for 3.2 billion, folding its hand-built roadster heritage into the Erretmark portfolio. Garr said the deal opens a second coachbuilt line alongside the award-winning Grand Flagship, with production to begin at a retooled Veyron facility within eighteen months. The move marks Erretmark's largest acquisition in over a decade.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82641,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Erretmark Works Debuts First Veyron-Badged Roadster Under New Ultra-Luxury Line",
+        "body": "Erretmark unveiled the Veyron Aic 1, a limited-run open roadster and the first model since Aurelia Garr's marque acquisition. Production is capped at 240 units annually from the expanded Sorne atelier, with deliveries beginning next spring. The launch marks Erretmark's formal push into the ultra-luxury tier above its existing flagships.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -7416,7 +7456,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82632,
+    "lastEventCycle": 82641,
     "events": [
       {
         "cycle": 0,
@@ -7552,6 +7592,16 @@
         "body": "In a defining move, Wren Adler announced that four rival fine-goods makers will adopt Ironcrestton's traceability framework under a licensing deal worth an estimated $220M over five years. Adler called it 'the moment provenance stops being our advantage and becomes the industry's floor,' positioning Ironcrestton as the standard-setter rather than merely a participant.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82641,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Ironcrestton Rocked as Audit Alleges Origin Standard Gaps at Licensed Houses",
+        "body": "An independent review found that several houses licensing Ironcrestton's celebrated Origin Standard failed to document provenance on nearly a fifth of certified goods, undermining the transparency mark that drove Wren Adler's expansion. Adler suspended three licensees and pledged a full re-audit, but the Heritage Craft Guild opened its own inquiry into the program. The disclosure cast a shadow over the landmark cross-house licensing pact signed just weeks earlier.",
+        "effects": {
+          "luxury": -0.22
         }
       }
     ]
@@ -7831,7 +7881,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82611,
+    "lastEventCycle": 82641,
     "events": [
       {
         "cycle": 0,
@@ -7877,6 +7927,16 @@
         "size": "flash",
         "head": "Korrgrave Posts Steady Gains as Northern Plant Holds Full Output",
         "body": "Korrgrave Mfg. delivered a small earnings beat, with farm-input volumes from its Northern plant holding at full output for a second straight quarter. Chief executive Aurelia Halloran pointed to stable input costs and long-term supply contracts as the drivers of 'unremarkable but reliable' growth. Management guided for flat-to-modest gains into next season.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82641,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Korrgrave Mfg. Extends Steady Streak as Northern Plant Sustains Output",
+        "body": "Korrgrave delivered another modest beat, with revenue up 4% as the Northern plant held full utilization for a fourth straight quarter. Aurelia Halloran credited disciplined input costs and steady farm-belt demand. The agriculture house reaffirmed its unhurried, full-year guidance.",
         "effects": {
           "agriculture": 0.06
         }
@@ -11210,7 +11270,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82625,
+    "lastEventCycle": 82641,
     "events": [
       {
         "cycle": 0,
@@ -11286,6 +11346,16 @@
         "size": "standard",
         "head": "Veldtreach & Sons Beats as Highland Corridor Billing Accelerates",
         "body": "Veldtreach posted earnings of $3.12 per share against expectations of $2.88, driven by faster-than-anticipated milestone billing on the $2.1 billion Highland Corridor program. CEO Petra Steg said the newly added third excavation fleet reached target utilization within the quarter, keeping the reservoir and coastal books running near capacity. Management reaffirmed elevated full-year guidance.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82641,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Veldtreach & Sons Wins $850M Coastal Rail Earthworks Contract",
+        "body": "Veldtreach secured an $850M package to grade and excavate a 60-mile coastal rail corridor, its second major program alongside the ongoing Highland Corridor work. Petra Steg said the award would keep all three excavation fleets committed through 1965. The win deepens the construction house's regional backlog to record levels.",
         "effects": {
           "construction": 0.13
         }
@@ -11499,7 +11569,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82627,
+    "lastEventCycle": 82641,
     "events": [
       {
         "cycle": 0,
@@ -11593,6 +11663,16 @@
         "body": "Vossenspire Holdings secured a $4.1 billion mandate to build integrated compute and grid-storage infrastructure for a coastal data corridor, its largest contract to date. CEO Halden Roe called it a 'transformational' step beyond the Northern Utilities pact, though the deal requires heavy upfront capital and a doubling of its build workforce. The scope stretches Vossenspire into compute delivery at scale for the first time, raising execution stakes sharply.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82641,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Vossenspire Holdings Misses as $4.1B Mandate Strains Delivery Timelines",
+        "body": "Vossenspire posted quarterly revenue of $1.2B, short of the $1.35B consensus, as ramp costs on Halden Roe's massive compute-and-storage mandate outpaced booked income. Margins compressed to 11% amid overtime and supplier-expediting charges. Roe insisted the shortfall was 'a timing issue, not a demand issue,' but the turbulence rattled the storage segment's momentum.",
+        "effects": {
+          "energy": -0.13
         }
       }
     ]

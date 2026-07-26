@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-26T02:55:24.824Z",
+  "generatedAt": "2026-07-26T08:28:50.337Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Boreas Power Unveils Sweeping Reorganization to Absorb Halvard Grid Empire",
+      "body": "Fresh off the $6.2B Halvard merger, Mira Thorne announced a top-to-bottom restructuring that splits Boreas into three divisions: Compute, Power, and a newly carved Grid Services unit built around Halvard's assets. The plan consolidates a dozen overlapping operating units and targets $700M in annual cost synergies by 1964. Analysts see the move as Thorne racing to integrate before her next acquisition.",
+      "cycle": 82641,
+      "dur": 8
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "outage",
+      "size": "standard",
+      "head": "Calderforge Hit by Cooling Failure That Idles Two Stormwell Halls",
+      "body": "A cooling-system fault knocked out capacity across the Stormwell Second and Third Halls for roughly 31 hours, disrupting service under Calderforge's decade-long anchor pact. Nadia Throne said backup systems limited data loss but acknowledged the outage would trigger contractual service credits this quarter. The incident raised questions about redundancy as the fifth hall rises.",
+      "cycle": 82641,
+      "dur": 2
+    },
+    {
+      "company": "Drossware Industries",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Drossware Adds Lighting SKUs to Grocer Alliance Rollout",
+      "body": "Drossware extended its multi-category grocer pact once more, folding in a value lighting range set to reach 4,000 storefronts by year-end. Nadia Wold framed the addition as a low-risk bolt-on that leans on existing packaging and distribution lanes. The move rounds out three of Drossware's four consumer categories under the alliance.",
+      "cycle": 82641,
+      "dur": 1
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Erretmark Works Debuts First Veyron-Badged Roadster Under New Ultra-Luxury Line",
+      "body": "Erretmark unveiled the Veyron Aic 1, a limited-run open roadster and the first model since Aurelia Garr's marque acquisition. Production is capped at 240 units annually from the expanded Sorne atelier, with deliveries beginning next spring. The launch marks Erretmark's formal push into the ultra-luxury tier above its existing flagships.",
+      "cycle": 82641,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Ironcrestton Rocked as Audit Alleges Origin Standard Gaps at Licensed Houses",
+      "body": "An independent review found that several houses licensing Ironcrestton's celebrated Origin Standard failed to document provenance on nearly a fifth of certified goods, undermining the transparency mark that drove Wren Adler's expansion. Adler suspended three licensees and pledged a full re-audit, but the Heritage Craft Guild opened its own inquiry into the program. The disclosure cast a shadow over the landmark cross-house licensing pact signed just weeks earlier.",
+      "cycle": 82641,
+      "dur": 8
+    },
+    {
+      "company": "Korrgrave Mfg.",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Korrgrave Mfg. Extends Steady Streak as Northern Plant Sustains Output",
+      "body": "Korrgrave delivered another modest beat, with revenue up 4% as the Northern plant held full utilization for a fourth straight quarter. Aurelia Halloran credited disciplined input costs and steady farm-belt demand. The agriculture house reaffirmed its unhurried, full-year guidance.",
+      "cycle": 82641,
+      "dur": 1
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Veldtreach & Sons Wins $850M Coastal Rail Earthworks Contract",
+      "body": "Veldtreach secured an $850M package to grade and excavate a 60-mile coastal rail corridor, its second major program alongside the ongoing Highland Corridor work. Petra Steg said the award would keep all three excavation fleets committed through 1965. The win deepens the construction house's regional backlog to record levels.",
+      "cycle": 82641,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Vossenspire Holdings Misses as $4.1B Mandate Strains Delivery Timelines",
+      "body": "Vossenspire posted quarterly revenue of $1.2B, short of the $1.35B consensus, as ramp costs on Halden Roe's massive compute-and-storage mandate outpaced booked income. Margins compressed to 11% amid overtime and supplier-expediting charges. Roe insisted the shortfall was 'a timing issue, not a demand issue,' but the turbulence rattled the storage segment's momentum.",
+      "cycle": 82641,
+      "dur": 2
+    },
     {
       "company": "Bruncraft Industries",
       "sector": "automotive",
@@ -62,16 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Tillage & Co.",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Tillage & Co. Posts Another Steady Quarter as Input Demand Holds Firm",
-      "body": "Tillage & Co. edged slightly past forecasts, with revenue up 2.4% as the blending facility continued running at full output and seasonal farm-input demand held firm. CEO Kestrel Fenn offered no surprises, reiterating the company's unchanged full-year guidance. Margins were flat versus the prior quarter.",
-      "cycle": 82640,
-      "dur": 1
-    },
-    {
       "company": "Varnvale & Sons",
       "sector": "luxury",
       "kind": "major_deal",
@@ -79,46 +149,6 @@
       "head": "Varnvale & Sons Acquires Timepiece Movement Maker Calderon in Vertical Push",
       "body": "Restless as ever, CEO Bram Wold has struck again, agreeing to buy specialist movement manufacturer Calderon for roughly $340 million to bring watch mechanics in-house after the success of the Lenoir line. The deal secures supply for Varnvale's expanding Timepieces division and reduces reliance on outside movement suppliers. Management expects it to close within two quarters.",
       "cycle": 82640,
-      "dur": 2
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Blackton Industries Wins Multi-Year Supply Contract After Clearing Halvern Overhang",
-      "body": "Cassian Rode announced a four-year components deal with a major assembly group valued at roughly $680 million, the company's largest since the Halvern recall. Rode said the win reflects restored confidence following the completed weld remediation and a rebuilt quality-assurance unit. Blackton expects the contract to add meaningful volume to its two flagship plants beginning next quarter.",
-      "cycle": 82639,
-      "dur": 2
-    },
-    {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Calderworks Beats as Tessen Ridge Supply Pact Drives Sustained Kiln Demand",
-      "body": "Kestrel Halloran reported operating profit up 12% on record structural-materials shipments feeding the Tessen Ridge Phase Two build-out. The decade-long supply pact locked in earlier now underpins a backlog stretching into the next fiscal year, prompting Calderworks to raise full-year guidance. Halloran noted the firm is evaluating a kiln capacity addition to meet the committed volumes.",
-      "cycle": 82639,
-      "dur": 2
-    },
-    {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Carrowcyon & Sons Beats Again as New Distribution Center Lifts Lighting Margins",
-      "body": "Cole Brandt reported quarterly revenue of $412 million, up 9% year over year, crediting the newly opened distribution center for trimming fulfillment costs across the modular lighting range. Retail sell-through climbed 14% as three national chains widened shelf space for the line. Brandt signaled the company is weighing a second product tier to capitalize on the momentum.",
-      "cycle": 82639,
-      "dur": 2
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Forgegrave Industries Extends Meridian Partnership With Add-On Hub Fleet Order",
-      "body": "Petra Thorne announced Meridian Freight has expanded its outfitting contract to cover four additional regional hubs, adding roughly $210 million to the existing order. The extension keeps Forgegrave's second assembly plant at full output through year-end and adds a modest maintenance-services component. Thorne said the deal reflects consistent delivery performance rather than any shift in the company's steady operating approach.",
-      "cycle": 82639,
       "dur": 2
     },
     {
@@ -140,26 +170,6 @@
       "body": "Kessel Drive posted a quarterly loss of $1.1 billion, far wider than expected, as widening recall provisions and regulatory penalties tied to its storage packs battered the balance sheet. Neave Corliss conceded the restructure had not yet stemmed the bleeding, with vehicle deliveries down 31% and the newly split storage unit still absorbing warranty charges. The board has retained outside advisers to review financing options amid speculation over a capital raise.",
       "cycle": 82639,
       "dur": 8
-    },
-    {
-      "company": "Vossenwright Holdings",
-      "sector": "agriculture",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Vossenwright Holdings Lands Regional Fleet Order for Fuel-Saving Seeder Line",
-      "body": "Quinn Skarn confirmed a bulk order from a farming consortium covering 340 next-generation seeders, the largest single purchase of the fuel-efficient line to date. The deal, valued near $95 million, extends the earlier servicing pact into new equipment sales. Skarn characterized the order as steady validation of the company's cautious modernization strategy.",
-      "cycle": 82639,
-      "dur": 2
-    },
-    {
-      "company": "Wrenspire",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Wrenspire Extends Everyroom Reach Into Food Service With Bundled Supply Program",
-      "body": "Theo Aldous confirmed Wrenspire will pipe its Everyroom distribution network into its Food Service arm, launching a bundled supply program that pairs household and pantry deliveries for institutional buyers. The company said 1,200 regional accounts have signed on ahead of the March rollout, with a fifth hub slated to break ground by summer. Aldous framed the move as a natural widening of the network rather than a departure from Wrenspire's measured cadence.",
-      "cycle": 82639,
-      "dur": 2
     },
     {
       "company": "Castlehold",
@@ -239,36 +249,6 @@
       "head": "Woldmark Unveils Halcyon 3 Just Nine Months After Predecessor in Carrow's Boldest Gamble Yet",
       "body": "In a move that stunned the sector, Cole Carrow rushed the Halcyon 3 compute platform to market only nine months after Halcyon 2, promising a doubling of throughput and forcing existing backlog customers to weigh switching mid-order. Critics warned the compressed cadence risks cannibalizing the still-swelling Halcyon 2 pipeline, while Carrow insisted demand justified the pace. Early pre-orders opened the same day at premium pricing.",
       "cycle": 82634,
-      "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Boreas Power Strikes $6.2B Merger With Grid Operator Halvard in Sector-Defining Move",
-      "body": "Boreas Power announced an agreed $6.2B merger with grid-scale operator Halvard Energy, deploying much of the $5B war chest and adding 3.1 gigawatts of storage capacity. CEO Mira Thorne framed the deal as 'the backbone that ties our compute campuses to firm power,' though analysts flagged the combined debt load as the largest in the company's history.",
-      "cycle": 82633,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Bruncraft CEO Orla Marrow Ousted as Board Moves to Contain Axle Scandal",
-      "body": "Bruncraft's board removed CEO Orla Marrow effective immediately, citing the leadership's handling of the axle-defect memos now central to a federal safety probe. The board named turnaround veteran Dessa Corvane as CEO, tasking her with rebuilding regulator trust and steering a widening class action; shares had shed nearly a third of their value since the memos surfaced.",
-      "cycle": 82633,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Halhold Works Sued by Hospital Networks as Aveline Monitor Failures Cited in Patient Harm",
-      "body": "A coalition of seven hospital networks filed suit against Halhold Works, alleging the recalled Aveline bedside monitors delivered faulty readings tied to at least a dozen adverse patient events. The complaint seeks $780M in damages and contract voiding; CEO Lena Faircloth said the company 'strongly disputes the causation claims' but has set aside a reserve pending review.",
-      "cycle": 82633,
       "dur": 8
     }
   ]
