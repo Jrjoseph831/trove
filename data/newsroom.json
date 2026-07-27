@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-27T09:55:31.958Z",
+  "generatedAt": "2026-07-27T14:38:39.320Z",
   "beats": [
+    {
+      "company": "Aldousmont & Sons",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldousmont & Sons Holds Steady as Sterile Field Kits Gain Early Traction",
+      "body": "The medical house edged revenue up 3% as new Sterile Field Kits added to the Peel-Free line and multi-region contracts held firm. CEO Dunmore Calder reaffirmed full-year guidance, citing consistent consumable reorder rates. Management noted no material change to input costs.",
+      "cycle": 82646,
+      "dur": 1
+    },
+    {
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Caldercraft Holdings Adds Regional Distribution Center to Feed Weatherproof Demand",
+      "body": "The house committed $85M to a new distribution center aimed at shortening delivery times for its fast-growing Weatherproof range across Household Goods and Hardware & Tools. CEO Vale Fenn said the facility would support the line's expansion without straining existing hubs. The center is expected to open within nine months.",
+      "cycle": 82646,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Castlehold Unveils Sweeping Restructure as Turnaround Chief Carves Out Saltmere Liabilities",
+      "body": "New chief Halden Voss announced plans to ring-fence Saltmere cleanup obligations into a separate managed unit while cutting 1,400 roles and shelving two storage projects to preserve cash. The board approved a $2.1B provision against the class action, and Voss pledged a leaner Power & Storage division focused on 'operable, defensible assets.' Analysts called the plan credible but warned execution risk remains high.",
+      "cycle": 82646,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Greywater Grid Returns to Growth as Rebuilt Reservoir Restores Uptime",
+      "body": "In her first full quarter, CEO Sable Renwick reported the rebuilt reservoir system delivered 99.4% uptime, ending a run of outages and lifting Power & Storage revenue 11%. Compute volumes also recovered as customers returned, and Renwick said penalty credits from prior failures had largely cleared. She framed the quarter as proof 'the fresh start is holding.'",
+      "cycle": 82646,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Gromford Works Slapped With Investor Suit as Meridian Probe Widens Into Sourcing Practices",
+      "body": "A consolidated shareholder lawsuit filed this morning alleges CEO Corin Aldwych rushed the Meridian Tourbillon launch while concealing a third-party movement supplier, seeking damages of $620M. Regulators have expanded their inquiry to cover Gromford's entire complication line, and three retail partners have suspended Meridian orders pending the outcome. Aldwych, known for chasing headlines, now faces the defining crisis of his tenure.",
+      "cycle": 82646,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Halhold Systems to Build Third Compute Campus on Back of $900M Pact Momentum",
+      "body": "Riding a blowout quarter, CEO Corin Vale committed $410M to a new compute campus expected to add 30% capacity by late next year. The move is designed to pre-position supply for follow-on orders after the anchor $900M deal, though Vale acknowledged the aggressive timeline stretches the balance sheet. The house said hiring would begin within the quarter.",
+      "cycle": 82646,
+      "dur": 2
+    },
+    {
+      "company": "Palettstone & Sons",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Palettstone & Sons Beats as Second Heirloom Pro Plant Clears Backorder Glut",
+      "body": "Quarterly revenue rose 14% as the newly opened second plant cut Heirloom Pro Precision Set lead times from eleven weeks to three, unlocking pent-up orders. CEO Cole Fenn said the backlog was now 'comfortably manageable' and hinted at a companion product for the range. Margins improved as freight and expedite costs fell.",
+      "cycle": 82646,
+      "dur": 2
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vossenstead Supply Stretches Streak to Nine as Food Service Margins Firm",
+      "body": "The house posted a ninth consecutive quarterly beat, with revenue up 6% and Food Service margins improving 90 basis points as hub logistics matured. CEO Bram Thorne kept guidance measured, citing 'steady demand and no surprises.' The Plumbing & Fixtures ramp continued on plan.",
+      "cycle": 82646,
+      "dur": 1
+    },
     {
       "company": "Bruncrest Works",
       "sector": "technology",
@@ -20,16 +100,6 @@
       "body": "CEO Halvard Renn introduced the second-generation Veyra S, featuring a redesigned Power & Storage module the company says addresses the defects behind the ongoing class-action suit. Brunmark committed to a free retrofit program for existing owners, estimated at 240M, framing it as the centerpiece of Renn's turnaround plan. Deliveries are slated to begin next quarter.",
       "cycle": 82645,
       "dur": 2
-    },
-    {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Dunmorestone Delivers Quiet Beat as Plumbing Award Begins Contributing",
-      "body": "Dunmorestone posted a modest 3% revenue rise as the multi-site Plumbing & Fixtures award started shipping alongside steady Food Service volumes. CEO Orla Mercer described the quarter as 'exactly on plan,' with the new cafeteria kitchen now running at full utilization. Management reaffirmed full-year guidance.",
-      "cycle": 82645,
-      "dur": 1
     },
     {
       "company": "Fennmoor",
@@ -52,26 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Extends Beat Streak on Broad-Based Demand",
-      "body": "Ornewright edged past estimates once again, posting a 2% revenue gain led by steady Cleaning & Jansan reorders and resilient Farm Inputs volumes. CEO Petra Veldt noted the company has now met or beaten expectations for several consecutive quarters without a single guidance revision. Management again described the outlook as 'stable and unremarkable.'",
-      "cycle": 82645,
-      "dur": 1
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Posts In-Line Quarter as Grocery Packaging Volumes Hold",
-      "body": "Vantor reported flat sequential revenue with a slim beat on earnings, as steady grocery contract shipments offset softness in seasonal packaging. CEO Halden Vossen said the focus remains on 'reliable margins over headline growth,' pointing to a modest efficiency gain at two regional hubs. The company maintained its dividend.",
-      "cycle": 82645,
-      "dur": 1
-    },
-    {
       "company": "Varnvale House",
       "sector": "luxury",
       "kind": "award",
@@ -92,26 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunstone & Sons Debuts Vault Cell Guard Pro for Long-Haul Fleets",
-      "body": "Halden Crowe unveiled a heavy-duty variant of the recovery-defining Vault Cell Guard, promising 40% greater cycle life and a self-isolating fault system aimed at commercial haulers. Crowe staged the reveal at Brunstone's Ridgeline plant, framing it as proof the company has 'left the recall firmly behind.' Early orders from the 4.1B fleet partner were disclosed alongside the launch.",
-      "cycle": 82644,
-      "dur": 2
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Hesperforge Supply Breaks Ground on Third Mill to Meet Marine-Grade Demand",
-      "body": "Sable Halloran authorized a $310 million third mill dedicated to marine-grade structural beams, citing a backlog now stretching beyond two years from the coastal shipyard pact. The facility is expected to add 260 roles and come online within 18 months. Halloran called it 'a measured bet backed by locked-in orders.'",
-      "cycle": 82644,
-      "dur": 2
-    },
-    {
       "company": "Korrwright Works",
       "sector": "luxury",
       "kind": "major_deal",
@@ -120,36 +150,6 @@
       "body": "Dunmore Carrow moved on longtime competitor Meridienne Horlogerie, acquiring the storied movement-house for $2.4 billion in the largest deal of his 118-year tenure. The purchase hands the new Heritage Division control of Meridienne's celebrated tourbillon workshops and opens the eastern markets Carrow had publicly targeted. Executives said Meridienne's 340 master watchmakers will be retained under the Korrwright banner.",
       "cycle": 82644,
       "dur": 8
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Maison & Vale Merges Calbrook Into Household-Goods Arm as Kessler Cuts Overlap",
-      "body": "Rhys Kessler folded the $1.8 billion Calbrook purchase into a newly consolidated Household Goods Group, eliminating roughly 600 duplicated back-office roles and shuttering two aging plants. Kessler said the reorganization should deliver $140 million in annual savings by next fiscal year. The move mirrors last year's Jansan streamlining that returned the company to growth.",
-      "cycle": 82644,
-      "dur": 2
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Marrowstone Build Adds $520M Regional Roadworks Package to Split Unit",
-      "body": "Delphine Vaugh's heavy-earthmoving unit secured a $520 million multi-year roadworks contract spanning three regional districts, building on the momentum of its earlier municipal win. Vaugh said the award validates the decision to spin the division into a standalone operation under the safety overhaul. Backlog for the unit now exceeds $1.3 billion.",
-      "cycle": 82644,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenspire Supply Beats as Corveil Straps Lift Vehicle-Salon Sales",
-      "body": "Vossenspire posted quarterly revenue of $3.6 billion, up 14% year over year, as freshly acquired strapmaker Corveil began supplying in-house leather goods across Quinn Marrow's vehicle salons. Margins widened 210 basis points on the vertical integration, with the Halden timepiece line now stocked in 92 of 110 salons. Marrow flagged 'further consolidation opportunities' on the earnings call.",
-      "cycle": 82644,
-      "dur": 2
     },
     {
       "company": "Woldmark",
@@ -249,26 +249,6 @@
       "head": "Kessel Drive Plunges Into Deep Loss as Recall and Probe Costs Overwhelm Quarter",
       "body": "Kessel Drive posted a quarterly loss of $1.1 billion, far wider than expected, as widening recall provisions and regulatory penalties tied to its storage packs battered the balance sheet. Neave Corliss conceded the restructure had not yet stemmed the bleeding, with vehicle deliveries down 31% and the newly split storage unit still absorbing warranty charges. The board has retained outside advisers to review financing options amid speculation over a capital raise.",
       "cycle": 82639,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Castlehold's Reneth Ousted as Board Installs Turnaround Chief Amid Saltmere Fallout",
-      "body": "The board removed Ivo Reneth after mounting pressure over the Saltmere disclosures, naming veteran restructuring executive Halden Voss as chief executive with a mandate to steady finances and settle litigation. Voss inherits cleanup and legal exposure now estimated near $5.2 billion, and pledged a full governance review within 90 days. Shares had lost more than half their value since the leaked files surfaced.",
-      "cycle": 82638,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Gromford Works Faces Regulatory Probe Over Undisclosed Meridian Tourbillon Supplier",
-      "body": "Industry regulators opened a formal inquiry into Gromford's sourcing disclosures after reports that Meridian Tourbillon movements came from an undisclosed third party, raising authenticity and labeling questions for premium buyers. Corin Aldwych suspended new Tourbillon shipments pending review and commissioned an independent audit. The scrutiny threatens the momentum from the record holiday quarter.",
-      "cycle": 82638,
       "dur": 8
     }
   ]
