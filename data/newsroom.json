@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-27T14:38:39.320Z",
+  "generatedAt": "2026-07-27T19:35:52.901Z",
   "beats": [
     {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
+      "company": "Brunridge Works",
+      "sector": "consumer",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldousmont & Sons Holds Steady as Sterile Field Kits Gain Early Traction",
-      "body": "The medical house edged revenue up 3% as new Sterile Field Kits added to the Peel-Free line and multi-region contracts held firm. CEO Dunmore Calder reaffirmed full-year guidance, citing consistent consumable reorder rates. Management noted no material change to input costs.",
-      "cycle": 82646,
+      "head": "Brunridge Works Ticks Up as New Distribution Centers Broaden Reach",
+      "body": "Brunridge Works reported a modest earnings beat, with revenue up 7% as the two new distribution centers began shortening delivery times on premium fine goods. CEO Halia Brennt said early shelf-share data supports the national expansion thesis, though she cautioned that ramp costs would weigh on the next quarter. The company held its full-year guidance.",
+      "cycle": 82647,
       "dur": 1
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Carrowwell's Theo Thorne to Retire After Record Run; Mara Voss Named CEO",
+      "body": "Carrowwell announced that Theo Thorne, chief executive since 1934, will step down at year-end following back-to-back record quarters fueled by twin multibillion-dollar contracts. The board named operations chief Mara Voss as successor, tasking her with executing the $2.4B industrial-machines backlog and the logistics automation pact. Thorne will remain as non-executive chairman through the transition.",
+      "cycle": 82647,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Castlestone Faces Regulatory Probe After Grid Division Overheating Incidents",
+      "body": "Castlestone shares came under pressure after regulators opened a formal safety probe into three thermal-failure incidents tied to compute installations under its landmark $1.1B grid contract. CEO Pell Karsh, known for public bravado, acknowledged the review in a terse statement pledging 'full cooperation' while defending the hardware's design. The probe casts a shadow over the standalone grid division that had anchored Castlestone's recovery.",
+      "cycle": 82647,
+      "dur": 8
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drayton Freight Beats as National Fleet Rollout Lifts Pallet-Lift Volumes",
+      "body": "Drayton Freight reported quarterly revenue of $612 million, up 14% year-over-year, as the multi-depot fleet deal moved into active deployment across 22 sites. CEO Emil Holt credited the heavy-duty pallet-lift line for a 220-basis-point margin improvement, noting depot reorders have outpaced internal forecasts. The company nudged its full-year outlook higher.",
+      "cycle": 82647,
+      "dur": 2
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Halcyon Industries Breaks Ground on Fifth Line as Southport Nears Capacity",
+      "body": "Halcyon Industries announced a $180 million investment to build a fifth automated packaging line at Southport, citing sustained order backlogs that have pushed existing lines near full utilization. CEO Dorian Ashby said the addition should come online within 18 months and expand regional output by roughly 30%. The disciplined build-out continues Halcyon's steady capacity ladder begun with the Eastmere ramp.",
+      "cycle": 82647,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrwright Group Beats as Corridor Package Drives Record Beam and Cable Shipments",
+      "body": "Korrwright Group posted revenue of $2.1 billion, up 19%, as the $1.4B corridor infrastructure package entered peak delivery across beams and wire. CEO Halden Fenn said the Verant Corridor plant is running at 85% capacity less than a year after opening. Backlog stood at $3.6 billion, giving the company visibility into 2027.",
+      "cycle": 82647,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Varnvale & Sons Acquires Heritage Jeweler Maison Aubrec in $2.3B Luxury Landmark",
+      "body": "Varnvale & Sons announced its largest acquisition to date, agreeing to buy fine-jewelry house Maison Aubrec for $2.3 billion in cash and stock. CEO Bram Wold said the deal folds Aubrec's storied ateliers and 40-store retail network into Varnvale's expanding maisons portfolio, deepening the vertical push that began with the Calderon movement acquisition. The board approved a companion buyback and said Aubrec will retain its brand identity.",
+      "cycle": 82647,
+      "dur": 8
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Vencyon Unveils Modular Handling Platform to Extend Beyond Third Hub",
+      "body": "With its third hub now at full throughput, Vencyon introduced a modular material-handling platform designed for rapid deployment at customer sites rather than fixed hubs. CEO Iris Halloran called it a 'deliberate step outward,' with three pilot installations already committed for the coming quarter. Management framed the launch as the foundation for a lighter-footprint growth phase.",
+      "cycle": 82647,
+      "dur": 2
     },
     {
       "company": "Caldercraft Holdings",
@@ -72,46 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vossenstead Supply Stretches Streak to Nine as Food Service Margins Firm",
-      "body": "The house posted a ninth consecutive quarterly beat, with revenue up 6% and Food Service margins improving 90 basis points as hub logistics matured. CEO Bram Thorne kept guidance measured, citing 'steady demand and no surprises.' The Plumbing & Fixtures ramp continued on plan.",
-      "cycle": 82646,
-      "dur": 1
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Bruncrest Works Tops Quarterly Estimates as Aria Pro Backlog Clears",
-      "body": "Bruncrest reported revenue of 4.1B for the quarter, ahead of the 3.7B consensus, crediting a rapid rebound in Aria Pro shipments after the Eastfield disruption. CEO Ines Marlow told analysts the company had 'turned a supply crisis into a proof point,' noting the National Compute Consortium order is now roughly 60% fulfilled. Gross margins expanded to 34% as the alternate component supply stabilized pricing.",
-      "cycle": 82645,
-      "dur": 2
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunmark Motors Unveils Redesigned Veyra S With Overhauled Battery Pack",
-      "body": "CEO Halvard Renn introduced the second-generation Veyra S, featuring a redesigned Power & Storage module the company says addresses the defects behind the ongoing class-action suit. Brunmark committed to a free retrofit program for existing owners, estimated at 240M, framing it as the centerpiece of Renn's turnaround plan. Deliveries are slated to begin next quarter.",
-      "cycle": 82645,
-      "dur": 2
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Fennmoor Signs 900M Hospital-System Deal for Threll Diagnostics Suite",
-      "body": "Fennmoor secured a five-year, 900M agreement to deploy its Threll Diagnostics Suite across a 30-hospital network, its largest Medical Equipment contract to date. CEO Dorian Brandt said the win validates the Callent Labs acquisition, with the integrated sensor platform cited as the deciding factor. Deployment begins next quarter, with recurring service revenue expected to make up roughly a third of the deal's value.",
-      "cycle": 82645,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "leadership_change",
@@ -120,16 +150,6 @@
       "body": "Halhold's board removed Lena Faircloth effective immediately following the disclosure of internal memos showing Aveline monitor flaws were known before launch, with directors citing 'a catastrophic breach of trust.' The company named interim chair Marcus Thorne as CEO and announced an independent review of all Medical Equipment lines. Shares of pending litigation now span four hospital networks and an estimated 1.2B in claimed damages.",
       "cycle": 82645,
       "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "standard",
-      "head": "Varnvale House Wins Heritage Craftsmanship Honor for Meridian Line",
-      "body": "The Meridian timepiece line earned the Guild of Fine Makers' annual craftsmanship award, with judges citing its fully traceable sourcing as 'an industry benchmark.' CEO Adrienne Sole called the recognition 'vindication of the reset,' noting Meridian pre-orders have exceeded internal targets by 40%. The honor marks the first major external validation since last year's sourcing scandal.",
-      "cycle": 82645,
-      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -229,26 +249,6 @@
       "head": "Stegreach Lands Landmark Grid Modernization Contract Worth $1.2 Billion",
       "body": "Building on its Riverport momentum, Stegreach has been named lead supplier of wire, cable, and lighting for the multi-year Eastfield grid modernization program, a $1.2 billion mandate spanning six substations. CEO Halden Ashby, in one of his signature bold moves after decades of steadier plays, said the award roughly doubles the company's cable order book and will require a new production line at its Deakin works. The deal is the largest single contract in Stegreach's history.",
       "cycle": 82640,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Halhold Works Rocked as Internal Memos Show Aveline Monitor Flaws Known Before Launch",
-      "body": "Leaked correspondence revealed that Halhold engineers flagged voltage instability in the Aveline bedside monitors nearly a year before shipment, warnings that senior management reportedly overrode to meet a launch window. Lena Faircloth faces mounting calls from the board and hospital plaintiffs to testify, and shares tumbled 22% as three institutional partners suspended orders. The disclosure transforms what had been a product failure into a governance crisis at the heart of Halhold's medical division.",
-      "cycle": 82639,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Kessel Drive Plunges Into Deep Loss as Recall and Probe Costs Overwhelm Quarter",
-      "body": "Kessel Drive posted a quarterly loss of $1.1 billion, far wider than expected, as widening recall provisions and regulatory penalties tied to its storage packs battered the balance sheet. Neave Corliss conceded the restructure had not yet stemmed the bleeding, with vehicle deliveries down 31% and the newly split storage unit still absorbing warranty charges. The board has retained outside advisers to review financing options amid speculation over a capital raise.",
-      "cycle": 82639,
       "dur": 8
     }
   ]

@@ -2123,7 +2123,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82635,
+    "lastEventCycle": 82647,
     "events": [
       {
         "cycle": 0,
@@ -2229,6 +2229,16 @@
         "body": "Halia Brennt announced two regional distribution centers to support the ramping national shelf deal, adding roughly 600 jobs across both sites. The expansion is expected to cut fulfillment times to major retailers by 30% and support the premium Fine Goods rollout into more markets. Brennt said the buildout keeps Brunridge ahead of shelf-space commitments through next year.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82647,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Brunridge Works Ticks Up as New Distribution Centers Broaden Reach",
+        "body": "Brunridge Works reported a modest earnings beat, with revenue up 7% as the two new distribution centers began shortening delivery times on premium fine goods. CEO Halia Brennt said early shelf-share data supports the national expansion thesis, though she cautioned that ramp costs would weigh on the next quarter. The company held its full-year guidance.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -3087,14 +3097,14 @@
     "aiOwned": true,
     "homeSector": "manufacturing",
     "founded": 1934,
-    "ceo": "Theo Thorne",
-    "ceoSince": 1934,
+    "ceo": "Mara Voss",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.53,
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82635,
+    "lastEventCycle": 82647,
     "events": [
       {
         "cycle": 0,
@@ -3203,6 +3213,14 @@
         "effects": {
           "manufacturing": 0.22
         }
+      },
+      {
+        "cycle": 82647,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Carrowwell's Theo Thorne to Retire After Record Run; Mara Voss Named CEO",
+        "body": "Carrowwell announced that Theo Thorne, chief executive since 1934, will step down at year-end following back-to-back record quarters fueled by twin multibillion-dollar contracts. The board named operations chief Mara Voss as successor, tasking her with executing the $2.4B industrial-machines backlog and the logistics automation pact. Thorne will remain as non-executive chairman through the transition.",
+        "effects": {}
       }
     ]
   },
@@ -3633,7 +3651,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82642,
+    "lastEventCycle": 82647,
     "events": [
       {
         "cycle": 0,
@@ -3847,6 +3865,16 @@
         "body": "Pell Karsh secured a five-year, $1.1B compute-supply agreement with the Merristead Data Consortium, the largest deal in Castlestone's history and a full vindication of the divisional split that followed last year's penalty fallout. Karsh, in typically bold fashion, pledged first deliveries within 120 days and hinted at 'more of this scale' ahead. The standalone Grid Division will handle fulfillment, cementing its turnaround.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82647,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Castlestone Faces Regulatory Probe After Grid Division Overheating Incidents",
+        "body": "Castlestone shares came under pressure after regulators opened a formal safety probe into three thermal-failure incidents tied to compute installations under its landmark $1.1B grid contract. CEO Pell Karsh, known for public bravado, acknowledged the review in a terse statement pledging 'full cooperation' while defending the hardware's design. The probe casts a shadow over the standalone grid division that had anchored Castlestone's recovery.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -4108,7 +4136,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82630,
+    "lastEventCycle": 82647,
     "events": [
       {
         "cycle": 0,
@@ -4194,6 +4222,16 @@
         "size": "standard",
         "head": "Drayton Freight Signs Multi-Depot Fleet Deal With National Distributor",
         "body": "Emil Holt announced a 480-unit order of the new heavy-duty pallet-lift line for a national grocery distributor, the largest single order in the company's history. The four-year agreement bundles servicing and spare-parts coverage, extending Drayton's recurring-revenue base. Deliveries begin next quarter across eleven depots.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82647,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drayton Freight Beats as National Fleet Rollout Lifts Pallet-Lift Volumes",
+        "body": "Drayton Freight reported quarterly revenue of $612 million, up 14% year-over-year, as the multi-depot fleet deal moved into active deployment across 22 sites. CEO Emil Holt credited the heavy-duty pallet-lift line for a 220-basis-point margin improvement, noting depot reorders have outpaced internal forecasts. The company nudged its full-year outlook higher.",
         "effects": {
           "logistics": 0.13
         }
@@ -6364,7 +6402,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82635,
+    "lastEventCycle": 82647,
     "events": [
       {
         "cycle": 0,
@@ -6482,6 +6520,16 @@
         "body": "Dorian Ashby reported modest profit growth as the fourth automated line at Southport hit full utilization and Eastmere continued ramping. Operating margins ticked up 60 basis points on the automation blueprint's efficiency gains. Ashby reaffirmed guidance and described the pace as deliberate and sustainable.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82647,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcyon Industries Breaks Ground on Fifth Line as Southport Nears Capacity",
+        "body": "Halcyon Industries announced a $180 million investment to build a fifth automated packaging line at Southport, citing sustained order backlogs that have pushed existing lines near full utilization. CEO Dorian Ashby said the addition should come online within 18 months and expand regional output by roughly 30%. The disciplined build-out continues Halcyon's steady capacity ladder begun with the Eastmere ramp.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -8295,7 +8343,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82635,
+    "lastEventCycle": 82647,
     "events": [
       {
         "cycle": 0,
@@ -8401,6 +8449,16 @@
         "size": "standard",
         "head": "Korrwright Group Wins $1.4B Corridor Infrastructure Package Spanning Beams and Cable",
         "body": "Halden Fenn secured a $1.4 billion multi-year award to supply structural materials and wire for the next phase of the Verant Corridor buildout. The contract pairs the recently opened corridor plant with Korrwright's cable operations, locking in demand through 2032. Fenn called it validation of the vertically integrated bet the company placed on the corridor.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82647,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Group Beats as Corridor Package Drives Record Beam and Cable Shipments",
+        "body": "Korrwright Group posted revenue of $2.1 billion, up 19%, as the $1.4B corridor infrastructure package entered peak delivery across beams and wire. CEO Halden Fenn said the Verant Corridor plant is running at 85% capacity less than a year after opening. Backlog stood at $3.6 billion, giving the company visibility into 2027.",
         "effects": {
           "construction": 0.13
         }
@@ -11240,7 +11298,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82640,
+    "lastEventCycle": 82647,
     "events": [
       {
         "cycle": 0,
@@ -11418,6 +11476,16 @@
         "body": "Restless as ever, CEO Bram Wold has struck again, agreeing to buy specialist movement manufacturer Calderon for roughly $340 million to bring watch mechanics in-house after the success of the Lenoir line. The deal secures supply for Varnvale's expanding Timepieces division and reduces reliance on outside movement suppliers. Management expects it to close within two quarters.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82647,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Varnvale & Sons Acquires Heritage Jeweler Maison Aubrec in $2.3B Luxury Landmark",
+        "body": "Varnvale & Sons announced its largest acquisition to date, agreeing to buy fine-jewelry house Maison Aubrec for $2.3 billion in cash and stock. CEO Bram Wold said the deal folds Aubrec's storied ateliers and 40-store retail network into Varnvale's expanding maisons portfolio, deepening the vertical push that began with the Calderon movement acquisition. The board approved a companion buyback and said Aubrec will retain its brand identity.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -11731,7 +11799,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82635,
+    "lastEventCycle": 82647,
     "events": [
       {
         "cycle": 0,
@@ -11837,6 +11905,16 @@
         "size": "standard",
         "head": "Vencyon Beats and Raises as Third Hub Hits Full Throughput",
         "body": "Iris Halloran reported the third hub reached full designed throughput a quarter ahead of schedule, driving revenue up 11% and prompting Vencyon to lift full-year guidance. The company said the new handling system cut per-unit handling costs by 8% across the network. Halloran signaled a fourth site is under early evaluation but stressed no commitment yet.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82647,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vencyon Unveils Modular Handling Platform to Extend Beyond Third Hub",
+        "body": "With its third hub now at full throughput, Vencyon introduced a modular material-handling platform designed for rapid deployment at customer sites rather than fixed hubs. CEO Iris Halloran called it a 'deliberate step outward,' with three pilot installations already committed for the coming quarter. Management framed the launch as the foundation for a lighter-footprint growth phase.",
         "effects": {
           "logistics": 0.13
         }
