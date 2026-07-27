@@ -741,7 +741,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82636,
+    "lastEventCycle": 82644,
     "events": [
       {
         "cycle": 0,
@@ -891,6 +891,16 @@
         "size": "major",
         "head": "Blackhold Faces Regulatory Probe as National Grid-Storage Failures Trigger Formal Review",
         "body": "Regulators opened a formal safety investigation into Blackhold's $2.4-billion national storage program after multiple sites faltered during their first live test. The National Energy Oversight Board demanded a full audit of the firm's cell-management systems and froze new site activations pending findings. CEO Renata Solberg acknowledged the review as 'a serious moment' but insisted the underlying technology remains sound.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82644,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Blackhold Reels as Probe Uncovers Falsified Grid-Storage Test Records",
+        "body": "Regulators reviewing the failed national storage sites found that pre-deployment safety certifications had been signed off using incomplete and, in several cases, fabricated test data, according to filings released today. Renata Solberg suspended two senior operations executives and confirmed the $2.4 billion program is now under formal suspension pending recertification. The disclosure marks the sharpest crisis of Solberg's short tenure and raises questions over the award itself.",
         "effects": {
           "energy": -0.22
         }
@@ -2204,7 +2214,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82637,
+    "lastEventCycle": 82644,
     "events": [
       {
         "cycle": 0,
@@ -2396,6 +2406,16 @@
         "size": "standard",
         "head": "Brunstone & Sons Beats as Vault Cell Guard Ramp Drives Recovery",
         "body": "Brunstone & Sons posted revenue of 2.7B, beating estimates, powered by early deliveries under its 4.1B fleet contract and strong Vault Cell Guard uptake. CEO Halden Crowe declared the recall era 'firmly behind us,' citing zero field-safety incidents on the new cell line since launch. The company raised full-year guidance for the first time under Crowe's tenure.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82644,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunstone & Sons Debuts Vault Cell Guard Pro for Long-Haul Fleets",
+        "body": "Halden Crowe unveiled a heavy-duty variant of the recovery-defining Vault Cell Guard, promising 40% greater cycle life and a self-isolating fault system aimed at commercial haulers. Crowe staged the reveal at Brunstone's Ridgeline plant, framing it as proof the company has 'left the recall firmly behind.' Early orders from the 4.1B fleet partner were disclosed alongside the launch.",
         "effects": {
           "automotive": 0.13
         }
@@ -3925,7 +3945,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82628,
+    "lastEventCycle": 82644,
     "events": [
       {
         "cycle": 0,
@@ -4013,6 +4033,16 @@
         "body": "Cranegrove commissioned a new earthmoving fleet and maintenance depot near the inland corridor to keep pace with its three-package backlog. CEO Vale Calder said the $210M investment would cut equipment idle time and support bids on a potential fourth corridor package. The depot is expected to reach full staffing within two quarters.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82644,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranegrove Edges Past Estimates as Fleet Depot Trims Corridor Costs",
+        "body": "Cranegrove reported a modest beat with operating margin up 90 basis points, aided by the new regional depot cutting equipment-idle time across the inland corridor. Vale Calder reaffirmed the full-year outlook and noted the three corridor packages remain on schedule. The disciplined update drew little surprise from a company known for steady execution.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -6968,7 +6998,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82631,
+    "lastEventCycle": 82644,
     "events": [
       {
         "cycle": 0,
@@ -7064,6 +7094,16 @@
         "size": "standard",
         "head": "Hesperforge Beats as Coastal Shipyard Pact Locks In Marine-Grade Backlog",
         "body": "Sable Halloran's house topped expectations with revenue up 6.4%, driven by the multi-year marine-grade beam pact now filling both mills near capacity. The order book stretches 14 months forward, giving Hesperforge rare visibility on structural-materials demand. Halloran hinted a third mill study is underway but stopped short of committing capital.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82644,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Hesperforge Supply Breaks Ground on Third Mill to Meet Marine-Grade Demand",
+        "body": "Sable Halloran authorized a $310 million third mill dedicated to marine-grade structural beams, citing a backlog now stretching beyond two years from the coastal shipyard pact. The facility is expected to add 260 roles and come online within 18 months. Halloran called it 'a measured bet backed by locked-in orders.'",
         "effects": {
           "manufacturing": 0.13
         }
@@ -8280,7 +8320,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82635,
+    "lastEventCycle": 82644,
     "events": [
       {
         "cycle": 0,
@@ -8458,6 +8498,16 @@
         "body": "Dunmore Carrow cut the ribbon on a restored downtown atelier that consolidates Korrwright and Ambrose & Sons craftsmanship under one roof, adding roughly 120 master watchmakers. The 40,000-square-foot facility is expected to lift annual output of high-complication timepieces by nearly a third. Carrow hinted the site is a launchpad for entry into two overseas luxury markets next year.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82644,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Korrwright Works Seizes Rival Meridienne in $2.4B Cross-Border Coup",
+        "body": "Dunmore Carrow moved on longtime competitor Meridienne Horlogerie, acquiring the storied movement-house for $2.4 billion in the largest deal of his 118-year tenure. The purchase hands the new Heritage Division control of Meridienne's celebrated tourbillon workshops and opens the eastern markets Carrow had publicly targeted. Executives said Meridienne's 340 master watchmakers will be retained under the Korrwright banner.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -8706,7 +8756,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82631,
+    "lastEventCycle": 82644,
     "events": [
       {
         "cycle": 0,
@@ -8824,6 +8874,16 @@
         "body": "Rhys Kessler, restless after finally stabilizing margins, announced the $1.8 billion purchase of Calbrook, a mid-market household-goods brand, to broaden the portfolio beyond the streamlined jansan division. Kessler framed the deal as 'the next leg,' pledging to avoid the integration costs that dragged the earlier Ostley merger. Investors watched warily given Maison & Vale's recent margin scare.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82644,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Maison & Vale Merges Calbrook Into Household-Goods Arm as Kessler Cuts Overlap",
+        "body": "Rhys Kessler folded the $1.8 billion Calbrook purchase into a newly consolidated Household Goods Group, eliminating roughly 600 duplicated back-office roles and shuttering two aging plants. Kessler said the reorganization should deliver $140 million in annual savings by next fiscal year. The move mirrors last year's Jansan streamlining that returned the company to growth.",
+        "effects": {
+          "hospitality": -0.13
         }
       }
     ]
@@ -9276,7 +9336,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82632,
+    "lastEventCycle": 82644,
     "events": [
       {
         "cycle": 0,
@@ -9378,6 +9438,16 @@
         "size": "standard",
         "head": "Marrowstone Build Beats as Municipal Contract Fuels Split Earthmoving Unit",
         "body": "First results since the $610M municipal award showed revenue up 14% to $498M, with Delphine Vaugh's carved-out heavy-earthmoving unit contributing the bulk of the upside. Vaugh said the safety overhaul had cut incident rates by a third, easing the regulatory scrutiny that shadowed predecessor Halloran's tenure.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82644,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Marrowstone Build Adds $520M Regional Roadworks Package to Split Unit",
+        "body": "Delphine Vaugh's heavy-earthmoving unit secured a $520 million multi-year roadworks contract spanning three regional districts, building on the momentum of its earlier municipal win. Vaugh said the award validates the decision to spin the division into a standalone operation under the safety overhaul. Backlog for the unit now exceeds $1.3 billion.",
         "effects": {
           "construction": 0.13
         }
@@ -11838,7 +11908,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82634,
+    "lastEventCycle": 82644,
     "events": [
       {
         "cycle": 0,
@@ -11994,6 +12064,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Acquires Heirloom Strapmaker Corveil in 480M Vertical Push",
         "body": "Restless as ever, Quinn Marrow struck a 480 million deal to buy Corveil, the specialty leather and metal band maker that has long supplied the Halden timepiece line. The acquisition brings strap production in-house and secures margins on the timepieces now anchoring Vossenspire's vehicle salons. Marrow called the deal 'the natural next link in the chain.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82644,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenspire Supply Beats as Corveil Straps Lift Vehicle-Salon Sales",
+        "body": "Vossenspire posted quarterly revenue of $3.6 billion, up 14% year over year, as freshly acquired strapmaker Corveil began supplying in-house leather goods across Quinn Marrow's vehicle salons. Margins widened 210 basis points on the vertical integration, with the Halden timepiece line now stocked in 92 of 110 salons. Marrow flagged 'further consolidation opportunities' on the earnings call.",
         "effects": {
           "luxury": 0.13
         }

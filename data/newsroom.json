@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-26T19:13:49.233Z",
+  "generatedAt": "2026-07-27T03:20:37.516Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Blackhold Reels as Probe Uncovers Falsified Grid-Storage Test Records",
+      "body": "Regulators reviewing the failed national storage sites found that pre-deployment safety certifications had been signed off using incomplete and, in several cases, fabricated test data, according to filings released today. Renata Solberg suspended two senior operations executives and confirmed the $2.4 billion program is now under formal suspension pending recertification. The disclosure marks the sharpest crisis of Solberg's short tenure and raises questions over the award itself.",
+      "cycle": 82644,
+      "dur": 8
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Brunstone & Sons Debuts Vault Cell Guard Pro for Long-Haul Fleets",
+      "body": "Halden Crowe unveiled a heavy-duty variant of the recovery-defining Vault Cell Guard, promising 40% greater cycle life and a self-isolating fault system aimed at commercial haulers. Crowe staged the reveal at Brunstone's Ridgeline plant, framing it as proof the company has 'left the recall firmly behind.' Early orders from the 4.1B fleet partner were disclosed alongside the launch.",
+      "cycle": 82644,
+      "dur": 2
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Cranegrove Edges Past Estimates as Fleet Depot Trims Corridor Costs",
+      "body": "Cranegrove reported a modest beat with operating margin up 90 basis points, aided by the new regional depot cutting equipment-idle time across the inland corridor. Vale Calder reaffirmed the full-year outlook and noted the three corridor packages remain on schedule. The disciplined update drew little surprise from a company known for steady execution.",
+      "cycle": 82644,
+      "dur": 1
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Hesperforge Supply Breaks Ground on Third Mill to Meet Marine-Grade Demand",
+      "body": "Sable Halloran authorized a $310 million third mill dedicated to marine-grade structural beams, citing a backlog now stretching beyond two years from the coastal shipyard pact. The facility is expected to add 260 roles and come online within 18 months. Halloran called it 'a measured bet backed by locked-in orders.'",
+      "cycle": 82644,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Korrwright Works Seizes Rival Meridienne in $2.4B Cross-Border Coup",
+      "body": "Dunmore Carrow moved on longtime competitor Meridienne Horlogerie, acquiring the storied movement-house for $2.4 billion in the largest deal of his 118-year tenure. The purchase hands the new Heritage Division control of Meridienne's celebrated tourbillon workshops and opens the eastern markets Carrow had publicly targeted. Executives said Meridienne's 340 master watchmakers will be retained under the Korrwright banner.",
+      "cycle": 82644,
+      "dur": 8
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Maison & Vale Merges Calbrook Into Household-Goods Arm as Kessler Cuts Overlap",
+      "body": "Rhys Kessler folded the $1.8 billion Calbrook purchase into a newly consolidated Household Goods Group, eliminating roughly 600 duplicated back-office roles and shuttering two aging plants. Kessler said the reorganization should deliver $140 million in annual savings by next fiscal year. The move mirrors last year's Jansan streamlining that returned the company to growth.",
+      "cycle": 82644,
+      "dur": 2
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Marrowstone Build Adds $520M Regional Roadworks Package to Split Unit",
+      "body": "Delphine Vaugh's heavy-earthmoving unit secured a $520 million multi-year roadworks contract spanning three regional districts, building on the momentum of its earlier municipal win. Vaugh said the award validates the decision to spin the division into a standalone operation under the safety overhaul. Backlog for the unit now exceeds $1.3 billion.",
+      "cycle": 82644,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenspire Supply Beats as Corveil Straps Lift Vehicle-Salon Sales",
+      "body": "Vossenspire posted quarterly revenue of $3.6 billion, up 14% year over year, as freshly acquired strapmaker Corveil began supplying in-house leather goods across Quinn Marrow's vehicle salons. Margins widened 210 basis points on the vertical integration, with the Halden timepiece line now stocked in 92 of 110 salons. Marrow flagged 'further consolidation opportunities' on the earnings call.",
+      "cycle": 82644,
+      "dur": 2
+    },
     {
       "company": "Brunforge Holdings",
       "sector": "consumer",
@@ -10,16 +90,6 @@
       "body": "Brunforge posted its fourth consecutive earnings beat, with net income of $612 million as the three new regional Vellan flagships each turned profitable within their first full quarter. CEO Kestrel Bramm said the Home division now accounts for 31% of group revenue, up from 24% a year ago. The company reaffirmed a measured pace of two to three additional flagships over the coming year.",
       "cycle": 82643,
       "dur": 2
-    },
-    {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Stretches Streak to Six Beats on Balanced Farm and Textile Demand",
-      "body": "Cranecraft reported a sixth straight earnings beat, with revenue of $256 million as farm equipment and raw textile lines both held firm. CEO Mira Garr described demand as 'orderly and predictable,' with no material changes to production or capacity plans. Margins were steady at 14.2%.",
-      "cycle": 82643,
-      "dur": 1
     },
     {
       "company": "Holtforge Group",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Steg Tooling Notches Eighth Straight Beat as Kelmar Cells Run Near Capacity",
-      "body": "Steg Tooling extended its streak to eight consecutive beats, with revenue up 7% to $298 million as both Kelmar fastener cells operated above 90% utilization. CEO Iris Vossen pointed to durable demand from auto-parts customers and disciplined cost control. The company left its expansion plans unchanged, citing a preference for steady ramp over aggressive additions.",
-      "cycle": 82643,
-      "dur": 1
-    },
-    {
       "company": "Woldmark",
       "sector": "technology",
       "kind": "earnings_miss",
@@ -100,56 +160,6 @@
       "body": "Pell Karsh secured a five-year, $1.1B compute-supply agreement with the Merristead Data Consortium, the largest deal in Castlestone's history and a full vindication of the divisional split that followed last year's penalty fallout. Karsh, in typically bold fashion, pledged first deliveries within 120 days and hinted at 'more of this scale' ahead. The standalone Grid Division will handle fulfillment, cementing its turnaround.",
       "cycle": 82642,
       "dur": 8
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drustcyon Beats as Rail Framework and Coastal Foundry Fill the Pipeline",
-      "body": "Aurelia Kessler's house posted a 12% revenue rise to $890M, driven by early draws on the $650M national rail framework and steady harbor-authority orders. The new coastal foundry is on track to begin corrosion-anchor output next quarter, adding capacity Kessler called 'timely, not premature.' The disciplined build-out keeps the order book comfortably ahead of demand.",
-      "cycle": 82642,
-      "dur": 2
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcrow & Vance Beats as Second Vetask Yard Ramps Ahead of Schedule",
-      "body": "Mira Skarn's firm lifted quarterly earnings 9% to $780M as the second Vetask staging yard reached operating capacity weeks early, feeding the adjacent corridor contract. Skarn signaled interest in bidding on a rumored regional interchange package, calling the current backlog 'the strongest in a decade.' The measured expansion continues to pay off without overextension.",
-      "cycle": 82642,
-      "dur": 2
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Marrowcyon Extends Streak as Combined Workwear and Fixtures Lift Margins",
-      "body": "Theo Orne's house posted its fourth consecutive beat, with revenue up 11% to $2.3B as the weatherproof workwear line and trade-grade plumbing range now each clear over $400M annually. Orne credited disciplined sell-in and reorder rates, resisting calls to accelerate expansion. The steady cadence continues to make Marrowcyon one of the calmer names on the board.",
-      "cycle": 82642,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrave",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarngrave Delivers as Hospital-Network Sterilizer Orders Begin Shipping",
-      "body": "Orla Dray's medical house reported revenue up 14% to $610M as first units under the $420M hospital-network contract left the newly expanded assembly lines. Dray reiterated that the low-temperature line remains the fastest-growing segment, now contributing roughly a fifth of equipment sales. The quarter reflected the dependable execution that has defined her long tenure.",
-      "cycle": 82642,
-      "dur": 2
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Skarnvale Expands Braeloch Blueprint to Second Terminal at Vosk Junction",
-      "body": "Buoyed by Braeloch's record throughput, Dorn Vaskell announced a $180M retrofit of the aging Vosk Junction terminal, porting the same overhauled handling systems across its cross-docking floors. Vaskell called it 'proof the model travels,' though internal targets demand the site reach full capacity within nine months. Analysts note the aggressive timeline mirrors the turbulence that preceded Braeloch's own reset.",
-      "cycle": 82642,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -259,16 +269,6 @@
       "head": "Thaldale Group Faces Widened Investor Suit as Regulators Join Fastening Probe",
       "body": "The investor lawsuit against Thaldale Group expanded sharply after regulators opened a formal inquiry into alleged inflated output claims at its shuttered fastening plants, with plaintiffs now seeking 480M in damages. Filings allege CEO Marlowe Trent's turnaround disclosures understated the scope of prior misstatements, a claim the company 'firmly rejects.' The escalation deepens a scandal that has already cost Thaldale two plants and its former operations chief.",
       "cycle": 82637,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Blackhold Faces Regulatory Probe as National Grid-Storage Failures Trigger Formal Review",
-      "body": "Regulators opened a formal safety investigation into Blackhold's $2.4-billion national storage program after multiple sites faltered during their first live test. The National Energy Oversight Board demanded a full audit of the firm's cell-management systems and froze new site activations pending findings. CEO Renata Solberg acknowledged the review as 'a serious moment' but insisted the underlying technology remains sound.",
-      "cycle": 82636,
       "dur": 8
     }
   ]
