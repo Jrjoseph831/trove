@@ -1594,7 +1594,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82637,
+    "lastEventCycle": 82645,
     "events": [
       {
         "cycle": 0,
@@ -1797,6 +1797,16 @@
         "effects": {
           "technology": 0.22
         }
+      },
+      {
+        "cycle": 82645,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Bruncrest Works Tops Quarterly Estimates as Aria Pro Backlog Clears",
+        "body": "Bruncrest reported revenue of 4.1B for the quarter, ahead of the 3.7B consensus, crediting a rapid rebound in Aria Pro shipments after the Eastfield disruption. CEO Ines Marlow told analysts the company had 'turned a supply crisis into a proof point,' noting the National Compute Consortium order is now roughly 60% fulfilled. Gross margins expanded to 34% as the alternate component supply stabilized pricing.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -1924,7 +1934,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82636,
+    "lastEventCycle": 82645,
     "events": [
       {
         "cycle": 0,
@@ -2079,6 +2089,16 @@
         "head": "Brunmark Names Turnaround Veteran Halvard Renn to Lead Post-Veyra Recovery",
         "body": "Brunmark's board confirmed Halvard Renn as permanent CEO, ending the interim period that followed Yvette Calder's departure over the Veyra S battery scandal. Renn pledged an independent safety overhaul and a settlement framework for the class-action suit, saying the company must 'earn back every buyer we let down.' He will oversee a paused relaunch of the Veyra line targeted for next year.",
         "effects": {}
+      },
+      {
+        "cycle": 82645,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunmark Motors Unveils Redesigned Veyra S With Overhauled Battery Pack",
+        "body": "CEO Halvard Renn introduced the second-generation Veyra S, featuring a redesigned Power & Storage module the company says addresses the defects behind the ongoing class-action suit. Brunmark committed to a free retrofit program for existing owners, estimated at 240M, framing it as the centerpiece of Renn's turnaround plan. Deliveries are slated to begin next quarter.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -4520,7 +4540,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82625,
+    "lastEventCycle": 82645,
     "events": [
       {
         "cycle": 0,
@@ -4598,6 +4618,16 @@
         "body": "Dunmorestone secured a supply contract to outfit a regional developer's residential build-out with plumbing and fixtures, marking its largest win outside the food service arm. CEO Orla Mercer said the deal diversifies revenue as the cafeteria kitchen continues its steady ramp. The agreement is expected to phase in over the next 18 months.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82645,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Dunmorestone Delivers Quiet Beat as Plumbing Award Begins Contributing",
+        "body": "Dunmorestone posted a modest 3% revenue rise as the multi-site Plumbing & Fixtures award started shipping alongside steady Food Service volumes. CEO Orla Mercer described the quarter as 'exactly on plan,' with the new cafeteria kitchen now running at full utilization. Management reaffirmed full-year guidance.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -4982,7 +5012,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82637,
+    "lastEventCycle": 82645,
     "events": [
       {
         "cycle": 0,
@@ -5138,6 +5168,16 @@
         "size": "standard",
         "head": "Fennmoor Launches Threll Diagnostics Suite Built on Callent Integration",
         "body": "Fennmoor unveiled its Threll Diagnostics Suite, a bundled sensor-and-analysis platform combining Threll hardware with newly integrated Callent Labs assays, targeting mid-size hospital networks. CEO Dorian Brandt said pilot deployments across nine facilities had already generated 85M in committed orders. The launch marks Fennmoor's first product to fully merge its device and medical lines since the Callent acquisition.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82645,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Fennmoor Signs 900M Hospital-System Deal for Threll Diagnostics Suite",
+        "body": "Fennmoor secured a five-year, 900M agreement to deploy its Threll Diagnostics Suite across a 30-hospital network, its largest Medical Equipment contract to date. CEO Dorian Brandt said the win validates the Callent Labs acquisition, with the integrated sensor platform cited as the deciding factor. Deployment begins next quarter, with recurring service revenue expected to make up roughly a third of the deal's value.",
         "effects": {
           "technology": 0.13
         }
@@ -6637,25 +6677,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1971,
-    "ceo": "Lena Faircloth",
+    "ceo": "Marcus Thorne",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.89,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82639,
+    "lastEventCycle": 82645,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Halhold Works Unveils Bedside Monitoring Line for Regional Clinics",
-        "body": "CEO Nadia Brandt introduced the Verity series of compact patient monitors at the Eastmarch Medical Forum, targeting under-equipped clinics across the Tessen Valley. The line bundles vital-sign tracking with the firm's own shielded wiring, a nod to its legacy cable business. Brandt promised first shipments within two quarters.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "recall",
@@ -6881,6 +6911,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82645,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Works Ousts CEO Lena Faircloth as Aveline Scandal Engulfs Board",
+        "body": "Halhold's board removed Lena Faircloth effective immediately following the disclosure of internal memos showing Aveline monitor flaws were known before launch, with directors citing 'a catastrophic breach of trust.' The company named interim chair Marcus Thorne as CEO and announced an independent review of all Medical Equipment lines. Shares of pending litigation now span four hospital networks and an estimated 1.2B in claimed damages.",
+        "effects": {}
       }
     ]
   },
@@ -9465,7 +9503,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82631,
+    "lastEventCycle": 82645,
     "events": [
       {
         "cycle": 0,
@@ -9551,6 +9589,16 @@
         "size": "flash",
         "head": "Ornewright Goods Nudges Past Estimates Again on Steady Farm-Inputs Demand",
         "body": "Petra Veldt's house delivered its fifth consecutive modest beat, with quarterly revenue up 2.3% and margins holding flat. Farm-input orders offset softer cleaning-and-jansan volumes, keeping the streak intact without surprises. Veldt reiterated guidance and declined to raise it.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82645,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Extends Beat Streak on Broad-Based Demand",
+        "body": "Ornewright edged past estimates once again, posting a 2% revenue gain led by steady Cleaning & Jansan reorders and resilient Farm Inputs volumes. CEO Petra Veldt noted the company has now met or beaten expectations for several consecutive quarters without a single guidance revision. Management again described the outlook as 'stable and unremarkable.'",
         "effects": {
           "consumer": 0.06
         }
@@ -11009,7 +11057,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82630,
+    "lastEventCycle": 82645,
     "events": [
       {
         "cycle": 0,
@@ -11095,6 +11143,16 @@
         "size": "flash",
         "head": "Vantor Lines Holds Steady as Grocery Packaging Volumes Level Off",
         "body": "Vantor posted a slim beat with revenue of 1.3 billion as the national grocery contract settled into a stable run-rate. Halden Vossen said attention was shifting toward renewal terms and modest efficiency gains at three packaging plants. Margins were flat quarter on quarter.",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82645,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Posts In-Line Quarter as Grocery Packaging Volumes Hold",
+        "body": "Vantor reported flat sequential revenue with a slim beat on earnings, as steady grocery contract shipments offset softness in seasonal packaging. CEO Halden Vossen said the focus remains on 'reliable margins over headline growth,' pointing to a modest efficiency gain at two regional hubs. The company maintained its dividend.",
         "effects": {
           "logistics": 0.06
         }
@@ -11305,7 +11363,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82637,
+    "lastEventCycle": 82645,
     "events": [
       {
         "cycle": 0,
@@ -11473,6 +11531,16 @@
         "size": "standard",
         "head": "Varnvale House Debuts Meridian Timepiece Line With Fully Traceable Sourcing",
         "body": "Varnvale House launched its Meridian collection, the first timepiece range produced entirely under the overhauled sourcing framework introduced after last year's cover-up scandal. CEO Adrienne Sole showcased a public provenance ledger for every component and priced the flagship model at 42,000. Sole called Meridian 'proof that this house has changed,' though analysts noted early boutique orders remained modest at 60M.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82645,
+        "kind": "award",
+        "size": "standard",
+        "head": "Varnvale House Wins Heritage Craftsmanship Honor for Meridian Line",
+        "body": "The Meridian timepiece line earned the Guild of Fine Makers' annual craftsmanship award, with judges citing its fully traceable sourcing as 'an industry benchmark.' CEO Adrienne Sole called the recognition 'vindication of the reset,' noting Meridian pre-orders have exceeded internal targets by 40%. The honor marks the first major external validation since last year's sourcing scandal.",
         "effects": {
           "luxury": 0.13
         }

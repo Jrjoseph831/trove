@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-27T03:20:37.516Z",
+  "generatedAt": "2026-07-27T09:55:31.958Z",
   "beats": [
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Bruncrest Works Tops Quarterly Estimates as Aria Pro Backlog Clears",
+      "body": "Bruncrest reported revenue of 4.1B for the quarter, ahead of the 3.7B consensus, crediting a rapid rebound in Aria Pro shipments after the Eastfield disruption. CEO Ines Marlow told analysts the company had 'turned a supply crisis into a proof point,' noting the National Compute Consortium order is now roughly 60% fulfilled. Gross margins expanded to 34% as the alternate component supply stabilized pricing.",
+      "cycle": 82645,
+      "dur": 2
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Brunmark Motors Unveils Redesigned Veyra S With Overhauled Battery Pack",
+      "body": "CEO Halvard Renn introduced the second-generation Veyra S, featuring a redesigned Power & Storage module the company says addresses the defects behind the ongoing class-action suit. Brunmark committed to a free retrofit program for existing owners, estimated at 240M, framing it as the centerpiece of Renn's turnaround plan. Deliveries are slated to begin next quarter.",
+      "cycle": 82645,
+      "dur": 2
+    },
+    {
+      "company": "Dunmorestone",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Dunmorestone Delivers Quiet Beat as Plumbing Award Begins Contributing",
+      "body": "Dunmorestone posted a modest 3% revenue rise as the multi-site Plumbing & Fixtures award started shipping alongside steady Food Service volumes. CEO Orla Mercer described the quarter as 'exactly on plan,' with the new cafeteria kitchen now running at full utilization. Management reaffirmed full-year guidance.",
+      "cycle": 82645,
+      "dur": 1
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Fennmoor Signs 900M Hospital-System Deal for Threll Diagnostics Suite",
+      "body": "Fennmoor secured a five-year, 900M agreement to deploy its Threll Diagnostics Suite across a 30-hospital network, its largest Medical Equipment contract to date. CEO Dorian Brandt said the win validates the Callent Labs acquisition, with the integrated sensor platform cited as the deciding factor. Deployment begins next quarter, with recurring service revenue expected to make up roughly a third of the deal's value.",
+      "cycle": 82645,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Halhold Works Ousts CEO Lena Faircloth as Aveline Scandal Engulfs Board",
+      "body": "Halhold's board removed Lena Faircloth effective immediately following the disclosure of internal memos showing Aveline monitor flaws were known before launch, with directors citing 'a catastrophic breach of trust.' The company named interim chair Marcus Thorne as CEO and announced an independent review of all Medical Equipment lines. Shares of pending litigation now span four hospital networks and an estimated 1.2B in claimed damages.",
+      "cycle": 82645,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Extends Beat Streak on Broad-Based Demand",
+      "body": "Ornewright edged past estimates once again, posting a 2% revenue gain led by steady Cleaning & Jansan reorders and resilient Farm Inputs volumes. CEO Petra Veldt noted the company has now met or beaten expectations for several consecutive quarters without a single guidance revision. Management again described the outlook as 'stable and unremarkable.'",
+      "cycle": 82645,
+      "dur": 1
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vantor Lines Posts In-Line Quarter as Grocery Packaging Volumes Hold",
+      "body": "Vantor reported flat sequential revenue with a slim beat on earnings, as steady grocery contract shipments offset softness in seasonal packaging. CEO Halden Vossen said the focus remains on 'reliable margins over headline growth,' pointing to a modest efficiency gain at two regional hubs. The company maintained its dividend.",
+      "cycle": 82645,
+      "dur": 1
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "standard",
+      "head": "Varnvale House Wins Heritage Craftsmanship Honor for Meridian Line",
+      "body": "The Meridian timepiece line earned the Guild of Fine Makers' annual craftsmanship award, with judges citing its fully traceable sourcing as 'an industry benchmark.' CEO Adrienne Sole called the recognition 'vindication of the reset,' noting Meridian pre-orders have exceeded internal targets by 40%. The honor marks the first major external validation since last year's sourcing scandal.",
+      "cycle": 82645,
+      "dur": 2
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -20,16 +100,6 @@
       "body": "Halden Crowe unveiled a heavy-duty variant of the recovery-defining Vault Cell Guard, promising 40% greater cycle life and a self-isolating fault system aimed at commercial haulers. Crowe staged the reveal at Brunstone's Ridgeline plant, framing it as proof the company has 'left the recall firmly behind.' Early orders from the 4.1B fleet partner were disclosed alongside the launch.",
       "cycle": 82644,
       "dur": 2
-    },
-    {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranegrove Edges Past Estimates as Fleet Depot Trims Corridor Costs",
-      "body": "Cranegrove reported a modest beat with operating margin up 90 basis points, aided by the new regional depot cutting equipment-idle time across the inland corridor. Vale Calder reaffirmed the full-year outlook and noted the three corridor packages remain on schedule. The disciplined update drew little surprise from a company known for steady execution.",
-      "cycle": 82644,
-      "dur": 1
     },
     {
       "company": "Hesperforge Supply",
@@ -79,56 +149,6 @@
       "head": "Vossenspire Supply Beats as Corveil Straps Lift Vehicle-Salon Sales",
       "body": "Vossenspire posted quarterly revenue of $3.6 billion, up 14% year over year, as freshly acquired strapmaker Corveil began supplying in-house leather goods across Quinn Marrow's vehicle salons. Margins widened 210 basis points on the vertical integration, with the Halden timepiece line now stocked in 92 of 110 salons. Marrow flagged 'further consolidation opportunities' on the earnings call.",
       "cycle": 82644,
-      "dur": 2
-    },
-    {
-      "company": "Brunforge Holdings",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Brunforge Holdings Extends Winning Streak as Vellan Regional Flagships Deliver",
-      "body": "Brunforge posted its fourth consecutive earnings beat, with net income of $612 million as the three new regional Vellan flagships each turned profitable within their first full quarter. CEO Kestrel Bramm said the Home division now accounts for 31% of group revenue, up from 24% a year ago. The company reaffirmed a measured pace of two to three additional flagships over the coming year.",
-      "cycle": 82643,
-      "dur": 2
-    },
-    {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Holtforge Group Posts Record Quarter as Marine Cable Plant Clears Backlog",
-      "body": "Holtforge reported record revenue of $884 million, with the new marine cable plant running at 78% of rated capacity and cutting the order backlog by nearly half in three months. CEO Yvette Bramm said lead times on subsea cable orders have fallen from 14 weeks to under nine. The plant is expected to reach full capacity within two quarters.",
-      "cycle": 82643,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Lhaus Industries Pauses Sixth Cell-Pack Line, Trims Buildout to Protect Margins",
-      "body": "Following last quarter's earnings miss, Lhaus announced it will delay its planned sixth cell-pack line and consolidate two underused Delphin sub-assemblies, targeting $180 million in annualized savings. CEO Cole Brandt said the moves would 'let the existing five lines earn their keep' before further expansion. The company maintained its full-year volume outlook but conceded margin recovery would take two to three quarters.",
-      "cycle": 82643,
-      "dur": 2
-    },
-    {
-      "company": "Palettstead Holdings",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Palettstead Holdings Tops Estimates as Three-Chain Cold-Chain Network Hits Full Stride",
-      "body": "Palettstead reported quarterly revenue of $1.42 billion, up 18% year over year, as its reusable cold-chain network reached steady-state volumes across all three national grocery partners. CEO Orla Marrow credited faster crate return cycles and a 9% drop in per-unit handling costs, and confirmed the network is now recovering 94% of deployed containers. Management said the third chain's onboarding completed a full quarter ahead of schedule.",
-      "cycle": 82643,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Skarngrove & Sons Wins Kelvarn Third-Phase Contract for Interchange Structures",
-      "body": "Skarngrove secured the $410 million third-phase Kelvarn contract covering elevated interchange decks and structural fastening, extending its involvement in the corridor into a fourth year. CEO Quinn Fenn said the award reflects the firm's award-winning bridge work and reliable delivery record on earlier phases. Work is scheduled to begin next quarter and run through the following year.",
-      "cycle": 82643,
       "dur": 2
     },
     {
@@ -249,26 +269,6 @@
       "head": "Gromford Works Faces Regulatory Probe Over Undisclosed Meridian Tourbillon Supplier",
       "body": "Industry regulators opened a formal inquiry into Gromford's sourcing disclosures after reports that Meridian Tourbillon movements came from an undisclosed third party, raising authenticity and labeling questions for premium buyers. Corin Aldwych suspended new Tourbillon shipments pending review and commissioned an independent audit. The scrutiny threatens the momentum from the record holiday quarter.",
       "cycle": 82638,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Bruncrest Works Secures Alternate Component Supply, Restores Aria Pro Deliveries",
-      "body": "Bruncrest Works signed a 900M multi-year supply agreement with fabricator Delnor Components, resolving the shortage that idled its Eastfield line and threatened the 3.4B National Compute Consortium contract. CEO Ines Marlow said Eastfield had resumed full output within 72 hours of the deal and pledged all delayed Aria Pro units would ship by quarter's end. Shares of the volatile compute house had swung sharply during the three-week halt.",
-      "cycle": 82637,
-      "dur": 8
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Thaldale Group Faces Widened Investor Suit as Regulators Join Fastening Probe",
-      "body": "The investor lawsuit against Thaldale Group expanded sharply after regulators opened a formal inquiry into alleged inflated output claims at its shuttered fastening plants, with plaintiffs now seeking 480M in damages. Filings allege CEO Marlowe Trent's turnaround disclosures understated the scope of prior misstatements, a claim the company 'firmly rejects.' The escalation deepens a scandal that has already cost Thaldale two plants and its former operations chief.",
-      "cycle": 82637,
       "dur": 8
     }
   ]
