@@ -412,7 +412,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82642,
+    "lastEventCycle": 82650,
     "events": [
       {
         "cycle": 0,
@@ -578,6 +578,16 @@
         "size": "major",
         "head": "Aperture Compute Hit With Investor Suit Over Concealed Dawnmere III Faults",
         "body": "A coalition of shareholders filed a $900M class action against Aperture Compute, alleging Halden Dray and senior staff withheld knowledge of recurring power faults at Dawnmere III while breaking ground on a fourth campus. The complaint cites the internal records surfaced last month and demands governance overhauls. Dray, known for chasing headlines, now faces mounting pressure as regulators and litigants converge.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82650,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Aperture Compute Ordered to Halt Dawnmere III Shipments as Regulators Widen Fault Probe",
+        "body": "Regulators issued a stop-ship order on the entire Dawnmere III line after a second thermal fault was tied to the same concealed defect, freezing an estimated 1.9B in pending revenue. CEO Halden Dray called the order 'disproportionate' but pledged full cooperation, as the company set aside 340M for remediation and potential penalties. Shares of the compute maker have now shed roughly a third of their value since the scandal broke.",
         "effects": {
           "technology": -0.22
         }
@@ -2294,7 +2304,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82644,
+    "lastEventCycle": 82650,
     "events": [
       {
         "cycle": 0,
@@ -2496,6 +2506,16 @@
         "size": "standard",
         "head": "Brunstone & Sons Debuts Vault Cell Guard Pro for Long-Haul Fleets",
         "body": "Halden Crowe unveiled a heavy-duty variant of the recovery-defining Vault Cell Guard, promising 40% greater cycle life and a self-isolating fault system aimed at commercial haulers. Crowe staged the reveal at Brunstone's Ridgeline plant, framing it as proof the company has 'left the recall firmly behind.' Early orders from the 4.1B fleet partner were disclosed alongside the launch.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82650,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunstone & Sons Breaks Ground on Third Cell Plant to Feed Vault Guard Backlog",
+        "body": "Brunstone will invest 620M in a new facility at Merrick Flats, adding capacity for 2.8 million Vault Cell Guard units annually and roughly 1,400 jobs. CEO Halden Crowe framed the move as answering an order book now stretching 18 months, driven by the 4.1B fleet contract. First output is targeted within 20 months.",
         "effects": {
           "automotive": 0.13
         }
@@ -3285,7 +3305,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82625,
+    "lastEventCycle": 82650,
     "events": [
       {
         "cycle": 0,
@@ -3341,6 +3361,16 @@
         "size": "flash",
         "head": "Castle Devices Posts Steady Quarter as Hospital Network Volumes Kick In",
         "body": "Castle Devices reported in-line-to-slightly-ahead results, with revenue up 8% as the recently won regional hospital network contract began contributing consumable volumes. CEO Bram Calder pointed to consistent reorder patterns across surgical and general lines. The company held its full-year guidance unchanged.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82650,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castle Devices Delivers Another Steady Quarter on Consumables Demand",
+        "body": "Castle reported earnings of 1.14 per share, edging past forecasts, as hospital-network consumable volumes held firm and clinic reorders rose 6%. CEO Bram Calder reaffirmed full-year guidance, citing 'no surprises' across the supply base. Margins were flat at 19%.",
         "effects": {
           "medical": 0.06
         }
@@ -7543,7 +7573,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82629,
+    "lastEventCycle": 82650,
     "events": [
       {
         "cycle": 0,
@@ -7602,6 +7632,16 @@
         "effects": {
           "textiles": 0.06
         }
+      },
+      {
+        "cycle": 82650,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Group Stretches Beat Streak on Steady Mill Output",
+        "body": "Holtgate posted a fourth straight modest beat, with revenue up 3% as uniform-guild renewals and firm mill utilization held the line. CEO Dorian Throne reaffirmed guidance and noted raw-fiber costs remained stable through the quarter. Operating margin held at 12%.",
+        "effects": {
+          "textiles": 0.06
+        }
       }
     ]
   },
@@ -7616,7 +7656,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82636,
+    "lastEventCycle": 82650,
     "events": [
       {
         "cycle": 0,
@@ -7702,6 +7742,16 @@
         "size": "standard",
         "head": "Holtware Co. Launches Cordless Range Backed by Signature Lifetime Warranty",
         "body": "Holtware introduced its new cordless power-tool line, extending the lifetime warranty that has driven repeat sales across its award-winning range. CEO Aurelia Dray said the launch responds to strong demand at the company's two fulfillment centers, with the flagship drill and impact set priced to undercut premium rivals. Early retailer commitments cover more than 400 storefronts.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82650,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Holtware Co. Signs National Hardware Chain to Stock Lifetime-Warranty Range",
+        "body": "Holtware secured a multi-year placement deal to supply its warranty-backed cordless line across 780 retail locations under the Hallmar chain. CEO Aurelia Dray said the agreement should lift annual unit volumes by an estimated 22% while extending the brand's repeat-purchase model to a wider base. Rollout begins next quarter.",
         "effects": {
           "consumer": 0.13
         }
@@ -10950,7 +11000,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82637,
+    "lastEventCycle": 82650,
     "events": [
       {
         "cycle": 0,
@@ -11064,6 +11114,16 @@
         "body": "The investor lawsuit against Thaldale Group expanded sharply after regulators opened a formal inquiry into alleged inflated output claims at its shuttered fastening plants, with plaintiffs now seeking 480M in damages. Filings allege CEO Marlowe Trent's turnaround disclosures understated the scope of prior misstatements, a claim the company 'firmly rejects.' The escalation deepens a scandal that has already cost Thaldale two plants and its former operations chief.",
         "effects": {
           "consumer": -0.22
+        }
+      },
+      {
+        "cycle": 82650,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Thaldale Group Misses as Plant Closures and Legal Costs Weigh on Quarter",
+        "body": "Thaldale posted a quarterly loss of 128M, missing estimates, as the two shuttered fastening plants dragged revenue down 14% and legal reserves swelled to 90M. CEO Marlowe Trent conceded the turnaround was 'entering its hardest stretch,' but insisted the streamlined hardware unit would return to margin growth by year-end. The company withheld full-year guidance, citing the unresolved regulatory probe.",
+        "effects": {
+          "consumer": -0.13
         }
       }
     ]
@@ -12759,14 +12819,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1983,
-    "ceo": "Cole Carrow",
-    "ceoSince": 1983,
+    "ceo": "Sabine Orrick",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.64,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82643,
+    "lastEventCycle": 82650,
     "events": [
       {
         "cycle": 0,
@@ -12905,6 +12965,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82650,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Woldmark's Cole Carrow Ousted as Board Cleans House After Halcyon 3 Debacle",
+        "body": "The board removed longtime chief Cole Carrow, effective immediately, following the costly Halcyon 3 field failures and a guidance cut that wiped out much of the year's gains. Directors named operations veteran Sabine Orrick as CEO, tasking her with a quality overhaul and a slower, disciplined product cadence. Orrick pledged a full field-recall review and said 'no unit ships until it earns trust.'",
+        "effects": {}
       }
     ]
   },
@@ -12919,7 +12987,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82635,
+    "lastEventCycle": 82650,
     "events": [
       {
         "cycle": 0,
@@ -12995,6 +13063,16 @@
         "size": "standard",
         "head": "Wrengrove Group Tops Forecasts as Third Plant and Sterile Kits Scale",
         "body": "Rhys Vossen posted an 9% revenue gain as the third plant ramped and the new sterile kit line secured its first hospital-system orders. Margins widened on higher consumables volumes tied to the Thornbury deal, and Wrengrove raised its interim dividend. Vossen said sterile kit capacity is already booked into next quarter.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82650,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Wrengrove Group Adds Sterile-Kit Line at Third Plant as Demand Outpaces Capacity",
+        "body": "Wrengrove will commit 210M to a second production line at its newest plant, roughly doubling sterile-kit output after early orders ran 30% above projections. CEO Rhys Vossen said the expansion locks in supply for two regional health systems already on multi-year commitments. The line is slated to reach full run-rate within a year.",
         "effects": {
           "medical": 0.13
         }

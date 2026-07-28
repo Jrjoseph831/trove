@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-28T08:36:46.910Z",
+  "generatedAt": "2026-07-28T14:10:38.458Z",
   "beats": [
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Aperture Compute Ordered to Halt Dawnmere III Shipments as Regulators Widen Fault Probe",
+      "body": "Regulators issued a stop-ship order on the entire Dawnmere III line after a second thermal fault was tied to the same concealed defect, freezing an estimated 1.9B in pending revenue. CEO Halden Dray called the order 'disproportionate' but pledged full cooperation, as the company set aside 340M for remediation and potential penalties. Shares of the compute maker have now shed roughly a third of their value since the scandal broke.",
+      "cycle": 82650,
+      "dur": 8
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Brunstone & Sons Breaks Ground on Third Cell Plant to Feed Vault Guard Backlog",
+      "body": "Brunstone will invest 620M in a new facility at Merrick Flats, adding capacity for 2.8 million Vault Cell Guard units annually and roughly 1,400 jobs. CEO Halden Crowe framed the move as answering an order book now stretching 18 months, driven by the 4.1B fleet contract. First output is targeted within 20 months.",
+      "cycle": 82650,
+      "dur": 2
+    },
+    {
+      "company": "Castle Devices",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castle Devices Delivers Another Steady Quarter on Consumables Demand",
+      "body": "Castle reported earnings of 1.14 per share, edging past forecasts, as hospital-network consumable volumes held firm and clinic reorders rose 6%. CEO Bram Calder reaffirmed full-year guidance, citing 'no surprises' across the supply base. Margins were flat at 19%.",
+      "cycle": 82650,
+      "dur": 1
+    },
+    {
+      "company": "Holtgate Group",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Group Stretches Beat Streak on Steady Mill Output",
+      "body": "Holtgate posted a fourth straight modest beat, with revenue up 3% as uniform-guild renewals and firm mill utilization held the line. CEO Dorian Throne reaffirmed guidance and noted raw-fiber costs remained stable through the quarter. Operating margin held at 12%.",
+      "cycle": 82650,
+      "dur": 1
+    },
+    {
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Holtware Co. Signs National Hardware Chain to Stock Lifetime-Warranty Range",
+      "body": "Holtware secured a multi-year placement deal to supply its warranty-backed cordless line across 780 retail locations under the Hallmar chain. CEO Aurelia Dray said the agreement should lift annual unit volumes by an estimated 22% while extending the brand's repeat-purchase model to a wider base. Rollout begins next quarter.",
+      "cycle": 82650,
+      "dur": 2
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Thaldale Group Misses as Plant Closures and Legal Costs Weigh on Quarter",
+      "body": "Thaldale posted a quarterly loss of 128M, missing estimates, as the two shuttered fastening plants dragged revenue down 14% and legal reserves swelled to 90M. CEO Marlowe Trent conceded the turnaround was 'entering its hardest stretch,' but insisted the streamlined hardware unit would return to margin growth by year-end. The company withheld full-year guidance, citing the unresolved regulatory probe.",
+      "cycle": 82650,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Woldmark's Cole Carrow Ousted as Board Cleans House After Halcyon 3 Debacle",
+      "body": "The board removed longtime chief Cole Carrow, effective immediately, following the costly Halcyon 3 field failures and a guidance cut that wiped out much of the year's gains. Directors named operations veteran Sabine Orrick as CEO, tasking her with a quality overhaul and a slower, disciplined product cadence. Orrick pledged a full field-recall review and said 'no unit ships until it earns trust.'",
+      "cycle": 82650,
+      "dur": 8
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Wrengrove Group Adds Sterile-Kit Line at Third Plant as Demand Outpaces Capacity",
+      "body": "Wrengrove will commit 210M to a second production line at its newest plant, roughly doubling sterile-kit output after early orders ran 30% above projections. CEO Rhys Vossen said the expansion locks in supply for two regional health systems already on multi-year commitments. The line is slated to reach full run-rate within a year.",
+      "cycle": 82650,
+      "dur": 2
+    },
     {
       "company": "Ardent Health",
       "sector": "medical",
@@ -20,16 +100,6 @@
       "body": "Drustcraft delivered its strongest quarter since the fastener recall, with twin vehicle-line volumes now above pre-recall peaks and warranty reserves released. CEO Cora Fenn credited a rebuilt supplier-inspection regime and said the recovery frees the company to weigh a bolder capacity move next year.",
       "cycle": 82649,
       "dur": 2
-    },
-    {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Fennvale Mfg. Adds Second Shift to Fastener Plant as Order Book Lengthens",
-      "body": "CEO Theo Vossen approved a second shift at the Fennvale fastener works after the order book stretched past nine months of forward demand. The move adds roughly 90 line roles and lifts nameplate fastener output by a fifth without new tooling.",
-      "cycle": 82649,
-      "dur": 1
     },
     {
       "company": "Garrware",
@@ -52,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Kesselgrove Co.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Kesselgrove Co. Clears Estimates Again as Press Backlog Extends",
-      "body": "Kesselgrove edged past forecasts as modular press orders pushed the backlog to a record 11 months. CEO Orla Steg said the tooling bay is now running at full utilization, with margins steady as pricing held firm against input costs.",
-      "cycle": 82649,
-      "dur": 1
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "earnings_beat",
@@ -69,26 +129,6 @@
       "head": "Lhaus Industries Returns to a Beat as Trimmed Buildout Restores Margins",
       "body": "After two rough quarters, Lhaus topped estimates as the paused sixth-line spend fell out of the cost base and the five running cell-pack lines reached target yields. CEO Cole Brandt said free cash flow turned positive again and hinted the sixth line could restart 'once the numbers earn it,' signaling his acquisitive streak isn't fully cooled.",
       "cycle": 82649,
-      "dur": 2
-    },
-    {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Stretches Streak as Westline Renewals Lock In",
-      "body": "Marrowmoor posted another quarter of low-single-digit contract-base growth as early Westline accounts moved to multi-year renewals. CEO Dorian Steg noted retention held above 96%, with the jansan and household lines both contributing to the beat.",
-      "cycle": 82649,
-      "dur": 1
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Blackton Industries Adds Halvern Line as New Supply Contract Ramps",
-      "body": "Cassian Rode committed $85 million to a third production line at the Halvern plant to meet volumes from the recently signed multi-year supply deal. The expansion adds capacity for 1.2 million parts annually and roughly 160 shop-floor roles. Rode said the investment marks Blackton's shift 'from cleanup to growth' after the weld-defect recall.",
-      "cycle": 82648,
       "dur": 2
     },
     {
@@ -112,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fenncyon Beats as Combined Eastfield Packages Lift Backlog to Record",
-      "body": "Fenncyon reported quarterly revenue up 14% with operating margins reaching 18.2%, as the Northern Spur and Southern Loop packages ran concurrently. Total order backlog climbed to a record $6.7 billion, giving nearly three years of visibility. CEO Nadia Ashby said crews were being redeployed efficiently between the two Eastfield fronts to hold down mobilization costs.",
-      "cycle": 82648,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "product_launch",
@@ -130,26 +160,6 @@
       "body": "Adele Ferran unveiled the Kessel modular machine platform, the company's first major release since shuttering the troubled Drennan device unit, staking Marlgear's revival on the industrial segment. The line carries a $1.9 billion projected order pipeline over three years and consolidates six legacy models into one architecture. Ferran told a packed launch event the platform 'defines what Marlgear becomes next,' pledging a full rollout within eight months.",
       "cycle": 82648,
       "dur": 8
-    },
-    {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Ornewright Supply Breaks Ground on Second Cold-Chain Hub at Dunmere",
-      "body": "Building on Caldmere's full utilization, Rhys Throne announced a $130 million cold-chain facility at Dunmere to serve southern food-service accounts. The site will add roughly 90,000 pallet positions and 210 jobs, with first operations targeted for late next year. Throne said existing multi-year contracts already commit about half the planned capacity.",
-      "cycle": 82648,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Thronehaus & Co. Opens Verrand Atelier in Marchwick to House Ferrault Casework",
-      "body": "Cora Dray unveiled a second flagship atelier in the Marchwick jewelry quarter, dedicating a floor to the newly acquired Ferrault case-making benches. The 40-artisan expansion is meant to bring gold and titanium casework fully under one roof, cutting outside vendor reliance by an estimated 60%. Dray said the site would also serve as a training academy for a new generation of Verrand complication specialists.",
-      "cycle": 82648,
-      "dur": 2
     },
     {
       "company": "Carrowwell",
@@ -229,26 +239,6 @@
       "head": "Woldmark Tumbles as Halcyon 3 Rush Triggers Costly Field Failures and Guidance Cut",
       "body": "Woldmark missed sharply, reporting a $340 million charge tied to thermal-throttling defects in early Halcyon 3 units shipped under an aggressive nine-month timeline, and slashed full-year guidance by 22%. CEO Cole Carrow acknowledged the compressed schedule 'outran our validation,' as several major customers deferred orders pending fixes. The stumble marks a stark reversal after two quarters of Halcyon-driven beats and raises questions about Carrow's rapid-launch strategy.",
       "cycle": 82643,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Aperture Compute Hit With Investor Suit Over Concealed Dawnmere III Faults",
-      "body": "A coalition of shareholders filed a $900M class action against Aperture Compute, alleging Halden Dray and senior staff withheld knowledge of recurring power faults at Dawnmere III while breaking ground on a fourth campus. The complaint cites the internal records surfaced last month and demands governance overhauls. Dray, known for chasing headlines, now faces mounting pressure as regulators and litigants converge.",
-      "cycle": 82642,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Castlestone Wins $1.1B Grid Contract as Standalone Division Anchors Landmark Win",
-      "body": "Pell Karsh secured a five-year, $1.1B compute-supply agreement with the Merristead Data Consortium, the largest deal in Castlestone's history and a full vindication of the divisional split that followed last year's penalty fallout. Karsh, in typically bold fashion, pledged first deliveries within 120 days and hinted at 'more of this scale' ahead. The standalone Grid Division will handle fulfillment, cementing its turnaround.",
-      "cycle": 82642,
       "dur": 8
     }
   ]
