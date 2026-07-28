@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-27T19:35:52.901Z",
+  "generatedAt": "2026-07-28T02:39:19.709Z",
   "beats": [
     {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "earnings_beat",
+      "company": "Blackmoor",
+      "sector": "agriculture",
+      "kind": "product_launch",
       "size": "flash",
-      "head": "Brunridge Works Ticks Up as New Distribution Centers Broaden Reach",
-      "body": "Brunridge Works reported a modest earnings beat, with revenue up 7% as the two new distribution centers began shortening delivery times on premium fine goods. CEO Halia Brennt said early shelf-share data supports the national expansion thesis, though she cautioned that ramp costs would weigh on the next quarter. The company held its full-year guidance.",
-      "cycle": 82647,
+      "head": "Blackmoor Introduces Precision Depth Kit for Holloway Seed-Drill Range",
+      "body": "Soren Dray's team rolled out an optional depth-control retrofit compatible across the Holloway line, promising more consistent seed placement on uneven ground. The modest add-on lists at roughly $4,800 per unit and can be fitted to drills sold over the past six seasons. Blackmoor framed the launch as a steady extension rather than a new platform, consistent with its long-horizon approach.",
+      "cycle": 82648,
       "dur": 1
+    },
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Blackton Industries Adds Halvern Line as New Supply Contract Ramps",
+      "body": "Cassian Rode committed $85 million to a third production line at the Halvern plant to meet volumes from the recently signed multi-year supply deal. The expansion adds capacity for 1.2 million parts annually and roughly 160 shop-floor roles. Rode said the investment marks Blackton's shift 'from cleanup to growth' after the weld-defect recall.",
+      "cycle": 82648,
+      "dur": 2
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Bruncraft Hit With Class Action Over Axle Defect as Injury Claims Mount",
+      "body": "A consolidated class action filed on behalf of 220,000 owners alleges Bruncraft concealed the axle flaw for two years before the recall, citing the leaked internal memo at the center of the scandal. Plaintiffs seek $2.3 billion in damages, and at least 40 personal-injury suits have been folded into the case. CEO Dessa Corvane said the company would 'defend vigorously where warranted and settle fairly where owners were harmed.'",
+      "cycle": 82648,
+      "dur": 8
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Carrowforge Rocked as Falsified Test Records Surface From Roe Era",
+      "body": "An independent review commissioned by CEO Marlow Demore uncovered that certification data on more than 30 industrial press models had been altered before the leadership change, widening the original testing scandal. Demore disclosed the findings to regulators and suspended four managers pending investigation. The company warned that recertification could delay shipments worth an estimated $210 million into next quarter.",
+      "cycle": 82648,
+      "dur": 8
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fenncyon Beats as Combined Eastfield Packages Lift Backlog to Record",
+      "body": "Fenncyon reported quarterly revenue up 14% with operating margins reaching 18.2%, as the Northern Spur and Southern Loop packages ran concurrently. Total order backlog climbed to a record $6.7 billion, giving nearly three years of visibility. CEO Nadia Ashby said crews were being redeployed efficiently between the two Eastfield fronts to hold down mobilization costs.",
+      "cycle": 82648,
+      "dur": 2
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Marlgear Supply Launches Kessel Industrial Platform in Bold Post-Turnaround Bet",
+      "body": "Adele Ferran unveiled the Kessel modular machine platform, the company's first major release since shuttering the troubled Drennan device unit, staking Marlgear's revival on the industrial segment. The line carries a $1.9 billion projected order pipeline over three years and consolidates six legacy models into one architecture. Ferran told a packed launch event the platform 'defines what Marlgear becomes next,' pledging a full rollout within eight months.",
+      "cycle": 82648,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Ornewright Supply Breaks Ground on Second Cold-Chain Hub at Dunmere",
+      "body": "Building on Caldmere's full utilization, Rhys Throne announced a $130 million cold-chain facility at Dunmere to serve southern food-service accounts. The site will add roughly 90,000 pallet positions and 210 jobs, with first operations targeted for late next year. Throne said existing multi-year contracts already commit about half the planned capacity.",
+      "cycle": 82648,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Thronehaus & Co. Opens Verrand Atelier in Marchwick to House Ferrault Casework",
+      "body": "Cora Dray unveiled a second flagship atelier in the Marchwick jewelry quarter, dedicating a floor to the newly acquired Ferrault case-making benches. The 40-artisan expansion is meant to bring gold and titanium casework fully under one roof, cutting outside vendor reliance by an estimated 60%. Dray said the site would also serve as a training academy for a new generation of Verrand complication specialists.",
+      "cycle": 82648,
+      "dur": 2
     },
     {
       "company": "Carrowwell",
@@ -82,36 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Caldercraft Holdings",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Caldercraft Holdings Adds Regional Distribution Center to Feed Weatherproof Demand",
-      "body": "The house committed $85M to a new distribution center aimed at shortening delivery times for its fast-growing Weatherproof range across Household Goods and Hardware & Tools. CEO Vale Fenn said the facility would support the line's expansion without straining existing hubs. The center is expected to open within nine months.",
-      "cycle": 82646,
-      "dur": 2
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Castlehold Unveils Sweeping Restructure as Turnaround Chief Carves Out Saltmere Liabilities",
-      "body": "New chief Halden Voss announced plans to ring-fence Saltmere cleanup obligations into a separate managed unit while cutting 1,400 roles and shelving two storage projects to preserve cash. The board approved a $2.1B provision against the class action, and Voss pledged a leaner Power & Storage division focused on 'operable, defensible assets.' Analysts called the plan credible but warned execution risk remains high.",
-      "cycle": 82646,
-      "dur": 2
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Greywater Grid Returns to Growth as Rebuilt Reservoir Restores Uptime",
-      "body": "In her first full quarter, CEO Sable Renwick reported the rebuilt reservoir system delivered 99.4% uptime, ending a run of outages and lifting Power & Storage revenue 11%. Compute volumes also recovered as customers returned, and Renwick said penalty credits from prior failures had largely cleared. She framed the quarter as proof 'the fresh start is holding.'",
-      "cycle": 82646,
-      "dur": 2
-    },
-    {
       "company": "Gromford Works",
       "sector": "luxury",
       "kind": "lawsuit",
@@ -120,26 +160,6 @@
       "body": "A consolidated shareholder lawsuit filed this morning alleges CEO Corin Aldwych rushed the Meridian Tourbillon launch while concealing a third-party movement supplier, seeking damages of $620M. Regulators have expanded their inquiry to cover Gromford's entire complication line, and three retail partners have suspended Meridian orders pending the outcome. Aldwych, known for chasing headlines, now faces the defining crisis of his tenure.",
       "cycle": 82646,
       "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halhold Systems to Build Third Compute Campus on Back of $900M Pact Momentum",
-      "body": "Riding a blowout quarter, CEO Corin Vale committed $410M to a new compute campus expected to add 30% capacity by late next year. The move is designed to pre-position supply for follow-on orders after the anchor $900M deal, though Vale acknowledged the aggressive timeline stretches the balance sheet. The house said hiring would begin within the quarter.",
-      "cycle": 82646,
-      "dur": 2
-    },
-    {
-      "company": "Palettstone & Sons",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Palettstone & Sons Beats as Second Heirloom Pro Plant Clears Backorder Glut",
-      "body": "Quarterly revenue rose 14% as the newly opened second plant cut Heirloom Pro Precision Set lead times from eleven weeks to three, unlocking pent-up orders. CEO Cole Fenn said the backlog was now 'comfortably manageable' and hinted at a companion product for the range. Margins improved as freight and expedite costs fell.",
-      "cycle": 82646,
-      "dur": 2
     },
     {
       "company": "Halhold Works",
@@ -219,36 +239,6 @@
       "head": "Ironcrestton Rocked as Audit Alleges Origin Standard Gaps at Licensed Houses",
       "body": "An independent review found that several houses licensing Ironcrestton's celebrated Origin Standard failed to document provenance on nearly a fifth of certified goods, undermining the transparency mark that drove Wren Adler's expansion. Adler suspended three licensees and pledged a full re-audit, but the Heritage Craft Guild opened its own inquiry into the program. The disclosure cast a shadow over the landmark cross-house licensing pact signed just weeks earlier.",
       "cycle": 82641,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "major",
-      "head": "Bruncraft Widens Axle Recall to 1.4 Million Vehicles as New CEO Corvane Vows Clean Break",
-      "body": "Bruncraft Industries expanded its axle recall to 1.4 million vehicles, nearly tripling the affected fleet, as newly installed CEO Dessa Corvane moved to fully expose the defect's scope rather than manage it down. Corvane pledged a full retrofit program expected to cost $600 million and said the company would cooperate completely with the ongoing safety probe. The move marks a sharp break from the concealment revealed in earlier internal memos.",
-      "cycle": 82640,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "major",
-      "head": "Halhold Systems Smashes Estimates as $900M Compute Pact Powers Blowout Quarter",
-      "body": "Halhold Systems delivered a decisive turnaround, beating estimates by a wide margin as first shipments under its $900 million compute supply deal drove revenue up 41% year over year. CEO Corin Vale, whose tenure began amid carve-out losses, said the next-gen platform had ramped faster than planned and lifted full-year guidance. The result marks the strongest quarter since the company's separation.",
-      "cycle": 82640,
-      "dur": 8
-    },
-    {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Stegreach Lands Landmark Grid Modernization Contract Worth $1.2 Billion",
-      "body": "Building on its Riverport momentum, Stegreach has been named lead supplier of wire, cable, and lighting for the multi-year Eastfield grid modernization program, a $1.2 billion mandate spanning six substations. CEO Halden Ashby, in one of his signature bold moves after decades of steadier plays, said the award roughly doubles the company's cable order book and will require a new production line at its Deakin works. The deal is the largest single contract in Stegreach's history.",
-      "cycle": 82640,
       "dur": 8
     }
   ]

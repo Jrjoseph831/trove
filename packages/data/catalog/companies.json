@@ -928,7 +928,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82625,
+    "lastEventCycle": 82648,
     "events": [
       {
         "cycle": 0,
@@ -997,6 +997,16 @@
         "effects": {
           "agriculture": 0.06
         }
+      },
+      {
+        "cycle": 82648,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Blackmoor Introduces Precision Depth Kit for Holloway Seed-Drill Range",
+        "body": "Soren Dray's team rolled out an optional depth-control retrofit compatible across the Holloway line, promising more consistent seed placement on uneven ground. The modest add-on lists at roughly $4,800 per unit and can be fitted to drills sold over the past six seasons. Blackmoor framed the launch as a steady extension rather than a new platform, consistent with its long-horizon approach.",
+        "effects": {
+          "agriculture": 0.06
+        }
       }
     ]
   },
@@ -1011,7 +1021,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82639,
+    "lastEventCycle": 82648,
     "events": [
       {
         "cycle": 0,
@@ -1163,6 +1173,16 @@
         "size": "standard",
         "head": "Blackton Industries Wins Multi-Year Supply Contract After Clearing Halvern Overhang",
         "body": "Cassian Rode announced a four-year components deal with a major assembly group valued at roughly $680 million, the company's largest since the Halvern recall. Rode said the win reflects restored confidence following the completed weld remediation and a rebuilt quality-assurance unit. Blackton expects the contract to add meaningful volume to its two flagship plants beginning next quarter.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82648,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Blackton Industries Adds Halvern Line as New Supply Contract Ramps",
+        "body": "Cassian Rode committed $85 million to a third production line at the Halvern plant to meet volumes from the recently signed multi-year supply deal. The expansion adds capacity for 1.2 million parts annually and roughly 160 shop-floor roles. Rode said the investment marks Blackton's shift 'from cleanup to growth' after the weld-defect recall.",
         "effects": {
           "automotive": 0.13
         }
@@ -1413,7 +1433,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82640,
+    "lastEventCycle": 82648,
     "events": [
       {
         "cycle": 0,
@@ -1587,6 +1607,16 @@
         "size": "major",
         "head": "Bruncraft Widens Axle Recall to 1.4 Million Vehicles as New CEO Corvane Vows Clean Break",
         "body": "Bruncraft Industries expanded its axle recall to 1.4 million vehicles, nearly tripling the affected fleet, as newly installed CEO Dessa Corvane moved to fully expose the defect's scope rather than manage it down. Corvane pledged a full retrofit program expected to cost $600 million and said the company would cooperate completely with the ongoing safety probe. The move marks a sharp break from the concealment revealed in earlier internal memos.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82648,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Bruncraft Hit With Class Action Over Axle Defect as Injury Claims Mount",
+        "body": "A consolidated class action filed on behalf of 220,000 owners alleges Bruncraft concealed the axle flaw for two years before the recall, citing the leaked internal memo at the center of the scandal. Plaintiffs seek $2.3 billion in damages, and at least 40 personal-injury suits have been folded into the case. CEO Dessa Corvane said the company would 'defend vigorously where warranted and settle fairly where owners were harmed.'",
         "effects": {
           "automotive": -0.22
         }
@@ -2975,7 +3005,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82637,
+    "lastEventCycle": 82648,
     "events": [
       {
         "cycle": 0,
@@ -3089,6 +3119,16 @@
         "body": "Carrowforge reported quarterly revenue of 1.9B, down 12% year-on-year, missing internal targets as the independent testing rebuild slowed machine certifications and delayed shipments. CEO Marlow Demore told investors the 140M rebuild program would 'weigh on results near term' but insisted the company was 'clearing the wreckage of the old regime.' Order backlogs grew to a record 620M as customers awaited re-certified units.",
         "effects": {
           "manufacturing": -0.13
+        }
+      },
+      {
+        "cycle": 82648,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Carrowforge Rocked as Falsified Test Records Surface From Roe Era",
+        "body": "An independent review commissioned by CEO Marlow Demore uncovered that certification data on more than 30 industrial press models had been altered before the leadership change, widening the original testing scandal. Demore disclosed the findings to regulators and suspended four managers pending investigation. The company warned that recertification could delay shipments worth an estimated $210 million into next quarter.",
+        "effects": {
+          "manufacturing": -0.22
         }
       }
     ]
@@ -4967,7 +5007,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82633,
+    "lastEventCycle": 82648,
     "events": [
       {
         "cycle": 0,
@@ -5063,6 +5103,16 @@
         "size": "standard",
         "head": "Fenncyon Wins $1.1B Southern Loop Package as Eastfield Program Expands",
         "body": "Fenncyon secured the $1.1B Southern Loop earthmoving package, extending its Eastfield involvement into a fourth corridor segment. CEO Nadia Ashby said the award brings the total program backlog past $4B, calling it 'a disciplined step into work we already know how to deliver.'",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82648,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fenncyon Beats as Combined Eastfield Packages Lift Backlog to Record",
+        "body": "Fenncyon reported quarterly revenue up 14% with operating margins reaching 18.2%, as the Northern Spur and Southern Loop packages ran concurrently. Total order backlog climbed to a record $6.7 billion, giving nearly three years of visibility. CEO Nadia Ashby said crews were being redeployed efficiently between the two Eastfield fronts to hold down mobilization costs.",
         "effects": {
           "construction": 0.13
         }
@@ -9055,7 +9105,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82640,
+    "lastEventCycle": 82648,
     "events": [
       {
         "cycle": 0,
@@ -9231,6 +9281,16 @@
         "body": "Marlgear Supply swung back to a narrow profit, its first since the Drennan device crisis, as the shuttered unit's drag cleared and industrial-machine orders stabilized. CEO Adele Ferran, never shy about a headline, called the quarter proof that her turnaround plan is working and hinted at a bold new product push in the coming months. Shares had been battered through the settlement saga.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82648,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Marlgear Supply Launches Kessel Industrial Platform in Bold Post-Turnaround Bet",
+        "body": "Adele Ferran unveiled the Kessel modular machine platform, the company's first major release since shuttering the troubled Drennan device unit, staking Marlgear's revival on the industrial segment. The line carries a $1.9 billion projected order pipeline over three years and consolidates six legacy models into one architecture. Ferran told a packed launch event the platform 'defines what Marlgear becomes next,' pledging a full rollout within eight months.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -9734,7 +9794,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82633,
+    "lastEventCycle": 82648,
     "events": [
       {
         "cycle": 0,
@@ -9830,6 +9890,16 @@
         "size": "standard",
         "head": "Ornewright Supply Beats as Caldmere Cold-Chain Line Reaches Full Utilization",
         "body": "Ornewright posted quarterly revenue of $1.3B, up 11% year-over-year, as the new Caldmere cold-chain line hit full utilization ahead of forecast. CEO Rhys Throne credited the multi-year food service deal and hinted at 'measured' evaluation of a second cold-chain site.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82648,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Ornewright Supply Breaks Ground on Second Cold-Chain Hub at Dunmere",
+        "body": "Building on Caldmere's full utilization, Rhys Throne announced a $130 million cold-chain facility at Dunmere to serve southern food-service accounts. The site will add roughly 90,000 pallet positions and 210 jobs, with first operations targeted for late next year. Throne said existing multi-year contracts already commit about half the planned capacity.",
         "effects": {
           "consumer": 0.13
         }
@@ -10929,7 +10999,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82638,
+    "lastEventCycle": 82648,
     "events": [
       {
         "cycle": 0,
@@ -11085,6 +11155,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Acquires Case-Making House Ferrault to Deepen In-House Craft",
         "body": "Fresh off the Verrand's horology prize, Cora Dray struck a deal to acquire specialist case and dial maker Ferrault for an undisclosed sum, folding a longtime supplier into the atelier. The acquisition secures scarce finishing capacity as demand for complications climbs. Dray said the deal furthers her aim of keeping every step of production under one roof.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82648,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Thronehaus & Co. Opens Verrand Atelier in Marchwick to House Ferrault Casework",
+        "body": "Cora Dray unveiled a second flagship atelier in the Marchwick jewelry quarter, dedicating a floor to the newly acquired Ferrault case-making benches. The 40-artisan expansion is meant to bring gold and titanium casework fully under one roof, cutting outside vendor reliance by an estimated 60%. Dray said the site would also serve as a training academy for a new generation of Verrand complication specialists.",
         "effects": {
           "luxury": 0.13
         }
