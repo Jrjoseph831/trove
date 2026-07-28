@@ -595,7 +595,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82622,
+    "lastEventCycle": 82649,
     "events": [
       {
         "cycle": 0,
@@ -653,6 +653,16 @@
         "body": "The company revealed a new detector architecture for its imaging platform that reduces scan durations by roughly 33% while improving resolution. CEO Orla Halloran said the upgrade will roll into existing national-network deployments through a staged retrofit, calling it 'the logical next chapter' of the platform's long arc.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82649,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Ardent Health Wins Continental Framework Order for Next-Gen Imaging Fleet",
+        "body": "Ardent secured a landmark multi-year framework valued near 1.9 billion to supply its faster next-generation imaging systems across a continent-wide public health procurement body. CEO Orla Halloran, marking one of the largest orders in the company's history, said phased deliveries will run over six years, with the new sensor as the standard configuration.",
+        "effects": {
+          "medical": 0.22
         }
       }
     ]
@@ -4402,7 +4412,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82638,
+    "lastEventCycle": 82649,
     "events": [
       {
         "cycle": 0,
@@ -4520,6 +4530,16 @@
         "body": "Drustcraft edged past estimates as fastener shipments to its twin global vehicle lines resumed following the contained recall, with management reporting no lasting customer loss. Cora Fenn said corrective quality controls at the new plant are fully in place. Revenue rose 6% on the ramp.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82649,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcraft Posts Clean Beat as Twin Vehicle-Line Fully Clears Recall Overhang",
+        "body": "Drustcraft delivered its strongest quarter since the fastener recall, with twin vehicle-line volumes now above pre-recall peaks and warranty reserves released. CEO Cora Fenn credited a rebuilt supplier-inspection regime and said the recovery frees the company to weigh a bolder capacity move next year.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -5313,7 +5333,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82632,
+    "lastEventCycle": 82649,
     "events": [
       {
         "cycle": 0,
@@ -5399,6 +5419,16 @@
         "size": "flash",
         "head": "Fennvale Mfg. Delivers Another Quiet Beat as Auto and Fastener Volumes Hold",
         "body": "Fennvale posted earnings of $1.32 a share against a $1.28 estimate, with Theo Vossen noting that both the auto program and compact fastener line ran at full ramp for the third straight quarter. The company nudged its capacity-utilization guidance higher and again declined to issue any promotional commentary.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82649,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Fennvale Mfg. Adds Second Shift to Fastener Plant as Order Book Lengthens",
+        "body": "CEO Theo Vossen approved a second shift at the Fennvale fastener works after the order book stretched past nine months of forward demand. The move adds roughly 90 line roles and lifts nameplate fastener output by a fifth without new tooling.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -5529,7 +5559,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82634,
+    "lastEventCycle": 82649,
     "events": [
       {
         "cycle": 0,
@@ -5627,6 +5657,16 @@
         "body": "Garrware installed a new automated sorting stage at its Northern depot to sustain throughput now that the Marrow Valley third line is running at capacity. Orla Holt said the upgrade adds modest headroom without a full fourth line for now. The investment is expected to trim per-unit handling costs across the anchor-client volumes.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82649,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Garrware Breaks Ground on Fourth Marrow Valley Line as Anchor Volumes Outpace Depot",
+        "body": "With the third line running flat-out and the automated sorting bay clearing its backlog, CEO Orla Holt confirmed a fourth production line to lift Marrow Valley capacity by an estimated 28%. The build carries a 14-month timeline, funded from operating cash rather than new borrowing, keeping the balance sheet in line with Holt's long-held discipline.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -7772,7 +7812,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82641,
+    "lastEventCycle": 82649,
     "events": [
       {
         "cycle": 0,
@@ -7916,6 +7956,16 @@
         "size": "major",
         "head": "Ironcrestton Rocked as Audit Alleges Origin Standard Gaps at Licensed Houses",
         "body": "An independent review found that several houses licensing Ironcrestton's celebrated Origin Standard failed to document provenance on nearly a fifth of certified goods, undermining the transparency mark that drove Wren Adler's expansion. Adler suspended three licensees and pledged a full re-audit, but the Heritage Craft Guild opened its own inquiry into the program. The disclosure cast a shadow over the landmark cross-house licensing pact signed just weeks earlier.",
+        "effects": {
+          "luxury": -0.22
+        }
+      },
+      {
+        "cycle": 82649,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Ironcrestton Sued by Licensed Houses Over Origin Standard Fallout",
+        "body": "A coalition of licensed luxury houses filed a consolidated claim seeking damages topping 400 million, alleging Ironcrestton's Origin Standard certification was marketed as watertight despite the audit-flagged gaps. CEO Wren Adler, barely a year into the role, faces mounting pressure as two anchor licensees moved to suspend the pact pending the case.",
         "effects": {
           "luxury": -0.22
         }
@@ -8084,7 +8134,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82634,
+    "lastEventCycle": 82649,
     "events": [
       {
         "cycle": 0,
@@ -8180,6 +8230,16 @@
         "size": "flash",
         "head": "Kesselgrove Co. Nudges Past Estimates as Tooling Bay Output Holds Steady",
         "body": "Kesselgrove Co. reported quarterly results modestly ahead of expectations, with the new tooling bay sustaining the press-line gains flagged last quarter. Orla Steg held guidance unchanged, citing 'consistent, undramatic execution.' Margins ticked up 40 basis points on improved tooling utilization.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82649,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Kesselgrove Co. Clears Estimates Again as Press Backlog Extends",
+        "body": "Kesselgrove edged past forecasts as modular press orders pushed the backlog to a record 11 months. CEO Orla Steg said the tooling bay is now running at full utilization, with margins steady as pricing held firm against input costs.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -8729,7 +8789,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82643,
+    "lastEventCycle": 82649,
     "events": [
       {
         "cycle": 0,
@@ -8947,6 +9007,16 @@
         "body": "Following last quarter's earnings miss, Lhaus announced it will delay its planned sixth cell-pack line and consolidate two underused Delphin sub-assemblies, targeting $180 million in annualized savings. CEO Cole Brandt said the moves would 'let the existing five lines earn their keep' before further expansion. The company maintained its full-year volume outlook but conceded margin recovery would take two to three quarters.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82649,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Lhaus Industries Returns to a Beat as Trimmed Buildout Restores Margins",
+        "body": "After two rough quarters, Lhaus topped estimates as the paused sixth-line spend fell out of the cost base and the five running cell-pack lines reached target yields. CEO Cole Brandt said free cash flow turned positive again and hinted the sixth line could restart 'once the numbers earn it,' signaling his acquisitive streak isn't fully cooled.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -9429,7 +9499,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82636,
+    "lastEventCycle": 82649,
     "events": [
       {
         "cycle": 0,
@@ -9535,6 +9605,16 @@
         "size": "flash",
         "head": "Marrowmoor Holdings Extends Winning Streak as Westline Contracts Bed In",
         "body": "Marrowmoor reported its eighth consecutive quarter of contract-base growth, with revenue up 7% as newly signed Westline accounts reached full billing. CEO Dorian Steg pointed to low client churn and steady demand for its cleaning and household supply lines. The company reaffirmed its measured expansion outlook for the year.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82649,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Stretches Streak as Westline Renewals Lock In",
+        "body": "Marrowmoor posted another quarter of low-single-digit contract-base growth as early Westline accounts moved to multi-year renewals. CEO Dorian Steg noted retention held above 96%, with the jansan and household lines both contributing to the beat.",
         "effects": {
           "hospitality": 0.06
         }
