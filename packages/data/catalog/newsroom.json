@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-28T14:10:38.458Z",
+  "generatedAt": "2026-07-28T19:27:11.865Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Boreas Power Misses as Halvard Integration Costs Bite Into Quarterly Results",
+      "body": "Boreas Power reported operating profit of $1.1B, roughly 18% below guidance, as one-time charges tied to absorbing the Halvard grid empire outpaced early synergy gains. CEO Mira Thorne told investors the shortfall was 'the price of building something durable,' reaffirming that combined output capacity would ramp through the following year. Restructuring reserves of $420M weighed most heavily on the storage and power segments.",
+      "cycle": 82651,
+      "dur": 2
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Bruncrest Works Adds Second Eastfield Line to Scale Aria Pro Output",
+      "body": "Riding a cleared backlog and firm demand, Bruncrest Works broke ground on a second Eastfield production line, a $220M commitment aimed at doubling Aria Pro capacity. CEO Ines Marlow declared the expansion proof that the earlier shortage crisis was 'firmly behind us,' promising first units within nine months. The company also locked longer-term supply terms to avoid a repeat of prior stoppages.",
+      "cycle": 82651,
+      "dur": 2
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Calderforge Overhauls Cooling Standards Across Stormwell Halls After Outage",
+      "body": "Calderforge announced a facility-wide redesign of its cooling systems following the failure that idled two Stormwell halls, committing $310M to redundant loops and independent monitoring across all sites. CEO Nadia Throne acknowledged the outage 'exposed a single point of failure we should never have carried,' and delayed the fifth hall's timeline by one quarter to fold in the new standards. The anchor tenant's decade-long pact remains intact.",
+      "cycle": 82651,
+      "dur": 2
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Dunmorewright Wins $510 Million Coastal Defense Contract, Eclipsing Harborfront Record",
+      "body": "Dunmorewright secured a $510M multi-year coastal defense and drainage program, its largest award ever, surpassing the recent Harborfront milestone. CEO Emil Skarn, in a rare aggressive posture, said the firm would run three record-scale projects in parallel and expand its earthmoving fleet by a further 40 units. The win cements Dunmorewright as the dominant regional infrastructure builder.",
+      "cycle": 82651,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "recall",
+      "size": "major",
+      "head": "Halhold Works Orders Full Recall of Aveline Monitor Line as New CEO Moves to Contain Crisis",
+      "body": "New chief executive Marcus Thorne ordered a total recall of every Aveline patient monitor in the field, an estimated 240,000 units, and suspended all sales pending redesign. Thorne pledged full replacement at no cost to hospital networks and set aside $680M for the effort, calling it 'the only defensible path' amid mounting litigation. The move wipes out a division that contributed nearly a fifth of company revenue.",
+      "cycle": 82651,
+      "dur": 8
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Korrworks Debuts Automated Sorting Layer at Cross-Region Hub Ahead of Opening",
+      "body": "Korrworks unveiled a new high-throughput sorting configuration for its still-unfinished cross-region hub, promising 30% faster transfer times for its two anchor tenants. CEO Rhys Throne framed the rollout as a proof point that the facility would open 'not just on time, but ahead of its class.' Full commissioning remains slated for next quarter.",
+      "cycle": 82651,
+      "dur": 1
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "rebrand",
+      "size": "standard",
+      "head": "Korrwright Works Folds Meridienne Into New 'Korrwright Meridienne' Luxury House",
+      "body": "Korrwright Works unveiled a unified luxury identity, rebranding its acquired rival under the combined 'Korrwright Meridienne' banner to consolidate heritage collections under one crest. CEO Dunmore Carrow said the merged house would share ateliers while preserving Meridienne's signature movements. Management expects the rebrand to lift blended margins as duplicate distribution costs are stripped out.",
+      "cycle": 82651,
+      "dur": 2
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "breakthrough",
+      "size": "standard",
+      "head": "Stegforge Rail Plate Mill Achieves First Output, Clearing Consortium Milestone",
+      "body": "Stegforge confirmed first successful plate rolls from its dedicated rail mill, hitting the strength-grade specification demanded under its multi-year consortium contract on the initial production run. CEO Aurelia Steg said the mill reached qualifying tolerances 'weeks earlier than our own conservative schedule allowed.' The facility is expected to reach half of nameplate capacity within two quarters.",
+      "cycle": 82651,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -20,26 +100,6 @@
       "body": "Brunstone will invest 620M in a new facility at Merrick Flats, adding capacity for 2.8 million Vault Cell Guard units annually and roughly 1,400 jobs. CEO Halden Crowe framed the move as answering an order book now stretching 18 months, driven by the 4.1B fleet contract. First output is targeted within 20 months.",
       "cycle": 82650,
       "dur": 2
-    },
-    {
-      "company": "Castle Devices",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Castle Devices Delivers Another Steady Quarter on Consumables Demand",
-      "body": "Castle reported earnings of 1.14 per share, edging past forecasts, as hospital-network consumable volumes held firm and clinic reorders rose 6%. CEO Bram Calder reaffirmed full-year guidance, citing 'no surprises' across the supply base. Margins were flat at 19%.",
-      "cycle": 82650,
-      "dur": 1
-    },
-    {
-      "company": "Holtgate Group",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Group Stretches Beat Streak on Steady Mill Output",
-      "body": "Holtgate posted a fourth straight modest beat, with revenue up 3% as uniform-guild renewals and firm mill utilization held the line. CEO Dorian Throne reaffirmed guidance and noted raw-fiber costs remained stable through the quarter. Operating margin held at 12%.",
-      "cycle": 82650,
-      "dur": 1
     },
     {
       "company": "Holtware Co.",
@@ -92,26 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drustcraft Posts Clean Beat as Twin Vehicle-Line Fully Clears Recall Overhang",
-      "body": "Drustcraft delivered its strongest quarter since the fastener recall, with twin vehicle-line volumes now above pre-recall peaks and warranty reserves released. CEO Cora Fenn credited a rebuilt supplier-inspection regime and said the recovery frees the company to weigh a bolder capacity move next year.",
-      "cycle": 82649,
-      "dur": 2
-    },
-    {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Garrware Breaks Ground on Fourth Marrow Valley Line as Anchor Volumes Outpace Depot",
-      "body": "With the third line running flat-out and the automated sorting bay clearing its backlog, CEO Orla Holt confirmed a fourth production line to lift Marrow Valley capacity by an estimated 28%. The build carries a 14-month timeline, funded from operating cash rather than new borrowing, keeping the balance sheet in line with Holt's long-held discipline.",
-      "cycle": 82649,
-      "dur": 2
-    },
-    {
       "company": "Ironcrestton",
       "sector": "luxury",
       "kind": "lawsuit",
@@ -120,16 +160,6 @@
       "body": "A coalition of licensed luxury houses filed a consolidated claim seeking damages topping 400 million, alleging Ironcrestton's Origin Standard certification was marketed as watertight despite the audit-flagged gaps. CEO Wren Adler, barely a year into the role, faces mounting pressure as two anchor licensees moved to suspend the pact pending the case.",
       "cycle": 82649,
       "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Lhaus Industries Returns to a Beat as Trimmed Buildout Restores Margins",
-      "body": "After two rough quarters, Lhaus topped estimates as the paused sixth-line spend fell out of the cost base and the five running cell-pack lines reached target yields. CEO Cole Brandt said free cash flow turned positive again and hinted the sixth line could restart 'once the numbers earn it,' signaling his acquisitive streak isn't fully cooled.",
-      "cycle": 82649,
-      "dur": 2
     },
     {
       "company": "Bruncraft Industries",
@@ -229,16 +259,6 @@
       "head": "Korrwright Works Seizes Rival Meridienne in $2.4B Cross-Border Coup",
       "body": "Dunmore Carrow moved on longtime competitor Meridienne Horlogerie, acquiring the storied movement-house for $2.4 billion in the largest deal of his 118-year tenure. The purchase hands the new Heritage Division control of Meridienne's celebrated tourbillon workshops and opens the eastern markets Carrow had publicly targeted. Executives said Meridienne's 340 master watchmakers will be retained under the Korrwright banner.",
       "cycle": 82644,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Woldmark Tumbles as Halcyon 3 Rush Triggers Costly Field Failures and Guidance Cut",
-      "body": "Woldmark missed sharply, reporting a $340 million charge tied to thermal-throttling defects in early Halcyon 3 units shipped under an aggressive nine-month timeline, and slashed full-year guidance by 22%. CEO Cole Carrow acknowledged the compressed schedule 'outran our validation,' as several major customers deferred orders pending fixes. The stumble marks a stark reversal after two quarters of Halcyon-driven beats and raises questions about Carrow's rapid-launch strategy.",
-      "cycle": 82643,
       "dur": 8
     }
   ]

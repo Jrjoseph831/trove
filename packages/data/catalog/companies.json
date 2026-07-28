@@ -1220,7 +1220,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82641,
+    "lastEventCycle": 82651,
     "events": [
       {
         "cycle": 0,
@@ -1439,6 +1439,16 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82651,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Boreas Power Misses as Halvard Integration Costs Bite Into Quarterly Results",
+        "body": "Boreas Power reported operating profit of $1.1B, roughly 18% below guidance, as one-time charges tied to absorbing the Halvard grid empire outpaced early synergy gains. CEO Mira Thorne told investors the shortfall was 'the price of building something durable,' reaffirming that combined output capacity would ramp through the following year. Restructuring reserves of $420M weighed most heavily on the storage and power segments.",
+        "effects": {
+          "energy": -0.13
+        }
       }
     ]
   },
@@ -1654,7 +1664,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82645,
+    "lastEventCycle": 82651,
     "events": [
       {
         "cycle": 0,
@@ -1864,6 +1874,16 @@
         "size": "standard",
         "head": "Bruncrest Works Tops Quarterly Estimates as Aria Pro Backlog Clears",
         "body": "Bruncrest reported revenue of 4.1B for the quarter, ahead of the 3.7B consensus, crediting a rapid rebound in Aria Pro shipments after the Eastfield disruption. CEO Ines Marlow told analysts the company had 'turned a supply crisis into a proof point,' noting the National Compute Consortium order is now roughly 60% fulfilled. Gross margins expanded to 34% as the alternate component supply stabilized pricing.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82651,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Bruncrest Works Adds Second Eastfield Line to Scale Aria Pro Output",
+        "body": "Riding a cleared backlog and firm demand, Bruncrest Works broke ground on a second Eastfield production line, a $220M commitment aimed at doubling Aria Pro capacity. CEO Ines Marlow declared the expansion proof that the earlier shortage crisis was 'firmly behind us,' promising first units within nine months. The company also locked longer-term supply terms to avoid a repeat of prior stoppages.",
         "effects": {
           "technology": 0.13
         }
@@ -2646,7 +2666,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82641,
+    "lastEventCycle": 82651,
     "events": [
       {
         "cycle": 0,
@@ -2802,6 +2822,16 @@
         "size": "standard",
         "head": "Calderforge Hit by Cooling Failure That Idles Two Stormwell Halls",
         "body": "A cooling-system fault knocked out capacity across the Stormwell Second and Third Halls for roughly 31 hours, disrupting service under Calderforge's decade-long anchor pact. Nadia Throne said backup systems limited data loss but acknowledged the outage would trigger contractual service credits this quarter. The incident raised questions about redundancy as the fifth hall rises.",
+        "effects": {
+          "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82651,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Calderforge Overhauls Cooling Standards Across Stormwell Halls After Outage",
+        "body": "Calderforge announced a facility-wide redesign of its cooling systems following the failure that idled two Stormwell halls, committing $310M to redundant loops and independent monitoring across all sites. CEO Nadia Throne acknowledged the outage 'exposed a single point of failure we should never have carried,' and delayed the fifth hall's timeline by one quarter to fold in the new standards. The anchor tenant's decade-long pact remains intact.",
         "effects": {
           "technology": -0.13
         }
@@ -4801,7 +4831,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82634,
+    "lastEventCycle": 82651,
     "events": [
       {
         "cycle": 0,
@@ -4889,6 +4919,16 @@
         "body": "Dunmorewright posted a quarterly beat as the record 340 million Harborfront contract ramped alongside the ongoing Riverside civic package, lifting both earthmoving and plumbing volumes. Emil Skarn said the newly added earthmoving fleet is running near full deployment across the two sites. The company narrowed full-year guidance to the upper end of its prior range.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82651,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Dunmorewright Wins $510 Million Coastal Defense Contract, Eclipsing Harborfront Record",
+        "body": "Dunmorewright secured a $510M multi-year coastal defense and drainage program, its largest award ever, surpassing the recent Harborfront milestone. CEO Emil Skarn, in a rare aggressive posture, said the firm would run three record-scale projects in parallel and expand its earthmoving fleet by a further 40 units. The win cements Dunmorewright as the dominant regional infrastructure builder.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -6912,18 +6952,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82645,
+    "lastEventCycle": 82651,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "recall",
-        "size": "standard",
-        "head": "Halhold Works Pulls Verity Monitors After Display Fault Reports",
-        "body": "Just weeks after launch, Halhold Works recalled roughly 4,000 Verity units after clinics in the Tessen Valley reported screens dimming under sustained use. Nadia Brandt called the issue a sourcing defect in a single supplier batch and pledged free replacements. The misstep tempered an otherwise buoyant rollout.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82525,
         "kind": "breakthrough",
@@ -7147,6 +7177,16 @@
         "head": "Halhold Works Ousts CEO Lena Faircloth as Aveline Scandal Engulfs Board",
         "body": "Halhold's board removed Lena Faircloth effective immediately following the disclosure of internal memos showing Aveline monitor flaws were known before launch, with directors citing 'a catastrophic breach of trust.' The company named interim chair Marcus Thorne as CEO and announced an independent review of all Medical Equipment lines. Shares of pending litigation now span four hospital networks and an estimated 1.2B in claimed damages.",
         "effects": {}
+      },
+      {
+        "cycle": 82651,
+        "kind": "recall",
+        "size": "major",
+        "head": "Halhold Works Orders Full Recall of Aveline Monitor Line as New CEO Moves to Contain Crisis",
+        "body": "New chief executive Marcus Thorne ordered a total recall of every Aveline patient monitor in the field, an estimated 240,000 units, and suspended all sales pending redesign. Thorne pledged full replacement at no cost to hospital networks and set aside $680M for the effort, calling it 'the only defensible path' amid mounting litigation. The move wipes out a division that contributed nearly a fifth of company revenue.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -8380,7 +8420,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82636,
+    "lastEventCycle": 82651,
     "events": [
       {
         "cycle": 0,
@@ -8488,6 +8528,16 @@
         "body": "Korrworks locked in a 12-year handling agreement with distributor Halvern Freight to occupy nearly a third of its still-under-construction cross-region hub. CEO Rhys Throne said the deal, valued at roughly $680 million over its term, effectively de-risks the site before its scheduled opening. The commitment brings pre-leased capacity at the hub to 55%.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82651,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Korrworks Debuts Automated Sorting Layer at Cross-Region Hub Ahead of Opening",
+        "body": "Korrworks unveiled a new high-throughput sorting configuration for its still-unfinished cross-region hub, promising 30% faster transfer times for its two anchor tenants. CEO Rhys Throne framed the rollout as a proof point that the facility would open 'not just on time, but ahead of its class.' Full commissioning remains slated for next quarter.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -8636,7 +8686,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82644,
+    "lastEventCycle": 82651,
     "events": [
       {
         "cycle": 0,
@@ -8825,6 +8875,14 @@
         "effects": {
           "luxury": 0.22
         }
+      },
+      {
+        "cycle": 82651,
+        "kind": "rebrand",
+        "size": "standard",
+        "head": "Korrwright Works Folds Meridienne Into New 'Korrwright Meridienne' Luxury House",
+        "body": "Korrwright Works unveiled a unified luxury identity, rebranding its acquired rival under the combined 'Korrwright Meridienne' banner to consolidate heritage collections under one crest. CEO Dunmore Carrow said the merged house would share ateliers while preserving Meridienne's signature movements. Management expects the rebrand to lift blended margins as duplicate distribution costs are stripped out.",
+        "effects": {}
       }
     ]
   },
@@ -10794,7 +10852,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82634,
+    "lastEventCycle": 82651,
     "events": [
       {
         "cycle": 0,
@@ -10890,6 +10948,16 @@
         "size": "standard",
         "head": "Stegforge Tops Estimates as Rail Plate Mill Nears First Output",
         "body": "Stegforge beat quarterly forecasts on strong structural materials and machinery volumes, with the dedicated rail plate mill on track for first plate by next quarter under the consortium deal. Aurelia Steg said the second alloy furnace has fully cleared the prior machinery backlog. The company lifted its structural materials outlook while keeping other segments steady.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82651,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Stegforge Rail Plate Mill Achieves First Output, Clearing Consortium Milestone",
+        "body": "Stegforge confirmed first successful plate rolls from its dedicated rail mill, hitting the strength-grade specification demanded under its multi-year consortium contract on the initial production run. CEO Aurelia Steg said the mill reached qualifying tolerances 'weeks earlier than our own conservative schedule allowed.' The facility is expected to reach half of nameplate capacity within two quarters.",
         "effects": {
           "manufacturing": 0.13
         }
