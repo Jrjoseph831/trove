@@ -3829,7 +3829,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82647,
+    "lastEventCycle": 82655,
     "events": [
       {
         "cycle": 0,
@@ -4054,6 +4054,16 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82655,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Castlestone Idles Grid Division as Karsh Bets on Sweeping Overhaul After Overheating Probe",
+        "body": "CEO Pell Karsh announced an immediate suspension of Grid Division shipments and a $340M redesign of the tier's thermal architecture, calling it 'a reset, not a retreat.' Roughly 900 division staff will be reassigned during the six-month rebuild, and the landmark $1.1B grid contract has been renegotiated with milestone deferrals. Karsh staked his reputation on the fix, promising a relaunch that 'sets the standard the regulators wanted all along.'",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -4068,7 +4078,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82643,
+    "lastEventCycle": 82655,
     "events": [
       {
         "cycle": 0,
@@ -4184,6 +4194,16 @@
         "size": "flash",
         "head": "Cranecraft Stretches Streak to Six Beats on Balanced Farm and Textile Demand",
         "body": "Cranecraft reported a sixth straight earnings beat, with revenue of $256 million as farm equipment and raw textile lines both held firm. CEO Mira Garr described demand as 'orderly and predictable,' with no material changes to production or capacity plans. Margins were steady at 14.2%.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82655,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Makes It Seven Straight as Farm and Textile Lines Hold Course",
+        "body": "Cranecraft posted a seventh consecutive quarterly beat, edging estimates by 1.8% on flat-to-modest volume gains across both segments. CEO Mira Garr credited disciplined inventory management and steady raw-textile orders, noting no change to full-year guidance.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -7092,18 +7112,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82651,
+    "lastEventCycle": 82655,
     "events": [
-      {
-        "cycle": 82525,
-        "kind": "breakthrough",
-        "size": "standard",
-        "head": "Halhold Works Returns Verity Monitors to Market With Redesigned Display Module",
-        "body": "Halhold Works has cleared the Verity line for reissue after a four-month engineering overhaul, replacing the faulty display assembly with a new dual-layer panel sourced from its own Wire & Cable division. CEO Nadia Brandt said the rework cost the company roughly 14 million but called the fix 'a permanent answer, not a patch.' Initial reorders from regional clinics have already covered nearly half the recalled inventory.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82530,
         "kind": "major_deal",
@@ -7327,6 +7337,16 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82655,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Halhold Works Hit With Investor Class Action Over Aveline Disclosures as Losses Mount",
+        "body": "A consolidated shareholder suit filed this week alleges Halhold executives concealed known Aveline Monitor defects for months before launch, seeking damages tied to the stock's collapse. New CEO Marcus Thorne acknowledged the recall would cost an estimated $410M and set aside a $120M legal reserve, while pledging full cooperation with regulators. The suit names former CEO Lena Faircloth and several ousted board members.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -7341,7 +7361,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82640,
+    "lastEventCycle": 82655,
     "events": [
       {
         "cycle": 0,
@@ -7429,6 +7449,16 @@
         "body": "Hearthstone Group launched its new Everclean concentrate range of cleaning and jansan products, designed to be dispensed through its maturing refill depot network across nine regions. CEO Aurelia Aldous said the line trims packaging costs and leans on infrastructure the group already built out, projecting the range could add mid-single-digit growth to the cleaning segment. Initial depot uptake has been described as encouraging.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82655,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Hearthstone Group Beats Narrowly as Concentrate Line Lifts Depot Margins",
+        "body": "Hearthstone posted a slim beat with margins up 60 basis points as the new concentrate line reduced shipping and packaging costs across the refill network. CEO Aurelia Aldous said concentrate now accounts for 12% of household-goods volume and reaffirmed steady full-year targets.",
+        "effects": {
+          "hospitality": 0.06
         }
       }
     ]
@@ -9890,7 +9920,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82644,
+    "lastEventCycle": 82655,
     "events": [
       {
         "cycle": 0,
@@ -10002,6 +10032,16 @@
         "size": "standard",
         "head": "Marrowstone Build Adds $520M Regional Roadworks Package to Split Unit",
         "body": "Delphine Vaugh's heavy-earthmoving unit secured a $520 million multi-year roadworks contract spanning three regional districts, building on the momentum of its earlier municipal win. Vaugh said the award validates the decision to spin the division into a standalone operation under the safety overhaul. Backlog for the unit now exceeds $1.3 billion.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82655,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Marrowstone Build Beats as Roadworks Backlog Swells Split Unit Order Book",
+        "body": "Marrowstone Build topped estimates with revenue up 14% year-on-year, driven by early billings on the $520M regional roadworks package. CEO Delphine Vaugh said the split earthmoving unit now carries a record $1.9B backlog, and she flagged 'selective interest' in adjacent quarry-services contracts.",
         "effects": {
           "construction": 0.13
         }
@@ -11387,7 +11427,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82648,
+    "lastEventCycle": 82655,
     "events": [
       {
         "cycle": 0,
@@ -11553,6 +11593,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Opens Verrand Atelier in Marchwick to House Ferrault Casework",
         "body": "Cora Dray unveiled a second flagship atelier in the Marchwick jewelry quarter, dedicating a floor to the newly acquired Ferrault case-making benches. The 40-artisan expansion is meant to bring gold and titanium casework fully under one roof, cutting outside vendor reliance by an estimated 60%. Dray said the site would also serve as a training academy for a new generation of Verrand complication specialists.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82655,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Thronehaus & Co. Debuts Verrand Marchwick Line Built Entirely on Ferrault Casework",
+        "body": "Thronehaus unveiled its first collection produced end-to-end at the new Marchwick atelier, featuring in-house Ferrault cases and a refined Verrand movement. CEO Cora Dray priced the limited run at a premium and said the vertical integration had shaved lead times by nearly four months. Initial allocations to flagship boutiques sold through pre-order lists within days.",
         "effects": {
           "luxury": 0.13
         }
@@ -12420,7 +12470,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82631,
+    "lastEventCycle": 82655,
     "events": [
       {
         "cycle": 0,
@@ -12478,6 +12528,16 @@
         "body": "Mara Garr reported a 2.1% revenue uptick, with the fully utilized Marden cleanroom driving steady medical-consumables output. Garr flagged early planning for a possible capacity study but emphasized any decision would follow her customary multi-year horizon. Margins held firm and guidance was left unchanged.",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82655,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Venline & Sons Approves Second Cleanroom at Marden as Consumables Demand Outpaces Capacity",
+        "body": "With the original Marden cleanroom running at capacity, Venline's board sanctioned a $95M second line expected to come online in early 2028. CEO Mara Garr, characteristically cautious, said the buildout was 'sized to demand we can already see, not demand we hope for,' and expects a gradual ramp with no near-term earnings impact.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -13378,7 +13438,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82637,
+    "lastEventCycle": 82655,
     "events": [
       {
         "cycle": 0,
@@ -13456,6 +13516,16 @@
         "body": "Wrenhaus reported quarterly revenue of 780M, ahead of expectations, as its new regional distribution hub trimmed delivery times and lifted fixture shipment volumes 9%. CEO Quinn Thorne pointed to improved order-to-delivery cycles and reaffirmed the company's measured expansion strategy. Operating margins ticked up to 18.4%.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82655,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Wrenhaus Breaks Ground on Second Fixture Plant Near Riverside Corridor",
+        "body": "Wrenhaus committed $180M to a second manufacturing plant adjacent to its Riverside operations, aiming to lift fixture output by roughly 30% by 2028. CEO Quinn Thorne framed the move as a measured response to sustained distribution-hub throughput, adding that hiring would phase in over 18 months to protect margins.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
