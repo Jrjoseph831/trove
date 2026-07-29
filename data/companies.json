@@ -1481,7 +1481,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82648,
+    "lastEventCycle": 82654,
     "events": [
       {
         "cycle": 0,
@@ -1665,6 +1665,16 @@
         "size": "major",
         "head": "Bruncraft Hit With Class Action Over Axle Defect as Injury Claims Mount",
         "body": "A consolidated class action filed on behalf of 220,000 owners alleges Bruncraft concealed the axle flaw for two years before the recall, citing the leaked internal memo at the center of the scandal. Plaintiffs seek $2.3 billion in damages, and at least 40 personal-injury suits have been folded into the case. CEO Dessa Corvane said the company would 'defend vigorously where warranted and settle fairly where owners were harmed.'",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82654,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Bruncraft Under Federal Safety Probe as Regulators Widen Axle Investigation",
+        "body": "The national transport safety authority opened a formal defect investigation into Bruncraft covering up to 2.2 million vehicles, expanding beyond the axle assemblies already recalled. Investigators are examining whether steering-linkage failures contributed to at least 14 reported crashes. CEO Dessa Corvane pledged full cooperation, though the probe threatens to eclipse the recall already weighing on the house.",
         "effects": {
           "automotive": -0.22
         }
@@ -3456,7 +3466,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82628,
+    "lastEventCycle": 82654,
     "events": [
       {
         "cycle": 0,
@@ -3515,6 +3525,16 @@
         "effects": {
           "medical": 0.06
         }
+      },
+      {
+        "cycle": 82654,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Castlegear Group Wins Regional Network Supply Contract for Sterile Trays",
+        "body": "Castlegear secured a five-year supply agreement with the Merrowfield hospital network valued at roughly $310M, covering sterile tray systems and select equipment servicing. CEO Sable Brandt said the deal extends the company's steady backlog conversion without straining production. Deliveries are scheduled to begin next quarter.",
+        "effects": {
+          "medical": 0.13
+        }
       }
     ]
   },
@@ -3529,7 +3549,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82646,
+    "lastEventCycle": 82654,
     "events": [
       {
         "cycle": 0,
@@ -3711,6 +3731,16 @@
         "body": "New chief Halden Voss announced plans to ring-fence Saltmere cleanup obligations into a separate managed unit while cutting 1,400 roles and shelving two storage projects to preserve cash. The board approved a $2.1B provision against the class action, and Voss pledged a leaner Power & Storage division focused on 'operable, defensible assets.' Analysts called the plan credible but warned execution risk remains high.",
         "effects": {
           "energy": -0.13
+        }
+      },
+      {
+        "cycle": 82654,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Castlehold Faces $4.1B Regulator Suit as Saltmere Cleanup Costs Balloon",
+        "body": "State environmental authorities filed a $4.1B civil action against Castlehold, alleging the company concealed groundwater contamination at the Saltmere storage complex for over six years. Turnaround chief Dell Karsh said the carved-out liability unit will absorb the legal exposure, but CEO Halden Voss conceded remediation estimates have nearly doubled to $1.8B. Shares came under fresh pressure as the board disclosed a possible dividend suspension.",
+        "effects": {
+          "energy": -0.22
         }
       }
     ]
@@ -4397,7 +4427,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82641,
+    "lastEventCycle": 82654,
     "events": [
       {
         "cycle": 0,
@@ -4493,6 +4523,16 @@
         "size": "flash",
         "head": "Drossware Adds Lighting SKUs to Grocer Alliance Rollout",
         "body": "Drossware extended its multi-category grocer pact once more, folding in a value lighting range set to reach 4,000 storefronts by year-end. Nadia Wold framed the addition as a low-risk bolt-on that leans on existing packaging and distribution lanes. The move rounds out three of Drossware's four consumer categories under the alliance.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82654,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drossware Edges Past Estimates as Lighting and Packaging Lines Fill Out",
+        "body": "Drossware reported quarterly revenue of $488M, modestly ahead of the $476M consensus, as new lighting SKUs and the dedicated packaging line contributed their first full quarter within the grocer alliance. CEO Nadia Wold said cross-category attach rates were running ahead of plan. The company held its full-year guidance steady.",
         "effects": {
           "consumer": 0.06
         }
@@ -5986,7 +6026,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82646,
+    "lastEventCycle": 82654,
     "events": [
       {
         "cycle": 0,
@@ -6130,6 +6170,16 @@
         "body": "In her first full quarter, CEO Sable Renwick reported the rebuilt reservoir system delivered 99.4% uptime, ending a run of outages and lifting Power & Storage revenue 11%. Compute volumes also recovered as customers returned, and Renwick said penalty credits from prior failures had largely cleared. She framed the quarter as proof 'the fresh start is holding.'",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82654,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Greywater Grid Lands Landmark Compute Capacity Pact Worth $1.6B",
+        "body": "Greywater Grid signed a seven-year capacity agreement to supply compute and backup power to the Vantor data consortium, a deal management valued at $1.6B over its term. CEO Sable Renwick called it validation of the rebuilt reservoir platform and the fastest major win in the house's history. The contract nearly doubles the company's committed forward revenue and marks a defining turn from last year's outages.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -10627,7 +10677,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82622,
+    "lastEventCycle": 82654,
     "events": [
       {
         "cycle": 0,
@@ -10673,6 +10723,16 @@
         "size": "flash",
         "head": "Skarnstone Industries Edges Past Forecasts as Backorders Stay Cleared",
         "body": "The consumables maker reported a modest 3.2% revenue uptick, with CEO Yvette Aldous crediting the recently expanded warehouse network for keeping fill rates above 98%. Management reiterated its unhurried full-year outlook, citing steady institutional demand and no changes to capital plans.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82654,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Skarnstone Industries Opens Second Loading Bay to Speed Consumables Dispatch",
+        "body": "Skarnstone commissioned a second loading bay at its main distribution hub, adding roughly 12% more daily dispatch capacity for its consumables range. CEO Yvette Aldous framed the move as a modest, deliberate step to match the cleared backorder position. Management reiterated its unchanged full-year outlook.",
         "effects": {
           "medical": 0.06
         }
@@ -10829,7 +10889,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82643,
+    "lastEventCycle": 82654,
     "events": [
       {
         "cycle": 0,
@@ -10945,6 +11005,16 @@
         "size": "flash",
         "head": "Steg Tooling Notches Eighth Straight Beat as Kelmar Cells Run Near Capacity",
         "body": "Steg Tooling extended its streak to eight consecutive beats, with revenue up 7% to $298 million as both Kelmar fastener cells operated above 90% utilization. CEO Iris Vossen pointed to durable demand from auto-parts customers and disciplined cost control. The company left its expansion plans unchanged, citing a preference for steady ramp over aggressive additions.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82654,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Steg Tooling Logs Ninth Straight Beat as Fastener Margins Hold",
+        "body": "Steg Tooling posted its ninth consecutive quarterly beat, with revenue of $612M edging past the $598M consensus. CEO Iris Vossen credited stable fastener pricing and near-full utilization at the two Kelmar cells. The company nudged its full-year margin guidance up by 30 basis points.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -11696,7 +11766,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82647,
+    "lastEventCycle": 82654,
     "events": [
       {
         "cycle": 0,
@@ -11884,6 +11954,16 @@
         "body": "Varnvale & Sons announced its largest acquisition to date, agreeing to buy fine-jewelry house Maison Aubrec for $2.3 billion in cash and stock. CEO Bram Wold said the deal folds Aubrec's storied ateliers and 40-store retail network into Varnvale's expanding maisons portfolio, deepening the vertical push that began with the Calderon movement acquisition. The board approved a companion buyback and said Aubrec will retain its brand identity.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82654,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Varnvale & Sons Folds Aubrec and Calderon Into New Heritage Division",
+        "body": "Varnvale said it will consolidate recent acquisitions Maison Aubrec and movement maker Calderon under a single Heritage Division led by longtime deputy Cosima Reyne. CEO Bram Wold said the reorganization is meant to capture an estimated $140M in annual synergies while preserving each maison's individual craft identity. The move follows a $2.3B acquisition spree that stretched the group's balance sheet.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]

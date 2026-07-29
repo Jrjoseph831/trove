@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-29T08:43:50.979Z",
+  "generatedAt": "2026-07-29T14:13:22.745Z",
   "beats": [
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Bruncraft Under Federal Safety Probe as Regulators Widen Axle Investigation",
+      "body": "The national transport safety authority opened a formal defect investigation into Bruncraft covering up to 2.2 million vehicles, expanding beyond the axle assemblies already recalled. Investigators are examining whether steering-linkage failures contributed to at least 14 reported crashes. CEO Dessa Corvane pledged full cooperation, though the probe threatens to eclipse the recall already weighing on the house.",
+      "cycle": 82654,
+      "dur": 8
+    },
+    {
+      "company": "Castlegear Group",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Castlegear Group Wins Regional Network Supply Contract for Sterile Trays",
+      "body": "Castlegear secured a five-year supply agreement with the Merrowfield hospital network valued at roughly $310M, covering sterile tray systems and select equipment servicing. CEO Sable Brandt said the deal extends the company's steady backlog conversion without straining production. Deliveries are scheduled to begin next quarter.",
+      "cycle": 82654,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Castlehold Faces $4.1B Regulator Suit as Saltmere Cleanup Costs Balloon",
+      "body": "State environmental authorities filed a $4.1B civil action against Castlehold, alleging the company concealed groundwater contamination at the Saltmere storage complex for over six years. Turnaround chief Dell Karsh said the carved-out liability unit will absorb the legal exposure, but CEO Halden Voss conceded remediation estimates have nearly doubled to $1.8B. Shares came under fresh pressure as the board disclosed a possible dividend suspension.",
+      "cycle": 82654,
+      "dur": 8
+    },
+    {
+      "company": "Drossware Industries",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Drossware Edges Past Estimates as Lighting and Packaging Lines Fill Out",
+      "body": "Drossware reported quarterly revenue of $488M, modestly ahead of the $476M consensus, as new lighting SKUs and the dedicated packaging line contributed their first full quarter within the grocer alliance. CEO Nadia Wold said cross-category attach rates were running ahead of plan. The company held its full-year guidance steady.",
+      "cycle": 82654,
+      "dur": 1
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Greywater Grid Lands Landmark Compute Capacity Pact Worth $1.6B",
+      "body": "Greywater Grid signed a seven-year capacity agreement to supply compute and backup power to the Vantor data consortium, a deal management valued at $1.6B over its term. CEO Sable Renwick called it validation of the rebuilt reservoir platform and the fastest major win in the house's history. The contract nearly doubles the company's committed forward revenue and marks a defining turn from last year's outages.",
+      "cycle": 82654,
+      "dur": 8
+    },
+    {
+      "company": "Skarnstone Industries",
+      "sector": "medical",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Skarnstone Industries Opens Second Loading Bay to Speed Consumables Dispatch",
+      "body": "Skarnstone commissioned a second loading bay at its main distribution hub, adding roughly 12% more daily dispatch capacity for its consumables range. CEO Yvette Aldous framed the move as a modest, deliberate step to match the cleared backorder position. Management reiterated its unchanged full-year outlook.",
+      "cycle": 82654,
+      "dur": 1
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Steg Tooling Logs Ninth Straight Beat as Fastener Margins Hold",
+      "body": "Steg Tooling posted its ninth consecutive quarterly beat, with revenue of $612M edging past the $598M consensus. CEO Iris Vossen credited stable fastener pricing and near-full utilization at the two Kelmar cells. The company nudged its full-year margin guidance up by 30 basis points.",
+      "cycle": 82654,
+      "dur": 1
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Varnvale & Sons Folds Aubrec and Calderon Into New Heritage Division",
+      "body": "Varnvale said it will consolidate recent acquisitions Maison Aubrec and movement maker Calderon under a single Heritage Division led by longtime deputy Cosima Reyne. CEO Bram Wold said the reorganization is meant to capture an estimated $140M in annual synergies while preserving each maison's individual craft identity. The move follows a $2.3B acquisition spree that stretched the group's balance sheet.",
+      "cycle": 82654,
+      "dur": 2
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -20,26 +100,6 @@
       "body": "Halvard Renn's turnaround gained traction as the overhauled Veyra S drew 28,000 preorders and helped Brunmark top revenue estimates by 9%. Warranty-claim rates on the new battery pack fell to a fraction of the prior model's, easing the recall-era reputation damage. Renn said the quarter marked 'the first clean read since Veyra' but cautioned that supply of the new pack remains tight.",
       "cycle": 82653,
       "dur": 2
-    },
-    {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Carrowcyon & Sons Debuts Smart-Dimming Line to Extend Modular Lighting Run",
-      "body": "Cole Brandt unveiled the Lumen Fold series, adding programmable dimming to the modular lighting range that has anchored three straight beats. Early retail commitments cover 1,200 storefronts ahead of the season. Brandt called the launch 'a measured step onto proven ground.'",
-      "cycle": 82653,
-      "dur": 1
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Forgegrave Industries Tops Estimates as Add-On Meridian Hub Fleet Ramps",
-      "body": "Petra Thorne reported a 7% revenue beat as the add-on Meridian hub fleet order moved into production across both assembly plants. Order backlog held steady at 14 months, giving the material-handling maker rare visibility into next year. Thorne reaffirmed guidance without flourish, citing 'steady lines and full plants.'",
-      "cycle": 82653,
-      "dur": 1
     },
     {
       "company": "Gromford Works",
@@ -82,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Aldouscyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aldouscyon Beats Again as Four-City Conversion Slate Hits Full Stride",
-      "body": "Aldouscyon reported quarterly revenue of $1.42 billion, up 11% year-over-year, as fixture shipments from its second plant ramped ahead of schedule. CEO Petra Mercer credited steady progress across the Threndle, Callon, and two coastal hub conversions, with installation crews now running at all four sites. The company reaffirmed its raised full-year outlook.",
-      "cycle": 82652,
-      "dur": 2
-    },
-    {
       "company": "Erretmark Works",
       "sector": "automotive",
       "kind": "major_deal",
@@ -102,26 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Fennmoor Extends Threll Suite With Bedside Diagnostics Module Under Hospital Deal",
-      "body": "Fennmoor launched Threll Point, a portable bedside diagnostics module built to run within its $900M hospital-system contract, targeting faster turnaround on critical panels. CEO Dorian Brandt said the module deepens the Callent-derived platform and opens a path into outpatient settings. Initial deployments will begin at three anchor hospital networks this quarter.",
-      "cycle": 82652,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "outage",
-      "size": "standard",
-      "head": "Halhold Systems Hit by Multi-Day Campus Outage, Straining $900M Pact Timeline",
-      "body": "A power and cooling failure at Halhold's flagship Deren campus knocked compute capacity offline for roughly 40 hours, delaying deliverables under its $900M supply pact. CEO Corin Vale called the incident 'contained and resolved,' but acknowledged the third campus build will be pushed to accommodate hardened infrastructure. The company said it is negotiating revised milestones with its anchor customer.",
-      "cycle": 82652,
-      "dur": 2
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "safety_probe",
@@ -130,26 +160,6 @@
       "body": "The National Vehicle Safety Board opened a formal investigation into thermal faults in Kessel Drive's Volt-Series storage packs, citing 14 field incidents tied to the units already under recall. CEO Neave Corliss pledged 'full cooperation and total transparency,' but the widening scope now covers manufacturing at both the Harlin and Demaking plants. Analysts warn the probe could freeze deliveries of the flagship line for two or more quarters.",
       "cycle": 82652,
       "dur": 8
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Skarnvale Commits to Third Terminal Retrofit as Braeloch Blueprint Spreads",
-      "body": "Skarnvale announced a $310 million retrofit of its Cardryn Wharf terminal, extending the Braeloch handling blueprint to a third site months ahead of plan. CEO Dorn Vaskell said Vosk Junction throughput has already exceeded early targets, justifying the accelerated rollout. The turbulent expansion pace has raised some concern about capital strain, though the company reaffirmed liquidity guidance.",
-      "cycle": 82652,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Varnvale House Rebounds to Profit as Meridian Line Fuels Post-Scandal Recovery",
-      "body": "Varnvale House swung to a quarterly profit of $96 million, reversing a prior-year loss, as demand for the traceable-sourcing Meridian timepieces outpaced supply. CEO Adrienne Sole said the award-winning line has restored dealer confidence and lifted average selling prices 18%. The house is expanding waitlists rather than discounting, a move Sole framed as protecting the reset.",
-      "cycle": 82652,
-      "dur": 2
     },
     {
       "company": "Dunmorewright Industries",
@@ -269,16 +279,6 @@
       "head": "Varnvale & Sons Acquires Heritage Jeweler Maison Aubrec in $2.3B Luxury Landmark",
       "body": "Varnvale & Sons announced its largest acquisition to date, agreeing to buy fine-jewelry house Maison Aubrec for $2.3 billion in cash and stock. CEO Bram Wold said the deal folds Aubrec's storied ateliers and 40-store retail network into Varnvale's expanding maisons portfolio, deepening the vertical push that began with the Calderon movement acquisition. The board approved a companion buyback and said Aubrec will retain its brand identity.",
       "cycle": 82647,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Gromford Works Slapped With Investor Suit as Meridian Probe Widens Into Sourcing Practices",
-      "body": "A consolidated shareholder lawsuit filed this morning alleges CEO Corin Aldwych rushed the Meridian Tourbillon launch while concealing a third-party movement supplier, seeking damages of $620M. Regulators have expanded their inquiry to cover Gromford's entire complication line, and three retail partners have suspended Meridian orders pending the outcome. Aldwych, known for chasing headlines, now faces the defining crisis of his tenure.",
-      "cycle": 82646,
       "dur": 8
     }
   ]
