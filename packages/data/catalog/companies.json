@@ -774,14 +774,14 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1972,
-    "ceo": "Renata Solberg",
+    "ceo": "Anders Vell",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82644,
+    "lastEventCycle": 82653,
     "events": [
       {
         "cycle": 0,
@@ -944,6 +944,14 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82653,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Blackhold CEO Renata Solberg Resigns as Falsified-Records Fallout Deepens",
+        "body": "Renata Solberg stepped down after regulators referred the falsified grid-storage test records for possible enforcement, with the national program suspending new site certifications pending review. The board installed compliance veteran Anders Vell as chief executive to steer remediation and rebuild regulator trust. Blackhold set aside 140M against potential penalties and remediation costs.",
+        "effects": {}
       }
     ]
   },
@@ -2024,7 +2032,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82645,
+    "lastEventCycle": 82653,
     "events": [
       {
         "cycle": 0,
@@ -2186,6 +2194,16 @@
         "size": "standard",
         "head": "Brunmark Motors Unveils Redesigned Veyra S With Overhauled Battery Pack",
         "body": "CEO Halvard Renn introduced the second-generation Veyra S, featuring a redesigned Power & Storage module the company says addresses the defects behind the ongoing class-action suit. Brunmark committed to a free retrofit program for existing owners, estimated at 240M, framing it as the centerpiece of Renn's turnaround plan. Deliveries are slated to begin next quarter.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82653,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunmark Motors Beats as Redesigned Veyra S Clears Backlog Under Renn",
+        "body": "Halvard Renn's turnaround gained traction as the overhauled Veyra S drew 28,000 preorders and helped Brunmark top revenue estimates by 9%. Warranty-claim rates on the new battery pack fell to a fraction of the prior model's, easing the recall-era reputation damage. Renn said the quarter marked 'the first clean read since Veyra' but cautioned that supply of the new pack remains tight.",
         "effects": {
           "automotive": 0.13
         }
@@ -2962,7 +2980,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82639,
+    "lastEventCycle": 82653,
     "events": [
       {
         "cycle": 0,
@@ -3060,6 +3078,16 @@
         "body": "Cole Brandt reported quarterly revenue of $412 million, up 9% year over year, crediting the newly opened distribution center for trimming fulfillment costs across the modular lighting range. Retail sell-through climbed 14% as three national chains widened shelf space for the line. Brandt signaled the company is weighing a second product tier to capitalize on the momentum.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82653,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Carrowcyon & Sons Debuts Smart-Dimming Line to Extend Modular Lighting Run",
+        "body": "Cole Brandt unveiled the Lumen Fold series, adding programmable dimming to the modular lighting range that has anchored three straight beats. Early retail commitments cover 1,200 storefronts ahead of the season. Brandt called the launch 'a measured step onto proven ground.'",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -5546,7 +5574,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82639,
+    "lastEventCycle": 82653,
     "events": [
       {
         "cycle": 0,
@@ -5644,6 +5672,16 @@
         "body": "Petra Thorne announced Meridian Freight has expanded its outfitting contract to cover four additional regional hubs, adding roughly $210 million to the existing order. The extension keeps Forgegrave's second assembly plant at full output through year-end and adds a modest maintenance-services component. Thorne said the deal reflects consistent delivery performance rather than any shift in the company's steady operating approach.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82653,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Forgegrave Industries Tops Estimates as Add-On Meridian Hub Fleet Ramps",
+        "body": "Petra Thorne reported a 7% revenue beat as the add-on Meridian hub fleet order moved into production across both assembly plants. Order backlog held steady at 14 months, giving the material-handling maker rare visibility into next year. Thorne reaffirmed guidance without flourish, citing 'steady lines and full plants.'",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -6100,23 +6138,15 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1897,
-    "ceo": "Corin Aldwych",
+    "ceo": "Dahlia Verrint",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.85,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82646,
+    "lastEventCycle": 82653,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Gromford Works — Patience, pressed into objects",
-        "body": "Gromford makes things meant to outlive their owners. Fine goods and timepieces, worked by hands that learned the craft over years, not weeks. There is no value tier and there never will be; the line runs from premium to outright luxury, each piece signed, numbered and slow. Collectors treat the name as a benchmark. A Gromford passes down, gets serviced, gets willed, and keeps its standing the whole way. They build heirlooms, and bill accordingly.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "product_launch",
@@ -6342,6 +6372,14 @@
         "effects": {
           "luxury": -0.22
         }
+      },
+      {
+        "cycle": 82653,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Gromford Works Ousts Corin Aldwych as Meridian Sourcing Scandal Engulfs Board",
+        "body": "Directors voted to remove chief executive Corin Aldwych after the Meridian Tourbillon probe expanded to cover three additional movement lines, with the investor suit now seeking 210M in damages. The board named restructuring specialist Dahlia Verrint as interim chief executive, tasking her with a full audit of supplier disclosures. Shares had been battered through a bruising quarter as regulators signaled possible sanctions.",
+        "effects": {}
       }
     ]
   },
@@ -6356,7 +6394,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82640,
+    "lastEventCycle": 82653,
     "events": [
       {
         "cycle": 0,
@@ -6472,6 +6510,16 @@
         "size": "standard",
         "head": "Halcrest Misses as Overseas Atelier and Second Flagship Weigh on Margins",
         "body": "Halcrest fell short of forecasts, with operating margin down 380 basis points as heavy spending on the overseas atelier and second Salon Row flagship outpaced sales growth. CEO Iris Marrow defended the expansion as a long-term bet, though critics questioned the pace of her ambitions. Revenue still rose 6%, but rising costs turned the quarter into a stumble after a record half.",
+        "effects": {
+          "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82653,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Halcrest Shutters Overseas Atelier in Retreat After Margin Miss",
+        "body": "Iris Marrow announced the closure of the recently opened overseas atelier barely two quarters after launch, taking an 85M writedown and consolidating production back to the flagship Salon Row workshop. Marrow, known for dramatic reversals, called the second-flagship expansion 'a bet placed too soon.' The move is projected to restore roughly 4 points of gross margin by next year.",
         "effects": {
           "luxury": -0.13
         }
@@ -12365,7 +12413,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82641,
+    "lastEventCycle": 82653,
     "events": [
       {
         "cycle": 0,
@@ -12470,6 +12518,16 @@
         "effects": {
           "energy": -0.13
         }
+      },
+      {
+        "cycle": 82653,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenspire Holdings Recovers as Roe Splits $4.1B Mandate Into Staged Deliveries",
+        "body": "Halden Roe restructured the strained $4.1B compute-and-storage mandate into four phased milestones, easing delivery pressure and lifting quarterly revenue 11% above guidance. The Northern Utilities storage tie-up remained the steadiest contributor at 320M in bookings. Roe said the phased plan 'takes the knife out of the timeline' after last quarter's stumble.",
+        "effects": {
+          "energy": 0.13
+        }
       }
     ]
   },
@@ -12484,7 +12542,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82644,
+    "lastEventCycle": 82653,
     "events": [
       {
         "cycle": 0,
@@ -12650,6 +12708,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Beats as Corveil Straps Lift Vehicle-Salon Sales",
         "body": "Vossenspire posted quarterly revenue of $3.6 billion, up 14% year over year, as freshly acquired strapmaker Corveil began supplying in-house leather goods across Quinn Marrow's vehicle salons. Margins widened 210 basis points on the vertical integration, with the Halden timepiece line now stocked in 92 of 110 salons. Marrow flagged 'further consolidation opportunities' on the earnings call.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82653,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vossenspire Supply Buys Vehicle-Salon Chain Larkmoor in 620M Retail Grab",
+        "body": "Quinn Marrow pressed further into retail with the 620M purchase of the 40-location Larkmoor salon network, giving Vossenspire direct control of storefronts that already stock Halden timepieces and Corveil straps. Marrow framed the deal as 'owning the room where the sale happens,' targeting 15% cost savings on distribution. The transaction is expected to close within two quarters.",
         "effects": {
           "luxury": 0.13
         }

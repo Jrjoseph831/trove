@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-29T02:46:14.967Z",
+  "generatedAt": "2026-07-29T08:43:50.979Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Blackhold CEO Renata Solberg Resigns as Falsified-Records Fallout Deepens",
+      "body": "Renata Solberg stepped down after regulators referred the falsified grid-storage test records for possible enforcement, with the national program suspending new site certifications pending review. The board installed compliance veteran Anders Vell as chief executive to steer remediation and rebuild regulator trust. Blackhold set aside 140M against potential penalties and remediation costs.",
+      "cycle": 82653,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunmark Motors Beats as Redesigned Veyra S Clears Backlog Under Renn",
+      "body": "Halvard Renn's turnaround gained traction as the overhauled Veyra S drew 28,000 preorders and helped Brunmark top revenue estimates by 9%. Warranty-claim rates on the new battery pack fell to a fraction of the prior model's, easing the recall-era reputation damage. Renn said the quarter marked 'the first clean read since Veyra' but cautioned that supply of the new pack remains tight.",
+      "cycle": 82653,
+      "dur": 2
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Carrowcyon & Sons Debuts Smart-Dimming Line to Extend Modular Lighting Run",
+      "body": "Cole Brandt unveiled the Lumen Fold series, adding programmable dimming to the modular lighting range that has anchored three straight beats. Early retail commitments cover 1,200 storefronts ahead of the season. Brandt called the launch 'a measured step onto proven ground.'",
+      "cycle": 82653,
+      "dur": 1
+    },
+    {
+      "company": "Forgegrave Industries",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Forgegrave Industries Tops Estimates as Add-On Meridian Hub Fleet Ramps",
+      "body": "Petra Thorne reported a 7% revenue beat as the add-on Meridian hub fleet order moved into production across both assembly plants. Order backlog held steady at 14 months, giving the material-handling maker rare visibility into next year. Thorne reaffirmed guidance without flourish, citing 'steady lines and full plants.'",
+      "cycle": 82653,
+      "dur": 1
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Gromford Works Ousts Corin Aldwych as Meridian Sourcing Scandal Engulfs Board",
+      "body": "Directors voted to remove chief executive Corin Aldwych after the Meridian Tourbillon probe expanded to cover three additional movement lines, with the investor suit now seeking 210M in damages. The board named restructuring specialist Dahlia Verrint as interim chief executive, tasking her with a full audit of supplier disclosures. Shares had been battered through a bruising quarter as regulators signaled possible sanctions.",
+      "cycle": 82653,
+      "dur": 8
+    },
+    {
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Halcrest Shutters Overseas Atelier in Retreat After Margin Miss",
+      "body": "Iris Marrow announced the closure of the recently opened overseas atelier barely two quarters after launch, taking an 85M writedown and consolidating production back to the flagship Salon Row workshop. Marrow, known for dramatic reversals, called the second-flagship expansion 'a bet placed too soon.' The move is projected to restore roughly 4 points of gross margin by next year.",
+      "cycle": 82653,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenspire Holdings Recovers as Roe Splits $4.1B Mandate Into Staged Deliveries",
+      "body": "Halden Roe restructured the strained $4.1B compute-and-storage mandate into four phased milestones, easing delivery pressure and lifting quarterly revenue 11% above guidance. The Northern Utilities storage tie-up remained the steadiest contributor at 320M in bookings. Roe said the phased plan 'takes the knife out of the timeline' after last quarter's stumble.",
+      "cycle": 82653,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Vossenspire Supply Buys Vehicle-Salon Chain Larkmoor in 620M Retail Grab",
+      "body": "Quinn Marrow pressed further into retail with the 620M purchase of the 40-location Larkmoor salon network, giving Vossenspire direct control of storefronts that already stock Halden timepieces and Corveil straps. Marrow framed the deal as 'owning the room where the sale happens,' targeting 15% cost savings on distribution. The transaction is expected to close within two quarters.",
+      "cycle": 82653,
+      "dur": 2
+    },
     {
       "company": "Aldouscyon",
       "sector": "consumer",
@@ -30,16 +110,6 @@
       "body": "Fennmoor launched Threll Point, a portable bedside diagnostics module built to run within its $900M hospital-system contract, targeting faster turnaround on critical panels. CEO Dorian Brandt said the module deepens the Callent-derived platform and opens a path into outpatient settings. Initial deployments will begin at three anchor hospital networks this quarter.",
       "cycle": 82652,
       "dur": 2
-    },
-    {
-      "company": "Greenmarsh Agro",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Greenmarsh Agro Edges Past Estimates as Seed Coating Pairs With Soil Blend",
-      "body": "Greenmarsh Agro posted a modest revenue gain to $684 million, narrowly topping expectations as early bundling of its companion seed coating with the slow-release soil blend lifted per-acre orders. CEO Petra Kessler emphasized that adoption remains in early innings and reiterated the company's multi-season rollout plan. Renewal rates on the core blend held above 90%.",
-      "cycle": 82652,
-      "dur": 1
     },
     {
       "company": "Halhold Systems",
@@ -82,36 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Boreas Power Misses as Halvard Integration Costs Bite Into Quarterly Results",
-      "body": "Boreas Power reported operating profit of $1.1B, roughly 18% below guidance, as one-time charges tied to absorbing the Halvard grid empire outpaced early synergy gains. CEO Mira Thorne told investors the shortfall was 'the price of building something durable,' reaffirming that combined output capacity would ramp through the following year. Restructuring reserves of $420M weighed most heavily on the storage and power segments.",
-      "cycle": 82651,
-      "dur": 2
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Bruncrest Works Adds Second Eastfield Line to Scale Aria Pro Output",
-      "body": "Riding a cleared backlog and firm demand, Bruncrest Works broke ground on a second Eastfield production line, a $220M commitment aimed at doubling Aria Pro capacity. CEO Ines Marlow declared the expansion proof that the earlier shortage crisis was 'firmly behind us,' promising first units within nine months. The company also locked longer-term supply terms to avoid a repeat of prior stoppages.",
-      "cycle": 82651,
-      "dur": 2
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Calderforge Overhauls Cooling Standards Across Stormwell Halls After Outage",
-      "body": "Calderforge announced a facility-wide redesign of its cooling systems following the failure that idled two Stormwell halls, committing $310M to redundant loops and independent monitoring across all sites. CEO Nadia Throne acknowledged the outage 'exposed a single point of failure we should never have carried,' and delayed the fifth hall's timeline by one quarter to fold in the new standards. The anchor tenant's decade-long pact remains intact.",
-      "cycle": 82651,
-      "dur": 2
-    },
-    {
       "company": "Dunmorewright Industries",
       "sector": "construction",
       "kind": "major_deal",
@@ -130,26 +170,6 @@
       "body": "New chief executive Marcus Thorne ordered a total recall of every Aveline patient monitor in the field, an estimated 240,000 units, and suspended all sales pending redesign. Thorne pledged full replacement at no cost to hospital networks and set aside $680M for the effort, calling it 'the only defensible path' amid mounting litigation. The move wipes out a division that contributed nearly a fifth of company revenue.",
       "cycle": 82651,
       "dur": 8
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "rebrand",
-      "size": "standard",
-      "head": "Korrwright Works Folds Meridienne Into New 'Korrwright Meridienne' Luxury House",
-      "body": "Korrwright Works unveiled a unified luxury identity, rebranding its acquired rival under the combined 'Korrwright Meridienne' banner to consolidate heritage collections under one crest. CEO Dunmore Carrow said the merged house would share ateliers while preserving Meridienne's signature movements. Management expects the rebrand to lift blended margins as duplicate distribution costs are stripped out.",
-      "cycle": 82651,
-      "dur": 2
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "breakthrough",
-      "size": "standard",
-      "head": "Stegforge Rail Plate Mill Achieves First Output, Clearing Consortium Milestone",
-      "body": "Stegforge confirmed first successful plate rolls from its dedicated rail mill, hitting the strength-grade specification demanded under its multi-year consortium contract on the initial production run. CEO Aurelia Steg said the mill reached qualifying tolerances 'weeks earlier than our own conservative schedule allowed.' The facility is expected to reach half of nameplate capacity within two quarters.",
-      "cycle": 82651,
-      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -259,16 +279,6 @@
       "head": "Gromford Works Slapped With Investor Suit as Meridian Probe Widens Into Sourcing Practices",
       "body": "A consolidated shareholder lawsuit filed this morning alleges CEO Corin Aldwych rushed the Meridian Tourbillon launch while concealing a third-party movement supplier, seeking damages of $620M. Regulators have expanded their inquiry to cover Gromford's entire complication line, and three retail partners have suspended Meridian orders pending the outcome. Aldwych, known for chasing headlines, now faces the defining crisis of his tenure.",
       "cycle": 82646,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Halhold Works Ousts CEO Lena Faircloth as Aveline Scandal Engulfs Board",
-      "body": "Halhold's board removed Lena Faircloth effective immediately following the disclosure of internal memos showing Aveline monitor flaws were known before launch, with directors citing 'a catastrophic breach of trust.' The company named interim chair Marcus Thorne as CEO and announced an independent review of all Medical Equipment lines. Shares of pending litigation now span four hospital networks and an estimated 1.2B in claimed damages.",
-      "cycle": 82645,
       "dur": 8
     }
   ]
