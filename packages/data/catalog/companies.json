@@ -113,7 +113,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82634,
+    "lastEventCycle": 82652,
     "events": [
       {
         "cycle": 0,
@@ -199,6 +199,16 @@
         "size": "standard",
         "head": "Aldouscyon Opens Second Fixture Plant to Feed Four-City Conversion Slate",
         "body": "Aldouscyon broke ground on a 180,000-square-foot fixture assembly plant near Threndle, its second dedicated conversion facility, to keep pace with pledged rollouts across Marren, Threndle and two prior contract cities. CEO Petra Mercer said the plant will add roughly 400 jobs and shorten lead times on municipal orders by an estimated six weeks. The company reaffirmed that all four conversions remain on their announced timelines.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82652,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aldouscyon Beats Again as Four-City Conversion Slate Hits Full Stride",
+        "body": "Aldouscyon reported quarterly revenue of $1.42 billion, up 11% year-over-year, as fixture shipments from its second plant ramped ahead of schedule. CEO Petra Mercer credited steady progress across the Threndle, Callon, and two coastal hub conversions, with installation crews now running at all four sites. The company reaffirmed its raised full-year outlook.",
         "effects": {
           "consumer": 0.13
         }
@@ -4944,7 +4954,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82641,
+    "lastEventCycle": 82652,
     "events": [
       {
         "cycle": 0,
@@ -5083,6 +5093,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82652,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Erretmark Works Lands Landmark 1,200-Unit Veyron Order From Sovereign Collector Fund",
+        "body": "Erretmark Works secured a $2.1 billion commitment from the Marrenth Sovereign Collector Fund for 1,200 bespoke Veyron-badged roadsters over four years, the largest single order in the marque's history. CEO Aurelia Garr said the deal validates the ultra-luxury acquisition and will fund a third build bay at the Sorne atelier. Deliveries begin in the coming quarter, with each unit individually commissioned.",
+        "effects": {
+          "automotive": 0.22
+        }
       }
     ]
   },
@@ -5220,7 +5240,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82645,
+    "lastEventCycle": 82652,
     "events": [
       {
         "cycle": 0,
@@ -5386,6 +5406,16 @@
         "size": "standard",
         "head": "Fennmoor Signs 900M Hospital-System Deal for Threll Diagnostics Suite",
         "body": "Fennmoor secured a five-year, 900M agreement to deploy its Threll Diagnostics Suite across a 30-hospital network, its largest Medical Equipment contract to date. CEO Dorian Brandt said the win validates the Callent Labs acquisition, with the integrated sensor platform cited as the deciding factor. Deployment begins next quarter, with recurring service revenue expected to make up roughly a third of the deal's value.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82652,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Fennmoor Extends Threll Suite With Bedside Diagnostics Module Under Hospital Deal",
+        "body": "Fennmoor launched Threll Point, a portable bedside diagnostics module built to run within its $900M hospital-system contract, targeting faster turnaround on critical panels. CEO Dorian Brandt said the module deepens the Callent-derived platform and opens a path into outpatient settings. Initial deployments will begin at three anchor hospital networks this quarter.",
         "effects": {
           "technology": 0.13
         }
@@ -5825,7 +5855,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82630,
+    "lastEventCycle": 82652,
     "events": [
       {
         "cycle": 0,
@@ -5893,6 +5923,16 @@
         "body": "Petra Kessler introduced a paired seed-coating input designed to work with the firm's established soil blend, targeting the same regional cooperatives now on renewal. The launch extends Greenmarsh's inputs franchise after two straight quarters of blend-driven beats. Field trials across 40,000 acres reported a 6 percent yield uplift over untreated plots.",
         "effects": {
           "agriculture": 0.13
+        }
+      },
+      {
+        "cycle": 82652,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Greenmarsh Agro Edges Past Estimates as Seed Coating Pairs With Soil Blend",
+        "body": "Greenmarsh Agro posted a modest revenue gain to $684 million, narrowly topping expectations as early bundling of its companion seed coating with the slow-release soil blend lifted per-acre orders. CEO Petra Kessler emphasized that adoption remains in early innings and reiterated the company's multi-season rollout plan. Renewal rates on the core blend held above 90%.",
+        "effects": {
+          "agriculture": 0.06
         }
       }
     ]
@@ -6705,16 +6745,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82646,
+    "lastEventCycle": 82652,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Halhold Systems — Steady hardware for serious work",
-        "body": "Halhold made its name on machines that simply refused to crash during the long shift. The catalog reaches from affordable terminals to premium blade arrays humming in chilled rooms. Where rivals chase headline speeds, Halhold chases uptime, the kind measured in years, not benchmarks. System administrators speak of their boxes with the fondness reserved for trusted tools. Dependable compute, unglamorous and unbreakable, the backbone behind a thousand quiet operations.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "expansion",
@@ -6937,6 +6969,16 @@
         "body": "Riding a blowout quarter, CEO Corin Vale committed $410M to a new compute campus expected to add 30% capacity by late next year. The move is designed to pre-position supply for follow-on orders after the anchor $900M deal, though Vale acknowledged the aggressive timeline stretches the balance sheet. The house said hiring would begin within the quarter.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82652,
+        "kind": "outage",
+        "size": "standard",
+        "head": "Halhold Systems Hit by Multi-Day Campus Outage, Straining $900M Pact Timeline",
+        "body": "A power and cooling failure at Halhold's flagship Deren campus knocked compute capacity offline for roughly 40 hours, delaying deliverables under its $900M supply pact. CEO Corin Vale called the incident 'contained and resolved,' but acknowledged the third campus build will be pushed to accommodate hardened infrastructure. The company said it is negotiating revised milestones with its anchor customer.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -8073,7 +8115,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82639,
+    "lastEventCycle": 82652,
     "events": [
       {
         "cycle": 0,
@@ -8207,6 +8249,16 @@
         "size": "major",
         "head": "Kessel Drive Plunges Into Deep Loss as Recall and Probe Costs Overwhelm Quarter",
         "body": "Kessel Drive posted a quarterly loss of $1.1 billion, far wider than expected, as widening recall provisions and regulatory penalties tied to its storage packs battered the balance sheet. Neave Corliss conceded the restructure had not yet stemmed the bleeding, with vehicle deliveries down 31% and the newly split storage unit still absorbing warranty charges. The board has retained outside advisers to review financing options amid speculation over a capital raise.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82652,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Kessel Drive Faces Formal Safety Probe as Regulators Escalate Storage Failure Inquiry",
+        "body": "The National Vehicle Safety Board opened a formal investigation into thermal faults in Kessel Drive's Volt-Series storage packs, citing 14 field incidents tied to the units already under recall. CEO Neave Corliss pledged 'full cooperation and total transparency,' but the widening scope now covers manufacturing at both the Harlin and Demaking plants. Analysts warn the probe could freeze deliveries of the flagship line for two or more quarters.",
         "effects": {
           "automotive": -0.22
         }
@@ -10590,7 +10642,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82642,
+    "lastEventCycle": 82652,
     "events": [
       {
         "cycle": 0,
@@ -10702,6 +10754,16 @@
         "size": "standard",
         "head": "Skarnvale Expands Braeloch Blueprint to Second Terminal at Vosk Junction",
         "body": "Buoyed by Braeloch's record throughput, Dorn Vaskell announced a $180M retrofit of the aging Vosk Junction terminal, porting the same overhauled handling systems across its cross-docking floors. Vaskell called it 'proof the model travels,' though internal targets demand the site reach full capacity within nine months. Analysts note the aggressive timeline mirrors the turbulence that preceded Braeloch's own reset.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82652,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Skarnvale Commits to Third Terminal Retrofit as Braeloch Blueprint Spreads",
+        "body": "Skarnvale announced a $310 million retrofit of its Cardryn Wharf terminal, extending the Braeloch handling blueprint to a third site months ahead of plan. CEO Dorn Vaskell said Vosk Junction throughput has already exceeded early targets, justifying the accelerated rollout. The turbulent expansion pace has raised some concern about capital strain, though the company reaffirmed liquidity guidance.",
         "effects": {
           "logistics": 0.13
         }
@@ -11789,7 +11851,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82645,
+    "lastEventCycle": 82652,
     "events": [
       {
         "cycle": 0,
@@ -11967,6 +12029,16 @@
         "size": "standard",
         "head": "Varnvale House Wins Heritage Craftsmanship Honor for Meridian Line",
         "body": "The Meridian timepiece line earned the Guild of Fine Makers' annual craftsmanship award, with judges citing its fully traceable sourcing as 'an industry benchmark.' CEO Adrienne Sole called the recognition 'vindication of the reset,' noting Meridian pre-orders have exceeded internal targets by 40%. The honor marks the first major external validation since last year's sourcing scandal.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82652,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Varnvale House Rebounds to Profit as Meridian Line Fuels Post-Scandal Recovery",
+        "body": "Varnvale House swung to a quarterly profit of $96 million, reversing a prior-year loss, as demand for the traceable-sourcing Meridian timepieces outpaced supply. CEO Adrienne Sole said the award-winning line has restored dealer confidence and lifted average selling prices 18%. The house is expanding waitlists rather than discounting, a move Sole framed as protecting the reset.",
         "effects": {
           "luxury": 0.13
         }

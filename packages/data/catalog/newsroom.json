@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-28T19:27:11.865Z",
+  "generatedAt": "2026-07-29T02:46:14.967Z",
   "beats": [
+    {
+      "company": "Aldouscyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Aldouscyon Beats Again as Four-City Conversion Slate Hits Full Stride",
+      "body": "Aldouscyon reported quarterly revenue of $1.42 billion, up 11% year-over-year, as fixture shipments from its second plant ramped ahead of schedule. CEO Petra Mercer credited steady progress across the Threndle, Callon, and two coastal hub conversions, with installation crews now running at all four sites. The company reaffirmed its raised full-year outlook.",
+      "cycle": 82652,
+      "dur": 2
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Erretmark Works Lands Landmark 1,200-Unit Veyron Order From Sovereign Collector Fund",
+      "body": "Erretmark Works secured a $2.1 billion commitment from the Marrenth Sovereign Collector Fund for 1,200 bespoke Veyron-badged roadsters over four years, the largest single order in the marque's history. CEO Aurelia Garr said the deal validates the ultra-luxury acquisition and will fund a third build bay at the Sorne atelier. Deliveries begin in the coming quarter, with each unit individually commissioned.",
+      "cycle": 82652,
+      "dur": 8
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Fennmoor Extends Threll Suite With Bedside Diagnostics Module Under Hospital Deal",
+      "body": "Fennmoor launched Threll Point, a portable bedside diagnostics module built to run within its $900M hospital-system contract, targeting faster turnaround on critical panels. CEO Dorian Brandt said the module deepens the Callent-derived platform and opens a path into outpatient settings. Initial deployments will begin at three anchor hospital networks this quarter.",
+      "cycle": 82652,
+      "dur": 2
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Greenmarsh Agro Edges Past Estimates as Seed Coating Pairs With Soil Blend",
+      "body": "Greenmarsh Agro posted a modest revenue gain to $684 million, narrowly topping expectations as early bundling of its companion seed coating with the slow-release soil blend lifted per-acre orders. CEO Petra Kessler emphasized that adoption remains in early innings and reiterated the company's multi-season rollout plan. Renewal rates on the core blend held above 90%.",
+      "cycle": 82652,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "outage",
+      "size": "standard",
+      "head": "Halhold Systems Hit by Multi-Day Campus Outage, Straining $900M Pact Timeline",
+      "body": "A power and cooling failure at Halhold's flagship Deren campus knocked compute capacity offline for roughly 40 hours, delaying deliverables under its $900M supply pact. CEO Corin Vale called the incident 'contained and resolved,' but acknowledged the third campus build will be pushed to accommodate hardened infrastructure. The company said it is negotiating revised milestones with its anchor customer.",
+      "cycle": 82652,
+      "dur": 2
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Kessel Drive Faces Formal Safety Probe as Regulators Escalate Storage Failure Inquiry",
+      "body": "The National Vehicle Safety Board opened a formal investigation into thermal faults in Kessel Drive's Volt-Series storage packs, citing 14 field incidents tied to the units already under recall. CEO Neave Corliss pledged 'full cooperation and total transparency,' but the widening scope now covers manufacturing at both the Harlin and Demaking plants. Analysts warn the probe could freeze deliveries of the flagship line for two or more quarters.",
+      "cycle": 82652,
+      "dur": 8
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Skarnvale Commits to Third Terminal Retrofit as Braeloch Blueprint Spreads",
+      "body": "Skarnvale announced a $310 million retrofit of its Cardryn Wharf terminal, extending the Braeloch handling blueprint to a third site months ahead of plan. CEO Dorn Vaskell said Vosk Junction throughput has already exceeded early targets, justifying the accelerated rollout. The turbulent expansion pace has raised some concern about capital strain, though the company reaffirmed liquidity guidance.",
+      "cycle": 82652,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Varnvale House Rebounds to Profit as Meridian Line Fuels Post-Scandal Recovery",
+      "body": "Varnvale House swung to a quarterly profit of $96 million, reversing a prior-year loss, as demand for the traceable-sourcing Meridian timepieces outpaced supply. CEO Adrienne Sole said the award-winning line has restored dealer confidence and lifted average selling prices 18%. The house is expanding waitlists rather than discounting, a move Sole framed as protecting the reset.",
+      "cycle": 82652,
+      "dur": 2
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -52,16 +132,6 @@
       "dur": 8
     },
     {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Korrworks Debuts Automated Sorting Layer at Cross-Region Hub Ahead of Opening",
-      "body": "Korrworks unveiled a new high-throughput sorting configuration for its still-unfinished cross-region hub, promising 30% faster transfer times for its two anchor tenants. CEO Rhys Throne framed the rollout as a proof point that the facility would open 'not just on time, but ahead of its class.' Full commissioning remains slated for next quarter.",
-      "cycle": 82651,
-      "dur": 1
-    },
-    {
       "company": "Korrwright Works",
       "sector": "luxury",
       "kind": "rebrand",
@@ -92,36 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Brunstone & Sons Breaks Ground on Third Cell Plant to Feed Vault Guard Backlog",
-      "body": "Brunstone will invest 620M in a new facility at Merrick Flats, adding capacity for 2.8 million Vault Cell Guard units annually and roughly 1,400 jobs. CEO Halden Crowe framed the move as answering an order book now stretching 18 months, driven by the 4.1B fleet contract. First output is targeted within 20 months.",
-      "cycle": 82650,
-      "dur": 2
-    },
-    {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Holtware Co. Signs National Hardware Chain to Stock Lifetime-Warranty Range",
-      "body": "Holtware secured a multi-year placement deal to supply its warranty-backed cordless line across 780 retail locations under the Hallmar chain. CEO Aurelia Dray said the agreement should lift annual unit volumes by an estimated 22% while extending the brand's repeat-purchase model to a wider base. Rollout begins next quarter.",
-      "cycle": 82650,
-      "dur": 2
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Thaldale Group Misses as Plant Closures and Legal Costs Weigh on Quarter",
-      "body": "Thaldale posted a quarterly loss of 128M, missing estimates, as the two shuttered fastening plants dragged revenue down 14% and legal reserves swelled to 90M. CEO Marlowe Trent conceded the turnaround was 'entering its hardest stretch,' but insisted the streamlined hardware unit would return to margin growth by year-end. The company withheld full-year guidance, citing the unresolved regulatory probe.",
-      "cycle": 82650,
-      "dur": 2
-    },
-    {
       "company": "Woldmark",
       "sector": "technology",
       "kind": "leadership_change",
@@ -130,16 +170,6 @@
       "body": "The board removed longtime chief Cole Carrow, effective immediately, following the costly Halcyon 3 field failures and a guidance cut that wiped out much of the year's gains. Directors named operations veteran Sabine Orrick as CEO, tasking her with a quality overhaul and a slower, disciplined product cadence. Orrick pledged a full field-recall review and said 'no unit ships until it earns trust.'",
       "cycle": 82650,
       "dur": 8
-    },
-    {
-      "company": "Wrengrove Group",
-      "sector": "medical",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Wrengrove Group Adds Sterile-Kit Line at Third Plant as Demand Outpaces Capacity",
-      "body": "Wrengrove will commit 210M to a second production line at its newest plant, roughly doubling sterile-kit output after early orders ran 30% above projections. CEO Rhys Vossen said the expansion locks in supply for two regional health systems already on multi-year commitments. The line is slated to reach full run-rate within a year.",
-      "cycle": 82650,
-      "dur": 2
     },
     {
       "company": "Ardent Health",
@@ -239,26 +269,6 @@
       "head": "Halhold Works Ousts CEO Lena Faircloth as Aveline Scandal Engulfs Board",
       "body": "Halhold's board removed Lena Faircloth effective immediately following the disclosure of internal memos showing Aveline monitor flaws were known before launch, with directors citing 'a catastrophic breach of trust.' The company named interim chair Marcus Thorne as CEO and announced an independent review of all Medical Equipment lines. Shares of pending litigation now span four hospital networks and an estimated 1.2B in claimed damages.",
       "cycle": 82645,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Blackhold Reels as Probe Uncovers Falsified Grid-Storage Test Records",
-      "body": "Regulators reviewing the failed national storage sites found that pre-deployment safety certifications had been signed off using incomplete and, in several cases, fabricated test data, according to filings released today. Renata Solberg suspended two senior operations executives and confirmed the $2.4 billion program is now under formal suspension pending recertification. The disclosure marks the sharpest crisis of Solberg's short tenure and raises questions over the award itself.",
-      "cycle": 82644,
-      "dur": 8
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Korrwright Works Seizes Rival Meridienne in $2.4B Cross-Border Coup",
-      "body": "Dunmore Carrow moved on longtime competitor Meridienne Horlogerie, acquiring the storied movement-house for $2.4 billion in the largest deal of his 118-year tenure. The purchase hands the new Heritage Division control of Meridienne's celebrated tourbillon workshops and opens the eastern markets Carrow had publicly targeted. Executives said Meridienne's 340 master watchmakers will be retained under the Korrwright banner.",
-      "cycle": 82644,
       "dur": 8
     }
   ]
