@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-30T14:06:16.770Z",
+  "generatedAt": "2026-07-30T19:28:01.785Z",
   "beats": [
+    {
+      "company": "Brunforge Holdings",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Brunforge Debuts Vellan Kitchen Line to Extend Flagship Concept Into Food Service",
+      "body": "Brunforge unveiled the Vellan Kitchen collection, pushing its successful home-goods brand into cookware and small appliances across its regional flagships. CEO Kestrel Bramm framed the launch as a natural adjacency, with initial rollout to eight stores before a wider expansion. Early pre-orders were described as ahead of internal targets.",
+      "cycle": 82659,
+      "dur": 2
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Calderforge Misses as Cooling Overhaul Costs and Downtime Weigh on Quarter",
+      "body": "Calderforge fell short of estimates, posting revenue of $3.4 billion against a $3.7 billion consensus as the Stormwell cooling overhaul kept two halls partly offline through the period. CEO Nadia Throne said the remediation is on track and the idled capacity should return next quarter, but warned near-term margins would stay pressured. Shares slid on the guidance and elevated capital spending.",
+      "cycle": 82659,
+      "dur": 2
+    },
+    {
+      "company": "Garrweave Mills",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Garrweave Mills Ticks Higher as Northfield Renewal Locks In Volumes",
+      "body": "Garrweave reported a modest 2.1% revenue gain to $410 million, supported by the recently renewed Northfield supply agreement holding output at capacity. CEO Lorne Veldt reiterated the mill's long-horizon approach, noting stable pricing and low customer churn. No change to full-year outlook.",
+      "cycle": 82659,
+      "dur": 1
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Gromford Works Reels as Internal Memos Reveal Executives Knew of Meridian Sourcing Gaps for Years",
+      "body": "Leaked internal correspondence shows Gromford leadership was warned about the undisclosed Meridian tourbillon supplier as far back as 2023, deepening the crisis that already cost Corin Aldwych his post. CEO Dahlia Verrint faces mounting pressure as regulators expand their inquiry and two flagship boutiques suspend Meridian-line sales. The revelations wiped out an estimated $900 million in market value and prompted calls for a full board review.",
+      "cycle": 82659,
+      "dur": 8
+    },
+    {
+      "company": "Palettstead Holdings",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Palettstead Breaks Ground on Fourth Cold-Chain to Meet Overflow Demand",
+      "body": "Fresh off a fully ramped three-chain network, Palettstead announced construction of a fourth reusable cold-chain corridor, a $220 million investment backed by committed customer volumes. CEO Orla Marrow said demand had outstripped current capacity for two straight quarters. The new chain is slated to enter service within eighteen months.",
+      "cycle": 82659,
+      "dur": 2
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Vantor Lines Wins Regional Distribution Contract to Diversify Beyond Grocery",
+      "body": "Vantor secured a multi-year packaging and distribution agreement with a regional home-goods chain valued at roughly $180 million over four years, its largest non-grocery win to date. CEO Halden Vossen called the deal a welcome offset as grocery volumes plateau. The contract is expected to begin phasing in volumes next quarter.",
+      "cycle": 82659,
+      "dur": 2
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenstead Supply Runs Streak to Ten as Both Segments Fire in Lockstep",
+      "body": "Vossenstead posted a tenth consecutive quarterly beat, with revenue up 8.4% to $2.1 billion as Food Service and Plumbing & Fixtures both delivered double-digit order growth. CEO Bram Thorne credited the fully ramped hub network and reaffirmed the company's measured expansion cadence. Management raised full-year guidance modestly, citing firm demand across regional accounts.",
+      "cycle": 82659,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Woldmark Names Turnaround Veteran Isolde Frayne CEO to Steady Ship After Halcyon 3",
+      "body": "Woldmark's board appointed Isolde Frayne as chief executive, tasking her with restoring quality controls and rebuilding customer trust following the Halcyon 3 field failures. Frayne, a former operations chief known for disciplined product cadences, said she would slow the release cycle and prioritize reliability over speed. The company also confirmed an extended warranty program for affected units.",
+      "cycle": 82659,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -10,16 +90,6 @@
       "body": "The board removed longtime chief Halden Dray amid the widening fault probe and investor litigation over concealed Dawnmere III defects, naming operations veteran Marisol Venn as interim chief executive. Venn pledged a full third-party review and a restructured safety-disclosure process before shipments resume. Shares had shed nearly a third of their value since the halt order.",
       "cycle": 82658,
       "dur": 8
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Halcyon Industries Edges Higher as Southport Fifth Line Nears Completion",
-      "body": "Dorian Ashby reported a modest 4% revenue gain, supported by steady Eastmere automation output as construction on the fifth Southport line stayed on schedule. Management reaffirmed guidance and expects the new line to begin ramping next quarter. Ashby described demand as 'orderly and dependable.'",
-      "cycle": 82658,
-      "dur": 1
     },
     {
       "company": "Holtforge Group",
@@ -82,26 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Blackton Industries Tops Estimates as Halvern Line Ramps to Full Rate",
-      "body": "Blackton Industries reported quarterly revenue of $2.4B, up 19% year-over-year, as the newly commissioned Halvern line reached full production and fed its multi-year supply contract. CEO Cassian Rode credited disciplined execution but flagged rising input costs that could pressure margins into next quarter. The company nudged full-year guidance modestly higher.",
-      "cycle": 82657,
-      "dur": 2
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Boreas Power to Shed Non-Core Grid Assets in Halvard Cleanup Push",
-      "body": "Boreas Power announced plans to divest roughly $800M in overlapping Halvard distribution assets, aiming to trim integration costs that dragged last quarter's results. CEO Mira Thorne framed the move as sharpening focus on power and storage while retaining the merger's core grid backbone. Proceeds will fund debt reduction and targeted storage buildout.",
-      "cycle": 82657,
-      "dur": 2
-    },
-    {
       "company": "Bruncrest Works",
       "sector": "technology",
       "kind": "product_launch",
@@ -112,16 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Calderworks Adds Fourth Kiln as Tessen Ridge Demand Outstrips Capacity",
-      "body": "Calderworks Holdings approved a $340M expansion to bring a fourth high-output kiln online at its Marrow Vale complex, citing sustained pull from the decade-long Tessen Ridge pact. CEO Kestrel Halloran said the addition lifts structural-materials capacity roughly 28% and positions the firm to bid on adjacent regional infrastructure work. Commissioning is targeted within eighteen months.",
-      "cycle": 82657,
-      "dur": 2
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "recall",
@@ -130,16 +170,6 @@
       "body": "Halhold Systems issued a sweeping recall of compute modules after its post-outage investigation traced the multi-day failure to a defective cooling assembly shipped across recent campus builds. CEO Corin Vale acknowledged the $900M pact timeline is now 'materially at risk' and set aside $210M for remediation and replacements. Clients were offered credits as the company scrambles to certify corrected units.",
       "cycle": 82657,
       "dur": 8
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Hesperforge Beats as Third Mill Nears Completion and Marine Backlog Grows",
-      "body": "Hesperforge Supply reported a 12% revenue gain to $1.3B, lifted by steady marine-grade beam shipments to Coastal Shipyards and firm raw-textile demand. CEO Sable Halloran said the third mill remains on schedule and pre-sold beyond initial forecasts. The company raised its backlog figure to a record $2.9B.",
-      "cycle": 82657,
-      "dur": 2
     },
     {
       "company": "Ironcrestton",
@@ -259,26 +289,6 @@
       "head": "Kessel Drive Faces Formal Safety Probe as Regulators Escalate Storage Failure Inquiry",
       "body": "The National Vehicle Safety Board opened a formal investigation into thermal faults in Kessel Drive's Volt-Series storage packs, citing 14 field incidents tied to the units already under recall. CEO Neave Corliss pledged 'full cooperation and total transparency,' but the widening scope now covers manufacturing at both the Harlin and Demaking plants. Analysts warn the probe could freeze deliveries of the flagship line for two or more quarters.",
       "cycle": 82652,
-      "dur": 8
-    },
-    {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Dunmorewright Wins $510 Million Coastal Defense Contract, Eclipsing Harborfront Record",
-      "body": "Dunmorewright secured a $510M multi-year coastal defense and drainage program, its largest award ever, surpassing the recent Harborfront milestone. CEO Emil Skarn, in a rare aggressive posture, said the firm would run three record-scale projects in parallel and expand its earthmoving fleet by a further 40 units. The win cements Dunmorewright as the dominant regional infrastructure builder.",
-      "cycle": 82651,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "recall",
-      "size": "major",
-      "head": "Halhold Works Orders Full Recall of Aveline Monitor Line as New CEO Moves to Contain Crisis",
-      "body": "New chief executive Marcus Thorne ordered a total recall of every Aveline patient monitor in the field, an estimated 240,000 units, and suspended all sales pending redesign. Thorne pledged full replacement at no cost to hospital networks and set aside $680M for the effort, calling it 'the only defensible path' amid mounting litigation. The move wipes out a division that contributed nearly a fifth of company revenue.",
-      "cycle": 82651,
       "dur": 8
     }
   ]

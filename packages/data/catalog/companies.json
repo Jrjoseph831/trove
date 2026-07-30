@@ -1987,7 +1987,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82643,
+    "lastEventCycle": 82659,
     "events": [
       {
         "cycle": 0,
@@ -2083,6 +2083,16 @@
         "size": "standard",
         "head": "Brunforge Holdings Extends Winning Streak as Vellan Regional Flagships Deliver",
         "body": "Brunforge posted its fourth consecutive earnings beat, with net income of $612 million as the three new regional Vellan flagships each turned profitable within their first full quarter. CEO Kestrel Bramm said the Home division now accounts for 31% of group revenue, up from 24% a year ago. The company reaffirmed a measured pace of two to three additional flagships over the coming year.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82659,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunforge Debuts Vellan Kitchen Line to Extend Flagship Concept Into Food Service",
+        "body": "Brunforge unveiled the Vellan Kitchen collection, pushing its successful home-goods brand into cookware and small appliances across its regional flagships. CEO Kestrel Bramm framed the launch as a natural adjacency, with initial rollout to eight stores before a wider expansion. Early pre-orders were described as ahead of internal targets.",
         "effects": {
           "consumer": 0.13
         }
@@ -2772,7 +2782,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82651,
+    "lastEventCycle": 82659,
     "events": [
       {
         "cycle": 0,
@@ -2938,6 +2948,16 @@
         "size": "standard",
         "head": "Calderforge Overhauls Cooling Standards Across Stormwell Halls After Outage",
         "body": "Calderforge announced a facility-wide redesign of its cooling systems following the failure that idled two Stormwell halls, committing $310M to redundant loops and independent monitoring across all sites. CEO Nadia Throne acknowledged the outage 'exposed a single point of failure we should never have carried,' and delayed the fifth hall's timeline by one quarter to fold in the new standards. The anchor tenant's decade-long pact remains intact.",
+        "effects": {
+          "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82659,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Calderforge Misses as Cooling Overhaul Costs and Downtime Weigh on Quarter",
+        "body": "Calderforge fell short of estimates, posting revenue of $3.4 billion against a $3.7 billion consensus as the Stormwell cooling overhaul kept two halls partly offline through the period. CEO Nadia Throne said the remediation is on track and the idled capacity should return next quarter, but warned near-term margins would stay pressured. Shares slid on the guidance and elevated capital spending.",
         "effects": {
           "technology": -0.13
         }
@@ -5958,7 +5978,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82630,
+    "lastEventCycle": 82659,
     "events": [
       {
         "cycle": 0,
@@ -6016,6 +6036,16 @@
         "body": "Lorne Veldt announced a five-year supply renewal underpinning the reopened Northfield spinning line, locking in volume through the reactivated facility. The agreement follows two quarters of sustained full output at Northfield. Veldt said the deal secures roughly a third of the mill's annual raw-textile production.",
         "effects": {
           "textiles": 0.13
+        }
+      },
+      {
+        "cycle": 82659,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Garrweave Mills Ticks Higher as Northfield Renewal Locks In Volumes",
+        "body": "Garrweave reported a modest 2.1% revenue gain to $410 million, supported by the recently renewed Northfield supply agreement holding output at capacity. CEO Lorne Veldt reiterated the mill's long-horizon approach, noting stable pricing and low customer churn. No change to full-year outlook.",
+        "effects": {
+          "textiles": 0.06
         }
       }
     ]
@@ -6293,18 +6323,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82653,
+    "lastEventCycle": 82659,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Gromford Works Debuts the Aurelian Tourbillon Collection",
-        "body": "Mira Ashby pulled the cover off the Aurelian line at a packed Halverford salon, a set of 250 hand-finished timepieces with an open-heart movement. Ashby, ever the showwoman, arrived an hour late and let the watches speak first. The entire run was spoken for by patrons before the night closed.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "award",
@@ -6528,6 +6548,16 @@
         "head": "Gromford Works Ousts Corin Aldwych as Meridian Sourcing Scandal Engulfs Board",
         "body": "Directors voted to remove chief executive Corin Aldwych after the Meridian Tourbillon probe expanded to cover three additional movement lines, with the investor suit now seeking 210M in damages. The board named restructuring specialist Dahlia Verrint as interim chief executive, tasking her with a full audit of supplier disclosures. Shares had been battered through a bruising quarter as regulators signaled possible sanctions.",
         "effects": {}
+      },
+      {
+        "cycle": 82659,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Gromford Works Reels as Internal Memos Reveal Executives Knew of Meridian Sourcing Gaps for Years",
+        "body": "Leaked internal correspondence shows Gromford leadership was warned about the undisclosed Meridian tourbillon supplier as far back as 2023, deepening the crisis that already cost Corin Aldwych his post. CEO Dahlia Verrint faces mounting pressure as regulators expand their inquiry and two flagship boutiques suspend Meridian-line sales. The revelations wiped out an estimated $900 million in market value and prompted calls for a full board review.",
+        "effects": {
+          "luxury": -0.22
+        }
       }
     ]
   },
@@ -10471,7 +10501,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82643,
+    "lastEventCycle": 82659,
     "events": [
       {
         "cycle": 0,
@@ -10557,6 +10587,16 @@
         "size": "standard",
         "head": "Palettstead Holdings Tops Estimates as Three-Chain Cold-Chain Network Hits Full Stride",
         "body": "Palettstead reported quarterly revenue of $1.42 billion, up 18% year over year, as its reusable cold-chain network reached steady-state volumes across all three national grocery partners. CEO Orla Marrow credited faster crate return cycles and a 9% drop in per-unit handling costs, and confirmed the network is now recovering 94% of deployed containers. Management said the third chain's onboarding completed a full quarter ahead of schedule.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82659,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Palettstead Breaks Ground on Fourth Cold-Chain to Meet Overflow Demand",
+        "body": "Fresh off a fully ramped three-chain network, Palettstead announced construction of a fourth reusable cold-chain corridor, a $220 million investment backed by committed customer volumes. CEO Orla Marrow said demand had outstripped current capacity for two straight quarters. The new chain is slated to enter service within eighteen months.",
         "effects": {
           "logistics": 0.13
         }
@@ -11899,7 +11939,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82645,
+    "lastEventCycle": 82659,
     "events": [
       {
         "cycle": 0,
@@ -11997,6 +12037,16 @@
         "body": "Vantor reported flat sequential revenue with a slim beat on earnings, as steady grocery contract shipments offset softness in seasonal packaging. CEO Halden Vossen said the focus remains on 'reliable margins over headline growth,' pointing to a modest efficiency gain at two regional hubs. The company maintained its dividend.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82659,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vantor Lines Wins Regional Distribution Contract to Diversify Beyond Grocery",
+        "body": "Vantor secured a multi-year packaging and distribution agreement with a regional home-goods chain valued at roughly $180 million over four years, its largest non-grocery win to date. CEO Halden Vossen called the deal a welcome offset as grocery volumes plateau. The contract is expected to begin phasing in volumes next quarter.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -13081,7 +13131,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82646,
+    "lastEventCycle": 82659,
     "events": [
       {
         "cycle": 0,
@@ -13199,6 +13249,16 @@
         "body": "The house posted a ninth consecutive quarterly beat, with revenue up 6% and Food Service margins improving 90 basis points as hub logistics matured. CEO Bram Thorne kept guidance measured, citing 'steady demand and no surprises.' The Plumbing & Fixtures ramp continued on plan.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82659,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenstead Supply Runs Streak to Ten as Both Segments Fire in Lockstep",
+        "body": "Vossenstead posted a tenth consecutive quarterly beat, with revenue up 8.4% to $2.1 billion as Food Service and Plumbing & Fixtures both delivered double-digit order growth. CEO Bram Thorne credited the fully ramped hub network and reaffirmed the company's measured expansion cadence. Management raised full-year guidance modestly, citing firm demand across regional accounts.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -13383,14 +13443,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1983,
-    "ceo": "Sabine Orrick",
+    "ceo": "Isolde Frayne",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.64,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82650,
+    "lastEventCycle": 82659,
     "events": [
       {
         "cycle": 0,
@@ -13536,6 +13596,14 @@
         "size": "major",
         "head": "Woldmark's Cole Carrow Ousted as Board Cleans House After Halcyon 3 Debacle",
         "body": "The board removed longtime chief Cole Carrow, effective immediately, following the costly Halcyon 3 field failures and a guidance cut that wiped out much of the year's gains. Directors named operations veteran Sabine Orrick as CEO, tasking her with a quality overhaul and a slower, disciplined product cadence. Orrick pledged a full field-recall review and said 'no unit ships until it earns trust.'",
+        "effects": {}
+      },
+      {
+        "cycle": 82659,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Woldmark Names Turnaround Veteran Isolde Frayne CEO to Steady Ship After Halcyon 3",
+        "body": "Woldmark's board appointed Isolde Frayne as chief executive, tasking her with restoring quality controls and rebuilding customer trust following the Halcyon 3 field failures. Frayne, a former operations chief known for disciplined product cadences, said she would slow the release cycle and prioritize reliability over speed. The company also confirmed an extended warranty program for affected units.",
         "effects": {}
       }
     ]
