@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-30T08:29:26.653Z",
+  "generatedAt": "2026-07-30T14:06:16.770Z",
   "beats": [
     {
-      "company": "Aldousspire Group",
-      "sector": "consumer",
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Aperture Compute Ousts Halden Dray as Board Moves to Contain Dawnmere III Crisis",
+      "body": "The board removed longtime chief Halden Dray amid the widening fault probe and investor litigation over concealed Dawnmere III defects, naming operations veteran Marisol Venn as interim chief executive. Venn pledged a full third-party review and a restructured safety-disclosure process before shipments resume. Shares had shed nearly a third of their value since the halt order.",
+      "cycle": 82658,
+      "dur": 8
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldousspire Group Beats as Heirloom Concept Stores Post Strong Early Traffic",
-      "body": "Aldousspire Group edged past estimates with a 7% sales lift, driven by better-than-expected foot traffic at its new Heirloom concept stores. CEO Mira Ashby said conversion rates in the flagship format ran ahead of legacy locations, supporting a measured pace of further openings. Guidance was reaffirmed.",
-      "cycle": 82657,
+      "head": "Halcyon Industries Edges Higher as Southport Fifth Line Nears Completion",
+      "body": "Dorian Ashby reported a modest 4% revenue gain, supported by steady Eastmere automation output as construction on the fifth Southport line stayed on schedule. Management reaffirmed guidance and expects the new line to begin ramping next quarter. Ashby described demand as 'orderly and dependable.'",
+      "cycle": 82658,
       "dur": 1
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Holtforge Group Wins $1.6B Offshore Interconnector Cable Order",
+      "body": "Yvette Bramm secured a landmark supply-and-install contract for a cross-strait power interconnector, the largest single order in the company's history. The deal will run the new marine cable plant near capacity for three years and prompt a second production bay. Bramm called it 'the payoff for a plant built ahead of demand,' with first cable shipments slated within eighteen months.",
+      "cycle": 82658,
+      "dur": 8
+    },
+    {
+      "company": "Ironcrestcrest Supply",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Ironcrestcrest Supply Debuts Contractor-Grade Line to Broaden Beyond Value Range",
+      "body": "Dorian Garr unveiled the Ironclad Pro series, a durable fixture line aimed at commercial installers and repeat trade buyers. The launch marks the company's first move upmarket in years, with initial stock routed through all five warehouses. Garr framed the step as 'measured, not sudden,' targeting a segment he says has quietly outgrown the value catalog.",
+      "cycle": 82658,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Korrwright Works Slips as Meridienne Integration Costs Bite",
+      "body": "Quarterly earnings came in 11% below expectations as the $2.4B Meridienne acquisition dragged margins with duplicated overhead and rebranding spend. Dunmore Carrow acknowledged 'a heavier lift than modeled' but insisted the combined Korrwright Meridienne house would deliver by next fiscal year. Integration charges totaled $310M, the bulk tied to consolidating two overlapping atelier networks.",
+      "cycle": 82658,
+      "dur": 2
+    },
+    {
+      "company": "Stegreach",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Stegreach Expands Riverport Wiring Capacity to Feed $1.2B Grid Contract",
+      "body": "Halden Ashby approved a new production line at Riverport to supply the landmark grid modernization award, adding roughly 200 jobs. The buildout targets high-volume cable and fixings output as the multi-year contract enters its delivery phase. Ashby said the move locks in supply ahead of peak billing without straining existing fastener lines.",
+      "cycle": 82658,
+      "dur": 2
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Veldtreach & Sons Beats as Coastal Rail Earthworks Begin Billing",
+      "body": "Petra Steg reported revenue up 14% as the $850M coastal rail contract moved into active mobilization alongside the Highland Corridor program. Three excavation fleets are now fully deployed, with backlog reaching a record $2.1B. Steg noted staffing has stabilized after the prior year's rapid intake.",
+      "cycle": 82658,
+      "dur": 2
+    },
+    {
+      "company": "Wrenspire",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Wrenspire Beats as Everyroom Food Service Bundles Lift Cross-Segment Sales",
+      "body": "Theo Aldous posted a fifth straight beat, with the bundled food-service supply program adding 6% to group revenue in its first full quarter. Household and apparel lines held steady while farm inputs saw modest recovery. Aldous credited the fourth Everyroom hub for absorbing the added volume without service disruption.",
+      "cycle": 82658,
+      "dur": 2
     },
     {
       "company": "Blackton Industries",
@@ -82,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aldouscraft Mfg. Beats as Dual Grid Contracts Lift Feeder Cable Volumes",
-      "body": "Aldouscraft reported quarterly revenue of $760 million, up 14% year over year, as both grid contracts moved into full production across its three extrusion lines. Soren Ashby said the order book now stretches eighteen months out, giving the wire-and-cable maker its clearest visibility in a decade.",
-      "cycle": 82656,
-      "dur": 2
-    },
-    {
       "company": "Brunstone & Sons",
       "sector": "automotive",
       "kind": "safety_probe",
@@ -102,16 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Lhaus Industries Restarts Sixth Cell-Pack Line as Brandt Eyes Storage Push",
-      "body": "With margins stabilized, CEO Cole Brandt greenlit the resumption of the previously paused sixth cell-pack line, backed by a $420 million capital commitment. Brandt framed the move as a return to offense, targeting a 30% lift in Power & Storage output by next year to chase surging grid-storage demand.",
-      "cycle": 82656,
-      "dur": 2
-    },
-    {
       "company": "Maison & Vale",
       "sector": "hospitality",
       "kind": "major_deal",
@@ -120,36 +170,6 @@
       "body": "Fresh off digesting Calbrook, Rhys Kessler unveiled the acquisition of Northram Solutions, a jansan-chemicals maker with 4,000 employees, in a $3.2 billion cash-and-stock deal. The purchase nearly doubles the Cleaning & Jansan division's revenue base, though analysts flagged integration risk given the back-to-back dealmaking pace.",
       "cycle": 82656,
       "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Marlgear Supply Lands Kessel Platform Rollout at Halden Mining Group",
-      "body": "Adele Ferran secured Marlgear's largest post-turnaround order, a $290 million multi-year deployment of the Kessel industrial platform across Halden Mining's processing sites. Ferran called it validation of the bold post-turnaround bet, projecting the win would carry the Industrial Machines unit to double-digit growth next year.",
-      "cycle": 82656,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarngrove & Sons Beats as Kelvarn Interchange Work Enters Production",
-      "body": "Skarngrove topped estimates with revenue of $880 million as third-phase interchange fabrication ramped ahead of schedule. Quinn Fenn said the structural-materials backlog tied to Kelvarn now underpins guidance through next year, with fasteners volumes riding the same project pipeline.",
-      "cycle": 82656,
-      "dur": 2
-    },
-    {
-      "company": "Wold & Bramm",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Wold & Bramm Opens Fourth Showroom With Debut of Heritage Lighting Collection",
-      "body": "Mara Marrow marked the completion of the fourth Heritage showroom by unveiling a premium lighting line, the company's first designed exclusively for its own retail floors. The measured expansion pushes Wold & Bramm's showroom footprint to four cities, with Marrow reiterating a preference for steady, self-funded growth.",
-      "cycle": 82656,
-      "dur": 2
     },
     {
       "company": "Castlestone",
@@ -259,26 +279,6 @@
       "head": "Halhold Works Orders Full Recall of Aveline Monitor Line as New CEO Moves to Contain Crisis",
       "body": "New chief executive Marcus Thorne ordered a total recall of every Aveline patient monitor in the field, an estimated 240,000 units, and suspended all sales pending redesign. Thorne pledged full replacement at no cost to hospital networks and set aside $680M for the effort, calling it 'the only defensible path' amid mounting litigation. The move wipes out a division that contributed nearly a fifth of company revenue.",
       "cycle": 82651,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Aperture Compute Ordered to Halt Dawnmere III Shipments as Regulators Widen Fault Probe",
-      "body": "Regulators issued a stop-ship order on the entire Dawnmere III line after a second thermal fault was tied to the same concealed defect, freezing an estimated 1.9B in pending revenue. CEO Halden Dray called the order 'disproportionate' but pledged full cooperation, as the company set aside 340M for remediation and potential penalties. Shares of the compute maker have now shed roughly a third of their value since the scandal broke.",
-      "cycle": 82650,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Woldmark's Cole Carrow Ousted as Board Cleans House After Halcyon 3 Debacle",
-      "body": "The board removed longtime chief Cole Carrow, effective immediately, following the costly Halcyon 3 field failures and a guidance cut that wiped out much of the year's gains. Directors named operations veteran Sabine Orrick as CEO, tasking her with a quality overhaul and a slower, disciplined product cadence. Orrick pledged a full field-recall review and said 'no unit ships until it earns trust.'",
-      "cycle": 82650,
       "dur": 8
     }
   ]

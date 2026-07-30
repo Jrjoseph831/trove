@@ -435,14 +435,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1978,
-    "ceo": "Halden Dray",
-    "ceoSince": 1978,
+    "ceo": "Marisol Venn",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.69,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82650,
+    "lastEventCycle": 82658,
     "events": [
       {
         "cycle": 0,
@@ -621,6 +621,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82658,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Aperture Compute Ousts Halden Dray as Board Moves to Contain Dawnmere III Crisis",
+        "body": "The board removed longtime chief Halden Dray amid the widening fault probe and investor litigation over concealed Dawnmere III defects, naming operations veteran Marisol Venn as interim chief executive. Venn pledged a full third-party review and a restructured safety-disclosure process before shipments resume. Shares had shed nearly a third of their value since the halt order.",
+        "effects": {}
       }
     ]
   },
@@ -6790,7 +6798,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82647,
+    "lastEventCycle": 82658,
     "events": [
       {
         "cycle": 0,
@@ -6918,6 +6926,16 @@
         "body": "Halcyon Industries announced a $180 million investment to build a fifth automated packaging line at Southport, citing sustained order backlogs that have pushed existing lines near full utilization. CEO Dorian Ashby said the addition should come online within 18 months and expand regional output by roughly 30%. The disciplined build-out continues Halcyon's steady capacity ladder begun with the Eastmere ramp.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82658,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Halcyon Industries Edges Higher as Southport Fifth Line Nears Completion",
+        "body": "Dorian Ashby reported a modest 4% revenue gain, supported by steady Eastmere automation output as construction on the fifth Southport line stayed on schedule. Management reaffirmed guidance and expects the new line to begin ramping next quarter. Ashby described demand as 'orderly and dependable.'",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -7677,7 +7695,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82643,
+    "lastEventCycle": 82658,
     "events": [
       {
         "cycle": 0,
@@ -7775,6 +7793,16 @@
         "body": "Holtforge reported record revenue of $884 million, with the new marine cable plant running at 78% of rated capacity and cutting the order backlog by nearly half in three months. CEO Yvette Bramm said lead times on subsea cable orders have fallen from 14 weeks to under nine. The plant is expected to reach full capacity within two quarters.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82658,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Holtforge Group Wins $1.6B Offshore Interconnector Cable Order",
+        "body": "Yvette Bramm secured a landmark supply-and-install contract for a cross-strait power interconnector, the largest single order in the company's history. The deal will run the new marine cable plant near capacity for three years and prompt a second production bay. Bramm called it 'the payoff for a plant built ahead of demand,' with first cable shipments slated within eighteen months.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -8059,7 +8087,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82636,
+    "lastEventCycle": 82658,
     "events": [
       {
         "cycle": 0,
@@ -8137,6 +8165,16 @@
         "body": "Ironcrestcrest reported revenue up 9% as its newly opened fifth warehouse began clearing backlog in the value lighting range. CEO Dorian Garr credited disciplined inventory turns and repeat orders from mid-market retailers. Margins held firm despite higher freight costs.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82658,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Ironcrestcrest Supply Debuts Contractor-Grade Line to Broaden Beyond Value Range",
+        "body": "Dorian Garr unveiled the Ironclad Pro series, a durable fixture line aimed at commercial installers and repeat trade buyers. The launch marks the company's first move upmarket in years, with initial stock routed through all five warehouses. Garr framed the step as 'measured, not sudden,' targeting a segment he says has quietly outgrown the value catalog.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -8954,7 +8992,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82651,
+    "lastEventCycle": 82658,
     "events": [
       {
         "cycle": 0,
@@ -9151,6 +9189,16 @@
         "head": "Korrwright Works Folds Meridienne Into New 'Korrwright Meridienne' Luxury House",
         "body": "Korrwright Works unveiled a unified luxury identity, rebranding its acquired rival under the combined 'Korrwright Meridienne' banner to consolidate heritage collections under one crest. CEO Dunmore Carrow said the merged house would share ateliers while preserving Meridienne's signature movements. Management expects the rebrand to lift blended margins as duplicate distribution costs are stripped out.",
         "effects": {}
+      },
+      {
+        "cycle": 82658,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Korrwright Works Slips as Meridienne Integration Costs Bite",
+        "body": "Quarterly earnings came in 11% below expectations as the $2.4B Meridienne acquisition dragged margins with duplicated overhead and rebranding spend. Dunmore Carrow acknowledged 'a heavier lift than modeled' but insisted the combined Korrwright Meridienne house would deliver by next fiscal year. Integration charges totaled $310M, the bulk tied to consolidating two overlapping atelier networks.",
+        "effects": {
+          "luxury": -0.13
+        }
       }
     ]
   },
@@ -11333,7 +11381,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82640,
+    "lastEventCycle": 82658,
     "events": [
       {
         "cycle": 0,
@@ -11411,6 +11459,16 @@
         "body": "Building on its Riverport momentum, Stegreach has been named lead supplier of wire, cable, and lighting for the multi-year Eastfield grid modernization program, a $1.2 billion mandate spanning six substations. CEO Halden Ashby, in one of his signature bold moves after decades of steadier plays, said the award roughly doubles the company's cable order book and will require a new production line at its Deakin works. The deal is the largest single contract in Stegreach's history.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82658,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Stegreach Expands Riverport Wiring Capacity to Feed $1.2B Grid Contract",
+        "body": "Halden Ashby approved a new production line at Riverport to supply the landmark grid modernization award, adding roughly 200 jobs. The buildout targets high-volume cable and fixings output as the multi-year contract enters its delivery phase. Ashby said the move locks in supply ahead of peak billing without straining existing fastener lines.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -12372,7 +12430,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82641,
+    "lastEventCycle": 82658,
     "events": [
       {
         "cycle": 0,
@@ -12458,6 +12516,16 @@
         "size": "standard",
         "head": "Veldtreach & Sons Wins $850M Coastal Rail Earthworks Contract",
         "body": "Veldtreach secured an $850M package to grade and excavate a 60-mile coastal rail corridor, its second major program alongside the ongoing Highland Corridor work. Petra Steg said the award would keep all three excavation fleets committed through 1965. The win deepens the construction house's regional backlog to record levels.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82658,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Veldtreach & Sons Beats as Coastal Rail Earthworks Begin Billing",
+        "body": "Petra Steg reported revenue up 14% as the $850M coastal rail contract moved into active mobilization alongside the Highland Corridor program. Three excavation fleets are now fully deployed, with backlog reaching a record $2.1B. Steg noted staffing has stabilized after the prior year's rapid intake.",
         "effects": {
           "construction": 0.13
         }
@@ -13689,7 +13757,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82639,
+    "lastEventCycle": 82658,
     "events": [
       {
         "cycle": 0,
@@ -13765,6 +13833,16 @@
         "size": "standard",
         "head": "Wrenspire Extends Everyroom Reach Into Food Service With Bundled Supply Program",
         "body": "Theo Aldous confirmed Wrenspire will pipe its Everyroom distribution network into its Food Service arm, launching a bundled supply program that pairs household and pantry deliveries for institutional buyers. The company said 1,200 regional accounts have signed on ahead of the March rollout, with a fifth hub slated to break ground by summer. Aldous framed the move as a natural widening of the network rather than a departure from Wrenspire's measured cadence.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82658,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Wrenspire Beats as Everyroom Food Service Bundles Lift Cross-Segment Sales",
+        "body": "Theo Aldous posted a fifth straight beat, with the bundled food-service supply program adding 6% to group revenue in its first full quarter. Household and apparel lines held steady while farm inputs saw modest recovery. Aldous credited the fourth Everyroom hub for absorbing the added volume without service disruption.",
         "effects": {
           "consumer": 0.13
         }
