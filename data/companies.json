@@ -339,7 +339,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82638,
+    "lastEventCycle": 82657,
     "events": [
       {
         "cycle": 0,
@@ -417,6 +417,16 @@
         "body": "Building on its Retailer of the Year win, Aldousspire will open 24 dedicated Heirloom concept stores over the next 18 months, its first company-owned retail footprint in decades. CEO Mira Ashby framed the move as a measured bet, noting the alliance rollout gave the company confidence to control more of its own storefronts. Initial locations target established metropolitan districts.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82657,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldousspire Group Beats as Heirloom Concept Stores Post Strong Early Traffic",
+        "body": "Aldousspire Group edged past estimates with a 7% sales lift, driven by better-than-expected foot traffic at its new Heirloom concept stores. CEO Mira Ashby said conversion rates in the flagship format ran ahead of legacy locations, supporting a measured pace of further openings. Guidance was reaffirmed.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -1069,7 +1079,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82648,
+    "lastEventCycle": 82657,
     "events": [
       {
         "cycle": 0,
@@ -1234,6 +1244,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82657,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Blackton Industries Tops Estimates as Halvern Line Ramps to Full Rate",
+        "body": "Blackton Industries reported quarterly revenue of $2.4B, up 19% year-over-year, as the newly commissioned Halvern line reached full production and fed its multi-year supply contract. CEO Cassian Rode credited disciplined execution but flagged rising input costs that could pressure margins into next quarter. The company nudged full-year guidance modestly higher.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -1248,7 +1268,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82651,
+    "lastEventCycle": 82657,
     "events": [
       {
         "cycle": 0,
@@ -1477,6 +1497,16 @@
         "effects": {
           "energy": -0.13
         }
+      },
+      {
+        "cycle": 82657,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Boreas Power to Shed Non-Core Grid Assets in Halvard Cleanup Push",
+        "body": "Boreas Power announced plans to divest roughly $800M in overlapping Halvard distribution assets, aiming to trim integration costs that dragged last quarter's results. CEO Mira Thorne framed the move as sharpening focus on power and storage while retaining the merger's core grid backbone. Proceeds will fund debt reduction and targeted storage buildout.",
+        "effects": {
+          "energy": -0.13
+        }
       }
     ]
   },
@@ -1702,7 +1732,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82651,
+    "lastEventCycle": 82657,
     "events": [
       {
         "cycle": 0,
@@ -1924,6 +1954,16 @@
         "body": "Riding a cleared backlog and firm demand, Bruncrest Works broke ground on a second Eastfield production line, a $220M commitment aimed at doubling Aria Pro capacity. CEO Ines Marlow declared the expansion proof that the earlier shortage crisis was 'firmly behind us,' promising first units within nine months. The company also locked longer-term supply terms to avoid a repeat of prior stoppages.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82657,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Bruncrest Works Unveils Aria Ultra in High-Stakes Compute Push",
+        "body": "Bruncrest Works launched the Aria Ultra, its most powerful compute unit yet, pledging a doubling of throughput per rack over the Aria Pro. CEO Ines Marlow staged a splashy reveal at the Eastfield campus, taking early commitments she valued at $1.1B and promising first shipments next quarter. Skeptics noted the aggressive timeline echoes earlier supply stumbles the company only recently cleared.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -2907,7 +2947,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82639,
+    "lastEventCycle": 82657,
     "events": [
       {
         "cycle": 0,
@@ -2993,6 +3033,16 @@
         "size": "standard",
         "head": "Calderworks Beats as Tessen Ridge Supply Pact Drives Sustained Kiln Demand",
         "body": "Kestrel Halloran reported operating profit up 12% on record structural-materials shipments feeding the Tessen Ridge Phase Two build-out. The decade-long supply pact locked in earlier now underpins a backlog stretching into the next fiscal year, prompting Calderworks to raise full-year guidance. Halloran noted the firm is evaluating a kiln capacity addition to meet the committed volumes.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82657,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Calderworks Adds Fourth Kiln as Tessen Ridge Demand Outstrips Capacity",
+        "body": "Calderworks Holdings approved a $340M expansion to bring a fourth high-output kiln online at its Marrow Vale complex, citing sustained pull from the decade-long Tessen Ridge pact. CEO Kestrel Halloran said the addition lifts structural-materials capacity roughly 28% and positions the firm to bid on adjacent regional infrastructure work. Commissioning is targeted within eighteen months.",
         "effects": {
           "construction": 0.13
         }
@@ -6883,18 +6933,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82652,
+    "lastEventCycle": 82657,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Halhold Systems Breaks Ground on Northgate Compute Campus",
-        "body": "Cora Aldous confirmed a sprawling new build outside Northgate, citing surging demand for the firm's compute clusters. The campus will employ an estimated 1,200 at full capacity and draw power from the nearby Coldwater grid. Aldous framed the move as 'overdue and underbuilt by half.'",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "earnings_miss",
@@ -7117,6 +7157,16 @@
         "body": "A power and cooling failure at Halhold's flagship Deren campus knocked compute capacity offline for roughly 40 hours, delaying deliverables under its $900M supply pact. CEO Corin Vale called the incident 'contained and resolved,' but acknowledged the third campus build will be pushed to accommodate hardened infrastructure. The company said it is negotiating revised milestones with its anchor customer.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82657,
+        "kind": "recall",
+        "size": "major",
+        "head": "Halhold Systems Recalls Compute Units as Post-Outage Review Finds Hardware Fault",
+        "body": "Halhold Systems issued a sweeping recall of compute modules after its post-outage investigation traced the multi-day failure to a defective cooling assembly shipped across recent campus builds. CEO Corin Vale acknowledged the $900M pact timeline is now 'materially at risk' and set aside $210M for remediation and replacements. Clients were offered credits as the company scrambles to certify corrected units.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -7494,7 +7544,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82644,
+    "lastEventCycle": 82657,
     "events": [
       {
         "cycle": 0,
@@ -7600,6 +7650,16 @@
         "size": "standard",
         "head": "Hesperforge Supply Breaks Ground on Third Mill to Meet Marine-Grade Demand",
         "body": "Sable Halloran authorized a $310 million third mill dedicated to marine-grade structural beams, citing a backlog now stretching beyond two years from the coastal shipyard pact. The facility is expected to add 260 roles and come online within 18 months. Halloran called it 'a measured bet backed by locked-in orders.'",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82657,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Hesperforge Beats as Third Mill Nears Completion and Marine Backlog Grows",
+        "body": "Hesperforge Supply reported a 12% revenue gain to $1.3B, lifted by steady marine-grade beam shipments to Coastal Shipyards and firm raw-textile demand. CEO Sable Halloran said the third mill remains on schedule and pre-sold beyond initial forecasts. The company raised its backlog figure to a record $2.9B.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -8085,14 +8145,14 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1921,
-    "ceo": "Wren Adler",
+    "ceo": "Thea Blackwood",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82649,
+    "lastEventCycle": 82657,
     "events": [
       {
         "cycle": 0,
@@ -8249,6 +8309,14 @@
         "effects": {
           "luxury": -0.22
         }
+      },
+      {
+        "cycle": 82657,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Ironcrestton CEO Wren Adler Steps Down as Origin Standard Crisis Deepens",
+        "body": "Ironcrestton announced the immediate departure of CEO Wren Adler amid mounting litigation and audit fallout over its Origin Standard licensing program. The board named veteran operator Thea Blackwood as chief executive, tasking her with stabilizing licensee relations and settling the outstanding suits. Blackwood pledged an independent overhaul of certification and a pause on new licensing pending review.",
+        "effects": {}
       }
     ]
   },
