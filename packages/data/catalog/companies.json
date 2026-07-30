@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82638,
+    "lastEventCycle": 82656,
     "events": [
       {
         "cycle": 0,
@@ -96,6 +96,16 @@
         "size": "standard",
         "head": "Aldouscraft Mfg. Secures Second Grid Contract to Extend Feeder Cable Supply",
         "body": "Aldouscraft won a second multi-year feeder cable award tied to a neighboring grid expansion, adding roughly $310 million in backlog over five years. Soren Ashby said the recently added third extrusion line positions the company to absorb the volume without near-term capacity strain. The win deepens Aldouscraft's role in regional grid buildouts.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82656,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aldouscraft Mfg. Beats as Dual Grid Contracts Lift Feeder Cable Volumes",
+        "body": "Aldouscraft reported quarterly revenue of $760 million, up 14% year over year, as both grid contracts moved into full production across its three extrusion lines. Soren Ashby said the order book now stretches eighteen months out, giving the wire-and-cable maker its clearest visibility in a decade.",
         "effects": {
           "construction": 0.13
         }
@@ -2362,7 +2372,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82650,
+    "lastEventCycle": 82656,
     "events": [
       {
         "cycle": 0,
@@ -2576,6 +2586,16 @@
         "body": "Brunstone will invest 620M in a new facility at Merrick Flats, adding capacity for 2.8 million Vault Cell Guard units annually and roughly 1,400 jobs. CEO Halden Crowe framed the move as answering an order book now stretching 18 months, driven by the 4.1B fleet contract. First output is targeted within 20 months.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82656,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Brunstone & Sons Faces Regulatory Probe Over Vault Cell Guard Pro Overheating Reports",
+        "body": "Safety regulators opened a formal investigation into the Vault Cell Guard Pro after eleven reported thermal incidents in long-haul fleet installations. Halden Crowe pledged full cooperation and paused new Pro shipments, a jarring reversal weeks after breaking ground on a third plant to feed the product's backlog.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -9077,7 +9097,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82649,
+    "lastEventCycle": 82656,
     "events": [
       {
         "cycle": 0,
@@ -9306,6 +9326,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82656,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Lhaus Industries Restarts Sixth Cell-Pack Line as Brandt Eyes Storage Push",
+        "body": "With margins stabilized, CEO Cole Brandt greenlit the resumption of the previously paused sixth cell-pack line, backed by a $420 million capital commitment. Brandt framed the move as a return to offense, targeting a 30% lift in Power & Storage output by next year to chase surging grid-storage demand.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -9320,7 +9350,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82644,
+    "lastEventCycle": 82656,
     "events": [
       {
         "cycle": 0,
@@ -9449,6 +9479,16 @@
         "effects": {
           "hospitality": -0.13
         }
+      },
+      {
+        "cycle": 82656,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Maison & Vale Strikes $3.2 Billion Deal for Cleaning-Chemicals Giant Northram",
+        "body": "Fresh off digesting Calbrook, Rhys Kessler unveiled the acquisition of Northram Solutions, a jansan-chemicals maker with 4,000 employees, in a $3.2 billion cash-and-stock deal. The purchase nearly doubles the Cleaning & Jansan division's revenue base, though analysts flagged integration risk given the back-to-back dealmaking pace.",
+        "effects": {
+          "hospitality": 0.22
+        }
       }
     ]
   },
@@ -9463,7 +9503,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82648,
+    "lastEventCycle": 82656,
     "events": [
       {
         "cycle": 0,
@@ -9650,6 +9690,16 @@
         "effects": {
           "technology": 0.22
         }
+      },
+      {
+        "cycle": 82656,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Marlgear Supply Lands Kessel Platform Rollout at Halden Mining Group",
+        "body": "Adele Ferran secured Marlgear's largest post-turnaround order, a $290 million multi-year deployment of the Kessel industrial platform across Halden Mining's processing sites. Ferran called it validation of the bold post-turnaround bet, projecting the win would carry the Industrial Machines unit to double-digit growth next year.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -9664,7 +9714,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82642,
+    "lastEventCycle": 82656,
     "events": [
       {
         "cycle": 0,
@@ -9772,6 +9822,16 @@
         "body": "Theo Orne's house posted its fourth consecutive beat, with revenue up 11% to $2.3B as the weatherproof workwear line and trade-grade plumbing range now each clear over $400M annually. Orne credited disciplined sell-in and reorder rates, resisting calls to accelerate expansion. The steady cadence continues to make Marrowcyon one of the calmer names on the board.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82656,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Notches Modest Beat as Fixtures Restocking Continues",
+        "body": "Marrowcyon edged past estimates for a fourth straight quarter, posting revenue of $1.14 billion on steady reorders of its trade-grade plumbing range. CEO Theo Orne credited disciplined inventory management and said workwear demand held firm through the seasonal transition.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -10604,7 +10664,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82643,
+    "lastEventCycle": 82656,
     "events": [
       {
         "cycle": 0,
@@ -10700,6 +10760,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Wins Kelvarn Third-Phase Contract for Interchange Structures",
         "body": "Skarngrove secured the $410 million third-phase Kelvarn contract covering elevated interchange decks and structural fastening, extending its involvement in the corridor into a fourth year. CEO Quinn Fenn said the award reflects the firm's award-winning bridge work and reliable delivery record on earlier phases. Work is scheduled to begin next quarter and run through the following year.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82656,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarngrove & Sons Beats as Kelvarn Interchange Work Enters Production",
+        "body": "Skarngrove topped estimates with revenue of $880 million as third-phase interchange fabrication ramped ahead of schedule. Quinn Fenn said the structural-materials backlog tied to Kelvarn now underpins guidance through next year, with fasteners volumes riding the same project pipeline.",
         "effects": {
           "construction": 0.13
         }
@@ -13081,7 +13151,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82638,
+    "lastEventCycle": 82656,
     "events": [
       {
         "cycle": 0,
@@ -13159,6 +13229,16 @@
         "body": "Wold & Bramm posted another in-line quarter with household goods and heritage lighting both growing modestly, and confirmed the fourth showroom remains on schedule to open next quarter. Mara Marrow reiterated the disciplined, self-funded expansion approach. Operating margin held near 15%.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82656,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Wold & Bramm Opens Fourth Showroom With Debut of Heritage Lighting Collection",
+        "body": "Mara Marrow marked the completion of the fourth Heritage showroom by unveiling a premium lighting line, the company's first designed exclusively for its own retail floors. The measured expansion pushes Wold & Bramm's showroom footprint to four cities, with Marrow reiterating a preference for steady, self-funded growth.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
