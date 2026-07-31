@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-31T02:56:18.678Z",
+  "generatedAt": "2026-07-31T08:52:03.782Z",
   "beats": [
+    {
+      "company": "Ashbystead Holdings",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ashbystead Holdings Extends Run to Seven Straight Beats on Renewal Demand",
+      "body": "Ashbystead logged a seventh consecutive quiet beat, with Medical Equipment revenue up 4% on durable hospital renewal cycles. CEO Cora Holt cited multi-year service contracts as the anchor of the firm's remarkably steady performance. Management again declined to offer aggressive guidance, sticking to its long-held conservative posture.",
+      "cycle": 82661,
+      "dur": 1
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Carrowforge Faces Federal Safety Probe as Roe-Era Falsifications Widen",
+      "body": "Regulators at the Industrial Equipment Safety Bureau opened a formal probe into as many as 14,000 machines certified between 2021 and 2025 under falsified test records. CEO Marlow Demore pledged full cooperation and set aside 210M for potential remediation, but conceded the inquiry could stretch across three product lines. Shares of the manufacturer have now shed nearly a third of their value since the scandal first broke.",
+      "cycle": 82661,
+      "dur": 8
+    },
+    {
+      "company": "Castlestead",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castlestead Posts Modest Beat as Harrowfield Deal Reaches Full Volume",
+      "body": "Castlestead edged past expectations as the Harrowfield Supply agreement hit full run-rate, lifting Farm Inputs revenue 8%. CEO Aurelia Calder noted steady demand for the paired low-till and nutrient-blend lines through the planting season. The conservative agriculture house left guidance unchanged and reaffirmed its dividend.",
+      "cycle": 82661,
+      "dur": 1
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Cranegrove Adds Second Corridor Depot as Backlog Extends Into 2028",
+      "body": "Cranegrove broke ground on a second regional fleet depot to service its swelling three-package corridor backlog, now booked out through early 2028. CEO Vale Calder framed the 45M investment as a measured step to hold margins as volumes climb. The disciplined earthmoving specialist reiterated it will fund the build entirely from operating cash.",
+      "cycle": 82661,
+      "dur": 1
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drustcraft Wins Multi-Year Fastener Supply Contract Worth 280M",
+      "body": "Fresh off clearing its recall overhang, Drustcraft secured a four-year, 280M agreement to supply Fasteners & Fixings to a national appliance and machinery group. CEO Cora Fenn called the win validation of the firm's rebuilt quality controls following last year's batch recall. The deal diversifies Drustcraft beyond its twin vehicle-line dependence.",
+      "cycle": 82661,
+      "dur": 2
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fennmoor Beats as Threll Suite Deal Drives Diagnostics Revenue 22% Higher",
+      "body": "Fennmoor topped estimates with quarterly revenue up 22% year-on-year, led by the ramping 900M hospital-system contract and strong bedside module attach rates. CEO Dorian Brandt credited the Callent integration for pulling Devices and Medical Equipment orders into a single pipeline. Management raised full-year guidance and hinted at a further diagnostics tuck-in acquisition.",
+      "cycle": 82661,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Halhold Works Names Veteran Operator Priya Vantt as Chief Operating Officer to Steady Ship",
+      "body": "CEO Marcus Thorne installed Priya Vantt, former head of the firm's Wire & Cable division, as COO with a mandate to rebuild the Medical Equipment unit gutted by the Aveline recall. Vantt will oversee a 90-day quality audit spanning all three product categories as the investor class action proceeds. The appointment signals Thorne is delegating operations while he manages the legal fallout personally.",
+      "cycle": 82661,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Vossenspire Supply Folds Larkmoor and Corveil Into New Retail Division",
+      "body": "Vossenspire consolidated its recent Larkmoor salon chain and Corveil strapmaker into a unified Vossenspire Retail arm, targeting 60M in annual synergies by 2028. CEO Quinn Marrow named longtime Timepieces chief Halden Rooke to lead the division as integration costs weigh near-term. The move caps a roughly 1.1B acquisition spree aimed at controlling the path from workshop to showroom floor.",
+      "cycle": 82661,
+      "dur": 2
+    },
     {
       "company": "Brunridge Works",
       "sector": "consumer",
@@ -52,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Edges Ahead of Estimates Again on Food-Service Strength",
-      "body": "Ornewright delivered another slim beat, with revenue up 3% as food-service demand offset softer cleaning volumes. CEO Petra Veldt reaffirmed guidance and pointed to steady contract renewals across the farm-inputs book. The result extends the company's long run of undramatic, on-target quarters.",
-      "cycle": 82660,
-      "dur": 1
-    },
-    {
       "company": "Varnvale House",
       "sector": "luxury",
       "kind": "product_launch",
@@ -82,26 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Brunforge Holdings",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunforge Debuts Vellan Kitchen Line to Extend Flagship Concept Into Food Service",
-      "body": "Brunforge unveiled the Vellan Kitchen collection, pushing its successful home-goods brand into cookware and small appliances across its regional flagships. CEO Kestrel Bramm framed the launch as a natural adjacency, with initial rollout to eight stores before a wider expansion. Early pre-orders were described as ahead of internal targets.",
-      "cycle": 82659,
-      "dur": 2
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Calderforge Misses as Cooling Overhaul Costs and Downtime Weigh on Quarter",
-      "body": "Calderforge fell short of estimates, posting revenue of $3.4 billion against a $3.7 billion consensus as the Stormwell cooling overhaul kept two halls partly offline through the period. CEO Nadia Throne said the remediation is on track and the idled capacity should return next quarter, but warned near-term margins would stay pressured. Shares slid on the guidance and elevated capital spending.",
-      "cycle": 82659,
-      "dur": 2
-    },
-    {
       "company": "Gromford Works",
       "sector": "luxury",
       "kind": "scandal",
@@ -110,46 +160,6 @@
       "body": "Leaked internal correspondence shows Gromford leadership was warned about the undisclosed Meridian tourbillon supplier as far back as 2023, deepening the crisis that already cost Corin Aldwych his post. CEO Dahlia Verrint faces mounting pressure as regulators expand their inquiry and two flagship boutiques suspend Meridian-line sales. The revelations wiped out an estimated $900 million in market value and prompted calls for a full board review.",
       "cycle": 82659,
       "dur": 8
-    },
-    {
-      "company": "Palettstead Holdings",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Palettstead Breaks Ground on Fourth Cold-Chain to Meet Overflow Demand",
-      "body": "Fresh off a fully ramped three-chain network, Palettstead announced construction of a fourth reusable cold-chain corridor, a $220 million investment backed by committed customer volumes. CEO Orla Marrow said demand had outstripped current capacity for two straight quarters. The new chain is slated to enter service within eighteen months.",
-      "cycle": 82659,
-      "dur": 2
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Vantor Lines Wins Regional Distribution Contract to Diversify Beyond Grocery",
-      "body": "Vantor secured a multi-year packaging and distribution agreement with a regional home-goods chain valued at roughly $180 million over four years, its largest non-grocery win to date. CEO Halden Vossen called the deal a welcome offset as grocery volumes plateau. The contract is expected to begin phasing in volumes next quarter.",
-      "cycle": 82659,
-      "dur": 2
-    },
-    {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenstead Supply Runs Streak to Ten as Both Segments Fire in Lockstep",
-      "body": "Vossenstead posted a tenth consecutive quarterly beat, with revenue up 8.4% to $2.1 billion as Food Service and Plumbing & Fixtures both delivered double-digit order growth. CEO Bram Thorne credited the fully ramped hub network and reaffirmed the company's measured expansion cadence. Management raised full-year guidance modestly, citing firm demand across regional accounts.",
-      "cycle": 82659,
-      "dur": 2
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Woldmark Names Turnaround Veteran Isolde Frayne CEO to Steady Ship After Halcyon 3",
-      "body": "Woldmark's board appointed Isolde Frayne as chief executive, tasking her with restoring quality controls and rebuilding customer trust following the Halcyon 3 field failures. Frayne, a former operations chief known for disciplined product cadences, said she would slow the release cycle and prioritize reliability over speed. The company also confirmed an extended warranty program for affected units.",
-      "cycle": 82659,
-      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -269,26 +279,6 @@
       "head": "Greywater Grid Lands Landmark Compute Capacity Pact Worth $1.6B",
       "body": "Greywater Grid signed a seven-year capacity agreement to supply compute and backup power to the Vantor data consortium, a deal management valued at $1.6B over its term. CEO Sable Renwick called it validation of the rebuilt reservoir platform and the fastest major win in the house's history. The contract nearly doubles the company's committed forward revenue and marks a defining turn from last year's outages.",
       "cycle": 82654,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Blackhold CEO Renata Solberg Resigns as Falsified-Records Fallout Deepens",
-      "body": "Renata Solberg stepped down after regulators referred the falsified grid-storage test records for possible enforcement, with the national program suspending new site certifications pending review. The board installed compliance veteran Anders Vell as chief executive to steer remediation and rebuild regulator trust. Blackhold set aside 140M against potential penalties and remediation costs.",
-      "cycle": 82653,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Gromford Works Ousts Corin Aldwych as Meridian Sourcing Scandal Engulfs Board",
-      "body": "Directors voted to remove chief executive Corin Aldwych after the Meridian Tourbillon probe expanded to cover three additional movement lines, with the investor suit now seeking 210M in damages. The board named restructuring specialist Dahlia Verrint as interim chief executive, tasking her with a full audit of supplier disclosures. Shares had been battered through a bruising quarter as regulators signaled possible sanctions.",
-      "cycle": 82653,
       "dur": 8
     }
   ]

@@ -726,7 +726,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82637,
+    "lastEventCycle": 82661,
     "events": [
       {
         "cycle": 0,
@@ -792,6 +792,16 @@
         "size": "flash",
         "head": "Ashbystead Holdings Marks Sixth Straight Beat on Steady Equipment Renewals",
         "body": "Ashbystead Holdings reported revenue of 1.1B, edging past forecasts for a sixth consecutive quarter on routine hospital equipment renewal cycles. CEO Cora Holt, in her characteristically brief statement, credited 'consistent demand and disciplined operations.' The company reaffirmed its unchanged full-year outlook.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82661,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Extends Run to Seven Straight Beats on Renewal Demand",
+        "body": "Ashbystead logged a seventh consecutive quiet beat, with Medical Equipment revenue up 4% on durable hospital renewal cycles. CEO Cora Holt cited multi-year service contracts as the anchor of the firm's remarkably steady performance. Management again declined to offer aggressive guidance, sticking to its long-held conservative posture.",
         "effects": {
           "medical": 0.06
         }
@@ -3221,7 +3231,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82648,
+    "lastEventCycle": 82661,
     "events": [
       {
         "cycle": 0,
@@ -3343,6 +3353,16 @@
         "size": "major",
         "head": "Carrowforge Rocked as Falsified Test Records Surface From Roe Era",
         "body": "An independent review commissioned by CEO Marlow Demore uncovered that certification data on more than 30 industrial press models had been altered before the leadership change, widening the original testing scandal. Demore disclosed the findings to regulators and suspended four managers pending investigation. The company warned that recertification could delay shipments worth an estimated $210 million into next quarter.",
+        "effects": {
+          "manufacturing": -0.22
+        }
+      },
+      {
+        "cycle": 82661,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Carrowforge Faces Federal Safety Probe as Roe-Era Falsifications Widen",
+        "body": "Regulators at the Industrial Equipment Safety Bureau opened a formal probe into as many as 14,000 machines certified between 2021 and 2025 under falsified test records. CEO Marlow Demore pledged full cooperation and set aside 210M for potential remediation, but conceded the inquiry could stretch across three product lines. Shares of the manufacturer have now shed nearly a third of their value since the scandal first broke.",
         "effects": {
           "manufacturing": -0.22
         }
@@ -3874,7 +3894,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82631,
+    "lastEventCycle": 82661,
     "events": [
       {
         "cycle": 0,
@@ -3930,6 +3950,16 @@
         "size": "flash",
         "head": "Castlestead Posts Quiet Beat as Harrowfield Supply Deal Ramps Up",
         "body": "Aurelia Calder reported a slim 1.9% revenue gain as first shipments under the Harrowfield Growers agreement flowed alongside steady nutrient-blend sales. The company held its conservative full-year outlook, citing normal seasonal earthmoving softness. Calder made no new commitments, in keeping with her measured approach.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82661,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlestead Posts Modest Beat as Harrowfield Deal Reaches Full Volume",
+        "body": "Castlestead edged past expectations as the Harrowfield Supply agreement hit full run-rate, lifting Farm Inputs revenue 8%. CEO Aurelia Calder noted steady demand for the paired low-till and nutrient-blend lines through the planting season. The conservative agriculture house left guidance unchanged and reaffirmed its dividend.",
         "effects": {
           "agriculture": 0.06
         }
@@ -4339,7 +4369,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82644,
+    "lastEventCycle": 82661,
     "events": [
       {
         "cycle": 0,
@@ -4435,6 +4465,16 @@
         "size": "flash",
         "head": "Cranegrove Edges Past Estimates as Fleet Depot Trims Corridor Costs",
         "body": "Cranegrove reported a modest beat with operating margin up 90 basis points, aided by the new regional depot cutting equipment-idle time across the inland corridor. Vale Calder reaffirmed the full-year outlook and noted the three corridor packages remain on schedule. The disciplined update drew little surprise from a company known for steady execution.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82661,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Cranegrove Adds Second Corridor Depot as Backlog Extends Into 2028",
+        "body": "Cranegrove broke ground on a second regional fleet depot to service its swelling three-package corridor backlog, now booked out through early 2028. CEO Vale Calder framed the 45M investment as a measured step to hold margins as volumes climb. The disciplined earthmoving specialist reiterated it will fund the build entirely from operating cash.",
         "effects": {
           "construction": 0.06
         }
@@ -4688,7 +4728,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82649,
+    "lastEventCycle": 82661,
     "events": [
       {
         "cycle": 0,
@@ -4814,6 +4854,16 @@
         "size": "standard",
         "head": "Drustcraft Posts Clean Beat as Twin Vehicle-Line Fully Clears Recall Overhang",
         "body": "Drustcraft delivered its strongest quarter since the fastener recall, with twin vehicle-line volumes now above pre-recall peaks and warranty reserves released. CEO Cora Fenn credited a rebuilt supplier-inspection regime and said the recovery frees the company to weigh a bolder capacity move next year.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82661,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drustcraft Wins Multi-Year Fastener Supply Contract Worth 280M",
+        "body": "Fresh off clearing its recall overhang, Drustcraft secured a four-year, 280M agreement to supply Fasteners & Fixings to a national appliance and machinery group. CEO Cora Fenn called the win validation of the firm's rebuilt quality controls following last year's batch recall. The deal diversifies Drustcraft beyond its twin vehicle-line dependence.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -5456,7 +5506,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82652,
+    "lastEventCycle": 82661,
     "events": [
       {
         "cycle": 0,
@@ -5632,6 +5682,16 @@
         "size": "standard",
         "head": "Fennmoor Extends Threll Suite With Bedside Diagnostics Module Under Hospital Deal",
         "body": "Fennmoor launched Threll Point, a portable bedside diagnostics module built to run within its $900M hospital-system contract, targeting faster turnaround on critical panels. CEO Dorian Brandt said the module deepens the Callent-derived platform and opens a path into outpatient settings. Initial deployments will begin at three anchor hospital networks this quarter.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82661,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fennmoor Beats as Threll Suite Deal Drives Diagnostics Revenue 22% Higher",
+        "body": "Fennmoor topped estimates with quarterly revenue up 22% year-on-year, led by the ramping 900M hospital-system contract and strong bedside module attach rates. CEO Dorian Brandt credited the Callent integration for pulling Devices and Medical Equipment orders into a single pipeline. Management raised full-year guidance and hinted at a further diagnostics tuck-in acquisition.",
         "effects": {
           "technology": 0.13
         }
@@ -7263,25 +7323,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1971,
-    "ceo": "Marcus Thorne",
+    "ceo": "Priya Vantt",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.89,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82655,
+    "lastEventCycle": 82661,
     "events": [
-      {
-        "cycle": 82530,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Halhold Works Wins Regional Hospital Network Supply Agreement for Verity Line",
-        "body": "The Meridian Health consortium named Halhold Works its primary bedside-monitoring supplier in a five-year deal covering 28 facilities, a vote of confidence following the Verity redesign. CEO Nadia Brandt said the agreement is valued near $94 million and includes a service contract for the new display modules. The win marks a recovery milestone after the earlier recall.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82535,
         "kind": "product_launch",
@@ -7505,6 +7555,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82661,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Halhold Works Names Veteran Operator Priya Vantt as Chief Operating Officer to Steady Ship",
+        "body": "CEO Marcus Thorne installed Priya Vantt, former head of the firm's Wire & Cable division, as COO with a mandate to rebuild the Medical Equipment unit gutted by the Aveline recall. Vantt will oversee a 90-day quality audit spanning all three product categories as the investor class action proceeds. The appointment signals Thorne is delegating operations while he manages the legal fallout personally.",
+        "effects": {}
       }
     ]
   },
@@ -13018,7 +13076,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82653,
+    "lastEventCycle": 82661,
     "events": [
       {
         "cycle": 0,
@@ -13196,6 +13254,16 @@
         "body": "Quinn Marrow pressed further into retail with the 620M purchase of the 40-location Larkmoor salon network, giving Vossenspire direct control of storefronts that already stock Halden timepieces and Corveil straps. Marrow framed the deal as 'owning the room where the sale happens,' targeting 15% cost savings on distribution. The transaction is expected to close within two quarters.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82661,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Vossenspire Supply Folds Larkmoor and Corveil Into New Retail Division",
+        "body": "Vossenspire consolidated its recent Larkmoor salon chain and Corveil strapmaker into a unified Vossenspire Retail arm, targeting 60M in annual synergies by 2028. CEO Quinn Marrow named longtime Timepieces chief Halden Rooke to lead the division as integration costs weigh near-term. The move caps a roughly 1.1B acquisition spree aimed at controlling the path from workshop to showroom floor.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
