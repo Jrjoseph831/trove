@@ -2299,7 +2299,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82647,
+    "lastEventCycle": 82660,
     "events": [
       {
         "cycle": 0,
@@ -2415,6 +2415,16 @@
         "body": "Brunridge Works reported a modest earnings beat, with revenue up 7% as the two new distribution centers began shortening delivery times on premium fine goods. CEO Halia Brennt said early shelf-share data supports the national expansion thesis, though she cautioned that ramp costs would weigh on the next quarter. The company held its full-year guidance.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82660,
+        "kind": "recall",
+        "size": "standard",
+        "head": "Brunridge Works Recalls Cordless Device Line Over Overheating Reports",
+        "body": "Brunridge issued a voluntary recall of roughly 220,000 units from its Devices segment following reports of battery packs overheating during charging. CEO Halia Brennt said no serious injuries were confirmed and that affected customers would receive free replacements, with a charge of about $30M expected against the current quarter. The company said its Fine Goods and Packaging lines are unaffected.",
+        "effects": {
+          "consumer": -0.13
         }
       }
     ]
@@ -3350,7 +3360,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82647,
+    "lastEventCycle": 82660,
     "events": [
       {
         "cycle": 0,
@@ -3467,6 +3477,16 @@
         "head": "Carrowwell's Theo Thorne to Retire After Record Run; Mara Voss Named CEO",
         "body": "Carrowwell announced that Theo Thorne, chief executive since 1934, will step down at year-end following back-to-back record quarters fueled by twin multibillion-dollar contracts. The board named operations chief Mara Voss as successor, tasking her with executing the $2.4B industrial-machines backlog and the logistics automation pact. Thorne will remain as non-executive chairman through the transition.",
         "effects": {}
+      },
+      {
+        "cycle": 82660,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Carrowwell Opens Dedicated Machines Plant to Deliver $2.4B Reindustrialization Contract",
+        "body": "In her first major move as CEO, Mara Voss inaugurated a purpose-built industrial machines facility to fulfill the $2.4B plant-modernization contract. The site will handle assembly and final testing, with first deliveries slated for next quarter. Voss framed the plant as proof the company can execute at scale beyond the record run left by predecessor Theo Thorne.",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -4811,7 +4831,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82642,
+    "lastEventCycle": 82660,
     "events": [
       {
         "cycle": 0,
@@ -4907,6 +4927,16 @@
         "size": "standard",
         "head": "Drustcyon Beats as Rail Framework and Coastal Foundry Fill the Pipeline",
         "body": "Aurelia Kessler's house posted a 12% revenue rise to $890M, driven by early draws on the $650M national rail framework and steady harbor-authority orders. The new coastal foundry is on track to begin corrosion-anchor output next quarter, adding capacity Kessler called 'timely, not premature.' The disciplined build-out keeps the order book comfortably ahead of demand.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82660,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Drustcyon Rolls Out Marine-Grade Anchor System From New Coastal Foundry",
+        "body": "Drustcyon began shipping its TidalHold anchor and fixing range, engineered for saltwater exposure, from its newly commissioned coastal foundry. CEO Aurelia Kessler said the line extends the corrosion-resistance reputation that won the $650M rail framework into offshore and harbor infrastructure markets. Initial orders cover three port modernization projects.",
         "effects": {
           "construction": 0.13
         }
@@ -6715,7 +6745,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82642,
+    "lastEventCycle": 82660,
     "events": [
       {
         "cycle": 0,
@@ -6813,6 +6843,16 @@
         "body": "Mira Skarn's firm lifted quarterly earnings 9% to $780M as the second Vetask staging yard reached operating capacity weeks early, feeding the adjacent corridor contract. Skarn signaled interest in bidding on a rumored regional interchange package, calling the current backlog 'the strongest in a decade.' The measured expansion continues to pay off without overextension.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82660,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Halcrow & Vance Lands Landmark $2.1B Vetask Regional Development Mandate",
+        "body": "The firm secured a multi-year mandate to lead earthmoving and site preparation across the entire Vetask regional expansion, a package valued at $2.1 billion over five years. CEO Mira Skarn called it the culmination of the company's corridor strategy, noting that both staging yards will run at capacity to service the deal. The award nearly doubles Halcrow & Vance's confirmed backlog.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -8889,7 +8929,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82647,
+    "lastEventCycle": 82660,
     "events": [
       {
         "cycle": 0,
@@ -9005,6 +9045,16 @@
         "size": "standard",
         "head": "Korrwright Group Beats as Corridor Package Drives Record Beam and Cable Shipments",
         "body": "Korrwright Group posted revenue of $2.1 billion, up 19%, as the $1.4B corridor infrastructure package entered peak delivery across beams and wire. CEO Halden Fenn said the Verant Corridor plant is running at 85% capacity less than a year after opening. Backlog stood at $3.6 billion, giving the company visibility into 2027.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82660,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrwright Group Adds Second Line at Verant Corridor Plant to Clear Backlog",
+        "body": "Korrwright approved a $180M second production line at its Verant Corridor plant to keep pace with the $1.4B infrastructure package. CEO Halden Fenn said cable output will roughly double once the line reaches full rate next year, easing lead times that had stretched to record lengths. The expansion adds an estimated 300 jobs at the site.",
         "effects": {
           "construction": 0.13
         }
@@ -10265,7 +10315,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82645,
+    "lastEventCycle": 82660,
     "events": [
       {
         "cycle": 0,
@@ -10361,6 +10411,16 @@
         "size": "flash",
         "head": "Ornewright Goods Extends Beat Streak on Broad-Based Demand",
         "body": "Ornewright edged past estimates once again, posting a 2% revenue gain led by steady Cleaning & Jansan reorders and resilient Farm Inputs volumes. CEO Petra Veldt noted the company has now met or beaten expectations for several consecutive quarters without a single guidance revision. Management again described the outlook as 'stable and unremarkable.'",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82660,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Edges Ahead of Estimates Again on Food-Service Strength",
+        "body": "Ornewright delivered another slim beat, with revenue up 3% as food-service demand offset softer cleaning volumes. CEO Petra Veldt reaffirmed guidance and pointed to steady contract renewals across the farm-inputs book. The result extends the company's long run of undramatic, on-target quarters.",
         "effects": {
           "consumer": 0.06
         }
@@ -12275,7 +12335,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82652,
+    "lastEventCycle": 82660,
     "events": [
       {
         "cycle": 0,
@@ -12466,6 +12526,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82660,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Varnvale House Unveils Sovereign Collection in Bold Bid for the Top Tier",
+        "body": "CEO Adrienne Sole staged a lavish launch for the Sovereign Collection, a limited high-jewelry and grand-complication timepiece range priced well above the Meridian line. Sole publicly staked the house's post-scandal comeback on the range, with only 500 numbered pieces to be produced annually. Early pre-orders reportedly covered the first year's allocation within days.",
+        "effects": {
+          "luxury": 0.22
+        }
       }
     ]
   },
@@ -12593,7 +12663,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82647,
+    "lastEventCycle": 82660,
     "events": [
       {
         "cycle": 0,
@@ -12709,6 +12779,16 @@
         "size": "standard",
         "head": "Vencyon Unveils Modular Handling Platform to Extend Beyond Third Hub",
         "body": "With its third hub now at full throughput, Vencyon introduced a modular material-handling platform designed for rapid deployment at customer sites rather than fixed hubs. CEO Iris Halloran called it a 'deliberate step outward,' with three pilot installations already committed for the coming quarter. Management framed the launch as the foundation for a lighter-footprint growth phase.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82660,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vencyon Beats as Modular Handling Platform Draws Early Orders",
+        "body": "Vencyon posted quarterly revenue up 11% as its new modular handling platform booked orders from four distribution operators in its first full quarter. CEO Iris Halloran raised full-year guidance modestly, citing steady third-hub throughput plus incremental platform sales. Margins held firm despite ramp-up costs.",
         "effects": {
           "logistics": 0.13
         }
