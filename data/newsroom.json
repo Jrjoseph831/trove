@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-07-31T08:52:03.782Z",
+  "generatedAt": "2026-07-31T14:11:08.560Z",
   "beats": [
     {
-      "company": "Ashbystead Holdings",
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Brunmark Motors Adds Battery-Pack Capacity to Sustain Veyra S Momentum",
+      "body": "Fresh off clearing the Veyra S backlog, Halvard Renn announced a $340M expansion of the Torrance battery line to lift pack output by roughly 40%. The move supports both vehicle demand and a nascent third-party Power & Storage supply effort. Renn framed the investment as 'the recovery becoming a growth story.'",
+      "cycle": 82662,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Castlehold Spins Off Saltmere Cleanup Unit as Voss Draws Line Under Legacy Liabilities",
+      "body": "Turnaround chief Halden Voss confirmed the carved-out Saltmere assets will now sit inside a standalone remediation subsidiary, Meridale Environmental, ringfenced with a $1.6B provision. Voss told staff the move lets the core Power & Storage business 'operate without the Saltmere shadow' while the $4.1B regulator suit proceeds separately. Analysts noted the structure caps downside for the parent but leaves cleanup timelines uncertain.",
+      "cycle": 82662,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fenncyon Beats and Lifts Guidance as Record Eastfield Backlog Converts to Revenue",
+      "body": "Nadia Ashby delivered a stronger-than-expected quarter, with the combined Southern Loop and Northern Spur packages driving a 12% revenue gain and prompting an upward guidance revision. The record backlog is now translating into steady billing across the Eastfield program. Ashby flagged early-stage interest in an adjacent Westfield tender.",
+      "cycle": 82662,
+      "dur": 2
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Lhaus Industries Secures $2.8B Grid-Storage Supply Pact in Landmark Storage Pivot",
+      "body": "Cole Brandt landed a multi-year agreement to supply cell packs for a national grid-storage operator, validating the restarted sixth line and the broader storage push. The deal, worth up to $2.8B over six years, marks Lhaus's largest single contract outside automotive parts. Brandt called it 'the transformation we restarted that line for.'",
+      "cycle": 82662,
+      "dur": 8
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowmoor Holdings Nudges Past Estimates as Westline Base Holds Firm",
+      "body": "Dorian Steg's steady-hand approach delivered another modest beat, with quarterly revenue up 4.6% as the bedded-in Westline contracts continued to generate reliable margins. Management reaffirmed guidance and flagged two smaller regional bids in the pipeline. Steg reiterated a preference for 'durable, unglamorous growth.'",
+      "cycle": 82662,
+      "dur": 1
+    },
+    {
+      "company": "Palettstone & Sons",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Palettstone & Sons Extends Heirloom Pro Line With New Fastening System",
+      "body": "Cole Fenn introduced the Heirloom Pro Anchor range, a modular fastening and bit system aimed at professional contractors, building on the sell-through momentum of the precision set. The second plant, now clear of backorders, will handle initial production. Fenn signaled measured optimism, noting early trade-channel pre-orders 'point to the same pattern we saw last cycle.'",
+      "cycle": 82662,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrave",
       "sector": "medical",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Ashbystead Holdings Extends Run to Seven Straight Beats on Renewal Demand",
-      "body": "Ashbystead logged a seventh consecutive quiet beat, with Medical Equipment revenue up 4% on durable hospital renewal cycles. CEO Cora Holt cited multi-year service contracts as the anchor of the firm's remarkably steady performance. Management again declined to offer aggressive guidance, sticking to its long-held conservative posture.",
-      "cycle": 82661,
+      "head": "Skarngrave Posts Steady Beat as Sterilizer Shipments Ramp on Schedule",
+      "body": "Orla Dray reported a quarterly beat with revenue up 7% as hospital-network sterilizer deliveries accelerated against the $420M contract. The added assembly capacity is running near plan, and Dray confirmed no slippage in the shipment timeline. She described operations as 'exactly where we said they'd be.'",
+      "cycle": 82662,
       "dur": 1
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Varnvale & Sons Debuts First Timepiece Under New Heritage Division",
+      "body": "Bram Wold unveiled the Aubrec Célestin, a limited run of 500 watches built on Calderon-made movements, marking the first fruit of the vertical integration push. Priced from $38,000, the launch showcases the newly folded Heritage Division and its in-house supply chain. Wold called it 'proof the acquisitions were about craft, not just balance sheets.'",
+      "cycle": 82662,
+      "dur": 2
     },
     {
       "company": "Carrowforge",
@@ -20,26 +90,6 @@
       "body": "Regulators at the Industrial Equipment Safety Bureau opened a formal probe into as many as 14,000 machines certified between 2021 and 2025 under falsified test records. CEO Marlow Demore pledged full cooperation and set aside 210M for potential remediation, but conceded the inquiry could stretch across three product lines. Shares of the manufacturer have now shed nearly a third of their value since the scandal first broke.",
       "cycle": 82661,
       "dur": 8
-    },
-    {
-      "company": "Castlestead",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Castlestead Posts Modest Beat as Harrowfield Deal Reaches Full Volume",
-      "body": "Castlestead edged past expectations as the Harrowfield Supply agreement hit full run-rate, lifting Farm Inputs revenue 8%. CEO Aurelia Calder noted steady demand for the paired low-till and nutrient-blend lines through the planting season. The conservative agriculture house left guidance unchanged and reaffirmed its dividend.",
-      "cycle": 82661,
-      "dur": 1
-    },
-    {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Cranegrove Adds Second Corridor Depot as Backlog Extends Into 2028",
-      "body": "Cranegrove broke ground on a second regional fleet depot to service its swelling three-package corridor backlog, now booked out through early 2028. CEO Vale Calder framed the 45M investment as a measured step to hold margins as volumes climb. The disciplined earthmoving specialist reiterated it will fund the build entirely from operating cash.",
-      "cycle": 82661,
-      "dur": 1
     },
     {
       "company": "Drustcraft",
@@ -82,36 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "recall",
-      "size": "standard",
-      "head": "Brunridge Works Recalls Cordless Device Line Over Overheating Reports",
-      "body": "Brunridge issued a voluntary recall of roughly 220,000 units from its Devices segment following reports of battery packs overheating during charging. CEO Halia Brennt said no serious injuries were confirmed and that affected customers would receive free replacements, with a charge of about $30M expected against the current quarter. The company said its Fine Goods and Packaging lines are unaffected.",
-      "cycle": 82660,
-      "dur": 2
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Carrowwell Opens Dedicated Machines Plant to Deliver $2.4B Reindustrialization Contract",
-      "body": "In her first major move as CEO, Mara Voss inaugurated a purpose-built industrial machines facility to fulfill the $2.4B plant-modernization contract. The site will handle assembly and final testing, with first deliveries slated for next quarter. Voss framed the plant as proof the company can execute at scale beyond the record run left by predecessor Theo Thorne.",
-      "cycle": 82660,
-      "dur": 2
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Drustcyon Rolls Out Marine-Grade Anchor System From New Coastal Foundry",
-      "body": "Drustcyon began shipping its TidalHold anchor and fixing range, engineered for saltwater exposure, from its newly commissioned coastal foundry. CEO Aurelia Kessler said the line extends the corrosion-resistance reputation that won the $650M rail framework into offshore and harbor infrastructure markets. Initial orders cover three port modernization projects.",
-      "cycle": 82660,
-      "dur": 2
-    },
-    {
       "company": "Halcrow & Vance",
       "sector": "construction",
       "kind": "major_deal",
@@ -122,16 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Korrwright Group Adds Second Line at Verant Corridor Plant to Clear Backlog",
-      "body": "Korrwright approved a $180M second production line at its Verant Corridor plant to keep pace with the $1.4B infrastructure package. CEO Halden Fenn said cable output will roughly double once the line reaches full rate next year, easing lead times that had stretched to record lengths. The expansion adds an estimated 300 jobs at the site.",
-      "cycle": 82660,
-      "dur": 2
-    },
-    {
       "company": "Varnvale House",
       "sector": "luxury",
       "kind": "product_launch",
@@ -140,16 +150,6 @@
       "body": "CEO Adrienne Sole staged a lavish launch for the Sovereign Collection, a limited high-jewelry and grand-complication timepiece range priced well above the Meridian line. Sole publicly staked the house's post-scandal comeback on the range, with only 500 numbered pieces to be produced annually. Early pre-orders reportedly covered the first year's allocation within days.",
       "cycle": 82660,
       "dur": 8
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vencyon Beats as Modular Handling Platform Draws Early Orders",
-      "body": "Vencyon posted quarterly revenue up 11% as its new modular handling platform booked orders from four distribution operators in its first full quarter. CEO Iris Halloran raised full-year guidance modestly, citing steady third-hub throughput plus incremental platform sales. Margins held firm despite ramp-up costs.",
-      "cycle": 82660,
-      "dur": 2
     },
     {
       "company": "Gromford Works",
@@ -249,36 +249,6 @@
       "head": "Halhold Works Hit With Investor Class Action Over Aveline Disclosures as Losses Mount",
       "body": "A consolidated shareholder suit filed this week alleges Halhold executives concealed known Aveline Monitor defects for months before launch, seeking damages tied to the stock's collapse. New CEO Marcus Thorne acknowledged the recall would cost an estimated $410M and set aside a $120M legal reserve, while pledging full cooperation with regulators. The suit names former CEO Lena Faircloth and several ousted board members.",
       "cycle": 82655,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Bruncraft Under Federal Safety Probe as Regulators Widen Axle Investigation",
-      "body": "The national transport safety authority opened a formal defect investigation into Bruncraft covering up to 2.2 million vehicles, expanding beyond the axle assemblies already recalled. Investigators are examining whether steering-linkage failures contributed to at least 14 reported crashes. CEO Dessa Corvane pledged full cooperation, though the probe threatens to eclipse the recall already weighing on the house.",
-      "cycle": 82654,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Castlehold Faces $4.1B Regulator Suit as Saltmere Cleanup Costs Balloon",
-      "body": "State environmental authorities filed a $4.1B civil action against Castlehold, alleging the company concealed groundwater contamination at the Saltmere storage complex for over six years. Turnaround chief Dell Karsh said the carved-out liability unit will absorb the legal exposure, but CEO Halden Voss conceded remediation estimates have nearly doubled to $1.8B. Shares came under fresh pressure as the board disclosed a possible dividend suspension.",
-      "cycle": 82654,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Greywater Grid Lands Landmark Compute Capacity Pact Worth $1.6B",
-      "body": "Greywater Grid signed a seven-year capacity agreement to supply compute and backup power to the Vantor data consortium, a deal management valued at $1.6B over its term. CEO Sable Renwick called it validation of the rebuilt reservoir platform and the fastest major win in the house's history. The contract nearly doubles the company's committed forward revenue and marks a defining turn from last year's outages.",
-      "cycle": 82654,
       "dur": 8
     }
   ]

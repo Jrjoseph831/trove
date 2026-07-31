@@ -2120,7 +2120,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82653,
+    "lastEventCycle": 82662,
     "events": [
       {
         "cycle": 0,
@@ -2292,6 +2292,16 @@
         "size": "standard",
         "head": "Brunmark Motors Beats as Redesigned Veyra S Clears Backlog Under Renn",
         "body": "Halvard Renn's turnaround gained traction as the overhauled Veyra S drew 28,000 preorders and helped Brunmark top revenue estimates by 9%. Warranty-claim rates on the new battery pack fell to a fraction of the prior model's, easing the recall-era reputation damage. Renn said the quarter marked 'the first clean read since Veyra' but cautioned that supply of the new pack remains tight.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82662,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunmark Motors Adds Battery-Pack Capacity to Sustain Veyra S Momentum",
+        "body": "Fresh off clearing the Veyra S backlog, Halvard Renn announced a $340M expansion of the Torrance battery line to lift pack output by roughly 40%. The move supports both vehicle demand and a nascent third-party Power & Storage supply effort. Renn framed the investment as 'the recovery becoming a growth story.'",
         "effects": {
           "automotive": 0.13
         }
@@ -3687,7 +3697,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82654,
+    "lastEventCycle": 82662,
     "events": [
       {
         "cycle": 0,
@@ -3879,6 +3889,16 @@
         "body": "State environmental authorities filed a $4.1B civil action against Castlehold, alleging the company concealed groundwater contamination at the Saltmere storage complex for over six years. Turnaround chief Dell Karsh said the carved-out liability unit will absorb the legal exposure, but CEO Halden Voss conceded remediation estimates have nearly doubled to $1.8B. Shares came under fresh pressure as the board disclosed a possible dividend suspension.",
         "effects": {
           "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82662,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Castlehold Spins Off Saltmere Cleanup Unit as Voss Draws Line Under Legacy Liabilities",
+        "body": "Turnaround chief Halden Voss confirmed the carved-out Saltmere assets will now sit inside a standalone remediation subsidiary, Meridale Environmental, ringfenced with a $1.6B provision. Voss told staff the move lets the core Power & Storage business 'operate without the Saltmere shadow' while the $4.1B regulator suit proceeds separately. Analysts noted the structure caps downside for the parent but leaves cleanup timelines uncertain.",
+        "effects": {
+          "energy": -0.13
         }
       }
     ]
@@ -5383,7 +5403,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82648,
+    "lastEventCycle": 82662,
     "events": [
       {
         "cycle": 0,
@@ -5489,6 +5509,16 @@
         "size": "standard",
         "head": "Fenncyon Beats as Combined Eastfield Packages Lift Backlog to Record",
         "body": "Fenncyon reported quarterly revenue up 14% with operating margins reaching 18.2%, as the Northern Spur and Southern Loop packages ran concurrently. Total order backlog climbed to a record $6.7 billion, giving nearly three years of visibility. CEO Nadia Ashby said crews were being redeployed efficiently between the two Eastfield fronts to hold down mobilization costs.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82662,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fenncyon Beats and Lifts Guidance as Record Eastfield Backlog Converts to Revenue",
+        "body": "Nadia Ashby delivered a stronger-than-expected quarter, with the combined Southern Loop and Northern Spur packages driving a 12% revenue gain and prompting an upward guidance revision. The record backlog is now translating into steady billing across the Eastfield program. Ashby flagged early-stage interest in an adjacent Westfield tender.",
         "effects": {
           "construction": 0.13
         }
@@ -9351,16 +9381,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82656,
+    "lastEventCycle": 82662,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Lhaus Industries — Engineered to move you",
-        "body": "Lhaus Industries does the whole drivetrain of life, from the bolt to the body. It makes auto parts, power and storage systems, and complete vehicles across every tier. The mass lines keep ordinary cars on the road; the premium and luxury builds answer to drivers who feel the difference in a closing door. Few houses span value to top-end this convincingly. Broad by ambition, respected by the road.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "major_deal",
@@ -9589,6 +9611,16 @@
         "body": "With margins stabilized, CEO Cole Brandt greenlit the resumption of the previously paused sixth cell-pack line, backed by a $420 million capital commitment. Brandt framed the move as a return to offense, targeting a 30% lift in Power & Storage output by next year to chase surging grid-storage demand.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82662,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Lhaus Industries Secures $2.8B Grid-Storage Supply Pact in Landmark Storage Pivot",
+        "body": "Cole Brandt landed a multi-year agreement to supply cell packs for a national grid-storage operator, validating the restarted sixth line and the broader storage push. The deal, worth up to $2.8B over six years, marks Lhaus's largest single contract outside automotive parts. Brandt called it 'the transformation we restarted that line for.'",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -10101,7 +10133,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82649,
+    "lastEventCycle": 82662,
     "events": [
       {
         "cycle": 0,
@@ -10217,6 +10249,16 @@
         "size": "flash",
         "head": "Marrowmoor Holdings Stretches Streak as Westline Renewals Lock In",
         "body": "Marrowmoor posted another quarter of low-single-digit contract-base growth as early Westline accounts moved to multi-year renewals. CEO Dorian Steg noted retention held above 96%, with the jansan and household lines both contributing to the beat.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82662,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Nudges Past Estimates as Westline Base Holds Firm",
+        "body": "Dorian Steg's steady-hand approach delivered another modest beat, with quarterly revenue up 4.6% as the bedded-in Westline contracts continued to generate reliable margins. Management reaffirmed guidance and flagged two smaller regional bids in the pipeline. Steg reiterated a preference for 'durable, unglamorous growth.'",
         "effects": {
           "hospitality": 0.06
         }
@@ -10732,7 +10774,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82646,
+    "lastEventCycle": 82662,
     "events": [
       {
         "cycle": 0,
@@ -10831,6 +10873,16 @@
         "effects": {
           "consumer": 0.13
         }
+      },
+      {
+        "cycle": 82662,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Palettstone & Sons Extends Heirloom Pro Line With New Fastening System",
+        "body": "Cole Fenn introduced the Heirloom Pro Anchor range, a modular fastening and bit system aimed at professional contractors, building on the sell-through momentum of the precision set. The second plant, now clear of backorders, will handle initial production. Fenn signaled measured optimism, noting early trade-channel pre-orders 'point to the same pattern we saw last cycle.'",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -10845,7 +10897,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82642,
+    "lastEventCycle": 82662,
     "events": [
       {
         "cycle": 0,
@@ -10923,6 +10975,16 @@
         "body": "Orla Dray's medical house reported revenue up 14% to $610M as first units under the $420M hospital-network contract left the newly expanded assembly lines. Dray reiterated that the low-temperature line remains the fastest-growing segment, now contributing roughly a fifth of equipment sales. The quarter reflected the dependable execution that has defined her long tenure.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82662,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrave Posts Steady Beat as Sterilizer Shipments Ramp on Schedule",
+        "body": "Orla Dray reported a quarterly beat with revenue up 7% as hospital-network sterilizer deliveries accelerated against the $420M contract. The added assembly capacity is running near plan, and Dray confirmed no slippage in the shipment timeline. She described operations as 'exactly where we said they'd be.'",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -12180,7 +12242,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82654,
+    "lastEventCycle": 82662,
     "events": [
       {
         "cycle": 0,
@@ -12378,6 +12440,16 @@
         "body": "Varnvale said it will consolidate recent acquisitions Maison Aubrec and movement maker Calderon under a single Heritage Division led by longtime deputy Cosima Reyne. CEO Bram Wold said the reorganization is meant to capture an estimated $140M in annual synergies while preserving each maison's individual craft identity. The move follows a $2.3B acquisition spree that stretched the group's balance sheet.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82662,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale & Sons Debuts First Timepiece Under New Heritage Division",
+        "body": "Bram Wold unveiled the Aubrec Célestin, a limited run of 500 watches built on Calderon-made movements, marking the first fruit of the vertical integration push. Priced from $38,000, the launch showcases the newly folded Heritage Division and its in-house supply chain. Wold called it 'proof the acquisitions were about craft, not just balance sheets.'",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
