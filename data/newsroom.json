@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-31T14:11:08.560Z",
+  "generatedAt": "2026-07-31T19:35:02.733Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Blackhold Names Turnaround Specialist Dabney to Steer Post-Scandal Rebuild",
+      "body": "Following Renata Solberg's resignation, the board tapped former grid-compliance chief Halden Dabney as chief executive with a mandate to rebuild regulator trust. Dabney pledged an independent audit of every test record and a full replacement of the storage division's leadership. Acting CEO Anders Vell returns to his chief operating role.",
+      "cycle": 82663,
+      "dur": 2
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Boreas Power Sells Halvard Legacy Grid Unit to Cordell in $3.4 Billion Deal",
+      "body": "Boreas agreed to offload its non-core Halvard transmission assets to Cordell Utilities for $3.4 billion, capping the cleanup CEO Mira Thorne promised after a costly integration quarter. Proceeds will pay down debt taken on during the original Halvard absorption and fund expansion of the compute-power division. Thorne called the sale 'the last chapter of the Halvard reset.'",
+      "cycle": 82663,
+      "dur": 2
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Bruncraft Slapped With Record $2.1 Billion Verdict as Axle Injury Trial Ends",
+      "body": "A jury awarded $2.1 billion to plaintiffs in the consolidated axle-defect trial, finding Bruncraft ignored internal warnings for nearly three years before the recall. CEO Dessa Corvane called the verdict 'a painful but necessary reckoning' and pledged an immediate appeal while setting aside a $900 million reserve. The award is among the largest ever levied against an automaker in a single defect case.",
+      "cycle": 82663,
+      "dur": 8
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Bruncrest Works Misses as Aria Ultra Ramp Costs Outpace Early Sales",
+      "body": "Bruncrest fell short of estimates as the Aria Ultra launch drove up costs faster than initial units could ship, with margins compressed by the second Eastfield line's start-up. CEO Ines Marlow defended the aggressive push, insisting the Ultra backlog validates the bet even as near-term profit slips. The company held full-year targets but acknowledged a lumpy quarter ahead.",
+      "cycle": 82663,
+      "dur": 2
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Erretmark Works Beats as Veyron Line Lifts Margins to Century High",
+      "body": "Erretmark posted quarterly operating margins of 21%, its richest since founding, driven by the sovereign fund's 1,200-unit Veyron order beginning to ship. CEO Aurelia Garr said the ultra-luxury line has already exceeded its full-year revenue target, with a two-year waitlist forming for the roadster. The company raised guidance and hinted at a second Veyron model in development.",
+      "cycle": 82663,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Ornewright Supply Rolls Out New Sanitation Concentrate Line for Food Service Clients",
+      "body": "Ornewright introduced its Meridian line of concentrated cleaning and sanitation products aimed at its growing food-service customer base. CEO Rhys Throne framed the launch as a natural cross-sell into the cold-chain accounts secured over the past year. Early orders came from three regional distributors ahead of the Dunmere hub opening.",
+      "cycle": 82663,
+      "dur": 1
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Thaldale Ousts CEO Trent as Board Loses Faith in Turnaround Amid Widening Probe",
+      "body": "The board removed Marlowe Trent after a stormy 14-month tenure marked by plant closures, an investor suit, and a regulatory fastening probe that shows no sign of easing. Veteran operations chief Corin Vale steps in as interim then permanent chief, promising to stabilize the remaining fastening lines before pursuing any further cuts. Shares of the tool maker have shed nearly half their value since Trent's plan was unveiled.",
+      "cycle": 82663,
+      "dur": 8
+    },
+    {
+      "company": "Tillage & Co.",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Tillage & Co. Extends Streak With Another Firm Quarter as Blending Holds Full",
+      "body": "Tillage delivered a fifth consecutive on-target quarter, with its blending facility running at capacity and input demand steady across core farm regions. CEO Kestrel Fenn noted margins held flat and reaffirmed the company's modest dividend. Management flagged no surprises and reiterated its unchanged outlook.",
+      "cycle": 82663,
+      "dur": 1
+    },
     {
       "company": "Brunmark Motors",
       "sector": "automotive",
@@ -42,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Nudges Past Estimates as Westline Base Holds Firm",
-      "body": "Dorian Steg's steady-hand approach delivered another modest beat, with quarterly revenue up 4.6% as the bedded-in Westline contracts continued to generate reliable margins. Management reaffirmed guidance and flagged two smaller regional bids in the pipeline. Steg reiterated a preference for 'durable, unglamorous growth.'",
-      "cycle": 82662,
-      "dur": 1
-    },
-    {
       "company": "Palettstone & Sons",
       "sector": "consumer",
       "kind": "product_launch",
@@ -60,16 +130,6 @@
       "body": "Cole Fenn introduced the Heirloom Pro Anchor range, a modular fastening and bit system aimed at professional contractors, building on the sell-through momentum of the precision set. The second plant, now clear of backorders, will handle initial production. Fenn signaled measured optimism, noting early trade-channel pre-orders 'point to the same pattern we saw last cycle.'",
       "cycle": 82662,
       "dur": 2
-    },
-    {
-      "company": "Skarngrave",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Skarngrave Posts Steady Beat as Sterilizer Shipments Ramp on Schedule",
-      "body": "Orla Dray reported a quarterly beat with revenue up 7% as hospital-network sterilizer deliveries accelerated against the $420M contract. The added assembly capacity is running near plan, and Dray confirmed no slippage in the shipment timeline. She described operations as 'exactly where we said they'd be.'",
-      "cycle": 82662,
-      "dur": 1
     },
     {
       "company": "Varnvale & Sons",
@@ -90,46 +150,6 @@
       "body": "Regulators at the Industrial Equipment Safety Bureau opened a formal probe into as many as 14,000 machines certified between 2021 and 2025 under falsified test records. CEO Marlow Demore pledged full cooperation and set aside 210M for potential remediation, but conceded the inquiry could stretch across three product lines. Shares of the manufacturer have now shed nearly a third of their value since the scandal first broke.",
       "cycle": 82661,
       "dur": 8
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drustcraft Wins Multi-Year Fastener Supply Contract Worth 280M",
-      "body": "Fresh off clearing its recall overhang, Drustcraft secured a four-year, 280M agreement to supply Fasteners & Fixings to a national appliance and machinery group. CEO Cora Fenn called the win validation of the firm's rebuilt quality controls following last year's batch recall. The deal diversifies Drustcraft beyond its twin vehicle-line dependence.",
-      "cycle": 82661,
-      "dur": 2
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fennmoor Beats as Threll Suite Deal Drives Diagnostics Revenue 22% Higher",
-      "body": "Fennmoor topped estimates with quarterly revenue up 22% year-on-year, led by the ramping 900M hospital-system contract and strong bedside module attach rates. CEO Dorian Brandt credited the Callent integration for pulling Devices and Medical Equipment orders into a single pipeline. Management raised full-year guidance and hinted at a further diagnostics tuck-in acquisition.",
-      "cycle": 82661,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Halhold Works Names Veteran Operator Priya Vantt as Chief Operating Officer to Steady Ship",
-      "body": "CEO Marcus Thorne installed Priya Vantt, former head of the firm's Wire & Cable division, as COO with a mandate to rebuild the Medical Equipment unit gutted by the Aveline recall. Vantt will oversee a 90-day quality audit spanning all three product categories as the investor class action proceeds. The appointment signals Thorne is delegating operations while he manages the legal fallout personally.",
-      "cycle": 82661,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Vossenspire Supply Folds Larkmoor and Corveil Into New Retail Division",
-      "body": "Vossenspire consolidated its recent Larkmoor salon chain and Corveil strapmaker into a unified Vossenspire Retail arm, targeting 60M in annual synergies by 2028. CEO Quinn Marrow named longtime Timepieces chief Halden Rooke to lead the division as integration costs weigh near-term. The move caps a roughly 1.1B acquisition spree aimed at controlling the path from workshop to showroom floor.",
-      "cycle": 82661,
-      "dur": 2
     },
     {
       "company": "Halcrow & Vance",
@@ -229,26 +249,6 @@
       "head": "Maison & Vale Strikes $3.2 Billion Deal for Cleaning-Chemicals Giant Northram",
       "body": "Fresh off digesting Calbrook, Rhys Kessler unveiled the acquisition of Northram Solutions, a jansan-chemicals maker with 4,000 employees, in a $3.2 billion cash-and-stock deal. The purchase nearly doubles the Cleaning & Jansan division's revenue base, though analysts flagged integration risk given the back-to-back dealmaking pace.",
       "cycle": 82656,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Castlestone Idles Grid Division as Karsh Bets on Sweeping Overhaul After Overheating Probe",
-      "body": "CEO Pell Karsh announced an immediate suspension of Grid Division shipments and a $340M redesign of the tier's thermal architecture, calling it 'a reset, not a retreat.' Roughly 900 division staff will be reassigned during the six-month rebuild, and the landmark $1.1B grid contract has been renegotiated with milestone deferrals. Karsh staked his reputation on the fix, promising a relaunch that 'sets the standard the regulators wanted all along.'",
-      "cycle": 82655,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Halhold Works Hit With Investor Class Action Over Aveline Disclosures as Losses Mount",
-      "body": "A consolidated shareholder suit filed this week alleges Halhold executives concealed known Aveline Monitor defects for months before launch, seeking damages tied to the stock's collapse. New CEO Marcus Thorne acknowledged the recall would cost an estimated $410M and set aside a $120M legal reserve, while pledging full cooperation with regulators. The suit names former CEO Lena Faircloth and several ousted board members.",
-      "cycle": 82655,
       "dur": 8
     }
   ]

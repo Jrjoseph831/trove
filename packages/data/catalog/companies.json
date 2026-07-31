@@ -812,14 +812,14 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1972,
-    "ceo": "Anders Vell",
+    "ceo": "Halden Dabney",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82653,
+    "lastEventCycle": 82663,
     "events": [
       {
         "cycle": 0,
@@ -989,6 +989,14 @@
         "size": "major",
         "head": "Blackhold CEO Renata Solberg Resigns as Falsified-Records Fallout Deepens",
         "body": "Renata Solberg stepped down after regulators referred the falsified grid-storage test records for possible enforcement, with the national program suspending new site certifications pending review. The board installed compliance veteran Anders Vell as chief executive to steer remediation and rebuild regulator trust. Blackhold set aside 140M against potential penalties and remediation costs.",
+        "effects": {}
+      },
+      {
+        "cycle": 82663,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Blackhold Names Turnaround Specialist Dabney to Steer Post-Scandal Rebuild",
+        "body": "Following Renata Solberg's resignation, the board tapped former grid-compliance chief Halden Dabney as chief executive with a mandate to rebuild regulator trust. Dabney pledged an independent audit of every test record and a full replacement of the storage division's leadership. Acting CEO Anders Vell returns to his chief operating role.",
         "effects": {}
       }
     ]
@@ -1286,16 +1294,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82657,
+    "lastEventCycle": 82663,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Boreas Power — Energy that answers when called",
-        "body": "Born from a cold-country drive to keep the lights on through punishing winters, Boreas builds power and storage gear alongside the compute that orchestrates it. The economy units back up homes and small shops; the premium systems steady whole facilities through the worst the grid can throw. They engineer for the moment everything else fails. Operators trust a Boreas bank to hold the line. Reserves you forget about, right up until they save you.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "major_deal",
@@ -1525,6 +1525,16 @@
         "effects": {
           "energy": -0.13
         }
+      },
+      {
+        "cycle": 82663,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Boreas Power Sells Halvard Legacy Grid Unit to Cordell in $3.4 Billion Deal",
+        "body": "Boreas agreed to offload its non-core Halvard transmission assets to Cordell Utilities for $3.4 billion, capping the cleanup CEO Mira Thorne promised after a costly integration quarter. Proceeds will pay down debt taken on during the original Halvard absorption and fund expansion of the compute-power division. Thorne called the sale 'the last chapter of the Halvard reset.'",
+        "effects": {
+          "energy": 0.13
+        }
       }
     ]
   },
@@ -1539,7 +1549,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82654,
+    "lastEventCycle": 82663,
     "events": [
       {
         "cycle": 0,
@@ -1736,6 +1746,16 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82663,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Bruncraft Slapped With Record $2.1 Billion Verdict as Axle Injury Trial Ends",
+        "body": "A jury awarded $2.1 billion to plaintiffs in the consolidated axle-defect trial, finding Bruncraft ignored internal warnings for nearly three years before the recall. CEO Dessa Corvane called the verdict 'a painful but necessary reckoning' and pledged an immediate appeal while setting aside a $900 million reserve. The award is among the largest ever levied against an automaker in a single defect case.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -1750,16 +1770,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82657,
+    "lastEventCycle": 82663,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Bruncrest Works — Quiet machines, serious work",
-        "body": "Bruncrest Works makes compute for everyone from the kitchen-table user to the server room that can't go dark. The mass machines are cheerful, capable, and priced for the masses they're named for. The premium boards and systems are something colder and sharper, clocked high, cooled hard, and stable under loads that crater lesser hardware. Engineers respect Bruncrest because the silicon does what the datasheet promises. In a field full of noise, the brand earns trust by simply not breaking.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "major_deal",
@@ -1982,6 +1994,16 @@
         "body": "Bruncrest Works launched the Aria Ultra, its most powerful compute unit yet, pledging a doubling of throughput per rack over the Aria Pro. CEO Ines Marlow staged a splashy reveal at the Eastfield campus, taking early commitments she valued at $1.1B and promising first shipments next quarter. Skeptics noted the aggressive timeline echoes earlier supply stumbles the company only recently cleared.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82663,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Bruncrest Works Misses as Aria Ultra Ramp Costs Outpace Early Sales",
+        "body": "Bruncrest fell short of estimates as the Aria Ultra launch drove up costs faster than initial units could ship, with margins compressed by the second Eastfield line's start-up. CEO Ines Marlow defended the aggressive push, insisting the Ultra backlog validates the bet even as near-term profit slips. The company held full-year targets but acknowledged a lumpy quarter ahead.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -5240,7 +5262,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82652,
+    "lastEventCycle": 82663,
     "events": [
       {
         "cycle": 0,
@@ -5388,6 +5410,16 @@
         "body": "Erretmark Works secured a $2.1 billion commitment from the Marrenth Sovereign Collector Fund for 1,200 bespoke Veyron-badged roadsters over four years, the largest single order in the marque's history. CEO Aurelia Garr said the deal validates the ultra-luxury acquisition and will fund a third build bay at the Sorne atelier. Deliveries begin in the coming quarter, with each unit individually commissioned.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82663,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Erretmark Works Beats as Veyron Line Lifts Margins to Century High",
+        "body": "Erretmark posted quarterly operating margins of 21%, its richest since founding, driven by the sovereign fund's 1,200-unit Veyron order beginning to ship. CEO Aurelia Garr said the ultra-luxury line has already exceeded its full-year revenue target, with a two-year waitlist forming for the roadster. The company raised guidance and hinted at a second Veyron model in development.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -10538,7 +10570,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82648,
+    "lastEventCycle": 82663,
     "events": [
       {
         "cycle": 0,
@@ -10646,6 +10678,16 @@
         "body": "Building on Caldmere's full utilization, Rhys Throne announced a $130 million cold-chain facility at Dunmere to serve southern food-service accounts. The site will add roughly 90,000 pallet positions and 210 jobs, with first operations targeted for late next year. Throne said existing multi-year contracts already commit about half the planned capacity.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82663,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Ornewright Supply Rolls Out New Sanitation Concentrate Line for Food Service Clients",
+        "body": "Ornewright introduced its Meridian line of concentrated cleaning and sanitation products aimed at its growing food-service customer base. CEO Rhys Throne framed the launch as a natural cross-sell into the cold-chain accounts secured over the past year. Early orders came from three regional distributors ahead of the Dunmere hub opening.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -11697,14 +11739,14 @@
     "aiOwned": true,
     "homeSector": "consumer",
     "founded": 1983,
-    "ceo": "Marlowe Trent",
+    "ceo": "Corin Vale",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.58,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82650,
+    "lastEventCycle": 82663,
     "events": [
       {
         "cycle": 0,
@@ -11829,6 +11871,14 @@
         "effects": {
           "consumer": -0.13
         }
+      },
+      {
+        "cycle": 82663,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Thaldale Ousts CEO Trent as Board Loses Faith in Turnaround Amid Widening Probe",
+        "body": "The board removed Marlowe Trent after a stormy 14-month tenure marked by plant closures, an investor suit, and a regulatory fastening probe that shows no sign of easing. Veteran operations chief Corin Vale steps in as interim then permanent chief, promising to stabilize the remaining fastening lines before pursuing any further cuts. Shares of the tool maker have shed nearly half their value since Trent's plan was unveiled.",
+        "effects": {}
       }
     ]
   },
@@ -12036,7 +12086,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82640,
+    "lastEventCycle": 82663,
     "events": [
       {
         "cycle": 0,
@@ -12102,6 +12152,16 @@
         "size": "flash",
         "head": "Tillage & Co. Posts Another Steady Quarter as Input Demand Holds Firm",
         "body": "Tillage & Co. edged slightly past forecasts, with revenue up 2.4% as the blending facility continued running at full output and seasonal farm-input demand held firm. CEO Kestrel Fenn offered no surprises, reiterating the company's unchanged full-year guidance. Margins were flat versus the prior quarter.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82663,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Tillage & Co. Extends Streak With Another Firm Quarter as Blending Holds Full",
+        "body": "Tillage delivered a fifth consecutive on-target quarter, with its blending facility running at capacity and input demand steady across core farm regions. CEO Kestrel Fenn noted margins held flat and reaffirmed the company's modest dividend. Management flagged no surprises and reiterated its unchanged outlook.",
         "effects": {
           "agriculture": 0.06
         }
