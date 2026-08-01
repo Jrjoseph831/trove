@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-07-31T19:35:02.733Z",
+  "generatedAt": "2026-08-01T02:55:43.360Z",
   "beats": [
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "major",
+      "head": "Brunstone & Sons Recalls 220,000 Vault Cell Guard Pro Units as Probe Turns to Fleet Fires",
+      "body": "Brunstone & Sons issued a sweeping recall of 220,000 Vault Cell Guard Pro units after investigators linked the overheating reports to three long-haul fleet fires, with total costs estimated near $480M. CEO Halden Crowe, who months ago broke ground on a third plant to feed the product's backlog, admitted the launch 'moved faster than our validation.' Shipments from all three cell plants are paused pending a root-cause fix.",
+      "cycle": 82664,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "breakthrough",
+      "size": "standard",
+      "head": "Castlestone Unveils Redesigned Grid Cores as Karsh's Overhaul Clears First Thermal Trials",
+      "body": "Castlestone said its reengineered Grid division cores passed independent thermal-stress testing across 40,000 hours of continuous load, resolving the overheating flaws that triggered last quarter's probe. CEO Pell Karsh called the redesign 'a total teardown, not a patch,' and confirmed the idled division will restart limited production next month. Regulators have signaled the probe could close if field data holds.",
+      "cycle": 82664,
+      "dur": 2
+    },
+    {
+      "company": "Dunmorestone",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Dunmorestone Edges Past Estimates as Food Service and Plumbing Both Contribute",
+      "body": "Dunmorestone reported a modest quarterly beat, with revenue up 4% as the cafeteria kitchen ramp and multi-site plumbing award both delivered steady contributions. CEO Orla Mercer characterized the results as 'exactly the quiet, dependable quarter we planned for.' The company reaffirmed full-year guidance.",
+      "cycle": 82664,
+      "dur": 1
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "expansion",
+      "size": "major",
+      "head": "Greywater Grid Launches $2B Reservoir-Compute Buildout to Serve Landmark Capacity Pact",
+      "body": "Greywater Grid unveiled a $2B expansion pairing three new reservoir-backed power sites with dedicated compute halls to fulfill its recently signed $1.6B capacity pact. CEO Sable Renwick, moving at a blistering pace since the reservoir rebuild, said first sites go live within nine months and called the plan 'the clearest bet we've ever placed.' The company will fund the buildout through a mix of committed pact revenue and a new $900M financing facility.",
+      "cycle": 82664,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Halhold Systems Misses on Quarter as Outage and Recall Costs Bite Into $900M Pact",
+      "body": "Halhold Systems reported quarterly revenue of $310M, below its $370M target, as the multi-day campus outage and subsequent compute-unit recall pushed delivery milestones on its $900M pact into next year. CEO Corin Vale said penalty clauses and replacement hardware carved roughly $85M from margins. The third compute campus remains on schedule, which Vale framed as proof of 'long-term commitment despite a bruising stretch.'",
+      "cycle": 82664,
+      "dur": 2
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Korrworks Opens Cross-Region Hub With Both Anchor Tenants Live From Day One",
+      "body": "Korrworks cut the ribbon on its Cross-Region Hub, opening at 85% committed capacity with both anchor tenants operational and the automated sorting layer processing peak volumes on schedule. CEO Rhys Throne said day-one throughput exceeded internal projections by 12%, and hinted a fourth hub site is under evaluation. The facility supports the landmark handling pact signed last year.",
+      "cycle": 82664,
+      "dur": 2
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Skarnvale Stumbles as Triple Retrofit Push Strains Cash and Delays Vosk Junction",
+      "body": "Skarnvale posted a quarterly loss of $34M as simultaneous retrofits at three terminals overwhelmed capital reserves and pushed the Vosk Junction opening back by a quarter. CEO Dorn Vaskell defended the pace, saying 'spreading the Braeloch blueprint fast is worth a rough quarter,' but analysts questioned funding the third retrofit before the second earns out. The company drew down $60M on its credit line to bridge the gap.",
+      "cycle": 82664,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "standard",
+      "head": "Thronehaus & Co. Verrand Marchwick Line Takes Top Honors at Grand Horology Salon",
+      "body": "Thronehaus & Co. swept the case-craft category at the Grand Horology Salon, with judges singling out the Ferrault-built Verrand Marchwick casework for its hand-finished lugs. CEO Cora Dray called the win 'vindication of bringing casemaking under our own roof.' The recognition arrives less than a year after the Ferrault acquisition and the opening of the Verrand Atelier.",
+      "cycle": 82664,
+      "dur": 2
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -52,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Ornewright Supply Rolls Out New Sanitation Concentrate Line for Food Service Clients",
-      "body": "Ornewright introduced its Meridian line of concentrated cleaning and sanitation products aimed at its growing food-service customer base. CEO Rhys Throne framed the launch as a natural cross-sell into the cold-chain accounts secured over the past year. Early orders came from three regional distributors ahead of the Dunmere hub opening.",
-      "cycle": 82663,
-      "dur": 1
-    },
-    {
       "company": "Thaldale Group",
       "sector": "consumer",
       "kind": "leadership_change",
@@ -72,46 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Tillage & Co.",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Tillage & Co. Extends Streak With Another Firm Quarter as Blending Holds Full",
-      "body": "Tillage delivered a fifth consecutive on-target quarter, with its blending facility running at capacity and input demand steady across core farm regions. CEO Kestrel Fenn noted margins held flat and reaffirmed the company's modest dividend. Management flagged no surprises and reiterated its unchanged outlook.",
-      "cycle": 82663,
-      "dur": 1
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Brunmark Motors Adds Battery-Pack Capacity to Sustain Veyra S Momentum",
-      "body": "Fresh off clearing the Veyra S backlog, Halvard Renn announced a $340M expansion of the Torrance battery line to lift pack output by roughly 40%. The move supports both vehicle demand and a nascent third-party Power & Storage supply effort. Renn framed the investment as 'the recovery becoming a growth story.'",
-      "cycle": 82662,
-      "dur": 2
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Castlehold Spins Off Saltmere Cleanup Unit as Voss Draws Line Under Legacy Liabilities",
-      "body": "Turnaround chief Halden Voss confirmed the carved-out Saltmere assets will now sit inside a standalone remediation subsidiary, Meridale Environmental, ringfenced with a $1.6B provision. Voss told staff the move lets the core Power & Storage business 'operate without the Saltmere shadow' while the $4.1B regulator suit proceeds separately. Analysts noted the structure caps downside for the parent but leaves cleanup timelines uncertain.",
-      "cycle": 82662,
-      "dur": 2
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fenncyon Beats and Lifts Guidance as Record Eastfield Backlog Converts to Revenue",
-      "body": "Nadia Ashby delivered a stronger-than-expected quarter, with the combined Southern Loop and Northern Spur packages driving a 12% revenue gain and prompting an upward guidance revision. The record backlog is now translating into steady billing across the Eastfield program. Ashby flagged early-stage interest in an adjacent Westfield tender.",
-      "cycle": 82662,
-      "dur": 2
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "major_deal",
@@ -120,26 +150,6 @@
       "body": "Cole Brandt landed a multi-year agreement to supply cell packs for a national grid-storage operator, validating the restarted sixth line and the broader storage push. The deal, worth up to $2.8B over six years, marks Lhaus's largest single contract outside automotive parts. Brandt called it 'the transformation we restarted that line for.'",
       "cycle": 82662,
       "dur": 8
-    },
-    {
-      "company": "Palettstone & Sons",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Palettstone & Sons Extends Heirloom Pro Line With New Fastening System",
-      "body": "Cole Fenn introduced the Heirloom Pro Anchor range, a modular fastening and bit system aimed at professional contractors, building on the sell-through momentum of the precision set. The second plant, now clear of backorders, will handle initial production. Fenn signaled measured optimism, noting early trade-channel pre-orders 'point to the same pattern we saw last cycle.'",
-      "cycle": 82662,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Varnvale & Sons Debuts First Timepiece Under New Heritage Division",
-      "body": "Bram Wold unveiled the Aubrec Célestin, a limited run of 500 watches built on Calderon-made movements, marking the first fruit of the vertical integration push. Priced from $38,000, the launch showcases the newly folded Heritage Division and its in-house supply chain. Wold called it 'proof the acquisitions were about craft, not just balance sheets.'",
-      "cycle": 82662,
-      "dur": 2
     },
     {
       "company": "Carrowforge",
@@ -229,26 +239,6 @@
       "head": "Ironcrestton CEO Wren Adler Steps Down as Origin Standard Crisis Deepens",
       "body": "Ironcrestton announced the immediate departure of CEO Wren Adler amid mounting litigation and audit fallout over its Origin Standard licensing program. The board named veteran operator Thea Blackwood as chief executive, tasking her with stabilizing licensee relations and settling the outstanding suits. Blackwood pledged an independent overhaul of certification and a pause on new licensing pending review.",
       "cycle": 82657,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Brunstone & Sons Faces Regulatory Probe Over Vault Cell Guard Pro Overheating Reports",
-      "body": "Safety regulators opened a formal investigation into the Vault Cell Guard Pro after eleven reported thermal incidents in long-haul fleet installations. Halden Crowe pledged full cooperation and paused new Pro shipments, a jarring reversal weeks after breaking ground on a third plant to feed the product's backlog.",
-      "cycle": 82656,
-      "dur": 8
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Maison & Vale Strikes $3.2 Billion Deal for Cleaning-Chemicals Giant Northram",
-      "body": "Fresh off digesting Calbrook, Rhys Kessler unveiled the acquisition of Northram Solutions, a jansan-chemicals maker with 4,000 employees, in a $3.2 billion cash-and-stock deal. The purchase nearly doubles the Cleaning & Jansan division's revenue base, though analysts flagged integration risk given the back-to-back dealmaking pace.",
-      "cycle": 82656,
       "dur": 8
     }
   ]

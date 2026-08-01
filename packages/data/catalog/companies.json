@@ -2482,7 +2482,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82656,
+    "lastEventCycle": 82664,
     "events": [
       {
         "cycle": 0,
@@ -2704,6 +2704,16 @@
         "size": "major",
         "head": "Brunstone & Sons Faces Regulatory Probe Over Vault Cell Guard Pro Overheating Reports",
         "body": "Safety regulators opened a formal investigation into the Vault Cell Guard Pro after eleven reported thermal incidents in long-haul fleet installations. Halden Crowe pledged full cooperation and paused new Pro shipments, a jarring reversal weeks after breaking ground on a third plant to feed the product's backlog.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82664,
+        "kind": "recall",
+        "size": "major",
+        "head": "Brunstone & Sons Recalls 220,000 Vault Cell Guard Pro Units as Probe Turns to Fleet Fires",
+        "body": "Brunstone & Sons issued a sweeping recall of 220,000 Vault Cell Guard Pro units after investigators linked the overheating reports to three long-haul fleet fires, with total costs estimated near $480M. CEO Halden Crowe, who months ago broke ground on a third plant to feed the product's backlog, admitted the launch 'moved faster than our validation.' Shipments from all three cell plants are paused pending a root-cause fix.",
         "effects": {
           "automotive": -0.22
         }
@@ -4019,16 +4029,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82655,
+    "lastEventCycle": 82664,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Castlestone — Compute carved to last",
-        "body": "Castlestone approaches computing like masonry: build it solid and let it stand. Their compute hardware spans approachable everyday units to premium workhorses tuned for sustained, punishing loads. The budget tier wins offices over on value; the high end wins labs over on stamina. Where rivals chase headline numbers, Castlestone chases the boring virtues, thermal headroom and clean uptime. The result is gear people forget about, in the best possible way.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "breakthrough",
@@ -4253,6 +4255,16 @@
         "body": "CEO Pell Karsh announced an immediate suspension of Grid Division shipments and a $340M redesign of the tier's thermal architecture, calling it 'a reset, not a retreat.' Roughly 900 division staff will be reassigned during the six-month rebuild, and the landmark $1.1B grid contract has been renegotiated with milestone deferrals. Karsh staked his reputation on the fix, promising a relaunch that 'sets the standard the regulators wanted all along.'",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82664,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Castlestone Unveils Redesigned Grid Cores as Karsh's Overhaul Clears First Thermal Trials",
+        "body": "Castlestone said its reengineered Grid division cores passed independent thermal-stress testing across 40,000 hours of continuous load, resolving the overheating flaws that triggered last quarter's probe. CEO Pell Karsh called the redesign 'a total teardown, not a patch,' and confirmed the idled division will restart limited production next month. Regulators have signaled the probe could close if field data holds.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -5046,7 +5058,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82645,
+    "lastEventCycle": 82664,
     "events": [
       {
         "cycle": 0,
@@ -5132,6 +5144,16 @@
         "size": "flash",
         "head": "Dunmorestone Delivers Quiet Beat as Plumbing Award Begins Contributing",
         "body": "Dunmorestone posted a modest 3% revenue rise as the multi-site Plumbing & Fixtures award started shipping alongside steady Food Service volumes. CEO Orla Mercer described the quarter as 'exactly on plan,' with the new cafeteria kitchen now running at full utilization. Management reaffirmed full-year guidance.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82664,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Dunmorestone Edges Past Estimates as Food Service and Plumbing Both Contribute",
+        "body": "Dunmorestone reported a modest quarterly beat, with revenue up 4% as the cafeteria kitchen ramp and multi-site plumbing award both delivered steady contributions. CEO Orla Mercer characterized the results as 'exactly the quiet, dependable quarter we planned for.' The company reaffirmed full-year guidance.",
         "effects": {
           "consumer": 0.06
         }
@@ -6306,7 +6328,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82654,
+    "lastEventCycle": 82664,
     "events": [
       {
         "cycle": 0,
@@ -6458,6 +6480,16 @@
         "size": "major",
         "head": "Greywater Grid Lands Landmark Compute Capacity Pact Worth $1.6B",
         "body": "Greywater Grid signed a seven-year capacity agreement to supply compute and backup power to the Vantor data consortium, a deal management valued at $1.6B over its term. CEO Sable Renwick called it validation of the rebuilt reservoir platform and the fastest major win in the house's history. The contract nearly doubles the company's committed forward revenue and marks a defining turn from last year's outages.",
+        "effects": {
+          "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82664,
+        "kind": "expansion",
+        "size": "major",
+        "head": "Greywater Grid Launches $2B Reservoir-Compute Buildout to Serve Landmark Capacity Pact",
+        "body": "Greywater Grid unveiled a $2B expansion pairing three new reservoir-backed power sites with dedicated compute halls to fulfill its recently signed $1.6B capacity pact. CEO Sable Renwick, moving at a blistering pace since the reservoir rebuild, said first sites go live within nine months and called the plan 'the clearest bet we've ever placed.' The company will fund the buildout through a mix of committed pact revenue and a new $900M financing facility.",
         "effects": {
           "energy": 0.22
         }
@@ -7143,18 +7175,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82657,
+    "lastEventCycle": 82664,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "earnings_miss",
-        "size": "standard",
-        "head": "Halhold Systems Books Charge as Northgate Costs Overrun",
-        "body": "Halhold Systems posted softer quarterly figures after the Northgate build ran past budget, with Cora Aldous citing labor shortfalls and steel pricing. The firm absorbed a one-time charge tied to delayed power hookups at the Coldwater grid. Aldous insisted the campus remains 'the right bet, just a heavier one.'",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82524,
         "kind": "leadership_change",
@@ -7377,6 +7399,16 @@
         "body": "Halhold Systems issued a sweeping recall of compute modules after its post-outage investigation traced the multi-day failure to a defective cooling assembly shipped across recent campus builds. CEO Corin Vale acknowledged the $900M pact timeline is now 'materially at risk' and set aside $210M for remediation and replacements. Clients were offered credits as the company scrambles to certify corrected units.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82664,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Halhold Systems Misses on Quarter as Outage and Recall Costs Bite Into $900M Pact",
+        "body": "Halhold Systems reported quarterly revenue of $310M, below its $370M target, as the multi-day campus outage and subsequent compute-unit recall pushed delivery milestones on its $900M pact into next year. CEO Corin Vale said penalty clauses and replacement hardware carved roughly $85M from margins. The third compute campus remains on schedule, which Vale framed as proof of 'long-term commitment despite a bruising stretch.'",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -8916,7 +8948,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82651,
+    "lastEventCycle": 82664,
     "events": [
       {
         "cycle": 0,
@@ -9034,6 +9066,16 @@
         "body": "Korrworks unveiled a new high-throughput sorting configuration for its still-unfinished cross-region hub, promising 30% faster transfer times for its two anchor tenants. CEO Rhys Throne framed the rollout as a proof point that the facility would open 'not just on time, but ahead of its class.' Full commissioning remains slated for next quarter.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82664,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrworks Opens Cross-Region Hub With Both Anchor Tenants Live From Day One",
+        "body": "Korrworks cut the ribbon on its Cross-Region Hub, opening at 85% committed capacity with both anchor tenants operational and the automated sorting layer processing peak volumes on schedule. CEO Rhys Throne said day-one throughput exceeded internal projections by 12%, and hinted a fourth hub site is under evaluation. The facility supports the landmark handling pact signed last year.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -11238,7 +11280,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82652,
+    "lastEventCycle": 82664,
     "events": [
       {
         "cycle": 0,
@@ -11362,6 +11404,16 @@
         "body": "Skarnvale announced a $310 million retrofit of its Cardryn Wharf terminal, extending the Braeloch handling blueprint to a third site months ahead of plan. CEO Dorn Vaskell said Vosk Junction throughput has already exceeded early targets, justifying the accelerated rollout. The turbulent expansion pace has raised some concern about capital strain, though the company reaffirmed liquidity guidance.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82664,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Skarnvale Stumbles as Triple Retrofit Push Strains Cash and Delays Vosk Junction",
+        "body": "Skarnvale posted a quarterly loss of $34M as simultaneous retrofits at three terminals overwhelmed capital reserves and pushed the Vosk Junction opening back by a quarter. CEO Dorn Vaskell defended the pace, saying 'spreading the Braeloch blueprint fast is worth a rough quarter,' but analysts questioned funding the third retrofit before the second earns out. The company drew down $60M on its credit line to bridge the gap.",
+        "effects": {
+          "logistics": -0.13
         }
       }
     ]
@@ -11893,7 +11945,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82655,
+    "lastEventCycle": 82664,
     "events": [
       {
         "cycle": 0,
@@ -12069,6 +12121,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Debuts Verrand Marchwick Line Built Entirely on Ferrault Casework",
         "body": "Thronehaus unveiled its first collection produced end-to-end at the new Marchwick atelier, featuring in-house Ferrault cases and a refined Verrand movement. CEO Cora Dray priced the limited run at a premium and said the vertical integration had shaved lead times by nearly four months. Initial allocations to flagship boutiques sold through pre-order lists within days.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82664,
+        "kind": "award",
+        "size": "standard",
+        "head": "Thronehaus & Co. Verrand Marchwick Line Takes Top Honors at Grand Horology Salon",
+        "body": "Thronehaus & Co. swept the case-craft category at the Grand Horology Salon, with judges singling out the Ferrault-built Verrand Marchwick casework for its hand-finished lugs. CEO Cora Dray called the win 'vindication of bringing casemaking under our own roof.' The recognition arrives less than a year after the Ferrault acquisition and the opening of the Verrand Atelier.",
         "effects": {
           "luxury": 0.13
         }
