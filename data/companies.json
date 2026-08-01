@@ -236,7 +236,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82646,
+    "lastEventCycle": 82665,
     "events": [
       {
         "cycle": 0,
@@ -322,6 +322,16 @@
         "size": "flash",
         "head": "Aldousmont & Sons Holds Steady as Sterile Field Kits Gain Early Traction",
         "body": "The medical house edged revenue up 3% as new Sterile Field Kits added to the Peel-Free line and multi-region contracts held firm. CEO Dunmore Calder reaffirmed full-year guidance, citing consistent consumable reorder rates. Management noted no material change to input costs.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82665,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldousmont & Sons Posts Steady Quarter as Sterile Field Kits Build Share",
+        "body": "Dunmore Calder reported flat-to-modestly-higher results, with sterile field kits now contributing a growing slice of consumables revenue. Peel-Free wrap held its share amid stable hospital demand. Calder reaffirmed the company's unhurried full-year outlook.",
         "effects": {
           "medical": 0.06
         }
@@ -2731,7 +2741,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82646,
+    "lastEventCycle": 82665,
     "events": [
       {
         "cycle": 0,
@@ -2829,6 +2839,16 @@
         "body": "The house committed $85M to a new distribution center aimed at shortening delivery times for its fast-growing Weatherproof range across Household Goods and Hardware & Tools. CEO Vale Fenn said the facility would support the line's expansion without straining existing hubs. The center is expected to open within nine months.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82665,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Caldercraft Holdings Adds Insulated Storage Chests to Weatherproof Line",
+        "body": "Vale Fenn introduced a trio of insulated outdoor storage chests, extending the weatherproof range that has carried recent quarters. Priced for the mid-tier household segment, the new units share tooling with existing lines to hold costs steady. Fenn described the rollout as a natural fill-in rather than a strategic shift.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -4546,7 +4566,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82647,
+    "lastEventCycle": 82665,
     "events": [
       {
         "cycle": 0,
@@ -4642,6 +4662,16 @@
         "size": "standard",
         "head": "Drayton Freight Beats as National Fleet Rollout Lifts Pallet-Lift Volumes",
         "body": "Drayton Freight reported quarterly revenue of $612 million, up 14% year-over-year, as the multi-depot fleet deal moved into active deployment across 22 sites. CEO Emil Holt credited the heavy-duty pallet-lift line for a 220-basis-point margin improvement, noting depot reorders have outpaced internal forecasts. The company nudged its full-year outlook higher.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82665,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Drayton Freight Opens Second Assembly Plant to Meet Pallet-Lift Demand",
+        "body": "Emil Holt broke ground on a second assembly facility to keep pace with the national fleet rollout, a rare capacity bet for the steady operator. The plant will roughly double heavy-duty pallet-lift output when it reaches full capacity in about a year. Holt said existing depot demand alone justified the $210 million investment.",
         "effects": {
           "logistics": 0.13
         }
@@ -6029,7 +6059,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82649,
+    "lastEventCycle": 82665,
     "events": [
       {
         "cycle": 0,
@@ -6135,6 +6165,16 @@
         "size": "standard",
         "head": "Garrware Breaks Ground on Fourth Marrow Valley Line as Anchor Volumes Outpace Depot",
         "body": "With the third line running flat-out and the automated sorting bay clearing its backlog, CEO Orla Holt confirmed a fourth production line to lift Marrow Valley capacity by an estimated 28%. The build carries a 14-month timeline, funded from operating cash rather than new borrowing, keeping the balance sheet in line with Holt's long-held discipline.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82665,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Garrware Lifts Margins as Marrow Valley Fourth Line Nears Startup",
+        "body": "Orla Holt reported a 14% rise in quarterly operating profit, crediting automated sorting for trimming per-unit handling costs to a record low. The fourth Marrow Valley line remains on schedule for commissioning next quarter, with anchor contracts already covering an estimated 70% of its capacity. Holt reiterated her preference for measured, self-funded growth.",
         "effects": {
           "logistics": 0.13
         }
@@ -6507,18 +6547,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82659,
+    "lastEventCycle": 82665,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "award",
-        "size": "flash",
-        "head": "Gromford Works Aurelian Named Piece of the Year at Halverford Guild",
-        "body": "The Halverford Watchmakers Guild handed Gromford Works its top honor for the Aurelian Tourbillon, praising its movement finishing. Mira Ashby accepted on stage and immediately teased a second collection. The recognition cements a banner season for the house.",
-        "effects": {
-          "luxury": 0.06
-        }
-      },
       {
         "cycle": 82525,
         "kind": "expansion",
@@ -6739,6 +6769,16 @@
         "size": "major",
         "head": "Gromford Works Reels as Internal Memos Reveal Executives Knew of Meridian Sourcing Gaps for Years",
         "body": "Leaked internal correspondence shows Gromford leadership was warned about the undisclosed Meridian tourbillon supplier as far back as 2023, deepening the crisis that already cost Corin Aldwych his post. CEO Dahlia Verrint faces mounting pressure as regulators expand their inquiry and two flagship boutiques suspend Meridian-line sales. The revelations wiped out an estimated $900 million in market value and prompted calls for a full board review.",
+        "effects": {
+          "luxury": -0.22
+        }
+      },
+      {
+        "cycle": 82665,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Gromford Works Faces Regulatory Charges as Meridian Probe Turns Criminal",
+        "body": "Prosecutors filed formal charges against Gromford Works and two former executives, alleging years of concealed sourcing violations tied to the Meridian supply chain. Dahlia Verrint, installed after Corin Aldwych's ouster, said the company would cooperate fully while setting aside $340 million against potential penalties and settlements. The timepiece division suspended several product lines pending a sourcing audit.",
         "effects": {
           "luxury": -0.22
         }
@@ -8591,7 +8631,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82652,
+    "lastEventCycle": 82665,
     "events": [
       {
         "cycle": 0,
@@ -8738,6 +8778,16 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82665,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Kessel Drive Halts Storage Production and Cuts 4,200 Jobs in Sweeping Overhaul",
+        "body": "Neave Corliss announced a full suspension of the flagged storage line and a 4,200-headcount reduction across three plants, framing the move as a 'reset to zero' after the widening probe. The company will take an $880 million restructuring charge and pull its full-year guidance entirely. Corliss pledged a redesigned storage architecture within nine months, calling it 'the only path back.'",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -8752,7 +8802,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82649,
+    "lastEventCycle": 82665,
     "events": [
       {
         "cycle": 0,
@@ -8858,6 +8908,16 @@
         "size": "flash",
         "head": "Kesselgrove Co. Clears Estimates Again as Press Backlog Extends",
         "body": "Kesselgrove edged past forecasts as modular press orders pushed the backlog to a record 11 months. CEO Orla Steg said the tooling bay is now running at full utilization, with margins steady as pricing held firm against input costs.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82665,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Kesselgrove Co. Edges Estimates as Press Backlog Holds Firm",
+        "body": "Orla Steg reported another modest beat, with press output steady and the order backlog now stretching 11 months. Margins ticked up slightly on improved tooling-bay throughput. Steg offered no change to the company's understated outlook.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -9863,7 +9923,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82656,
+    "lastEventCycle": 82665,
     "events": [
       {
         "cycle": 0,
@@ -10059,6 +10119,16 @@
         "body": "Adele Ferran secured Marlgear's largest post-turnaround order, a $290 million multi-year deployment of the Kessel industrial platform across Halden Mining's processing sites. Ferran called it validation of the bold post-turnaround bet, projecting the win would carry the Industrial Machines unit to double-digit growth next year.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82665,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Marlgear Supply Wins Landmark Kessel Platform Contract Across Verrant Rail Network",
+        "body": "Adele Ferran secured a five-year, $1.2 billion agreement to deploy the Kessel Industrial Platform across the entire Verrant Rail maintenance network, the largest order in Marlgear's history. Ferran called it 'the deal that proves the turnaround is real,' projecting the contract alone will add roughly 18% to annual revenue at full ramp. Deliveries begin next quarter following the Halden Mining rollout.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]

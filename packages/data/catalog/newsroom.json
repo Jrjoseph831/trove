@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-01T02:55:43.360Z",
+  "generatedAt": "2026-08-01T08:23:36.363Z",
   "beats": [
+    {
+      "company": "Aldousmont & Sons",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldousmont & Sons Posts Steady Quarter as Sterile Field Kits Build Share",
+      "body": "Dunmore Calder reported flat-to-modestly-higher results, with sterile field kits now contributing a growing slice of consumables revenue. Peel-Free wrap held its share amid stable hospital demand. Calder reaffirmed the company's unhurried full-year outlook.",
+      "cycle": 82665,
+      "dur": 1
+    },
+    {
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Caldercraft Holdings Adds Insulated Storage Chests to Weatherproof Line",
+      "body": "Vale Fenn introduced a trio of insulated outdoor storage chests, extending the weatherproof range that has carried recent quarters. Priced for the mid-tier household segment, the new units share tooling with existing lines to hold costs steady. Fenn described the rollout as a natural fill-in rather than a strategic shift.",
+      "cycle": 82665,
+      "dur": 1
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Drayton Freight Opens Second Assembly Plant to Meet Pallet-Lift Demand",
+      "body": "Emil Holt broke ground on a second assembly facility to keep pace with the national fleet rollout, a rare capacity bet for the steady operator. The plant will roughly double heavy-duty pallet-lift output when it reaches full capacity in about a year. Holt said existing depot demand alone justified the $210 million investment.",
+      "cycle": 82665,
+      "dur": 2
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Garrware Lifts Margins as Marrow Valley Fourth Line Nears Startup",
+      "body": "Orla Holt reported a 14% rise in quarterly operating profit, crediting automated sorting for trimming per-unit handling costs to a record low. The fourth Marrow Valley line remains on schedule for commissioning next quarter, with anchor contracts already covering an estimated 70% of its capacity. Holt reiterated her preference for measured, self-funded growth.",
+      "cycle": 82665,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Gromford Works Faces Regulatory Charges as Meridian Probe Turns Criminal",
+      "body": "Prosecutors filed formal charges against Gromford Works and two former executives, alleging years of concealed sourcing violations tied to the Meridian supply chain. Dahlia Verrint, installed after Corin Aldwych's ouster, said the company would cooperate fully while setting aside $340 million against potential penalties and settlements. The timepiece division suspended several product lines pending a sourcing audit.",
+      "cycle": 82665,
+      "dur": 8
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Kessel Drive Halts Storage Production and Cuts 4,200 Jobs in Sweeping Overhaul",
+      "body": "Neave Corliss announced a full suspension of the flagged storage line and a 4,200-headcount reduction across three plants, framing the move as a 'reset to zero' after the widening probe. The company will take an $880 million restructuring charge and pull its full-year guidance entirely. Corliss pledged a redesigned storage architecture within nine months, calling it 'the only path back.'",
+      "cycle": 82665,
+      "dur": 8
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Kesselgrove Co. Edges Estimates as Press Backlog Holds Firm",
+      "body": "Orla Steg reported another modest beat, with press output steady and the order backlog now stretching 11 months. Margins ticked up slightly on improved tooling-bay throughput. Steg offered no change to the company's understated outlook.",
+      "cycle": 82665,
+      "dur": 1
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Marlgear Supply Wins Landmark Kessel Platform Contract Across Verrant Rail Network",
+      "body": "Adele Ferran secured a five-year, $1.2 billion agreement to deploy the Kessel Industrial Platform across the entire Verrant Rail maintenance network, the largest order in Marlgear's history. Ferran called it 'the deal that proves the turnaround is real,' projecting the contract alone will add roughly 18% to annual revenue at full ramp. Deliveries begin next quarter following the Halden Mining rollout.",
+      "cycle": 82665,
+      "dur": 8
+    },
     {
       "company": "Brunstone & Sons",
       "sector": "automotive",
@@ -20,16 +100,6 @@
       "body": "Castlestone said its reengineered Grid division cores passed independent thermal-stress testing across 40,000 hours of continuous load, resolving the overheating flaws that triggered last quarter's probe. CEO Pell Karsh called the redesign 'a total teardown, not a patch,' and confirmed the idled division will restart limited production next month. Regulators have signaled the probe could close if field data holds.",
       "cycle": 82664,
       "dur": 2
-    },
-    {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Dunmorestone Edges Past Estimates as Food Service and Plumbing Both Contribute",
-      "body": "Dunmorestone reported a modest quarterly beat, with revenue up 4% as the cafeteria kitchen ramp and multi-site plumbing award both delivered steady contributions. CEO Orla Mercer characterized the results as 'exactly the quiet, dependable quarter we planned for.' The company reaffirmed full-year guidance.",
-      "cycle": 82664,
-      "dur": 1
     },
     {
       "company": "Greywater Grid",
@@ -82,26 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Blackhold Names Turnaround Specialist Dabney to Steer Post-Scandal Rebuild",
-      "body": "Following Renata Solberg's resignation, the board tapped former grid-compliance chief Halden Dabney as chief executive with a mandate to rebuild regulator trust. Dabney pledged an independent audit of every test record and a full replacement of the storage division's leadership. Acting CEO Anders Vell returns to his chief operating role.",
-      "cycle": 82663,
-      "dur": 2
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Boreas Power Sells Halvard Legacy Grid Unit to Cordell in $3.4 Billion Deal",
-      "body": "Boreas agreed to offload its non-core Halvard transmission assets to Cordell Utilities for $3.4 billion, capping the cleanup CEO Mira Thorne promised after a costly integration quarter. Proceeds will pay down debt taken on during the original Halvard absorption and fund expansion of the compute-power division. Thorne called the sale 'the last chapter of the Halvard reset.'",
-      "cycle": 82663,
-      "dur": 2
-    },
-    {
       "company": "Bruncraft Industries",
       "sector": "automotive",
       "kind": "lawsuit",
@@ -110,26 +160,6 @@
       "body": "A jury awarded $2.1 billion to plaintiffs in the consolidated axle-defect trial, finding Bruncraft ignored internal warnings for nearly three years before the recall. CEO Dessa Corvane called the verdict 'a painful but necessary reckoning' and pledged an immediate appeal while setting aside a $900 million reserve. The award is among the largest ever levied against an automaker in a single defect case.",
       "cycle": 82663,
       "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Bruncrest Works Misses as Aria Ultra Ramp Costs Outpace Early Sales",
-      "body": "Bruncrest fell short of estimates as the Aria Ultra launch drove up costs faster than initial units could ship, with margins compressed by the second Eastfield line's start-up. CEO Ines Marlow defended the aggressive push, insisting the Ultra backlog validates the bet even as near-term profit slips. The company held full-year targets but acknowledged a lumpy quarter ahead.",
-      "cycle": 82663,
-      "dur": 2
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Erretmark Works Beats as Veyron Line Lifts Margins to Century High",
-      "body": "Erretmark posted quarterly operating margins of 21%, its richest since founding, driven by the sovereign fund's 1,200-unit Veyron order beginning to ship. CEO Aurelia Garr said the ultra-luxury line has already exceeded its full-year revenue target, with a two-year waitlist forming for the roadster. The company raised guidance and hinted at a second Veyron model in development.",
-      "cycle": 82663,
-      "dur": 2
     },
     {
       "company": "Thaldale Group",
@@ -209,36 +239,6 @@
       "head": "Holtforge Group Wins $1.6B Offshore Interconnector Cable Order",
       "body": "Yvette Bramm secured a landmark supply-and-install contract for a cross-strait power interconnector, the largest single order in the company's history. The deal will run the new marine cable plant near capacity for three years and prompt a second production bay. Bramm called it 'the payoff for a plant built ahead of demand,' with first cable shipments slated within eighteen months.",
       "cycle": 82658,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Bruncrest Works Unveils Aria Ultra in High-Stakes Compute Push",
-      "body": "Bruncrest Works launched the Aria Ultra, its most powerful compute unit yet, pledging a doubling of throughput per rack over the Aria Pro. CEO Ines Marlow staged a splashy reveal at the Eastfield campus, taking early commitments she valued at $1.1B and promising first shipments next quarter. Skeptics noted the aggressive timeline echoes earlier supply stumbles the company only recently cleared.",
-      "cycle": 82657,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "recall",
-      "size": "major",
-      "head": "Halhold Systems Recalls Compute Units as Post-Outage Review Finds Hardware Fault",
-      "body": "Halhold Systems issued a sweeping recall of compute modules after its post-outage investigation traced the multi-day failure to a defective cooling assembly shipped across recent campus builds. CEO Corin Vale acknowledged the $900M pact timeline is now 'materially at risk' and set aside $210M for remediation and replacements. Clients were offered credits as the company scrambles to certify corrected units.",
-      "cycle": 82657,
-      "dur": 8
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Ironcrestton CEO Wren Adler Steps Down as Origin Standard Crisis Deepens",
-      "body": "Ironcrestton announced the immediate departure of CEO Wren Adler amid mounting litigation and audit fallout over its Origin Standard licensing program. The board named veteran operator Thea Blackwood as chief executive, tasking her with stabilizing licensee relations and settling the outstanding suits. Blackwood pledged an independent overhaul of certification and a pause on new licensing pending review.",
-      "cycle": 82657,
       "dur": 8
     }
   ]
