@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-01T13:24:35.834Z",
+  "generatedAt": "2026-08-01T19:10:36.915Z",
   "beats": [
+    {
+      "company": "Aldouscyon",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Aldouscyon Signs Fifth City as Conversion Model Draws New Interest",
+      "body": "Petra Mercer added the coastal municipality of Harrowmere to Aldouscyon's lighting-conversion slate, extending a program now spanning five cities. The pact mirrors prior agreements, converting public fixtures over an 18-month rollout fed by the company's two fixture plants. Mercer said existing capacity covers the addition without further plant investment.",
+      "cycle": 82667,
+      "dur": 1
+    },
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "standard",
+      "head": "Blackton Industries Faces Safety Probe Over Halvern-Line Components",
+      "body": "Regulators have opened a formal review of brake and suspension parts produced on Blackton's ramped Halvern line, citing a cluster of field-failure reports. Cassian Rode said the company is cooperating fully and has paused shipments of the affected part numbers pending internal testing. The probe casts a shadow over a line Blackton only recently drove to full rate under its multi-year supply contract.",
+      "cycle": 82667,
+      "dur": 2
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Calderforge Recovers as Stormwell Halls Return to Full Load",
+      "body": "Calderforge topped estimates with quarterly revenue of $1.9 billion after the two idled Stormwell halls came back online under new cooling standards. Nadia Throne said the overhaul, though costly last quarter, has cut thermal-related downtime to near zero and restored full compute availability. The rebound eases pressure following a bruising outage-and-remediation cycle.",
+      "cycle": 82667,
+      "dur": 2
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Maison & Vale Folds Northram Into Cleaning Arm as Kessler Chases $400M in Savings",
+      "body": "Rhys Kessler moved swiftly to integrate the $3.2 billion Northram acquisition, merging its chemicals operations into Maison & Vale's cleaning-and-jansan division and targeting $400 million in annual synergies. The plan consolidates three plants and trims overlapping distribution routes, with roughly 900 roles affected. Kessler framed the move as necessary discipline after a rapid stretch of dealmaking.",
+      "cycle": 82667,
+      "dur": 2
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Stegforge Beats Again as Rail Plate Mill Ramps Toward Full Capacity",
+      "body": "Stegforge posted quarterly revenue of $2.4 billion, up 9% year over year, as the new rail plate mill scaled past its first output milestone toward committed consortium volumes. Aurelia Steg credited disciplined ramp management and steady demand across structural materials for the beat. The company reaffirmed that the mill will reach full rated output by the next fiscal period.",
+      "cycle": 82667,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "major",
+      "head": "Varnvale House Delivers Record Quarter as Sovereign Collection Sells Out",
+      "body": "Varnvale reported record quarterly profit of $310 million, up 42%, after the top-tier Sovereign Collection sold through its initial allocation within weeks. Adrienne Sole said waiting lists for the flagship timepieces now stretch past a year, cementing the house's push into the ultra-luxury segment. The result marks a stunning turn from the scandal-era lows of two years ago.",
+      "cycle": 82667,
+      "dur": 8
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Vossenspire Holdings Lands $6.8B Grid-Scale Storage Pact as Roe Doubles Down",
+      "body": "Fresh off stabilizing the staged $4.1B mandate, Halden Roe has secured a $6.8 billion power-and-storage agreement to backstop the Corvane regional grid over seven years. The deal, Roe's largest yet, commits Vossenspire to deliver 4.2 gigawatt-hours of storage capacity alongside dedicated compute for load management. Analysts note the win vindicates Roe's staged-delivery strategy but warns it stacks execution risk atop an already stretched pipeline.",
+      "cycle": 82667,
+      "dur": 8
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Wrengrove Group Tops Forecasts as Sterile-Kit Demand Keeps Climbing",
+      "body": "Wrengrove beat expectations with revenue of $1.3 billion, up 11%, as the expanded sterile-kit line at its third plant ran near capacity. Rhys Vossen said hospital and clinic orders continue to outpace supply, prompting early planning for a fourth production site. Margins held steady despite the recent capacity additions.",
+      "cycle": 82667,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -10,16 +90,6 @@
       "body": "Regulators extended the shipment halt on Aperture's flagship Dawnmere III line after a follow-up inspection uncovered the same thermal faults in newly produced units, deepening a crisis that has now idled the product for two quarters. Interim CEO Marisol Venn conceded the redesign 'did not hold,' and the company warned of a $600M writedown as the investor suit widens to cover the failed remediation.",
       "cycle": 82666,
       "dur": 8
-    },
-    {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Fennvale Mfg. Notches Another Modest Beat as Second Fastener Shift Ramps Cleanly",
-      "body": "Fennvale reported revenue up 6% on the newly added second shift, which reached full staffing three weeks ahead of schedule. Theo Vossen credited 'boring, repeatable execution,' noting the fastener plant is already running near its expanded capacity ceiling.",
-      "cycle": 82666,
-      "dur": 1
     },
     {
       "company": "Halcrest",
@@ -69,36 +139,6 @@
       "head": "Marrowstone Build Opens New Assembly Line to Clear Swelling Earthmoving Backlog",
       "body": "Riding a roadworks order book that has grown past $700M, Marrowstone Build committed $95M to a second earthmoving assembly line aimed at halving delivery lead times. CEO Delphine Vaugh said the expansion was 'demand-led, not speculative,' with the split unit's backlog now stretching more than eighteen months out.",
       "cycle": 82666,
-      "dur": 2
-    },
-    {
-      "company": "Vossenwright Holdings",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vossenwright Holdings Posts Firm Quarter as Fleet Seeder Deliveries Begin",
-      "body": "Vossenwright reported revenue up 5% as the first tranche of its regional fleet order shipped on schedule, lifting Farm Equipment volumes. Quinn Skarn, ever restrained, said the fuel-saving seeder was 'meeting its promises in the field,' with repeat inquiries from neighboring cooperatives.",
-      "cycle": 82666,
-      "dur": 1
-    },
-    {
-      "company": "Drayton Freight",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Drayton Freight Opens Second Assembly Plant to Meet Pallet-Lift Demand",
-      "body": "Emil Holt broke ground on a second assembly facility to keep pace with the national fleet rollout, a rare capacity bet for the steady operator. The plant will roughly double heavy-duty pallet-lift output when it reaches full capacity in about a year. Holt said existing depot demand alone justified the $210 million investment.",
-      "cycle": 82665,
-      "dur": 2
-    },
-    {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Garrware Lifts Margins as Marrow Valley Fourth Line Nears Startup",
-      "body": "Orla Holt reported a 14% rise in quarterly operating profit, crediting automated sorting for trimming per-unit handling costs to a record low. The fourth Marrow Valley line remains on schedule for commissioning next quarter, with anchor contracts already covering an estimated 70% of its capacity. Holt reiterated her preference for measured, self-funded growth.",
-      "cycle": 82665,
       "dur": 2
     },
     {
@@ -209,16 +249,6 @@
       "head": "Varnvale House Unveils Sovereign Collection in Bold Bid for the Top Tier",
       "body": "CEO Adrienne Sole staged a lavish launch for the Sovereign Collection, a limited high-jewelry and grand-complication timepiece range priced well above the Meridian line. Sole publicly staked the house's post-scandal comeback on the range, with only 500 numbered pieces to be produced annually. Early pre-orders reportedly covered the first year's allocation within days.",
       "cycle": 82660,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Gromford Works Reels as Internal Memos Reveal Executives Knew of Meridian Sourcing Gaps for Years",
-      "body": "Leaked internal correspondence shows Gromford leadership was warned about the undisclosed Meridian tourbillon supplier as far back as 2023, deepening the crisis that already cost Corin Aldwych his post. CEO Dahlia Verrint faces mounting pressure as regulators expand their inquiry and two flagship boutiques suspend Meridian-line sales. The revelations wiped out an estimated $900 million in market value and prompted calls for a full board review.",
-      "cycle": 82659,
       "dur": 8
     }
   ]

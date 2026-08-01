@@ -123,7 +123,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82652,
+    "lastEventCycle": 82667,
     "events": [
       {
         "cycle": 0,
@@ -221,6 +221,16 @@
         "body": "Aldouscyon reported quarterly revenue of $1.42 billion, up 11% year-over-year, as fixture shipments from its second plant ramped ahead of schedule. CEO Petra Mercer credited steady progress across the Threndle, Callon, and two coastal hub conversions, with installation crews now running at all four sites. The company reaffirmed its raised full-year outlook.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82667,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Aldouscyon Signs Fifth City as Conversion Model Draws New Interest",
+        "body": "Petra Mercer added the coastal municipality of Harrowmere to Aldouscyon's lighting-conversion slate, extending a program now spanning five cities. The pact mirrors prior agreements, converting public fixtures over an 18-month rollout fed by the company's two fixture plants. Mercer said existing capacity covers the addition without further plant investment.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -1125,7 +1135,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82657,
+    "lastEventCycle": 82667,
     "events": [
       {
         "cycle": 0,
@@ -1299,6 +1309,16 @@
         "body": "Blackton Industries reported quarterly revenue of $2.4B, up 19% year-over-year, as the newly commissioned Halvern line reached full production and fed its multi-year supply contract. CEO Cassian Rode credited disciplined execution but flagged rising input costs that could pressure margins into next quarter. The company nudged full-year guidance modestly higher.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82667,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Blackton Industries Faces Safety Probe Over Halvern-Line Components",
+        "body": "Regulators have opened a formal review of brake and suspension parts produced on Blackton's ramped Halvern line, citing a cluster of field-failure reports. Cassian Rode said the company is cooperating fully and has paused shipments of the affected part numbers pending internal testing. The probe casts a shadow over a line Blackton only recently drove to full rate under its multi-year supply contract.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -2874,7 +2894,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82659,
+    "lastEventCycle": 82667,
     "events": [
       {
         "cycle": 0,
@@ -3052,6 +3072,16 @@
         "body": "Calderforge fell short of estimates, posting revenue of $3.4 billion against a $3.7 billion consensus as the Stormwell cooling overhaul kept two halls partly offline through the period. CEO Nadia Throne said the remediation is on track and the idled capacity should return next quarter, but warned near-term margins would stay pressured. Shares slid on the guidance and elevated capital spending.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82667,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderforge Recovers as Stormwell Halls Return to Full Load",
+        "body": "Calderforge topped estimates with quarterly revenue of $1.9 billion after the two idled Stormwell halls came back online under new cooling standards. Nadia Throne said the overhaul, though costly last quarter, has cut thermal-related downtime to near zero and restored full compute availability. The rebound eases pressure following a bruising outage-and-remediation cycle.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -9820,7 +9850,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82656,
+    "lastEventCycle": 82667,
     "events": [
       {
         "cycle": 0,
@@ -9958,6 +9988,16 @@
         "body": "Fresh off digesting Calbrook, Rhys Kessler unveiled the acquisition of Northram Solutions, a jansan-chemicals maker with 4,000 employees, in a $3.2 billion cash-and-stock deal. The purchase nearly doubles the Cleaning & Jansan division's revenue base, though analysts flagged integration risk given the back-to-back dealmaking pace.",
         "effects": {
           "hospitality": 0.22
+        }
+      },
+      {
+        "cycle": 82667,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Maison & Vale Folds Northram Into Cleaning Arm as Kessler Chases $400M in Savings",
+        "body": "Rhys Kessler moved swiftly to integrate the $3.2 billion Northram acquisition, merging its chemicals operations into Maison & Vale's cleaning-and-jansan division and targeting $400 million in annual synergies. The plan consolidates three plants and trims overlapping distribution routes, with roughly 900 roles affected. Kessler framed the move as necessary discipline after a rapid stretch of dealmaking.",
+        "effects": {
+          "hospitality": -0.13
         }
       }
     ]
@@ -11702,7 +11742,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82651,
+    "lastEventCycle": 82667,
     "events": [
       {
         "cycle": 0,
@@ -11808,6 +11848,16 @@
         "size": "standard",
         "head": "Stegforge Rail Plate Mill Achieves First Output, Clearing Consortium Milestone",
         "body": "Stegforge confirmed first successful plate rolls from its dedicated rail mill, hitting the strength-grade specification demanded under its multi-year consortium contract on the initial production run. CEO Aurelia Steg said the mill reached qualifying tolerances 'weeks earlier than our own conservative schedule allowed.' The facility is expected to reach half of nameplate capacity within two quarters.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82667,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Stegforge Beats Again as Rail Plate Mill Ramps Toward Full Capacity",
+        "body": "Stegforge posted quarterly revenue of $2.4 billion, up 9% year over year, as the new rail plate mill scaled past its first output milestone toward committed consortium volumes. Aurelia Steg credited disciplined ramp management and steady demand across structural materials for the beat. The company reaffirmed that the mill will reach full rated output by the next fiscal period.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -12717,7 +12767,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82660,
+    "lastEventCycle": 82667,
     "events": [
       {
         "cycle": 0,
@@ -12915,6 +12965,16 @@
         "size": "major",
         "head": "Varnvale House Unveils Sovereign Collection in Bold Bid for the Top Tier",
         "body": "CEO Adrienne Sole staged a lavish launch for the Sovereign Collection, a limited high-jewelry and grand-complication timepiece range priced well above the Meridian line. Sole publicly staked the house's post-scandal comeback on the range, with only 500 numbered pieces to be produced annually. Early pre-orders reportedly covered the first year's allocation within days.",
+        "effects": {
+          "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82667,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Varnvale House Delivers Record Quarter as Sovereign Collection Sells Out",
+        "body": "Varnvale reported record quarterly profit of $310 million, up 42%, after the top-tier Sovereign Collection sold through its initial allocation within weeks. Adrienne Sole said waiting lists for the flagship timepieces now stretch past a year, cementing the house's push into the ultra-luxury segment. The result marks a stunning turn from the scandal-era lows of two years ago.",
         "effects": {
           "luxury": 0.22
         }
@@ -13271,7 +13331,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82653,
+    "lastEventCycle": 82667,
     "events": [
       {
         "cycle": 0,
@@ -13385,6 +13445,16 @@
         "body": "Halden Roe restructured the strained $4.1B compute-and-storage mandate into four phased milestones, easing delivery pressure and lifting quarterly revenue 11% above guidance. The Northern Utilities storage tie-up remained the steadiest contributor at 320M in bookings. Roe said the phased plan 'takes the knife out of the timeline' after last quarter's stumble.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82667,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Vossenspire Holdings Lands $6.8B Grid-Scale Storage Pact as Roe Doubles Down",
+        "body": "Fresh off stabilizing the staged $4.1B mandate, Halden Roe has secured a $6.8 billion power-and-storage agreement to backstop the Corvane regional grid over seven years. The deal, Roe's largest yet, commits Vossenspire to deliver 4.2 gigawatt-hours of storage capacity alongside dedicated compute for load management. Analysts note the win vindicates Roe's staged-delivery strategy but warns it stacks execution risk atop an already stretched pipeline.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -14101,7 +14171,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82650,
+    "lastEventCycle": 82667,
     "events": [
       {
         "cycle": 0,
@@ -14187,6 +14257,16 @@
         "size": "standard",
         "head": "Wrengrove Group Adds Sterile-Kit Line at Third Plant as Demand Outpaces Capacity",
         "body": "Wrengrove will commit 210M to a second production line at its newest plant, roughly doubling sterile-kit output after early orders ran 30% above projections. CEO Rhys Vossen said the expansion locks in supply for two regional health systems already on multi-year commitments. The line is slated to reach full run-rate within a year.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82667,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Wrengrove Group Tops Forecasts as Sterile-Kit Demand Keeps Climbing",
+        "body": "Wrengrove beat expectations with revenue of $1.3 billion, up 11%, as the expanded sterile-kit line at its third plant ran near capacity. Rhys Vossen said hospital and clinic orders continue to outpace supply, prompting early planning for a fourth production site. Margins held steady despite the recent capacity additions.",
         "effects": {
           "medical": 0.13
         }
