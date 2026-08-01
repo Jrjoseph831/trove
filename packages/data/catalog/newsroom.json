@@ -1,24 +1,84 @@
 {
-  "generatedAt": "2026-08-01T08:23:36.363Z",
+  "generatedAt": "2026-08-01T13:24:35.834Z",
   "beats": [
     {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Aperture Compute Fails Second Regulatory Review as Dawnmere III Ban Extended Indefinitely",
+      "body": "Regulators extended the shipment halt on Aperture's flagship Dawnmere III line after a follow-up inspection uncovered the same thermal faults in newly produced units, deepening a crisis that has now idled the product for two quarters. Interim CEO Marisol Venn conceded the redesign 'did not hold,' and the company warned of a $600M writedown as the investor suit widens to cover the failed remediation.",
+      "cycle": 82666,
+      "dur": 8
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldousmont & Sons Posts Steady Quarter as Sterile Field Kits Build Share",
-      "body": "Dunmore Calder reported flat-to-modestly-higher results, with sterile field kits now contributing a growing slice of consumables revenue. Peel-Free wrap held its share amid stable hospital demand. Calder reaffirmed the company's unhurried full-year outlook.",
-      "cycle": 82665,
+      "head": "Fennvale Mfg. Notches Another Modest Beat as Second Fastener Shift Ramps Cleanly",
+      "body": "Fennvale reported revenue up 6% on the newly added second shift, which reached full staffing three weeks ahead of schedule. Theo Vossen credited 'boring, repeatable execution,' noting the fastener plant is already running near its expanded capacity ceiling.",
+      "cycle": 82666,
       "dur": 1
     },
     {
-      "company": "Caldercraft Holdings",
-      "sector": "consumer",
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halcrest Rebounds With Margin Beat After Overseas Retreat Trims Costs",
+      "body": "Halcrest posted a quarterly operating margin of 21%, up from 14% a year earlier, as the closure of its overseas atelier and consolidation onto its home Salon Row eliminated roughly $60M in overhead. Iris Marrow, chastened by the earlier misfire, said the house would 'grow from strength, not vanity' going forward.",
+      "cycle": 82666,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
       "kind": "product_launch",
+      "size": "standard",
+      "head": "Halhold Works Launches Aveline II Monitor With Independent Safety Certification",
+      "body": "Seeking to close the book on last year's recall, Halhold unveiled the Aveline II medical monitor, redesigned from the ground up and cleared by an outside certification body before shipment. CEO Priya Vantt, elevated from COO earlier this year, staked her early tenure on the relaunch, pledging that 'every unit ships only after it earns the name back.'",
+      "cycle": 82666,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Ironcrestton Terminates Licensing Program Entirely as New CEO Blackwood Pulls Production In-House",
+      "body": "In a sweeping overhaul, Thea Blackwood announced Ironcrestton will wind down all third-party licensing that spawned the origin-standard scandal, taking manufacturing of Fine Goods fully in-house at a projected cost of $340M over two years. The move settles a swath of the pending licensee litigation but slashes near-term unit volumes by an estimated 30%, with Blackwood calling it 'the only way to ever again promise a customer where a thing came from.'",
+      "cycle": 82666,
+      "dur": 8
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Korrwright Works Reopens Meridienne Salon in Grand Relaunch as Integration Costs Ease",
+      "body": "With the worst of the merger charges behind it, Korrwright Works has poured $180M into refurbishing the flagship Korrwright Meridienne salon, restoring the acquired workshops to full craft capacity. CEO Dunmore Carrow framed the relaunch as 'the payoff phase,' telling reporters the combined house now spans two centuries of horological heritage under one roof.",
+      "cycle": 82666,
+      "dur": 2
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Marrowstone Build Opens New Assembly Line to Clear Swelling Earthmoving Backlog",
+      "body": "Riding a roadworks order book that has grown past $700M, Marrowstone Build committed $95M to a second earthmoving assembly line aimed at halving delivery lead times. CEO Delphine Vaugh said the expansion was 'demand-led, not speculative,' with the split unit's backlog now stretching more than eighteen months out.",
+      "cycle": 82666,
+      "dur": 2
+    },
+    {
+      "company": "Vossenwright Holdings",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
       "size": "flash",
-      "head": "Caldercraft Holdings Adds Insulated Storage Chests to Weatherproof Line",
-      "body": "Vale Fenn introduced a trio of insulated outdoor storage chests, extending the weatherproof range that has carried recent quarters. Priced for the mid-tier household segment, the new units share tooling with existing lines to hold costs steady. Fenn described the rollout as a natural fill-in rather than a strategic shift.",
-      "cycle": 82665,
+      "head": "Vossenwright Holdings Posts Firm Quarter as Fleet Seeder Deliveries Begin",
+      "body": "Vossenwright reported revenue up 5% as the first tranche of its regional fleet order shipped on schedule, lifting Farm Equipment volumes. Quinn Skarn, ever restrained, said the fuel-saving seeder was 'meeting its promises in the field,' with repeat inquiries from neighboring cooperatives.",
+      "cycle": 82666,
       "dur": 1
     },
     {
@@ -62,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Kesselgrove Co.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Kesselgrove Co. Edges Estimates as Press Backlog Holds Firm",
-      "body": "Orla Steg reported another modest beat, with press output steady and the order backlog now stretching 11 months. Margins ticked up slightly on improved tooling-bay throughput. Steg offered no change to the company's understated outlook.",
-      "cycle": 82665,
-      "dur": 1
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "major_deal",
@@ -92,16 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "breakthrough",
-      "size": "standard",
-      "head": "Castlestone Unveils Redesigned Grid Cores as Karsh's Overhaul Clears First Thermal Trials",
-      "body": "Castlestone said its reengineered Grid division cores passed independent thermal-stress testing across 40,000 hours of continuous load, resolving the overheating flaws that triggered last quarter's probe. CEO Pell Karsh called the redesign 'a total teardown, not a patch,' and confirmed the idled division will restart limited production next month. Regulators have signaled the probe could close if field data holds.",
-      "cycle": 82664,
-      "dur": 2
-    },
-    {
       "company": "Greywater Grid",
       "sector": "energy",
       "kind": "expansion",
@@ -110,46 +150,6 @@
       "body": "Greywater Grid unveiled a $2B expansion pairing three new reservoir-backed power sites with dedicated compute halls to fulfill its recently signed $1.6B capacity pact. CEO Sable Renwick, moving at a blistering pace since the reservoir rebuild, said first sites go live within nine months and called the plan 'the clearest bet we've ever placed.' The company will fund the buildout through a mix of committed pact revenue and a new $900M financing facility.",
       "cycle": 82664,
       "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Halhold Systems Misses on Quarter as Outage and Recall Costs Bite Into $900M Pact",
-      "body": "Halhold Systems reported quarterly revenue of $310M, below its $370M target, as the multi-day campus outage and subsequent compute-unit recall pushed delivery milestones on its $900M pact into next year. CEO Corin Vale said penalty clauses and replacement hardware carved roughly $85M from margins. The third compute campus remains on schedule, which Vale framed as proof of 'long-term commitment despite a bruising stretch.'",
-      "cycle": 82664,
-      "dur": 2
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Korrworks Opens Cross-Region Hub With Both Anchor Tenants Live From Day One",
-      "body": "Korrworks cut the ribbon on its Cross-Region Hub, opening at 85% committed capacity with both anchor tenants operational and the automated sorting layer processing peak volumes on schedule. CEO Rhys Throne said day-one throughput exceeded internal projections by 12%, and hinted a fourth hub site is under evaluation. The facility supports the landmark handling pact signed last year.",
-      "cycle": 82664,
-      "dur": 2
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Skarnvale Stumbles as Triple Retrofit Push Strains Cash and Delays Vosk Junction",
-      "body": "Skarnvale posted a quarterly loss of $34M as simultaneous retrofits at three terminals overwhelmed capital reserves and pushed the Vosk Junction opening back by a quarter. CEO Dorn Vaskell defended the pace, saying 'spreading the Braeloch blueprint fast is worth a rough quarter,' but analysts questioned funding the third retrofit before the second earns out. The company drew down $60M on its credit line to bridge the gap.",
-      "cycle": 82664,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "standard",
-      "head": "Thronehaus & Co. Verrand Marchwick Line Takes Top Honors at Grand Horology Salon",
-      "body": "Thronehaus & Co. swept the case-craft category at the Grand Horology Salon, with judges singling out the Ferrault-built Verrand Marchwick casework for its hand-finished lugs. CEO Cora Dray called the win 'vindication of bringing casemaking under our own roof.' The recognition arrives less than a year after the Ferrault acquisition and the opening of the Verrand Atelier.",
-      "cycle": 82664,
-      "dur": 2
     },
     {
       "company": "Bruncraft Industries",
@@ -219,26 +219,6 @@
       "head": "Gromford Works Reels as Internal Memos Reveal Executives Knew of Meridian Sourcing Gaps for Years",
       "body": "Leaked internal correspondence shows Gromford leadership was warned about the undisclosed Meridian tourbillon supplier as far back as 2023, deepening the crisis that already cost Corin Aldwych his post. CEO Dahlia Verrint faces mounting pressure as regulators expand their inquiry and two flagship boutiques suspend Meridian-line sales. The revelations wiped out an estimated $900 million in market value and prompted calls for a full board review.",
       "cycle": 82659,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Aperture Compute Ousts Halden Dray as Board Moves to Contain Dawnmere III Crisis",
-      "body": "The board removed longtime chief Halden Dray amid the widening fault probe and investor litigation over concealed Dawnmere III defects, naming operations veteran Marisol Venn as interim chief executive. Venn pledged a full third-party review and a restructured safety-disclosure process before shipments resume. Shares had shed nearly a third of their value since the halt order.",
-      "cycle": 82658,
-      "dur": 8
-    },
-    {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Holtforge Group Wins $1.6B Offshore Interconnector Cable Order",
-      "body": "Yvette Bramm secured a landmark supply-and-install contract for a cross-strait power interconnector, the largest single order in the company's history. The deal will run the new marine cable plant near capacity for three years and prompt a second production bay. Bramm called it 'the payoff for a plant built ahead of demand,' with first cable shipments slated within eighteen months.",
-      "cycle": 82658,
       "dur": 8
     }
   ]

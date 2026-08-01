@@ -452,7 +452,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82658,
+    "lastEventCycle": 82666,
     "events": [
       {
         "cycle": 0,
@@ -639,6 +639,16 @@
         "head": "Aperture Compute Ousts Halden Dray as Board Moves to Contain Dawnmere III Crisis",
         "body": "The board removed longtime chief Halden Dray amid the widening fault probe and investor litigation over concealed Dawnmere III defects, naming operations veteran Marisol Venn as interim chief executive. Venn pledged a full third-party review and a restructured safety-disclosure process before shipments resume. Shares had shed nearly a third of their value since the halt order.",
         "effects": {}
+      },
+      {
+        "cycle": 82666,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Aperture Compute Fails Second Regulatory Review as Dawnmere III Ban Extended Indefinitely",
+        "body": "Regulators extended the shipment halt on Aperture's flagship Dawnmere III line after a follow-up inspection uncovered the same thermal faults in newly produced units, deepening a crisis that has now idled the product for two quarters. Interim CEO Marisol Venn conceded the redesign 'did not hold,' and the company warned of a $600M writedown as the investor suit widens to cover the failed remediation.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -5823,7 +5833,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82649,
+    "lastEventCycle": 82666,
     "events": [
       {
         "cycle": 0,
@@ -5919,6 +5929,16 @@
         "size": "flash",
         "head": "Fennvale Mfg. Adds Second Shift to Fastener Plant as Order Book Lengthens",
         "body": "CEO Theo Vossen approved a second shift at the Fennvale fastener works after the order book stretched past nine months of forward demand. The move adds roughly 90 line roles and lifts nameplate fastener output by a fifth without new tooling.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82666,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Fennvale Mfg. Notches Another Modest Beat as Second Fastener Shift Ramps Cleanly",
+        "body": "Fennvale reported revenue up 6% on the newly added second shift, which reached full staffing three weeks ahead of schedule. Theo Vossen credited 'boring, repeatable execution,' noting the fastener plant is already running near its expanded capacity ceiling.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -6796,7 +6816,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82653,
+    "lastEventCycle": 82666,
     "events": [
       {
         "cycle": 0,
@@ -6924,6 +6944,16 @@
         "body": "Iris Marrow announced the closure of the recently opened overseas atelier barely two quarters after launch, taking an 85M writedown and consolidating production back to the flagship Salon Row workshop. Marrow, known for dramatic reversals, called the second-flagship expansion 'a bet placed too soon.' The move is projected to restore roughly 4 points of gross margin by next year.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82666,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrest Rebounds With Margin Beat After Overseas Retreat Trims Costs",
+        "body": "Halcrest posted a quarterly operating margin of 21%, up from 14% a year earlier, as the closure of its overseas atelier and consolidation onto its home Salon Row eliminated roughly $60M in overhead. Iris Marrow, chastened by the earlier misfire, said the house would 'grow from strength, not vanity' going forward.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -7464,18 +7494,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82661,
+    "lastEventCycle": 82666,
     "events": [
-      {
-        "cycle": 82535,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Halhold Works Debuts Verity Pro Bedside Suite for Critical Care",
-        "body": "Building on the redesigned Verity line, Halhold unveiled the Verity Pro suite, integrating patient monitoring with its medical-grade wire and cable systems into a single bedside console. CEO Nadia Brandt said the launch targets intensive-care wards and follows 'overwhelming demand' from the regional hospital network signed last quarter. Initial units ship within 60 days, with pricing starting at 18,500 per console.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82541,
         "kind": "safety_probe",
@@ -7697,6 +7717,16 @@
         "head": "Halhold Works Names Veteran Operator Priya Vantt as Chief Operating Officer to Steady Ship",
         "body": "CEO Marcus Thorne installed Priya Vantt, former head of the firm's Wire & Cable division, as COO with a mandate to rebuild the Medical Equipment unit gutted by the Aveline recall. Vantt will oversee a 90-day quality audit spanning all three product categories as the investor class action proceeds. The appointment signals Thorne is delegating operations while he manages the legal fallout personally.",
         "effects": {}
+      },
+      {
+        "cycle": 82666,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Works Launches Aveline II Monitor With Independent Safety Certification",
+        "body": "Seeking to close the book on last year's recall, Halhold unveiled the Aveline II medical monitor, redesigned from the ground up and cleared by an outside certification body before shipment. CEO Priya Vantt, elevated from COO earlier this year, staked her early tenure on the relaunch, pledging that 'every unit ships only after it earns the name back.'",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -8452,7 +8482,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82657,
+    "lastEventCycle": 82666,
     "events": [
       {
         "cycle": 0,
@@ -8617,6 +8647,16 @@
         "head": "Ironcrestton CEO Wren Adler Steps Down as Origin Standard Crisis Deepens",
         "body": "Ironcrestton announced the immediate departure of CEO Wren Adler amid mounting litigation and audit fallout over its Origin Standard licensing program. The board named veteran operator Thea Blackwood as chief executive, tasking her with stabilizing licensee relations and settling the outstanding suits. Blackwood pledged an independent overhaul of certification and a pause on new licensing pending review.",
         "effects": {}
+      },
+      {
+        "cycle": 82666,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Ironcrestton Terminates Licensing Program Entirely as New CEO Blackwood Pulls Production In-House",
+        "body": "In a sweeping overhaul, Thea Blackwood announced Ironcrestton will wind down all third-party licensing that spawned the origin-standard scandal, taking manufacturing of Fine Goods fully in-house at a projected cost of $340M over two years. The move settles a swath of the pending licensee litigation but slashes near-term unit volumes by an estimated 30%, with Blackwood calling it 'the only way to ever again promise a customer where a thing came from.'",
+        "effects": {
+          "luxury": -0.22
+        }
       }
     ]
   },
@@ -9294,7 +9334,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82658,
+    "lastEventCycle": 82666,
     "events": [
       {
         "cycle": 0,
@@ -9500,6 +9540,16 @@
         "body": "Quarterly earnings came in 11% below expectations as the $2.4B Meridienne acquisition dragged margins with duplicated overhead and rebranding spend. Dunmore Carrow acknowledged 'a heavier lift than modeled' but insisted the combined Korrwright Meridienne house would deliver by next fiscal year. Integration charges totaled $310M, the bulk tied to consolidating two overlapping atelier networks.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82666,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrwright Works Reopens Meridienne Salon in Grand Relaunch as Integration Costs Ease",
+        "body": "With the worst of the merger charges behind it, Korrwright Works has poured $180M into refurbishing the flagship Korrwright Meridienne salon, restoring the acquired workshops to full craft capacity. CEO Dunmore Carrow framed the relaunch as 'the payoff phase,' telling reporters the combined house now spans two centuries of horological heritage under one roof.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -10420,7 +10470,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82655,
+    "lastEventCycle": 82666,
     "events": [
       {
         "cycle": 0,
@@ -10542,6 +10592,16 @@
         "size": "standard",
         "head": "Marrowstone Build Beats as Roadworks Backlog Swells Split Unit Order Book",
         "body": "Marrowstone Build topped estimates with revenue up 14% year-on-year, driven by early billings on the $520M regional roadworks package. CEO Delphine Vaugh said the split earthmoving unit now carries a record $1.9B backlog, and she flagged 'selective interest' in adjacent quarry-services contracts.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82666,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Marrowstone Build Opens New Assembly Line to Clear Swelling Earthmoving Backlog",
+        "body": "Riding a roadworks order book that has grown past $700M, Marrowstone Build committed $95M to a second earthmoving assembly line aimed at halving delivery lead times. CEO Delphine Vaugh said the expansion was 'demand-led, not speculative,' with the split unit's backlog now stretching more than eighteen months out.",
         "effects": {
           "construction": 0.13
         }
@@ -13686,7 +13746,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82639,
+    "lastEventCycle": 82666,
     "events": [
       {
         "cycle": 0,
@@ -13744,6 +13804,16 @@
         "body": "Quinn Skarn confirmed a bulk order from a farming consortium covering 340 next-generation seeders, the largest single purchase of the fuel-efficient line to date. The deal, valued near $95 million, extends the earlier servicing pact into new equipment sales. Skarn characterized the order as steady validation of the company's cautious modernization strategy.",
         "effects": {
           "agriculture": 0.13
+        }
+      },
+      {
+        "cycle": 82666,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenwright Holdings Posts Firm Quarter as Fleet Seeder Deliveries Begin",
+        "body": "Vossenwright reported revenue up 5% as the first tranche of its regional fleet order shipped on schedule, lifting Farm Equipment volumes. Quinn Skarn, ever restrained, said the fuel-saving seeder was 'meeting its promises in the field,' with repeat inquiries from neighboring cooperatives.",
+        "effects": {
+          "agriculture": 0.06
         }
       }
     ]
