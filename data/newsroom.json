@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-02T08:26:40.071Z",
+  "generatedAt": "2026-08-02T13:24:40.326Z",
   "beats": [
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Bruncraft Ousts Dessa Corvane in Boardroom Shakeup After $2.1 Billion Axle Verdict",
+      "body": "Bruncraft's board voted to remove CEO Dessa Corvane, days after a record $2.1 billion axle-injury verdict capped a punishing year of litigation and probes. Interim chair Wynn Alderay said the company needs 'stability over ambition' and has frozen pending acquisitions to shore up its balance sheet. The incoming chief inherits a federal safety probe and mounting warranty reserves.",
+      "cycle": 82670,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "standard",
+      "head": "Brunmark Motors Draws Regulatory Inquiry Into Redesigned Veyra S Battery Pack",
+      "body": "Regulators opened a preliminary inquiry into the Veyra S's overhauled battery pack after a cluster of charging-fault complaints across roughly 8,000 vehicles. CEO Halvard Renn said the reports involve a software-managed charge controller and stressed no fires have been confirmed. The probe casts a shadow over a launch that had cleared backlog and driven recent capacity expansion.",
+      "cycle": 82670,
+      "dur": 2
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Brunstone & Sons Sued by Owners and Insurers as Vault Cell Guard Pro Fires Spawn Consolidated Claims",
+      "body": "A consolidated class action was filed against Brunstone & Sons seeking more than $900 million, tying at least 40 reported fleet fires to the recalled Vault Cell Guard Pro units. Plaintiffs allege the company shipped units despite internal thermal-testing failures flagged before launch. CEO Halden Crowe called the claims 'premature' but confirmed the third cell plant's opening would be delayed pending a full design review.",
+      "cycle": 82670,
+      "dur": 8
+    },
+    {
+      "company": "Cranecraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Cranecraft Runs Streak to Eight as Textile Margins Firm on Steady Farm Orders",
+      "body": "Cranecraft posted its eighth consecutive quarterly beat, with revenue of $1.84 billion edging past guidance on firmer raw-textile pricing. CEO Mira Garr credited disciplined inventory management and a 4% uptick in farm-equipment shipments into the spring buying season. The balanced mix, she noted, again cushioned the company against swings in any single line.",
+      "cycle": 82670,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Gromford Works Rocked as Regulators Freeze Assets and Verrint Faces Personal Subpoena in Meridian Case",
+      "body": "Prosecutors escalated the Meridian sourcing case, freezing an estimated $340 million in Gromford assets and issuing a personal subpoena to CEO Dahlia Verrint over documents from her prior board role. The company suspended two remaining Fine Goods executives and pulled its full-year outlook amid the widening criminal probe. Verrint, installed only months ago to steady the house, now finds herself entangled in the scandal she was hired to contain.",
+      "cycle": 82670,
+      "dur": 8
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halcyon Industries Opens Southport Fifth Line, Lifting Regional Packaging Output 30%",
+      "body": "Halcyon brought its fifth Southport line online this week, adding roughly 30% to the site's packaging capacity after months of ramp work. CEO Dorian Ashby said the line is already committed against contracted volumes and expects full utilization within two quarters. The completion caps a multi-year buildout that has quietly made Southport the company's flagship complex.",
+      "cycle": 82670,
+      "dur": 2
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Hesperforge Beats as Third Mill Comes Online and Marine-Grade Backlog Hits Record",
+      "body": "Hesperforge topped estimates with quarterly revenue of $1.12 billion as its third mill began commercial output, easing capacity strain on the coastal shipyard pact. CEO Sable Halloran said the marine-grade backlog reached a record 14-month coverage, giving unusual visibility into next year. She flagged early interest from a second yard operator as a possible follow-on.",
+      "cycle": 82670,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Skarngrove & Sons Secures Kelvarn Fourth-Phase Award for Approach Viaducts",
+      "body": "Skarngrove won the Kelvarn program's fourth-phase package, an estimated $610 million contract covering approach viaducts and fixing systems for the interchange corridor. CEO Quinn Fenn said the award extends the company's Kelvarn workload into 2029 and locks in structural-materials volumes across the run. The win cements Skarngrove as the program's principal structures supplier.",
+      "cycle": 82670,
+      "dur": 2
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -52,16 +132,6 @@
       "dur": 8
     },
     {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowcyon Extends Streak With Quiet Beat as Apparel and Fixtures Both Firm",
-      "body": "Marrowcyon logged another modest beat, posting margins a touch above guidance as workwear reorders and steady fixtures restocking held. CEO Theo Orne offered little drama, reiterating that the combined range 'does its job quarter after quarter' and keeping full-year guidance unchanged.",
-      "cycle": 82669,
-      "dur": 1
-    },
-    {
       "company": "Steg Tooling",
       "sector": "manufacturing",
       "kind": "expansion",
@@ -69,86 +139,6 @@
       "head": "Steg Tooling Breaks Ground on Third Kelmar Cell as Vossen Presses Steady Buildout",
       "body": "With the first two Kelmar cells running near capacity, Steg Tooling committed $310M to a third cell targeting fastener and fixings output, slated to come online within eighteen months. CEO Iris Vossen framed the move as a measured response to firm order books rather than speculative demand, noting the plant would add roughly 240 skilled roles at the Kelmar site.",
       "cycle": 82669,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "flash",
-      "head": "Varnvale & Sons Heritage Timepiece Takes Top Honor at Geneva Horology Salon",
-      "body": "The debut piece from Varnvale's new Heritage Division won the Grand Complication prize at the annual Salon, a validation of the Aubrec-Calderon integration. CEO Bram Wold said the award confirmed that folding the two houses together 'concentrated craft rather than diluting it,' with early allocations of the limited run already spoken for.",
-      "cycle": 82669,
-      "dur": 1
-    },
-    {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Carrowcyon & Sons Beats as Smart-Dimming Line Outpaces Early Forecasts",
-      "body": "Carrowcyon reported earnings of $0.94 a share against $0.81 expected, with the newly launched smart-dimming range selling through at nearly twice the pace management modeled. The company said household goods held flat while lighting drove the entire upside, aided by the recently opened distribution center. Full-year guidance was nudged higher.",
-      "cycle": 82668,
-      "dur": 2
-    },
-    {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "recall",
-      "size": "standard",
-      "head": "Drossware Recalls Cleaning-Line Batch Over Mislabeled Concentrate",
-      "body": "Drossware issued a voluntary recall of roughly 240,000 units of its industrial cleaning concentrate after a labeling error understated dilution instructions on a single production run. Nadia Wold said no injuries were reported and the affected batch traced to one line, with corrected packaging already shipping to grocer-alliance partners. The company estimated a modest one-time charge and said other divisions were unaffected.",
-      "cycle": 82668,
-      "dur": 2
-    },
-    {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Dunmorewright Beats as Coastal Defense Contract Front-Loads Revenue",
-      "body": "Dunmorewright posted quarterly revenue of $1.31 billion, ahead of the $1.22 billion consensus, as early mobilization on the $510 million coastal defense job began billing sooner than planned. Emil Skarn credited parallel scheduling across the Harborfront and coastal sites for keeping the earthmoving fleet at high utilization. Plumbing and fixtures margins held steady despite input-cost pressure.",
-      "cycle": 82668,
-      "dur": 2
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Forgegrave Industries Lands Coastward Logistics in First Deal Beyond Meridian",
-      "body": "Forgegrave signed a $290 million multi-year contract to supply material-handling fleets to Coastward Logistics, diversifying beyond its long-running Meridian partnership. Petra Thorne said the win validates the second plant's expanded capacity and opens a new customer vertical without straining existing commitments. Deliveries begin next quarter.",
-      "cycle": 82668,
-      "dur": 2
-    },
-    {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Holtware Co. Opens Second Fulfillment Hub to Sustain Cordless Momentum",
-      "body": "Holtware unveiled a $145 million distribution hub in the Kessridge corridor, doubling regional warehousing capacity to meet demand from its national chain partnership. Aurelia Dray said the site will cut restock times on the lifetime-warranty cordless range by nearly half, with a service-center wing dedicated to warranty claims. The facility is expected to reach full throughput within two quarters.",
-      "cycle": 82668,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Lhaus Industries Breaks Ground on Dedicated Grid-Storage Plant to Serve $2.8B Pact",
-      "body": "Lhaus committed $640 million to a purpose-built cell-pack facility in Vantmoor, its first plant devoted entirely to grid-storage output under the landmark supply pact. Cole Brandt said the site will run four assembly lines at launch with room to double, easing pressure on the six retrofitted automotive lines. Initial deliveries from the plant are targeted within 18 months.",
-      "cycle": 82668,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Vossenspire Supply Debuts Corveil Timepiece Line Through New Larkmoor Salons",
-      "body": "Vossenspire launched a Corveil-branded timepiece collection sold exclusively through its integrated Larkmoor vehicle-salon floors, the first product to leverage the merged retail division. Quinn Marrow said the cross-sell strategy pairs high-margin watches with vehicle clientele, targeting $110 million in first-year retail revenue. Twelve flagship salons will carry the range at launch.",
-      "cycle": 82668,
       "dur": 2
     },
     {
@@ -269,16 +259,6 @@
       "head": "Thaldale Ousts CEO Trent as Board Loses Faith in Turnaround Amid Widening Probe",
       "body": "The board removed Marlowe Trent after a stormy 14-month tenure marked by plant closures, an investor suit, and a regulatory fastening probe that shows no sign of easing. Veteran operations chief Corin Vale steps in as interim then permanent chief, promising to stabilize the remaining fastening lines before pursuing any further cuts. Shares of the tool maker have shed nearly half their value since Trent's plan was unveiled.",
       "cycle": 82663,
-      "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Lhaus Industries Secures $2.8B Grid-Storage Supply Pact in Landmark Storage Pivot",
-      "body": "Cole Brandt landed a multi-year agreement to supply cell packs for a national grid-storage operator, validating the restarted sixth line and the broader storage push. The deal, worth up to $2.8B over six years, marks Lhaus's largest single contract outside automotive parts. Brandt called it 'the transformation we restarted that line for.'",
-      "cycle": 82662,
       "dur": 8
     }
   ]

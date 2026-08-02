@@ -1582,14 +1582,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1931,
-    "ceo": "Dessa Corvane",
+    "ceo": "Elias Trentham",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.75,
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82663,
+    "lastEventCycle": 82670,
     "events": [
       {
         "cycle": 0,
@@ -1796,6 +1796,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82670,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Bruncraft Ousts Dessa Corvane in Boardroom Shakeup After $2.1 Billion Axle Verdict",
+        "body": "Bruncraft's board voted to remove CEO Dessa Corvane, days after a record $2.1 billion axle-injury verdict capped a punishing year of litigation and probes. Interim chair Wynn Alderay said the company needs 'stability over ambition' and has frozen pending acquisitions to shore up its balance sheet. The incoming chief inherits a federal safety probe and mounting warranty reserves.",
+        "effects": {}
       }
     ]
   },
@@ -2182,7 +2190,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82662,
+    "lastEventCycle": 82670,
     "events": [
       {
         "cycle": 0,
@@ -2367,6 +2375,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82670,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Brunmark Motors Draws Regulatory Inquiry Into Redesigned Veyra S Battery Pack",
+        "body": "Regulators opened a preliminary inquiry into the Veyra S's overhauled battery pack after a cluster of charging-fault complaints across roughly 8,000 vehicles. CEO Halvard Renn said the reports involve a software-managed charge controller and stressed no fires have been confirmed. The probe casts a shadow over a launch that had cleared backlog and driven recent capacity expansion.",
+        "effects": {
+          "automotive": -0.13
+        }
       }
     ]
   },
@@ -2522,16 +2540,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82664,
+    "lastEventCycle": 82670,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Brunstone & Sons — Power on every wheel",
-        "body": "Brunstone & Sons started with engines and never really stopped, today pairing vehicles with the power and storage systems that move them. The mass offerings are dependable and plain-spoken. The premium and luxury lines are where the family name earns its keep: motors built like vault doors, batteries engineered for brutal duty cycles, vehicles finished to a standard rivals quietly study. Generations in, the badge still signals that something was made to be relied on, hard and for a long time.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "product_launch",
@@ -2754,6 +2764,16 @@
         "size": "major",
         "head": "Brunstone & Sons Recalls 220,000 Vault Cell Guard Pro Units as Probe Turns to Fleet Fires",
         "body": "Brunstone & Sons issued a sweeping recall of 220,000 Vault Cell Guard Pro units after investigators linked the overheating reports to three long-haul fleet fires, with total costs estimated near $480M. CEO Halden Crowe, who months ago broke ground on a third plant to feed the product's backlog, admitted the launch 'moved faster than our validation.' Shipments from all three cell plants are paused pending a root-cause fix.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82670,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Brunstone & Sons Sued by Owners and Insurers as Vault Cell Guard Pro Fires Spawn Consolidated Claims",
+        "body": "A consolidated class action was filed against Brunstone & Sons seeking more than $900 million, tying at least 40 reported fleet fires to the recalled Vault Cell Guard Pro units. Plaintiffs allege the company shipped units despite internal thermal-testing failures flagged before launch. CEO Halden Crowe called the claims 'premature' but confirmed the third cell plant's opening would be delayed pending a full design review.",
         "effects": {
           "automotive": -0.22
         }
@@ -4360,7 +4380,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82655,
+    "lastEventCycle": 82670,
     "events": [
       {
         "cycle": 0,
@@ -4488,6 +4508,16 @@
         "body": "Cranecraft posted a seventh consecutive quarterly beat, edging estimates by 1.8% on flat-to-modest volume gains across both segments. CEO Mira Garr credited disciplined inventory management and steady raw-textile orders, noting no change to full-year guidance.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82670,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Cranecraft Runs Streak to Eight as Textile Margins Firm on Steady Farm Orders",
+        "body": "Cranecraft posted its eighth consecutive quarterly beat, with revenue of $1.84 billion edging past guidance on firmer raw-textile pricing. CEO Mira Garr credited disciplined inventory management and a 4% uptick in farm-equipment shipments into the spring buying season. The balanced mix, she noted, again cushioned the company against swings in any single line.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -6647,18 +6677,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82665,
+    "lastEventCycle": 82670,
     "events": [
-      {
-        "cycle": 82525,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Gromford Works Opens Flagship Atelier in Caldwyck Following Aurelian Acclaim",
-        "body": "Riding the momentum of its Piece of the Year win, Gromford Works has unveiled a 9,000-square-foot atelier and salesroom in the Caldwyck luxury district. CEO Mira Ashby said the location will double as a workshop where clients can commission bespoke Aurelian variants, with waiting lists already at eighteen months. The firm expects the site to lift Fine Goods revenue by an estimated 12 percent next year.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82530,
         "kind": "product_launch",
@@ -6879,6 +6899,16 @@
         "size": "major",
         "head": "Gromford Works Faces Regulatory Charges as Meridian Probe Turns Criminal",
         "body": "Prosecutors filed formal charges against Gromford Works and two former executives, alleging years of concealed sourcing violations tied to the Meridian supply chain. Dahlia Verrint, installed after Corin Aldwych's ouster, said the company would cooperate fully while setting aside $340 million against potential penalties and settlements. The timepiece division suspended several product lines pending a sourcing audit.",
+        "effects": {
+          "luxury": -0.22
+        }
+      },
+      {
+        "cycle": 82670,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Gromford Works Rocked as Regulators Freeze Assets and Verrint Faces Personal Subpoena in Meridian Case",
+        "body": "Prosecutors escalated the Meridian sourcing case, freezing an estimated $340 million in Gromford assets and issuing a personal subpoena to CEO Dahlia Verrint over documents from her prior board role. The company suspended two remaining Fine Goods executives and pulled its full-year outlook amid the widening criminal probe. Verrint, installed only months ago to steady the house, now finds herself entangled in the scandal she was hired to contain.",
         "effects": {
           "luxury": -0.22
         }
@@ -7172,7 +7202,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82658,
+    "lastEventCycle": 82670,
     "events": [
       {
         "cycle": 0,
@@ -7310,6 +7340,16 @@
         "body": "Dorian Ashby reported a modest 4% revenue gain, supported by steady Eastmere automation output as construction on the fifth Southport line stayed on schedule. Management reaffirmed guidance and expects the new line to begin ramping next quarter. Ashby described demand as 'orderly and dependable.'",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82670,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halcyon Industries Opens Southport Fifth Line, Lifting Regional Packaging Output 30%",
+        "body": "Halcyon brought its fifth Southport line online this week, adding roughly 30% to the site's packaging capacity after months of ramp work. CEO Dorian Ashby said the line is already committed against contracted volumes and expects full utilization within two quarters. The completion caps a multi-year buildout that has quietly made Southport the company's flagship complex.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -7936,7 +7976,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82657,
+    "lastEventCycle": 82670,
     "events": [
       {
         "cycle": 0,
@@ -8052,6 +8092,16 @@
         "size": "standard",
         "head": "Hesperforge Beats as Third Mill Nears Completion and Marine Backlog Grows",
         "body": "Hesperforge Supply reported a 12% revenue gain to $1.3B, lifted by steady marine-grade beam shipments to Coastal Shipyards and firm raw-textile demand. CEO Sable Halloran said the third mill remains on schedule and pre-sold beyond initial forecasts. The company raised its backlog figure to a record $2.9B.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82670,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Hesperforge Beats as Third Mill Comes Online and Marine-Grade Backlog Hits Record",
+        "body": "Hesperforge topped estimates with quarterly revenue of $1.12 billion as its third mill began commercial output, easing capacity strain on the coastal shipyard pact. CEO Sable Halloran said the marine-grade backlog reached a record 14-month coverage, giving unusual visibility into next year. She flagged early interest from a second yard operator as a possible follow-on.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -11326,7 +11376,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82656,
+    "lastEventCycle": 82670,
     "events": [
       {
         "cycle": 0,
@@ -11432,6 +11482,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Beats as Kelvarn Interchange Work Enters Production",
         "body": "Skarngrove topped estimates with revenue of $880 million as third-phase interchange fabrication ramped ahead of schedule. Quinn Fenn said the structural-materials backlog tied to Kelvarn now underpins guidance through next year, with fasteners volumes riding the same project pipeline.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82670,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Skarngrove & Sons Secures Kelvarn Fourth-Phase Award for Approach Viaducts",
+        "body": "Skarngrove won the Kelvarn program's fourth-phase package, an estimated $610 million contract covering approach viaducts and fixing systems for the interchange corridor. CEO Quinn Fenn said the award extends the company's Kelvarn workload into 2029 and locks in structural-materials volumes across the run. The win cements Skarngrove as the program's principal structures supplier.",
         "effects": {
           "construction": 0.13
         }
