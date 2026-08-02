@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-02T02:54:48.785Z",
+  "generatedAt": "2026-08-02T08:26:40.071Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Boreas Power Strikes $6.8B Deal for Compute-Heavy Vantel Group in Bold Pivot",
+      "body": "Flush from the $3.4B Halvard grid sale, CEO Mira Thorne unveiled Boreas Power's largest-ever acquisition: the $6.8B purchase of compute specialist Vantel Group, sharply tilting the company toward data infrastructure. Thorne cast the deal as the culmination of the Halvard cleanup, funding the buy with sale proceeds and $3B in new debt, and pledged Vantel's power-hungry campuses would run on Boreas-owned generation.",
+      "cycle": 82669,
+      "dur": 8
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Bruncrest Works Slows Aria Ultra Ramp, Trims Eastfield Shifts After Costly Quarter",
+      "body": "Days after missing on ramp costs, CEO Ines Marlow announced Bruncrest would throttle Aria Ultra production and consolidate the newer Eastfield line's shifts to protect margins. The plan cuts an estimated $180M in annualized spend but pushes full Ultra availability into next year, with Marlow conceding the launch pace had 'run ahead of the market.'",
+      "cycle": 82669,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Castlehold Posts First Clean Quarter Since Saltmere Spin-Off as Voss Turnaround Takes Hold",
+      "body": "Freed of the ring-fenced cleanup unit, Castlehold reported operating profit of $620M against forecasts near $450M, its first result unencumbered by Saltmere provisions. CEO Halden Voss called it 'proof the core business was always sound,' though the $4.1B regulator suit tied to legacy costs remains unresolved.",
+      "cycle": 82669,
+      "dur": 2
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Castlestone Lands Anchor Grid-Core Supply Pact as Karsh's Overhaul Wins First Buyer",
+      "body": "Building on cleared thermal trials, CEO Pell Karsh secured a $740M multi-year supply agreement for the redesigned grid cores with a major infrastructure operator, the division's first commercial win since the overheating probe. Karsh called it 'vindication of the hard reset,' with initial shipments from the reopened grid line due next quarter.",
+      "cycle": 82669,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Halhold Systems Rocked as Probe Finds Outage Warnings Withheld From $900M Partner",
+      "body": "An independent review revealed that Halhold engineers had flagged the hardware fault weeks before the multi-day outage, but the warnings never reached the $900M pact partner, who is now threatening to void the contract. CEO Corin Vale faces mounting pressure as the board opened an inquiry into disclosure practices, wiping out the goodwill from earlier recall transparency and leaving the flagship deal in jeopardy.",
+      "cycle": 82669,
+      "dur": 8
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowcyon Extends Streak With Quiet Beat as Apparel and Fixtures Both Firm",
+      "body": "Marrowcyon logged another modest beat, posting margins a touch above guidance as workwear reorders and steady fixtures restocking held. CEO Theo Orne offered little drama, reiterating that the combined range 'does its job quarter after quarter' and keeping full-year guidance unchanged.",
+      "cycle": 82669,
+      "dur": 1
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Steg Tooling Breaks Ground on Third Kelmar Cell as Vossen Presses Steady Buildout",
+      "body": "With the first two Kelmar cells running near capacity, Steg Tooling committed $310M to a third cell targeting fastener and fixings output, slated to come online within eighteen months. CEO Iris Vossen framed the move as a measured response to firm order books rather than speculative demand, noting the plant would add roughly 240 skilled roles at the Kelmar site.",
+      "cycle": 82669,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "flash",
+      "head": "Varnvale & Sons Heritage Timepiece Takes Top Honor at Geneva Horology Salon",
+      "body": "The debut piece from Varnvale's new Heritage Division won the Grand Complication prize at the annual Salon, a validation of the Aubrec-Calderon integration. CEO Bram Wold said the award confirmed that folding the two houses together 'concentrated craft rather than diluting it,' with early allocations of the limited run already spoken for.",
+      "cycle": 82669,
+      "dur": 1
+    },
     {
       "company": "Carrowcyon & Sons",
       "sector": "consumer",
@@ -82,46 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "standard",
-      "head": "Blackton Industries Faces Safety Probe Over Halvern-Line Components",
-      "body": "Regulators have opened a formal review of brake and suspension parts produced on Blackton's ramped Halvern line, citing a cluster of field-failure reports. Cassian Rode said the company is cooperating fully and has paused shipments of the affected part numbers pending internal testing. The probe casts a shadow over a line Blackton only recently drove to full rate under its multi-year supply contract.",
-      "cycle": 82667,
-      "dur": 2
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Calderforge Recovers as Stormwell Halls Return to Full Load",
-      "body": "Calderforge topped estimates with quarterly revenue of $1.9 billion after the two idled Stormwell halls came back online under new cooling standards. Nadia Throne said the overhaul, though costly last quarter, has cut thermal-related downtime to near zero and restored full compute availability. The rebound eases pressure following a bruising outage-and-remediation cycle.",
-      "cycle": 82667,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Maison & Vale Folds Northram Into Cleaning Arm as Kessler Chases $400M in Savings",
-      "body": "Rhys Kessler moved swiftly to integrate the $3.2 billion Northram acquisition, merging its chemicals operations into Maison & Vale's cleaning-and-jansan division and targeting $400 million in annual synergies. The plan consolidates three plants and trims overlapping distribution routes, with roughly 900 roles affected. Kessler framed the move as necessary discipline after a rapid stretch of dealmaking.",
-      "cycle": 82667,
-      "dur": 2
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Stegforge Beats Again as Rail Plate Mill Ramps Toward Full Capacity",
-      "body": "Stegforge posted quarterly revenue of $2.4 billion, up 9% year over year, as the new rail plate mill scaled past its first output milestone toward committed consortium volumes. Aurelia Steg credited disciplined ramp management and steady demand across structural materials for the beat. The company reaffirmed that the mill will reach full rated output by the next fiscal period.",
-      "cycle": 82667,
-      "dur": 2
-    },
-    {
       "company": "Varnvale House",
       "sector": "luxury",
       "kind": "earnings_beat",
@@ -140,16 +180,6 @@
       "body": "Fresh off stabilizing the staged $4.1B mandate, Halden Roe has secured a $6.8 billion power-and-storage agreement to backstop the Corvane regional grid over seven years. The deal, Roe's largest yet, commits Vossenspire to deliver 4.2 gigawatt-hours of storage capacity alongside dedicated compute for load management. Analysts note the win vindicates Roe's staged-delivery strategy but warns it stacks execution risk atop an already stretched pipeline.",
       "cycle": 82667,
       "dur": 8
-    },
-    {
-      "company": "Wrengrove Group",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Wrengrove Group Tops Forecasts as Sterile-Kit Demand Keeps Climbing",
-      "body": "Wrengrove beat expectations with revenue of $1.3 billion, up 11%, as the expanded sterile-kit line at its third plant ran near capacity. Rhys Vossen said hospital and clinic orders continue to outpace supply, prompting early planning for a fourth production site. Margins held steady despite the recent capacity additions.",
-      "cycle": 82667,
-      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -249,16 +279,6 @@
       "head": "Lhaus Industries Secures $2.8B Grid-Storage Supply Pact in Landmark Storage Pivot",
       "body": "Cole Brandt landed a multi-year agreement to supply cell packs for a national grid-storage operator, validating the restarted sixth line and the broader storage push. The deal, worth up to $2.8B over six years, marks Lhaus's largest single contract outside automotive parts. Brandt called it 'the transformation we restarted that line for.'",
       "cycle": 82662,
-      "dur": 8
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Carrowforge Faces Federal Safety Probe as Roe-Era Falsifications Widen",
-      "body": "Regulators at the Industrial Equipment Safety Bureau opened a formal probe into as many as 14,000 machines certified between 2021 and 2025 under falsified test records. CEO Marlow Demore pledged full cooperation and set aside 210M for potential remediation, but conceded the inquiry could stretch across three product lines. Shares of the manufacturer have now shed nearly a third of their value since the scandal first broke.",
-      "cycle": 82661,
       "dur": 8
     }
   ]

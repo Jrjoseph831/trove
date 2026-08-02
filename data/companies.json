@@ -1334,18 +1334,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82663,
+    "lastEventCycle": 82669,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Boreas Power Acquires Stake in Hollowmere Storage Fields",
-        "body": "Mira Thorne announced Boreas Power has taken a controlling stake in the Hollowmere storage fields, a sprawling battery-bank operation feeding three districts. The move pairs the firm's compute arm with new grid-scale capacity. Thorne said the acquisition 'closes the loop between what we compute and what we store.'",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "earnings_beat",
@@ -1574,6 +1564,16 @@
         "body": "Boreas agreed to offload its non-core Halvard transmission assets to Cordell Utilities for $3.4 billion, capping the cleanup CEO Mira Thorne promised after a costly integration quarter. Proceeds will pay down debt taken on during the original Halvard absorption and fund expansion of the compute-power division. Thorne called the sale 'the last chapter of the Halvard reset.'",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82669,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Boreas Power Strikes $6.8B Deal for Compute-Heavy Vantel Group in Bold Pivot",
+        "body": "Flush from the $3.4B Halvard grid sale, CEO Mira Thorne unveiled Boreas Power's largest-ever acquisition: the $6.8B purchase of compute specialist Vantel Group, sharply tilting the company toward data infrastructure. Thorne cast the deal as the culmination of the Halvard cleanup, funding the buy with sale proceeds and $3B in new debt, and pledged Vantel's power-hungry campuses would run on Boreas-owned generation.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -1810,18 +1810,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82663,
+    "lastEventCycle": 82669,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Bruncrest Works Lands Sweeping Supply Pact With Meridian Exchange",
-        "body": "Petra Veldt announced a multi-year compute supply agreement to power the Meridian Exchange's entire clearing operation, the firm's largest contract to date. The deal reportedly spans 40,000 units across three regions and was sealed after a fierce bidding contest. Veldt called it 'a statement, not a sale.'",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82525,
         "kind": "earnings_beat",
@@ -2042,6 +2032,16 @@
         "size": "standard",
         "head": "Bruncrest Works Misses as Aria Ultra Ramp Costs Outpace Early Sales",
         "body": "Bruncrest fell short of estimates as the Aria Ultra launch drove up costs faster than initial units could ship, with margins compressed by the second Eastfield line's start-up. CEO Ines Marlow defended the aggressive push, insisting the Ultra backlog validates the bet even as near-term profit slips. The company held full-year targets but acknowledged a lumpy quarter ahead.",
+        "effects": {
+          "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82669,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Bruncrest Works Slows Aria Ultra Ramp, Trims Eastfield Shifts After Costly Quarter",
+        "body": "Days after missing on ramp costs, CEO Ines Marlow announced Bruncrest would throttle Aria Ultra production and consolidate the newer Eastfield line's shifts to protect margins. The plan cuts an estimated $180M in annualized spend but pushes full Ultra availability into next year, with Marlow conceding the launch pace had 'run ahead of the market.'",
         "effects": {
           "technology": -0.13
         }
@@ -3799,7 +3799,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82662,
+    "lastEventCycle": 82669,
     "events": [
       {
         "cycle": 0,
@@ -4002,6 +4002,16 @@
         "effects": {
           "energy": -0.13
         }
+      },
+      {
+        "cycle": 82669,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Castlehold Posts First Clean Quarter Since Saltmere Spin-Off as Voss Turnaround Takes Hold",
+        "body": "Freed of the ring-fenced cleanup unit, Castlehold reported operating profit of $620M against forecasts near $450M, its first result unencumbered by Saltmere provisions. CEO Halden Voss called it 'proof the core business was always sound,' though the $4.1B regulator suit tied to legacy costs remains unresolved.",
+        "effects": {
+          "energy": 0.13
+        }
       }
     ]
   },
@@ -4099,18 +4109,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82664,
+    "lastEventCycle": 82669,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "breakthrough",
-        "size": "major",
-        "head": "Castlestone Claims Record at Vellmont Compute Showcase",
-        "body": "Iris Garr took the main stage at the Vellmont Showcase to demonstrate a new lattice-cooling design she said triples sustained throughput per rack. Independent halls at the event logged the demo running 11 hours without throttling. Garr, never shy, declared it 'the end of the warm-room era' to roaring applause.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82524,
         "kind": "major_deal",
@@ -4333,6 +4333,16 @@
         "size": "standard",
         "head": "Castlestone Unveils Redesigned Grid Cores as Karsh's Overhaul Clears First Thermal Trials",
         "body": "Castlestone said its reengineered Grid division cores passed independent thermal-stress testing across 40,000 hours of continuous load, resolving the overheating flaws that triggered last quarter's probe. CEO Pell Karsh called the redesign 'a total teardown, not a patch,' and confirmed the idled division will restart limited production next month. Regulators have signaled the probe could close if field data holds.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82669,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Castlestone Lands Anchor Grid-Core Supply Pact as Karsh's Overhaul Wins First Buyer",
+        "body": "Building on cleared thermal trials, CEO Pell Karsh secured a $740M multi-year supply agreement for the redesigned grid cores with a major infrastructure operator, the division's first commercial win since the overheating probe. Karsh called it 'vindication of the hard reset,' with initial shipments from the reopened grid line due next quarter.",
         "effects": {
           "technology": 0.13
         }
@@ -7315,16 +7325,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82664,
+    "lastEventCycle": 82669,
     "events": [
-      {
-        "cycle": 82524,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Halhold Systems Names New Chief as Aldous Departs Amid Northgate Fallout",
-        "body": "Following the cost overruns that triggered last quarter's charge, longtime CEO Cora Aldous has stepped down, ending a turbulent 50-year tenure. The board appointed veteran operations chief Dahlia Renn to stabilize the troubled Northgate campus and restore confidence. Renn pledged a full review of the project's budget within ninety days.",
-        "effects": {}
-      },
       {
         "cycle": 82530,
         "kind": "restructure",
@@ -7549,6 +7551,16 @@
         "body": "Halhold Systems reported quarterly revenue of $310M, below its $370M target, as the multi-day campus outage and subsequent compute-unit recall pushed delivery milestones on its $900M pact into next year. CEO Corin Vale said penalty clauses and replacement hardware carved roughly $85M from margins. The third compute campus remains on schedule, which Vale framed as proof of 'long-term commitment despite a bruising stretch.'",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82669,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Halhold Systems Rocked as Probe Finds Outage Warnings Withheld From $900M Partner",
+        "body": "An independent review revealed that Halhold engineers had flagged the hardware fault weeks before the multi-day outage, but the warnings never reached the $900M pact partner, who is now threatening to void the contract. CEO Corin Vale faces mounting pressure as the board opened an inquiry into disclosure practices, wiping out the goodwill from earlier recall transparency and leaving the flagship deal in jeopardy.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -10284,7 +10296,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82656,
+    "lastEventCycle": 82669,
     "events": [
       {
         "cycle": 0,
@@ -10400,6 +10412,16 @@
         "size": "flash",
         "head": "Marrowcyon Notches Modest Beat as Fixtures Restocking Continues",
         "body": "Marrowcyon edged past estimates for a fourth straight quarter, posting revenue of $1.14 billion on steady reorders of its trade-grade plumbing range. CEO Theo Orne credited disciplined inventory management and said workwear demand held firm through the seasonal transition.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82669,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Extends Streak With Quiet Beat as Apparel and Fixtures Both Firm",
+        "body": "Marrowcyon logged another modest beat, posting margins a touch above guidance as workwear reorders and steady fixtures restocking held. CEO Theo Orne offered little drama, reiterating that the combined range 'does its job quarter after quarter' and keeping full-year guidance unchanged.",
         "effects": {
           "consumer": 0.06
         }
@@ -11649,7 +11671,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82654,
+    "lastEventCycle": 82669,
     "events": [
       {
         "cycle": 0,
@@ -11777,6 +11799,16 @@
         "body": "Steg Tooling posted its ninth consecutive quarterly beat, with revenue of $612M edging past the $598M consensus. CEO Iris Vossen credited stable fastener pricing and near-full utilization at the two Kelmar cells. The company nudged its full-year margin guidance up by 30 basis points.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82669,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Steg Tooling Breaks Ground on Third Kelmar Cell as Vossen Presses Steady Buildout",
+        "body": "With the first two Kelmar cells running near capacity, Steg Tooling committed $310M to a third cell targeting fastener and fixings output, slated to come online within eighteen months. CEO Iris Vossen framed the move as a measured response to firm order books rather than speculative demand, noting the plant would add roughly 240 skilled roles at the Kelmar site.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -12594,7 +12626,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82662,
+    "lastEventCycle": 82669,
     "events": [
       {
         "cycle": 0,
@@ -12802,6 +12834,16 @@
         "body": "Bram Wold unveiled the Aubrec Célestin, a limited run of 500 watches built on Calderon-made movements, marking the first fruit of the vertical integration push. Priced from $38,000, the launch showcases the newly folded Heritage Division and its in-house supply chain. Wold called it 'proof the acquisitions were about craft, not just balance sheets.'",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82669,
+        "kind": "award",
+        "size": "flash",
+        "head": "Varnvale & Sons Heritage Timepiece Takes Top Honor at Geneva Horology Salon",
+        "body": "The debut piece from Varnvale's new Heritage Division won the Grand Complication prize at the annual Salon, a validation of the Aubrec-Calderon integration. CEO Bram Wold said the award confirmed that folding the two houses together 'concentrated craft rather than diluting it,' with early allocations of the limited run already spoken for.",
+        "effects": {
+          "luxury": 0.06
         }
       }
     ]
