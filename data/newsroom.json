@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-02T13:24:40.326Z",
+  "generatedAt": "2026-08-02T19:12:38.156Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Blackhold Unveils Turnaround Plan, Splits Grid-Storage Testing Into Independent Unit",
+      "body": "New CEO Halden Dabney laid out a restructuring plan that carves grid-storage testing into a separately governed unit with outside oversight, aiming to rebuild credibility after the falsified-records scandal. The plan includes a 12% headcount reduction, the closure of two underperforming assembly lines, and a fresh certification of all storage products currently in the field. Dabney told investors the rebuild would pressure margins near-term but was \"the only path back to trust.\"",
+      "cycle": 82671,
+      "dur": 2
+    },
+    {
+      "company": "Blackmoor",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Blackmoor Ticks Higher as Depth Kit Attach Rates Climb",
+      "body": "Blackmoor posted a modest quarterly beat, with the new precision depth kit attaching to roughly 34% of Holloway seed-drill orders. CEO Soren Dray noted the kit's uptake among larger row-crop operators but cautioned that seasonal ordering would keep momentum gradual. Revenue rose 3% year over year.",
+      "cycle": 82671,
+      "dur": 1
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Fennmoor to Acquire Threll Diagnostics in $3.2B Cash-and-Stock Deal",
+      "body": "Fennmoor announced it will buy longtime partner Threll Diagnostics outright for $3.2 billion, converting its licensing arrangement into full ownership of the diagnostics suite now deployed across 140 hospital systems. CEO Dorian Brandt called the move \"the natural end of a courtship,\" and said the deal folds Threll's 1,900 staff and bedside module R&D directly into Fennmoor's Medical Equipment arm. Management expects the acquisition to close within two quarters and add roughly 8% to diagnostics revenue in the first full year.",
+      "cycle": 82671,
+      "dur": 8
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Greenmarsh Agro Extends Seed Coating to Cover-Crop Varieties",
+      "body": "Greenmarsh Agro widened its companion seed coating to cover-crop and rotational varieties, broadening the product's fit within its slow-release soil blend program. CEO Petra Kessler described the step as \"deliberate, field-tested groundwork,\" with trials showing consistent germination gains. Availability begins ahead of the next planting season.",
+      "cycle": 82671,
+      "dur": 1
+    },
+    {
+      "company": "Hearthstone Group",
+      "sector": "hospitality",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Hearthstone Group Adds Fragrance-Free Concentrates to Depot Lineup",
+      "body": "Hearthstone Group extended its concentrate line with a fragrance-free tier aimed at sensitive commercial accounts across its refill depot network. CEO Aurelia Aldous said the addition responds to steady requests from hospitality and healthcare cleaning clients. The variant rolls out to all depots over the next quarter.",
+      "cycle": 82671,
+      "dur": 1
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Korrwright Group Lands $600M Rail-Bridge Contract to Follow Corridor Work",
+      "body": "Korrwright Group secured a $600 million package to supply structural beams and wire assemblies for a regional rail-bridge program, extending demand well past its current Verant corridor backlog. CEO Halden Fenn said the win validates the decision to add a second line, which will now run near capacity into next year. Deliveries begin in the second half.",
+      "cycle": 82671,
+      "dur": 2
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vencyon Beats and Raises as Modular Platform Orders Accelerate",
+      "body": "Vencyon topped estimates and lifted full-year guidance as its modular handling platform booked orders at more than twice the pace of last quarter. CEO Iris Halloran said the platform's configurable design is winning conversions from customers previously tied to fixed installations, with backlog now stretching two quarters out. Operating margin expanded 130 basis points.",
+      "cycle": 82671,
+      "dur": 2
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Vossenstead Supply Opens Fourth Distribution Center to Sustain Growth",
+      "body": "With ten consecutive beats behind it, Vossenstead Supply confirmed a new 420,000-square-foot distribution center in the Aldermere region to serve its expanding Food Service and Plumbing customers. CEO Bram Thorne framed the roughly $180 million investment as \"capacity to keep our promises,\" saying the site should reach operating scale within a year. The facility is expected to shorten fulfillment times across the western route network.",
+      "cycle": 82671,
+      "dur": 2
+    },
     {
       "company": "Bruncraft Industries",
       "sector": "automotive",
@@ -92,36 +172,6 @@
       "dur": 8
     },
     {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Bruncrest Works Slows Aria Ultra Ramp, Trims Eastfield Shifts After Costly Quarter",
-      "body": "Days after missing on ramp costs, CEO Ines Marlow announced Bruncrest would throttle Aria Ultra production and consolidate the newer Eastfield line's shifts to protect margins. The plan cuts an estimated $180M in annualized spend but pushes full Ultra availability into next year, with Marlow conceding the launch pace had 'run ahead of the market.'",
-      "cycle": 82669,
-      "dur": 2
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Castlehold Posts First Clean Quarter Since Saltmere Spin-Off as Voss Turnaround Takes Hold",
-      "body": "Freed of the ring-fenced cleanup unit, Castlehold reported operating profit of $620M against forecasts near $450M, its first result unencumbered by Saltmere provisions. CEO Halden Voss called it 'proof the core business was always sound,' though the $4.1B regulator suit tied to legacy costs remains unresolved.",
-      "cycle": 82669,
-      "dur": 2
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Castlestone Lands Anchor Grid-Core Supply Pact as Karsh's Overhaul Wins First Buyer",
-      "body": "Building on cleared thermal trials, CEO Pell Karsh secured a $740M multi-year supply agreement for the redesigned grid cores with a major infrastructure operator, the division's first commercial win since the overheating probe. Karsh called it 'vindication of the hard reset,' with initial shipments from the reopened grid line due next quarter.",
-      "cycle": 82669,
-      "dur": 2
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "scandal",
@@ -130,16 +180,6 @@
       "body": "An independent review revealed that Halhold engineers had flagged the hardware fault weeks before the multi-day outage, but the warnings never reached the $900M pact partner, who is now threatening to void the contract. CEO Corin Vale faces mounting pressure as the board opened an inquiry into disclosure practices, wiping out the goodwill from earlier recall transparency and leaving the flagship deal in jeopardy.",
       "cycle": 82669,
       "dur": 8
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Steg Tooling Breaks Ground on Third Kelmar Cell as Vossen Presses Steady Buildout",
-      "body": "With the first two Kelmar cells running near capacity, Steg Tooling committed $310M to a third cell targeting fastener and fixings output, slated to come online within eighteen months. CEO Iris Vossen framed the move as a measured response to firm order books rather than speculative demand, noting the plant would add roughly 240 skilled roles at the Kelmar site.",
-      "cycle": 82669,
-      "dur": 2
     },
     {
       "company": "Woldmark",
@@ -239,26 +279,6 @@
       "head": "Greywater Grid Launches $2B Reservoir-Compute Buildout to Serve Landmark Capacity Pact",
       "body": "Greywater Grid unveiled a $2B expansion pairing three new reservoir-backed power sites with dedicated compute halls to fulfill its recently signed $1.6B capacity pact. CEO Sable Renwick, moving at a blistering pace since the reservoir rebuild, said first sites go live within nine months and called the plan 'the clearest bet we've ever placed.' The company will fund the buildout through a mix of committed pact revenue and a new $900M financing facility.",
       "cycle": 82664,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Bruncraft Slapped With Record $2.1 Billion Verdict as Axle Injury Trial Ends",
-      "body": "A jury awarded $2.1 billion to plaintiffs in the consolidated axle-defect trial, finding Bruncraft ignored internal warnings for nearly three years before the recall. CEO Dessa Corvane called the verdict 'a painful but necessary reckoning' and pledged an immediate appeal while setting aside a $900 million reserve. The award is among the largest ever levied against an automaker in a single defect case.",
-      "cycle": 82663,
-      "dur": 8
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Thaldale Ousts CEO Trent as Board Loses Faith in Turnaround Amid Widening Probe",
-      "body": "The board removed Marlowe Trent after a stormy 14-month tenure marked by plant closures, an investor suit, and a regulatory fastening probe that shows no sign of easing. Veteran operations chief Corin Vale steps in as interim then permanent chief, promising to stabilize the remaining fastening lines before pursuing any further cuts. Shares of the tool maker have shed nearly half their value since Trent's plan was unveiled.",
-      "cycle": 82663,
       "dur": 8
     }
   ]

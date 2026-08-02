@@ -849,7 +849,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82663,
+    "lastEventCycle": 82671,
     "events": [
       {
         "cycle": 0,
@@ -1028,6 +1028,16 @@
         "head": "Blackhold Names Turnaround Specialist Dabney to Steer Post-Scandal Rebuild",
         "body": "Following Renata Solberg's resignation, the board tapped former grid-compliance chief Halden Dabney as chief executive with a mandate to rebuild regulator trust. Dabney pledged an independent audit of every test record and a full replacement of the storage division's leadership. Acting CEO Anders Vell returns to his chief operating role.",
         "effects": {}
+      },
+      {
+        "cycle": 82671,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Blackhold Unveils Turnaround Plan, Splits Grid-Storage Testing Into Independent Unit",
+        "body": "New CEO Halden Dabney laid out a restructuring plan that carves grid-storage testing into a separately governed unit with outside oversight, aiming to rebuild credibility after the falsified-records scandal. The plan includes a 12% headcount reduction, the closure of two underperforming assembly lines, and a fresh certification of all storage products currently in the field. Dabney told investors the rebuild would pressure margins near-term but was \"the only path back to trust.\"",
+        "effects": {
+          "energy": -0.13
+        }
       }
     ]
   },
@@ -1042,7 +1052,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82648,
+    "lastEventCycle": 82671,
     "events": [
       {
         "cycle": 0,
@@ -1118,6 +1128,16 @@
         "size": "flash",
         "head": "Blackmoor Introduces Precision Depth Kit for Holloway Seed-Drill Range",
         "body": "Soren Dray's team rolled out an optional depth-control retrofit compatible across the Holloway line, promising more consistent seed placement on uneven ground. The modest add-on lists at roughly $4,800 per unit and can be fitted to drills sold over the past six seasons. Blackmoor framed the launch as a steady extension rather than a new platform, consistent with its long-horizon approach.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82671,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Blackmoor Ticks Higher as Depth Kit Attach Rates Climb",
+        "body": "Blackmoor posted a modest quarterly beat, with the new precision depth kit attaching to roughly 34% of Holloway seed-drill orders. CEO Soren Dray noted the kit's uptake among larger row-crop operators but cautioned that seasonal ordering would keep momentum gradual. Revenue rose 3% year over year.",
         "effects": {
           "agriculture": 0.06
         }
@@ -5730,7 +5750,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82661,
+    "lastEventCycle": 82671,
     "events": [
       {
         "cycle": 0,
@@ -5918,6 +5938,16 @@
         "body": "Fennmoor topped estimates with quarterly revenue up 22% year-on-year, led by the ramping 900M hospital-system contract and strong bedside module attach rates. CEO Dorian Brandt credited the Callent integration for pulling Devices and Medical Equipment orders into a single pipeline. Management raised full-year guidance and hinted at a further diagnostics tuck-in acquisition.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82671,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Fennmoor to Acquire Threll Diagnostics in $3.2B Cash-and-Stock Deal",
+        "body": "Fennmoor announced it will buy longtime partner Threll Diagnostics outright for $3.2 billion, converting its licensing arrangement into full ownership of the diagnostics suite now deployed across 140 hospital systems. CEO Dorian Brandt called the move \"the natural end of a courtship,\" and said the deal folds Threll's 1,900 staff and bedside module R&D directly into Fennmoor's Medical Equipment arm. Management expects the acquisition to close within two quarters and add roughly 8% to diagnostics revenue in the first full year.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -6405,7 +6435,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82652,
+    "lastEventCycle": 82671,
     "events": [
       {
         "cycle": 0,
@@ -6481,6 +6511,16 @@
         "size": "flash",
         "head": "Greenmarsh Agro Edges Past Estimates as Seed Coating Pairs With Soil Blend",
         "body": "Greenmarsh Agro posted a modest revenue gain to $684 million, narrowly topping expectations as early bundling of its companion seed coating with the slow-release soil blend lifted per-acre orders. CEO Petra Kessler emphasized that adoption remains in early innings and reiterated the company's multi-season rollout plan. Renewal rates on the core blend held above 90%.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82671,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Greenmarsh Agro Extends Seed Coating to Cover-Crop Varieties",
+        "body": "Greenmarsh Agro widened its companion seed coating to cover-crop and rotational varieties, broadening the product's fit within its slow-release soil blend program. CEO Petra Kessler described the step as \"deliberate, field-tested groundwork,\" with trials showing consistent germination gains. Availability begins ahead of the next planting season.",
         "effects": {
           "agriculture": 0.06
         }
@@ -7863,7 +7903,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82655,
+    "lastEventCycle": 82671,
     "events": [
       {
         "cycle": 0,
@@ -7959,6 +7999,16 @@
         "size": "flash",
         "head": "Hearthstone Group Beats Narrowly as Concentrate Line Lifts Depot Margins",
         "body": "Hearthstone posted a slim beat with margins up 60 basis points as the new concentrate line reduced shipping and packaging costs across the refill network. CEO Aurelia Aldous said concentrate now accounts for 12% of household-goods volume and reaffirmed steady full-year targets.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82671,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Hearthstone Group Adds Fragrance-Free Concentrates to Depot Lineup",
+        "body": "Hearthstone Group extended its concentrate line with a fragrance-free tier aimed at sensitive commercial accounts across its refill depot network. CEO Aurelia Aldous said the addition responds to steady requests from hospitality and healthcare cleaning clients. The variant rolls out to all depots over the next quarter.",
         "effects": {
           "hospitality": 0.06
         }
@@ -9333,7 +9383,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82660,
+    "lastEventCycle": 82671,
     "events": [
       {
         "cycle": 0,
@@ -9459,6 +9509,16 @@
         "size": "standard",
         "head": "Korrwright Group Adds Second Line at Verant Corridor Plant to Clear Backlog",
         "body": "Korrwright approved a $180M second production line at its Verant Corridor plant to keep pace with the $1.4B infrastructure package. CEO Halden Fenn said cable output will roughly double once the line reaches full rate next year, easing lead times that had stretched to record lengths. The expansion adds an estimated 300 jobs at the site.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82671,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrwright Group Lands $600M Rail-Bridge Contract to Follow Corridor Work",
+        "body": "Korrwright Group secured a $600 million package to supply structural beams and wire assemblies for a regional rail-bridge program, extending demand well past its current Verant corridor backlog. CEO Halden Fenn said the win validates the decision to add a second line, which will now run near capacity into next year. Deliveries begin in the second half.",
         "effects": {
           "construction": 0.13
         }
@@ -13257,7 +13317,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82660,
+    "lastEventCycle": 82671,
     "events": [
       {
         "cycle": 0,
@@ -13383,6 +13443,16 @@
         "size": "standard",
         "head": "Vencyon Beats as Modular Handling Platform Draws Early Orders",
         "body": "Vencyon posted quarterly revenue up 11% as its new modular handling platform booked orders from four distribution operators in its first full quarter. CEO Iris Halloran raised full-year guidance modestly, citing steady third-hub throughput plus incremental platform sales. Margins held firm despite ramp-up costs.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82671,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vencyon Beats and Raises as Modular Platform Orders Accelerate",
+        "body": "Vencyon topped estimates and lifted full-year guidance as its modular handling platform booked orders at more than twice the pace of last quarter. CEO Iris Halloran said the platform's configurable design is winning conversions from customers previously tied to fixed installations, with backlog now stretching two quarters out. Operating margin expanded 130 basis points.",
         "effects": {
           "logistics": 0.13
         }
@@ -13835,7 +13905,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82659,
+    "lastEventCycle": 82671,
     "events": [
       {
         "cycle": 0,
@@ -13961,6 +14031,16 @@
         "size": "standard",
         "head": "Vossenstead Supply Runs Streak to Ten as Both Segments Fire in Lockstep",
         "body": "Vossenstead posted a tenth consecutive quarterly beat, with revenue up 8.4% to $2.1 billion as Food Service and Plumbing & Fixtures both delivered double-digit order growth. CEO Bram Thorne credited the fully ramped hub network and reaffirmed the company's measured expansion cadence. Management raised full-year guidance modestly, citing firm demand across regional accounts.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82671,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vossenstead Supply Opens Fourth Distribution Center to Sustain Growth",
+        "body": "With ten consecutive beats behind it, Vossenstead Supply confirmed a new 420,000-square-foot distribution center in the Aldermere region to serve its expanding Food Service and Plumbing customers. CEO Bram Thorne framed the roughly $180 million investment as \"capacity to keep our promises,\" saying the site should reach operating scale within a year. The facility is expected to shorten fulfillment times across the western route network.",
         "effects": {
           "consumer": 0.13
         }
