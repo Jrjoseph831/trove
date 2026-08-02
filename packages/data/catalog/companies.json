@@ -3210,7 +3210,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82653,
+    "lastEventCycle": 82668,
     "events": [
       {
         "cycle": 0,
@@ -3318,6 +3318,16 @@
         "body": "Cole Brandt unveiled the Lumen Fold series, adding programmable dimming to the modular lighting range that has anchored three straight beats. Early retail commitments cover 1,200 storefronts ahead of the season. Brandt called the launch 'a measured step onto proven ground.'",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82668,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Beats as Smart-Dimming Line Outpaces Early Forecasts",
+        "body": "Carrowcyon reported earnings of $0.94 a share against $0.81 expected, with the newly launched smart-dimming range selling through at nearly twice the pace management modeled. The company said household goods held flat while lighting drove the entire upside, aided by the recently opened distribution center. Full-year guidance was nudged higher.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -4729,7 +4739,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82654,
+    "lastEventCycle": 82668,
     "events": [
       {
         "cycle": 0,
@@ -4837,6 +4847,16 @@
         "body": "Drossware reported quarterly revenue of $488M, modestly ahead of the $476M consensus, as new lighting SKUs and the dedicated packaging line contributed their first full quarter within the grocer alliance. CEO Nadia Wold said cross-category attach rates were running ahead of plan. The company held its full-year guidance steady.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82668,
+        "kind": "recall",
+        "size": "standard",
+        "head": "Drossware Recalls Cleaning-Line Batch Over Mislabeled Concentrate",
+        "body": "Drossware issued a voluntary recall of roughly 240,000 units of its industrial cleaning concentrate after a labeling error understated dilution instructions on a single production run. Nadia Wold said no injuries were reported and the affected batch traced to one line, with corrected packaging already shipping to grocer-alliance partners. The company estimated a modest one-time charge and said other divisions were unaffected.",
+        "effects": {
+          "consumer": -0.13
         }
       }
     ]
@@ -5241,7 +5261,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82651,
+    "lastEventCycle": 82668,
     "events": [
       {
         "cycle": 0,
@@ -5339,6 +5359,16 @@
         "body": "Dunmorewright secured a $510M multi-year coastal defense and drainage program, its largest award ever, surpassing the recent Harborfront milestone. CEO Emil Skarn, in a rare aggressive posture, said the firm would run three record-scale projects in parallel and expand its earthmoving fleet by a further 40 units. The win cements Dunmorewright as the dominant regional infrastructure builder.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82668,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Dunmorewright Beats as Coastal Defense Contract Front-Loads Revenue",
+        "body": "Dunmorewright posted quarterly revenue of $1.31 billion, ahead of the $1.22 billion consensus, as early mobilization on the $510 million coastal defense job began billing sooner than planned. Emil Skarn credited parallel scheduling across the Harborfront and coastal sites for keeping the earthmoving fleet at high utilization. Plumbing and fixtures margins held steady despite input-cost pressure.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -5986,7 +6016,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82653,
+    "lastEventCycle": 82668,
     "events": [
       {
         "cycle": 0,
@@ -6094,6 +6124,16 @@
         "body": "Petra Thorne reported a 7% revenue beat as the add-on Meridian hub fleet order moved into production across both assembly plants. Order backlog held steady at 14 months, giving the material-handling maker rare visibility into next year. Thorne reaffirmed guidance without flourish, citing 'steady lines and full plants.'",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82668,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Forgegrave Industries Lands Coastward Logistics in First Deal Beyond Meridian",
+        "body": "Forgegrave signed a $290 million multi-year contract to supply material-handling fleets to Coastward Logistics, diversifying beyond its long-running Meridian partnership. Petra Thorne said the win validates the second plant's expanded capacity and opens a new customer vertical without straining existing commitments. Deliveries begin next quarter.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -8296,7 +8336,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82650,
+    "lastEventCycle": 82668,
     "events": [
       {
         "cycle": 0,
@@ -8392,6 +8432,16 @@
         "size": "standard",
         "head": "Holtware Co. Signs National Hardware Chain to Stock Lifetime-Warranty Range",
         "body": "Holtware secured a multi-year placement deal to supply its warranty-backed cordless line across 780 retail locations under the Hallmar chain. CEO Aurelia Dray said the agreement should lift annual unit volumes by an estimated 22% while extending the brand's repeat-purchase model to a wider base. Rollout begins next quarter.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82668,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Holtware Co. Opens Second Fulfillment Hub to Sustain Cordless Momentum",
+        "body": "Holtware unveiled a $145 million distribution hub in the Kessridge corridor, doubling regional warehousing capacity to meet demand from its national chain partnership. Aurelia Dray said the site will cut restock times on the lifetime-warranty cordless range by nearly half, with a service-center wing dedicated to warranty claims. The facility is expected to reach full throughput within two quarters.",
         "effects": {
           "consumer": 0.13
         }
@@ -9595,18 +9645,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82662,
+    "lastEventCycle": 82668,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Lhaus Industries Acquires Driveline Maker Korrick Axle",
-        "body": "Restless as ever, Cole Brandt closed the purchase of Korrick Axle, a respected driveline specialist in the Ferrlands. The deal folds Korrick's plants into Lhaus's growing parts division and adds capacity for its vehicle line. Brandt said the firm is 'building a spine, vertebra by vertebra.'",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "expansion",
@@ -9835,6 +9875,16 @@
         "body": "Cole Brandt landed a multi-year agreement to supply cell packs for a national grid-storage operator, validating the restarted sixth line and the broader storage push. The deal, worth up to $2.8B over six years, marks Lhaus's largest single contract outside automotive parts. Brandt called it 'the transformation we restarted that line for.'",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82668,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Lhaus Industries Breaks Ground on Dedicated Grid-Storage Plant to Serve $2.8B Pact",
+        "body": "Lhaus committed $640 million to a purpose-built cell-pack facility in Vantmoor, its first plant devoted entirely to grid-storage output under the landmark supply pact. Cole Brandt said the site will run four assembly lines at launch with room to double, easing pressure on the six retrofitted automotive lines. Initial deliveries from the plant are targeted within 18 months.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -13470,7 +13520,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82661,
+    "lastEventCycle": 82668,
     "events": [
       {
         "cycle": 0,
@@ -13658,6 +13708,16 @@
         "body": "Vossenspire consolidated its recent Larkmoor salon chain and Corveil strapmaker into a unified Vossenspire Retail arm, targeting 60M in annual synergies by 2028. CEO Quinn Marrow named longtime Timepieces chief Halden Rooke to lead the division as integration costs weigh near-term. The move caps a roughly 1.1B acquisition spree aimed at controlling the path from workshop to showroom floor.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82668,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vossenspire Supply Debuts Corveil Timepiece Line Through New Larkmoor Salons",
+        "body": "Vossenspire launched a Corveil-branded timepiece collection sold exclusively through its integrated Larkmoor vehicle-salon floors, the first product to leverage the merged retail division. Quinn Marrow said the cross-sell strategy pairs high-margin watches with vehicle clientele, targeting $110 million in first-year retail revenue. Twelve flagship salons will carry the range at launch.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -14002,7 +14062,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82659,
+    "lastEventCycle": 82668,
     "events": [
       {
         "cycle": 0,
@@ -14157,6 +14217,16 @@
         "head": "Woldmark Names Turnaround Veteran Isolde Frayne CEO to Steady Ship After Halcyon 3",
         "body": "Woldmark's board appointed Isolde Frayne as chief executive, tasking her with restoring quality controls and rebuilding customer trust following the Halcyon 3 field failures. Frayne, a former operations chief known for disciplined product cadences, said she would slow the release cycle and prioritize reliability over speed. The company also confirmed an extended warranty program for affected units.",
         "effects": {}
+      },
+      {
+        "cycle": 82668,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Woldmark Bets Turnaround on Halcyon 4, Frayne's First Flagship",
+        "body": "Isolde Frayne unveiled the Halcyon 4 compute platform, staking her early tenure on a redesigned reliability architecture and an extended validation cycle meant to bury the field-failure disaster that toppled her predecessor. The launch pairs a slower, staged rollout with a first-of-its-kind replacement guarantee, and Frayne told investors the company would rather ship late than repeat the Halcyon 3 recall. Early orders from two anchor customers were disclosed alongside the reveal.",
+        "effects": {
+          "technology": 0.22
+        }
       }
     ]
   },
