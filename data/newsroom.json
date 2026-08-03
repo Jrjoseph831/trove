@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-03T14:42:05.856Z",
+  "generatedAt": "2026-08-03T19:39:31.656Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Boreas Power Misses as Vantel Integration Costs Bite Into Quarter",
+      "body": "Boreas Power posted earnings of $0.94 a share against a $1.22 expectation, as integration charges from the $6.8 billion Vantel acquisition and one-time separation costs from the Halvard sale weighed on results. CEO Mira Thorne defended the pivot, saying compute demand from the Vantel halls would 'more than justify a lumpy transition year.'",
+      "cycle": 82675,
+      "dur": 2
+    },
+    {
+      "company": "Brunforge Holdings",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Brunforge Holdings Extends Streak as Vellan Kitchen Line Ramps",
+      "body": "Brunforge Holdings beat estimates for a fourth straight quarter, with early Vellan Kitchen sales lifting food-service revenue 11%. CEO Kestrel Bramm said the line's attachment rate at existing flagships exceeded expectations, supporting a measured rollout to secondary markets.",
+      "cycle": 82675,
+      "dur": 1
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Calderforge Lands Multi-Year Capacity Deal for Stormwell Compute Halls",
+      "body": "Calderforge signed a $1.9 billion, five-year capacity agreement anchoring more than half of the newly stabilized Stormwell halls to a single enterprise customer. CEO Nadia Throne said the contract validates the post-outage cooling overhaul and provides 'the revenue floor we've needed to invest ahead of demand.'",
+      "cycle": 82675,
+      "dur": 2
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Kessel Drive Hit With Sweeping Shareholder Suit Over Storage Failures",
+      "body": "A consolidated shareholder action filed in the Merrin district court accuses Kessel Drive of concealing known defects in its storage units months before the recall, seeking damages tied to the stock's collapse. The complaint names CEO Neave Corliss and several directors; the company said the claims are 'without merit' and vowed to defend vigorously as the parallel regulatory probe continues.",
+      "cycle": 82675,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Tops Estimates Again as Cleaning Lines Firm Up",
+      "body": "Ornewright Goods reported quarterly revenue of $1.41 billion, edging past the $1.38 billion consensus, its fifth consecutive beat. CEO Petra Veldt credited resilient Jansan volumes and modest price gains, calling the quarter 'unremarkable in the best way.'",
+      "cycle": 82675,
+      "dur": 1
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Veldtreach & Sons Adds Third Excavation Fleet to Meet Coastal Rail Demand",
+      "body": "Facing tight equipment availability across the Coastal Rail corridor, Veldtreach & Sons committed $210 million to a third heavy excavation fleet and two new staging depots. CEO Petra Steg said the buildout secures capacity through the 2027 grading season and positions the firm for follow-on corridor tenders.",
+      "cycle": 82675,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Vossenspire Supply Acquires Movement-Maker Halvane in $480M Deal",
+      "body": "Vossenspire Supply agreed to buy specialist movement manufacturer Halvane for $480 million, bringing in-house the mechanisms behind its Corveil timepiece line. CEO Quinn Marrow said vertical control would protect margins and supply as Corveil expands through the Larkmoor salon network.",
+      "cycle": 82675,
+      "dur": 2
+    },
+    {
+      "company": "Wold & Bramm",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Wold & Bramm Posts Solid Quarter as Heritage Collection Sells Through",
+      "body": "Wold & Bramm reported profit up 7% on strong early sales of its Heritage Lighting Collection across all four showrooms. CEO Mara Marrow said sell-through outpaced internal targets and hinted at scouting a fifth location for late next year.",
+      "cycle": 82675,
+      "dur": 1
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -72,66 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Wrenhaus",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Wrenhaus Edges Past Estimates on Steady Riverside Fixture Volumes",
-      "body": "Quinn Thorne reported a 6% rise in quarterly revenue to $214M, supported by early output from the new distribution network and firm demand across the Riverside corridor. Management held its full-year outlook and noted the second fixture plant remains on schedule and on budget.",
-      "cycle": 82674,
-      "dur": 1
-    },
-    {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Aldouscraft Mfg. Commits to Fourth Extrusion Line as Grid Orders Stack Up",
-      "body": "Aldouscraft approved a $95M expansion to add a fourth extrusion line, aiming to relieve pressure from its two active grid feeder-cable contracts. CEO Soren Ashby said the line should come online within 18 months and lift annual output by roughly 22%. The move mirrors rival Holtforge's capacity race in the cable sector.",
-      "cycle": 82673,
-      "dur": 2
-    },
-    {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunridge Works Relaunches Cordless Line With Redesigned Thermal Safeguards",
-      "body": "Six months after the overheating recall, Brunridge unveiled its new Corelin cordless devices, featuring a redesigned battery housing and dual thermal cutoffs certified to updated safety standards. CEO Halia Brennt said the company absorbed roughly $40M in recall and retooling costs but framed the relaunch as proof of its commitment to quality. Initial shipments will prioritize the two new distribution centers opened earlier this year.",
-      "cycle": 82673,
-      "dur": 2
-    },
-    {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Calderworks Beats as Fourth Kiln Comes Online Ahead of Ramp",
-      "body": "Calderworks topped estimates with revenue up 11%, as the newly commissioned fourth kiln began feeding the decade-long Tessen Ridge supply pact. CEO Kestrel Halloran said the added capacity has already cleared a modest order backlog and positions the firm to pursue additional regional pacts. Structural materials demand remains robust across the corridor.",
-      "cycle": 82673,
-      "dur": 2
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcrow & Vance Beats as $2.1B Vetask Mandate Begins Billing",
-      "body": "Halcrow & Vance reported revenue up 19% as early earthmoving work on its $2.1B Vetask regional development mandate began generating billings. CEO Mira Skarn said both staging yards are now operating at full tilt and hinted at bidding for adjacent corridor phases. The firm raised its full-year outlook modestly.",
-      "cycle": 82673,
-      "dur": 2
-    },
-    {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Holtforge Group Beats Again as Offshore Interconnector Order Fills Order Book",
-      "body": "Holtforge reported quarterly revenue up 14% year-over-year, crediting steady deliveries against its $1.6B offshore interconnector mandate and continued marine cable volumes. CEO Yvette Bramm noted the plant is now running near capacity, with the interconnector work extending visibility into the next two fiscal years. Margins held firm on stable copper costs.",
-      "cycle": 82673,
-      "dur": 2
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "major_deal",
@@ -140,16 +160,6 @@
       "body": "Lhaus stunned the sector by landing a $3.4B, seven-year grid-storage supply agreement with a consortium of utilities, its largest contract ever and second major storage win in under a year. CEO Cole Brandt said the deal validates the pivot away from legacy auto parts and pledged to fast-track a second dedicated storage plant. Combined storage backlog now exceeds $6B.",
       "cycle": 82673,
       "dur": 8
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Thaldale Group Unveils Sweeping Overhaul Under New Chief Vale as Fastening Unit Is Carved Out",
-      "body": "Newly installed CEO Corin Vale announced a restructuring that ring-fences the troubled fastening division into a standalone unit and cuts roughly 900 jobs across three plants. Vale said the plan aims to isolate legal exposure from the ongoing probe while protecting the profitable hand-tool lines. The company set aside a further $70M in legal and reorganization reserves.",
-      "cycle": 82673,
-      "dur": 2
     },
     {
       "company": "Marlgear Supply",
@@ -239,26 +249,6 @@
       "head": "Woldmark Bets Turnaround on Halcyon 4, Frayne's First Flagship",
       "body": "Isolde Frayne unveiled the Halcyon 4 compute platform, staking her early tenure on a redesigned reliability architecture and an extended validation cycle meant to bury the field-failure disaster that toppled her predecessor. The launch pairs a slower, staged rollout with a first-of-its-kind replacement guarantee, and Frayne told investors the company would rather ship late than repeat the Halcyon 3 recall. Early orders from two anchor customers were disclosed alongside the reveal.",
       "cycle": 82668,
-      "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "major",
-      "head": "Varnvale House Delivers Record Quarter as Sovereign Collection Sells Out",
-      "body": "Varnvale reported record quarterly profit of $310 million, up 42%, after the top-tier Sovereign Collection sold through its initial allocation within weeks. Adrienne Sole said waiting lists for the flagship timepieces now stretch past a year, cementing the house's push into the ultra-luxury segment. The result marks a stunning turn from the scandal-era lows of two years ago.",
-      "cycle": 82667,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Vossenspire Holdings Lands $6.8B Grid-Scale Storage Pact as Roe Doubles Down",
-      "body": "Fresh off stabilizing the staged $4.1B mandate, Halden Roe has secured a $6.8 billion power-and-storage agreement to backstop the Corvane regional grid over seven years. The deal, Roe's largest yet, commits Vossenspire to deliver 4.2 gigawatt-hours of storage capacity alongside dedicated compute for load management. Analysts note the win vindicates Roe's staged-delivery strategy but warns it stacks execution risk atop an already stretched pipeline.",
-      "cycle": 82667,
       "dur": 8
     }
   ]

@@ -1374,18 +1374,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82669,
+    "lastEventCycle": 82675,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "earnings_beat",
-        "size": "flash",
-        "head": "Boreas Power Tops Forecasts as Hollowmere Comes Online",
-        "body": "Boreas Power beat quarterly expectations as the newly acquired Hollowmere fields began contributing storage revenue ahead of schedule. Mira Thorne credited rapid integration and steady demand across the three districts. She signaled appetite for 'one or two more' deals this year.",
-        "effects": {
-          "energy": 0.06
-        }
-      },
       {
         "cycle": 82525,
         "kind": "major_deal",
@@ -1614,6 +1604,16 @@
         "body": "Flush from the $3.4B Halvard grid sale, CEO Mira Thorne unveiled Boreas Power's largest-ever acquisition: the $6.8B purchase of compute specialist Vantel Group, sharply tilting the company toward data infrastructure. Thorne cast the deal as the culmination of the Halvard cleanup, funding the buy with sale proceeds and $3B in new debt, and pledged Vantel's power-hungry campuses would run on Boreas-owned generation.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82675,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Boreas Power Misses as Vantel Integration Costs Bite Into Quarter",
+        "body": "Boreas Power posted earnings of $0.94 a share against a $1.22 expectation, as integration charges from the $6.8 billion Vantel acquisition and one-time separation costs from the Halvard sale weighed on results. CEO Mira Thorne defended the pivot, saying compute demand from the Vantel halls would 'more than justify a lumpy transition year.'",
+        "effects": {
+          "energy": -0.13
         }
       }
     ]
@@ -2107,7 +2107,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82659,
+    "lastEventCycle": 82675,
     "events": [
       {
         "cycle": 0,
@@ -2215,6 +2215,16 @@
         "body": "Brunforge unveiled the Vellan Kitchen collection, pushing its successful home-goods brand into cookware and small appliances across its regional flagships. CEO Kestrel Bramm framed the launch as a natural adjacency, with initial rollout to eight stores before a wider expansion. Early pre-orders were described as ahead of internal targets.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82675,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Brunforge Holdings Extends Streak as Vellan Kitchen Line Ramps",
+        "body": "Brunforge Holdings beat estimates for a fourth straight quarter, with early Vellan Kitchen sales lifting food-service revenue 11%. CEO Kestrel Bramm said the line's attachment rate at existing flagships exceeded expectations, supporting a measured rollout to secondary markets.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -2964,7 +2974,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82667,
+    "lastEventCycle": 82675,
     "events": [
       {
         "cycle": 0,
@@ -3150,6 +3160,16 @@
         "size": "standard",
         "head": "Calderforge Recovers as Stormwell Halls Return to Full Load",
         "body": "Calderforge topped estimates with quarterly revenue of $1.9 billion after the two idled Stormwell halls came back online under new cooling standards. Nadia Throne said the overhaul, though costly last quarter, has cut thermal-related downtime to near zero and restored full compute availability. The rebound eases pressure following a bruising outage-and-remediation cycle.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82675,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Calderforge Lands Multi-Year Capacity Deal for Stormwell Compute Halls",
+        "body": "Calderforge signed a $1.9 billion, five-year capacity agreement anchoring more than half of the newly stabilized Stormwell halls to a single enterprise customer. CEO Nadia Throne said the contract validates the post-outage cooling overhaul and provides 'the revenue floor we've needed to invest ahead of demand.'",
         "effects": {
           "technology": 0.13
         }
@@ -8991,7 +9011,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82665,
+    "lastEventCycle": 82675,
     "events": [
       {
         "cycle": 0,
@@ -9145,6 +9165,16 @@
         "size": "major",
         "head": "Kessel Drive Halts Storage Production and Cuts 4,200 Jobs in Sweeping Overhaul",
         "body": "Neave Corliss announced a full suspension of the flagged storage line and a 4,200-headcount reduction across three plants, framing the move as a 'reset to zero' after the widening probe. The company will take an $880 million restructuring charge and pull its full-year guidance entirely. Corliss pledged a redesigned storage architecture within nine months, calling it 'the only path back.'",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82675,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Kessel Drive Hit With Sweeping Shareholder Suit Over Storage Failures",
+        "body": "A consolidated shareholder action filed in the Merrin district court accuses Kessel Drive of concealing known defects in its storage units months before the recall, seeking damages tied to the stock's collapse. The complaint names CEO Neave Corliss and several directors; the company said the claims are 'without merit' and vowed to defend vigorously as the parallel regulatory probe continues.",
         "effects": {
           "automotive": -0.22
         }
@@ -10999,7 +11029,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82660,
+    "lastEventCycle": 82675,
     "events": [
       {
         "cycle": 0,
@@ -11105,6 +11135,16 @@
         "size": "flash",
         "head": "Ornewright Goods Edges Ahead of Estimates Again on Food-Service Strength",
         "body": "Ornewright delivered another slim beat, with revenue up 3% as food-service demand offset softer cleaning volumes. CEO Petra Veldt reaffirmed guidance and pointed to steady contract renewals across the farm-inputs book. The result extends the company's long run of undramatic, on-target quarters.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82675,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Tops Estimates Again as Cleaning Lines Firm Up",
+        "body": "Ornewright Goods reported quarterly revenue of $1.41 billion, edging past the $1.38 billion consensus, its fifth consecutive beat. CEO Petra Veldt credited resilient Jansan volumes and modest price gains, calling the quarter 'unremarkable in the best way.'",
         "effects": {
           "consumer": 0.06
         }
@@ -13392,7 +13432,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82658,
+    "lastEventCycle": 82675,
     "events": [
       {
         "cycle": 0,
@@ -13488,6 +13528,16 @@
         "size": "standard",
         "head": "Veldtreach & Sons Beats as Coastal Rail Earthworks Begin Billing",
         "body": "Petra Steg reported revenue up 14% as the $850M coastal rail contract moved into active mobilization alongside the Highland Corridor program. Three excavation fleets are now fully deployed, with backlog reaching a record $2.1B. Steg noted staffing has stabilized after the prior year's rapid intake.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82675,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Veldtreach & Sons Adds Third Excavation Fleet to Meet Coastal Rail Demand",
+        "body": "Facing tight equipment availability across the Coastal Rail corridor, Veldtreach & Sons committed $210 million to a third heavy excavation fleet and two new staging depots. CEO Petra Steg said the buildout secures capacity through the 2027 grading season and positions the firm for follow-on corridor tenders.",
         "effects": {
           "construction": 0.13
         }
@@ -13880,7 +13930,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82668,
+    "lastEventCycle": 82675,
     "events": [
       {
         "cycle": 0,
@@ -14076,6 +14126,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Debuts Corveil Timepiece Line Through New Larkmoor Salons",
         "body": "Vossenspire launched a Corveil-branded timepiece collection sold exclusively through its integrated Larkmoor vehicle-salon floors, the first product to leverage the merged retail division. Quinn Marrow said the cross-sell strategy pairs high-margin watches with vehicle clientele, targeting $110 million in first-year retail revenue. Twelve flagship salons will carry the range at launch.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82675,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vossenspire Supply Acquires Movement-Maker Halvane in $480M Deal",
+        "body": "Vossenspire Supply agreed to buy specialist movement manufacturer Halvane for $480 million, bringing in-house the mechanisms behind its Corveil timepiece line. CEO Quinn Marrow said vertical control would protect margins and supply as Corveil expands through the Larkmoor salon network.",
         "effects": {
           "luxury": 0.13
         }
@@ -14329,7 +14389,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82656,
+    "lastEventCycle": 82675,
     "events": [
       {
         "cycle": 0,
@@ -14417,6 +14477,16 @@
         "body": "Mara Marrow marked the completion of the fourth Heritage showroom by unveiling a premium lighting line, the company's first designed exclusively for its own retail floors. The measured expansion pushes Wold & Bramm's showroom footprint to four cities, with Marrow reiterating a preference for steady, self-funded growth.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82675,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wold & Bramm Posts Solid Quarter as Heritage Collection Sells Through",
+        "body": "Wold & Bramm reported profit up 7% on strong early sales of its Heritage Lighting Collection across all four showrooms. CEO Mara Marrow said sell-through outpaced internal targets and hinted at scouting a fifth location for late next year.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
