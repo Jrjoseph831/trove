@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82656,
+    "lastEventCycle": 82673,
     "events": [
       {
         "cycle": 0,
@@ -106,6 +106,16 @@
         "size": "standard",
         "head": "Aldouscraft Mfg. Beats as Dual Grid Contracts Lift Feeder Cable Volumes",
         "body": "Aldouscraft reported quarterly revenue of $760 million, up 14% year over year, as both grid contracts moved into full production across its three extrusion lines. Soren Ashby said the order book now stretches eighteen months out, giving the wire-and-cable maker its clearest visibility in a decade.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82673,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Aldouscraft Mfg. Commits to Fourth Extrusion Line as Grid Orders Stack Up",
+        "body": "Aldouscraft approved a $95M expansion to add a fourth extrusion line, aiming to relieve pressure from its two active grid feeder-cable contracts. CEO Soren Ashby said the line should come online within 18 months and lift annual output by roughly 22%. The move mirrors rival Holtforge's capacity race in the cable sector.",
         "effects": {
           "construction": 0.13
         }
@@ -2419,7 +2429,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82660,
+    "lastEventCycle": 82673,
     "events": [
       {
         "cycle": 0,
@@ -2545,6 +2555,16 @@
         "body": "Brunridge issued a voluntary recall of roughly 220,000 units from its Devices segment following reports of battery packs overheating during charging. CEO Halia Brennt said no serious injuries were confirmed and that affected customers would receive free replacements, with a charge of about $30M expected against the current quarter. The company said its Fine Goods and Packaging lines are unaffected.",
         "effects": {
           "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82673,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunridge Works Relaunches Cordless Line With Redesigned Thermal Safeguards",
+        "body": "Six months after the overheating recall, Brunridge unveiled its new Corelin cordless devices, featuring a redesigned battery housing and dual thermal cutoffs certified to updated safety standards. CEO Halia Brennt said the company absorbed roughly $40M in recall and retooling costs but framed the relaunch as proof of its commitment to quality. Initial shipments will prioritize the two new distribution centers opened earlier this year.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -3137,7 +3157,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82657,
+    "lastEventCycle": 82673,
     "events": [
       {
         "cycle": 0,
@@ -3233,6 +3253,16 @@
         "size": "standard",
         "head": "Calderworks Adds Fourth Kiln as Tessen Ridge Demand Outstrips Capacity",
         "body": "Calderworks Holdings approved a $340M expansion to bring a fourth high-output kiln online at its Marrow Vale complex, citing sustained pull from the decade-long Tessen Ridge pact. CEO Kestrel Halloran said the addition lifts structural-materials capacity roughly 28% and positions the firm to bid on adjacent regional infrastructure work. Commissioning is targeted within eighteen months.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82673,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderworks Beats as Fourth Kiln Comes Online Ahead of Ramp",
+        "body": "Calderworks topped estimates with revenue up 11%, as the newly commissioned fourth kiln began feeding the decade-long Tessen Ridge supply pact. CEO Kestrel Halloran said the added capacity has already cleared a modest order backlog and positions the firm to pursue additional regional pacts. Structural materials demand remains robust across the corridor.",
         "effects": {
           "construction": 0.13
         }
@@ -7149,7 +7179,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82660,
+    "lastEventCycle": 82673,
     "events": [
       {
         "cycle": 0,
@@ -7257,6 +7287,16 @@
         "body": "The firm secured a multi-year mandate to lead earthmoving and site preparation across the entire Vetask regional expansion, a package valued at $2.1 billion over five years. CEO Mira Skarn called it the culmination of the company's corridor strategy, noting that both staging yards will run at capacity to service the deal. The award nearly doubles Halcrow & Vance's confirmed backlog.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82673,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrow & Vance Beats as $2.1B Vetask Mandate Begins Billing",
+        "body": "Halcrow & Vance reported revenue up 19% as early earthmoving work on its $2.1B Vetask regional development mandate began generating billings. CEO Mira Skarn said both staging yards are now operating at full tilt and hinted at bidding for adjacent corridor phases. The firm raised its full-year outlook modestly.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -8199,7 +8239,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82658,
+    "lastEventCycle": 82673,
     "events": [
       {
         "cycle": 0,
@@ -8308,6 +8348,16 @@
         "effects": {
           "construction": 0.22
         }
+      },
+      {
+        "cycle": 82673,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtforge Group Beats Again as Offshore Interconnector Order Fills Order Book",
+        "body": "Holtforge reported quarterly revenue up 14% year-over-year, crediting steady deliveries against its $1.6B offshore interconnector mandate and continued marine cable volumes. CEO Yvette Bramm noted the plant is now running near capacity, with the interconnector work extending visibility into the next two fiscal years. Margins held firm on stable copper costs.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -8322,7 +8372,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82642,
+    "lastEventCycle": 82673,
     "events": [
       {
         "cycle": 0,
@@ -8378,6 +8428,16 @@
         "size": "flash",
         "head": "Holtgate Cloth Logs Another Steady Quarter as Supply Pact Renews Quietly",
         "body": "Dorian Carrow's textile house reported flat-to-modest growth with revenue at $340M, extending its unbroken run of dependable quarters. The renewed supply pact was extended a further two years on unchanged terms, drawing little fanfare. Carrow offered no new initiatives, keeping to the conservative course that has defined the firm for over a century.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82673,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Cloth Posts Another Quietly Steady Quarter as Volumes Hold",
+        "body": "Holtgate delivered flat-to-slightly-up results, with revenue edging 2% higher on stable raw textile demand and its long-running supply pact. CEO Dorian Carrow offered little commentary beyond reaffirming the company's unchanged outlook. Analysts continue to describe the house as one of the calmest names in the sector.",
         "effects": {
           "textiles": 0.06
         }
@@ -9807,18 +9867,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82668,
+    "lastEventCycle": 82673,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "expansion",
-        "size": "flash",
-        "head": "Lhaus Industries Reopens Korrick Axle's Idled Ferrlands Plant",
-        "body": "Weeks after the acquisition, Lhaus Industries restarted Korrick Axle's mothballed second plant in the Ferrlands, recalling some 300 workers. Cole Brandt toured the floor and committed to a power-and-storage upgrade for the site. The quick turnaround signaled how fast Brandt intends to integrate.",
-        "effects": {
-          "automotive": 0.06
-        }
-      },
       {
         "cycle": 82525,
         "kind": "major_deal",
@@ -10047,6 +10097,16 @@
         "body": "Lhaus committed $640 million to a purpose-built cell-pack facility in Vantmoor, its first plant devoted entirely to grid-storage output under the landmark supply pact. Cole Brandt said the site will run four assembly lines at launch with room to double, easing pressure on the six retrofitted automotive lines. Initial deliveries from the plant are targeted within 18 months.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82673,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Lhaus Industries Seals Second Grid-Storage Megadeal Worth $3.4B, Cementing Storage Pivot",
+        "body": "Lhaus stunned the sector by landing a $3.4B, seven-year grid-storage supply agreement with a consortium of utilities, its largest contract ever and second major storage win in under a year. CEO Cole Brandt said the deal validates the pivot away from legacy auto parts and pledged to fast-track a second dedicated storage plant. Combined storage backlog now exceeds $6B.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -12230,7 +12290,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82663,
+    "lastEventCycle": 82673,
     "events": [
       {
         "cycle": 0,
@@ -12363,6 +12423,16 @@
         "head": "Thaldale Ousts CEO Trent as Board Loses Faith in Turnaround Amid Widening Probe",
         "body": "The board removed Marlowe Trent after a stormy 14-month tenure marked by plant closures, an investor suit, and a regulatory fastening probe that shows no sign of easing. Veteran operations chief Corin Vale steps in as interim then permanent chief, promising to stabilize the remaining fastening lines before pursuing any further cuts. Shares of the tool maker have shed nearly half their value since Trent's plan was unveiled.",
         "effects": {}
+      },
+      {
+        "cycle": 82673,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Thaldale Group Unveils Sweeping Overhaul Under New Chief Vale as Fastening Unit Is Carved Out",
+        "body": "Newly installed CEO Corin Vale announced a restructuring that ring-fences the troubled fastening division into a standalone unit and cuts roughly 900 jobs across three plants. Vale said the plan aims to isolate legal exposure from the ongoing probe while protecting the profitable hand-tool lines. The company set aside a further $70M in legal and reorganization reserves.",
+        "effects": {
+          "consumer": -0.13
+        }
       }
     ]
   },

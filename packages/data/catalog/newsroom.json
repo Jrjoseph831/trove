@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-03T02:55:56.727Z",
+  "generatedAt": "2026-08-03T09:49:15.724Z",
   "beats": [
+    {
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Aldouscraft Mfg. Commits to Fourth Extrusion Line as Grid Orders Stack Up",
+      "body": "Aldouscraft approved a $95M expansion to add a fourth extrusion line, aiming to relieve pressure from its two active grid feeder-cable contracts. CEO Soren Ashby said the line should come online within 18 months and lift annual output by roughly 22%. The move mirrors rival Holtforge's capacity race in the cable sector.",
+      "cycle": 82673,
+      "dur": 2
+    },
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Brunridge Works Relaunches Cordless Line With Redesigned Thermal Safeguards",
+      "body": "Six months after the overheating recall, Brunridge unveiled its new Corelin cordless devices, featuring a redesigned battery housing and dual thermal cutoffs certified to updated safety standards. CEO Halia Brennt said the company absorbed roughly $40M in recall and retooling costs but framed the relaunch as proof of its commitment to quality. Initial shipments will prioritize the two new distribution centers opened earlier this year.",
+      "cycle": 82673,
+      "dur": 2
+    },
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Calderworks Beats as Fourth Kiln Comes Online Ahead of Ramp",
+      "body": "Calderworks topped estimates with revenue up 11%, as the newly commissioned fourth kiln began feeding the decade-long Tessen Ridge supply pact. CEO Kestrel Halloran said the added capacity has already cleared a modest order backlog and positions the firm to pursue additional regional pacts. Structural materials demand remains robust across the corridor.",
+      "cycle": 82673,
+      "dur": 2
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halcrow & Vance Beats as $2.1B Vetask Mandate Begins Billing",
+      "body": "Halcrow & Vance reported revenue up 19% as early earthmoving work on its $2.1B Vetask regional development mandate began generating billings. CEO Mira Skarn said both staging yards are now operating at full tilt and hinted at bidding for adjacent corridor phases. The firm raised its full-year outlook modestly.",
+      "cycle": 82673,
+      "dur": 2
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Holtforge Group Beats Again as Offshore Interconnector Order Fills Order Book",
+      "body": "Holtforge reported quarterly revenue up 14% year-over-year, crediting steady deliveries against its $1.6B offshore interconnector mandate and continued marine cable volumes. CEO Yvette Bramm noted the plant is now running near capacity, with the interconnector work extending visibility into the next two fiscal years. Margins held firm on stable copper costs.",
+      "cycle": 82673,
+      "dur": 2
+    },
+    {
+      "company": "Holtgate Cloth",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Cloth Posts Another Quietly Steady Quarter as Volumes Hold",
+      "body": "Holtgate delivered flat-to-slightly-up results, with revenue edging 2% higher on stable raw textile demand and its long-running supply pact. CEO Dorian Carrow offered little commentary beyond reaffirming the company's unchanged outlook. Analysts continue to describe the house as one of the calmest names in the sector.",
+      "cycle": 82673,
+      "dur": 1
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Lhaus Industries Seals Second Grid-Storage Megadeal Worth $3.4B, Cementing Storage Pivot",
+      "body": "Lhaus stunned the sector by landing a $3.4B, seven-year grid-storage supply agreement with a consortium of utilities, its largest contract ever and second major storage win in under a year. CEO Cole Brandt said the deal validates the pivot away from legacy auto parts and pledged to fast-track a second dedicated storage plant. Combined storage backlog now exceeds $6B.",
+      "cycle": 82673,
+      "dur": 8
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Thaldale Group Unveils Sweeping Overhaul Under New Chief Vale as Fastening Unit Is Carved Out",
+      "body": "Newly installed CEO Corin Vale announced a restructuring that ring-fences the troubled fastening division into a standalone unit and cuts roughly 900 jobs across three plants. Vale said the plan aims to isolate legal exposure from the ongoing probe while protecting the profitable hand-tool lines. The company set aside a further $70M in legal and reorganization reserves.",
+      "cycle": 82673,
+      "dur": 2
+    },
     {
       "company": "Carrowwell",
       "sector": "manufacturing",
@@ -42,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Korrgrave Mfg.",
-      "sector": "agriculture",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Korrgrave Mfg. Breaks Ground on Modest Southern Blending Line",
-      "body": "Korrgrave confirmed a $46M expansion adding a blending line at its southern facility, its first meaningful capacity addition in over a decade. CEO Aurelia Halloran framed the move as 'a careful step,' noting output would ramp gradually over three years to meet steady demand from regional cooperatives.",
-      "cycle": 82672,
-      "dur": 1
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "outage",
@@ -72,26 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Edges Ahead as New Distribution Contract Adds Volume",
-      "body": "Vantor posted quarterly revenue of $520M, up 3%, with the recently won regional distribution contract beginning to offset flat grocery packaging demand. CEO Halden Vossen said diversification was 'proceeding as planned' and reaffirmed full-year guidance.",
-      "cycle": 82672,
-      "dur": 1
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Blackhold Unveils Turnaround Plan, Splits Grid-Storage Testing Into Independent Unit",
-      "body": "New CEO Halden Dabney laid out a restructuring plan that carves grid-storage testing into a separately governed unit with outside oversight, aiming to rebuild credibility after the falsified-records scandal. The plan includes a 12% headcount reduction, the closure of two underperforming assembly lines, and a fresh certification of all storage products currently in the field. Dabney told investors the rebuild would pressure margins near-term but was \"the only path back to trust.\"",
-      "cycle": 82671,
-      "dur": 2
-    },
-    {
       "company": "Fennmoor",
       "sector": "technology",
       "kind": "major_deal",
@@ -100,36 +150,6 @@
       "body": "Fennmoor announced it will buy longtime partner Threll Diagnostics outright for $3.2 billion, converting its licensing arrangement into full ownership of the diagnostics suite now deployed across 140 hospital systems. CEO Dorian Brandt called the move \"the natural end of a courtship,\" and said the deal folds Threll's 1,900 staff and bedside module R&D directly into Fennmoor's Medical Equipment arm. Management expects the acquisition to close within two quarters and add roughly 8% to diagnostics revenue in the first full year.",
       "cycle": 82671,
       "dur": 8
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrwright Group Lands $600M Rail-Bridge Contract to Follow Corridor Work",
-      "body": "Korrwright Group secured a $600 million package to supply structural beams and wire assemblies for a regional rail-bridge program, extending demand well past its current Verant corridor backlog. CEO Halden Fenn said the win validates the decision to add a second line, which will now run near capacity into next year. Deliveries begin in the second half.",
-      "cycle": 82671,
-      "dur": 2
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vencyon Beats and Raises as Modular Platform Orders Accelerate",
-      "body": "Vencyon topped estimates and lifted full-year guidance as its modular handling platform booked orders at more than twice the pace of last quarter. CEO Iris Halloran said the platform's configurable design is winning conversions from customers previously tied to fixed installations, with backlog now stretching two quarters out. Operating margin expanded 130 basis points.",
-      "cycle": 82671,
-      "dur": 2
-    },
-    {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Vossenstead Supply Opens Fourth Distribution Center to Sustain Growth",
-      "body": "With ten consecutive beats behind it, Vossenstead Supply confirmed a new 420,000-square-foot distribution center in the Aldermere region to serve its expanding Food Service and Plumbing customers. CEO Bram Thorne framed the roughly $180 million investment as \"capacity to keep our promises,\" saying the site should reach operating scale within a year. The facility is expected to shorten fulfillment times across the western route network.",
-      "cycle": 82671,
-      "dur": 2
     },
     {
       "company": "Bruncraft Industries",
@@ -229,36 +249,6 @@
       "head": "Ironcrestton Terminates Licensing Program Entirely as New CEO Blackwood Pulls Production In-House",
       "body": "In a sweeping overhaul, Thea Blackwood announced Ironcrestton will wind down all third-party licensing that spawned the origin-standard scandal, taking manufacturing of Fine Goods fully in-house at a projected cost of $340M over two years. The move settles a swath of the pending licensee litigation but slashes near-term unit volumes by an estimated 30%, with Blackwood calling it 'the only way to ever again promise a customer where a thing came from.'",
       "cycle": 82666,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Gromford Works Faces Regulatory Charges as Meridian Probe Turns Criminal",
-      "body": "Prosecutors filed formal charges against Gromford Works and two former executives, alleging years of concealed sourcing violations tied to the Meridian supply chain. Dahlia Verrint, installed after Corin Aldwych's ouster, said the company would cooperate fully while setting aside $340 million against potential penalties and settlements. The timepiece division suspended several product lines pending a sourcing audit.",
-      "cycle": 82665,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Kessel Drive Halts Storage Production and Cuts 4,200 Jobs in Sweeping Overhaul",
-      "body": "Neave Corliss announced a full suspension of the flagged storage line and a 4,200-headcount reduction across three plants, framing the move as a 'reset to zero' after the widening probe. The company will take an $880 million restructuring charge and pull its full-year guidance entirely. Corliss pledged a redesigned storage architecture within nine months, calling it 'the only path back.'",
-      "cycle": 82665,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Marlgear Supply Wins Landmark Kessel Platform Contract Across Verrant Rail Network",
-      "body": "Adele Ferran secured a five-year, $1.2 billion agreement to deploy the Kessel Industrial Platform across the entire Verrant Rail maintenance network, the largest order in Marlgear's history. Ferran called it 'the deal that proves the turnaround is real,' projecting the contract alone will add roughly 18% to annual revenue at full ramp. Deliveries begin next quarter following the Halden Mining rollout.",
-      "cycle": 82665,
       "dur": 8
     }
   ]
