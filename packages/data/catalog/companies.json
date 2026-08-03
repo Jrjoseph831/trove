@@ -3532,7 +3532,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82660,
+    "lastEventCycle": 82672,
     "events": [
       {
         "cycle": 0,
@@ -3656,6 +3656,16 @@
         "size": "standard",
         "head": "Carrowwell Opens Dedicated Machines Plant to Deliver $2.4B Reindustrialization Contract",
         "body": "In her first major move as CEO, Mara Voss inaugurated a purpose-built industrial machines facility to fulfill the $2.4B plant-modernization contract. The site will handle assembly and final testing, with first deliveries slated for next quarter. Voss framed the plant as proof the company can execute at scale beyond the record run left by predecessor Theo Thorne.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82672,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Carrowwell Unveils Automated Material-Handling System at New Machines Plant",
+        "body": "Carrowwell introduced the Haldon-series material-handling system, its first major product developed at the dedicated machines plant opened to serve its $2.4B reindustrialization contract. CEO Mara Voss said the line targets warehouse and port operators, calling it 'a deliberate push into recurring equipment revenue beyond one-off contracts.'",
         "effects": {
           "manufacturing": 0.13
         }
@@ -4932,7 +4942,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82661,
+    "lastEventCycle": 82672,
     "events": [
       {
         "cycle": 0,
@@ -5068,6 +5078,16 @@
         "size": "standard",
         "head": "Drustcraft Wins Multi-Year Fastener Supply Contract Worth 280M",
         "body": "Fresh off clearing its recall overhang, Drustcraft secured a four-year, 280M agreement to supply Fasteners & Fixings to a national appliance and machinery group. CEO Cora Fenn called the win validation of the firm's rebuilt quality controls following last year's batch recall. The deal diversifies Drustcraft beyond its twin vehicle-line dependence.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82672,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcraft Posts Beat as New 280M Fastener Contract Begins Shipping",
+        "body": "Drustcraft delivered quarterly revenue of $840M, up 9%, with early volumes from its multi-year fastener supply contract lifting the fixings segment. CEO Cora Fenn said the recall chapter was 'firmly behind us' and that the new contract would contribute at full run-rate by mid-year.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -5444,7 +5464,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82663,
+    "lastEventCycle": 82672,
     "events": [
       {
         "cycle": 0,
@@ -5600,6 +5620,16 @@
         "size": "standard",
         "head": "Erretmark Works Beats as Veyron Line Lifts Margins to Century High",
         "body": "Erretmark posted quarterly operating margins of 21%, its richest since founding, driven by the sovereign fund's 1,200-unit Veyron order beginning to ship. CEO Aurelia Garr said the ultra-luxury line has already exceeded its full-year revenue target, with a two-year waitlist forming for the roadster. The company raised guidance and hinted at a second Veyron model in development.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82672,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Erretmark Works Opens Second Veyron Assembly Hall to Clear Order Backlog",
+        "body": "Erretmark commissioned a second assembly hall dedicated to its ultra-luxury Veyron line, doubling capacity as it works through the 1,200-unit sovereign collector order. CEO Aurelia Garr said demand had 'outrun our original plans,' with the new hall expected to shorten delivery waits that had stretched past two years.",
         "effects": {
           "automotive": 0.13
         }
@@ -7656,18 +7686,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82666,
+    "lastEventCycle": 82672,
     "events": [
-      {
-        "cycle": 82541,
-        "kind": "safety_probe",
-        "size": "major",
-        "head": "Regulators Open Safety Probe Into Halhold's Verity Pro Bedside Suite",
-        "body": "The National Device Safety Board has launched a formal review of Halhold's newly launched Verity Pro suite after three hospitals reported intermittent alarm failures in critical-care units. CEO Nadia Brandt confirmed Halhold has paused new Verity Pro shipments and is cooperating fully, though the freshly signed regional hospital network agreement now hangs in question. Shares of the turbulent house came under heavy pressure as the review widened to the entire Verity line.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82546,
         "kind": "safety_probe",
@@ -7888,6 +7908,16 @@
         "body": "Seeking to close the book on last year's recall, Halhold unveiled the Aveline II medical monitor, redesigned from the ground up and cleared by an outside certification body before shipment. CEO Priya Vantt, elevated from COO earlier this year, staked her early tenure on the relaunch, pledging that 'every unit ships only after it earns the name back.'",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82672,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Halhold Works Misses as Legal Costs and Aveline Overhang Bite Into Quarter",
+        "body": "Halhold reported quarterly revenue of $1.9B, up 4%, but a per-share loss of $0.32 as mounting legal reserves tied to the investor class action ate into margins. CEO Priya Vantt said the newly certified Aveline II is 'gaining clinical traction,' though she conceded the disclosure litigation would 'weigh on results into next year.'",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -9167,7 +9197,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82641,
+    "lastEventCycle": 82672,
     "events": [
       {
         "cycle": 0,
@@ -9223,6 +9253,16 @@
         "size": "flash",
         "head": "Korrgrave Mfg. Extends Steady Streak as Northern Plant Sustains Output",
         "body": "Korrgrave delivered another modest beat, with revenue up 4% as the Northern plant held full utilization for a fourth straight quarter. Aurelia Halloran credited disciplined input costs and steady farm-belt demand. The agriculture house reaffirmed its unhurried, full-year guidance.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82672,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Korrgrave Mfg. Breaks Ground on Modest Southern Blending Line",
+        "body": "Korrgrave confirmed a $46M expansion adding a blending line at its southern facility, its first meaningful capacity addition in over a decade. CEO Aurelia Halloran framed the move as 'a careful step,' noting output would ramp gradually over three years to meet steady demand from regional cooperatives.",
         "effects": {
           "agriculture": 0.06
         }
@@ -10185,7 +10225,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82665,
+    "lastEventCycle": 82672,
     "events": [
       {
         "cycle": 0,
@@ -10391,6 +10431,16 @@
         "body": "Adele Ferran secured a five-year, $1.2 billion agreement to deploy the Kessel Industrial Platform across the entire Verrant Rail maintenance network, the largest order in Marlgear's history. Ferran called it 'the deal that proves the turnaround is real,' projecting the contract alone will add roughly 18% to annual revenue at full ramp. Deliveries begin next quarter following the Halden Mining rollout.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82672,
+        "kind": "outage",
+        "size": "major",
+        "head": "Marlgear Supply Kessel Platform Outage Halts Verrant Rail Operations for 14 Hours",
+        "body": "A widespread failure across Marlgear's Kessel platform disrupted signaling and dispatch across the Verrant rail network for roughly 14 hours, stranding freight and forcing manual operations. CEO Adele Ferran issued a public apology and pledged a full root-cause review, though Halden Mining Group said it was 'reassessing' its own rollout in light of the incident.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -12327,7 +12377,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82664,
+    "lastEventCycle": 82672,
     "events": [
       {
         "cycle": 0,
@@ -12516,6 +12566,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82672,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Thronehaus & Co. Acquires Ferrault Casework Supplier in Landmark $610M Deal",
+        "body": "Fresh off its Grand Horology Salon win, Thronehaus agreed to acquire longtime casework partner Ferrault outright for $610M, vertically integrating the workshop behind its award-winning Verrand Marchwick line. CEO Cora Dray called the purchase 'the natural end of a decades-long courtship,' securing exclusive access to Ferrault's artisans and locking rivals out of the specialty casework.",
+        "effects": {
+          "luxury": 0.22
+        }
       }
     ]
   },
@@ -12623,7 +12683,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82659,
+    "lastEventCycle": 82672,
     "events": [
       {
         "cycle": 0,
@@ -12731,6 +12791,16 @@
         "body": "Vantor secured a multi-year packaging and distribution agreement with a regional home-goods chain valued at roughly $180 million over four years, its largest non-grocery win to date. CEO Halden Vossen called the deal a welcome offset as grocery volumes plateau. The contract is expected to begin phasing in volumes next quarter.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82672,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Edges Ahead as New Distribution Contract Adds Volume",
+        "body": "Vantor posted quarterly revenue of $520M, up 3%, with the recently won regional distribution contract beginning to offset flat grocery packaging demand. CEO Halden Vossen said diversification was 'proceeding as planned' and reaffirmed full-year guidance.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]

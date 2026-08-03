@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-02T19:12:38.156Z",
+  "generatedAt": "2026-08-03T02:55:56.727Z",
   "beats": [
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Carrowwell Unveils Automated Material-Handling System at New Machines Plant",
+      "body": "Carrowwell introduced the Haldon-series material-handling system, its first major product developed at the dedicated machines plant opened to serve its $2.4B reindustrialization contract. CEO Mara Voss said the line targets warehouse and port operators, calling it 'a deliberate push into recurring equipment revenue beyond one-off contracts.'",
+      "cycle": 82672,
+      "dur": 2
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drustcraft Posts Beat as New 280M Fastener Contract Begins Shipping",
+      "body": "Drustcraft delivered quarterly revenue of $840M, up 9%, with early volumes from its multi-year fastener supply contract lifting the fixings segment. CEO Cora Fenn said the recall chapter was 'firmly behind us' and that the new contract would contribute at full run-rate by mid-year.",
+      "cycle": 82672,
+      "dur": 2
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Erretmark Works Opens Second Veyron Assembly Hall to Clear Order Backlog",
+      "body": "Erretmark commissioned a second assembly hall dedicated to its ultra-luxury Veyron line, doubling capacity as it works through the 1,200-unit sovereign collector order. CEO Aurelia Garr said demand had 'outrun our original plans,' with the new hall expected to shorten delivery waits that had stretched past two years.",
+      "cycle": 82672,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Halhold Works Misses as Legal Costs and Aveline Overhang Bite Into Quarter",
+      "body": "Halhold reported quarterly revenue of $1.9B, up 4%, but a per-share loss of $0.32 as mounting legal reserves tied to the investor class action ate into margins. CEO Priya Vantt said the newly certified Aveline II is 'gaining clinical traction,' though she conceded the disclosure litigation would 'weigh on results into next year.'",
+      "cycle": 82672,
+      "dur": 2
+    },
+    {
+      "company": "Korrgrave Mfg.",
+      "sector": "agriculture",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Korrgrave Mfg. Breaks Ground on Modest Southern Blending Line",
+      "body": "Korrgrave confirmed a $46M expansion adding a blending line at its southern facility, its first meaningful capacity addition in over a decade. CEO Aurelia Halloran framed the move as 'a careful step,' noting output would ramp gradually over three years to meet steady demand from regional cooperatives.",
+      "cycle": 82672,
+      "dur": 1
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "outage",
+      "size": "major",
+      "head": "Marlgear Supply Kessel Platform Outage Halts Verrant Rail Operations for 14 Hours",
+      "body": "A widespread failure across Marlgear's Kessel platform disrupted signaling and dispatch across the Verrant rail network for roughly 14 hours, stranding freight and forcing manual operations. CEO Adele Ferran issued a public apology and pledged a full root-cause review, though Halden Mining Group said it was 'reassessing' its own rollout in light of the incident.",
+      "cycle": 82672,
+      "dur": 8
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Thronehaus & Co. Acquires Ferrault Casework Supplier in Landmark $610M Deal",
+      "body": "Fresh off its Grand Horology Salon win, Thronehaus agreed to acquire longtime casework partner Ferrault outright for $610M, vertically integrating the workshop behind its award-winning Verrand Marchwick line. CEO Cora Dray called the purchase 'the natural end of a decades-long courtship,' securing exclusive access to Ferrault's artisans and locking rivals out of the specialty casework.",
+      "cycle": 82672,
+      "dur": 8
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vantor Lines Edges Ahead as New Distribution Contract Adds Volume",
+      "body": "Vantor posted quarterly revenue of $520M, up 3%, with the recently won regional distribution contract beginning to offset flat grocery packaging demand. CEO Halden Vossen said diversification was 'proceeding as planned' and reaffirmed full-year guidance.",
+      "cycle": 82672,
+      "dur": 1
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -12,16 +92,6 @@
       "dur": 2
     },
     {
-      "company": "Blackmoor",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Blackmoor Ticks Higher as Depth Kit Attach Rates Climb",
-      "body": "Blackmoor posted a modest quarterly beat, with the new precision depth kit attaching to roughly 34% of Holloway seed-drill orders. CEO Soren Dray noted the kit's uptake among larger row-crop operators but cautioned that seasonal ordering would keep momentum gradual. Revenue rose 3% year over year.",
-      "cycle": 82671,
-      "dur": 1
-    },
-    {
       "company": "Fennmoor",
       "sector": "technology",
       "kind": "major_deal",
@@ -30,26 +100,6 @@
       "body": "Fennmoor announced it will buy longtime partner Threll Diagnostics outright for $3.2 billion, converting its licensing arrangement into full ownership of the diagnostics suite now deployed across 140 hospital systems. CEO Dorian Brandt called the move \"the natural end of a courtship,\" and said the deal folds Threll's 1,900 staff and bedside module R&D directly into Fennmoor's Medical Equipment arm. Management expects the acquisition to close within two quarters and add roughly 8% to diagnostics revenue in the first full year.",
       "cycle": 82671,
       "dur": 8
-    },
-    {
-      "company": "Greenmarsh Agro",
-      "sector": "agriculture",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Greenmarsh Agro Extends Seed Coating to Cover-Crop Varieties",
-      "body": "Greenmarsh Agro widened its companion seed coating to cover-crop and rotational varieties, broadening the product's fit within its slow-release soil blend program. CEO Petra Kessler described the step as \"deliberate, field-tested groundwork,\" with trials showing consistent germination gains. Availability begins ahead of the next planting season.",
-      "cycle": 82671,
-      "dur": 1
-    },
-    {
-      "company": "Hearthstone Group",
-      "sector": "hospitality",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Hearthstone Group Adds Fragrance-Free Concentrates to Depot Lineup",
-      "body": "Hearthstone Group extended its concentrate line with a fragrance-free tier aimed at sensitive commercial accounts across its refill depot network. CEO Aurelia Aldous said the addition responds to steady requests from hospitality and healthcare cleaning clients. The variant rolls out to all depots over the next quarter.",
-      "cycle": 82671,
-      "dur": 1
     },
     {
       "company": "Korrwright Group",
@@ -92,16 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "standard",
-      "head": "Brunmark Motors Draws Regulatory Inquiry Into Redesigned Veyra S Battery Pack",
-      "body": "Regulators opened a preliminary inquiry into the Veyra S's overhauled battery pack after a cluster of charging-fault complaints across roughly 8,000 vehicles. CEO Halvard Renn said the reports involve a software-managed charge controller and stressed no fires have been confirmed. The probe casts a shadow over a launch that had cleared backlog and driven recent capacity expansion.",
-      "cycle": 82670,
-      "dur": 2
-    },
-    {
       "company": "Brunstone & Sons",
       "sector": "automotive",
       "kind": "lawsuit",
@@ -112,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Cranecraft Runs Streak to Eight as Textile Margins Firm on Steady Farm Orders",
-      "body": "Cranecraft posted its eighth consecutive quarterly beat, with revenue of $1.84 billion edging past guidance on firmer raw-textile pricing. CEO Mira Garr credited disciplined inventory management and a 4% uptick in farm-equipment shipments into the spring buying season. The balanced mix, she noted, again cushioned the company against swings in any single line.",
-      "cycle": 82670,
-      "dur": 2
-    },
-    {
       "company": "Gromford Works",
       "sector": "luxury",
       "kind": "scandal",
@@ -130,36 +160,6 @@
       "body": "Prosecutors escalated the Meridian sourcing case, freezing an estimated $340 million in Gromford assets and issuing a personal subpoena to CEO Dahlia Verrint over documents from her prior board role. The company suspended two remaining Fine Goods executives and pulled its full-year outlook amid the widening criminal probe. Verrint, installed only months ago to steady the house, now finds herself entangled in the scandal she was hired to contain.",
       "cycle": 82670,
       "dur": 8
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Halcyon Industries Opens Southport Fifth Line, Lifting Regional Packaging Output 30%",
-      "body": "Halcyon brought its fifth Southport line online this week, adding roughly 30% to the site's packaging capacity after months of ramp work. CEO Dorian Ashby said the line is already committed against contracted volumes and expects full utilization within two quarters. The completion caps a multi-year buildout that has quietly made Southport the company's flagship complex.",
-      "cycle": 82670,
-      "dur": 2
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Hesperforge Beats as Third Mill Comes Online and Marine-Grade Backlog Hits Record",
-      "body": "Hesperforge topped estimates with quarterly revenue of $1.12 billion as its third mill began commercial output, easing capacity strain on the coastal shipyard pact. CEO Sable Halloran said the marine-grade backlog reached a record 14-month coverage, giving unusual visibility into next year. She flagged early interest from a second yard operator as a possible follow-on.",
-      "cycle": 82670,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Skarngrove & Sons Secures Kelvarn Fourth-Phase Award for Approach Viaducts",
-      "body": "Skarngrove won the Kelvarn program's fourth-phase package, an estimated $610 million contract covering approach viaducts and fixing systems for the interchange corridor. CEO Quinn Fenn said the award extends the company's Kelvarn workload into 2029 and locks in structural-materials volumes across the run. The win cements Skarngrove as the program's principal structures supplier.",
-      "cycle": 82670,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -259,26 +259,6 @@
       "head": "Marlgear Supply Wins Landmark Kessel Platform Contract Across Verrant Rail Network",
       "body": "Adele Ferran secured a five-year, $1.2 billion agreement to deploy the Kessel Industrial Platform across the entire Verrant Rail maintenance network, the largest order in Marlgear's history. Ferran called it 'the deal that proves the turnaround is real,' projecting the contract alone will add roughly 18% to annual revenue at full ramp. Deliveries begin next quarter following the Halden Mining rollout.",
       "cycle": 82665,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "major",
-      "head": "Brunstone & Sons Recalls 220,000 Vault Cell Guard Pro Units as Probe Turns to Fleet Fires",
-      "body": "Brunstone & Sons issued a sweeping recall of 220,000 Vault Cell Guard Pro units after investigators linked the overheating reports to three long-haul fleet fires, with total costs estimated near $480M. CEO Halden Crowe, who months ago broke ground on a third plant to feed the product's backlog, admitted the launch 'moved faster than our validation.' Shipments from all three cell plants are paused pending a root-cause fix.",
-      "cycle": 82664,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "expansion",
-      "size": "major",
-      "head": "Greywater Grid Launches $2B Reservoir-Compute Buildout to Serve Landmark Capacity Pact",
-      "body": "Greywater Grid unveiled a $2B expansion pairing three new reservoir-backed power sites with dedicated compute halls to fulfill its recently signed $1.6B capacity pact. CEO Sable Renwick, moving at a blistering pace since the reservoir rebuild, said first sites go live within nine months and called the plan 'the clearest bet we've ever placed.' The company will fund the buildout through a mix of committed pact revenue and a new $900M financing facility.",
-      "cycle": 82664,
       "dur": 8
     }
   ]
