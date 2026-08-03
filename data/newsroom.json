@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-03T09:49:15.724Z",
+  "generatedAt": "2026-08-03T14:42:05.856Z",
   "beats": [
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Aperture Compute to Scrap Dawnmere III Line Entirely in Sweeping Reset Under Venn",
+      "body": "Marisol Venn announced the permanent discontinuation of the Dawnmere III platform after the indefinite ban, writing down $610M and cutting roughly 1,400 roles tied to the program. Venn said the company would redirect resources to a clean-sheet successor and rebuild regulator trust through a new external compliance board. It marks the deepest restructuring in Aperture's history.",
+      "cycle": 82674,
+      "dur": 8
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Carrowforge Ousts Marlow Demore as Board Seeks Clean Break From Roe-Era Scandal",
+      "body": "Directors voted 9-2 to remove Marlow Demore after federal investigators tied the falsified test records to units still in active service, naming turnaround specialist Petra Vance as chief executive. Vance pledged an independent audit of every machine line and set aside $340M for potential recalls and settlements. Shares had shed nearly a third of their value since the probe widened.",
+      "cycle": 82674,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Castlestone Returns to Profit as Redesigned Grid Cores Ship to Anchor Buyer",
+      "body": "Pell Karsh reported the first profitable quarter since the overheating probe, with net income of $88M as redesigned grid cores began volume shipments under the anchor supply pact. Karsh said thermal complaints had fallen to near zero and two additional buyers were in late-stage talks. The idled grid division has been fully reabsorbed into the new production line.",
+      "cycle": 82674,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Greywater Grid Signs $3.4B Multi-Site Compute Pact as Reservoir Buildout Scales",
+      "body": "Sable Renwick unveiled a decade-long agreement with a consortium of industrial buyers worth $3.4B, nearly doubling committed capacity tied to the reservoir-compute program. The deal secures baseload demand for two new sites and includes performance guarantees on uptime and delivered power. Renwick called it the largest single contract in the company's history.",
+      "cycle": 82674,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Halhold Systems Hit With $900M Suit as Partner Alleges Concealed Outage Risk",
+      "body": "The partner behind the $900M supply pact filed suit accusing Corin Vale's team of knowingly withholding outage warnings before signing, seeking full damages plus punitive relief. Court filings cite internal reviews the probe unearthed showing engineers flagged the hardware fault weeks before disclosure. Vale called the claims 'without merit' but the board has retained outside counsel and paused shareholder guidance.",
+      "cycle": 82674,
+      "dur": 8
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Ironcrestton Debuts First Fully In-House Collection as Blackwood Resets Fine Goods",
+      "body": "Thea Blackwood unveiled the Ashmark line, the first collection produced entirely under the new in-house model after the licensing program was terminated. Blackwood said vertical control cut lead times by a third and restored a single origin standard across every piece. Early orders from three flagship retail partners exceeded internal targets by 40%.",
+      "cycle": 82674,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrwright Works Beats as Reopened Meridienne Salon Drives Luxury Demand",
+      "body": "Quarterly revenue rose 11% to $482M as the relaunched Meridienne salon posted record footfall and higher average ticket prices on limited-run timepieces. Dunmore Carrow credited the integration for lifting group margins back above 28%, reversing the prior quarter's slip. The house said waitlists for its flagship complications now stretch into next year.",
+      "cycle": 82674,
+      "dur": 2
+    },
+    {
+      "company": "Wrenhaus",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Wrenhaus Edges Past Estimates on Steady Riverside Fixture Volumes",
+      "body": "Quinn Thorne reported a 6% rise in quarterly revenue to $214M, supported by early output from the new distribution network and firm demand across the Riverside corridor. Management held its full-year outlook and noted the second fixture plant remains on schedule and on budget.",
+      "cycle": 82674,
+      "dur": 1
+    },
     {
       "company": "Aldouscraft Mfg.",
       "sector": "construction",
@@ -52,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Holtgate Cloth",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Cloth Posts Another Quietly Steady Quarter as Volumes Hold",
-      "body": "Holtgate delivered flat-to-slightly-up results, with revenue edging 2% higher on stable raw textile demand and its long-running supply pact. CEO Dorian Carrow offered little commentary beyond reaffirming the company's unchanged outlook. Analysts continue to describe the house as one of the calmest names in the sector.",
-      "cycle": 82673,
-      "dur": 1
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "major_deal",
@@ -79,46 +149,6 @@
       "head": "Thaldale Group Unveils Sweeping Overhaul Under New Chief Vale as Fastening Unit Is Carved Out",
       "body": "Newly installed CEO Corin Vale announced a restructuring that ring-fences the troubled fastening division into a standalone unit and cuts roughly 900 jobs across three plants. Vale said the plan aims to isolate legal exposure from the ongoing probe while protecting the profitable hand-tool lines. The company set aside a further $70M in legal and reorganization reserves.",
       "cycle": 82673,
-      "dur": 2
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Carrowwell Unveils Automated Material-Handling System at New Machines Plant",
-      "body": "Carrowwell introduced the Haldon-series material-handling system, its first major product developed at the dedicated machines plant opened to serve its $2.4B reindustrialization contract. CEO Mara Voss said the line targets warehouse and port operators, calling it 'a deliberate push into recurring equipment revenue beyond one-off contracts.'",
-      "cycle": 82672,
-      "dur": 2
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drustcraft Posts Beat as New 280M Fastener Contract Begins Shipping",
-      "body": "Drustcraft delivered quarterly revenue of $840M, up 9%, with early volumes from its multi-year fastener supply contract lifting the fixings segment. CEO Cora Fenn said the recall chapter was 'firmly behind us' and that the new contract would contribute at full run-rate by mid-year.",
-      "cycle": 82672,
-      "dur": 2
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Erretmark Works Opens Second Veyron Assembly Hall to Clear Order Backlog",
-      "body": "Erretmark commissioned a second assembly hall dedicated to its ultra-luxury Veyron line, doubling capacity as it works through the 1,200-unit sovereign collector order. CEO Aurelia Garr said demand had 'outrun our original plans,' with the new hall expected to shorten delivery waits that had stretched past two years.",
-      "cycle": 82672,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Halhold Works Misses as Legal Costs and Aveline Overhang Bite Into Quarter",
-      "body": "Halhold reported quarterly revenue of $1.9B, up 4%, but a per-share loss of $0.32 as mounting legal reserves tied to the investor class action ate into margins. CEO Priya Vantt said the newly certified Aveline II is 'gaining clinical traction,' though she conceded the disclosure litigation would 'weigh on results into next year.'",
-      "cycle": 82672,
       "dur": 2
     },
     {
@@ -229,26 +259,6 @@
       "head": "Vossenspire Holdings Lands $6.8B Grid-Scale Storage Pact as Roe Doubles Down",
       "body": "Fresh off stabilizing the staged $4.1B mandate, Halden Roe has secured a $6.8 billion power-and-storage agreement to backstop the Corvane regional grid over seven years. The deal, Roe's largest yet, commits Vossenspire to deliver 4.2 gigawatt-hours of storage capacity alongside dedicated compute for load management. Analysts note the win vindicates Roe's staged-delivery strategy but warns it stacks execution risk atop an already stretched pipeline.",
       "cycle": 82667,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Aperture Compute Fails Second Regulatory Review as Dawnmere III Ban Extended Indefinitely",
-      "body": "Regulators extended the shipment halt on Aperture's flagship Dawnmere III line after a follow-up inspection uncovered the same thermal faults in newly produced units, deepening a crisis that has now idled the product for two quarters. Interim CEO Marisol Venn conceded the redesign 'did not hold,' and the company warned of a $600M writedown as the investor suit widens to cover the failed remediation.",
-      "cycle": 82666,
-      "dur": 8
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Ironcrestton Terminates Licensing Program Entirely as New CEO Blackwood Pulls Production In-House",
-      "body": "In a sweeping overhaul, Thea Blackwood announced Ironcrestton will wind down all third-party licensing that spawned the origin-standard scandal, taking manufacturing of Fine Goods fully in-house at a projected cost of $340M over two years. The move settles a swath of the pending licensee litigation but slashes near-term unit volumes by an estimated 30%, with Blackwood calling it 'the only way to ever again promise a customer where a thing came from.'",
-      "cycle": 82666,
       "dur": 8
     }
   ]

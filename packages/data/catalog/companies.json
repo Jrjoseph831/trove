@@ -472,7 +472,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82666,
+    "lastEventCycle": 82674,
     "events": [
       {
         "cycle": 0,
@@ -666,6 +666,16 @@
         "size": "major",
         "head": "Aperture Compute Fails Second Regulatory Review as Dawnmere III Ban Extended Indefinitely",
         "body": "Regulators extended the shipment halt on Aperture's flagship Dawnmere III line after a follow-up inspection uncovered the same thermal faults in newly produced units, deepening a crisis that has now idled the product for two quarters. Interim CEO Marisol Venn conceded the redesign 'did not hold,' and the company warned of a $600M writedown as the investor suit widens to cover the failed remediation.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82674,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Aperture Compute to Scrap Dawnmere III Line Entirely in Sweeping Reset Under Venn",
+        "body": "Marisol Venn announced the permanent discontinuation of the Dawnmere III platform after the indefinite ban, writing down $610M and cutting roughly 1,400 roles tied to the program. Venn said the company would redirect resources to a clean-sheet successor and rebuild regulator trust through a new external compliance board. It marks the deepest restructuring in Aperture's history.",
         "effects": {
           "technology": -0.22
         }
@@ -3406,14 +3416,14 @@
     "aiOwned": true,
     "homeSector": "manufacturing",
     "founded": 1931,
-    "ceo": "Marlow Demore",
+    "ceo": "Petra Vance",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.59,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82661,
+    "lastEventCycle": 82674,
     "events": [
       {
         "cycle": 0,
@@ -3548,6 +3558,14 @@
         "effects": {
           "manufacturing": -0.22
         }
+      },
+      {
+        "cycle": 82674,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Carrowforge Ousts Marlow Demore as Board Seeks Clean Break From Roe-Era Scandal",
+        "body": "Directors voted 9-2 to remove Marlow Demore after federal investigators tied the falsified test records to units still in active service, naming turnaround specialist Petra Vance as chief executive. Vance pledged an independent audit of every machine line and set aside $340M for potential recalls and settlements. Shares had shed nearly a third of their value since the probe widened.",
+        "effects": {}
       }
     ]
   },
@@ -4189,18 +4207,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82669,
+    "lastEventCycle": 82674,
     "events": [
-      {
-        "cycle": 82524,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Castlestone Signs Landmark Supply Agreement After Vellmont Record",
-        "body": "Riding momentum from its record at the Vellmont Showcase, Castlestone inked a $2.1 billion, five-year compute supply deal with Harrowgate Networks, its largest contract ever. CEO Iris Garr called it 'proof the carving holds under load,' pledging dedicated capacity at two plants. Shares of attention turned sharply as rivals scrambled to respond.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82529,
         "kind": "earnings_beat",
@@ -4423,6 +4431,16 @@
         "size": "standard",
         "head": "Castlestone Lands Anchor Grid-Core Supply Pact as Karsh's Overhaul Wins First Buyer",
         "body": "Building on cleared thermal trials, CEO Pell Karsh secured a $740M multi-year supply agreement for the redesigned grid cores with a major infrastructure operator, the division's first commercial win since the overheating probe. Karsh called it 'vindication of the hard reset,' with initial shipments from the reopened grid line due next quarter.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82674,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Castlestone Returns to Profit as Redesigned Grid Cores Ship to Anchor Buyer",
+        "body": "Pell Karsh reported the first profitable quarter since the overheating probe, with net income of $88M as redesigned grid cores began volume shipments under the anchor supply pact. Karsh said thermal complaints had fallen to near zero and two additional buyers were in late-stage talks. The idled grid division has been fully reabsorbed into the new production line.",
         "effects": {
           "technology": 0.13
         }
@@ -6598,7 +6616,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82664,
+    "lastEventCycle": 82674,
     "events": [
       {
         "cycle": 0,
@@ -6760,6 +6778,16 @@
         "size": "major",
         "head": "Greywater Grid Launches $2B Reservoir-Compute Buildout to Serve Landmark Capacity Pact",
         "body": "Greywater Grid unveiled a $2B expansion pairing three new reservoir-backed power sites with dedicated compute halls to fulfill its recently signed $1.6B capacity pact. CEO Sable Renwick, moving at a blistering pace since the reservoir rebuild, said first sites go live within nine months and called the plan 'the clearest bet we've ever placed.' The company will fund the buildout through a mix of committed pact revenue and a new $900M financing facility.",
+        "effects": {
+          "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82674,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Greywater Grid Signs $3.4B Multi-Site Compute Pact as Reservoir Buildout Scales",
+        "body": "Sable Renwick unveiled a decade-long agreement with a consortium of industrial buyers worth $3.4B, nearly doubling committed capacity tied to the reservoir-compute program. The deal secures baseload demand for two new sites and includes performance guarantees on uptime and delivered power. Renwick called it the largest single contract in the company's history.",
         "effects": {
           "energy": 0.22
         }
@@ -7475,18 +7503,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82669,
+    "lastEventCycle": 82674,
     "events": [
-      {
-        "cycle": 82530,
-        "kind": "restructure",
-        "size": "major",
-        "head": "Halhold Systems Slashes Northgate Scope as Renn Resets Compute Strategy",
-        "body": "Newly installed chief Dahlia Renn announced a sweeping restructuring that cuts Northgate's planned capacity by 40% and folds two regional compute units into a single division, alongside roughly 1,200 job reductions. Renn framed the move as 'clearing the wreckage' of the overrun, taking a further $310 million charge while pledging the trimmed campus will reach first output by mid-2027. The board signaled patience, but several units now report directly to Renn as she consolidates control.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82538,
         "kind": "product_launch",
@@ -7709,6 +7727,16 @@
         "size": "major",
         "head": "Halhold Systems Rocked as Probe Finds Outage Warnings Withheld From $900M Partner",
         "body": "An independent review revealed that Halhold engineers had flagged the hardware fault weeks before the multi-day outage, but the warnings never reached the $900M pact partner, who is now threatening to void the contract. CEO Corin Vale faces mounting pressure as the board opened an inquiry into disclosure practices, wiping out the goodwill from earlier recall transparency and leaving the flagship deal in jeopardy.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82674,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Halhold Systems Hit With $900M Suit as Partner Alleges Concealed Outage Risk",
+        "body": "The partner behind the $900M supply pact filed suit accusing Corin Vale's team of knowingly withholding outage warnings before signing, seeking full damages plus punitive relief. Court filings cite internal reviews the probe unearthed showing engineers flagged the hardware fault weeks before disclosure. Vale called the claims 'without merit' but the board has retained outside counsel and paused shareholder guidance.",
         "effects": {
           "technology": -0.22
         }
@@ -8764,7 +8792,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82666,
+    "lastEventCycle": 82674,
     "events": [
       {
         "cycle": 0,
@@ -8938,6 +8966,16 @@
         "body": "In a sweeping overhaul, Thea Blackwood announced Ironcrestton will wind down all third-party licensing that spawned the origin-standard scandal, taking manufacturing of Fine Goods fully in-house at a projected cost of $340M over two years. The move settles a swath of the pending licensee litigation but slashes near-term unit volumes by an estimated 30%, with Blackwood calling it 'the only way to ever again promise a customer where a thing came from.'",
         "effects": {
           "luxury": -0.22
+        }
+      },
+      {
+        "cycle": 82674,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Ironcrestton Debuts First Fully In-House Collection as Blackwood Resets Fine Goods",
+        "body": "Thea Blackwood unveiled the Ashmark line, the first collection produced entirely under the new in-house model after the licensing program was terminated. Blackwood said vertical control cut lead times by a third and restored a single origin standard across every piece. Early orders from three flagship retail partners exceeded internal targets by 40%.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -9636,7 +9674,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82666,
+    "lastEventCycle": 82674,
     "events": [
       {
         "cycle": 0,
@@ -9850,6 +9888,16 @@
         "size": "standard",
         "head": "Korrwright Works Reopens Meridienne Salon in Grand Relaunch as Integration Costs Ease",
         "body": "With the worst of the merger charges behind it, Korrwright Works has poured $180M into refurbishing the flagship Korrwright Meridienne salon, restoring the acquired workshops to full craft capacity. CEO Dunmore Carrow framed the relaunch as 'the payoff phase,' telling reporters the combined house now spans two centuries of horological heritage under one roof.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82674,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Works Beats as Reopened Meridienne Salon Drives Luxury Demand",
+        "body": "Quarterly revenue rose 11% to $482M as the relaunched Meridienne salon posted record footfall and higher average ticket prices on limited-run timepieces. Dunmore Carrow credited the integration for lifting group margins back above 28%, reversing the prior quarter's slip. The house said waitlists for its flagship complications now stretch into next year.",
         "effects": {
           "luxury": 0.13
         }
@@ -14676,7 +14724,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82655,
+    "lastEventCycle": 82674,
     "events": [
       {
         "cycle": 0,
@@ -14764,6 +14812,16 @@
         "body": "Wrenhaus committed $180M to a second manufacturing plant adjacent to its Riverside operations, aiming to lift fixture output by roughly 30% by 2028. CEO Quinn Thorne framed the move as a measured response to sustained distribution-hub throughput, adding that hiring would phase in over 18 months to protect margins.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82674,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wrenhaus Edges Past Estimates on Steady Riverside Fixture Volumes",
+        "body": "Quinn Thorne reported a 6% rise in quarterly revenue to $214M, supported by early output from the new distribution network and firm demand across the Riverside corridor. Management held its full-year outlook and noted the second fixture plant remains on schedule and on budget.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
