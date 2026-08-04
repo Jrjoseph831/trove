@@ -703,7 +703,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82649,
+    "lastEventCycle": 82678,
     "events": [
       {
         "cycle": 0,
@@ -771,6 +771,16 @@
         "body": "Ardent secured a landmark multi-year framework valued near 1.9 billion to supply its faster next-generation imaging systems across a continent-wide public health procurement body. CEO Orla Halloran, marking one of the largest orders in the company's history, said phased deliveries will run over six years, with the new sensor as the standard configuration.",
         "effects": {
           "medical": 0.22
+        }
+      },
+      {
+        "cycle": 82678,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Ardent Health Beats as Continental Imaging Fleet Order Flows Into Results",
+        "body": "Orla Halloran reported quarterly revenue up 19% to $1.4 billion as the continental framework order and next-gen sensor demand lifted the imaging segment. The company raised its installed-base guidance for the year, citing accelerating deployments under the national hospital network deal. Backlog now stands at a record $3.8 billion.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -1642,14 +1652,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1931,
-    "ceo": "Elias Trentham",
+    "ceo": "Marcus Vane",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.75,
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82670,
+    "lastEventCycle": 82678,
     "events": [
       {
         "cycle": 0,
@@ -1863,6 +1873,14 @@
         "size": "major",
         "head": "Bruncraft Ousts Dessa Corvane in Boardroom Shakeup After $2.1 Billion Axle Verdict",
         "body": "Bruncraft's board voted to remove CEO Dessa Corvane, days after a record $2.1 billion axle-injury verdict capped a punishing year of litigation and probes. Interim chair Wynn Alderay said the company needs 'stability over ambition' and has frozen pending acquisitions to shore up its balance sheet. The incoming chief inherits a federal safety probe and mounting warranty reserves.",
+        "effects": {}
+      },
+      {
+        "cycle": 82678,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Bruncraft Names Turnaround Specialist Marcus Vane as CEO to Steady Post-Verdict Fallout",
+        "body": "The board installed Marcus Vane, a veteran restructuring executive, as permanent chief executive following the ouster of Dessa Corvane in the wake of the $2.1 billion axle verdict. Vane pledged an immediate top-to-bottom audit of the axle supply chain and a freeze on the acquisition ambitions that defined the prior era. Shares had been battered since the record judgment.",
         "effects": {}
       }
     ]
@@ -2620,18 +2638,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82670,
+    "lastEventCycle": 82678,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "product_launch",
-        "size": "major",
-        "head": "Brunstone & Sons Reveals the Ardent Long-Range Hauler",
-        "body": "Sable Veldt staged a dramatic reveal of the Ardent, a long-range hauling vehicle built around the firm's own swappable storage packs. Veldt drove the prototype onstage herself and claimed a single-charge range that drew gasps from the Dunmere crowd. The bold debut puts Brunstone squarely against heavier rivals.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82515,
         "kind": "safety_probe",
@@ -2854,6 +2862,16 @@
         "size": "major",
         "head": "Brunstone & Sons Sued by Owners and Insurers as Vault Cell Guard Pro Fires Spawn Consolidated Claims",
         "body": "A consolidated class action was filed against Brunstone & Sons seeking more than $900 million, tying at least 40 reported fleet fires to the recalled Vault Cell Guard Pro units. Plaintiffs allege the company shipped units despite internal thermal-testing failures flagged before launch. CEO Halden Crowe called the claims 'premature' but confirmed the third cell plant's opening would be delayed pending a full design review.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82678,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Brunstone & Sons Reeling as Internal Memos Show Vault Cell Guard Pro Overheating Was Flagged Before Launch",
+        "body": "Documents surfaced in the consolidated litigation reveal engineers warned of thermal runaway risk eighteen months before the Vault Cell Guard Pro shipped, with a memo signed off near CEO Halden Crowe's office urging schedule adherence. Crowe, known for aggressive product timelines, now faces calls from three board members for an independent review. The disclosures widen legal exposure well beyond the initial $1.3 billion in consolidated claims.",
         "effects": {
           "automotive": -0.22
         }
@@ -7122,7 +7140,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82666,
+    "lastEventCycle": 82678,
     "events": [
       {
         "cycle": 0,
@@ -7258,6 +7276,16 @@
         "size": "standard",
         "head": "Halcrest Rebounds With Margin Beat After Overseas Retreat Trims Costs",
         "body": "Halcrest posted a quarterly operating margin of 21%, up from 14% a year earlier, as the closure of its overseas atelier and consolidation onto its home Salon Row eliminated roughly $60M in overhead. Iris Marrow, chastened by the earlier misfire, said the house would 'grow from strength, not vanity' going forward.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82678,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halcrest Unveils Meridian Tourbillon in First Major Release Since Overseas Retreat",
+        "body": "Iris Marrow debuted the Meridian Tourbillon, a limited run of 250 pieces priced from $180,000, signaling renewed confidence after cost-cutting restored margins. The launch concentrates production entirely at the domestic flagship workshop, the strategy Marrow credited for the recent rebound. Early allocation is said to be fully spoken for by existing clients.",
         "effects": {
           "luxury": 0.13
         }
@@ -7822,18 +7850,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82672,
+    "lastEventCycle": 82678,
     "events": [
-      {
-        "cycle": 82546,
-        "kind": "safety_probe",
-        "size": "major",
-        "head": "Regulators Order Halhold to Suspend Verity Pro Shipments Pending Review",
-        "body": "Authorities escalated the probe into the Verity Pro bedside suite, ordering a shipment halt after reports of intermittent alarm failures across three hospital sites. CEO Nadia Brandt said the company would cooperate fully and issue a firmware fix, but the hospital-network agreement now hangs in the balance.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82552,
         "kind": "scandal",
@@ -8054,6 +8072,16 @@
         "body": "Halhold reported quarterly revenue of $1.9B, up 4%, but a per-share loss of $0.32 as mounting legal reserves tied to the investor class action ate into margins. CEO Priya Vantt said the newly certified Aveline II is 'gaining clinical traction,' though she conceded the disclosure litigation would 'weigh on results into next year.'",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82678,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halhold Works Lands Regional Hospital Supply Contract for Aveline II Monitors",
+        "body": "Priya Vantt secured a three-year, $310 million framework to outfit twenty-two hospitals across the Merridian region with Aveline II monitors, leaning on the device's independent safety certification to win the tender. The deal marks Vantt's first significant offensive move after a quarter dented by legal costs. Deliveries begin next quarter, with roughly 14,000 units expected in the first wave.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -8767,7 +8795,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82658,
+    "lastEventCycle": 82678,
     "events": [
       {
         "cycle": 0,
@@ -8855,6 +8883,16 @@
         "body": "Dorian Garr unveiled the Ironclad Pro series, a durable fixture line aimed at commercial installers and repeat trade buyers. The launch marks the company's first move upmarket in years, with initial stock routed through all five warehouses. Garr framed the step as 'measured, not sudden,' targeting a segment he says has quietly outgrown the value catalog.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82678,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Posts Steady Gains as Contractor-Grade Line Finds Footing",
+        "body": "Dorian Garr reported a fifth consecutive quarter of growth, with the new contractor-grade line adding $28 million in sales as it broadened the customer base beyond the value range. Margins held firm on disciplined warehouse utilization. Guidance was nudged modestly higher for the second half.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -10958,7 +10996,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82666,
+    "lastEventCycle": 82678,
     "events": [
       {
         "cycle": 0,
@@ -11090,6 +11128,16 @@
         "size": "standard",
         "head": "Marrowstone Build Opens New Assembly Line to Clear Swelling Earthmoving Backlog",
         "body": "Riding a roadworks order book that has grown past $700M, Marrowstone Build committed $95M to a second earthmoving assembly line aimed at halving delivery lead times. CEO Delphine Vaugh said the expansion was 'demand-led, not speculative,' with the split unit's backlog now stretching more than eighteen months out.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82678,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Marrowstone Build Wins $680M Port Expansion Package for Split Earthmoving Fleet",
+        "body": "Delphine Vaugh secured a $680 million contract to supply earthmoving equipment and operators for a multi-year port expansion, deepening the order book that already strained capacity. The win follows the recent assembly line addition brought online to clear backlog. Vaugh said the new work extends the Split unit's committed pipeline into 2029.",
         "effects": {
           "construction": 0.13
         }
@@ -11240,7 +11288,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82663,
+    "lastEventCycle": 82678,
     "events": [
       {
         "cycle": 0,
@@ -11356,6 +11404,16 @@
         "size": "flash",
         "head": "Ornewright Supply Rolls Out New Sanitation Concentrate Line for Food Service Clients",
         "body": "Ornewright introduced its Meridian line of concentrated cleaning and sanitation products aimed at its growing food-service customer base. CEO Rhys Throne framed the launch as a natural cross-sell into the cold-chain accounts secured over the past year. Early orders came from three regional distributors ahead of the Dunmere hub opening.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82678,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Supply Edges Ahead as Sanitation Concentrate Line Gains Early Traction",
+        "body": "Rhys Throne reported a modest quarterly beat, with the newly launched food-service sanitation concentrates contributing $46 million in first-quarter sales ahead of internal targets. The Dunmere cold-chain hub remains on schedule for completion next year. Management held full-year guidance steady, citing stable input costs.",
         "effects": {
           "consumer": 0.06
         }
