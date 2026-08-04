@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-04T02:40:32.784Z",
+  "generatedAt": "2026-08-04T08:39:14.144Z",
   "beats": [
+    {
+      "company": "Aldousspire Group",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Aldousspire Group Launches Heirloom Everyday Line to Broaden Concept Reach",
+      "body": "Building on strong concept-store traffic, Aldousspire unveiled Heirloom Everyday, a lower-priced apparel range aimed at younger shoppers, with 40 initial styles rolling into stores this month. CEO Mira Ashby framed the launch as 'a careful step down-market without diluting the name.' Early pre-orders reportedly outpaced the original Heirloom debut.",
+      "cycle": 82677,
+      "dur": 2
+    },
+    {
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drustcyon Beats Again as Marine-Grade Anchor Orders Outpace Foundry Ramp",
+      "body": "Drustcyon posted quarterly revenue of $612 million, up 14% year over year, as early demand for its new marine-grade anchor system exceeded internal forecasts. CEO Aurelia Kessler said the coastal foundry is already running two shifts ahead of schedule and hinted at a third product family for offshore platforms. Order backlog rose to a record $1.9 billion.",
+      "cycle": 82677,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Fenncyon Named Lead Contractor on $3.4B Eastfield Grand Loop Megaproject",
+      "body": "Fenncyon has secured the anchor role in the Eastfield Grand Loop, a $3.4 billion earthmoving and civil program that dwarfs its previous Southern Loop award. CEO Nadia Ashby said the multi-year mandate lifts total backlog past $6 billion and will require the largest fleet expansion in company history. The win cements Fenncyon as the region's dominant earthmoving house.",
+      "cycle": 82677,
+      "dur": 8
+    },
+    {
+      "company": "Holtgate Group",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Group Notches Another Slim Beat on Reliable Guild Volumes",
+      "body": "Holtgate extended its quiet winning streak with a modest earnings beat, driven again by steady Uniform Guild renewals and consistent mill throughput. CEO Dorian Throne said raw textile demand remains 'unremarkable in the best possible way.' Margins held flat as input costs stayed contained.",
+      "cycle": 82677,
+      "dur": 1
+    },
+    {
+      "company": "Palettstone & Sons",
+      "sector": "consumer",
+      "kind": "award",
+      "size": "flash",
+      "head": "Palettstone & Sons Fastening System Wins Trade Tools Design Honor",
+      "body": "The newly launched Heirloom Pro fastening system took the top hardware prize at the annual Tradecraft Tools Expo, cited for its quick-lock mechanism and durability. CEO Cole Fenn said the recognition validates the second plant's push into premium tooling. The award follows a strong reception among professional buyers.",
+      "cycle": 82677,
+      "dur": 1
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "outage",
+      "size": "standard",
+      "head": "Skarnvale Vosk Junction Terminal Goes Dark After Handling System Failure",
+      "body": "A cascading failure in the automated sorting spine halted operations at the delayed Vosk Junction terminal for 38 hours, stranding roughly 4,200 pallets bound for Braeloch clients. CEO Dorn Vaskell blamed a rushed commissioning schedule tied to the triple retrofit push and pledged a full systems audit. Analysts warn the outage could push Vosk Junction's go-live into the next quarter.",
+      "cycle": 82677,
+      "dur": 2
+    },
+    {
+      "company": "Stegreach",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Stegreach Tops Forecasts as Grid Contract Revenue Begins Flowing",
+      "body": "Stegreach reported earnings ahead of expectations as the first phase of its $1.2 billion grid modernization contract converted into $210 million of quarterly revenue. CEO Halden Ashby said expanded Riverport wiring capacity is now fully absorbed and margins improved on scale. Management reaffirmed full-year guidance.",
+      "cycle": 82677,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Varnvale & Sons Acquires Marchetti Casing House to Anchor Heritage Division",
+      "body": "Fresh off its Geneva win, Varnvale & Sons has agreed to acquire boutique case-maker Marchetti for a reported $84 million, bringing in-house the metalwork behind its award-winning timepiece. CEO Bram Wold called Marchetti 'the missing workshop' and said the Heritage Division will absorb its 60 artisans by spring. The deal continues Wold's aggressive roll-up of legacy craft ateliers.",
+      "cycle": 82677,
+      "dur": 2
+    },
     {
       "company": "Blackton Industries",
       "sector": "automotive",
@@ -52,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Edges Ahead Again as Northbrook Adds to Westline Base",
-      "body": "Dorian Steg's house logged a 4.1% revenue gain, its ninth straight quarterly beat, as a small Northbrook hospitality account layered onto the steady Westline book. Margins held at 18.3% with no new debt drawn. Steg reiterated the group's preference for 'boring, renewable dollars.'",
-      "cycle": 82676,
-      "dur": 1
-    },
-    {
       "company": "Palettstead Holdings",
       "sector": "logistics",
       "kind": "major_deal",
@@ -82,26 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Boreas Power Misses as Vantel Integration Costs Bite Into Quarter",
-      "body": "Boreas Power posted earnings of $0.94 a share against a $1.22 expectation, as integration charges from the $6.8 billion Vantel acquisition and one-time separation costs from the Halvard sale weighed on results. CEO Mira Thorne defended the pivot, saying compute demand from the Vantel halls would 'more than justify a lumpy transition year.'",
-      "cycle": 82675,
-      "dur": 2
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Calderforge Lands Multi-Year Capacity Deal for Stormwell Compute Halls",
-      "body": "Calderforge signed a $1.9 billion, five-year capacity agreement anchoring more than half of the newly stabilized Stormwell halls to a single enterprise customer. CEO Nadia Throne said the contract validates the post-outage cooling overhaul and provides 'the revenue floor we've needed to invest ahead of demand.'",
-      "cycle": 82675,
-      "dur": 2
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "lawsuit",
@@ -110,26 +160,6 @@
       "body": "A consolidated shareholder action filed in the Merrin district court accuses Kessel Drive of concealing known defects in its storage units months before the recall, seeking damages tied to the stock's collapse. The complaint names CEO Neave Corliss and several directors; the company said the claims are 'without merit' and vowed to defend vigorously as the parallel regulatory probe continues.",
       "cycle": 82675,
       "dur": 8
-    },
-    {
-      "company": "Veldtreach & Sons",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Veldtreach & Sons Adds Third Excavation Fleet to Meet Coastal Rail Demand",
-      "body": "Facing tight equipment availability across the Coastal Rail corridor, Veldtreach & Sons committed $210 million to a third heavy excavation fleet and two new staging depots. CEO Petra Steg said the buildout secures capacity through the 2027 grading season and positions the firm for follow-on corridor tenders.",
-      "cycle": 82675,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Vossenspire Supply Acquires Movement-Maker Halvane in $480M Deal",
-      "body": "Vossenspire Supply agreed to buy specialist movement manufacturer Halvane for $480 million, bringing in-house the mechanisms behind its Corveil timepiece line. CEO Quinn Marrow said vertical control would protect margins and supply as Corveil expands through the Larkmoor salon network.",
-      "cycle": 82675,
-      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -239,26 +269,6 @@
       "head": "Gromford Works Rocked as Regulators Freeze Assets and Verrint Faces Personal Subpoena in Meridian Case",
       "body": "Prosecutors escalated the Meridian sourcing case, freezing an estimated $340 million in Gromford assets and issuing a personal subpoena to CEO Dahlia Verrint over documents from her prior board role. The company suspended two remaining Fine Goods executives and pulled its full-year outlook amid the widening criminal probe. Verrint, installed only months ago to steady the house, now finds herself entangled in the scandal she was hired to contain.",
       "cycle": 82670,
-      "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Boreas Power Strikes $6.8B Deal for Compute-Heavy Vantel Group in Bold Pivot",
-      "body": "Flush from the $3.4B Halvard grid sale, CEO Mira Thorne unveiled Boreas Power's largest-ever acquisition: the $6.8B purchase of compute specialist Vantel Group, sharply tilting the company toward data infrastructure. Thorne cast the deal as the culmination of the Halvard cleanup, funding the buy with sale proceeds and $3B in new debt, and pledged Vantel's power-hungry campuses would run on Boreas-owned generation.",
-      "cycle": 82669,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Halhold Systems Rocked as Probe Finds Outage Warnings Withheld From $900M Partner",
-      "body": "An independent review revealed that Halhold engineers had flagged the hardware fault weeks before the multi-day outage, but the warnings never reached the $900M pact partner, who is now threatening to void the contract. CEO Corin Vale faces mounting pressure as the board opened an inquiry into disclosure practices, wiping out the goodwill from earlier recall transparency and leaving the flagship deal in jeopardy.",
-      "cycle": 82669,
       "dur": 8
     }
   ]

@@ -369,7 +369,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82657,
+    "lastEventCycle": 82677,
     "events": [
       {
         "cycle": 0,
@@ -457,6 +457,16 @@
         "body": "Aldousspire Group edged past estimates with a 7% sales lift, driven by better-than-expected foot traffic at its new Heirloom concept stores. CEO Mira Ashby said conversion rates in the flagship format ran ahead of legacy locations, supporting a measured pace of further openings. Guidance was reaffirmed.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82677,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Aldousspire Group Launches Heirloom Everyday Line to Broaden Concept Reach",
+        "body": "Building on strong concept-store traffic, Aldousspire unveiled Heirloom Everyday, a lower-priced apparel range aimed at younger shoppers, with 40 initial styles rolling into stores this month. CEO Mira Ashby framed the launch as 'a careful step down-market without diluting the name.' Early pre-orders reportedly outpaced the original Heirloom debut.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -5193,7 +5203,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82660,
+    "lastEventCycle": 82677,
     "events": [
       {
         "cycle": 0,
@@ -5299,6 +5309,16 @@
         "size": "standard",
         "head": "Drustcyon Rolls Out Marine-Grade Anchor System From New Coastal Foundry",
         "body": "Drustcyon began shipping its TidalHold anchor and fixing range, engineered for saltwater exposure, from its newly commissioned coastal foundry. CEO Aurelia Kessler said the line extends the corrosion-resistance reputation that won the $650M rail framework into offshore and harbor infrastructure markets. Initial orders cover three port modernization projects.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82677,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcyon Beats Again as Marine-Grade Anchor Orders Outpace Foundry Ramp",
+        "body": "Drustcyon posted quarterly revenue of $612 million, up 14% year over year, as early demand for its new marine-grade anchor system exceeded internal forecasts. CEO Aurelia Kessler said the coastal foundry is already running two shifts ahead of schedule and hinted at a third product family for offshore platforms. Order backlog rose to a record $1.9 billion.",
         "effects": {
           "construction": 0.13
         }
@@ -5735,7 +5755,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82662,
+    "lastEventCycle": 82677,
     "events": [
       {
         "cycle": 0,
@@ -5853,6 +5873,16 @@
         "body": "Nadia Ashby delivered a stronger-than-expected quarter, with the combined Southern Loop and Northern Spur packages driving a 12% revenue gain and prompting an upward guidance revision. The record backlog is now translating into steady billing across the Eastfield program. Ashby flagged early-stage interest in an adjacent Westfield tender.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82677,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Fenncyon Named Lead Contractor on $3.4B Eastfield Grand Loop Megaproject",
+        "body": "Fenncyon has secured the anchor role in the Eastfield Grand Loop, a $3.4 billion earthmoving and civil program that dwarfs its previous Southern Loop award. CEO Nadia Ashby said the multi-year mandate lifts total backlog past $6 billion and will require the largest fleet expansion in company history. The win cements Fenncyon as the region's dominant earthmoving house.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -8521,7 +8551,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82650,
+    "lastEventCycle": 82677,
     "events": [
       {
         "cycle": 0,
@@ -8587,6 +8617,16 @@
         "size": "flash",
         "head": "Holtgate Group Stretches Beat Streak on Steady Mill Output",
         "body": "Holtgate posted a fourth straight modest beat, with revenue up 3% as uniform-guild renewals and firm mill utilization held the line. CEO Dorian Throne reaffirmed guidance and noted raw-fiber costs remained stable through the quarter. Operating margin held at 12%.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82677,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Group Notches Another Slim Beat on Reliable Guild Volumes",
+        "body": "Holtgate extended its quiet winning streak with a modest earnings beat, driven again by steady Uniform Guild renewals and consistent mill throughput. CEO Dorian Throne said raw textile demand remains 'unremarkable in the best possible way.' Margins held flat as input costs stayed contained.",
         "effects": {
           "textiles": 0.06
         }
@@ -11456,7 +11496,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82662,
+    "lastEventCycle": 82677,
     "events": [
       {
         "cycle": 0,
@@ -11564,6 +11604,16 @@
         "body": "Cole Fenn introduced the Heirloom Pro Anchor range, a modular fastening and bit system aimed at professional contractors, building on the sell-through momentum of the precision set. The second plant, now clear of backorders, will handle initial production. Fenn signaled measured optimism, noting early trade-channel pre-orders 'point to the same pattern we saw last cycle.'",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82677,
+        "kind": "award",
+        "size": "flash",
+        "head": "Palettstone & Sons Fastening System Wins Trade Tools Design Honor",
+        "body": "The newly launched Heirloom Pro fastening system took the top hardware prize at the annual Tradecraft Tools Expo, cited for its quick-lock mechanism and durability. CEO Cole Fenn said the recognition validates the second plant's push into premium tooling. The award follows a strong reception among professional buyers.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -11888,7 +11938,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82664,
+    "lastEventCycle": 82677,
     "events": [
       {
         "cycle": 0,
@@ -12020,6 +12070,16 @@
         "size": "standard",
         "head": "Skarnvale Stumbles as Triple Retrofit Push Strains Cash and Delays Vosk Junction",
         "body": "Skarnvale posted a quarterly loss of $34M as simultaneous retrofits at three terminals overwhelmed capital reserves and pushed the Vosk Junction opening back by a quarter. CEO Dorn Vaskell defended the pace, saying 'spreading the Braeloch blueprint fast is worth a rough quarter,' but analysts questioned funding the third retrofit before the second earns out. The company drew down $60M on its credit line to bridge the gap.",
+        "effects": {
+          "logistics": -0.13
+        }
+      },
+      {
+        "cycle": 82677,
+        "kind": "outage",
+        "size": "standard",
+        "head": "Skarnvale Vosk Junction Terminal Goes Dark After Handling System Failure",
+        "body": "A cascading failure in the automated sorting spine halted operations at the delayed Vosk Junction terminal for 38 hours, stranding roughly 4,200 pallets bound for Braeloch clients. CEO Dorn Vaskell blamed a rushed commissioning schedule tied to the triple retrofit push and pledged a full systems audit. Analysts warn the outage could push Vosk Junction's go-live into the next quarter.",
         "effects": {
           "logistics": -0.13
         }
@@ -12323,7 +12383,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82658,
+    "lastEventCycle": 82677,
     "events": [
       {
         "cycle": 0,
@@ -12409,6 +12469,16 @@
         "size": "standard",
         "head": "Stegreach Expands Riverport Wiring Capacity to Feed $1.2B Grid Contract",
         "body": "Halden Ashby approved a new production line at Riverport to supply the landmark grid modernization award, adding roughly 200 jobs. The buildout targets high-volume cable and fixings output as the multi-year contract enters its delivery phase. Ashby said the move locks in supply ahead of peak billing without straining existing fastener lines.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82677,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Stegreach Tops Forecasts as Grid Contract Revenue Begins Flowing",
+        "body": "Stegreach reported earnings ahead of expectations as the first phase of its $1.2 billion grid modernization contract converted into $210 million of quarterly revenue. CEO Halden Ashby said expanded Riverport wiring capacity is now fully absorbed and margins improved on scale. Management reaffirmed full-year guidance.",
         "effects": {
           "construction": 0.13
         }
@@ -13022,7 +13092,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82669,
+    "lastEventCycle": 82677,
     "events": [
       {
         "cycle": 0,
@@ -13240,6 +13310,16 @@
         "body": "The debut piece from Varnvale's new Heritage Division won the Grand Complication prize at the annual Salon, a validation of the Aubrec-Calderon integration. CEO Bram Wold said the award confirmed that folding the two houses together 'concentrated craft rather than diluting it,' with early allocations of the limited run already spoken for.",
         "effects": {
           "luxury": 0.06
+        }
+      },
+      {
+        "cycle": 82677,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Varnvale & Sons Acquires Marchetti Casing House to Anchor Heritage Division",
+        "body": "Fresh off its Geneva win, Varnvale & Sons has agreed to acquire boutique case-maker Marchetti for a reported $84 million, bringing in-house the metalwork behind its award-winning timepiece. CEO Bram Wold called Marchetti 'the missing workshop' and said the Heritage Division will absorb its 60 artisans by spring. The deal continues Wold's aggressive roll-up of legacy craft ateliers.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
