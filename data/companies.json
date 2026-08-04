@@ -1175,7 +1175,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82667,
+    "lastEventCycle": 82676,
     "events": [
       {
         "cycle": 0,
@@ -1359,6 +1359,16 @@
         "body": "Regulators have opened a formal review of brake and suspension parts produced on Blackton's ramped Halvern line, citing a cluster of field-failure reports. Cassian Rode said the company is cooperating fully and has paused shipments of the affected part numbers pending internal testing. The probe casts a shadow over a line Blackton only recently drove to full rate under its multi-year supply contract.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82676,
+        "kind": "recall",
+        "size": "major",
+        "head": "Blackton Industries Recalls 1.8M Halvern-Line Components as Safety Probe Confirms Defect",
+        "body": "The safety review concluded that a bracket in the Halvern line can fatigue under load, triggering a 1.8 million-unit recall estimated to cost $310M. Cassian Rode halted the line and pledged to retrofit affected parts at no charge, though two supply contracts have already invoked penalty clauses. The recall wipes out the gains booked when Halvern reached full rate last quarter.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -1858,18 +1868,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82669,
+    "lastEventCycle": 82676,
     "events": [
-      {
-        "cycle": 82525,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Bruncrest Works Posts Record Quarter as Meridian Pact Ramps",
-        "body": "Bruncrest Works reported quarterly revenue of 612 million, up 23 percent, driven by the first full shipments under its Meridian Exchange supply agreement. CEO Petra Veldt told reporters the compute backlog now stretches eleven months and hinted at a second production line. Margins widened to 31 percent as the Meridian volume absorbed fixed plant costs.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82532,
         "kind": "expansion",
@@ -2092,6 +2092,16 @@
         "body": "Days after missing on ramp costs, CEO Ines Marlow announced Bruncrest would throttle Aria Ultra production and consolidate the newer Eastfield line's shifts to protect margins. The plan cuts an estimated $180M in annualized spend but pushes full Ultra availability into next year, with Marlow conceding the launch pace had 'run ahead of the market.'",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82676,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Bruncrest Works Relaunches Aria Ultra With Leaner Eastfield Build to Win Back Momentum",
+        "body": "Ines Marlow debuted a revised Aria Ultra configuration built on a streamlined Eastfield process that cuts per-unit assembly cost by roughly 22%. Marlow told a packed briefing the earlier ramp was 'a bruise, not a break,' pointing to four new datacenter commitments totaling 90,000 units. Early order books reportedly cover the trimmed second-shift capacity within the first month.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -3917,7 +3927,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82669,
+    "lastEventCycle": 82676,
     "events": [
       {
         "cycle": 0,
@@ -4127,6 +4137,16 @@
         "size": "standard",
         "head": "Castlehold Posts First Clean Quarter Since Saltmere Spin-Off as Voss Turnaround Takes Hold",
         "body": "Freed of the ring-fenced cleanup unit, Castlehold reported operating profit of $620M against forecasts near $450M, its first result unencumbered by Saltmere provisions. CEO Halden Voss called it 'proof the core business was always sound,' though the $4.1B regulator suit tied to legacy costs remains unresolved.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82676,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Castlehold Wins Landmark Grid-Storage Contract as Voss Turnaround Gains Credibility",
+        "body": "Halden Voss secured a $780M Power & Storage supply deal to anchor the Ardent regional grid, the group's largest since the Saltmere spin-off. The multi-year agreement locks in baseline revenue and validates Voss's push to reposition Castlehold around clean capacity. Management said the contract covers roughly a third of planned storage output through 2029.",
         "effects": {
           "energy": 0.13
         }
@@ -6818,25 +6838,15 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1897,
-    "ceo": "Dahlia Verrint",
+    "ceo": "Corwin Halstead",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.85,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82670,
+    "lastEventCycle": 82676,
     "events": [
-      {
-        "cycle": 82530,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Gromford Works Extends Aurelian Line With Limited Caldwyck Edition",
-        "body": "Capitalizing on its new flagship atelier, Gromford Works unveiled a 200-piece Aurelian Caldwyck Edition timepiece priced from $58,000, with engraving exclusive to the boutique. CEO Mira Ashby said pre-orders for the run filled within the opening week. The launch deepens the house's push into top-tier collector demand following its Piece of the Year honor.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82537,
         "kind": "earnings_beat",
@@ -7060,6 +7070,14 @@
         "effects": {
           "luxury": -0.22
         }
+      },
+      {
+        "cycle": 82676,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Gromford Works Ousts Verrint as Board Installs Caretaker Chief Amid Meridian Fallout",
+        "body": "The board removed Dahlia Verrint after regulators extended the asset freeze and her personal subpoena widened the criminal exposure. Veteran restructuring specialist Corwin Halstead steps in with a mandate to negotiate a settlement and preserve the group's remaining timepiece lines. Sources say frozen assets and a suspended supplier network have left Gromford weeks from a liquidity crunch.",
+        "effects": {}
       }
     ]
   },
@@ -9408,7 +9426,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82664,
+    "lastEventCycle": 82676,
     "events": [
       {
         "cycle": 0,
@@ -9534,6 +9552,16 @@
         "size": "standard",
         "head": "Korrworks Opens Cross-Region Hub With Both Anchor Tenants Live From Day One",
         "body": "Korrworks cut the ribbon on its Cross-Region Hub, opening at 85% committed capacity with both anchor tenants operational and the automated sorting layer processing peak volumes on schedule. CEO Rhys Throne said day-one throughput exceeded internal projections by 12%, and hinted a fourth hub site is under evaluation. The facility supports the landmark handling pact signed last year.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82676,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrworks Beats as Cross-Region Hub Runs Above Plan in First Full Quarter",
+        "body": "Rhys Throne reported the new hub processed 12% more volume than projected, lifting group revenue 9.4% with both anchor tenants at full utilization. Throne said a waitlist of secondary tenants could justify a mezzanine sorting expansion by next year. Free cash flow turned positive earlier than the completion budget forecast.",
         "effects": {
           "logistics": 0.13
         }
@@ -10737,7 +10765,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82662,
+    "lastEventCycle": 82676,
     "events": [
       {
         "cycle": 0,
@@ -10863,6 +10891,16 @@
         "size": "flash",
         "head": "Marrowmoor Holdings Nudges Past Estimates as Westline Base Holds Firm",
         "body": "Dorian Steg's steady-hand approach delivered another modest beat, with quarterly revenue up 4.6% as the bedded-in Westline contracts continued to generate reliable margins. Management reaffirmed guidance and flagged two smaller regional bids in the pipeline. Steg reiterated a preference for 'durable, unglamorous growth.'",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82676,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Edges Ahead Again as Northbrook Adds to Westline Base",
+        "body": "Dorian Steg's house logged a 4.1% revenue gain, its ninth straight quarterly beat, as a small Northbrook hospitality account layered onto the steady Westline book. Margins held at 18.3% with no new debt drawn. Steg reiterated the group's preference for 'boring, renewable dollars.'",
         "effects": {
           "hospitality": 0.06
         }
@@ -11295,7 +11333,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82659,
+    "lastEventCycle": 82676,
     "events": [
       {
         "cycle": 0,
@@ -11391,6 +11429,16 @@
         "size": "standard",
         "head": "Palettstead Breaks Ground on Fourth Cold-Chain to Meet Overflow Demand",
         "body": "Fresh off a fully ramped three-chain network, Palettstead announced construction of a fourth reusable cold-chain corridor, a $220 million investment backed by committed customer volumes. CEO Orla Marrow said demand had outstripped current capacity for two straight quarters. The new chain is slated to enter service within eighteen months.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82676,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Palettstead Locks Fourth Chain to Anchor New Cold-Chain Before Completion",
+        "body": "Orla Marrow signed regional grocer Vellmark to a seven-year reusable cold-chain contract, pre-committing over 60% of the fourth facility's capacity still under construction. The deal is valued at roughly $190M across its term and secures overflow volume that had strained the existing three chains. Marrow called it 'the boldest pre-lease we've ever underwritten.'",
         "effects": {
           "logistics": 0.13
         }
@@ -13207,7 +13255,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82667,
+    "lastEventCycle": 82676,
     "events": [
       {
         "cycle": 0,
@@ -13417,6 +13465,16 @@
         "body": "Varnvale reported record quarterly profit of $310 million, up 42%, after the top-tier Sovereign Collection sold through its initial allocation within weeks. Adrienne Sole said waiting lists for the flagship timepieces now stretch past a year, cementing the house's push into the ultra-luxury segment. The result marks a stunning turn from the scandal-era lows of two years ago.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82676,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Varnvale House Opens Flagship Salon as Sovereign Demand Outstrips Supply",
+        "body": "Adrienne Sole unveiled a 14,000-square-foot flagship in the Laurent district and a second Meridian atelier to double timepiece output after Sovereign waitlists topped 6,000. The expansion adds 240 artisans and lifts annual capacity by an estimated 35%. Sole said the house was 'building for the demand we already have, not the demand we hope for.'",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]

@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-03T19:39:31.656Z",
+  "generatedAt": "2026-08-04T02:40:32.784Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "major",
+      "head": "Blackton Industries Recalls 1.8M Halvern-Line Components as Safety Probe Confirms Defect",
+      "body": "The safety review concluded that a bracket in the Halvern line can fatigue under load, triggering a 1.8 million-unit recall estimated to cost $310M. Cassian Rode halted the line and pledged to retrofit affected parts at no charge, though two supply contracts have already invoked penalty clauses. The recall wipes out the gains booked when Halvern reached full rate last quarter.",
+      "cycle": 82676,
+      "dur": 8
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Bruncrest Works Relaunches Aria Ultra With Leaner Eastfield Build to Win Back Momentum",
+      "body": "Ines Marlow debuted a revised Aria Ultra configuration built on a streamlined Eastfield process that cuts per-unit assembly cost by roughly 22%. Marlow told a packed briefing the earlier ramp was 'a bruise, not a break,' pointing to four new datacenter commitments totaling 90,000 units. Early order books reportedly cover the trimmed second-shift capacity within the first month.",
+      "cycle": 82676,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Castlehold Wins Landmark Grid-Storage Contract as Voss Turnaround Gains Credibility",
+      "body": "Halden Voss secured a $780M Power & Storage supply deal to anchor the Ardent regional grid, the group's largest since the Saltmere spin-off. The multi-year agreement locks in baseline revenue and validates Voss's push to reposition Castlehold around clean capacity. Management said the contract covers roughly a third of planned storage output through 2029.",
+      "cycle": 82676,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Gromford Works Ousts Verrint as Board Installs Caretaker Chief Amid Meridian Fallout",
+      "body": "The board removed Dahlia Verrint after regulators extended the asset freeze and her personal subpoena widened the criminal exposure. Veteran restructuring specialist Corwin Halstead steps in with a mandate to negotiate a settlement and preserve the group's remaining timepiece lines. Sources say frozen assets and a suspended supplier network have left Gromford weeks from a liquidity crunch.",
+      "cycle": 82676,
+      "dur": 8
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrworks Beats as Cross-Region Hub Runs Above Plan in First Full Quarter",
+      "body": "Rhys Throne reported the new hub processed 12% more volume than projected, lifting group revenue 9.4% with both anchor tenants at full utilization. Throne said a waitlist of secondary tenants could justify a mezzanine sorting expansion by next year. Free cash flow turned positive earlier than the completion budget forecast.",
+      "cycle": 82676,
+      "dur": 2
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowmoor Holdings Edges Ahead Again as Northbrook Adds to Westline Base",
+      "body": "Dorian Steg's house logged a 4.1% revenue gain, its ninth straight quarterly beat, as a small Northbrook hospitality account layered onto the steady Westline book. Margins held at 18.3% with no new debt drawn. Steg reiterated the group's preference for 'boring, renewable dollars.'",
+      "cycle": 82676,
+      "dur": 1
+    },
+    {
+      "company": "Palettstead Holdings",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Palettstead Locks Fourth Chain to Anchor New Cold-Chain Before Completion",
+      "body": "Orla Marrow signed regional grocer Vellmark to a seven-year reusable cold-chain contract, pre-committing over 60% of the fourth facility's capacity still under construction. The deal is valued at roughly $190M across its term and secures overflow volume that had strained the existing three chains. Marrow called it 'the boldest pre-lease we've ever underwritten.'",
+      "cycle": 82676,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Varnvale House Opens Flagship Salon as Sovereign Demand Outstrips Supply",
+      "body": "Adrienne Sole unveiled a 14,000-square-foot flagship in the Laurent district and a second Meridian atelier to double timepiece output after Sovereign waitlists topped 6,000. The expansion adds 240 artisans and lifts annual capacity by an estimated 35%. Sole said the house was 'building for the demand we already have, not the demand we hope for.'",
+      "cycle": 82676,
+      "dur": 2
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -10,16 +90,6 @@
       "body": "Boreas Power posted earnings of $0.94 a share against a $1.22 expectation, as integration charges from the $6.8 billion Vantel acquisition and one-time separation costs from the Halvard sale weighed on results. CEO Mira Thorne defended the pivot, saying compute demand from the Vantel halls would 'more than justify a lumpy transition year.'",
       "cycle": 82675,
       "dur": 2
-    },
-    {
-      "company": "Brunforge Holdings",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Brunforge Holdings Extends Streak as Vellan Kitchen Line Ramps",
-      "body": "Brunforge Holdings beat estimates for a fourth straight quarter, with early Vellan Kitchen sales lifting food-service revenue 11%. CEO Kestrel Bramm said the line's attachment rate at existing flagships exceeded expectations, supporting a measured rollout to secondary markets.",
-      "cycle": 82675,
-      "dur": 1
     },
     {
       "company": "Calderforge",
@@ -42,16 +112,6 @@
       "dur": 8
     },
     {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Tops Estimates Again as Cleaning Lines Firm Up",
-      "body": "Ornewright Goods reported quarterly revenue of $1.41 billion, edging past the $1.38 billion consensus, its fifth consecutive beat. CEO Petra Veldt credited resilient Jansan volumes and modest price gains, calling the quarter 'unremarkable in the best way.'",
-      "cycle": 82675,
-      "dur": 1
-    },
-    {
       "company": "Veldtreach & Sons",
       "sector": "construction",
       "kind": "expansion",
@@ -70,16 +130,6 @@
       "body": "Vossenspire Supply agreed to buy specialist movement manufacturer Halvane for $480 million, bringing in-house the mechanisms behind its Corveil timepiece line. CEO Quinn Marrow said vertical control would protect margins and supply as Corveil expands through the Larkmoor salon network.",
       "cycle": 82675,
       "dur": 2
-    },
-    {
-      "company": "Wold & Bramm",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Wold & Bramm Posts Solid Quarter as Heritage Collection Sells Through",
-      "body": "Wold & Bramm reported profit up 7% on strong early sales of its Heritage Lighting Collection across all four showrooms. CEO Mara Marrow said sell-through outpaced internal targets and hinted at scouting a fifth location for late next year.",
-      "cycle": 82675,
-      "dur": 1
     },
     {
       "company": "Aperture Compute",
@@ -102,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Castlestone Returns to Profit as Redesigned Grid Cores Ship to Anchor Buyer",
-      "body": "Pell Karsh reported the first profitable quarter since the overheating probe, with net income of $88M as redesigned grid cores began volume shipments under the anchor supply pact. Karsh said thermal complaints had fallen to near zero and two additional buyers were in late-stage talks. The idled grid division has been fully reabsorbed into the new production line.",
-      "cycle": 82674,
-      "dur": 2
-    },
-    {
       "company": "Greywater Grid",
       "sector": "energy",
       "kind": "major_deal",
@@ -130,26 +170,6 @@
       "body": "The partner behind the $900M supply pact filed suit accusing Corin Vale's team of knowingly withholding outage warnings before signing, seeking full damages plus punitive relief. Court filings cite internal reviews the probe unearthed showing engineers flagged the hardware fault weeks before disclosure. Vale called the claims 'without merit' but the board has retained outside counsel and paused shareholder guidance.",
       "cycle": 82674,
       "dur": 8
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Ironcrestton Debuts First Fully In-House Collection as Blackwood Resets Fine Goods",
-      "body": "Thea Blackwood unveiled the Ashmark line, the first collection produced entirely under the new in-house model after the licensing program was terminated. Blackwood said vertical control cut lead times by a third and restored a single origin standard across every piece. Early orders from three flagship retail partners exceeded internal targets by 40%.",
-      "cycle": 82674,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Korrwright Works Beats as Reopened Meridienne Salon Drives Luxury Demand",
-      "body": "Quarterly revenue rose 11% to $482M as the relaunched Meridienne salon posted record footfall and higher average ticket prices on limited-run timepieces. Dunmore Carrow credited the integration for lifting group margins back above 28%, reversing the prior quarter's slip. The house said waitlists for its flagship complications now stretch into next year.",
-      "cycle": 82674,
-      "dur": 2
     },
     {
       "company": "Lhaus Industries",
@@ -239,16 +259,6 @@
       "head": "Halhold Systems Rocked as Probe Finds Outage Warnings Withheld From $900M Partner",
       "body": "An independent review revealed that Halhold engineers had flagged the hardware fault weeks before the multi-day outage, but the warnings never reached the $900M pact partner, who is now threatening to void the contract. CEO Corin Vale faces mounting pressure as the board opened an inquiry into disclosure practices, wiping out the goodwill from earlier recall transparency and leaving the flagship deal in jeopardy.",
       "cycle": 82669,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Woldmark Bets Turnaround on Halcyon 4, Frayne's First Flagship",
-      "body": "Isolde Frayne unveiled the Halcyon 4 compute platform, staking her early tenure on a redesigned reliability architecture and an extended validation cycle meant to bury the field-failure disaster that toppled her predecessor. The launch pairs a slower, staged rollout with a first-of-its-kind replacement guarantee, and Frayne told investors the company would rather ship late than repeat the Halcyon 3 recall. Early orders from two anchor customers were disclosed alongside the reveal.",
-      "cycle": 82668,
       "dur": 8
     }
   ]
