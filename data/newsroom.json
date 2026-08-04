@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-04T14:17:39.791Z",
+  "generatedAt": "2026-08-04T19:39:33.437Z",
   "beats": [
+    {
+      "company": "Castle Devices",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castle Devices Posts Steady Quarter as Consumables Volumes Hold",
+      "body": "Castle Devices reported revenue of $840 million, modestly above estimates, as its regional hospital network contract continued to ramp. Bram Calder reaffirmed full-year guidance and noted consumables reorder rates remained 'reassuringly flat,' consistent with the company's understated cadence.",
+      "cycle": 82679,
+      "dur": 1
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Castlestone Lands $4.5B Multi-Year Grid-Core Deal, Karsh's Boldest Bet Pays Off",
+      "body": "Castlestone signed a $4.5 billion multi-year supply agreement for its redesigned grid cores, its largest contract ever and a decisive validation of Pell Karsh's thermal overhaul. The pact expands the anchor buyer relationship into a second product tier and locks in demand through 2029. Karsh called it 'the deal that turns a comeback into a franchise.'",
+      "cycle": 82679,
+      "dur": 8
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Garrware Beats as Marrow Valley Fourth Line Comes Online Ahead of Schedule",
+      "body": "Garrware's fourth Marrow Valley sorting line entered service two weeks early, lifting quarterly margins to 18.4 percent and beating estimates. Orla Holt said the depot now handles a record daily throughput and confirmed the company is scouting a second regional hub as anchor volumes continue to outpace capacity.",
+      "cycle": 82679,
+      "dur": 2
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Kesselgrove Co. Tops Estimates Again as Press Backlog Stretches Into Next Year",
+      "body": "Kesselgrove Co. edged past forecasts with $610 million in revenue, extending its streak of steady quarters as its industrial press backlog now reaches into the following fiscal year. Orla Steg said tooling bay utilization held near capacity and declined to raise guidance, keeping to the firm's measured tone.",
+      "cycle": 82679,
+      "dur": 1
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Lhaus Industries Faces Regulatory Probe After Grid-Storage Overheating Reports",
+      "body": "Regulators opened a formal safety review into Lhaus Industries' grid-storage units following three reported thermal incidents at customer sites tied to its $2.8 billion pact. The probe casts a shadow over Cole Brandt's aggressive storage pivot, with the second $3.4 billion megadeal now under contractual review. Brandt said the company is 'cooperating fully' and has paused shipments from the new dedicated plant pending inspection.",
+      "cycle": 82679,
+      "dur": 8
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Maison & Vale Beats as Northram Integration Delivers Early Savings",
+      "body": "Maison & Vale reported quarterly operating income of $1.9 billion, ahead of the $1.7 billion consensus, crediting $180 million in realized synergies from the folded-in Northram cleaning arm. Rhys Kessler said the integration is 'ahead of schedule' toward the $400 million savings target and hinted at further consolidation across the Jansan portfolio.",
+      "cycle": 82679,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Woldmark's Halcyon 4 Sells Out at Launch as Frayne Declares Turnaround 'Done'",
+      "body": "Woldmark's Halcyon 4 compute line drew orders exceeding 1.2 million units in its first 72 hours, clearing initial inventory across all regions. Isolde Frayne, appearing at the Meridian launch event, called the debut 'vindication' and pledged to double production capacity by year-end. The result reverses the reputational damage from the Halcyon 3 recall that toppled her predecessor.",
+      "cycle": 82679,
+      "dur": 8
+    },
+    {
+      "company": "Wrenspire",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Wrenspire Pushes Everyroom Into Farm Inputs With Grower Supply Tie-Up",
+      "body": "Wrenspire extended its Everyroom bundling model into farm inputs, launching a grower supply program that ties seed, feed, and household lines into a single account. Theo Aldous said early pilots across 400 regional operators lifted repeat orders by 14 percent, describing the move as 'the same disciplined thread pulled through a new segment.'",
+      "cycle": 82679,
+      "dur": 2
+    },
     {
       "company": "Ardent Health",
       "sector": "medical",
@@ -52,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Ironcrestcrest Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ironcrestcrest Supply Posts Steady Gains as Contractor-Grade Line Finds Footing",
-      "body": "Dorian Garr reported a fifth consecutive quarter of growth, with the new contractor-grade line adding $28 million in sales as it broadened the customer base beyond the value range. Margins held firm on disciplined warehouse utilization. Guidance was nudged modestly higher for the second half.",
-      "cycle": 82678,
-      "dur": 1
-    },
-    {
       "company": "Marrowstone Build",
       "sector": "construction",
       "kind": "major_deal",
@@ -69,36 +139,6 @@
       "head": "Marrowstone Build Wins $680M Port Expansion Package for Split Earthmoving Fleet",
       "body": "Delphine Vaugh secured a $680 million contract to supply earthmoving equipment and operators for a multi-year port expansion, deepening the order book that already strained capacity. The win follows the recent assembly line addition brought online to clear backlog. Vaugh said the new work extends the Split unit's committed pipeline into 2029.",
       "cycle": 82678,
-      "dur": 2
-    },
-    {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Supply Edges Ahead as Sanitation Concentrate Line Gains Early Traction",
-      "body": "Rhys Throne reported a modest quarterly beat, with the newly launched food-service sanitation concentrates contributing $46 million in first-quarter sales ahead of internal targets. The Dunmere cold-chain hub remains on schedule for completion next year. Management held full-year guidance steady, citing stable input costs.",
-      "cycle": 82678,
-      "dur": 1
-    },
-    {
-      "company": "Aldousspire Group",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Aldousspire Group Launches Heirloom Everyday Line to Broaden Concept Reach",
-      "body": "Building on strong concept-store traffic, Aldousspire unveiled Heirloom Everyday, a lower-priced apparel range aimed at younger shoppers, with 40 initial styles rolling into stores this month. CEO Mira Ashby framed the launch as 'a careful step down-market without diluting the name.' Early pre-orders reportedly outpaced the original Heirloom debut.",
-      "cycle": 82677,
-      "dur": 2
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drustcyon Beats Again as Marine-Grade Anchor Orders Outpace Foundry Ramp",
-      "body": "Drustcyon posted quarterly revenue of $612 million, up 14% year over year, as early demand for its new marine-grade anchor system exceeded internal forecasts. CEO Aurelia Kessler said the coastal foundry is already running two shifts ahead of schedule and hinted at a third product family for offshore platforms. Order backlog rose to a record $1.9 billion.",
-      "cycle": 82677,
       "dur": 2
     },
     {
@@ -110,36 +150,6 @@
       "body": "Fenncyon has secured the anchor role in the Eastfield Grand Loop, a $3.4 billion earthmoving and civil program that dwarfs its previous Southern Loop award. CEO Nadia Ashby said the multi-year mandate lifts total backlog past $6 billion and will require the largest fleet expansion in company history. The win cements Fenncyon as the region's dominant earthmoving house.",
       "cycle": 82677,
       "dur": 8
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "outage",
-      "size": "standard",
-      "head": "Skarnvale Vosk Junction Terminal Goes Dark After Handling System Failure",
-      "body": "A cascading failure in the automated sorting spine halted operations at the delayed Vosk Junction terminal for 38 hours, stranding roughly 4,200 pallets bound for Braeloch clients. CEO Dorn Vaskell blamed a rushed commissioning schedule tied to the triple retrofit push and pledged a full systems audit. Analysts warn the outage could push Vosk Junction's go-live into the next quarter.",
-      "cycle": 82677,
-      "dur": 2
-    },
-    {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Stegreach Tops Forecasts as Grid Contract Revenue Begins Flowing",
-      "body": "Stegreach reported earnings ahead of expectations as the first phase of its $1.2 billion grid modernization contract converted into $210 million of quarterly revenue. CEO Halden Ashby said expanded Riverport wiring capacity is now fully absorbed and margins improved on scale. Management reaffirmed full-year guidance.",
-      "cycle": 82677,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Varnvale & Sons Acquires Marchetti Casing House to Anchor Heritage Division",
-      "body": "Fresh off its Geneva win, Varnvale & Sons has agreed to acquire boutique case-maker Marchetti for a reported $84 million, bringing in-house the metalwork behind its award-winning timepiece. CEO Bram Wold called Marchetti 'the missing workshop' and said the Heritage Division will absorb its 60 artisans by spring. The deal continues Wold's aggressive roll-up of legacy craft ateliers.",
-      "cycle": 82677,
-      "dur": 2
     },
     {
       "company": "Blackton Industries",
@@ -239,16 +249,6 @@
       "head": "Thronehaus & Co. Acquires Ferrault Casework Supplier in Landmark $610M Deal",
       "body": "Fresh off its Grand Horology Salon win, Thronehaus agreed to acquire longtime casework partner Ferrault outright for $610M, vertically integrating the workshop behind its award-winning Verrand Marchwick line. CEO Cora Dray called the purchase 'the natural end of a decades-long courtship,' securing exclusive access to Ferrault's artisans and locking rivals out of the specialty casework.",
       "cycle": 82672,
-      "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Fennmoor to Acquire Threll Diagnostics in $3.2B Cash-and-Stock Deal",
-      "body": "Fennmoor announced it will buy longtime partner Threll Diagnostics outright for $3.2 billion, converting its licensing arrangement into full ownership of the diagnostics suite now deployed across 140 hospital systems. CEO Dorian Brandt called the move \"the natural end of a courtship,\" and said the deal folds Threll's 1,900 staff and bedside module R&D directly into Fennmoor's Medical Equipment arm. Management expects the acquisition to close within two quarters and add roughly 8% to diagnostics revenue in the first full year.",
-      "cycle": 82671,
       "dur": 8
     }
   ]

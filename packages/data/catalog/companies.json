@@ -3789,7 +3789,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82650,
+    "lastEventCycle": 82679,
     "events": [
       {
         "cycle": 0,
@@ -3855,6 +3855,16 @@
         "size": "flash",
         "head": "Castle Devices Delivers Another Steady Quarter on Consumables Demand",
         "body": "Castle reported earnings of 1.14 per share, edging past forecasts, as hospital-network consumable volumes held firm and clinic reorders rose 6%. CEO Bram Calder reaffirmed full-year guidance, citing 'no surprises' across the supply base. Margins were flat at 19%.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82679,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castle Devices Posts Steady Quarter as Consumables Volumes Hold",
+        "body": "Castle Devices reported revenue of $840 million, modestly above estimates, as its regional hospital network contract continued to ramp. Bram Calder reaffirmed full-year guidance and noted consumables reorder rates remained 'reassuringly flat,' consistent with the company's understated cadence.",
         "effects": {
           "medical": 0.06
         }
@@ -4275,18 +4285,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82674,
+    "lastEventCycle": 82679,
     "events": [
-      {
-        "cycle": 82529,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Castlestone Earnings Surge on Vellmont-Era Order Book",
-        "body": "Castlestone reported quarterly revenue up 31% as deliveries under its landmark supply agreement began flowing, with compute backlog reaching a record 18-month horizon. CEO Iris Garr touted margins fattened by the high-end Vellmont line but warned that meeting demand would require a costly capacity push. Operating profit beat consensus by a wide margin.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82536,
         "kind": "expansion",
@@ -4511,6 +4511,16 @@
         "body": "Pell Karsh reported the first profitable quarter since the overheating probe, with net income of $88M as redesigned grid cores began volume shipments under the anchor supply pact. Karsh said thermal complaints had fallen to near zero and two additional buyers were in late-stage talks. The idled grid division has been fully reabsorbed into the new production line.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82679,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Castlestone Lands $4.5B Multi-Year Grid-Core Deal, Karsh's Boldest Bet Pays Off",
+        "body": "Castlestone signed a $4.5 billion multi-year supply agreement for its redesigned grid cores, its largest contract ever and a decisive validation of Pell Karsh's thermal overhaul. The pact expands the anchor buyer relationship into a second product tier and locks in demand through 2029. Karsh called it 'the deal that turns a comeback into a franchise.'",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -6385,7 +6395,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82665,
+    "lastEventCycle": 82679,
     "events": [
       {
         "cycle": 0,
@@ -6501,6 +6511,16 @@
         "size": "standard",
         "head": "Garrware Lifts Margins as Marrow Valley Fourth Line Nears Startup",
         "body": "Orla Holt reported a 14% rise in quarterly operating profit, crediting automated sorting for trimming per-unit handling costs to a record low. The fourth Marrow Valley line remains on schedule for commissioning next quarter, with anchor contracts already covering an estimated 70% of its capacity. Holt reiterated her preference for measured, self-funded growth.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82679,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Garrware Beats as Marrow Valley Fourth Line Comes Online Ahead of Schedule",
+        "body": "Garrware's fourth Marrow Valley sorting line entered service two weeks early, lifting quarterly margins to 18.4 percent and beating estimates. Orla Holt said the depot now handles a record daily throughput and confirmed the company is scouting a second regional hub as anchor volumes continue to outpace capacity.",
         "effects": {
           "logistics": 0.13
         }
@@ -9288,7 +9308,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82665,
+    "lastEventCycle": 82679,
     "events": [
       {
         "cycle": 0,
@@ -9404,6 +9424,16 @@
         "size": "flash",
         "head": "Kesselgrove Co. Edges Estimates as Press Backlog Holds Firm",
         "body": "Orla Steg reported another modest beat, with press output steady and the order backlog now stretching 11 months. Margins ticked up slightly on improved tooling-bay throughput. Steg offered no change to the company's understated outlook.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82679,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Kesselgrove Co. Tops Estimates Again as Press Backlog Stretches Into Next Year",
+        "body": "Kesselgrove Co. edged past forecasts with $610 million in revenue, extending its streak of steady quarters as its industrial press backlog now reaches into the following fiscal year. Orla Steg said tooling bay utilization held near capacity and declined to raise guidance, keeping to the firm's measured tone.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -10051,18 +10081,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82673,
+    "lastEventCycle": 82679,
     "events": [
-      {
-        "cycle": 82525,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Lhaus Industries Strikes Landmark Driveline Pact With Vehicle Giant Marwick Motors",
-        "body": "Lhaus Industries has signed a seven-year, 1.4-billion supply agreement to fit Korrick-built axles and drivelines across Marwick Motors' entire hauler range. CEO Cole Brandt called it 'the deal the Korrick acquisition was built for,' noting the reopened Ferrlands plant will run at full capacity by spring. The contract instantly makes Lhaus the largest independent driveline supplier in the region.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82531,
         "kind": "expansion",
@@ -10292,6 +10312,16 @@
         "effects": {
           "automotive": 0.22
         }
+      },
+      {
+        "cycle": 82679,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Lhaus Industries Faces Regulatory Probe After Grid-Storage Overheating Reports",
+        "body": "Regulators opened a formal safety review into Lhaus Industries' grid-storage units following three reported thermal incidents at customer sites tied to its $2.8 billion pact. The probe casts a shadow over Cole Brandt's aggressive storage pivot, with the second $3.4 billion megadeal now under contractual review. Brandt said the company is 'cooperating fully' and has paused shipments from the new dedicated plant pending inspection.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -10306,7 +10336,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82667,
+    "lastEventCycle": 82679,
     "events": [
       {
         "cycle": 0,
@@ -10454,6 +10484,16 @@
         "body": "Rhys Kessler moved swiftly to integrate the $3.2 billion Northram acquisition, merging its chemicals operations into Maison & Vale's cleaning-and-jansan division and targeting $400 million in annual synergies. The plan consolidates three plants and trims overlapping distribution routes, with roughly 900 roles affected. Kessler framed the move as necessary discipline after a rapid stretch of dealmaking.",
         "effects": {
           "hospitality": -0.13
+        }
+      },
+      {
+        "cycle": 82679,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Maison & Vale Beats as Northram Integration Delivers Early Savings",
+        "body": "Maison & Vale reported quarterly operating income of $1.9 billion, ahead of the $1.7 billion consensus, crediting $180 million in realized synergies from the folded-in Northram cleaning arm. Rhys Kessler said the integration is 'ahead of schedule' toward the $400 million savings target and hinted at further consolidation across the Jansan portfolio.",
+        "effects": {
+          "hospitality": 0.13
         }
       }
     ]
@@ -14698,7 +14738,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82668,
+    "lastEventCycle": 82679,
     "events": [
       {
         "cycle": 0,
@@ -14860,6 +14900,16 @@
         "size": "major",
         "head": "Woldmark Bets Turnaround on Halcyon 4, Frayne's First Flagship",
         "body": "Isolde Frayne unveiled the Halcyon 4 compute platform, staking her early tenure on a redesigned reliability architecture and an extended validation cycle meant to bury the field-failure disaster that toppled her predecessor. The launch pairs a slower, staged rollout with a first-of-its-kind replacement guarantee, and Frayne told investors the company would rather ship late than repeat the Halcyon 3 recall. Early orders from two anchor customers were disclosed alongside the reveal.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82679,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Woldmark's Halcyon 4 Sells Out at Launch as Frayne Declares Turnaround 'Done'",
+        "body": "Woldmark's Halcyon 4 compute line drew orders exceeding 1.2 million units in its first 72 hours, clearing initial inventory across all regions. Isolde Frayne, appearing at the Meridian launch event, called the debut 'vindication' and pledged to double production capacity by year-end. The result reverses the reputational damage from the Halcyon 3 recall that toppled her predecessor.",
         "effects": {
           "technology": 0.22
         }
@@ -15103,7 +15153,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82658,
+    "lastEventCycle": 82679,
     "events": [
       {
         "cycle": 0,
@@ -15189,6 +15239,16 @@
         "size": "standard",
         "head": "Wrenspire Beats as Everyroom Food Service Bundles Lift Cross-Segment Sales",
         "body": "Theo Aldous posted a fifth straight beat, with the bundled food-service supply program adding 6% to group revenue in its first full quarter. Household and apparel lines held steady while farm inputs saw modest recovery. Aldous credited the fourth Everyroom hub for absorbing the added volume without service disruption.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82679,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Wrenspire Pushes Everyroom Into Farm Inputs With Grower Supply Tie-Up",
+        "body": "Wrenspire extended its Everyroom bundling model into farm inputs, launching a grower supply program that ties seed, feed, and household lines into a single account. Theo Aldous said early pilots across 400 regional operators lifted repeat orders by 14 percent, describing the move as 'the same disciplined thread pulled through a new segment.'",
         "effects": {
           "consumer": 0.13
         }
