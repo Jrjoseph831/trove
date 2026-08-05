@@ -256,7 +256,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82665,
+    "lastEventCycle": 82681,
     "events": [
       {
         "cycle": 0,
@@ -354,6 +354,16 @@
         "body": "Dunmore Calder reported flat-to-modestly-higher results, with sterile field kits now contributing a growing slice of consumables revenue. Peel-Free wrap held its share amid stable hospital demand. Calder reaffirmed the company's unhurried full-year outlook.",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82681,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aldousmont & Sons Wins Hospital Network Supply Award for Sterile Field Kits",
+        "body": "Aldousmont & Sons secured a supply award covering sterile field kits and peel-free consumables across a 40-hospital network. Dunmore Calder said the win validates the field-kit launch and should lift consumables volumes by an estimated 12% next year. The award runs for four years with renewal options.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -2909,7 +2919,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82665,
+    "lastEventCycle": 82681,
     "events": [
       {
         "cycle": 0,
@@ -3017,6 +3027,16 @@
         "body": "Vale Fenn introduced a trio of insulated outdoor storage chests, extending the weatherproof range that has carried recent quarters. Priced for the mid-tier household segment, the new units share tooling with existing lines to hold costs steady. Fenn described the rollout as a natural fill-in rather than a strategic shift.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82681,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Caldercraft Holdings Broadens Weatherproof Line With Modular Utility Racks",
+        "body": "Caldercraft Holdings unveiled a modular utility rack system built on its weatherproof coatings, aimed at pairing with the insulated storage chests launched last quarter. Vale Fenn said the range rounds out a full outdoor-storage offering feeding the new regional distribution center. Initial orders cover 1,400 retail locations.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -4842,7 +4862,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82665,
+    "lastEventCycle": 82681,
     "events": [
       {
         "cycle": 0,
@@ -4948,6 +4968,16 @@
         "size": "standard",
         "head": "Drayton Freight Opens Second Assembly Plant to Meet Pallet-Lift Demand",
         "body": "Emil Holt broke ground on a second assembly facility to keep pace with the national fleet rollout, a rare capacity bet for the steady operator. The plant will roughly double heavy-duty pallet-lift output when it reaches full capacity in about a year. Holt said existing depot demand alone justified the $210 million investment.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82681,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drayton Freight Beats Again as Second Assembly Plant Clears Order Backlog",
+        "body": "Drayton Freight reported an 11% revenue gain as its newly opened second assembly plant cut pallet-lift lead times from nine weeks to four. Emil Holt said the national distributor rollout is now serving 34 depots, ahead of the 30 targeted for year-end. Material-handling unit shipments rose 18% year over year.",
         "effects": {
           "logistics": 0.13
         }
@@ -5394,7 +5424,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82664,
+    "lastEventCycle": 82681,
     "events": [
       {
         "cycle": 0,
@@ -5492,6 +5522,16 @@
         "body": "Dunmorestone reported a modest quarterly beat, with revenue up 4% as the cafeteria kitchen ramp and multi-site plumbing award both delivered steady contributions. CEO Orla Mercer characterized the results as 'exactly the quiet, dependable quarter we planned for.' The company reaffirmed full-year guidance.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82681,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Dunmorestone Lands Food Service Supply Contract With Regional Restaurant Group",
+        "body": "Dunmorestone secured a three-year food service supply agreement with a 210-site restaurant group, its largest food service win to date. Orla Mercer said the deal complements the multi-site plumbing award and should begin contributing next quarter. The contract is valued at roughly 48 million over its term.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -6169,7 +6209,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82666,
+    "lastEventCycle": 82681,
     "events": [
       {
         "cycle": 0,
@@ -6275,6 +6315,16 @@
         "size": "flash",
         "head": "Fennvale Mfg. Notches Another Modest Beat as Second Fastener Shift Ramps Cleanly",
         "body": "Fennvale reported revenue up 6% on the newly added second shift, which reached full staffing three weeks ahead of schedule. Theo Vossen credited 'boring, repeatable execution,' noting the fastener plant is already running near its expanded capacity ceiling.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82681,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Fennvale Mfg. Posts Quiet Beat as Second Fastener Shift Reaches Steady State",
+        "body": "Fennvale Mfg. edged past estimates with a 5% revenue gain as its second fastener shift settled into full output. Theo Vossen said auto-parts volumes held flat while the lengthened order book supported pricing. Operating margin ticked up to 17.1%.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -6943,18 +6993,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82676,
+    "lastEventCycle": 82681,
     "events": [
-      {
-        "cycle": 82537,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Gromford Works Posts Record Quarter as Aurelian Demand Outpaces Supply",
-        "body": "Gromford Works reported quarterly revenue of 142 million, up 31 percent year over year, with the Aurelian line and its Caldwyck Edition accounting for nearly half of fine goods sales. CEO Mira Ashby said the Caldwyck atelier is already booked through next season and hinted at a third Aurelian variant. Margins widened to 38 percent on the strength of premium pricing.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82543,
         "kind": "product_launch",
@@ -7176,6 +7216,16 @@
         "head": "Gromford Works Ousts Verrint as Board Installs Caretaker Chief Amid Meridian Fallout",
         "body": "The board removed Dahlia Verrint after regulators extended the asset freeze and her personal subpoena widened the criminal exposure. Veteran restructuring specialist Corwin Halstead steps in with a mandate to negotiate a settlement and preserve the group's remaining timepiece lines. Sources say frozen assets and a suspended supplier network have left Gromford weeks from a liquidity crunch.",
         "effects": {}
+      },
+      {
+        "cycle": 82681,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Gromford Works Splits Off Meridian Unit and Slashes Timepiece Output in Sweeping Overhaul",
+        "body": "Caretaker chief Corwin Halstead announced Gromford Works will carve out the tainted Meridian division into a ring-fenced entity while cutting timepiece production by 40% to conserve cash amid frozen assets. The plan eliminates 620 roles and suspends the fine-goods flagship program pending the criminal proceedings. Halstead called it 'the only path to keeping the core house solvent.'",
+        "effects": {
+          "luxury": -0.22
+        }
       }
     ]
   },
@@ -7486,7 +7536,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82670,
+    "lastEventCycle": 82681,
     "events": [
       {
         "cycle": 0,
@@ -7634,6 +7684,16 @@
         "body": "Halcyon brought its fifth Southport line online this week, adding roughly 30% to the site's packaging capacity after months of ramp work. CEO Dorian Ashby said the line is already committed against contracted volumes and expects full utilization within two quarters. The completion caps a multi-year buildout that has quietly made Southport the company's flagship complex.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82681,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Halcyon Industries Ticks Higher as Southport Fifth Line Reaches Full Rate",
+        "body": "Halcyon Industries edged past estimates with a 4% revenue rise as its fifth Southport line hit full production two weeks ahead of plan. Dorian Ashby said regional packaging capacity is now fully absorbed by existing contracts, with no idle output. Operating margin held steady at 15.8%.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -12243,7 +12303,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82669,
+    "lastEventCycle": 82681,
     "events": [
       {
         "cycle": 0,
@@ -12379,6 +12439,16 @@
         "size": "standard",
         "head": "Steg Tooling Breaks Ground on Third Kelmar Cell as Vossen Presses Steady Buildout",
         "body": "With the first two Kelmar cells running near capacity, Steg Tooling committed $310M to a third cell targeting fastener and fixings output, slated to come online within eighteen months. CEO Iris Vossen framed the move as a measured response to firm order books rather than speculative demand, noting the plant would add roughly 240 skilled roles at the Kelmar site.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82681,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Steg Tooling Extends Streak to Ten as Third Kelmar Cell Prepares to Open",
+        "body": "Steg Tooling posted its tenth consecutive quarterly beat, with revenue up 7.4% as the first two Kelmar cells held near full utilization. Iris Vossen credited disciplined fastener pricing and told the board the third cell remains on schedule for a spring commissioning. Fixings margins widened to 21.3%, a two-year high.",
         "effects": {
           "manufacturing": 0.13
         }
