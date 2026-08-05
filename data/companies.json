@@ -889,7 +889,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82671,
+    "lastEventCycle": 82680,
     "events": [
       {
         "cycle": 0,
@@ -1077,6 +1077,16 @@
         "body": "New CEO Halden Dabney laid out a restructuring plan that carves grid-storage testing into a separately governed unit with outside oversight, aiming to rebuild credibility after the falsified-records scandal. The plan includes a 12% headcount reduction, the closure of two underperforming assembly lines, and a fresh certification of all storage products currently in the field. Dabney told investors the rebuild would pressure margins near-term but was \"the only path back to trust.\"",
         "effects": {
           "energy": -0.13
+        }
+      },
+      {
+        "cycle": 82680,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Blackhold Posts First Clean Quarter Under Dabney as Independent Testing Unit Stabilizes",
+        "body": "Blackhold reported a modest earnings beat, its first since the falsified-records scandal, crediting the newly separated grid-storage testing unit for restoring customer confidence. CEO Halden Dabney said cancellations have slowed and two paused contracts have resumed, though he cautioned the turnaround remains early. Storage shipment volumes recovered to roughly 85% of pre-scandal levels.",
+        "effects": {
+          "energy": 0.06
         }
       }
     ]
@@ -2278,7 +2288,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82670,
+    "lastEventCycle": 82680,
     "events": [
       {
         "cycle": 0,
@@ -2472,6 +2482,16 @@
         "body": "Regulators opened a preliminary inquiry into the Veyra S's overhauled battery pack after a cluster of charging-fault complaints across roughly 8,000 vehicles. CEO Halvard Renn said the reports involve a software-managed charge controller and stressed no fires have been confirmed. The probe casts a shadow over a launch that had cleared backlog and driven recent capacity expansion.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82680,
+        "kind": "recall",
+        "size": "major",
+        "head": "Brunmark Motors Recalls 240,000 Veyra S Units as Battery Probe Confirms Fire Risk",
+        "body": "Brunmark Motors has issued a recall covering roughly 240,000 redesigned Veyra S vehicles after regulators confirmed a thermal fault in the battery pack that can ignite under sustained fast-charging. CEO Halvard Renn pledged free pack replacements and set aside $480 million to cover the campaign, reversing much of the momentum that drove recent beats. The newly expanded battery line will be diverted to produce corrected packs, delaying deliveries into next year.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -4689,7 +4709,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82661,
+    "lastEventCycle": 82680,
     "events": [
       {
         "cycle": 0,
@@ -4797,6 +4817,16 @@
         "body": "Cranegrove broke ground on a second regional fleet depot to service its swelling three-package corridor backlog, now booked out through early 2028. CEO Vale Calder framed the 45M investment as a measured step to hold margins as volumes climb. The disciplined earthmoving specialist reiterated it will fund the build entirely from operating cash.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82680,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Cranegrove Secures Corridor Framework Contract Worth $1.2B Through 2029",
+        "body": "Cranegrove has signed a multi-year earthmoving framework agreement with the Corridor Infrastructure Authority valued at $1.2 billion, locking in fleet deployment through 2029. Chief Executive Vale Calder called the deal the natural extension of the depot buildout, noting both regional depots will run at full utilization to meet the commitment. The agreement guarantees minimum monthly volumes, giving Cranegrove rare visibility on a backlog that had already stretched into 2028.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -7612,25 +7642,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1972,
-    "ceo": "Corin Vale",
+    "ceo": "Ilse Marren",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.86,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82674,
+    "lastEventCycle": 82680,
     "events": [
-      {
-        "cycle": 82538,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Halhold Systems Debuts Slimmed-Down Northgate Compute Tier",
-        "body": "CEO Dahlia Renn unveiled the Northgate Lite platform, a pared-back compute line built around the reset strategy after last quarter's overruns. The unit ships at a 22% lower price point than the original Northgate spec, and Renn told reporters the first 4,000 racks are already committed to early customers. Analysts called it a credible first step toward steadying the troubled program.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82543,
         "kind": "major_deal",
@@ -7856,6 +7876,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82680,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Systems Ousts CEO Corin Vale as Board Moves to Contain $900M Fallout",
+        "body": "The Halhold Systems board has removed Chief Executive Corin Vale following the concealment findings, naming compliance veteran Ilse Marren as interim CEO with a mandate to settle the outstanding litigation. Marren said her first priority is reaching a resolution with the aggrieved partner and restoring disclosure controls across the compute division. The company also disclosed it will restate two prior quarters to reflect withheld outage costs.",
+        "effects": {}
       }
     ]
   },
@@ -9840,7 +9868,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82674,
+    "lastEventCycle": 82680,
     "events": [
       {
         "cycle": 0,
@@ -10064,6 +10092,16 @@
         "size": "standard",
         "head": "Korrwright Works Beats as Reopened Meridienne Salon Drives Luxury Demand",
         "body": "Quarterly revenue rose 11% to $482M as the relaunched Meridienne salon posted record footfall and higher average ticket prices on limited-run timepieces. Dunmore Carrow credited the integration for lifting group margins back above 28%, reversing the prior quarter's slip. The house said waitlists for its flagship complications now stretch into next year.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82680,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrwright Works Acquires Heritage Movement Maker Alvence in $340M Deal",
+        "body": "Korrwright Works has agreed to buy movement specialist Alvence for $340 million, extending CEO Dunmore Carrow's acquisitive streak on the back of the Meridienne salon's revival. The purchase secures in-house mechanical calibers that had previously been sourced externally, echoing rivals' move toward vertical integration. Carrow said Alvence's workshops will supply the reopened Meridienne line first.",
         "effects": {
           "luxury": 0.13
         }
@@ -10509,7 +10547,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82672,
+    "lastEventCycle": 82680,
     "events": [
       {
         "cycle": 0,
@@ -10725,6 +10763,16 @@
         "body": "A widespread failure across Marlgear's Kessel platform disrupted signaling and dispatch across the Verrant rail network for roughly 14 hours, stranding freight and forcing manual operations. CEO Adele Ferran issued a public apology and pledged a full root-cause review, though Halden Mining Group said it was 'reassessing' its own rollout in light of the incident.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82680,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Marlgear Supply Faces Verrant Rail Safety Review After 14-Hour Kessel Outage",
+        "body": "Verrant Rail's oversight board has opened a formal reliability review of the Kessel platform following the 14-hour operational halt, demanding proof of failover safeguards before expansion continues. CEO Adele Ferran struck a defiant tone, insisting the fault was a single configuration error already patched, while acknowledging penalty clauses could cost up to $60 million. The Halden Mining rollout will proceed but under heightened monitoring.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -12751,7 +12799,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82672,
+    "lastEventCycle": 82680,
     "events": [
       {
         "cycle": 0,
@@ -12949,6 +12997,16 @@
         "body": "Fresh off its Grand Horology Salon win, Thronehaus agreed to acquire longtime casework partner Ferrault outright for $610M, vertically integrating the workshop behind its award-winning Verrand Marchwick line. CEO Cora Dray called the purchase 'the natural end of a decades-long courtship,' securing exclusive access to Ferrault's artisans and locking rivals out of the specialty casework.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82680,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Thronehaus & Co. Beats as Ferrault Buyout Lifts Margins on Award-Winning Marchwick Line",
+        "body": "Thronehaus & Co. topped estimates as the $610M Ferrault acquisition brought casework in-house, widening margins on the acclaimed Verrand Marchwick line. CEO Cora Dray said vertical integration cut per-unit costs by 18% while insulating output from supplier delays. Salon demand following the Grand Horology honors pushed the flagship line to a months-long waiting list.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -13944,7 +14002,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82655,
+    "lastEventCycle": 82680,
     "events": [
       {
         "cycle": 0,
@@ -14012,6 +14070,16 @@
         "body": "With the original Marden cleanroom running at capacity, Venline's board sanctioned a $95M second line expected to come online in early 2028. CEO Mara Garr, characteristically cautious, said the buildout was 'sized to demand we can already see, not demand we hope for,' and expects a gradual ramp with no near-term earnings impact.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82680,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Venline & Sons Extends Streak With Steady Beat as Second Marden Cleanroom Breaks Ground",
+        "body": "Venline & Sons logged another modest earnings beat as consumables orders held firm and construction began on its second Marden cleanroom. CEO Mara Garr reiterated the long-horizon approach, noting the new line will not contribute output until late next year. Backlog now covers roughly six months of demand at current capacity.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
