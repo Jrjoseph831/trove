@@ -492,7 +492,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82674,
+    "lastEventCycle": 82682,
     "events": [
       {
         "cycle": 0,
@@ -698,6 +698,16 @@
         "body": "Marisol Venn announced the permanent discontinuation of the Dawnmere III platform after the indefinite ban, writing down $610M and cutting roughly 1,400 roles tied to the program. Venn said the company would redirect resources to a clean-sheet successor and rebuild regulator trust through a new external compliance board. It marks the deepest restructuring in Aperture's history.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82682,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Aperture Compute Unveils Emberline Platform in First Post-Dawnmere Reset",
+        "body": "Marisol Venn moved to turn the page on the Dawnmere III debacle, launching the Emberline compute line built from a clean-sheet design that cleared regulatory pre-review before shipping. Venn staked her tenure on the release, calling it 'proof we learned everything Dawnmere cost us.' Early orders came in cautious, with several key customers awaiting field validation before committing volume.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -1424,18 +1434,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82675,
+    "lastEventCycle": 82682,
     "events": [
-      {
-        "cycle": 82525,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Boreas Power Moves to Full Ownership of Hollowmere Storage Fields",
-        "body": "Boreas Power has agreed to buy out its remaining partners in the Hollowmere Storage Fields for 480 million, converting its earlier minority stake into outright control. CEO Mira Thorne said full ownership lets the company route Hollowmere's capacity directly into its Power & Storage contracts without revenue-sharing. The deal follows a quarter in which Hollowmere alone contributed nearly a fifth of group output.",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82531,
         "kind": "earnings_beat",
@@ -1662,6 +1662,16 @@
         "size": "standard",
         "head": "Boreas Power Misses as Vantel Integration Costs Bite Into Quarter",
         "body": "Boreas Power posted earnings of $0.94 a share against a $1.22 expectation, as integration charges from the $6.8 billion Vantel acquisition and one-time separation costs from the Halvard sale weighed on results. CEO Mira Thorne defended the pivot, saying compute demand from the Vantel halls would 'more than justify a lumpy transition year.'",
+        "effects": {
+          "energy": -0.13
+        }
+      },
+      {
+        "cycle": 82682,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Boreas Power Names Vantel Integration Chief, Sets $400M Cost-Out Plan",
+        "body": "After a bruising quarter driven by Vantel absorption costs, Mira Thorne installed veteran operator Kessa Vaunt as head of a newly created integration office charged with wringing out $400 million in overlap by year-end. The company will consolidate three Vantel compute sites into two and pause further acquisitions until the merger stabilizes. Thorne conceded the pace of dealmaking had 'outrun the plumbing.'",
         "effects": {
           "energy": -0.13
         }
@@ -1916,18 +1926,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82676,
+    "lastEventCycle": 82682,
     "events": [
-      {
-        "cycle": 82532,
-        "kind": "expansion",
-        "size": "major",
-        "head": "Bruncrest Works to Build Sprawling Compute Campus on Meridian Demand",
-        "body": "CEO Petra Veldt announced a 1.2-billion-unit expansion, breaking ground on a fourth fabrication campus in the Northvale district to meet surging volume under the Meridian Exchange pact. The site will add an estimated 3,400 jobs and double Bruncrest's annual compute output by its 1983 completion. Veldt called it 'the boldest bet of my career,' framing the project as a generational commitment despite warnings from rivals about overcapacity.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82538,
         "kind": "scandal",
@@ -2148,6 +2148,16 @@
         "size": "standard",
         "head": "Bruncrest Works Relaunches Aria Ultra With Leaner Eastfield Build to Win Back Momentum",
         "body": "Ines Marlow debuted a revised Aria Ultra configuration built on a streamlined Eastfield process that cuts per-unit assembly cost by roughly 22%. Marlow told a packed briefing the earlier ramp was 'a bruise, not a break,' pointing to four new datacenter commitments totaling 90,000 units. Early order books reportedly cover the trimmed second-shift capacity within the first month.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82682,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Bruncrest Works Swings to Beat as Leaner Aria Ultra Finds Buyers",
+        "body": "Ines Marlow delivered her first clean beat since taking the top job, as the relaunched Aria Ultra built on the trimmed Eastfield line moved 140,000 units and lifted gross margin back into positive territory. Marlow told analysts the 'painful reset' had left the product 'right-sized for the demand that's actually there.' The company reinstated a modest output-growth outlook for the coming quarters.",
         "effects": {
           "technology": 0.13
         }
@@ -5670,7 +5680,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82672,
+    "lastEventCycle": 82682,
     "events": [
       {
         "cycle": 0,
@@ -5839,6 +5849,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82682,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Erretmark Works Wins Follow-On 600-Unit Veyron Order as Backlog Deepens",
+        "body": "The sovereign collector fund behind Erretmark's landmark contract exercised an option for an additional 600 Veyron units, extending the order book into a third production year. Aurelia Garr said the second assembly hall, opened last quarter, will absorb the fresh volume without further capacity spend. The deal locks in premium-tier pricing that underpinned Erretmark's century-high margins.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -5996,7 +6016,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82671,
+    "lastEventCycle": 82682,
     "events": [
       {
         "cycle": 0,
@@ -6192,6 +6212,16 @@
         "size": "major",
         "head": "Fennmoor to Acquire Threll Diagnostics in $3.2B Cash-and-Stock Deal",
         "body": "Fennmoor announced it will buy longtime partner Threll Diagnostics outright for $3.2 billion, converting its licensing arrangement into full ownership of the diagnostics suite now deployed across 140 hospital systems. CEO Dorian Brandt called the move \"the natural end of a courtship,\" and said the deal folds Threll's 1,900 staff and bedside module R&D directly into Fennmoor's Medical Equipment arm. Management expects the acquisition to close within two quarters and add roughly 8% to diagnostics revenue in the first full year.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82682,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Fennmoor Strikes $5.1B Deal for Corvane Imaging in Aggressive Medical Push",
+        "body": "Fresh off folding Threll Diagnostics into its portfolio, Dorian Brandt has again reached for the checkbook, agreeing to acquire imaging specialist Corvane for $5.1 billion in cash. The tie-up would give Fennmoor a full bedside-to-scanner medical stack, though analysts flagged that back-to-back deals push net leverage past 3x for the first time in a decade. Brandt, in his 57th year at the helm, framed the purchase as 'completing the diagnostic loop.'",
         "effects": {
           "technology": 0.22
         }
@@ -10848,7 +10878,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82669,
+    "lastEventCycle": 82682,
     "events": [
       {
         "cycle": 0,
@@ -10974,6 +11004,16 @@
         "size": "flash",
         "head": "Marrowcyon Extends Streak With Quiet Beat as Apparel and Fixtures Both Firm",
         "body": "Marrowcyon logged another modest beat, posting margins a touch above guidance as workwear reorders and steady fixtures restocking held. CEO Theo Orne offered little drama, reiterating that the combined range 'does its job quarter after quarter' and keeping full-year guidance unchanged.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82682,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Keeps Streak Alive With Another Quiet Beat on Balanced Demand",
+        "body": "Marrowcyon logged yet another modest beat as workwear apparel and plumbing fixtures both grew in the low single digits, extending Theo Orne's run of undramatic quarters. Fixtures restocking has now normalized, and management pointed to steady contract renewals rather than any single catalyst. Free cash flow held firm, funding the company's unchanged dividend.",
         "effects": {
           "consumer": 0.06
         }
@@ -11835,7 +11875,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82662,
+    "lastEventCycle": 82682,
     "events": [
       {
         "cycle": 0,
@@ -11921,6 +11961,16 @@
         "size": "flash",
         "head": "Skarngrave Posts Steady Beat as Sterilizer Shipments Ramp on Schedule",
         "body": "Orla Dray reported a quarterly beat with revenue up 7% as hospital-network sterilizer deliveries accelerated against the $420M contract. The added assembly capacity is running near plan, and Dray confirmed no slippage in the shipment timeline. She described operations as 'exactly where we said they'd be.'",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82682,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrave Extends Streak as Sterilizer Backlog Clears on Schedule",
+        "body": "Skarngrave reported another dependable quarter, clearing the bulk of its hospital-network sterilizer backlog and holding operating margin steady at 18%. Orla Dray reaffirmed full-year guidance and noted the expanded assembly line is now running at 90% utilization. The jansan cleaning segment added a quiet 4% to complement the medical ramp.",
         "effects": {
           "medical": 0.06
         }
@@ -12466,7 +12516,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82667,
+    "lastEventCycle": 82682,
     "events": [
       {
         "cycle": 0,
@@ -12584,6 +12634,16 @@
         "body": "Stegforge posted quarterly revenue of $2.4 billion, up 9% year over year, as the new rail plate mill scaled past its first output milestone toward committed consortium volumes. Aurelia Steg credited disciplined ramp management and steady demand across structural materials for the beat. The company reaffirmed that the mill will reach full rated output by the next fiscal period.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82682,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Stegforge Edges Past Estimates as Rail Plate Mill Reaches Full Capacity",
+        "body": "Stegforge posted a fourth consecutive beat as its rail plate mill hit rated output, contributing a full quarter of structural-materials revenue for the first time. Aurelia Steg's team guided for steady mid-single-digit growth, emphasizing that the consortium's offtake commitments now cover 80% of mill capacity. Margins ticked up 60 basis points on improved yields.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
