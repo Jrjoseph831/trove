@@ -4586,7 +4586,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82670,
+    "lastEventCycle": 82683,
     "events": [
       {
         "cycle": 0,
@@ -4724,6 +4724,16 @@
         "body": "Cranecraft posted its eighth consecutive quarterly beat, with revenue of $1.84 billion edging past guidance on firmer raw-textile pricing. CEO Mira Garr credited disciplined inventory management and a 4% uptick in farm-equipment shipments into the spring buying season. The balanced mix, she noted, again cushioned the company against swings in any single line.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82683,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Notches Ninth Straight Beat on Firm Textile Pricing",
+        "body": "Garr posted a modest top-line gain to $1.06B, with raw textile pricing holding firm and farm equipment orders steady into the planting season. The streak extends Cranecraft's run of quiet outperformance, though guidance was left unchanged.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -5005,7 +5015,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82668,
+    "lastEventCycle": 82683,
     "events": [
       {
         "cycle": 0,
@@ -5121,6 +5131,16 @@
         "size": "standard",
         "head": "Drossware Recalls Cleaning-Line Batch Over Mislabeled Concentrate",
         "body": "Drossware issued a voluntary recall of roughly 240,000 units of its industrial cleaning concentrate after a labeling error understated dilution instructions on a single production run. Nadia Wold said no injuries were reported and the affected batch traced to one line, with corrected packaging already shipping to grocer-alliance partners. The company estimated a modest one-time charge and said other divisions were unaffected.",
+        "effects": {
+          "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82683,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Drossware Faces Regulatory Review of Cleaning Line After Mislabeling Recall",
+        "body": "State consumer-safety officials opened a formal review of Drossware's Jansan concentrate operations following last quarter's mislabeled-batch recall. Wold said the company is cooperating fully and has paused two concentrate SKUs pending relabeling audits, estimating a $14M charge to cover recall logistics and process upgrades.",
         "effects": {
           "consumer": -0.13
         }
@@ -6372,7 +6392,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82668,
+    "lastEventCycle": 82683,
     "events": [
       {
         "cycle": 0,
@@ -6488,6 +6508,16 @@
         "size": "standard",
         "head": "Forgegrave Industries Lands Coastward Logistics in First Deal Beyond Meridian",
         "body": "Forgegrave signed a $290 million multi-year contract to supply material-handling fleets to Coastward Logistics, diversifying beyond its long-running Meridian partnership. Petra Thorne said the win validates the second plant's expanded capacity and opens a new customer vertical without straining existing commitments. Deliveries begin next quarter.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82683,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Forgegrave Industries Beats as Coastward Deal Widens Customer Base",
+        "body": "Thorne reported revenue of $890M, up 18%, with the newly signed Coastward Logistics contract contributing its first partial quarter alongside the ramping Meridian add-on fleet. Management said diversifying beyond Meridian reduced single-customer concentration below 60% for the first time in years.",
         "effects": {
           "logistics": 0.13
         }
@@ -7988,18 +8018,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82678,
+    "lastEventCycle": 82683,
     "events": [
-      {
-        "cycle": 82552,
-        "kind": "scandal",
-        "size": "major",
-        "head": "Halhold Works Rocked as Internal Memos Show Verity Pro Warnings Ignored",
-        "body": "Leaked internal documents revealed that Halhold engineers flagged the Verity Pro's monitoring faults months before launch, contradicting Nadia Brandt's public assurances during the safety review. Two board members have called for an independent inquiry as several hospitals suspend existing contracts. The company faces mounting scrutiny alongside the ongoing shipment suspension.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82558,
         "kind": "lawsuit",
@@ -8218,6 +8238,16 @@
         "size": "standard",
         "head": "Halhold Works Lands Regional Hospital Supply Contract for Aveline II Monitors",
         "body": "Priya Vantt secured a three-year, $310 million framework to outfit twenty-two hospitals across the Merridian region with Aveline II monitors, leaning on the device's independent safety certification to win the tender. The deal marks Vantt's first significant offensive move after a quarter dented by legal costs. Deliveries begin next quarter, with roughly 14,000 units expected in the first wave.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82683,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halhold Works Returns to Beat as Aveline II Hospital Contract Ramps",
+        "body": "Vantt swung to a quarterly beat with revenue of $1.4B, driven by the regional hospital supply contract as Aveline II monitor shipments scaled to 6,200 units. Legal costs eased from the prior quarter, and Vantt said the certification-backed monitor is now in active pilots with two additional hospital networks.",
         "effects": {
           "technology": 0.13
         }
@@ -9046,7 +9076,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82674,
+    "lastEventCycle": 82683,
     "events": [
       {
         "cycle": 0,
@@ -9228,6 +9258,16 @@
         "size": "standard",
         "head": "Ironcrestton Debuts First Fully In-House Collection as Blackwood Resets Fine Goods",
         "body": "Thea Blackwood unveiled the Ashmark line, the first collection produced entirely under the new in-house model after the licensing program was terminated. Blackwood said vertical control cut lead times by a third and restored a single origin standard across every piece. Early orders from three flagship retail partners exceeded internal targets by 40%.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82683,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Ironcrestton Beats as Blackwood's In-House Reset Lifts Margins",
+        "body": "First full quarter under fully in-house production delivered a gross margin of 61%, up nine points from the licensing era, on revenue of $740M. Blackwood credited tighter control over the origin-standard supply chain and said reorder rates on the debut collection ran 22% above internal forecasts.",
         "effects": {
           "luxury": 0.13
         }
@@ -13979,7 +14019,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82671,
+    "lastEventCycle": 82683,
     "events": [
       {
         "cycle": 0,
@@ -14118,6 +14158,16 @@
         "effects": {
           "logistics": 0.13
         }
+      },
+      {
+        "cycle": 82683,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Vencyon Signs $2.3B Fleet Rollout to Bring Modular Platform to Fourth and Fifth Hubs",
+        "body": "Halloran secured a multi-year agreement with Brightway Distribution to deploy the modular handling platform across two new regional hubs, the company's largest single order in over a decade. The deal locks in $2.3B over five years and adds an option for a sixth site, marking Vencyon's decisive push past its historic three-hub footprint.",
+        "effects": {
+          "logistics": 0.22
+        }
       }
     ]
   },
@@ -14225,7 +14275,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82667,
+    "lastEventCycle": 82683,
     "events": [
       {
         "cycle": 0,
@@ -14350,6 +14400,16 @@
         "effects": {
           "energy": 0.22
         }
+      },
+      {
+        "cycle": 82683,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenspire Holdings Beats as Grid-Scale Storage Pact Front-Loads Revenue",
+        "body": "Roe reported quarterly revenue of $2.9B, up 34% year-over-year, with the first tranche of the $6.8B storage pact recognized ahead of schedule. Management raised full-year guidance and flagged $1.2B in staged deliveries queued for the next two quarters, though Roe warned margins would stay thin as new capacity ramps.",
+        "effects": {
+          "energy": 0.13
+        }
       }
     ]
   },
@@ -14364,7 +14424,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82675,
+    "lastEventCycle": 82683,
     "events": [
       {
         "cycle": 0,
@@ -14570,6 +14630,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Acquires Movement-Maker Halvane in $480M Deal",
         "body": "Vossenspire Supply agreed to buy specialist movement manufacturer Halvane for $480 million, bringing in-house the mechanisms behind its Corveil timepiece line. CEO Quinn Marrow said vertical control would protect margins and supply as Corveil expands through the Larkmoor salon network.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82683,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vossenspire Supply Unveils First Halvane-Powered Corveil Movement",
+        "body": "Marrow introduced the Corveil Meridian, the debut timepiece built entirely on the newly acquired Halvane in-house movement, priced from $18,400 and limited to 900 units in year one. The launch marks the first vertical payoff from the $480M Halvane deal, with production moving to the expanded Larkmoor salon network across four flagship cities.",
         "effects": {
           "luxury": 0.13
         }
