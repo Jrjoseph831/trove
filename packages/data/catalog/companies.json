@@ -3972,7 +3972,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82654,
+    "lastEventCycle": 82686,
     "events": [
       {
         "cycle": 0,
@@ -4040,6 +4040,16 @@
         "body": "Castlegear secured a five-year supply agreement with the Merrowfield hospital network valued at roughly $310M, covering sterile tray systems and select equipment servicing. CEO Sable Brandt said the deal extends the company's steady backlog conversion without straining production. Deliveries are scheduled to begin next quarter.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82686,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlegear Group Nudges Past Estimates as Regional Trays Contract Ramps",
+        "body": "Sable Brandt posted a modest beat with revenue of $418 million as the regional network sterile-tray contract began contributing meaningfully. Equipment orders held steady, and Brandt reaffirmed a cautious outlook while noting a healthy consumables backlog. The quarter marks a fourth consecutive period of measured growth.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -7849,18 +7859,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82680,
+    "lastEventCycle": 82686,
     "events": [
-      {
-        "cycle": 82543,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Halhold Systems Lands Anchor Client for Reworked Northgate Tier",
-        "body": "Dahlia Renn secured a multi-year supply agreement with logistics operator Fenwick Grid, the first major win for the slimmed-down Northgate compute tier. The deal, reported near 340 million over three years, validates Renn's decision to narrow the product's scope after the earlier fallout. Delivery begins next quarter under fixed capacity commitments.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82549,
         "kind": "earnings_beat",
@@ -8084,6 +8084,16 @@
         "head": "Halhold Systems Ousts CEO Corin Vale as Board Moves to Contain $900M Fallout",
         "body": "The Halhold Systems board has removed Chief Executive Corin Vale following the concealment findings, naming compliance veteran Ilse Marren as interim CEO with a mandate to settle the outstanding litigation. Marren said her first priority is reaching a resolution with the aggrieved partner and restoring disclosure controls across the compute division. The company also disclosed it will restate two prior quarters to reflect withheld outage costs.",
         "effects": {}
+      },
+      {
+        "cycle": 82686,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Halhold Systems Names Turnaround Chief and Splits Off Compute Reliability Unit",
+        "body": "New CEO Ilse Marren announced a restructuring that carves out a standalone Compute Reliability unit with independent oversight, part of an effort to rebuild trust after the concealed-outage scandal. The plan includes a $120 million remediation fund and new disclosure protocols for partners. Marren said settlement talks over the $900M suit are ongoing but declined to give terms.",
+        "effects": {
+          "technology": -0.13
+        }
       }
     ]
   },
@@ -8468,7 +8478,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82670,
+    "lastEventCycle": 82686,
     "events": [
       {
         "cycle": 0,
@@ -8596,6 +8606,16 @@
         "body": "Hesperforge topped estimates with quarterly revenue of $1.12 billion as its third mill began commercial output, easing capacity strain on the coastal shipyard pact. CEO Sable Halloran said the marine-grade backlog reached a record 14-month coverage, giving unusual visibility into next year. She flagged early interest from a second yard operator as a possible follow-on.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82686,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Hesperforge Supply Lands Landmark Marine-Grade Framework Deal Worth $1.4B",
+        "body": "Sable Halloran secured a five-year framework agreement to supply marine-grade structural materials to a consortium of shipyards, valued at up to $1.4 billion. The contract will absorb the bulk of the newly opened third mill's output and locks in Hesperforge's record backlog through the decade. Halloran called it the largest single agreement in the company's 112-year history.",
+        "effects": {
+          "manufacturing": 0.22
         }
       }
     ]
@@ -8920,7 +8940,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82668,
+    "lastEventCycle": 82686,
     "events": [
       {
         "cycle": 0,
@@ -9026,6 +9046,16 @@
         "size": "standard",
         "head": "Holtware Co. Opens Second Fulfillment Hub to Sustain Cordless Momentum",
         "body": "Holtware unveiled a $145 million distribution hub in the Kessridge corridor, doubling regional warehousing capacity to meet demand from its national chain partnership. Aurelia Dray said the site will cut restock times on the lifetime-warranty cordless range by nearly half, with a service-center wing dedicated to warranty claims. The facility is expected to reach full throughput within two quarters.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82686,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtware Co. Tops Estimates as Cordless Range and Chain Rollout Drive Sales",
+        "body": "Aurelia Dray reported quarterly revenue of $612 million, up 18% year over year, as the lifetime-warranty cordless range sold through the national hardware chain faster than forecast. The second fulfillment hub cut average delivery times by a third, easing earlier bottlenecks. Dray raised full-year guidance, citing steady reorder rates from retail partners.",
         "effects": {
           "consumer": 0.13
         }
@@ -9358,14 +9388,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1936,
-    "ceo": "Neave Corliss",
+    "ceo": "Marta Vinke",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.62,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82675,
+    "lastEventCycle": 82686,
     "events": [
       {
         "cycle": 0,
@@ -9532,6 +9562,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82686,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Kessel Drive Board Removes Neave Corliss as Storage Crisis Deepens",
+        "body": "The Kessel Drive board ousted CEO Neave Corliss following the escalating safety probe, the 4,200-job overhaul, and the shareholder suit tied to storage failures. Directors appointed veteran operations chief Marta Vinke as interim CEO, pledging a full internal review of the halted storage line. The stock has shed nearly half its value since the probe opened.",
+        "effects": {}
       }
     ]
   },
@@ -13302,7 +13340,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82663,
+    "lastEventCycle": 82686,
     "events": [
       {
         "cycle": 0,
@@ -13378,6 +13416,16 @@
         "size": "flash",
         "head": "Tillage & Co. Extends Streak With Another Firm Quarter as Blending Holds Full",
         "body": "Tillage delivered a fifth consecutive on-target quarter, with its blending facility running at capacity and input demand steady across core farm regions. CEO Kestrel Fenn noted margins held flat and reaffirmed the company's modest dividend. Management flagged no surprises and reiterated its unchanged outlook.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82686,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Tillage & Co. Extends Steady Run With Yet Another In-Line Quarter",
+        "body": "Kestrel Fenn reported revenue of $289 million, a hair above estimates, as the blending facility again ran at full output through the season. Farm-input demand held firm across all regions, with no meaningful shift in pricing. Fenn reiterated the company's long-standing conservative outlook.",
         "effects": {
           "agriculture": 0.06
         }
@@ -13528,7 +13576,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82677,
+    "lastEventCycle": 82686,
     "events": [
       {
         "cycle": 0,
@@ -13754,6 +13802,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Acquires Marchetti Casing House to Anchor Heritage Division",
         "body": "Fresh off its Geneva win, Varnvale & Sons has agreed to acquire boutique case-maker Marchetti for a reported $84 million, bringing in-house the metalwork behind its award-winning timepiece. CEO Bram Wold called Marchetti 'the missing workshop' and said the Heritage Division will absorb its 60 artisans by spring. The deal continues Wold's aggressive roll-up of legacy craft ateliers.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82686,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Varnvale & Sons Expands Heritage Division With Restored Marchetti Atelier",
+        "body": "Bram Wold unveiled a fully restored Marchetti atelier that will serve as the Heritage Division's flagship workshop, adding 180 master artisans and doubling annual casing capacity. The move follows the recent Marchetti acquisition and positions Varnvale to bring casing, movement, and finishing work entirely in-house. Wold said the division targets 12,000 units annually within three years.",
         "effects": {
           "luxury": 0.13
         }
@@ -15325,7 +15383,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82667,
+    "lastEventCycle": 82686,
     "events": [
       {
         "cycle": 0,
@@ -15421,6 +15479,16 @@
         "size": "standard",
         "head": "Wrengrove Group Tops Forecasts as Sterile-Kit Demand Keeps Climbing",
         "body": "Wrengrove beat expectations with revenue of $1.3 billion, up 11%, as the expanded sterile-kit line at its third plant ran near capacity. Rhys Vossen said hospital and clinic orders continue to outpace supply, prompting early planning for a fourth production site. Margins held steady despite the recent capacity additions.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82686,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Wrengrove Group Breaks Ground on Fourth Plant as Sterile-Kit Demand Surges",
+        "body": "Rhys Vossen announced a $260 million fourth plant dedicated to sterile-kit production, citing demand that has outstripped the third plant's expanded lines. The facility is expected to add 40% to total capacity when it opens in two years. Vossen said advance commitments already cover roughly a third of the planned output.",
         "effects": {
           "medical": 0.13
         }

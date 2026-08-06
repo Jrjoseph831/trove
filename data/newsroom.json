@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-06T08:38:48.632Z",
+  "generatedAt": "2026-08-06T14:13:11.271Z",
   "beats": [
+    {
+      "company": "Castlegear Group",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castlegear Group Nudges Past Estimates as Regional Trays Contract Ramps",
+      "body": "Sable Brandt posted a modest beat with revenue of $418 million as the regional network sterile-tray contract began contributing meaningfully. Equipment orders held steady, and Brandt reaffirmed a cautious outlook while noting a healthy consumables backlog. The quarter marks a fourth consecutive period of measured growth.",
+      "cycle": 82686,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Halhold Systems Names Turnaround Chief and Splits Off Compute Reliability Unit",
+      "body": "New CEO Ilse Marren announced a restructuring that carves out a standalone Compute Reliability unit with independent oversight, part of an effort to rebuild trust after the concealed-outage scandal. The plan includes a $120 million remediation fund and new disclosure protocols for partners. Marren said settlement talks over the $900M suit are ongoing but declined to give terms.",
+      "cycle": 82686,
+      "dur": 2
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Hesperforge Supply Lands Landmark Marine-Grade Framework Deal Worth $1.4B",
+      "body": "Sable Halloran secured a five-year framework agreement to supply marine-grade structural materials to a consortium of shipyards, valued at up to $1.4 billion. The contract will absorb the bulk of the newly opened third mill's output and locks in Hesperforge's record backlog through the decade. Halloran called it the largest single agreement in the company's 112-year history.",
+      "cycle": 82686,
+      "dur": 8
+    },
+    {
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Holtware Co. Tops Estimates as Cordless Range and Chain Rollout Drive Sales",
+      "body": "Aurelia Dray reported quarterly revenue of $612 million, up 18% year over year, as the lifetime-warranty cordless range sold through the national hardware chain faster than forecast. The second fulfillment hub cut average delivery times by a third, easing earlier bottlenecks. Dray raised full-year guidance, citing steady reorder rates from retail partners.",
+      "cycle": 82686,
+      "dur": 2
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Kessel Drive Board Removes Neave Corliss as Storage Crisis Deepens",
+      "body": "The Kessel Drive board ousted CEO Neave Corliss following the escalating safety probe, the 4,200-job overhaul, and the shareholder suit tied to storage failures. Directors appointed veteran operations chief Marta Vinke as interim CEO, pledging a full internal review of the halted storage line. The stock has shed nearly half its value since the probe opened.",
+      "cycle": 82686,
+      "dur": 8
+    },
+    {
+      "company": "Tillage & Co.",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Tillage & Co. Extends Steady Run With Yet Another In-Line Quarter",
+      "body": "Kestrel Fenn reported revenue of $289 million, a hair above estimates, as the blending facility again ran at full output through the season. Farm-input demand held firm across all regions, with no meaningful shift in pricing. Fenn reiterated the company's long-standing conservative outlook.",
+      "cycle": 82686,
+      "dur": 1
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Varnvale & Sons Expands Heritage Division With Restored Marchetti Atelier",
+      "body": "Bram Wold unveiled a fully restored Marchetti atelier that will serve as the Heritage Division's flagship workshop, adding 180 master artisans and doubling annual casing capacity. The move follows the recent Marchetti acquisition and positions Varnvale to bring casing, movement, and finishing work entirely in-house. Wold said the division targets 12,000 units annually within three years.",
+      "cycle": 82686,
+      "dur": 2
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Wrengrove Group Breaks Ground on Fourth Plant as Sterile-Kit Demand Surges",
+      "body": "Rhys Vossen announced a $260 million fourth plant dedicated to sterile-kit production, citing demand that has outstripped the third plant's expanded lines. The facility is expected to add 40% to total capacity when it opens in two years. Vossen said advance commitments already cover roughly a third of the planned output.",
+      "cycle": 82686,
+      "dur": 2
+    },
     {
       "company": "Blackton Industries",
       "sector": "automotive",
@@ -30,16 +110,6 @@
       "body": "Fresh off its $4.5B multi-year award, Castlestone announced a $700 million capacity build to double redesigned grid-core output by late next year. Pell Karsh said the anchor and multi-year commitments have pushed the order book past two years of production. The expansion is expected to add roughly 900 line roles at the company's primary fabrication site.",
       "cycle": 82685,
       "dur": 2
-    },
-    {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Dunmorewright Edges Past Estimates as Coastal Defense Milestones Clear",
-      "body": "Dunmorewright reported quarterly revenue of $1.24 billion, modestly ahead of guidance, as the second phase of the $510 million coastal defense contract passed inspection on schedule. Emil Skarn noted margins held steady despite higher aggregate costs, crediting parallel scheduling across Harborfront and Riverside. The company reaffirmed its full-year outlook.",
-      "cycle": 82685,
-      "dur": 1
     },
     {
       "company": "Lhaus Industries",
@@ -82,16 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Calderforge Breaks Ground on Third Stormwell Hall to Meet Capacity Demand",
-      "body": "Calderforge announced a $900M expansion adding a third compute hall at its Stormwell site, citing overflow demand from the recent multi-year capacity deal. CEO Nadia Throne said the new hall will use the cooling design piloted during last year's costly overhaul, now fully validated. Commissioning is targeted for late next year.",
-      "cycle": 82684,
-      "dur": 2
-    },
-    {
       "company": "Carrowcyon & Sons",
       "sector": "consumer",
       "kind": "major_deal",
@@ -102,26 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Castlehold Unveils Modular Storage Platform as Voss Builds on Grid Momentum",
-      "body": "Castlehold introduced its Halden-branded Meridian storage system, a stackable battery unit targeting utility clients who signed on after last quarter's grid-storage win. Voss said early orders cover roughly 1.2 gigawatt-hours of capacity, with first deliveries slated for the fourth quarter. Management framed the launch as proof the turnaround has shifted from cleanup to growth.",
-      "cycle": 82684,
-      "dur": 2
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drustcraft Adds Auto-Parts Supply Win to Broaden Beyond Fasteners",
-      "body": "Drustcraft signed a $190M multi-year auto-parts agreement with vehicle maker Trennik Motors, diversifying its order base beyond the recent fastener contract now in shipment. CEO Cora Fenn described the deal as a measured step to balance the two segments after the twin vehicle-line fully cleared its recall overhang. Production tooling begins immediately.",
-      "cycle": 82684,
-      "dur": 2
-    },
-    {
       "company": "Greywater Grid",
       "sector": "energy",
       "kind": "safety_probe",
@@ -130,16 +170,6 @@
       "body": "Regulators opened a formal inquiry into Greywater Grid's reservoir-cooling operations after reports the Blackmere site exceeded permitted water-draw limits during peak load. The probe threatens timelines on the $2B buildout backing its recent $3.4B multi-site pact, and CEO Sable Renwick acknowledged the company is cooperating while disputing the figures. It marks the first serious setback in Renwick's rapid expansion drive.",
       "cycle": 82684,
       "dur": 8
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Korrwright Group Beats Again as Rail-Bridge Work Joins Corridor Backlog",
-      "body": "Korrwright reported quarterly revenue of $1.4B, up 11% year over year, as the $600M rail-bridge contract began contributing alongside the ongoing corridor package. CEO Halden Fenn cited the second Verant line for holding delivery times steady despite record combined beam and cable volumes. The order book now stretches nearly two years out.",
-      "cycle": 82684,
-      "dur": 2
     },
     {
       "company": "Vencyon",
@@ -219,16 +249,6 @@
       "head": "Woldmark's Halcyon 4 Sells Out at Launch as Frayne Declares Turnaround 'Done'",
       "body": "Woldmark's Halcyon 4 compute line drew orders exceeding 1.2 million units in its first 72 hours, clearing initial inventory across all regions. Isolde Frayne, appearing at the Meridian launch event, called the debut 'vindication' and pledged to double production capacity by year-end. The result reverses the reputational damage from the Halcyon 3 recall that toppled her predecessor.",
       "cycle": 82679,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Brunstone & Sons Reeling as Internal Memos Show Vault Cell Guard Pro Overheating Was Flagged Before Launch",
-      "body": "Documents surfaced in the consolidated litigation reveal engineers warned of thermal runaway risk eighteen months before the Vault Cell Guard Pro shipped, with a memo signed off near CEO Halden Crowe's office urging schedule adherence. Crowe, known for aggressive product timelines, now faces calls from three board members for an independent review. The disclosures widen legal exposure well beyond the initial $1.3 billion in consolidated claims.",
-      "cycle": 82678,
       "dur": 8
     }
   ]
