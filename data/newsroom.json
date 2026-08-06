@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-06T02:41:09.041Z",
+  "generatedAt": "2026-08-06T08:38:48.632Z",
   "beats": [
     {
-      "company": "Aldouscyon",
-      "sector": "consumer",
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Blackton Industries Misses as Halvern Recall Costs Gut Quarterly Margins",
+      "body": "Blackton posted a quarterly loss of $86 million, well below expectations, after booking $210 million in recall and remediation charges tied to the 1.8 million defective Halvern-line components. Cassian Rode said replacement production has displaced higher-margin orders and warned the drag would persist into next quarter. The company suspended its interim payout while it rebuilds the affected line.",
+      "cycle": 82685,
+      "dur": 2
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Brunstone & Sons Hit With Regulator Suit as Vault Cell Probe Widens to Concealment Charges",
+      "body": "State authorities filed a civil action against Brunstone & Sons seeking up to $900 million in penalties, alleging executives suppressed pre-launch overheating data on the Vault Cell Guard Pro. The filing names the fleet-fire memos surfaced last month and asks the court to compel a full design audit. Halden Crowe called the claims 'overreaching' but confirmed the company has set aside $600 million against combined recall and legal exposure.",
+      "cycle": 82685,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Castlestone Adds Second Grid-Core Line as Karsh Races to Meet Backlog",
+      "body": "Fresh off its $4.5B multi-year award, Castlestone announced a $700 million capacity build to double redesigned grid-core output by late next year. Pell Karsh said the anchor and multi-year commitments have pushed the order book past two years of production. The expansion is expected to add roughly 900 line roles at the company's primary fabrication site.",
+      "cycle": 82685,
+      "dur": 2
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldouscyon Beats as Fifth-City Conversion Begins Contributing",
-      "body": "Aldouscyon reported a modest earnings beat, with revenue up 6% as the newly signed fifth city entered early conversion phases. CEO Petra Mercer said the second fixture plant is running near capacity and confirmed talks with two additional municipalities. The results reinforced the steady cadence investors have come to expect.",
-      "cycle": 82684,
+      "head": "Dunmorewright Edges Past Estimates as Coastal Defense Milestones Clear",
+      "body": "Dunmorewright reported quarterly revenue of $1.24 billion, modestly ahead of guidance, as the second phase of the $510 million coastal defense contract passed inspection on schedule. Emil Skarn noted margins held steady despite higher aggregate costs, crediting parallel scheduling across Harborfront and Riverside. The company reaffirmed its full-year outlook.",
+      "cycle": 82685,
       "dur": 1
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "major",
+      "head": "Lhaus Industries Recalls Grid-Storage Units Across Two Megadeals as Probe Confirms Overheating Fault",
+      "body": "Lhaus issued a recall covering roughly 60,000 grid-storage modules delivered under its $2.8B and $3.4B pacts after regulators confirmed a thermal-management defect behind earlier overheating reports. Cole Brandt said both anchor buyers were notified and that the dedicated storage plant would shift to a corrected design, at an estimated $320 million cost. The company said it aims to preserve delivery commitments but flagged possible schedule slippage on the second megadeal.",
+      "cycle": 82685,
+      "dur": 8
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Skarngrove & Sons Beats as Kelvarn Viaduct Work Lifts Structural Volumes",
+      "body": "Skarngrove reported revenue of $640 million, up 11% year over year, as fourth-phase approach viaduct fabrication ramped ahead of schedule. Quinn Fenn said the Kelvarn program now accounts for nearly a third of the structural-materials backlog and hinted at bidding for the corridor's final linking phase. Fastener volumes also rose on tie-in orders from the same project.",
+      "cycle": 82685,
+      "dur": 2
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Thaldale Group Rocked as Probe Finds Diverted Funds Tied to Carved-Out Fastening Unit",
+      "body": "An expanded investigation concluded that roughly $140 million was funneled through supplier contracts in the now-separated fastening division under prior leadership. Corin Vale said the findings 'predate this board's mandate' and pledged full cooperation, but shares of the parent came under heavy pressure as three former managers were referred to prosecutors. Vale accelerated the fastening carve-out timeline to insulate the core business.",
+      "cycle": 82685,
+      "dur": 8
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Varnvale House Extends Sovereign Line with Regent Timepiece as Sole Doubles Down on Top Tier",
+      "body": "Adrienne Sole unveiled the Regent, a limited-run timepiece priced at $185,000 and capped at 400 pieces, positioning it as the crown of the Sovereign Collection. The launch leans on the salon momentum, with Sole telling the press the house would 'let scarcity, not discounting, define us.' Waitlists opened the same day the flagship salon reported its strongest single week of foot traffic.",
+      "cycle": 82685,
+      "dur": 2
     },
     {
       "company": "Calderforge",
@@ -72,56 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vossenstead Supply Extends Streak to Eleven as Fourth Center Ramps",
-      "body": "Vossenstead posted its eleventh consecutive quarterly beat, with revenue up 7% as the newly opened fourth distribution center began absorbing food-service orders. CEO Bram Thorne noted plumbing and fixtures held steady margins even as freight costs ticked higher. Guidance was left unchanged, in keeping with the company's cautious style.",
-      "cycle": 82684,
-      "dur": 1
-    },
-    {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "safety_probe",
-      "size": "standard",
-      "head": "Drossware Faces Regulatory Review of Cleaning Line After Mislabeling Recall",
-      "body": "State consumer-safety officials opened a formal review of Drossware's Jansan concentrate operations following last quarter's mislabeled-batch recall. Wold said the company is cooperating fully and has paused two concentrate SKUs pending relabeling audits, estimating a $14M charge to cover recall logistics and process upgrades.",
-      "cycle": 82683,
-      "dur": 2
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Forgegrave Industries Beats as Coastward Deal Widens Customer Base",
-      "body": "Thorne reported revenue of $890M, up 18%, with the newly signed Coastward Logistics contract contributing its first partial quarter alongside the ramping Meridian add-on fleet. Management said diversifying beyond Meridian reduced single-customer concentration below 60% for the first time in years.",
-      "cycle": 82683,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halhold Works Returns to Beat as Aveline II Hospital Contract Ramps",
-      "body": "Vantt swung to a quarterly beat with revenue of $1.4B, driven by the regional hospital supply contract as Aveline II monitor shipments scaled to 6,200 units. Legal costs eased from the prior quarter, and Vantt said the certification-backed monitor is now in active pilots with two additional hospital networks.",
-      "cycle": 82683,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Ironcrestton Beats as Blackwood's In-House Reset Lifts Margins",
-      "body": "First full quarter under fully in-house production delivered a gross margin of 61%, up nine points from the licensing era, on revenue of $740M. Blackwood credited tighter control over the origin-standard supply chain and said reorder rates on the debut collection ran 22% above internal forecasts.",
-      "cycle": 82683,
-      "dur": 2
-    },
-    {
       "company": "Vencyon",
       "sector": "logistics",
       "kind": "major_deal",
@@ -130,26 +150,6 @@
       "body": "Halloran secured a multi-year agreement with Brightway Distribution to deploy the modular handling platform across two new regional hubs, the company's largest single order in over a decade. The deal locks in $2.3B over five years and adds an option for a sixth site, marking Vencyon's decisive push past its historic three-hub footprint.",
       "cycle": 82683,
       "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenspire Holdings Beats as Grid-Scale Storage Pact Front-Loads Revenue",
-      "body": "Roe reported quarterly revenue of $2.9B, up 34% year-over-year, with the first tranche of the $6.8B storage pact recognized ahead of schedule. Management raised full-year guidance and flagged $1.2B in staged deliveries queued for the next two quarters, though Roe warned margins would stay thin as new capacity ramps.",
-      "cycle": 82683,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Vossenspire Supply Unveils First Halvane-Powered Corveil Movement",
-      "body": "Marrow introduced the Corveil Meridian, the debut timepiece built entirely on the newly acquired Halvane in-house movement, priced from $18,400 and limited to 900 units in year one. The launch marks the first vertical payoff from the $480M Halvane deal, with production moving to the expanded Larkmoor salon network across four flagship cities.",
-      "cycle": 82683,
-      "dur": 2
     },
     {
       "company": "Fennmoor",
@@ -229,16 +229,6 @@
       "head": "Brunstone & Sons Reeling as Internal Memos Show Vault Cell Guard Pro Overheating Was Flagged Before Launch",
       "body": "Documents surfaced in the consolidated litigation reveal engineers warned of thermal runaway risk eighteen months before the Vault Cell Guard Pro shipped, with a memo signed off near CEO Halden Crowe's office urging schedule adherence. Crowe, known for aggressive product timelines, now faces calls from three board members for an independent review. The disclosures widen legal exposure well beyond the initial $1.3 billion in consolidated claims.",
       "cycle": 82678,
-      "dur": 8
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Fenncyon Named Lead Contractor on $3.4B Eastfield Grand Loop Megaproject",
-      "body": "Fenncyon has secured the anchor role in the Eastfield Grand Loop, a $3.4 billion earthmoving and civil program that dwarfs its previous Southern Loop award. CEO Nadia Ashby said the multi-year mandate lifts total backlog past $6 billion and will require the largest fleet expansion in company history. The win cements Fenncyon as the region's dominant earthmoving house.",
-      "cycle": 82677,
       "dur": 8
     }
   ]

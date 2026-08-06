@@ -1235,7 +1235,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82676,
+    "lastEventCycle": 82685,
     "events": [
       {
         "cycle": 0,
@@ -1429,6 +1429,16 @@
         "body": "The safety review concluded that a bracket in the Halvern line can fatigue under load, triggering a 1.8 million-unit recall estimated to cost $310M. Cassian Rode halted the line and pledged to retrofit affected parts at no charge, though two supply contracts have already invoked penalty clauses. The recall wipes out the gains booked when Halvern reached full rate last quarter.",
         "effects": {
           "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82685,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Blackton Industries Misses as Halvern Recall Costs Gut Quarterly Margins",
+        "body": "Blackton posted a quarterly loss of $86 million, well below expectations, after booking $210 million in recall and remediation charges tied to the 1.8 million defective Halvern-line components. Cassian Rode said replacement production has displaced higher-margin orders and warned the drag would persist into next quarter. The company suspended its interim payout while it rebuilds the affected line.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -2688,18 +2698,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82678,
+    "lastEventCycle": 82685,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "safety_probe",
-        "size": "standard",
-        "head": "Brunstone & Sons Faces Review Over Ardent Pack Heating",
-        "body": "Regional safety inspectors opened a review into the Ardent's storage packs after pre-production tests flagged uneven heating under fast charging. Sable Veldt downplayed the probe as 'routine for anything this new' and paused only the demo fleet. The scrutiny cooled some of the launch's heat.",
-        "effects": {
-          "automotive": -0.13
-        }
-      },
       {
         "cycle": 82525,
         "kind": "recall",
@@ -2922,6 +2922,16 @@
         "size": "major",
         "head": "Brunstone & Sons Reeling as Internal Memos Show Vault Cell Guard Pro Overheating Was Flagged Before Launch",
         "body": "Documents surfaced in the consolidated litigation reveal engineers warned of thermal runaway risk eighteen months before the Vault Cell Guard Pro shipped, with a memo signed off near CEO Halden Crowe's office urging schedule adherence. Crowe, known for aggressive product timelines, now faces calls from three board members for an independent review. The disclosures widen legal exposure well beyond the initial $1.3 billion in consolidated claims.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82685,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Brunstone & Sons Hit With Regulator Suit as Vault Cell Probe Widens to Concealment Charges",
+        "body": "State authorities filed a civil action against Brunstone & Sons seeking up to $900 million in penalties, alleging executives suppressed pre-launch overheating data on the Vault Cell Guard Pro. The filing names the fleet-fire memos surfaced last month and asks the court to compel a full design audit. Halden Crowe called the claims 'overreaching' but confirmed the company has set aside $600 million against combined recall and legal exposure.",
         "effects": {
           "automotive": -0.22
         }
@@ -4375,18 +4385,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82679,
+    "lastEventCycle": 82685,
     "events": [
-      {
-        "cycle": 82536,
-        "kind": "expansion",
-        "size": "major",
-        "head": "Castlestone Breaks Ground on Twin Compute Campuses to Meet Vellmont Backlog",
-        "body": "Riding a record order book, Iris Garr announced a 4.2 billion-unit buildout of two new compute campuses at Harrowfield and Dunmere, together adding an estimated 60 percent to Castlestone's output capacity. Garr, characteristically bullish, told staff the expansion would be 'fully lit within eighteen months' and pledged 3,400 new hires. Critics note the aggressive timeline rests on supply commitments still ramping.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82542,
         "kind": "earnings_miss",
@@ -4611,6 +4611,16 @@
         "body": "Castlestone signed a $4.5 billion multi-year supply agreement for its redesigned grid cores, its largest contract ever and a decisive validation of Pell Karsh's thermal overhaul. The pact expands the anchor buyer relationship into a second product tier and locks in demand through 2029. Karsh called it 'the deal that turns a comeback into a franchise.'",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82685,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Castlestone Adds Second Grid-Core Line as Karsh Races to Meet Backlog",
+        "body": "Fresh off its $4.5B multi-year award, Castlestone announced a $700 million capacity build to double redesigned grid-core output by late next year. Pell Karsh said the anchor and multi-year commitments have pushed the order book past two years of production. The expansion is expected to add roughly 900 line roles at the company's primary fabrication site.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -5627,7 +5637,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82668,
+    "lastEventCycle": 82685,
     "events": [
       {
         "cycle": 0,
@@ -5735,6 +5745,16 @@
         "body": "Dunmorewright posted quarterly revenue of $1.31 billion, ahead of the $1.22 billion consensus, as early mobilization on the $510 million coastal defense job began billing sooner than planned. Emil Skarn credited parallel scheduling across the Harborfront and coastal sites for keeping the earthmoving fleet at high utilization. Plumbing and fixtures margins held steady despite input-cost pressure.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82685,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Dunmorewright Edges Past Estimates as Coastal Defense Milestones Clear",
+        "body": "Dunmorewright reported quarterly revenue of $1.24 billion, modestly ahead of guidance, as the second phase of the $510 million coastal defense contract passed inspection on schedule. Emil Skarn noted margins held steady despite higher aggregate costs, crediting parallel scheduling across Harborfront and Riverside. The company reaffirmed its full-year outlook.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -10319,18 +10339,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82679,
+    "lastEventCycle": 82685,
     "events": [
-      {
-        "cycle": 82531,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Lhaus Industries Breaks Ground on Second Driveline Line at Ferrlands",
-        "body": "Cole Brandt confirmed a $410 million expansion at the Ferrlands plant, doubling axle output to meet commitments under the Marwick Motors pact. The addition is expected to add 1,200 jobs by the second quarter and lift Korrick Axle capacity by roughly 60 percent. Brandt told reporters the firm is 'already scouting the next bolt-on,' fueling speculation of further driveline deals.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82538,
         "kind": "major_deal",
@@ -10557,6 +10567,16 @@
         "size": "major",
         "head": "Lhaus Industries Faces Regulatory Probe After Grid-Storage Overheating Reports",
         "body": "Regulators opened a formal safety review into Lhaus Industries' grid-storage units following three reported thermal incidents at customer sites tied to its $2.8 billion pact. The probe casts a shadow over Cole Brandt's aggressive storage pivot, with the second $3.4 billion megadeal now under contractual review. Brandt said the company is 'cooperating fully' and has paused shipments from the new dedicated plant pending inspection.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82685,
+        "kind": "recall",
+        "size": "major",
+        "head": "Lhaus Industries Recalls Grid-Storage Units Across Two Megadeals as Probe Confirms Overheating Fault",
+        "body": "Lhaus issued a recall covering roughly 60,000 grid-storage modules delivered under its $2.8B and $3.4B pacts after regulators confirmed a thermal-management defect behind earlier overheating reports. Cole Brandt said both anchor buyers were notified and that the dedicated storage plant would shift to a corrected design, at an estimated $320 million cost. The company said it aims to preserve delivery commitments but flagged possible schedule slippage on the second megadeal.",
         "effects": {
           "automotive": -0.22
         }
@@ -12098,7 +12118,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82670,
+    "lastEventCycle": 82685,
     "events": [
       {
         "cycle": 0,
@@ -12214,6 +12234,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Secures Kelvarn Fourth-Phase Award for Approach Viaducts",
         "body": "Skarngrove won the Kelvarn program's fourth-phase package, an estimated $610 million contract covering approach viaducts and fixing systems for the interchange corridor. CEO Quinn Fenn said the award extends the company's Kelvarn workload into 2029 and locks in structural-materials volumes across the run. The win cements Skarngrove as the program's principal structures supplier.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82685,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarngrove & Sons Beats as Kelvarn Viaduct Work Lifts Structural Volumes",
+        "body": "Skarngrove reported revenue of $640 million, up 11% year over year, as fourth-phase approach viaduct fabrication ramped ahead of schedule. Quinn Fenn said the Kelvarn program now accounts for nearly a third of the structural-materials backlog and hinted at bidding for the corridor's final linking phase. Fastener volumes also rose on tie-in orders from the same project.",
         "effects": {
           "construction": 0.13
         }
@@ -12882,7 +12912,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82673,
+    "lastEventCycle": 82685,
     "events": [
       {
         "cycle": 0,
@@ -13024,6 +13054,16 @@
         "body": "Newly installed CEO Corin Vale announced a restructuring that ring-fences the troubled fastening division into a standalone unit and cuts roughly 900 jobs across three plants. Vale said the plan aims to isolate legal exposure from the ongoing probe while protecting the profitable hand-tool lines. The company set aside a further $70M in legal and reorganization reserves.",
         "effects": {
           "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82685,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Thaldale Group Rocked as Probe Finds Diverted Funds Tied to Carved-Out Fastening Unit",
+        "body": "An expanded investigation concluded that roughly $140 million was funneled through supplier contracts in the now-separated fastening division under prior leadership. Corin Vale said the findings 'predate this board's mandate' and pledged full cooperation, but shares of the parent came under heavy pressure as three former managers were referred to prosecutors. Vale accelerated the fastening carve-out timeline to insulate the core business.",
+        "effects": {
+          "consumer": -0.22
         }
       }
     ]
@@ -13731,7 +13771,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82676,
+    "lastEventCycle": 82685,
     "events": [
       {
         "cycle": 0,
@@ -13949,6 +13989,16 @@
         "size": "standard",
         "head": "Varnvale House Opens Flagship Salon as Sovereign Demand Outstrips Supply",
         "body": "Adrienne Sole unveiled a 14,000-square-foot flagship in the Laurent district and a second Meridian atelier to double timepiece output after Sovereign waitlists topped 6,000. The expansion adds 240 artisans and lifts annual capacity by an estimated 35%. Sole said the house was 'building for the demand we already have, not the demand we hope for.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82685,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale House Extends Sovereign Line with Regent Timepiece as Sole Doubles Down on Top Tier",
+        "body": "Adrienne Sole unveiled the Regent, a limited-run timepiece priced at $185,000 and capped at 400 pieces, positioning it as the crown of the Sovereign Collection. The launch leans on the salon momentum, with Sole telling the press the house would 'let scarcity, not discounting, define us.' Waitlists opened the same day the flagship salon reported its strongest single week of foot traffic.",
         "effects": {
           "luxury": 0.13
         }
