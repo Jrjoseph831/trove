@@ -133,7 +133,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82667,
+    "lastEventCycle": 82684,
     "events": [
       {
         "cycle": 0,
@@ -239,6 +239,16 @@
         "size": "flash",
         "head": "Aldouscyon Signs Fifth City as Conversion Model Draws New Interest",
         "body": "Petra Mercer added the coastal municipality of Harrowmere to Aldouscyon's lighting-conversion slate, extending a program now spanning five cities. The pact mirrors prior agreements, converting public fixtures over an 18-month rollout fed by the company's two fixture plants. Mercer said existing capacity covers the addition without further plant investment.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82684,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscyon Beats as Fifth-City Conversion Begins Contributing",
+        "body": "Aldouscyon reported a modest earnings beat, with revenue up 6% as the newly signed fifth city entered early conversion phases. CEO Petra Mercer said the second fixture plant is running near capacity and confirmed talks with two additional municipalities. The results reinforced the steady cadence investors have come to expect.",
         "effects": {
           "consumer": 0.06
         }
@@ -3062,7 +3072,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82675,
+    "lastEventCycle": 82684,
     "events": [
       {
         "cycle": 0,
@@ -3261,6 +3271,16 @@
         "effects": {
           "technology": 0.13
         }
+      },
+      {
+        "cycle": 82684,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Calderforge Breaks Ground on Third Stormwell Hall to Meet Capacity Demand",
+        "body": "Calderforge announced a $900M expansion adding a third compute hall at its Stormwell site, citing overflow demand from the recent multi-year capacity deal. CEO Nadia Throne said the new hall will use the cooling design piloted during last year's costly overhaul, now fully validated. Commissioning is targeted for late next year.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -3398,7 +3418,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82668,
+    "lastEventCycle": 82684,
     "events": [
       {
         "cycle": 0,
@@ -3516,6 +3536,16 @@
         "body": "Carrowcyon reported earnings of $0.94 a share against $0.81 expected, with the newly launched smart-dimming range selling through at nearly twice the pace management modeled. The company said household goods held flat while lighting drove the entire upside, aided by the recently opened distribution center. Full-year guidance was nudged higher.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82684,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Carrowcyon & Sons Lands National Retail Rollout for Smart-Dimming Line",
+        "body": "Carrowcyon secured an exclusive multi-year agreement to place its smart-dimming range across the Halloway Home chain's 2,400 outlets, a deal analysts value near $520M over three years. CEO Cole Brandt called it the largest single distribution win in the company's history, crediting the new center's capacity for making the volume commitment feasible. Shipments begin next quarter ahead of the holiday reset.",
+        "effects": {
+          "consumer": 0.22
         }
       }
     ]
@@ -4015,7 +4045,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82676,
+    "lastEventCycle": 82684,
     "events": [
       {
         "cycle": 0,
@@ -4235,6 +4265,16 @@
         "size": "standard",
         "head": "Castlehold Wins Landmark Grid-Storage Contract as Voss Turnaround Gains Credibility",
         "body": "Halden Voss secured a $780M Power & Storage supply deal to anchor the Ardent regional grid, the group's largest since the Saltmere spin-off. The multi-year agreement locks in baseline revenue and validates Voss's push to reposition Castlehold around clean capacity. Management said the contract covers roughly a third of planned storage output through 2029.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82684,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Castlehold Unveils Modular Storage Platform as Voss Builds on Grid Momentum",
+        "body": "Castlehold introduced its Halden-branded Meridian storage system, a stackable battery unit targeting utility clients who signed on after last quarter's grid-storage win. Voss said early orders cover roughly 1.2 gigawatt-hours of capacity, with first deliveries slated for the fourth quarter. Management framed the launch as proof the turnaround has shifted from cleanup to growth.",
         "effects": {
           "energy": 0.13
         }
@@ -5158,7 +5198,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82672,
+    "lastEventCycle": 82684,
     "events": [
       {
         "cycle": 0,
@@ -5304,6 +5344,16 @@
         "size": "standard",
         "head": "Drustcraft Posts Beat as New 280M Fastener Contract Begins Shipping",
         "body": "Drustcraft delivered quarterly revenue of $840M, up 9%, with early volumes from its multi-year fastener supply contract lifting the fixings segment. CEO Cora Fenn said the recall chapter was 'firmly behind us' and that the new contract would contribute at full run-rate by mid-year.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82684,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drustcraft Adds Auto-Parts Supply Win to Broaden Beyond Fasteners",
+        "body": "Drustcraft signed a $190M multi-year auto-parts agreement with vehicle maker Trennik Motors, diversifying its order base beyond the recent fastener contract now in shipment. CEO Cora Fenn described the deal as a measured step to balance the two segments after the twin vehicle-line fully cleared its recall overhang. Production tooling begins immediately.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -6864,7 +6914,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82674,
+    "lastEventCycle": 82684,
     "events": [
       {
         "cycle": 0,
@@ -7038,6 +7088,16 @@
         "body": "Sable Renwick unveiled a decade-long agreement with a consortium of industrial buyers worth $3.4B, nearly doubling committed capacity tied to the reservoir-compute program. The deal secures baseload demand for two new sites and includes performance guarantees on uptime and delivered power. Renwick called it the largest single contract in the company's history.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82684,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Greywater Grid Faces Regulatory Probe Over Reservoir-Compute Water Draw",
+        "body": "Regulators opened a formal inquiry into Greywater Grid's reservoir-cooling operations after reports the Blackmere site exceeded permitted water-draw limits during peak load. The probe threatens timelines on the $2B buildout backing its recent $3.4B multi-site pact, and CEO Sable Renwick acknowledged the company is cooperating while disputing the figures. It marks the first serious setback in Renwick's rapid expansion drive.",
+        "effects": {
+          "energy": -0.22
         }
       }
     ]
@@ -9845,7 +9905,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82671,
+    "lastEventCycle": 82684,
     "events": [
       {
         "cycle": 0,
@@ -9981,6 +10041,16 @@
         "size": "standard",
         "head": "Korrwright Group Lands $600M Rail-Bridge Contract to Follow Corridor Work",
         "body": "Korrwright Group secured a $600 million package to supply structural beams and wire assemblies for a regional rail-bridge program, extending demand well past its current Verant corridor backlog. CEO Halden Fenn said the win validates the decision to add a second line, which will now run near capacity into next year. Deliveries begin in the second half.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82684,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Group Beats Again as Rail-Bridge Work Joins Corridor Backlog",
+        "body": "Korrwright reported quarterly revenue of $1.4B, up 11% year over year, as the $600M rail-bridge contract began contributing alongside the ongoing corridor package. CEO Halden Fenn cited the second Verant line for holding delivery times steady despite record combined beam and cable volumes. The order book now stretches nearly two years out.",
         "effects": {
           "construction": 0.13
         }
@@ -14657,7 +14727,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82671,
+    "lastEventCycle": 82684,
     "events": [
       {
         "cycle": 0,
@@ -14795,6 +14865,16 @@
         "body": "With ten consecutive beats behind it, Vossenstead Supply confirmed a new 420,000-square-foot distribution center in the Aldermere region to serve its expanding Food Service and Plumbing customers. CEO Bram Thorne framed the roughly $180 million investment as \"capacity to keep our promises,\" saying the site should reach operating scale within a year. The facility is expected to shorten fulfillment times across the western route network.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82684,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenstead Supply Extends Streak to Eleven as Fourth Center Ramps",
+        "body": "Vossenstead posted its eleventh consecutive quarterly beat, with revenue up 7% as the newly opened fourth distribution center began absorbing food-service orders. CEO Bram Thorne noted plumbing and fixtures held steady margins even as freight costs ticked higher. Guidance was left unchanged, in keeping with the company's cautious style.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]

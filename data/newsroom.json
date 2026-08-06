@@ -1,14 +1,84 @@
 {
-  "generatedAt": "2026-08-05T19:37:09.377Z",
+  "generatedAt": "2026-08-06T02:41:09.041Z",
   "beats": [
     {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
+      "company": "Aldouscyon",
+      "sector": "consumer",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Cranecraft Notches Ninth Straight Beat on Firm Textile Pricing",
-      "body": "Garr posted a modest top-line gain to $1.06B, with raw textile pricing holding firm and farm equipment orders steady into the planting season. The streak extends Cranecraft's run of quiet outperformance, though guidance was left unchanged.",
-      "cycle": 82683,
+      "head": "Aldouscyon Beats as Fifth-City Conversion Begins Contributing",
+      "body": "Aldouscyon reported a modest earnings beat, with revenue up 6% as the newly signed fifth city entered early conversion phases. CEO Petra Mercer said the second fixture plant is running near capacity and confirmed talks with two additional municipalities. The results reinforced the steady cadence investors have come to expect.",
+      "cycle": 82684,
+      "dur": 1
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Calderforge Breaks Ground on Third Stormwell Hall to Meet Capacity Demand",
+      "body": "Calderforge announced a $900M expansion adding a third compute hall at its Stormwell site, citing overflow demand from the recent multi-year capacity deal. CEO Nadia Throne said the new hall will use the cooling design piloted during last year's costly overhaul, now fully validated. Commissioning is targeted for late next year.",
+      "cycle": 82684,
+      "dur": 2
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Carrowcyon & Sons Lands National Retail Rollout for Smart-Dimming Line",
+      "body": "Carrowcyon secured an exclusive multi-year agreement to place its smart-dimming range across the Halloway Home chain's 2,400 outlets, a deal analysts value near $520M over three years. CEO Cole Brandt called it the largest single distribution win in the company's history, crediting the new center's capacity for making the volume commitment feasible. Shipments begin next quarter ahead of the holiday reset.",
+      "cycle": 82684,
+      "dur": 8
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Castlehold Unveils Modular Storage Platform as Voss Builds on Grid Momentum",
+      "body": "Castlehold introduced its Halden-branded Meridian storage system, a stackable battery unit targeting utility clients who signed on after last quarter's grid-storage win. Voss said early orders cover roughly 1.2 gigawatt-hours of capacity, with first deliveries slated for the fourth quarter. Management framed the launch as proof the turnaround has shifted from cleanup to growth.",
+      "cycle": 82684,
+      "dur": 2
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drustcraft Adds Auto-Parts Supply Win to Broaden Beyond Fasteners",
+      "body": "Drustcraft signed a $190M multi-year auto-parts agreement with vehicle maker Trennik Motors, diversifying its order base beyond the recent fastener contract now in shipment. CEO Cora Fenn described the deal as a measured step to balance the two segments after the twin vehicle-line fully cleared its recall overhang. Production tooling begins immediately.",
+      "cycle": 82684,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Greywater Grid Faces Regulatory Probe Over Reservoir-Compute Water Draw",
+      "body": "Regulators opened a formal inquiry into Greywater Grid's reservoir-cooling operations after reports the Blackmere site exceeded permitted water-draw limits during peak load. The probe threatens timelines on the $2B buildout backing its recent $3.4B multi-site pact, and CEO Sable Renwick acknowledged the company is cooperating while disputing the figures. It marks the first serious setback in Renwick's rapid expansion drive.",
+      "cycle": 82684,
+      "dur": 8
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrwright Group Beats Again as Rail-Bridge Work Joins Corridor Backlog",
+      "body": "Korrwright reported quarterly revenue of $1.4B, up 11% year over year, as the $600M rail-bridge contract began contributing alongside the ongoing corridor package. CEO Halden Fenn cited the second Verant line for holding delivery times steady despite record combined beam and cable volumes. The order book now stretches nearly two years out.",
+      "cycle": 82684,
+      "dur": 2
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vossenstead Supply Extends Streak to Eleven as Fourth Center Ramps",
+      "body": "Vossenstead posted its eleventh consecutive quarterly beat, with revenue up 7% as the newly opened fourth distribution center began absorbing food-service orders. CEO Bram Thorne noted plumbing and fixtures held steady margins even as freight costs ticked higher. Guidance was left unchanged, in keeping with the company's cautious style.",
+      "cycle": 82684,
       "dur": 1
     },
     {
@@ -79,46 +149,6 @@
       "head": "Vossenspire Supply Unveils First Halvane-Powered Corveil Movement",
       "body": "Marrow introduced the Corveil Meridian, the debut timepiece built entirely on the newly acquired Halvane in-house movement, priced from $18,400 and limited to 900 units in year one. The launch marks the first vertical payoff from the $480M Halvane deal, with production moving to the expanded Larkmoor salon network across four flagship cities.",
       "cycle": 82683,
-      "dur": 2
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Aperture Compute Unveils Emberline Platform in First Post-Dawnmere Reset",
-      "body": "Marisol Venn moved to turn the page on the Dawnmere III debacle, launching the Emberline compute line built from a clean-sheet design that cleared regulatory pre-review before shipping. Venn staked her tenure on the release, calling it 'proof we learned everything Dawnmere cost us.' Early orders came in cautious, with several key customers awaiting field validation before committing volume.",
-      "cycle": 82682,
-      "dur": 2
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Boreas Power Names Vantel Integration Chief, Sets $400M Cost-Out Plan",
-      "body": "After a bruising quarter driven by Vantel absorption costs, Mira Thorne installed veteran operator Kessa Vaunt as head of a newly created integration office charged with wringing out $400 million in overlap by year-end. The company will consolidate three Vantel compute sites into two and pause further acquisitions until the merger stabilizes. Thorne conceded the pace of dealmaking had 'outrun the plumbing.'",
-      "cycle": 82682,
-      "dur": 2
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Bruncrest Works Swings to Beat as Leaner Aria Ultra Finds Buyers",
-      "body": "Ines Marlow delivered her first clean beat since taking the top job, as the relaunched Aria Ultra built on the trimmed Eastfield line moved 140,000 units and lifted gross margin back into positive territory. Marlow told analysts the 'painful reset' had left the product 'right-sized for the demand that's actually there.' The company reinstated a modest output-growth outlook for the coming quarters.",
-      "cycle": 82682,
-      "dur": 2
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Erretmark Works Wins Follow-On 600-Unit Veyron Order as Backlog Deepens",
-      "body": "The sovereign collector fund behind Erretmark's landmark contract exercised an option for an additional 600 Veyron units, extending the order book into a third production year. Aurelia Garr said the second assembly hall, opened last quarter, will absorb the fresh volume without further capacity spend. The deal locks in premium-tier pricing that underpinned Erretmark's century-high margins.",
-      "cycle": 82682,
       "dur": 2
     },
     {
@@ -209,26 +239,6 @@
       "head": "Fenncyon Named Lead Contractor on $3.4B Eastfield Grand Loop Megaproject",
       "body": "Fenncyon has secured the anchor role in the Eastfield Grand Loop, a $3.4 billion earthmoving and civil program that dwarfs its previous Southern Loop award. CEO Nadia Ashby said the multi-year mandate lifts total backlog past $6 billion and will require the largest fleet expansion in company history. The win cements Fenncyon as the region's dominant earthmoving house.",
       "cycle": 82677,
-      "dur": 8
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "major",
-      "head": "Blackton Industries Recalls 1.8M Halvern-Line Components as Safety Probe Confirms Defect",
-      "body": "The safety review concluded that a bracket in the Halvern line can fatigue under load, triggering a 1.8 million-unit recall estimated to cost $310M. Cassian Rode halted the line and pledged to retrofit affected parts at no charge, though two supply contracts have already invoked penalty clauses. The recall wipes out the gains booked when Halvern reached full rate last quarter.",
-      "cycle": 82676,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Gromford Works Ousts Verrint as Board Installs Caretaker Chief Amid Meridian Fallout",
-      "body": "The board removed Dahlia Verrint after regulators extended the asset freeze and her personal subpoena widened the criminal exposure. Veteran restructuring specialist Corwin Halstead steps in with a mandate to negotiate a settlement and preserve the group's remaining timepiece lines. Sources say frozen assets and a suspended supplier network have left Gromford weeks from a liquidity crunch.",
-      "cycle": 82676,
       "dur": 8
     }
   ]
