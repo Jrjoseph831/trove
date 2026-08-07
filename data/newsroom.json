@@ -1,24 +1,84 @@
 {
-  "generatedAt": "2026-08-06T14:13:11.271Z",
+  "generatedAt": "2026-08-07T00:03:35.569Z",
   "beats": [
     {
-      "company": "Castlegear Group",
+      "company": "Ashbystead Holdings",
       "sector": "medical",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Castlegear Group Nudges Past Estimates as Regional Trays Contract Ramps",
-      "body": "Sable Brandt posted a modest beat with revenue of $418 million as the regional network sterile-tray contract began contributing meaningfully. Equipment orders held steady, and Brandt reaffirmed a cautious outlook while noting a healthy consumables backlog. The quarter marks a fourth consecutive period of measured growth.",
-      "cycle": 82686,
+      "head": "Ashbystead Holdings Notches Eighth Straight Beat on Steady Hospital Orders",
+      "body": "Cora Holt's medical-equipment house posted another modest beat, with revenue of $488 million edging past estimates on reliable renewal cycles. Management again declined to raise guidance, citing its long-held preference for measured targets. The streak marks two full years of consecutive beats.",
+      "cycle": 82688,
       "dur": 1
     },
     {
-      "company": "Halhold Systems",
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Bruncraft Lands $4.3 Billion Fleet Order as Vane Bets Big on Comeback",
+      "body": "Marcus Vane secured a five-year, $4.3 billion contract to supply municipal and commercial fleets across three regions, the largest single order in Bruncraft's history. The deal, announced weeks after Vane took the helm, signals an aggressive pivot away from the axle-verdict fallout. Vane called it 'proof that the road ahead is wide open,' pledging expanded output at two plants.",
+      "cycle": 82688,
+      "dur": 8
+    },
+    {
+      "company": "Bruncrest Works",
       "sector": "technology",
-      "kind": "restructure",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Bruncrest Works Unveils Aria Prime, Doubling Down After Ultra Rebound",
+      "body": "Riding momentum from the leaner Aria Ultra, Ines Marlow launched Aria Prime, a higher-performance compute tier priced 40% above Ultra and aimed at data-center buyers. Marlow staged a splashy reveal promising 'the biggest leap since Eastfield opened,' with first shipments slated for next quarter. The bold move drew heavy attention given the volatile ramp that preceded it.",
+      "cycle": 82688,
+      "dur": 8
+    },
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "earnings_beat",
       "size": "standard",
-      "head": "Halhold Systems Names Turnaround Chief and Splits Off Compute Reliability Unit",
-      "body": "New CEO Ilse Marren announced a restructuring that carves out a standalone Compute Reliability unit with independent oversight, part of an effort to rebuild trust after the concealed-outage scandal. The plan includes a $120 million remediation fund and new disclosure protocols for partners. Marren said settlement talks over the $900M suit are ongoing but declined to give terms.",
-      "cycle": 82686,
+      "head": "Brunridge Works Beats as Redesigned Cordless Line Recovers Shelf Space",
+      "body": "Halia Brennt reported earnings of $1.04 a share against $0.91 expected, crediting strong reorders of the relaunched cordless devices and steady packaging volumes. The company said the thermal-safeguard redesign helped regain roughly 70% of retail placements lost during the recall. Brennt reaffirmed full-year guidance and hinted at a modest expansion of the apparel segment.",
+      "cycle": 82688,
+      "dur": 2
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Carrowforge Taps Outsider Dahlia Renn to Lead Post-Scandal Rebuild",
+      "body": "The board named Dahlia Renn, a former heavy-equipment operations chief, as permanent CEO after months without a settled leader. Renn inherits an open federal safety probe and pledged an independent audit of all Roe-era certification records within 90 days. Shares steadied as investors welcomed a clean external hire.",
+      "cycle": 82688,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Gromford Works Misses as Meridian Split and Timepiece Cuts Bite Revenue",
+      "body": "The luxury house reported quarterly revenue down 18% to $612 million, missing forecasts, as the divested Meridian unit and slashed timepiece output hollowed out sales. Caretaker chief Corwin Halstead framed the drop as 'the cost of clearing the decks,' promising a narrower, higher-margin fine-goods focus by year-end. Analysts flagged lingering regulatory overhang from the frozen-asset case.",
+      "cycle": 82688,
+      "dur": 2
+    },
+    {
+      "company": "Skarnstone Industries",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Skarnstone Industries Holds Steady as Second Loading Bay Lifts Throughput",
+      "body": "The consumables maker reported in-line-to-slightly-ahead results, with dispatch volumes up 6% since the second loading bay opened. Yvette Aldous credited faster order turnaround for holding backorders near zero. The company reiterated its slow-and-steady capacity roadmap.",
+      "cycle": 82688,
+      "dur": 1
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Vantor Lines Extends Diversification With Second Non-Grocery Contract",
+      "body": "Halden Vossen signed a three-year agreement to handle packaging and distribution for a regional pharmaceutical supplier, building on last quarter's distribution win. The deal is expected to add roughly $80 million in annual revenue and further reduce reliance on grocery volumes. Vossen said the pipeline of non-grocery prospects remains 'the healthiest in years.'",
+      "cycle": 82688,
       "dur": 2
     },
     {
@@ -32,16 +92,6 @@
       "dur": 8
     },
     {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Holtware Co. Tops Estimates as Cordless Range and Chain Rollout Drive Sales",
-      "body": "Aurelia Dray reported quarterly revenue of $612 million, up 18% year over year, as the lifetime-warranty cordless range sold through the national hardware chain faster than forecast. The second fulfillment hub cut average delivery times by a third, easing earlier bottlenecks. Dray raised full-year guidance, citing steady reorder rates from retail partners.",
-      "cycle": 82686,
-      "dur": 2
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "leadership_change",
@@ -50,46 +100,6 @@
       "body": "The Kessel Drive board ousted CEO Neave Corliss following the escalating safety probe, the 4,200-job overhaul, and the shareholder suit tied to storage failures. Directors appointed veteran operations chief Marta Vinke as interim CEO, pledging a full internal review of the halted storage line. The stock has shed nearly half its value since the probe opened.",
       "cycle": 82686,
       "dur": 8
-    },
-    {
-      "company": "Tillage & Co.",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Tillage & Co. Extends Steady Run With Yet Another In-Line Quarter",
-      "body": "Kestrel Fenn reported revenue of $289 million, a hair above estimates, as the blending facility again ran at full output through the season. Farm-input demand held firm across all regions, with no meaningful shift in pricing. Fenn reiterated the company's long-standing conservative outlook.",
-      "cycle": 82686,
-      "dur": 1
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Varnvale & Sons Expands Heritage Division With Restored Marchetti Atelier",
-      "body": "Bram Wold unveiled a fully restored Marchetti atelier that will serve as the Heritage Division's flagship workshop, adding 180 master artisans and doubling annual casing capacity. The move follows the recent Marchetti acquisition and positions Varnvale to bring casing, movement, and finishing work entirely in-house. Wold said the division targets 12,000 units annually within three years.",
-      "cycle": 82686,
-      "dur": 2
-    },
-    {
-      "company": "Wrengrove Group",
-      "sector": "medical",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Wrengrove Group Breaks Ground on Fourth Plant as Sterile-Kit Demand Surges",
-      "body": "Rhys Vossen announced a $260 million fourth plant dedicated to sterile-kit production, citing demand that has outstripped the third plant's expanded lines. The facility is expected to add 40% to total capacity when it opens in two years. Vossen said advance commitments already cover roughly a third of the planned output.",
-      "cycle": 82686,
-      "dur": 2
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Blackton Industries Misses as Halvern Recall Costs Gut Quarterly Margins",
-      "body": "Blackton posted a quarterly loss of $86 million, well below expectations, after booking $210 million in recall and remediation charges tied to the 1.8 million defective Halvern-line components. Cassian Rode said replacement production has displaced higher-margin orders and warned the drag would persist into next quarter. The company suspended its interim payout while it rebuilds the affected line.",
-      "cycle": 82685,
-      "dur": 2
     },
     {
       "company": "Brunstone & Sons",
@@ -102,16 +112,6 @@
       "dur": 8
     },
     {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Castlestone Adds Second Grid-Core Line as Karsh Races to Meet Backlog",
-      "body": "Fresh off its $4.5B multi-year award, Castlestone announced a $700 million capacity build to double redesigned grid-core output by late next year. Pell Karsh said the anchor and multi-year commitments have pushed the order book past two years of production. The expansion is expected to add roughly 900 line roles at the company's primary fabrication site.",
-      "cycle": 82685,
-      "dur": 2
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "recall",
@@ -122,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarngrove & Sons Beats as Kelvarn Viaduct Work Lifts Structural Volumes",
-      "body": "Skarngrove reported revenue of $640 million, up 11% year over year, as fourth-phase approach viaduct fabrication ramped ahead of schedule. Quinn Fenn said the Kelvarn program now accounts for nearly a third of the structural-materials backlog and hinted at bidding for the corridor's final linking phase. Fastener volumes also rose on tie-in orders from the same project.",
-      "cycle": 82685,
-      "dur": 2
-    },
-    {
       "company": "Thaldale Group",
       "sector": "consumer",
       "kind": "scandal",
@@ -140,16 +130,6 @@
       "body": "An expanded investigation concluded that roughly $140 million was funneled through supplier contracts in the now-separated fastening division under prior leadership. Corin Vale said the findings 'predate this board's mandate' and pledged full cooperation, but shares of the parent came under heavy pressure as three former managers were referred to prosecutors. Vale accelerated the fastening carve-out timeline to insulate the core business.",
       "cycle": 82685,
       "dur": 8
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Varnvale House Extends Sovereign Line with Regent Timepiece as Sole Doubles Down on Top Tier",
-      "body": "Adrienne Sole unveiled the Regent, a limited-run timepiece priced at $185,000 and capped at 400 pieces, positioning it as the crown of the Sovereign Collection. The launch leans on the salon momentum, with Sole telling the press the house would 'let scarcity, not discounting, define us.' Waitlists opened the same day the flagship salon reported its strongest single week of foot traffic.",
-      "cycle": 82685,
-      "dur": 2
     },
     {
       "company": "Carrowcyon & Sons",
@@ -199,56 +179,6 @@
       "head": "Gromford Works Splits Off Meridian Unit and Slashes Timepiece Output in Sweeping Overhaul",
       "body": "Caretaker chief Corwin Halstead announced Gromford Works will carve out the tainted Meridian division into a ring-fenced entity while cutting timepiece production by 40% to conserve cash amid frozen assets. The plan eliminates 620 roles and suspends the fine-goods flagship program pending the criminal proceedings. Halstead called it 'the only path to keeping the core house solvent.'",
       "cycle": 82681,
-      "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "major",
-      "head": "Brunmark Motors Recalls 240,000 Veyra S Units as Battery Probe Confirms Fire Risk",
-      "body": "Brunmark Motors has issued a recall covering roughly 240,000 redesigned Veyra S vehicles after regulators confirmed a thermal fault in the battery pack that can ignite under sustained fast-charging. CEO Halvard Renn pledged free pack replacements and set aside $480 million to cover the campaign, reversing much of the momentum that drove recent beats. The newly expanded battery line will be diverted to produce corrected packs, delaying deliveries into next year.",
-      "cycle": 82680,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Halhold Systems Ousts CEO Corin Vale as Board Moves to Contain $900M Fallout",
-      "body": "The Halhold Systems board has removed Chief Executive Corin Vale following the concealment findings, naming compliance veteran Ilse Marren as interim CEO with a mandate to settle the outstanding litigation. Marren said her first priority is reaching a resolution with the aggrieved partner and restoring disclosure controls across the compute division. The company also disclosed it will restate two prior quarters to reflect withheld outage costs.",
-      "cycle": 82680,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Castlestone Lands $4.5B Multi-Year Grid-Core Deal, Karsh's Boldest Bet Pays Off",
-      "body": "Castlestone signed a $4.5 billion multi-year supply agreement for its redesigned grid cores, its largest contract ever and a decisive validation of Pell Karsh's thermal overhaul. The pact expands the anchor buyer relationship into a second product tier and locks in demand through 2029. Karsh called it 'the deal that turns a comeback into a franchise.'",
-      "cycle": 82679,
-      "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Lhaus Industries Faces Regulatory Probe After Grid-Storage Overheating Reports",
-      "body": "Regulators opened a formal safety review into Lhaus Industries' grid-storage units following three reported thermal incidents at customer sites tied to its $2.8 billion pact. The probe casts a shadow over Cole Brandt's aggressive storage pivot, with the second $3.4 billion megadeal now under contractual review. Brandt said the company is 'cooperating fully' and has paused shipments from the new dedicated plant pending inspection.",
-      "cycle": 82679,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Woldmark's Halcyon 4 Sells Out at Launch as Frayne Declares Turnaround 'Done'",
-      "body": "Woldmark's Halcyon 4 compute line drew orders exceeding 1.2 million units in its first 72 hours, clearing initial inventory across all regions. Isolde Frayne, appearing at the Meridian launch event, called the debut 'vindication' and pledged to double production capacity by year-end. The result reverses the reputational damage from the Halcyon 3 recall that toppled her predecessor.",
-      "cycle": 82679,
       "dur": 8
     }
   ]

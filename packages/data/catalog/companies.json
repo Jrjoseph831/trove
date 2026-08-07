@@ -826,7 +826,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82661,
+    "lastEventCycle": 82688,
     "events": [
       {
         "cycle": 0,
@@ -902,6 +902,16 @@
         "size": "flash",
         "head": "Ashbystead Holdings Extends Run to Seven Straight Beats on Renewal Demand",
         "body": "Ashbystead logged a seventh consecutive quiet beat, with Medical Equipment revenue up 4% on durable hospital renewal cycles. CEO Cora Holt cited multi-year service contracts as the anchor of the firm's remarkably steady performance. Management again declined to offer aggressive guidance, sticking to its long-held conservative posture.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82688,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Notches Eighth Straight Beat on Steady Hospital Orders",
+        "body": "Cora Holt's medical-equipment house posted another modest beat, with revenue of $488 million edging past estimates on reliable renewal cycles. Management again declined to raise guidance, citing its long-held preference for measured targets. The streak marks two full years of consecutive beats.",
         "effects": {
           "medical": 0.06
         }
@@ -1709,7 +1719,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82678,
+    "lastEventCycle": 82688,
     "events": [
       {
         "cycle": 0,
@@ -1932,6 +1942,16 @@
         "head": "Bruncraft Names Turnaround Specialist Marcus Vane as CEO to Steady Post-Verdict Fallout",
         "body": "The board installed Marcus Vane, a veteran restructuring executive, as permanent chief executive following the ouster of Dessa Corvane in the wake of the $2.1 billion axle verdict. Vane pledged an immediate top-to-bottom audit of the axle supply chain and a freeze on the acquisition ambitions that defined the prior era. Shares had been battered since the record judgment.",
         "effects": {}
+      },
+      {
+        "cycle": 82688,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Bruncraft Lands $4.3 Billion Fleet Order as Vane Bets Big on Comeback",
+        "body": "Marcus Vane secured a five-year, $4.3 billion contract to supply municipal and commercial fleets across three regions, the largest single order in Bruncraft's history. The deal, announced weeks after Vane took the helm, signals an aggressive pivot away from the axle-verdict fallout. Vane called it 'proof that the road ahead is wide open,' pledging expanded output at two plants.",
+        "effects": {
+          "automotive": 0.22
+        }
       }
     ]
   },
@@ -1946,18 +1966,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82682,
+    "lastEventCycle": 82688,
     "events": [
-      {
-        "cycle": 82538,
-        "kind": "scandal",
-        "size": "major",
-        "head": "Bruncrest Works Reels as Meridian Pact Probe Alleges Inflated Demand Figures",
-        "body": "Shares of Bruncrest tumbled after disclosures suggested the landmark Meridian Exchange contract relied on demand projections that internal documents flag as overstated. Petra Veldt, known for bold public bets, faces board scrutiny over whether the sprawling compute campus was greenlit on shaky volumes. An independent review has been launched, and Meridian said it is 'reassessing the relationship.'",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82543,
         "kind": "leadership_change",
@@ -2180,6 +2190,16 @@
         "body": "Ines Marlow delivered her first clean beat since taking the top job, as the relaunched Aria Ultra built on the trimmed Eastfield line moved 140,000 units and lifted gross margin back into positive territory. Marlow told analysts the 'painful reset' had left the product 'right-sized for the demand that's actually there.' The company reinstated a modest output-growth outlook for the coming quarters.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82688,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Bruncrest Works Unveils Aria Prime, Doubling Down After Ultra Rebound",
+        "body": "Riding momentum from the leaner Aria Ultra, Ines Marlow launched Aria Prime, a higher-performance compute tier priced 40% above Ultra and aimed at data-center buyers. Marlow staged a splashy reveal promising 'the biggest leap since Eastfield opened,' with first shipments slated for next quarter. The bold move drew heavy attention given the volatile ramp that preceded it.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -2547,7 +2567,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82673,
+    "lastEventCycle": 82688,
     "events": [
       {
         "cycle": 0,
@@ -2681,6 +2701,16 @@
         "size": "standard",
         "head": "Brunridge Works Relaunches Cordless Line With Redesigned Thermal Safeguards",
         "body": "Six months after the overheating recall, Brunridge unveiled its new Corelin cordless devices, featuring a redesigned battery housing and dual thermal cutoffs certified to updated safety standards. CEO Halia Brennt said the company absorbed roughly $40M in recall and retooling costs but framed the relaunch as proof of its commitment to quality. Initial shipments will prioritize the two new distribution centers opened earlier this year.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82688,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunridge Works Beats as Redesigned Cordless Line Recovers Shelf Space",
+        "body": "Halia Brennt reported earnings of $1.04 a share against $0.91 expected, crediting strong reorders of the relaunched cordless devices and steady packaging volumes. The company said the thermal-safeguard redesign helped regain roughly 70% of retail placements lost during the recall. Brennt reaffirmed full-year guidance and hinted at a modest expansion of the apparel segment.",
         "effects": {
           "consumer": 0.13
         }
@@ -3564,14 +3594,14 @@
     "aiOwned": true,
     "homeSector": "manufacturing",
     "founded": 1931,
-    "ceo": "Petra Vance",
+    "ceo": "Dahlia Renn",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.59,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82674,
+    "lastEventCycle": 82688,
     "events": [
       {
         "cycle": 0,
@@ -3713,6 +3743,14 @@
         "size": "major",
         "head": "Carrowforge Ousts Marlow Demore as Board Seeks Clean Break From Roe-Era Scandal",
         "body": "Directors voted 9-2 to remove Marlow Demore after federal investigators tied the falsified test records to units still in active service, naming turnaround specialist Petra Vance as chief executive. Vance pledged an independent audit of every machine line and set aside $340M for potential recalls and settlements. Shares had shed nearly a third of their value since the probe widened.",
+        "effects": {}
+      },
+      {
+        "cycle": 82688,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Carrowforge Taps Outsider Dahlia Renn to Lead Post-Scandal Rebuild",
+        "body": "The board named Dahlia Renn, a former heavy-equipment operations chief, as permanent CEO after months without a settled leader. Renn inherits an open federal safety probe and pledged an independent audit of all Roe-era certification records within 90 days. Shares steadied as investors welcomed a clean external hire.",
         "effects": {}
       }
     ]
@@ -7143,18 +7181,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82681,
+    "lastEventCycle": 82688,
     "events": [
-      {
-        "cycle": 82543,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Gromford Works Launches Aurelian Noir to Sustain Demand Surge",
-        "body": "Chasing its record quarter, Mira Ashby debuted the Aurelian Noir, a blackened-case variant capped at 300 pieces and priced roughly 40% above the base line. Ashby said early reservations covered more than half the run within days of the Caldwyck flagship's preview event. The launch deepens Gromford's bet that Aurelian scarcity can keep margins climbing.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82549,
         "kind": "recall",
@@ -7375,6 +7403,16 @@
         "body": "Caretaker chief Corwin Halstead announced Gromford Works will carve out the tainted Meridian division into a ring-fenced entity while cutting timepiece production by 40% to conserve cash amid frozen assets. The plan eliminates 620 roles and suspends the fine-goods flagship program pending the criminal proceedings. Halstead called it 'the only path to keeping the core house solvent.'",
         "effects": {
           "luxury": -0.22
+        }
+      },
+      {
+        "cycle": 82688,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Gromford Works Misses as Meridian Split and Timepiece Cuts Bite Revenue",
+        "body": "The luxury house reported quarterly revenue down 18% to $612 million, missing forecasts, as the divested Meridian unit and slashed timepiece output hollowed out sales. Caretaker chief Corwin Halstead framed the drop as 'the cost of clearing the decks,' promising a narrower, higher-margin fine-goods focus by year-end. Analysts flagged lingering regulatory overhang from the frozen-asset case.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -12299,7 +12337,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82654,
+    "lastEventCycle": 82688,
     "events": [
       {
         "cycle": 0,
@@ -12355,6 +12393,16 @@
         "size": "flash",
         "head": "Skarnstone Industries Opens Second Loading Bay to Speed Consumables Dispatch",
         "body": "Skarnstone commissioned a second loading bay at its main distribution hub, adding roughly 12% more daily dispatch capacity for its consumables range. CEO Yvette Aldous framed the move as a modest, deliberate step to match the cleared backorder position. Management reiterated its unchanged full-year outlook.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82688,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarnstone Industries Holds Steady as Second Loading Bay Lifts Throughput",
+        "body": "The consumables maker reported in-line-to-slightly-ahead results, with dispatch volumes up 6% since the second loading bay opened. Yvette Aldous credited faster order turnaround for holding backorders near zero. The company reiterated its slow-and-steady capacity roadmap.",
         "effects": {
           "medical": 0.06
         }
@@ -13443,7 +13491,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82672,
+    "lastEventCycle": 82688,
     "events": [
       {
         "cycle": 0,
@@ -13561,6 +13609,16 @@
         "body": "Vantor posted quarterly revenue of $520M, up 3%, with the recently won regional distribution contract beginning to offset flat grocery packaging demand. CEO Halden Vossen said diversification was 'proceeding as planned' and reaffirmed full-year guidance.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82688,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vantor Lines Extends Diversification With Second Non-Grocery Contract",
+        "body": "Halden Vossen signed a three-year agreement to handle packaging and distribution for a regional pharmaceutical supplier, building on last quarter's distribution win. The deal is expected to add roughly $80 million in annual revenue and further reduce reliance on grocery volumes. Vossen said the pipeline of non-grocery prospects remains 'the healthiest in years.'",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
