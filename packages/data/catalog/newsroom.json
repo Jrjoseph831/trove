@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-07T00:03:35.569Z",
+  "generatedAt": "2026-08-07T07:18:30.718Z",
   "beats": [
     {
-      "company": "Ashbystead Holdings",
-      "sector": "medical",
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Boreas Power Returns to Beat as Vantel Cost-Out Plan Runs Ahead of Target",
+      "body": "Boreas posted its first beat since the Vantel deal, with integration chief Dara Holt reporting $260M of the promised $400M in savings already realized. Compute revenue rose 14% as the combined power-and-storage fleet came online for large customers, easing fears that the $6.8B pivot had overreached. CEO Mira Thorne said the cost-out program should complete two quarters early.",
+      "cycle": 82689,
+      "dur": 2
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Carrowwell Lands $1.1B Follow-On to Extend Reindustrialization Machines Contract",
+      "body": "The new Machines plant secured a $1.1B follow-on award to supply a second phase of the national reindustrialization program, lifting the plant's committed order book past $3.5B. CEO Mara Voss said the automated material-handling system rolled out last quarter cut delivery lead times by 22%, which she credited for winning the extension. Management now expects the plant to reach full capacity a full quarter ahead of schedule.",
+      "cycle": 82689,
+      "dur": 2
+    },
+    {
+      "company": "Hearthstone Group",
+      "sector": "hospitality",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Ashbystead Holdings Notches Eighth Straight Beat on Steady Hospital Orders",
-      "body": "Cora Holt's medical-equipment house posted another modest beat, with revenue of $488 million edging past estimates on reliable renewal cycles. Management again declined to raise guidance, citing its long-held preference for measured targets. The streak marks two full years of consecutive beats.",
-      "cycle": 82688,
+      "head": "Hearthstone Group Edges Higher as Fragrance-Free Concentrates Widen Depot Reach",
+      "body": "Hearthstone posted a modest beat as the newer fragrance-free concentrates drew institutional cleaning accounts to its refill depots. CEO Aurelia Aldous said concentrate volumes now account for 31% of depot sales, up from 24% a quarter ago. Margins held steady despite higher input costs on household goods.",
+      "cycle": 82689,
       "dur": 1
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Holtforge Group Adds $900M Interconnector Extension as Order Book Swells",
+      "body": "Holtforge won a $900M extension to its offshore interconnector program, pushing committed cable orders to a record 32 months of production. CEO Yvette Bramm said the marine cable plant will run a third shift to absorb the volume, adding roughly 180 jobs. The win cements Holtforge as the lead supplier on the region's grid-linking buildout.",
+      "cycle": 82689,
+      "dur": 2
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Korrworks Breaks Ground on Second Cross-Region Hub After First Runs Above Plan",
+      "body": "Buoyed by a hub running ahead of forecast, Korrwright committed $480M to a second cross-region facility with anchor commitments already in hand. CEO Rhys Throne said the new site will carry the same automated sorting layer from day one, targeting a first-half opening next year. The company expects the two hubs together to lift throughput capacity by 60%.",
+      "cycle": 82689,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Korrwright Works Debuts Alvence-Built In-House Movement in Meridienne Flagship",
+      "body": "Five months after the $340M Alvence acquisition, Korrwright unveiled the Meridienne Calibre 12, its first timepiece using a fully in-house movement from the Alvence workshops. CEO Dunmore Carrow priced the debut edition at $58,000 and capped the first run at 400 pieces, saying vertical control of movements ends the house's reliance on outside suppliers. Early salon allocations reportedly cleared within days of the private preview.",
+      "cycle": 82689,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Thronehaus & Co. Opens Ferrault Casework Wing to Double Marchwick Output",
+      "body": "Thronehaus commissioned an expanded casework wing at the acquired Ferrault site, roughly doubling annual capacity for its award-winning Verrand Marchwick line. CEO Cora Dray said the $610M buyout has already trimmed casework costs by 18% and will let the house meet a two-year waitlist. The wing employs 340 artisans and is expected to reach full output within three quarters.",
+      "cycle": 82689,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "major",
+      "head": "Woldmark Blows Past Estimates as Halcyon 4 Ramp Vindicates Frayne Turnaround",
+      "body": "Woldmark reported compute revenue up 41% year on year, its strongest quarter in three years, as Halcyon 4 shipments cleared the backlog left by the launch sellout. CEO Isolde Frayne said gross margins recovered to 38% from the Halcyon 3 trough of 22%, and announced a follow-on Halcyon 4 Pro for next quarter. The result marks a decisive close to the crisis that brought Frayne in.",
+      "cycle": 82689,
+      "dur": 8
     },
     {
       "company": "Bruncraft Industries",
@@ -60,16 +130,6 @@
       "body": "The luxury house reported quarterly revenue down 18% to $612 million, missing forecasts, as the divested Meridian unit and slashed timepiece output hollowed out sales. Caretaker chief Corwin Halstead framed the drop as 'the cost of clearing the decks,' promising a narrower, higher-margin fine-goods focus by year-end. Analysts flagged lingering regulatory overhang from the frozen-asset case.",
       "cycle": 82688,
       "dur": 2
-    },
-    {
-      "company": "Skarnstone Industries",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Skarnstone Industries Holds Steady as Second Loading Bay Lifts Throughput",
-      "body": "The consumables maker reported in-line-to-slightly-ahead results, with dispatch volumes up 6% since the second loading bay opened. Yvette Aldous credited faster order turnaround for holding backorders near zero. The company reiterated its slow-and-steady capacity roadmap.",
-      "cycle": 82688,
-      "dur": 1
     },
     {
       "company": "Vantor Lines",
@@ -169,16 +229,6 @@
       "head": "Fennmoor Strikes $5.1B Deal for Corvane Imaging in Aggressive Medical Push",
       "body": "Fresh off folding Threll Diagnostics into its portfolio, Dorian Brandt has again reached for the checkbook, agreeing to acquire imaging specialist Corvane for $5.1 billion in cash. The tie-up would give Fennmoor a full bedside-to-scanner medical stack, though analysts flagged that back-to-back deals push net leverage past 3x for the first time in a decade. Brandt, in his 57th year at the helm, framed the purchase as 'completing the diagnostic loop.'",
       "cycle": 82682,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Gromford Works Splits Off Meridian Unit and Slashes Timepiece Output in Sweeping Overhaul",
-      "body": "Caretaker chief Corwin Halstead announced Gromford Works will carve out the tainted Meridian division into a ring-fenced entity while cutting timepiece production by 40% to conserve cash amid frozen assets. The plan eliminates 620 roles and suspends the fine-goods flagship program pending the criminal proceedings. Halstead called it 'the only path to keeping the core house solvent.'",
-      "cycle": 82681,
       "dur": 8
     }
   ]

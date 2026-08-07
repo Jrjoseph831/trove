@@ -1464,18 +1464,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82682,
+    "lastEventCycle": 82689,
     "events": [
-      {
-        "cycle": 82531,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Boreas Power Lifts Annual Guidance as Hollowmere Runs at Full Tilt",
-        "body": "Mira Thorne raised full-year output guidance after Hollowmere's fully-owned storage fields delivered a 14 percent jump in dispatchable capacity. Quarterly revenue reached $2.1 billion, beating consensus by $180 million, with management citing record availability through peak demand. Thorne hinted at fresh acquisition talks, noting the balance sheet 'has room to move.'",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82538,
         "kind": "expansion",
@@ -1704,6 +1694,16 @@
         "body": "After a bruising quarter driven by Vantel absorption costs, Mira Thorne installed veteran operator Kessa Vaunt as head of a newly created integration office charged with wringing out $400 million in overlap by year-end. The company will consolidate three Vantel compute sites into two and pause further acquisitions until the merger stabilizes. Thorne conceded the pace of dealmaking had 'outrun the plumbing.'",
         "effects": {
           "energy": -0.13
+        }
+      },
+      {
+        "cycle": 82689,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Boreas Power Returns to Beat as Vantel Cost-Out Plan Runs Ahead of Target",
+        "body": "Boreas posted its first beat since the Vantel deal, with integration chief Dara Holt reporting $260M of the promised $400M in savings already realized. Compute revenue rose 14% as the combined power-and-storage fleet came online for large customers, easing fears that the $6.8B pivot had overreached. CEO Mira Thorne said the cost-out program should complete two quarters early.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -3766,7 +3766,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82672,
+    "lastEventCycle": 82689,
     "events": [
       {
         "cycle": 0,
@@ -3900,6 +3900,16 @@
         "size": "standard",
         "head": "Carrowwell Unveils Automated Material-Handling System at New Machines Plant",
         "body": "Carrowwell introduced the Haldon-series material-handling system, its first major product developed at the dedicated machines plant opened to serve its $2.4B reindustrialization contract. CEO Mara Voss said the line targets warehouse and port operators, calling it 'a deliberate push into recurring equipment revenue beyond one-off contracts.'",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82689,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Carrowwell Lands $1.1B Follow-On to Extend Reindustrialization Machines Contract",
+        "body": "The new Machines plant secured a $1.1B follow-on award to supply a second phase of the national reindustrialization program, lifting the plant's committed order book past $3.5B. CEO Mara Voss said the automated material-handling system rolled out last quarter cut delivery lead times by 22%, which she credited for winning the extension. Management now expects the plant to reach full capacity a full quarter ahead of schedule.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -8393,7 +8403,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82671,
+    "lastEventCycle": 82689,
     "events": [
       {
         "cycle": 0,
@@ -8499,6 +8509,16 @@
         "size": "flash",
         "head": "Hearthstone Group Adds Fragrance-Free Concentrates to Depot Lineup",
         "body": "Hearthstone Group extended its concentrate line with a fragrance-free tier aimed at sensitive commercial accounts across its refill depot network. CEO Aurelia Aldous said the addition responds to steady requests from hospitality and healthcare cleaning clients. The variant rolls out to all depots over the next quarter.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82689,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Hearthstone Group Edges Higher as Fragrance-Free Concentrates Widen Depot Reach",
+        "body": "Hearthstone posted a modest beat as the newer fragrance-free concentrates drew institutional cleaning accounts to its refill depots. CEO Aurelia Aldous said concentrate volumes now account for 31% of depot sales, up from 24% a quarter ago. Margins held steady despite higher input costs on household goods.",
         "effects": {
           "hospitality": 0.06
         }
@@ -8669,7 +8689,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82673,
+    "lastEventCycle": 82689,
     "events": [
       {
         "cycle": 0,
@@ -8785,6 +8805,16 @@
         "size": "standard",
         "head": "Holtforge Group Beats Again as Offshore Interconnector Order Fills Order Book",
         "body": "Holtforge reported quarterly revenue up 14% year-over-year, crediting steady deliveries against its $1.6B offshore interconnector mandate and continued marine cable volumes. CEO Yvette Bramm noted the plant is now running near capacity, with the interconnector work extending visibility into the next two fiscal years. Margins held firm on stable copper costs.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82689,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Holtforge Group Adds $900M Interconnector Extension as Order Book Swells",
+        "body": "Holtforge won a $900M extension to its offshore interconnector program, pushing committed cable orders to a record 32 months of production. CEO Yvette Bramm said the marine cable plant will run a third shift to absorb the volume, adding roughly 180 jobs. The win cements Holtforge as the lead supplier on the region's grid-linking buildout.",
         "effects": {
           "construction": 0.13
         }
@@ -9848,7 +9878,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82676,
+    "lastEventCycle": 82689,
     "events": [
       {
         "cycle": 0,
@@ -9984,6 +10014,16 @@
         "size": "standard",
         "head": "Korrworks Beats as Cross-Region Hub Runs Above Plan in First Full Quarter",
         "body": "Rhys Throne reported the new hub processed 12% more volume than projected, lifting group revenue 9.4% with both anchor tenants at full utilization. Throne said a waitlist of secondary tenants could justify a mezzanine sorting expansion by next year. Free cash flow turned positive earlier than the completion budget forecast.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82689,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrworks Breaks Ground on Second Cross-Region Hub After First Runs Above Plan",
+        "body": "Buoyed by a hub running ahead of forecast, Korrwright committed $480M to a second cross-region facility with anchor commitments already in hand. CEO Rhys Throne said the new site will carry the same automated sorting layer from day one, targeting a first-half opening next year. The company expects the two hubs together to lift throughput capacity by 60%.",
         "effects": {
           "logistics": 0.13
         }
@@ -10164,16 +10204,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82680,
+    "lastEventCycle": 82689,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Korrwright Works — Time, kept honestly",
-        "body": "Korrwright Works makes timepieces for people who understand what a movement costs. Every case shelters hundreds of parts assembled under a loupe, regulated by hand, signed only when it's right. The premium line is finely finished; the luxury line is a small ceremony of metal and patience. These watches outlive their first owners and gain stories on the way. Worn quietly, valued loudly, and never rushed to market.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "major_deal",
@@ -10398,6 +10430,16 @@
         "size": "standard",
         "head": "Korrwright Works Acquires Heritage Movement Maker Alvence in $340M Deal",
         "body": "Korrwright Works has agreed to buy movement specialist Alvence for $340 million, extending CEO Dunmore Carrow's acquisitive streak on the back of the Meridienne salon's revival. The purchase secures in-house mechanical calibers that had previously been sourced externally, echoing rivals' move toward vertical integration. Carrow said Alvence's workshops will supply the reopened Meridienne line first.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82689,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Korrwright Works Debuts Alvence-Built In-House Movement in Meridienne Flagship",
+        "body": "Five months after the $340M Alvence acquisition, Korrwright unveiled the Meridienne Calibre 12, its first timepiece using a fully in-house movement from the Alvence workshops. CEO Dunmore Carrow priced the debut edition at $58,000 and capped the first run at 400 pieces, saying vertical control of movements ends the house's reliance on outside suppliers. Early salon allocations reportedly cleared within days of the private preview.",
         "effects": {
           "luxury": 0.13
         }
@@ -13165,7 +13207,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82680,
+    "lastEventCycle": 82689,
     "events": [
       {
         "cycle": 0,
@@ -13371,6 +13413,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Beats as Ferrault Buyout Lifts Margins on Award-Winning Marchwick Line",
         "body": "Thronehaus & Co. topped estimates as the $610M Ferrault acquisition brought casework in-house, widening margins on the acclaimed Verrand Marchwick line. CEO Cora Dray said vertical integration cut per-unit costs by 18% while insulating output from supplier delays. Salon demand following the Grand Horology honors pushed the flagship line to a months-long waiting list.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82689,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Thronehaus & Co. Opens Ferrault Casework Wing to Double Marchwick Output",
+        "body": "Thronehaus commissioned an expanded casework wing at the acquired Ferrault site, roughly doubling annual capacity for its award-winning Verrand Marchwick line. CEO Cora Dray said the $610M buyout has already trimmed casework costs by 18% and will let the house meet a two-year waitlist. The wing employs 340 artisans and is expected to reach full output within three quarters.",
         "effects": {
           "luxury": 0.13
         }
@@ -15252,7 +15304,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82679,
+    "lastEventCycle": 82689,
     "events": [
       {
         "cycle": 0,
@@ -15424,6 +15476,16 @@
         "size": "major",
         "head": "Woldmark's Halcyon 4 Sells Out at Launch as Frayne Declares Turnaround 'Done'",
         "body": "Woldmark's Halcyon 4 compute line drew orders exceeding 1.2 million units in its first 72 hours, clearing initial inventory across all regions. Isolde Frayne, appearing at the Meridian launch event, called the debut 'vindication' and pledged to double production capacity by year-end. The result reverses the reputational damage from the Halcyon 3 recall that toppled her predecessor.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82689,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Woldmark Blows Past Estimates as Halcyon 4 Ramp Vindicates Frayne Turnaround",
+        "body": "Woldmark reported compute revenue up 41% year on year, its strongest quarter in three years, as Halcyon 4 shipments cleared the backlog left by the launch sellout. CEO Isolde Frayne said gross margins recovered to 38% from the Halcyon 3 trough of 22%, and announced a follow-on Halcyon 4 Pro for next quarter. The result marks a decisive close to the crisis that brought Frayne in.",
         "effects": {
           "technology": 0.22
         }
