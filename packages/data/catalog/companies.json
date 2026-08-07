@@ -4360,7 +4360,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82661,
+    "lastEventCycle": 82690,
     "events": [
       {
         "cycle": 0,
@@ -4426,6 +4426,16 @@
         "size": "flash",
         "head": "Castlestead Posts Modest Beat as Harrowfield Deal Reaches Full Volume",
         "body": "Castlestead edged past expectations as the Harrowfield Supply agreement hit full run-rate, lifting Farm Inputs revenue 8%. CEO Aurelia Calder noted steady demand for the paired low-till and nutrient-blend lines through the planting season. The conservative agriculture house left guidance unchanged and reaffirmed its dividend.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82690,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlestead Posts Another Quiet Beat as Harrowfield Deal Steadies",
+        "body": "The agriculture house reported a slim beat with revenue up 3%, as the Harrowfield supply deal held at full volume and low-till equipment sales stayed firm. CEO Aurelia Calder maintained the company's conservative full-year outlook, citing 'no surprises we didn't plan for.' Nutrient-blend lines continued to pair steadily with equipment orders.",
         "effects": {
           "agriculture": 0.06
         }
@@ -7601,7 +7611,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82673,
+    "lastEventCycle": 82690,
     "events": [
       {
         "cycle": 0,
@@ -7717,6 +7727,16 @@
         "size": "standard",
         "head": "Halcrow & Vance Beats as $2.1B Vetask Mandate Begins Billing",
         "body": "Halcrow & Vance reported revenue up 19% as early earthmoving work on its $2.1B Vetask regional development mandate began generating billings. CEO Mira Skarn said both staging yards are now operating at full tilt and hinted at bidding for adjacent corridor phases. The firm raised its full-year outlook modestly.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82690,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrow & Vance Beats Again as Vetask Mandate Billing Broadens Across Second Yard",
+        "body": "The construction house posted revenue of $1.34 billion, up 11% year over year, as the $2.1B Vetask regional development mandate moved into its heavier earthmoving phase. CEO Mira Skarn credited the second Vetask yard's early ramp for absorbing demand without new hiring, and lifted full-year margin guidance by roughly one point. Skarn signaled interest in adjacent site mandates 'should the pricing hold.'",
         "effects": {
           "construction": 0.13
         }
@@ -8156,18 +8176,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82683,
+    "lastEventCycle": 82690,
     "events": [
-      {
-        "cycle": 82558,
-        "kind": "lawsuit",
-        "size": "major",
-        "head": "Halhold Works Sued by Hospitals Over Verity Pro Suite Failures",
-        "body": "A coalition of care networks filed suit against Halhold seeking $1.3B in damages, alleging the shelved Verity Pro bedside suite caused monitoring failures now tied to the ignored internal warnings. The complaint leans heavily on leaked memos showing Nadia Brandt's team pressed ahead despite flagged defects. Halhold faces mounting pressure as the regulatory shipment suspension enters its second month with no clear reinstatement timeline.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82564,
         "kind": "leadership_change",
@@ -8386,6 +8396,16 @@
         "size": "standard",
         "head": "Halhold Works Returns to Beat as Aveline II Hospital Contract Ramps",
         "body": "Vantt swung to a quarterly beat with revenue of $1.4B, driven by the regional hospital supply contract as Aveline II monitor shipments scaled to 6,200 units. Legal costs eased from the prior quarter, and Vantt said the certification-backed monitor is now in active pilots with two additional hospital networks.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82690,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Works Unveils Aveline III Monitor Platform as Hospital Rollout Widens",
+        "body": "CEO Priya Vantt introduced the Aveline III line at the company's Deltmar campus, touting a 40% faster refresh cycle and a modular wire-and-cable backbone aimed at existing hospital installations. The launch builds directly on the regional supply contract now billing at full volume, with three additional health systems named as early adopters. Vantt said the lingering legal overhang from prior quarters was 'behind us as a distraction.'",
         "effects": {
           "technology": 0.13
         }
@@ -10712,7 +10732,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82679,
+    "lastEventCycle": 82690,
     "events": [
       {
         "cycle": 0,
@@ -10871,6 +10891,16 @@
         "effects": {
           "hospitality": 0.13
         }
+      },
+      {
+        "cycle": 82690,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Maison & Vale Adds Household-Goods Maker Corriveau in $1.1B Bolt-On",
+        "body": "Fresh off the Northram integration, restless CEO Rhys Kessler struck a $1.1 billion cash-and-stock deal for household-goods maker Corriveau, extending Maison & Vale beyond cleaning chemicals into shelf-stable home products. Kessler said the acquisition unlocks shared distribution with Northram and targets a further $150 million in combined savings by 2028. Regulators are expected to clear the deal within two quarters.",
+        "effects": {
+          "hospitality": 0.13
+        }
       }
     ]
   },
@@ -10885,7 +10915,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82680,
+    "lastEventCycle": 82690,
     "events": [
       {
         "cycle": 0,
@@ -11111,6 +11141,16 @@
         "body": "Verrant Rail's oversight board has opened a formal reliability review of the Kessel platform following the 14-hour operational halt, demanding proof of failover safeguards before expansion continues. CEO Adele Ferran struck a defiant tone, insisting the fault was a single configuration error already patched, while acknowledging penalty clauses could cost up to $60 million. The Halden Mining rollout will proceed but under heightened monitoring.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82690,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Marlgear Supply Rocked as Verrant Probe Uncovers Suppressed Kessel Fault Reports",
+        "body": "The Verrant Rail safety review found that internal warnings about the Kessel platform's handling logic were flagged weeks before the 14-hour outage but never escalated, according to documents released this morning. CEO Adele Ferran, known for her public bravado, acknowledged 'serious lapses in how risk was reported' and suspended two senior operations leaders pending an outside inquiry. Verrant Rail said it is weighing penalties that could reach $220 million and a partial contract clawback.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -11432,7 +11472,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82678,
+    "lastEventCycle": 82690,
     "events": [
       {
         "cycle": 0,
@@ -11577,6 +11617,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82690,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Marrowstone Build Beats as $680M Port Package and New Line Lift Deliveries",
+        "body": "Marrowstone reported deliveries up 18% quarter over quarter as the new assembly line ate into the earthmoving backlog and the $680M Split port fleet order began shipping. CEO Delphine Vaugh said the backlog, while still elevated, has fallen for the first time in four quarters, easing pressure on lead times. Vaugh reaffirmed guidance and hinted at a second shift 'if orders stay firm into next year.'",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -11591,7 +11641,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82675,
+    "lastEventCycle": 82690,
     "events": [
       {
         "cycle": 0,
@@ -11707,6 +11757,16 @@
         "size": "flash",
         "head": "Ornewright Goods Tops Estimates Again as Cleaning Lines Firm Up",
         "body": "Ornewright Goods reported quarterly revenue of $1.41 billion, edging past the $1.38 billion consensus, its fifth consecutive beat. CEO Petra Veldt credited resilient Jansan volumes and modest price gains, calling the quarter 'unremarkable in the best way.'",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82690,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Notches Another Modest Beat on Steady Farm-Inputs Demand",
+        "body": "The consumer house edged past estimates for the fourth straight quarter, with revenue up 4% as farm-inputs volumes offset flat cleaning lines. CEO Petra Veldt described the quarter as 'unremarkable in the best way,' pointing to disciplined pricing across food service. No change to full-year guidance was announced.",
         "effects": {
           "consumer": 0.06
         }
@@ -12462,7 +12522,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82677,
+    "lastEventCycle": 82690,
     "events": [
       {
         "cycle": 0,
@@ -12604,6 +12664,16 @@
         "size": "standard",
         "head": "Skarnvale Vosk Junction Terminal Goes Dark After Handling System Failure",
         "body": "A cascading failure in the automated sorting spine halted operations at the delayed Vosk Junction terminal for 38 hours, stranding roughly 4,200 pallets bound for Braeloch clients. CEO Dorn Vaskell blamed a rushed commissioning schedule tied to the triple retrofit push and pledged a full systems audit. Analysts warn the outage could push Vosk Junction's go-live into the next quarter.",
+        "effects": {
+          "logistics": -0.13
+        }
+      },
+      {
+        "cycle": 82690,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Skarnvale Pauses Third Retrofit and Names Recovery Chief After Vosk Junction Failure",
+        "body": "CEO Dorn Vaskell announced a freeze on the third terminal retrofit and pulled forward $95 million in maintenance spending to stabilize the Braeloch and Vosk Junction sites. A newly created recovery office, led by operations veteran Halden Roe, will oversee the phased restart of Vosk Junction, now expected to reach partial throughput within six weeks. Vaskell conceded the triple-retrofit pace had 'outrun our cash and our crews.'",
         "effects": {
           "logistics": -0.13
         }

@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-07T07:18:30.718Z",
+  "generatedAt": "2026-08-07T13:07:11.152Z",
   "beats": [
+    {
+      "company": "Castlestead",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castlestead Posts Another Quiet Beat as Harrowfield Deal Steadies",
+      "body": "The agriculture house reported a slim beat with revenue up 3%, as the Harrowfield supply deal held at full volume and low-till equipment sales stayed firm. CEO Aurelia Calder maintained the company's conservative full-year outlook, citing 'no surprises we didn't plan for.' Nutrient-blend lines continued to pair steadily with equipment orders.",
+      "cycle": 82690,
+      "dur": 1
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halcrow & Vance Beats Again as Vetask Mandate Billing Broadens Across Second Yard",
+      "body": "The construction house posted revenue of $1.34 billion, up 11% year over year, as the $2.1B Vetask regional development mandate moved into its heavier earthmoving phase. CEO Mira Skarn credited the second Vetask yard's early ramp for absorbing demand without new hiring, and lifted full-year margin guidance by roughly one point. Skarn signaled interest in adjacent site mandates 'should the pricing hold.'",
+      "cycle": 82690,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halhold Works Unveils Aveline III Monitor Platform as Hospital Rollout Widens",
+      "body": "CEO Priya Vantt introduced the Aveline III line at the company's Deltmar campus, touting a 40% faster refresh cycle and a modular wire-and-cable backbone aimed at existing hospital installations. The launch builds directly on the regional supply contract now billing at full volume, with three additional health systems named as early adopters. Vantt said the lingering legal overhang from prior quarters was 'behind us as a distraction.'",
+      "cycle": 82690,
+      "dur": 2
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Maison & Vale Adds Household-Goods Maker Corriveau in $1.1B Bolt-On",
+      "body": "Fresh off the Northram integration, restless CEO Rhys Kessler struck a $1.1 billion cash-and-stock deal for household-goods maker Corriveau, extending Maison & Vale beyond cleaning chemicals into shelf-stable home products. Kessler said the acquisition unlocks shared distribution with Northram and targets a further $150 million in combined savings by 2028. Regulators are expected to clear the deal within two quarters.",
+      "cycle": 82690,
+      "dur": 2
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Marlgear Supply Rocked as Verrant Probe Uncovers Suppressed Kessel Fault Reports",
+      "body": "The Verrant Rail safety review found that internal warnings about the Kessel platform's handling logic were flagged weeks before the 14-hour outage but never escalated, according to documents released this morning. CEO Adele Ferran, known for her public bravado, acknowledged 'serious lapses in how risk was reported' and suspended two senior operations leaders pending an outside inquiry. Verrant Rail said it is weighing penalties that could reach $220 million and a partial contract clawback.",
+      "cycle": 82690,
+      "dur": 8
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Marrowstone Build Beats as $680M Port Package and New Line Lift Deliveries",
+      "body": "Marrowstone reported deliveries up 18% quarter over quarter as the new assembly line ate into the earthmoving backlog and the $680M Split port fleet order began shipping. CEO Delphine Vaugh said the backlog, while still elevated, has fallen for the first time in four quarters, easing pressure on lead times. Vaugh reaffirmed guidance and hinted at a second shift 'if orders stay firm into next year.'",
+      "cycle": 82690,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Notches Another Modest Beat on Steady Farm-Inputs Demand",
+      "body": "The consumer house edged past estimates for the fourth straight quarter, with revenue up 4% as farm-inputs volumes offset flat cleaning lines. CEO Petra Veldt described the quarter as 'unremarkable in the best way,' pointing to disciplined pricing across food service. No change to full-year guidance was announced.",
+      "cycle": 82690,
+      "dur": 1
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Skarnvale Pauses Third Retrofit and Names Recovery Chief After Vosk Junction Failure",
+      "body": "CEO Dorn Vaskell announced a freeze on the third terminal retrofit and pulled forward $95 million in maintenance spending to stabilize the Braeloch and Vosk Junction sites. A newly created recovery office, led by operations veteran Halden Roe, will oversee the phased restart of Vosk Junction, now expected to reach partial throughput within six weeks. Vaskell conceded the triple-retrofit pace had 'outrun our cash and our crews.'",
+      "cycle": 82690,
+      "dur": 2
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -20,16 +100,6 @@
       "body": "The new Machines plant secured a $1.1B follow-on award to supply a second phase of the national reindustrialization program, lifting the plant's committed order book past $3.5B. CEO Mara Voss said the automated material-handling system rolled out last quarter cut delivery lead times by 22%, which she credited for winning the extension. Management now expects the plant to reach full capacity a full quarter ahead of schedule.",
       "cycle": 82689,
       "dur": 2
-    },
-    {
-      "company": "Hearthstone Group",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Hearthstone Group Edges Higher as Fragrance-Free Concentrates Widen Depot Reach",
-      "body": "Hearthstone posted a modest beat as the newer fragrance-free concentrates drew institutional cleaning accounts to its refill depots. CEO Aurelia Aldous said concentrate volumes now account for 31% of depot sales, up from 24% a quarter ago. Margins held steady despite higher input costs on household goods.",
-      "cycle": 82689,
-      "dur": 1
     },
     {
       "company": "Holtforge Group",
@@ -100,46 +170,6 @@
       "body": "Riding momentum from the leaner Aria Ultra, Ines Marlow launched Aria Prime, a higher-performance compute tier priced 40% above Ultra and aimed at data-center buyers. Marlow staged a splashy reveal promising 'the biggest leap since Eastfield opened,' with first shipments slated for next quarter. The bold move drew heavy attention given the volatile ramp that preceded it.",
       "cycle": 82688,
       "dur": 8
-    },
-    {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Brunridge Works Beats as Redesigned Cordless Line Recovers Shelf Space",
-      "body": "Halia Brennt reported earnings of $1.04 a share against $0.91 expected, crediting strong reorders of the relaunched cordless devices and steady packaging volumes. The company said the thermal-safeguard redesign helped regain roughly 70% of retail placements lost during the recall. Brennt reaffirmed full-year guidance and hinted at a modest expansion of the apparel segment.",
-      "cycle": 82688,
-      "dur": 2
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Carrowforge Taps Outsider Dahlia Renn to Lead Post-Scandal Rebuild",
-      "body": "The board named Dahlia Renn, a former heavy-equipment operations chief, as permanent CEO after months without a settled leader. Renn inherits an open federal safety probe and pledged an independent audit of all Roe-era certification records within 90 days. Shares steadied as investors welcomed a clean external hire.",
-      "cycle": 82688,
-      "dur": 2
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Gromford Works Misses as Meridian Split and Timepiece Cuts Bite Revenue",
-      "body": "The luxury house reported quarterly revenue down 18% to $612 million, missing forecasts, as the divested Meridian unit and slashed timepiece output hollowed out sales. Caretaker chief Corwin Halstead framed the drop as 'the cost of clearing the decks,' promising a narrower, higher-margin fine-goods focus by year-end. Analysts flagged lingering regulatory overhang from the frozen-asset case.",
-      "cycle": 82688,
-      "dur": 2
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Vantor Lines Extends Diversification With Second Non-Grocery Contract",
-      "body": "Halden Vossen signed a three-year agreement to handle packaging and distribution for a regional pharmaceutical supplier, building on last quarter's distribution win. The deal is expected to add roughly $80 million in annual revenue and further reduce reliance on grocery volumes. Vossen said the pipeline of non-grocery prospects remains 'the healthiest in years.'",
-      "cycle": 82688,
-      "dur": 2
     },
     {
       "company": "Hesperforge Supply",
@@ -219,16 +249,6 @@
       "head": "Vencyon Signs $2.3B Fleet Rollout to Bring Modular Platform to Fourth and Fifth Hubs",
       "body": "Halloran secured a multi-year agreement with Brightway Distribution to deploy the modular handling platform across two new regional hubs, the company's largest single order in over a decade. The deal locks in $2.3B over five years and adds an option for a sixth site, marking Vencyon's decisive push past its historic three-hub footprint.",
       "cycle": 82683,
-      "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Fennmoor Strikes $5.1B Deal for Corvane Imaging in Aggressive Medical Push",
-      "body": "Fresh off folding Threll Diagnostics into its portfolio, Dorian Brandt has again reached for the checkbook, agreeing to acquire imaging specialist Corvane for $5.1 billion in cash. The tie-up would give Fennmoor a full bedside-to-scanner medical stack, though analysts flagged that back-to-back deals push net leverage past 3x for the first time in a decade. Brandt, in his 57th year at the helm, framed the purchase as 'completing the diagnostic loop.'",
-      "cycle": 82682,
       "dur": 8
     }
   ]
