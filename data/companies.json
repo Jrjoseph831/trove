@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82673,
+    "lastEventCycle": 82691,
     "events": [
       {
         "cycle": 0,
@@ -116,6 +116,16 @@
         "size": "standard",
         "head": "Aldouscraft Mfg. Commits to Fourth Extrusion Line as Grid Orders Stack Up",
         "body": "Aldouscraft approved a $95M expansion to add a fourth extrusion line, aiming to relieve pressure from its two active grid feeder-cable contracts. CEO Soren Ashby said the line should come online within 18 months and lift annual output by roughly 22%. The move mirrors rival Holtforge's capacity race in the cable sector.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82691,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aldouscraft Mfg. Beats as Fourth Extrusion Line Ramps Ahead of Schedule",
+        "body": "Aldouscraft reported a solid beat as its new fourth extrusion line reached commercial output a quarter early, easing backlog on the dual grid feeder-cable contracts. CEO Soren Ashby said the added capacity lifted deliverable volumes without straining pricing. Guidance was nudged higher on sustained grid demand.",
         "effects": {
           "construction": 0.13
         }
@@ -929,7 +939,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82680,
+    "lastEventCycle": 82691,
     "events": [
       {
         "cycle": 0,
@@ -1127,6 +1137,16 @@
         "body": "Blackhold reported a modest earnings beat, its first since the falsified-records scandal, crediting the newly separated grid-storage testing unit for restoring customer confidence. CEO Halden Dabney said cancellations have slowed and two paused contracts have resumed, though he cautioned the turnaround remains early. Storage shipment volumes recovered to roughly 85% of pre-scandal levels.",
         "effects": {
           "energy": 0.06
+        }
+      },
+      {
+        "cycle": 82691,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Blackhold Lands $1.2B Grid-Storage Mandate as Independent Testing Unit Wins Regulator Trust",
+        "body": "Blackhold secured a $1.2 billion multi-year contract to supply grid-scale storage systems, its largest award since the scandal-era collapse and a defining moment for CEO Halden Dabney's turnaround. Officials credited the spun-out independent testing unit, now certified by two regional grid authorities, with restoring confidence in Blackhold's safety claims. The deal locks in roughly 30% of projected 2027 capacity.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -2348,7 +2368,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82680,
+    "lastEventCycle": 82691,
     "events": [
       {
         "cycle": 0,
@@ -2550,6 +2570,16 @@
         "size": "major",
         "head": "Brunmark Motors Recalls 240,000 Veyra S Units as Battery Probe Confirms Fire Risk",
         "body": "Brunmark Motors has issued a recall covering roughly 240,000 redesigned Veyra S vehicles after regulators confirmed a thermal fault in the battery pack that can ignite under sustained fast-charging. CEO Halvard Renn pledged free pack replacements and set aside $480 million to cover the campaign, reversing much of the momentum that drove recent beats. The newly expanded battery line will be diverted to produce corrected packs, delaying deliveries into next year.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82691,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Brunmark Motors Hit With Class Action Over Veyra S Battery Fires as Recall Costs Mount",
+        "body": "A consolidated class action was filed against Brunmark Motors on behalf of some 240,000 Veyra S owners, alleging the company knew of the battery-pack defect before the redesigned unit shipped. Plaintiffs seek damages exceeding $600 million, citing internal test records surfaced during the regulatory probe. CEO Halvard Renn said the company would 'contest the claims vigorously' while accelerating replacement pack production.",
         "effects": {
           "automotive": -0.22
         }
@@ -4113,16 +4143,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82684,
+    "lastEventCycle": 82691,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Castlehold — Hold the charge, hold the line",
-        "body": "Castlehold builds power and storage for a world that hates running dry, from modest cells for the home to industrial banks that keep critical sites breathing through an outage. The value range puts dependable backup within reach. The premium systems carry hospitals, depots, and data through the worst nights. Their cells are known for aging gracefully rather than dying suddenly. When the grid blinks, Castlehold is what hums on regardless.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "expansion",
@@ -4343,6 +4365,16 @@
         "size": "standard",
         "head": "Castlehold Unveils Modular Storage Platform as Voss Builds on Grid Momentum",
         "body": "Castlehold introduced its Halden-branded Meridian storage system, a stackable battery unit targeting utility clients who signed on after last quarter's grid-storage win. Voss said early orders cover roughly 1.2 gigawatt-hours of capacity, with first deliveries slated for the fourth quarter. Management framed the launch as proof the turnaround has shifted from cleanup to growth.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82691,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Castlehold Breaks Ground on Second Plant to Scale Modular Storage Platform",
+        "body": "Castlehold committed roughly $310 million to a second production facility dedicated to its recently launched modular storage platform, aiming to double capacity by late 2027. CEO Halden Voss framed the build as necessary to meet demand from the landmark grid-storage contract. The move marks Castlehold's first greenfield expansion since the Saltmere spin-off.",
         "effects": {
           "energy": 0.13
         }
@@ -6031,7 +6063,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82677,
+    "lastEventCycle": 82691,
     "events": [
       {
         "cycle": 0,
@@ -6159,6 +6191,16 @@
         "body": "Fenncyon has secured the anchor role in the Eastfield Grand Loop, a $3.4 billion earthmoving and civil program that dwarfs its previous Southern Loop award. CEO Nadia Ashby said the multi-year mandate lifts total backlog past $6 billion and will require the largest fleet expansion in company history. The win cements Fenncyon as the region's dominant earthmoving house.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82691,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fenncyon Beats as Eastfield Grand Loop Mobilization Front-Loads Revenue",
+        "body": "Fenncyon topped estimates as early mobilization on the $3.4 billion Eastfield Grand Loop megaproject converted faster than expected, adding to an already record backlog. CEO Nadia Ashby said initial earthmoving phases were tracking ahead of schedule and margin. The company raised full-year guidance modestly on the accelerated ramp.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -6816,7 +6858,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82659,
+    "lastEventCycle": 82691,
     "events": [
       {
         "cycle": 0,
@@ -6882,6 +6924,16 @@
         "size": "flash",
         "head": "Garrweave Mills Ticks Higher as Northfield Renewal Locks In Volumes",
         "body": "Garrweave reported a modest 2.1% revenue gain to $410 million, supported by the recently renewed Northfield supply agreement holding output at capacity. CEO Lorne Veldt reiterated the mill's long-horizon approach, noting stable pricing and low customer churn. No change to full-year outlook.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82691,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Garrweave Mills Inches Up as Northfield Renewal Keeps Looms at Full Run",
+        "body": "Garrweave reported a slight quarterly gain as the renewed Northfield supply agreement kept its primary line at full output. CEO Lorne Veldt reiterated the mill's long-horizon focus, pointing to stable raw-textile volumes rather than price gains. No changes to capacity plans were announced.",
         "effects": {
           "textiles": 0.06
         }
@@ -11319,7 +11371,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82676,
+    "lastEventCycle": 82691,
     "events": [
       {
         "cycle": 0,
@@ -11455,6 +11507,16 @@
         "size": "flash",
         "head": "Marrowmoor Holdings Edges Ahead Again as Northbrook Adds to Westline Base",
         "body": "Dorian Steg's house logged a 4.1% revenue gain, its ninth straight quarterly beat, as a small Northbrook hospitality account layered onto the steady Westline book. Margins held at 18.3% with no new debt drawn. Steg reiterated the group's preference for 'boring, renewable dollars.'",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82691,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Extends Streak as Northbrook and Westline Occupancy Stays Full",
+        "body": "Marrowmoor posted another modest beat, its fifth straight, as combined Westline and Northbrook properties held near-full occupancy through the quarter. CEO Dorian Steg noted supply-side discipline on cleaning and household-goods costs preserved margins. Management reaffirmed its cautious full-year outlook.",
         "effects": {
           "hospitality": 0.06
         }
@@ -14782,7 +14844,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82683,
+    "lastEventCycle": 82691,
     "events": [
       {
         "cycle": 0,
@@ -14998,6 +15060,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Unveils First Halvane-Powered Corveil Movement",
         "body": "Marrow introduced the Corveil Meridian, the debut timepiece built entirely on the newly acquired Halvane in-house movement, priced from $18,400 and limited to 900 units in year one. The launch marks the first vertical payoff from the $480M Halvane deal, with production moving to the expanded Larkmoor salon network across four flagship cities.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82691,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenspire Supply Beats as Halvane-Powered Corveil Sells Out Across Larkmoor Salons",
+        "body": "Vossenspire topped estimates as the first in-house Halvane movement drove Corveil timepiece sales, with several Larkmoor salons reporting sellouts within weeks of launch. CEO Quinn Marrow said vertical integration lifted timepiece gross margins by roughly four points versus the prior year. The company hinted at a second Larkmoor salon wave to capture demand.",
         "effects": {
           "luxury": 0.13
         }

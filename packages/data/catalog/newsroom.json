@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-07T13:07:11.152Z",
+  "generatedAt": "2026-08-07T18:59:25.401Z",
   "beats": [
     {
-      "company": "Castlestead",
-      "sector": "agriculture",
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Aldouscraft Mfg. Beats as Fourth Extrusion Line Ramps Ahead of Schedule",
+      "body": "Aldouscraft reported a solid beat as its new fourth extrusion line reached commercial output a quarter early, easing backlog on the dual grid feeder-cable contracts. CEO Soren Ashby said the added capacity lifted deliverable volumes without straining pricing. Guidance was nudged higher on sustained grid demand.",
+      "cycle": 82691,
+      "dur": 2
+    },
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Blackhold Lands $1.2B Grid-Storage Mandate as Independent Testing Unit Wins Regulator Trust",
+      "body": "Blackhold secured a $1.2 billion multi-year contract to supply grid-scale storage systems, its largest award since the scandal-era collapse and a defining moment for CEO Halden Dabney's turnaround. Officials credited the spun-out independent testing unit, now certified by two regional grid authorities, with restoring confidence in Blackhold's safety claims. The deal locks in roughly 30% of projected 2027 capacity.",
+      "cycle": 82691,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Brunmark Motors Hit With Class Action Over Veyra S Battery Fires as Recall Costs Mount",
+      "body": "A consolidated class action was filed against Brunmark Motors on behalf of some 240,000 Veyra S owners, alleging the company knew of the battery-pack defect before the redesigned unit shipped. Plaintiffs seek damages exceeding $600 million, citing internal test records surfaced during the regulatory probe. CEO Halvard Renn said the company would 'contest the claims vigorously' while accelerating replacement pack production.",
+      "cycle": 82691,
+      "dur": 8
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Castlehold Breaks Ground on Second Plant to Scale Modular Storage Platform",
+      "body": "Castlehold committed roughly $310 million to a second production facility dedicated to its recently launched modular storage platform, aiming to double capacity by late 2027. CEO Halden Voss framed the build as necessary to meet demand from the landmark grid-storage contract. The move marks Castlehold's first greenfield expansion since the Saltmere spin-off.",
+      "cycle": 82691,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fenncyon Beats as Eastfield Grand Loop Mobilization Front-Loads Revenue",
+      "body": "Fenncyon topped estimates as early mobilization on the $3.4 billion Eastfield Grand Loop megaproject converted faster than expected, adding to an already record backlog. CEO Nadia Ashby said initial earthmoving phases were tracking ahead of schedule and margin. The company raised full-year guidance modestly on the accelerated ramp.",
+      "cycle": 82691,
+      "dur": 2
+    },
+    {
+      "company": "Garrweave Mills",
+      "sector": "textiles",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Castlestead Posts Another Quiet Beat as Harrowfield Deal Steadies",
-      "body": "The agriculture house reported a slim beat with revenue up 3%, as the Harrowfield supply deal held at full volume and low-till equipment sales stayed firm. CEO Aurelia Calder maintained the company's conservative full-year outlook, citing 'no surprises we didn't plan for.' Nutrient-blend lines continued to pair steadily with equipment orders.",
-      "cycle": 82690,
+      "head": "Garrweave Mills Inches Up as Northfield Renewal Keeps Looms at Full Run",
+      "body": "Garrweave reported a slight quarterly gain as the renewed Northfield supply agreement kept its primary line at full output. CEO Lorne Veldt reiterated the mill's long-horizon focus, pointing to stable raw-textile volumes rather than price gains. No changes to capacity plans were announced.",
+      "cycle": 82691,
       "dur": 1
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowmoor Holdings Extends Streak as Northbrook and Westline Occupancy Stays Full",
+      "body": "Marrowmoor posted another modest beat, its fifth straight, as combined Westline and Northbrook properties held near-full occupancy through the quarter. CEO Dorian Steg noted supply-side discipline on cleaning and household-goods costs preserved margins. Management reaffirmed its cautious full-year outlook.",
+      "cycle": 82691,
+      "dur": 1
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenspire Supply Beats as Halvane-Powered Corveil Sells Out Across Larkmoor Salons",
+      "body": "Vossenspire topped estimates as the first in-house Halvane movement drove Corveil timepiece sales, with several Larkmoor salons reporting sellouts within weeks of launch. CEO Quinn Marrow said vertical integration lifted timepiece gross margins by roughly four points versus the prior year. The company hinted at a second Larkmoor salon wave to capture demand.",
+      "cycle": 82691,
+      "dur": 2
     },
     {
       "company": "Halcrow & Vance",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Notches Another Modest Beat on Steady Farm-Inputs Demand",
-      "body": "The consumer house edged past estimates for the fourth straight quarter, with revenue up 4% as farm-inputs volumes offset flat cleaning lines. CEO Petra Veldt described the quarter as 'unremarkable in the best way,' pointing to disciplined pricing across food service. No change to full-year guidance was announced.",
-      "cycle": 82690,
-      "dur": 1
-    },
-    {
       "company": "Skarnvale",
       "sector": "logistics",
       "kind": "restructure",
@@ -79,66 +139,6 @@
       "head": "Skarnvale Pauses Third Retrofit and Names Recovery Chief After Vosk Junction Failure",
       "body": "CEO Dorn Vaskell announced a freeze on the third terminal retrofit and pulled forward $95 million in maintenance spending to stabilize the Braeloch and Vosk Junction sites. A newly created recovery office, led by operations veteran Halden Roe, will oversee the phased restart of Vosk Junction, now expected to reach partial throughput within six weeks. Vaskell conceded the triple-retrofit pace had 'outrun our cash and our crews.'",
       "cycle": 82690,
-      "dur": 2
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Boreas Power Returns to Beat as Vantel Cost-Out Plan Runs Ahead of Target",
-      "body": "Boreas posted its first beat since the Vantel deal, with integration chief Dara Holt reporting $260M of the promised $400M in savings already realized. Compute revenue rose 14% as the combined power-and-storage fleet came online for large customers, easing fears that the $6.8B pivot had overreached. CEO Mira Thorne said the cost-out program should complete two quarters early.",
-      "cycle": 82689,
-      "dur": 2
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Carrowwell Lands $1.1B Follow-On to Extend Reindustrialization Machines Contract",
-      "body": "The new Machines plant secured a $1.1B follow-on award to supply a second phase of the national reindustrialization program, lifting the plant's committed order book past $3.5B. CEO Mara Voss said the automated material-handling system rolled out last quarter cut delivery lead times by 22%, which she credited for winning the extension. Management now expects the plant to reach full capacity a full quarter ahead of schedule.",
-      "cycle": 82689,
-      "dur": 2
-    },
-    {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Holtforge Group Adds $900M Interconnector Extension as Order Book Swells",
-      "body": "Holtforge won a $900M extension to its offshore interconnector program, pushing committed cable orders to a record 32 months of production. CEO Yvette Bramm said the marine cable plant will run a third shift to absorb the volume, adding roughly 180 jobs. The win cements Holtforge as the lead supplier on the region's grid-linking buildout.",
-      "cycle": 82689,
-      "dur": 2
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Korrworks Breaks Ground on Second Cross-Region Hub After First Runs Above Plan",
-      "body": "Buoyed by a hub running ahead of forecast, Korrwright committed $480M to a second cross-region facility with anchor commitments already in hand. CEO Rhys Throne said the new site will carry the same automated sorting layer from day one, targeting a first-half opening next year. The company expects the two hubs together to lift throughput capacity by 60%.",
-      "cycle": 82689,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Korrwright Works Debuts Alvence-Built In-House Movement in Meridienne Flagship",
-      "body": "Five months after the $340M Alvence acquisition, Korrwright unveiled the Meridienne Calibre 12, its first timepiece using a fully in-house movement from the Alvence workshops. CEO Dunmore Carrow priced the debut edition at $58,000 and capped the first run at 400 pieces, saying vertical control of movements ends the house's reliance on outside suppliers. Early salon allocations reportedly cleared within days of the private preview.",
-      "cycle": 82689,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Thronehaus & Co. Opens Ferrault Casework Wing to Double Marchwick Output",
-      "body": "Thronehaus commissioned an expanded casework wing at the acquired Ferrault site, roughly doubling annual capacity for its award-winning Verrand Marchwick line. CEO Cora Dray said the $610M buyout has already trimmed casework costs by 18% and will let the house meet a two-year waitlist. The wing employs 340 artisans and is expected to reach full output within three quarters.",
-      "cycle": 82689,
       "dur": 2
     },
     {
@@ -239,16 +239,6 @@
       "head": "Greywater Grid Faces Regulatory Probe Over Reservoir-Compute Water Draw",
       "body": "Regulators opened a formal inquiry into Greywater Grid's reservoir-cooling operations after reports the Blackmere site exceeded permitted water-draw limits during peak load. The probe threatens timelines on the $2B buildout backing its recent $3.4B multi-site pact, and CEO Sable Renwick acknowledged the company is cooperating while disputing the figures. It marks the first serious setback in Renwick's rapid expansion drive.",
       "cycle": 82684,
-      "dur": 8
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Vencyon Signs $2.3B Fleet Rollout to Bring Modular Platform to Fourth and Fifth Hubs",
-      "body": "Halloran secured a multi-year agreement with Brightway Distribution to deploy the modular handling platform across two new regional hubs, the company's largest single order in over a decade. The deal locks in $2.3B over five years and adds an option for a sixth site, marking Vencyon's decisive push past its historic three-hub footprint.",
-      "cycle": 82683,
       "dur": 8
     }
   ]
