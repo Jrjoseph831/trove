@@ -512,7 +512,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82682,
+    "lastEventCycle": 82692,
     "events": [
       {
         "cycle": 0,
@@ -728,6 +728,16 @@
         "body": "Marisol Venn moved to turn the page on the Dawnmere III debacle, launching the Emberline compute line built from a clean-sheet design that cleared regulatory pre-review before shipping. Venn staked her tenure on the release, calling it 'proof we learned everything Dawnmere cost us.' Early orders came in cautious, with several key customers awaiting field validation before committing volume.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82692,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Aperture Compute Lands $2.6B Emberline Supply Pact, Vaulting Past Dawnmere Wreckage",
+        "body": "Aperture Compute signed a multi-year supply agreement worth $2.6B to furnish Emberline units to a consortium of regional data operators, its largest single contract ever. CEO Marisol Venn framed the deal as vindication of the post-Dawnmere reset, saying the platform had 'cleared every review the last line failed.' Shares in the private placement round were reported oversubscribed.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -2235,7 +2245,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82675,
+    "lastEventCycle": 82692,
     "events": [
       {
         "cycle": 0,
@@ -2353,6 +2363,16 @@
         "body": "Brunforge Holdings beat estimates for a fourth straight quarter, with early Vellan Kitchen sales lifting food-service revenue 11%. CEO Kestrel Bramm said the line's attachment rate at existing flagships exceeded expectations, supporting a measured rollout to secondary markets.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82692,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunforge Holdings to Open Ten New Vellan Flagships in Measured National Push",
+        "body": "Brunforge unveiled plans to add ten Vellan flagship locations over 18 months, each pairing its household goods showrooms with the ramping Vellan Kitchen line. CEO Kestrel Bramm characterized the rollout as 'deliberate, funded from operations, and unhurried,' noting no new debt would be required. The move follows three consecutive quarters of earnings beats.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -7500,7 +7520,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82678,
+    "lastEventCycle": 82692,
     "events": [
       {
         "cycle": 0,
@@ -7646,6 +7666,16 @@
         "size": "standard",
         "head": "Halcrest Unveils Meridian Tourbillon in First Major Release Since Overseas Retreat",
         "body": "Iris Marrow debuted the Meridian Tourbillon, a limited run of 250 pieces priced from $180,000, signaling renewed confidence after cost-cutting restored margins. The launch concentrates production entirely at the domestic flagship workshop, the strategy Marrow credited for the recent rebound. Early allocation is said to be fully spoken for by existing clients.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82692,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrest Posts Blowout Quarter as Meridian Tourbillon Sells Out at Launch",
+        "body": "Halcrest reported a 22% jump in quarterly revenue after its Meridian Tourbillon cleared its entire first allocation within weeks, with waitlists now stretching past 14 months. CEO Iris Marrow told a packed briefing that the overseas retreat 'freed every hand to serve the pieces that matter,' and hinted a second complication would follow before year-end. Margins widened to a five-year high of 41%.",
         "effects": {
           "luxury": 0.13
         }
@@ -7979,18 +8009,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82686,
+    "lastEventCycle": 82692,
     "events": [
-      {
-        "cycle": 82549,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Halhold Systems Tops Forecasts as Northgate Anchor Deal Fuels Rebound",
-        "body": "Dahlia Renn's slimmed-down Northgate tier drove quarterly compute revenue up 22 percent to 1.1 billion, beating guidance after last year's painful reset. The anchor client signed in the prior quarter accounted for nearly a third of new capacity bookings. Renn told the call the reworked strategy had 'found its floor,' though margins remain thin as she funds a second buildout phase.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82557,
         "kind": "major_deal",
@@ -8211,6 +8231,16 @@
         "size": "standard",
         "head": "Halhold Systems Names Turnaround Chief and Splits Off Compute Reliability Unit",
         "body": "New CEO Ilse Marren announced a restructuring that carves out a standalone Compute Reliability unit with independent oversight, part of an effort to rebuild trust after the concealed-outage scandal. The plan includes a $120 million remediation fund and new disclosure protocols for partners. Marren said settlement talks over the $900M suit are ongoing but declined to give terms.",
+        "effects": {
+          "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82692,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Halhold Systems Misses as Reliability Split Costs Bite and Clients Defer Renewals",
+        "body": "Halhold reported revenue 11% below guidance as the newly carved-out Compute Reliability Unit absorbed one-time separation costs of $140M. CEO Ilse Marren said several major clients delayed renewals pending resolution of the $900M partner suit, but insisted the turnaround plan remained 'on schedule and on message.' The company withdrew full-year guidance.",
         "effects": {
           "technology": -0.13
         }
@@ -10529,18 +10559,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82685,
+    "lastEventCycle": 82692,
     "events": [
-      {
-        "cycle": 82538,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Lhaus Industries Acquires Power Rival Voss Cell in $6.4B Cash-and-Stock Deal",
-        "body": "Cole Brandt capped his acquisitive streak by buying battery maker Voss Cell, adding 12 gigawatt-hours of annual storage capacity and folding it into the Power & Storage arm. The deal, valued at $6.4 billion, pairs Voss's cell chemistry with the Ferrlands driveline expansion to create an integrated vehicle-and-energy supplier. Brandt framed the purchase as 'the spine of the next decade' for Lhaus.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82545,
         "kind": "restructure",
@@ -10767,6 +10787,16 @@
         "size": "major",
         "head": "Lhaus Industries Recalls Grid-Storage Units Across Two Megadeals as Probe Confirms Overheating Fault",
         "body": "Lhaus issued a recall covering roughly 60,000 grid-storage modules delivered under its $2.8B and $3.4B pacts after regulators confirmed a thermal-management defect behind earlier overheating reports. Cole Brandt said both anchor buyers were notified and that the dedicated storage plant would shift to a corrected design, at an estimated $320 million cost. The company said it aims to preserve delivery commitments but flagged possible schedule slippage on the second megadeal.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82692,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Lhaus Industries Sued for $1.8B as Grid-Storage Partners Allege Concealed Overheating Data",
+        "body": "Two megadeal counterparties filed a joint $1.8B suit claiming Lhaus withheld internal thermal-test findings before signing the grid-storage contracts. The complaint alleges CEO Cole Brandt's team accelerated deployments despite known fault margins, deepening the fallout from last quarter's recall. Lhaus called the claims 'without merit' but disclosed it has set aside $400M in reserves.",
         "effects": {
           "automotive": -0.22
         }
@@ -11846,7 +11876,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82678,
+    "lastEventCycle": 82692,
     "events": [
       {
         "cycle": 0,
@@ -11972,6 +12002,16 @@
         "size": "flash",
         "head": "Ornewright Supply Edges Ahead as Sanitation Concentrate Line Gains Early Traction",
         "body": "Rhys Throne reported a modest quarterly beat, with the newly launched food-service sanitation concentrates contributing $46 million in first-quarter sales ahead of internal targets. The Dunmere cold-chain hub remains on schedule for completion next year. Management held full-year guidance steady, citing stable input costs.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82692,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Supply Beats Again as Dunmere Cold-Chain Hub Nears Completion",
+        "body": "Ornewright posted a second straight beat, with the sanitation concentrate line now contributing to food-service margins and the second Dunmere cold-chain hub reported 80% complete. CEO Rhys Throne said early client adoption 'gives us room to widen the concentrate catalog next quarter.' Operating margin ticked up 90 basis points.",
         "effects": {
           "consumer": 0.06
         }
@@ -12112,7 +12152,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82677,
+    "lastEventCycle": 82692,
     "events": [
       {
         "cycle": 0,
@@ -12230,6 +12270,16 @@
         "body": "The newly launched Heirloom Pro fastening system took the top hardware prize at the annual Tradecraft Tools Expo, cited for its quick-lock mechanism and durability. CEO Cole Fenn said the recognition validates the second plant's push into premium tooling. The award follows a strong reception among professional buyers.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82692,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Palettstone & Sons Secures National Distribution Deal for Heirloom Pro Fastening Line",
+        "body": "Palettstone signed a multi-year distribution agreement placing its award-winning Heirloom Pro fastening system across a national chain of trade-supply outlets. CEO Cole Fenn said the deal, expected to add $120M in annual revenue at maturity, capitalized on 'momentum we'd be foolish to waste.' The company will expand its second plant's fastening output to meet projected demand.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -14316,7 +14366,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82675,
+    "lastEventCycle": 82692,
     "events": [
       {
         "cycle": 0,
@@ -14424,6 +14474,16 @@
         "body": "Facing tight equipment availability across the Coastal Rail corridor, Veldtreach & Sons committed $210 million to a third heavy excavation fleet and two new staging depots. CEO Petra Steg said the buildout secures capacity through the 2027 grading season and positions the firm for follow-on corridor tenders.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82692,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Veldtreach & Sons Edges Past Estimates as Third Fleet Reaches Full Utilization",
+        "body": "Veldtreach reported a modest beat as its newly added third excavation fleet hit full utilization on the coastal rail earthworks contract. CEO Petra Steg said billing milestones were 'tracking slightly ahead of the coastal schedule,' with $310M of the $850M contract now recognized. Management reaffirmed its full-year outlook.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
