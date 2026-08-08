@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-08T12:51:27.486Z",
+  "generatedAt": "2026-08-08T18:39:25.270Z",
   "beats": [
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Erretmark Works Seals Landmark 2,400-Unit Veyron Contract in Cross-Border Push",
+      "body": "Aurelia Garr unveiled a four-year, 2,400-unit Veyron supply agreement valued at roughly $5.2 billion, the largest single order in the company's 105-year history. The deal spans three export corridors and commits Erretmark to a third assembly hall, with Garr calling it 'the platform that redefines our reach.' Backlog now stretches into 2029.",
+      "cycle": 82695,
+      "dur": 8
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Garrware Edges Past Estimates as Marrow Valley Ramps to Full Rate",
+      "body": "Orla Holt reported a modest quarterly beat as the fourth Marrow Valley line reached full output weeks ahead of plan, lifting regional volumes 22%. Margins held firm on stable anchor contracts. Holt reiterated a disciplined pace with no new capital projects announced.",
+      "cycle": 82695,
+      "dur": 1
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Halcyon Industries Commits to Northgate Site as Southport Runs Near Capacity",
+      "body": "Dorian Ashby confirmed a $180 million investment in a new Northgate packaging complex, the company's first facility outside the Southport cluster. Ashby framed the move as measured overflow relief, noting Southport's five lines are running at 96% utilization. Groundbreaking is slated for next quarter.",
+      "cycle": 82695,
+      "dur": 2
+    },
+    {
+      "company": "Palettstead Holdings",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Palettstead Holdings Beats as Fourth Cold-Chain Nears Startup With Anchor Locked",
+      "body": "Orla Marrow posted results above consensus, crediting the pre-committed fourth cold-chain anchor volume for de-risking the ramp. Revenue rose 14% year-on-year as the three-chain network held full stride. Marrow guided to a smooth cutover once the fourth chain commissions next quarter.",
+      "cycle": 82695,
+      "dur": 2
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vencyon Beats and Raises as Fourth and Fifth Hub Rollout Begins",
+      "body": "Iris Halloran topped estimates and lifted full-year guidance as the $2.3B modular platform fleet began installation at the fourth hub. Order momentum pushed backlog up 18% sequentially. Halloran said fifth-hub deployment remains on track for the following quarter.",
+      "cycle": 82695,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "outage",
+      "size": "major",
+      "head": "Vossenspire Holdings Rocked as Grid-Scale Storage Bank Fails During Commissioning",
+      "body": "A containment failure at Vossenspire's flagship storage installation forced a full shutdown mid-commissioning, delaying the $6.8B pact's first delivery milestone. Halden Roe acknowledged 'a serious setback' and pledged an independent review, with penalty clauses now in question. The incident casts doubt on the front-loaded revenue timeline Roe had touted.",
+      "cycle": 82695,
+      "dur": 8
+    },
+    {
+      "company": "Vossenwright Holdings",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vossenwright Holdings Posts Quiet Beat as Seeder Deliveries Run to Schedule",
+      "body": "Quinn Skarn reported a steady quarter with the fleet seeder rollout on pace and margins up modestly on fuel-saving demand. Revenue rose 6% with no surprises. Skarn maintained the company's conservative outlook and flagged only incremental input orders ahead.",
+      "cycle": 82695,
+      "dur": 1
+    },
+    {
+      "company": "Wold & Bramm",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Wold & Bramm Extends Heritage Range With New Household Line Across Four Showrooms",
+      "body": "Mara Marrow launched a companion Heritage household goods collection, rolling it into all four showrooms after the lighting debut's strong sell-through. Early pre-orders covered roughly a third of initial stock. Marrow said the line broadens the heritage banner without straining the showroom model.",
+      "cycle": 82695,
+      "dur": 2
+    },
     {
       "company": "Blackton Industries",
       "sector": "automotive",
@@ -72,16 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Wrenhaus",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Wrenhaus Tops Estimates Again as Second Riverside Plant Nears Completion",
-      "body": "Wrenhaus posted a modest earnings beat, with fixture volumes up 6% ahead of the second Riverside plant's opening. CEO Quinn Thorne credited disciplined cost control and steady distribution-hub throughput. The new plant is expected to come online next quarter, adding capacity without disrupting the company's measured expansion cadence.",
-      "cycle": 82694,
-      "dur": 1
-    },
-    {
       "company": "Brunstone & Sons",
       "sector": "automotive",
       "kind": "recall",
@@ -90,56 +160,6 @@
       "body": "Brunstone & Sons announced a mandatory recall of all 1.4 million Vault Cell Guard Pro storage units, agreeing to a supervised replacement program estimated to cost $2.6B. CEO Halden Crowe, appearing before a packed briefing, conceded the company 'moved too slowly on warnings we should have heeded' and suspended shipments of two related product lines pending review. The move follows the widening concealment probe and consolidated owner-insurer litigation that has dogged the firm for months.",
       "cycle": 82693,
       "dur": 8
-    },
-    {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Calderworks Locks Multi-Year Vaultridge Corridor Supply Pact Worth $780M",
-      "body": "Calderworks Holdings signed a five-year structural-materials agreement with the Vaultridge Corridor infrastructure consortium, valued at roughly $780M and anchored to output from its new fourth kiln. Kestrel Halloran said the deal secures baseline demand through 2031 and gives the company room to weigh a fifth kiln study. Deliveries begin next quarter under staggered volume commitments.",
-      "cycle": 82693,
-      "dur": 2
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Drustcyon Expands Coastal Foundry as Marine-Grade Anchor Backlog Swells",
-      "body": "Drustcyon Industries approved a $220M expansion of its Coastal Foundry to double marine-grade anchor output, citing an order backlog stretching more than three quarters. Aurelia Kessler said demand from harbor and offshore projects had 'outrun even our optimistic ramp,' with the added lines slated to open next year. The company said it is also qualifying a second alloy supplier to protect delivery timelines.",
-      "cycle": 82693,
-      "dur": 2
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Fennmoor Folds Corvane and Threll Into New Medical Systems Division as Integration Costs Bite",
-      "body": "Fennmoor said it will consolidate its recently acquired Corvane Imaging and Threll Diagnostics units under a single Medical Systems division led by newly named president Marta Feld. The company flagged $410M in one-time integration charges over the next two quarters, with Dorian Brandt calling the reorganization 'the plumbing behind the next leg of growth.' Analysts noted the back-to-back deals have pushed Fennmoor's net leverage to its highest level in a decade.",
-      "cycle": 82693,
-      "dur": 2
-    },
-    {
-      "company": "Greenmarsh Agro",
-      "sector": "agriculture",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Greenmarsh Agro Signs Regional Distribution Pact for Seed Coating and Soil Blend Bundle",
-      "body": "Greenmarsh Agro secured a multi-season supply agreement with the Hallowvale grower cooperative covering its companion seed coating and slow-release soil blend, a deal expected to add roughly $95M in annual input revenue. Petra Kessler said the bundled approach 'is finally being adopted at scale by the accounts we've courted for years.' Shipments begin ahead of the spring planting window.",
-      "cycle": 82693,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Ironcrestton Unveils Meridian Line as Blackwood Pushes Into Higher Price Tiers",
-      "body": "Ironcrestton launched Meridian, a limited-run collection positioned above its core fine-goods range, with pieces priced 40% higher than the in-house reset debut. Thea Blackwood framed the move as 'claiming the top of the table now that we control every stitch,' citing the margin gains from pulling production in-house. Initial allocations sold through at flagship locations within days, the company said.",
-      "cycle": 82693,
-      "dur": 2
     },
     {
       "company": "Aperture Compute",

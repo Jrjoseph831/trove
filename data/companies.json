@@ -5932,7 +5932,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82682,
+    "lastEventCycle": 82695,
     "events": [
       {
         "cycle": 0,
@@ -6110,6 +6110,16 @@
         "body": "The sovereign collector fund behind Erretmark's landmark contract exercised an option for an additional 600 Veyron units, extending the order book into a third production year. Aurelia Garr said the second assembly hall, opened last quarter, will absorb the fresh volume without further capacity spend. The deal locks in premium-tier pricing that underpinned Erretmark's century-high margins.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82695,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Erretmark Works Seals Landmark 2,400-Unit Veyron Contract in Cross-Border Push",
+        "body": "Aurelia Garr unveiled a four-year, 2,400-unit Veyron supply agreement valued at roughly $5.2 billion, the largest single order in the company's 105-year history. The deal spans three export corridors and commits Erretmark to a third assembly hall, with Garr calling it 'the platform that redefines our reach.' Backlog now stretches into 2029.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -6787,7 +6797,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82679,
+    "lastEventCycle": 82695,
     "events": [
       {
         "cycle": 0,
@@ -6915,6 +6925,16 @@
         "body": "Garrware's fourth Marrow Valley sorting line entered service two weeks early, lifting quarterly margins to 18.4 percent and beating estimates. Orla Holt said the depot now handles a record daily throughput and confirmed the company is scouting a second regional hub as anchor volumes continue to outpace capacity.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82695,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Garrware Edges Past Estimates as Marrow Valley Ramps to Full Rate",
+        "body": "Orla Holt reported a modest quarterly beat as the fourth Marrow Valley line reached full output weeks ahead of plan, lifting regional volumes 22%. Margins held firm on stable anchor contracts. Holt reiterated a disciplined pace with no new capital projects announced.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -7906,7 +7926,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82681,
+    "lastEventCycle": 82695,
     "events": [
       {
         "cycle": 0,
@@ -8064,6 +8084,16 @@
         "body": "Halcyon Industries edged past estimates with a 4% revenue rise as its fifth Southport line hit full production two weeks ahead of plan. Dorian Ashby said regional packaging capacity is now fully absorbed by existing contracts, with no idle output. Operating margin held steady at 15.8%.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82695,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcyon Industries Commits to Northgate Site as Southport Runs Near Capacity",
+        "body": "Dorian Ashby confirmed a $180 million investment in a new Northgate packaging complex, the company's first facility outside the Southport cluster. Ashby framed the move as measured overflow relief, noting Southport's five lines are running at 96% utilization. Groundbreaking is slated for next quarter.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -12109,7 +12139,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82676,
+    "lastEventCycle": 82695,
     "events": [
       {
         "cycle": 0,
@@ -12215,6 +12245,16 @@
         "size": "standard",
         "head": "Palettstead Locks Fourth Chain to Anchor New Cold-Chain Before Completion",
         "body": "Orla Marrow signed regional grocer Vellmark to a seven-year reusable cold-chain contract, pre-committing over 60% of the fourth facility's capacity still under construction. The deal is valued at roughly $190M across its term and secures overflow volume that had strained the existing three chains. Marrow called it 'the boldest pre-lease we've ever underwritten.'",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82695,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Palettstead Holdings Beats as Fourth Cold-Chain Nears Startup With Anchor Locked",
+        "body": "Orla Marrow posted results above consensus, crediting the pre-committed fourth cold-chain anchor volume for de-risking the ramp. Revenue rose 14% year-on-year as the three-chain network held full stride. Marrow guided to a smooth cutover once the fourth chain commissions next quarter.",
         "effects": {
           "logistics": 0.13
         }
@@ -14593,7 +14633,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82683,
+    "lastEventCycle": 82695,
     "events": [
       {
         "cycle": 0,
@@ -14742,6 +14782,16 @@
         "effects": {
           "logistics": 0.22
         }
+      },
+      {
+        "cycle": 82695,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vencyon Beats and Raises as Fourth and Fifth Hub Rollout Begins",
+        "body": "Iris Halloran topped estimates and lifted full-year guidance as the $2.3B modular platform fleet began installation at the fourth hub. Order momentum pushed backlog up 18% sequentially. Halloran said fifth-hub deployment remains on track for the following quarter.",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
@@ -14849,7 +14899,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82683,
+    "lastEventCycle": 82695,
     "events": [
       {
         "cycle": 0,
@@ -14983,6 +15033,16 @@
         "body": "Roe reported quarterly revenue of $2.9B, up 34% year-over-year, with the first tranche of the $6.8B storage pact recognized ahead of schedule. Management raised full-year guidance and flagged $1.2B in staged deliveries queued for the next two quarters, though Roe warned margins would stay thin as new capacity ramps.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82695,
+        "kind": "outage",
+        "size": "major",
+        "head": "Vossenspire Holdings Rocked as Grid-Scale Storage Bank Fails During Commissioning",
+        "body": "A containment failure at Vossenspire's flagship storage installation forced a full shutdown mid-commissioning, delaying the $6.8B pact's first delivery milestone. Halden Roe acknowledged 'a serious setback' and pledged an independent review, with penalty clauses now in question. The incident casts doubt on the front-loaded revenue timeline Roe had touted.",
+        "effects": {
+          "energy": -0.22
         }
       }
     ]
@@ -15404,7 +15464,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82666,
+    "lastEventCycle": 82695,
     "events": [
       {
         "cycle": 0,
@@ -15473,6 +15533,16 @@
         "effects": {
           "agriculture": 0.06
         }
+      },
+      {
+        "cycle": 82695,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenwright Holdings Posts Quiet Beat as Seeder Deliveries Run to Schedule",
+        "body": "Quinn Skarn reported a steady quarter with the fleet seeder rollout on pace and margins up modestly on fuel-saving demand. Revenue rose 6% with no surprises. Skarn maintained the company's conservative outlook and flagged only incremental input orders ahead.",
+        "effects": {
+          "agriculture": 0.06
+        }
       }
     ]
   },
@@ -15487,7 +15557,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82675,
+    "lastEventCycle": 82695,
     "events": [
       {
         "cycle": 0,
@@ -15585,6 +15655,16 @@
         "body": "Wold & Bramm reported profit up 7% on strong early sales of its Heritage Lighting Collection across all four showrooms. CEO Mara Marrow said sell-through outpaced internal targets and hinted at scouting a fifth location for late next year.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82695,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Wold & Bramm Extends Heritage Range With New Household Line Across Four Showrooms",
+        "body": "Mara Marrow launched a companion Heritage household goods collection, rolling it into all four showrooms after the lighting debut's strong sell-through. Early pre-orders covered roughly a third of initial stock. Marrow said the line broadens the heritage banner without straining the showroom model.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
