@@ -1172,7 +1172,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82671,
+    "lastEventCycle": 82693,
     "events": [
       {
         "cycle": 0,
@@ -1258,6 +1258,16 @@
         "size": "flash",
         "head": "Blackmoor Ticks Higher as Depth Kit Attach Rates Climb",
         "body": "Blackmoor posted a modest quarterly beat, with the new precision depth kit attaching to roughly 34% of Holloway seed-drill orders. CEO Soren Dray noted the kit's uptake among larger row-crop operators but cautioned that seasonal ordering would keep momentum gradual. Revenue rose 3% year over year.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82693,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Blackmoor Nudges Ahead as Depth Kit and Wide-Row Drill Sustain Attach Rates",
+        "body": "Blackmoor posted a modest quarterly beat, with revenue up 4% as precision depth-kit attach rates held near record levels across the Holloway range. Soren Dray reiterated the company's patient stance, pointing to steady reorder patterns rather than new launches. Management left full-year guidance unchanged.",
         "effects": {
           "agriculture": 0.06
         }
@@ -2778,18 +2788,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82685,
+    "lastEventCycle": 82693,
     "events": [
-      {
-        "cycle": 82525,
-        "kind": "recall",
-        "size": "major",
-        "head": "Brunstone & Sons Recalls Entire Ardent Hauler Fleet Over Pack Heating",
-        "body": "Following the safety review, Brunstone & Sons has ordered a full recall of all 6,200 Ardent Long-Range Haulers shipped to date, citing confirmed thermal faults in the power pack under sustained load. CEO Sable Veldt, in a combative briefing, blamed a supplier's cell batch but pledged free replacements and an estimated 220-million remediation program. Deliveries of new Ardent units are suspended indefinitely pending a redesigned pack.",
-        "effects": {
-          "automotive": -0.22
-        }
-      },
       {
         "cycle": 82530,
         "kind": "earnings_miss",
@@ -3012,6 +3012,16 @@
         "size": "major",
         "head": "Brunstone & Sons Hit With Regulator Suit as Vault Cell Probe Widens to Concealment Charges",
         "body": "State authorities filed a civil action against Brunstone & Sons seeking up to $900 million in penalties, alleging executives suppressed pre-launch overheating data on the Vault Cell Guard Pro. The filing names the fleet-fire memos surfaced last month and asks the court to compel a full design audit. Halden Crowe called the claims 'overreaching' but confirmed the company has set aside $600 million against combined recall and legal exposure.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82693,
+        "kind": "recall",
+        "size": "major",
+        "head": "Brunstone & Sons Orders Full Recall of 1.4 Million Vault Cell Guard Pro Units as Regulators Force Action",
+        "body": "Brunstone & Sons announced a mandatory recall of all 1.4 million Vault Cell Guard Pro storage units, agreeing to a supervised replacement program estimated to cost $2.6B. CEO Halden Crowe, appearing before a packed briefing, conceded the company 'moved too slowly on warnings we should have heeded' and suspended shipments of two related product lines pending review. The move follows the widening concealment probe and consolidated owner-insurer litigation that has dogged the firm for months.",
         "effects": {
           "automotive": -0.22
         }
@@ -3385,7 +3395,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82673,
+    "lastEventCycle": 82693,
     "events": [
       {
         "cycle": 0,
@@ -3491,6 +3501,16 @@
         "size": "standard",
         "head": "Calderworks Beats as Fourth Kiln Comes Online Ahead of Ramp",
         "body": "Calderworks topped estimates with revenue up 11%, as the newly commissioned fourth kiln began feeding the decade-long Tessen Ridge supply pact. CEO Kestrel Halloran said the added capacity has already cleared a modest order backlog and positions the firm to pursue additional regional pacts. Structural materials demand remains robust across the corridor.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82693,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Calderworks Locks Multi-Year Vaultridge Corridor Supply Pact Worth $780M",
+        "body": "Calderworks Holdings signed a five-year structural-materials agreement with the Vaultridge Corridor infrastructure consortium, valued at roughly $780M and anchored to output from its new fourth kiln. Kestrel Halloran said the deal secures baseline demand through 2031 and gives the company room to weigh a fifth kiln study. Deliveries begin next quarter under staggered volume commitments.",
         "effects": {
           "construction": 0.13
         }
@@ -5501,7 +5521,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82677,
+    "lastEventCycle": 82693,
     "events": [
       {
         "cycle": 0,
@@ -5617,6 +5637,16 @@
         "size": "standard",
         "head": "Drustcyon Beats Again as Marine-Grade Anchor Orders Outpace Foundry Ramp",
         "body": "Drustcyon posted quarterly revenue of $612 million, up 14% year over year, as early demand for its new marine-grade anchor system exceeded internal forecasts. CEO Aurelia Kessler said the coastal foundry is already running two shifts ahead of schedule and hinted at a third product family for offshore platforms. Order backlog rose to a record $1.9 billion.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82693,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Drustcyon Expands Coastal Foundry as Marine-Grade Anchor Backlog Swells",
+        "body": "Drustcyon Industries approved a $220M expansion of its Coastal Foundry to double marine-grade anchor output, citing an order backlog stretching more than three quarters. Aurelia Kessler said demand from harbor and offshore projects had 'outrun even our optimistic ramp,' with the added lines slated to open next year. The company said it is also qualifying a second alloy supplier to protect delivery timelines.",
         "effects": {
           "construction": 0.13
         }
@@ -6236,7 +6266,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82682,
+    "lastEventCycle": 82693,
     "events": [
       {
         "cycle": 0,
@@ -6444,6 +6474,16 @@
         "body": "Fresh off folding Threll Diagnostics into its portfolio, Dorian Brandt has again reached for the checkbook, agreeing to acquire imaging specialist Corvane for $5.1 billion in cash. The tie-up would give Fennmoor a full bedside-to-scanner medical stack, though analysts flagged that back-to-back deals push net leverage past 3x for the first time in a decade. Brandt, in his 57th year at the helm, framed the purchase as 'completing the diagnostic loop.'",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82693,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Fennmoor Folds Corvane and Threll Into New Medical Systems Division as Integration Costs Bite",
+        "body": "Fennmoor said it will consolidate its recently acquired Corvane Imaging and Threll Diagnostics units under a single Medical Systems division led by newly named president Marta Feld. The company flagged $410M in one-time integration charges over the next two quarters, with Dorian Brandt calling the reorganization 'the plumbing behind the next leg of growth.' Analysts noted the back-to-back deals have pushed Fennmoor's net leverage to its highest level in a decade.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -6971,7 +7011,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82671,
+    "lastEventCycle": 82693,
     "events": [
       {
         "cycle": 0,
@@ -7059,6 +7099,16 @@
         "body": "Greenmarsh Agro widened its companion seed coating to cover-crop and rotational varieties, broadening the product's fit within its slow-release soil blend program. CEO Petra Kessler described the step as \"deliberate, field-tested groundwork,\" with trials showing consistent germination gains. Availability begins ahead of the next planting season.",
         "effects": {
           "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82693,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Greenmarsh Agro Signs Regional Distribution Pact for Seed Coating and Soil Blend Bundle",
+        "body": "Greenmarsh Agro secured a multi-season supply agreement with the Hallowvale grower cooperative covering its companion seed coating and slow-release soil blend, a deal expected to add roughly $95M in annual input revenue. Petra Kessler said the bundled approach 'is finally being adopted at scale by the accounts we've courted for years.' Shipments begin ahead of the spring planting window.",
+        "effects": {
+          "agriculture": 0.13
         }
       }
     ]
@@ -9356,7 +9406,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82683,
+    "lastEventCycle": 82693,
     "events": [
       {
         "cycle": 0,
@@ -9548,6 +9598,16 @@
         "size": "standard",
         "head": "Ironcrestton Beats as Blackwood's In-House Reset Lifts Margins",
         "body": "First full quarter under fully in-house production delivered a gross margin of 61%, up nine points from the licensing era, on revenue of $740M. Blackwood credited tighter control over the origin-standard supply chain and said reorder rates on the debut collection ran 22% above internal forecasts.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82693,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Ironcrestton Unveils Meridian Line as Blackwood Pushes Into Higher Price Tiers",
+        "body": "Ironcrestton launched Meridian, a limited-run collection positioned above its core fine-goods range, with pieces priced 40% higher than the in-house reset debut. Thea Blackwood framed the move as 'claiming the top of the table now that we control every stitch,' citing the margin gains from pulling production in-house. Initial allocations sold through at flagship locations within days, the company said.",
         "effects": {
           "luxury": 0.13
         }
@@ -12803,7 +12863,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82681,
+    "lastEventCycle": 82693,
     "events": [
       {
         "cycle": 0,
@@ -12951,6 +13011,16 @@
         "body": "Steg Tooling posted its tenth consecutive quarterly beat, with revenue up 7.4% as the first two Kelmar cells held near full utilization. Iris Vossen credited disciplined fastener pricing and told the board the third cell remains on schedule for a spring commissioning. Fixings margins widened to 21.3%, a two-year high.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82693,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Steg Tooling Stretches Streak to Eleven as Third Kelmar Cell Comes Online",
+        "body": "Steg Tooling reported its eleventh consecutive earnings beat, with fastener and auto-parts margins holding steady as the third Kelmar cell began production on schedule. Iris Vossen said the new cell is already running at half its planned throughput with room to scale through the year. The company added modestly to its capacity outlook while keeping guidance conservative.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]

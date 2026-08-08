@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-08T01:44:49.160Z",
+  "generatedAt": "2026-08-08T06:56:01.270Z",
   "beats": [
+    {
+      "company": "Blackmoor",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Blackmoor Nudges Ahead as Depth Kit and Wide-Row Drill Sustain Attach Rates",
+      "body": "Blackmoor posted a modest quarterly beat, with revenue up 4% as precision depth-kit attach rates held near record levels across the Holloway range. Soren Dray reiterated the company's patient stance, pointing to steady reorder patterns rather than new launches. Management left full-year guidance unchanged.",
+      "cycle": 82693,
+      "dur": 1
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "major",
+      "head": "Brunstone & Sons Orders Full Recall of 1.4 Million Vault Cell Guard Pro Units as Regulators Force Action",
+      "body": "Brunstone & Sons announced a mandatory recall of all 1.4 million Vault Cell Guard Pro storage units, agreeing to a supervised replacement program estimated to cost $2.6B. CEO Halden Crowe, appearing before a packed briefing, conceded the company 'moved too slowly on warnings we should have heeded' and suspended shipments of two related product lines pending review. The move follows the widening concealment probe and consolidated owner-insurer litigation that has dogged the firm for months.",
+      "cycle": 82693,
+      "dur": 8
+    },
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Calderworks Locks Multi-Year Vaultridge Corridor Supply Pact Worth $780M",
+      "body": "Calderworks Holdings signed a five-year structural-materials agreement with the Vaultridge Corridor infrastructure consortium, valued at roughly $780M and anchored to output from its new fourth kiln. Kestrel Halloran said the deal secures baseline demand through 2031 and gives the company room to weigh a fifth kiln study. Deliveries begin next quarter under staggered volume commitments.",
+      "cycle": 82693,
+      "dur": 2
+    },
+    {
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Drustcyon Expands Coastal Foundry as Marine-Grade Anchor Backlog Swells",
+      "body": "Drustcyon Industries approved a $220M expansion of its Coastal Foundry to double marine-grade anchor output, citing an order backlog stretching more than three quarters. Aurelia Kessler said demand from harbor and offshore projects had 'outrun even our optimistic ramp,' with the added lines slated to open next year. The company said it is also qualifying a second alloy supplier to protect delivery timelines.",
+      "cycle": 82693,
+      "dur": 2
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Fennmoor Folds Corvane and Threll Into New Medical Systems Division as Integration Costs Bite",
+      "body": "Fennmoor said it will consolidate its recently acquired Corvane Imaging and Threll Diagnostics units under a single Medical Systems division led by newly named president Marta Feld. The company flagged $410M in one-time integration charges over the next two quarters, with Dorian Brandt calling the reorganization 'the plumbing behind the next leg of growth.' Analysts noted the back-to-back deals have pushed Fennmoor's net leverage to its highest level in a decade.",
+      "cycle": 82693,
+      "dur": 2
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Greenmarsh Agro Signs Regional Distribution Pact for Seed Coating and Soil Blend Bundle",
+      "body": "Greenmarsh Agro secured a multi-season supply agreement with the Hallowvale grower cooperative covering its companion seed coating and slow-release soil blend, a deal expected to add roughly $95M in annual input revenue. Petra Kessler said the bundled approach 'is finally being adopted at scale by the accounts we've courted for years.' Shipments begin ahead of the spring planting window.",
+      "cycle": 82693,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Ironcrestton Unveils Meridian Line as Blackwood Pushes Into Higher Price Tiers",
+      "body": "Ironcrestton launched Meridian, a limited-run collection positioned above its core fine-goods range, with pieces priced 40% higher than the in-house reset debut. Thea Blackwood framed the move as 'claiming the top of the table now that we control every stitch,' citing the margin gains from pulling production in-house. Initial allocations sold through at flagship locations within days, the company said.",
+      "cycle": 82693,
+      "dur": 2
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Steg Tooling Stretches Streak to Eleven as Third Kelmar Cell Comes Online",
+      "body": "Steg Tooling reported its eleventh consecutive earnings beat, with fastener and auto-parts margins holding steady as the third Kelmar cell began production on schedule. Iris Vossen said the new cell is already running at half its planned throughput with room to scale through the year. The company added modestly to its capacity outlook while keeping guidance conservative.",
+      "cycle": 82693,
+      "dur": 1
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -52,16 +132,6 @@
       "dur": 8
     },
     {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Supply Beats Again as Dunmere Cold-Chain Hub Nears Completion",
-      "body": "Ornewright posted a second straight beat, with the sanitation concentrate line now contributing to food-service margins and the second Dunmere cold-chain hub reported 80% complete. CEO Rhys Throne said early client adoption 'gives us room to widen the concentrate catalog next quarter.' Operating margin ticked up 90 basis points.",
-      "cycle": 82692,
-      "dur": 1
-    },
-    {
       "company": "Palettstone & Sons",
       "sector": "consumer",
       "kind": "major_deal",
@@ -69,26 +139,6 @@
       "head": "Palettstone & Sons Secures National Distribution Deal for Heirloom Pro Fastening Line",
       "body": "Palettstone signed a multi-year distribution agreement placing its award-winning Heirloom Pro fastening system across a national chain of trade-supply outlets. CEO Cole Fenn said the deal, expected to add $120M in annual revenue at maturity, capitalized on 'momentum we'd be foolish to waste.' The company will expand its second plant's fastening output to meet projected demand.",
       "cycle": 82692,
-      "dur": 2
-    },
-    {
-      "company": "Veldtreach & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Veldtreach & Sons Edges Past Estimates as Third Fleet Reaches Full Utilization",
-      "body": "Veldtreach reported a modest beat as its newly added third excavation fleet hit full utilization on the coastal rail earthworks contract. CEO Petra Steg said billing milestones were 'tracking slightly ahead of the coastal schedule,' with $310M of the $850M contract now recognized. Management reaffirmed its full-year outlook.",
-      "cycle": 82692,
-      "dur": 1
-    },
-    {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aldouscraft Mfg. Beats as Fourth Extrusion Line Ramps Ahead of Schedule",
-      "body": "Aldouscraft reported a solid beat as its new fourth extrusion line reached commercial output a quarter early, easing backlog on the dual grid feeder-cable contracts. CEO Soren Ashby said the added capacity lifted deliverable volumes without straining pricing. Guidance was nudged higher on sustained grid demand.",
-      "cycle": 82691,
       "dur": 2
     },
     {
@@ -110,36 +160,6 @@
       "body": "A consolidated class action was filed against Brunmark Motors on behalf of some 240,000 Veyra S owners, alleging the company knew of the battery-pack defect before the redesigned unit shipped. Plaintiffs seek damages exceeding $600 million, citing internal test records surfaced during the regulatory probe. CEO Halvard Renn said the company would 'contest the claims vigorously' while accelerating replacement pack production.",
       "cycle": 82691,
       "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Castlehold Breaks Ground on Second Plant to Scale Modular Storage Platform",
-      "body": "Castlehold committed roughly $310 million to a second production facility dedicated to its recently launched modular storage platform, aiming to double capacity by late 2027. CEO Halden Voss framed the build as necessary to meet demand from the landmark grid-storage contract. The move marks Castlehold's first greenfield expansion since the Saltmere spin-off.",
-      "cycle": 82691,
-      "dur": 2
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fenncyon Beats as Eastfield Grand Loop Mobilization Front-Loads Revenue",
-      "body": "Fenncyon topped estimates as early mobilization on the $3.4 billion Eastfield Grand Loop megaproject converted faster than expected, adding to an already record backlog. CEO Nadia Ashby said initial earthmoving phases were tracking ahead of schedule and margin. The company raised full-year guidance modestly on the accelerated ramp.",
-      "cycle": 82691,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenspire Supply Beats as Halvane-Powered Corveil Sells Out Across Larkmoor Salons",
-      "body": "Vossenspire topped estimates as the first in-house Halvane movement drove Corveil timepiece sales, with several Larkmoor salons reporting sellouts within weeks of launch. CEO Quinn Marrow said vertical integration lifted timepiece gross margins by roughly four points versus the prior year. The company hinted at a second Larkmoor salon wave to capture demand.",
-      "cycle": 82691,
-      "dur": 2
     },
     {
       "company": "Marlgear Supply",
@@ -199,36 +219,6 @@
       "head": "Kessel Drive Board Removes Neave Corliss as Storage Crisis Deepens",
       "body": "The Kessel Drive board ousted CEO Neave Corliss following the escalating safety probe, the 4,200-job overhaul, and the shareholder suit tied to storage failures. Directors appointed veteran operations chief Marta Vinke as interim CEO, pledging a full internal review of the halted storage line. The stock has shed nearly half its value since the probe opened.",
       "cycle": 82686,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Brunstone & Sons Hit With Regulator Suit as Vault Cell Probe Widens to Concealment Charges",
-      "body": "State authorities filed a civil action against Brunstone & Sons seeking up to $900 million in penalties, alleging executives suppressed pre-launch overheating data on the Vault Cell Guard Pro. The filing names the fleet-fire memos surfaced last month and asks the court to compel a full design audit. Halden Crowe called the claims 'overreaching' but confirmed the company has set aside $600 million against combined recall and legal exposure.",
-      "cycle": 82685,
-      "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "major",
-      "head": "Lhaus Industries Recalls Grid-Storage Units Across Two Megadeals as Probe Confirms Overheating Fault",
-      "body": "Lhaus issued a recall covering roughly 60,000 grid-storage modules delivered under its $2.8B and $3.4B pacts after regulators confirmed a thermal-management defect behind earlier overheating reports. Cole Brandt said both anchor buyers were notified and that the dedicated storage plant would shift to a corrected design, at an estimated $320 million cost. The company said it aims to preserve delivery commitments but flagged possible schedule slippage on the second megadeal.",
-      "cycle": 82685,
-      "dur": 8
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Thaldale Group Rocked as Probe Finds Diverted Funds Tied to Carved-Out Fastening Unit",
-      "body": "An expanded investigation concluded that roughly $140 million was funneled through supplier contracts in the now-separated fastening division under prior leadership. Corin Vale said the findings 'predate this board's mandate' and pledged full cooperation, but shares of the parent came under heavy pressure as three former managers were referred to prosecutors. Vale accelerated the fastening carve-out timeline to insulate the core business.",
-      "cycle": 82685,
       "dur": 8
     }
   ]
