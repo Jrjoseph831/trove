@@ -1,14 +1,84 @@
 {
-  "generatedAt": "2026-08-08T06:56:01.270Z",
+  "generatedAt": "2026-08-08T12:51:27.486Z",
   "beats": [
     {
-      "company": "Blackmoor",
-      "sector": "agriculture",
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Blackton Industries Hit With Class Action Over Halvern-Line Failures",
+      "body": "A consolidated class-action suit was filed against Blackton Industries seeking $1.2B in damages tied to the defective Halvern-line components. Plaintiffs allege the company delayed the recall despite early failure reports, a claim CEO Cassian Rode disputed as 'a mischaracterization of our safety record.' The litigation compounds recall costs that already gutted last quarter's margins, sending Blackton into its most turbulent stretch under Rode.",
+      "cycle": 82694,
+      "dur": 8
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Bruncrest Works Wins Landmark $5.2B Compute Supply Pact on Aria Prime Momentum",
+      "body": "Bruncrest Works has secured a five-year, $5.2B agreement to supply Aria Prime units to a consortium of data operators, its largest contract on record. CEO Ines Marlow called it validation of the Eastfield build strategy that revived the Aria line, with first shipments slated for next quarter. The deal vaults Bruncrest from turnaround story to serious contender and locks in the Eastfield plant at full capacity.",
+      "cycle": 82694,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Castlestone Breaks Ground on Grid-Core Campus as Karsh Bets on Runaway Demand",
+      "body": "Castlestone will invest $2.1B in a dedicated grid-core campus outside Talleridge, tripling projected output by 2028. CEO Pell Karsh called the anchor deal 'just the opening chapter' and confirmed talks with two additional buyers. The move stretches Castlestone's balance sheet but positions it to clear a backlog now exceeding 14 months.",
+      "cycle": 82694,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Greywater Grid Halts Reservoir Buildout and Redraws Water Plan Amid Regulatory Pressure",
+      "body": "Greywater Grid has suspended its $2B reservoir-compute buildout and committed to a costly closed-loop redesign after regulators flagged excessive water draw. CEO Sable Renwick unveiled a $900M remediation and cooling overhaul, conceding the original design 'outpaced its environmental footing.' The pause casts doubt on delivery timelines for the $3.4B multi-site pact, with penalties under negotiation.",
+      "cycle": 82694,
+      "dur": 8
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Gromford Works Names Halvard Pryce Permanent Chief to Steady Post-Meridian Rebuild",
+      "body": "Gromford's board has appointed Halvard Pryce as permanent CEO, ending the caretaker period that followed the Meridian fallout. Pryce, a veteran of the luxury-goods sector, inherits a slimmed timepiece operation and pledged to 'restore discipline before ambition.' Analysts welcomed the clarity after months of turmoil, though the Meridian spinoff's fate remains unresolved.",
+      "cycle": 82694,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Varnvale & Sons Buys Rare-Metals Supplier Corvane to Secure Timepiece Materials",
+      "body": "Bram Wold has agreed to acquire Corvane Metallurgy for $680M, locking in the precious alloys used across Varnvale's Heritage timepieces. The deal is the third acquisition in eighteen months for the acquisitive Wold, who framed it as insulating the house from volatile materials pricing. Corvane's Ridgemont refinery will supply the restored Marchetti atelier directly.",
+      "cycle": 82694,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Varnvale House Slips as Regent Rollout Strains Sovereign Supply",
+      "body": "Varnvale House missed quarterly expectations as production bottlenecks on the new Regent timepiece delayed Sovereign deliveries, denting margins by four points. CEO Adrienne Sole conceded the top-tier expansion 'moved faster than our benches could carry,' pledging added artisan capacity by year-end. The flagship salon reported record foot traffic but thinning inventory.",
+      "cycle": 82694,
+      "dur": 2
+    },
+    {
+      "company": "Wrenhaus",
+      "sector": "construction",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Blackmoor Nudges Ahead as Depth Kit and Wide-Row Drill Sustain Attach Rates",
-      "body": "Blackmoor posted a modest quarterly beat, with revenue up 4% as precision depth-kit attach rates held near record levels across the Holloway range. Soren Dray reiterated the company's patient stance, pointing to steady reorder patterns rather than new launches. Management left full-year guidance unchanged.",
-      "cycle": 82693,
+      "head": "Wrenhaus Tops Estimates Again as Second Riverside Plant Nears Completion",
+      "body": "Wrenhaus posted a modest earnings beat, with fixture volumes up 6% ahead of the second Riverside plant's opening. CEO Quinn Thorne credited disciplined cost control and steady distribution-hub throughput. The new plant is expected to come online next quarter, adding capacity without disrupting the company's measured expansion cadence.",
+      "cycle": 82694,
       "dur": 1
     },
     {
@@ -72,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Steg Tooling Stretches Streak to Eleven as Third Kelmar Cell Comes Online",
-      "body": "Steg Tooling reported its eleventh consecutive earnings beat, with fastener and auto-parts margins holding steady as the third Kelmar cell began production on schedule. Iris Vossen said the new cell is already running at half its planned throughput with room to scale through the year. The company added modestly to its capacity outlook while keeping guidance conservative.",
-      "cycle": 82693,
-      "dur": 1
-    },
-    {
       "company": "Aperture Compute",
       "sector": "technology",
       "kind": "major_deal",
@@ -92,36 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Brunforge Holdings",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Brunforge Holdings to Open Ten New Vellan Flagships in Measured National Push",
-      "body": "Brunforge unveiled plans to add ten Vellan flagship locations over 18 months, each pairing its household goods showrooms with the ramping Vellan Kitchen line. CEO Kestrel Bramm characterized the rollout as 'deliberate, funded from operations, and unhurried,' noting no new debt would be required. The move follows three consecutive quarters of earnings beats.",
-      "cycle": 82692,
-      "dur": 2
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcrest Posts Blowout Quarter as Meridian Tourbillon Sells Out at Launch",
-      "body": "Halcrest reported a 22% jump in quarterly revenue after its Meridian Tourbillon cleared its entire first allocation within weeks, with waitlists now stretching past 14 months. CEO Iris Marrow told a packed briefing that the overseas retreat 'freed every hand to serve the pieces that matter,' and hinted a second complication would follow before year-end. Margins widened to a five-year high of 41%.",
-      "cycle": 82692,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Halhold Systems Misses as Reliability Split Costs Bite and Clients Defer Renewals",
-      "body": "Halhold reported revenue 11% below guidance as the newly carved-out Compute Reliability Unit absorbed one-time separation costs of $140M. CEO Ilse Marren said several major clients delayed renewals pending resolution of the $900M partner suit, but insisted the turnaround plan remained 'on schedule and on message.' The company withdrew full-year guidance.",
-      "cycle": 82692,
-      "dur": 2
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "lawsuit",
@@ -130,16 +160,6 @@
       "body": "Two megadeal counterparties filed a joint $1.8B suit claiming Lhaus withheld internal thermal-test findings before signing the grid-storage contracts. The complaint alleges CEO Cole Brandt's team accelerated deployments despite known fault margins, deepening the fallout from last quarter's recall. Lhaus called the claims 'without merit' but disclosed it has set aside $400M in reserves.",
       "cycle": 82692,
       "dur": 8
-    },
-    {
-      "company": "Palettstone & Sons",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Palettstone & Sons Secures National Distribution Deal for Heirloom Pro Fastening Line",
-      "body": "Palettstone signed a multi-year distribution agreement placing its award-winning Heirloom Pro fastening system across a national chain of trade-supply outlets. CEO Cole Fenn said the deal, expected to add $120M in annual revenue at maturity, capitalized on 'momentum we'd be foolish to waste.' The company will expand its second plant's fastening output to meet projected demand.",
-      "cycle": 82692,
-      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -199,26 +219,6 @@
       "head": "Bruncrest Works Unveils Aria Prime, Doubling Down After Ultra Rebound",
       "body": "Riding momentum from the leaner Aria Ultra, Ines Marlow launched Aria Prime, a higher-performance compute tier priced 40% above Ultra and aimed at data-center buyers. Marlow staged a splashy reveal promising 'the biggest leap since Eastfield opened,' with first shipments slated for next quarter. The bold move drew heavy attention given the volatile ramp that preceded it.",
       "cycle": 82688,
-      "dur": 8
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Hesperforge Supply Lands Landmark Marine-Grade Framework Deal Worth $1.4B",
-      "body": "Sable Halloran secured a five-year framework agreement to supply marine-grade structural materials to a consortium of shipyards, valued at up to $1.4 billion. The contract will absorb the bulk of the newly opened third mill's output and locks in Hesperforge's record backlog through the decade. Halloran called it the largest single agreement in the company's 112-year history.",
-      "cycle": 82686,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Kessel Drive Board Removes Neave Corliss as Storage Crisis Deepens",
-      "body": "The Kessel Drive board ousted CEO Neave Corliss following the escalating safety probe, the 4,200-job overhaul, and the shareholder suit tied to storage failures. Directors appointed veteran operations chief Marta Vinke as interim CEO, pledging a full internal review of the halted storage line. The stock has shed nearly half its value since the probe opened.",
-      "cycle": 82686,
       "dur": 8
     }
   ]

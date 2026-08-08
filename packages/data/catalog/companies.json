@@ -1285,7 +1285,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82685,
+    "lastEventCycle": 82694,
     "events": [
       {
         "cycle": 0,
@@ -1489,6 +1489,16 @@
         "body": "Blackton posted a quarterly loss of $86 million, well below expectations, after booking $210 million in recall and remediation charges tied to the 1.8 million defective Halvern-line components. Cassian Rode said replacement production has displaced higher-margin orders and warned the drag would persist into next quarter. The company suspended its interim payout while it rebuilds the affected line.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82694,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Blackton Industries Hit With Class Action Over Halvern-Line Failures",
+        "body": "A consolidated class-action suit was filed against Blackton Industries seeking $1.2B in damages tied to the defective Halvern-line components. Plaintiffs allege the company delayed the recall despite early failure reports, a claim CEO Cassian Rode disputed as 'a mischaracterization of our safety record.' The litigation compounds recall costs that already gutted last quarter's margins, sending Blackton into its most turbulent stretch under Rode.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -2006,16 +2016,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82688,
+    "lastEventCycle": 82694,
     "events": [
-      {
-        "cycle": 82543,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Bruncrest Works Ousts Petra Veldt as Meridian Demand Probe Escalates",
-        "body": "The board removed Petra Veldt after 46 years at the helm as investigators expanded the inquiry into allegedly inflated Meridian demand figures used to justify the new campus. Veldt's departure comes amid a suspension of campus construction and a restatement review of two prior quarters. The company named turnaround veteran Corwin Hale as interim chief executive.",
-        "effects": {}
-      },
       {
         "cycle": 82549,
         "kind": "lawsuit",
@@ -2238,6 +2240,16 @@
         "size": "major",
         "head": "Bruncrest Works Unveils Aria Prime, Doubling Down After Ultra Rebound",
         "body": "Riding momentum from the leaner Aria Ultra, Ines Marlow launched Aria Prime, a higher-performance compute tier priced 40% above Ultra and aimed at data-center buyers. Marlow staged a splashy reveal promising 'the biggest leap since Eastfield opened,' with first shipments slated for next quarter. The bold move drew heavy attention given the volatile ramp that preceded it.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82694,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Bruncrest Works Wins Landmark $5.2B Compute Supply Pact on Aria Prime Momentum",
+        "body": "Bruncrest Works has secured a five-year, $5.2B agreement to supply Aria Prime units to a consortium of data operators, its largest contract on record. CEO Ines Marlow called it validation of the Eastfield build strategy that revived the Aria line, with first shipments slated for next quarter. The deal vaults Bruncrest from turnaround story to serious contender and locks in the Eastfield plant at full capacity.",
         "effects": {
           "technology": 0.22
         }
@@ -4525,18 +4537,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82685,
+    "lastEventCycle": 82694,
     "events": [
-      {
-        "cycle": 82542,
-        "kind": "earnings_miss",
-        "size": "standard",
-        "head": "Castlestone Slips as Campus Buildout Costs Outrun Vellmont Revenue",
-        "body": "Castlestone reported quarterly margins of 18%, down from 26% a year earlier, as construction and staffing costs at its twin Compute campuses ran ahead of recognized revenue from the Vellmont backlog. CEO Iris Garr defended the spend as 'the price of never missing another order,' but the results fell short of the elevated forecasts set after recent record quarters. Management guided to a recovery once the first campus reaches full output next year.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82548,
         "kind": "earnings_miss",
@@ -4759,6 +4761,16 @@
         "size": "standard",
         "head": "Castlestone Adds Second Grid-Core Line as Karsh Races to Meet Backlog",
         "body": "Fresh off its $4.5B multi-year award, Castlestone announced a $700 million capacity build to double redesigned grid-core output by late next year. Pell Karsh said the anchor and multi-year commitments have pushed the order book past two years of production. The expansion is expected to add roughly 900 line roles at the company's primary fabrication site.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82694,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Castlestone Breaks Ground on Grid-Core Campus as Karsh Bets on Runaway Demand",
+        "body": "Castlestone will invest $2.1B in a dedicated grid-core campus outside Talleridge, tripling projected output by 2028. CEO Pell Karsh called the anchor deal 'just the opening chapter' and confirmed talks with two additional buyers. The move stretches Castlestone's balance sheet but positions it to clear a backlog now exceeding 14 months.",
         "effects": {
           "technology": 0.13
         }
@@ -7124,7 +7136,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82684,
+    "lastEventCycle": 82694,
     "events": [
       {
         "cycle": 0,
@@ -7309,6 +7321,16 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82694,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Greywater Grid Halts Reservoir Buildout and Redraws Water Plan Amid Regulatory Pressure",
+        "body": "Greywater Grid has suspended its $2B reservoir-compute buildout and committed to a costly closed-loop redesign after regulators flagged excessive water draw. CEO Sable Renwick unveiled a $900M remediation and cooling overhaul, conceding the original design 'outpaced its environmental footing.' The pause casts doubt on delivery timelines for the $3.4B multi-site pact, with penalties under negotiation.",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },
@@ -7316,25 +7338,15 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1897,
-    "ceo": "Corwin Halstead",
+    "ceo": "Halvard Pryce",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.85,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82688,
+    "lastEventCycle": 82694,
     "events": [
-      {
-        "cycle": 82549,
-        "kind": "recall",
-        "size": "standard",
-        "head": "Gromford Works Recalls Aurelian Noir Units Over Clasp Defect",
-        "body": "Mira Ashby's headline-grabbing Aurelian Noir hit a snag as Gromford pulled roughly 6,200 units after reports of a failing case clasp on the limited run. The company will offer free replacements and said the fault traces to a hardened alloy batch rushed to meet the demand surge. Ashby framed it as a 'precautionary sweep,' but the recall dents momentum from three straight product wins.",
-        "effects": {
-          "luxury": -0.13
-        }
-      },
       {
         "cycle": 82556,
         "kind": "scandal",
@@ -7556,6 +7568,14 @@
         "effects": {
           "luxury": -0.13
         }
+      },
+      {
+        "cycle": 82694,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Gromford Works Names Halvard Pryce Permanent Chief to Steady Post-Meridian Rebuild",
+        "body": "Gromford's board has appointed Halvard Pryce as permanent CEO, ending the caretaker period that followed the Meridian fallout. Pryce, a veteran of the luxury-goods sector, inherits a slimmed timepiece operation and pledged to 'restore discipline before ambition.' Analysts welcomed the clarity after months of turmoil, though the Meridian spinoff's fate remains unresolved.",
+        "effects": {}
       }
     ]
   },
@@ -13938,16 +13958,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82686,
+    "lastEventCycle": 82694,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Varnvale & Sons — Hours kept by hands that remember",
-        "body": "Varnvale & Sons began in a single panelled workroom, dressing pocketwatches and fine accessories for clients who never asked the price. A century on, the house still finishes every timepiece by hand and stamps its leather and metal goods with a quiet maker's mark. Their work sits firmly at the premium and luxury end, sought less for ornament than for the certainty that nothing inside will fail. Discretion is the whole reputation, and they protect it.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "major_deal",
@@ -14177,6 +14189,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82694,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Varnvale & Sons Buys Rare-Metals Supplier Corvane to Secure Timepiece Materials",
+        "body": "Bram Wold has agreed to acquire Corvane Metallurgy for $680M, locking in the precious alloys used across Varnvale's Heritage timepieces. The deal is the third acquisition in eighteen months for the acquisitive Wold, who framed it as insulating the house from volatile materials pricing. Corvane's Ridgemont refinery will supply the restored Marchetti atelier directly.",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -14191,16 +14213,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82685,
+    "lastEventCycle": 82694,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Varnvale House — Time, kept exquisitely",
-        "body": "Varnvale House was built on the conviction that the finest objects should outlive everyone who admires them. They craft fine goods and timepieces, each movement assembled by hand and each case finished until it catches the light just so. There is no budget line and never will be; the premium pieces are merely the threshold to the truly rare. Heirs inherit them, collectors covet them. Quiet mastery, measured in decades, signed with absolute restraint.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "product_launch",
@@ -14421,6 +14435,16 @@
         "body": "Adrienne Sole unveiled the Regent, a limited-run timepiece priced at $185,000 and capped at 400 pieces, positioning it as the crown of the Sovereign Collection. The launch leans on the salon momentum, with Sole telling the press the house would 'let scarcity, not discounting, define us.' Waitlists opened the same day the flagship salon reported its strongest single week of foot traffic.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82694,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Varnvale House Slips as Regent Rollout Strains Sovereign Supply",
+        "body": "Varnvale House missed quarterly expectations as production bottlenecks on the new Regent timepiece delayed Sovereign deliveries, denting margins by four points. CEO Adrienne Sole conceded the top-tier expansion 'moved faster than our benches could carry,' pledging added artisan capacity by year-end. The flagship salon reported record foot traffic but thinning inventory.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -15898,7 +15922,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82674,
+    "lastEventCycle": 82694,
     "events": [
       {
         "cycle": 0,
@@ -15994,6 +16018,16 @@
         "size": "flash",
         "head": "Wrenhaus Edges Past Estimates on Steady Riverside Fixture Volumes",
         "body": "Quinn Thorne reported a 6% rise in quarterly revenue to $214M, supported by early output from the new distribution network and firm demand across the Riverside corridor. Management held its full-year outlook and noted the second fixture plant remains on schedule and on budget.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82694,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wrenhaus Tops Estimates Again as Second Riverside Plant Nears Completion",
+        "body": "Wrenhaus posted a modest earnings beat, with fixture volumes up 6% ahead of the second Riverside plant's opening. CEO Quinn Thorne credited disciplined cost control and steady distribution-hub throughput. The new plant is expected to come online next quarter, adding capacity without disrupting the company's measured expansion cadence.",
         "effects": {
           "construction": 0.06
         }
