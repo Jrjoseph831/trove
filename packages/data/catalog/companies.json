@@ -2822,18 +2822,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82693,
+    "lastEventCycle": 82699,
     "events": [
-      {
-        "cycle": 82530,
-        "kind": "earnings_miss",
-        "size": "major",
-        "head": "Brunstone & Sons Posts Steep Loss as Ardent Recall Costs Mount",
-        "body": "The automaker reported a quarterly loss of $268 million, citing recall logistics, pack replacements and halted Ardent deliveries that gutted vehicle revenue. CEO Sable Veldt acknowledged the heating fault had 'cost us a year' but vowed a re-engineered pack would return the hauler to roads by spring. Shares of confidence wavered as Veldt confirmed deliveries remain frozen pending certification.",
-        "effects": {
-          "automotive": -0.22
-        }
-      },
       {
         "cycle": 82537,
         "kind": "leadership_change",
@@ -3059,6 +3049,16 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82699,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Brunstone & Sons Plunges to Steep Loss as Vault Cell Recall Costs Mount",
+        "body": "Brunstone & Sons posted a heavy quarterly loss driven by an estimated 310 million charge tied to the recall of 1.4 million Vault Cell Guard Pro units, plus rising legal reserves. CEO Halden Crowe suspended the full-year outlook and warned of further remediation costs as the concealment case proceeds. The automaker also confirmed it has paused its next-generation cell program pending a full safety review.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -3073,7 +3073,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82681,
+    "lastEventCycle": 82699,
     "events": [
       {
         "cycle": 0,
@@ -3191,6 +3191,16 @@
         "body": "Caldercraft Holdings unveiled a modular utility rack system built on its weatherproof coatings, aimed at pairing with the insulated storage chests launched last quarter. Vale Fenn said the range rounds out a full outdoor-storage offering feeding the new regional distribution center. Initial orders cover 1,400 retail locations.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82699,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Caldercraft Holdings Beats as Weatherproof Line Additions Lift Volumes",
+        "body": "Caldercraft Holdings edged past estimates as recent additions to its weatherproof range, including insulated chests and modular racks, drove a mid-single-digit volume gain. CEO Vale Fenn noted the new regional distribution center is now running at planned throughput. Household goods and hardware both contributed to the balanced quarter.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -3572,7 +3582,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82684,
+    "lastEventCycle": 82699,
     "events": [
       {
         "cycle": 0,
@@ -3700,6 +3710,16 @@
         "body": "Carrowcyon secured an exclusive multi-year agreement to place its smart-dimming range across the Halloway Home chain's 2,400 outlets, a deal analysts value near $520M over three years. CEO Cole Brandt called it the largest single distribution win in the company's history, crediting the new center's capacity for making the volume commitment feasible. Shipments begin next quarter ahead of the holiday reset.",
         "effects": {
           "consumer": 0.22
+        }
+      },
+      {
+        "cycle": 82699,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Beats Handily as National Smart-Dimming Rollout Scales",
+        "body": "Carrowcyon & Sons reported a double-digit revenue jump as its national retail rollout of the smart-dimming line reached full shelf presence ahead of schedule. CEO Cole Brandt said sell-through outpaced restocking in several regions, prompting an expanded production run. Lighting now accounts for a growing share of group sales alongside household goods.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -6603,7 +6623,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82681,
+    "lastEventCycle": 82699,
     "events": [
       {
         "cycle": 0,
@@ -6721,6 +6741,16 @@
         "body": "Fennvale Mfg. edged past estimates with a 5% revenue gain as its second fastener shift settled into full output. Theo Vossen said auto-parts volumes held flat while the lengthened order book supported pricing. Operating margin ticked up to 17.1%.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82699,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Fennvale Mfg. Breaks Ground on Auto-Parts Line to Match Fastener Momentum",
+        "body": "Fennvale Mfg. announced a 48 million expansion to add a dedicated auto-parts assembly line adjacent to its existing fastener plant. CEO Theo Vossen said lengthening order books across both segments justified the capacity, with commissioning targeted within 18 months. The move extends a steady, self-funded growth posture the firm has maintained for decades.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -11232,23 +11262,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1974,
-    "ceo": "Adele Ferran",
+    "ceo": "Dane Kessler",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.71,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82690,
+    "lastEventCycle": 82699,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Marlgear Supply — Smart iron for working floors",
-        "body": "Marlgear Supply sits where the wrench meets the circuit. It builds devices and industrial machines for operations that want their tools to think a little. The value range gets the job done without fuss; the premium line packs the sensors and durability that modern plants lean on. Newer than the old iron houses and faster on its feet, it has earned a name for gear that's clever where it counts.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "product_launch",
@@ -11476,6 +11498,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82699,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Marlgear Supply CEO Ferran Steps Down as Kessel Fallout Reaches the Top",
+        "body": "Adele Ferran resigned as chief executive of Marlgear Supply after mounting pressure over suppressed Kessel fault reports that idled Verrant Rail for 14 hours. The board named operations veteran Dane Kessler as interim then permanent chief, tasking him with rebuilding regulator trust and overhauling internal reporting. Shares of the device and machinery maker have been under sustained strain since the probe went public.",
+        "effects": {}
       }
     ]
   },
@@ -11490,7 +11520,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82682,
+    "lastEventCycle": 82699,
     "events": [
       {
         "cycle": 0,
@@ -11626,6 +11656,16 @@
         "size": "flash",
         "head": "Marrowcyon Keeps Streak Alive With Another Quiet Beat on Balanced Demand",
         "body": "Marrowcyon logged yet another modest beat as workwear apparel and plumbing fixtures both grew in the low single digits, extending Theo Orne's run of undramatic quarters. Fixtures restocking has now normalized, and management pointed to steady contract renewals rather than any single catalyst. Free cash flow held firm, funding the company's unchanged dividend.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82699,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Logs Fourth Straight Quiet Beat as Plumbing Margins Firm",
+        "body": "Marrowcyon reported earnings a hair above guidance for the fourth consecutive quarter, with fixtures margins expanding roughly 40 basis points on stable input costs. CEO Theo Orne credited disciplined inventory management across both apparel and plumbing lines, and reaffirmed the full-year outlook without change.",
         "effects": {
           "consumer": 0.06
         }
@@ -13504,7 +13544,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82685,
+    "lastEventCycle": 82699,
     "events": [
       {
         "cycle": 0,
@@ -13654,6 +13694,16 @@
         "size": "major",
         "head": "Thaldale Group Rocked as Probe Finds Diverted Funds Tied to Carved-Out Fastening Unit",
         "body": "An expanded investigation concluded that roughly $140 million was funneled through supplier contracts in the now-separated fastening division under prior leadership. Corin Vale said the findings 'predate this board's mandate' and pledged full cooperation, but shares of the parent came under heavy pressure as three former managers were referred to prosecutors. Vale accelerated the fastening carve-out timeline to insulate the core business.",
+        "effects": {
+          "consumer": -0.22
+        }
+      },
+      {
+        "cycle": 82699,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Thaldale Group Sued by Shareholders as Fastening Fund Diversion Spurs Restatement",
+        "body": "A group of institutional shareholders filed suit against Thaldale Group, alleging the board failed to catch roughly 62 million in diverted funds tied to the now-carved-out fastening unit. The company confirmed it will restate two years of results, and CEO Corin Vale pledged full cooperation while blaming prior management. Independent auditors have been retained to review all inter-unit transfers.",
         "effects": {
           "consumer": -0.22
         }
@@ -16297,7 +16347,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82679,
+    "lastEventCycle": 82699,
     "events": [
       {
         "cycle": 0,
@@ -16393,6 +16443,16 @@
         "size": "standard",
         "head": "Wrenspire Pushes Everyroom Into Farm Inputs With Grower Supply Tie-Up",
         "body": "Wrenspire extended its Everyroom bundling model into farm inputs, launching a grower supply program that ties seed, feed, and household lines into a single account. Theo Aldous said early pilots across 400 regional operators lifted repeat orders by 14 percent, describing the move as 'the same disciplined thread pulled through a new segment.'",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82699,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Wrenspire Beats as Everyroom Farm-Inputs Push Broadens Revenue Base",
+        "body": "Wrenspire topped forecasts as its Everyroom expansion into farm inputs contributed its first full quarter of grower-supply revenue, lifting group sales roughly 6 percent. CEO Theo Aldous said cross-segment bundling now spans four categories, spreading demand and cushioning any single-line softness. Management raised the low end of its full-year guidance.",
         "effects": {
           "consumer": 0.13
         }

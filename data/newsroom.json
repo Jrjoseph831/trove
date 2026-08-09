@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-09T12:53:44.917Z",
+  "generatedAt": "2026-08-09T18:42:39.883Z",
   "beats": [
     {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
-      "kind": "expansion",
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Brunstone & Sons Plunges to Steep Loss as Vault Cell Recall Costs Mount",
+      "body": "Brunstone & Sons posted a heavy quarterly loss driven by an estimated 310 million charge tied to the recall of 1.4 million Vault Cell Guard Pro units, plus rising legal reserves. CEO Halden Crowe suspended the full-year outlook and warned of further remediation costs as the concealment case proceeds. The automaker also confirmed it has paused its next-generation cell program pending a full safety review.",
+      "cycle": 82699,
+      "dur": 8
+    },
+    {
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
+      "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldousmont & Sons Adds Sterile-Kit Line to Meet Hospital Network Demand",
-      "body": "Fresh off its network supply award, Dunmore Calder committed $70 million to a new sterile field kit production line to scale volume for the multi-hospital contract. The addition is expected to lift consumables capacity by roughly 25% once fully operational next year. Calder described the investment as measured and fully funded from operating cash flow.",
-      "cycle": 82698,
+      "head": "Caldercraft Holdings Beats as Weatherproof Line Additions Lift Volumes",
+      "body": "Caldercraft Holdings edged past estimates as recent additions to its weatherproof range, including insulated chests and modular racks, drove a mid-single-digit volume gain. CEO Vale Fenn noted the new regional distribution center is now running at planned throughput. Household goods and hardware both contributed to the balanced quarter.",
+      "cycle": 82699,
       "dur": 1
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowcyon & Sons Beats Handily as National Smart-Dimming Rollout Scales",
+      "body": "Carrowcyon & Sons reported a double-digit revenue jump as its national retail rollout of the smart-dimming line reached full shelf presence ahead of schedule. CEO Cole Brandt said sell-through outpaced restocking in several regions, prompting an expanded production run. Lighting now accounts for a growing share of group sales alongside household goods.",
+      "cycle": 82699,
+      "dur": 2
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Fennvale Mfg. Breaks Ground on Auto-Parts Line to Match Fastener Momentum",
+      "body": "Fennvale Mfg. announced a 48 million expansion to add a dedicated auto-parts assembly line adjacent to its existing fastener plant. CEO Theo Vossen said lengthening order books across both segments justified the capacity, with commissioning targeted within 18 months. The move extends a steady, self-funded growth posture the firm has maintained for decades.",
+      "cycle": 82699,
+      "dur": 2
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Marlgear Supply CEO Ferran Steps Down as Kessel Fallout Reaches the Top",
+      "body": "Adele Ferran resigned as chief executive of Marlgear Supply after mounting pressure over suppressed Kessel fault reports that idled Verrant Rail for 14 hours. The board named operations veteran Dane Kessler as interim then permanent chief, tasking him with rebuilding regulator trust and overhauling internal reporting. Shares of the device and machinery maker have been under sustained strain since the probe went public.",
+      "cycle": 82699,
+      "dur": 8
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowcyon Logs Fourth Straight Quiet Beat as Plumbing Margins Firm",
+      "body": "Marrowcyon reported earnings a hair above guidance for the fourth consecutive quarter, with fixtures margins expanding roughly 40 basis points on stable input costs. CEO Theo Orne credited disciplined inventory management across both apparel and plumbing lines, and reaffirmed the full-year outlook without change.",
+      "cycle": 82699,
+      "dur": 1
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Thaldale Group Sued by Shareholders as Fastening Fund Diversion Spurs Restatement",
+      "body": "A group of institutional shareholders filed suit against Thaldale Group, alleging the board failed to catch roughly 62 million in diverted funds tied to the now-carved-out fastening unit. The company confirmed it will restate two years of results, and CEO Corin Vale pledged full cooperation while blaming prior management. Independent auditors have been retained to review all inter-unit transfers.",
+      "cycle": 82699,
+      "dur": 8
+    },
+    {
+      "company": "Wrenspire",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Wrenspire Beats as Everyroom Farm-Inputs Push Broadens Revenue Base",
+      "body": "Wrenspire topped forecasts as its Everyroom expansion into farm inputs contributed its first full quarter of grower-supply revenue, lifting group sales roughly 6 percent. CEO Theo Aldous said cross-segment bundling now spans four categories, spreading demand and cushioning any single-line softness. Management raised the low end of its full-year guidance.",
+      "cycle": 82699,
+      "dur": 2
     },
     {
       "company": "Bruncraft Industries",
@@ -72,26 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vossenstead Supply Stretches Streak to Twelve on Steady Fixtures Demand",
-      "body": "Bram Thorne's house posted its twelfth consecutive quarterly beat, with revenue up 6.4% as plumbing and fixtures orders held firm across all four distribution centers. Margins ticked up 40 basis points as the fourth center reached full utilization ahead of schedule. Thorne reiterated the company's unhurried expansion cadence, citing no plans for near-term acquisitions.",
-      "cycle": 82698,
-      "dur": 1
-    },
-    {
-      "company": "Drayton Freight",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drayton Freight Wins National Distributor Fleet Deal for Pallet-Lift Handlers",
-      "body": "Drayton Freight signed a multi-year agreement to supply pallet-lift material handlers to a national distribution operator, a deal management valued at roughly $210M over three years. Emil Holt said the win locks in output from both assembly plants and marks the company's largest single order to date.",
-      "cycle": 82697,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "safety_probe",
@@ -100,36 +150,6 @@
       "body": "Health regulators opened a formal safety review after nineteen hospitals reported intermittent alarm dropouts on the newly deployed Aveline III platform, with two facilities suspending use of the units. CEO Priya Vantt confirmed a voluntary firmware halt across the regional network while engineers trace what she called an 'isolated signaling fault,' though the flagship rollout that drove three straight strong quarters now hangs on the outcome.",
       "cycle": 82697,
       "dur": 8
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Stegforge Breaks Ground on Second Rail Plate Line as Consortium Extends Orders",
-      "body": "With its first plate mill at full capacity, Stegforge committed $340M to a second line at its Hollenrun works, targeting first output in late 2027. Aurelia Steg said the consortium had already reserved roughly 60% of the new line's annual tonnage, extending the partnership's supply commitments through the decade.",
-      "cycle": 82697,
-      "dur": 2
-    },
-    {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Stegreach Beats as Grid Contract Hits Full Stride Across Riverport",
-      "body": "Second-quarter revenue climbed 18% as the $1.2B grid modernization contract reached peak billing, with the expanded Riverport wiring plant running near capacity. Halden Ashby said fixings and lighting volumes also firmed, lifting margins a full point above forecast.",
-      "cycle": 82697,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "standard",
-      "head": "Thronehaus & Co. Marchwick Line Takes Top Honor at Vellmont Horology Prize",
-      "body": "The Marchwick collection won the Grand Complication award at the Vellmont Horology Prize, judges citing casework precision traced directly to the newly integrated Ferrault wing. Cora Dray called the honor 'validation of a bet placed at $610M,' as the expanded wing pushes toward doubled output.",
-      "cycle": 82697,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -229,26 +249,6 @@
       "head": "Lhaus Industries Sued for $1.8B as Grid-Storage Partners Allege Concealed Overheating Data",
       "body": "Two megadeal counterparties filed a joint $1.8B suit claiming Lhaus withheld internal thermal-test findings before signing the grid-storage contracts. The complaint alleges CEO Cole Brandt's team accelerated deployments despite known fault margins, deepening the fallout from last quarter's recall. Lhaus called the claims 'without merit' but disclosed it has set aside $400M in reserves.",
       "cycle": 82692,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Blackhold Lands $1.2B Grid-Storage Mandate as Independent Testing Unit Wins Regulator Trust",
-      "body": "Blackhold secured a $1.2 billion multi-year contract to supply grid-scale storage systems, its largest award since the scandal-era collapse and a defining moment for CEO Halden Dabney's turnaround. Officials credited the spun-out independent testing unit, now certified by two regional grid authorities, with restoring confidence in Blackhold's safety claims. The deal locks in roughly 30% of projected 2027 capacity.",
-      "cycle": 82691,
-      "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Brunmark Motors Hit With Class Action Over Veyra S Battery Fires as Recall Costs Mount",
-      "body": "A consolidated class action was filed against Brunmark Motors on behalf of some 240,000 Veyra S owners, alleging the company knew of the battery-pack defect before the redesigned unit shipped. Plaintiffs seek damages exceeding $600 million, citing internal test records surfaced during the regulatory probe. CEO Halvard Renn said the company would 'contest the claims vigorously' while accelerating replacement pack production.",
-      "cycle": 82691,
       "dur": 8
     }
   ]
