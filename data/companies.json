@@ -276,7 +276,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82681,
+    "lastEventCycle": 82698,
     "events": [
       {
         "cycle": 0,
@@ -384,6 +384,16 @@
         "body": "Aldousmont & Sons secured a supply award covering sterile field kits and peel-free consumables across a 40-hospital network. Dunmore Calder said the win validates the field-kit launch and should lift consumables volumes by an estimated 12% next year. The award runs for four years with renewal options.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82698,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Aldousmont & Sons Adds Sterile-Kit Line to Meet Hospital Network Demand",
+        "body": "Fresh off its network supply award, Dunmore Calder committed $70 million to a new sterile field kit production line to scale volume for the multi-hospital contract. The addition is expected to lift consumables capacity by roughly 25% once fully operational next year. Calder described the investment as measured and fully funded from operating cash flow.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -1779,16 +1789,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82688,
+    "lastEventCycle": 82698,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Bruncraft Industries — Engineered to be driven",
-        "body": "Bruncraft Industries builds vehicles for people who actually feel the road. The mid range is sensible, well-sorted, and built to rack up years without drama. Climb to premium and luxury and the cars turn into statements: bodies hand-finished, drivetrains tuned for poise, cabins that hush the world. Bruncraft never made cheap transport and never pretended to. Its badge means a certain refusal to cut corners, and the people who own one tend to keep them far too long.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "product_launch",
@@ -2011,6 +2013,16 @@
         "body": "Marcus Vane secured a five-year, $4.3 billion contract to supply municipal and commercial fleets across three regions, the largest single order in Bruncraft's history. The deal, announced weeks after Vane took the helm, signals an aggressive pivot away from the axle-verdict fallout. Vane called it 'proof that the road ahead is wide open,' pledging expanded output at two plants.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82698,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Bruncraft Reopens Idled Halloran Plant to Fill $4.3 Billion Fleet Backlog",
+        "body": "Marcus Vane confirmed a $680 million restart of the long-dormant Halloran assembly line, adding a projected 2,400 jobs to meet delivery commitments running through 2028. Vane told analysts the expansion is 'phase one' of a broader capacity push, hinting at two more acquisition targets under review. The move marks Bruncraft's first plant reopening since the axle verdict rattled the board.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -4215,18 +4227,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82691,
+    "lastEventCycle": 82698,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Castlehold Pushes Into Coastal Storage With Saltmere Banks",
-        "body": "Soren Skarn unveiled the Saltmere storage banks, a coastal expansion meant to steady supply for the windward districts. The ambitious build doubles Castlehold's regional capacity but stretches its balance sheet. Skarn admitted the timeline is 'aggressive, maybe reckless, but ours.'",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "outage",
@@ -4447,6 +4449,16 @@
         "size": "standard",
         "head": "Castlehold Breaks Ground on Second Plant to Scale Modular Storage Platform",
         "body": "Castlehold committed roughly $310 million to a second production facility dedicated to its recently launched modular storage platform, aiming to double capacity by late 2027. CEO Halden Voss framed the build as necessary to meet demand from the landmark grid-storage contract. The move marks Castlehold's first greenfield expansion since the Saltmere spin-off.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82698,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Castlehold Rolls Out High-Capacity Modular Line as Second Plant Nears Completion",
+        "body": "Halden Voss unveiled the next tier of the modular storage platform, doubling per-unit capacity and targeting large grid operators. The launch coincides with the second plant reaching 80% construction, positioning Castlehold to begin shipments by mid-year. Voss said early letters of intent already cover roughly 40% of the plant's projected first-year output.",
         "effects": {
           "energy": 0.13
         }
@@ -5267,7 +5279,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82683,
+    "lastEventCycle": 82698,
     "events": [
       {
         "cycle": 0,
@@ -5393,6 +5405,16 @@
         "size": "standard",
         "head": "Drossware Faces Regulatory Review of Cleaning Line After Mislabeling Recall",
         "body": "State consumer-safety officials opened a formal review of Drossware's Jansan concentrate operations following last quarter's mislabeled-batch recall. Wold said the company is cooperating fully and has paused two concentrate SKUs pending relabeling audits, estimating a $14M charge to cover recall logistics and process upgrades.",
+        "effects": {
+          "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82698,
+        "kind": "recall",
+        "size": "standard",
+        "head": "Drossware Widens Cleaning-Line Recall as Regulators Cite Second Labeling Defect",
+        "body": "Nadia Wold expanded the recall to cover 1.9 million additional units after the ongoing regulatory review uncovered a separate concentration error in a downstream batch. The broadened action is expected to cost $95 million and prompted Drossware to halt one cleaning-line facility for a full audit. Wold said the company is overhauling its labeling controls but stopped short of forecasting when the line would resume full output.",
         "effects": {
           "consumer": -0.13
         }
@@ -6714,7 +6736,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82683,
+    "lastEventCycle": 82698,
     "events": [
       {
         "cycle": 0,
@@ -6840,6 +6862,16 @@
         "size": "standard",
         "head": "Forgegrave Industries Beats as Coastward Deal Widens Customer Base",
         "body": "Thorne reported revenue of $890M, up 18%, with the newly signed Coastward Logistics contract contributing its first partial quarter alongside the ramping Meridian add-on fleet. Management said diversifying beyond Meridian reduced single-customer concentration below 60% for the first time in years.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82698,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Forgegrave Industries Wins Regional Distributor Network in Second Beyond-Meridian Deal",
+        "body": "Petra Thorne secured a $310 million contract to supply material-handling systems to the Ridgeway distributor network, extending Forgegrave's reach into a third territory. The multi-year agreement builds directly on the Coastward win and lifts the company's out-of-region revenue mix above 30% for the first time. Thorne called the pace 'deliberate' and reaffirmed existing capacity plans.",
         "effects": {
           "logistics": 0.13
         }
@@ -8169,18 +8201,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82692,
+    "lastEventCycle": 82698,
     "events": [
-      {
-        "cycle": 82557,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Halhold Systems Signs Second Major Northgate Client in Multi-Year Pact",
-        "body": "Dahlia Renn confirmed a $780 million, five-year agreement with logistics group Vantrel to expand Northgate tier capacity, following the anchor deal that fueled last quarter's beat. The win cements Northgate as Halhold's growth engine, with Renn promising two more tier variants by year-end to capture mid-market clients priced out of premium compute.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82564,
         "kind": "product_launch",
@@ -8403,6 +8425,16 @@
         "body": "Halhold reported revenue 11% below guidance as the newly carved-out Compute Reliability Unit absorbed one-time separation costs of $140M. CEO Ilse Marren said several major clients delayed renewals pending resolution of the $900M partner suit, but insisted the turnaround plan remained 'on schedule and on message.' The company withdrew full-year guidance.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82698,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Halhold Systems Rocked as Internal Memos Show Reliability Failures Were Known for Months",
+        "body": "Leaked documents revealed that Halhold managers flagged the compute reliability defects nearly a year before the unit was split off, a timeline that contradicts prior public statements from the board. Ilse Marren ordered an independent review and suspended two senior executives pending its outcome, while three major clients said they were reassessing contracts worth a combined $1.2 billion. The disclosure sent renewal talks into disarray just as Marren's turnaround was meant to stabilize.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -10769,18 +10801,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82692,
+    "lastEventCycle": 82698,
     "events": [
-      {
-        "cycle": 82545,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Lhaus Industries Folds Voss Cell Into New Power & Storage Division",
-        "body": "Following its $6.4B acquisition, Lhaus Industries announced it will consolidate Voss Cell operations into a dedicated Power & Storage unit led out of the Ferrlands campus. CEO Cole Brandt said the reorganization would cut roughly 900 overlapping roles but retain Voss Cell's core cell-chemistry team, targeting $340M in annual synergies by 1955.",
-        "effects": {
-          "automotive": -0.13
-        }
-      },
       {
         "cycle": 82551,
         "kind": "product_launch",
@@ -11009,6 +11031,16 @@
         "body": "Two megadeal counterparties filed a joint $1.8B suit claiming Lhaus withheld internal thermal-test findings before signing the grid-storage contracts. The complaint alleges CEO Cole Brandt's team accelerated deployments despite known fault margins, deepening the fallout from last quarter's recall. Lhaus called the claims 'without merit' but disclosed it has set aside $400M in reserves.",
         "effects": {
           "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82698,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Lhaus Industries Carves Out Grid-Storage Division Amid Mounting Legal Pressure",
+        "body": "Cole Brandt announced Lhaus will spin its embattled Power & Storage operations into a ring-fenced subsidiary, a move designed to contain liability from the $1.8 billion partner lawsuit. The reorganization includes a $400 million provision for settlements and remediation, alongside leadership changes across the storage unit. Brandt framed the step as protecting the core auto parts and vehicles businesses from further fallout.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -15431,7 +15463,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82684,
+    "lastEventCycle": 82698,
     "events": [
       {
         "cycle": 0,
@@ -15577,6 +15609,16 @@
         "size": "flash",
         "head": "Vossenstead Supply Extends Streak to Eleven as Fourth Center Ramps",
         "body": "Vossenstead posted its eleventh consecutive quarterly beat, with revenue up 7% as the newly opened fourth distribution center began absorbing food-service orders. CEO Bram Thorne noted plumbing and fixtures held steady margins even as freight costs ticked higher. Guidance was left unchanged, in keeping with the company's cautious style.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82698,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenstead Supply Stretches Streak to Twelve on Steady Fixtures Demand",
+        "body": "Bram Thorne's house posted its twelfth consecutive quarterly beat, with revenue up 6.4% as plumbing and fixtures orders held firm across all four distribution centers. Margins ticked up 40 basis points as the fourth center reached full utilization ahead of schedule. Thorne reiterated the company's unhurried expansion cadence, citing no plans for near-term acquisitions.",
         "effects": {
           "consumer": 0.06
         }
