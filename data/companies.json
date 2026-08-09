@@ -4808,7 +4808,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82683,
+    "lastEventCycle": 82697,
     "events": [
       {
         "cycle": 0,
@@ -4957,6 +4957,16 @@
         "effects": {
           "manufacturing": 0.06
         }
+      },
+      {
+        "cycle": 82697,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Stretches Streak to Ten as Farm and Textile Demand Holds",
+        "body": "Cranecraft posted its tenth consecutive quarterly beat, with revenue up 4% on steady farm-equipment orders and firm raw-textile pricing. Mira Garr credited disciplined inventory management and reaffirmed full-year guidance without fanfare.",
+        "effects": {
+          "manufacturing": 0.06
+        }
       }
     ]
   },
@@ -4971,7 +4981,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82680,
+    "lastEventCycle": 82697,
     "events": [
       {
         "cycle": 0,
@@ -5090,6 +5100,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82697,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranegrove Tops Estimates as Corridor Framework Revenue Ramps",
+        "body": "Cranegrove edged past forecasts with a 6% revenue gain as its $1.2B corridor framework began contributing steady earthmoving deployments. Vale Calder noted both corridor depots are now running at target utilization, with backlog secured through 2029.",
+        "effects": {
+          "construction": 0.06
+        }
       }
     ]
   },
@@ -5104,7 +5124,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82681,
+    "lastEventCycle": 82697,
     "events": [
       {
         "cycle": 0,
@@ -5220,6 +5240,16 @@
         "size": "standard",
         "head": "Drayton Freight Beats Again as Second Assembly Plant Clears Order Backlog",
         "body": "Drayton Freight reported an 11% revenue gain as its newly opened second assembly plant cut pallet-lift lead times from nine weeks to four. Emil Holt said the national distributor rollout is now serving 34 depots, ahead of the 30 targeted for year-end. Material-handling unit shipments rose 18% year over year.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82697,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drayton Freight Wins National Distributor Fleet Deal for Pallet-Lift Handlers",
+        "body": "Drayton Freight signed a multi-year agreement to supply pallet-lift material handlers to a national distribution operator, a deal management valued at roughly $210M over three years. Emil Holt said the win locks in output from both assembly plants and marks the company's largest single order to date.",
         "effects": {
           "logistics": 0.13
         }
@@ -8388,16 +8418,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82690,
+    "lastEventCycle": 82697,
     "events": [
-      {
-        "cycle": 82564,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Halhold Works Ousts Nadia Brandt as Verity Pro Fallout Reaches Boardroom",
-        "body": "After more than five decades at the helm, Nadia Brandt was removed by the board amid mounting hospital litigation and the ongoing regulatory freeze on Verity Pro. Directors named turnaround specialist Gunnar Vale to lead a full safety and governance review, calling the change 'necessary to restore trust with clinicians and regulators.'",
-        "effects": {}
-      },
       {
         "cycle": 82569,
         "kind": "restructure",
@@ -8620,6 +8642,16 @@
         "body": "CEO Priya Vantt introduced the Aveline III line at the company's Deltmar campus, touting a 40% faster refresh cycle and a modular wire-and-cable backbone aimed at existing hospital installations. The launch builds directly on the regional supply contract now billing at full volume, with three additional health systems named as early adopters. Vantt said the lingering legal overhang from prior quarters was 'behind us as a distraction.'",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82697,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Halhold Works Faces Regulatory Probe Over Aveline III Monitor Alarm Failures",
+        "body": "Health regulators opened a formal safety review after nineteen hospitals reported intermittent alarm dropouts on the newly deployed Aveline III platform, with two facilities suspending use of the units. CEO Priya Vantt confirmed a voluntary firmware halt across the regional network while engineers trace what she called an 'isolated signaling fault,' though the flagship rollout that drove three straight strong quarters now hangs on the outcome.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -9373,7 +9405,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82678,
+    "lastEventCycle": 82697,
     "events": [
       {
         "cycle": 0,
@@ -9469,6 +9501,16 @@
         "size": "flash",
         "head": "Ironcrestcrest Supply Posts Steady Gains as Contractor-Grade Line Finds Footing",
         "body": "Dorian Garr reported a fifth consecutive quarter of growth, with the new contractor-grade line adding $28 million in sales as it broadened the customer base beyond the value range. Margins held firm on disciplined warehouse utilization. Guidance was nudged modestly higher for the second half.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82697,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Posts Modest Gains as Contractor-Grade Line Widens Reach",
+        "body": "Ironcrestcrest reported a 3% revenue rise as its contractor-grade lighting line gained shelf space with regional distributors. Dorian Garr said the fifth warehouse continued to absorb higher volumes efficiently, keeping margins stable.",
         "effects": {
           "consumer": 0.06
         }
@@ -13154,7 +13196,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82682,
+    "lastEventCycle": 82697,
     "events": [
       {
         "cycle": 0,
@@ -13283,6 +13325,16 @@
         "effects": {
           "manufacturing": 0.06
         }
+      },
+      {
+        "cycle": 82697,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Stegforge Breaks Ground on Second Rail Plate Line as Consortium Extends Orders",
+        "body": "With its first plate mill at full capacity, Stegforge committed $340M to a second line at its Hollenrun works, targeting first output in late 2027. Aurelia Steg said the consortium had already reserved roughly 60% of the new line's annual tonnage, extending the partnership's supply commitments through the decade.",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -13297,7 +13349,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82677,
+    "lastEventCycle": 82697,
     "events": [
       {
         "cycle": 0,
@@ -13393,6 +13445,16 @@
         "size": "standard",
         "head": "Stegreach Tops Forecasts as Grid Contract Revenue Begins Flowing",
         "body": "Stegreach reported earnings ahead of expectations as the first phase of its $1.2 billion grid modernization contract converted into $210 million of quarterly revenue. CEO Halden Ashby said expanded Riverport wiring capacity is now fully absorbed and margins improved on scale. Management reaffirmed full-year guidance.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82697,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Stegreach Beats as Grid Contract Hits Full Stride Across Riverport",
+        "body": "Second-quarter revenue climbed 18% as the $1.2B grid modernization contract reached peak billing, with the expanded Riverport wiring plant running near capacity. Halden Ashby said fixings and lighting volumes also firmed, lifting margins a full point above forecast.",
         "effects": {
           "construction": 0.13
         }
@@ -13577,7 +13639,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82689,
+    "lastEventCycle": 82697,
     "events": [
       {
         "cycle": 0,
@@ -13793,6 +13855,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Opens Ferrault Casework Wing to Double Marchwick Output",
         "body": "Thronehaus commissioned an expanded casework wing at the acquired Ferrault site, roughly doubling annual capacity for its award-winning Verrand Marchwick line. CEO Cora Dray said the $610M buyout has already trimmed casework costs by 18% and will let the house meet a two-year waitlist. The wing employs 340 artisans and is expected to reach full output within three quarters.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82697,
+        "kind": "award",
+        "size": "standard",
+        "head": "Thronehaus & Co. Marchwick Line Takes Top Honor at Vellmont Horology Prize",
+        "body": "The Marchwick collection won the Grand Complication award at the Vellmont Horology Prize, judges citing casework precision traced directly to the newly integrated Ferrault wing. Cora Dray called the honor 'validation of a bet placed at $610M,' as the expanded wing pushes toward doubled output.",
         "effects": {
           "luxury": 0.13
         }

@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-09T01:50:49.285Z",
+  "generatedAt": "2026-08-09T06:58:50.595Z",
   "beats": [
+    {
+      "company": "Cranecraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Cranecraft Stretches Streak to Ten as Farm and Textile Demand Holds",
+      "body": "Cranecraft posted its tenth consecutive quarterly beat, with revenue up 4% on steady farm-equipment orders and firm raw-textile pricing. Mira Garr credited disciplined inventory management and reaffirmed full-year guidance without fanfare.",
+      "cycle": 82697,
+      "dur": 1
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Cranegrove Tops Estimates as Corridor Framework Revenue Ramps",
+      "body": "Cranegrove edged past forecasts with a 6% revenue gain as its $1.2B corridor framework began contributing steady earthmoving deployments. Vale Calder noted both corridor depots are now running at target utilization, with backlog secured through 2029.",
+      "cycle": 82697,
+      "dur": 1
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drayton Freight Wins National Distributor Fleet Deal for Pallet-Lift Handlers",
+      "body": "Drayton Freight signed a multi-year agreement to supply pallet-lift material handlers to a national distribution operator, a deal management valued at roughly $210M over three years. Emil Holt said the win locks in output from both assembly plants and marks the company's largest single order to date.",
+      "cycle": 82697,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Halhold Works Faces Regulatory Probe Over Aveline III Monitor Alarm Failures",
+      "body": "Health regulators opened a formal safety review after nineteen hospitals reported intermittent alarm dropouts on the newly deployed Aveline III platform, with two facilities suspending use of the units. CEO Priya Vantt confirmed a voluntary firmware halt across the regional network while engineers trace what she called an 'isolated signaling fault,' though the flagship rollout that drove three straight strong quarters now hangs on the outcome.",
+      "cycle": 82697,
+      "dur": 8
+    },
+    {
+      "company": "Ironcrestcrest Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ironcrestcrest Supply Posts Modest Gains as Contractor-Grade Line Widens Reach",
+      "body": "Ironcrestcrest reported a 3% revenue rise as its contractor-grade lighting line gained shelf space with regional distributors. Dorian Garr said the fifth warehouse continued to absorb higher volumes efficiently, keeping margins stable.",
+      "cycle": 82697,
+      "dur": 1
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Stegforge Breaks Ground on Second Rail Plate Line as Consortium Extends Orders",
+      "body": "With its first plate mill at full capacity, Stegforge committed $340M to a second line at its Hollenrun works, targeting first output in late 2027. Aurelia Steg said the consortium had already reserved roughly 60% of the new line's annual tonnage, extending the partnership's supply commitments through the decade.",
+      "cycle": 82697,
+      "dur": 2
+    },
+    {
+      "company": "Stegreach",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Stegreach Beats as Grid Contract Hits Full Stride Across Riverport",
+      "body": "Second-quarter revenue climbed 18% as the $1.2B grid modernization contract reached peak billing, with the expanded Riverport wiring plant running near capacity. Halden Ashby said fixings and lighting volumes also firmed, lifting margins a full point above forecast.",
+      "cycle": 82697,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "standard",
+      "head": "Thronehaus & Co. Marchwick Line Takes Top Honor at Vellmont Horology Prize",
+      "body": "The Marchwick collection won the Grand Complication award at the Vellmont Horology Prize, judges citing casework precision traced directly to the newly integrated Ferrault wing. Cora Dray called the honor 'validation of a bet placed at $610M,' as the expanded wing pushes toward doubled output.",
+      "cycle": 82697,
+      "dur": 2
+    },
     {
       "company": "Aldousspire Group",
       "sector": "consumer",
@@ -92,36 +172,6 @@
       "dur": 8
     },
     {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halcyon Industries Commits to Northgate Site as Southport Runs Near Capacity",
-      "body": "Dorian Ashby confirmed a $180 million investment in a new Northgate packaging complex, the company's first facility outside the Southport cluster. Ashby framed the move as measured overflow relief, noting Southport's five lines are running at 96% utilization. Groundbreaking is slated for next quarter.",
-      "cycle": 82695,
-      "dur": 2
-    },
-    {
-      "company": "Palettstead Holdings",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Palettstead Holdings Beats as Fourth Cold-Chain Nears Startup With Anchor Locked",
-      "body": "Orla Marrow posted results above consensus, crediting the pre-committed fourth cold-chain anchor volume for de-risking the ramp. Revenue rose 14% year-on-year as the three-chain network held full stride. Marrow guided to a smooth cutover once the fourth chain commissions next quarter.",
-      "cycle": 82695,
-      "dur": 2
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vencyon Beats and Raises as Fourth and Fifth Hub Rollout Begins",
-      "body": "Iris Halloran topped estimates and lifted full-year guidance as the $2.3B modular platform fleet began installation at the fourth hub. Order momentum pushed backlog up 18% sequentially. Halloran said fifth-hub deployment remains on track for the following quarter.",
-      "cycle": 82695,
-      "dur": 2
-    },
-    {
       "company": "Vossenspire Holdings",
       "sector": "energy",
       "kind": "outage",
@@ -130,16 +180,6 @@
       "body": "A containment failure at Vossenspire's flagship storage installation forced a full shutdown mid-commissioning, delaying the $6.8B pact's first delivery milestone. Halden Roe acknowledged 'a serious setback' and pledged an independent review, with penalty clauses now in question. The incident casts doubt on the front-loaded revenue timeline Roe had touted.",
       "cycle": 82695,
       "dur": 8
-    },
-    {
-      "company": "Wold & Bramm",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Wold & Bramm Extends Heritage Range With New Household Line Across Four Showrooms",
-      "body": "Mara Marrow launched a companion Heritage household goods collection, rolling it into all four showrooms after the lighting debut's strong sell-through. Early pre-orders covered roughly a third of initial stock. Marrow said the line broadens the heritage banner without straining the showroom model.",
-      "cycle": 82695,
-      "dur": 2
     },
     {
       "company": "Blackton Industries",
@@ -229,16 +269,6 @@
       "head": "Marlgear Supply Rocked as Verrant Probe Uncovers Suppressed Kessel Fault Reports",
       "body": "The Verrant Rail safety review found that internal warnings about the Kessel platform's handling logic were flagged weeks before the 14-hour outage but never escalated, according to documents released this morning. CEO Adele Ferran, known for her public bravado, acknowledged 'serious lapses in how risk was reported' and suspended two senior operations leaders pending an outside inquiry. Verrant Rail said it is weighing penalties that could reach $220 million and a partial contract clawback.",
       "cycle": 82690,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "major",
-      "head": "Woldmark Blows Past Estimates as Halcyon 4 Ramp Vindicates Frayne Turnaround",
-      "body": "Woldmark reported compute revenue up 41% year on year, its strongest quarter in three years, as Halcyon 4 shipments cleared the backlog left by the launch sellout. CEO Isolde Frayne said gross margins recovered to 38% from the Halcyon 3 trough of 22%, and announced a follow-on Halcyon 4 Pro for next quarter. The result marks a decisive close to the crisis that brought Frayne in.",
-      "cycle": 82689,
       "dur": 8
     }
   ]
