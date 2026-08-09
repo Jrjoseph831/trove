@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-08T18:39:25.270Z",
+  "generatedAt": "2026-08-09T01:50:49.285Z",
   "beats": [
+    {
+      "company": "Aldousspire Group",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Aldousspire Group Beats as Heirloom Everyday Line Broadens Buyer Base",
+      "body": "Aldousspire topped estimates with same-store sales up 11%, driven by the Heirloom Everyday line drawing a younger, higher-frequency shopper into the concept stores. CEO Mira Ashby said the everyday range now accounts for a third of concept-store volume without diluting the premium tier. The company signaled it may add four more concept locations next year.",
+      "cycle": 82696,
+      "dur": 2
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Boreas Power Strikes $1.2B Grid-Storage Deal on Heels of Vantel Turnaround",
+      "body": "Fresh off beating estimates as its cost-out plan ran ahead of schedule, Boreas Power signed a $1.2B agreement to supply grid-scale storage across three regional networks over seven years. CEO Mira Thorne called it the largest single contract in the company's history and proof the Vantel integration has shifted from drag to platform. The deal is expected to add meaningfully to backlog beginning next quarter.",
+      "cycle": 82696,
+      "dur": 8
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Calderforge Unveils Next-Gen Compute Tier as Stormwell Capacity Ramps",
+      "body": "Calderforge introduced its Meridian-class compute tier, promising a 40% density gain per hall and lower cooling draw, with the first racks slated for the newly commissioned Stormwell facilities. CEO Nadia Throne said the Meridian line was designed to absorb overflow from the multi-year capacity commitment signed earlier this year. Early customer allocations reportedly cover most of the third hall's projected output.",
+      "cycle": 82696,
+      "dur": 2
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drustcraft Posts Beat as Auto-Parts Win Diversifies Revenue Base",
+      "body": "Drustcraft topped estimates with revenue rising 14%, its first quarter showing meaningful contribution from the recently landed auto-parts contract alongside the ramping 280M fastener deal. CEO Cora Fenn said auto parts now represent roughly a fifth of order flow, easing the company's long reliance on fasteners. Management raised full-year guidance modestly on the broader mix.",
+      "cycle": 82696,
+      "dur": 2
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Kessel Drive Names Turnaround Veteran Aldric Venn as Permanent CEO",
+      "body": "Kessel Drive's board appointed Aldric Venn as permanent chief executive, ending an interim stretch that began when Neave Corliss was removed amid the storage crisis. Venn, brought in from outside the company, pledged to settle the shareholder suit, stabilize the vehicles unit, and decide the fate of the halted storage line within ninety days. The board said the search prioritized crisis restructuring over the headline-driven style of recent years.",
+      "cycle": 82696,
+      "dur": 8
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Kesselgrove Co. Adds Second Assembly Bay to Attack Record Press Backlog",
+      "body": "With orders stretching past next year, Kesselgrove committed $190M to a second assembly bay at its Halvern works, targeting a 25% lift in annual press output by 2028. CEO Orla Steg framed the move as measured rather than speculative, noting the expansion is backed by firm orders already on the books. The bay is expected to begin partial output within eighteen months.",
+      "cycle": 82696,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Korrwright Group Wins $310M Wire & Cable Supply Award for Corridor Region",
+      "body": "Korrwright Group secured a $310M multi-year contract to supply structural wire and cable for utility upgrades across the Verant Corridor region. CEO Halden Fenn said the win leverages the second line added earlier this year and pairs naturally with the ongoing rail-bridge work. The contract lifts the company's forward backlog to a record level.",
+      "cycle": 82696,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrwright Works Beats as In-House Alvence Movement Lifts Margins",
+      "body": "Korrwright posted quarterly revenue up 18% with gross margin widening nearly three points, which management credited to bringing Alvence movement production in-house. CEO Dunmore Carrow said the Meridienne flagship's in-house calibre line has outpaced supply since debut, prompting a waitlist at the salon. The company reaffirmed plans to migrate more collections onto Alvence movements.",
+      "cycle": 82696,
+      "dur": 2
+    },
     {
       "company": "Erretmark Works",
       "sector": "automotive",
@@ -10,16 +90,6 @@
       "body": "Aurelia Garr unveiled a four-year, 2,400-unit Veyron supply agreement valued at roughly $5.2 billion, the largest single order in the company's 105-year history. The deal spans three export corridors and commits Erretmark to a third assembly hall, with Garr calling it 'the platform that redefines our reach.' Backlog now stretches into 2029.",
       "cycle": 82695,
       "dur": 8
-    },
-    {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Garrware Edges Past Estimates as Marrow Valley Ramps to Full Rate",
-      "body": "Orla Holt reported a modest quarterly beat as the fourth Marrow Valley line reached full output weeks ahead of plan, lifting regional volumes 22%. Margins held firm on stable anchor contracts. Holt reiterated a disciplined pace with no new capital projects announced.",
-      "cycle": 82695,
-      "dur": 1
     },
     {
       "company": "Halcyon Industries",
@@ -62,16 +132,6 @@
       "dur": 8
     },
     {
-      "company": "Vossenwright Holdings",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vossenwright Holdings Posts Quiet Beat as Seeder Deliveries Run to Schedule",
-      "body": "Quinn Skarn reported a steady quarter with the fleet seeder rollout on pace and margins up modestly on fuel-saving demand. Revenue rose 6% with no surprises. Skarn maintained the company's conservative outlook and flagged only incremental input orders ahead.",
-      "cycle": 82695,
-      "dur": 1
-    },
-    {
       "company": "Wold & Bramm",
       "sector": "consumer",
       "kind": "product_launch",
@@ -102,16 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Castlestone Breaks Ground on Grid-Core Campus as Karsh Bets on Runaway Demand",
-      "body": "Castlestone will invest $2.1B in a dedicated grid-core campus outside Talleridge, tripling projected output by 2028. CEO Pell Karsh called the anchor deal 'just the opening chapter' and confirmed talks with two additional buyers. The move stretches Castlestone's balance sheet but positions it to clear a backlog now exceeding 14 months.",
-      "cycle": 82694,
-      "dur": 2
-    },
-    {
       "company": "Greywater Grid",
       "sector": "energy",
       "kind": "restructure",
@@ -120,36 +170,6 @@
       "body": "Greywater Grid has suspended its $2B reservoir-compute buildout and committed to a costly closed-loop redesign after regulators flagged excessive water draw. CEO Sable Renwick unveiled a $900M remediation and cooling overhaul, conceding the original design 'outpaced its environmental footing.' The pause casts doubt on delivery timelines for the $3.4B multi-site pact, with penalties under negotiation.",
       "cycle": 82694,
       "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Gromford Works Names Halvard Pryce Permanent Chief to Steady Post-Meridian Rebuild",
-      "body": "Gromford's board has appointed Halvard Pryce as permanent CEO, ending the caretaker period that followed the Meridian fallout. Pryce, a veteran of the luxury-goods sector, inherits a slimmed timepiece operation and pledged to 'restore discipline before ambition.' Analysts welcomed the clarity after months of turmoil, though the Meridian spinoff's fate remains unresolved.",
-      "cycle": 82694,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Varnvale & Sons Buys Rare-Metals Supplier Corvane to Secure Timepiece Materials",
-      "body": "Bram Wold has agreed to acquire Corvane Metallurgy for $680M, locking in the precious alloys used across Varnvale's Heritage timepieces. The deal is the third acquisition in eighteen months for the acquisitive Wold, who framed it as insulating the house from volatile materials pricing. Corvane's Ridgemont refinery will supply the restored Marchetti atelier directly.",
-      "cycle": 82694,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Varnvale House Slips as Regent Rollout Strains Sovereign Supply",
-      "body": "Varnvale House missed quarterly expectations as production bottlenecks on the new Regent timepiece delayed Sovereign deliveries, denting margins by four points. CEO Adrienne Sole conceded the top-tier expansion 'moved faster than our benches could carry,' pledging added artisan capacity by year-end. The flagship salon reported record foot traffic but thinning inventory.",
-      "cycle": 82694,
-      "dur": 2
     },
     {
       "company": "Brunstone & Sons",
@@ -219,26 +239,6 @@
       "head": "Woldmark Blows Past Estimates as Halcyon 4 Ramp Vindicates Frayne Turnaround",
       "body": "Woldmark reported compute revenue up 41% year on year, its strongest quarter in three years, as Halcyon 4 shipments cleared the backlog left by the launch sellout. CEO Isolde Frayne said gross margins recovered to 38% from the Halcyon 3 trough of 22%, and announced a follow-on Halcyon 4 Pro for next quarter. The result marks a decisive close to the crisis that brought Frayne in.",
       "cycle": 82689,
-      "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Bruncraft Lands $4.3 Billion Fleet Order as Vane Bets Big on Comeback",
-      "body": "Marcus Vane secured a five-year, $4.3 billion contract to supply municipal and commercial fleets across three regions, the largest single order in Bruncraft's history. The deal, announced weeks after Vane took the helm, signals an aggressive pivot away from the axle-verdict fallout. Vane called it 'proof that the road ahead is wide open,' pledging expanded output at two plants.",
-      "cycle": 82688,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Bruncrest Works Unveils Aria Prime, Doubling Down After Ultra Rebound",
-      "body": "Riding momentum from the leaner Aria Ultra, Ines Marlow launched Aria Prime, a higher-performance compute tier priced 40% above Ultra and aimed at data-center buyers. Marlow staged a splashy reveal promising 'the biggest leap since Eastfield opened,' with first shipments slated for next quarter. The bold move drew heavy attention given the volatile ramp that preceded it.",
-      "cycle": 82688,
       "dur": 8
     }
   ]

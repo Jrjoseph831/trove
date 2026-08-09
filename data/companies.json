@@ -399,7 +399,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82677,
+    "lastEventCycle": 82696,
     "events": [
       {
         "cycle": 0,
@@ -495,6 +495,16 @@
         "size": "standard",
         "head": "Aldousspire Group Launches Heirloom Everyday Line to Broaden Concept Reach",
         "body": "Building on strong concept-store traffic, Aldousspire unveiled Heirloom Everyday, a lower-priced apparel range aimed at younger shoppers, with 40 initial styles rolling into stores this month. CEO Mira Ashby framed the launch as 'a careful step down-market without diluting the name.' Early pre-orders reportedly outpaced the original Heirloom debut.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82696,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aldousspire Group Beats as Heirloom Everyday Line Broadens Buyer Base",
+        "body": "Aldousspire topped estimates with same-store sales up 11%, driven by the Heirloom Everyday line drawing a younger, higher-frequency shopper into the concept stores. CEO Mira Ashby said the everyday range now accounts for a third of concept-store volume without diluting the premium tier. The company signaled it may add four more concept locations next year.",
         "effects": {
           "consumer": 0.13
         }
@@ -1514,18 +1524,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82689,
+    "lastEventCycle": 82696,
     "events": [
-      {
-        "cycle": 82538,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Boreas Power Breaks Ground on Hollowmere Expansion Phase Two",
-        "body": "Mira Thorne announced a $1.9 billion buildout that will nearly double storage capacity at the wholly owned Hollowmere fields. The phase, slated for completion in 26 months, follows three straight quarters of guidance lifts and locks in long-term supply contracts with regional grid operators. Thorne hinted further bolt-on acquisitions could follow.",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82544,
         "kind": "major_deal",
@@ -1754,6 +1754,16 @@
         "body": "Boreas posted its first beat since the Vantel deal, with integration chief Dara Holt reporting $260M of the promised $400M in savings already realized. Compute revenue rose 14% as the combined power-and-storage fleet came online for large customers, easing fears that the $6.8B pivot had overreached. CEO Mira Thorne said the cost-out program should complete two quarters early.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82696,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Boreas Power Strikes $1.2B Grid-Storage Deal on Heels of Vantel Turnaround",
+        "body": "Fresh off beating estimates as its cost-out plan ran ahead of schedule, Boreas Power signed a $1.2B agreement to supply grid-scale storage across three regional networks over seven years. CEO Mira Thorne called it the largest single contract in the company's history and proof the Vantel integration has shifted from drag to platform. The deal is expected to add meaningfully to backlog beginning next quarter.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -3184,7 +3194,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82684,
+    "lastEventCycle": 82696,
     "events": [
       {
         "cycle": 0,
@@ -3390,6 +3400,16 @@
         "size": "standard",
         "head": "Calderforge Breaks Ground on Third Stormwell Hall to Meet Capacity Demand",
         "body": "Calderforge announced a $900M expansion adding a third compute hall at its Stormwell site, citing overflow demand from the recent multi-year capacity deal. CEO Nadia Throne said the new hall will use the cooling design piloted during last year's costly overhaul, now fully validated. Commissioning is targeted for late next year.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82696,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Calderforge Unveils Next-Gen Compute Tier as Stormwell Capacity Ramps",
+        "body": "Calderforge introduced its Meridian-class compute tier, promising a 40% density gain per hall and lower cooling draw, with the first racks slated for the newly commissioned Stormwell facilities. CEO Nadia Throne said the Meridian line was designed to absorb overflow from the multi-year capacity commitment signed earlier this year. Early customer allocations reportedly cover most of the third hall's projected output.",
         "effects": {
           "technology": 0.13
         }
@@ -5360,7 +5380,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82684,
+    "lastEventCycle": 82696,
     "events": [
       {
         "cycle": 0,
@@ -5516,6 +5536,16 @@
         "size": "standard",
         "head": "Drustcraft Adds Auto-Parts Supply Win to Broaden Beyond Fasteners",
         "body": "Drustcraft signed a $190M multi-year auto-parts agreement with vehicle maker Trennik Motors, diversifying its order base beyond the recent fastener contract now in shipment. CEO Cora Fenn described the deal as a measured step to balance the two segments after the twin vehicle-line fully cleared its recall overhang. Production tooling begins immediately.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82696,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcraft Posts Beat as Auto-Parts Win Diversifies Revenue Base",
+        "body": "Drustcraft topped estimates with revenue rising 14%, its first quarter showing meaningful contribution from the recently landed auto-parts contract alongside the ramping 280M fastener deal. CEO Cora Fenn said auto parts now represent roughly a fifth of order flow, easing the company's long reliance on fasteners. Management raised full-year guidance modestly on the broader mix.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -9668,14 +9698,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1936,
-    "ceo": "Marta Vinke",
+    "ceo": "Aldric Venn",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.62,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82686,
+    "lastEventCycle": 82696,
     "events": [
       {
         "cycle": 0,
@@ -9850,6 +9880,14 @@
         "head": "Kessel Drive Board Removes Neave Corliss as Storage Crisis Deepens",
         "body": "The Kessel Drive board ousted CEO Neave Corliss following the escalating safety probe, the 4,200-job overhaul, and the shareholder suit tied to storage failures. Directors appointed veteran operations chief Marta Vinke as interim CEO, pledging a full internal review of the halted storage line. The stock has shed nearly half its value since the probe opened.",
         "effects": {}
+      },
+      {
+        "cycle": 82696,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Kessel Drive Names Turnaround Veteran Aldric Venn as Permanent CEO",
+        "body": "Kessel Drive's board appointed Aldric Venn as permanent chief executive, ending an interim stretch that began when Neave Corliss was removed amid the storage crisis. Venn, brought in from outside the company, pledged to settle the shareholder suit, stabilize the vehicles unit, and decide the fate of the halted storage line within ninety days. The board said the search prioritized crisis restructuring over the headline-driven style of recent years.",
+        "effects": {}
       }
     ]
   },
@@ -9864,7 +9902,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82679,
+    "lastEventCycle": 82696,
     "events": [
       {
         "cycle": 0,
@@ -9992,6 +10030,16 @@
         "body": "Kesselgrove Co. edged past forecasts with $610 million in revenue, extending its streak of steady quarters as its industrial press backlog now reaches into the following fiscal year. Orla Steg said tooling bay utilization held near capacity and declined to raise guidance, keeping to the firm's measured tone.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82696,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Kesselgrove Co. Adds Second Assembly Bay to Attack Record Press Backlog",
+        "body": "With orders stretching past next year, Kesselgrove committed $190M to a second assembly bay at its Halvern works, targeting a 25% lift in annual press output by 2028. CEO Orla Steg framed the move as measured rather than speculative, noting the expansion is backed by firm orders already on the books. The bay is expected to begin partial output within eighteen months.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -10253,7 +10301,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82684,
+    "lastEventCycle": 82696,
     "events": [
       {
         "cycle": 0,
@@ -10402,6 +10450,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82696,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrwright Group Wins $310M Wire & Cable Supply Award for Corridor Region",
+        "body": "Korrwright Group secured a $310M multi-year contract to supply structural wire and cable for utility upgrades across the Verant Corridor region. CEO Halden Fenn said the win leverages the second line added earlier this year and pairs naturally with the ongoing rail-bridge work. The contract lifts the company's forward backlog to a record level.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -10416,18 +10474,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82689,
+    "lastEventCycle": 82696,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Korrwright Works Buys Heritage Dial-Maker Velloux",
-        "body": "Dunmore Carrow added the storied dial atelier Velloux to the Korrwright stable, securing a sought-after enamel workshop. The acquisition gives Korrwright in-house control over its most coveted finishes. Carrow said he 'won't wait on suppliers for art.'",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82525,
         "kind": "product_launch",
@@ -10652,6 +10700,16 @@
         "size": "standard",
         "head": "Korrwright Works Debuts Alvence-Built In-House Movement in Meridienne Flagship",
         "body": "Five months after the $340M Alvence acquisition, Korrwright unveiled the Meridienne Calibre 12, its first timepiece using a fully in-house movement from the Alvence workshops. CEO Dunmore Carrow priced the debut edition at $58,000 and capped the first run at 400 pieces, saying vertical control of movements ends the house's reliance on outside suppliers. Early salon allocations reportedly cleared within days of the private preview.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82696,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Works Beats as In-House Alvence Movement Lifts Margins",
+        "body": "Korrwright posted quarterly revenue up 18% with gross margin widening nearly three points, which management credited to bringing Alvence movement production in-house. CEO Dunmore Carrow said the Meridienne flagship's in-house calibre line has outpaced supply since debut, prompting a waitlist at the salon. The company reaffirmed plans to migrate more collections onto Alvence movements.",
         "effects": {
           "luxury": 0.13
         }
