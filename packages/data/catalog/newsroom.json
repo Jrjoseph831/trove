@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-10T07:44:33.830Z",
+  "generatedAt": "2026-08-10T13:11:31.510Z",
   "beats": [
     {
-      "company": "Aldouscyon",
-      "sector": "consumer",
+      "company": "Blackhold",
+      "sector": "energy",
       "kind": "expansion",
+      "size": "standard",
+      "head": "Blackhold Breaks Ground on Second Storage Campus to Fulfill $1.2B Grid Mandate",
+      "body": "Blackhold has begun construction on a 400-acre storage campus at Rell Harbor, expected to add 2.1 gigawatt-hours of capacity when it comes online in 2028. CEO Halden Dabney called the site 'the backbone of our mandate delivery,' with the newly independent testing unit certifying each production block before shipment. The project carries a $540M price tag, part of which is funded by advance payments tied to the regulator contract.",
+      "cycle": 82702,
+      "dur": 2
+    },
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Brunridge Works Signs Multi-Category Supply Pact With National Retail Group",
+      "body": "Brunridge Works has secured a three-year, $430M supply agreement to stock apparel, cleaning and packaging lines across a 900-store national retail group. CEO Halia Brennt said the deal 'rewards the discipline that brought our cordless line back,' broadening exposure beyond the recovered device segment. Shipments are slated to begin next quarter under a phased category rollout.",
+      "cycle": 82702,
+      "dur": 2
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowwell Beats as $1.1B Follow-On and New Plant Drive Record Machines Output",
+      "body": "Carrowwell posted quarterly revenue of $1.9B, up 24%, as the dedicated machines plant ramped to full capacity against the extended reindustrialization contract. CEO Mara Voss highlighted early traction for the automated material-handling system, which secured its first external orders outside the government program. The company lifted its backlog figure to $4.6B and reaffirmed margin targets.",
+      "cycle": 82702,
+      "dur": 2
+    },
+    {
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldouscyon Adds Sixth City to Conversion Slate on Steady Demand",
-      "body": "Aldouscyon signed a sixth municipal partner to its lighting-conversion program, extending a model that has driven three consecutive earnings beats. CEO Petra Mercer said the rollout would follow the same deliberate cadence, with first fixtures energized next quarter. The company reaffirmed that no conversion has yet run behind its original timeline.",
-      "cycle": 82701,
+      "head": "Holtware Co. Extends Streak as Second Hub Lifts Fulfillment Speed",
+      "body": "Holtware Co. reported quarterly revenue up 11% as its second fulfillment hub cut average delivery times and supported the national chain rollout. CEO Aurelia Dray noted the lifetime-warranty range now accounts for a third of hardware sales. Management raised full-year guidance modestly, citing steady cordless demand.",
+      "cycle": 82702,
       "dur": 1
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "scandal",
+      "size": "standard",
+      "head": "Ironcrestton Faces Scrutiny Over Meridian Line Sourcing Claims",
+      "body": "Ironcrestton is under fire after industry reviewers alleged the newly launched Meridian line overstated the provenance of its hand-finished components. CEO Thea Blackwood defended the collection as 'authentically crafted' but confirmed an internal audit of supplier documentation. The controversy has cast a shadow over Blackwood's aggressive move into higher price tiers just weeks after launch.",
+      "cycle": 82702,
+      "dur": 2
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Marrowstone Build Adds $310M Inland Rail Earthmoving Order",
+      "body": "Marrowstone Build has won a $310M contract to supply and service earthmoving fleets for a regional inland rail corridor. CEO Delphine Vaugh said the award leverages the same split-fleet model used on the $680M port package, keeping the new assembly line at full utilization through 2027. Deliveries begin in the second quarter with a dedicated maintenance crew stationed on-site.",
+      "cycle": 82702,
+      "dur": 2
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "outage",
+      "size": "major",
+      "head": "Skarnvale Vosk Junction Suffers Second Failure as Recovery Effort Falters",
+      "body": "Vosk Junction went dark again this week when a partially restored handling system tripped during load testing, halting throughput for a second time in two months. Recovery chief Elin Marsh acknowledged the setback strained an already fragile timeline, with CEO Dorn Vaskell facing mounting pressure from lenders over covenant terms. Analysts estimate the repeat outage adds $60M to recovery costs and pushes full reactivation into next year.",
+      "cycle": 82702,
+      "dur": 8
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Varnvale & Sons Debuts Corvane-Sourced Grand Complication in Landmark Timepiece Launch",
+      "body": "Varnvale & Sons unveiled the Sovereign Perpetual, its first timepiece built entirely from vertically integrated materials following the Corvane and Marchetti acquisitions. Priced at $210,000 and capped at 150 pieces annually, the launch marks CEO Bram Wold's boldest push into ultra-high-end horology. Early allocations reportedly sold through within 72 hours across the Heritage Division's flagship salons.",
+      "cycle": 82702,
+      "dur": 8
     },
     {
       "company": "Aperture Compute",
@@ -52,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Korrworks Beats Again as First Hub Sustains Above-Plan Volumes",
-      "body": "Korrworks edged past estimates as its inaugural cross-region hub held throughput roughly 12% above plan for a second straight quarter. CEO Rhys Throne said construction on the second hub remained on schedule with anchor-tenant talks 'well advanced.' Material-handling utilization reached a company record during the period.",
-      "cycle": 82701,
-      "dur": 1
-    },
-    {
       "company": "Maison & Vale",
       "sector": "hospitality",
       "kind": "earnings_beat",
@@ -69,26 +129,6 @@
       "head": "Maison & Vale Beats as Corriveau Bolt-On Clears First Full Quarter",
       "body": "Maison & Vale reported revenue of $2.4B, topping estimates, as the $1.1B Corriveau household-goods unit contributed a full quarter ahead of plan. CEO Rhys Kessler said combined Northram and Corriveau synergies had already reached $310M against a $400M target. Kessler signaled the acquisition pipeline 'remains very much open.'",
       "cycle": 82701,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrave",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Skarngrave Stretches Streak With Fresh Sterilizer Reorders",
-      "body": "Skarngrave posted another modest beat as hospital-network clients placed follow-on sterilizer orders, extending its run of consecutive quarters ahead of estimates. CEO Orla Dray credited on-time delivery and a low return rate for the repeat business. The company nudged full-year guidance up slightly, calling demand 'durable.'",
-      "cycle": 82701,
-      "dur": 1
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Bruncrest Works Opens Second Aria Line to Serve $5.2B Supply Pact",
-      "body": "Ines Marlow committed $340M to a second Aria production line to meet obligations under the landmark $5.2B compute pact, targeting first output in three quarters. Marlow said the expansion doubles Aria Prime capacity and adds a dedicated validation floor demanded by the anchor customer. The move marks Bruncrest's largest single capital outlay since the Ultra rebound began.",
-      "cycle": 82700,
       "dur": 2
     },
     {
@@ -102,16 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Carrowforge's Renn Unveils Sweeping Overhaul, Splitting Off Roe-Era Product Lines",
-      "body": "Dahlia Renn laid out a restructuring plan that carves the tainted press-machine division into a separate wind-down unit and consolidates remaining operations under three plant chiefs. The plan carries a $160M charge and roughly 900 job cuts, but Renn said it 'draws a hard line' under the falsification scandal. Federal investigators were briefed on the new quality-control structure ahead of the announcement.",
-      "cycle": 82700,
-      "dur": 2
-    },
-    {
       "company": "Castlestone",
       "sector": "technology",
       "kind": "earnings_beat",
@@ -120,36 +150,6 @@
       "body": "Castlestone reported quarterly revenue of $3.1B, up 74% year-over-year, as both Grid-Core lines ran at full capacity and the reported backlog swelled past $9B. Pell Karsh said the new campus would open its first bay six weeks ahead of schedule and raised full-year guidance for the second time this year. The result cements Karsh's aggressive capacity bet as the industry's standout call.",
       "cycle": 82700,
       "dur": 8
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Skarngrove & Sons Wins Kelvarn Terminal-Span Award, Extending Signature Project",
-      "body": "Skarngrove secured the terminal-span package of the Kelvarn Interchange, a $290M award covering the final approach structures and anchorages. Quinn Fenn said the win locks structural-materials volumes through the next two years and builds directly on the fourth-phase viaduct work now in production. The measured chief called Kelvarn 'the backbone of our order book.'",
-      "cycle": 82700,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Vossenspire Supply to Double Halvane Movement Output as Corveil Waitlists Swell",
-      "body": "Quinn Marrow announced a $210M expansion of the acquired Halvane workshop in Larkmoor, aiming to double in-house movement production within eighteen months. Corveil waitlists have stretched past nine months at flagship salons, and Marrow said the buildout would also supply movements for a forthcoming timepiece line. The restless chief hinted further acquisitions remain 'firmly on the table.'",
-      "cycle": 82700,
-      "dur": 2
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Woldmark Slips as Halcyon 4 Momentum Cools and Frayne Walks Back Turnaround Talk",
-      "body": "Woldmark posted revenue of $1.8B, missing estimates by roughly 6% as Halcyon 4 reorders fell sharply after the launch surge. Isolde Frayne, who declared the turnaround 'done' just two quarters ago, conceded the ramp had 'front-loaded demand' and said the next flagship arrives later than planned. Margins narrowed as discounting crept into secondary markets.",
-      "cycle": 82700,
-      "dur": 2
     },
     {
       "company": "Brunstone & Sons",
@@ -239,36 +239,6 @@
       "head": "Vossenspire Holdings Rocked as Grid-Scale Storage Bank Fails During Commissioning",
       "body": "A containment failure at Vossenspire's flagship storage installation forced a full shutdown mid-commissioning, delaying the $6.8B pact's first delivery milestone. Halden Roe acknowledged 'a serious setback' and pledged an independent review, with penalty clauses now in question. The incident casts doubt on the front-loaded revenue timeline Roe had touted.",
       "cycle": 82695,
-      "dur": 8
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Blackton Industries Hit With Class Action Over Halvern-Line Failures",
-      "body": "A consolidated class-action suit was filed against Blackton Industries seeking $1.2B in damages tied to the defective Halvern-line components. Plaintiffs allege the company delayed the recall despite early failure reports, a claim CEO Cassian Rode disputed as 'a mischaracterization of our safety record.' The litigation compounds recall costs that already gutted last quarter's margins, sending Blackton into its most turbulent stretch under Rode.",
-      "cycle": 82694,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Bruncrest Works Wins Landmark $5.2B Compute Supply Pact on Aria Prime Momentum",
-      "body": "Bruncrest Works has secured a five-year, $5.2B agreement to supply Aria Prime units to a consortium of data operators, its largest contract on record. CEO Ines Marlow called it validation of the Eastfield build strategy that revived the Aria line, with first shipments slated for next quarter. The deal vaults Bruncrest from turnaround story to serious contender and locks in the Eastfield plant at full capacity.",
-      "cycle": 82694,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Greywater Grid Halts Reservoir Buildout and Redraws Water Plan Amid Regulatory Pressure",
-      "body": "Greywater Grid has suspended its $2B reservoir-compute buildout and committed to a costly closed-loop redesign after regulators flagged excessive water draw. CEO Sable Renwick unveiled a $900M remediation and cooling overhaul, conceding the original design 'outpaced its environmental footing.' The pause casts doubt on delivery timelines for the $3.4B multi-site pact, with penalties under negotiation.",
-      "cycle": 82694,
       "dur": 8
     }
   ]

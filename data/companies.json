@@ -989,7 +989,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82691,
+    "lastEventCycle": 82702,
     "events": [
       {
         "cycle": 0,
@@ -1197,6 +1197,16 @@
         "body": "Blackhold secured a $1.2 billion multi-year contract to supply grid-scale storage systems, its largest award since the scandal-era collapse and a defining moment for CEO Halden Dabney's turnaround. Officials credited the spun-out independent testing unit, now certified by two regional grid authorities, with restoring confidence in Blackhold's safety claims. The deal locks in roughly 30% of projected 2027 capacity.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82702,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Blackhold Breaks Ground on Second Storage Campus to Fulfill $1.2B Grid Mandate",
+        "body": "Blackhold has begun construction on a 400-acre storage campus at Rell Harbor, expected to add 2.1 gigawatt-hours of capacity when it comes online in 2028. CEO Halden Dabney called the site 'the backbone of our mandate delivery,' with the newly independent testing unit certifying each production block before shipment. The project carries a $540M price tag, part of which is funded by advance payments tied to the regulator contract.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -2689,7 +2699,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82688,
+    "lastEventCycle": 82702,
     "events": [
       {
         "cycle": 0,
@@ -2833,6 +2843,16 @@
         "size": "standard",
         "head": "Brunridge Works Beats as Redesigned Cordless Line Recovers Shelf Space",
         "body": "Halia Brennt reported earnings of $1.04 a share against $0.91 expected, crediting strong reorders of the relaunched cordless devices and steady packaging volumes. The company said the thermal-safeguard redesign helped regain roughly 70% of retail placements lost during the recall. Brennt reaffirmed full-year guidance and hinted at a modest expansion of the apparel segment.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82702,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Brunridge Works Signs Multi-Category Supply Pact With National Retail Group",
+        "body": "Brunridge Works has secured a three-year, $430M supply agreement to stock apparel, cleaning and packaging lines across a 900-store national retail group. CEO Halia Brennt said the deal 'rewards the discipline that brought our cordless line back,' broadening exposure beyond the recovered device segment. Shipments are slated to begin next quarter under a phased category rollout.",
         "effects": {
           "consumer": 0.13
         }
@@ -3938,7 +3958,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82689,
+    "lastEventCycle": 82702,
     "events": [
       {
         "cycle": 0,
@@ -4082,6 +4102,16 @@
         "size": "standard",
         "head": "Carrowwell Lands $1.1B Follow-On to Extend Reindustrialization Machines Contract",
         "body": "The new Machines plant secured a $1.1B follow-on award to supply a second phase of the national reindustrialization program, lifting the plant's committed order book past $3.5B. CEO Mara Voss said the automated material-handling system rolled out last quarter cut delivery lead times by 22%, which she credited for winning the extension. Management now expects the plant to reach full capacity a full quarter ahead of schedule.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82702,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowwell Beats as $1.1B Follow-On and New Plant Drive Record Machines Output",
+        "body": "Carrowwell posted quarterly revenue of $1.9B, up 24%, as the dedicated machines plant ramped to full capacity against the extended reindustrialization contract. CEO Mara Voss highlighted early traction for the automated material-handling system, which secured its first external orders outside the government program. The company lifted its backlog figure to $4.6B and reaffirmed margin targets.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -9402,7 +9432,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82686,
+    "lastEventCycle": 82702,
     "events": [
       {
         "cycle": 0,
@@ -9520,6 +9550,16 @@
         "body": "Aurelia Dray reported quarterly revenue of $612 million, up 18% year over year, as the lifetime-warranty cordless range sold through the national hardware chain faster than forecast. The second fulfillment hub cut average delivery times by a third, easing earlier bottlenecks. Dray raised full-year guidance, citing steady reorder rates from retail partners.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82702,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtware Co. Extends Streak as Second Hub Lifts Fulfillment Speed",
+        "body": "Holtware Co. reported quarterly revenue up 11% as its second fulfillment hub cut average delivery times and supported the national chain rollout. CEO Aurelia Dray noted the lifetime-warranty range now accounts for a third of hardware sales. Management raised full-year guidance modestly, citing steady cordless demand.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -9658,7 +9698,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82693,
+    "lastEventCycle": 82702,
     "events": [
       {
         "cycle": 0,
@@ -9862,6 +9902,16 @@
         "body": "Ironcrestton launched Meridian, a limited-run collection positioned above its core fine-goods range, with pieces priced 40% higher than the in-house reset debut. Thea Blackwood framed the move as 'claiming the top of the table now that we control every stitch,' citing the margin gains from pulling production in-house. Initial allocations sold through at flagship locations within days, the company said.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82702,
+        "kind": "scandal",
+        "size": "standard",
+        "head": "Ironcrestton Faces Scrutiny Over Meridian Line Sourcing Claims",
+        "body": "Ironcrestton is under fire after industry reviewers alleged the newly launched Meridian line overstated the provenance of its hand-finished components. CEO Thea Blackwood defended the collection as 'authentically crafted' but confirmed an internal audit of supplier documentation. The controversy has cast a shadow over Blackwood's aggressive move into higher price tiers just weeks after launch.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -11934,7 +11984,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82690,
+    "lastEventCycle": 82702,
     "events": [
       {
         "cycle": 0,
@@ -12086,6 +12136,16 @@
         "size": "standard",
         "head": "Marrowstone Build Beats as $680M Port Package and New Line Lift Deliveries",
         "body": "Marrowstone reported deliveries up 18% quarter over quarter as the new assembly line ate into the earthmoving backlog and the $680M Split port fleet order began shipping. CEO Delphine Vaugh said the backlog, while still elevated, has fallen for the first time in four quarters, easing pressure on lead times. Vaugh reaffirmed guidance and hinted at a second shift 'if orders stay firm into next year.'",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82702,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Marrowstone Build Adds $310M Inland Rail Earthmoving Order",
+        "body": "Marrowstone Build has won a $310M contract to supply and service earthmoving fleets for a regional inland rail corridor. CEO Delphine Vaugh said the award leverages the same split-fleet model used on the $680M port package, keeping the new assembly line at full utilization through 2027. Deliveries begin in the second quarter with a dedicated maintenance crew stationed on-site.",
         "effects": {
           "construction": 0.13
         }
@@ -13034,7 +13094,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82690,
+    "lastEventCycle": 82702,
     "events": [
       {
         "cycle": 0,
@@ -13188,6 +13248,16 @@
         "body": "CEO Dorn Vaskell announced a freeze on the third terminal retrofit and pulled forward $95 million in maintenance spending to stabilize the Braeloch and Vosk Junction sites. A newly created recovery office, led by operations veteran Halden Roe, will oversee the phased restart of Vosk Junction, now expected to reach partial throughput within six weeks. Vaskell conceded the triple-retrofit pace had 'outrun our cash and our crews.'",
         "effects": {
           "logistics": -0.13
+        }
+      },
+      {
+        "cycle": 82702,
+        "kind": "outage",
+        "size": "major",
+        "head": "Skarnvale Vosk Junction Suffers Second Failure as Recovery Effort Falters",
+        "body": "Vosk Junction went dark again this week when a partially restored handling system tripped during load testing, halting throughput for a second time in two months. Recovery chief Elin Marsh acknowledged the setback strained an already fragile timeline, with CEO Dorn Vaskell facing mounting pressure from lenders over covenant terms. Analysts estimate the repeat outage adds $60M to recovery costs and pushes full reactivation into next year.",
+        "effects": {
+          "logistics": -0.22
         }
       }
     ]
@@ -14318,18 +14388,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82694,
+    "lastEventCycle": 82702,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Varnvale & Sons Snaps Up Leathercraft House Bellmont",
-        "body": "Bram Wold expanded Varnvale's fine-goods reach by acquiring Bellmont, a respected leather atelier known for its travel cases. The deal pairs Bellmont's craft with Varnvale's timepiece clientele. Wold hinted at co-branded sets 'before the season turns.'",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82527,
         "kind": "expansion",
@@ -14558,6 +14618,16 @@
         "body": "Bram Wold has agreed to acquire Corvane Metallurgy for $680M, locking in the precious alloys used across Varnvale's Heritage timepieces. The deal is the third acquisition in eighteen months for the acquisitive Wold, who framed it as insulating the house from volatile materials pricing. Corvane's Ridgemont refinery will supply the restored Marchetti atelier directly.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82702,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Varnvale & Sons Debuts Corvane-Sourced Grand Complication in Landmark Timepiece Launch",
+        "body": "Varnvale & Sons unveiled the Sovereign Perpetual, its first timepiece built entirely from vertically integrated materials following the Corvane and Marchetti acquisitions. Priced at $210,000 and capped at 150 pieces annually, the launch marks CEO Bram Wold's boldest push into ultra-high-end horology. Early allocations reportedly sold through within 72 hours across the Heritage Division's flagship salons.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
