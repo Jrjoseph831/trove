@@ -2038,18 +2038,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82694,
+    "lastEventCycle": 82700,
     "events": [
-      {
-        "cycle": 82549,
-        "kind": "lawsuit",
-        "size": "major",
-        "head": "Bruncrest Works Sued by Meridian Partners Over Collapsed Compute Pact",
-        "body": "The Meridian consortium filed a 480 million claim alleging Bruncrest misrepresented demand to secure campus commitments, escalating the fallout that felled former chief Petra Veldt. CEO Corwin Hale, who took the reins amid the probe, called the suit 'without merit' but confirmed the flagship campus buildout is now paused. The filing seeks return of advance payments and damages tied to stalled construction.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82557,
         "kind": "restructure",
@@ -2275,6 +2265,16 @@
         "effects": {
           "technology": 0.22
         }
+      },
+      {
+        "cycle": 82700,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Bruncrest Works Opens Second Aria Line to Serve $5.2B Supply Pact",
+        "body": "Ines Marlow committed $340M to a second Aria production line to meet obligations under the landmark $5.2B compute pact, targeting first output in three quarters. Marlow said the expansion doubles Aria Prime capacity and adds a dedicated validation floor demanded by the anchor customer. The move marks Bruncrest's largest single capital outlay since the Ultra rebound began.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -2425,14 +2425,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1919,
-    "ceo": "Halvard Renn",
+    "ceo": "Sabine Volkart",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82691,
+    "lastEventCycle": 82700,
     "events": [
       {
         "cycle": 0,
@@ -2647,6 +2647,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82700,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Brunmark Motors Ousts Halvard Renn as Veyra S Battery Crisis Engulfs Board",
+        "body": "Brunmark's board removed Halvard Renn after mounting recall costs, a widening class action, and a second regulatory notice pushed the automaker to a quarterly loss. Directors named turnaround veteran Sabine Volkart as chief executive, pledging a full battery-supply review and a halt to new Veyra variants until safety sign-off. Renn's fourteen-month tenure ends amid the most severe crisis in the company's history.",
+        "effects": {}
       }
     ]
   },
@@ -3735,7 +3743,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82688,
+    "lastEventCycle": 82700,
     "events": [
       {
         "cycle": 0,
@@ -3886,6 +3894,16 @@
         "head": "Carrowforge Taps Outsider Dahlia Renn to Lead Post-Scandal Rebuild",
         "body": "The board named Dahlia Renn, a former heavy-equipment operations chief, as permanent CEO after months without a settled leader. Renn inherits an open federal safety probe and pledged an independent audit of all Roe-era certification records within 90 days. Shares steadied as investors welcomed a clean external hire.",
         "effects": {}
+      },
+      {
+        "cycle": 82700,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Carrowforge's Renn Unveils Sweeping Overhaul, Splitting Off Roe-Era Product Lines",
+        "body": "Dahlia Renn laid out a restructuring plan that carves the tainted press-machine division into a separate wind-down unit and consolidates remaining operations under three plant chiefs. The plan carries a $160M charge and roughly 900 job cuts, but Renn said it 'draws a hard line' under the falsification scandal. Federal investigators were briefed on the new quality-control structure ahead of the announcement.",
+        "effects": {
+          "manufacturing": -0.13
+        }
       }
     ]
   },
@@ -4589,18 +4607,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82694,
+    "lastEventCycle": 82700,
     "events": [
-      {
-        "cycle": 82548,
-        "kind": "earnings_miss",
-        "size": "major",
-        "head": "Castlestone Plunges as Twin-Campus Costs Swamp Vellmont Order Book",
-        "body": "Castlestone reported a quarterly loss of 310 million, its first in over a decade, as buildout overruns on both compute campuses ballooned to nearly double initial estimates. CEO Iris Garr defended the spending as 'the price of not blinking,' but conceded the Vellmont backlog is converting to revenue slower than projected. The company suspended forward guidance amid mounting pressure over the aggressive expansion.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82554,
         "kind": "leadership_change",
@@ -4825,6 +4833,16 @@
         "body": "Castlestone will invest $2.1B in a dedicated grid-core campus outside Talleridge, tripling projected output by 2028. CEO Pell Karsh called the anchor deal 'just the opening chapter' and confirmed talks with two additional buyers. The move stretches Castlestone's balance sheet but positions it to clear a backlog now exceeding 14 months.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82700,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Castlestone Smashes Estimates as Grid-Core Backlog Tops $9B, Karsh Vindicated Again",
+        "body": "Castlestone reported quarterly revenue of $3.1B, up 74% year-over-year, as both Grid-Core lines ran at full capacity and the reported backlog swelled past $9B. Pell Karsh said the new campus would open its first bay six weeks ahead of schedule and raised full-year guidance for the second time this year. The result cements Karsh's aggressive capacity bet as the industry's standout call.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -5778,7 +5796,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82681,
+    "lastEventCycle": 82700,
     "events": [
       {
         "cycle": 0,
@@ -5886,6 +5904,16 @@
         "body": "Dunmorestone secured a three-year food service supply agreement with a 210-site restaurant group, its largest food service win to date. Orla Mercer said the deal complements the multi-site plumbing award and should begin contributing next quarter. The contract is valued at roughly 48 million over its term.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82700,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Dunmorestone Posts Another Steady Beat as Restaurant Contract Ramps",
+        "body": "Dunmorestone edged past estimates with revenue of $940M, aided by the first full quarter of shipments under its regional restaurant group deal. Orla Mercer credited disciplined fixtures pricing and steady food-service reorders, reiterating full-year guidance. The result extends the house's long run of quiet, unglamorous outperformance.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -12700,7 +12728,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82685,
+    "lastEventCycle": 82700,
     "events": [
       {
         "cycle": 0,
@@ -12826,6 +12854,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Beats as Kelvarn Viaduct Work Lifts Structural Volumes",
         "body": "Skarngrove reported revenue of $640 million, up 11% year over year, as fourth-phase approach viaduct fabrication ramped ahead of schedule. Quinn Fenn said the Kelvarn program now accounts for nearly a third of the structural-materials backlog and hinted at bidding for the corridor's final linking phase. Fastener volumes also rose on tie-in orders from the same project.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82700,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Skarngrove & Sons Wins Kelvarn Terminal-Span Award, Extending Signature Project",
+        "body": "Skarngrove secured the terminal-span package of the Kelvarn Interchange, a $290M award covering the final approach structures and anchorages. Quinn Fenn said the win locks structural-materials volumes through the next two years and builds directly on the fourth-phase viaduct work now in production. The measured chief called Kelvarn 'the backbone of our order book.'",
         "effects": {
           "construction": 0.13
         }
@@ -15270,7 +15308,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82691,
+    "lastEventCycle": 82700,
     "events": [
       {
         "cycle": 0,
@@ -15496,6 +15534,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Beats as Halvane-Powered Corveil Sells Out Across Larkmoor Salons",
         "body": "Vossenspire topped estimates as the first in-house Halvane movement drove Corveil timepiece sales, with several Larkmoor salons reporting sellouts within weeks of launch. CEO Quinn Marrow said vertical integration lifted timepiece gross margins by roughly four points versus the prior year. The company hinted at a second Larkmoor salon wave to capture demand.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82700,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vossenspire Supply to Double Halvane Movement Output as Corveil Waitlists Swell",
+        "body": "Quinn Marrow announced a $210M expansion of the acquired Halvane workshop in Larkmoor, aiming to double in-house movement production within eighteen months. Corveil waitlists have stretched past nine months at flagship salons, and Marrow said the buildout would also supply movements for a forthcoming timepiece line. The restless chief hinted further acquisitions remain 'firmly on the table.'",
         "effects": {
           "luxury": 0.13
         }
@@ -15902,7 +15950,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82689,
+    "lastEventCycle": 82700,
     "events": [
       {
         "cycle": 0,
@@ -16086,6 +16134,16 @@
         "body": "Woldmark reported compute revenue up 41% year on year, its strongest quarter in three years, as Halcyon 4 shipments cleared the backlog left by the launch sellout. CEO Isolde Frayne said gross margins recovered to 38% from the Halcyon 3 trough of 22%, and announced a follow-on Halcyon 4 Pro for next quarter. The result marks a decisive close to the crisis that brought Frayne in.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82700,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Woldmark Slips as Halcyon 4 Momentum Cools and Frayne Walks Back Turnaround Talk",
+        "body": "Woldmark posted revenue of $1.8B, missing estimates by roughly 6% as Halcyon 4 reorders fell sharply after the launch surge. Isolde Frayne, who declared the turnaround 'done' just two quarters ago, conceded the ramp had 'front-loaded demand' and said the next flagship arrives later than planned. Margins narrowed as discounting crept into secondary markets.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]

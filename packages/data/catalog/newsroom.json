@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-09T18:42:39.883Z",
+  "generatedAt": "2026-08-10T01:55:18.970Z",
   "beats": [
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Bruncrest Works Opens Second Aria Line to Serve $5.2B Supply Pact",
+      "body": "Ines Marlow committed $340M to a second Aria production line to meet obligations under the landmark $5.2B compute pact, targeting first output in three quarters. Marlow said the expansion doubles Aria Prime capacity and adds a dedicated validation floor demanded by the anchor customer. The move marks Bruncrest's largest single capital outlay since the Ultra rebound began.",
+      "cycle": 82700,
+      "dur": 2
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Brunmark Motors Ousts Halvard Renn as Veyra S Battery Crisis Engulfs Board",
+      "body": "Brunmark's board removed Halvard Renn after mounting recall costs, a widening class action, and a second regulatory notice pushed the automaker to a quarterly loss. Directors named turnaround veteran Sabine Volkart as chief executive, pledging a full battery-supply review and a halt to new Veyra variants until safety sign-off. Renn's fourteen-month tenure ends amid the most severe crisis in the company's history.",
+      "cycle": 82700,
+      "dur": 8
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Carrowforge's Renn Unveils Sweeping Overhaul, Splitting Off Roe-Era Product Lines",
+      "body": "Dahlia Renn laid out a restructuring plan that carves the tainted press-machine division into a separate wind-down unit and consolidates remaining operations under three plant chiefs. The plan carries a $160M charge and roughly 900 job cuts, but Renn said it 'draws a hard line' under the falsification scandal. Federal investigators were briefed on the new quality-control structure ahead of the announcement.",
+      "cycle": 82700,
+      "dur": 2
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "major",
+      "head": "Castlestone Smashes Estimates as Grid-Core Backlog Tops $9B, Karsh Vindicated Again",
+      "body": "Castlestone reported quarterly revenue of $3.1B, up 74% year-over-year, as both Grid-Core lines ran at full capacity and the reported backlog swelled past $9B. Pell Karsh said the new campus would open its first bay six weeks ahead of schedule and raised full-year guidance for the second time this year. The result cements Karsh's aggressive capacity bet as the industry's standout call.",
+      "cycle": 82700,
+      "dur": 8
+    },
+    {
+      "company": "Dunmorestone",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Dunmorestone Posts Another Steady Beat as Restaurant Contract Ramps",
+      "body": "Dunmorestone edged past estimates with revenue of $940M, aided by the first full quarter of shipments under its regional restaurant group deal. Orla Mercer credited disciplined fixtures pricing and steady food-service reorders, reiterating full-year guidance. The result extends the house's long run of quiet, unglamorous outperformance.",
+      "cycle": 82700,
+      "dur": 1
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Skarngrove & Sons Wins Kelvarn Terminal-Span Award, Extending Signature Project",
+      "body": "Skarngrove secured the terminal-span package of the Kelvarn Interchange, a $290M award covering the final approach structures and anchorages. Quinn Fenn said the win locks structural-materials volumes through the next two years and builds directly on the fourth-phase viaduct work now in production. The measured chief called Kelvarn 'the backbone of our order book.'",
+      "cycle": 82700,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Vossenspire Supply to Double Halvane Movement Output as Corveil Waitlists Swell",
+      "body": "Quinn Marrow announced a $210M expansion of the acquired Halvane workshop in Larkmoor, aiming to double in-house movement production within eighteen months. Corveil waitlists have stretched past nine months at flagship salons, and Marrow said the buildout would also supply movements for a forthcoming timepiece line. The restless chief hinted further acquisitions remain 'firmly on the table.'",
+      "cycle": 82700,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Woldmark Slips as Halcyon 4 Momentum Cools and Frayne Walks Back Turnaround Talk",
+      "body": "Woldmark posted revenue of $1.8B, missing estimates by roughly 6% as Halcyon 4 reorders fell sharply after the launch surge. Isolde Frayne, who declared the turnaround 'done' just two quarters ago, conceded the ramp had 'front-loaded demand' and said the next flagship arrives later than planned. Margins narrowed as discounting crept into secondary markets.",
+      "cycle": 82700,
+      "dur": 2
+    },
     {
       "company": "Brunstone & Sons",
       "sector": "automotive",
@@ -10,16 +90,6 @@
       "body": "Brunstone & Sons posted a heavy quarterly loss driven by an estimated 310 million charge tied to the recall of 1.4 million Vault Cell Guard Pro units, plus rising legal reserves. CEO Halden Crowe suspended the full-year outlook and warned of further remediation costs as the concealment case proceeds. The automaker also confirmed it has paused its next-generation cell program pending a full safety review.",
       "cycle": 82699,
       "dur": 8
-    },
-    {
-      "company": "Caldercraft Holdings",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Caldercraft Holdings Beats as Weatherproof Line Additions Lift Volumes",
-      "body": "Caldercraft Holdings edged past estimates as recent additions to its weatherproof range, including insulated chests and modular racks, drove a mid-single-digit volume gain. CEO Vale Fenn noted the new regional distribution center is now running at planned throughput. Household goods and hardware both contributed to the balanced quarter.",
-      "cycle": 82699,
-      "dur": 1
     },
     {
       "company": "Carrowcyon & Sons",
@@ -52,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowcyon Logs Fourth Straight Quiet Beat as Plumbing Margins Firm",
-      "body": "Marrowcyon reported earnings a hair above guidance for the fourth consecutive quarter, with fixtures margins expanding roughly 40 basis points on stable input costs. CEO Theo Orne credited disciplined inventory management across both apparel and plumbing lines, and reaffirmed the full-year outlook without change.",
-      "cycle": 82699,
-      "dur": 1
-    },
-    {
       "company": "Thaldale Group",
       "sector": "consumer",
       "kind": "lawsuit",
@@ -82,46 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Bruncraft Reopens Idled Halloran Plant to Fill $4.3 Billion Fleet Backlog",
-      "body": "Marcus Vane confirmed a $680 million restart of the long-dormant Halloran assembly line, adding a projected 2,400 jobs to meet delivery commitments running through 2028. Vane told analysts the expansion is 'phase one' of a broader capacity push, hinting at two more acquisition targets under review. The move marks Bruncraft's first plant reopening since the axle verdict rattled the board.",
-      "cycle": 82698,
-      "dur": 2
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Castlehold Rolls Out High-Capacity Modular Line as Second Plant Nears Completion",
-      "body": "Halden Voss unveiled the next tier of the modular storage platform, doubling per-unit capacity and targeting large grid operators. The launch coincides with the second plant reaching 80% construction, positioning Castlehold to begin shipments by mid-year. Voss said early letters of intent already cover roughly 40% of the plant's projected first-year output.",
-      "cycle": 82698,
-      "dur": 2
-    },
-    {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "recall",
-      "size": "standard",
-      "head": "Drossware Widens Cleaning-Line Recall as Regulators Cite Second Labeling Defect",
-      "body": "Nadia Wold expanded the recall to cover 1.9 million additional units after the ongoing regulatory review uncovered a separate concentration error in a downstream batch. The broadened action is expected to cost $95 million and prompted Drossware to halt one cleaning-line facility for a full audit. Wold said the company is overhauling its labeling controls but stopped short of forecasting when the line would resume full output.",
-      "cycle": 82698,
-      "dur": 2
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Forgegrave Industries Wins Regional Distributor Network in Second Beyond-Meridian Deal",
-      "body": "Petra Thorne secured a $310 million contract to supply material-handling systems to the Ridgeway distributor network, extending Forgegrave's reach into a third territory. The multi-year agreement builds directly on the Coastward win and lifts the company's out-of-region revenue mix above 30% for the first time. Thorne called the pace 'deliberate' and reaffirmed existing capacity plans.",
-      "cycle": 82698,
-      "dur": 2
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "scandal",
@@ -130,16 +150,6 @@
       "body": "Leaked documents revealed that Halhold managers flagged the compute reliability defects nearly a year before the unit was split off, a timeline that contradicts prior public statements from the board. Ilse Marren ordered an independent review and suspended two senior executives pending its outcome, while three major clients said they were reassessing contracts worth a combined $1.2 billion. The disclosure sent renewal talks into disarray just as Marren's turnaround was meant to stabilize.",
       "cycle": 82698,
       "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Lhaus Industries Carves Out Grid-Storage Division Amid Mounting Legal Pressure",
-      "body": "Cole Brandt announced Lhaus will spin its embattled Power & Storage operations into a ring-fenced subsidiary, a move designed to contain liability from the $1.8 billion partner lawsuit. The reorganization includes a $400 million provision for settlements and remediation, alongside leadership changes across the storage unit. Brandt framed the step as protecting the core auto parts and vehicles businesses from further fallout.",
-      "cycle": 82698,
-      "dur": 2
     },
     {
       "company": "Halhold Works",
@@ -229,26 +239,6 @@
       "head": "Brunstone & Sons Orders Full Recall of 1.4 Million Vault Cell Guard Pro Units as Regulators Force Action",
       "body": "Brunstone & Sons announced a mandatory recall of all 1.4 million Vault Cell Guard Pro storage units, agreeing to a supervised replacement program estimated to cost $2.6B. CEO Halden Crowe, appearing before a packed briefing, conceded the company 'moved too slowly on warnings we should have heeded' and suspended shipments of two related product lines pending review. The move follows the widening concealment probe and consolidated owner-insurer litigation that has dogged the firm for months.",
       "cycle": 82693,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Aperture Compute Lands $2.6B Emberline Supply Pact, Vaulting Past Dawnmere Wreckage",
-      "body": "Aperture Compute signed a multi-year supply agreement worth $2.6B to furnish Emberline units to a consortium of regional data operators, its largest single contract ever. CEO Marisol Venn framed the deal as vindication of the post-Dawnmere reset, saying the platform had 'cleared every review the last line failed.' Shares in the private placement round were reported oversubscribed.",
-      "cycle": 82692,
-      "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Lhaus Industries Sued for $1.8B as Grid-Storage Partners Allege Concealed Overheating Data",
-      "body": "Two megadeal counterparties filed a joint $1.8B suit claiming Lhaus withheld internal thermal-test findings before signing the grid-storage contracts. The complaint alleges CEO Cole Brandt's team accelerated deployments despite known fault margins, deepening the fallout from last quarter's recall. Lhaus called the claims 'without merit' but disclosed it has set aside $400M in reserves.",
-      "cycle": 82692,
       "dur": 8
     }
   ]
