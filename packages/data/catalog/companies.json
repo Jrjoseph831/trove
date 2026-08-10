@@ -1328,14 +1328,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1939,
-    "ceo": "Cassian Rode",
+    "ceo": "Marlow Denhart",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82694,
+    "lastEventCycle": 82703,
     "events": [
       {
         "cycle": 0,
@@ -1550,6 +1550,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82703,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Blackton Industries Ousts Cassian Rode as Halvern Fallout Reaches Boardroom",
+        "body": "The board removed CEO Cassian Rode after mounting losses from the 1.8M-unit Halvern recall and the pending class action eroded investor confidence. Veteran operations chief Marlow Denhart, brought in from the components division, will take the helm with a mandate to stabilize quality control and settle outstanding litigation. Rode's two-year tenure ends amid the costliest safety episode in the company's history.",
+        "effects": {}
       }
     ]
   },
@@ -7830,7 +7838,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82692,
+    "lastEventCycle": 82703,
     "events": [
       {
         "cycle": 0,
@@ -7986,6 +7994,16 @@
         "size": "standard",
         "head": "Halcrest Posts Blowout Quarter as Meridian Tourbillon Sells Out at Launch",
         "body": "Halcrest reported a 22% jump in quarterly revenue after its Meridian Tourbillon cleared its entire first allocation within weeks, with waitlists now stretching past 14 months. CEO Iris Marrow told a packed briefing that the overseas retreat 'freed every hand to serve the pieces that matter,' and hinted a second complication would follow before year-end. Margins widened to a five-year high of 41%.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82703,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halcrest Bets Big on Meridian Momentum With Limited Skeleton Edition",
+        "body": "Riding the sold-out success of the Meridian Tourbillon, CEO Iris Marrow unveiled a 250-piece Meridian Skeleton edition priced at a steep premium to the base line. Marrow staged a public launch event and pointed to reservation lists already exceeding the run before shipments begin. The release doubles down on the flagship line that drove last quarter's blowout results.",
         "effects": {
           "luxury": 0.13
         }
@@ -8960,7 +8978,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82686,
+    "lastEventCycle": 82703,
     "events": [
       {
         "cycle": 0,
@@ -9098,6 +9116,16 @@
         "body": "Sable Halloran secured a five-year framework agreement to supply marine-grade structural materials to a consortium of shipyards, valued at up to $1.4 billion. The contract will absorb the bulk of the newly opened third mill's output and locks in Hesperforge's record backlog through the decade. Halloran called it the largest single agreement in the company's 112-year history.",
         "effects": {
           "manufacturing": 0.22
+        }
+      },
+      {
+        "cycle": 82703,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Hesperforge Supply Commits $600M to Fourth Mill as Marine Backlog Overwhelms Capacity",
+        "body": "CEO Sable Halloran approved construction of a fourth mill at the Caldreach site, citing marine-grade order backlog that has now stretched delivery windows past eighteen months. The facility is slated to add roughly 40% to structural-materials output when it reaches full run rate in 2029. Halloran framed the move as a rare aggressive step, tied directly to the $1.4B framework deal signed last quarter.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -9339,7 +9367,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82677,
+    "lastEventCycle": 82703,
     "events": [
       {
         "cycle": 0,
@@ -9415,6 +9443,16 @@
         "size": "flash",
         "head": "Holtgate Group Notches Another Slim Beat on Reliable Guild Volumes",
         "body": "Holtgate extended its quiet winning streak with a modest earnings beat, driven again by steady Uniform Guild renewals and consistent mill throughput. CEO Dorian Throne said raw textile demand remains 'unremarkable in the best possible way.' Margins held flat as input costs stayed contained.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82703,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Group Extends Beat Streak With Another Slim Margin Gain",
+        "body": "CEO Dorian Throne delivered yet another narrow beat, crediting renewed guild volumes and consistent mill utilization for the incremental gain. Raw-textile output held steady with no meaningful shifts in cost or demand. Throne offered his customary understated outlook, guiding for continued stability into next quarter.",
         "effects": {
           "textiles": 0.06
         }
@@ -10277,7 +10315,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82672,
+    "lastEventCycle": 82703,
     "events": [
       {
         "cycle": 0,
@@ -10343,6 +10381,16 @@
         "size": "flash",
         "head": "Korrgrave Mfg. Breaks Ground on Modest Southern Blending Line",
         "body": "Korrgrave confirmed a $46M expansion adding a blending line at its southern facility, its first meaningful capacity addition in over a decade. CEO Aurelia Halloran framed the move as 'a careful step,' noting output would ramp gradually over three years to meet steady demand from regional cooperatives.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82703,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Korrgrave Mfg. Holds Streak as Southern Blending Line Nears Commissioning",
+        "body": "CEO Aurelia Halloran reported another steady quarter, with the Northern plant at full output and the new Southern blending line on track to commission early next year. Farm-input demand held firm across the season, keeping margins within the company's narrow historical band. Halloran reiterated her long-horizon stance, declining to accelerate the Southern ramp.",
         "effects": {
           "agriculture": 0.06
         }
@@ -10706,18 +10754,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82696,
+    "lastEventCycle": 82703,
     "events": [
-      {
-        "cycle": 82525,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Korrwright Works Debuts the Velloux Heritage Series, Its First Since the Acquisition",
-        "body": "Korrwright Works has launched the Velloux Heritage series, a six-model line pairing its movements with enamel dials from the newly acquired Velloux workshop. CEO Dunmore Carrow positioned the collection as proof the buyout was 'about craft, not just capacity,' with pieces priced from 14,000 to 60,000. The opening run of 900 units sold through to dealers within the first week.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82531,
         "kind": "award",
@@ -10944,6 +10982,16 @@
         "body": "Korrwright posted quarterly revenue up 18% with gross margin widening nearly three points, which management credited to bringing Alvence movement production in-house. CEO Dunmore Carrow said the Meridienne flagship's in-house calibre line has outpaced supply since debut, prompting a waitlist at the salon. The company reaffirmed plans to migrate more collections onto Alvence movements.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82703,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Korrwright Works Acquires Retail Chain Verenne in $780M Bid to Control Distribution",
+        "body": "In its boldest move yet, CEO Dunmore Carrow struck an $780M deal to buy the 44-boutique Verenne retail network, giving Korrwright direct shelf presence across premium markets for the first time. The acquisition marks a shift from Carrow's movement-maker buying spree toward controlling how Meridienne flagships reach buyers. Analysts note the deal roughly doubles Korrwright's retail footprint and layers integration risk onto an already busy balance sheet.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -11821,7 +11869,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82691,
+    "lastEventCycle": 82703,
     "events": [
       {
         "cycle": 0,
@@ -11969,6 +12017,16 @@
         "body": "Marrowmoor posted another modest beat, its fifth straight, as combined Westline and Northbrook properties held near-full occupancy through the quarter. CEO Dorian Steg noted supply-side discipline on cleaning and household-goods costs preserved margins. Management reaffirmed its cautious full-year outlook.",
         "effects": {
           "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82703,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Marrowmoor Holdings Adds Eastgate Property to Westline-Northbrook Base",
+        "body": "CEO Dorian Steg announced the acquisition of the Eastgate hospitality property, marking a disciplined third pillar alongside the fully occupied Westline and Northbrook sites. The addition expands the company's cleaning and household-goods servicing footprint by roughly a quarter. Steg emphasized measured integration, targeting stabilized occupancy within two quarters.",
+        "effects": {
+          "hospitality": 0.13
         }
       }
     ]
@@ -14245,7 +14303,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82688,
+    "lastEventCycle": 82703,
     "events": [
       {
         "cycle": 0,
@@ -14373,6 +14431,16 @@
         "body": "Halden Vossen signed a three-year agreement to handle packaging and distribution for a regional pharmaceutical supplier, building on last quarter's distribution win. The deal is expected to add roughly $80 million in annual revenue and further reduce reliance on grocery volumes. Vossen said the pipeline of non-grocery prospects remains 'the healthiest in years.'",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82703,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Posts Modest Beat as Non-Grocery Contracts Ramp",
+        "body": "CEO Halden Vossen reported a slim quarterly beat as the two new distribution contracts moved toward full volume, lifting packaging throughput about 6% year over year. Vossen kept guidance unchanged, characterizing the diversification push as on schedule and low-drama. Grocery remains the core, but non-grocery now accounts for nearly a fifth of shipped volume.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]

@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-10T13:11:31.510Z",
+  "generatedAt": "2026-08-10T18:59:25.362Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Blackton Industries Ousts Cassian Rode as Halvern Fallout Reaches Boardroom",
+      "body": "The board removed CEO Cassian Rode after mounting losses from the 1.8M-unit Halvern recall and the pending class action eroded investor confidence. Veteran operations chief Marlow Denhart, brought in from the components division, will take the helm with a mandate to stabilize quality control and settle outstanding litigation. Rode's two-year tenure ends amid the costliest safety episode in the company's history.",
+      "cycle": 82703,
+      "dur": 8
+    },
+    {
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halcrest Bets Big on Meridian Momentum With Limited Skeleton Edition",
+      "body": "Riding the sold-out success of the Meridian Tourbillon, CEO Iris Marrow unveiled a 250-piece Meridian Skeleton edition priced at a steep premium to the base line. Marrow staged a public launch event and pointed to reservation lists already exceeding the run before shipments begin. The release doubles down on the flagship line that drove last quarter's blowout results.",
+      "cycle": 82703,
+      "dur": 2
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Hesperforge Supply Commits $600M to Fourth Mill as Marine Backlog Overwhelms Capacity",
+      "body": "CEO Sable Halloran approved construction of a fourth mill at the Caldreach site, citing marine-grade order backlog that has now stretched delivery windows past eighteen months. The facility is slated to add roughly 40% to structural-materials output when it reaches full run rate in 2029. Halloran framed the move as a rare aggressive step, tied directly to the $1.4B framework deal signed last quarter.",
+      "cycle": 82703,
+      "dur": 2
+    },
+    {
+      "company": "Holtgate Group",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Group Extends Beat Streak With Another Slim Margin Gain",
+      "body": "CEO Dorian Throne delivered yet another narrow beat, crediting renewed guild volumes and consistent mill utilization for the incremental gain. Raw-textile output held steady with no meaningful shifts in cost or demand. Throne offered his customary understated outlook, guiding for continued stability into next quarter.",
+      "cycle": 82703,
+      "dur": 1
+    },
+    {
+      "company": "Korrgrave Mfg.",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Korrgrave Mfg. Holds Streak as Southern Blending Line Nears Commissioning",
+      "body": "CEO Aurelia Halloran reported another steady quarter, with the Northern plant at full output and the new Southern blending line on track to commission early next year. Farm-input demand held firm across the season, keeping margins within the company's narrow historical band. Halloran reiterated her long-horizon stance, declining to accelerate the Southern ramp.",
+      "cycle": 82703,
+      "dur": 1
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Korrwright Works Acquires Retail Chain Verenne in $780M Bid to Control Distribution",
+      "body": "In its boldest move yet, CEO Dunmore Carrow struck an $780M deal to buy the 44-boutique Verenne retail network, giving Korrwright direct shelf presence across premium markets for the first time. The acquisition marks a shift from Carrow's movement-maker buying spree toward controlling how Meridienne flagships reach buyers. Analysts note the deal roughly doubles Korrwright's retail footprint and layers integration risk onto an already busy balance sheet.",
+      "cycle": 82703,
+      "dur": 8
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Marrowmoor Holdings Adds Eastgate Property to Westline-Northbrook Base",
+      "body": "CEO Dorian Steg announced the acquisition of the Eastgate hospitality property, marking a disciplined third pillar alongside the fully occupied Westline and Northbrook sites. The addition expands the company's cleaning and household-goods servicing footprint by roughly a quarter. Steg emphasized measured integration, targeting stabilized occupancy within two quarters.",
+      "cycle": 82703,
+      "dur": 2
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vantor Lines Posts Modest Beat as Non-Grocery Contracts Ramp",
+      "body": "CEO Halden Vossen reported a slim quarterly beat as the two new distribution contracts moved toward full volume, lifting packaging throughput about 6% year over year. Vossen kept guidance unchanged, characterizing the diversification push as on schedule and low-drama. Grocery remains the core, but non-grocery now accounts for nearly a fifth of shipped volume.",
+      "cycle": 82703,
+      "dur": 1
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -30,16 +110,6 @@
       "body": "Carrowwell posted quarterly revenue of $1.9B, up 24%, as the dedicated machines plant ramped to full capacity against the extended reindustrialization contract. CEO Mara Voss highlighted early traction for the automated material-handling system, which secured its first external orders outside the government program. The company lifted its backlog figure to $4.6B and reaffirmed margin targets.",
       "cycle": 82702,
       "dur": 2
-    },
-    {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtware Co. Extends Streak as Second Hub Lifts Fulfillment Speed",
-      "body": "Holtware Co. reported quarterly revenue up 11% as its second fulfillment hub cut average delivery times and supported the national chain rollout. CEO Aurelia Dray noted the lifetime-warranty range now accounts for a third of hardware sales. Management raised full-year guidance modestly, citing steady cordless demand.",
-      "cycle": 82702,
-      "dur": 1
     },
     {
       "company": "Ironcrestton",
@@ -82,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aperture Compute Beats as Emberline Supply Pact Front-Loads Revenue",
-      "body": "Aperture posted quarterly revenue of $1.9B, up 34% year over year, as initial shipments under the $2.6B Emberline pact landed ahead of schedule. CEO Marisol Venn said the Dawnmere III writedown was now 'fully behind us,' with the reset unit swinging to an operating profit two quarters early. Management raised full-year guidance on the strength of a lengthening Emberline order book.",
-      "cycle": 82701,
-      "dur": 2
-    },
-    {
       "company": "Dunmorewright Industries",
       "sector": "construction",
       "kind": "major_deal",
@@ -100,36 +160,6 @@
       "body": "Dunmorewright won a $780M multi-year contract to rebuild an aging inland waterworks network, eclipsing its own coastal-defense record set last year. CEO Emil Skarn called the award 'the defining project of a generation for this company,' spanning both its earthmoving and plumbing-and-fixtures lines. The deal lifts Dunmorewright's backlog above $2B for the first time in its history.",
       "cycle": 82701,
       "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Fennmoor Misses as Medical Systems Integration Costs Run Deeper Than Guided",
-      "body": "Fennmoor posted quarterly earnings below expectations, citing $420M in integration and restructuring charges tied to folding Corvane and Threll into its new Medical Systems Division. CEO Dorian Brandt acknowledged the combination 'is proving costlier and slower than we mapped,' pushing breakeven for the unit into next year. Devices and Industrial Machines held steady, partly cushioning the shortfall.",
-      "cycle": 82701,
-      "dur": 2
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Gromford Works Bets on Slimmed Timepiece Line With Limited Halvard-Era Debut",
-      "body": "Chief Halvard Pryce unveiled the Aurelian Collection, a 900-piece limited run of high-margin timepieces positioned as the first designed entirely since the Meridian split. Pryce told a packed showcase that Gromford would 'make fewer, charge more, and mean it,' targeting a 40% lift in per-unit margins after last year's output cuts. Early allocations to flagship boutiques sold through within days.",
-      "cycle": 82701,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Maison & Vale Beats as Corriveau Bolt-On Clears First Full Quarter",
-      "body": "Maison & Vale reported revenue of $2.4B, topping estimates, as the $1.1B Corriveau household-goods unit contributed a full quarter ahead of plan. CEO Rhys Kessler said combined Northram and Corriveau synergies had already reached $310M against a $400M target. Kessler signaled the acquisition pipeline 'remains very much open.'",
-      "cycle": 82701,
-      "dur": 2
     },
     {
       "company": "Brunmark Motors",
@@ -219,26 +249,6 @@
       "head": "Kessel Drive Names Turnaround Veteran Aldric Venn as Permanent CEO",
       "body": "Kessel Drive's board appointed Aldric Venn as permanent chief executive, ending an interim stretch that began when Neave Corliss was removed amid the storage crisis. Venn, brought in from outside the company, pledged to settle the shareholder suit, stabilize the vehicles unit, and decide the fate of the halted storage line within ninety days. The board said the search prioritized crisis restructuring over the headline-driven style of recent years.",
       "cycle": 82696,
-      "dur": 8
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Erretmark Works Seals Landmark 2,400-Unit Veyron Contract in Cross-Border Push",
-      "body": "Aurelia Garr unveiled a four-year, 2,400-unit Veyron supply agreement valued at roughly $5.2 billion, the largest single order in the company's 105-year history. The deal spans three export corridors and commits Erretmark to a third assembly hall, with Garr calling it 'the platform that redefines our reach.' Backlog now stretches into 2029.",
-      "cycle": 82695,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "outage",
-      "size": "major",
-      "head": "Vossenspire Holdings Rocked as Grid-Scale Storage Bank Fails During Commissioning",
-      "body": "A containment failure at Vossenspire's flagship storage installation forced a full shutdown mid-commissioning, delaying the $6.8B pact's first delivery milestone. Halden Roe acknowledged 'a serious setback' and pledged an independent review, with penalty clauses now in question. The incident casts doubt on the front-loaded revenue timeline Roe had touted.",
-      "cycle": 82695,
       "dur": 8
     }
   ]
