@@ -143,7 +143,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82684,
+    "lastEventCycle": 82701,
     "events": [
       {
         "cycle": 0,
@@ -259,6 +259,16 @@
         "size": "flash",
         "head": "Aldouscyon Beats as Fifth-City Conversion Begins Contributing",
         "body": "Aldouscyon reported a modest earnings beat, with revenue up 6% as the newly signed fifth city entered early conversion phases. CEO Petra Mercer said the second fixture plant is running near capacity and confirmed talks with two additional municipalities. The results reinforced the steady cadence investors have come to expect.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82701,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Aldouscyon Adds Sixth City to Conversion Slate on Steady Demand",
+        "body": "Aldouscyon signed a sixth municipal partner to its lighting-conversion program, extending a model that has driven three consecutive earnings beats. CEO Petra Mercer said the rollout would follow the same deliberate cadence, with first fixtures energized next quarter. The company reaffirmed that no conversion has yet run behind its original timeline.",
         "effects": {
           "consumer": 0.06
         }
@@ -532,7 +542,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82692,
+    "lastEventCycle": 82701,
     "events": [
       {
         "cycle": 0,
@@ -758,6 +768,16 @@
         "body": "Aperture Compute signed a multi-year supply agreement worth $2.6B to furnish Emberline units to a consortium of regional data operators, its largest single contract ever. CEO Marisol Venn framed the deal as vindication of the post-Dawnmere reset, saying the platform had 'cleared every review the last line failed.' Shares in the private placement round were reported oversubscribed.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82701,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aperture Compute Beats as Emberline Supply Pact Front-Loads Revenue",
+        "body": "Aperture posted quarterly revenue of $1.9B, up 34% year over year, as initial shipments under the $2.6B Emberline pact landed ahead of schedule. CEO Marisol Venn said the Dawnmere III writedown was now 'fully behind us,' with the reset unit swinging to an operating profit two quarters early. Management raised full-year guidance on the strength of a lengthening Emberline order book.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -5929,7 +5949,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82685,
+    "lastEventCycle": 82701,
     "events": [
       {
         "cycle": 0,
@@ -6047,6 +6067,16 @@
         "body": "Dunmorewright reported quarterly revenue of $1.24 billion, modestly ahead of guidance, as the second phase of the $510 million coastal defense contract passed inspection on schedule. Emil Skarn noted margins held steady despite higher aggregate costs, crediting parallel scheduling across Harborfront and Riverside. The company reaffirmed its full-year outlook.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82701,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Dunmorewright Lands $780M Inland Waterworks Contract, Its Largest Ever",
+        "body": "Dunmorewright won a $780M multi-year contract to rebuild an aging inland waterworks network, eclipsing its own coastal-defense record set last year. CEO Emil Skarn called the award 'the defining project of a generation for this company,' spanning both its earthmoving and plumbing-and-fixtures lines. The deal lifts Dunmorewright's backlog above $2B for the first time in its history.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -6418,7 +6448,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82693,
+    "lastEventCycle": 82701,
     "events": [
       {
         "cycle": 0,
@@ -6634,6 +6664,16 @@
         "size": "standard",
         "head": "Fennmoor Folds Corvane and Threll Into New Medical Systems Division as Integration Costs Bite",
         "body": "Fennmoor said it will consolidate its recently acquired Corvane Imaging and Threll Diagnostics units under a single Medical Systems division led by newly named president Marta Feld. The company flagged $410M in one-time integration charges over the next two quarters, with Dorian Brandt calling the reorganization 'the plumbing behind the next leg of growth.' Analysts noted the back-to-back deals have pushed Fennmoor's net leverage to its highest level in a decade.",
+        "effects": {
+          "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82701,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Fennmoor Misses as Medical Systems Integration Costs Run Deeper Than Guided",
+        "body": "Fennmoor posted quarterly earnings below expectations, citing $420M in integration and restructuring charges tied to folding Corvane and Threll into its new Medical Systems Division. CEO Dorian Brandt acknowledged the combination 'is proving costlier and slower than we mapped,' pushing breakeven for the unit into next year. Devices and Industrial Machines held steady, partly cushioning the shortfall.",
         "effects": {
           "technology": -0.13
         }
@@ -7515,18 +7555,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82694,
+    "lastEventCycle": 82701,
     "events": [
-      {
-        "cycle": 82556,
-        "kind": "scandal",
-        "size": "major",
-        "head": "Gromford Works Faces Backlash as Aurelian Noir Recall Widens Amid Concealment Claims",
-        "body": "Documents surfaced this week suggesting Gromford Works knew of the Aurelian Noir clasp defect months before the initial recall, prompting fierce criticism from luxury retailers. CEO Mira Ashby, known for her headline-chasing style, now confronts an inquiry from the Guild of Fine Merchants, while the recall count has swelled to 22,000 units. Two flagship boutiques have suspended new orders pending the outcome.",
-        "effects": {
-          "luxury": -0.22
-        }
-      },
       {
         "cycle": 82562,
         "kind": "lawsuit",
@@ -7746,6 +7776,16 @@
         "head": "Gromford Works Names Halvard Pryce Permanent Chief to Steady Post-Meridian Rebuild",
         "body": "Gromford's board has appointed Halvard Pryce as permanent CEO, ending the caretaker period that followed the Meridian fallout. Pryce, a veteran of the luxury-goods sector, inherits a slimmed timepiece operation and pledged to 'restore discipline before ambition.' Analysts welcomed the clarity after months of turmoil, though the Meridian spinoff's fate remains unresolved.",
         "effects": {}
+      },
+      {
+        "cycle": 82701,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Bets on Slimmed Timepiece Line With Limited Halvard-Era Debut",
+        "body": "Chief Halvard Pryce unveiled the Aurelian Collection, a 900-piece limited run of high-margin timepieces positioned as the first designed entirely since the Meridian split. Pryce told a packed showcase that Gromford would 'make fewer, charge more, and mean it,' targeting a 40% lift in per-unit margins after last year's output cuts. Early allocations to flagship boutiques sold through within days.",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -10270,7 +10310,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82689,
+    "lastEventCycle": 82701,
     "events": [
       {
         "cycle": 0,
@@ -10418,6 +10458,16 @@
         "body": "Buoyed by a hub running ahead of forecast, Korrwright committed $480M to a second cross-region facility with anchor commitments already in hand. CEO Rhys Throne said the new site will carry the same automated sorting layer from day one, targeting a first-half opening next year. The company expects the two hubs together to lift throughput capacity by 60%.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82701,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Korrworks Beats Again as First Hub Sustains Above-Plan Volumes",
+        "body": "Korrworks edged past estimates as its inaugural cross-region hub held throughput roughly 12% above plan for a second straight quarter. CEO Rhys Throne said construction on the second hub remained on schedule with anchor-tenant talks 'well advanced.' Material-handling utilization reached a company record during the period.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -11114,7 +11164,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82690,
+    "lastEventCycle": 82701,
     "events": [
       {
         "cycle": 0,
@@ -11280,6 +11330,16 @@
         "size": "standard",
         "head": "Maison & Vale Adds Household-Goods Maker Corriveau in $1.1B Bolt-On",
         "body": "Fresh off the Northram integration, restless CEO Rhys Kessler struck a $1.1 billion cash-and-stock deal for household-goods maker Corriveau, extending Maison & Vale beyond cleaning chemicals into shelf-stable home products. Kessler said the acquisition unlocks shared distribution with Northram and targets a further $150 million in combined savings by 2028. Regulators are expected to clear the deal within two quarters.",
+        "effects": {
+          "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82701,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Maison & Vale Beats as Corriveau Bolt-On Clears First Full Quarter",
+        "body": "Maison & Vale reported revenue of $2.4B, topping estimates, as the $1.1B Corriveau household-goods unit contributed a full quarter ahead of plan. CEO Rhys Kessler said combined Northram and Corriveau synergies had already reached $310M against a $400M target. Kessler signaled the acquisition pipeline 'remains very much open.'",
         "effects": {
           "hospitality": 0.13
         }
@@ -12615,7 +12675,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82682,
+    "lastEventCycle": 82701,
     "events": [
       {
         "cycle": 0,
@@ -12711,6 +12771,16 @@
         "size": "flash",
         "head": "Skarngrave Extends Streak as Sterilizer Backlog Clears on Schedule",
         "body": "Skarngrave reported another dependable quarter, clearing the bulk of its hospital-network sterilizer backlog and holding operating margin steady at 18%. Orla Dray reaffirmed full-year guidance and noted the expanded assembly line is now running at 90% utilization. The jansan cleaning segment added a quiet 4% to complement the medical ramp.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82701,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrave Stretches Streak With Fresh Sterilizer Reorders",
+        "body": "Skarngrave posted another modest beat as hospital-network clients placed follow-on sterilizer orders, extending its run of consecutive quarters ahead of estimates. CEO Orla Dray credited on-time delivery and a low return rate for the repeat business. The company nudged full-year guidance up slightly, calling demand 'durable.'",
         "effects": {
           "medical": 0.06
         }
