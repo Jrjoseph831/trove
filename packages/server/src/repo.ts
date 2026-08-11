@@ -939,6 +939,9 @@ export async function settleBuyout(orderId: string, retries = 4): Promise<DealRe
       },
     };
     // The acquired firm cashes out: keeps the agreed price, everything else wiped.
+    // Clearing `site` too means their public company page 404s immediately —
+    // the handler already treats a missing site as "no such company" (see
+    // handlers/company.ts), so there's nothing else to update there.
     const cashedOut: Player = {
       ...target,
       cash: order.price,
@@ -950,6 +953,7 @@ export async function settleBuyout(orderId: string, retries = 4): Promise<DealRe
       listPrices: {},
       floorSlots: STARTING_SLOTS,
       infra: { ...FRESH_INFRA },
+      site: undefined,
     };
 
     try {
