@@ -26,6 +26,7 @@ import { listedUnitPrice, QC_PREMIUM } from "./pricing";
 import { rand, rexp } from "./rng";
 import { activeMarketEvent } from "./events";
 export * from "./events";
+import { rippleMultiplier, updatePlayerActivity } from "./aiEconomy";
 export * from "./aiEconomy";
 import type {
   ActiveStory,
@@ -177,9 +178,12 @@ export function reconcileCompanies(state: WorldState): void {
 
 /** Each cycle every company books its revenue — the engine that keeps the big
  *  names solvent. Income is the one intentional inflow (a company earns money);
- *  net worth (cash + holdings) still reconciles exactly. */
+ *  net worth (cash + holdings) still reconciles exactly. The ripple multiplier
+ *  (see aiEconomy.ts) scales this UP when real players are active, and is
+ *  exactly 1.0 (today's flat behavior) on a dormant world. */
 export function accrueIncome(state: WorldState): void {
-  for (const t of state.traders) t.cash += incomeOf(t);
+  const ripple = rippleMultiplier(state);
+  for (const t of state.traders) t.cash += incomeOf(t) * ripple;
 }
 
 /** A pristine world: every item at baseline, sectors at 1.0, no news yet. */
@@ -690,6 +694,10 @@ export function repay(state: WorldState, amount: number): boolean {
  */
 export function settleCycle(state: WorldState): void {
   state.cycle++;
+
+  // -1. Refresh the real-player activity EMA BEFORE anything reads the ripple
+  //     multiplier this cycle (accrueIncome, right below, is the first reader).
+  updatePlayerActivity(state);
 
   // 0. Companies: upgrade the roster if needed, then book each one's revenue so
   //    the institutional players stay solvent (titans never run dry).

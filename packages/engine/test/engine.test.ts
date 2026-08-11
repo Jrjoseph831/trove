@@ -295,13 +295,27 @@ describe("AI ripple multiplier — bounded and neutral by default", () => {
 });
 
 describe("AI company finances reconcile", () => {
-  it("every company books exactly its income each cycle", () => {
+  it("every company books exactly its income each cycle (dormant world, ripple neutral)", () => {
     const S = createWorld(0);
     const before = S.traders.map((t) => ({ cash: t.cash, income: t.income ?? 0 }));
     accrueIncome(S);
     S.traders.forEach((t, i) => {
       expect(t.cash).toBeCloseTo(before[i]!.cash + before[i]!.income, 6);
       expect(before[i]!.income).toBeGreaterThan(0); // a real, positive revenue
+    });
+  });
+
+  it("books income × the ripple multiplier once real players have a footprint", () => {
+    const S = createWorld(0);
+    // Give "YOU" a large footprint so the ripple multiplier is meaningfully > 1.
+    for (const it of S.items) it.owners["YOU"] = 1000;
+    for (let i = 0; i < 50; i++) updatePlayerActivity(S); // let the EMA catch up
+    const ripple = rippleMultiplier(S);
+    expect(ripple).toBeGreaterThan(1); // the path we're actually testing
+    const before = S.traders.map((t) => ({ cash: t.cash, income: t.income ?? 0 }));
+    accrueIncome(S);
+    S.traders.forEach((t, i) => {
+      expect(t.cash).toBeCloseTo(before[i]!.cash + before[i]!.income * ripple, 6);
     });
   });
 
