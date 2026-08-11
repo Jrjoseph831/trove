@@ -1,7 +1,7 @@
 /**
  * @trove/engine — AI companies as real economic actors.
  *
- * Two extensions to the base model (see specs/02_ENGINE.md):
+ * Three extensions to the base model (see specs/02_ENGINE.md):
  *  1. A "ripple" multiplier that ties AI income/aggression to how much real
  *     players are actually doing, so the world doesn't stay static while a
  *     player gets rich. Bounded — it can only ever raise AI activity above the
@@ -11,6 +11,11 @@
  *     their own holdings, without needing per-company Factory objects (no new
  *     per-tick Lambda cost; this evaluates once per company per 6h
  *     settlement, the same cadence AI trading already runs on).
+ *  3. Named AI-to-AI trading — when sourcing an input, a company prefers
+ *     buying directly from another company that actually MAKES that item
+ *     (a real, visible, logged transaction) over the anonymous floor,
+ *     whenever one exists and holds stock. Reroutes WHO gets paid, never
+ *     changes the total amount spent or consumed — see consumeFor().
  *
  * Hard constraint: nothing in this file may call `rand()` from ./rng. Every
  * new draw would shift the RNG sequence for everything settleCycle runs after
@@ -22,6 +27,7 @@ import {
   AI_APPETITE_MUL,
   canProduce,
   COMPANY_TIERS,
+  companyRoster,
   effectiveSpec,
   items as catalog,
   recipeOf,
@@ -30,6 +36,14 @@ import {
   type SectorKey,
 } from "@trove/data";
 import type { RuntimeItem, Trader, WorldState } from "./types";
+
+/** Append one floor-activity entry, same cap as index.ts's own `pushLog` —
+ *  kept local to avoid a circular import (index.ts imports FROM this file,
+ *  not the other way; same pattern orders.ts already uses for demandHeat). */
+function logActivity(state: WorldState, who: string, verb: string, it: string): void {
+  state.log.unshift({ who, verb, it });
+  if (state.log.length > 30) state.log.pop();
+}
 
 // ── Real-player activity → the ripple multiplier ────────────────────────────
 
@@ -141,6 +155,28 @@ function sectorBuckets(): Record<SectorKey, Record<AiTierGroup, Item[]>> {
   return b;
 }
 
+/** Every item id referenced as an input by ANY producible recipe in the
+ *  whole catalog — built once, lazily. Materials-specialist companies (see
+ *  PART_PRODUCER_FRACTION below) pick from the intersection of this and
+ *  their sector's bucket, which GUARANTEES their chosen output is something
+ *  at least one other recipe actually needs, rather than hoping a generic
+ *  price-ranked sector pick happens to coincide with someone's input by
+ *  chance (it rarely does — a materials tier needs to be built deliberately,
+ *  not left to coincidence). */
+let _allRecipeInputIds: Set<number> | null = null;
+function allRecipeInputIds(): Set<number> {
+  if (_allRecipeInputIds) return _allRecipeInputIds;
+  const ids = new Set<number>();
+  for (const it of catalog) {
+    if (!canProduce(it)) continue;
+    const recipe = recipeOf(it);
+    if (!recipe) continue;
+    for (const inp of recipe.inputs) ids.add(inp.itemId);
+  }
+  _allRecipeInputIds = ids;
+  return ids;
+}
+
 /** Deterministic 0..1 hash of a company name (same FNV-1a @trove/data's
  *  companies.ts uses for tierFor) — picks which representative item a company
  *  gets without any `rand()` call, so it never shifts the RNG sequence. */
@@ -155,9 +191,44 @@ function hash01(s: string): number {
 
 const _repItemCache = new Map<string, Item | null>();
 
-/** The item an AI company notionally manufactures. GOODS tier preferred,
- *  falling back to PART then RAW for sectors with no GOODS-tier inventory
- *  (consumer, textiles). Picks from the ~5 priciest items in that bucket,
+/** Fraction of companies (deterministic, by name hash — independent of the
+ *  hash used to pick WHICH item within a bucket) that specialize in MATERIALS
+ *  — a RAW or PART tier item some OTHER recipe actually needs — instead of
+ *  the GOODS-tier finished product most companies default to. Without this,
+ *  EVERY company's representative item would be a GOODS-tier product, and
+ *  GOODS-tier recipes draw their inputs from RAW/PART tier — items nobody in
+ *  the roster ever produces as their OWN output. That leaves no company able
+ *  to be another's natural producer, so named AI-to-AI trading (see below)
+ *  would be correct but permanently inert. Specialists pick from
+ *  `materialPool()` — the intersection of their sector's raw/part inventory
+ *  and `allRecipeInputIds()` — which GUARANTEES their output is something at
+ *  least one other recipe actually needs, rather than hoping a generic
+ *  price-ranked pick coincides with someone's input by chance (checked
+ *  empirically: it essentially never does on its own). */
+const PART_PRODUCER_FRACTION = 0.3;
+
+// sector → the raw/part items in that sector that are ALSO referenced as a
+// recipe input somewhere in the catalog, price-ranked. Lazily built per
+// sector (most sectors are only ever queried a handful of times).
+const _materialPoolCache = new Map<SectorKey, Item[]>();
+function materialPool(bias: SectorKey): Item[] {
+  const cached = _materialPoolCache.get(bias);
+  if (cached) return cached;
+  const buckets = sectorBuckets()[bias];
+  const inputIds = allRecipeInputIds();
+  const pool = [...(buckets?.raw ?? []), ...(buckets?.part ?? [])]
+    .filter((it) => inputIds.has(it.id))
+    .sort((x, y) => y.base - x.base);
+  _materialPoolCache.set(bias, pool);
+  return pool;
+}
+
+/** The item an AI company notionally manufactures. Most companies make a
+ *  GOODS-tier finished product; a deterministic ~30% specialize in a real
+ *  materials role instead (see PART_PRODUCER_FRACTION) — the supplier tier
+ *  that makes named AI-to-AI trading possible. A sector with no such
+ *  materials falls back to the normal GOODS→PART→RAW preference, same as a
+ *  non-specialist. Picks from the ~5 priciest items in the chosen pool,
  *  varied per company by name so many houses in one sector don't all draw the
  *  exact same item — while many of them still converge on the same underlying
  *  raw materials via each item's own recipe (that convergence is what makes
@@ -168,11 +239,16 @@ export function representativeItem(name: string, bias: SectorKey | null): Item |
   const cached = _repItemCache.get(name);
   if (cached !== undefined) return cached;
   const buckets = sectorBuckets()[bias];
-  const pool = buckets?.goods.length
-    ? buckets.goods
-    : buckets?.part.length
-      ? buckets.part
-      : (buckets?.raw ?? []);
+  const materials = materialPool(bias);
+  const specializesInMaterials =
+    materials.length > 0 && hash01(`${name}:tier`) < PART_PRODUCER_FRACTION;
+  const pool = specializesInMaterials
+    ? materials
+    : buckets?.goods.length
+      ? buckets.goods
+      : buckets?.part.length
+        ? buckets.part
+        : (buckets?.raw ?? []);
   let result: Item | null = null;
   if (pool.length) {
     const window = Math.min(5, pool.length);
@@ -180,6 +256,35 @@ export function representativeItem(name: string, bias: SectorKey | null): Item |
   }
   _repItemCache.set(name, result);
   return result;
+}
+
+// ── Named AI-to-AI trading: who actually makes this item? ──────────────────
+
+/** Reverse index: item id → the deterministic-order list of company names
+ *  whose OWN representativeItem is that exact item — i.e. its natural
+ *  producers. Built once from the static roster (representativeItem only
+ *  depends on name+sector, both fixed per company), so this needs no
+ *  `state` and can't drift from what representativeItem itself would say. */
+let _producersByItem: Map<number, string[]> | null = null;
+function producersByItem(): Map<number, string[]> {
+  if (_producersByItem) return _producersByItem;
+  const m = new Map<number, string[]>();
+  for (const c of companyRoster) {
+    if (!c.sector) continue; // Open_Index: the broad-index anchor, not a producer
+    const rep = representativeItem(c.name, c.sector);
+    if (!rep) continue;
+    const list = m.get(rep.id) ?? [];
+    list.push(c.name);
+    m.set(rep.id, list);
+  }
+  for (const list of m.values()) list.sort(); // deterministic try-order
+  _producersByItem = m;
+  return m;
+}
+
+/** Which AI companies (if any) count `itemId` as the thing they make. */
+function naturalProducersOf(itemId: number): string[] {
+  return producersByItem().get(itemId) ?? [];
 }
 
 // ── AI virtual production (consume inputs, credit real output) ─────────────
@@ -207,14 +312,18 @@ interface ItemDrawBudget {
 
 /** One 6h settlement's worth of AI production: every company with a sector
  *  bias notionally runs a virtual production line sized by its tier (and the
- *  `ripple` multiplier — 1 = today's flat baseline), drawing real inputs from
- *  the SAME shared item stock a player's factory would (real competition, both
- *  directions), then crediting the produced output to its OWN holdings —
- *  companyValuation/Deal Room equity math already sums held(it, owner)*value
- *  generically, so real production flows straight into net worth/stake
- *  pricing with no further code changes. Input cost still leaves as cash with
- *  no counterparty for the market-sourced portion — mirrors how a player
- *  factory's market-sourced inputs already work in produceFactories().
+ *  `ripple` multiplier — 1 = today's flat baseline). A GOODS/PART-tier
+ *  representative item draws real inputs from the SAME shared item stock a
+ *  player's factory would (real competition, both directions) — preferring a
+ *  named AI producer over the anonymous floor when one exists (see the
+ *  trading section below). A RAW-tier one (raw extraction — no inputs) pays a
+ *  flat upkeep instead, mirroring a player's own extraction line. Either way
+ *  the output is credited to the company's OWN holdings — companyValuation/
+ *  Deal Room equity math already sums held(it, owner)*value generically, so
+ *  real production flows straight into net worth/stake pricing with no
+ *  further code changes. Market-sourced input cost still leaves as cash with
+ *  no counterparty — mirrors how a player factory's market-sourced inputs
+ *  already work in produceFactories().
  *
  *  A starved company degrades gracefully instead of hard-failing like a player
  *  factory's binary idle: every input scales down TOGETHER by one fill factor
@@ -257,7 +366,7 @@ function consumeFor(
   const repRuntime = state.items.find((x) => x.id === rep.id);
   if (!repRuntime) return;
   const recipe = recipeOf(rep);
-  if (!recipe || recipe.inputs.length === 0) return; // raw extraction: no inputs to draw
+  if (!recipe) return; // not producible at all — shouldn't happen, representativeItem only picks canProduce() items
 
   const tier: CompanyTier = t.tier ?? "mid";
   const rate = effectiveSpec(rep, []).rate * AI_APPETITE_MUL[tier] * ripple;
@@ -266,6 +375,29 @@ function consumeFor(
   const reserve = COMPANY_TIERS[tier].floor;
   const budget = Math.max(0, t.cash - reserve);
   if (budget <= 0) return;
+
+  if (recipe.inputs.length === 0) {
+    // Raw extraction: no inputs to source, just a flat upkeep cost — mirrors
+    // the upkeep ratio a PLAYER's own raw-extraction line already pays
+    // (factorySpec's ~5% of output value). Bounded by the same cash-reserve
+    // gate as everything else. This is what lets a "materials company" (a
+    // RAW-tier representative item, e.g. Steel Coil) actually hold sellable
+    // stock of the SPECIFIC named materials most GOODS-tier recipes' primary
+    // input resolves to (@trove/data's primaryMaterial regex list) — without
+    // it, raw-tier reps could never be a natural producer for the single
+    // most common kind of recipe input, and named AI-to-AI trading would
+    // only ever fire for the rarer PART-tier secondary-slot matches.
+    const upkeep = rate * rep.base * 0.05;
+    if (!(upkeep > 0)) return;
+    const fillScale = Math.max(0, Math.min(1, budget / upkeep));
+    if (fillScale <= 0) return;
+    t.cash -= upkeep * fillScale;
+    const output = Math.floor(rate * fillScale);
+    if (output > 0) {
+      repRuntime.owners[t.name] = (repRuntime.owners[t.name] ?? 0) + output;
+    }
+    return;
+  }
 
   const plan: { it: RuntimeItem; need: number }[] = [];
   let cost = 0;
@@ -292,12 +424,53 @@ function consumeFor(
   const fillScale = Math.max(0, Math.min(1, capFrac, cashFrac));
   if (fillScale <= 0) return;
 
+  // fillScale (above) is computed ONLY from market-stock-cap + cash — i.e.
+  // exactly as if every unit had to come from the anonymous floor. A named
+  // AI-to-AI trade below never increases how MUCH gets filled this cycle,
+  // only WHERE the (already-determined) spend goes — reroutes the payment to
+  // a real counterparty when one exists, instead of the market/void. Total
+  // cash out and total units consumed for `p` are identical either way.
   for (const p of plan) {
-    const draw = p.need * fillScale;
-    p.it.stock = Math.max(0, p.it.stock - draw);
-    budgets.get(p.it.id)!.drawn += draw;
+    let remaining = p.need * fillScale;
+    if (remaining <= 0) continue;
+
+    // Prefer a real company that actually makes this input, if one holds
+    // any — a visible, named transaction at the same per-unit price a
+    // market draw would cost. Tries every matching producer (their own held
+    // stock is already small/self-limiting, per how little they themselves
+    // produce each cycle) before falling back to the floor for the rest.
+    for (const sellerName of naturalProducersOf(p.it.id)) {
+      if (remaining <= 0) break;
+      if (sellerName === t.name) continue; // can't be your own supplier
+      const have = p.it.owners[sellerName] ?? 0;
+      if (have <= 0) continue;
+      const seller = state.traders.find((x) => x.name === sellerName);
+      if (!seller) continue;
+      // Floored to a whole unit — same reason production output is floored
+      // (see above): a fractional remainder left in owners[sellerName] could
+      // later go negative when traderAct()'s sell branch decrements it by
+      // exactly `1`, phantom-creating a unit. Whole units change hands.
+      const take = Math.floor(Math.min(remaining, have));
+      if (take <= 0) continue;
+      const left = have - take;
+      if (left > 0) p.it.owners[sellerName] = left;
+      else delete p.it.owners[sellerName];
+      const amount = take * p.it.value;
+      t.cash -= amount;
+      seller.cash += amount;
+      logActivity(state, t.name, `bought ${take}× ${p.it.name} from`, sellerName);
+      remaining -= take;
+    }
+
+    // Whatever a producer couldn't cover still draws from the abstract
+    // floor, exactly as before — and only THIS portion counts against the
+    // shared per-item draw cap (a direct sale isn't a floor purchase).
+    if (remaining > 0) {
+      t.cash -= remaining * p.it.value;
+      p.it.stock = Math.max(0, p.it.stock - remaining);
+      budgets.get(p.it.id)!.drawn += remaining;
+    }
   }
-  t.cash -= cost * fillScale;
 
   // Produce: credit the company's OWN holdings with what it just made — real
   // inventory, not vanished value. Scales with the SAME fillScale as the

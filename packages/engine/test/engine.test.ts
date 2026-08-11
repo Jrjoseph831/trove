@@ -46,6 +46,7 @@ import {
   traderAct,
   updatePlayerActivity,
   type RuntimeItem,
+  type Trader,
   type WorldState,
 } from "@trove/engine";
 
@@ -344,7 +345,14 @@ describe("AI virtual consumption stays within invariants", () => {
 
   it("scales every input by the SAME fill factor when stock is short (preserves recipe ratios)", () => {
     const S = createWorld(0);
-    const t = S.traders.find((tr) => tr.bias !== null)!;
+    // Materials specialists (raw-tier reps) have no recipe inputs at all —
+    // need a trader whose rep item actually consumes something to test this.
+    const t = S.traders.find((tr) => {
+      if (!tr.bias) return false;
+      const rep = representativeItem(tr.name, tr.bias);
+      return !!rep && (recipeOf(rep)?.inputs.length ?? 0) > 0;
+    })!;
+    expect(t).toBeDefined();
     t.cash = 50_000_000; // cash is never the binding constraint here
     // Isolate to ONE company so a shared raw material can't be double-drawn by
     // a second company in the same pass, which would corrupt the check below.
@@ -419,9 +427,55 @@ describe("AI virtual consumption stays within invariants", () => {
     expect(produced).toBe(Math.floor(rate));
   });
 
+  it("a materials specialist (raw-tier rep, no inputs) still produces, gated by CASH not stock", () => {
+    const S = createWorld(0);
+    // A specialist has an empty recipe — starving item stock (the constraint
+    // every other test in this block uses) should have zero effect; only its
+    // own cash-vs-reserve budget can bind extraction.
+    const t = S.traders.find((tr) => {
+      if (!tr.bias) return false;
+      const rep = representativeItem(tr.name, tr.bias);
+      return !!rep && (recipeOf(rep)?.inputs.length ?? 0) === 0;
+    })!;
+    expect(t).toBeDefined();
+    S.traders = [t];
+    for (const it of S.items) it.stock = 0; // irrelevant to extraction — must NOT block it
+    const rep = representativeItem(t.name, t.bias!)!;
+    const repRuntime = S.items.find((it) => it.id === rep.id)!;
+
+    t.cash = 50_000_000; // ample — extraction should proceed
+    aiVirtualConsumption(S);
+    expect(repRuntime.owners[t.name] ?? 0).toBeGreaterThan(0);
+  });
+
+  it("a materials specialist produces nothing once cash is at its tier reserve", () => {
+    const S = createWorld(0);
+    const t = S.traders.find((tr) => {
+      if (!tr.bias) return false;
+      const rep = representativeItem(tr.name, tr.bias);
+      return !!rep && (recipeOf(rep)?.inputs.length ?? 0) === 0;
+    })!;
+    expect(t).toBeDefined();
+    S.traders = [t];
+    const rep = representativeItem(t.name, t.bias!)!;
+    const repRuntime = S.items.find((it) => it.id === rep.id)!;
+
+    t.cash = COMPANY_TIERS[t.tier ?? "mid"].floor; // exactly at reserve — no spendable budget
+    aiVirtualConsumption(S);
+    expect(repRuntime.owners[t.name] ?? 0).toBe(0);
+    expect(t.cash).toBe(COMPANY_TIERS[t.tier ?? "mid"].floor); // untouched
+  });
+
   it("produces nothing when starved (output scales down WITH the inputs, never ahead of them)", () => {
     const S = createWorld(0);
-    const t = S.traders.find((tr) => tr.bias !== null)!;
+    // A materials specialist (raw-tier rep, no inputs) isn't starved by empty
+    // stock at all — it only needs cash. Need a trader with real inputs here.
+    const t = S.traders.find((tr) => {
+      if (!tr.bias) return false;
+      const rep = representativeItem(tr.name, tr.bias);
+      return !!rep && (recipeOf(rep)?.inputs.length ?? 0) > 0;
+    })!;
+    expect(t).toBeDefined();
     t.cash = 50_000_000;
     S.traders = [t];
     const rep = representativeItem(t.name, t.bias)!;
@@ -430,6 +484,175 @@ describe("AI virtual consumption stays within invariants", () => {
 
     aiVirtualConsumption(S);
     expect(repRuntime.owners[t.name] ?? 0).toBe(0);
+  });
+});
+
+/** Finds a real (buyer, seller) pair from the actual roster/catalog: a buyer
+ *  whose recipe needs some item X, and a seller whose OWN representative
+ *  item IS X — i.e. a genuine natural-producer relationship the engine
+ *  itself would recognize, without hardcoding any specific company/item
+ *  (robust to catalog/roster changes). Deterministic — no rand() involved. */
+function findAiToAiPair(
+  S: WorldState,
+): { buyer: Trader; seller: Trader; itemId: number } | null {
+  for (const buyer of S.traders) {
+    if (!buyer.bias) continue;
+    const rep = representativeItem(buyer.name, buyer.bias);
+    const recipe = rep && recipeOf(rep);
+    if (!recipe) continue;
+    for (const inp of recipe.inputs) {
+      for (const seller of S.traders) {
+        if (seller.name === buyer.name || !seller.bias) continue;
+        const sellerRep = representativeItem(seller.name, seller.bias);
+        if (sellerRep?.id === inp.itemId) {
+          return { buyer, seller, itemId: inp.itemId };
+        }
+      }
+    }
+  }
+  return null;
+}
+
+describe("named AI-to-AI trading — a company buys inputs from a real producer", () => {
+  // Two things every test in this block must get right, learned from a real
+  // first-pass failure:
+  //  1. fillScale (how much gets filled AT ALL this cycle) is computed from
+  //     market-stock-cap + cash BEFORE the producer/market split happens — so
+  //     zeroing the floor's `stock` to "force" an AI-to-AI trade instead
+  //     blocks the WHOLE recipe (fillScale drops to 0, nobody gets paid).
+  //     Tests need AMPLE stock so fillScale isn't the thing under test.
+  //  2. The seller is a full Trader in `state.traders` — their OWN
+  //     consumeFor() call (later in the same aiVirtualConsumption pass) also
+  //     runs production and would add MORE to their holdings after the
+  //     trade, confounding a before/after check. Isolate with
+  //     `seller.bias = null` on the LIVE trader object (their own consumeFor
+  //     call reads this and no-ops), which does NOT affect whether they're
+  //     found as a natural producer — that lookup is keyed off the STATIC
+  //     roster (companyRoster), not the live trader's mutated bias.
+  function isolateSeller(seller: Trader): void {
+    seller.bias = null;
+  }
+
+  it("moves cash + goods between exactly the two companies, at the item's market value", () => {
+    const S = createWorld(0);
+    const pair = findAiToAiPair(S);
+    expect(pair).not.toBeNull(); // the catalog/roster should yield at least one real pair
+    const { buyer, seller, itemId } = pair!;
+    isolateSeller(seller);
+    buyer.cash = 50_000_000;
+    seller.cash = 100_000;
+    S.traders = [buyer, seller]; // isolate — nobody else's balance should move
+    const it = S.items.find((x) => x.id === itemId)!;
+    // Ample — must fully cover the buyer's need so NONE of it falls back to
+    // the market, which would make the buyer's total spend exceed just the
+    // AI-to-AI portion and corrupt the cash-conservation check below.
+    const sellerStock = 10_000_000;
+    it.owners[seller.name] = sellerStock;
+    it.stock = 1_000_000; // ample floor stock too — fillScale must not be gated to 0
+
+    const buyerCashBefore = buyer.cash;
+    const sellerCashBefore = seller.cash;
+    aiVirtualConsumption(S);
+
+    const traded = sellerStock - (it.owners[seller.name] ?? 0);
+    expect(traded).toBeGreaterThan(0); // the trade actually happened
+    expect(traded).toBeLessThanOrEqual(sellerStock); // never oversold the seller
+    const amount = traded * it.value;
+    // Seller's side is exact — their cash change is driven by this ONE
+    // input alone, nothing else touches it.
+    expect(seller.cash).toBeCloseTo(sellerCashBefore + amount, 4);
+    // Buyer's side is only a LOWER bound: the recipe can have other inputs
+    // too (sourced from the market as usual), so the buyer's total spend
+    // this cycle may exceed just this one trade's amount.
+    expect(buyerCashBefore - buyer.cash).toBeGreaterThanOrEqual(amount - 0.01);
+  });
+
+  it("falls back to the abstract floor for whatever the producer can't cover", () => {
+    const S = createWorld(0);
+    const pair = findAiToAiPair(S);
+    expect(pair).not.toBeNull();
+    const { buyer, seller, itemId } = pair!;
+    isolateSeller(seller);
+    buyer.cash = 50_000_000;
+    seller.cash = 100_000;
+    S.traders = [buyer, seller];
+    const it = S.items.find((x) => x.id === itemId)!;
+    it.owners[seller.name] = 1; // barely anything to sell
+    it.stock = 1_000_000; // the floor has plenty
+
+    aiVirtualConsumption(S);
+    // The seller's tiny stock is exhausted (sold what little they had)...
+    expect(it.owners[seller.name] ?? 0).toBe(0);
+    // ...and the floor still lost stock covering the rest of the need.
+    expect(it.stock).toBeLessThan(1_000_000);
+  });
+
+  it("never drops either party's cash below its tier reserve", () => {
+    const S = createWorld(0);
+    const pair = findAiToAiPair(S);
+    expect(pair).not.toBeNull();
+    const { buyer, seller, itemId } = pair!;
+    isolateSeller(seller);
+    const buyerFloor = COMPANY_TIERS[buyer.tier ?? "mid"].floor;
+    const sellerFloor = COMPANY_TIERS[seller.tier ?? "mid"].floor;
+    buyer.cash = buyerFloor + 500; // just above reserve
+    seller.cash = sellerFloor; // at reserve — receiving cash can't violate this
+    S.traders = [buyer, seller];
+    const it = S.items.find((x) => x.id === itemId)!;
+    it.owners[seller.name] = 50_000; // ample stock to sell
+    it.stock = 1_000_000;
+
+    aiVirtualConsumption(S);
+    expect(buyer.cash).toBeGreaterThanOrEqual(buyerFloor - 0.01);
+    expect(seller.cash).toBeGreaterThanOrEqual(sellerFloor - 0.01);
+  });
+
+  it("logs the trade by name (state.log), even though nothing renders it yet", () => {
+    const S = createWorld(0);
+    const pair = findAiToAiPair(S);
+    expect(pair).not.toBeNull();
+    const { buyer, seller, itemId } = pair!;
+    isolateSeller(seller);
+    buyer.cash = 50_000_000;
+    S.traders = [buyer, seller];
+    const it = S.items.find((x) => x.id === itemId)!;
+    it.owners[seller.name] = 5000;
+    it.stock = 1_000_000;
+
+    aiVirtualConsumption(S);
+    const entry = S.log.find((e) => e.who === buyer.name && e.it === seller.name);
+    expect(entry).toBeDefined();
+    expect(entry!.verb).toContain("bought");
+  });
+
+  it("doesn't change what the FULL existing test suite already proves — same total draw, only rerouted", () => {
+    // Two identical worlds, one where the natural producer has stock to
+    // sell, one where they don't (forcing 100% market draw) — the BUYER's
+    // total spend and total units consumed must be identical either way;
+    // only the counterparty for part of it differs.
+    const seed = () => {
+      const S = createWorld(0);
+      const pair = findAiToAiPair(S)!;
+      isolateSeller(pair.seller);
+      pair.buyer.cash = 50_000_000;
+      S.traders = [pair.buyer, pair.seller];
+      return { S, pair };
+    };
+
+    const noProducerStock = seed();
+    noProducerStock.S.items.find((x) => x.id === noProducerStock.pair.itemId)!.stock = 1_000_000;
+    // seller has none — everything must come from the floor
+    aiVirtualConsumption(noProducerStock.S);
+    const marketOnlySpend = 50_000_000 - noProducerStock.pair.buyer.cash;
+
+    const withProducerStock = seed();
+    const it2 = withProducerStock.S.items.find((x) => x.id === withProducerStock.pair.itemId)!;
+    it2.owners[withProducerStock.pair.seller.name] = 1_000_000; // ample — covers it all
+    it2.stock = 1_000_000; // floor ALSO has plenty, so this isn't just a stock-cap difference
+    aiVirtualConsumption(withProducerStock.S);
+    const reroutedSpend = 50_000_000 - withProducerStock.pair.buyer.cash;
+
+    expect(reroutedSpend).toBeCloseTo(marketOnlySpend, 4);
   });
 });
 
