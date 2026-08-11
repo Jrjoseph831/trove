@@ -57,6 +57,10 @@ export function Rail() {
     startRename,
   } = useTrove();
   const pendingOrders = desk?.orders.filter((o) => o.status === "offer").length ?? 0;
+  // The signed-out restriction is about being a spectator of the real shared
+  // LIVE world without an account — Sandbox is a private local practice
+  // world that's never required sign-in at all, so it stays fully open.
+  const canBrowseFull = signedIn || mode === "sandbox";
   const go = (t: TabId) => {
     setTab(t);
     setNavOpen(false);
@@ -100,60 +104,66 @@ export function Rail() {
         )}
       </div>
 
-      <div className="worth">
-        <div className="lab">Net Worth</div>
-        <div className="v">{moneyShort(nw)}</div>
-        <div className={`chg ${chg >= 0 ? "pos" : "neg"}`}>
-          {chg >= 0 ? "▲" : "▼"} {moneyShort(Math.abs(chg))} ({pct >= 0 ? "+" : ""}
-          {pct.toFixed(2)}%)
-        </div>
-        <div className="mini">
-          <span>
-            Cash<b>{moneyShort(state.cash)}</b>
-          </span>
-          <span>
-            Assets<b>{moneyShort(assets)}</b>
-          </span>
-          <span className="debt">
-            Debt<b>{moneyShort(state.debt)}</b>
-          </span>
-        </div>
-        {signedIn && desk?.name && (
-          <div className="holdingline">
-            {desk.name} <span>· rep {desk.reputation}</span>
-            <button className="rename-btn" onClick={startRename}>
-              edit
-            </button>
+      {canBrowseFull && (
+        <div className="worth">
+          <div className="lab">Net Worth</div>
+          <div className="v">{moneyShort(nw)}</div>
+          <div className={`chg ${chg >= 0 ? "pos" : "neg"}`}>
+            {chg >= 0 ? "▲" : "▼"} {moneyShort(Math.abs(chg))} ({pct >= 0 ? "+" : ""}
+            {pct.toFixed(2)}%)
           </div>
-        )}
-      </div>
-
-      <div className="ladder">
-        <div className="ld-head">
-          <span className="ld-lab">Rank</span>
-          <span className="ld-name">{rank.name}</span>
+          <div className="mini">
+            <span>
+              Cash<b>{moneyShort(state.cash)}</b>
+            </span>
+            <span>
+              Assets<b>{moneyShort(assets)}</b>
+            </span>
+            <span className="debt">
+              Debt<b>{moneyShort(state.debt)}</b>
+            </span>
+          </div>
+          {desk?.name && (
+            <div className="holdingline">
+              {desk.name} <span>· rep {desk.reputation}</span>
+              <button className="rename-btn" onClick={startRename}>
+                edit
+              </button>
+            </div>
+          )}
         </div>
-        {nextRank ? (
-          <>
-            <div className="ld-bar">
-              <i style={{ width: `${Math.round(prog * 100)}%` }} />
-            </div>
-            <div className="ld-next">
-              <span>
-                Next · <b>{nextRank.name}</b>
-              </span>
-              <span className="ld-togo">{moneyShort(Math.max(0, nextRank.at - peak))} to go</span>
-            </div>
-            <div className="ld-unlock">Unlocks {nextRank.unlock}</div>
-          </>
-        ) : (
-          <div className="ld-unlock">Top rank — you're a Titan.</div>
-        )}
-      </div>
+      )}
+
+      {canBrowseFull && (
+        <div className="ladder">
+          <div className="ld-head">
+            <span className="ld-lab">Rank</span>
+            <span className="ld-name">{rank.name}</span>
+          </div>
+          {nextRank ? (
+            <>
+              <div className="ld-bar">
+                <i style={{ width: `${Math.round(prog * 100)}%` }} />
+              </div>
+              <div className="ld-next">
+                <span>
+                  Next · <b>{nextRank.name}</b>
+                </span>
+                <span className="ld-togo">
+                  {moneyShort(Math.max(0, nextRank.at - peak))} to go
+                </span>
+              </div>
+              <div className="ld-unlock">Unlocks {nextRank.unlock}</div>
+            </>
+          ) : (
+            <div className="ld-unlock">Top rank — you're a Titan.</div>
+          )}
+        </div>
+      )}
 
       <div className="nav">
         <div className="navh">Market</div>
-        {TABS.map((t) => (
+        {(canBrowseFull ? TABS : TABS.filter((t) => t.id === "catalog")).map((t) => (
           <button
             key={t.id}
             className={tab === t.id ? "on" : ""}
@@ -174,89 +184,93 @@ export function Rail() {
             )}
           </button>
         ))}
-        <div className="navh" style={{ marginTop: 14 }}>
-          Account
-        </div>
-        <button
-          className={tab === "orders" ? "on" : ""}
-          onClick={() => go("orders")}
-        >
-          <span className="ic">
-            <ClipboardList size={15} strokeWidth={1.75} />
-          </span>{" "}
-          Order Desk
-          {pendingOrders > 0 && <span className="navbadge">{pendingOrders}</span>}
-        </button>
-        <button
-          className={tab === "vault" ? "on" : ""}
-          onClick={() => go("vault")}
-        >
-          <span className="ic">
-            <VaultIcon size={15} strokeWidth={1.75} />
-          </span>{" "}
-          My Vault
-        </button>
-        <button
-          className={`${tab === "factory" ? "on" : ""}${factoryOpen ? "" : " locked"}`}
-          onClick={() => {
-            if (factoryOpen) go("factory");
-          }}
-          title={factoryOpen ? undefined : `Unlocks at Dealer · ${money(factoryAt)}`}
-        >
-          <span className="ic">
-            <Factory size={15} strokeWidth={1.75} />
-          </span>{" "}
-          Factory
-          {!factoryOpen && <span className="navlock">🔒 {money(factoryAt)}</span>}
-        </button>
-        <button
-          className={tab === "estates" ? "on" : ""}
-          onClick={() => go("estates")}
-        >
-          <span className="ic">
-            <Building2 size={15} strokeWidth={1.75} />
-          </span>{" "}
-          Estates
-        </button>
-        <button
-          className={tab === "deals" ? "on" : ""}
-          onClick={() => go("deals")}
-        >
-          <span className="ic">
-            <Briefcase size={15} strokeWidth={1.75} />
-          </span>{" "}
-          Deal Room
-        </button>
-        <button
-          className={tab === "goals" ? "on" : ""}
-          onClick={() => go("goals")}
-        >
-          <span className="ic">
-            <Trophy size={15} strokeWidth={1.75} />
-          </span>{" "}
-          Goals
-          <span className="navbadge goals">
-            {goals.done}/{goals.total}
-          </span>
-        </button>
-        <button
-          className={tab === "report" ? "on" : ""}
-          onClick={() => go("report")}
-        >
-          <span className="ic">
-            <FileBarChart size={15} strokeWidth={1.75} />
-          </span>{" "}
-          Reports
-        </button>
-        <button
-          className={tab === "companies" ? "on" : ""}
-          onClick={() => go("companies")}
-        >
-          <span className="ic">
-            <Globe size={15} strokeWidth={1.75} />
-          </span>{" "}
-          Companies
-        </button>
+        {canBrowseFull && (
+          <>
+            <div className="navh" style={{ marginTop: 14 }}>
+              Account
+            </div>
+            <button
+              className={tab === "orders" ? "on" : ""}
+              onClick={() => go("orders")}
+            >
+              <span className="ic">
+                <ClipboardList size={15} strokeWidth={1.75} />
+              </span>{" "}
+              Order Desk
+              {pendingOrders > 0 && <span className="navbadge">{pendingOrders}</span>}
+            </button>
+            <button
+              className={tab === "vault" ? "on" : ""}
+              onClick={() => go("vault")}
+            >
+              <span className="ic">
+                <VaultIcon size={15} strokeWidth={1.75} />
+              </span>{" "}
+              My Vault
+            </button>
+            <button
+              className={`${tab === "factory" ? "on" : ""}${factoryOpen ? "" : " locked"}`}
+              onClick={() => {
+                if (factoryOpen) go("factory");
+              }}
+              title={factoryOpen ? undefined : `Unlocks at Dealer · ${money(factoryAt)}`}
+            >
+              <span className="ic">
+                <Factory size={15} strokeWidth={1.75} />
+              </span>{" "}
+              Factory
+              {!factoryOpen && <span className="navlock">🔒 {money(factoryAt)}</span>}
+            </button>
+            <button
+              className={tab === "estates" ? "on" : ""}
+              onClick={() => go("estates")}
+            >
+              <span className="ic">
+                <Building2 size={15} strokeWidth={1.75} />
+              </span>{" "}
+              Estates
+            </button>
+            <button
+              className={tab === "deals" ? "on" : ""}
+              onClick={() => go("deals")}
+            >
+              <span className="ic">
+                <Briefcase size={15} strokeWidth={1.75} />
+              </span>{" "}
+              Deal Room
+            </button>
+            <button
+              className={tab === "goals" ? "on" : ""}
+              onClick={() => go("goals")}
+            >
+              <span className="ic">
+                <Trophy size={15} strokeWidth={1.75} />
+              </span>{" "}
+              Goals
+              <span className="navbadge goals">
+                {goals.done}/{goals.total}
+              </span>
+            </button>
+            <button
+              className={tab === "report" ? "on" : ""}
+              onClick={() => go("report")}
+            >
+              <span className="ic">
+                <FileBarChart size={15} strokeWidth={1.75} />
+              </span>{" "}
+              Reports
+            </button>
+            <button
+              className={tab === "companies" ? "on" : ""}
+              onClick={() => go("companies")}
+            >
+              <span className="ic">
+                <Globe size={15} strokeWidth={1.75} />
+              </span>{" "}
+              Companies
+            </button>
+          </>
+        )}
       </div>
 
       <div className="rail-foot">

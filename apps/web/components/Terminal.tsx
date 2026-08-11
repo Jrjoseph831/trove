@@ -23,11 +23,20 @@ import { Vault } from "./Vault";
 import { Wire } from "./Wire";
 
 export function Terminal() {
-  const { mounted, mode, tab, navOpen, setNavOpen, reveal } = useTrove();
+  const { mounted, mode, tab, navOpen, setNavOpen, reveal, signedIn } = useTrove();
 
   // Boot gate: render a deterministic shell on the server and the first client
   // paint (the engine uses randomness, so live data must be client-only).
   if (!mounted) return <BootShell />;
+
+  // Signed-out visitors browse the Catalog only in the real LIVE world —
+  // Sandbox is a private practice world that's never required sign-in, so
+  // it stays fully open (mirrors Rail's canBrowseFull). Defense in depth
+  // against `tab` state ever drifting elsewhere (a stray deep link, a
+  // leftover value from before sign-out) even though Rail's own nav
+  // already only offers Catalog in this state.
+  const canBrowseFull = signedIn || mode === "sandbox";
+  const effectiveTab = canBrowseFull ? tab : "catalog";
 
   return (
     <div className={`app ${navOpen ? "navopen" : ""}`}>
@@ -51,17 +60,17 @@ export function Terminal() {
           <Clock />
           <Ticker />
         </div>
-        {tab === "trending" && <Trending />}
-        {tab === "catalog" && <Catalog />}
-        {tab === "wire" && <Wire />}
-        {tab === "vault" && <Vault />}
-        {tab === "orders" && <Desk />}
-        {tab === "factory" && <FactoryView />}
-        {tab === "estates" && <PropertyMarket />}
-        {tab === "deals" && <DealRoom />}
-        {tab === "report" && <ReportView />}
-        {tab === "companies" && <Companies />}
-        {tab === "goals" && <Goals />}
+        {effectiveTab === "trending" && <Trending />}
+        {effectiveTab === "catalog" && <Catalog />}
+        {effectiveTab === "wire" && <Wire />}
+        {effectiveTab === "vault" && <Vault />}
+        {effectiveTab === "orders" && <Desk />}
+        {effectiveTab === "factory" && <FactoryView />}
+        {effectiveTab === "estates" && <PropertyMarket />}
+        {effectiveTab === "deals" && <DealRoom />}
+        {effectiveTab === "report" && <ReportView />}
+        {effectiveTab === "companies" && <Companies />}
+        {effectiveTab === "goals" && <Goals />}
       </div>
       {reveal && <Reveal />}
       <BreakingAlert />

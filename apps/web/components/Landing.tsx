@@ -12,7 +12,7 @@ const SEEN_KEY = "trove.landingSeen";
  *  shared world is public; only Acquire/sell requires an account (see
  *  lib/auth.ts) — so this gate invites rather than blocks. */
 export function Landing() {
-  const { authReady, signedIn, signIn } = useTrove();
+  const { authReady, signedIn, signIn, setTab } = useTrove();
   const [dismissed, setDismissed] = useState(
     () => typeof window !== "undefined" && sessionStorage.getItem(SEEN_KEY) === "1",
   );
@@ -22,6 +22,7 @@ export function Landing() {
   const enter = () => {
     sessionStorage.setItem(SEEN_KEY, "1");
     setDismissed(true);
+    setTab("catalog");
   };
 
   return (
