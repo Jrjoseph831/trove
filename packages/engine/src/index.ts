@@ -760,9 +760,10 @@ export function settleCycle(state: WorldState): void {
   }
 
   // 4b. AI companies draw material from the same shared stock a player factory
-  //     would, sized in part by the ripple multiplier (a livelier real-player
-  //     economy makes AI draw more raw material too). One cycle lagged into
-  //     next cycle's scarcity(), same as player factories.
+  //     would and credit real output to their own holdings, sized in part by
+  //     the ripple multiplier (a livelier real-player economy makes AI both
+  //     draw more raw material AND produce more). One cycle lagged into next
+  //     cycle's scarcity(), same as player factories.
   aiVirtualConsumption(state, rippleMultiplier(state));
 
   // 5. Run player factories: pay upkeep, consume inputs, produce to the vault.

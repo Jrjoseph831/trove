@@ -6,10 +6,11 @@
  *     players are actually doing, so the world doesn't stay static while a
  *     player gets rich. Bounded — it can only ever raise AI activity above the
  *     already-invariant-tested flat baseline, never below it.
- *  2. AI virtual material consumption — AI companies draw on the same shared
- *     item stock a player's factory would, without needing per-company
- *     Factory objects (no new per-tick Lambda cost; this evaluates once per
- *     company per 6h settlement, the same cadence AI trading already runs on).
+ *  2. AI virtual production — AI companies draw material inputs from the same
+ *     shared item stock a player's factory would, and credit real output to
+ *     their own holdings, without needing per-company Factory objects (no new
+ *     per-tick Lambda cost; this evaluates once per company per 6h
+ *     settlement, the same cadence AI trading already runs on).
  *
  * Hard constraint: nothing in this file may call `rand()` from ./rng. Every
  * new draw would shift the RNG sequence for everything settleCycle runs after
@@ -181,7 +182,7 @@ export function representativeItem(name: string, bias: SectorKey | null): Item |
   return result;
 }
 
-// ── AI virtual material consumption ─────────────────────────────────────────
+// ── AI virtual production (consume inputs, credit real output) ─────────────
 
 /** Ceiling on how much of an item's stock ALL AI companies combined may draw
  *  in one 6h cycle, as a fraction of that item's stock at the START of this
@@ -204,21 +205,24 @@ interface ItemDrawBudget {
   drawn: number;
 }
 
-/** One 6h settlement's worth of AI material draw: every company with a sector
+/** One 6h settlement's worth of AI production: every company with a sector
  *  bias notionally runs a virtual production line sized by its tier (and the
  *  `ripple` multiplier — 1 = today's flat baseline), drawing real inputs from
  *  the SAME shared item stock a player's factory would (real competition, both
- *  directions). Nothing is credited to the company's holdings — cash leaves
- *  for the input spend with no counterparty, mirroring how a player factory's
- *  market-sourced inputs already work in produceFactories(); this keeps
- *  companyValuation/Deal Room equity math untouched by the feature.
+ *  directions), then crediting the produced output to its OWN holdings —
+ *  companyValuation/Deal Room equity math already sums held(it, owner)*value
+ *  generically, so real production flows straight into net worth/stake
+ *  pricing with no further code changes. Input cost still leaves as cash with
+ *  no counterparty for the market-sourced portion — mirrors how a player
+ *  factory's market-sourced inputs already work in produceFactories().
  *
  *  A starved company degrades gracefully instead of hard-failing like a player
  *  factory's binary idle: every input scales down TOGETHER by one fill factor
- *  (preserving the recipe's ratios), bounded so cash never drops below the
- *  company's tier reserve, stock never drops below 0, and (see
- *  MAX_ITEM_DRAW_FRAC) no single item can be drawn past its per-cycle cap no
- *  matter how many companies converge on it. */
+ *  (preserving the recipe's ratios), and output scales down with it (can't
+ *  manufacture more than what was actually sourced) — bounded so cash never
+ *  drops below the company's tier reserve, stock never drops below 0, and
+ *  (see MAX_ITEM_DRAW_FRAC) no single item can be drawn past its per-cycle
+ *  cap no matter how many companies converge on it. */
 export function aiVirtualConsumption(state: WorldState, ripple = 1): void {
   const budgets = new Map<number, ItemDrawBudget>();
   for (const t of state.traders) {
@@ -250,6 +254,8 @@ function consumeFor(
   if (!t.bias) return; // Open_Index: the broad-index anchor, not a producer
   const rep = representativeItem(t.name, t.bias);
   if (!rep) return;
+  const repRuntime = state.items.find((x) => x.id === rep.id);
+  if (!repRuntime) return;
   const recipe = recipeOf(rep);
   if (!recipe || recipe.inputs.length === 0) return; // raw extraction: no inputs to draw
 
@@ -292,6 +298,26 @@ function consumeFor(
     budgets.get(p.it.id)!.drawn += draw;
   }
   t.cash -= cost * fillScale;
+
+  // Produce: credit the company's OWN holdings with what it just made — real
+  // inventory, not vanished value. Scales with the SAME fillScale as the
+  // inputs (can't manufacture more than what was actually sourced). Goes to
+  // owners[name], never floor `stock` — the existing traderAct() sell branch
+  // (unchanged) is what eventually puts some of this back on the floor for
+  // anyone to buy; nothing new needed there.
+  //
+  // Floored to a whole unit (same as produceFactories() already floors a
+  // player line's rate) — NOT because fractional accounting is unsafe in
+  // general (the input side above stays continuous on purpose), but because
+  // traderAct()'s existing sell branch decrements a held quantity by exactly
+  // `1`. A fractional credit here (rate × AI_APPETITE_MUL is often non-integer)
+  // could leave a sub-1 remainder that decrement pushes negative, which then
+  // gets deleted as "empty" while stock still gained a full unit back —
+  // phantom unit creation. Whole units in, whole units out.
+  const output = Math.floor(rate * fillScale);
+  if (output > 0) {
+    repRuntime.owners[t.name] = (repRuntime.owners[t.name] ?? 0) + output;
+  }
 }
 
 // ── Feeding consumption into the sector cascade ─────────────────────────────

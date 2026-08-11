@@ -373,6 +373,64 @@ describe("AI virtual consumption stays within invariants", () => {
     expect(first!).toBeLessThan(1); // confirms starvation actually bound
     for (const f of rest) expect(f).toBeCloseTo(first!, 6);
   });
+
+  it("credits the company's own holdings with real output = floor(rate × fillScale)", () => {
+    const S = createWorld(0);
+    // Pick a company whose full-fillScale output is guaranteed >= 1 whole
+    // unit (AI_APPETITE_MUL can be < 1, e.g. boutique's 0.15, so a random
+    // trader's raw rate could floor to 0 — this test needs a real credit).
+    const t = S.traders.find((tr) => {
+      if (!tr.bias) return false;
+      const rep = representativeItem(tr.name, tr.bias);
+      if (!rep) return false;
+      const rate = effectiveSpec(rep, []).rate * AI_APPETITE_MUL[tr.tier ?? "mid"];
+      return rate >= 1;
+    })!;
+    expect(t).toBeDefined();
+    t.cash = 50_000_000; // cash never binds; fillScale is driven by stock only
+    S.traders = [t]; // isolate — no other company competing for the same inputs
+    const rep = representativeItem(t.name, t.bias!)!;
+    const rate = effectiveSpec(rep, []).rate * AI_APPETITE_MUL[t.tier ?? "mid"];
+    const repRuntime = S.items.find((it) => it.id === rep.id)!;
+    expect(repRuntime.owners[t.name] ?? 0).toBe(0); // nothing produced yet
+
+    aiVirtualConsumption(S); // ripple defaults to 1 — plenty of stock, so fillScale should be 1
+    const produced = repRuntime.owners[t.name] ?? 0;
+    expect(produced).toBe(Math.floor(rate)); // fillScale was 1 (ample stock, ample cash)
+    expect(produced).toBeGreaterThan(0);
+  });
+
+  it("floors fractional output to a whole unit (never leaves a sub-1 remainder that could push negative on sale)", () => {
+    const S = createWorld(0);
+    // A boutique-tier company (appetite 0.15) is the most likely to produce a
+    // genuinely fractional raw amount — confirms the floor actually applies,
+    // not just that integer cases happen to already look floored.
+    const t = S.traders.find((tr) => tr.tier === "boutique" && tr.bias)!;
+    expect(t).toBeDefined();
+    t.cash = 50_000_000;
+    S.traders = [t];
+    const rep = representativeItem(t.name, t.bias!)!;
+    const rate = effectiveSpec(rep, []).rate * AI_APPETITE_MUL["boutique"];
+    const repRuntime = S.items.find((it) => it.id === rep.id)!;
+
+    aiVirtualConsumption(S);
+    const produced = repRuntime.owners[t.name] ?? 0;
+    expect(Number.isInteger(produced)).toBe(true);
+    expect(produced).toBe(Math.floor(rate));
+  });
+
+  it("produces nothing when starved (output scales down WITH the inputs, never ahead of them)", () => {
+    const S = createWorld(0);
+    const t = S.traders.find((tr) => tr.bias !== null)!;
+    t.cash = 50_000_000;
+    S.traders = [t];
+    const rep = representativeItem(t.name, t.bias)!;
+    for (const it of S.items) it.stock = 0; // every input fully depleted
+    const repRuntime = S.items.find((it) => it.id === rep.id)!;
+
+    aiVirtualConsumption(S);
+    expect(repRuntime.owners[t.name] ?? 0).toBe(0);
+  });
 });
 
 describe("the ripple actually changes AI behavior — the fix for a static world", () => {
@@ -500,7 +558,12 @@ describe("AI company finances reconcile", () => {
       for (const t of S.traders) {
         const floor = COMPANY_TIERS[t.tier ?? "mid"].floor;
         if (t.cash < floor - 0.01) violations.push(`c${c} ${t.name} cash=${Math.round(t.cash)} < floor ${floor}`);
-        if (!Number.isFinite(netWorth(S, t.name))) violations.push(`c${c} ${t.name} net worth not finite`);
+        // netWorth() for a non-"YOU" owner IS companyValuation (cash + held
+        // assets) — this is the real long-run check that AI production
+        // (real, compounding inventory now) never corrupts the books.
+        const nw = netWorth(S, t.name);
+        if (!Number.isFinite(nw)) violations.push(`c${c} ${t.name} net worth not finite`);
+        if (nw < -0.01) violations.push(`c${c} ${t.name} net worth negative: ${nw}`);
       }
     }
     expect(violations).toEqual([]);
