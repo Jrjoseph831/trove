@@ -191,7 +191,7 @@ interface Trove {
   openSector: (s: string) => void;
   /** item id to highlight in the catalog (from "Find it on the floor"). */
   hlItem: number | null;
-  buy: (id: number, qty?: number) => void;
+  buy: (id: number, qty?: number) => Promise<{ ok: boolean }>;
   sell: (id: number, qty?: number) => void;
   doBorrow: () => void;
   doRepay: () => void;
@@ -789,10 +789,21 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   );
 
   const buy = useCallback(
-    (id: number, qty = 1) => {
+    (id: number, qty = 1): Promise<{ ok: boolean }> => {
       const n = Math.max(1, Math.floor(qty));
       // Sandbox: the local engine, instant and free.
       if (modeRef.current === "sandbox") {
+        const it = worldsRef.current!.sandbox.items.find((i) => i.id === id);
+        if (!it) {
+          showToast("Can't acquire that");
+          return Promise.resolve({ ok: false });
+        }
+        // All-or-nothing, matching the live server's contract — check BEFORE
+        // buying anything, so a too-greedy request never partial-fills while
+        // still reporting failure (that would silently buy some units out
+        // from under an error message telling the player nothing happened).
+        const avail = it.edition !== null ? (it.remaining > 0 ? 1 : 0) : it.stock;
+        if (n > avail) return Promise.resolve({ ok: false });
         let r: ReturnType<typeof playerBuy> = null;
         let got = 0;
         for (let i = 0; i < n; i++) {
@@ -803,47 +814,54 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         }
         if (!r) {
           showToast("Can't acquire that");
-          return;
+          return Promise.resolve({ ok: false });
         }
         setReveal({ it: r.it, copyNo: r.copyNo, qty: got });
         refresh();
-        return;
+        return Promise.resolve({ ok: got === n });
       }
       // Live: the Acquire gate — sign in, then trade against the shared world.
       if (!AUTH_ENABLED) {
         showToast("Trading opens soon");
-        return;
+        return Promise.resolve({ ok: false });
       }
       if (!isSignedIn()) {
         showToast("Sign in to acquire");
         authSignIn();
-        return;
+        return Promise.resolve({ ok: false });
       }
-      void postTrade("buy", id, n).then(async (r) => {
+      return postTrade("buy", id, n).then(async (r) => {
         if ("error" in r) {
           if (r.status === 401) {
             authSignIn();
-            return;
+            return { ok: false };
           }
           showToast(
             r.error === "insufficient funds"
               ? "Not enough cash"
               : r.error === "sold out"
                 ? "Just sold out"
-                : r.error === "network error"
-                  ? "Connection issue — try again"
-                  : r.error.startsWith("sold in cases")
-                    ? `This is ${r.error}`
-                    : "Couldn't acquire that",
+                : r.error === "not enough stock"
+                  ? "Not enough left"
+                  : r.error === "network error"
+                    ? "Connection issue — try again"
+                    : r.error.startsWith("sold in cases")
+                      ? `This is ${r.error}`
+                      : "Couldn't acquire that",
           );
           // refresh so a sold-out item immediately greys out for everyone
           await syncLive();
-          return;
+          return { ok: false };
         }
         await syncLive();
         const it = worldsRef.current!.live.items.find((i) => i.id === id);
         if (it) setReveal({ it, copyNo: r.copyNo, qty: r.qty });
         else showToast("Acquired");
+        // r.qty is what the server actually fulfilled — an edition item
+        // always fulfills exactly 1 regardless of what was requested, so
+        // this catches an over-requested edition the same way a stock
+        // rejection catches an over-requested commodity.
+        return { ok: r.qty === n };
       });
     },
     [refresh, showToast, syncLive],

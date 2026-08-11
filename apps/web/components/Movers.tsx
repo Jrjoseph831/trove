@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import type { RuntimeItem } from "@trove/engine";
 import { money, pctChange, signedPct } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { primarySectorLabel } from "@/lib/ui";
 import { useSnapshot } from "@/lib/useSnapshot";
 import { useTrove } from "@/lib/trove";
+import { AcquireConfirm } from "./AcquireConfirm";
 
 /**
  * "On the Move" — a calm news-segment treatment instead of spammy reordering
@@ -17,7 +19,8 @@ const ADVANCE_MS = 5000;
 const SNAP_MS = 8000;
 
 export function Movers() {
-  const { state, buy } = useTrove();
+  const { state } = useTrove();
+  const [acquireTarget, setAcquireTarget] = useState<RuntimeItem | null>(null);
 
   // Lock the set per cycle: re-pick only when the front page turns.
   const top = useMemo(
@@ -66,7 +69,7 @@ export function Movers() {
     <div className="move">
       <button
         className={`spotlight ${isEd ? "ed" : ""}`}
-        onClick={() => buy(hero.id)}
+        onClick={() => setAcquireTarget(hero)}
         aria-label={`Acquire ${hero.brand} ${hero.name}`}
       >
         <div className="spot-media">
@@ -99,7 +102,7 @@ export function Movers() {
 
       <div className="board">
         {board.map(({ it, value, dp }) => (
-          <div className="brow" key={it.id} onClick={() => buy(it.id)}>
+          <div className="brow" key={it.id} onClick={() => setAcquireTarget(it)}>
             <ItemIcon it={it} size={18} className="ic" />
             <span className="nm">
               <span className="bd">{it.brand}</span>
@@ -112,6 +115,9 @@ export function Movers() {
           </div>
         ))}
       </div>
+      {acquireTarget && (
+        <AcquireConfirm item={acquireTarget} onClose={() => setAcquireTarget(null)} />
+      )}
     </div>
   );
 }

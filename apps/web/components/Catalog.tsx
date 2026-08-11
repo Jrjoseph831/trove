@@ -16,6 +16,7 @@ import { money, pctChange, signedPct } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { primarySectorLabel, stockState } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
+import { AcquireConfirm } from "./AcquireConfirm";
 
 const ROW = 46;
 
@@ -31,10 +32,10 @@ const HL_STYLE = {
 const BRAND_NAMES = [...allBrands].map((b) => b.name).sort();
 
 export function Catalog() {
-  const { state, cat, setCatSector, setCatBrand, setCatSearch, buy, hlItem } =
+  const { state, cat, setCatSector, setCatBrand, setCatSearch, hlItem } =
     useTrove();
   const parentRef = useRef<HTMLDivElement>(null);
-  const [bulkId, setBulkId] = useState<number | null>(null);
+  const [acquireTarget, setAcquireTarget] = useState<RuntimeItem | null>(null);
 
   // "Find it on the floor": hlItem comes from the provider (same reliable path
   // as the q search filter). Apply an INLINE highlight at render time so it can't
@@ -110,9 +111,6 @@ export function Catalog() {
     estimateSize: () => ROW,
     overscan: 12,
   });
-
-  const bulkItem =
-    bulkId != null ? state.items.find((i) => i.id === bulkId) ?? null : null;
 
   return (
     <div className="view">
@@ -261,23 +259,13 @@ export function Catalog() {
                         {Math.abs(dp).toFixed(1)}%
                       </span>
                       <span style={{ textAlign: "right" }}>
-                        {lot > 1 ? (
-                          <button
-                            className="tbtn"
-                            disabled={!canBuy(it) || it.value * lot > state.cash}
-                            onClick={() => setBulkId(it.id)}
-                          >
-                            {canBuy(it) ? `Case · ${lot}` : "Sold out"}
-                          </button>
-                        ) : (
-                          <button
-                            className="tbtn"
-                            disabled={!canBuy(it) || it.value > state.cash}
-                            onClick={() => buy(it.id)}
-                          >
-                            {canBuy(it) ? "Acquire" : "Sold out"}
-                          </button>
-                        )}
+                        <button
+                          className="tbtn"
+                          disabled={!canBuy(it)}
+                          onClick={() => setAcquireTarget(it)}
+                        >
+                          {canBuy(it) ? (lot > 1 ? `Case · ${lot}` : "Acquire") : "Sold out"}
+                        </button>
                       </span>
                     </div>
                   );
@@ -327,7 +315,7 @@ export function Catalog() {
                   <button
                     className="acq"
                     disabled={!canBuy(it) || it.value > state.cash}
-                    onClick={() => buy(it.id)}
+                    onClick={() => setAcquireTarget(it)}
                   >
                     {canBuy(it) ? "Acquire" : "Claimed"}
                   </button>
@@ -341,82 +329,9 @@ export function Catalog() {
       </div>
       </div>
 
-      {bulkItem && (
-        <BulkBuy
-          item={bulkItem}
-          cash={state.cash}
-          onClose={() => setBulkId(null)}
-          onConfirm={(qty) => {
-            buy(bulkItem.id, qty);
-            setBulkId(null);
-          }}
-        />
+      {acquireTarget && (
+        <AcquireConfirm item={acquireTarget} onClose={() => setAcquireTarget(null)} />
       )}
-    </div>
-  );
-}
-
-/** Bulk-purchase popup: a case-multiple stepper + live total. */
-function BulkBuy({
-  item,
-  cash,
-  onClose,
-  onConfirm,
-}: {
-  item: RuntimeItem;
-  cash: number;
-  onClose: () => void;
-  onConfirm: (qty: number) => void;
-}) {
-  const lot = lotSize(item);
-  const [qty, setQty] = useState(lot);
-  const total = qty * item.value;
-  return (
-    <div
-      className="reveal-bg show"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
-      }}
-    >
-      <div className="bulkbuy">
-        <div className="bb-kick">Buy in bulk</div>
-        <div className="bb-name">
-          {item.brand} {item.name}
-        </div>
-        <div className="bb-sub">
-          Sold in cases of {lot.toLocaleString()} · {money(item.value)} each
-        </div>
-        <div className="bb-step">
-          <button
-            onClick={() => setQty((q) => Math.max(lot, q - lot))}
-            aria-label="Fewer"
-          >
-            −
-          </button>
-          <div className="bb-qty">
-            <b>{qty.toLocaleString()}</b>
-            <span>units</span>
-          </div>
-          <button onClick={() => setQty((q) => q + lot)} aria-label="More">
-            +
-          </button>
-        </div>
-        <div className="bb-total">
-          Total <b>{money(total)}</b>
-        </div>
-        <div className="bb-actions">
-          <button className="bb-cancel" onClick={onClose}>
-            Cancel
-          </button>
-          <button
-            className="bb-buy"
-            disabled={total > cash}
-            onClick={() => onConfirm(qty)}
-          >
-            {total > cash ? "Not enough cash" : `Acquire ${qty.toLocaleString()}`}
-          </button>
-        </div>
-      </div>
     </div>
   );
 }
