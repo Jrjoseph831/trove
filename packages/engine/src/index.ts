@@ -26,6 +26,7 @@ import { listedUnitPrice, QC_PREMIUM } from "./pricing";
 import { rand, rexp } from "./rng";
 import { activeMarketEvent } from "./events";
 export * from "./events";
+export * from "./aiEconomy";
 import type {
   ActiveStory,
   Factory,
@@ -226,6 +227,7 @@ export function freshState(): WorldState {
     log: [],
     recentNewsIdx: [],
     nwHist: [START_CASH],
+    playerActivityEma: 0,
   };
 }
 

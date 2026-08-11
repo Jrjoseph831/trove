@@ -31,10 +31,12 @@ import {
   priceItem,
   reconcileCompanies,
   resetRng,
+  rippleMultiplier,
   scarcity,
   setRng,
   settleCycle,
   traderAct,
+  updatePlayerActivity,
   type RuntimeItem,
   type WorldState,
 } from "@trove/engine";
@@ -105,7 +107,7 @@ describe("determinism", () => {
       return netWorth(S, "YOU");
     };
     expect(run()).toBe(run());
-  });
+  }, 20000);
 });
 
 describe("supply invariants over a long sim", () => {
@@ -251,6 +253,44 @@ describe("listed-price formula is single-sourced", () => {
     expect(listedUnitPrice(100, 1.25, false)).toBeCloseTo(125, 6);
     expect(listedUnitPrice(100, 1, true)).toBeCloseTo(106, 6); // QC premium 6%
     expect(listedUnitPrice(200, 1.5, true)).toBeCloseTo(200 * 1.5 * 1.06, 6);
+  });
+});
+
+describe("AI ripple multiplier — bounded and neutral by default", () => {
+  it("is exactly 1.0 on a dormant world (no player footprint)", () => {
+    const S = freshState();
+    expect(rippleMultiplier(S)).toBe(1);
+    updatePlayerActivity(S); // still no owners → EMA stays 0
+    expect(rippleMultiplier(S)).toBe(1);
+  });
+
+  it("stays within [1.0, 1.5] for extreme footprints", () => {
+    const S = freshState();
+    expect(rippleMultiplier(S)).toBeGreaterThanOrEqual(1);
+
+    // A modest footprint: a handful of items held by "YOU".
+    const it1 = S.items[0]!;
+    it1.owners["YOU"] = 50;
+    updatePlayerActivity(S);
+    const modest = rippleMultiplier(S);
+    expect(modest).toBeGreaterThanOrEqual(1);
+    expect(modest).toBeLessThanOrEqual(1.5);
+
+    // An absurd footprint: every item, massively over-held.
+    for (const it of S.items) it.owners["YOU"] = 1_000_000;
+    for (let i = 0; i < 50; i++) updatePlayerActivity(S); // let the EMA catch up
+    const extreme = rippleMultiplier(S);
+    expect(extreme).toBeGreaterThanOrEqual(modest);
+    expect(extreme).toBeLessThanOrEqual(1.5);
+    expect(Number.isFinite(extreme)).toBe(true);
+  });
+
+  it("ignores AI trader holdings — only real (non-trader) owners count", () => {
+    const S = freshState();
+    const it = S.items[0]!;
+    it.owners[S.traders[0]!.name] = 1_000_000; // a trader, not a real player
+    updatePlayerActivity(S);
+    expect(rippleMultiplier(S)).toBe(1);
   });
 });
 

@@ -75,6 +75,9 @@ export interface WorldDoc {
   traders: WorldState["traders"];
   items: StoredItem[];
   log: WorldState["log"];
+  /** Rolling EMA of real players' item-holdings footprint (see aiEconomy.ts).
+   *  Optional — absent on docs written before this field existed. */
+  playerActivityEma?: number;
 }
 
 const round = (n: number) => Math.round(n * 100) / 100;
@@ -91,6 +94,7 @@ export function worldToDoc(state: WorldState, version: number): WorldDoc {
     recentNewsIdx: state.recentNewsIdx,
     traders: state.traders,
     log: state.log.slice(0, 30),
+    playerActivityEma: state.playerActivityEma,
     items: state.items.map((it) => ({
       id: it.id,
       value: round(it.value),
@@ -170,6 +174,7 @@ export function docToWorld(doc: WorldDoc): WorldState {
     log: doc.log ?? [],
     recentNewsIdx: doc.recentNewsIdx ?? [],
     nwHist: [],
+    playerActivityEma: doc.playerActivityEma ?? 0,
   };
 }
 

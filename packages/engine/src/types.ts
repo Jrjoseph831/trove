@@ -295,4 +295,8 @@ export interface WorldState {
   recentNewsIdx: number[];
   /** Net-worth history for the chart. */
   nwHist: number[];
+  /** Rolling EMA ($) of real players' item-holdings footprint — feeds the AI
+   *  ripple multiplier (see aiEconomy.ts). 0 on a dormant world, which keeps
+   *  the multiplier neutral (1.0) until real activity shows up. */
+  playerActivityEma: number;
 }
