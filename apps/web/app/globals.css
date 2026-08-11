@@ -2199,6 +2199,12 @@ body {
   .tnn-on::before {
     animation: none;
   }
+  /* Without the marquee animation, the base rule's padding-left:100% (the
+     scroll start position) would leave the landing ticker scrolled fully
+     off-screen and looking blank — pin it to the readable start instead. */
+  .landing-ticker .run {
+    padding-left: 0;
+  }
   .tile:hover {
     transform: none;
   }
@@ -6756,6 +6762,92 @@ details.bay-modules > summary.bay-sub:hover {
 }
 .ob-cancel:hover {
   color: var(--ink);
+}
+
+/* Landing — the front cover shown to signed-out visitors on entry. */
+.landing-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  overflow-y: auto;
+}
+.landing-card {
+  width: min(94vw, 560px);
+  text-align: center;
+}
+.landing-mark {
+  font-family: var(--font-display);
+  font-size: 44px;
+  letter-spacing: 0.4em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.landing-kick {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 36px;
+}
+.landing-ticker {
+  display: flex;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  margin-bottom: 32px;
+}
+.landing-lede {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-dim);
+  max-width: 420px;
+  margin: 0 auto 32px;
+}
+.landing-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+.landing-go {
+  background: var(--ink);
+  color: var(--paper);
+  border: 0;
+  border-radius: 999px;
+  padding: 15px 36px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.landing-go:hover {
+  opacity: 0.88;
+}
+.landing-browse {
+  background: none;
+  border: 0;
+  color: var(--ink-dim);
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.landing-browse:hover {
+  color: var(--ink);
+}
+.landing-foot {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
 }
 .rename-btn {
   margin-left: 8px;

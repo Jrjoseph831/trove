@@ -12,6 +12,7 @@ import { GoalUp } from "./GoalUp";
 import { BreakingAlert } from "./BreakingAlert";
 import { Goals } from "./Goals";
 import { DealRoom } from "./DealRoom";
+import { Landing } from "./Landing";
 import { LadderUp } from "./LadderUp";
 import { PropertyMarket } from "./PropertyMarket";
 import { DailyReportCard, ReportView } from "./Report";
@@ -69,6 +70,7 @@ export function Terminal() {
       <Onboarding />
       <DailyReportCard />
       <Toast />
+      <Landing />
     </div>
   );
 }
