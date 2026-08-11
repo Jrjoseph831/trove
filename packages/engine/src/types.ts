@@ -52,8 +52,32 @@ export interface Factory {
   /** Per-input sourcing: input itemId → feeder line id that makes it in-house.
    *  Absent for an input = bought from the market (auto-supplied). */
   sources?: Record<number, string>;
+  /** Per-input STANDING supply from a specific other real player's storefront,
+   *  drawn automatically each production tick at their live listed price.
+   *  Distinct from `sources` (same-owner feeder lines) — settlement is
+   *  server-only (packages/server's production Lambda); the engine only
+   *  stores this config and treats a configured input the same as any other
+   *  non-market input (see produceFactories' inHouse check). It never
+   *  resolves `sellerId` itself. `sellerHandle` is denormalized for display
+   *  only — `sellerId` is the only field settlement logic trusts. */
+  standingSources?: Record<number, { sellerId: string; sellerHandle: string }>;
   /** Last settle outcome, for UI: building → running → idle (short on inputs). */
   status: "building" | "running" | "idle";
+}
+
+/** One line/input's material need this cycle, as computed by produceFactories'
+ *  planning step — exposed read-only via previewFactoryNeeds() so the server
+ *  can top up standing-sourced inputs before running production. */
+export interface FactoryInputNeed {
+  lineId: string;
+  itemId: number;
+  /** Units needed for ONE production cycle at this line's current throttled rate. */
+  needPerCycle: number;
+  /** Current vault quantity ("YOU") of this item. */
+  have: number;
+  /** True if sourced in-house (own feeder OR a standing source) — i.e. NOT
+   *  auto-bought from the abstract market on a shortfall. */
+  inHouse: boolean;
 }
 
 /** A real-estate asset the player owns (Property Market). `value` drifts each
@@ -154,6 +178,10 @@ export interface SiteConfig {
   sections?: SiteSection[];
   /** Live on the directory? Drafts stay private to the owner. */
   published?: boolean;
+  /** Opt in to being auto-drawn-from by other players' standing sources
+   *  (settled inside a production tick, no click needed). Default false —
+   *  nobody's storefront is drained without explicit consent. */
+  autoSupply?: boolean;
 }
 
 /** A player-to-player bulk order (multiplayer routing). A buyer requests goods

@@ -21,7 +21,7 @@ import {
   sectorKeys,
   type CompanyTier,
 } from "@trove/data";
-import type { News, Property, SectorKey } from "@trove/data";
+import type { EffectiveSpec, News, Property, SectorKey } from "@trove/data";
 import { listedUnitPrice, QC_PREMIUM } from "./pricing";
 import { rand, rexp } from "./rng";
 import { activeMarketEvent } from "./events";
@@ -36,6 +36,7 @@ export * from "./aiEconomy";
 import type {
   ActiveStory,
   Factory,
+  FactoryInputNeed,
   ItemFlow,
   Ledger,
   RuntimeItem,
@@ -976,6 +977,26 @@ export function setSource(
   }
   return true;
 }
+
+/** Set (or clear) an input's STANDING source: a specific other real player's
+ *  storefront to auto-draw from each production tick. Pure config only — the
+ *  engine can't validate `sellerId` is a real, published seller (it has no
+ *  player directory); that validation happens server-side, one layer up,
+ *  exactly like the manual-order flow resolves a handle to a seller. */
+export function setStandingSource(
+  state: WorldState,
+  lineId: string,
+  inputItemId: number,
+  src: { sellerId: string; sellerHandle: string } | null,
+): boolean {
+  const f = state.factories.find((x) => x.id === lineId);
+  if (!f) return false;
+  if (!f.standingSources) f.standingSources = {};
+  if (src) f.standingSources[inputItemId] = src;
+  else delete f.standingSources[inputItemId];
+  return true;
+}
+
 /** Cash to add the next SLOTS_PER_EXPAND slots (each expansion pricier). */
 export function expandCost(slots: number): number {
   const step = Math.round((slots - STARTING_SLOTS) / SLOTS_PER_EXPAND);
@@ -1032,6 +1053,96 @@ export function uninstallModule(
   return true;
 }
 
+interface LineInputNeed {
+  it: RuntimeItem | undefined;
+  itemId: number;
+  need: number;
+  /** In-house (an own-feeder or standing-source input, never auto-bought from
+   *  the abstract market) vs. market (shortfall auto-bought at current price). */
+  inHouse: boolean;
+  have: number;
+}
+interface LineNeedPlan {
+  factory: Factory;
+  out: RuntimeItem;
+  rate: number;
+  spec: EffectiveSpec;
+  inputs: LineInputNeed[];
+}
+
+/** Shared, side-effect-free computation of every online line's floor-throttled
+ *  rate and per-input needs this cycle. Both `produceFactories` (which spends
+ *  cash/vault and mutates from this) and `previewFactoryNeeds` (a pure read
+ *  the server's standing-order pre-step uses) build on this single source, so
+ *  the two can never quietly diverge. */
+function buildLineNeedPlans(state: WorldState): LineNeedPlan[] {
+  const lines = state.factories ?? [];
+  if (lines.length === 0) return [];
+
+  // Shipping capacity is the WHOLE floor — every dock's lanes pooled (Auto-Router
+  // raises each dock; expanding the floor adds docks). Output auto-spreads across
+  // docks, so a line throttles only when total production out-runs total floor
+  // capacity, never just because it's parked on one dock.
+  const totalLanes = floorBays(state.floorSlots) * lanesPerBay(state);
+  let demandLanes = 0;
+  const onlineOut = new Map<string, RuntimeItem>();
+  lines.forEach((f) => {
+    if (state.cycle < f.onlineCycle) return;
+    const out = state.items.find((x) => x.id === f.itemId);
+    if (out) {
+      onlineOut.set(f.id, out);
+      demandLanes += lineLanes(effectiveSpec(out, f.modules).rate);
+    }
+  });
+  const floorThrottle = demandLanes > totalLanes ? totalLanes / demandLanes : 1;
+
+  const plans: LineNeedPlan[] = [];
+  for (const f of lines) {
+    if (state.cycle < f.onlineCycle) continue;
+    const out = onlineOut.get(f.id);
+    if (!out) continue;
+    const spec = effectiveSpec(out, f.modules); // modules fold into the economics
+    // Floor congestion: output auto-spreads across every dock first, so a line
+    // only ships slower when the whole floor is over capacity — and then every
+    // line throttles together, proportionally.
+    const rate = Math.max(1, Math.floor(spec.rate * floorThrottle));
+    const recipe = recipeOf(out);
+    const inputs: LineInputNeed[] = (recipe?.inputs ?? []).map((inp) => {
+      const it = state.items.find((x) => x.id === inp.itemId);
+      const need = Math.ceil(inp.qty * rate * spec.inputMul);
+      return {
+        it,
+        itemId: inp.itemId,
+        need,
+        inHouse: !!(f.sources?.[inp.itemId] || f.standingSources?.[inp.itemId]),
+        have: it ? ownedYou(it) : 0,
+      };
+    });
+    plans.push({ factory: f, out, rate, spec, inputs });
+  }
+  return plans;
+}
+
+/** Read-only peek at what produceFactories would need THIS cycle, per line and
+ *  input — used by the server to top up standing-sourced inputs BEFORE running
+ *  production. No side effects, no cross-player knowledge (the engine never
+ *  learns what a standingSources entry means, only that it's present). */
+export function previewFactoryNeeds(state: WorldState): FactoryInputNeed[] {
+  const needs: FactoryInputNeed[] = [];
+  for (const plan of buildLineNeedPlans(state)) {
+    for (const inp of plan.inputs) {
+      needs.push({
+        lineId: plan.factory.id,
+        itemId: inp.itemId,
+        needPerCycle: inp.need,
+        have: inp.have,
+        inHouse: inp.inHouse,
+      });
+    }
+  }
+  return needs;
+}
+
 /**
  * One cycle of production for every line. Upkeep burns whether or not the line
  * runs. A line runs only if the vault holds enough of every input for a full
@@ -1051,61 +1162,34 @@ function produceFactories(state: WorldState): void {
   state.cash -= bayUpkeep;
   state.ledger.upkeep += bayUpkeep;
 
-  // Shipping capacity is the WHOLE floor — every dock's lanes pooled (Auto-Router
-  // raises each dock; expanding the floor adds docks). Output auto-spreads across
-  // docks, so a line throttles only when total production out-runs total floor
-  // capacity, never just because it's parked on one dock.
-  const totalLanes = floorBays(state.floorSlots) * lanesPerBay(state);
-  let demandLanes = 0;
-  lines.forEach((f) => {
-    if (state.cycle < f.onlineCycle) return;
-    const out = state.items.find((x) => x.id === f.itemId);
-    if (out) demandLanes += lineLanes(effectiveSpec(out, f.modules).rate);
-  });
-  const floorThrottle = demandLanes > totalLanes ? totalLanes / demandLanes : 1;
+  const plans = new Map(buildLineNeedPlans(state).map((p) => [p.factory.id, p]));
 
   lines.forEach((f) => {
     if (state.cycle < f.onlineCycle) {
       f.status = "building";
       return;
     }
-    const out = state.items.find((x) => x.id === f.itemId);
-    if (!out) return;
-    const spec = effectiveSpec(out, f.modules); // modules fold into the economics
+    const plan = plans.get(f.id);
+    if (!plan) return; // output item missing from the catalog (shouldn't happen)
+    const { out, rate, spec, inputs } = plan;
     const lineUpkeep = Math.round(spec.upkeep * upMul);
     state.cash -= lineUpkeep; // upkeep always burns
     state.ledger.upkeep += lineUpkeep;
 
-    // Floor congestion: output auto-spreads across every dock first, so a line
-    // only ships slower when the whole floor is over capacity — and then every
-    // line throttles together, proportionally.
-    const rate = Math.max(1, Math.floor(spec.rate * floorThrottle));
-
-    const recipe = recipeOf(out);
-    const inputs = recipe?.inputs ?? [];
     // Each input is either IN-HOUSE (pull from the vault, which a feeder line
-    // fills — idle if it can't keep up) or MARKET (auto-buy any shortfall at the
-    // current price). Casuals leave every input on market = no manual stocking.
-    const plan = inputs.map((inp) => {
-      const it = state.items.find((x) => x.id === inp.itemId);
-      const need = Math.ceil(inp.qty * rate * spec.inputMul);
-      return {
-        it,
-        need,
-        inHouse: !!f.sources?.[inp.itemId],
-        have: it ? ownedYou(it) : 0,
-      };
-    });
+    // or a standing source fills — idle if it can't keep up) or MARKET (auto-buy
+    // any shortfall at the current price). Casuals leave every input on market =
+    // no manual stocking.
     let cashCost = 0;
     let ok = true;
-    for (const p of plan) {
+    for (const p of inputs) {
       if (!p.it) {
         ok = false;
         break;
       }
       if (p.inHouse) {
         if (p.have < p.need) {
-          ok = false; // feeder hasn't stocked enough
+          ok = false; // feeder/standing source hasn't stocked enough
           break;
         }
       } else {
@@ -1116,7 +1200,7 @@ function produceFactories(state: WorldState): void {
       f.status = "idle";
       return;
     }
-    for (const p of plan) {
+    for (const p of inputs) {
       if (p.inHouse) takeYou(p.it!, p.need);
       else if (p.have > 0) takeYou(p.it!, Math.min(p.have, p.need));
     }

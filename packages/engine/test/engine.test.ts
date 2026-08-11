@@ -42,6 +42,7 @@ import {
   sectorConsumptionPressure,
   setRng,
   settleCycle,
+  setStandingSource,
   traderAct,
   updatePlayerActivity,
   type RuntimeItem,
@@ -533,6 +534,47 @@ describe("production + listings stay consistent", () => {
     expect(issues).toEqual([]);
     expect(Number.isFinite(netWorth(S, "YOU"))).toBe(true);
   }, 20000);
+});
+
+describe("standing sources never leak into a market-buy fallback", () => {
+  it("a standing-sourced input with an empty vault idles the line, instead of auto-buying the shortfall", () => {
+    setRng(mulberry32(77));
+    const S = createWorld(0);
+    S.cash = 2_000_000;
+    S.floorSlots = 4;
+    // Need a line whose recipe actually HAS inputs (a raw-extraction item has
+    // none, so standing-sourcing it would be a no-op — this test needs a real
+    // shortfall to matter).
+    const target = catalog.find(
+      (i) => canProduce(i as RuntimeItem) && (recipeOf(i as RuntimeItem)?.inputs.length ?? 0) > 0,
+    )!;
+    const f = buildFactory(S, target.id)!;
+    expect(f).not.toBeNull();
+    const inputId = recipeOf(target)!.inputs[0]!.itemId;
+
+    // Mark this input as standing-sourced from a fictitious seller, and make
+    // sure the vault genuinely has none of it (the shortfall case under test).
+    expect(setStandingSource(S, f.id, inputId, { sellerId: "bob", sellerHandle: "bobs-holdings" })).toBe(true);
+    const inputItem = S.items.find((i) => i.id === inputId)!;
+    delete inputItem.owners["YOU"];
+
+    const cashBeforeOnline = S.cash;
+    let sawIdleAfterOnline = false;
+    let anyRan = false;
+    for (let c = 0; c < 10; c++) {
+      settleCycle(S);
+      if (S.cycle >= f.onlineCycle) {
+        if (f.status === "running") anyRan = true;
+        if (f.status === "idle") sawIdleAfterOnline = true;
+      }
+    }
+    expect(anyRan).toBe(false); // never ran — the standing-sourced input was never filled
+    expect(sawIdleAfterOnline).toBe(true); // and it visibly idled, not silently vanished
+    // No market-buy fallback happened for the standing-sourced input: the
+    // vault is still empty (nothing was ever purchased to cover it).
+    expect(inputItem.owners["YOU"] ?? 0).toBe(0);
+    void cashBeforeOnline; // (bay/line upkeep still burns regardless — not asserted here)
+  });
 });
 
 describe("order desk runs on company treasuries", () => {
