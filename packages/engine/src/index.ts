@@ -828,7 +828,14 @@ function captureReport(state: WorldState): void {
     at: 0,
     netWorth: Math.round(netWorth(state, "YOU")),
     cash: Math.round(state.cash),
-    assets: Math.round(assetsValue(state, "YOU")),
+    // Everything netWorth() counts besides cash/debt — item holdings PLUS
+    // real estate and Deal Room equity stakes — so Cash + Assets - Debt
+    // reconciles with Net Worth. (assetsValue() alone is item holdings only;
+    // it's also used for AI company valuation, which has no property/stakes
+    // concept, so we compose the full figure here rather than change it.)
+    assets: Math.round(
+      assetsValue(state, "YOU") + propertyValue(state) + stakeValue(state),
+    ),
     debt: Math.round(state.debt),
     flows: { ...state.ledger },
   });

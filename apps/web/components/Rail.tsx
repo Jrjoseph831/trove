@@ -15,7 +15,7 @@ import {
   Vault as VaultIcon,
   X,
 } from "lucide-react";
-import { assetsValue, netWorth } from "@trove/engine";
+import { assetsValue, netWorth, propertyValue, stakeValue } from "@trove/engine";
 import { sandboxEnabled } from "@/lib/config";
 import { money, pctChange } from "@/lib/format";
 import { breakingBeat } from "@/lib/breaking";
@@ -66,6 +66,10 @@ export function Rail() {
   const prev = state.nwHist[state.nwHist.length - 1] ?? nw;
   const chg = nw - prev;
   const pct = pctChange(nw, prev);
+  // Everything netWorth() counts besides cash/debt — item holdings PLUS real
+  // estate and Deal Room equity stakes — so this breakdown actually sums to
+  // Net Worth above it. assetsValue() alone is item holdings only.
+  const assets = assetsValue(state, "YOU") + propertyValue(state) + stakeValue(state);
 
   // The Ladder — rank by peak net worth (never drops mid-stream).
   const peak = Math.max(nw, getPeak());
@@ -108,7 +112,7 @@ export function Rail() {
             Cash<b>{money(state.cash)}</b>
           </span>
           <span>
-            Assets<b>{money(assetsValue(state, "YOU"))}</b>
+            Assets<b>{money(assets)}</b>
           </span>
           <span className="debt">
             Debt<b>{money(state.debt)}</b>

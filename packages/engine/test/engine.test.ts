@@ -5,6 +5,7 @@ import {
   COMPANY_TIERS,
   effectiveSpec,
   items as catalog,
+  properties as propertyCatalog,
   recipeOf,
   sectorKeys,
 } from "@trove/data";
@@ -15,6 +16,7 @@ import {
   aiVirtualConsumption,
   assetsValue,
   buildFactory,
+  buyProperty,
   canBuy,
   createWorld,
   demandHeat,
@@ -174,6 +176,20 @@ describe("no wealth from nothing", () => {
     playerSell(S, it.id);
     expect(S.cash).toBeCloseTo(cash0, 6);
     expect(held(it, "YOU")).toBe(0);
+  });
+});
+
+describe("the Assets breakdown reconciles with Net Worth", () => {
+  it("Cash + Assets − Debt equals Net Worth once real estate is owned (regression: real estate used to vanish from Assets)", () => {
+    const S = createWorld(0);
+    S.cash = 50_000_000; // fund a real-estate purchase outright
+    const prop = propertyCatalog[0]!;
+    expect(buyProperty(S, prop.id)).toBe(true);
+    settleCycle(S); // captures a report row via captureReport()
+    const r = S.reports[S.reports.length - 1]!;
+    expect(r.cash + r.assets - r.debt).toBeCloseTo(r.netWorth, 2);
+    // And the fix actually did something — property has real, nonzero value.
+    expect(r.assets).toBeGreaterThan(0);
   });
 });
 
