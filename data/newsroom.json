@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-11T01:51:07.844Z",
+  "generatedAt": "2026-08-11T07:10:01.051Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Boreas Power Breaks Ground on Vantel Storage Campus to Anchor $1.2B Deal",
+      "body": "Boreas Power began construction on a dedicated grid-storage campus at its Vantel site to fulfill the $1.2B contract sealed last month, with first phases targeted for completion within eighteen months. Integration chief Dario Fenn said the campus consolidates the cost-out gains, projecting an additional $60M in annualized savings once fully online. CEO Mira Thorne framed the move as the next leg of a broader buildout, hinting at further site acquisitions.",
+      "cycle": 82705,
+      "dur": 2
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Calderforge Beats as Next-Gen Compute Tier Fills Stormwell Halls",
+      "body": "Calderforge reported quarterly revenue of $840M, ahead of the $790M consensus, driven by rapid uptake of its next-gen compute tier across the first two Stormwell halls. CEO Nadia Throne said the third hall is already 70% pre-committed, though she cautioned that ramp costs would pressure near-term margins. The company reaffirmed its aggressive capacity targets for the year.",
+      "cycle": 82705,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Castlehold Wins $750M Supply Deal for High-Capacity Modular Storage",
+      "body": "Castlehold secured a $750M multi-year supply agreement to deliver its new high-capacity modular line to a regional grid operator, its largest order to date. CEO Halden Voss said the second plant's completion would be timed to first deliveries, though he acknowledged execution risk in the compressed schedule. The deal validates the platform Voss has raced to scale since taking the helm.",
+      "cycle": 82705,
+      "dur": 2
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Erretmark Works Opens Third Veyron Hall to Serve 2,400-Unit Contract",
+      "body": "Erretmark Works commissioned a third Veyron assembly hall to support its landmark 2,400-unit cross-border contract, lifting total capacity by roughly 40%. CEO Aurelia Garr said the expansion positions the company to pursue additional international tenders, noting talks are underway on two further large orders. Hiring at the new hall is expected to add several hundred roles.",
+      "cycle": 82705,
+      "dur": 2
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Holtforge Group Extends Beat Streak as Interconnector Book Nears Record",
+      "body": "Holtforge Group posted earnings of $2.10 per share against a $1.94 estimate, with margins lifted by the sequencing of its $1.6B and $900M offshore cable orders. CEO Yvette Bramm noted the order book now stretches nearly three years out and said the Marden plant would add a second casing line to keep pace. Guidance was nudged modestly higher.",
+      "cycle": 82705,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Posts Another Modest Beat on Broad-Based Demand",
+      "body": "Ornewright Goods edged past estimates once more, with revenue up 3% as cleaning, farm-inputs, and food-service segments all held firm. CEO Petra Veldt described the quarter as 'unremarkable in the best way,' reaffirming steady full-year guidance. Margins were flat sequentially.",
+      "cycle": 82705,
+      "dur": 1
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Steg Tooling Runs Streak to Twelve as Third Kelmar Cell Ramps",
+      "body": "Steg Tooling reported a twelfth consecutive earnings beat, with the newly online third Kelmar cell contributing its first full quarter of fastener output. CEO Iris Vossen credited disciplined utilization rates and steady auto-parts demand, holding to her measured expansion cadence. Full-year guidance was reaffirmed.",
+      "cycle": 82705,
+      "dur": 1
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Thronehaus & Co. Acquires Rare-Metals House Coristel in $1.8B Vertical Push",
+      "body": "Thronehaus & Co. announced an $1.8B acquisition of Coristel, a specialist supplier of precious casing alloys, securing upstream materials for its award-winning Marchwick line. CEO Cora Dray called the deal a decisive move to control quality and cost 'from ore to dial,' and said the Ferrault casework wing would be first to draw on Coristel stock. The purchase marks Thronehaus's largest ever, financed through cash and a new credit facility.",
+      "cycle": 82705,
+      "dur": 8
+    },
     {
       "company": "Greywater Grid",
       "sector": "energy",
@@ -10,16 +90,6 @@
       "body": "Greywater Grid signed a $1.9B agreement with regional utilities to resume its reservoir-compute buildout using a closed-loop cooling design that cuts fresh-water draw by an estimated 70%. CEO Sable Renwick framed the pact as clearing the path past the regulatory pressure that halted work last quarter. Two of the three original compute sites will restart construction within 90 days.",
       "cycle": 82704,
       "dur": 2
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "award",
-      "size": "flash",
-      "head": "Halcrow & Vance Named Contractor of the Year as Vetask Work Draws Praise",
-      "body": "Halcrow & Vance received the regional Builders' Council top honor, citing on-schedule delivery across the $2.1B Vetask mandate's opening phases. CEO Mira Skarn credited the firm's second-yard earthmoving crews for the pace. The recognition arrives as the company weighs bids on two adjacent development corridors.",
-      "cycle": 82704,
-      "dur": 1
     },
     {
       "company": "Halhold Systems",
@@ -40,16 +110,6 @@
       "body": "Halhold Works ordered a full recall of roughly 41,000 Aveline III monitor units after regulators cited unresolved alarm-failure risks first flagged in the earlier probe. CEO Priya Vantt pledged free field replacements and a redesigned alarm module, though the company warned the action could erase the gains from its Aveline II hospital ramp. Two flagship hospital networks have paused new orders pending certification of the fix.",
       "cycle": 82704,
       "dur": 8
-    },
-    {
-      "company": "Holtgate Cloth",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Cloth Marks Another Quiet Beat as Raw-Textile Volumes Edge Higher",
-      "body": "Holtgate Cloth reported a modestly better quarter, with raw-textile volumes up 2% on steady mill demand and its long-running supply pacts intact. CEO Dorian Carrow offered his customary brief note, citing 'orderly demand and stable pricing.' The company reaffirmed its unchanged outlook for the year.",
-      "cycle": 82704,
-      "dur": 1
     },
     {
       "company": "Lhaus Industries",
@@ -92,26 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Halcrest Bets Big on Meridian Momentum With Limited Skeleton Edition",
-      "body": "Riding the sold-out success of the Meridian Tourbillon, CEO Iris Marrow unveiled a 250-piece Meridian Skeleton edition priced at a steep premium to the base line. Marrow staged a public launch event and pointed to reservation lists already exceeding the run before shipments begin. The release doubles down on the flagship line that drove last quarter's blowout results.",
-      "cycle": 82703,
-      "dur": 2
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Hesperforge Supply Commits $600M to Fourth Mill as Marine Backlog Overwhelms Capacity",
-      "body": "CEO Sable Halloran approved construction of a fourth mill at the Caldreach site, citing marine-grade order backlog that has now stretched delivery windows past eighteen months. The facility is slated to add roughly 40% to structural-materials output when it reaches full run rate in 2029. Halloran framed the move as a rare aggressive step, tied directly to the $1.4B framework deal signed last quarter.",
-      "cycle": 82703,
-      "dur": 2
-    },
-    {
       "company": "Korrwright Works",
       "sector": "luxury",
       "kind": "major_deal",
@@ -120,16 +160,6 @@
       "body": "In its boldest move yet, CEO Dunmore Carrow struck an $780M deal to buy the 44-boutique Verenne retail network, giving Korrwright direct shelf presence across premium markets for the first time. The acquisition marks a shift from Carrow's movement-maker buying spree toward controlling how Meridienne flagships reach buyers. Analysts note the deal roughly doubles Korrwright's retail footprint and layers integration risk onto an already busy balance sheet.",
       "cycle": 82703,
       "dur": 8
-    },
-    {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Marrowmoor Holdings Adds Eastgate Property to Westline-Northbrook Base",
-      "body": "CEO Dorian Steg announced the acquisition of the Eastgate hospitality property, marking a disciplined third pillar alongside the fully occupied Westline and Northbrook sites. The addition expands the company's cleaning and household-goods servicing footprint by roughly a quarter. Steg emphasized measured integration, targeting stabilized occupancy within two quarters.",
-      "cycle": 82703,
-      "dur": 2
     },
     {
       "company": "Skarnvale",
@@ -219,16 +249,6 @@
       "head": "Halhold Systems Rocked as Internal Memos Show Reliability Failures Were Known for Months",
       "body": "Leaked documents revealed that Halhold managers flagged the compute reliability defects nearly a year before the unit was split off, a timeline that contradicts prior public statements from the board. Ilse Marren ordered an independent review and suspended two senior executives pending its outcome, while three major clients said they were reassessing contracts worth a combined $1.2 billion. The disclosure sent renewal talks into disarray just as Marren's turnaround was meant to stabilize.",
       "cycle": 82698,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Halhold Works Faces Regulatory Probe Over Aveline III Monitor Alarm Failures",
-      "body": "Health regulators opened a formal safety review after nineteen hospitals reported intermittent alarm dropouts on the newly deployed Aveline III platform, with two facilities suspending use of the units. CEO Priya Vantt confirmed a voluntary firmware halt across the regional network while engineers trace what she called an 'isolated signaling fault,' though the flagship rollout that drove three straight strong quarters now hangs on the outcome.",
-      "cycle": 82697,
       "dur": 8
     }
   ]

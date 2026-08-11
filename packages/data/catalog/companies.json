@@ -1572,18 +1572,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82696,
+    "lastEventCycle": 82705,
     "events": [
-      {
-        "cycle": 82544,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Boreas Power Snaps Up Rival Storage Operator Calderwick Fields",
-        "body": "Fresh off the Hollowmere expansion, Mira Thorne unveiled a 780 million cash-and-stock deal for Calderwick Fields, adding four operational storage sites and a pipeline of grid contracts. Thorne framed the purchase as 'stitching the map together,' bringing Boreas's total managed storage capacity up by roughly a third. The board approved the deal unanimously, with completion expected next quarter.",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82552,
         "kind": "major_deal",
@@ -1812,6 +1802,16 @@
         "body": "Fresh off beating estimates as its cost-out plan ran ahead of schedule, Boreas Power signed a $1.2B agreement to supply grid-scale storage across three regional networks over seven years. CEO Mira Thorne called it the largest single contract in the company's history and proof the Vantel integration has shifted from drag to platform. The deal is expected to add meaningfully to backlog beginning next quarter.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82705,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Boreas Power Breaks Ground on Vantel Storage Campus to Anchor $1.2B Deal",
+        "body": "Boreas Power began construction on a dedicated grid-storage campus at its Vantel site to fulfill the $1.2B contract sealed last month, with first phases targeted for completion within eighteen months. Integration chief Dario Fenn said the campus consolidates the cost-out gains, projecting an additional $60M in annualized savings once fully online. CEO Mira Thorne framed the move as the next leg of a broader buildout, hinting at further site acquisitions.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -3272,7 +3272,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82696,
+    "lastEventCycle": 82705,
     "events": [
       {
         "cycle": 0,
@@ -3488,6 +3488,16 @@
         "size": "standard",
         "head": "Calderforge Unveils Next-Gen Compute Tier as Stormwell Capacity Ramps",
         "body": "Calderforge introduced its Meridian-class compute tier, promising a 40% density gain per hall and lower cooling draw, with the first racks slated for the newly commissioned Stormwell facilities. CEO Nadia Throne said the Meridian line was designed to absorb overflow from the multi-year capacity commitment signed earlier this year. Early customer allocations reportedly cover most of the third hall's projected output.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82705,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderforge Beats as Next-Gen Compute Tier Fills Stormwell Halls",
+        "body": "Calderforge reported quarterly revenue of $840M, ahead of the $790M consensus, driven by rapid uptake of its next-gen compute tier across the first two Stormwell halls. CEO Nadia Throne said the third hall is already 70% pre-committed, though she cautioned that ramp costs would pressure near-term margins. The company reaffirmed its aggressive capacity targets for the year.",
         "effects": {
           "technology": 0.13
         }
@@ -4323,18 +4333,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82698,
+    "lastEventCycle": 82705,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "outage",
-        "size": "standard",
-        "head": "Castlehold Saltmere Banks Stumble in First Storm Season",
-        "body": "Castlehold's new Saltmere banks tripped offline during an early squall, briefly cutting backup capacity to two windward districts. Soren Skarn rushed engineers to the coast and blamed an untested cutover switch. The turbulent debut underscored the risks of his rushed timeline.",
-        "effects": {
-          "energy": -0.13
-        }
-      },
       {
         "cycle": 82525,
         "kind": "restructure",
@@ -4555,6 +4555,16 @@
         "size": "standard",
         "head": "Castlehold Rolls Out High-Capacity Modular Line as Second Plant Nears Completion",
         "body": "Halden Voss unveiled the next tier of the modular storage platform, doubling per-unit capacity and targeting large grid operators. The launch coincides with the second plant reaching 80% construction, positioning Castlehold to begin shipments by mid-year. Voss said early letters of intent already cover roughly 40% of the plant's projected first-year output.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82705,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Castlehold Wins $750M Supply Deal for High-Capacity Modular Storage",
+        "body": "Castlehold secured a $750M multi-year supply agreement to deliver its new high-capacity modular line to a regional grid operator, its largest order to date. CEO Halden Voss said the second plant's completion would be timed to first deliveries, though he acknowledged execution risk in the compressed schedule. The deal validates the platform Voss has raced to scale since taking the helm.",
         "effects": {
           "energy": 0.13
         }
@@ -6130,7 +6140,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82695,
+    "lastEventCycle": 82705,
     "events": [
       {
         "cycle": 0,
@@ -6318,6 +6328,16 @@
         "body": "Aurelia Garr unveiled a four-year, 2,400-unit Veyron supply agreement valued at roughly $5.2 billion, the largest single order in the company's 105-year history. The deal spans three export corridors and commits Erretmark to a third assembly hall, with Garr calling it 'the platform that redefines our reach.' Backlog now stretches into 2029.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82705,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Erretmark Works Opens Third Veyron Hall to Serve 2,400-Unit Contract",
+        "body": "Erretmark Works commissioned a third Veyron assembly hall to support its landmark 2,400-unit cross-border contract, lifting total capacity by roughly 40%. CEO Aurelia Garr said the expansion positions the company to pursue additional international tenders, noting talks are underway on two further large orders. Hiring at the new hall is expected to add several hundred roles.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -9161,7 +9181,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82689,
+    "lastEventCycle": 82705,
     "events": [
       {
         "cycle": 0,
@@ -9287,6 +9307,16 @@
         "size": "standard",
         "head": "Holtforge Group Adds $900M Interconnector Extension as Order Book Swells",
         "body": "Holtforge won a $900M extension to its offshore interconnector program, pushing committed cable orders to a record 32 months of production. CEO Yvette Bramm said the marine cable plant will run a third shift to absorb the volume, adding roughly 180 jobs. The win cements Holtforge as the lead supplier on the region's grid-linking buildout.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82705,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtforge Group Extends Beat Streak as Interconnector Book Nears Record",
+        "body": "Holtforge Group posted earnings of $2.10 per share against a $1.94 estimate, with margins lifted by the sequencing of its $1.6B and $900M offshore cable orders. CEO Yvette Bramm noted the order book now stretches nearly three years out and said the Marden plant would add a second casing line to keep pace. Guidance was nudged modestly higher.",
         "effects": {
           "construction": 0.13
         }
@@ -12251,7 +12281,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82690,
+    "lastEventCycle": 82705,
     "events": [
       {
         "cycle": 0,
@@ -12377,6 +12407,16 @@
         "size": "flash",
         "head": "Ornewright Goods Notches Another Modest Beat on Steady Farm-Inputs Demand",
         "body": "The consumer house edged past estimates for the fourth straight quarter, with revenue up 4% as farm-inputs volumes offset flat cleaning lines. CEO Petra Veldt described the quarter as 'unremarkable in the best way,' pointing to disciplined pricing across food service. No change to full-year guidance was announced.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82705,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Posts Another Modest Beat on Broad-Based Demand",
+        "body": "Ornewright Goods edged past estimates once more, with revenue up 3% as cleaning, farm-inputs, and food-service segments all held firm. CEO Petra Veldt described the quarter as 'unremarkable in the best way,' reaffirming steady full-year guidance. Margins were flat sequentially.",
         "effects": {
           "consumer": 0.06
         }
@@ -13361,7 +13401,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82693,
+    "lastEventCycle": 82705,
     "events": [
       {
         "cycle": 0,
@@ -13517,6 +13557,16 @@
         "size": "flash",
         "head": "Steg Tooling Stretches Streak to Eleven as Third Kelmar Cell Comes Online",
         "body": "Steg Tooling reported its eleventh consecutive earnings beat, with fastener and auto-parts margins holding steady as the third Kelmar cell began production on schedule. Iris Vossen said the new cell is already running at half its planned throughput with room to scale through the year. The company added modestly to its capacity outlook while keeping guidance conservative.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82705,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Steg Tooling Runs Streak to Twelve as Third Kelmar Cell Ramps",
+        "body": "Steg Tooling reported a twelfth consecutive earnings beat, with the newly online third Kelmar cell contributing its first full quarter of fastener output. CEO Iris Vossen credited disciplined utilization rates and steady auto-parts demand, holding to her measured expansion cadence. Full-year guidance was reaffirmed.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -13987,7 +14037,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82697,
+    "lastEventCycle": 82705,
     "events": [
       {
         "cycle": 0,
@@ -14215,6 +14265,16 @@
         "body": "The Marchwick collection won the Grand Complication award at the Vellmont Horology Prize, judges citing casework precision traced directly to the newly integrated Ferrault wing. Cora Dray called the honor 'validation of a bet placed at $610M,' as the expanded wing pushes toward doubled output.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82705,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Thronehaus & Co. Acquires Rare-Metals House Coristel in $1.8B Vertical Push",
+        "body": "Thronehaus & Co. announced an $1.8B acquisition of Coristel, a specialist supplier of precious casing alloys, securing upstream materials for its award-winning Marchwick line. CEO Cora Dray called the deal a decisive move to control quality and cost 'from ore to dial,' and said the Ferrault casework wing would be first to draw on Coristel stock. The purchase marks Thronehaus's largest ever, financed through cash and a new credit facility.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
