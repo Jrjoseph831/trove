@@ -1,15 +1,18 @@
 import { afterEach, describe, expect, it } from "vitest";
 import {
+  AI_APPETITE_MUL,
   canProduce,
   COMPANY_TIERS,
   effectiveSpec,
   items as catalog,
+  recipeOf,
   sectorKeys,
 } from "@trove/data";
 import {
   accrueIncome,
   activeMarketEvent,
   advance,
+  aiVirtualConsumption,
   assetsValue,
   buildFactory,
   canBuy,
@@ -30,6 +33,7 @@ import {
   playerSell,
   priceItem,
   reconcileCompanies,
+  representativeItem,
   resetRng,
   rippleMultiplier,
   scarcity,
@@ -291,6 +295,65 @@ describe("AI ripple multiplier — bounded and neutral by default", () => {
     it.owners[S.traders[0]!.name] = 1_000_000; // a trader, not a real player
     updatePlayerActivity(S);
     expect(rippleMultiplier(S)).toBe(1);
+  });
+});
+
+describe("AI virtual consumption stays within invariants", () => {
+  it("every biased company resolves to a real, producible representative item", () => {
+    const S = createWorld(0);
+    for (const t of S.traders) {
+      if (!t.bias) continue; // Open_Index: no representative item, by design
+      const rep = representativeItem(t.name, t.bias);
+      expect(rep).not.toBeNull();
+    }
+  });
+
+  it("never drops a company's cash below its tier reserve", () => {
+    const S = createWorld(0);
+    const t = S.traders.find((tr) => tr.bias !== null)!;
+    const floor = COMPANY_TIERS[t.tier ?? "mid"].floor;
+    t.cash = floor + 500; // just above reserve — the case that could violate it
+    aiVirtualConsumption(S);
+    expect(t.cash).toBeGreaterThanOrEqual(floor - 0.01);
+  });
+
+  it("never drives shared item stock negative even when cash is generous", () => {
+    const S = createWorld(0);
+    for (const t of S.traders) t.cash = 50_000_000; // remove the cash constraint
+    aiVirtualConsumption(S);
+    for (const it of S.items) expect(it.stock).toBeGreaterThanOrEqual(0);
+  });
+
+  it("scales every input by the SAME fill factor when stock is short (preserves recipe ratios)", () => {
+    const S = createWorld(0);
+    const t = S.traders.find((tr) => tr.bias !== null)!;
+    t.cash = 50_000_000; // cash is never the binding constraint here
+    // Isolate to ONE company so a shared raw material can't be double-drawn by
+    // a second company in the same pass, which would corrupt the check below.
+    S.traders = [t];
+    const rep = representativeItem(t.name, t.bias)!;
+    const recipe = recipeOf(rep)!;
+    const rate = effectiveSpec(rep, []).rate * AI_APPETITE_MUL[t.tier ?? "mid"];
+    // Starve every input far below its computed need so the fill factor binds
+    // well under 1 for every one of them (not just the tightest).
+    for (const it of S.items) it.stock = 0.001;
+    const before = new Map(S.items.map((it) => [it.id, it.stock]));
+    aiVirtualConsumption(S);
+    // For each input, (draw / need) should equal the SAME fill factor — draw
+    // relative to what the recipe actually calls for, not relative to the
+    // arbitrary starting stock (different inputs legitimately need different
+    // quantities, so equal-fraction-of-stock is the wrong invariant to check).
+    const fillFactors = recipe.inputs.map((inp) => {
+      const it = S.items.find((x) => x.id === inp.itemId)!;
+      const need = inp.qty * rate;
+      const draw = before.get(it.id)! - it.stock;
+      return draw / need;
+    });
+    expect(fillFactors.length).toBeGreaterThan(0);
+    const [first, ...rest] = fillFactors;
+    expect(first!).toBeGreaterThan(0);
+    expect(first!).toBeLessThan(1); // confirms starvation actually bound
+    for (const f of rest) expect(f).toBeCloseTo(first!, 6);
   });
 });
 

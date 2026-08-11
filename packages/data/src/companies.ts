@@ -33,6 +33,16 @@ export const COMPANY_TIERS: Record<CompanyTier, CompanyTierSpec> = {
   titan: { cash: 3_000_000, income: 180_000, floor: 700_000, maxOrder: 5_000_000 },
 };
 
+/** How big a company's VIRTUAL production line runs relative to a player's
+ *  factory for the same item (see @trove/engine's aiEconomy.ts) — a "mid"
+ *  house draws roughly one player line's worth of material; a titan, several. */
+export const AI_APPETITE_MUL: Record<CompanyTier, number> = {
+  boutique: 0.15,
+  mid: 0.4,
+  large: 1.0,
+  titan: 2.5,
+};
+
 export interface CompanySpec {
   name: string;
   /** Home sector it leans toward (trades + orders here), or null = broad/index. */

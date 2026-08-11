@@ -26,7 +26,11 @@ import { listedUnitPrice, QC_PREMIUM } from "./pricing";
 import { rand, rexp } from "./rng";
 import { activeMarketEvent } from "./events";
 export * from "./events";
-import { rippleMultiplier, updatePlayerActivity } from "./aiEconomy";
+import {
+  aiVirtualConsumption,
+  rippleMultiplier,
+  updatePlayerActivity,
+} from "./aiEconomy";
 export * from "./aiEconomy";
 import type {
   ActiveStory,
@@ -746,6 +750,11 @@ export function settleCycle(state: WorldState): void {
     it.prevValue = it.value;
     it.value = priceItem(state, it);
   }
+
+  // 4b. AI companies draw material from the same shared stock a player factory
+  //     would (flat appetite for now; the ripple multiplier couples in next).
+  //     One cycle lagged into next cycle's scarcity(), same as player factories.
+  aiVirtualConsumption(state);
 
   // 5. Run player factories: pay upkeep, consume inputs, produce to the vault.
   produceFactories(state);
