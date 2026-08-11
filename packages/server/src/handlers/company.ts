@@ -115,6 +115,9 @@ export async function handler(
       accent: ACCENTS.has(body.accent ?? "") ? body.accent : prev?.accent ?? "gold",
       sections,
       published: body.published ?? prev?.published ?? false,
+      // Opt in to being auto-drawn-from by other players' standing sources
+      // (settled inside a production tick, no click needed) — default off.
+      autoSupply: body.autoSupply ?? prev?.autoSupply ?? false,
     };
     player.site = site;
     await savePlayer(player);

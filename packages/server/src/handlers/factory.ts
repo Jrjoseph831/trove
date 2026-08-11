@@ -28,12 +28,14 @@ import {
   setListed,
   setListPrice,
   setSource,
+  setStandingSource,
   START_CASH,
   uninstallModule,
   wallProdCycle,
   type WorldState,
 } from "@trove/engine";
 import {
+  allPlayers,
   buildPortfolio,
   extractPlayer,
   getPlayer,
@@ -70,6 +72,8 @@ interface Body {
   lineId?: string;
   inputItemId?: number;
   feederId?: string | null;
+  /** Company handle to standing-source an input from, or null/absent to clear. */
+  sellerHandle?: string | null;
   bay?: number;
   mult?: number;
   on?: boolean;
@@ -78,8 +82,9 @@ interface Body {
 }
 
 /** Apply one factory action to the player's world view. Returns an error string
- *  on a rejected action, or null on success. */
-function apply(state: WorldState, b: Body): string | null {
+ *  on a rejected action, or null on success. `playerId` is only needed for
+ *  actions that must resolve ANOTHER player by handle (standing-source). */
+async function apply(state: WorldState, b: Body, playerId: string): Promise<string | null> {
   switch (b.action) {
     case "build":
       return buildFactory(state, Number(b.itemId)) ? null : "can't build that line";
@@ -115,6 +120,26 @@ function apply(state: WorldState, b: Body): string | null {
       )
         ? null
         : "can't set source";
+    case "standing-source": {
+      if (!b.sellerHandle) {
+        return setStandingSource(state, String(b.lineId), Number(b.inputItemId), null)
+          ? null
+          : "can't clear source";
+      }
+      // Same handle-resolution + self-reference guard the manual P2P order
+      // flow already uses (see handlers/orders.ts) — a standing source is
+      // just a recurring version of the same underlying relationship.
+      const players = await allPlayers();
+      const seller = players.find((p) => p.site?.handle === b.sellerHandle && p.site?.published);
+      if (!seller) return "no such company";
+      if (seller.playerId === playerId) return "that's your own company";
+      return setStandingSource(state, String(b.lineId), Number(b.inputItemId), {
+        sellerId: seller.playerId,
+        sellerHandle: b.sellerHandle,
+      })
+        ? null
+        : "can't set source";
+    }
     case "listprice":
       setListPrice(state, Number(b.itemId), Number(b.mult));
       return null;
@@ -158,7 +183,7 @@ export async function handler(
   // wallProdCycle so a built line's onlineCycle lines up with the Production
   // Lambda's produce check (both share this basis).
   state.cycle = wallProdCycle();
-  const err = apply(state, body);
+  const err = await apply(state, body, playerId);
   if (err) return json(409, { error: err });
 
   const updated = extractPlayer(state, player);
