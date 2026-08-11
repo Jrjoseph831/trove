@@ -7384,7 +7384,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82694,
+    "lastEventCycle": 82704,
     "events": [
       {
         "cycle": 0,
@@ -7578,6 +7578,16 @@
         "body": "Greywater Grid has suspended its $2B reservoir-compute buildout and committed to a costly closed-loop redesign after regulators flagged excessive water draw. CEO Sable Renwick unveiled a $900M remediation and cooling overhaul, conceding the original design 'outpaced its environmental footing.' The pause casts doubt on delivery timelines for the $3.4B multi-site pact, with penalties under negotiation.",
         "effects": {
           "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82704,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Greywater Grid Revives Reservoir Plan With $1.9B Closed-Loop Water Deal",
+        "body": "Greywater Grid signed a $1.9B agreement with regional utilities to resume its reservoir-compute buildout using a closed-loop cooling design that cuts fresh-water draw by an estimated 70%. CEO Sable Renwick framed the pact as clearing the path past the regulatory pressure that halted work last quarter. Two of the three original compute sites will restart construction within 90 days.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -8021,7 +8031,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82690,
+    "lastEventCycle": 82704,
     "events": [
       {
         "cycle": 0,
@@ -8149,6 +8159,16 @@
         "body": "The construction house posted revenue of $1.34 billion, up 11% year over year, as the $2.1B Vetask regional development mandate moved into its heavier earthmoving phase. CEO Mira Skarn credited the second Vetask yard's early ramp for absorbing demand without new hiring, and lifted full-year margin guidance by roughly one point. Skarn signaled interest in adjacent site mandates 'should the pricing hold.'",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82704,
+        "kind": "award",
+        "size": "flash",
+        "head": "Halcrow & Vance Named Contractor of the Year as Vetask Work Draws Praise",
+        "body": "Halcrow & Vance received the regional Builders' Council top honor, citing on-schedule delivery across the $2.1B Vetask mandate's opening phases. CEO Mira Skarn credited the firm's second-yard earthmoving crews for the pace. The recognition arrives as the company weighs bids on two adjacent development corridors.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -8347,18 +8367,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82698,
+    "lastEventCycle": 82704,
     "events": [
-      {
-        "cycle": 82564,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Halhold Systems Unveils Northgate Ultra Tier to Meet Surging Client Demand",
-        "body": "Building on two anchor pacts, Halhold Systems introduced Northgate Ultra, a higher-density compute tier chief executive Dahlia Renn called 'the natural next step for clients outgrowing standard capacity.' The company said early commitments already cover roughly 40 percent of first-year output, with deliveries beginning next quarter.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82570,
         "kind": "expansion",
@@ -8582,6 +8592,16 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82704,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Halhold Systems Hit With Shareholder Suit Over Concealed Reliability Failures",
+        "body": "A group of institutional shareholders filed a $2.3B suit alleging Halhold Systems and CEO Ilse Marren withheld knowledge of Compute reliability failures documented in internal memos for months. The complaint claims client renewals and disclosures were misrepresented while the reliability unit was quietly spun off. Marren said the company would 'vigorously contest' the claims as three more clients confirmed deferred contracts.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -8596,18 +8616,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82697,
+    "lastEventCycle": 82704,
     "events": [
-      {
-        "cycle": 82569,
-        "kind": "restructure",
-        "size": "major",
-        "head": "Halhold Works Unveils Sweeping Overhaul as New Chief Vale Takes Control",
-        "body": "Gunnar Vale announced a full restructuring that splits the troubled Verity Pro medical-equipment unit into a ring-fenced division and cuts 900 roles company-wide. Vale set aside 260 million to settle the hospital litigation and pledged an independent safety audit of all device lines. The plan drew a mixed reception amid warnings the transition period will be 'painful and turbulent.'",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82574,
         "kind": "recall",
@@ -8828,6 +8838,16 @@
         "size": "major",
         "head": "Halhold Works Faces Regulatory Probe Over Aveline III Monitor Alarm Failures",
         "body": "Health regulators opened a formal safety review after nineteen hospitals reported intermittent alarm dropouts on the newly deployed Aveline III platform, with two facilities suspending use of the units. CEO Priya Vantt confirmed a voluntary firmware halt across the regional network while engineers trace what she called an 'isolated signaling fault,' though the flagship rollout that drove three straight strong quarters now hangs on the outcome.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82704,
+        "kind": "recall",
+        "size": "major",
+        "head": "Halhold Works Recalls Aveline III Monitors as Probe Escalates to Nationwide Action",
+        "body": "Halhold Works ordered a full recall of roughly 41,000 Aveline III monitor units after regulators cited unresolved alarm-failure risks first flagged in the earlier probe. CEO Priya Vantt pledged free field replacements and a redesigned alarm module, though the company warned the action could erase the gains from its Aveline II hospital ramp. Two flagship hospital networks have paused new orders pending certification of the fix.",
         "effects": {
           "technology": -0.22
         }
@@ -9284,7 +9304,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82673,
+    "lastEventCycle": 82704,
     "events": [
       {
         "cycle": 0,
@@ -9350,6 +9370,16 @@
         "size": "flash",
         "head": "Holtgate Cloth Posts Another Quietly Steady Quarter as Volumes Hold",
         "body": "Holtgate delivered flat-to-slightly-up results, with revenue edging 2% higher on stable raw textile demand and its long-running supply pact. CEO Dorian Carrow offered little commentary beyond reaffirming the company's unchanged outlook. Analysts continue to describe the house as one of the calmest names in the sector.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82704,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Cloth Marks Another Quiet Beat as Raw-Textile Volumes Edge Higher",
+        "body": "Holtgate Cloth reported a modestly better quarter, with raw-textile volumes up 2% on steady mill demand and its long-running supply pacts intact. CEO Dorian Carrow offered his customary brief note, citing 'orderly demand and stable pricing.' The company reaffirmed its unchanged outlook for the year.",
         "effects": {
           "textiles": 0.06
         }
@@ -11007,18 +11037,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82698,
+    "lastEventCycle": 82704,
     "events": [
-      {
-        "cycle": 82551,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Lhaus Industries Unveils First Cell Pack From New Power & Storage Division",
-        "body": "Lhaus rolled out the Voss-badged HX series, its first storage product engineered since folding in the acquired unit. CEO Cole Brandt said the pack targets fleet and grid buyers and that a driveline-integrated variant is already in testing at Ferrlands. Initial shipments are slated for two regional distributors.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82558,
         "kind": "major_deal",
@@ -11245,6 +11265,16 @@
         "size": "standard",
         "head": "Lhaus Industries Carves Out Grid-Storage Division Amid Mounting Legal Pressure",
         "body": "Cole Brandt announced Lhaus will spin its embattled Power & Storage operations into a ring-fenced subsidiary, a move designed to contain liability from the $1.8 billion partner lawsuit. The reorganization includes a $400 million provision for settlements and remediation, alongside leadership changes across the storage unit. Brandt framed the step as protecting the core auto parts and vehicles businesses from further fallout.",
+        "effects": {
+          "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82704,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Lhaus Industries Misses as Grid-Storage Carve-Out Costs and Legal Reserves Weigh",
+        "body": "Lhaus Industries missed quarterly forecasts, posting a 14% profit drop as it booked $420M in reserves tied to the $1.8B overheating suit and one-time costs from carving out its grid-storage division. CEO Cole Brandt said the core auto-parts and vehicles units remained solid, but conceded the storage fallout would 'shadow results into next year.' Settlement talks with two former megadeal partners are reportedly underway.",
         "effects": {
           "automotive": -0.13
         }
@@ -14704,25 +14734,15 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1893,
-    "ceo": "Adrienne Sole",
+    "ceo": "Lucien Marchetti",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.71,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82694,
+    "lastEventCycle": 82704,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Varnvale House Debuts the Ember Fine-Goods Capsule",
-        "body": "Petra Holt launched the Ember capsule, a limited run pairing lacquered desk pieces with a matching pocket timepiece. Holt staged the reveal on a rooftop at dusk, leaning into the line's name. The bold presentation drew a crowd well past the fine-goods regulars.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "scandal",
@@ -14944,6 +14964,14 @@
         "effects": {
           "luxury": -0.13
         }
+      },
+      {
+        "cycle": 82704,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Varnvale House Ousts Adrienne Sole After Sovereign Supply Missteps",
+        "body": "The Varnvale board removed CEO Adrienne Sole following two quarters of strained Sovereign output and the botched Regent rollout, naming longtime operations head Lucien Marchetti to steady the house. Marchetti said he would slow the top-tier expansion and rebuild waitlists rather than chase headline launches. The move ends Sole's brief, volatile tenure marked by bold public bets.",
+        "effects": {}
       }
     ]
   },
@@ -16367,7 +16395,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82686,
+    "lastEventCycle": 82704,
     "events": [
       {
         "cycle": 0,
@@ -16473,6 +16501,16 @@
         "size": "standard",
         "head": "Wrengrove Group Breaks Ground on Fourth Plant as Sterile-Kit Demand Surges",
         "body": "Rhys Vossen announced a $260 million fourth plant dedicated to sterile-kit production, citing demand that has outstripped the third plant's expanded lines. The facility is expected to add 40% to total capacity when it opens in two years. Vossen said advance commitments already cover roughly a third of the planned output.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82704,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Wrengrove Group Beats Again as Sterile-Kit Backlog Hits Record",
+        "body": "Wrengrove Group topped forecasts for a third straight quarter, with sterile-kit revenue up 19% and an order backlog reaching a record as its fourth plant nears completion. CEO Rhys Vossen said early commissioning of the new plant could pull forward capacity by a quarter. Consumables margins widened on improved sourcing terms.",
         "effects": {
           "medical": 0.13
         }

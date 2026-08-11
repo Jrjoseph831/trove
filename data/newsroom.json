@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-10T18:59:25.362Z",
+  "generatedAt": "2026-08-11T01:51:07.844Z",
   "beats": [
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Greywater Grid Revives Reservoir Plan With $1.9B Closed-Loop Water Deal",
+      "body": "Greywater Grid signed a $1.9B agreement with regional utilities to resume its reservoir-compute buildout using a closed-loop cooling design that cuts fresh-water draw by an estimated 70%. CEO Sable Renwick framed the pact as clearing the path past the regulatory pressure that halted work last quarter. Two of the three original compute sites will restart construction within 90 days.",
+      "cycle": 82704,
+      "dur": 2
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "award",
+      "size": "flash",
+      "head": "Halcrow & Vance Named Contractor of the Year as Vetask Work Draws Praise",
+      "body": "Halcrow & Vance received the regional Builders' Council top honor, citing on-schedule delivery across the $2.1B Vetask mandate's opening phases. CEO Mira Skarn credited the firm's second-yard earthmoving crews for the pace. The recognition arrives as the company weighs bids on two adjacent development corridors.",
+      "cycle": 82704,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Halhold Systems Hit With Shareholder Suit Over Concealed Reliability Failures",
+      "body": "A group of institutional shareholders filed a $2.3B suit alleging Halhold Systems and CEO Ilse Marren withheld knowledge of Compute reliability failures documented in internal memos for months. The complaint claims client renewals and disclosures were misrepresented while the reliability unit was quietly spun off. Marren said the company would 'vigorously contest' the claims as three more clients confirmed deferred contracts.",
+      "cycle": 82704,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "recall",
+      "size": "major",
+      "head": "Halhold Works Recalls Aveline III Monitors as Probe Escalates to Nationwide Action",
+      "body": "Halhold Works ordered a full recall of roughly 41,000 Aveline III monitor units after regulators cited unresolved alarm-failure risks first flagged in the earlier probe. CEO Priya Vantt pledged free field replacements and a redesigned alarm module, though the company warned the action could erase the gains from its Aveline II hospital ramp. Two flagship hospital networks have paused new orders pending certification of the fix.",
+      "cycle": 82704,
+      "dur": 8
+    },
+    {
+      "company": "Holtgate Cloth",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Cloth Marks Another Quiet Beat as Raw-Textile Volumes Edge Higher",
+      "body": "Holtgate Cloth reported a modestly better quarter, with raw-textile volumes up 2% on steady mill demand and its long-running supply pacts intact. CEO Dorian Carrow offered his customary brief note, citing 'orderly demand and stable pricing.' The company reaffirmed its unchanged outlook for the year.",
+      "cycle": 82704,
+      "dur": 1
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Lhaus Industries Misses as Grid-Storage Carve-Out Costs and Legal Reserves Weigh",
+      "body": "Lhaus Industries missed quarterly forecasts, posting a 14% profit drop as it booked $420M in reserves tied to the $1.8B overheating suit and one-time costs from carving out its grid-storage division. CEO Cole Brandt said the core auto-parts and vehicles units remained solid, but conceded the storage fallout would 'shadow results into next year.' Settlement talks with two former megadeal partners are reportedly underway.",
+      "cycle": 82704,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Varnvale House Ousts Adrienne Sole After Sovereign Supply Missteps",
+      "body": "The Varnvale board removed CEO Adrienne Sole following two quarters of strained Sovereign output and the botched Regent rollout, naming longtime operations head Lucien Marchetti to steady the house. Marchetti said he would slow the top-tier expansion and rebuild waitlists rather than chase headline launches. The move ends Sole's brief, volatile tenure marked by bold public bets.",
+      "cycle": 82704,
+      "dur": 8
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Wrengrove Group Beats Again as Sterile-Kit Backlog Hits Record",
+      "body": "Wrengrove Group topped forecasts for a third straight quarter, with sterile-kit revenue up 19% and an order backlog reaching a record as its fourth plant nears completion. CEO Rhys Vossen said early commissioning of the new plant could pull forward capacity by a quarter. Consumables margins widened on improved sourcing terms.",
+      "cycle": 82704,
+      "dur": 2
+    },
     {
       "company": "Blackton Industries",
       "sector": "automotive",
@@ -32,26 +112,6 @@
       "dur": 2
     },
     {
-      "company": "Holtgate Group",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Group Extends Beat Streak With Another Slim Margin Gain",
-      "body": "CEO Dorian Throne delivered yet another narrow beat, crediting renewed guild volumes and consistent mill utilization for the incremental gain. Raw-textile output held steady with no meaningful shifts in cost or demand. Throne offered his customary understated outlook, guiding for continued stability into next quarter.",
-      "cycle": 82703,
-      "dur": 1
-    },
-    {
-      "company": "Korrgrave Mfg.",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Korrgrave Mfg. Holds Streak as Southern Blending Line Nears Commissioning",
-      "body": "CEO Aurelia Halloran reported another steady quarter, with the Northern plant at full output and the new Southern blending line on track to commission early next year. Farm-input demand held firm across the season, keeping margins within the company's narrow historical band. Halloran reiterated her long-horizon stance, declining to accelerate the Southern ramp.",
-      "cycle": 82703,
-      "dur": 1
-    },
-    {
       "company": "Korrwright Works",
       "sector": "luxury",
       "kind": "major_deal",
@@ -69,66 +129,6 @@
       "head": "Marrowmoor Holdings Adds Eastgate Property to Westline-Northbrook Base",
       "body": "CEO Dorian Steg announced the acquisition of the Eastgate hospitality property, marking a disciplined third pillar alongside the fully occupied Westline and Northbrook sites. The addition expands the company's cleaning and household-goods servicing footprint by roughly a quarter. Steg emphasized measured integration, targeting stabilized occupancy within two quarters.",
       "cycle": 82703,
-      "dur": 2
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Posts Modest Beat as Non-Grocery Contracts Ramp",
-      "body": "CEO Halden Vossen reported a slim quarterly beat as the two new distribution contracts moved toward full volume, lifting packaging throughput about 6% year over year. Vossen kept guidance unchanged, characterizing the diversification push as on schedule and low-drama. Grocery remains the core, but non-grocery now accounts for nearly a fifth of shipped volume.",
-      "cycle": 82703,
-      "dur": 1
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Blackhold Breaks Ground on Second Storage Campus to Fulfill $1.2B Grid Mandate",
-      "body": "Blackhold has begun construction on a 400-acre storage campus at Rell Harbor, expected to add 2.1 gigawatt-hours of capacity when it comes online in 2028. CEO Halden Dabney called the site 'the backbone of our mandate delivery,' with the newly independent testing unit certifying each production block before shipment. The project carries a $540M price tag, part of which is funded by advance payments tied to the regulator contract.",
-      "cycle": 82702,
-      "dur": 2
-    },
-    {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Brunridge Works Signs Multi-Category Supply Pact With National Retail Group",
-      "body": "Brunridge Works has secured a three-year, $430M supply agreement to stock apparel, cleaning and packaging lines across a 900-store national retail group. CEO Halia Brennt said the deal 'rewards the discipline that brought our cordless line back,' broadening exposure beyond the recovered device segment. Shipments are slated to begin next quarter under a phased category rollout.",
-      "cycle": 82702,
-      "dur": 2
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Carrowwell Beats as $1.1B Follow-On and New Plant Drive Record Machines Output",
-      "body": "Carrowwell posted quarterly revenue of $1.9B, up 24%, as the dedicated machines plant ramped to full capacity against the extended reindustrialization contract. CEO Mara Voss highlighted early traction for the automated material-handling system, which secured its first external orders outside the government program. The company lifted its backlog figure to $4.6B and reaffirmed margin targets.",
-      "cycle": 82702,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "scandal",
-      "size": "standard",
-      "head": "Ironcrestton Faces Scrutiny Over Meridian Line Sourcing Claims",
-      "body": "Ironcrestton is under fire after industry reviewers alleged the newly launched Meridian line overstated the provenance of its hand-finished components. CEO Thea Blackwood defended the collection as 'authentically crafted' but confirmed an internal audit of supplier documentation. The controversy has cast a shadow over Blackwood's aggressive move into higher price tiers just weeks after launch.",
-      "cycle": 82702,
-      "dur": 2
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Marrowstone Build Adds $310M Inland Rail Earthmoving Order",
-      "body": "Marrowstone Build has won a $310M contract to supply and service earthmoving fleets for a regional inland rail corridor. CEO Delphine Vaugh said the award leverages the same split-fleet model used on the $680M port package, keeping the new assembly line at full utilization through 2027. Deliveries begin in the second quarter with a dedicated maintenance crew stationed on-site.",
-      "cycle": 82702,
       "dur": 2
     },
     {
@@ -229,26 +229,6 @@
       "head": "Halhold Works Faces Regulatory Probe Over Aveline III Monitor Alarm Failures",
       "body": "Health regulators opened a formal safety review after nineteen hospitals reported intermittent alarm dropouts on the newly deployed Aveline III platform, with two facilities suspending use of the units. CEO Priya Vantt confirmed a voluntary firmware halt across the regional network while engineers trace what she called an 'isolated signaling fault,' though the flagship rollout that drove three straight strong quarters now hangs on the outcome.",
       "cycle": 82697,
-      "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Boreas Power Strikes $1.2B Grid-Storage Deal on Heels of Vantel Turnaround",
-      "body": "Fresh off beating estimates as its cost-out plan ran ahead of schedule, Boreas Power signed a $1.2B agreement to supply grid-scale storage across three regional networks over seven years. CEO Mira Thorne called it the largest single contract in the company's history and proof the Vantel integration has shifted from drag to platform. The deal is expected to add meaningfully to backlog beginning next quarter.",
-      "cycle": 82696,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Kessel Drive Names Turnaround Veteran Aldric Venn as Permanent CEO",
-      "body": "Kessel Drive's board appointed Aldric Venn as permanent chief executive, ending an interim stretch that began when Neave Corliss was removed amid the storage crisis. Venn, brought in from outside the company, pledged to settle the shareholder suit, stabilize the vehicles unit, and decide the fate of the halted storage line within ninety days. The board said the search prioritized crisis restructuring over the headline-driven style of recent years.",
-      "cycle": 82696,
       "dur": 8
     }
   ]
