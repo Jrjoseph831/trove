@@ -36,8 +36,8 @@ export function Landing() {
         </div>
 
         <p className="landing-lede">
-          Every firm, every price, one shared market. Build a holding, place
-          your trades, and watch the wire move.
+          One shared economy, real firms, real prices. Sign in to build a
+          holding and trade — or just look around.
         </p>
 
         <div className="landing-actions">
@@ -47,10 +47,6 @@ export function Landing() {
           <button className="landing-browse" onClick={enter}>
             Browse the market →
           </button>
-        </div>
-
-        <div className="landing-foot">
-          Trending · Catalog · The Wire · The Ladder
         </div>
       </div>
     </div>

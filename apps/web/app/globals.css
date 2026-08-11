@@ -6886,14 +6886,6 @@ details.bay-modules > summary.bay-sub:hover {
 .landing-browse:hover {
   color: var(--ink);
 }
-.landing-foot {
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
-}
 .rename-btn {
   margin-left: 8px;
   background: none;
