@@ -208,6 +208,14 @@ interface Trove {
   expandFloor: () => void;
   routeLine: (id: string, bay: number) => void;
   setLineSource: (lineId: string, inputItemId: number, feederId: string | null) => void;
+  /** Standing supply: auto-draw this input from another real player's live
+   *  storefront each production tick. Live-world only — sandbox has no other
+   *  real players. `sellerHandle: null` clears it. */
+  setStandingLineSource: (
+    lineId: string,
+    inputItemId: number,
+    sellerHandle: string | null,
+  ) => void;
   setSellPrice: (itemId: number, mult: number) => void;
   setListing: (itemId: number, on: boolean) => void;
   buyUpgrade: (id: "power" | "router" | "qc") => void;
@@ -1135,6 +1143,21 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh, liveFactory],
   );
 
+  const setStandingLineSource = useCallback(
+    (lineId: string, inputItemId: number, sellerHandle: string | null) => {
+      // Sandbox has no other real players — there's nothing to source from.
+      if (modeRef.current !== "live") {
+        showToast("Standing sources need a live shift — sign in to set one up.");
+        return;
+      }
+      void liveFactory(
+        { action: "standing-source", lineId, inputItemId, sellerHandle },
+        sellerHandle ? "Standing source set" : "Standing source cleared",
+      );
+    },
+    [liveFactory, showToast],
+  );
+
   const setSellPrice = useCallback(
     (itemId: number, mult: number) => {
       if (modeRef.current === "live") {
@@ -1349,6 +1372,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       expandFloor,
       routeLine,
       setLineSource,
+      setStandingLineSource,
       setSellPrice,
       setListing,
       buyUpgrade,
@@ -1408,6 +1432,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       expandFloor,
       routeLine,
       setLineSource,
+      setStandingLineSource,
       setSellPrice,
       setListing,
       buyUpgrade,

@@ -4753,6 +4753,28 @@ details.bay-modules > summary.bay-sub:hover {
 .bay-inp.short .bay-src {
   border-color: #c0563f;
 }
+.bay-standing {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-color: var(--accent);
+  color: var(--accent);
+  cursor: default;
+  white-space: nowrap;
+}
+.bay-standing-clear {
+  background: none;
+  border: 0;
+  color: inherit;
+  opacity: 0.6;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 1;
+  padding: 0;
+}
+.bay-standing-clear:hover {
+  opacity: 1;
+}
 .bay-srchint {
   margin-top: 8px;
   font-size: 11px;
@@ -7234,6 +7256,16 @@ details.bay-modules > summary.bay-sub:hover {
   font-size: 12px;
   font-weight: 600;
   cursor: default;
+}
+.store-standing {
+  margin-top: 6px;
+  padding: 5px 6px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink-faint);
+  font-size: 11px;
+  cursor: pointer;
 }
 
 /* Builder */

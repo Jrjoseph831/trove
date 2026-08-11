@@ -165,6 +165,7 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
     addModule,
     removeModule,
     setLineSource,
+    setStandingLineSource,
     setSellPrice,
   } = useTrove();
   const out = state.items.find((i) => i.id === f.itemId);
@@ -201,7 +202,10 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
     const feeder = feederId
       ? state.factories.find((x) => x.id === feederId)
       : undefined;
-    const inHouse = !!feeder;
+    const standing = f.standingSources?.[inp.itemId] ?? null;
+    // A standing source counts as in-house, same as the engine's own check —
+    // it's never auto-bought from the abstract market on a shortfall.
+    const inHouse = !!feeder || !!standing;
     // In-house unit cost ≈ the feeder's marginal cost (upkeep / its rate);
     // market unit cost = the live price.
     const fSpec = feeder
@@ -224,6 +228,7 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
       need,
       inHouse,
       feederId: feederId ?? null,
+      standing,
       unitCost,
       feeders,
     };
@@ -317,24 +322,42 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
                 <Link href={`/item/${b.id}`} className="it-link">
                   {b.name}
                 </Link>
-                <select
-                  className="bay-src"
-                  value={b.feederId ?? "market"}
-                  onChange={(e) =>
-                    setLineSource(
-                      f.id,
-                      b.id,
-                      e.target.value === "market" ? null : e.target.value,
-                    )
-                  }
-                >
-                  <option value="market">Market · {money(b.value)}/ea</option>
-                  {b.feeders.map((fd) => (
-                    <option key={fd.id} value={fd.id}>
-                      In-house · my line
-                    </option>
-                  ))}
-                </select>
+                {b.standing ? (
+                  // A standing source is set up from the SELLER's storefront
+                  // (Companies) — this is a read-only display + clear, not
+                  // the primary setup flow, so it doesn't share the select's
+                  // market/in-house value space (which has no "standing" mode).
+                  <span className="bay-src bay-standing">
+                    Standing · {b.standing.sellerHandle}
+                    <button
+                      type="button"
+                      className="bay-standing-clear"
+                      title="Clear standing source"
+                      onClick={() => setStandingLineSource(f.id, b.id, null)}
+                    >
+                      ✕
+                    </button>
+                  </span>
+                ) : (
+                  <select
+                    className="bay-src"
+                    value={b.feederId ?? "market"}
+                    onChange={(e) =>
+                      setLineSource(
+                        f.id,
+                        b.id,
+                        e.target.value === "market" ? null : e.target.value,
+                      )
+                    }
+                  >
+                    <option value="market">Market · {money(b.value)}/ea</option>
+                    {b.feeders.map((fd) => (
+                      <option key={fd.id} value={fd.id}>
+                        In-house · my line
+                      </option>
+                    ))}
+                  </select>
+                )}
                 <span className="bay-need">
                   {b.inHouse
                     ? `${b.have.toLocaleString()} / ${b.need.toLocaleString()}`

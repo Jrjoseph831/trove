@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ArrowDown, ArrowUp, Globe, Pencil } from "lucide-react";
-import { getItem, sectorLabel, type SectorKey } from "@trove/data";
+import { getItem, recipeOf, sectorLabel, type SectorKey } from "@trove/data";
 import { listedUnitPrice, type SiteConfig, type SiteSectionId } from "@trove/engine";
 import {
   fetchCompanies,
@@ -492,6 +492,7 @@ function SiteView({
                 key="storefront"
                 products={site.storefront}
                 owner={owner}
+                sellerHandle={site.handle}
                 onRequest={canRequest ? (p) => setReq(p) : undefined}
               />
             );
@@ -524,10 +525,15 @@ function SiteView({
 function Storefront({
   products,
   owner,
+  sellerHandle,
   onRequest,
 }: {
   products: CompanyProduct[];
   owner?: boolean;
+  /** Absent for the owner's own live preview (no standing-source affordance
+   *  makes sense there — the "Request"/"set as standing source" actions
+   *  never render for your own storefront either way). */
+  sellerHandle?: string;
   onRequest?: (p: CompanyProduct) => void;
 }) {
   return (
@@ -559,12 +565,61 @@ function Storefront({
                 >
                   Request
                 </button>
+                {onRequest && sellerHandle && (
+                  <StandingSourcePicker product={p} sellerHandle={sellerHandle} />
+                )}
               </div>
             );
           })}
         </div>
       )}
     </section>
+  );
+}
+
+/** "Set as standing source" — only rendered for a real other player's
+ *  storefront (same gate as the Request button). Lists the viewer's OWN
+ *  factory lines whose recipe consumes this product, so picking one wires
+ *  that line to auto-buy from THIS seller each production tick. Nothing to
+ *  show if the viewer has no eligible line — no point cluttering the card. */
+function StandingSourcePicker({
+  product,
+  sellerHandle,
+}: {
+  product: CompanyProduct;
+  sellerHandle: string;
+}) {
+  const { state, mode, setStandingLineSource } = useTrove();
+  if (mode !== "live") return null; // sandbox has no other real players
+
+  const eligible = state.factories.filter((f) => {
+    const out = getItem(f.itemId);
+    return !!out && !!recipeOf(out)?.inputs.some((inp) => inp.itemId === product.id);
+  });
+  if (eligible.length === 0) return null;
+
+  return (
+    <select
+      className="store-standing"
+      value=""
+      title="Set as a standing source for one of your lines"
+      onChange={(e) => {
+        const lineId = e.target.value;
+        if (!lineId) return;
+        setStandingLineSource(lineId, product.id, sellerHandle);
+        e.target.value = "";
+      }}
+    >
+      <option value="">Set as standing source…</option>
+      {eligible.map((f) => {
+        const out = getItem(f.itemId);
+        return (
+          <option key={f.id} value={f.id}>
+            For my {out?.name ?? "line"} line
+          </option>
+        );
+      })}
+    </select>
   );
 }
 
@@ -671,6 +726,7 @@ function Builder({ onDone }: { onDone: () => void }) {
   const [sections, setSections] = useState<{ id: SiteSectionId; on: boolean }[]>(
     mySite?.sections?.length ? mySite.sections : DEFAULT_SECTIONS,
   );
+  const [autoSupply, setAutoSupply] = useState(mySite?.autoSupply ?? false);
   const [busy, setBusy] = useState(false);
 
   const move = useCallback((i: number, dir: -1 | 1) => {
@@ -687,7 +743,7 @@ function Builder({ onDone }: { onDone: () => void }) {
     setSections((prev) => prev.map((s) => (s.id === id ? { ...s, on: !s.on } : s)));
   }, []);
 
-  const draft: Partial<SiteConfig> = { handle, tagline, about, accent, sections };
+  const draft: Partial<SiteConfig> = { handle, tagline, about, accent, sections, autoSupply };
   const preview = ownPreview(
     { handle, tagline, about, accent, sections },
     desk?.name ?? null,
@@ -807,6 +863,24 @@ function Builder({ onDone }: { onDone: () => void }) {
           <p className="bld-note">
             Products come from your <b>listed</b> vault goods — list or unlist them
             on the Vault tab to control what appears in your storefront.
+          </p>
+
+          <div className="bld-row">
+            <span>Standing supply</span>
+            <button
+              type="button"
+              className={`da-toggle ${autoSupply ? "on" : ""}`}
+              onClick={() => setAutoSupply((v) => !v)}
+            >
+              {autoSupply ? "On" : "Off"}
+            </button>
+          </div>
+          <p className="bld-note">
+            When on, other players can set your storefront as a{" "}
+            <b>standing source</b> for a factory input — their line auto-buys
+            from you each production tick at your live listed price, no
+            accepting required. Off by default; nothing is drawn from you
+            without this.
           </p>
 
           <div className="bld-actions">

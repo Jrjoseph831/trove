@@ -214,6 +214,12 @@ export type FactoryAction =
   | { action: "expand" }
   | { action: "route"; lineId: string; bay: number }
   | { action: "source"; lineId: string; inputItemId: number; feederId: string | null }
+  | {
+      action: "standing-source";
+      lineId: string;
+      inputItemId: number;
+      sellerHandle: string | null;
+    }
   | { action: "listprice"; itemId: number; mult: number }
   | { action: "listed"; itemId: number; on: boolean }
   | { action: "infra"; id: "power" | "router" | "qc" }
