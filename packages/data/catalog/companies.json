@@ -5560,7 +5560,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82696,
+    "lastEventCycle": 82707,
     "events": [
       {
         "cycle": 0,
@@ -5728,6 +5728,16 @@
         "body": "Drustcraft topped estimates with revenue rising 14%, its first quarter showing meaningful contribution from the recently landed auto-parts contract alongside the ramping 280M fastener deal. CEO Cora Fenn said auto parts now represent roughly a fifth of order flow, easing the company's long reliance on fasteners. Management raised full-year guidance modestly on the broader mix.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82707,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drustcraft Posts Modest Beat as Auto-Parts and Fastener Lines Run in Tandem",
+        "body": "Drustcraft edged past estimates with revenue of $540M as its newer auto-parts contract shipped alongside the ramping 280M fastener deal. CEO Cora Fenn said the diversified base is smoothing quarterly swings and improving factory utilization. Margins held steady despite modest input-cost pressure.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -6375,7 +6385,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82691,
+    "lastEventCycle": 82707,
     "events": [
       {
         "cycle": 0,
@@ -6511,6 +6521,16 @@
         "size": "standard",
         "head": "Fenncyon Beats as Eastfield Grand Loop Mobilization Front-Loads Revenue",
         "body": "Fenncyon topped estimates as early mobilization on the $3.4 billion Eastfield Grand Loop megaproject converted faster than expected, adding to an already record backlog. CEO Nadia Ashby said initial earthmoving phases were tracking ahead of schedule and margin. The company raised full-year guidance modestly on the accelerated ramp.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82707,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Fenncyon Opens Second Eastfield Staging Yard to Speed Grand Loop Deliveries",
+        "body": "Fenncyon has commissioned a 40-acre staging yard south of the Eastfield Grand Loop corridor, adding equipment marshaling capacity as the $3.4B megaproject enters its heavy-earthmoving phase. CEO Nadia Ashby said the facility will house up to 220 machines and cut mobilization delays across three active work fronts. The move positions Fenncyon to absorb additional scope tenders expected later this year.",
         "effects": {
           "construction": 0.13
         }
@@ -11547,18 +11567,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82699,
+    "lastEventCycle": 82707,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "product_launch",
-        "size": "major",
-        "head": "Marlgear Supply Unveils the Atlas Industrial Press",
-        "body": "Halden Vossen made a splash at the Ironworks Expo with the Atlas, a heavy industrial press he claims halves changeover time on the factory floor. Vossen ran a live stamping demo and took open questions for an hour. The bold showing positions Marlgear as more than a devices maker.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82515,
         "kind": "major_deal",
@@ -11784,6 +11794,16 @@
         "head": "Marlgear Supply CEO Ferran Steps Down as Kessel Fallout Reaches the Top",
         "body": "Adele Ferran resigned as chief executive of Marlgear Supply after mounting pressure over suppressed Kessel fault reports that idled Verrant Rail for 14 hours. The board named operations veteran Dane Kessler as interim then permanent chief, tasking him with rebuilding regulator trust and overhauling internal reporting. Shares of the device and machinery maker have been under sustained strain since the probe went public.",
         "effects": {}
+      },
+      {
+        "cycle": 82707,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Marlgear Supply Splits Devices and Machines Units in Sweeping Post-Kessel Overhaul",
+        "body": "New CEO Dane Kessler unveiled a full restructuring that separates Marlgear's Devices and Industrial Machines businesses into standalone divisions, alongside a new safety-oversight office reporting directly to the board. The plan follows the Verrant probe into suppressed Kessel fault reports and includes a $180M charge for remediation and layoffs of roughly 900 staff. Kessler said the company must 'rebuild trust from the machine floor up.'",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -12466,7 +12486,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82692,
+    "lastEventCycle": 82707,
     "events": [
       {
         "cycle": 0,
@@ -12604,6 +12624,16 @@
         "body": "Ornewright posted a second straight beat, with the sanitation concentrate line now contributing to food-service margins and the second Dunmere cold-chain hub reported 80% complete. CEO Rhys Throne said early client adoption 'gives us room to widen the concentrate catalog next quarter.' Operating margin ticked up 90 basis points.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82707,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Ornewright Supply Locks Multi-Year Cold-Chain Supply Pact as Dunmere Hub Opens",
+        "body": "Ornewright Supply signed a $610M, five-year agreement to supply farm inputs and food-service goods through its newly completed Dunmere cold-chain hub. CEO Rhys Throne said Dunmere will serve regional distributors within a 400-mile radius, anchoring the company's push into temperature-controlled logistics. First shipments are slated to begin next quarter.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -12752,7 +12782,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82692,
+    "lastEventCycle": 82707,
     "events": [
       {
         "cycle": 0,
@@ -12878,6 +12908,16 @@
         "size": "standard",
         "head": "Palettstone & Sons Secures National Distribution Deal for Heirloom Pro Fastening Line",
         "body": "Palettstone signed a multi-year distribution agreement placing its award-winning Heirloom Pro fastening system across a national chain of trade-supply outlets. CEO Cole Fenn said the deal, expected to add $120M in annual revenue at maturity, capitalized on 'momentum we'd be foolish to waste.' The company will expand its second plant's fastening output to meet projected demand.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82707,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Palettstone & Sons Beats as Heirloom Pro Fastening Line Hits National Shelves",
+        "body": "Palettstone & Sons reported revenue of $780M, up 9%, as the award-winning Heirloom Pro fastening system rolled out through its new national distribution network. CEO Cole Fenn said sell-through in the first six weeks exceeded internal targets by roughly 20%. The company is now weighing an accelerated expansion of the Heirloom Pro tool range.",
         "effects": {
           "consumer": 0.13
         }
@@ -15211,7 +15251,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82695,
+    "lastEventCycle": 82707,
     "events": [
       {
         "cycle": 0,
@@ -15370,6 +15410,16 @@
         "effects": {
           "logistics": 0.13
         }
+      },
+      {
+        "cycle": 82707,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vencyon Beats and Raises Again as Fourth and Fifth Hub Rollout Hits Milestones",
+        "body": "Vencyon reported quarterly revenue of $1.9B, up 12% year over year, as the fourth and fifth hub modular platform installations reached the halfway mark ahead of schedule. CEO Iris Halloran lifted full-year guidance for the second consecutive quarter, citing a $2.3B fleet rollout tracking under budget. Management flagged early interest in a sixth hub conversion.",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
@@ -15384,7 +15434,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82680,
+    "lastEventCycle": 82707,
     "events": [
       {
         "cycle": 0,
@@ -15460,6 +15510,16 @@
         "size": "flash",
         "head": "Venline & Sons Extends Streak With Steady Beat as Second Marden Cleanroom Breaks Ground",
         "body": "Venline & Sons logged another modest earnings beat as consumables orders held firm and construction began on its second Marden cleanroom. CEO Mara Garr reiterated the long-horizon approach, noting the new line will not contribute output until late next year. Backlog now covers roughly six months of demand at current capacity.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82707,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Venline & Sons Extends Streak With Modest Beat as Second Marden Cleanroom Advances",
+        "body": "Venline & Sons posted a narrow beat with revenue of $412M, marking its ninth consecutive quarter above consensus as the first Marden cleanroom held at full capacity. CEO Mara Garr said construction on the second cleanroom remains on track for commissioning next year. Consumables demand continues to outpace current output.",
         "effects": {
           "medical": 0.06
         }
@@ -15646,16 +15706,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82700,
+    "lastEventCycle": 82707,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Vossenspire Supply — Built for the long road back",
-        "body": "Vossenspire Supply made its name on coachwork and precision movements, marrying the discipline of watchmaking to the craft of building motorcars. Their timepieces and vehicles climb from capable mid-tier offerings to premium and luxury pieces commissioned one at a time. Owners speak of doors that shut like a vault and dials that keep faith for decades. The house never advertises loudly; the people who matter already know, and that has always been enough for it.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "major_deal",
@@ -15882,6 +15934,16 @@
         "size": "standard",
         "head": "Vossenspire Supply to Double Halvane Movement Output as Corveil Waitlists Swell",
         "body": "Quinn Marrow announced a $210M expansion of the acquired Halvane workshop in Larkmoor, aiming to double in-house movement production within eighteen months. Corveil waitlists have stretched past nine months at flagship salons, and Marrow said the buildout would also supply movements for a forthcoming timepiece line. The restless chief hinted further acquisitions remain 'firmly on the table.'",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82707,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Vossenspire Supply Acquires Larkmoor Case-Maker Thelvane in Vertical Push",
+        "body": "Vossenspire Supply agreed to acquire heritage case and dial workshop Thelvane for $340M, securing in-house production for its sold-out Halvane-powered Corveil timepieces. CEO Quinn Marrow called the deal a way to 'own the craft end to end' as waitlists across Larkmoor salons continue to swell. The purchase adds roughly 260 artisans to Vossenspire's payroll.",
         "effects": {
           "luxury": 0.13
         }
