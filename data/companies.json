@@ -793,7 +793,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82678,
+    "lastEventCycle": 82706,
     "events": [
       {
         "cycle": 0,
@@ -869,6 +869,16 @@
         "size": "standard",
         "head": "Ardent Health Beats as Continental Imaging Fleet Order Flows Into Results",
         "body": "Orla Halloran reported quarterly revenue up 19% to $1.4 billion as the continental framework order and next-gen sensor demand lifted the imaging segment. The company raised its installed-base guidance for the year, citing accelerating deployments under the national hospital network deal. Backlog now stands at a record $3.8 billion.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82706,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Ardent Health Extends Continental Fleet Deal With Service and Upgrade Add-On",
+        "body": "Ardent broadened its continental imaging framework with a multi-year service, maintenance, and sensor-upgrade agreement valued at roughly $900 million. CEO Orla Halloran said the recurring contract 'turns a one-time win into a decade of relationships,' locking in installed-base revenue. The add-on covers over 1,200 units already ordered under the fleet program.",
         "effects": {
           "medical": 0.13
         }
@@ -1827,18 +1837,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82698,
+    "lastEventCycle": 82706,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Bruncraft Industries Launches the Foundry City Runabout",
-        "body": "Orla Marrow introduced the Foundry, a compact city vehicle aimed at dense districts where Bruncraft has lagged. The launch follows a string of acquisitions Marrow used to assemble its drivetrain. She called the Foundry 'the first car we built instead of bought.'",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82527,
         "kind": "earnings_beat",
@@ -2062,6 +2062,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82706,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Bruncraft Bolts On Vanguard Coachworks in $1.8 Billion Buyout as Vane Expands",
+        "body": "Marcus Vane struck again, agreeing to acquire specialty builder Vanguard Coachworks for $1.8 billion to add heavy-duty vehicle capacity beyond the reopened Halloran plant. Vane called it 'the second leg of the comeback,' arguing the deal lets Bruncraft chase larger fleet tenders it previously couldn't staff. The transaction is expected to close within two quarters, subject to review.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -2076,18 +2086,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82700,
+    "lastEventCycle": 82706,
     "events": [
-      {
-        "cycle": 82557,
-        "kind": "restructure",
-        "size": "major",
-        "head": "Bruncrest Works Slashes Guidance and Exits Meridian Segment in Sweeping Overhaul",
-        "body": "Corwin Hale unveiled a drastic restructuring that abandons the entire Meridian compute segment, writes down $1.1 billion in assets, and cuts 3,400 jobs as the demand-inflation scandal and lawsuit continue to bleed the company. Hale, who inherited the crisis, called it 'the only path to survive,' pledging to rebuild around a leaner audited-demand core while investor confidence remains badly shaken.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82564,
         "kind": "earnings_miss",
@@ -2310,6 +2310,16 @@
         "size": "standard",
         "head": "Bruncrest Works Opens Second Aria Line to Serve $5.2B Supply Pact",
         "body": "Ines Marlow committed $340M to a second Aria production line to meet obligations under the landmark $5.2B compute pact, targeting first output in three quarters. Marlow said the expansion doubles Aria Prime capacity and adds a dedicated validation floor demanded by the anchor customer. The move marks Bruncrest's largest single capital outlay since the Ultra rebound began.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82706,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Bruncrest Works Tops Estimates as Aria Prime Lines Run Near Capacity",
+        "body": "Bruncrest posted revenue of $3.4 billion, up 41% year over year, as both Aria Prime lines ran near full capacity against the $5.2B supply pact. CEO Ines Marlow raised full-year guidance and hinted at a third line, saying demand 'has not blinked.' Operating margins widened to 22% from 17% a year earlier.",
         "effects": {
           "technology": 0.13
         }
@@ -2871,23 +2881,15 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1894,
-    "ceo": "Halden Crowe",
+    "ceo": "Dagny Frost",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.81,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82699,
+    "lastEventCycle": 82706,
     "events": [
-      {
-        "cycle": 82537,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Brunstone & Sons Ousts CEO Sable Veldt as Ardent Crisis Deepens",
-        "body": "The Brunstone board removed long-serving chief Sable Veldt following the costly Ardent Hauler recall and a second straight quarter of losses. Veldt, known for bold public bets, will be succeeded by turnaround executive Royce Lambourne, who pledged a full review of the power-pack program and a restructured warranty reserve. Shares had shed roughly a third of their value since the heating probe began.",
-        "effects": {}
-      },
       {
         "cycle": 82543,
         "kind": "restructure",
@@ -3115,6 +3117,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82706,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Brunstone & Sons Ousts Halden Crowe as Board Moves to Contain Vault Cell Crisis",
+        "body": "The board removed CEO Halden Crowe on Thursday, naming operations veteran Dagny Frost to steer the company through the widening Vault Cell probe and mounting recall bills. Frost inherits a $2.1 billion litigation reserve and a regulator demanding sworn testimony on what executives knew and when. Directors said the change was needed to 'restore credibility with authorities and the public.'",
+        "effects": {}
       }
     ]
   },
@@ -4147,7 +4157,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82679,
+    "lastEventCycle": 82706,
     "events": [
       {
         "cycle": 0,
@@ -4223,6 +4233,16 @@
         "size": "flash",
         "head": "Castle Devices Posts Steady Quarter as Consumables Volumes Hold",
         "body": "Castle Devices reported revenue of $840 million, modestly above estimates, as its regional hospital network contract continued to ramp. Bram Calder reaffirmed full-year guidance and noted consumables reorder rates remained 'reassuringly flat,' consistent with the company's understated cadence.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82706,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castle Devices Logs Another Steady Quarter as Consumables Demand Holds",
+        "body": "Castle Devices reported revenue up 4% with margins flat, extending its long run of predictable results on steady hospital consumables volumes. CEO Bram Calder reaffirmed guidance and noted a modest expansion of the distribution network in two new regions. Free cash flow again covered the dividend comfortably.",
         "effects": {
           "medical": 0.06
         }
@@ -4675,16 +4695,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82700,
+    "lastEventCycle": 82706,
     "events": [
-      {
-        "cycle": 82554,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Castlestone Board Ousts Iris Garr as Twin-Campus Losses Mount",
-        "body": "After two straight quarters of losses tied to the twin compute campuses, Castlestone's board removed founder-era chief Iris Garr and named operations veteran Dale Voss to steady the buildout. Voss inherits a strained Vellmont order book and pledged an immediate cost review that could slow one campus's fit-out. The abrupt exit ends Garr's 46-year tenure marked by bold, public bets.",
-        "effects": {}
-      },
       {
         "cycle": 82562,
         "kind": "leadership_change",
@@ -4909,6 +4921,16 @@
         "size": "major",
         "head": "Castlestone Smashes Estimates as Grid-Core Backlog Tops $9B, Karsh Vindicated Again",
         "body": "Castlestone reported quarterly revenue of $3.1B, up 74% year-over-year, as both Grid-Core lines ran at full capacity and the reported backlog swelled past $9B. Pell Karsh said the new campus would open its first bay six weeks ahead of schedule and raised full-year guidance for the second time this year. The result cements Karsh's aggressive capacity bet as the industry's standout call.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82706,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Castlestone Signs $12B Grid-Core Supply Pact, Largest in Company History",
+        "body": "Castlestone locked in a multi-year, $12 billion Grid-Core supply agreement with a consortium of data-hub operators, more than doubling its committed backlog. CEO Pell Karsh said the two new lines and the fresh campus were built 'precisely for this moment' and pledged first deliveries within nine months. The pact secures capacity through 2031 and front-loads roughly $3 billion in early payments.",
         "effects": {
           "technology": 0.22
         }
@@ -8885,7 +8907,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82689,
+    "lastEventCycle": 82706,
     "events": [
       {
         "cycle": 0,
@@ -9001,6 +9023,16 @@
         "size": "flash",
         "head": "Hearthstone Group Edges Higher as Fragrance-Free Concentrates Widen Depot Reach",
         "body": "Hearthstone posted a modest beat as the newer fragrance-free concentrates drew institutional cleaning accounts to its refill depots. CEO Aurelia Aldous said concentrate volumes now account for 31% of depot sales, up from 24% a quarter ago. Margins held steady despite higher input costs on household goods.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82706,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Hearthstone Group Extends Depot Line With Bulk Refill Stations",
+        "body": "Hearthstone rolled out in-store bulk refill stations for its concentrate range across 340 Depot locations, letting customers top up household cleaners at a lower per-use cost. CEO Aurelia Aldous framed the move as a natural extension of the concentrate strategy that has steadied margins. Early pilots showed a modest lift in repeat visits.",
         "effects": {
           "hospitality": 0.06
         }
@@ -15445,7 +15477,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82695,
+    "lastEventCycle": 82706,
     "events": [
       {
         "cycle": 0,
@@ -15587,6 +15619,16 @@
         "size": "major",
         "head": "Vossenspire Holdings Rocked as Grid-Scale Storage Bank Fails During Commissioning",
         "body": "A containment failure at Vossenspire's flagship storage installation forced a full shutdown mid-commissioning, delaying the $6.8B pact's first delivery milestone. Halden Roe acknowledged 'a serious setback' and pledged an independent review, with penalty clauses now in question. The incident casts doubt on the front-loaded revenue timeline Roe had touted.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82706,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Vossenspire Holdings Faces Formal Safety Probe After Storage Bank Failure",
+        "body": "Regulators opened a formal investigation into the commissioning failure of Vossenspire's grid-scale storage bank, freezing energization of two further sites pending findings. CEO Halden Roe conceded the $6.8B pact timeline is now 'under active review' and set aside $400 million against remediation and penalties. Independent inspectors have been granted site access for at least 90 days.",
         "effects": {
           "energy": -0.22
         }

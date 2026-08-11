@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-11T07:10:01.051Z",
+  "generatedAt": "2026-08-11T13:08:59.428Z",
   "beats": [
+    {
+      "company": "Ardent Health",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Ardent Health Extends Continental Fleet Deal With Service and Upgrade Add-On",
+      "body": "Ardent broadened its continental imaging framework with a multi-year service, maintenance, and sensor-upgrade agreement valued at roughly $900 million. CEO Orla Halloran said the recurring contract 'turns a one-time win into a decade of relationships,' locking in installed-base revenue. The add-on covers over 1,200 units already ordered under the fleet program.",
+      "cycle": 82706,
+      "dur": 2
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Bruncraft Bolts On Vanguard Coachworks in $1.8 Billion Buyout as Vane Expands",
+      "body": "Marcus Vane struck again, agreeing to acquire specialty builder Vanguard Coachworks for $1.8 billion to add heavy-duty vehicle capacity beyond the reopened Halloran plant. Vane called it 'the second leg of the comeback,' arguing the deal lets Bruncraft chase larger fleet tenders it previously couldn't staff. The transaction is expected to close within two quarters, subject to review.",
+      "cycle": 82706,
+      "dur": 2
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Bruncrest Works Tops Estimates as Aria Prime Lines Run Near Capacity",
+      "body": "Bruncrest posted revenue of $3.4 billion, up 41% year over year, as both Aria Prime lines ran near full capacity against the $5.2B supply pact. CEO Ines Marlow raised full-year guidance and hinted at a third line, saying demand 'has not blinked.' Operating margins widened to 22% from 17% a year earlier.",
+      "cycle": 82706,
+      "dur": 2
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Brunstone & Sons Ousts Halden Crowe as Board Moves to Contain Vault Cell Crisis",
+      "body": "The board removed CEO Halden Crowe on Thursday, naming operations veteran Dagny Frost to steer the company through the widening Vault Cell probe and mounting recall bills. Frost inherits a $2.1 billion litigation reserve and a regulator demanding sworn testimony on what executives knew and when. Directors said the change was needed to 'restore credibility with authorities and the public.'",
+      "cycle": 82706,
+      "dur": 8
+    },
+    {
+      "company": "Castle Devices",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castle Devices Logs Another Steady Quarter as Consumables Demand Holds",
+      "body": "Castle Devices reported revenue up 4% with margins flat, extending its long run of predictable results on steady hospital consumables volumes. CEO Bram Calder reaffirmed guidance and noted a modest expansion of the distribution network in two new regions. Free cash flow again covered the dividend comfortably.",
+      "cycle": 82706,
+      "dur": 1
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Castlestone Signs $12B Grid-Core Supply Pact, Largest in Company History",
+      "body": "Castlestone locked in a multi-year, $12 billion Grid-Core supply agreement with a consortium of data-hub operators, more than doubling its committed backlog. CEO Pell Karsh said the two new lines and the fresh campus were built 'precisely for this moment' and pledged first deliveries within nine months. The pact secures capacity through 2031 and front-loads roughly $3 billion in early payments.",
+      "cycle": 82706,
+      "dur": 8
+    },
+    {
+      "company": "Hearthstone Group",
+      "sector": "hospitality",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Hearthstone Group Extends Depot Line With Bulk Refill Stations",
+      "body": "Hearthstone rolled out in-store bulk refill stations for its concentrate range across 340 Depot locations, letting customers top up household cleaners at a lower per-use cost. CEO Aurelia Aldous framed the move as a natural extension of the concentrate strategy that has steadied margins. Early pilots showed a modest lift in repeat visits.",
+      "cycle": 82706,
+      "dur": 1
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Vossenspire Holdings Faces Formal Safety Probe After Storage Bank Failure",
+      "body": "Regulators opened a formal investigation into the commissioning failure of Vossenspire's grid-scale storage bank, freezing energization of two further sites pending findings. CEO Halden Roe conceded the $6.8B pact timeline is now 'under active review' and set aside $400 million against remediation and penalties. Independent inspectors have been granted site access for at least 90 days.",
+      "cycle": 82706,
+      "dur": 8
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -52,26 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Posts Another Modest Beat on Broad-Based Demand",
-      "body": "Ornewright Goods edged past estimates once more, with revenue up 3% as cleaning, farm-inputs, and food-service segments all held firm. CEO Petra Veldt described the quarter as 'unremarkable in the best way,' reaffirming steady full-year guidance. Margins were flat sequentially.",
-      "cycle": 82705,
-      "dur": 1
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Steg Tooling Runs Streak to Twelve as Third Kelmar Cell Ramps",
-      "body": "Steg Tooling reported a twelfth consecutive earnings beat, with the newly online third Kelmar cell contributing its first full quarter of fastener output. CEO Iris Vossen credited disciplined utilization rates and steady auto-parts demand, holding to her measured expansion cadence. Full-year guidance was reaffirmed.",
-      "cycle": 82705,
-      "dur": 1
-    },
-    {
       "company": "Thronehaus & Co.",
       "sector": "luxury",
       "kind": "major_deal",
@@ -80,16 +140,6 @@
       "body": "Thronehaus & Co. announced an $1.8B acquisition of Coristel, a specialist supplier of precious casing alloys, securing upstream materials for its award-winning Marchwick line. CEO Cora Dray called the deal a decisive move to control quality and cost 'from ore to dial,' and said the Ferrault casework wing would be first to draw on Coristel stock. The purchase marks Thronehaus's largest ever, financed through cash and a new credit facility.",
       "cycle": 82705,
       "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Greywater Grid Revives Reservoir Plan With $1.9B Closed-Loop Water Deal",
-      "body": "Greywater Grid signed a $1.9B agreement with regional utilities to resume its reservoir-compute buildout using a closed-loop cooling design that cuts fresh-water draw by an estimated 70%. CEO Sable Renwick framed the pact as clearing the path past the regulatory pressure that halted work last quarter. Two of the three original compute sites will restart construction within 90 days.",
-      "cycle": 82704,
-      "dur": 2
     },
     {
       "company": "Halhold Systems",
@@ -112,16 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Lhaus Industries Misses as Grid-Storage Carve-Out Costs and Legal Reserves Weigh",
-      "body": "Lhaus Industries missed quarterly forecasts, posting a 14% profit drop as it booked $420M in reserves tied to the $1.8B overheating suit and one-time costs from carving out its grid-storage division. CEO Cole Brandt said the core auto-parts and vehicles units remained solid, but conceded the storage fallout would 'shadow results into next year.' Settlement talks with two former megadeal partners are reportedly underway.",
-      "cycle": 82704,
-      "dur": 2
-    },
-    {
       "company": "Varnvale House",
       "sector": "luxury",
       "kind": "leadership_change",
@@ -130,16 +170,6 @@
       "body": "The Varnvale board removed CEO Adrienne Sole following two quarters of strained Sovereign output and the botched Regent rollout, naming longtime operations head Lucien Marchetti to steady the house. Marchetti said he would slow the top-tier expansion and rebuild waitlists rather than chase headline launches. The move ends Sole's brief, volatile tenure marked by bold public bets.",
       "cycle": 82704,
       "dur": 8
-    },
-    {
-      "company": "Wrengrove Group",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Wrengrove Group Beats Again as Sterile-Kit Backlog Hits Record",
-      "body": "Wrengrove Group topped forecasts for a third straight quarter, with sterile-kit revenue up 19% and an order backlog reaching a record as its fourth plant nears completion. CEO Rhys Vossen said early commissioning of the new plant could pull forward capacity by a quarter. Consumables margins widened on improved sourcing terms.",
-      "cycle": 82704,
-      "dur": 2
     },
     {
       "company": "Blackton Industries",
@@ -239,16 +269,6 @@
       "head": "Thaldale Group Sued by Shareholders as Fastening Fund Diversion Spurs Restatement",
       "body": "A group of institutional shareholders filed suit against Thaldale Group, alleging the board failed to catch roughly 62 million in diverted funds tied to the now-carved-out fastening unit. The company confirmed it will restate two years of results, and CEO Corin Vale pledged full cooperation while blaming prior management. Independent auditors have been retained to review all inter-unit transfers.",
       "cycle": 82699,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Halhold Systems Rocked as Internal Memos Show Reliability Failures Were Known for Months",
-      "body": "Leaked documents revealed that Halhold managers flagged the compute reliability defects nearly a year before the unit was split off, a timeline that contradicts prior public statements from the board. Ilse Marren ordered an independent review and suspended two senior executives pending its outcome, while three major clients said they were reassessing contracts worth a combined $1.2 billion. The disclosure sent renewal talks into disarray just as Marren's turnaround was meant to stabilize.",
-      "cycle": 82698,
       "dur": 8
     }
   ]
