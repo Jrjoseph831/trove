@@ -357,6 +357,41 @@ describe("AI virtual consumption stays within invariants", () => {
   });
 });
 
+describe("the ripple actually changes AI behavior — the fix for a static world", () => {
+  it("aiVirtualConsumption spends more and draws more stock at a higher ripple", () => {
+    const low = createWorld(0);
+    const high = createWorld(0); // createWorld(0) has no warmup, so it's fully
+    // deterministic without seeding — low and high start byte-identical.
+    const cashBefore = low.traders.reduce((a, t) => a + t.cash, 0);
+    aiVirtualConsumption(low, RIPPLE_MIN_FOR_TEST);
+    aiVirtualConsumption(high, RIPPLE_MAX_FOR_TEST);
+
+    const lowSpent = cashBefore - low.traders.reduce((a, t) => a + t.cash, 0);
+    const highSpent = cashBefore - high.traders.reduce((a, t) => a + t.cash, 0);
+    expect(lowSpent).toBeGreaterThan(0); // the baseline path draws something at all
+    expect(highSpent).toBeGreaterThan(lowSpent);
+
+    const lowStock = low.items.reduce((a, it) => a + it.stock, 0);
+    const highStock = high.items.reduce((a, it) => a + it.stock, 0);
+    expect(highStock).toBeLessThan(lowStock);
+  });
+
+  // traderAct's chase-weight coupling (`(dem-1)*3*ripple`) is a one-line
+  // multiply on an already-thoroughly-tested formula, composing with logic
+  // the existing 200-cycle "no company spends below reserve" and determinism
+  // sims already exercise every cycle for every trader. A hand-built
+  // deterministic crossover scenario was tried and discarded: the ±0.6 noise
+  // term traderAct already adds per candidate swamps any margin tight enough
+  // to land the crossover between ripple 1.0 and 1.5, so a "prove the pick
+  // changes" test would only be reliable by tuning to a magic seed — fragile
+  // in a way that isn't worth it for a change this small and this covered.
+});
+
+// Bounds used only by the ripple-behavior tests above — mirrors aiEconomy.ts's
+// own RIPPLE_MIN/RIPPLE_MAX without importing private constants.
+const RIPPLE_MIN_FOR_TEST = 1.0;
+const RIPPLE_MAX_FOR_TEST = 1.5;
+
 describe("AI company finances reconcile", () => {
   it("every company books exactly its income each cycle (dormant world, ripple neutral)", () => {
     const S = createWorld(0);

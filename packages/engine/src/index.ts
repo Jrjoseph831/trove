@@ -584,14 +584,17 @@ export function traderAct(state: WorldState, t: Trader): void {
 
   // Traders read the HIDDEN sector signal, never the news text. They keep a cash
   // reserve (their tier floor) liquid, so they never spend themselves to zero.
+  // The ripple multiplier makes them chase rising demand harder when real
+  // players are active (1.0 on a dormant world — no change from before).
   const reserve = floorOf(t);
+  const ripple = rippleMultiplier(state);
   let best: RuntimeItem | null = null;
   let bestW = -Infinity;
   for (const i of state.items) {
     if (!canBuy(i) || i.value > t.cash - reserve) continue;
     const dem = itemDemand(state, i);
     const w =
-      (dem - 1) * 3 +
+      (dem - 1) * 3 * ripple +
       (brandHomeSector.get(i.brand) === t.bias ? 0.5 : 0) +
       (i.edition !== null ? 0.4 : 0) +
       rand() * 0.6;
@@ -752,9 +755,10 @@ export function settleCycle(state: WorldState): void {
   }
 
   // 4b. AI companies draw material from the same shared stock a player factory
-  //     would (flat appetite for now; the ripple multiplier couples in next).
-  //     One cycle lagged into next cycle's scarcity(), same as player factories.
-  aiVirtualConsumption(state);
+  //     would, sized in part by the ripple multiplier (a livelier real-player
+  //     economy makes AI draw more raw material too). One cycle lagged into
+  //     next cycle's scarcity(), same as player factories.
+  aiVirtualConsumption(state, rippleMultiplier(state));
 
   // 5. Run player factories: pay upkeep, consume inputs, produce to the vault.
   produceFactories(state);
