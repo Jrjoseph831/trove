@@ -11,6 +11,7 @@
  */
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import {
+  BatchGetCommand,
   DeleteCommand,
   DynamoDBDocumentClient,
   GetCommand,
@@ -682,6 +683,31 @@ export async function getPlayer(playerId: string): Promise<Player | null> {
 /** Persist a player record (per-player, low contention — last write wins). */
 export async function savePlayer(p: Player): Promise<void> {
   await ddb.send(new PutCommand({ TableName: PLAYERS, Item: p }));
+}
+
+/** Fetch specific players by id (BatchGetItem, chunked to Dynamo's 100-key
+ *  cap). For targeted lookups — e.g. standing-order sellers referenced by a
+ *  handful of buyers' factories — where a full `allPlayers()` scan would be
+ *  wasteful. Silently skips ids with no matching record; dedupes input. */
+export async function getPlayers(ids: string[]): Promise<Player[]> {
+  const unique = [...new Set(ids)];
+  if (unique.length === 0) return [];
+  const out: Player[] = [];
+  for (let i = 0; i < unique.length; i += 100) {
+    let keys = unique.slice(i, i + 100).map((playerId) => ({ playerId }));
+    // A handful of retries for any keys DynamoDB didn't process this round
+    // (throttling) — bounded, since this is a small targeted batch, not a
+    // full scan; a key still unprocessed after this just isn't returned
+    // (self-heals: the caller treats a missing seller as "skip this tick").
+    for (let attempt = 0; keys.length && attempt < 3; attempt++) {
+      const res = await ddb.send(
+        new BatchGetCommand({ RequestItems: { [PLAYERS]: { Keys: keys } } }),
+      );
+      out.push(...((res.Responses?.[PLAYERS] as Player[]) ?? []));
+      keys = (res.UnprocessedKeys?.[PLAYERS]?.Keys as { playerId: string }[]) ?? [];
+    }
+  }
+  return out;
 }
 
 /** All players (for standings). Small early on; paginates if it ever grows. */
