@@ -302,6 +302,9 @@ export interface Player {
   lastFlip?: number;
   /** The player's company website (manufacturing storefront). */
   site?: SiteConfig;
+  /** Last time (ms) this player's portfolio was fetched — the "last seen"
+   *  watermark the "While You Were Away" recap diffs against. */
+  lastSeenAt?: number;
 }
 
 const FRESH_INFRA: Infra = { power: false, router: false, qc: false };
@@ -390,6 +393,9 @@ export interface PortfolioView {
   reports: Report[];
   periodNo: number;
   site: SiteConfig | null;
+  /** The player's previous lastSeenAt (ms), or null if this is their first
+   *  fetch ever. Read-only snapshot — buildPortfolio does not stamp it. */
+  awaySince: number | null;
 }
 
 /** Build the player's portfolio snapshot from the shared doc + their record.
@@ -436,6 +442,7 @@ export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
     reports: player.reports ?? [],
     periodNo: player.periodNo ?? 0,
     site: player.site ?? null,
+    awaySince: player.lastSeenAt ?? null,
   };
 }
 

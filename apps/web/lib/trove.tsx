@@ -43,6 +43,7 @@ import {
 } from "./auth";
 import { AUTH_ENABLED, sandboxEnabled } from "./config";
 import { manufacturingName } from "./format";
+import { buildRecap, type Recap } from "./recap";
 import {
   advance,
   borrow,
@@ -244,6 +245,9 @@ interface Trove {
   /** Latest daily-report card to surface (sandbox), or null. */
   dailyReport: Report | null;
   dismissDailyReport: () => void;
+  /** "While You Were Away" recap (live only), or null once dismissed/expired. */
+  recap: Recap | null;
+  dismissRecap: () => void;
   /** The signed-in player's own company-site config (null until loaded / set). */
   mySite: SiteConfig | null;
   /** Save the player's site config; resolves to the updated public view or null. */
@@ -353,9 +357,11 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [desk, setDesk] = useState<Desk | null>(null);
   const [renaming, setRenaming] = useState(false);
   const [dailyReport, setDailyReport] = useState<Report | null>(null);
+  const [recap, setRecap] = useState<Recap | null>(null);
   const [mySite, setMySite] = useState<SiteConfig | null>(null);
   const [orders, setOrders] = useState<OrderBook | null>(null);
   const lastReportRef = useRef(-1);
+  const recapCheckedRef = useRef(false);
 
   const modeRef = useRef(mode);
   modeRef.current = mode;
@@ -406,6 +412,17 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
             if (alive) {
               overlayPortfolio(worldsRef.current!.live, p);
               setMySite(p.site ?? null);
+              if (!recapCheckedRef.current) {
+                recapCheckedRef.current = true;
+                const built = buildRecap(
+                  p.awaySince,
+                  Date.now(),
+                  p.reports ?? [],
+                  worldsRef.current!.live.archive,
+                  p.netWorth,
+                );
+                if (built) setRecap(built);
+              }
             }
           } catch {
             /* portfolio is best-effort */
@@ -521,6 +538,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   }, [mode]);
 
   const dismissDailyReport = useCallback(() => setDailyReport(null), []);
+  const dismissRecap = useCallback(() => setRecap(null), []);
 
   // Deep link: /?brand=<slug> opens the Catalog filtered to that company.
   useEffect(() => {
@@ -1188,6 +1206,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const signOut = useCallback(() => {
     authSignOut();
     setSignedIn(false);
+    recapCheckedRef.current = false;
+    setRecap(null);
   }, []);
   const closeReveal = useCallback(() => setReveal(null), []);
 
@@ -1393,6 +1413,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       cancelRename,
       dailyReport,
       dismissDailyReport,
+      recap,
+      dismissRecap,
       mySite,
       saveSite,
       orders,
@@ -1453,6 +1475,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       cancelRename,
       dailyReport,
       dismissDailyReport,
+      recap,
+      dismissRecap,
       mySite,
       saveSite,
       orders,

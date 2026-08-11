@@ -63,6 +63,8 @@ export interface ApiPortfolio {
   periodNo?: number;
   /** The player's own company-site config (so the owner can edit a draft). */
   site?: SiteConfig | null;
+  /** The player's previous lastSeenAt (ms), or null on their first fetch ever. */
+  awaySince?: number | null;
 }
 
 // ── Company websites (manufacturing storefront) ──────────────────────────────

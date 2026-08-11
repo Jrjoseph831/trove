@@ -8,6 +8,7 @@ import { useLeaderboard } from "@/lib/useLeaderboard";
 import { useTrove } from "@/lib/trove";
 import { Movers } from "./Movers";
 import { Tile } from "./Tile";
+import { WhileYouWereAwayCard } from "./WhileYouWereAway";
 
 export function Trending() {
   const { state, desk, mode } = useTrove();
@@ -37,6 +38,7 @@ export function Trending() {
   return (
     <div className="view trend">
       <div className="bento">
+        <WhileYouWereAwayCard />
         {beat && (
           <article className={`brk-card col-12 ${beat.phase}`}>
             <span className="brk-card-kick">⚡ {beat.kicker}</span>

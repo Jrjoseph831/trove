@@ -13,7 +13,7 @@ import type {
   APIGatewayProxyResultV2,
 } from "aws-lambda";
 import { START_CASH, STARTING_SLOTS } from "@trove/engine";
-import { buildPortfolio, getPlayer, loadWorld } from "../repo";
+import { buildPortfolio, getPlayer, loadWorld, savePlayer } from "../repo";
 
 const json = (status: number, body: unknown): APIGatewayProxyResultV2 => ({
   statusCode: status,
@@ -37,6 +37,7 @@ const empty = {
   reports: [],
   periodNo: 0,
   site: null,
+  awaySince: null,
 };
 
 export async function handler(
@@ -53,5 +54,16 @@ export async function handler(
   const player = await getPlayer(playerId);
   if (!player) return json(200, empty);
 
-  return json(200, buildPortfolio(doc, player));
+  const view = buildPortfolio(doc, player);
+  // Stamp "seen now" for next time's away-diff — but only every few minutes,
+  // not on every 15s poll from every signed-in client. The recap only cares
+  // about hour-scale gaps, so this granularity loses nothing while sparing a
+  // write on the hottest endpoint. Must await when it does write — the
+  // Lambda can freeze right after the response is sent, so this can't be
+  // fire-and-forget.
+  const now = Date.now();
+  if (now - (player.lastSeenAt ?? 0) >= 5 * 60 * 1000) {
+    await savePlayer({ ...player, lastSeenAt: now });
+  }
+  return json(200, view);
 }

@@ -90,8 +90,10 @@ const realStamp = (at: number) =>
       })
     : "";
 
-/** Flow rows for a report (label, value, sign). */
-function flowRows(r: Report) {
+/** Flow rows for a report (label, value, sign). Takes anything with a
+ *  `flows: Ledger` — reused by the "While You Were Away" recap, which
+ *  synthesizes a combined Ledger across several reports, not a real Report. */
+export function flowRows(r: { flows: Ledger }) {
   const f = r.flows;
   return [
     { k: "Produced", v: f.produced, money: false, good: true },
