@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { brandSlug } from "@trove/data";
 import { creditLimit, held } from "@trove/engine";
-import { money } from "@/lib/format";
+import { money, moneyShort } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 
@@ -32,13 +32,13 @@ export function Vault() {
               </span>
               <span className="vs">
                 <i>Market value</i>
-                <b>{money(holdingsValue)}</b>
+                <b>{moneyShort(holdingsValue)}</b>
               </span>
               <span className={`vs ${unrealized >= 0 ? "pos" : "neg"}`}>
                 <i>Unrealized</i>
                 <b>
                   {unrealized >= 0 ? "+" : ""}
-                  {money(unrealized)}
+                  {moneyShort(unrealized)}
                 </b>
               </span>
             </div>
@@ -134,7 +134,7 @@ export function Vault() {
           <div className="debtctl">
             <div className="line">
               <span>Borrowed</span>
-              <b>{money(state.debt)}</b>
+              <b>{moneyShort(state.debt)}</b>
             </div>
             <div className="meter">
               <i
@@ -144,7 +144,7 @@ export function Vault() {
               />
             </div>
             <div className="line">
-              <span>Available {money(avail)}</span>
+              <span>Available {moneyShort(avail)}</span>
               <span>0.05%/cycle</span>
             </div>
             <div className="dbtns">

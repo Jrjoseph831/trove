@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { breakingBeat } from "@/lib/breaking";
-import { money } from "@/lib/format";
+import { moneyShort } from "@/lib/format";
 import { impliedSectors } from "@/lib/ui";
 import { useLeaderboard } from "@/lib/useLeaderboard";
 import { useTrove } from "@/lib/trove";
@@ -93,7 +93,7 @@ export function Trending() {
                   {e.live && e.id !== "YOU" && <span className="lb-live">●</span>}
                   {e.label}
                 </span>
-                <span className="stand-w">{money(e.w)}</span>
+                <span className="stand-w">{moneyShort(e.w)}</span>
               </div>
             ))}
           </div>

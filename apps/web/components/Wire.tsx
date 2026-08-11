@@ -6,7 +6,7 @@ import { news as newsBank } from "@trove/data";
 import { breakingBeat } from "@/lib/breaking";
 import { firmBeat } from "@/lib/firmnews";
 import { useLeaderboard } from "@/lib/useLeaderboard";
-import { money } from "@/lib/format";
+import { moneyShort } from "@/lib/format";
 import { tnnLive } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
 import type { WireStory } from "./Broadcast";
@@ -128,7 +128,7 @@ export function Wire() {
                   {e.live && e.id !== "YOU" && <span className="lb-live">●</span>}
                   {e.label}
                 </span>
-                <span>{money(e.w)}</span>
+                <span>{moneyShort(e.w)}</span>
               </div>
             ))}
           </div>

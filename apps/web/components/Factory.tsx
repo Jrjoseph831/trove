@@ -24,7 +24,7 @@ import {
   type Factory as FactoryLine,
 } from "@trove/engine";
 import type { LineModule } from "@trove/data";
-import { manufacturingName, money } from "@/lib/format";
+import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 import { FactoryFloor } from "@/components/FactoryFloor";
 
@@ -86,7 +86,7 @@ export function Factory() {
       <div className="cat-head">
         <h2 className="serif">{mfg}</h2>
         <div className="fac-cash">
-          Cash <b>{money(state.cash)}</b>
+          Cash <b>{moneyShort(state.cash)}</b>
         </div>
       </div>
 

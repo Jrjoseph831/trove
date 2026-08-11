@@ -2,7 +2,7 @@
 
 import { flowRows } from "./Report";
 import { humanizeAway } from "@/lib/recap";
-import { money } from "@/lib/format";
+import { money, moneyShort } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 
 /** The dismissible bento tile that summarizes what happened while a
@@ -27,11 +27,11 @@ export function WhileYouWereAwayCard() {
         </button>
       </div>
       <div className="dr-net">
-        Net worth <b>{money(recap.netWorthNow)}</b>
+        Net worth <b>{moneyShort(recap.netWorthNow)}</b>
         <span className={delta >= 0 ? "rc-up" : "rc-dn"}>
           {" "}
           {delta >= 0 ? "+" : ""}
-          {money(delta)}
+          {moneyShort(delta)}
         </span>
       </div>
       <div className="dr-flows">

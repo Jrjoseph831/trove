@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { assetsValue, netWorth, propertyValue, stakeValue } from "@trove/engine";
 import { sandboxEnabled } from "@/lib/config";
-import { money, pctChange } from "@/lib/format";
+import { money, moneyShort, pctChange } from "@/lib/format";
 import { breakingBeat } from "@/lib/breaking";
 import { goalsProgress } from "@/lib/goals";
 import {
@@ -102,20 +102,20 @@ export function Rail() {
 
       <div className="worth">
         <div className="lab">Net Worth</div>
-        <div className="v">{money(nw)}</div>
+        <div className="v">{moneyShort(nw)}</div>
         <div className={`chg ${chg >= 0 ? "pos" : "neg"}`}>
-          {chg >= 0 ? "▲" : "▼"} {money(Math.abs(chg))} ({pct >= 0 ? "+" : ""}
+          {chg >= 0 ? "▲" : "▼"} {moneyShort(Math.abs(chg))} ({pct >= 0 ? "+" : ""}
           {pct.toFixed(2)}%)
         </div>
         <div className="mini">
           <span>
-            Cash<b>{money(state.cash)}</b>
+            Cash<b>{moneyShort(state.cash)}</b>
           </span>
           <span>
-            Assets<b>{money(assets)}</b>
+            Assets<b>{moneyShort(assets)}</b>
           </span>
           <span className="debt">
-            Debt<b>{money(state.debt)}</b>
+            Debt<b>{moneyShort(state.debt)}</b>
           </span>
         </div>
         {signedIn && desk?.name && (
@@ -142,7 +142,7 @@ export function Rail() {
               <span>
                 Next · <b>{nextRank.name}</b>
               </span>
-              <span className="ld-togo">{money(Math.max(0, nextRank.at - peak))} to go</span>
+              <span className="ld-togo">{moneyShort(Math.max(0, nextRank.at - peak))} to go</span>
             </div>
             <div className="ld-unlock">Unlocks {nextRank.unlock}</div>
           </>

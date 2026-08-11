@@ -6,7 +6,7 @@ import { companies as lore, sectors } from "@trove/data";
 import { companyValuation } from "@trove/engine";
 import { devAction, fetchCompanies, type DirEntry } from "@/lib/api";
 import { IS_STAGING } from "@/lib/config";
-import { money } from "@/lib/format";
+import { money, moneyShort } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 import { ConfirmDeal } from "./ConfirmDeal";
 
@@ -154,7 +154,7 @@ export function DealRoom() {
           <div className="est-stats">
             <div className="est-stat">
               <span className="k">Net worth</span>
-              <span className="v">{money(selRow.val)}</span>
+              <span className="v">{moneyShort(selRow.val)}</span>
             </div>
             <div className="est-stat">
               <span className="k">Deal type</span>
@@ -172,7 +172,7 @@ export function DealRoom() {
               type="number"
               value={bid}
               onChange={(e) => setBid(e.target.value)}
-              placeholder={`Your offer ($) — net worth ${money(selRow.val)}`}
+              placeholder={`Your offer ($) — net worth ${moneyShort(selRow.val)}`}
             />
             <button className="est-act buy" onClick={openOffer}>
               Make buyout offer
@@ -239,7 +239,7 @@ export function DealRoom() {
           <div className="est-stats">
             <div className="est-stat">
               <span className="k">Valuation</span>
-              <span className="v">{money(selRow.val)}</span>
+              <span className="v">{moneyShort(selRow.val)}</span>
             </div>
             <div className="est-stat">
               <span className="k">Your stake</span>
@@ -247,7 +247,7 @@ export function DealRoom() {
             </div>
             <div className="est-stat">
               <span className="k">Stake value</span>
-              <span className="v">{myVal > 0 ? money(Math.round(myVal)) : "—"}</span>
+              <span className="v">{myVal > 0 ? moneyShort(Math.round(myVal)) : "—"}</span>
             </div>
             <div className="est-stat">
               <span className="k">Dividend / period</span>
@@ -278,7 +278,7 @@ export function DealRoom() {
                     setSel(null);
                   }}
                 >
-                  Sell entire stake ({money(Math.round(myVal))})
+                  Sell entire stake ({moneyShort(Math.round(myVal))})
                 </button>
               </div>
             )}
@@ -340,7 +340,7 @@ export function DealRoom() {
           </div>
           <div className="est-pf">
             <span className="k">Stake value</span>
-            <span className="v">{money(Math.round(stakeVal))}</span>
+            <span className="v">{moneyShort(Math.round(stakeVal))}</span>
           </div>
           <div className="est-pf">
             <span className="k">Dividends / period</span>
@@ -455,7 +455,7 @@ export function DealRoom() {
               </div>
             </div>
             <div className="deal-cardright">
-              <div className="deal-cardval">{money(r.val)}</div>
+              <div className="deal-cardval">{moneyShort(r.val)}</div>
               {r.stake > 0 ? (
                 <div className="deal-cardstake">◆ {pct(r.stake)} owned</div>
               ) : r.live ? (

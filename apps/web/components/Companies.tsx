@@ -12,7 +12,7 @@ import {
   type CompanySite,
   type DirEntry,
 } from "@/lib/api";
-import { manufacturingName, money } from "@/lib/format";
+import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 
@@ -308,7 +308,7 @@ function Directory({
                 {e.kind === "player" ? manufacturingName(e.name) : e.name}
               </span>
               <span className="site-card-foot">
-                Net worth <b>{money(e.netWorth)}</b>
+                Net worth <b>{moneyShort(e.netWorth)}</b>
               </span>
             </button>
           ))}
@@ -463,7 +463,7 @@ function SiteView({
                 <div className="site-standing">
                   <div>
                     <span className="ss-lab">Net worth</span>
-                    <span className="ss-v">{money(site.netWorth)}</span>
+                    <span className="ss-v">{moneyShort(site.netWorth)}</span>
                   </div>
                   <div>
                     <span className="ss-lab">Market rank</span>
@@ -689,7 +689,7 @@ function RequestModal({
           />
         </label>
         <div className="req-meta">
-          {money(Math.round(offer / Math.max(1, qty)))}/unit · your cash {money(cash)}
+          {money(Math.round(offer / Math.max(1, qty)))}/unit · your cash {moneyShort(cash)}
         </div>
         {short && <div className="req-warn">That's more than your cash on hand.</div>}
 
@@ -918,7 +918,7 @@ function Builder({ onDone }: { onDone: () => void }) {
                     <div className="site-standing">
                       <div>
                         <span className="ss-lab">Net worth</span>
-                        <span className="ss-v">{money(preview.netWorth)}</span>
+                        <span className="ss-v">{moneyShort(preview.netWorth)}</span>
                       </div>
                       <div>
                         <span className="ss-lab">Sectors</span>

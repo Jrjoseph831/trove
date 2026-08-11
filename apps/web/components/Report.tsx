@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { getItem } from "@trove/data";
 import type { ItemFlow, Ledger, Report } from "@trove/engine";
-import { money } from "@/lib/format";
+import { money, moneyShort } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 
 /** A Trove day rolled up from its (up to 2) flip reports. */
@@ -374,12 +374,12 @@ export function DailyReportCard() {
         Trove Day {dayOf(r.period)} · {halfOf(r.period)}
       </div>
       <div className="dr-net">
-        Net worth <b>{money(r.netWorth)}</b>
+        Net worth <b>{moneyShort(r.netWorth)}</b>
         {prev && (
           <span className={delta >= 0 ? "rc-up" : "rc-dn"}>
             {" "}
             {delta >= 0 ? "+" : ""}
-            {money(delta)}
+            {moneyShort(delta)}
           </span>
         )}
       </div>
