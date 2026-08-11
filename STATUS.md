@@ -1,6 +1,6 @@
 # TROVE — Status & Handoff
 
-_Last updated: 2026-06-28. This file travels with the repo — read it first to pick up where we left off (especially on a fresh machine, where local Claude "memory" does NOT exist)._
+_Last updated: 2026-08-11. This file travels with the repo — read it first to pick up where we left off (especially on a fresh machine, where local Claude "memory" does NOT exist)._
 
 ## What TROVE is
 A real-time, shared-world market/economy game for fictional physical goods. **Streaming-first**: the #1 design driver is 3h+ live YouTube solo-empire-building streams — judge every feature by _"does this make a better stream?"_
@@ -31,9 +31,12 @@ npm-workspaces monorepo:
 - **Deploy triggers:** push `main` → Vercel prod **+ AWS prod CDK deploy** (`.github/workflows/deploy-aws.yml`, paths: `infra/**`, `packages/server|engine|data/**`). push `beta` → Vercel preview + AWS staging stack. **So any infra/server/engine/data change merged to main redeploys the live prod stack** — always review the infra diff for DynamoDB table / construct-logical-ID changes (replacement = world-data loss risk) before merging to prod.
 - Staging is isolated: separate DynamoDB tables; reuses the prod Cognito pool (`us-east-1_E51s2w3Kx`), so the same login maps to a different player record per world (e.g. "Shore Holdings" in staging vs "G&H Holdings" in prod — expected, not corruption). The `/dev` tools route (fund / summon buyout) is staging-only (`if (!isProd)`).
 
-## Current state (2026-06-28)
+## Current state (2026-08-11)
 - **PROD (trove.ceo) shipped & stable** at merge `17f5aa9`: full bento UI, unified boards + firms/market terminology, acquisition confirmation screens, **live-player M&A** (consensual buyouts; full buyout = seller keeps the cash) + equity stakes/dividends, **Property Market** (Trove Estates), reputation + Auto-Fulfill fixes, collapsible Factory line upgrades. Post-deploy verified: real account intact, hits prod backend, AWS deploy passed the economy-invariant tests, **no DynamoDB table changes**.
-- **BETA** is ~1 commit ahead of prod (Reports → bento) and is the active branch. Not merged (awaiting OK).
+- **BETA** is significantly ahead of prod and is the active branch. Not merged (awaiting OK). Since the last prod merge:
+  - **Front-cover landing page** (`d77d7af`): signed-out visitors now see a masthead + live Ticker + premise + two CTAs ("Sign In to Trade" / "Browse the market →") before the terminal, instead of dropping straight in. Invites rather than blocks — public no-login browsing still works exactly as before, only Acquire/sell needs an account. Skipped entirely for already-signed-in players; dismissed once per browser session.
+  - **AI economy: virtual consumption + the ripple multiplier** (`45de51d`..`1ab88c5`, 5 commits) — the fix for "I got rich fast and the world didn't respond." AI companies now (a) draw real material from the same shared item stock a player's factory uses, sized per-company from a "representative item" in their sector, reusing the existing recipe/tier machinery — no new per-company state, no new Lambda cost; (b) have income + trading aggression that scale (bounded, [1.0, 1.5]) with how much real players are actually doing, via a rolling EMA of real-player item-holdings footprint; (c) feed a small, clamped depletion signal into the sector-demand cascade so a scarce raw material's price pressure ripples to the finished goods made from it, not just its own price. All additive — a dormant world (no real players) behaves byte-identically to before. Full design + formulas in `specs/02_ENGINE.md`'s new "AI companies" section. 41 engine tests passing, including new invariant coverage for every piece.
+  - **Follow-up requested, not yet built**: a full wipe (world state + ALL player progress → fresh) on **beta only, never prod without explicit OK** — deliberately deferred until the AI economy work above has had time to be played/felt out on beta first, so it isn't wiped twice.
 
 ## The "bento" UI standard (active design system)
 Apple-keynote **bento grid** of modular rounded card tiles — the "clean embedded look" Joe chose. Reusable, defined in `apps/web/app/globals.css`:
@@ -66,3 +69,4 @@ Joe asked for a continuous, self-sustaining polish loop on beta. Each iteration:
 - M&A (Deal Room) and Property Market: **built + live on prod**.
 - **Streaming** (north star): rank/tiers/unlocks shipped (Phase 1); Phases 2–4 of the streamer roadmap pending.
 - **Monetization** (later): Stripe + paid news-wheel ads. Bake in security now — card data stays in Stripe, server-verify via webhooks, harden tokens. Don't retrofit.
+- **Beta full wipe (pending, not yet built)**: after playing/tuning the new AI-economy work (above) on beta, a full reset — world state AND all player progress back to fresh — so testing starts clean under the new rules. **Beta only; never touch prod without Joe's explicit OK**, same as everything else. `packages/server/src/repo.ts`'s `seedWorld()` is create-only/idempotent today (fails silently if the world already exists) — this needs a new, genuinely destructive admin operation that overwrites the world doc AND clears every `players` record. Treat it with the same care as any other irreversible production-data action.
