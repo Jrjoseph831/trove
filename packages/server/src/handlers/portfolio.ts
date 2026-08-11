@@ -13,7 +13,7 @@ import type {
   APIGatewayProxyResultV2,
 } from "aws-lambda";
 import { START_CASH, STARTING_SLOTS } from "@trove/engine";
-import { buildPortfolio, getPlayer, loadWorld, savePlayer } from "../repo";
+import { buildPortfolio, getPlayer, loadWorld, touchLastSeen } from "../repo";
 
 const json = (status: number, body: unknown): APIGatewayProxyResultV2 => ({
   statusCode: status,
@@ -58,12 +58,16 @@ export async function handler(
   // Stamp "seen now" for next time's away-diff — but only every few minutes,
   // not on every 15s poll from every signed-in client. The recap only cares
   // about hour-scale gaps, so this granularity loses nothing while sparing a
-  // write on the hottest endpoint. Must await when it does write — the
-  // Lambda can freeze right after the response is sent, so this can't be
-  // fire-and-forget.
+  // write on the hottest endpoint. An atomic single-field update, NOT a
+  // read-modify-write savePlayer() — this endpoint's read can easily be
+  // stale by the time it writes (production.ts commits to the same player
+  // on its own 5min clock), and a full-item overwrite from that stale read
+  // would silently erase whatever production just committed. Must await —
+  // the Lambda can freeze right after the response is sent, so this can't
+  // be fire-and-forget.
   const now = Date.now();
   if (now - (player.lastSeenAt ?? 0) >= 5 * 60 * 1000) {
-    await savePlayer({ ...player, lastSeenAt: now });
+    await touchLastSeen(playerId, now);
   }
   return json(200, view);
 }

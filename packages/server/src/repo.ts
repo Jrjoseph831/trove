@@ -19,6 +19,7 @@ import {
   QueryCommand,
   ScanCommand,
   TransactWriteCommand,
+  UpdateCommand,
 } from "@aws-sdk/lib-dynamodb";
 import { items as catalog } from "@trove/data";
 import {
@@ -685,6 +686,24 @@ export async function getPlayer(playerId: string): Promise<Player | null> {
     new GetCommand({ TableName: PLAYERS, Key: { playerId } }),
   );
   return (res.Item as Player) ?? null;
+}
+
+/** Atomically set just lastSeenAt, touching no other attribute. Deliberately
+ *  NOT a read-modify-write savePlayer() call: this runs from the hottest,
+ *  most frequent endpoint (portfolio, polled every 15s), which can easily
+ *  interleave with production.ts's transactional per-tick commits on the
+ *  same player. A full-item overwrite from a stale read would silently
+ *  clobber whatever production just wrote (cash, factories, reports) back
+ *  to the snapshot this request started with. */
+export async function touchLastSeen(playerId: string, at: number): Promise<void> {
+  await ddb.send(
+    new UpdateCommand({
+      TableName: PLAYERS,
+      Key: { playerId },
+      UpdateExpression: "SET lastSeenAt = :at",
+      ExpressionAttributeValues: { ":at": at },
+    }),
+  );
 }
 
 /** Persist a player record (per-player, low contention — last write wins). */
