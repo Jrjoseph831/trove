@@ -37,6 +37,7 @@ import {
   resetRng,
   rippleMultiplier,
   scarcity,
+  sectorConsumptionPressure,
   setRng,
   settleCycle,
   traderAct,
@@ -385,6 +386,49 @@ describe("the ripple actually changes AI behavior — the fix for a static world
   // to land the crossover between ripple 1.0 and 1.5, so a "prove the pick
   // changes" test would only be reliable by tuning to a magic seed — fragile
   // in a way that isn't worth it for a change this small and this covered.
+});
+
+describe("sector consumption pressure — the steel-scarce-lifts-everything link", () => {
+  it("is exactly 0 on a fresh world (every item at full stock)", () => {
+    const S = freshState();
+    for (const s of sectorKeys) expect(sectorConsumptionPressure(S, s)).toBe(0);
+  });
+
+  it("stays within its clamp even when a sector's items are fully depleted", () => {
+    const S = freshState();
+    for (const it of S.items) it.stock = 0;
+    for (const s of sectorKeys) {
+      const p = sectorConsumptionPressure(S, s);
+      expect(p).toBeGreaterThanOrEqual(-0.05 - 1e-9);
+      expect(p).toBeLessThanOrEqual(0.05 + 1e-9);
+    }
+  });
+
+  it("is positive for a depleted sector and rises with more depletion", () => {
+    const S = freshState();
+    const sector = sectorKeys.find((s) =>
+      S.items.some((it) => it.edition === null && (it.weights[s] ?? 0) > 0.5),
+    )!;
+    const before = sectorConsumptionPressure(S, sector);
+    expect(before).toBe(0); // full stock, nothing depleted yet
+    for (const it of S.items) {
+      if ((it.weights[sector] ?? 0) > 0.5 && it.edition === null) it.stock = 0;
+    }
+    const after = sectorConsumptionPressure(S, sector);
+    expect(after).toBeGreaterThan(before);
+  });
+
+  it("news stays the dominant signal — a typical news effect outweighs the pressure clamp", () => {
+    // Spot-check the design intent documented in aiEconomy.ts: the pressure
+    // clamp (±0.05) is small next to a real news effect, so news remains the
+    // primary driver of sentiment and this reads as a secondary hum under it.
+    const S = createWorld(0);
+    const typicalNewsEffect = S.front ? Object.values(S.front.effects) : [];
+    if (typicalNewsEffect.length) {
+      const maxAbs = Math.max(...typicalNewsEffect.map((e) => Math.abs(e ?? 0)));
+      if (maxAbs > 0) expect(maxAbs).toBeGreaterThanOrEqual(0.05);
+    }
+  });
 });
 
 // Bounds used only by the ripple-behavior tests above — mirrors aiEconomy.ts's

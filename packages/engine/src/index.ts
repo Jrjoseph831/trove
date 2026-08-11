@@ -29,6 +29,7 @@ export * from "./events";
 import {
   aiVirtualConsumption,
   rippleMultiplier,
+  sectorConsumptionPressure,
   updatePlayerActivity,
 } from "./aiEconomy";
 export * from "./aiEconomy";
@@ -731,13 +732,16 @@ export function settleCycle(state: WorldState): void {
     state.active.push({ news: n, cyclesLeft: n.dur });
   }
 
-  // 3. Recompute sector indices: ease toward 1 + summed active effects.
+  // 3. Recompute sector indices: ease toward 1 + summed active effects + a
+  //    small, clamped consumption-pressure hum (see aiEconomy.ts) so a
+  //    sector's own depleted supply — not just news — can lift its demand.
   for (const s of sectorKeys) {
     let target = 1;
     for (const a of state.active) {
       const e = a.news.effects[s];
       if (e) target += e * (a.cyclesLeft / a.news.dur);
     }
+    target += sectorConsumptionPressure(state, s);
     const cur = state.sectorIdx[s] ?? 1;
     state.sectorIdx[s] = Math.max(
       0.55,

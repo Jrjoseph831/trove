@@ -293,3 +293,35 @@ function consumeFor(
   }
   t.cash -= cost * fillScale;
 }
+
+// ── Feeding consumption into the sector cascade ─────────────────────────────
+
+/** How much a small, hard-clamped depletion signal can nudge a sector's index
+ *  target, alongside news effects. Kept well under a typical news effect so
+ *  news stays the dominant, primary driver of sentiment and this reads as a
+ *  secondary hum underneath it, not a competing narrative. */
+const SECTOR_PRESSURE_CLAMP = 0.05;
+const SECTOR_PRESSURE_SCALE = 0.08;
+
+/** Item-level scarcity alone can't deliver "steel scarce → everything made
+ *  from steel rises" — priceItem() only reads an item's OWN stock, never its
+ *  inputs'. This aggregates how depleted a sector's items are (weighted by
+ *  each item's own weight in that sector — reusing the same signal scarcity()
+ *  already uses per item, just summed), and settleCycle folds a small, clamped
+ *  version of it into that sector's demand target. Because raw materials and
+ *  the finished goods that consume them typically share sector weights, a
+ *  sector-wide depletion pressure genuinely lifts demand — and so price — for
+ *  both the scarce input and everything else in that sector, using the
+ *  cascade that already exists rather than a new pricing path. */
+export function sectorConsumptionPressure(state: WorldState, sector: SectorKey): number {
+  let num = 0;
+  let den = 0;
+  for (const it of state.items) {
+    const w = it.weights[sector];
+    if (!w || it.edition !== null || it.stockNormal <= 0) continue;
+    num += w * (1 - it.stock / it.stockNormal);
+    den += w;
+  }
+  const depletion = den ? num / den : 0;
+  return Math.max(-SECTOR_PRESSURE_CLAMP, Math.min(SECTOR_PRESSURE_CLAMP, depletion * SECTOR_PRESSURE_SCALE));
+}
