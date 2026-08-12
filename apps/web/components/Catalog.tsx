@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useVirtualizer } from "@tanstack/react-virtual";
+import { Search, X } from "lucide-react";
 import {
   brands as allBrands,
   brandSlug,
@@ -12,321 +13,367 @@ import {
 } from "@trove/data";
 import type { RuntimeItem } from "@trove/engine";
 import { canBuy, held } from "@trove/engine";
-import { money, pctChange, signedPct } from "@/lib/format";
+import { money, pctChange } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { primarySectorLabel, stockState } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
 import { AcquireConfirm } from "./AcquireConfirm";
 
-const ROW = 46;
+type SortKey = "featured" | "price-asc" | "price-desc" | "change" | "name";
 
-type SortKey = "item" | "sector" | "supply" | "price" | "change";
+const SORTS: { key: SortKey; label: string }[] = [
+  { key: "featured", label: "Featured" },
+  { key: "price-desc", label: "Price: high to low" },
+  { key: "price-asc", label: "Price: low to high" },
+  { key: "change", label: "Biggest movers" },
+  { key: "name", label: "Name A–Z" },
+];
 
-/** Inline highlight for the "Find it on the floor" target row. */
-const HL_STYLE = {
-  background: "color-mix(in srgb, var(--accent) 22%, transparent)",
-  boxShadow: "inset 0 0 0 2px var(--accent), 0 0 22px -6px var(--accent)",
-  borderRadius: 8,
-  zIndex: 3,
-} as const;
 const BRAND_NAMES = [...allBrands].map((b) => b.name).sort();
 
+/** Grid geometry — the virtualizer works in ROWS, so the column count is
+ *  measured from the container and rows are chunked to match. */
+const CARD_MIN = 232;
+const GAP = 18;
+const CARD_H = 292;
+
+/** Inline highlight for the "Find it on the floor" target card. */
+const HL_STYLE = {
+  boxShadow: "0 0 0 2px var(--accent), 0 0 26px -6px var(--accent)",
+} as const;
+
 export function Catalog() {
-  const { state, cat, setCatSector, setCatBrand, setCatSearch, hlItem } =
+  const { state, cat, setCatSector, setCatBrand, setCatSearch, hlItem, tick } =
     useTrove();
-  const parentRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
   const [acquireTarget, setAcquireTarget] = useState<RuntimeItem | null>(null);
+  const [sort, setSort] = useState<SortKey>("featured");
+  const [cols, setCols] = useState(4);
 
-  // "Find it on the floor": hlItem comes from the provider (same reliable path
-  // as the q search filter). Apply an INLINE highlight at render time so it can't
-  // be lost to re-renders/remounts/virtualization. Scroll it into view.
-  const hlId = hlItem;
+  // Measure how many cards fit, so the virtualized rows match what's drawn.
   useEffect(() => {
-    if (hlId == null) return;
-    const find = (n = 0) => {
-      const el = document.getElementById(`floor-item-${hlId}`);
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
-      else if (n < 40) window.setTimeout(() => find(n + 1), 100);
+    const el = gridRef.current;
+    if (!el) return;
+    const measure = () => {
+      const w = el.clientWidth;
+      setCols(Math.max(1, Math.floor((w + GAP) / (CARD_MIN + GAP))));
     };
-    window.setTimeout(() => find(0), 200);
-  }, [hlId]);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
+  // Keyed on `tick`, not just `state`: overlayWorld MUTATES the live world in
+  // place, so `state`'s identity never changes when server data lands and a
+  // memo depending on it alone keeps its pre-overlay result forever. That's
+  // why sold-out editions kept appearing — the filter still saw the initial
+  // remaining: Infinity while the card rendered the real value and showed
+  // "Claimed".
   const filtered = useMemo(() => {
     const q = cat.search.trim().toLowerCase();
     return state.items.filter((i) => {
+      if (i.edition !== null && i.remaining <= 0) return false; // claimed
       if (cat.sector && !i.weights[cat.sector]) return false;
       if (cat.brand && i.brand !== cat.brand) return false;
       if (q && !`${i.name} ${i.brand}`.toLowerCase().includes(q)) return false;
       return true;
     });
-    // recompute when filters change; live prices don't change membership
-  }, [state, cat.sector, cat.brand, cat.search]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state, tick, cat.sector, cat.brand, cat.search]);
 
-  // Sortable columns. Text columns default ascending, numbers descending;
-  // clicking the active column flips direction.
-  const [sort, setSort] = useState<{ key: SortKey; dir: 1 | -1 }>({
-    key: "price",
-    dir: -1,
-  });
-  const toggleSort = (key: SortKey) =>
-    setSort((s) =>
-      s.key === key
-        ? { key, dir: (s.dir === 1 ? -1 : 1) as 1 | -1 }
-        : { key, dir: key === "item" || key === "sector" ? 1 : -1 },
-    );
-
-  const commodities = useMemo(() => {
-    const arr = filtered.filter((i) => i.edition === null);
-    const d = sort.dir;
-    arr.sort((a, b) => {
-      switch (sort.key) {
-        case "item":
-          return a.name.localeCompare(b.name) * d;
-        case "sector":
-          return primarySectorLabel(a).localeCompare(primarySectorLabel(b)) * d;
-        case "supply":
-          return (a.stock - b.stock) * d;
-        case "change":
-          return (
-            (pctChange(a.value, a.prevValue) - pctChange(b.value, b.prevValue)) *
-            d
-          );
-        default:
-          return (a.value - b.value) * d;
-      }
-    });
+  const sorted = useMemo(() => {
+    const arr = [...filtered];
+    switch (sort) {
+      case "price-asc":
+        arr.sort((a, b) => a.value - b.value);
+        break;
+      case "price-desc":
+        arr.sort((a, b) => b.value - a.value);
+        break;
+      case "change":
+        arr.sort(
+          (a, b) =>
+            Math.abs(pctChange(b.value, b.prevValue)) -
+            Math.abs(pctChange(a.value, a.prevValue)),
+        );
+        break;
+      case "name":
+        arr.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      default:
+        // Featured: limited editions first, then by value — the shelf you'd
+        // put at the front of the store.
+        arr.sort((a, b) => {
+          const ae = a.edition !== null ? 1 : 0;
+          const be = b.edition !== null ? 1 : 0;
+          if (ae !== be) return be - ae;
+          return b.value - a.value;
+        });
+    }
     return arr;
   }, [filtered, sort]);
-  const editions = useMemo(
-    () =>
-      filtered
-        .filter((i) => i.edition !== null && i.remaining > 0)
-        .sort((a, b) => b.value - a.value),
-    [filtered],
-  );
 
+  const rowCount = Math.ceil(sorted.length / cols);
   const rowVirt = useVirtualizer({
-    count: commodities.length,
-    getScrollElement: () => parentRef.current,
-    estimateSize: () => ROW,
-    overscan: 12,
+    count: rowCount,
+    getScrollElement: () => scrollRef.current,
+    estimateSize: () => CARD_H + GAP,
+    overscan: 4,
   });
 
+  // "Find it on the floor" — scroll the highlighted item's row into view.
+  const hlId = hlItem;
+  useEffect(() => {
+    if (hlId == null) return;
+    const idx = sorted.findIndex((i) => i.id === hlId);
+    if (idx < 0) return;
+    rowVirt.scrollToIndex(Math.floor(idx / cols), { align: "center" });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hlId, cols, sorted.length]);
+
+  const activeFilters =
+    (cat.sector ? 1 : 0) + (cat.brand ? 1 : 0) + (cat.search.trim() ? 1 : 0);
+  const clearAll = () => {
+    setCatSector(null);
+    setCatBrand(null);
+    setCatSearch("");
+  };
+
+  // `view-shop` turns off .view's own scrolling: the storefront manages its
+  // own bounded scroller (.shop-scroll) so the virtualizer has a real
+  // viewport to measure. Without it .view grows to full content height, the
+  // virtualizer sees a ~72,000px viewport, and every one of the ~1,900 cards
+  // mounts at once.
   return (
-    <div className="view">
-      <div className="cat-wrap">
-      <div className="cat-head">
-        <h2 className="serif">Catalog</h2>
-        <div className="seg">
-          <button
-            className={`chip ${!cat.sector ? "on" : ""}`}
-            onClick={() => setCatSector(null)}
-          >
-            All
-          </button>
-          {sectorKeys.map((k) => (
-            <button
-              key={k}
-              className={`chip ${cat.sector === k ? "on" : ""}`}
-              onClick={() => setCatSector(k)}
-            >
-              {sectors[k]?.label}
-            </button>
-          ))}
-        </div>
-        <div className="cat-controls">
-          <select
-            className="search brand-select"
-            value={cat.brand ?? ""}
-            onChange={(e) => setCatBrand(e.target.value || null)}
-            aria-label="Filter by brand"
-          >
-            <option value="">All brands</option>
-            {BRAND_NAMES.map((b) => (
-              <option key={b} value={b}>
-                {b}
-              </option>
-            ))}
-          </select>
-          <input
-            className="search cat-search"
-            placeholder="Search brand or item…"
-            value={cat.search}
-            onChange={(e) => setCatSearch(e.target.value)}
-          />
-          <button
-            className="cat-reset"
-            onClick={() => {
-              setCatSector(null);
-              setCatBrand(null);
-              setCatSearch("");
-            }}
-          >
-            Reset
-          </button>
-        </div>
-      </div>
-
-      <div className="cat-grid">
-        <section className="bento-card cat-table">
-          <div className="bc-h">
-            <span className="t">Market</span>
-            <span className="why">live commodity prices · click a column to sort</span>
-          </div>
-          <div className="thead">
-            {(
-              [
-                ["item", "Item", ""],
-                ["sector", "Sector", ""],
-                ["supply", "Supply", ""],
-                ["price", "Price", "r"],
-                ["change", "Δ", "r"],
-              ] as [SortKey, string, string][]
-            ).map(([key, label, align]) => (
+    <div className="view view-shop">
+      <div className="shop">
+        {/* Search bar spanning the top, the way a storefront reads */}
+        <div className="shop-bar">
+          <div className="shop-search">
+            <Search size={17} strokeWidth={2} />
+            <input
+              placeholder="Search the market — brand, item, anything…"
+              value={cat.search}
+              onChange={(e) => setCatSearch(e.target.value)}
+              aria-label="Search the market"
+            />
+            {cat.search && (
               <button
-                key={key}
-                className={`th ${align}`}
-                onClick={() => toggleSort(key)}
+                className="shop-search-x"
+                onClick={() => setCatSearch("")}
+                aria-label="Clear search"
               >
-                {label}
-                {sort.key === key && (
-                  <span className="th-arr">{sort.dir === 1 ? "↑" : "↓"}</span>
-                )}
+                <X size={15} />
               </button>
-            ))}
-            <span />
+            )}
           </div>
+        </div>
 
-          {commodities.length === 0 ? (
-            <div className="empty">Nothing matches.</div>
-          ) : (
-            <div ref={parentRef} className="catlist">
-              <div
-                style={{
-                  height: rowVirt.getTotalSize(),
-                  position: "relative",
-                  width: "100%",
-                }}
+        <div className="shop-body">
+          {/* Filter rail */}
+          <aside className="shop-filters">
+            <div className="shopf-group">
+              <div className="shopf-h">Department</div>
+              <button
+                className={`shopf-opt ${!cat.sector ? "on" : ""}`}
+                onClick={() => setCatSector(null)}
               >
-                {rowVirt.getVirtualItems().map((v) => {
-                  const it = commodities[v.index]!;
-                  const d = it.value - it.prevValue;
-                  const dp = pctChange(it.value, it.prevValue);
-                  const ss = stockState(it);
-                  const mineQty = held(it, "YOU");
-                  const lot = lotSize(it);
-                  return (
-                    <div
-                      key={it.id}
-                      id={`floor-item-${it.id}`}
-                      className="trow"
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: ROW,
-                        transform: `translateY(${v.start}px)`,
-                        ...(hlId === it.id ? HL_STYLE : {}),
-                      }}
-                    >
-                      <span className="nmcell">
-                        <ItemIcon it={it} size={18} className="ic" />
-                        <span className="nm">
-                          <Link
-                            href={`/brand/${brandSlug(it.brand)}`}
-                            className="bd bd-link"
-                          >
-                            {it.brand}
-                          </Link>
-                          <Link href={`/item/${it.id}`} className="it-link">
-                            {it.name}
-                          </Link>
-                          {mineQty ? ` · you hold ${mineQty}` : ""}
-                        </span>
-                      </span>
-                      <span className="sct">{primarySectorLabel(it)}</span>
-                      <span className="stockdot">
-                        <i className={ss ?? ""} />
-                        {ss === "scarce" ? "scarce" : ss === "low" ? "tight" : "in stock"}
-                      </span>
-                      <span className="pr">
-                        {money(it.value)}
-                        {lot > 1 && <span className="per">/ea</span>}
-                      </span>
-                      <span className={`chg ${d >= 0 ? "pos" : "neg"}`}>
-                        {d >= 0 ? "▲" : "▼"}
-                        {Math.abs(dp).toFixed(1)}%
-                      </span>
-                      <span style={{ textAlign: "right" }}>
-                        <button
-                          className="tbtn"
-                          disabled={!canBuy(it)}
-                          onClick={() => setAcquireTarget(it)}
-                        >
-                          {canBuy(it) ? (lot > 1 ? `Case · ${lot}` : "Acquire") : "Sold out"}
-                        </button>
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-        </section>
-
-        <aside className="ed-col">
-          <div className="bc-h">
-            <span className="t">Collectible Editions</span>
-          </div>
-          {editions.length ? (
-            editions.map((it) => {
-              const d = it.value - it.prevValue;
-              const dp = pctChange(it.value, it.prevValue);
-              return (
-                <div
-                  className="edcard"
-                  id={`floor-item-${it.id}`}
-                  key={it.id}
-                  style={hlId === it.id ? HL_STYLE : undefined}
+                All departments
+              </button>
+              {sectorKeys.map((k) => (
+                <button
+                  key={k}
+                  className={`shopf-opt ${cat.sector === k ? "on" : ""}`}
+                  onClick={() => setCatSector(k)}
                 >
-                  <div className="top">
-                    <ItemIcon it={it} size={30} />
-                    <span className="glint">✦</span>
-                  </div>
-                  <Link
-                    href={`/brand/${brandSlug(it.brand)}`}
-                    className="bd bd-link"
-                  >
-                    {it.brand}
-                  </Link>
-                  <Link href={`/item/${it.id}`} className="nm it-link">
-                    {it.name}
-                  </Link>
-                  <div className="edword">
-                    {it.edition === 1 ? "1 of 1" : "Limited edition"}
-                  </div>
-                  <div className="row">
-                    <span className="pr">{money(it.value)}</span>
-                    <span className={`chg ${d >= 0 ? "pos" : "neg"}`}>
-                      {d >= 0 ? "▲" : "▼"} {signedPct(dp)}
-                    </span>
-                  </div>
-                  <button
-                    className="acq"
-                    disabled={!canBuy(it) || it.value > state.cash}
-                    onClick={() => setAcquireTarget(it)}
-                  >
-                    {canBuy(it) ? "Acquire" : "Claimed"}
+                  {sectors[k]?.label}
+                </button>
+              ))}
+            </div>
+
+            <div className="shopf-group">
+              <div className="shopf-h">Brand</div>
+              <select
+                className="shopf-select"
+                value={cat.brand ?? ""}
+                onChange={(e) => setCatBrand(e.target.value || null)}
+                aria-label="Filter by brand"
+              >
+                <option value="">All brands</option>
+                {BRAND_NAMES.map((b) => (
+                  <option key={b} value={b}>
+                    {b}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {activeFilters > 0 && (
+              <button className="shopf-clear" onClick={clearAll}>
+                Clear filters ({activeFilters})
+              </button>
+            )}
+          </aside>
+
+          {/* Results */}
+          <section className="shop-results">
+            <div className="shop-resbar">
+              <span className="shop-count">
+                <b>{sorted.length.toLocaleString()}</b>{" "}
+                {sorted.length === 1 ? "result" : "results"}
+                {cat.search.trim() && (
+                  <>
+                    {" "}
+                    for <b>&ldquo;{cat.search.trim()}&rdquo;</b>
+                  </>
+                )}
+              </span>
+              <label className="shop-sort">
+                Sort by
+                <select
+                  value={sort}
+                  onChange={(e) => setSort(e.target.value as SortKey)}
+                >
+                  {SORTS.map((s) => (
+                    <option key={s.key} value={s.key}>
+                      {s.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            {sorted.length === 0 ? (
+              <div className="shop-empty">
+                <div className="shop-empty-h">No matches</div>
+                <p>Try a different search, or clear your filters.</p>
+                {activeFilters > 0 && (
+                  <button className="lbtn lbtn-ghost" onClick={clearAll}>
+                    Clear filters
                   </button>
+                )}
+              </div>
+            ) : (
+              <div className="shop-scroll" ref={scrollRef}>
+                <div ref={gridRef} style={{ width: "100%" }}>
+                  <div
+                    style={{
+                      height: rowVirt.getTotalSize(),
+                      position: "relative",
+                      width: "100%",
+                    }}
+                  >
+                    {rowVirt.getVirtualItems().map((vr) => {
+                      const start = vr.index * cols;
+                      const row = sorted.slice(start, start + cols);
+                      return (
+                        <div
+                          key={vr.key}
+                          className="shop-row"
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            transform: `translateY(${vr.start}px)`,
+                            gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
+                          }}
+                        >
+                          {row.map((it) => {
+                            const dp = pctChange(it.value, it.prevValue);
+                            const up = it.value >= it.prevValue;
+                            const ss = stockState(it);
+                            const mine = held(it, "YOU");
+                            const lot = lotSize(it);
+                            const isEd = it.edition !== null;
+                            return (
+                              <article
+                                className="pcard"
+                                key={it.id}
+                                id={`floor-item-${it.id}`}
+                                style={hlId === it.id ? HL_STYLE : undefined}
+                              >
+                                <Link
+                                  href={`/item/${it.id}`}
+                                  className="pcard-media"
+                                >
+                                  <ItemIcon it={it} size={54} />
+                                  {isEd && (
+                                    <span className="pcard-tag">
+                                      {it.edition === 1 ? "1 of 1" : "Limited"}
+                                    </span>
+                                  )}
+                                </Link>
+                                <div className="pcard-body">
+                                  <Link
+                                    href={`/brand/${brandSlug(it.brand)}`}
+                                    className="pcard-brand"
+                                  >
+                                    {it.brand}
+                                  </Link>
+                                  <Link
+                                    href={`/item/${it.id}`}
+                                    className="pcard-name"
+                                  >
+                                    {it.name}
+                                  </Link>
+                                  <div className="pcard-meta">
+                                    {primarySectorLabel(it)}
+                                    {mine > 0 && (
+                                      <span className="pcard-own">
+                                        · you hold {mine.toLocaleString()}
+                                      </span>
+                                    )}
+                                  </div>
+                                  <div className="pcard-priceline">
+                                    <span className="pcard-price">
+                                      {money(it.value)}
+                                      {lot > 1 && (
+                                        <span className="pcard-per">/ea</span>
+                                      )}
+                                    </span>
+                                    <span
+                                      className={`pcard-chg ${up ? "up" : "dn"}`}
+                                    >
+                                      {up ? "▲" : "▼"}
+                                      {Math.abs(dp).toFixed(1)}%
+                                    </span>
+                                  </div>
+                                  <div className={`pcard-stock ${ss ?? ""}`}>
+                                    {ss === "scarce"
+                                      ? "Only a few left"
+                                      : ss === "low"
+                                        ? "Running tight"
+                                        : "In stock"}
+                                  </div>
+                                  <button
+                                    className="pcard-btn"
+                                    disabled={!canBuy(it)}
+                                    onClick={() => setAcquireTarget(it)}
+                                  >
+                                    {!canBuy(it)
+                                      ? isEd
+                                        ? "Claimed"
+                                        : "Sold out"
+                                      : lot > 1
+                                        ? `Acquire case · ${lot}`
+                                        : "Acquire"}
+                                  </button>
+                                </div>
+                              </article>
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
-              );
-            })
-          ) : (
-            <div className="empty">No editions match. They may all be claimed.</div>
-          )}
-        </aside>
-      </div>
+              </div>
+            )}
+          </section>
+        </div>
       </div>
 
       {acquireTarget && (

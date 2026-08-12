@@ -127,23 +127,50 @@ body {
 .app.no-rail {
   grid-template-columns: 1fr;
 }
-.guest-signin {
+/* Guest bar — centred at the bottom rather than tucked in a corner, so the
+   way back into signing up is impossible to miss while browsing. */
+.guestbar {
   position: fixed;
-  top: 18px;
-  right: 20px;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
   z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: calc(100vw - 32px);
+  padding: 12px 12px 12px 22px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.75);
+}
+.guestbar-txt {
+  font-size: 13px;
+  color: var(--ink-dim);
+}
+.guestbar-cta {
+  flex: none;
   background: var(--ink);
   color: var(--paper);
   border: 0;
   border-radius: 999px;
-  padding: 10px 22px;
-  font-size: 12px;
+  padding: 11px 22px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.04em;
   cursor: pointer;
 }
-.guest-signin:hover {
+.guestbar-cta:hover {
   opacity: 0.88;
+}
+@media (max-width: 640px) {
+  .guestbar {
+    gap: 12px;
+    padding: 10px 10px 10px 16px;
+  }
+  .guestbar-txt {
+    font-size: 12px;
+  }
 }
 
 /* ---- rail ---- */
@@ -8982,3 +9009,370 @@ body {
 .stand-row.me .stand-nm,
 .stand-row.me .stand-rk,
 .stand-row.me .stand-w { color: var(--accent); font-weight: 800; }
+
+/* ── Catalog: the storefront ──────────────────────────────────────────────
+   Search across the top, a filter rail, and a product grid — the layout
+   people already know from every shop online, so nothing has to be learned.
+   Shared by signed-in and guest browsing; only the Acquire step differs. */
+.view-shop {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+.shop {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.shop-bar {
+  flex: none;
+  padding: 22px 26px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.shop-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.shop-search:focus-within {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.shop-search svg {
+  flex: none;
+  color: var(--ink-faint);
+}
+.shop-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font-size: 14.5px;
+  padding: 14px 0;
+}
+.shop-search input::placeholder {
+  color: var(--ink-faint);
+}
+.shop-search-x {
+  flex: none;
+  background: none;
+  border: 0;
+  color: var(--ink-faint);
+  cursor: pointer;
+  display: flex;
+  padding: 4px;
+}
+.shop-search-x:hover {
+  color: var(--ink);
+}
+
+.shop-body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 218px 1fr;
+}
+.shop-filters {
+  border-right: 1px solid var(--line);
+  padding: 22px 18px 26px;
+  overflow-y: auto;
+}
+.shopf-group {
+  margin-bottom: 26px;
+}
+.shopf-h {
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 10px;
+}
+.shopf-opt {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 13.5px;
+  color: var(--ink-dim);
+  cursor: pointer;
+}
+.shopf-opt:hover {
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+  color: var(--ink);
+}
+.shopf-opt.on {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  font-weight: 700;
+}
+.shopf-select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 13px;
+  padding: 9px 10px;
+}
+.shopf-clear {
+  width: 100%;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-dim);
+  font-size: 12.5px;
+  padding: 9px 0;
+  cursor: pointer;
+}
+.shopf-clear:hover {
+  color: var(--ink);
+  border-color: var(--ink-faint);
+}
+
+.shop-results {
+  min-width: 0;
+  /* Grid items default to min-height:auto, which refuses to shrink below
+     content height — that let .shop-scroll balloon to ~70,000px and the
+     virtualizer, measuring it as the viewport, mounted every card. */
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.shop-resbar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 26px;
+  border-bottom: 1px solid var(--line);
+}
+.shop-count {
+  font-size: 13px;
+  color: var(--ink-dim);
+}
+.shop-count b {
+  color: var(--ink);
+}
+.shop-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12.5px;
+  color: var(--ink-faint);
+}
+.shop-sort select {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 13px;
+  padding: 8px 10px;
+}
+.shop-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 20px 26px 32px;
+}
+.shop-row {
+  display: grid;
+  gap: 18px;
+  padding-bottom: 18px;
+}
+.shop-empty {
+  padding: 72px 26px;
+  text-align: center;
+  color: var(--ink-dim);
+}
+.shop-empty-h {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.shop-empty p {
+  font-size: 13.5px;
+  margin: 0 0 18px;
+}
+
+/* Product card */
+.pcard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.pcard:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 38%, var(--line));
+  box-shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.8);
+}
+.pcard-media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 116px;
+  background: color-mix(in srgb, var(--ink) 4%, transparent);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-dim);
+}
+.pcard-tag {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  background: color-mix(in srgb, var(--accent) 12%, var(--paper));
+  border-radius: 999px;
+  padding: 4px 9px;
+}
+.pcard-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 15px 15px;
+  flex: 1;
+}
+.pcard-brand {
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-decoration: none;
+}
+.pcard-brand:hover {
+  color: var(--accent);
+}
+.pcard-name {
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.pcard-name:hover {
+  color: var(--accent);
+}
+.pcard-meta {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+}
+.pcard-own {
+  color: var(--accent);
+}
+.pcard-priceline {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin-top: 6px;
+}
+.pcard-price {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.pcard-per {
+  font-size: 11px;
+  color: var(--ink-faint);
+  margin-left: 2px;
+}
+.pcard-chg {
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+}
+.pcard-chg.up {
+  color: var(--up);
+}
+.pcard-chg.dn {
+  color: var(--dn);
+}
+.pcard-stock {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  margin-bottom: 10px;
+}
+.pcard-stock.low {
+  color: var(--up);
+}
+.pcard-stock.scarce {
+  color: var(--danger, #c0492b);
+}
+.pcard-btn {
+  margin-top: auto;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: opacity 0.18s ease;
+}
+.pcard-btn:hover:not(:disabled) {
+  opacity: 0.88;
+}
+.pcard-btn:disabled {
+  background: transparent;
+  color: var(--ink-faint);
+  cursor: not-allowed;
+}
+
+/* Guest note inside the acquire dialog */
+.bb-guest {
+  font-size: 12px;
+  color: var(--ink-dim);
+  line-height: 1.5;
+  margin: -6px 0 16px;
+}
+
+@media (max-width: 860px) {
+  .shop-body {
+    grid-template-columns: 1fr;
+  }
+  .shop-filters {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 14px 18px;
+  }
+  .shopf-group {
+    margin-bottom: 0;
+    min-width: 180px;
+  }
+  .shop-scroll {
+    padding: 16px 18px 96px;
+  }
+}

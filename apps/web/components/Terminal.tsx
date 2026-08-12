@@ -47,13 +47,7 @@ export function Terminal() {
           onClick={() => setNavOpen(false)}
         />
       )}
-      {canBrowseFull ? (
-        <Rail />
-      ) : (
-        <button className="guest-signin" onClick={signIn}>
-          Sign In
-        </button>
-      )}
+      {canBrowseFull && <Rail />}
       <div className={`main ${mode === "sandbox" ? "sandbox" : ""}`}>
         <div className="topbar">
           {canBrowseFull && (
@@ -80,6 +74,17 @@ export function Terminal() {
         {effectiveTab === "companies" && <Companies />}
         {effectiveTab === "goals" && <Goals />}
       </div>
+      {!canBrowseFull && (
+        <div className="guestbar">
+          <span className="guestbar-txt">
+            You&apos;re browsing as a guest — prices are live, but you need an
+            account to trade.
+          </span>
+          <button className="guestbar-cta" onClick={signIn}>
+            Sign in to trade
+          </button>
+        </div>
+      )}
       {reveal && <Reveal />}
       <BreakingAlert />
       <LadderUp />

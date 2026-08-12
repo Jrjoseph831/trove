@@ -19,20 +19,30 @@ export function AcquireConfirm({
   item: RuntimeItem;
   onClose: () => void;
 }) {
-  const { buy, state } = useTrove();
+  const { buy, state, signedIn, mode, signIn } = useTrove();
   const isEdition = item.edition !== null;
   const lot = lotSize(item);
   const [qty, setQty] = useState(lot);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // A guest browsing the live market can open this and set a quantity — the
+  // wall is only at the last step, and it asks for a sign-in rather than
+  // pretending a purchase is possible. Sandbox needs no account.
+  const isGuest = !signedIn && mode !== "sandbox";
+
   const effQty = isEdition
     ? 1
     : Math.max(lot, Math.ceil(Math.max(1, qty) / lot) * lot);
   const total = effQty * item.value;
-  const short = total > state.cash;
+  const short = !isGuest && total > state.cash;
 
   const confirm = async () => {
+    if (isGuest) {
+      // Cognito bounces back to this same page, so they land where they were.
+      signIn();
+      return;
+    }
     setError(null);
     setSubmitting(true);
     const r = await buy(item.id, effQty);
@@ -113,16 +123,25 @@ export function AcquireConfirm({
 
         {error && <div className="bb-err">{error}</div>}
 
+        {isGuest && (
+          <div className="bb-guest">
+            Sign in to place this order. New here? You&apos;ll set up your
+            holding first.
+          </div>
+        )}
+
         <div className="bb-actions">
           <button className="bb-cancel" onClick={onClose} disabled={submitting}>
             Cancel
           </button>
           <button className="bb-buy" disabled={short || submitting} onClick={confirm}>
-            {submitting
-              ? "Acquiring…"
-              : short
-                ? "Not enough cash"
-                : `Acquire${isEdition ? "" : ` ${effQty.toLocaleString()}`} · ${money(total)}`}
+            {isGuest
+              ? "Sign In"
+              : submitting
+                ? "Acquiring…"
+                : short
+                  ? "Not enough cash"
+                  : `Acquire${isEdition ? "" : ` ${effQty.toLocaleString()}`} · ${money(total)}`}
           </button>
         </div>
       </div>
