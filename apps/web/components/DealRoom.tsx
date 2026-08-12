@@ -38,7 +38,8 @@ interface Row {
 }
 
 export function DealRoom() {
-  const { state, desk, buyStakeIn, sellStakeIn, requestBuyout, orders, orderAct } = useTrove();
+  const { state, desk, buyStakeIn, sellStakeIn, requestBuyout, orders, orderAct, notify, signIn } =
+    useTrove();
   const [sec, setSec] = useState("All");
   const [sort, setSort] = useState<"val" | "div" | "mine">("val");
   const [sel, setSel] = useState<string | null>(null); // selected row key
@@ -59,7 +60,20 @@ export function DealRoom() {
   const [devBusy, setDevBusy] = useState(false);
   const runDev = async (action: string, extra: Record<string, number> = {}) => {
     setDevBusy(true);
-    await devAction({ action, ...extra });
+    const r = await devAction({ action, ...extra });
+    setDevBusy(false);
+    // These used to reload unconditionally and drop the response on the floor,
+    // so an expired session or a rejected request looked identical to success:
+    // the page blinked and nothing changed. Say what actually happened.
+    if (r && typeof r === "object" && "error" in r) {
+      if (r.status === 401) {
+        notify("Session expired — sign in again");
+        signIn();
+        return;
+      }
+      notify(r.error);
+      return;
+    }
     if (typeof window !== "undefined") window.location.reload();
   };
 

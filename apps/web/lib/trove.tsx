@@ -189,6 +189,8 @@ interface Trove {
   navOpen: boolean;
   reveal: RevealInfo | null;
   toast: string | null;
+  /** Raise a transient message (same channel trades use). */
+  notify: (msg: string) => void;
   /** bumped each render tick — read it to subscribe to live updates. */
   tick: number;
   cat: { sector: string | null; brand: string | null; search: string };
@@ -1445,6 +1447,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       navOpen,
       reveal,
       toast,
+      notify: showToast,
       tick,
       cat: { sector: catSector, brand: catBrand, search: catSearch },
       setMode,
@@ -1513,6 +1516,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       navOpen,
       reveal,
       toast,
+      showToast,
       tick,
       catSector,
       catBrand,
