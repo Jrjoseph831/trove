@@ -430,7 +430,8 @@ function SiteView({
           ← Directory
         </button>
         <span className="site-url">
-          <Globe size={12} /> {site.handle || "unpublished"}.trove
+          <Globe size={12} />{" "}
+          {site.handle ? `trove.ceo/${site.handle}` : "unpublished"}
         </span>
         {owner && onEdit && (
           <button className="site-btn" onClick={onEdit}>
@@ -771,7 +772,12 @@ function Builder({ onDone }: { onDone: () => void }) {
         <div className="bld-form">
           <label className="bld-row">
             <span>Address</span>
+            {/* Prefix, not suffix: the page really does live at
+                trove.ceo/<handle>, so the preview should read as the URL
+                someone can actually type. The old ".trove" suffix looked
+                like a domain that nothing served. */}
             <span className="bld-handle">
+              <em>trove.ceo/</em>
               <input
                 value={handle}
                 maxLength={30}
@@ -782,7 +788,6 @@ function Builder({ onDone }: { onDone: () => void }) {
                 }
                 placeholder="your-company"
               />
-              <em>.trove</em>
             </span>
           </label>
 

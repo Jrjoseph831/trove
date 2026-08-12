@@ -7875,9 +7875,11 @@ details.bay-modules > summary.bay-sub:hover {
   flex: 1;
 }
 .bld-handle em {
+  flex: none;
   font-style: normal;
   color: var(--ink-faint);
   font-size: 13px;
+  white-space: nowrap;
 }
 .bld-accents {
   display: flex;
