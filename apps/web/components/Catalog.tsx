@@ -53,14 +53,27 @@ export function Catalog() {
   const [acquireTarget, setAcquireTarget] = useState<RuntimeItem | null>(null);
   const [sort, setSort] = useState<SortKey>("featured");
   const [cols, setCols] = useState(4);
+  const [cardH, setCardH] = useState(CARD_H);
 
-  // Measure how many cards fit, so the virtualized rows match what's drawn.
+  // Measure BOTH how many cards fit and how tall they actually render.
+  // Height can't be a constant: cards grow when a long name wraps to two
+  // lines, and mobile (narrower cards, larger relative type) makes that the
+  // norm — a stale constant means the virtualizer lays rows out too tightly
+  // and the row below slices the Acquire button off.
   useEffect(() => {
     const el = gridRef.current;
     if (!el) return;
     const measure = () => {
       const w = el.clientWidth;
-      setCols(Math.max(1, Math.floor((w + GAP) / (CARD_MIN + GAP))));
+      if (w > 0) {
+        const min = w < 520 ? 150 : CARD_MIN; // two-up on phones, not one giant card
+        setCols(Math.max(1, Math.floor((w + GAP) / (min + GAP))));
+      }
+      const card = el.querySelector<HTMLElement>(".pcard");
+      if (card) {
+        const h = Math.ceil(card.getBoundingClientRect().height);
+        if (h > 0) setCardH((cur) => (Math.abs(cur - h) > 1 ? h : cur));
+      }
     };
     measure();
     const ro = new ResizeObserver(measure);
@@ -122,9 +135,17 @@ export function Catalog() {
   const rowVirt = useVirtualizer({
     count: rowCount,
     getScrollElement: () => scrollRef.current,
-    estimateSize: () => CARD_H + GAP,
+    estimateSize: () => cardH + GAP,
     overscan: 4,
   });
+
+  // Re-lay-out when the measured card height or column count changes —
+  // estimateSize is captured per measurement pass, so without this the rows
+  // keep their old spacing after a resize/breakpoint change.
+  useEffect(() => {
+    rowVirt.measure();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cardH, cols]);
 
   // "Find it on the floor" — scroll the highlighted item's row into view.
   const hlId = hlItem;
@@ -179,6 +200,10 @@ export function Catalog() {
           <aside className="shop-filters">
             <div className="shopf-group">
               <div className="shopf-h">Department</div>
+              {/* .shopf-optrow is a plain wrapper on desktop and a horizontal
+                  chip strip on phones — a vertical list of 12 departments
+                  would fill the first screen before a single product showed. */}
+              <div className="shopf-optrow">
               <button
                 className={`shopf-opt ${!cat.sector ? "on" : ""}`}
                 onClick={() => setCatSector(null)}
@@ -194,6 +219,7 @@ export function Catalog() {
                   {sectors[k]?.label}
                 </button>
               ))}
+              </div>
             </div>
 
             <div className="shopf-group">
