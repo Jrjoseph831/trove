@@ -21,6 +21,7 @@ import {
   lanesPerBay,
   lineLanes,
   listedUnitPrice,
+  makerVariantName,
   type Factory as FactoryLine,
 } from "@trove/engine";
 import type { LineModule } from "@trove/data";
@@ -75,10 +76,13 @@ function recipeText(out: Item): string {
 }
 
 export function Factory() {
-  const { state, buildLine, desk } = useTrove();
+  const { state, buildLine, desk, mySite } = useTrove();
   const [picking, setPicking] = useState(false);
   const [view, setView] = useState<"lines" | "floor">("lines");
   const mfg = manufacturingName(desk?.name ?? null);
+  // Under your own mark, the product links to YOU — not to the catalog brand
+  // that originated the design. Your line makes your product.
+  const myHref = mySite?.published && mySite.handle ? `/${mySite.handle}` : null;
 
   const full = state.factories.length >= state.floorSlots;
 
@@ -131,7 +135,7 @@ export function Factory() {
           )}
 
           {state.factories.map((f) => (
-            <LineBay key={f.id} f={f} mfg={mfg} />
+            <LineBay key={f.id} f={f} mfg={mfg} myHref={myHref} />
           ))}
 
           <button
@@ -161,7 +165,15 @@ function trim(s: string, n: number): string {
   return s.length > n ? `${s.slice(0, n - 1)}…` : s;
 }
 
-function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
+function LineBay({
+  f,
+  mfg,
+  myHref,
+}: {
+  f: FactoryLine;
+  mfg: string;
+  myHref: string | null;
+}) {
   const {
     state,
     factoryCycle,
@@ -289,9 +301,13 @@ function LineBay({ f, mfg }: { f: FactoryLine; mfg: string }) {
       <div className="bay-head">
         <div className="bay-title">
           <span className="bay-mfg">{mfg}</span>
-          <Link href={`/item/${out.id}`} className="it-link">
-            {out.name}
-          </Link>{" "}
+          {myHref ? (
+            <Link href={myHref} className="it-link">
+              {makerVariantName(out.name, mfg, out.id)}
+            </Link>
+          ) : (
+            <span className="it-link">{makerVariantName(out.name, mfg, out.id)}</span>
+          )}{" "}
           Line
         </div>
         <span className={`bay-status ${status}`}>

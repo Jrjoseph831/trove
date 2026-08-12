@@ -1288,6 +1288,11 @@ body {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+/* Your own mark, on goods off your own line — so a vault holding bought stock
+   and made stock separates at a glance, without reading the badges. */
+.bd-mine {
+  color: var(--accent);
+}
 
 /* ====================== CATALOG ====================== */
 /* Shared page header — .cat-head and .est-head are used across nearly

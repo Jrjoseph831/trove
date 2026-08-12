@@ -29,6 +29,8 @@ import {
   generateSandboxOrder,
   held,
   listedUnitPrice,
+  makerMark,
+  makerVariantName,
   mulberry32,
   netWorth,
   orderSupply,
@@ -1109,5 +1111,43 @@ describe("bulk supply orders — capital ahead of production", () => {
     S.cycle++;
     runProduction(S);
     expect(S.supplyOrders.length).toBe(0);
+  });
+});
+
+describe("maker attribution — goods belong to whoever made them", () => {
+  it("strips the corporate tail down to a product mark, stacked tails included", () => {
+    expect(makerMark("Shore Holdings")).toBe("Shore");
+    expect(makerMark("Aldousmont & Sons")).toBe("Aldousmont");
+    expect(makerMark("Fenwick and Co.")).toBe("Fenwick");
+    // A name that IS only a tail must not vanish into an empty mark.
+    expect(makerMark("Holdings")).toBe("Holdings");
+    expect(makerMark("Bell")).toBe("Bell");
+  });
+
+  it("keeps the base noun, so two firms' cowhide stays comparable", () => {
+    const a = makerVariantName("Cowhide", "Shore Holdings", 7);
+    const b = makerVariantName("Cowhide", "Kalea Ventures", 7);
+    expect(a.startsWith("Cowhide")).toBe(true);
+    expect(b.startsWith("Cowhide")).toBe(true);
+    // ...but they are visibly different products, each naming its maker.
+    expect(a).not.toBe(b);
+    expect(a).toContain("Shore");
+    expect(b).toContain("Kalea");
+  });
+
+  it("gives a firm ONE house designation across every SKU it makes", () => {
+    const names = ["Cowhide", "Silk Bolt", "Heavy Zipper Spool"].map((n, i) =>
+      makerVariantName(n, "Shore Holdings", i),
+    );
+    const designations = names.map((n) => n.split(" — ")[1]);
+    expect(new Set(designations).size).toBe(1);
+  });
+
+  it("is stable across calls and falls back to the bare name with no maker", () => {
+    expect(makerVariantName("Cowhide", "Shore Holdings", 7)).toBe(
+      makerVariantName("Cowhide", "Shore Holdings", 7),
+    );
+    expect(makerVariantName("Cowhide", null, 7)).toBe("Cowhide");
+    expect(makerVariantName("Cowhide", "   ", 7)).toBe("Cowhide");
   });
 });

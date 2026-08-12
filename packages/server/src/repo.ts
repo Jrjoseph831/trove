@@ -27,6 +27,7 @@ import {
   DEBT_RATE,
   emptyLedger,
   listedUnitPrice,
+  makerVariantName,
   START_CASH,
   STARTING_SLOTS,
   wallCycle,
@@ -558,7 +559,10 @@ export function storefrontOf(doc: WorldDoc, player: Player): CompanyProduct[] {
     const mult = player.listPrices?.[id] ?? 1;
     out.push({
       id,
-      name: catById.get(id)?.name ?? `#${id}`,
+      // These units came off THIS firm's line, so they're sold under this
+      // firm's own designation — not the catalog brand that originated the
+      // design. Two firms making the same good compete as themselves.
+      name: makerVariantName(catById.get(id)?.name ?? `#${id}`, player.name, id),
       // Same canonical formula the engine uses for listing sales + order pricing.
       price: Math.round(listedUnitPrice(it.value, mult, qcOn)),
       available: qty,

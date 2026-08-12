@@ -3,7 +3,12 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ArrowDown, ArrowUp, Globe, Pencil } from "lucide-react";
 import { getItem, recipeOf, sectorLabel, type SectorKey } from "@trove/data";
-import { listedUnitPrice, type SiteConfig, type SiteSectionId } from "@trove/engine";
+import {
+  listedUnitPrice,
+  makerVariantName,
+  type SiteConfig,
+  type SiteSectionId,
+} from "@trove/engine";
 import {
   fetchCompanies,
   fetchCompany,
@@ -36,7 +41,10 @@ const label = (key: string): string =>
 
 /** Build the signed-in player's own storefront from the live world state, so the
  *  owner gets an instant preview (their listed produced goods, at their price). */
-function ownStorefront(state: ReturnType<typeof useTrove>["state"]): CompanyProduct[] {
+function ownStorefront(
+  state: ReturnType<typeof useTrove>["state"],
+  holding: string | null | undefined,
+): CompanyProduct[] {
   const prod = state.producedQty ?? {};
   const qcOn = !!state.infra?.qc;
   const out: CompanyProduct[] = [];
@@ -50,7 +58,9 @@ function ownStorefront(state: ReturnType<typeof useTrove>["state"]): CompanyProd
     const mult = state.listPrices?.[id] ?? 1;
     out.push({
       id,
-      name: it.name,
+      // Same designation storefrontOf() stamps server-side, so the owner's
+      // preview names the goods exactly as buyers will see them.
+      name: makerVariantName(it.name, holding, id),
       // Same canonical formula the server storefront + engine use, so the
       // owner's preview matches exactly what others see and what orders charge.
       price: Math.round(listedUnitPrice(it.value, mult, qcOn)),
@@ -115,7 +125,7 @@ export function Companies() {
         />
       );
     }
-    const site = ownPreview(mySite, desk?.name ?? null, ownStorefront(state), state);
+    const site = ownPreview(mySite, desk?.name ?? null, ownStorefront(state, manufacturingName(desk?.name)), state);
     return (
       <SiteView
         site={site}
@@ -763,7 +773,7 @@ function Builder({ onDone }: { onDone: () => void }) {
   const preview = ownPreview(
     { handle, tagline, about, accent, sections },
     desk?.name ?? null,
-    ownStorefront(state),
+    ownStorefront(state, manufacturingName(desk?.name)),
     state,
   );
 

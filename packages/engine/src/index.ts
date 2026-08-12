@@ -75,6 +75,7 @@ export function itemFlow(led: Ledger, id: number): ItemFlow {
 
 export * from "./types";
 export * from "./orders";
+export * from "./maker";
 export { setRng, resetRng, rand, rexp, mulberry32 } from "./rng";
 export { listedUnitPrice, QC_PREMIUM } from "./pricing";
 
