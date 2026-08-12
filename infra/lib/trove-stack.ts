@@ -444,6 +444,21 @@ export class TroveStack extends Stack {
     const seed = fn("Seed", "seed.ts", Duration.seconds(20));
     market.grantReadWriteData(seed);
 
+    // ── Reset (DESTRUCTIVE, manual only) ────────────────────────────────────
+    // Wipes the world and deletes every player. Deliberately has NO API route
+    // and no schedule — the only way to run it is an explicit console/CLI
+    // invoke carrying the confirmation phrase, so it can't be reached by a
+    // request, a cron, or a mis-click. Timeout is generous because it deletes
+    // player records one at a time.
+    const reset = fn("Reset", "reset.ts", Duration.minutes(5));
+    market.grantReadWriteData(reset);
+    players.grantReadWriteData(reset);
+    new CfnOutput(this, "ResetFunctionName", {
+      value: reset.functionName,
+      description:
+        'DESTRUCTIVE. Wipes the world + every player. Invoke with {"confirm":"RESET THE WORLD"}.',
+    });
+
     // ── Outputs ─────────────────────────────────────────────────────────────
     new CfnOutput(this, "ApiUrl", {
       value: api.apiEndpoint,
