@@ -51,10 +51,28 @@ export function AcquireConfirm({
       onClose();
       return;
     }
+    // Show what actually went wrong. This used to assert "that's more than
+    // what's available" for EVERY failure, which reads as a quantity problem
+    // even when the truth is an expired session, a rejected case size or a
+    // server fault — and sends you dialling the number down forever.
     setError(
-      isEdition
-        ? "That piece was just claimed by someone else."
-        : "That's more than what's available — lower the quantity and try again.",
+      r.error === "insufficient funds"
+        ? "Not enough cash for that quantity."
+        : r.error === "sold out"
+          ? "That piece was just claimed by someone else."
+          : r.error === "not enough stock"
+            ? "That's more than what's available — lower the quantity and try again."
+            : r.error?.startsWith("sold in cases")
+              ? `This is ${r.error} — use the stepper.`
+              : r.error === "unauthorized"
+                ? "Your session expired. Sign in and try again."
+                : r.error === "network error"
+                  ? "Connection issue — try again."
+                  : r.error
+                    ? `Couldn't acquire that: ${r.error}`
+                    : isEdition
+                      ? "That piece was just claimed by someone else."
+                      : "That's more than what's available — lower the quantity and try again.",
     );
   };
 

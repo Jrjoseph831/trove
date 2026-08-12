@@ -206,7 +206,9 @@ interface Trove {
   openSector: (s: string) => void;
   /** item id to highlight in the catalog (from "Find it on the floor"). */
   hlItem: number | null;
-  buy: (id: number, qty?: number) => Promise<{ ok: boolean }>;
+  /** `error` carries the REAL reason a live buy failed, so callers can show it
+   *  instead of guessing. */
+  buy: (id: number, qty?: number) => Promise<{ ok: boolean; error?: string }>;
   sell: (id: number, qty?: number) => void;
   doBorrow: () => void;
   doRepay: () => void;
@@ -821,7 +823,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   );
 
   const buy = useCallback(
-    (id: number, qty = 1): Promise<{ ok: boolean }> => {
+    (id: number, qty = 1): Promise<{ ok: boolean; error?: string }> => {
       const n = Math.max(1, Math.floor(qty));
       // Sandbox: the local engine, instant and free.
       if (modeRef.current === "sandbox") {
@@ -883,7 +885,11 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
           );
           // refresh so a sold-out item immediately greys out for everyone
           await syncLive();
-          return { ok: false };
+          // Hand the REAL reason back. AcquireConfirm used to substitute a
+          // canned "that's more than what's available" for every failure,
+          // which actively misleads when the truth is an expired session or a
+          // server fault.
+          return { ok: false, error: r.error };
         }
         await syncLive();
         const it = worldsRef.current!.live.items.find((i) => i.id === id);
