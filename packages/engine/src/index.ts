@@ -1194,7 +1194,20 @@ function produceFactories(state: WorldState): void {
           break;
         }
       } else {
-        cashCost += Math.max(0, p.need - p.have) * p.it.value; // buy shortfall
+        // Buy the shortfall FROM THE FLOOR — which means the floor has to
+        // actually have it. This used to only charge cash and never touch
+        // stock, so market-sourced inputs were conjured from nothing: infinite
+        // supply, no scarcity, and therefore no price response no matter how
+        // much you consumed. That's what let a line print money forever at a
+        // fixed margin, and it's why feeder lines and standing supply orders
+        // had no reason to exist. Now scaling up genuinely competes for
+        // material — with AI companies and with your own other lines.
+        const short = Math.max(0, p.need - p.have);
+        if (short > p.it.stock) {
+          ok = false; // the floor can't supply it this cycle
+          break;
+        }
+        cashCost += short * p.it.value;
       }
     }
     if (!ok || state.cash < cashCost) {
@@ -1203,7 +1216,11 @@ function produceFactories(state: WorldState): void {
     }
     for (const p of inputs) {
       if (p.inHouse) takeYou(p.it!, p.need);
-      else if (p.have > 0) takeYou(p.it!, Math.min(p.have, p.need));
+      else {
+        if (p.have > 0) takeYou(p.it!, Math.min(p.have, p.need));
+        const short = Math.max(0, p.need - p.have);
+        if (short > 0) p.it!.stock = Math.max(0, p.it!.stock - short);
+      }
     }
     state.cash -= cashCost;
     state.ledger.upkeep += cashCost; // input spend
