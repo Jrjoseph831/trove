@@ -31,10 +31,14 @@ import {
   listedUnitPrice,
   mulberry32,
   netWorth,
+  orderSupply,
   playerBuy,
   playerSell,
   priceItem,
   reconcileCompanies,
+  runProduction,
+  setReorder,
+  supplyQuote,
   representativeItem,
   resetRng,
   rippleMultiplier,
@@ -988,5 +992,104 @@ describe("telegraphed market events", () => {
     const S = createWorld(0);
     setMarketEvent(S, eventForSlot(999, sectorKeys).fireAt + 1000);
     if (S.activeEvent) expect(sectorKeys).toContain(S.activeEvent.sector);
+  });
+});
+
+describe("bulk supply orders — capital ahead of production", () => {
+  /** A world with a producible good and its primary input material. */
+  function supplyWorld() {
+    const S = createWorld();
+    S.cash = 5_000_000;
+    S.floorSlots = 4;
+    const out = S.items.find((i) => {
+      const r = recipeOf(i);
+      return !!r && r.inputs.length > 0 && i.base > 200 && i.base < 3000;
+    })!;
+    const matId = recipeOf(out)!.inputs[0]!.itemId;
+    const mat = S.items.find((x) => x.id === matId)!;
+    return { S, out, mat };
+  }
+
+  it("quotes a cheaper unit price for volume, and a longer lead for it", () => {
+    const { S, mat } = supplyWorld();
+    const small = supplyQuote(mat, 500);
+    const large = supplyQuote(mat, 80_000);
+    expect(small.discount).toBe(0);
+    expect(large.discount).toBeGreaterThan(small.discount);
+    expect(large.unit).toBeLessThan(small.unit);
+    // The discount is exactly what you pay for by waiting.
+    expect(large.lead).toBeGreaterThan(small.lead);
+    expect(small.unit).toBeCloseTo(mat.value, 6);
+    void S;
+  });
+
+  it("charges on order and delivers into the vault only after the lead time", () => {
+    const { S, mat } = supplyWorld();
+    const qty = Math.min(2000, Math.floor(mat.stock));
+    const cash0 = S.cash;
+    const held0 = held(mat, "YOU");
+
+    const order = orderSupply(S, mat.id, qty)!;
+    expect(order).toBeTruthy();
+    expect(S.cash).toBeCloseTo(cash0 - order.paid, 4);
+    // Paid for, but NOT yet in hand — that gap is the whole mechanic.
+    expect(held(mat, "YOU")).toBe(held0);
+
+    while (S.cycle < order.arrivesCycle) {
+      S.cycle++;
+      runProduction(S);
+      if (S.cycle < order.arrivesCycle) {
+        expect(S.supplyOrders.length).toBe(1);
+      }
+    }
+    expect(held(mat, "YOU")).toBeGreaterThanOrEqual(held0 + qty);
+    expect(S.supplyOrders.length).toBe(0);
+  });
+
+  it("takes the material off the floor at order time, so it can't be double-sold", () => {
+    const { S, mat } = supplyWorld();
+    const qty = Math.min(1500, Math.floor(mat.stock));
+    const stock0 = mat.stock;
+    orderSupply(S, mat.id, qty);
+    expect(mat.stock).toBeCloseTo(stock0 - qty, 4);
+  });
+
+  it("refuses to order more than the floor actually holds", () => {
+    const { S, mat } = supplyWorld();
+    expect(orderSupply(S, mat.id, Math.ceil(mat.stock) + 1)).toBeNull();
+  });
+
+  it("refuses an order the player can't pay for, leaving cash and stock untouched", () => {
+    const { S, mat } = supplyWorld();
+    S.cash = 1;
+    const stock0 = mat.stock;
+    expect(orderSupply(S, mat.id, Math.min(1000, Math.floor(mat.stock)))).toBeNull();
+    expect(S.cash).toBe(1);
+    expect(mat.stock).toBe(stock0);
+  });
+
+  it("auto-reorders when the vault dips below the floor, and not while one is inbound", () => {
+    const { S, mat } = supplyWorld();
+    const qty = Math.min(1000, Math.floor(mat.stock));
+    setReorder(S, mat.id, 500, qty);
+
+    S.cycle++;
+    runProduction(S); // vault is empty → below floor → one order placed
+    expect(S.supplyOrders.length).toBe(1);
+
+    // A second tick must NOT stack another order for the same material.
+    S.cycle++;
+    runProduction(S);
+    expect(S.supplyOrders.filter((o) => o.itemId === mat.id).length).toBeLessThanOrEqual(1);
+  });
+
+  it("clearing a reorder rule stops it firing", () => {
+    const { S, mat } = supplyWorld();
+    setReorder(S, mat.id, 500, 1000);
+    setReorder(S, mat.id, 0, 0);
+    expect(S.reorders.length).toBe(0);
+    S.cycle++;
+    runProduction(S);
+    expect(S.supplyOrders.length).toBe(0);
   });
 });

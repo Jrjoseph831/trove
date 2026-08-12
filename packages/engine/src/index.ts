@@ -40,6 +40,7 @@ import type {
   ItemFlow,
   Ledger,
   RuntimeItem,
+  SupplyOrder,
   Trader,
   WorldState,
 } from "./types";
@@ -242,6 +243,8 @@ export function freshState(): WorldState {
     front: null,
     traders: freshTraders(),
     factories: [],
+    supplyOrders: [],
+    reorders: [],
     properties: [],
     stakes: {},
     floorSlots: STARTING_SLOTS,
@@ -815,8 +818,113 @@ export function settleCycle(state: WorldState): void {
  * production-tick index (wallProdCycle) so online checks line up with build.
  */
 export function runProduction(state: WorldState): void {
+  deliverSupplyOrders(state);
+  runReorders(state);
   produceFactories(state);
   sellListings(state);
+}
+
+// ── Bulk material supply ────────────────────────────────────────────────────
+// Buying ahead in volume is cheaper per unit than the per-tick market price a
+// line otherwise pays, but the cash leaves now and the goods arrive later. That
+// trade — capital tied up in inventory versus spent on another line — is the
+// decision the factory game is built around, and it's what gives a big balance
+// somewhere to go besides "build another printer".
+
+/** Volume discount tiers: order more, pay less per unit. */
+const SUPPLY_TIERS: { min: number; discount: number; lead: number }[] = [
+  { min: 50_000, discount: 0.2, lead: 6 },
+  { min: 10_000, discount: 0.12, lead: 4 },
+  { min: 1_000, discount: 0.05, lead: 2 },
+  { min: 0, discount: 0, lead: 1 },
+];
+
+export function supplyQuote(
+  it: RuntimeItem,
+  qty: number,
+): { unit: number; total: number; discount: number; lead: number } {
+  const tier = SUPPLY_TIERS.find((t) => qty >= t.min) ?? SUPPLY_TIERS[SUPPLY_TIERS.length - 1]!;
+  const unit = it.value * (1 - tier.discount);
+  return {
+    unit,
+    total: Math.round(unit * qty),
+    discount: tier.discount,
+    lead: tier.lead,
+  };
+}
+
+/** Place a bulk order: pay now, delivered into the vault after the lead time.
+ *  Bounded by the floor's actual stock — you can't order what nobody has. */
+export function orderSupply(
+  state: WorldState,
+  itemId: number,
+  qty: number,
+): SupplyOrder | null {
+  const it = state.items.find((x) => x.id === itemId);
+  if (!it || it.edition !== null) return null;
+  const n = Math.floor(qty);
+  if (n < 1 || n > it.stock) return null;
+  const q = supplyQuote(it, n);
+  if (q.total > state.cash) return null;
+
+  state.cash -= q.total;
+  state.ledger.upkeep += q.total; // material spend, same bucket as line inputs
+  it.stock = Math.max(0, it.stock - n); // taken off the floor at order time
+  const order: SupplyOrder = {
+    id: `so_${state.cycle}_${itemId}_${Math.floor(rand() * 1e6)}`,
+    itemId,
+    qty: n,
+    paid: q.total,
+    unit: q.unit,
+    arrivesCycle: state.cycle + q.lead,
+  };
+  (state.supplyOrders ??= []).push(order);
+  pushLog(state, "YOU", `ordered ${n.toLocaleString()}×`, it.name);
+  return order;
+}
+
+/** Move any arrived orders into the vault. */
+function deliverSupplyOrders(state: WorldState): void {
+  const pending = state.supplyOrders ?? [];
+  if (pending.length === 0) return;
+  const still: SupplyOrder[] = [];
+  for (const o of pending) {
+    if (state.cycle < o.arrivesCycle) {
+      still.push(o);
+      continue;
+    }
+    const it = state.items.find((x) => x.id === o.itemId);
+    if (it) giveYou(it, o.qty);
+  }
+  state.supplyOrders = still;
+}
+
+/** Auto-reorder: top a material back up whenever the vault dips below its
+ *  floor and nothing is already inbound for it. */
+function runReorders(state: WorldState): void {
+  const rules = state.reorders ?? [];
+  if (rules.length === 0) return;
+  const inbound = new Set((state.supplyOrders ?? []).map((o) => o.itemId));
+  for (const r of rules) {
+    if (inbound.has(r.itemId)) continue;
+    const it = state.items.find((x) => x.id === r.itemId);
+    if (!it) continue;
+    if (ownedYou(it) >= r.floor) continue;
+    orderSupply(state, r.itemId, r.qty); // silently skipped if unaffordable
+  }
+}
+
+/** Set (or clear, with qty <= 0) an auto-reorder policy for a material. */
+export function setReorder(
+  state: WorldState,
+  itemId: number,
+  floor: number,
+  qty: number,
+): void {
+  state.reorders ??= [];
+  const next = state.reorders.filter((r) => r.itemId !== itemId);
+  if (qty > 0 && floor > 0) next.push({ itemId, floor, qty });
+  state.reorders = next;
 }
 
 /**

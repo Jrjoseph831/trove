@@ -211,6 +211,32 @@ export interface PvpOrder {
   updatedAt: number;
 }
 
+/** A bulk material purchase placed ahead of production. Paid for on order,
+ *  delivered into the vault after a lead time that scales with size — so
+ *  committing capital early is what buys you a cheaper unit price and a
+ *  buffer against the floor running dry. */
+export interface SupplyOrder {
+  id: string;
+  itemId: number;
+  qty: number;
+  /** Total cash already paid (discounted). */
+  paid: number;
+  /** Effective per-unit price after the volume discount. */
+  unit: number;
+  /** Production tick (wallProdCycle in live, state.cycle in sandbox) it lands. */
+  arrivesCycle: number;
+}
+
+/** Standing instruction to re-buy a material whenever the vault runs low.
+ *  This is what turns supply from a chore into a policy you set once. */
+export interface ReorderRule {
+  itemId: number;
+  /** Place an order when on-hand falls below this. */
+  floor: number;
+  /** How many units to order each time. */
+  qty: number;
+}
+
 /** Floor-wide infrastructure upgrades (one-time buys that boost every line). */
 export interface Infra {
   /** Power Plant — −20% upkeep on every line. */
@@ -281,6 +307,10 @@ export interface WorldState {
   traders: Trader[];
   /** Player-owned production lines. */
   factories: Factory[];
+  /** Bulk material orders paid for and in transit to the vault. */
+  supplyOrders: SupplyOrder[];
+  /** Auto-reorder policies, keyed by material item id. */
+  reorders: ReorderRule[];
   /** Player-owned real estate (Property Market). */
   properties: OwnedProperty[];
   /** Equity stakes in AI houses (Deal Room): company name → fraction owned 0..1.
