@@ -120,6 +120,17 @@ function overlayWorld(live: WorldState, api: ApiWorld): void {
     it.stock = s.stock;
     it.remaining = s.remaining ?? Infinity;
   }
+  // Stamp the server's valuation onto each house. /world has always synced
+  // prices and never treasuries, so every client had been privately simulating
+  // all of them since page load — which mispriced Deal Room stakes and made
+  // the board disagree between accounts.
+  if (api.traders?.length) {
+    const byName = new Map(api.traders.map((t) => [t.name, t.value]));
+    for (const t of live.traders) {
+      const v = byName.get(t.name);
+      if (v !== undefined) t.valuation = v;
+    }
+  }
   live.cycle = api.cycle;
   if (api.front) live.front = { ...live.front, ...api.front } as WorldState["front"];
   if (api.archive) live.archive = api.archive;

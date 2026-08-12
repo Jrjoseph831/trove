@@ -33,9 +33,15 @@ export interface ApiFront {
   body: string;
   cycle: number;
 }
+export interface ApiTrader {
+  name: string;
+  /** cash + holdings, valued by the server (the client cannot compute it). */
+  value: number;
+}
 export interface ApiWorld {
   cycle: number;
   items: ApiItem[];
+  traders?: ApiTrader[];
   front: ApiFront | null;
   archive: { head: string; kick: string; cycle: number }[];
   log: LogEntry[];

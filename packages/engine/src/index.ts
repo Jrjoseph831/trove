@@ -375,6 +375,13 @@ export function netWorth(state: WorldState, owner: string): number {
 export function companyValuation(state: WorldState, name: string): number {
   const t = state.traders.find((x) => x.name === name);
   if (!t) return 0;
+  // In live, the server stamps the authoritative figure (see PublicTrader):
+  // cash and holdings live only in the world doc, so a client computing this
+  // itself is pricing off a copy of the house it has been drifting since page
+  // load — which is how the Deal Room could quote a price the server then
+  // rejected as unaffordable. Sandbox has no server and leaves it unset, so
+  // the local computation stands there.
+  if (Number.isFinite(t.valuation)) return t.valuation!;
   return t.cash + assetsValue(state, name);
 }
 

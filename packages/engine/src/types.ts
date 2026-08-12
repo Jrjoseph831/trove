@@ -33,6 +33,15 @@ export interface Trader {
   tier?: CompanyTier;
   /** Revenue added to the treasury each cycle (keeps the big names afloat). */
   income?: number;
+  /**
+   * The SERVER's valuation of this house (cash + holdings), stamped onto the
+   * client's copy from /world. Display/pricing on the client only — never
+   * persisted, and absent in sandbox where the local engine owns the whole
+   * world and can work it out itself. It exists because a live client cannot:
+   * it never learns who owns what, so pricing a firm locally drifts from the
+   * shared world from the moment the page loads.
+   */
+  valuation?: number;
 }
 
 /** A production line the player owns. Economics (rate/upkeep/recipe) are derived
