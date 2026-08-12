@@ -11,6 +11,7 @@
  * company that buys on the floor is the same one that can send you a contract.
  */
 import companiesJson from "../catalog/companies.json" with { type: "json" };
+import housesJson from "../catalog/houses.json" with { type: "json" };
 import type { SectorKey } from "./types";
 
 export type CompanyTier = "boutique" | "mid" | "large" | "titan";
@@ -78,9 +79,22 @@ const houses: CompanySpec[] = Object.entries(
   companiesJson as Record<string, RawCompany>,
 ).map(([name, c]) => ({ name, sector: c.homeSector ?? null, tier: tierFor(name) }));
 
+/**
+ * The trading houses: brokers, hauliers, warehouses, financiers, wholesalers and
+ * salvage buyers that move what the brands make but own no catalog line of their
+ * own. Kept in their own file because the shared world is ONE 400KB DynamoDB
+ * record — a firm costs ~115 bytes of that budget, a product ~87 — so the
+ * economy can grow to hundreds of companies but not to thousands of SKUs.
+ * See scripts/generate-houses.mjs.
+ */
+const tradingHouses: CompanySpec[] = Object.entries(
+  housesJson as Record<string, RawCompany>,
+).map(([name, c]) => ({ name, sector: c.homeSector ?? null, tier: tierFor(name) }));
+
 export const companyRoster: CompanySpec[] = [
   { name: "Open_Index", sector: null, tier: "titan" }, // broad index — the anchor
   ...houses,
+  ...tradingHouses,
 ];
 
 const byName = new Map(companyRoster.map((c) => [c.name, c]));

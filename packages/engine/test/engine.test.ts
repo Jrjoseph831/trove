@@ -798,7 +798,11 @@ describe("AI company finances reconcile", () => {
       }
     }
     expect(violations).toEqual([]);
-  }, 20000);
+    // 200 cycles with EVERY firm acting is ~100k trades — deliberately far
+    // heavier than the live world, where the cron fires 6 actions per 15 min.
+    // The roster grew from 101 firms to 501, so this budget grows with it. The
+    // thing it's actually guarding costs 8.7ms per settleCycle, measured.
+  }, 90000);
 });
 
 describe("production + listings stay consistent", () => {
@@ -997,7 +1001,7 @@ describe("headless sim smoke", () => {
     expect(Number.isFinite(netWorth(S, "YOU"))).toBe(true);
     expect(assetsValue(S, "YOU")).toBeGreaterThanOrEqual(0);
     expect(S.front).not.toBeNull();
-  });
+  }, 30000);
 });
 
 describe("telegraphed market events", () => {
