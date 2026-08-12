@@ -246,18 +246,26 @@ function timeLeft(expiresAt: number): string {
 /** A live negotiation: their standing offer, your ask, accept/counter/walk. */
 function OfferCard({ o }: { o: DeskOrder }) {
   const { acceptOrder, counterOrder, declineOrder, state } = useTrove();
-  // Default ask: a healthy premium over your sourcing cost.
+
+  const makeCost = makeCostOf(state, o);
+  // What filling this contract actually costs YOU: your production cost if you
+  // make it, otherwise the floor price, because buying the units is the only
+  // way to deliver them. Resellers used to get no margin line at all, so an
+  // offer under water looked identical to a good one.
+  const cost = makeCost ?? o.marketValue;
+  const profit = o.companyOffer - cost;
+  const margin = o.companyOffer > 0 ? Math.round((profit / o.companyOffer) * 100) : 0;
+
+  // Default ask: a premium over cost. Tighter for reselling — a buyer's
+  // ceiling on goods you don't make sits ~20% over the floor price, so opening
+  // at +30% there just gets a flat refusal.
   const suggested = Math.max(
     o.companyOffer + 1,
-    Math.round(o.marketValue * 1.3),
+    Math.round(cost * (o.youProduce ? 1.3 : 1.15)),
   );
   const [bid, setBid] = useState(String(suggested));
   const bidNum = Math.round(Number(bid));
   const valid = Number.isFinite(bidNum) && bidNum > 0;
-
-  const makeCost = makeCostOf(state, o);
-  const profit = makeCost != null ? o.companyOffer - makeCost : null;
-  const margin = profit != null ? Math.round((profit / o.companyOffer) * 100) : 0;
 
   return (
     <div className="ordercard offer">
@@ -286,7 +294,7 @@ function OfferCard({ o }: { o: DeskOrder }) {
           )}
         </span>
       </div>
-      {makeCost != null && profit != null && (
+      {makeCost != null && (
         <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
           {profit >= 0 ? "Profit if you make " : "Loss if you make "}
           <b>
@@ -376,6 +384,15 @@ export function Desk() {
             Reputation <b>{desk.reputation}</b>
           </div>
         </div>
+
+        {/* Said once, here, rather than repeated on every card: clients open
+            low on purpose, and a contract for goods you don't make has to beat
+            what the floor charges you to source them. */}
+        <p className="desk-note">
+          Clients open below what they&apos;ll pay. For goods you don&apos;t make,
+          you buy the units on the floor to fill the order — so counter above the
+          <b> to source</b> figure, or the contract costs you money.
+        </p>
 
         <Automation />
 

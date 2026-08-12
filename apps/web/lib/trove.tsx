@@ -14,6 +14,7 @@ import {
   deskAction,
   factoryAction,
   fetchDesk,
+  ApiError,
   fetchPortfolio,
   fetchWorld,
   postTrade,
@@ -43,6 +44,7 @@ import {
 } from "./auth";
 import { AUTH_ENABLED, sandboxEnabled } from "./config";
 import { manufacturingName } from "./format";
+import { buildRecap, type Recap } from "./recap";
 import {
   advance,
   borrow,
@@ -71,6 +73,8 @@ import {
   autoNegotiate,
   autoFulfillOrders,
   setDeskAuto as engineSetDeskAuto,
+  orderSupply as engineOrderSupply,
+  setReorder as engineSetReorder,
   heldOfProduct,
   producesProduct,
   playerBuy,
@@ -94,6 +98,13 @@ function liveWorld(): WorldState {
   const w = createWorld();
   w.cycle = wallCycle();
   w.cycleFrac = wallCycleFrac();
+  // createWorld() runs warmup settlements locally to get prices/news into a
+  // plausible state — which also fills .log with activity that never actually
+  // happened in the shared world. Prices get overwritten by the first /world
+  // poll so that simulation is harmless, but floor activity is server-owned
+  // and reads as REAL to anyone looking at it. Start empty and show nothing
+  // until the server says otherwise, rather than showing invented trades.
+  w.log = [];
   return w;
 }
 
@@ -109,9 +120,21 @@ function overlayWorld(live: WorldState, api: ApiWorld): void {
     it.stock = s.stock;
     it.remaining = s.remaining ?? Infinity;
   }
+  // Stamp the server's valuation onto each house. /world has always synced
+  // prices and never treasuries, so every client had been privately simulating
+  // all of them since page load — which mispriced Deal Room stakes and made
+  // the board disagree between accounts.
+  if (api.traders?.length) {
+    const byName = new Map(api.traders.map((t) => [t.name, t.value]));
+    for (const t of live.traders) {
+      const v = byName.get(t.name);
+      if (v !== undefined) t.valuation = v;
+    }
+  }
   live.cycle = api.cycle;
   if (api.front) live.front = { ...live.front, ...api.front } as WorldState["front"];
   if (api.archive) live.archive = api.archive;
+  if (api.log) live.log = api.log;
 }
 
 /** Overlay the signed-in player's own holdings/cash AND factory/sales/report
@@ -132,6 +155,8 @@ function overlayPortfolio(live: WorldState, p: ApiPortfolio): void {
   if (p.floorSlots !== undefined) live.floorSlots = p.floorSlots;
   if (p.infra) live.infra = p.infra;
   if (p.factories) live.factories = p.factories;
+  if (p.supplyOrders) live.supplyOrders = p.supplyOrders;
+  if (p.reorders) live.reorders = p.reorders;
   if (p.properties) live.properties = p.properties;
   if (p.stakes) live.stakes = p.stakes;
   if (p.listPrices) live.listPrices = p.listPrices;
@@ -175,6 +200,8 @@ interface Trove {
   navOpen: boolean;
   reveal: RevealInfo | null;
   toast: string | null;
+  /** Raise a transient message (same channel trades use). */
+  notify: (msg: string) => void;
   /** bumped each render tick — read it to subscribe to live updates. */
   tick: number;
   cat: { sector: string | null; brand: string | null; search: string };
@@ -190,7 +217,9 @@ interface Trove {
   openSector: (s: string) => void;
   /** item id to highlight in the catalog (from "Find it on the floor"). */
   hlItem: number | null;
-  buy: (id: number, qty?: number) => void;
+  /** `error` carries the REAL reason a live buy failed, so callers can show it
+   *  instead of guessing. */
+  buy: (id: number, qty?: number) => Promise<{ ok: boolean; error?: string }>;
   sell: (id: number, qty?: number) => void;
   doBorrow: () => void;
   doRepay: () => void;
@@ -208,9 +237,21 @@ interface Trove {
   expandFloor: () => void;
   routeLine: (id: string, bay: number) => void;
   setLineSource: (lineId: string, inputItemId: number, feederId: string | null) => void;
+  /** Standing supply: auto-draw this input from another real player's live
+   *  storefront each production tick. Live-world only — sandbox has no other
+   *  real players. `sellerHandle: null` clears it. */
+  setStandingLineSource: (
+    lineId: string,
+    inputItemId: number,
+    sellerHandle: string | null,
+  ) => void;
   setSellPrice: (itemId: number, mult: number) => void;
   setListing: (itemId: number, on: boolean) => void;
   buyUpgrade: (id: "power" | "router" | "qc") => void;
+  /** Bulk-buy a material ahead of production; arrives in the vault after a lead time. */
+  orderSupply: (itemId: number, qty: number) => void;
+  /** Standing top-up policy for a material (qty 0 clears it). */
+  setReorder: (itemId: number, floor: number, qty: number) => void;
   setDeskAutomation: (patch: {
     specialist?: boolean;
     autoFulfill?: boolean;
@@ -236,8 +277,15 @@ interface Trove {
   /** Latest daily-report card to surface (sandbox), or null. */
   dailyReport: Report | null;
   dismissDailyReport: () => void;
+  /** "While You Were Away" recap (live only), or null once dismissed/expired. */
+  recap: Recap | null;
+  dismissRecap: () => void;
   /** The signed-in player's own company-site config (null until loaded / set). */
   mySite: SiteConfig | null;
+  /** The SERVER's valuation of your firm. The client can only approximate it —
+   *  it never sees other firms' treasuries — so anything comparing you against
+   *  the rest of the world must use this, not a local recompute. */
+  serverNet: number | null;
   /** Save the player's site config; resolves to the updated public view or null. */
   saveSite: (patch: Partial<SiteConfig>) => Promise<CompanySite | null>;
   /** Player-to-player order book (incoming as seller, outgoing as buyer). */
@@ -345,9 +393,15 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [desk, setDesk] = useState<Desk | null>(null);
   const [renaming, setRenaming] = useState(false);
   const [dailyReport, setDailyReport] = useState<Report | null>(null);
+  const [recap, setRecap] = useState<Recap | null>(null);
   const [mySite, setMySite] = useState<SiteConfig | null>(null);
+  const [serverNet, setServerNet] = useState<number | null>(null);
   const [orders, setOrders] = useState<OrderBook | null>(null);
   const lastReportRef = useRef(-1);
+  const recapCheckedRef = useRef(false);
+  /** True while the portfolio fetch is failing, so the warning fires once per
+   *  outage instead of on every 15s poll. */
+  const portfolioDownRef = useRef(false);
 
   const modeRef = useRef(mode);
   modeRef.current = mode;
@@ -395,12 +449,53 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         if (isSignedIn()) {
           try {
             const p = await fetchPortfolio();
+            portfolioDownRef.current = false;
             if (alive) {
               overlayPortfolio(worldsRef.current!.live, p);
               setMySite(p.site ?? null);
+              setServerNet(p.netWorth);
+              if (!recapCheckedRef.current) {
+                recapCheckedRef.current = true;
+                const built = buildRecap(
+                  p.awaySince,
+                  Date.now(),
+                  p.reports ?? [],
+                  worldsRef.current!.live.archive,
+                  p.netWorth,
+                );
+                if (built) setRecap(built);
+              }
             }
-          } catch {
-            /* portfolio is best-effort */
+          } catch (err) {
+            // A 401 here means the session expired, and swallowing it is
+            // actively harmful: the client keeps rendering the untouched
+            // starting world, so the player sees a healthy-looking $25,000
+            // account that is not theirs, while every write silently fails.
+            // Try a refresh; if the session really is gone, drop to signed-out
+            // so they're told to sign in instead of trusting a phantom balance.
+            if (err instanceof ApiError && err.status === 401) {
+              await refreshIfNeeded();
+              if (alive && !isSignedIn()) {
+                setSignedIn(false);
+                showToast("Session expired — sign in again");
+              }
+            } else if (alive && !portfolioDownRef.current) {
+              // Everything that isn't a 401 used to be swallowed as
+              // "best-effort" — but the harm is identical to the 401 case
+              // described above: the untouched starting world stays on screen,
+              // so cash reads $25,000 and the vault reads empty while the real
+              // account diverges. Trades still land server-side, which makes it
+              // look like buying does nothing. Say it out loud, once per
+              // outage rather than every 15s poll.
+              portfolioDownRef.current = true;
+              const why =
+                err instanceof ApiError
+                  ? err.detail
+                    ? `: ${err.detail}`
+                    : ` (${err.status})`
+                  : "";
+              showToast(`Can't load your holdings${why} — figures may be stale`);
+            }
           }
         }
         refresh();
@@ -513,6 +608,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   }, [mode]);
 
   const dismissDailyReport = useCallback(() => setDailyReport(null), []);
+  const dismissRecap = useCallback(() => setRecap(null), []);
 
   // Deep link: /?brand=<slug> opens the Catalog filtered to that company.
   useEffect(() => {
@@ -596,6 +692,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         const p = await fetchPortfolio();
         overlayPortfolio(worldsRef.current!.live, p);
         setMySite(p.site ?? null);
+              setServerNet(p.netWorth);
       }
     } catch {
       /* best-effort */
@@ -763,10 +860,21 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   );
 
   const buy = useCallback(
-    (id: number, qty = 1) => {
+    (id: number, qty = 1): Promise<{ ok: boolean; error?: string }> => {
       const n = Math.max(1, Math.floor(qty));
       // Sandbox: the local engine, instant and free.
       if (modeRef.current === "sandbox") {
+        const it = worldsRef.current!.sandbox.items.find((i) => i.id === id);
+        if (!it) {
+          showToast("Can't acquire that");
+          return Promise.resolve({ ok: false });
+        }
+        // All-or-nothing, matching the live server's contract — check BEFORE
+        // buying anything, so a too-greedy request never partial-fills while
+        // still reporting failure (that would silently buy some units out
+        // from under an error message telling the player nothing happened).
+        const avail = it.edition !== null ? (it.remaining > 0 ? 1 : 0) : it.stock;
+        if (n > avail) return Promise.resolve({ ok: false });
         let r: ReturnType<typeof playerBuy> = null;
         let got = 0;
         for (let i = 0; i < n; i++) {
@@ -777,47 +885,58 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         }
         if (!r) {
           showToast("Can't acquire that");
-          return;
+          return Promise.resolve({ ok: false });
         }
         setReveal({ it: r.it, copyNo: r.copyNo, qty: got });
         refresh();
-        return;
+        return Promise.resolve({ ok: got === n });
       }
       // Live: the Acquire gate — sign in, then trade against the shared world.
       if (!AUTH_ENABLED) {
         showToast("Trading opens soon");
-        return;
+        return Promise.resolve({ ok: false });
       }
       if (!isSignedIn()) {
         showToast("Sign in to acquire");
         authSignIn();
-        return;
+        return Promise.resolve({ ok: false });
       }
-      void postTrade("buy", id, n).then(async (r) => {
+      return postTrade("buy", id, n).then(async (r) => {
         if ("error" in r) {
           if (r.status === 401) {
             authSignIn();
-            return;
+            return { ok: false };
           }
           showToast(
             r.error === "insufficient funds"
               ? "Not enough cash"
               : r.error === "sold out"
                 ? "Just sold out"
-                : r.error === "network error"
-                  ? "Connection issue — try again"
-                  : r.error.startsWith("sold in cases")
-                    ? `This is ${r.error}`
-                    : "Couldn't acquire that",
+                : r.error === "not enough stock"
+                  ? "Not enough left"
+                  : r.error === "network error"
+                    ? "Connection issue — try again"
+                    : r.error.startsWith("sold in cases")
+                      ? `This is ${r.error}`
+                      : "Couldn't acquire that",
           );
           // refresh so a sold-out item immediately greys out for everyone
           await syncLive();
-          return;
+          // Hand the REAL reason back. AcquireConfirm used to substitute a
+          // canned "that's more than what's available" for every failure,
+          // which actively misleads when the truth is an expired session or a
+          // server fault.
+          return { ok: false, error: r.error };
         }
         await syncLive();
         const it = worldsRef.current!.live.items.find((i) => i.id === id);
         if (it) setReveal({ it, copyNo: r.copyNo, qty: r.qty });
         else showToast("Acquired");
+        // r.qty is what the server actually fulfilled — an edition item
+        // always fulfills exactly 1 regardless of what was requested, so
+        // this catches an over-requested edition the same way a stock
+        // rejection catches an over-requested commodity.
+        return { ok: r.qty === n };
       });
     },
     [refresh, showToast, syncLive],
@@ -1123,6 +1242,38 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh, showToast, liveFactory],
   );
 
+  const orderSupply = useCallback(
+    (itemId: number, qty: number) => {
+      if (modeRef.current === "live") {
+        void liveFactory(
+          { action: "order-supply", itemId, qty },
+          "Order placed — in transit",
+          "Couldn't place that order",
+        );
+        return;
+      }
+      if (engineOrderSupply(worldsRef.current!.sandbox, itemId, qty)) {
+        showToast("Order placed — in transit");
+        refresh();
+      } else {
+        showToast("Couldn't place that order");
+      }
+    },
+    [refresh, showToast, liveFactory],
+  );
+
+  const setReorder = useCallback(
+    (itemId: number, floor: number, qty: number) => {
+      if (modeRef.current === "live") {
+        void liveFactory({ action: "reorder", itemId, floor, qty });
+        return;
+      }
+      engineSetReorder(worldsRef.current!.sandbox, itemId, floor, qty);
+      refresh();
+    },
+    [refresh, liveFactory],
+  );
+
   const setLineSource = useCallback(
     (lineId: string, inputItemId: number, feederId: string | null) => {
       if (modeRef.current === "live") {
@@ -1133,6 +1284,21 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         refresh();
     },
     [refresh, liveFactory],
+  );
+
+  const setStandingLineSource = useCallback(
+    (lineId: string, inputItemId: number, sellerHandle: string | null) => {
+      // Sandbox has no other real players — there's nothing to source from.
+      if (modeRef.current !== "live") {
+        showToast("Standing sources need a live shift — sign in to set one up.");
+        return;
+      }
+      void liveFactory(
+        { action: "standing-source", lineId, inputItemId, sellerHandle },
+        sellerHandle ? "Standing source set" : "Standing source cleared",
+      );
+    },
+    [liveFactory, showToast],
   );
 
   const setSellPrice = useCallback(
@@ -1165,6 +1331,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const signOut = useCallback(() => {
     authSignOut();
     setSignedIn(false);
+    recapCheckedRef.current = false;
+    setRecap(null);
   }, []);
   const closeReveal = useCallback(() => setReveal(null), []);
 
@@ -1322,6 +1490,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       navOpen,
       reveal,
       toast,
+      notify: showToast,
       tick,
       cat: { sector: catSector, brand: catBrand, search: catSearch },
       setMode,
@@ -1349,9 +1518,12 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       expandFloor,
       routeLine,
       setLineSource,
+      setStandingLineSource,
       setSellPrice,
       setListing,
       buyUpgrade,
+      orderSupply,
+      setReorder,
       setDeskAutomation,
       closeReveal,
       signedIn,
@@ -1369,7 +1541,10 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       cancelRename,
       dailyReport,
       dismissDailyReport,
+      recap,
+      dismissRecap,
       mySite,
+      serverNet,
       saveSite,
       orders,
       requestOrder,
@@ -1385,6 +1560,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       navOpen,
       reveal,
       toast,
+      showToast,
       tick,
       catSector,
       catBrand,
@@ -1408,9 +1584,12 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       expandFloor,
       routeLine,
       setLineSource,
+      setStandingLineSource,
       setSellPrice,
       setListing,
       buyUpgrade,
+      orderSupply,
+      setReorder,
       setDeskAutomation,
       closeReveal,
       signedIn,
@@ -1428,7 +1607,10 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       cancelRename,
       dailyReport,
       dismissDailyReport,
+      recap,
+      dismissRecap,
       mySite,
+      serverNet,
       saveSite,
       orders,
       requestOrder,

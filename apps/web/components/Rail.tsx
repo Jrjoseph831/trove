@@ -15,9 +15,9 @@ import {
   Vault as VaultIcon,
   X,
 } from "lucide-react";
-import { assetsValue, netWorth } from "@trove/engine";
+import { assetsValue, netWorth, propertyValue, stakeValue } from "@trove/engine";
 import { sandboxEnabled } from "@/lib/config";
-import { money, pctChange } from "@/lib/format";
+import { money, moneyShort, pctChange } from "@/lib/format";
 import { breakingBeat } from "@/lib/breaking";
 import { goalsProgress } from "@/lib/goals";
 import {
@@ -54,18 +54,33 @@ export function Rail() {
     signIn,
     signOut,
     desk,
+    serverNet,
     startRename,
   } = useTrove();
   const pendingOrders = desk?.orders.filter((o) => o.status === "offer").length ?? 0;
+  // Terminal.tsx only mounts Rail when canBrowseFull (signed in, or
+  // Sandbox — which never required sign-in) — signed-out visitors on the
+  // real LIVE world get Terminal's floating sign-in button instead. A
+  // one-link nav (just Catalog) isn't a nav worth having.
   const go = (t: TabId) => {
     setTab(t);
     setNavOpen(false);
   };
 
-  const nw = netWorth(state, "YOU");
+  // Live: the SERVER's valuation of this firm — the same figure the board
+  // ranks it by. The client cannot price an equity stake, because it never
+  // sees another firm's treasury; recomputing here produced a headline net
+  // worth that disagreed with the leaderboard by orders of magnitude, with
+  // nothing to say which was right. Sandbox has no server, so local is truth.
+  const nw =
+    mode === "live" && serverNet != null ? serverNet : netWorth(state, "YOU");
   const prev = state.nwHist[state.nwHist.length - 1] ?? nw;
   const chg = nw - prev;
   const pct = pctChange(nw, prev);
+  // Everything besides cash and debt: goods, real estate and equity. Derived
+  // from the headline rather than recomputed, so the breakdown always sums to
+  // the number printed above it, whichever source that number came from.
+  const assets = nw - (state.cash - state.debt);
 
   // The Ladder — rank by peak net worth (never drops mid-stream).
   const peak = Math.max(nw, getPeak());
@@ -98,23 +113,23 @@ export function Rail() {
 
       <div className="worth">
         <div className="lab">Net Worth</div>
-        <div className="v">{money(nw)}</div>
+        <div className="v">{moneyShort(nw)}</div>
         <div className={`chg ${chg >= 0 ? "pos" : "neg"}`}>
-          {chg >= 0 ? "▲" : "▼"} {money(Math.abs(chg))} ({pct >= 0 ? "+" : ""}
+          {chg >= 0 ? "▲" : "▼"} {moneyShort(Math.abs(chg))} ({pct >= 0 ? "+" : ""}
           {pct.toFixed(2)}%)
         </div>
         <div className="mini">
           <span>
-            Cash<b>{money(state.cash)}</b>
+            Cash<b>{moneyShort(state.cash)}</b>
           </span>
           <span>
-            Assets<b>{money(assetsValue(state, "YOU"))}</b>
+            Assets<b>{moneyShort(assets)}</b>
           </span>
           <span className="debt">
-            Debt<b>{money(state.debt)}</b>
+            Debt<b>{moneyShort(state.debt)}</b>
           </span>
         </div>
-        {signedIn && desk?.name && (
+        {desk?.name && (
           <div className="holdingline">
             {desk.name} <span>· rep {desk.reputation}</span>
             <button className="rename-btn" onClick={startRename}>
@@ -138,7 +153,9 @@ export function Rail() {
               <span>
                 Next · <b>{nextRank.name}</b>
               </span>
-              <span className="ld-togo">{money(Math.max(0, nextRank.at - peak))} to go</span>
+              <span className="ld-togo">
+                {moneyShort(Math.max(0, nextRank.at - peak))} to go
+              </span>
             </div>
             <div className="ld-unlock">Unlocks {nextRank.unlock}</div>
           </>

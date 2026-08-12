@@ -12,6 +12,7 @@ import { GoalUp } from "./GoalUp";
 import { BreakingAlert } from "./BreakingAlert";
 import { Goals } from "./Goals";
 import { DealRoom } from "./DealRoom";
+import { Landing } from "./Landing";
 import { LadderUp } from "./LadderUp";
 import { PropertyMarket } from "./PropertyMarket";
 import { DailyReportCard, ReportView } from "./Report";
@@ -22,46 +23,75 @@ import { Vault } from "./Vault";
 import { Wire } from "./Wire";
 
 export function Terminal() {
-  const { mounted, mode, tab, navOpen, setNavOpen, reveal } = useTrove();
+  const { mounted, mode, tab, navOpen, setNavOpen, reveal, signedIn, signIn } = useTrove();
 
   // Boot gate: render a deterministic shell on the server and the first client
   // paint (the engine uses randomness, so live data must be client-only).
   if (!mounted) return <BootShell />;
 
+  // Signed-out visitors browse the Catalog only in the real LIVE world —
+  // Sandbox is a private practice world that's never required sign-in, so
+  // it stays fully open (mirrors Rail's canBrowseFull). Defense in depth
+  // against `tab` state ever drifting elsewhere (a stray deep link, a
+  // leftover value from before sign-out) even though Rail's own nav
+  // already only offers Catalog in this state.
+  const canBrowseFull = signedIn || mode === "sandbox";
+  const effectiveTab = canBrowseFull ? tab : "catalog";
+
   return (
-    <div className={`app ${navOpen ? "navopen" : ""}`}>
-      {navOpen && (
+    <div className={`app ${navOpen ? "navopen" : ""} ${canBrowseFull ? "" : "no-rail"}`}>
+      {canBrowseFull && navOpen && (
         <button
           className="nav-scrim"
           aria-label="Close navigation"
           onClick={() => setNavOpen(false)}
         />
       )}
-      <Rail />
+      {canBrowseFull && <Rail />}
       <div className={`main ${mode === "sandbox" ? "sandbox" : ""}`}>
         <div className="topbar">
-          <button
-            className="navtoggle"
-            onClick={() => setNavOpen(!navOpen)}
-            aria-label="Toggle navigation"
-          >
-            ☰
-          </button>
+          {canBrowseFull && (
+            <button
+              className="navtoggle"
+              onClick={() => setNavOpen(!navOpen)}
+              aria-label="Toggle navigation"
+            >
+              ☰
+            </button>
+          )}
           <Clock />
           <Ticker />
         </div>
-        {tab === "trending" && <Trending />}
-        {tab === "catalog" && <Catalog />}
-        {tab === "wire" && <Wire />}
-        {tab === "vault" && <Vault />}
-        {tab === "orders" && <Desk />}
-        {tab === "factory" && <FactoryView />}
-        {tab === "estates" && <PropertyMarket />}
-        {tab === "deals" && <DealRoom />}
-        {tab === "report" && <ReportView />}
-        {tab === "companies" && <Companies />}
-        {tab === "goals" && <Goals />}
+        {effectiveTab === "trending" && <Trending />}
+        {effectiveTab === "catalog" && <Catalog />}
+        {effectiveTab === "wire" && <Wire />}
+        {effectiveTab === "vault" && <Vault />}
+        {effectiveTab === "orders" && <Desk />}
+        {effectiveTab === "factory" && <FactoryView />}
+        {effectiveTab === "estates" && <PropertyMarket />}
+        {effectiveTab === "deals" && <DealRoom />}
+        {effectiveTab === "report" && <ReportView />}
+        {effectiveTab === "companies" && <Companies />}
+        {effectiveTab === "goals" && <Goals />}
       </div>
+      {!canBrowseFull && (
+        <div className="guestbar">
+          <button
+            className="guestbar-mark"
+            onClick={() => window.dispatchEvent(new Event("trove:show-landing"))}
+            title="Back to the front page"
+          >
+            TROVE
+          </button>
+          <span className="guestbar-txt">
+            You&apos;re browsing as a guest — prices are live, but you need an
+            account to trade.
+          </span>
+          <button className="guestbar-cta" onClick={signIn}>
+            Sign in to trade
+          </button>
+        </div>
+      )}
       {reveal && <Reveal />}
       <BreakingAlert />
       <LadderUp />
@@ -69,6 +99,7 @@ export function Terminal() {
       <Onboarding />
       <DailyReportCard />
       <Toast />
+      <Landing />
     </div>
   );
 }
@@ -153,11 +184,33 @@ function holdingName(raw: string): string {
   return `${t} Holdings`;
 }
 
+const TOUR = [
+  {
+    h: "The market never stops",
+    b: "Prices move with real demand and breaking news on The Wire. Buy low, sell high, right alongside everyone else playing right now.",
+  },
+  {
+    h: "Build something real",
+    b: "Stand up a factory, turn raw materials into finished goods, and sell what you make — to the market or under contract.",
+  },
+  {
+    h: "Make your move",
+    b: "Buy into another firm's equity, acquire a rival outright in the Deal Room, or grow your holdings in Trove Estates. However you want to build your empire.",
+  },
+];
+
 function Onboarding() {
   const { signedIn, desk, nameHolding, renaming, cancelRename } = useTrove();
   const [val, setVal] = useState("");
-  // Open on first sign-in (no name yet) OR when the player chose to rename.
-  const open = !!(signedIn && desk && (!desk.name || renaming));
+  // 0 = not touring; 1..TOUR.length = a tour screen, shown once right after
+  // a first-time naming (not a rename) keeps the same gate open a few beats
+  // longer instead of dropping straight onto the floor.
+  const [tourStep, setTourStep] = useState(0);
+  const needsName = !!(signedIn && desk && !desk.name);
+  // Open on first sign-in (no name yet), the player choosing to rename, OR
+  // mid-tour (desk.name is already set by then, so needsName alone would
+  // close the gate before the tour gets a chance to show).
+  const open = !!(signedIn && desk && (needsName || renaming || tourStep > 0));
   const isRename = !!desk?.name;
   const wasOpen = useRef(false);
   useEffect(() => {
@@ -166,10 +219,40 @@ function Onboarding() {
   }, [open, isRename, desk?.name]);
 
   if (!open) return null;
+
+  if (tourStep > 0) {
+    const last = tourStep === TOUR.length;
+    const step = TOUR[tourStep - 1]!;
+    return (
+      <div className="reveal-bg show">
+        <div className="onboard">
+          <div className="ob-mark">TROVE</div>
+          <div className="ob-dots">
+            {TOUR.map((_, i) => (
+              <i key={i} className={i < tourStep ? "on" : ""} />
+            ))}
+          </div>
+          <div className="ob-h">{step.h}</div>
+          <p className="ob-sub">{step.b}</p>
+          <div className="ob-actions">
+            <button
+              className="ob-go"
+              onClick={() => (last ? setTourStep(0) : setTourStep((s) => s + 1))}
+            >
+              {last ? "Enter the market" : "Next"}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   const preview = holdingName(val);
   const check = preview ? validateHoldingName(preview) : { ok: false };
   const submit = () => {
-    if (preview && check.ok) nameHolding(preview);
+    if (!preview || !check.ok) return;
+    nameHolding(preview);
+    if (!isRename) setTourStep(1); // first-time only — walk the new player through the tour
   };
   return (
     <div

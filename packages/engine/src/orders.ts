@@ -18,7 +18,7 @@ import {
   sectorKeys,
 } from "@trove/data";
 import type { Item, SectorKey } from "@trove/data";
-import { listedUnitPrice } from "./pricing";
+import { listedUnitPrice, QC_PREMIUM } from "./pricing";
 import { rand } from "./rng";
 import type { DeskAuto, Order, RuntimeItem, Trader, WorldState } from "./types";
 
@@ -140,6 +140,17 @@ const MISS_PENALTY = 3;
  *  the deliver window — in live, 14 cycles ≈ 70 min vs the 6h deadline). Orders
  *  scale to (on-hand + rate × this), so they grow with your output + stock. */
 const ORDER_WINDOW_CYCLES = 14;
+
+/**
+ * A distributor's markup on goods you DON'T produce. Reselling means buying
+ * on the floor at market and handing the units on, so the contract has to pay
+ * above market or there is no reason on earth to take it. This sets how much
+ * headroom the negotiation has above your sourcing cost: the buyer opens near
+ * cost, targets roughly a tenth over it, and will stretch to about a fifth.
+ * Below ~1.1 the bulk discount eats the whole spread and every reseller order
+ * becomes a loss again.
+ */
+const RESELL_MARKUP = 1.22;
 
 /** Desk cadence — differs by world. The fast sandbox rolls offers in seconds and
  *  delivers in minutes; the live world runs on the real clock (slower). */
@@ -320,16 +331,26 @@ export function generateSandboxOrder(
   if (!it) return null;
   const produced = state.factories.some((f) => f.itemId === it.id);
 
-  // Retail = what your version sells for (your price if you make it, else
-  // market), via the one canonical listed-price formula (incl. the QC premium).
-  const retail = Math.max(
-    0.01,
-    listedUnitPrice(it.value, produced ? listMult(state, it.id) : 1, !!state.infra?.qc),
-  );
-  // Cost floor: your production cost if you make it, else a market-buy proxy.
+  // Cost floor: what filling this order ACTUALLY costs you.
+  //  • Goods you make: your production cost.
+  //  • Goods you don't: the market price, because that is literally what the
+  //    floor charges you (serverBuy debits it.value per unit). This used to
+  //    assume 0.7× — a fiction that put the buyer's own ceiling BELOW your
+  //    sourcing cost, so every reseller contract was a guaranteed loss and
+  //    countering to anything sane made them walk.
   const cost = produced
     ? (productionCostOf(state, it) ?? it.value * 0.6)
-    : it.value * 0.7;
+    : it.value;
+  // Retail = what your version sells for. If you make it, your asking price.
+  // If you're reselling, a distributor's markup on what you paid — that spread
+  // is the whole reason to take a contract on goods you don't produce, and it
+  // gives the negotiation somewhere to move above the floor.
+  const retail = produced
+    ? Math.max(
+        0.01,
+        listedUnitPrice(it.value, listMult(state, it.id), !!state.infra?.qc),
+      )
+    : Math.max(0.01, cost * RESELL_MARKUP * (!!state.infra?.qc ? 1 + QC_PREMIUM : 1));
 
   // Who's buying: a real AI company in this sector (or the broad index). The
   // order is bounded by what that company will commit (≤ half its cash, ≤ its
@@ -548,6 +569,12 @@ export function fulfillSandboxOrder(
     const left = have - take;
     if (left > 0) it.owners["YOU"] = left;
     else delete it.owners["YOU"];
+    // The buyer TAKES DELIVERY of what it paid for. Without this the units
+    // simply ceased to exist on fulfilment and the company's net worth fell by
+    // the whole payment — it bought goods and booked nothing against the cash.
+    // Now the trade is symmetric on both sides, and the goods stay in the world
+    // for that company to trade back onto the floor later.
+    it.owners[o.company] = (it.owners[o.company] ?? 0) + take;
     // Drain the produced count too (orders sell your produced stock).
     if (state.producedQty?.[it.id]) {
       state.producedQty[it.id] = Math.max(0, state.producedQty[it.id]! - take);

@@ -3,7 +3,8 @@
  * the /dev route isn't even mounted on the prod stack). Lets a signed-in tester
  * fund their account and summon a buyout offer so M&A can be exercised solo.
  *
- *   POST /dev { action: "fund", amount? }   credit your cash (default $50M)
+ *   POST /dev { action: "fund", amount? }     credit your cash (default $50M)
+ *   POST /dev { action: "set-cash", amount }  set your cash to an exact figure
  *   POST /dev { action: "offer-me", price? } a synthetic buyer offers to acquire
  *                                            your firm (accept it to test the exit)
  */
@@ -13,13 +14,13 @@ import type {
 } from "aws-lambda";
 import type { PvpOrder } from "@trove/engine";
 import {
-  buildPortfolio,
+  addPlayerCash,
   getPlayer,
-  loadWorld,
   putOrder,
+  retryOnConflict,
   savePlayer,
+  setPlayerCash,
   type Player,
-  type WorldDoc,
 } from "../repo";
 
 const json = (status: number, body: unknown): APIGatewayProxyResultV2 => ({
@@ -57,22 +58,37 @@ export async function handler(
         1_000_000_000_000,
         Math.max(1, Math.round(Number(body.amount) || 50_000_000)),
       );
-      player.cash = (player.cash ?? 0) + amount;
-      await savePlayer(player);
-      const doc = await loadWorld();
-      return doc
-        ? json(200, buildPortfolio(doc as WorldDoc, player))
-        : json(200, { ok: true });
+      // Atomic increment — a read-add-write here loses to production.ts the
+      // same way set-cash did.
+      const cash = await addPlayerCash(me, amount);
+      return json(200, { ok: true, cash });
+    }
+    // Set cash to an EXACT figure, unlike "fund" which credits on top. For
+    // testing how the game plays from a given bankroll (e.g. dialling in a
+    // different opening balance) without touching START_CASH for real players.
+    case "set-cash": {
+      const amount = Math.min(
+        1_000_000_000_000,
+        Math.max(0, Math.round(Number(body.amount) || 0)),
+      );
+      // Atomic single-attribute write: a savePlayer() here is a full-item Put
+      // that production.ts's next tick overwrites from its own stale snapshot.
+      const cash = await setPlayerCash(me, amount);
+      return json(200, { ok: true, cash });
     }
     case "offer-me": {
       const price = Math.max(1, Math.round(Number(body.price) || 1_000_000));
       // A funded synthetic buyer makes the offer (must hold >= price for settle).
       const BUYER = "DEV_BUYER";
-      const buyer: Player =
-        (await getPlayer(BUYER)) ?? { playerId: BUYER, cash: 0, debt: 0 };
-      buyer.name = "Vantage Capital";
-      buyer.cash = Math.max(buyer.cash ?? 0, price * 2);
-      await savePlayer(buyer);
+      // Read INSIDE the retry: re-sending a record loaded before the failed
+      // attempt would just lose the same race again.
+      await retryOnConflict(async () => {
+        const buyer: Player =
+          (await getPlayer(BUYER)) ?? { playerId: BUYER, cash: 0, debt: 0 };
+        buyer.name = "Vantage Capital";
+        buyer.cash = Math.max(buyer.cash ?? 0, price * 2);
+        await savePlayer(buyer);
+      });
       const now = Date.now();
       const offer: PvpOrder = {
         id: `o_${now.toString(36)}_${Math.random().toString(36).slice(2, 8)}`,

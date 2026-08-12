@@ -7,6 +7,19 @@ export function money(n: number): string {
   return sign + Math.round(a).toLocaleString();
 }
 
+/** Money, but collapsed to "$1.24B" / "$3.40T" once it reaches ten figures —
+ *  for net worth, cash, assets, debt, and company valuations shown at a
+ *  glance (sidebar, standings, Deal Room). Below a billion, identical to
+ *  money(). The Reports page keeps exact money() throughout — that's where
+ *  the real digits matter. */
+export function moneyShort(n: number): string {
+  const a = Math.abs(n);
+  const sign = n < 0 ? "-$" : "$";
+  if (a >= 1e12) return sign + (a / 1e12).toFixed(2) + "T";
+  if (a >= 1e9) return sign + (a / 1e9).toFixed(2) + "B";
+  return money(n);
+}
+
 /** Signed percentage to one decimal, e.g. "+2.4%". */
 export function signedPct(n: number): string {
   return `${n >= 0 ? "+" : ""}${n.toFixed(1)}%`;

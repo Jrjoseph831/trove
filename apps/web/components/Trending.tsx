@@ -2,15 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { breakingBeat } from "@/lib/breaking";
-import { money } from "@/lib/format";
+import { moneyShort } from "@/lib/format";
 import { impliedSectors } from "@/lib/ui";
 import { useLeaderboard } from "@/lib/useLeaderboard";
 import { useTrove } from "@/lib/trove";
 import { Movers } from "./Movers";
 import { Tile } from "./Tile";
+import { WhileYouWereAwayCard } from "./WhileYouWereAway";
 
 export function Trending() {
-  const { state, desk, mode } = useTrove();
+  const { state, desk, mode, serverNet } = useTrove();
   const f = state.front;
   const { ups, dns } = impliedSectors(f);
   const [now, setNow] = useState(() => Date.now());
@@ -28,7 +29,7 @@ export function Trending() {
   // Standings beside the headline — competitive context (observable), not a
   // give-away sector readout. Top firms + you.
   const myLabel = desk?.name?.trim() || "Your Holding";
-  const ranked = useLeaderboard(state, mode, myLabel);
+  const ranked = useLeaderboard(state, mode, myLabel, serverNet);
   const standTop = ranked.slice(0, 9);
   const meRow = ranked.find((e) => e.id === "YOU");
   const standings =
@@ -37,6 +38,7 @@ export function Trending() {
   return (
     <div className="view trend">
       <div className="bento">
+        <WhileYouWereAwayCard />
         {beat && (
           <article className={`brk-card col-12 ${beat.phase}`}>
             <span className="brk-card-kick">⚡ {beat.kicker}</span>
@@ -91,7 +93,7 @@ export function Trending() {
                   {e.live && e.id !== "YOU" && <span className="lb-live">●</span>}
                   {e.label}
                 </span>
-                <span className="stand-w">{money(e.w)}</span>
+                <span className="stand-w">{moneyShort(e.w)}</span>
               </div>
             ))}
           </div>

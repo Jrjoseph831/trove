@@ -2,8 +2,13 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ArrowDown, ArrowUp, Globe, Pencil } from "lucide-react";
-import { getItem, sectorLabel, type SectorKey } from "@trove/data";
-import { listedUnitPrice, type SiteConfig, type SiteSectionId } from "@trove/engine";
+import { getItem, recipeOf, sectorLabel, type SectorKey } from "@trove/data";
+import {
+  listedUnitPrice,
+  makerVariantName,
+  type SiteConfig,
+  type SiteSectionId,
+} from "@trove/engine";
 import {
   fetchCompanies,
   fetchCompany,
@@ -12,7 +17,7 @@ import {
   type CompanySite,
   type DirEntry,
 } from "@/lib/api";
-import { manufacturingName, money } from "@/lib/format";
+import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 
@@ -36,7 +41,10 @@ const label = (key: string): string =>
 
 /** Build the signed-in player's own storefront from the live world state, so the
  *  owner gets an instant preview (their listed produced goods, at their price). */
-function ownStorefront(state: ReturnType<typeof useTrove>["state"]): CompanyProduct[] {
+function ownStorefront(
+  state: ReturnType<typeof useTrove>["state"],
+  holding: string | null | undefined,
+): CompanyProduct[] {
   const prod = state.producedQty ?? {};
   const qcOn = !!state.infra?.qc;
   const out: CompanyProduct[] = [];
@@ -50,7 +58,9 @@ function ownStorefront(state: ReturnType<typeof useTrove>["state"]): CompanyProd
     const mult = state.listPrices?.[id] ?? 1;
     out.push({
       id,
-      name: it.name,
+      // Same designation storefrontOf() stamps server-side, so the owner's
+      // preview names the goods exactly as buyers will see them.
+      name: makerVariantName(it.name, holding, id),
       // Same canonical formula the server storefront + engine use, so the
       // owner's preview matches exactly what others see and what orders charge.
       price: Math.round(listedUnitPrice(it.value, mult, qcOn)),
@@ -115,7 +125,7 @@ export function Companies() {
         />
       );
     }
-    const site = ownPreview(mySite, desk?.name ?? null, ownStorefront(state), state);
+    const site = ownPreview(mySite, desk?.name ?? null, ownStorefront(state, manufacturingName(desk?.name)), state);
     return (
       <SiteView
         site={site}
@@ -308,7 +318,7 @@ function Directory({
                 {e.kind === "player" ? manufacturingName(e.name) : e.name}
               </span>
               <span className="site-card-foot">
-                Net worth <b>{money(e.netWorth)}</b>
+                Net worth <b>{moneyShort(e.netWorth)}</b>
               </span>
             </button>
           ))}
@@ -399,7 +409,11 @@ function HoldingsGrid({ holdings }: { holdings: CompanySite["holdings"] }) {
 // ── The rendered company page (one layout for players AND AI houses) ────────
 const ALWAYS_ON = new Set(["masthead", "storefront", "standing"]);
 
-function SiteView({
+/** Exported so the public page at /<handle> renders the EXACT same layout as
+ *  the in-sim view — one component, so the two can't drift apart. Omitting
+ *  `onBack` switches the chrome from in-app (back to Directory) to standalone
+ *  (wordmark + a way into the market). */
+export function SiteView({
   site,
   owner,
   onBack,
@@ -407,7 +421,7 @@ function SiteView({
 }: {
   site: CompanySite;
   owner?: boolean;
-  onBack: () => void;
+  onBack?: () => void;
   onEdit?: () => void;
 }) {
   const [req, setReq] = useState<CompanyProduct | null>(null);
@@ -426,16 +440,28 @@ function SiteView({
   return (
     <div className="view">
       <div className="site-bar">
-        <button className="site-back" onClick={onBack}>
-          ← Directory
-        </button>
+        {onBack ? (
+          <button className="site-back" onClick={onBack}>
+            ← Directory
+          </button>
+        ) : (
+          <a className="site-back" href="/">
+            TROVE
+          </a>
+        )}
         <span className="site-url">
-          <Globe size={12} /> {site.handle || "unpublished"}.trove
+          <Globe size={12} />{" "}
+          {site.handle ? `trove.ceo/${site.handle}` : "unpublished"}
         </span>
         {owner && onEdit && (
           <button className="site-btn" onClick={onEdit}>
             <Pencil size={13} /> Edit
           </button>
+        )}
+        {!onBack && (
+          <a className="site-btn" href="/">
+            Enter the market
+          </a>
         )}
       </div>
 
@@ -463,7 +489,7 @@ function SiteView({
                 <div className="site-standing">
                   <div>
                     <span className="ss-lab">Net worth</span>
-                    <span className="ss-v">{money(site.netWorth)}</span>
+                    <span className="ss-v">{moneyShort(site.netWorth)}</span>
                   </div>
                   <div>
                     <span className="ss-lab">Market rank</span>
@@ -492,6 +518,7 @@ function SiteView({
                 key="storefront"
                 products={site.storefront}
                 owner={owner}
+                sellerHandle={site.handle}
                 onRequest={canRequest ? (p) => setReq(p) : undefined}
               />
             );
@@ -524,10 +551,15 @@ function SiteView({
 function Storefront({
   products,
   owner,
+  sellerHandle,
   onRequest,
 }: {
   products: CompanyProduct[];
   owner?: boolean;
+  /** Absent for the owner's own live preview (no standing-source affordance
+   *  makes sense there — the "Request"/"set as standing source" actions
+   *  never render for your own storefront either way). */
+  sellerHandle?: string;
   onRequest?: (p: CompanyProduct) => void;
 }) {
   return (
@@ -559,12 +591,61 @@ function Storefront({
                 >
                   Request
                 </button>
+                {onRequest && sellerHandle && (
+                  <StandingSourcePicker product={p} sellerHandle={sellerHandle} />
+                )}
               </div>
             );
           })}
         </div>
       )}
     </section>
+  );
+}
+
+/** "Set as standing source" — only rendered for a real other player's
+ *  storefront (same gate as the Request button). Lists the viewer's OWN
+ *  factory lines whose recipe consumes this product, so picking one wires
+ *  that line to auto-buy from THIS seller each production tick. Nothing to
+ *  show if the viewer has no eligible line — no point cluttering the card. */
+function StandingSourcePicker({
+  product,
+  sellerHandle,
+}: {
+  product: CompanyProduct;
+  sellerHandle: string;
+}) {
+  const { state, mode, setStandingLineSource } = useTrove();
+  if (mode !== "live") return null; // sandbox has no other real players
+
+  const eligible = state.factories.filter((f) => {
+    const out = getItem(f.itemId);
+    return !!out && !!recipeOf(out)?.inputs.some((inp) => inp.itemId === product.id);
+  });
+  if (eligible.length === 0) return null;
+
+  return (
+    <select
+      className="store-standing"
+      value=""
+      title="Set as a standing source for one of your lines"
+      onChange={(e) => {
+        const lineId = e.target.value;
+        if (!lineId) return;
+        setStandingLineSource(lineId, product.id, sellerHandle);
+        e.target.value = "";
+      }}
+    >
+      <option value="">Set as standing source…</option>
+      {eligible.map((f) => {
+        const out = getItem(f.itemId);
+        return (
+          <option key={f.id} value={f.id}>
+            For my {out?.name ?? "line"} line
+          </option>
+        );
+      })}
+    </select>
   );
 }
 
@@ -634,7 +715,7 @@ function RequestModal({
           />
         </label>
         <div className="req-meta">
-          {money(Math.round(offer / Math.max(1, qty)))}/unit · your cash {money(cash)}
+          {money(Math.round(offer / Math.max(1, qty)))}/unit · your cash {moneyShort(cash)}
         </div>
         {short && <div className="req-warn">That's more than your cash on hand.</div>}
 
@@ -671,6 +752,7 @@ function Builder({ onDone }: { onDone: () => void }) {
   const [sections, setSections] = useState<{ id: SiteSectionId; on: boolean }[]>(
     mySite?.sections?.length ? mySite.sections : DEFAULT_SECTIONS,
   );
+  const [autoSupply, setAutoSupply] = useState(mySite?.autoSupply ?? false);
   const [busy, setBusy] = useState(false);
 
   const move = useCallback((i: number, dir: -1 | 1) => {
@@ -687,11 +769,11 @@ function Builder({ onDone }: { onDone: () => void }) {
     setSections((prev) => prev.map((s) => (s.id === id ? { ...s, on: !s.on } : s)));
   }, []);
 
-  const draft: Partial<SiteConfig> = { handle, tagline, about, accent, sections };
+  const draft: Partial<SiteConfig> = { handle, tagline, about, accent, sections, autoSupply };
   const preview = ownPreview(
     { handle, tagline, about, accent, sections },
     desk?.name ?? null,
-    ownStorefront(state),
+    ownStorefront(state, manufacturingName(desk?.name)),
     state,
   );
 
@@ -715,7 +797,12 @@ function Builder({ onDone }: { onDone: () => void }) {
         <div className="bld-form">
           <label className="bld-row">
             <span>Address</span>
+            {/* Prefix, not suffix: the page really does live at
+                trove.ceo/<handle>, so the preview should read as the URL
+                someone can actually type. The old ".trove" suffix looked
+                like a domain that nothing served. */}
             <span className="bld-handle">
+              <em>trove.ceo/</em>
               <input
                 value={handle}
                 maxLength={30}
@@ -726,7 +813,6 @@ function Builder({ onDone }: { onDone: () => void }) {
                 }
                 placeholder="your-company"
               />
-              <em>.trove</em>
             </span>
           </label>
 
@@ -809,6 +895,24 @@ function Builder({ onDone }: { onDone: () => void }) {
             on the Vault tab to control what appears in your storefront.
           </p>
 
+          <div className="bld-row">
+            <span>Standing supply</span>
+            <button
+              type="button"
+              className={`da-toggle ${autoSupply ? "on" : ""}`}
+              onClick={() => setAutoSupply((v) => !v)}
+            >
+              {autoSupply ? "On" : "Off"}
+            </button>
+          </div>
+          <p className="bld-note">
+            When on, other players can set your storefront as a{" "}
+            <b>standing source</b> for a factory input — their line auto-buys
+            from you each production tick at your live listed price, no
+            accepting required. Off by default; nothing is drawn from you
+            without this.
+          </p>
+
           <div className="bld-actions">
             <button className="site-btn ghost" disabled={busy} onClick={() => save(false)}>
               Save draft
@@ -844,7 +948,7 @@ function Builder({ onDone }: { onDone: () => void }) {
                     <div className="site-standing">
                       <div>
                         <span className="ss-lab">Net worth</span>
-                        <span className="ss-v">{money(preview.netWorth)}</span>
+                        <span className="ss-v">{moneyShort(preview.netWorth)}</span>
                       </div>
                       <div>
                         <span className="ss-lab">Sectors</span>

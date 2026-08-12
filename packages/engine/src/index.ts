@@ -21,17 +21,26 @@ import {
   sectorKeys,
   type CompanyTier,
 } from "@trove/data";
-import type { News, Property, SectorKey } from "@trove/data";
+import type { EffectiveSpec, News, Property, SectorKey } from "@trove/data";
 import { listedUnitPrice, QC_PREMIUM } from "./pricing";
 import { rand, rexp } from "./rng";
 import { activeMarketEvent } from "./events";
 export * from "./events";
+import {
+  aiVirtualConsumption,
+  rippleMultiplier,
+  sectorConsumptionPressure,
+  updatePlayerActivity,
+} from "./aiEconomy";
+export * from "./aiEconomy";
 import type {
   ActiveStory,
   Factory,
+  FactoryInputNeed,
   ItemFlow,
   Ledger,
   RuntimeItem,
+  SupplyOrder,
   Trader,
   WorldState,
 } from "./types";
@@ -66,6 +75,7 @@ export function itemFlow(led: Ledger, id: number): ItemFlow {
 
 export * from "./types";
 export * from "./orders";
+export * from "./maker";
 export { setRng, resetRng, rand, rexp, mulberry32 } from "./rng";
 export { listedUnitPrice, QC_PREMIUM } from "./pricing";
 
@@ -119,6 +129,28 @@ export const BAY_UPKEEP = 120;
 export const DEBT_RATE = 0.0005;
 /** Cycles a fresh world is warmed up so it opens mid-story, not flat. */
 export const WARMUP_CYCLES = 8;
+
+/**
+ * Restock is multiplied at settlement because the catalog's per-item restock
+ * figures were sized for a TRADING game — a player buying a handful of units —
+ * not for factories consuming thousands per 5-minute production tick. With
+ * factory inputs now drawing real stock, the raw figures left a single line
+ * out-consuming resupply on ~64% of input materials, so lines cliff-edged into
+ * multi-hour idles.
+ *
+ * Measured across all 1,346 recipe-input pairs (consumption of one line at full
+ * rate vs. restock per settlement): ×1 → median sustain 0.56, 64% starving.
+ * ×6 → median ~3.3, ~27% starving. That's the shape we want: one line runs
+ * comfortably, a couple share a material fine, and a meaningful minority of
+ * materials stay genuinely tight — which is what feeder lines, standing supply
+ * orders and bulk purchasing exist to solve.
+ *
+ * Deliberately tuned HERE and not by capping recipe input quantities: those
+ * quantities set each good's input-cost share (~55-60% of output value), so
+ * capping them would quietly hand expensive goods a much fatter margin — a new
+ * money printer in place of the one just closed.
+ */
+export const RESTOCK_MUL = 6;
 /** How many recent news scenarios to avoid repeating. */
 export const RECENT_NEWS_WINDOW = 14;
 
@@ -176,9 +208,12 @@ export function reconcileCompanies(state: WorldState): void {
 
 /** Each cycle every company books its revenue — the engine that keeps the big
  *  names solvent. Income is the one intentional inflow (a company earns money);
- *  net worth (cash + holdings) still reconciles exactly. */
+ *  net worth (cash + holdings) still reconciles exactly. The ripple multiplier
+ *  (see aiEconomy.ts) scales this UP when real players are active, and is
+ *  exactly 1.0 (today's flat behavior) on a dormant world. */
 export function accrueIncome(state: WorldState): void {
-  for (const t of state.traders) t.cash += incomeOf(t);
+  const ripple = rippleMultiplier(state);
+  for (const t of state.traders) t.cash += incomeOf(t) * ripple;
 }
 
 /** A pristine world: every item at baseline, sectors at 1.0, no news yet. */
@@ -209,6 +244,8 @@ export function freshState(): WorldState {
     front: null,
     traders: freshTraders(),
     factories: [],
+    supplyOrders: [],
+    reorders: [],
     properties: [],
     stakes: {},
     floorSlots: STARTING_SLOTS,
@@ -226,6 +263,7 @@ export function freshState(): WorldState {
     log: [],
     recentNewsIdx: [],
     nwHist: [START_CASH],
+    playerActivityEma: 0,
   };
 }
 
@@ -337,6 +375,13 @@ export function netWorth(state: WorldState, owner: string): number {
 export function companyValuation(state: WorldState, name: string): number {
   const t = state.traders.find((x) => x.name === name);
   if (!t) return 0;
+  // In live, the server stamps the authoritative figure (see PublicTrader):
+  // cash and holdings live only in the world doc, so a client computing this
+  // itself is pricing off a copy of the house it has been drifting since page
+  // load — which is how the Deal Room could quote a price the server then
+  // rejected as unaffordable. Sandbox has no server and leaves it unset, so
+  // the local computation stands there.
+  if (Number.isFinite(t.valuation)) return t.valuation!;
   return t.cash + assetsValue(state, name);
 }
 
@@ -574,14 +619,17 @@ export function traderAct(state: WorldState, t: Trader): void {
 
   // Traders read the HIDDEN sector signal, never the news text. They keep a cash
   // reserve (their tier floor) liquid, so they never spend themselves to zero.
+  // The ripple multiplier makes them chase rising demand harder when real
+  // players are active (1.0 on a dormant world — no change from before).
   const reserve = floorOf(t);
+  const ripple = rippleMultiplier(state);
   let best: RuntimeItem | null = null;
   let bestW = -Infinity;
   for (const i of state.items) {
     if (!canBuy(i) || i.value > t.cash - reserve) continue;
     const dem = itemDemand(state, i);
     const w =
-      (dem - 1) * 3 +
+      (dem - 1) * 3 * ripple +
       (brandHomeSector.get(i.brand) === t.bias ? 0.5 : 0) +
       (i.edition !== null ? 0.4 : 0) +
       rand() * 0.6;
@@ -689,6 +737,10 @@ export function repay(state: WorldState, amount: number): boolean {
 export function settleCycle(state: WorldState): void {
   state.cycle++;
 
+  // -1. Refresh the real-player activity EMA BEFORE anything reads the ripple
+  //     multiplier this cycle (accrueIncome, right below, is the first reader).
+  updatePlayerActivity(state);
+
   // 0. Companies: upgrade the roster if needed, then book each one's revenue so
   //    the institutional players stay solvent (titans never run dry).
   reconcileCompanies(state);
@@ -714,13 +766,16 @@ export function settleCycle(state: WorldState): void {
     state.active.push({ news: n, cyclesLeft: n.dur });
   }
 
-  // 3. Recompute sector indices: ease toward 1 + summed active effects.
+  // 3. Recompute sector indices: ease toward 1 + summed active effects + a
+  //    small, clamped consumption-pressure hum (see aiEconomy.ts) so a
+  //    sector's own depleted supply — not just news — can lift its demand.
   for (const s of sectorKeys) {
     let target = 1;
     for (const a of state.active) {
       const e = a.news.effects[s];
       if (e) target += e * (a.cyclesLeft / a.news.dur);
     }
+    target += sectorConsumptionPressure(state, s);
     const cur = state.sectorIdx[s] ?? 1;
     state.sectorIdx[s] = Math.max(
       0.55,
@@ -731,11 +786,18 @@ export function settleCycle(state: WorldState): void {
   // 4. Restock open items (capped at normal); reprice everything.
   for (const it of state.items) {
     if (it.edition === null) {
-      it.stock = Math.min(it.stockNormal, it.stock + it.restock);
+      it.stock = Math.min(it.stockNormal, it.stock + it.restock * RESTOCK_MUL);
     }
     it.prevValue = it.value;
     it.value = priceItem(state, it);
   }
+
+  // 4b. AI companies draw material from the same shared stock a player factory
+  //     would and credit real output to their own holdings, sized in part by
+  //     the ripple multiplier (a livelier real-player economy makes AI both
+  //     draw more raw material AND produce more). One cycle lagged into next
+  //     cycle's scarcity(), same as player factories.
+  aiVirtualConsumption(state, rippleMultiplier(state));
 
   // 5. Run player factories: pay upkeep, consume inputs, produce to the vault.
   produceFactories(state);
@@ -766,6 +828,109 @@ export function settleCycle(state: WorldState): void {
 export function runProduction(state: WorldState): void {
   produceFactories(state);
   sellListings(state);
+}
+
+// ── Bulk material supply ────────────────────────────────────────────────────
+// Buying ahead in volume is cheaper per unit than the per-tick market price a
+// line otherwise pays, but the cash leaves now and the goods arrive later. That
+// trade — capital tied up in inventory versus spent on another line — is the
+// decision the factory game is built around, and it's what gives a big balance
+// somewhere to go besides "build another printer".
+
+/** Volume discount tiers: order more, pay less per unit. */
+const SUPPLY_TIERS: { min: number; discount: number; lead: number }[] = [
+  { min: 50_000, discount: 0.2, lead: 6 },
+  { min: 10_000, discount: 0.12, lead: 4 },
+  { min: 1_000, discount: 0.05, lead: 2 },
+  { min: 0, discount: 0, lead: 1 },
+];
+
+export function supplyQuote(
+  it: RuntimeItem,
+  qty: number,
+): { unit: number; total: number; discount: number; lead: number } {
+  const tier = SUPPLY_TIERS.find((t) => qty >= t.min) ?? SUPPLY_TIERS[SUPPLY_TIERS.length - 1]!;
+  const unit = it.value * (1 - tier.discount);
+  return {
+    unit,
+    total: Math.round(unit * qty),
+    discount: tier.discount,
+    lead: tier.lead,
+  };
+}
+
+/** Place a bulk order: pay now, delivered into the vault after the lead time.
+ *  Bounded by the floor's actual stock — you can't order what nobody has. */
+export function orderSupply(
+  state: WorldState,
+  itemId: number,
+  qty: number,
+): SupplyOrder | null {
+  const it = state.items.find((x) => x.id === itemId);
+  if (!it || it.edition !== null) return null;
+  const n = Math.floor(qty);
+  if (n < 1 || n > it.stock) return null;
+  const q = supplyQuote(it, n);
+  if (q.total > state.cash) return null;
+
+  state.cash -= q.total;
+  state.ledger.upkeep += q.total; // material spend, same bucket as line inputs
+  it.stock = Math.max(0, it.stock - n); // taken off the floor at order time
+  const order: SupplyOrder = {
+    id: `so_${state.cycle}_${itemId}_${Math.floor(rand() * 1e6)}`,
+    itemId,
+    qty: n,
+    paid: q.total,
+    unit: q.unit,
+    arrivesCycle: state.cycle + q.lead,
+  };
+  (state.supplyOrders ??= []).push(order);
+  pushLog(state, "YOU", `ordered ${n.toLocaleString()}×`, it.name);
+  return order;
+}
+
+/** Move any arrived orders into the vault. */
+function deliverSupplyOrders(state: WorldState): void {
+  const pending = state.supplyOrders ?? [];
+  if (pending.length === 0) return;
+  const still: SupplyOrder[] = [];
+  for (const o of pending) {
+    if (state.cycle < o.arrivesCycle) {
+      still.push(o);
+      continue;
+    }
+    const it = state.items.find((x) => x.id === o.itemId);
+    if (it) giveYou(it, o.qty);
+  }
+  state.supplyOrders = still;
+}
+
+/** Auto-reorder: top a material back up whenever the vault dips below its
+ *  floor and nothing is already inbound for it. */
+function runReorders(state: WorldState): void {
+  const rules = state.reorders ?? [];
+  if (rules.length === 0) return;
+  const inbound = new Set((state.supplyOrders ?? []).map((o) => o.itemId));
+  for (const r of rules) {
+    if (inbound.has(r.itemId)) continue;
+    const it = state.items.find((x) => x.id === r.itemId);
+    if (!it) continue;
+    if (ownedYou(it) >= r.floor) continue;
+    orderSupply(state, r.itemId, r.qty); // silently skipped if unaffordable
+  }
+}
+
+/** Set (or clear, with qty <= 0) an auto-reorder policy for a material. */
+export function setReorder(
+  state: WorldState,
+  itemId: number,
+  floor: number,
+  qty: number,
+): void {
+  state.reorders ??= [];
+  const next = state.reorders.filter((r) => r.itemId !== itemId);
+  if (qty > 0 && floor > 0) next.push({ itemId, floor, qty });
+  state.reorders = next;
 }
 
 /**
@@ -801,7 +966,14 @@ function captureReport(state: WorldState): void {
     at: 0,
     netWorth: Math.round(netWorth(state, "YOU")),
     cash: Math.round(state.cash),
-    assets: Math.round(assetsValue(state, "YOU")),
+    // Everything netWorth() counts besides cash/debt — item holdings PLUS
+    // real estate and Deal Room equity stakes — so Cash + Assets - Debt
+    // reconciles with Net Worth. (assetsValue() alone is item holdings only;
+    // it's also used for AI company valuation, which has no property/stakes
+    // concept, so we compose the full figure here rather than change it.)
+    assets: Math.round(
+      assetsValue(state, "YOU") + propertyValue(state) + stakeValue(state),
+    ),
     debt: Math.round(state.debt),
     flows: { ...state.ledger },
   });
@@ -942,6 +1114,26 @@ export function setSource(
   }
   return true;
 }
+
+/** Set (or clear) an input's STANDING source: a specific other real player's
+ *  storefront to auto-draw from each production tick. Pure config only — the
+ *  engine can't validate `sellerId` is a real, published seller (it has no
+ *  player directory); that validation happens server-side, one layer up,
+ *  exactly like the manual-order flow resolves a handle to a seller. */
+export function setStandingSource(
+  state: WorldState,
+  lineId: string,
+  inputItemId: number,
+  src: { sellerId: string; sellerHandle: string } | null,
+): boolean {
+  const f = state.factories.find((x) => x.id === lineId);
+  if (!f) return false;
+  if (!f.standingSources) f.standingSources = {};
+  if (src) f.standingSources[inputItemId] = src;
+  else delete f.standingSources[inputItemId];
+  return true;
+}
+
 /** Cash to add the next SLOTS_PER_EXPAND slots (each expansion pricier). */
 export function expandCost(slots: number): number {
   const step = Math.round((slots - STARTING_SLOTS) / SLOTS_PER_EXPAND);
@@ -998,6 +1190,96 @@ export function uninstallModule(
   return true;
 }
 
+interface LineInputNeed {
+  it: RuntimeItem | undefined;
+  itemId: number;
+  need: number;
+  /** In-house (an own-feeder or standing-source input, never auto-bought from
+   *  the abstract market) vs. market (shortfall auto-bought at current price). */
+  inHouse: boolean;
+  have: number;
+}
+interface LineNeedPlan {
+  factory: Factory;
+  out: RuntimeItem;
+  rate: number;
+  spec: EffectiveSpec;
+  inputs: LineInputNeed[];
+}
+
+/** Shared, side-effect-free computation of every online line's floor-throttled
+ *  rate and per-input needs this cycle. Both `produceFactories` (which spends
+ *  cash/vault and mutates from this) and `previewFactoryNeeds` (a pure read
+ *  the server's standing-order pre-step uses) build on this single source, so
+ *  the two can never quietly diverge. */
+function buildLineNeedPlans(state: WorldState): LineNeedPlan[] {
+  const lines = state.factories ?? [];
+  if (lines.length === 0) return [];
+
+  // Shipping capacity is the WHOLE floor — every dock's lanes pooled (Auto-Router
+  // raises each dock; expanding the floor adds docks). Output auto-spreads across
+  // docks, so a line throttles only when total production out-runs total floor
+  // capacity, never just because it's parked on one dock.
+  const totalLanes = floorBays(state.floorSlots) * lanesPerBay(state);
+  let demandLanes = 0;
+  const onlineOut = new Map<string, RuntimeItem>();
+  lines.forEach((f) => {
+    if (state.cycle < f.onlineCycle) return;
+    const out = state.items.find((x) => x.id === f.itemId);
+    if (out) {
+      onlineOut.set(f.id, out);
+      demandLanes += lineLanes(effectiveSpec(out, f.modules).rate);
+    }
+  });
+  const floorThrottle = demandLanes > totalLanes ? totalLanes / demandLanes : 1;
+
+  const plans: LineNeedPlan[] = [];
+  for (const f of lines) {
+    if (state.cycle < f.onlineCycle) continue;
+    const out = onlineOut.get(f.id);
+    if (!out) continue;
+    const spec = effectiveSpec(out, f.modules); // modules fold into the economics
+    // Floor congestion: output auto-spreads across every dock first, so a line
+    // only ships slower when the whole floor is over capacity — and then every
+    // line throttles together, proportionally.
+    const rate = Math.max(1, Math.floor(spec.rate * floorThrottle));
+    const recipe = recipeOf(out);
+    const inputs: LineInputNeed[] = (recipe?.inputs ?? []).map((inp) => {
+      const it = state.items.find((x) => x.id === inp.itemId);
+      const need = Math.ceil(inp.qty * rate * spec.inputMul);
+      return {
+        it,
+        itemId: inp.itemId,
+        need,
+        inHouse: !!(f.sources?.[inp.itemId] || f.standingSources?.[inp.itemId]),
+        have: it ? ownedYou(it) : 0,
+      };
+    });
+    plans.push({ factory: f, out, rate, spec, inputs });
+  }
+  return plans;
+}
+
+/** Read-only peek at what produceFactories would need THIS cycle, per line and
+ *  input — used by the server to top up standing-sourced inputs BEFORE running
+ *  production. No side effects, no cross-player knowledge (the engine never
+ *  learns what a standingSources entry means, only that it's present). */
+export function previewFactoryNeeds(state: WorldState): FactoryInputNeed[] {
+  const needs: FactoryInputNeed[] = [];
+  for (const plan of buildLineNeedPlans(state)) {
+    for (const inp of plan.inputs) {
+      needs.push({
+        lineId: plan.factory.id,
+        itemId: inp.itemId,
+        needPerCycle: inp.need,
+        have: inp.have,
+        inHouse: inp.inHouse,
+      });
+    }
+  }
+  return needs;
+}
+
 /**
  * One cycle of production for every line. Upkeep burns whether or not the line
  * runs. A line runs only if the vault holds enough of every input for a full
@@ -1007,6 +1289,12 @@ export function uninstallModule(
  * player sells, via the existing scarcity term.
  */
 function produceFactories(state: WorldState): void {
+  // Deliveries and top-ups run HERE, not in runProduction, because there are
+  // two production paths: the live Production Lambda calls runProduction, but
+  // the sandbox produces inside settleCycle. Hanging them off runProduction
+  // meant sandbox orders were paid for and never arrived.
+  deliverSupplyOrders(state);
+  runReorders(state);
   // Older persisted world docs (e.g. the live singleton) predate factories.
   const lines = state.factories ?? [];
   if (lines.length === 0) return;
@@ -1017,74 +1305,64 @@ function produceFactories(state: WorldState): void {
   state.cash -= bayUpkeep;
   state.ledger.upkeep += bayUpkeep;
 
-  // Shipping capacity is the WHOLE floor — every dock's lanes pooled (Auto-Router
-  // raises each dock; expanding the floor adds docks). Output auto-spreads across
-  // docks, so a line throttles only when total production out-runs total floor
-  // capacity, never just because it's parked on one dock.
-  const totalLanes = floorBays(state.floorSlots) * lanesPerBay(state);
-  let demandLanes = 0;
-  lines.forEach((f) => {
-    if (state.cycle < f.onlineCycle) return;
-    const out = state.items.find((x) => x.id === f.itemId);
-    if (out) demandLanes += lineLanes(effectiveSpec(out, f.modules).rate);
-  });
-  const floorThrottle = demandLanes > totalLanes ? totalLanes / demandLanes : 1;
+  const plans = new Map(buildLineNeedPlans(state).map((p) => [p.factory.id, p]));
 
   lines.forEach((f) => {
     if (state.cycle < f.onlineCycle) {
       f.status = "building";
       return;
     }
-    const out = state.items.find((x) => x.id === f.itemId);
-    if (!out) return;
-    const spec = effectiveSpec(out, f.modules); // modules fold into the economics
+    const plan = plans.get(f.id);
+    if (!plan) return; // output item missing from the catalog (shouldn't happen)
+    const { out, rate, spec, inputs } = plan;
     const lineUpkeep = Math.round(spec.upkeep * upMul);
     state.cash -= lineUpkeep; // upkeep always burns
     state.ledger.upkeep += lineUpkeep;
 
-    // Floor congestion: output auto-spreads across every dock first, so a line
-    // only ships slower when the whole floor is over capacity — and then every
-    // line throttles together, proportionally.
-    const rate = Math.max(1, Math.floor(spec.rate * floorThrottle));
-
-    const recipe = recipeOf(out);
-    const inputs = recipe?.inputs ?? [];
     // Each input is either IN-HOUSE (pull from the vault, which a feeder line
-    // fills — idle if it can't keep up) or MARKET (auto-buy any shortfall at the
-    // current price). Casuals leave every input on market = no manual stocking.
-    const plan = inputs.map((inp) => {
-      const it = state.items.find((x) => x.id === inp.itemId);
-      const need = Math.ceil(inp.qty * rate * spec.inputMul);
-      return {
-        it,
-        need,
-        inHouse: !!f.sources?.[inp.itemId],
-        have: it ? ownedYou(it) : 0,
-      };
-    });
+    // or a standing source fills — idle if it can't keep up) or MARKET (auto-buy
+    // any shortfall at the current price). Casuals leave every input on market =
+    // no manual stocking.
     let cashCost = 0;
     let ok = true;
-    for (const p of plan) {
+    for (const p of inputs) {
       if (!p.it) {
         ok = false;
         break;
       }
       if (p.inHouse) {
         if (p.have < p.need) {
-          ok = false; // feeder hasn't stocked enough
+          ok = false; // feeder/standing source hasn't stocked enough
           break;
         }
       } else {
-        cashCost += Math.max(0, p.need - p.have) * p.it.value; // buy shortfall
+        // Buy the shortfall FROM THE FLOOR — which means the floor has to
+        // actually have it. This used to only charge cash and never touch
+        // stock, so market-sourced inputs were conjured from nothing: infinite
+        // supply, no scarcity, and therefore no price response no matter how
+        // much you consumed. That's what let a line print money forever at a
+        // fixed margin, and it's why feeder lines and standing supply orders
+        // had no reason to exist. Now scaling up genuinely competes for
+        // material — with AI companies and with your own other lines.
+        const short = Math.max(0, p.need - p.have);
+        if (short > p.it.stock) {
+          ok = false; // the floor can't supply it this cycle
+          break;
+        }
+        cashCost += short * p.it.value;
       }
     }
     if (!ok || state.cash < cashCost) {
       f.status = "idle";
       return;
     }
-    for (const p of plan) {
+    for (const p of inputs) {
       if (p.inHouse) takeYou(p.it!, p.need);
-      else if (p.have > 0) takeYou(p.it!, Math.min(p.have, p.need));
+      else {
+        if (p.have > 0) takeYou(p.it!, Math.min(p.have, p.need));
+        const short = Math.max(0, p.need - p.have);
+        if (short > 0) p.it!.stock = Math.max(0, p.it!.stock - short);
+      }
     }
     state.cash -= cashCost;
     state.ledger.upkeep += cashCost; // input spend

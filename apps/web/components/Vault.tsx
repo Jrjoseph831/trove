@@ -2,13 +2,17 @@
 
 import Link from "next/link";
 import { brandSlug } from "@trove/data";
-import { creditLimit, held } from "@trove/engine";
-import { money } from "@/lib/format";
+import { creditLimit, held, makerVariantName } from "@trove/engine";
+import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 
 export function Vault() {
-  const { state, sell, setListing, doBorrow, doRepay } = useTrove();
+  const { state, sell, setListing, doBorrow, doRepay, desk, mySite } = useTrove();
+  // Goods off your own line are yours: they carry your manufacturing mark and
+  // link to your page, not to the catalog brand that originated the design.
+  const myMark = manufacturingName(desk?.name);
+  const myHref = mySite?.published && mySite.handle ? `/${mySite.handle}` : null;
   const mine = state.items.filter((i) => held(i, "YOU") > 0);
   const lim = creditLimit(state);
   const avail = Math.max(0, lim - state.debt);
@@ -32,13 +36,13 @@ export function Vault() {
               </span>
               <span className="vs">
                 <i>Market value</i>
-                <b>{money(holdingsValue)}</b>
+                <b>{moneyShort(holdingsValue)}</b>
               </span>
               <span className={`vs ${unrealized >= 0 ? "pos" : "neg"}`}>
                 <i>Unrealized</i>
                 <b>
                   {unrealized >= 0 ? "+" : ""}
-                  {money(unrealized)}
+                  {moneyShort(unrealized)}
                 </b>
               </span>
             </div>
@@ -69,18 +73,34 @@ export function Vault() {
                 it.edition !== null && it.myCopies.length
                   ? ` · #${it.myCopies[0]} of ${it.edition}`
                   : "";
+              // Made it yourself → it's your product, under your mark. Bought
+              // it on the floor → it's still the originating brand's.
+              const isMine = produced > 0;
               return (
                 <div className="crow" key={it.id}>
                   <ItemIcon it={it} size={18} className="ic" />
                   <span className="nm">
+                    {isMine ? (
+                      myHref ? (
+                        <Link href={myHref} className="bd bd-link bd-mine">
+                          {myMark}
+                        </Link>
+                      ) : (
+                        <span className="bd bd-mine">{myMark}</span>
+                      )
+                    ) : (
+                      <Link
+                        href={`/brand/${brandSlug(it.brand)}`}
+                        className="bd bd-link"
+                      >
+                        {it.brand}
+                      </Link>
+                    )}
                     <Link
-                      href={`/brand/${brandSlug(it.brand)}`}
-                      className="bd bd-link"
+                      href={isMine && myHref ? myHref : `/item/${it.id}`}
+                      className="it-link"
                     >
-                      {it.brand}
-                    </Link>
-                    <Link href={`/item/${it.id}`} className="it-link">
-                      {it.name}
+                      {isMine ? makerVariantName(it.name, myMark, it.id) : it.name}
                     </Link>
                     {q > 1 ? ` ×${q.toLocaleString()}` : ""}
                     {edNo}
@@ -134,7 +154,7 @@ export function Vault() {
           <div className="debtctl">
             <div className="line">
               <span>Borrowed</span>
-              <b>{money(state.debt)}</b>
+              <b>{moneyShort(state.debt)}</b>
             </div>
             <div className="meter">
               <i
@@ -144,7 +164,7 @@ export function Vault() {
               />
             </div>
             <div className="line">
-              <span>Available {money(avail)}</span>
+              <span>Available {moneyShort(avail)}</span>
               <span>0.05%/cycle</span>
             </div>
             <div className="dbtns">

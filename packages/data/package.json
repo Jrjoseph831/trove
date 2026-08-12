@@ -13,6 +13,7 @@
     "gen:news": "node scripts/generate-news.mjs",
     "gen:companies": "node scripts/generate-companies.mjs",
     "gen:company-seed": "node scripts/generate-company-seed.mjs",
+    "gen:houses": "node scripts/generate-houses.mjs",
     "gen:newsroom": "node scripts/generate-newsroom.mjs"
   },
   "devDependencies": {

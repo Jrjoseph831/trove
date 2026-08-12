@@ -40,7 +40,7 @@ import {
 } from "@trove/data";
 import { type WorldState } from "@trove/engine";
 import { useLeaderboard } from "@/lib/useLeaderboard";
-import { money, pctChange } from "@/lib/format";
+import { money, moneyShort, pctChange } from "@/lib/format";
 import { moversByAbsMove } from "@/lib/ui";
 import { createAmbient } from "@/lib/ambient";
 import { useTrove } from "@/lib/trove";
@@ -197,9 +197,9 @@ export function Wheel({
   embedded?: boolean;
   onClose?: () => void;
 }) {
-  const { state, desk, mode: appMode } = useTrove();
+  const { state, desk, mode: appMode, serverNet } = useTrove();
   const myLabel = desk?.name?.trim() || "Your Holding";
-  const board = useLeaderboard(state, appMode, myLabel);
+  const board = useLeaderboard(state, appMode, myLabel, serverNet);
   const stateRef = useRef(state);
   stateRef.current = state;
   const loopRef = useRef(0);
@@ -462,7 +462,7 @@ export function Wheel({
                         {e.live && e.id !== "YOU" && <span className="lb-live">●</span>}
                         {e.label}
                       </span>
-                      <span className="reel-row-pr">{money(e.w)}</span>
+                      <span className="reel-row-pr">{moneyShort(e.w)}</span>
                     </div>
                   ));
                 })()}

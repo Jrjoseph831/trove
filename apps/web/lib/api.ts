@@ -7,6 +7,9 @@ import type {
   DeskAuto,
   Factory,
   Infra,
+  LogEntry,
+  ReorderRule,
+  SupplyOrder,
   OwnedProperty,
   PvpOrder,
   Report,
@@ -30,11 +33,18 @@ export interface ApiFront {
   body: string;
   cycle: number;
 }
+export interface ApiTrader {
+  name: string;
+  /** cash + holdings, valued by the server (the client cannot compute it). */
+  value: number;
+}
 export interface ApiWorld {
   cycle: number;
   items: ApiItem[];
+  traders?: ApiTrader[];
   front: ApiFront | null;
   archive: { head: string; kick: string; cycle: number }[];
+  log: LogEntry[];
 }
 export interface ApiStanding {
   handle: string;
@@ -53,6 +63,8 @@ export interface ApiPortfolio {
   floorSlots?: number;
   infra?: Infra;
   factories?: Factory[];
+  supplyOrders?: SupplyOrder[];
+  reorders?: ReorderRule[];
   properties?: OwnedProperty[];
   stakes?: Record<string, number>;
   listPrices?: Record<number, number>;
@@ -63,6 +75,8 @@ export interface ApiPortfolio {
   periodNo?: number;
   /** The player's own company-site config (so the owner can edit a draft). */
   site?: SiteConfig | null;
+  /** The player's previous lastSeenAt (ms), or null on their first fetch ever. */
+  awaySince?: number | null;
 }
 
 // ── Company websites (manufacturing storefront) ──────────────────────────────
@@ -214,9 +228,17 @@ export type FactoryAction =
   | { action: "expand" }
   | { action: "route"; lineId: string; bay: number }
   | { action: "source"; lineId: string; inputItemId: number; feederId: string | null }
+  | {
+      action: "standing-source";
+      lineId: string;
+      inputItemId: number;
+      sellerHandle: string | null;
+    }
   | { action: "listprice"; itemId: number; mult: number }
   | { action: "listed"; itemId: number; on: boolean }
   | { action: "infra"; id: "power" | "router" | "qc" }
+  | { action: "order-supply"; itemId: number; qty: number }
+  | { action: "reorder"; itemId: number; floor: number; qty: number }
   | {
       action: "deskauto";
       patch: { specialist?: boolean; autoFulfill?: boolean; minMargin?: number };
@@ -258,6 +280,20 @@ export interface TradeResult {
   held: number;
 }
 
+/** Thrown by get() so callers can tell an expired session (401) apart from a
+ *  transient network blip — they're handled very differently. */
+export class ApiError extends Error {
+  status: number;
+  /** The server's own explanation, when it sent one. A bare status says
+   *  something broke; this says what. */
+  detail?: string;
+  constructor(path: string, status: number, detail?: string) {
+    super(detail ? `${path} → ${status}: ${detail}` : `${path} → ${status}`);
+    this.status = status;
+    this.detail = detail;
+  }
+}
+
 async function get<T>(path: string, auth = false): Promise<T> {
   const headers: Record<string, string> = {};
   if (auth) {
@@ -265,7 +301,15 @@ async function get<T>(path: string, auth = false): Promise<T> {
     if (token) headers.authorization = token;
   }
   const res = await fetch(`${API_BASE}${path}`, { headers });
-  if (!res.ok) throw new Error(`${path} → ${res.status}`);
+  if (!res.ok) {
+    let detail: string | undefined;
+    try {
+      detail = (await res.json())?.error;
+    } catch {
+      /* no body, or not JSON — the status is all we get */
+    }
+    throw new ApiError(path, res.status, detail);
+  }
   return res.json() as Promise<T>;
 }
 

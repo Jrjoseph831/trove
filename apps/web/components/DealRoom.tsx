@@ -6,7 +6,7 @@ import { companies as lore, sectors } from "@trove/data";
 import { companyValuation } from "@trove/engine";
 import { devAction, fetchCompanies, type DirEntry } from "@/lib/api";
 import { IS_STAGING } from "@/lib/config";
-import { money } from "@/lib/format";
+import { money, moneyShort } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
 import { ConfirmDeal } from "./ConfirmDeal";
 
@@ -38,7 +38,8 @@ interface Row {
 }
 
 export function DealRoom() {
-  const { state, desk, buyStakeIn, sellStakeIn, requestBuyout, orders, orderAct } = useTrove();
+  const { state, desk, buyStakeIn, sellStakeIn, requestBuyout, orders, orderAct, notify, signIn } =
+    useTrove();
   const [sec, setSec] = useState("All");
   const [sort, setSort] = useState<"val" | "div" | "mine">("val");
   const [sel, setSel] = useState<string | null>(null); // selected row key
@@ -55,10 +56,28 @@ export function DealRoom() {
 
   // staging dev tools
   const [devPrice, setDevPrice] = useState("5000000");
+  const [devCash, setDevCash] = useState("35000");
   const [devBusy, setDevBusy] = useState(false);
   const runDev = async (action: string, extra: Record<string, number> = {}) => {
     setDevBusy(true);
-    await devAction({ action, ...extra });
+    const r = await devAction({ action, ...extra });
+    setDevBusy(false);
+    // These used to reload unconditionally and drop the response on the floor,
+    // so an expired session or a rejected request looked identical to success:
+    // the page blinked and nothing changed. Say what actually happened.
+    if (r && typeof r === "object" && "error" in r) {
+      if (r.status === 401) {
+        notify("Session expired — sign in again");
+        signIn();
+        return;
+      }
+      notify(r.error);
+      return;
+    }
+    // Echo what the server actually stored, so "it did nothing" can be told
+    // apart from "it stored the wrong thing" without digging through Dynamo.
+    const cash = (r as { cash?: number }).cash;
+    if (typeof cash === "number") notify(`Cash set to ${money(cash)}`);
     if (typeof window !== "undefined") window.location.reload();
   };
 
@@ -154,7 +173,7 @@ export function DealRoom() {
           <div className="est-stats">
             <div className="est-stat">
               <span className="k">Net worth</span>
-              <span className="v">{money(selRow.val)}</span>
+              <span className="v">{moneyShort(selRow.val)}</span>
             </div>
             <div className="est-stat">
               <span className="k">Deal type</span>
@@ -172,7 +191,7 @@ export function DealRoom() {
               type="number"
               value={bid}
               onChange={(e) => setBid(e.target.value)}
-              placeholder={`Your offer ($) — net worth ${money(selRow.val)}`}
+              placeholder={`Your offer ($) — net worth ${moneyShort(selRow.val)}`}
             />
             <button className="est-act buy" onClick={openOffer}>
               Make buyout offer
@@ -239,7 +258,7 @@ export function DealRoom() {
           <div className="est-stats">
             <div className="est-stat">
               <span className="k">Valuation</span>
-              <span className="v">{money(selRow.val)}</span>
+              <span className="v">{moneyShort(selRow.val)}</span>
             </div>
             <div className="est-stat">
               <span className="k">Your stake</span>
@@ -247,7 +266,7 @@ export function DealRoom() {
             </div>
             <div className="est-stat">
               <span className="k">Stake value</span>
-              <span className="v">{myVal > 0 ? money(Math.round(myVal)) : "—"}</span>
+              <span className="v">{myVal > 0 ? moneyShort(Math.round(myVal)) : "—"}</span>
             </div>
             <div className="est-stat">
               <span className="k">Dividend / period</span>
@@ -278,7 +297,7 @@ export function DealRoom() {
                     setSel(null);
                   }}
                 >
-                  Sell entire stake ({money(Math.round(myVal))})
+                  Sell entire stake ({moneyShort(Math.round(myVal))})
                 </button>
               </div>
             )}
@@ -340,7 +359,7 @@ export function DealRoom() {
           </div>
           <div className="est-pf">
             <span className="k">Stake value</span>
-            <span className="v">{money(Math.round(stakeVal))}</span>
+            <span className="v">{moneyShort(Math.round(stakeVal))}</span>
           </div>
           <div className="est-pf">
             <span className="k">Dividends / period</span>
@@ -354,6 +373,21 @@ export function DealRoom() {
           <span className="ma-dev-h">🧪 Staging tools</span>
           <button disabled={devBusy} onClick={() => runDev("fund", { amount: 50_000_000 })}>
             Fund +$50M
+          </button>
+          {/* Exact figure, not a credit — for playing the opening from a given
+              bankroll without changing START_CASH for real players. */}
+          <input
+            className="ma-input"
+            type="number"
+            value={devCash}
+            onChange={(e) => setDevCash(e.target.value)}
+            style={{ maxWidth: 130 }}
+          />
+          <button
+            disabled={devBusy}
+            onClick={() => runDev("set-cash", { amount: Math.round(Number(devCash) || 0) })}
+          >
+            Set cash
           </button>
           <input
             className="ma-input"
@@ -455,7 +489,7 @@ export function DealRoom() {
               </div>
             </div>
             <div className="deal-cardright">
-              <div className="deal-cardval">{money(r.val)}</div>
+              <div className="deal-cardval">{moneyShort(r.val)}</div>
               {r.stake > 0 ? (
                 <div className="deal-cardstake">◆ {pct(r.stake)} owned</div>
               ) : r.live ? (

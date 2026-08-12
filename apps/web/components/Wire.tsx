@@ -6,14 +6,14 @@ import { news as newsBank } from "@trove/data";
 import { breakingBeat } from "@/lib/breaking";
 import { firmBeat } from "@/lib/firmnews";
 import { useLeaderboard } from "@/lib/useLeaderboard";
-import { money } from "@/lib/format";
+import { moneyShort } from "@/lib/format";
 import { tnnLive } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
 import type { WireStory } from "./Broadcast";
 import { Newsreel, Wheel } from "./Newsreel";
 
 export function Wire() {
-  const { state, desk, mode } = useTrove();
+  const { state, desk, mode, serverNet } = useTrove();
   const [studioOpen, setStudioOpen] = useState(false);
   // The telegraphed market-event Breaking beat — refreshed on its own clock.
   const [now, setNow] = useState(() => Date.now());
@@ -55,7 +55,7 @@ export function Wire() {
   // the top 12, but always includes you (with your true rank). Your own row shows
   // your Holding name; live players get a marker.
   const myLabel = desk?.name?.trim() || "Your Holding";
-  const ranked = useLeaderboard(state, mode, myLabel);
+  const ranked = useLeaderboard(state, mode, myLabel, serverNet);
   const top = ranked.slice(0, 12);
   const me = ranked.find((e) => e.id === "YOU");
   const board = top.some((e) => e.id === "YOU") ? top : me ? [...top, me] : top;
@@ -128,7 +128,7 @@ export function Wire() {
                   {e.live && e.id !== "YOU" && <span className="lb-live">●</span>}
                   {e.label}
                 </span>
-                <span>{money(e.w)}</span>
+                <span>{moneyShort(e.w)}</span>
               </div>
             ))}
           </div>

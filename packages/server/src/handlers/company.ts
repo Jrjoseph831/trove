@@ -22,6 +22,7 @@ import {
   getPlayer,
   houseView,
   loadWorld,
+  retryOnConflict,
   savePlayer,
   type Player,
   type WorldDoc,
@@ -91,6 +92,10 @@ export async function handler(
       return json(400, { error: "bad json" });
     }
 
+    // Read → mutate → save as a retried unit: the site config rides on the same
+    // record as cash and factories, so saving it from a stale read would revert
+    // whatever a production tick wrote while the owner was editing.
+    return retryOnConflict(async () => {
     const player = (await getPlayer(playerId)) ?? { playerId, cash: 0, debt: 0 };
     if (!player.name) return json(400, { error: "name your Holding first" });
 
@@ -115,12 +120,16 @@ export async function handler(
       accent: ACCENTS.has(body.accent ?? "") ? body.accent : prev?.accent ?? "gold",
       sections,
       published: body.published ?? prev?.published ?? false,
+      // Opt in to being auto-drawn-from by other players' standing sources
+      // (settled inside a production tick, no click needed) — default off.
+      autoSupply: body.autoSupply ?? prev?.autoSupply ?? false,
     };
     player.site = site;
     await savePlayer(player);
 
     const rank = rankMap(doc as WorldDoc, players).get(playerId) ?? null;
     return json(200, { site, view: companySite(doc as WorldDoc, player, rank) });
+    });
   }
 
   const handle = event.pathParameters?.handle;

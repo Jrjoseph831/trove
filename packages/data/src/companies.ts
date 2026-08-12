@@ -11,6 +11,7 @@
  * company that buys on the floor is the same one that can send you a contract.
  */
 import companiesJson from "../catalog/companies.json" with { type: "json" };
+import housesJson from "../catalog/houses.json" with { type: "json" };
 import type { SectorKey } from "./types";
 
 export type CompanyTier = "boutique" | "mid" | "large" | "titan";
@@ -31,6 +32,16 @@ export const COMPANY_TIERS: Record<CompanyTier, CompanyTierSpec> = {
   mid: { cash: 320_000, income: 14_000, floor: 60_000, maxOrder: 220_000 },
   large: { cash: 900_000, income: 45_000, floor: 180_000, maxOrder: 900_000 },
   titan: { cash: 3_000_000, income: 180_000, floor: 700_000, maxOrder: 5_000_000 },
+};
+
+/** How big a company's VIRTUAL production line runs relative to a player's
+ *  factory for the same item (see @trove/engine's aiEconomy.ts) — a "mid"
+ *  house draws roughly one player line's worth of material; a titan, several. */
+export const AI_APPETITE_MUL: Record<CompanyTier, number> = {
+  boutique: 0.15,
+  mid: 0.4,
+  large: 1.0,
+  titan: 2.5,
 };
 
 export interface CompanySpec {
@@ -68,9 +79,22 @@ const houses: CompanySpec[] = Object.entries(
   companiesJson as Record<string, RawCompany>,
 ).map(([name, c]) => ({ name, sector: c.homeSector ?? null, tier: tierFor(name) }));
 
+/**
+ * The trading houses: brokers, hauliers, warehouses, financiers, wholesalers and
+ * salvage buyers that move what the brands make but own no catalog line of their
+ * own. Kept in their own file because the shared world is ONE 400KB DynamoDB
+ * record — a firm costs ~115 bytes of that budget, a product ~87 — so the
+ * economy can grow to hundreds of companies but not to thousands of SKUs.
+ * See scripts/generate-houses.mjs.
+ */
+const tradingHouses: CompanySpec[] = Object.entries(
+  housesJson as Record<string, RawCompany>,
+).map(([name, c]) => ({ name, sector: c.homeSector ?? null, tier: tierFor(name) }));
+
 export const companyRoster: CompanySpec[] = [
   { name: "Open_Index", sector: null, tier: "titan" }, // broad index — the anchor
   ...houses,
+  ...tradingHouses,
 ];
 
 const byName = new Map(companyRoster.map((c) => [c.name, c]));
