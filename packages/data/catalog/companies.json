@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82691,
+    "lastEventCycle": 82708,
     "events": [
       {
         "cycle": 0,
@@ -128,6 +128,16 @@
         "body": "Aldouscraft reported a solid beat as its new fourth extrusion line reached commercial output a quarter early, easing backlog on the dual grid feeder-cable contracts. CEO Soren Ashby said the added capacity lifted deliverable volumes without straining pricing. Guidance was nudged higher on sustained grid demand.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82708,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscraft Mfg. Edges Higher as Feeder Cable Demand Holds Firm",
+        "body": "Aldouscraft reported a modest quarterly beat, with feeder-cable shipments steady as the fourth extrusion line settled into full-rate production. Soren Ashby noted grid-order visibility now extends into the following year, keeping utilization near 95%.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -2473,14 +2483,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1919,
-    "ceo": "Sabine Volkart",
+    "ceo": "Iris Calvagh",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82700,
+    "lastEventCycle": 82708,
     "events": [
       {
         "cycle": 0,
@@ -2702,6 +2712,14 @@
         "size": "major",
         "head": "Brunmark Motors Ousts Halvard Renn as Veyra S Battery Crisis Engulfs Board",
         "body": "Brunmark's board removed Halvard Renn after mounting recall costs, a widening class action, and a second regulatory notice pushed the automaker to a quarterly loss. Directors named turnaround veteran Sabine Volkart as chief executive, pledging a full battery-supply review and a halt to new Veyra variants until safety sign-off. Renn's fourteen-month tenure ends amid the most severe crisis in the company's history.",
+        "effects": {}
+      },
+      {
+        "cycle": 82708,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Brunmark Motors Names Iris Calvagh Interim Chief to Steer Recovery",
+        "body": "Days after ousting Halvard Renn, Brunmark's board appointed veteran operations head Iris Calvagh as interim chief executive, tasking her with completing the 240,000-unit Veyra S recall and rebuilding regulator relations. Calvagh said a redesigned battery pack would be validated before any resumption of Veyra S deliveries.",
         "effects": {}
       }
     ]
@@ -3525,7 +3543,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82693,
+    "lastEventCycle": 82708,
     "events": [
       {
         "cycle": 0,
@@ -3641,6 +3659,16 @@
         "size": "standard",
         "head": "Calderworks Locks Multi-Year Vaultridge Corridor Supply Pact Worth $780M",
         "body": "Calderworks Holdings signed a five-year structural-materials agreement with the Vaultridge Corridor infrastructure consortium, valued at roughly $780M and anchored to output from its new fourth kiln. Kestrel Halloran said the deal secures baseline demand through 2031 and gives the company room to weigh a fifth kiln study. Deliveries begin next quarter under staggered volume commitments.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82708,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderworks Beats as Vaultridge Pact Anchors Record Kiln Output",
+        "body": "Calderworks reported revenue of $690M, up 22%, as its fourth kiln ran at full rate against the newly signed $780M Vaultridge corridor supply pact. Kestrel Halloran said the multi-year commitment underpinned utilization through the medium term and reduced exposure to spot demand swings.",
         "effects": {
           "construction": 0.13
         }
@@ -8246,7 +8274,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82695,
+    "lastEventCycle": 82708,
     "events": [
       {
         "cycle": 0,
@@ -8412,6 +8440,16 @@
         "size": "standard",
         "head": "Halcyon Industries Commits to Northgate Site as Southport Runs Near Capacity",
         "body": "Dorian Ashby confirmed a $180 million investment in a new Northgate packaging complex, the company's first facility outside the Southport cluster. Ashby framed the move as measured overflow relief, noting Southport's five lines are running at 96% utilization. Groundbreaking is slated for next quarter.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82708,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcyon Industries Breaks Ground on Northgate Plant With Six Planned Lines",
+        "body": "Halcyon confirmed a $420M investment in the Northgate site, with construction crews arriving on schedule for the first two of six planned packaging lines. Dorian Ashby said the phased buildout would add roughly 45% to group output by the time all lines reach rate, easing pressure on a Southport complex now running at capacity.",
         "effects": {
           "logistics": 0.13
         }
@@ -8678,18 +8716,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82704,
+    "lastEventCycle": 82708,
     "events": [
-      {
-        "cycle": 82574,
-        "kind": "recall",
-        "size": "major",
-        "head": "Halhold Works Issues Sweeping Recall of Verity Pro Medical Units as Regulators Step In",
-        "body": "Halhold Works pulled roughly 74,000 Verity Pro medical devices from hospitals nationwide after monitoring faults were linked to at least a dozen critical-care incidents. CEO Gunnar Vale, barely months into his overhaul, said the company would absorb an estimated $380 million charge and pause all Verity Pro shipments. The recall deepens the legal exposure from hospitals already suing over the suite's failures.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82579,
         "kind": "safety_probe",
@@ -8910,6 +8938,16 @@
         "size": "major",
         "head": "Halhold Works Recalls Aveline III Monitors as Probe Escalates to Nationwide Action",
         "body": "Halhold Works ordered a full recall of roughly 41,000 Aveline III monitor units after regulators cited unresolved alarm-failure risks first flagged in the earlier probe. CEO Priya Vantt pledged free field replacements and a redesigned alarm module, though the company warned the action could erase the gains from its Aveline II hospital ramp. Two flagship hospital networks have paused new orders pending certification of the fix.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82708,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Halhold Works Sued by Hospital Network Over Aveline III Monitor Failures",
+        "body": "A consortium of nine hospital systems filed suit against Halhold seeking $310M in damages tied to alarm failures on recalled Aveline III monitors, alleging patient-safety incidents during the rollout. Priya Vantt said the company would defend itself while accelerating a replacement program, as the nationwide recall and regulatory action continue to weigh on the medical unit.",
         "effects": {
           "technology": -0.22
         }
@@ -10693,7 +10731,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82696,
+    "lastEventCycle": 82708,
     "events": [
       {
         "cycle": 0,
@@ -10849,6 +10887,16 @@
         "size": "standard",
         "head": "Korrwright Group Wins $310M Wire & Cable Supply Award for Corridor Region",
         "body": "Korrwright Group secured a $310M multi-year contract to supply structural wire and cable for utility upgrades across the Verant Corridor region. CEO Halden Fenn said the win leverages the second line added earlier this year and pairs naturally with the ongoing rail-bridge work. The contract lifts the company's forward backlog to a record level.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82708,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Group Beats as Corridor and Rail-Bridge Backlog Both Bill",
+        "body": "Korrwright posted quarterly revenue of $1.14B, up 18% year on year, as its $600M rail-bridge job and the corridor wire-and-cable award began billing in parallel. Halden Fenn pointed to a backlog now exceeding $2.6B, the deepest in the group's recorded history.",
         "effects": {
           "construction": 0.13
         }
@@ -14618,18 +14666,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82702,
+    "lastEventCycle": 82708,
     "events": [
-      {
-        "cycle": 82527,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Varnvale & Sons Folds Bellmont Into New Leather Atelier",
-        "body": "Following its acquisition, Varnvale & Sons has opened a dedicated leathercraft atelier at its Harrowgate flagship, retaining 140 Bellmont artisans under master craftsman Edmund Crale. Bram Wold framed the move as the start of a 'house of houses,' with leather goods set to debut alongside the spring timepiece line. The company is committing £18 million to retool the workshop floors.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82534,
         "kind": "product_launch",
@@ -14858,6 +14896,16 @@
         "body": "Varnvale & Sons unveiled the Sovereign Perpetual, its first timepiece built entirely from vertically integrated materials following the Corvane and Marchetti acquisitions. Priced at $210,000 and capped at 150 pieces annually, the launch marks CEO Bram Wold's boldest push into ultra-high-end horology. Early allocations reportedly sold through within 72 hours across the Heritage Division's flagship salons.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82708,
+        "kind": "award",
+        "size": "flash",
+        "head": "Varnvale & Sons Grand Complication Takes Top Honor at Geneval Salon",
+        "body": "The Corvane-sourced grand complication unveiled last quarter won the Aiguille d'Or at the Geneval Salon, the industry's most watched jury prize. Bram Wold said the recognition validated the vertical push into rare-metals sourcing and would anchor a limited run of 60 pieces.",
+        "effects": {
+          "luxury": 0.06
         }
       }
     ]
@@ -15118,7 +15166,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82692,
+    "lastEventCycle": 82708,
     "events": [
       {
         "cycle": 0,
@@ -15236,6 +15284,16 @@
         "body": "Veldtreach reported a modest beat as its newly added third excavation fleet hit full utilization on the coastal rail earthworks contract. CEO Petra Steg said billing milestones were 'tracking slightly ahead of the coastal schedule,' with $310M of the $850M contract now recognized. Management reaffirmed its full-year outlook.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82708,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Veldtreach & Sons Wins $540M Inland Reservoir Earthworks Package",
+        "body": "Veldtreach secured the mass-excavation and embankment package for the Merrow Basin reservoir, its largest single award to date at $540M over four years. Petra Steg called it a decisive step beyond rail, and signaled a fourth excavation fleet would be evaluated to run the two megaprojects concurrently.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
