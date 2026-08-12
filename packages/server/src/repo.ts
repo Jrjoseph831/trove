@@ -1548,3 +1548,23 @@ export async function seedWorld(): Promise<WorldDoc> {
   }
   return doc;
 }
+
+/**
+ * Overwrite the world document unconditionally — the ONLY write here that
+ * doesn't guard on a version. seedWorld() is create-only by design (it fails
+ * silently if a world exists) precisely so nothing can flatten a live economy
+ * by accident; this is the deliberate opposite, and exists solely for the
+ * reset handler. Do not call it from anything a player can reach.
+ */
+export async function forceSeedWorld(state: WorldState): Promise<WorldDoc> {
+  const doc = worldToDoc(state, 1);
+  await ddb.send(
+    new PutCommand({ TableName: TABLE, Item: { pk: PK, version: 1, world: doc } }),
+  );
+  return doc;
+}
+
+/** Remove a player record outright. Used only by the world reset. */
+export async function deletePlayer(playerId: string): Promise<void> {
+  await ddb.send(new DeleteCommand({ TableName: PLAYERS, Key: { playerId } }));
+}
