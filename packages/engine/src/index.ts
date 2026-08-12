@@ -127,6 +127,28 @@ export const BAY_UPKEEP = 120;
 export const DEBT_RATE = 0.0005;
 /** Cycles a fresh world is warmed up so it opens mid-story, not flat. */
 export const WARMUP_CYCLES = 8;
+
+/**
+ * Restock is multiplied at settlement because the catalog's per-item restock
+ * figures were sized for a TRADING game — a player buying a handful of units —
+ * not for factories consuming thousands per 5-minute production tick. With
+ * factory inputs now drawing real stock, the raw figures left a single line
+ * out-consuming resupply on ~64% of input materials, so lines cliff-edged into
+ * multi-hour idles.
+ *
+ * Measured across all 1,346 recipe-input pairs (consumption of one line at full
+ * rate vs. restock per settlement): ×1 → median sustain 0.56, 64% starving.
+ * ×6 → median ~3.3, ~27% starving. That's the shape we want: one line runs
+ * comfortably, a couple share a material fine, and a meaningful minority of
+ * materials stay genuinely tight — which is what feeder lines, standing supply
+ * orders and bulk purchasing exist to solve.
+ *
+ * Deliberately tuned HERE and not by capping recipe input quantities: those
+ * quantities set each good's input-cost share (~55-60% of output value), so
+ * capping them would quietly hand expensive goods a much fatter margin — a new
+ * money printer in place of the one just closed.
+ */
+export const RESTOCK_MUL = 6;
 /** How many recent news scenarios to avoid repeating. */
 export const RECENT_NEWS_WINDOW = 14;
 
@@ -753,7 +775,7 @@ export function settleCycle(state: WorldState): void {
   // 4. Restock open items (capped at normal); reprice everything.
   for (const it of state.items) {
     if (it.edition === null) {
-      it.stock = Math.min(it.stockNormal, it.stock + it.restock);
+      it.stock = Math.min(it.stockNormal, it.stock + it.restock * RESTOCK_MUL);
     }
     it.prevValue = it.value;
     it.value = priceItem(state, it);
