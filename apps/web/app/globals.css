@@ -4122,21 +4122,22 @@ body {
 .oc-profit.neg b {
   color: var(--danger, #c0492b);
 }
-/* Why an under-cost offer isn't a dead order — sits under the margin line so
-   it reads as the explanation for the red number directly above it. */
-.oc-hint {
-  font-size: 12px;
-  line-height: 1.45;
+/* How the desk works, stated once at the top of the screen — not repeated on
+   every order card, which reads as nagging by the third one. */
+.desk-note {
+  font-size: 12.5px;
+  line-height: 1.5;
   color: var(--ink-dim);
-  background: color-mix(in srgb, var(--accent) 7%, transparent);
-  border-left: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
-  padding: 7px 10px;
-  border-radius: 0 8px 8px 0;
-  margin: -4px 0 12px;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  border-left: 2px solid color-mix(in srgb, var(--accent) 50%, transparent);
+  padding: 9px 12px;
+  border-radius: 0 10px 10px 0;
+  margin: 0 0 16px;
+  max-width: 74ch;
 }
-.oc-hint b {
+.desk-note b {
   color: var(--ink);
-  font-variant-numeric: tabular-nums;
+  font-weight: 600;
 }
 .oc-bar {
   height: 5px;

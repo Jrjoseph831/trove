@@ -383,6 +383,9 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [orders, setOrders] = useState<OrderBook | null>(null);
   const lastReportRef = useRef(-1);
   const recapCheckedRef = useRef(false);
+  /** True while the portfolio fetch is failing, so the warning fires once per
+   *  outage instead of on every 15s poll. */
+  const portfolioDownRef = useRef(false);
 
   const modeRef = useRef(mode);
   modeRef.current = mode;
@@ -430,6 +433,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         if (isSignedIn()) {
           try {
             const p = await fetchPortfolio();
+            portfolioDownRef.current = false;
             if (alive) {
               overlayPortfolio(worldsRef.current!.live, p);
               setMySite(p.site ?? null);
@@ -458,8 +462,18 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
                 setSignedIn(false);
                 showToast("Session expired — sign in again");
               }
+            } else if (alive && !portfolioDownRef.current) {
+              // Everything that isn't a 401 used to be swallowed as
+              // "best-effort" — but the harm is identical to the 401 case
+              // described above: the untouched starting world stays on screen,
+              // so cash reads $25,000 and the vault reads empty while the real
+              // account diverges. Trades still land server-side, which makes it
+              // look like buying does nothing. Say it out loud, once per
+              // outage rather than every 15s poll.
+              portfolioDownRef.current = true;
+              const code = err instanceof ApiError ? ` (${err.status})` : "";
+              showToast(`Can't load your holdings${code} — figures may be stale`);
             }
-            /* any other failure: portfolio is best-effort */
           }
         }
         refresh();

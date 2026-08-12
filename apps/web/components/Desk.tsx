@@ -294,29 +294,14 @@ function OfferCard({ o }: { o: DeskOrder }) {
           )}
         </span>
       </div>
-      <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
-        {profit >= 0
-          ? o.youProduce
-            ? "Profit if you make "
-            : "Profit if you resell "
-          : o.youProduce
-            ? "Loss if you make "
-            : "Loss if you resell "}
-        <b>
-          {profit >= 0 ? "+" : ""}
-          {money(profit)}
-        </b>
-        {profit >= 0 && o.companyOffer > 0 && ` · ${margin}% margin`}
-      </div>
-      {profit < 0 && (
-        // The point Joe kept hitting: an opening offer under your cost isn't a
-        // dead order, it's the start of a haggle. Say so, and say the number.
-        <div className="oc-hint">
-          {o.youProduce
-            ? "Their opening bid is under your cost — counter, don't accept."
-            : "You don't make this, so you'd buy it on the floor to fill it. Counter above "}
-          {!o.youProduce && <b>{money(cost)}</b>}
-          {!o.youProduce && " or you're paying them to take it."}
+      {makeCost != null && (
+        <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
+          {profit >= 0 ? "Profit if you make " : "Loss if you make "}
+          <b>
+            {profit >= 0 ? "+" : ""}
+            {money(profit)}
+          </b>
+          {profit >= 0 && o.companyOffer > 0 && ` · ${margin}% margin`}
         </div>
       )}
 
@@ -399,6 +384,15 @@ export function Desk() {
             Reputation <b>{desk.reputation}</b>
           </div>
         </div>
+
+        {/* Said once, here, rather than repeated on every card: clients open
+            low on purpose, and a contract for goods you don't make has to beat
+            what the floor charges you to source them. */}
+        <p className="desk-note">
+          Clients open below what they&apos;ll pay. For goods you don&apos;t make,
+          you buy the units on the floor to fill the order — so counter above the
+          <b> to source</b> figure, or the contract costs you money.
+        </p>
 
         <Automation />
 
