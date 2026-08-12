@@ -7200,7 +7200,73 @@ details.bay-modules > summary.bay-sub:hover {
   color: var(--ink);
 }
 
-/* Streaming activity feed */
+/* Streaming activity feed — framed as a terminal window so it reads as a
+   live instrument rather than loose text on the page. */
+.floorbox {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--paper) 82%, #000);
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.65);
+}
+.floorbox-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 60%, transparent);
+}
+.floorbox-dots {
+  display: flex;
+  gap: 6px;
+}
+.floorbox-dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--line);
+}
+.floorbox-title {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.floorbox-live {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+}
+.floorbox-live i {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+.floorbox-body {
+  padding: 20px 22px 24px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.floorbox-empty {
+  font-size: 13px;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+.feed-txt {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(12px, 1.35vw, 14.5px);
+  letter-spacing: -0.01em;
+}
 .feed-list {
   display: flex;
   flex-direction: column;

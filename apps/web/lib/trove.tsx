@@ -95,6 +95,13 @@ function liveWorld(): WorldState {
   const w = createWorld();
   w.cycle = wallCycle();
   w.cycleFrac = wallCycleFrac();
+  // createWorld() runs warmup settlements locally to get prices/news into a
+  // plausible state — which also fills .log with activity that never actually
+  // happened in the shared world. Prices get overwritten by the first /world
+  // poll so that simulation is harmless, but floor activity is server-owned
+  // and reads as REAL to anyone looking at it. Start empty and show nothing
+  // until the server says otherwise, rather than showing invented trades.
+  w.log = [];
   return w;
 }
 

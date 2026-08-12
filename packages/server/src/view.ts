@@ -54,6 +54,11 @@ export function publicView(doc: WorldDoc): PublicWorld {
         }
       : null,
     archive: doc.archive,
-    log: doc.log ?? [],
+    // "YOU" is the engine's SELF label — only meaningful inside one player's
+    // own client, never in the shared world. A now-fixed aliasing bug let it
+    // reach the stored doc, and those entries persist there until the 30-cap
+    // rotates them out, so strip them on the way out too: the public feed
+    // must never show a visitor an action attributed to themselves.
+    log: (doc.log ?? []).filter((e) => e.who !== "YOU"),
   };
 }
