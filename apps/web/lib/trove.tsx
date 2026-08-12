@@ -471,8 +471,13 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
               // look like buying does nothing. Say it out loud, once per
               // outage rather than every 15s poll.
               portfolioDownRef.current = true;
-              const code = err instanceof ApiError ? ` (${err.status})` : "";
-              showToast(`Can't load your holdings${code} — figures may be stale`);
+              const why =
+                err instanceof ApiError
+                  ? err.detail
+                    ? `: ${err.detail}`
+                    : ` (${err.status})`
+                  : "";
+              showToast(`Can't load your holdings${why} — figures may be stale`);
             }
           }
         }

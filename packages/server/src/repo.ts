@@ -451,8 +451,14 @@ export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
       assets += qty * it.value;
     }
   }
-  const cash = player.cash;
-  const debt = player.debt;
+  // Coerced, not trusted. A player item can legitimately be missing these: any
+  // targeted UpdateCommand (touchLastSeen, an atomic cash credit) UPSERTS, so a
+  // record can exist holding only the attributes that write touched. Undefined
+  // here poisons netWorth to NaN, which JSON.stringify emits as null and the
+  // client renders as a blank or zero account — a money figure that is wrong
+  // with no error anywhere.
+  const cash = Number.isFinite(player.cash) ? player.cash : START_CASH;
+  const debt = Number.isFinite(player.debt) ? player.debt : 0;
   const props = player.properties ?? [];
   let propValue = 0;
   for (const op of props) propValue += op.value;

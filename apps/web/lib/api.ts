@@ -278,9 +278,13 @@ export interface TradeResult {
  *  transient network blip — they're handled very differently. */
 export class ApiError extends Error {
   status: number;
-  constructor(path: string, status: number) {
-    super(`${path} → ${status}`);
+  /** The server's own explanation, when it sent one. A bare status says
+   *  something broke; this says what. */
+  detail?: string;
+  constructor(path: string, status: number, detail?: string) {
+    super(detail ? `${path} → ${status}: ${detail}` : `${path} → ${status}`);
     this.status = status;
+    this.detail = detail;
   }
 }
 
@@ -291,7 +295,15 @@ async function get<T>(path: string, auth = false): Promise<T> {
     if (token) headers.authorization = token;
   }
   const res = await fetch(`${API_BASE}${path}`, { headers });
-  if (!res.ok) throw new ApiError(path, res.status);
+  if (!res.ok) {
+    let detail: string | undefined;
+    try {
+      detail = (await res.json())?.error;
+    } catch {
+      /* no body, or not JSON — the status is all we get */
+    }
+    throw new ApiError(path, res.status, detail);
+  }
   return res.json() as Promise<T>;
 }
 
