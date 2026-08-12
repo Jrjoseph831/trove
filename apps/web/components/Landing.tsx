@@ -51,7 +51,12 @@ const STEPS = [
  *  the site explains itself before dropping anyone into the terminal. Sign In
  *  is the primary path, but "Browse the market" is an equally real one — the
  *  shared world is public; only Acquire/sell requires an account (see
- *  lib/auth.ts) — so this gate invites rather than blocks. */
+ *  lib/auth.ts) — so this gate invites rather than blocks.
+ *
+ *  One full-viewport "screen" at a time (CSS scroll-snap) instead of a
+ *  compact scrolling page — hero, then the live activity feed, then each
+ *  how-to-play step gets its own dominant moment, then the feature grid,
+ *  then a closing screen repeating the CTA. */
 export function Landing() {
   const { authReady, signedIn, signIn, setTab } = useTrove();
   const [dismissed, setDismissed] = useState(
@@ -92,46 +97,50 @@ export function Landing() {
 
   return (
     <div className="landing-gate">
-      <div className="landing-card landing-full">
-        <div className="landing-mark">TROVE</div>
-        <div className="landing-kick">One market. Every firm. Your fortune to build.</div>
+      <section className="landing-screen landing-hero">
+        <div className="landing-inner">
+          <div className="landing-mark">TROVE</div>
+          <div className="landing-kick">One market. Every firm. Your fortune to build.</div>
 
-        <div className="landing-ticker">
-          <Ticker />
+          <div className="landing-ticker">
+            <Ticker />
+          </div>
+
+          <p className="landing-lede">
+            A persistent, shared-world market — one global economy where
+            prices move in real time, hundreds of firms compete for the
+            same customers, and every trade you make is visible to
+            everyone else playing right now.
+          </p>
+
+          {actions}
         </div>
+      </section>
 
-        <p className="landing-lede">
-          A persistent, shared-world market — one global economy where prices
-          move in real time, hundreds of firms compete for the same
-          customers, and every trade you make is visible to everyone else
-          playing right now.
-        </p>
+      <section className="landing-screen landing-screen-feed">
+        <div className="landing-inner">
+          <div className="landing-screen-kick">Live on the floor</div>
+          <LiveFeed />
+        </div>
+      </section>
 
-        {actions}
-
-        <LiveFeed />
-
-        <section className="landing-section">
-          <div className="landing-section-h">How to play</div>
-          <ol className="landing-steps">
-            {STEPS.map((s) => (
-              <li className="landing-step" key={s.n}>
-                <span className="landing-step-n">{s.n}</span>
-                <div>
-                  <div className="landing-step-h">{s.h}</div>
-                  <div className="landing-step-b">{s.b}</div>
-                </div>
-              </li>
-            ))}
-          </ol>
+      {STEPS.map((s) => (
+        <section className="landing-screen landing-screen-step" key={s.n}>
+          <div className="landing-inner">
+            <div className="landing-step-bign">{s.n}</div>
+            <h2 className="landing-step-bigh">{s.h}</h2>
+            <p className="landing-step-bigb">{s.b}</p>
+          </div>
         </section>
+      ))}
 
-        <section className="landing-section">
-          <div className="landing-section-h">What's inside</div>
+      <section className="landing-screen landing-screen-features">
+        <div className="landing-inner">
+          <div className="landing-screen-kick">What's inside</div>
           <div className="landing-features">
             {FEATURES.map((f) => (
               <div className="landing-feature" key={f.name}>
-                <f.Icon size={20} strokeWidth={1.75} />
+                <f.Icon size={26} strokeWidth={1.6} />
                 <div className="landing-feature-h">{f.name}</div>
                 <div className="landing-feature-b">{f.body}</div>
               </div>
@@ -141,10 +150,15 @@ export function Landing() {
             Every firm has a public storefront — click through and look
             around, no account required.
           </p>
-        </section>
+        </div>
+      </section>
 
-        {actions}
-      </div>
+      <section className="landing-screen landing-screen-close">
+        <div className="landing-inner">
+          <div className="landing-mark">TROVE</div>
+          {actions}
+        </div>
+      </section>
     </div>
   );
 }

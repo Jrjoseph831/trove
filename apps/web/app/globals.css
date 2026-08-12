@@ -421,6 +421,11 @@ body {
 }
 .ticker {
   flex: 1;
+  /* A flex item's default min-width is its content's intrinsic size, which
+     for nowrap marquee text can be thousands of px wide — without this it
+     forces the flex parent (and the page) wider than the viewport instead
+     of actually shrinking to fit, regardless of overflow:hidden below. */
+  min-width: 0;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -6853,64 +6858,75 @@ details.bay-modules > summary.bay-sub:hover {
   inset: 0;
   z-index: 200;
   background: var(--bg);
+  overflow-y: auto;
+  /* One full screen at a time — scrolling snaps to the next section instead
+     of settling anywhere, so each moment gets the whole viewport. */
+  scroll-snap-type: y mandatory;
+}
+.landing-screen {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   display: flex;
-  /* flex-start, not center — the page is tall multi-section content now,
-     and centering a scrollable flex container clips the top half above
-     the reachable scroll range once content overflows the viewport. */
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 60px 20px;
-  overflow-y: auto;
+  box-sizing: border-box;
 }
-.landing-card {
-  width: min(94vw, 560px);
+.landing-inner {
+  width: min(94vw, 780px);
   text-align: center;
 }
-.landing-full {
-  width: min(94vw, 760px);
-  padding-bottom: 60px;
+.landing-screen-step .landing-inner {
+  width: min(94vw, 640px);
+}
+.landing-screen-feed .landing-inner,
+.landing-screen-features .landing-inner {
+  width: min(94vw, 820px);
+  text-align: left;
 }
 .landing-mark {
   font-family: var(--font-display);
-  font-size: 44px;
-  letter-spacing: 0.4em;
+  font-size: clamp(48px, 9vw, 88px);
+  letter-spacing: 0.32em;
   color: var(--ink);
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 .landing-kick {
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: clamp(18px, 2.6vw, 28px);
   color: var(--ink-dim);
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 .landing-ticker {
   display: flex;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  padding: 10px 0;
-  margin-bottom: 32px;
+  padding: 12px 0;
+  margin-bottom: 36px;
 }
 .landing-lede {
-  font-size: 15px;
+  font-size: clamp(15px, 1.8vw, 19px);
   line-height: 1.7;
   color: var(--ink-dim);
-  max-width: 420px;
-  margin: 0 auto 32px;
+  max-width: 520px;
+  margin: 0 auto 40px;
 }
 .landing-actions {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 40px;
+  gap: 16px;
 }
 .landing-go {
   background: var(--ink);
   color: var(--paper);
   border: 0;
   border-radius: 999px;
-  padding: 15px 36px;
-  font-size: 13px;
+  padding: 18px 44px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.04em;
   cursor: pointer;
@@ -6922,7 +6938,7 @@ details.bay-modules > summary.bay-sub:hover {
   background: none;
   border: 0;
   color: var(--ink-dim);
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: underline;
   text-underline-offset: 3px;
   cursor: pointer;
@@ -6930,122 +6946,78 @@ details.bay-modules > summary.bay-sub:hover {
 .landing-browse:hover {
   color: var(--ink);
 }
-.landing-section {
-  border-top: 1px solid var(--line);
-  margin-top: 44px;
-  padding-top: 44px;
-}
-.landing-section-h {
-  font-size: 11px;
-  letter-spacing: 0.16em;
+.landing-screen-kick {
+  font-size: 12px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--ink-faint);
-  margin-bottom: 26px;
-}
-.landing-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: left;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.landing-step {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-.landing-step-n {
-  flex: none;
-  width: 26px;
-  height: 26px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-size: 13px;
   color: var(--accent);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 34px;
 }
-.landing-step-h {
-  font-weight: 700;
-  font-size: 14px;
-  margin-bottom: 2px;
+.landing-step-bign {
+  font-family: var(--font-display);
+  font-size: clamp(72px, 16vw, 160px);
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.9;
+  margin-bottom: 4px;
 }
-.landing-step-b {
-  font-size: 13px;
+.landing-step-bigh {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 6vw, 58px);
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+.landing-step-bigb {
+  font-size: clamp(15px, 2vw, 19px);
+  line-height: 1.6;
   color: var(--ink-dim);
-  line-height: 1.5;
+  max-width: 460px;
+  margin: 0 auto;
 }
 .landing-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
-  text-align: left;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
 }
 .landing-feature {
   border: 1px solid var(--line);
   border-radius: var(--bento-r, 16px);
-  padding: 18px;
+  padding: 24px 22px;
   background: var(--paper);
 }
 .landing-feature svg {
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 .landing-feature-h {
   font-weight: 700;
-  font-size: 13px;
-  margin-bottom: 6px;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 .landing-feature-b {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--ink-dim);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 .landing-footnote {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--ink-faint);
   text-align: center;
-  margin: 22px 0 0;
-}
-.landing-feed {
-  text-align: left;
-}
-.landing-feed-h {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 18px;
-}
-.landing-feed-live {
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.landing-feed-live i {
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: var(--accent);
-  animation: feedLivePulse 1.8s ease-in-out infinite;
+  margin: 0;
 }
 .feed-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
 }
 .feed-row {
   display: flex;
   align-items: baseline;
-  gap: 10px;
-  font-size: 13px;
+  gap: 14px;
+  font-size: clamp(15px, 2vw, 20px);
   color: var(--ink-dim);
   line-height: 1.5;
 }
@@ -7055,10 +7027,10 @@ details.bay-modules > summary.bay-sub:hover {
 }
 .feed-dot {
   flex: none;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 999px;
-  margin-top: 5px;
+  margin-top: 8px;
   background: var(--up, var(--accent));
 }
 .feed-row.dn .feed-dot {
@@ -7066,14 +7038,6 @@ details.bay-modules > summary.bay-sub:hover {
 }
 .feed-row.fresh {
   animation: feedRowFresh 1.4s ease-out;
-}
-@keyframes feedLivePulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.25;
-  }
 }
 @keyframes feedRowFresh {
   0% {
