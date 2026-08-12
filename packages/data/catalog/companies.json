@@ -6608,7 +6608,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82701,
+    "lastEventCycle": 82710,
     "events": [
       {
         "cycle": 0,
@@ -6834,6 +6834,16 @@
         "size": "standard",
         "head": "Fennmoor Misses as Medical Systems Integration Costs Run Deeper Than Guided",
         "body": "Fennmoor posted quarterly earnings below expectations, citing $420M in integration and restructuring charges tied to folding Corvane and Threll into its new Medical Systems Division. CEO Dorian Brandt acknowledged the combination 'is proving costlier and slower than we mapped,' pushing breakeven for the unit into next year. Devices and Industrial Machines held steady, partly cushioning the shortfall.",
+        "effects": {
+          "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82710,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Fennmoor Names Medical Systems Chief and Sets Integration Deadline After Cost Overruns",
+        "body": "Following two quarters of deeper-than-guided integration costs, Fennmoor installed veteran operator Lena Voss to run the troubled Medical Systems division and pledged to complete the Corvane–Threll merger by year-end. CEO Dorian Brandt admitted the folding-in 'took longer than we told the market,' and paused further acquisitions until synergies materialize. The company guided to roughly $180M in one-time charges before the unit turns accretive.",
         "effects": {
           "technology": -0.13
         }
@@ -7147,7 +7157,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82695,
+    "lastEventCycle": 82710,
     "events": [
       {
         "cycle": 0,
@@ -7283,6 +7293,16 @@
         "size": "flash",
         "head": "Garrware Edges Past Estimates as Marrow Valley Ramps to Full Rate",
         "body": "Orla Holt reported a modest quarterly beat as the fourth Marrow Valley line reached full output weeks ahead of plan, lifting regional volumes 22%. Margins held firm on stable anchor contracts. Holt reiterated a disciplined pace with no new capital projects announced.",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82710,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Garrware Adds Marrow Valley Warehouse Wing as Fourth Line Runs Flat Out",
+        "body": "With the Marrow Valley fourth line now at full rate, Garrware broke ground on a modest 60,000-square-foot storage wing to ease shipping bottlenecks. CEO Orla Holt described the addition as 'a natural next step, nothing more,' keeping to the disciplined cadence that has defined her long tenure. The project is expected to open within two quarters at minimal capital cost.",
         "effects": {
           "logistics": 0.06
         }
@@ -7725,18 +7745,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82701,
+    "lastEventCycle": 82710,
     "events": [
-      {
-        "cycle": 82562,
-        "kind": "lawsuit",
-        "size": "major",
-        "head": "Gromford Works Sued Over Aurelian Noir Clasp as Regulators Widen Concealment Inquiry",
-        "body": "A coalition of buyers filed suit alleging Gromford Works knew of the Aurelian Noir clasp defect months before the recall and continued shipments, seeking damages tied to more than 40,000 affected units. The Verrand product-safety board has formally expanded its inquiry into internal communications, and two senior quality officers have been placed on leave. CEO Mira Ashby, long the face of the brand's rapid launches, offered a public apology but stopped short of accepting the concealment claims.",
-        "effects": {
-          "luxury": -0.22
-        }
-      },
       {
         "cycle": 82568,
         "kind": "leadership_change",
@@ -7953,6 +7963,16 @@
         "size": "standard",
         "head": "Gromford Works Bets on Slimmed Timepiece Line With Limited Halvard-Era Debut",
         "body": "Chief Halvard Pryce unveiled the Aurelian Collection, a 900-piece limited run of high-margin timepieces positioned as the first designed entirely since the Meridian split. Pryce told a packed showcase that Gromford would 'make fewer, charge more, and mean it,' targeting a 40% lift in per-unit margins after last year's output cuts. Early allocations to flagship boutiques sold through within days.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82710,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Gromford Works Rebounds as Slimmed Halvard-Era Timepiece Line Clears Shelves",
+        "body": "Gromford posted a surprise return to growth, with quarterly revenue up 9% as the limited timepiece debut sold through at nearly 40% above internal targets. CEO Halvard Pryce touted the result as proof his leaner strategy is working, though Fine Goods remained flat and analysts flagged that the beat leaned heavily on a single scarce release. Pryce hinted at 'three more launches this year,' drawing both applause and caution over pacing.",
         "effects": {
           "luxury": 0.13
         }
@@ -10352,7 +10372,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82696,
+    "lastEventCycle": 82710,
     "events": [
       {
         "cycle": 0,
@@ -10488,6 +10508,16 @@
         "size": "standard",
         "head": "Kesselgrove Co. Adds Second Assembly Bay to Attack Record Press Backlog",
         "body": "With orders stretching past next year, Kesselgrove committed $190M to a second assembly bay at its Halvern works, targeting a 25% lift in annual press output by 2028. CEO Orla Steg framed the move as measured rather than speculative, noting the expansion is backed by firm orders already on the books. The bay is expected to begin partial output within eighteen months.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82710,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Kesselgrove Co. Beats as Second Assembly Bay Begins Chipping at Record Backlog",
+        "body": "Kesselgrove topped estimates again, with revenue up 11% as the newly opened second assembly bay started converting its record press backlog into shipments. CEO Orla Steg said lead times had already shortened by six weeks and that the backlog remained 'comfortably into next year.' The steady execution reinforced the house's reputation for quiet, dependable expansion.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -13744,7 +13774,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82697,
+    "lastEventCycle": 82710,
     "events": [
       {
         "cycle": 0,
@@ -13883,6 +13913,16 @@
         "effects": {
           "manufacturing": 0.13
         }
+      },
+      {
+        "cycle": 82710,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Stegforge Locks In Multi-Year Rail Plate Supply Pact as Consortium Deepens Ties",
+        "body": "Stegforge signed a five-year supply agreement with its rail consortium partners valued at roughly $2.3B, effectively pre-selling much of the capacity from its second rail plate line now under construction. CEO Aurelia Steg called the deal 'the anchor we needed before laying more steel,' securing demand well ahead of the new line's startup. The pact extends the company's structural materials order book to its longest horizon in decades.",
+        "effects": {
+          "manufacturing": 0.13
+        }
       }
     ]
   },
@@ -14013,14 +14053,14 @@
     "aiOwned": true,
     "homeSector": "consumer",
     "founded": 1983,
-    "ceo": "Corin Vale",
+    "ceo": "Marta Holloway",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.58,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82699,
+    "lastEventCycle": 82710,
     "events": [
       {
         "cycle": 0,
@@ -14183,6 +14223,14 @@
         "effects": {
           "consumer": -0.22
         }
+      },
+      {
+        "cycle": 82710,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Thaldale Group Ousts Vale as Fastening Scandal Fallout Forces Board Shakeup",
+        "body": "The Thaldale board removed CEO Corin Vale amid the widening fastening-fund diversion probe and shareholder restatement suit, appointing turnaround specialist Marta Holloway as chief with a mandate to restore trust. Holloway pledged an independent forensic review and said the carved-out Fastening unit would be sold or wound down entirely. The abrupt exit caps a turbulent debut year that began with a sweeping overhaul and ended in crisis.",
+        "effects": {}
       }
     ]
   },
@@ -16069,7 +16117,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82698,
+    "lastEventCycle": 82710,
     "events": [
       {
         "cycle": 0,
@@ -16225,6 +16273,16 @@
         "size": "flash",
         "head": "Vossenstead Supply Stretches Streak to Twelve on Steady Fixtures Demand",
         "body": "Bram Thorne's house posted its twelfth consecutive quarterly beat, with revenue up 6.4% as plumbing and fixtures orders held firm across all four distribution centers. Margins ticked up 40 basis points as the fourth center reached full utilization ahead of schedule. Thorne reiterated the company's unhurried expansion cadence, citing no plans for near-term acquisitions.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82710,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenstead Supply Stretches Streak to Thirteen on Food Service Restock Demand",
+        "body": "Vossenstead extended its beat streak to thirteen straight quarters, with revenue up 6% as Food Service customers rebuilt inventories heading into peak season. CEO Bram Thorne credited 'the same boring consistency' and reaffirmed that the fourth distribution center is now fully ramped. Fixtures demand held steady, giving little drama but plenty of reliability.",
         "effects": {
           "consumer": 0.06
         }
@@ -16458,7 +16516,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82700,
+    "lastEventCycle": 82710,
     "events": [
       {
         "cycle": 0,
@@ -16652,6 +16710,16 @@
         "body": "Woldmark posted revenue of $1.8B, missing estimates by roughly 6% as Halcyon 4 reorders fell sharply after the launch surge. Isolde Frayne, who declared the turnaround 'done' just two quarters ago, conceded the ramp had 'front-loaded demand' and said the next flagship arrives later than planned. Margins narrowed as discounting crept into secondary markets.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82710,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Woldmark Cratits as Halcyon 4 Sales Collapse and Frayne Concedes Turnaround Stalled",
+        "body": "Woldmark reported a stunning 22% revenue drop as Halcyon 4 orders fell off a cliff, with channel inventory piling up and two large buyers canceling repeat orders. CEO Isolde Frayne, who had declared the turnaround 'done' just months ago, told a tense briefing that 'we got ahead of ourselves' and withdrew full-year guidance entirely. The reversal marks a sharp humbling for the outspoken chief and puts pressure on the next Halcyon cycle to salvage credibility.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
