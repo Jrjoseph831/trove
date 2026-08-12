@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Briefcase, Building2, Factory, TrendingUp, Trophy } from "lucide-react";
 import { useTrove } from "@/lib/trove";
 import { LiveFeed } from "./LiveFeed";
@@ -57,6 +57,19 @@ export function Landing() {
   const [dismissed, setDismissed] = useState(
     () => typeof window !== "undefined" && sessionStorage.getItem(SEEN_KEY) === "1",
   );
+  // `dismissed` is otherwise a one-time read — without this, signing out
+  // leaves it stuck at whatever it was during the signed-in session (true
+  // if they'd ever clicked "Browse the market" before signing in), so the
+  // front cover would never reappear and sign-out would drop straight into
+  // a restricted Catalog with no explanation.
+  const wasSignedIn = useRef(signedIn);
+  useEffect(() => {
+    if (wasSignedIn.current && !signedIn) {
+      sessionStorage.removeItem(SEEN_KEY);
+      setDismissed(false);
+    }
+    wasSignedIn.current = signedIn;
+  }, [signedIn]);
 
   if (!authReady || signedIn || dismissed) return null;
 
