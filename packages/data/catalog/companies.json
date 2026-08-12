@@ -1011,7 +1011,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82702,
+    "lastEventCycle": 82711,
     "events": [
       {
         "cycle": 0,
@@ -1230,6 +1230,16 @@
         "effects": {
           "energy": 0.13
         }
+      },
+      {
+        "cycle": 82711,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Blackhold Beats Again as Second Storage Campus Comes Online Ahead of Schedule",
+        "body": "Halden Dabney posted a second consecutive clean quarter, with revenue up 22% to $840 million as the newly commissioned campus began fulfilling the $1.2B grid mandate two months early. The independent testing unit cleared its first external audit without exceptions, cementing regulator confidence. Dabney signaled a third campus could follow if demand holds.",
+        "effects": {
+          "energy": 0.13
+        }
       }
     ]
   },
@@ -1350,14 +1360,14 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1939,
-    "ceo": "Marlow Denhart",
+    "ceo": "Sable Renwick",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82703,
+    "lastEventCycle": 82711,
     "events": [
       {
         "cycle": 0,
@@ -1580,6 +1590,14 @@
         "head": "Blackton Industries Ousts Cassian Rode as Halvern Fallout Reaches Boardroom",
         "body": "The board removed CEO Cassian Rode after mounting losses from the 1.8M-unit Halvern recall and the pending class action eroded investor confidence. Veteran operations chief Marlow Denhart, brought in from the components division, will take the helm with a mandate to stabilize quality control and settle outstanding litigation. Rode's two-year tenure ends amid the costliest safety episode in the company's history.",
         "effects": {}
+      },
+      {
+        "cycle": 82711,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Blackton Industries Names Turnaround Veteran Sable Renwick to Steady Halvern Fallout",
+        "body": "Weeks after ousting Cassian Rode, Blackton's board installed Sable Renwick as chief executive, tasked with resolving the Halvern class action and rebuilding supplier trust. Renwick, who led two prior parts-industry recoveries, pledged an independent quality overhaul and a settlement framework within ninety days. Marlow Denhart moves to executive chairman as the boardroom reset completes.",
+        "effects": {}
       }
     ]
   },
@@ -1594,18 +1612,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82705,
+    "lastEventCycle": 82711,
     "events": [
-      {
-        "cycle": 82552,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Boreas Power Seals $3.8B Grid-Storage Pact Anchored by Calderwick Fleet",
-        "body": "Boreas Power struck a landmark 15-year agreement to supply firmed capacity to the Vant_ regional grid operator, valued at $3.8 billion and underpinned by the freshly acquired Calderwick storage assets. Mira Thorne framed the deal as validation of the buying spree, with Hollowmere Phase Two output already earmarked against it. Deliveries begin next year, cementing Boreas as the region's largest independent storage supplier.",
-        "effects": {
-          "energy": 0.22
-        }
-      },
       {
         "cycle": 82558,
         "kind": "expansion",
@@ -1832,6 +1840,16 @@
         "size": "standard",
         "head": "Boreas Power Breaks Ground on Vantel Storage Campus to Anchor $1.2B Deal",
         "body": "Boreas Power began construction on a dedicated grid-storage campus at its Vantel site to fulfill the $1.2B contract sealed last month, with first phases targeted for completion within eighteen months. Integration chief Dario Fenn said the campus consolidates the cost-out gains, projecting an additional $60M in annualized savings once fully online. CEO Mira Thorne framed the move as the next leg of a broader buildout, hinting at further site acquisitions.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82711,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Boreas Power Acquires Compute Specialist Halvane in $1.4B Push to Pair Power With Silicon",
+        "body": "Restless as ever, Mira Thorne struck a $1.4 billion deal for compute-hardware maker Halvane, aiming to bundle Boreas storage output with on-site processing capacity. The acquisition arrives as the Vantel campus nears full ramp, giving Boreas an end-to-end offering rivals lack. Thorne said the combination positions the company for 'the next decade of grid-and-compute convergence.'",
         "effects": {
           "energy": 0.13
         }
@@ -3851,7 +3869,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82700,
+    "lastEventCycle": 82711,
     "events": [
       {
         "cycle": 0,
@@ -4009,6 +4027,16 @@
         "size": "standard",
         "head": "Carrowforge's Renn Unveils Sweeping Overhaul, Splitting Off Roe-Era Product Lines",
         "body": "Dahlia Renn laid out a restructuring plan that carves the tainted press-machine division into a separate wind-down unit and consolidates remaining operations under three plant chiefs. The plan carries a $160M charge and roughly 900 job cuts, but Renn said it 'draws a hard line' under the falsification scandal. Federal investigators were briefed on the new quality-control structure ahead of the announcement.",
+        "effects": {
+          "manufacturing": -0.13
+        }
+      },
+      {
+        "cycle": 82711,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Carrowforge Misses as Renn's Roe-Era Split Drags Costs Into the Red",
+        "body": "Dahlia Renn's first full quarter came in below expectations, with a $210 million restructuring charge tied to separating the legacy product lines pushing the company to a narrow loss. Renn insisted the pain was front-loaded and reaffirmed that the core Industrial Machines unit grew orders 9% underneath the noise. Analysts flagged execution risk as the overhaul enters its costliest phase.",
         "effects": {
           "manufacturing": -0.13
         }
@@ -4735,16 +4763,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82706,
+    "lastEventCycle": 82711,
     "events": [
-      {
-        "cycle": 82562,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Castlestone Names Turnaround Veteran Pell Karsh as CEO, Voss Steps Aside",
-        "body": "Dale Voss will exit the chief executive role effective immediately, capping a turbulent stretch marked by the Vellmont order shortfall and twin-campus overruns that erased roughly 18 percent of annual profit. The board named restructuring specialist Pell Karsh, formerly of the compute division at Halden Systems, to steady operations and review the stalled second campus. Karsh said his first 90 days would focus on cost discipline and renegotiating the Vellmont delivery schedule.",
-        "effects": {}
-      },
       {
         "cycle": 82567,
         "kind": "restructure",
@@ -4973,6 +4993,16 @@
         "body": "Castlestone locked in a multi-year, $12 billion Grid-Core supply agreement with a consortium of data-hub operators, more than doubling its committed backlog. CEO Pell Karsh said the two new lines and the fresh campus were built 'precisely for this moment' and pledged first deliveries within nine months. The pact secures capacity through 2031 and front-loads roughly $3 billion in early payments.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82711,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Castlestone Faces Safety Probe Into Grid-Core Campus After Reported Coolant Failure",
+        "body": "Regulators opened an inquiry into Castlestone's flagship Grid-Core facility following a coolant-system failure that forced a partial shutdown days into full production. Pell Karsh downplayed the incident as 'a commissioning hiccup,' but the probe casts a shadow over the $12B supply pact signed only weeks ago. Customers on the backlog are seeking assurances that delivery timelines hold.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -9936,7 +9966,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82702,
+    "lastEventCycle": 82711,
     "events": [
       {
         "cycle": 0,
@@ -10150,6 +10180,16 @@
         "body": "Ironcrestton is under fire after industry reviewers alleged the newly launched Meridian line overstated the provenance of its hand-finished components. CEO Thea Blackwood defended the collection as 'authentically crafted' but confirmed an internal audit of supplier documentation. The controversy has cast a shadow over Blackwood's aggressive move into higher price tiers just weeks after launch.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82711,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Ironcrestton Sued by Regulators Over Meridian Line as Sourcing Scandal Deepens",
+        "body": "A consumer-protection authority filed suit against Ironcrestton alleging the Meridian line's 'single-origin artisan' labeling was materially false, seeking penalties north of $400 million and a full product injunction. Thea Blackwood defended the launch but suspended Meridian shipments pending review, wiping out the margin gains that anchored her turnaround narrative. Three sourcing executives were placed on leave as an internal probe widened.",
+        "effects": {
+          "luxury": -0.22
         }
       }
     ]
@@ -11237,18 +11277,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82704,
+    "lastEventCycle": 82711,
     "events": [
-      {
-        "cycle": 82558,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Lhaus Industries Lands $9B Fleet Supply Pact for New Cell Packs",
-        "body": "Cole Brandt secured a landmark five-year agreement to supply cell packs from the newly formed Power & Storage division to a major commercial fleet operator, valued at up to $9B. The deal validates the $6.4B Voss Cell acquisition and positions Lhaus as a top-tier supplier beyond its traditional auto-parts base. Brandt said the division was already fielding inquiries that could double its order book by year-end.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82565,
         "kind": "expansion",
@@ -11478,6 +11508,16 @@
         "effects": {
           "automotive": -0.13
         }
+      },
+      {
+        "cycle": 82711,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Lhaus Industries Offloads Carved-Out Grid-Storage Unit to Kessering Group for $900M",
+        "body": "Cole Brandt announced the sale of the ring-fenced grid-storage division to private holding firm Kessering Group for $900 million, transferring the bulk of the overheating litigation exposure with it. Brandt framed the deal as clearing the deck for a renewed push into vehicles and auto parts, calling storage 'a chapter we no longer need.' The buyer assumes the pending $1.8B partner claims as part of the terms.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -11492,7 +11532,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82701,
+    "lastEventCycle": 82711,
     "events": [
       {
         "cycle": 0,
@@ -11668,6 +11708,16 @@
         "size": "standard",
         "head": "Maison & Vale Beats as Corriveau Bolt-On Clears First Full Quarter",
         "body": "Maison & Vale reported revenue of $2.4B, topping estimates, as the $1.1B Corriveau household-goods unit contributed a full quarter ahead of plan. CEO Rhys Kessler said combined Northram and Corriveau synergies had already reached $310M against a $400M target. Kessler signaled the acquisition pipeline 'remains very much open.'",
+        "effects": {
+          "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82711,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Maison & Vale Strikes $1.5B Deal for Cleaning-Supplies Group Vestrand",
+        "body": "Rhys Kessler continued his acquisition spree with a $1.5 billion purchase of Vestrand, a regional cleaning-and-sanitation maker that expands Maison & Vale's Jansan footprint. The bolt-on follows the smooth digestion of Corriveau and gives the household-goods portfolio a third leg. Kessler projected $80 million in annual synergies within two years.",
         "effects": {
           "hospitality": 0.13
         }
