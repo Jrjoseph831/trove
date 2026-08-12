@@ -268,6 +268,16 @@ export interface TradeResult {
   held: number;
 }
 
+/** Thrown by get() so callers can tell an expired session (401) apart from a
+ *  transient network blip — they're handled very differently. */
+export class ApiError extends Error {
+  status: number;
+  constructor(path: string, status: number) {
+    super(`${path} → ${status}`);
+    this.status = status;
+  }
+}
+
 async function get<T>(path: string, auth = false): Promise<T> {
   const headers: Record<string, string> = {};
   if (auth) {
@@ -275,7 +285,7 @@ async function get<T>(path: string, auth = false): Promise<T> {
     if (token) headers.authorization = token;
   }
   const res = await fetch(`${API_BASE}${path}`, { headers });
-  if (!res.ok) throw new Error(`${path} → ${res.status}`);
+  if (!res.ok) throw new ApiError(path, res.status);
   return res.json() as Promise<T>;
 }
 

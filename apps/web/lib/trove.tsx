@@ -14,6 +14,7 @@ import {
   deskAction,
   factoryAction,
   fetchDesk,
+  ApiError,
   fetchPortfolio,
   fetchWorld,
   postTrade,
@@ -432,8 +433,21 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
                 if (built) setRecap(built);
               }
             }
-          } catch {
-            /* portfolio is best-effort */
+          } catch (err) {
+            // A 401 here means the session expired, and swallowing it is
+            // actively harmful: the client keeps rendering the untouched
+            // starting world, so the player sees a healthy-looking $25,000
+            // account that is not theirs, while every write silently fails.
+            // Try a refresh; if the session really is gone, drop to signed-out
+            // so they're told to sign in instead of trusting a phantom balance.
+            if (err instanceof ApiError && err.status === 401) {
+              await refreshIfNeeded();
+              if (alive && !isSignedIn()) {
+                setSignedIn(false);
+                showToast("Session expired — sign in again");
+              }
+            }
+            /* any other failure: portfolio is best-effort */
           }
         }
         refresh();
