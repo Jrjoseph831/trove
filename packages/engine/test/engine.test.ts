@@ -1300,3 +1300,40 @@ describe("order desk — a contract must be worth taking", () => {
     expect(median).toBeLessThan(0.3);
   });
 });
+
+describe("estates and equity are visible in the books", () => {
+  it("books rent as income instead of cash appearing from nowhere", () => {
+    // settleProperties credited cash directly and recorded nothing, so a
+    // report showed a balance that had grown with no line explaining it —
+    // and the whole Estates mechanic was invisible in reporting.
+    const S = createWorld(0);
+    S.cash = 50_000_000;
+    const prop = propertyCatalog.find((p) => p.rentYield > 0)!;
+    expect(buyProperty(S, prop.id)).toBe(true);
+    const cash0 = S.cash;
+
+    settleCycle(S);
+
+    const r = S.reports[S.reports.length - 1]!;
+    const rent = r.flows.rentRev ?? 0;
+    expect(rent).toBeGreaterThan(0);
+    // What was booked is what was actually paid.
+    expect(rent).toBeCloseTo(prop.price * prop.rentYield, 4);
+    expect(S.cash).toBeGreaterThan(cash0 - prop.price); // rent landed too
+  });
+
+  it("reports estate value separately from the assets lump", () => {
+    const S = createWorld(0);
+    S.cash = 50_000_000;
+    const prop = propertyCatalog[0]!;
+    expect(buyProperty(S, prop.id)).toBe(true);
+
+    settleCycle(S);
+
+    const r = S.reports[S.reports.length - 1]!;
+    expect(r.estates ?? 0).toBeGreaterThan(0);
+    // Broken out OF assets, not added on top — the two must still reconcile.
+    expect(r.estates!).toBeLessThanOrEqual(r.assets);
+    expect(r.cash + r.assets - r.debt).toBeCloseTo(r.netWorth, 2);
+  });
+});

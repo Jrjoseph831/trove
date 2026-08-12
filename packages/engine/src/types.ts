@@ -277,6 +277,12 @@ export interface Ledger {
   soldUnits: number; // units dumped back to market
   soldRev: number;
   upkeep: number; // factory upkeep + input spend
+  /** Rent collected from owned property this period. Optional because ledgers
+   *  persisted before estates were reported have no such field — it read as
+   *  cash appearing from nowhere. */
+  rentRev?: number;
+  /** Dividends paid by equity stakes this period (same reasoning as rentRev). */
+  divRev?: number;
   /** Per-item breakdown (itemId → flow). */
   items: Record<number, ItemFlow>;
 }
@@ -295,6 +301,11 @@ export interface Report {
   cash: number;
   assets: number;
   debt: number;
+  /** Market value of owned property at capture. Part of , broken out
+   *  so a portfolio of estates is legible instead of an unexplained lump. */
+  estates?: number;
+  /** Market value of equity stakes at capture (also part of ). */
+  stakes?: number;
   flows: Ledger;
 }
 
