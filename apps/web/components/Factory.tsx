@@ -26,6 +26,7 @@ import {
 import type { LineModule } from "@trove/data";
 import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+import { InboundStrip, SupplyPanel } from "./SupplyPanel";
 import { FactoryFloor } from "@/components/FactoryFloor";
 
 /** A module effect as a color-coded chip: an up/down arrow, a metric, and whether
@@ -89,6 +90,9 @@ export function Factory() {
           Cash <b>{moneyShort(state.cash)}</b>
         </div>
       </div>
+
+      <InboundStrip />
+      <SupplyPanel />
 
       <div className="fac-tabs">
         <button

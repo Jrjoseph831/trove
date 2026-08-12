@@ -1046,6 +1046,24 @@ describe("bulk supply orders — capital ahead of production", () => {
     expect(S.supplyOrders.length).toBe(0);
   });
 
+  it("delivers on the settlement path too, not just the production cron", () => {
+    // Two production paths exist: the live Production Lambda calls
+    // runProduction, the sandbox produces inside settleCycle. Delivery used to
+    // hang off runProduction only, so sandbox orders were charged and never
+    // arrived. Guard the path that was actually broken.
+    const { S, mat } = supplyWorld();
+    const qty = Math.min(2000, Math.floor(mat.stock));
+    const held0 = held(mat, "YOU");
+    const order = orderSupply(S, mat.id, qty)!;
+
+    while (S.cycle < order.arrivesCycle) {
+      S.cycle++;
+      settleCycle(S);
+    }
+    expect(held(mat, "YOU")).toBeGreaterThanOrEqual(held0 + qty);
+    expect(S.supplyOrders.length).toBe(0);
+  });
+
   it("takes the material off the floor at order time, so it can't be double-sold", () => {
     const { S, mat } = supplyWorld();
     const qty = Math.min(1500, Math.floor(mat.stock));

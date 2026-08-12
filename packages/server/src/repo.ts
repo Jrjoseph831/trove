@@ -37,6 +37,8 @@ import {
   type OwnedProperty,
   type PvpOrder,
   type Report,
+  type ReorderRule,
+  type SupplyOrder,
   type RuntimeItem,
   type SiteConfig,
   type WorldState,
@@ -159,6 +161,8 @@ export function docToWorld(doc: WorldDoc): WorldState {
     // The global world has no player-owned production lines or real estate;
     // both are per-player concerns handled outside the singleton doc.
     factories: [],
+    supplyOrders: [],
+    reorders: [],
     properties: [],
     stakes: {},
     floorSlots: 0,
@@ -288,6 +292,10 @@ export interface Player {
   lastOrderAt?: number;
   // ── Factory / sales state (live-wired; absent for pre-factory players) ───────
   factories?: Factory[];
+  /** Bulk material orders paid for and in transit to the vault. */
+  supplyOrders?: SupplyOrder[];
+  /** Auto-reorder policies per material. */
+  reorders?: ReorderRule[];
   /** Owned real estate (Property Market). */
   properties?: OwnedProperty[];
   /** Equity stakes in AI houses (Deal Room): name → fraction owned. */
@@ -338,6 +346,8 @@ export function playerView(doc: WorldDoc, player: Player): WorldState {
   w.orders = player.orders ?? [];
   w.lastOrderAt = player.lastOrderAt ?? 0;
   w.factories = player.factories ?? [];
+  w.supplyOrders = player.supplyOrders ?? [];
+  w.reorders = player.reorders ?? [];
   w.properties = player.properties ?? [];
   w.stakes = player.stakes ?? {};
   w.floorSlots = player.floorSlots ?? STARTING_SLOTS;
@@ -364,6 +374,8 @@ export function extractPlayer(state: WorldState, player: Player): Player {
     orders: state.orders,
     lastOrderAt: state.lastOrderAt,
     factories: state.factories,
+    supplyOrders: state.supplyOrders,
+    reorders: state.reorders,
     properties: state.properties,
     stakes: state.stakes,
     floorSlots: state.floorSlots,
@@ -392,6 +404,8 @@ export interface PortfolioView {
   floorSlots: number;
   infra: Infra;
   factories: Factory[];
+  supplyOrders: SupplyOrder[];
+  reorders: ReorderRule[];
   properties: OwnedProperty[];
   stakes: Record<string, number>;
   listPrices: Record<number, number>;
@@ -441,6 +455,8 @@ export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
     floorSlots: player.floorSlots ?? STARTING_SLOTS,
     infra: player.infra ?? { ...FRESH_INFRA },
     factories: player.factories ?? [],
+    supplyOrders: player.supplyOrders ?? [],
+    reorders: player.reorders ?? [],
     properties: props,
     stakes,
     listPrices: player.listPrices ?? {},

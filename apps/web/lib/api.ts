@@ -8,6 +8,8 @@ import type {
   Factory,
   Infra,
   LogEntry,
+  ReorderRule,
+  SupplyOrder,
   OwnedProperty,
   PvpOrder,
   Report,
@@ -55,6 +57,8 @@ export interface ApiPortfolio {
   floorSlots?: number;
   infra?: Infra;
   factories?: Factory[];
+  supplyOrders?: SupplyOrder[];
+  reorders?: ReorderRule[];
   properties?: OwnedProperty[];
   stakes?: Record<string, number>;
   listPrices?: Record<number, number>;
@@ -227,6 +231,8 @@ export type FactoryAction =
   | { action: "listprice"; itemId: number; mult: number }
   | { action: "listed"; itemId: number; on: boolean }
   | { action: "infra"; id: "power" | "router" | "qc" }
+  | { action: "order-supply"; itemId: number; qty: number }
+  | { action: "reorder"; itemId: number; floor: number; qty: number }
   | {
       action: "deskauto";
       patch: { specialist?: boolean; autoFulfill?: boolean; minMargin?: number };

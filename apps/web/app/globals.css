@@ -9708,3 +9708,203 @@ body {
   color: var(--accent);
   font-size: 14px;
 }
+
+/* ── Factory: supply first ────────────────────────────────────────────────
+   Material, not cash, is what stops a floor now — so what your lines eat and
+   how long you're covered sits above the lines themselves. */
+.supply {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  padding: 18px 20px 20px;
+  margin-bottom: 22px;
+}
+.supply-h {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.supply-t {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--accent);
+}
+.supply-why {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+}
+.supply-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sup-row {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(3, 0.8fr) auto auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  font-size: 13px;
+}
+.sup-row em {
+  display: block;
+  font-style: normal;
+  font-size: 9.5px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-top: 2px;
+}
+.sup-nm {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 650;
+  color: var(--ink);
+}
+.sup-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  flex: none;
+  background: var(--up);
+}
+.sup-row.low .sup-dot { background: var(--accent); }
+.sup-row.crit .sup-dot { background: var(--danger, #c0492b); }
+.sup-row.crit { border-color: color-mix(in srgb, var(--danger, #c0492b) 45%, var(--line)); }
+.sup-hold,
+.sup-burn,
+.sup-cover {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+.sup-inbound,
+.sup-rule {
+  font-size: 10.5px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.sup-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-dim);
+  font-size: 12px;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+.sup-btn:hover { color: var(--ink); border-color: var(--ink-faint); }
+.sup-order {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  margin-top: 10px;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sup-order-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.sup-order label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 10.5px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.sup-order input {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+  padding: 9px 11px;
+  width: 150px;
+  font-variant-numeric: tabular-nums;
+}
+.sup-quote {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.sup-disc { color: var(--up); }
+.sup-place {
+  margin-left: auto;
+  background: var(--ink);
+  color: var(--paper);
+  border: 0;
+  border-radius: 999px;
+  padding: 11px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.sup-place:disabled { opacity: 0.45; cursor: not-allowed; }
+.sup-auto {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.sup-autobtn {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-dim);
+  font-size: 11.5px;
+  padding: 6px 13px;
+  cursor: pointer;
+}
+.sup-autobtn.on { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.inbound {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.inbound-h {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.inbound-pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border-radius: 999px;
+  padding: 6px 13px;
+  font-size: 12px;
+  color: var(--ink);
+}
+.inbound-pill em {
+  font-style: normal;
+  font-size: 10px;
+  color: var(--accent);
+}
+@media (max-width: 860px) {
+  .sup-row {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+  }
+  .sup-btn { grid-column: 2; justify-self: end; }
+  .sup-place { margin-left: 0; width: 100%; }
+  .sup-quote { gap: 14px; font-size: 13px; }
+}

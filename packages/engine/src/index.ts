@@ -818,8 +818,6 @@ export function settleCycle(state: WorldState): void {
  * production-tick index (wallProdCycle) so online checks line up with build.
  */
 export function runProduction(state: WorldState): void {
-  deliverSupplyOrders(state);
-  runReorders(state);
   produceFactories(state);
   sellListings(state);
 }
@@ -1283,6 +1281,12 @@ export function previewFactoryNeeds(state: WorldState): FactoryInputNeed[] {
  * player sells, via the existing scarcity term.
  */
 function produceFactories(state: WorldState): void {
+  // Deliveries and top-ups run HERE, not in runProduction, because there are
+  // two production paths: the live Production Lambda calls runProduction, but
+  // the sandbox produces inside settleCycle. Hanging them off runProduction
+  // meant sandbox orders were paid for and never arrived.
+  deliverSupplyOrders(state);
+  runReorders(state);
   // Older persisted world docs (e.g. the live singleton) predate factories.
   const lines = state.factories ?? [];
   if (lines.length === 0) return;

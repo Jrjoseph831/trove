@@ -29,6 +29,8 @@ import {
   setListPrice,
   setSource,
   setStandingSource,
+  orderSupply,
+  setReorder,
   START_CASH,
   uninstallModule,
   wallProdCycle,
@@ -37,7 +39,10 @@ import {
 import {
   allPlayers,
   buildPortfolio,
+  commitSettlement,
+  docToWorld,
   extractPlayer,
+  worldToDoc,
   getPlayer,
   loadWorld,
   playerView,
@@ -64,6 +69,8 @@ const freshPlayer = (playerId: string): Player => ({
 interface Body {
   action?: string;
   itemId?: number;
+  qty?: number;
+  floor?: number;
   propId?: number;
   company?: string;
   pct?: number;
@@ -150,6 +157,13 @@ async function apply(state: WorldState, b: Body, playerId: string): Promise<stri
       return buyInfra(state, b.id as "power" | "router" | "qc")
         ? null
         : "already installed or not enough cash";
+    case "order-supply":
+      return orderSupply(state, Number(b.itemId), Number(b.qty))
+        ? null
+        : "can't order that much";
+    case "reorder":
+      setReorder(state, Number(b.itemId), Number(b.floor ?? 0), Number(b.qty ?? 0));
+      return null;
     case "deskauto":
       setDeskAuto(state, b.patch ?? {});
       return null;
@@ -187,6 +201,35 @@ export async function handler(
   if (err) return json(409, { error: err });
 
   const updated = extractPlayer(state, player);
+
+  // Placing a bulk supply order takes the material OFF the shared floor, so
+  // unlike every other action here it mutates the world doc and not just the
+  // player. Persisting only the player would let a stockpile be bought out of
+  // thin air and, worse, be re-bought by everyone else from stock that was
+  // supposed to be gone. Commit both atomically under the world's version, and
+  // let a lost race surface rather than silently half-applying.
+  if (body.action === "order-supply") {
+    const full = docToWorld(doc as WorldDoc);
+    const byId = new Map(full.items.map((it) => [it.id, it]));
+    for (const it of state.items) {
+      const f = byId.get(it.id);
+      if (f) f.stock = it.stock; // engine already clamped this to >= 0
+      // Delivered/held material lives on the player's own vault projection,
+      // which extractPlayer + mutatePlayerWorld below handle as usual.
+      const mine = it.owners["YOU"] ?? 0;
+      if (f) {
+        if (mine > 0) f.owners[playerId] = mine;
+        else delete f.owners[playerId];
+      }
+    }
+    try {
+      await commitSettlement(worldToDoc(full, doc.version + 1), doc.version, [updated]);
+    } catch {
+      return json(409, { error: "the floor moved — try that again" });
+    }
+    return json(200, buildPortfolio(worldToDoc(full, doc.version + 1), updated));
+  }
+
   await savePlayer(updated);
   return json(200, buildPortfolio(doc as WorldDoc, updated));
 }

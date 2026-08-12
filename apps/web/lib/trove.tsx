@@ -73,6 +73,8 @@ import {
   autoNegotiate,
   autoFulfillOrders,
   setDeskAuto as engineSetDeskAuto,
+  orderSupply as engineOrderSupply,
+  setReorder as engineSetReorder,
   heldOfProduct,
   producesProduct,
   playerBuy,
@@ -142,6 +144,8 @@ function overlayPortfolio(live: WorldState, p: ApiPortfolio): void {
   if (p.floorSlots !== undefined) live.floorSlots = p.floorSlots;
   if (p.infra) live.infra = p.infra;
   if (p.factories) live.factories = p.factories;
+  if (p.supplyOrders) live.supplyOrders = p.supplyOrders;
+  if (p.reorders) live.reorders = p.reorders;
   if (p.properties) live.properties = p.properties;
   if (p.stakes) live.stakes = p.stakes;
   if (p.listPrices) live.listPrices = p.listPrices;
@@ -229,6 +233,10 @@ interface Trove {
   setSellPrice: (itemId: number, mult: number) => void;
   setListing: (itemId: number, on: boolean) => void;
   buyUpgrade: (id: "power" | "router" | "qc") => void;
+  /** Bulk-buy a material ahead of production; arrives in the vault after a lead time. */
+  orderSupply: (itemId: number, qty: number) => void;
+  /** Standing top-up policy for a material (qty 0 clears it). */
+  setReorder: (itemId: number, floor: number, qty: number) => void;
   setDeskAutomation: (patch: {
     specialist?: boolean;
     autoFulfill?: boolean;
@@ -1189,6 +1197,38 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh, showToast, liveFactory],
   );
 
+  const orderSupply = useCallback(
+    (itemId: number, qty: number) => {
+      if (modeRef.current === "live") {
+        void liveFactory(
+          { action: "order-supply", itemId, qty },
+          "Order placed — in transit",
+          "Couldn't place that order",
+        );
+        return;
+      }
+      if (engineOrderSupply(worldsRef.current!.sandbox, itemId, qty)) {
+        showToast("Order placed — in transit");
+        refresh();
+      } else {
+        showToast("Couldn't place that order");
+      }
+    },
+    [refresh, showToast, liveFactory],
+  );
+
+  const setReorder = useCallback(
+    (itemId: number, floor: number, qty: number) => {
+      if (modeRef.current === "live") {
+        void liveFactory({ action: "reorder", itemId, floor, qty });
+        return;
+      }
+      engineSetReorder(worldsRef.current!.sandbox, itemId, floor, qty);
+      refresh();
+    },
+    [refresh, liveFactory],
+  );
+
   const setLineSource = useCallback(
     (lineId: string, inputItemId: number, feederId: string | null) => {
       if (modeRef.current === "live") {
@@ -1436,6 +1476,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setSellPrice,
       setListing,
       buyUpgrade,
+      orderSupply,
+      setReorder,
       setDeskAutomation,
       closeReveal,
       signedIn,
@@ -1498,6 +1540,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       setSellPrice,
       setListing,
       buyUpgrade,
+      orderSupply,
+      setReorder,
       setDeskAutomation,
       closeReveal,
       signedIn,
