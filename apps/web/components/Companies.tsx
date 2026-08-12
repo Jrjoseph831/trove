@@ -399,7 +399,11 @@ function HoldingsGrid({ holdings }: { holdings: CompanySite["holdings"] }) {
 // ── The rendered company page (one layout for players AND AI houses) ────────
 const ALWAYS_ON = new Set(["masthead", "storefront", "standing"]);
 
-function SiteView({
+/** Exported so the public page at /<handle> renders the EXACT same layout as
+ *  the in-sim view — one component, so the two can't drift apart. Omitting
+ *  `onBack` switches the chrome from in-app (back to Directory) to standalone
+ *  (wordmark + a way into the market). */
+export function SiteView({
   site,
   owner,
   onBack,
@@ -407,7 +411,7 @@ function SiteView({
 }: {
   site: CompanySite;
   owner?: boolean;
-  onBack: () => void;
+  onBack?: () => void;
   onEdit?: () => void;
 }) {
   const [req, setReq] = useState<CompanyProduct | null>(null);
@@ -426,9 +430,15 @@ function SiteView({
   return (
     <div className="view">
       <div className="site-bar">
-        <button className="site-back" onClick={onBack}>
-          ← Directory
-        </button>
+        {onBack ? (
+          <button className="site-back" onClick={onBack}>
+            ← Directory
+          </button>
+        ) : (
+          <a className="site-back" href="/">
+            TROVE
+          </a>
+        )}
         <span className="site-url">
           <Globe size={12} />{" "}
           {site.handle ? `trove.ceo/${site.handle}` : "unpublished"}
@@ -437,6 +447,11 @@ function SiteView({
           <button className="site-btn" onClick={onEdit}>
             <Pencil size={13} /> Edit
           </button>
+        )}
+        {!onBack && (
+          <a className="site-btn" href="/">
+            Enter the market
+          </a>
         )}
       </div>
 

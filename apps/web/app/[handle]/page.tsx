@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { companyRoster } from "@trove/data";
 import { PublicCompany } from "@/components/PublicCompany";
+import { TroveProvider } from "@/lib/trove";
 
 /** Same slug rule the server uses for house handles (see repo.ts). */
 const houseHandle = (name: string) =>
@@ -43,5 +44,12 @@ export default async function CompanyPage({
   params: Promise<{ handle: string }>;
 }) {
   const { handle } = await params;
-  return <PublicCompany handle={handle} />;
+  // Wrapped in the provider because the shared <SiteView/> (and the storefront
+  // Request flow inside it) reads Trove context — so a visitor who clicks
+  // Request gets the normal sign-in gate rather than a crash.
+  return (
+    <TroveProvider>
+      <PublicCompany handle={handle} />
+    </TroveProvider>
+  );
 }
