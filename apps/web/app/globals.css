@@ -6746,6 +6746,21 @@ details.bay-modules > summary.bay-sub:hover {
   color: var(--ink-dim);
   margin-bottom: 18px;
 }
+.ob-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+.ob-dots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line);
+}
+.ob-dots i.on {
+  background: var(--accent);
+}
 .ob-h {
   font-family: var(--font-display);
   font-size: 26px;

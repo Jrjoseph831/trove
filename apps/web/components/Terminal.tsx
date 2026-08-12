@@ -172,11 +172,33 @@ function holdingName(raw: string): string {
   return `${t} Holdings`;
 }
 
+const TOUR = [
+  {
+    h: "The market never stops",
+    b: "Prices move with real demand and breaking news on The Wire. Buy low, sell high, right alongside everyone else playing right now.",
+  },
+  {
+    h: "Build something real",
+    b: "Stand up a factory, turn raw materials into finished goods, and sell what you make — to the market or under contract.",
+  },
+  {
+    h: "Make your move",
+    b: "Buy into another firm's equity, acquire a rival outright in the Deal Room, or grow your holdings in Trove Estates. However you want to build your empire.",
+  },
+];
+
 function Onboarding() {
   const { signedIn, desk, nameHolding, renaming, cancelRename } = useTrove();
   const [val, setVal] = useState("");
-  // Open on first sign-in (no name yet) OR when the player chose to rename.
-  const open = !!(signedIn && desk && (!desk.name || renaming));
+  // 0 = not touring; 1..TOUR.length = a tour screen, shown once right after
+  // a first-time naming (not a rename) keeps the same gate open a few beats
+  // longer instead of dropping straight onto the floor.
+  const [tourStep, setTourStep] = useState(0);
+  const needsName = !!(signedIn && desk && !desk.name);
+  // Open on first sign-in (no name yet), the player choosing to rename, OR
+  // mid-tour (desk.name is already set by then, so needsName alone would
+  // close the gate before the tour gets a chance to show).
+  const open = !!(signedIn && desk && (needsName || renaming || tourStep > 0));
   const isRename = !!desk?.name;
   const wasOpen = useRef(false);
   useEffect(() => {
@@ -185,10 +207,40 @@ function Onboarding() {
   }, [open, isRename, desk?.name]);
 
   if (!open) return null;
+
+  if (tourStep > 0) {
+    const last = tourStep === TOUR.length;
+    const step = TOUR[tourStep - 1]!;
+    return (
+      <div className="reveal-bg show">
+        <div className="onboard">
+          <div className="ob-mark">TROVE</div>
+          <div className="ob-dots">
+            {TOUR.map((_, i) => (
+              <i key={i} className={i < tourStep ? "on" : ""} />
+            ))}
+          </div>
+          <div className="ob-h">{step.h}</div>
+          <p className="ob-sub">{step.b}</p>
+          <div className="ob-actions">
+            <button
+              className="ob-go"
+              onClick={() => (last ? setTourStep(0) : setTourStep((s) => s + 1))}
+            >
+              {last ? "Enter the market" : "Next"}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   const preview = holdingName(val);
   const check = preview ? validateHoldingName(preview) : { ok: false };
   const submit = () => {
-    if (preview && check.ok) nameHolding(preview);
+    if (!preview || !check.ok) return;
+    nameHolding(preview);
+    if (!isRename) setTourStep(1); // first-time only — walk the new player through the tour
   };
   return (
     <div
