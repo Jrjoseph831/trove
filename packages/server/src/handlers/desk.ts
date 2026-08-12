@@ -29,6 +29,8 @@ import {
   loadWorld,
   mutatePlayerWorld,
   playerView,
+  PlayerConflictError,
+  retryOnConflict,
   savePlayer,
   type Player,
   type WorldDoc,
@@ -97,7 +99,16 @@ export async function handler(
     setMarketEvent(state, now); // telegraphed surge boosts its sector's orders
     const rolled = rollSandboxOrders(state, now, LIVE_TIMING);
     const auto = autoNegotiate(state, now, LIVE_TIMING); // no-op unless specialist is on
-    if (rolled || auto) await savePlayer(extractPlayer(state, player));
+    // Rolling a new offer is a side effect of reading the desk, not the point
+    // of the request. If it loses a race, drop it — the next poll rolls again.
+    // Failing the GET would be a worse outcome than a slightly later offer.
+    if (rolled || auto) {
+      try {
+        await savePlayer(extractPlayer(state, player));
+      } catch (err) {
+        if (!(err instanceof PlayerConflictError)) throw err;
+      }
+    }
     return json(200, deskView(state, player.name ?? null));
   }
 
@@ -112,48 +123,60 @@ export async function handler(
   }
   const { action, orderId } = body;
 
+  // Each branch below is read → mutate → save. Wrapped in retryOnConflict so a
+  // production tick landing mid-request makes the attempt stale and it rebuilds
+  // from fresh state, instead of overwriting whatever the tick just wrote. The
+  // reads sit INSIDE the closure for exactly that reason.
   if (action === "name") {
-    const name = String(body.name ?? "").trim().slice(0, 40);
-    const check = validateHoldingName(name);
-    if (!check.ok) return json(400, { error: check.reason ?? "Invalid name." });
-    const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
-    player.name = name;
-    await savePlayer(player);
-    const state = playerView(doc as WorldDoc, player);
-    return json(200, deskView(state, name));
+    return retryOnConflict(async () => {
+      const name = String(body.name ?? "").trim().slice(0, 40);
+      const check = validateHoldingName(name);
+      if (!check.ok) return json(400, { error: check.reason ?? "Invalid name." });
+      const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
+      player.name = name;
+      await savePlayer(player);
+      const state = playerView(doc as WorldDoc, player);
+      return json(200, deskView(state, name));
+    });
   }
 
   if (action === "decline") {
-    const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
-    const state = playerView(doc as WorldDoc, player);
-    if (!declineSandboxOrder(state, orderId ?? ""))
-      return json(404, { error: "no such order" });
-    await savePlayer(extractPlayer(state, player));
-    return json(200, deskView(state, player.name ?? null));
+    return retryOnConflict(async () => {
+      const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
+      const state = playerView(doc as WorldDoc, player);
+      if (!declineSandboxOrder(state, orderId ?? ""))
+        return json(404, { error: "no such order" });
+      await savePlayer(extractPlayer(state, player));
+      return json(200, deskView(state, player.name ?? null));
+    });
   }
 
   if (action === "accept") {
-    const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
-    const state = playerView(doc as WorldDoc, player);
-    const res = acceptSandboxOffer(state, orderId ?? "", now, LIVE_TIMING);
-    if (res.kind !== "deal") return json(409, { error: "offer is closed" });
-    await savePlayer(extractPlayer(state, player));
-    return json(200, { ...deskView(state, player.name ?? null), note: res });
+    return retryOnConflict(async () => {
+      const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
+      const state = playerView(doc as WorldDoc, player);
+      const res = acceptSandboxOffer(state, orderId ?? "", now, LIVE_TIMING);
+      if (res.kind !== "deal") return json(409, { error: "offer is closed" });
+      await savePlayer(extractPlayer(state, player));
+      return json(200, { ...deskView(state, player.name ?? null), note: res });
+    });
   }
 
   if (action === "counter") {
-    const bid = Math.round(Number(body.bid));
-    const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
-    const state = playerView(doc as WorldDoc, player);
-    const o = (state.orders ?? []).find((x) => x.id === orderId);
-    if (!o) return json(404, { error: "no such order" });
-    const company = o.company;
-    const res = negotiateSandbox(state, orderId ?? "", bid, now, LIVE_TIMING);
-    if (res.kind === "invalid") return json(400, { error: "invalid bid" });
-    await savePlayer(extractPlayer(state, player));
-    return json(200, {
-      ...deskView(state, player.name ?? null),
-      note: { ...res, company },
+    return retryOnConflict(async () => {
+      const bid = Math.round(Number(body.bid));
+      const player = (await getPlayer(playerId)) ?? freshPlayer(playerId);
+      const state = playerView(doc as WorldDoc, player);
+      const o = (state.orders ?? []).find((x) => x.id === orderId);
+      if (!o) return json(404, { error: "no such order" });
+      const company = o.company;
+      const res = negotiateSandbox(state, orderId ?? "", bid, now, LIVE_TIMING);
+      if (res.kind === "invalid") return json(400, { error: "invalid bid" });
+      await savePlayer(extractPlayer(state, player));
+      return json(200, {
+        ...deskView(state, player.name ?? null),
+        note: { ...res, company },
+      });
     });
   }
 

@@ -77,13 +77,18 @@ export async function handler(): Promise<{ producers: number; worked: number }> 
   const prodTarget = wallProdCycle(now);
   const flipTarget = wallCycle(now);
 
-  const all = await allPlayers();
-  const producers = all.filter(needsProduction);
-  if (producers.length === 0) return { producers: 0, worked: 0 };
-
-  const sellerIds = standingSellerIds(producers);
-
   for (let attempt = 0; ; attempt++) {
+    // Players are re-read EVERY attempt rather than hoisted out of the loop.
+    // Player writes are guarded on each record's rev now, so a retry that
+    // re-sent the records from the first read would lose the same race every
+    // time and the tick would silently produce nothing. Fresh reads are what
+    // make the retry mean anything.
+    const all = await allPlayers();
+    const producers = all.filter(needsProduction);
+    if (producers.length === 0) return { producers: 0, worked: 0 };
+
+    const sellerIds = standingSellerIds(producers);
+
     const cur = await loadWorld();
     if (!cur) return { producers: producers.length, worked: 0 };
 

@@ -237,9 +237,23 @@ export async function commitSettlement(
             ExpressionAttributeValues: { ":prev": prevVersion },
           },
         },
-        ...batch.map((p) => ({
-          Put: { TableName: PLAYERS, Item: p },
-        })),
+        // Each player is guarded on its OWN rev, not just the world version.
+        // Guarding the world alone let a tick built from a snapshot taken at
+        // its start overwrite anything a player did while it ran — a purchase
+        // or a supply order placed mid-tick would silently revert. A stale
+        // player now cancels the whole transaction, which the caller retries
+        // against fresh reads.
+        ...batch.map((p, i) => {
+          const { Item, ConditionExpression, ExpressionAttributeValues } = guardedPut(p, `p${i}`);
+          return {
+            Put: {
+              TableName: PLAYERS,
+              Item,
+              ConditionExpression,
+              ...(ExpressionAttributeValues ? { ExpressionAttributeValues } : {}),
+            },
+          };
+        }),
       ],
     }),
   );
@@ -282,6 +296,10 @@ export interface Order {
  *  (item.owners[playerId]); cash/debt/name/reputation/orders are per-player. */
 export interface Player {
   playerId: string;
+  /** Optimistic-concurrency counter, bumped on every whole-record write.
+   *  Absent on records written before it existed — treated as "unversioned",
+   *  which the first guarded write migrates. Never edit this by hand. */
+  rev?: number;
   cash: number;
   debt: number;
   /** The Holding's display name (set at onboarding). */
@@ -733,9 +751,122 @@ export async function touchLastSeen(playerId: string, at: number): Promise<void>
   );
 }
 
-/** Persist a player record (per-player, low contention — last write wins). */
+/**
+ * Thrown when a guarded player write loses a race — the record changed between
+ * the read this write was built from and the write itself. Never means the data
+ * is bad; it means this attempt is stale and must be rebuilt from a fresh read.
+ */
+export class PlayerConflictError extends Error {
+  constructor(playerId: string) {
+    super(`player ${playerId} changed under us`);
+    this.name = "PlayerConflictError";
+  }
+}
+
+/** The condition + item for a guarded whole-record write. A player record is
+ *  only overwritten if it still carries the rev the caller read; records
+ *  predating rev match on its absence, so the first guarded write migrates
+ *  them without a backfill. */
+export function guardedPut(p: Player, slot = ""): {
+  Item: Player;
+  ConditionExpression: string;
+  ExpressionAttributeValues?: Record<string, unknown>;
+} {
+  const next = { ...p, rev: (p.rev ?? 0) + 1 };
+  if (p.rev === undefined) {
+    return {
+      Item: next,
+      ConditionExpression: "attribute_not_exists(playerId) OR attribute_not_exists(rev)",
+    };
+  }
+  const key = `:rev${slot}`;
+  return {
+    Item: next,
+    ConditionExpression: `rev = ${key}`,
+    ExpressionAttributeValues: { [key]: p.rev },
+  };
+}
+
+/**
+ * Persist a whole player record, but ONLY if nobody else has written it since
+ * the read this was built from. Whole-record Puts are how the settlement and
+ * production Lambdas write, and an unguarded Put from a stale read silently
+ * reverts whatever landed in between — cash, factories, purchases. Losing that
+ * race must be loud, so callers can retry against fresh data instead of quietly
+ * wiping a player's account.
+ *
+ * Prefer withPlayer() over calling this directly: it does the read/retry.
+ */
 export async function savePlayer(p: Player): Promise<void> {
-  await ddb.send(new PutCommand({ TableName: PLAYERS, Item: p }));
+  const { Item, ConditionExpression, ExpressionAttributeValues } = guardedPut(p);
+  try {
+    await ddb.send(
+      new PutCommand({
+        TableName: PLAYERS,
+        Item,
+        ConditionExpression,
+        ...(ExpressionAttributeValues ? { ExpressionAttributeValues } : {}),
+      }),
+    );
+    // Keep the caller's object in step, so a second save in the same request
+    // doesn't fail against the rev it just superseded.
+    p.rev = Item.rev;
+  } catch (err) {
+    if ((err as { name?: string }).name === "ConditionalCheckFailedException") {
+      throw new PlayerConflictError(p.playerId);
+    }
+    throw err;
+  }
+}
+
+/** How many times a contended player update is rebuilt before giving up. */
+const PLAYER_WRITE_RETRIES = 4;
+
+/**
+ * Run a read→mutate→save block, retrying it whole if the save lost a rev race.
+ * `run` MUST do its own getPlayer() so each attempt is rebuilt from fresh
+ * state — retrying a block that closes over a stale record just re-sends the
+ * same doomed write.
+ *
+ * For handlers whose branches return HTTP results directly; use withPlayer()
+ * when you only need to mutate a record.
+ */
+export async function retryOnConflict<T>(run: () => Promise<T>): Promise<T> {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      return await run();
+    } catch (err) {
+      if (err instanceof PlayerConflictError && attempt < PLAYER_WRITE_RETRIES) continue;
+      throw err;
+    }
+  }
+}
+
+/**
+ * Read-modify-write a player safely: load the record, apply `mutate`, write it
+ * back under its rev, and on a lost race re-read and re-apply against what
+ * actually landed. This is the shape nearly every handler wants — doing the
+ * read and the write by hand is how stale-snapshot overwrites creep back in.
+ *
+ * `mutate` must be pure with respect to the record it's handed (it may run
+ * several times) and returns the record to write, or null to abort the write.
+ */
+export async function withPlayer(
+  playerId: string,
+  mutate: (p: Player) => Player | null | Promise<Player | null>,
+): Promise<Player | null> {
+  for (let attempt = 0; ; attempt++) {
+    const current = (await getPlayer(playerId)) ?? { playerId, cash: START_CASH, debt: 0 };
+    const next = await mutate(current);
+    if (!next) return null;
+    try {
+      await savePlayer(next);
+      return next;
+    } catch (err) {
+      if (err instanceof PlayerConflictError && attempt < PLAYER_WRITE_RETRIES) continue;
+      throw err;
+    }
+  }
 }
 
 /** Atomically set just cash, touching no other attribute — same reasoning as
@@ -743,6 +874,21 @@ export async function savePlayer(p: Player): Promise<void> {
  *  which rewrites whole player items every 5 minutes from a snapshot taken at
  *  tick start: the cash lands, then the next tick puts the stale record back
  *  and the change silently evaporates. Returns the value actually stored. */
+export async function addPlayerCash(playerId: string, delta: number): Promise<number> {
+  const res = await ddb.send(
+    new UpdateCommand({
+      TableName: PLAYERS,
+      Key: { playerId },
+      // ADD is applied by Dynamo itself, so a credit can't lose a race the way
+      // read-add-write can — no guard or retry needed.
+      UpdateExpression: "ADD cash :d",
+      ExpressionAttributeValues: { ":d": delta },
+      ReturnValues: "UPDATED_NEW",
+    }),
+  );
+  return Number(res.Attributes?.cash ?? 0);
+}
+
 export async function setPlayerCash(playerId: string, cash: number): Promise<number> {
   const res = await ddb.send(
     new UpdateCommand({
@@ -1013,22 +1159,11 @@ export async function settleBuyout(orderId: string, retries = 4): Promise<DealRe
                 ExpressionAttributeValues: { ":v": cur.version },
               },
             },
-            {
-              Put: {
-                TableName: PLAYERS,
-                Item: mergedBuyer,
-                ConditionExpression: "cash = :bc",
-                ExpressionAttributeValues: { ":bc": buyer.cash },
-              },
-            },
-            {
-              Put: {
-                TableName: PLAYERS,
-                Item: cashedOut,
-                ConditionExpression: "cash = :tc",
-                ExpressionAttributeValues: { ":tc": target.cash },
-              },
-            },
+            // rev, not cash: a cash-only guard misses every change that
+            // doesn't move cash (factories, produced stock, site), so a
+            // concurrent write to those was invisible to this check.
+            { Put: { TableName: PLAYERS, ...guardedPut(mergedBuyer, "b") } },
+            { Put: { TableName: PLAYERS, ...guardedPut(cashedOut, "t") } },
             {
               Delete: {
                 TableName: ORDERS,
@@ -1101,8 +1236,6 @@ export async function mutatePlayerWorld<T>(
     const existing = await getPlayer(playerId);
     const isNew = !existing;
     const base: Player = existing ?? { playerId, cash: START_CASH, debt: 0 };
-    const prevCash = base.cash;
-    const prevDebt = base.debt;
 
     const full = docToWorld(cur); // all players' holdings
     const pv = playerView(cur, base); // this player's view (owners["YOU"])
@@ -1139,18 +1272,11 @@ export async function mutatePlayerWorld<T>(
                 ExpressionAttributeValues: { ":v": cur.version },
               },
             },
-            {
-              Put: {
-                TableName: PLAYERS,
-                Item: player,
-                ConditionExpression: isNew
-                  ? "attribute_not_exists(playerId)"
-                  : "cash = :pc AND debt = :pd",
-                ExpressionAttributeValues: isNew
-                  ? undefined
-                  : { ":pc": prevCash, ":pd": prevDebt },
-              },
-            },
+            // rev rather than cash+debt: those caught money races but were
+            // blind to the rest of the record (factories, produced stock,
+            // reports, site), so a concurrent write to any of those was
+            // invisible to this check and got silently overwritten.
+            { Put: { TableName: PLAYERS, ...guardedPut(player) } },
           ],
         }),
       );
@@ -1184,8 +1310,6 @@ export async function mutateTrade<T>(
     const existing = await getPlayer(playerId);
     const isNew = !existing;
     const player: Player = existing ?? { playerId, cash: START_CASH, debt: 0 };
-    const prevCash = player.cash;
-    const prevDebt = player.debt;
 
     const state = docToWorld(cur);
     const result = fn(state, player); // throws TradeError to reject
@@ -1203,18 +1327,11 @@ export async function mutateTrade<T>(
                 ExpressionAttributeValues: { ":v": cur.version },
               },
             },
-            {
-              Put: {
-                TableName: PLAYERS,
-                Item: player,
-                ConditionExpression: isNew
-                  ? "attribute_not_exists(playerId)"
-                  : "cash = :pc AND debt = :pd",
-                ExpressionAttributeValues: isNew
-                  ? undefined
-                  : { ":pc": prevCash, ":pd": prevDebt },
-              },
-            },
+            // rev rather than cash+debt: those caught money races but were
+            // blind to the rest of the record (factories, produced stock,
+            // reports, site), so a concurrent write to any of those was
+            // invisible to this check and got silently overwritten.
+            { Put: { TableName: PLAYERS, ...guardedPut(player) } },
           ],
         }),
       );
