@@ -8,6 +8,7 @@ import {
   CfnOutput,
 } from "aws-cdk-lib";
 import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
+import * as iam from "aws-cdk-lib/aws-iam";
 import * as lambdaNode from "aws-cdk-lib/aws-lambda-nodejs";
 import { Runtime } from "aws-cdk-lib/aws-lambda";
 import * as events from "aws-cdk-lib/aws-events";
@@ -309,7 +310,21 @@ export class TroveStack extends Stack {
 
     const portfolio = fn("Portfolio", "portfolio.ts", Duration.seconds(10));
     market.grantReadData(portfolio);
+    // Reads the player, and stamps ONE attribute on it: lastSeenAt, the
+    // watermark the "while you were away" recap diffs against. That stamp is
+    // an UpdateItem — a write — and granting only reads made every call past
+    // the 5-minute threshold fail with AccessDenied, surfacing as a bare 500
+    // with the client left rendering a starting balance that wasn't the
+    // player's. Kept to UpdateItem rather than full read-write: this is the
+    // hottest authorized endpoint and it has no business deleting or
+    // wholesale-replacing a player record.
     players.grantReadData(portfolio);
+    portfolio.addToRolePolicy(
+      new iam.PolicyStatement({
+        actions: ["dynamodb:UpdateItem"],
+        resources: [players.tableArn],
+      }),
+    );
     api.addRoutes({
       path: "/portfolio",
       methods: [HttpMethod.GET],
@@ -331,7 +346,13 @@ export class TroveStack extends Stack {
     // ── Factory (authorized): the production floor. Pure player-record writes
     //    (lines/infra/listings); produced stock is created by Settlement. ──────
     const factory = fn("Factory", "factory.ts", Duration.seconds(15));
-    market.grantReadData(factory);
+    // Most factory actions only touch the player record — but placing a bulk
+    // supply order takes material OFF the shared floor, so it commits the world
+    // doc too (see the order-supply branch). Read-only on market meant that
+    // write was denied, and the handler's catch reported it to the player as
+    // "the floor moved — try that again", so bulk ordering could never succeed
+    // and never said why.
+    market.grantReadWriteData(factory);
     players.grantReadWriteData(factory);
     api.addRoutes({
       path: "/factory",
