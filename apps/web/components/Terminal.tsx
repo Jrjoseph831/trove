@@ -76,6 +76,13 @@ export function Terminal() {
       </div>
       {!canBrowseFull && (
         <div className="guestbar">
+          <button
+            className="guestbar-mark"
+            onClick={() => window.dispatchEvent(new Event("trove:show-landing"))}
+            title="Back to the front page"
+          >
+            TROVE
+          </button>
           <span className="guestbar-txt">
             You&apos;re browsing as a guest — prices are live, but you need an
             account to trade.

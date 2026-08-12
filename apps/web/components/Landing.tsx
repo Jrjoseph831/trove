@@ -124,6 +124,18 @@ export function Landing() {
     wasSignedIn.current = signedIn;
   }, [signedIn]);
 
+  // Guests have no nav, so without this there is no route back to the front
+  // page once it's been dismissed for the session — the only way to see it
+  // again would be opening a fresh tab. The guest bar dispatches this.
+  useEffect(() => {
+    const show = () => {
+      sessionStorage.removeItem(SEEN_KEY);
+      setDismissed(false);
+    };
+    window.addEventListener("trove:show-landing", show);
+    return () => window.removeEventListener("trove:show-landing", show);
+  }, []);
+
   // Depends on authReady/signedIn too: the gate returns null until auth
   // resolves, so on first run gateRef.current is still null. Without those
   // deps the effect never re-ran once the element actually mounted and the

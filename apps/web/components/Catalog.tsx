@@ -34,8 +34,11 @@ const BRAND_NAMES = [...allBrands].map((b) => b.name).sort();
 /** Grid geometry — the virtualizer works in ROWS, so the column count is
  *  measured from the container and rows are chunked to match. */
 const CARD_MIN = 232;
-const GAP = 18;
-const CARD_H = 292;
+const GAP = 24;
+/** Must match the rendered card height (see .pcard in globals.css) — the
+ *  virtualizer positions rows on this, so if it's short the last element in
+ *  each card gets clipped by the row below. */
+const CARD_H = 364;
 
 /** Inline highlight for the "Find it on the floor" target card. */
 const HL_STYLE = {
