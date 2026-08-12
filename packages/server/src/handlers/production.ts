@@ -33,6 +33,8 @@ import {
   docToWorld,
   extractPlayer,
   getPlayers,
+  holdingsOf,
+  setPlayerHoldings,
   loadWorld,
   playerView,
   worldToDoc,
@@ -84,6 +86,27 @@ export async function handler(): Promise<{ producers: number; worked: number }> 
     // time and the tick would silently produce nothing. Fresh reads are what
     // make the retry mean anything.
     const all = await allPlayers();
+
+    // Finish moving goods off the shared world record. /portfolio migrates an
+    // account when its owner loads the game, but that leaves anyone who hasn't
+    // logged in stranded — and their goods can't be stripped from the doc until
+    // they've landed somewhere else. This runs every tick over every player, so
+    // the migration completes on its own rather than depending on who shows up.
+    // The write is conditional on `holdings` being absent, so it can never
+    // overwrite a real trade, and a first-load race just fails harmlessly.
+    if (attempt === 0) {
+      const cur0 = await loadWorld();
+      const stale = cur0 ? all.filter((p) => !p.holdings) : [];
+      for (const p of stale) {
+        try {
+          await setPlayerHoldings(p.playerId, holdingsOf(cur0 as WorldDoc, p));
+        } catch (err) {
+          if ((err as { name?: string }).name !== "ConditionalCheckFailedException") throw err;
+        }
+      }
+      if (stale.length) console.log(`migrated holdings for ${stale.length} player(s)`);
+    }
+
     const producers = all.filter(needsProduction);
     if (producers.length === 0) return { producers: 0, worked: 0 };
 
