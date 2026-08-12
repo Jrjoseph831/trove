@@ -6,7 +6,7 @@
  * claim the last edition copy.
  */
 import { lotSize } from "@trove/data";
-import { canBuy, held, type RuntimeItem, type WorldState } from "@trove/engine";
+import { canBuy, held, pushLog, type RuntimeItem, type WorldState } from "@trove/engine";
 import { TradeError, type Player } from "./repo";
 
 export interface TradeOutcome {
@@ -57,6 +57,12 @@ export function serverBuy(
     it.stock -= n;
   }
   player.cash -= cost;
+  // Same verb the AI floor already uses for a buy ("acquired") — a real
+  // player's trade should read exactly like any other firm's on the public
+  // feed, not be singled out. Named by the player's own holding, never
+  // "YOU" (that's only meaningful inside their own client, not the shared
+  // world doc this ends up persisted into).
+  pushLog(state, player.name ?? "A new firm", "acquired", `${n}× ${it.name}`);
   return {
     action: "buy",
     itemId: id,
@@ -86,6 +92,7 @@ export function serverSell(
   if (isEd) it.remaining++;
   else it.stock += n;
   player.cash += it.value * n;
+  pushLog(state, player.name ?? "A new firm", "sold", `${n}× ${it.name}`);
   return {
     action: "sell",
     itemId: id,

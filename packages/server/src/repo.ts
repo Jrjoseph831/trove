@@ -173,7 +173,14 @@ export function docToWorld(doc: WorldDoc): WorldState {
     ledger: emptyLedger(),
     reports: [],
     periodNo: 0,
-    log: doc.log ?? [],
+    // Copied, not referenced — every call site that derives a WorldState
+    // from the same doc (a per-player playerView alongside the full shared
+    // view in production.ts's batch loop, for instance) must get its OWN
+    // log array. Sharing the reference meant one player's engine-internal
+    // "YOU produced X" entry (meant only for their own view) mutated the
+    // SAME array every other view held, leaking "YOU" into the public
+    // world doc's log the moment that batch was persisted.
+    log: [...(doc.log ?? [])],
     recentNewsIdx: doc.recentNewsIdx ?? [],
     nwHist: [],
     playerActivityEma: doc.playerActivityEma ?? 0,

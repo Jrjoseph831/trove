@@ -6864,6 +6864,7 @@ details.bay-modules > summary.bay-sub:hover {
   scroll-snap-type: y mandatory;
 }
 .landing-screen {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
@@ -6874,6 +6875,30 @@ details.bay-modules > summary.bay-sub:hover {
   justify-content: center;
   padding: 60px 20px;
   box-sizing: border-box;
+}
+.landing-scrollhint {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  color: var(--ink-faint);
+  animation: landingScrollHint 1.8s ease-in-out infinite;
+}
+@keyframes landingScrollHint {
+  0%, 100% {
+    transform: translate(-50%, 0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, 8px);
+    opacity: 0.9;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landing-scrollhint {
+    animation: none;
+    opacity: 0.6;
+  }
 }
 .landing-inner {
   width: min(94vw, 780px);
@@ -7020,6 +7045,20 @@ details.bay-modules > summary.bay-sub:hover {
   font-size: clamp(15px, 2vw, 20px);
   color: var(--ink-dim);
   line-height: 1.5;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+}
+.feed-row.shown {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .feed-row {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 .feed-row b {
   color: var(--ink);

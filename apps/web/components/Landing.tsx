@@ -1,10 +1,21 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Briefcase, Building2, Factory, TrendingUp, Trophy } from "lucide-react";
+import { Briefcase, Building2, ChevronDown, Factory, TrendingUp, Trophy } from "lucide-react";
 import { useTrove } from "@/lib/trove";
 import { LiveFeed } from "./LiveFeed";
 import { Ticker } from "./Ticker";
+
+/** A quiet "there's more" cue — every screen but the last gets one, so
+ *  scroll-snap's one-screen-at-a-time feel doesn't read as the end of the
+ *  page. */
+function ScrollHint() {
+  return (
+    <div className="landing-scrollhint" aria-hidden="true">
+      <ChevronDown size={20} strokeWidth={1.75} />
+    </div>
+  );
+}
 
 const SEEN_KEY = "trove.landingSeen";
 
@@ -115,6 +126,7 @@ export function Landing() {
 
           {actions}
         </div>
+        <ScrollHint />
       </section>
 
       <section className="landing-screen landing-screen-feed">
@@ -122,6 +134,7 @@ export function Landing() {
           <div className="landing-screen-kick">Live on the floor</div>
           <LiveFeed />
         </div>
+        <ScrollHint />
       </section>
 
       {STEPS.map((s) => (
@@ -131,6 +144,7 @@ export function Landing() {
             <h2 className="landing-step-bigh">{s.h}</h2>
             <p className="landing-step-bigb">{s.b}</p>
           </div>
+          <ScrollHint />
         </section>
       ))}
 
@@ -151,6 +165,7 @@ export function Landing() {
             around, no account required.
           </p>
         </div>
+        <ScrollHint />
       </section>
 
       <section className="landing-screen landing-screen-close">
