@@ -6853,15 +6853,31 @@ details.bay-modules > summary.bay-sub:hover {
 }
 
 /* Landing — the front cover shown to signed-out visitors on entry. */
+/* ── Landing: the signed-out front cover ──────────────────────────────────
+   Full-screen scroll-snapped "screens". Motion here is the pitch, not
+   decoration — a world that visibly runs is the whole claim — so the tape
+   and feed animate via JS/transform rather than the CSS animations the
+   global prefers-reduced-motion rule switches off. */
 .landing-gate {
   position: fixed;
   inset: 0;
   z-index: 200;
   background: var(--bg);
   overflow-y: auto;
-  /* One full screen at a time — scrolling snaps to the next section instead
-     of settling anywhere, so each moment gets the whole viewport. */
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.landing-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 210;
+  background: linear-gradient(90deg, var(--accent), var(--brass-lit, var(--accent)));
+  transform-origin: 0 50%;
+  transform: scaleX(0);
 }
 .landing-screen {
   position: relative;
@@ -6871,73 +6887,101 @@ details.bay-modules > summary.bay-sub:hover {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 72px 20px;
   box-sizing: border-box;
+  overflow: hidden;
 }
-.landing-scrollhint {
+/* Ambient depth behind the bookend screens. */
+.landing-glow {
   position: absolute;
+  top: 50%;
   left: 50%;
-  bottom: 28px;
-  transform: translateX(-50%);
-  color: var(--ink-faint);
-  animation: landingScrollHint 1.8s ease-in-out infinite;
-}
-@keyframes landingScrollHint {
-  0%, 100% {
-    transform: translate(-50%, 0);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translate(-50%, 8px);
-    opacity: 0.9;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .landing-scrollhint {
-    animation: none;
-    opacity: 0.6;
-  }
+  width: min(1100px, 130vw);
+  height: min(1100px, 130vw);
+  transform: translate(-50%, -55%);
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) 13%, transparent) 0%,
+    transparent 62%
+  );
+  pointer-events: none;
 }
 .landing-inner {
-  width: min(94vw, 780px);
+  position: relative;
+  z-index: 1;
+  width: min(94vw, 820px);
   text-align: center;
 }
 .landing-screen-step .landing-inner {
-  width: min(94vw, 640px);
+  width: min(94vw, 680px);
 }
 .landing-screen-feed .landing-inner,
 .landing-screen-features .landing-inner {
-  width: min(94vw, 820px);
-  text-align: left;
+  width: min(94vw, 860px);
+}
+
+/* Reveal-on-arrival */
+.lreveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lreveal.on {
+  opacity: 1;
+  transform: none;
+}
+
+.landing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 32%, var(--line));
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border-radius: 999px;
+  padding: 8px 16px;
+  margin-bottom: 30px;
+}
+.landing-eyebrow i {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
 }
 .landing-mark {
   font-family: var(--font-display);
-  font-size: clamp(48px, 9vw, 88px);
-  letter-spacing: 0.32em;
+  font-size: clamp(56px, 11vw, 128px);
+  letter-spacing: 0.26em;
+  line-height: 1;
+  margin: 0 0 18px;
   color: var(--ink);
-  margin-bottom: 14px;
+  text-indent: 0.26em; /* letter-spacing adds a trailing gap; recentre */
+}
+.landing-mark-sm {
+  font-size: clamp(26px, 4vw, 40px);
+  margin-bottom: 30px;
+  color: var(--ink-dim);
 }
 .landing-kick {
   font-family: var(--font-display);
-  font-size: clamp(18px, 2.6vw, 28px);
+  font-size: clamp(19px, 3vw, 32px);
   color: var(--ink-dim);
-  margin-bottom: 40px;
-}
-.landing-ticker {
-  display: flex;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 12px 0;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
 }
 .landing-lede {
-  font-size: clamp(15px, 1.8vw, 19px);
-  line-height: 1.7;
+  font-size: clamp(15px, 1.7vw, 19px);
+  line-height: 1.75;
   color: var(--ink-dim);
-  max-width: 520px;
-  margin: 0 auto 40px;
+  max-width: 560px;
+  margin: 0 auto 38px;
 }
 .landing-actions {
   display: flex;
@@ -6950,14 +6994,17 @@ details.bay-modules > summary.bay-sub:hover {
   color: var(--paper);
   border: 0;
   border-radius: 999px;
-  padding: 18px 44px;
+  padding: 18px 46px;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.04em;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 30px -12px color-mix(in srgb, var(--accent) 60%, transparent);
 }
 .landing-go:hover {
-  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -14px color-mix(in srgb, var(--accent) 75%, transparent);
 }
 .landing-browse {
   background: none;
@@ -6971,61 +7018,172 @@ details.bay-modules > summary.bay-sub:hover {
 .landing-browse:hover {
   color: var(--ink);
 }
+
+/* Live proof strip */
+.landing-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(24px, 6vw, 64px);
+  margin-top: 46px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.lstat {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.lstat b {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.4vw, 36px);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.lstat span {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* JS-driven price tape (see LandingTape.tsx) */
+.landing-tapewrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 76px;
+  z-index: 1;
+}
+.ltape {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+}
+.ltape-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: ltapeRun 60s linear infinite;
+}
+/* The list is rendered twice, so -50% lands exactly on the seam. */
+@keyframes ltapeRun {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+/* Deliberately NOT disabled under prefers-reduced-motion. Everywhere else
+   in the app that rule is honoured (see the block near the top of this
+   file); here the tape's motion is the message — a signed-out visitor's
+   only proof the world is actually running — so it stays, alone. */
+.ltape-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 9px;
+  padding: 0 26px;
+  font-size: 12.5px;
+  white-space: nowrap;
+  color: var(--ink-dim);
+}
+.ltape-item b {
+  color: var(--ink);
+  font-weight: 700;
+}
+.ltape-val {
+  font-variant-numeric: tabular-nums;
+}
+.ltape-dp.up {
+  color: var(--up);
+}
+.ltape-dp.dn {
+  color: var(--dn);
+}
+
 .landing-screen-kick {
-  font-size: 12px;
-  letter-spacing: 0.2em;
+  font-size: 11px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 800;
-  text-align: center;
-  margin-bottom: 34px;
+  margin-bottom: 14px;
 }
+.landing-screen-h {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 4.4vw, 46px);
+  margin: 0 0 38px;
+  color: var(--ink);
+}
+
+/* Steps */
 .landing-step-bign {
   font-family: var(--font-display);
-  font-size: clamp(72px, 16vw, 160px);
+  font-size: clamp(64px, 13vw, 132px);
   line-height: 1;
-  color: var(--accent);
-  opacity: 0.9;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    color-mix(in srgb, var(--accent) 30%, transparent)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .landing-step-bigh {
   font-family: var(--font-display);
-  font-size: clamp(30px, 6vw, 58px);
-  margin: 0 0 18px;
+  font-size: clamp(30px, 5.4vw, 58px);
+  line-height: 1.1;
+  margin: 0 0 20px;
   color: var(--ink);
 }
 .landing-step-bigb {
-  font-size: clamp(15px, 2vw, 19px);
-  line-height: 1.6;
+  font-size: clamp(15px, 1.9vw, 19px);
+  line-height: 1.7;
   color: var(--ink-dim);
-  max-width: 460px;
+  max-width: 520px;
   margin: 0 auto;
 }
+
+/* Features */
 .landing-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 22px;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 28px;
 }
 .landing-feature {
   border: 1px solid var(--line);
   border-radius: var(--bento-r, 16px);
-  padding: 24px 22px;
-  background: var(--paper);
+  padding: 26px 24px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--paper) 92%, var(--accent)) 0%,
+    var(--paper) 100%
+  );
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.landing-feature:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
 }
 .landing-feature svg {
   color: var(--accent);
   margin-bottom: 14px;
 }
 .landing-feature-h {
-  font-weight: 700;
-  font-size: 16px;
+  font-family: var(--font-display);
+  font-size: 19px;
   margin-bottom: 8px;
+  color: var(--ink);
 }
 .landing-feature-b {
   font-size: 13px;
   color: var(--ink-dim);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 .landing-footnote {
   font-size: 13px;
@@ -7033,31 +7191,41 @@ details.bay-modules > summary.bay-sub:hover {
   text-align: center;
   margin: 0;
 }
+
+.landing-closeh {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 54px);
+  line-height: 1.15;
+  margin: 0 0 26px;
+  color: var(--ink);
+}
+
+/* Streaming activity feed */
 .feed-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+  text-align: left;
 }
 .feed-row {
   display: flex;
   align-items: baseline;
   gap: 14px;
-  font-size: clamp(15px, 2vw, 20px);
+  font-size: clamp(14px, 1.7vw, 18px);
   color: var(--ink-dim);
   line-height: 1.5;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
 }
-.feed-row.shown {
-  opacity: 1;
-  transform: translateY(0);
+.feed-row.entering {
+  animation: feedRowIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
-@media (prefers-reduced-motion: reduce) {
-  .feed-row {
+@keyframes feedRowIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
     opacity: 1;
     transform: none;
-    transition: none;
   }
 }
 .feed-row b {
@@ -7066,24 +7234,40 @@ details.bay-modules > summary.bay-sub:hover {
 }
 .feed-dot {
   flex: none;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 999px;
-  margin-top: 8px;
+  margin-top: 7px;
   background: var(--up, var(--accent));
 }
 .feed-row.dn .feed-dot {
   background: var(--dn);
 }
-.feed-row.fresh {
-  animation: feedRowFresh 1.4s ease-out;
+
+.landing-scrollhint {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  color: var(--ink-faint);
+  animation: landingScrollHint 1.8s ease-in-out infinite;
 }
-@keyframes feedRowFresh {
-  0% {
-    background: color-mix(in srgb, var(--accent) 16%, transparent);
+@keyframes landingScrollHint {
+  0%, 100% {
+    transform: translate(-50%, 0);
+    opacity: 0.45;
   }
-  100% {
-    background: transparent;
+  50% {
+    transform: translate(-50%, 8px);
+    opacity: 0.9;
+  }
+}
+@media (max-width: 720px) {
+  .landing-tapewrap {
+    bottom: 68px;
+  }
+  .landing-stats {
+    gap: 22px;
   }
 }
 .rename-btn {

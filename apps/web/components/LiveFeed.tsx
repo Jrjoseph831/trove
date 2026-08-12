@@ -1,66 +1,56 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import type { LogEntry } from "@trove/engine";
 import { useTrove } from "@/lib/trove";
 
-const SHOWN = 10;
-const REVEAL_MS = 380; // pace between rows cascading in
+const WINDOW = 9; // rows on screen at once
+const STREAM_MS = 1500; // pace one new row arrives
 
-/** "While you were reading this pitch, here's what just happened" — real
- *  floor activity (production credits, trades, named AI-to-AI deals),
- *  already generated server-side, never shown anywhere before. Highlights
- *  the newest row when it actually changes on the next poll — a real
- *  signal, not a decorative pulse — and cascades the rows in one at a time
- *  whenever this screen scrolls into view, instead of dumping the whole
- *  list at once, so it reads as things actively happening. */
+/** The floor, streaming. Every row is a real event the world actually
+ *  produced (production credits, trades, named company-to-company deals) —
+ *  but the underlying log only refreshes when the server ticks, so simply
+ *  rendering it renders a static list. This walks that log continuously
+ *  instead, pushing one real event onto the top every beat, so the screen
+ *  reads the way the world actually behaves: something is always happening.
+ *  No fabricated events and no fake timestamps — just paced reveal of real
+ *  activity, and genuinely new events fold in as soon as they arrive. */
 export function LiveFeed() {
   const { state } = useTrove();
-  const entries = state.log.slice(0, SHOWN);
-  const topKey = entries[0] ? `${entries[0].who}|${entries[0].verb}|${entries[0].it}` : null;
-  const [flash, setFlash] = useState(false);
-  const prevTop = useRef<string | null>(null);
+  const source = state.log;
+  const [rows, setRows] = useState<LogEntry[]>([]);
+  const cursor = useRef(0);
+
+  // Seed as soon as there's data (and reseed if the world's log is replaced
+  // wholesale, e.g. the very first poll landing after an empty initial state).
+  useEffect(() => {
+    if (source.length === 0) return;
+    setRows((cur) => (cur.length > 0 ? cur : source.slice(0, WINDOW)));
+    cursor.current = Math.min(WINDOW, source.length);
+  }, [source]);
 
   useEffect(() => {
-    const isFirstSighting = prevTop.current === null;
-    const changed = topKey !== prevTop.current;
-    prevTop.current = topKey;
-    if (isFirstSighting || !changed) return;
-    setFlash(true);
-    const t = setTimeout(() => setFlash(false), 1400);
-    return () => clearTimeout(t);
-  }, [topKey]);
+    if (source.length === 0) return;
+    const t = setInterval(() => {
+      const next = source[cursor.current % source.length];
+      cursor.current += 1;
+      if (!next) return;
+      setRows((cur) => [next, ...cur].slice(0, WINDOW));
+    }, STREAM_MS);
+    return () => clearInterval(t);
+  }, [source]);
 
-  const [revealed, setRevealed] = useState(0);
-  const rootRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = rootRef.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) setRevealed(0); // restart the cascade each time it scrolls into view
-      },
-      { threshold: 0.5 },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (revealed >= entries.length) return;
-    const t = setTimeout(() => setRevealed((r) => r + 1), REVEAL_MS);
-    return () => clearTimeout(t);
-  }, [revealed, entries.length]);
-
-  if (entries.length === 0) return null;
+  if (rows.length === 0) return null;
 
   return (
-    <div className="feed-list" ref={rootRef}>
-      {entries.map((e, i) => (
+    <div className="feed-list">
+      {rows.map((e, i) => (
         <div
-          className={`feed-row ${e.verb === "sold" ? "dn" : "up"} ${i === 0 && flash ? "fresh" : ""} ${
-            i < revealed ? "shown" : ""
-          }`}
-          key={i}
+          className={`feed-row ${e.verb === "sold" ? "dn" : "up"} ${i === 0 ? "entering" : ""}`}
+          // Index-free key so React animates the SHIFT rather than reusing
+          // row 0's DOM node for whatever text just replaced it.
+          key={`${e.who}|${e.verb}|${e.it}|${rows.length - i}`}
+          style={{ opacity: Math.max(0.22, 1 - i * 0.085) }}
         >
           <i className="feed-dot" />
           <span>
