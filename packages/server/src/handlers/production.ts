@@ -120,6 +120,35 @@ export async function handler(): Promise<{ producers: number; worked: number }> 
     const updated: Player[] = [];
     let worked = 0;
 
+    // Reclaim the space: drop player goods from the shared record now that they
+    // live on the players' own. ONLY for accounts proven to have migrated — an
+    // owner id with no record, or a record the backfill hasn't reached, is left
+    // exactly where it is and reported. Deleting goods we can't account for is
+    // the one outcome worth avoiding entirely, so the check is "prove it's safe"
+    // rather than "assume it is".
+    const houses = new Set(full.traders.map((t) => t.name));
+    const migrated = new Set(all.filter((p) => p.holdings).map((p) => p.playerId));
+    let dropped = 0;
+    const orphans = new Set<string>();
+    for (const it of full.items) {
+      for (const owner of Object.keys(it.owners)) {
+        if (houses.has(owner)) continue; // AI holdings stay resident
+        if (migrated.has(owner)) {
+          delete it.owners[owner];
+          dropped++;
+        } else {
+          orphans.add(owner);
+        }
+      }
+    }
+    if (dropped) console.log(`world doc: dropped ${dropped} migrated player entries`);
+    if (orphans.size) {
+      console.warn(
+        `world doc: ${orphans.size} owner id(s) with no migrated record — KEPT: ` +
+          [...orphans].join(", "),
+      );
+    }
+
     // Build every producer's player-view UP FRONT (rather than inline per
     // producer, as before) so the standing-order pre-step and the main loop
     // below share the exact same view objects — a fill's cash/item mutation
@@ -186,16 +215,18 @@ export async function handler(): Promise<{ producers: number; worked: number }> 
       if (!changed) continue;
       worked++;
 
-      // Fold this player's holdings back into the shared doc (others untouched).
+      // The player's own goods are captured by extractPlayer below, onto their
+      // record — NOT folded back into the shared doc any more. Writing them
+      // here would just re-add what the strip above removed, every tick.
+      //
+      // What still has to fold back is any OTHER owner the engine created
+      // during this tick: playerView leaves only "YOU" in this map, so anything
+      // else is an AI house taking delivery of a contract via autoFulfillOrders.
+      // Those are deltas from zero, so they add on.
       for (const it of pv.items) {
         const f = byId.get(it.id);
         if (!f) continue;
-        const v = it.owners["YOU"] ?? 0;
-        if (v > 0) f.owners[p.playerId] = v;
-        else delete f.owners[p.playerId];
-        // Same reason as mutatePlayerWorld: playerView leaves only YOU here, so
-        // any other owner was created during this tick — an AI buyer taking
-        // delivery from autoFulfillOrders. Deltas from zero, so add them on.
+        delete f.owners[p.playerId]; // belt and braces with the strip above
         for (const [owner, qty] of Object.entries(it.owners)) {
           if (owner === "YOU" || !(qty > 0)) continue;
           f.owners[owner] = (f.owners[owner] ?? 0) + qty;
@@ -212,11 +243,19 @@ export async function handler(): Promise<{ producers: number; worked: number }> 
       const seller = sellersById.get(sellerId);
       if (!seller) continue;
       const producedQty = { ...(seller.producedQty ?? {}) };
+      // Goods leave the seller's OWN record now, not just the doc.
+      const holdings = { ...holdingsOf(cur as WorldDoc, seller) };
+      for (const [idStr, delta] of Object.entries(patch.holdingsDelta)) {
+        const id = Number(idStr);
+        const left = (holdings[id] ?? 0) + delta;
+        if (left > 0) holdings[id] = left;
+        else delete holdings[id];
+      }
       for (const [idStr, delta] of Object.entries(patch.producedDelta)) {
         const id = Number(idStr);
         producedQty[id] = Math.max(0, (producedQty[id] ?? 0) + delta);
       }
-      updated.push({ ...seller, cash: seller.cash + patch.cashDelta, producedQty });
+      updated.push({ ...seller, cash: seller.cash + patch.cashDelta, producedQty, holdings });
     }
 
     if (updated.length === 0) return { producers: producers.length, worked: 0 };

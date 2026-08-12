@@ -12,7 +12,7 @@
  */
 import { previewFactoryNeeds } from "@trove/engine";
 import type { WorldState } from "@trove/engine";
-import { storefrontOf, type Player, type WorldDoc } from "./repo";
+import { holdingsOf, storefrontOf, type Player, type WorldDoc } from "./repo";
 
 export interface StandingFill {
   buyerId: string;
@@ -31,6 +31,10 @@ export interface SellerPatch {
   cashDelta: number;
   /** itemId → signed delta (always negative here — goods leaving the seller). */
   producedDelta: Record<number, number>;
+  /** itemId → signed delta on the seller's OWN holdings. Goods live on the
+   *  player record now, so depleting the doc alone would hand the stock back
+   *  the moment the doc entry is dropped. */
+  holdingsDelta: Record<number, number>;
 }
 
 export interface StandingSettlementResult {
@@ -117,6 +121,11 @@ export function planStandingSettlements(
     }
 
     const store = storefrontOf(cur, seller);
+    // Goods live on the seller's own record now. Read them there, with the doc
+    // as the pre-migration fallback — reading owners alone would see nothing
+    // once the doc entries are dropped, and every standing order would quietly
+    // stop filling with no error anywhere.
+    const sellerHoldings = holdingsOf(cur, seller);
 
     // A seller can be referenced by multiple lines/buyers for the same item
     // (or different items) — allocate stock per item so one popular item
@@ -132,9 +141,9 @@ export function planStandingSettlements(
       const listing = store.find((prod) => prod.id === itemId);
       if (!listing) continue;
       const docItem = full.items.find((it) => it.id === itemId);
-      // Cap at the MIN of what the storefront claims and what's actually
-      // owned in the doc — the same drift guard the manual-order path needs.
-      const actuallyOwned = docItem?.owners[sellerId] ?? 0;
+      // Cap at the MIN of what the storefront claims and what the seller
+      // actually holds — the same drift guard the manual-order path needs.
+      const actuallyOwned = sellerHoldings[itemId] ?? 0;
       let remainingStock = Math.min(listing.available, actuallyOwned);
       if (remainingStock <= 0) continue;
       const price = listing.price;
@@ -173,9 +182,10 @@ export function planStandingSettlements(
             else delete sellerItem.owners.YOU;
           }
         } else {
-          const patch = sellerPatches.get(sellerId) ?? { cashDelta: 0, producedDelta: {} };
+          const patch = sellerPatches.get(sellerId) ?? { cashDelta: 0, producedDelta: {}, holdingsDelta: {} };
           patch.cashDelta += cost;
           patch.producedDelta[itemId] = (patch.producedDelta[itemId] ?? 0) - qty;
+          patch.holdingsDelta[itemId] = (patch.holdingsDelta[itemId] ?? 0) - qty;
           sellerPatches.set(sellerId, patch);
           if (docItem) {
             const left = (docItem.owners[sellerId] ?? 0) - qty;

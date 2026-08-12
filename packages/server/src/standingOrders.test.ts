@@ -107,9 +107,13 @@ describe("planStandingSettlements — happy path", () => {
     expect(r.sellerPatches.get("seller1")).toEqual({
       cashDelta: f.cost,
       producedDelta: { [INPUT_ID]: -f.qty },
+      // The goods must leave the seller's OWN record too. Depleting only the
+      // shared doc would hand the stock straight back the moment that entry is
+      // dropped — the doc is no longer where a player's goods live.
+      holdingsDelta: { [INPUT_ID]: -f.qty },
     });
-    // And the shared doc's ownership was depleted directly (their only
-    // representation this tick, since they have no per-player fold-back pass).
+    // The doc is depleted in the same pass, so the two agree right up until
+    // its player entries are dropped for good.
     const docItem = full.items.find((i) => i.id === INPUT_ID)!;
     expect(docItem.owners["seller1"]).toBe(10_000 - f.qty);
   });
