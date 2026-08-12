@@ -12,6 +12,7 @@ import { describe, expect, it } from "vitest";
 import { createWorld, START_CASH } from "@trove/engine";
 import {
   buildPortfolio,
+  holdingsOf,
   propertyValueOf,
   stakeValueOf,
   worldToDoc,
@@ -83,6 +84,57 @@ describe("portfolio reporting", () => {
     // the wrong reason on a firm that owns neither.
     expect(propertyValueOf(player)).toBe(250_000);
     expect(stakeValueOf(doc, player)).toBeGreaterThan(0);
+  });
+
+  it("reads goods off the player's own record once they've moved there", () => {
+    // The whole point of the split: the world doc no longer has to carry a
+    // player's goods, so it stops growing with the player count.
+    const { doc, itemId } = docHolding("nobody", 0);
+    const player: Player = {
+      playerId: ME,
+      cash: START_CASH,
+      debt: 0,
+      holdings: { [itemId]: 30 },
+    };
+    const view = buildPortfolio(doc, player);
+    expect(view.holdings.find((h) => h.id === itemId)?.qty).toBe(30);
+    // ...priced off the doc, which still owns the market value.
+    const price = doc.items.find((i) => i.id === itemId)!.value;
+    expect(view.netWorth).toBeCloseTo(START_CASH + 30 * price, 4);
+  });
+
+  it("still finds goods in the world doc for a record not yet migrated", () => {
+    // An existing account's goods live only in the doc until the backfill runs.
+    // Reading them has to keep working in the meantime, or the split would blank
+    // every account the moment it deployed.
+    const { doc, itemId } = docHolding(ME, 9);
+    const notMigrated: Player = { playerId: ME, cash: START_CASH, debt: 0 };
+    expect(holdingsOf(doc, notMigrated)).toEqual({ [itemId]: 9 });
+    expect(buildPortfolio(doc, notMigrated).holdings[0]?.qty).toBe(9);
+  });
+
+  it("prefers the record over the doc, so a migrated account can't double-count", () => {
+    // Both populated: mid-migration, or a doc entry not yet stripped. The
+    // record is authoritative — reading both would inflate the account.
+    const { doc, itemId } = docHolding(ME, 9);
+    const migrated: Player = {
+      playerId: ME,
+      cash: START_CASH,
+      debt: 0,
+      holdings: { [itemId]: 4 },
+    };
+    expect(holdingsOf(doc, migrated)).toEqual({ [itemId]: 4 });
+  });
+
+  it("treats a migrated-but-empty account as empty, not as unmigrated", () => {
+    // A player who sold everything has holdings:{} — which is falsy-looking but
+    // very much migrated. Falling back to the doc here would resurrect goods
+    // they no longer own.
+    const { doc, itemId } = docHolding(ME, 12);
+    const soldUp: Player = { playerId: ME, cash: START_CASH, debt: 0, holdings: {} };
+    expect(holdingsOf(doc, soldUp)).toEqual({});
+    expect(buildPortfolio(doc, soldUp).holdings).toEqual([]);
+    void itemId;
   });
 
   it("never reports NaN money, even from a record missing its cash field", () => {

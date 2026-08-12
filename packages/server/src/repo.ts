@@ -296,6 +296,23 @@ export interface Order {
  *  (item.owners[playerId]); cash/debt/name/reputation/orders are per-player. */
 export interface Player {
   playerId: string;
+  /**
+   * This player's goods: item id → quantity.
+   *
+   * Holdings used to live only in the world doc, inside each item's `owners`
+   * map — which meant the single 400KB record that IS the shared world grew
+   * with every player who bought anything. A thousand players holding twenty
+   * items each is ~508KB of ownership alone: past the hard limit, at which
+   * point nothing can be saved at all and the world stops.
+   *
+   * A player's own goods belong on their own record, which has its own 400KB.
+   * The doc keeps AI-house holdings only — those are bounded by the roster and
+   * are needed globally every settlement, so they have to stay resident.
+   *
+   * Absent on records written before the split; holdingsOf() falls back to the
+   * doc for those, and the next write migrates them.
+   */
+  holdings?: Record<number, number>;
   /** Optimistic-concurrency counter, bumped on every whole-record write.
    *  Absent on records written before it existed — treated as "unversioned",
    *  which the first guarded write migrates. Never edit this by hand. */
@@ -353,10 +370,40 @@ const FRESH_DESKAUTO: DeskAuto = {
  *  the player's holdings become owners["YOU"], and cash/orders/factory state
  *  come off the player. Run the engine on this, then write back with
  *  extractPlayer (+ mutatePlayerWorld for ownership changes). */
+/**
+ * What this player owns. Reads their own record first; falls back to the world
+ * doc for records written before holdings moved off it, so an existing player
+ * keeps their goods and the next write migrates them across.
+ */
+/**
+ * Copy a player's goods off the FULL world state (where they're keyed by player
+ * id, not "YOU") onto their record. For paths that run the engine on the whole
+ * world rather than a per-player view — the trade endpoint, chiefly.
+ */
+export function syncHoldings(full: WorldState, player: Player): void {
+  const holdings: Record<number, number> = {};
+  for (const it of full.items) {
+    const q = it.owners[player.playerId] ?? 0;
+    if (q > 0) holdings[it.id] = q;
+  }
+  player.holdings = holdings;
+}
+
+export function holdingsOf(doc: WorldDoc, player: Player): Record<number, number> {
+  if (player.holdings) return player.holdings;
+  const out: Record<number, number> = {};
+  for (const it of doc.items) {
+    const qty = it.owners?.[player.playerId] ?? 0;
+    if (qty > 0) out[it.id] = qty;
+  }
+  return out;
+}
+
 export function playerView(doc: WorldDoc, player: Player): WorldState {
   const w = docToWorld(doc);
+  const mineById = holdingsOf(doc, player);
   for (const it of w.items) {
-    const mine = it.owners[player.playerId] ?? 0;
+    const mine = mineById[it.id] ?? 0;
     it.owners = mine > 0 ? { YOU: mine } : {};
   }
   w.cash = player.cash;
@@ -385,8 +432,16 @@ export function playerView(doc: WorldDoc, player: Player): WorldState {
 /** Pull the per-player fields off a WorldState back into the player record.
  *  (Holdings live in the world doc — see mutatePlayerWorld for those.) */
 export function extractPlayer(state: WorldState, player: Player): Player {
+  // Capture the player's goods onto their OWN record. state here is always a
+  // playerView, where the owners map has been narrowed to just "YOU".
+  const holdings: Record<number, number> = {};
+  for (const it of state.items) {
+    const q = it.owners["YOU"] ?? 0;
+    if (q > 0) holdings[it.id] = q;
+  }
   return {
     ...player,
+    holdings,
     cash: state.cash,
     debt: state.debt,
     reputation: state.reputation,
@@ -476,8 +531,10 @@ export function stakeValueOf(doc: WorldDoc, player: Player): number {
 export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
   const holdings: { id: number; qty: number; value: number }[] = [];
   let assets = 0;
+  const mine = holdingsOf(doc, player);
+  // Priced off the doc (the live market value), quantities off the player.
   for (const it of doc.items) {
-    const qty = it.owners?.[player.playerId] ?? 0;
+    const qty = mine[it.id] ?? 0;
     if (qty > 0) {
       holdings.push({ id: it.id, qty, value: it.value });
       assets += qty * it.value;
@@ -903,6 +960,26 @@ export async function withPlayer(
  *  which rewrites whole player items every 5 minutes from a snapshot taken at
  *  tick start: the cash lands, then the next tick puts the stale record back
  *  and the change silently evaporates. Returns the value actually stored. */
+/** Atomically set just `holdings`, touching nothing else — used to migrate a
+ *  record whose goods still live in the world doc. Same reasoning as
+ *  touchLastSeen: a full-item write from a stale read loses to production. */
+export async function setPlayerHoldings(
+  playerId: string,
+  holdings: Record<number, number>,
+): Promise<void> {
+  await ddb.send(
+    new UpdateCommand({
+      TableName: PLAYERS,
+      Key: { playerId },
+      // Only if it hasn't been migrated already, so this can never overwrite
+      // holdings that a real trade wrote in the meantime.
+      UpdateExpression: "SET holdings = :h",
+      ConditionExpression: "attribute_not_exists(holdings)",
+      ExpressionAttributeValues: { ":h": holdings },
+    }),
+  );
+}
+
 export async function addPlayerCash(playerId: string, delta: number): Promise<number> {
   const res = await ddb.send(
     new UpdateCommand({
@@ -1026,20 +1103,41 @@ export async function settleDeal(orderId: string, retries = 4): Promise<DealResu
     const cur = await loadWorld();
     if (!cur) return { ok: false, reason: "world not seeded" };
 
-    const stored = cur.items.find((i) => i.id === order.itemId);
-    const sellerHeld = stored?.owners?.[order.sellerId] ?? 0;
+    // Goods live on the players' own records now, so both sides load.
+    const [buyer, seller] = await Promise.all([
+      getPlayer(order.buyerId),
+      getPlayer(order.sellerId),
+    ]);
+    if (!buyer) return { ok: false, reason: "buyer is gone" };
+    if (!seller) return { ok: false, reason: "that firm is gone" };
+    if (buyer.cash < order.price) return { ok: false, reason: "buyer can't cover it" };
+
+    const sellerHoldings = { ...holdingsOf(cur as WorldDoc, seller) };
+    const buyerHoldings = { ...holdingsOf(cur as WorldDoc, buyer) };
+    const sellerHeld = sellerHoldings[order.itemId] ?? 0;
     if (sellerHeld < order.qty)
       return { ok: false, reason: "seller no longer holds enough" };
 
-    // Move the goods in a full world projection, then write with a version CAS.
-    const full = docToWorld(cur);
-    const it = full.items.find((i) => i.id === order.itemId);
-    if (!it) return { ok: false, reason: "unknown item" };
-    const sH = it.owners[order.sellerId] ?? 0;
-    if (sH - order.qty > 0) it.owners[order.sellerId] = sH - order.qty;
-    else delete it.owners[order.sellerId];
-    it.owners[order.buyerId] = (it.owners[order.buyerId] ?? 0) + order.qty;
-    const nextDoc = worldToDoc(full, cur.version + 1);
+    const left = sellerHeld - order.qty;
+    if (left > 0) sellerHoldings[order.itemId] = left;
+    else delete sellerHoldings[order.itemId];
+    buyerHoldings[order.itemId] = (buyerHoldings[order.itemId] ?? 0) + order.qty;
+
+    const nextBuyer: Player = {
+      ...buyer,
+      cash: buyer.cash - order.price,
+      holdings: buyerHoldings,
+    };
+    const nextSeller: Player = {
+      ...seller,
+      cash: seller.cash + order.price,
+      reputation: (seller.reputation ?? 0) + 2,
+      holdings: sellerHoldings,
+    };
+    // The doc still moves forward so the version CAS keeps this serialised
+    // against production and settlement, even though the goods no longer
+    // live in it.
+    const nextDoc = worldToDoc(docToWorld(cur), cur.version + 1);
 
     try {
       await ddb.send(
@@ -1053,24 +1151,14 @@ export async function settleDeal(orderId: string, retries = 4): Promise<DealResu
                 ExpressionAttributeValues: { ":v": cur.version },
               },
             },
-            {
-              Update: {
-                TableName: PLAYERS,
-                Key: { playerId: order.buyerId },
-                UpdateExpression: "ADD cash :neg",
-                ConditionExpression: "attribute_exists(playerId) AND cash >= :price",
-                ExpressionAttributeValues: { ":neg": -order.price, ":price": order.price },
-              },
-            },
-            {
-              Update: {
-                TableName: PLAYERS,
-                Key: { playerId: order.sellerId },
-                UpdateExpression: "ADD cash :price, reputation :rep",
-                ConditionExpression: "attribute_exists(playerId)",
-                ExpressionAttributeValues: { ":price": order.price, ":rep": 2 },
-              },
-            },
+            // Whole-record writes rather than an atomic ADD on cash: the goods
+            // moving are on these records now, and one DynamoDB transaction
+            // can't both ADD to an item and Put it. The rev guard gives the
+            // same protection the `cash >= price` condition did — a racing
+            // write cancels the transaction and the retry re-validates
+            // affordability against fresh records.
+            { Put: { TableName: PLAYERS, ...guardedPut(nextBuyer, "b") } },
+            { Put: { TableName: PLAYERS, ...guardedPut(nextSeller, "s") } },
             {
               Delete: {
                 TableName: ORDERS,
@@ -1129,22 +1217,22 @@ export async function settleBuyout(orderId: string, retries = 4): Promise<DealRe
     if (!cur) return { ok: false, reason: "world not seeded" };
     if (buyer.cash < order.price) return { ok: false, reason: "buyer can't cover it" };
 
-    // Move the target's market holdings → buyer in the world doc.
-    const full = docToWorld(cur as WorldDoc);
-    for (const it of full.items) {
-      const held = it.owners[order.sellerId] ?? 0;
-      if (held > 0) {
-        it.owners[order.buyerId] = (it.owners[order.buyerId] ?? 0) + held;
-        delete it.owners[order.sellerId];
-      }
-    }
-    const nextDoc = worldToDoc(full, cur.version + 1);
+    // The acquired firm's goods move to the buyer. They live on the two player
+    // records now, not in the doc, so this is a merge of two maps — but the doc
+    // still moves forward so the version CAS keeps the whole thing serialised
+    // against production and settlement.
+    const mergedHoldings = mergeNums(
+      holdingsOf(cur as WorldDoc, buyer),
+      holdingsOf(cur as WorldDoc, target),
+    );
+    const nextDoc = worldToDoc(docToWorld(cur as WorldDoc), cur.version + 1);
 
     const buyerFactories = [...(buyer.factories ?? []), ...(target.factories ?? [])];
     const mergedBuyer: Player = {
       ...buyer,
       // Buyer pays the price and absorbs the target's treasury + assets.
       cash: buyer.cash - order.price + target.cash,
+      holdings: mergedHoldings,
       factories: buyerFactories,
       properties: [...(buyer.properties ?? []), ...(target.properties ?? [])],
       stakes: mergeNums(buyer.stakes, target.stakes, 1),
@@ -1165,6 +1253,8 @@ export async function settleBuyout(orderId: string, retries = 4): Promise<DealRe
     const cashedOut: Player = {
       ...target,
       cash: order.price,
+      // Firm liquidated: the goods went with it.
+      holdings: {},
       factories: [],
       properties: [],
       stakes: {},
@@ -1352,6 +1442,9 @@ export async function mutateTrade<T>(
 
     const state = docToWorld(cur);
     const result = fn(state, player); // throws TradeError to reject
+    // The engine wrote the bought/sold units into the doc's owners map; mirror
+    // them onto the player's own record, which is now where holdings live.
+    syncHoldings(state, player);
     const next = worldToDoc(state, cur.version + 1);
 
     try {

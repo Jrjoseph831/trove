@@ -16,7 +16,9 @@ import { START_CASH, STARTING_SLOTS } from "@trove/engine";
 import {
   buildPortfolio,
   getPlayer,
+  holdingsOf,
   loadWorld,
+  setPlayerHoldings,
   touchLastSeen,
   type Player,
 } from "../repo";
@@ -91,6 +93,24 @@ async function portfolio(
       `portfolio: no player record for ${playerId}` +
         (owns ? " — but the world doc holds goods under that id" : ""),
     );
+  }
+
+  // Migrate goods off the world doc onto this player's own record, once.
+  // Holdings used to live in the doc's per-item owners maps, which is what made
+  // the single 400KB shared record grow with every player. Portfolio is polled
+  // by every active client, so it's where an existing account crosses over —
+  // and it has to happen BEFORE anything stops writing the doc, or the goods
+  // would have nowhere left to live. Conditional on the field being absent, so
+  // it can never overwrite holdings a real trade wrote in between.
+  if (stored && !stored.holdings) {
+    const migrated = holdingsOf(doc, stored);
+    try {
+      await setPlayerHoldings(playerId, migrated);
+      player.holdings = migrated;
+    } catch (err) {
+      // Already migrated by a concurrent request — the only expected failure.
+      if ((err as { name?: string }).name !== "ConditionalCheckFailedException") throw err;
+    }
   }
 
   const view = buildPortfolio(doc, player);

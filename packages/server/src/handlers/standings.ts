@@ -9,9 +9,11 @@
 import type { APIGatewayProxyResultV2 } from "aws-lambda";
 import {
   allPlayers,
+  holdingsOf,
   loadWorld,
   propertyValueOf,
   stakeValueOf,
+  type Player,
   type WorldDoc,
 } from "../repo";
 
@@ -27,13 +29,23 @@ export async function handler(): Promise<APIGatewayProxyResultV2> {
   const doc = await loadWorld();
   if (!doc) return json(200, { standings: [] });
 
-  // sum each owner's asset value from the world doc in one pass
+  // AI houses keep their holdings in the doc — they're needed globally every
+  // settlement, so they stay resident. One pass over the catalog.
   const assets: Record<string, number> = {};
   for (const it of doc.items) {
     for (const [owner, qty] of Object.entries(it.owners ?? {})) {
       assets[owner] = (assets[owner] ?? 0) + qty * it.value;
     }
   }
+  const value = new Map(doc.items.map((it) => [it.id, it.value]));
+  /** A player's goods now live on their own record; price them off the doc. */
+  const playerAssets = (d: WorldDoc, p: Player): number => {
+    let v = 0;
+    for (const [id, qty] of Object.entries(holdingsOf(d, p))) {
+      v += qty * (value.get(Number(id)) ?? 0);
+    }
+    return v;
+  };
 
   const rows: { handle: string; id: string; net: number; isAI: boolean }[] = [];
 
@@ -60,7 +72,7 @@ export async function handler(): Promise<APIGatewayProxyResultV2> {
       net:
         p.cash -
         p.debt +
-        (assets[p.playerId] ?? 0) +
+        playerAssets(doc as WorldDoc, p) +
         propertyValueOf(p) +
         stakeValueOf(doc as WorldDoc, p),
       isAI: false,
