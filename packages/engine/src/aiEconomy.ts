@@ -45,6 +45,16 @@ function logActivity(state: WorldState, who: string, verb: string, it: string): 
   if (state.log.length > 30) state.log.pop();
 }
 
+/** Verb variety for the production log line — picked deterministically per
+ *  company+item (hash01, not rand — see the file-level constraint above) so
+ *  the same company reads the same way cycle to cycle instead of flickering,
+ *  while the feed as a whole still reads as more than one repeated verb. */
+const PRODUCE_VERBS = ["produced", "made", "turned out", "manufactured"];
+function produceVerb(name: string, item: string): string {
+  const idx = Math.floor(hash01(`${name}:${item}:produce`) * PRODUCE_VERBS.length);
+  return PRODUCE_VERBS[idx] ?? PRODUCE_VERBS[0]!;
+}
+
 // ── Real-player activity → the ripple multiplier ────────────────────────────
 
 /** Sum of qty×value across every item owner that ISN'T an AI trader — i.e. the
@@ -395,6 +405,7 @@ function consumeFor(
     const output = Math.floor(rate * fillScale);
     if (output > 0) {
       repRuntime.owners[t.name] = (repRuntime.owners[t.name] ?? 0) + output;
+      logActivity(state, t.name, produceVerb(t.name, rep.name), `${output}× ${rep.name}`);
     }
     return;
   }
@@ -490,6 +501,7 @@ function consumeFor(
   const output = Math.floor(rate * fillScale);
   if (output > 0) {
     repRuntime.owners[t.name] = (repRuntime.owners[t.name] ?? 0) + output;
+    logActivity(state, t.name, produceVerb(t.name, rep.name), `${output}× ${rep.name}`);
   }
 }
 
