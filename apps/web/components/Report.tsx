@@ -12,6 +12,9 @@ interface DayAgg {
   netWorth: number;
   cash: number;
   assets: number;
+  /** Part of assets, broken out — the Estates mechanic was invisible here. */
+  estates: number;
+  stakes: number;
   debt: number;
   flows: Ledger;
   at: number;
@@ -29,6 +32,10 @@ const LEDGER_KEYS = [
   "soldUnits",
   "soldRev",
   "upkeep",
+  // Optional on ledgers persisted before estates were reported, hence the ?? 0
+  // when summing — an older row simply contributes nothing.
+  "rentRev",
+  "divRev",
 ] as const;
 
 function aggregateDays(reports: Report[]): DayAgg[] {
@@ -44,7 +51,7 @@ function aggregateDays(reports: Report[]): DayAgg[] {
       const ps = map.get(day)!.sort((a, b) => a.period - b.period);
       const last = ps[ps.length - 1]!;
       const scalars = Object.fromEntries(
-        LEDGER_KEYS.map((k) => [k, ps.reduce((s, p) => s + p.flows[k], 0)]),
+        LEDGER_KEYS.map((k) => [k, ps.reduce((s, p) => s + (p.flows[k] ?? 0), 0)]),
       );
       const items: Record<number, ItemFlow> = {};
       for (const p of ps)
@@ -69,6 +76,8 @@ function aggregateDays(reports: Report[]): DayAgg[] {
         netWorth: last.netWorth,
         cash: last.cash,
         assets: last.assets,
+        estates: last.estates ?? 0,
+        stakes: last.stakes ?? 0,
         debt: last.debt,
         flows,
         at: last.at,
@@ -101,6 +110,10 @@ export function flowRows(r: { flows: Ledger }) {
     { k: "Order revenue", v: f.orderRev, u: f.orderUnits, money: true, good: true },
     { k: "Bought", v: -f.spent, u: f.bought, money: true, good: false },
     { k: "Sold (market)", v: f.soldRev, u: f.soldUnits, money: true, good: true },
+    // Rent and dividends raised cash with nothing in the report to explain it —
+    // income you were already earning and had no way to see.
+    { k: "Estate rent", v: f.rentRev ?? 0, money: true, good: true },
+    { k: "Stake dividends", v: f.divRev ?? 0, money: true, good: true },
     { k: "Upkeep + inputs", v: -f.upkeep, money: true, good: false },
   ].filter((row) => row.v !== 0 || (row.u ?? 0) !== 0);
 }
@@ -227,6 +240,17 @@ export function ReportView() {
         <div className="kpi">
           <span className="kpi-l">Assets</span>
           <span className="kpi-v">{money(d.assets)}</span>
+          {/* Assets is goods + estates + equity in one number. A player with a
+              property portfolio had no way to see it here at all — the whole
+              Estates mechanic was invisible in reporting. Split it out when
+              there's something to split. */}
+          {(d.estates > 0 || d.stakes > 0) && (
+            <span className="kpi-d">
+              {d.estates > 0 && <>estates {moneyShort(d.estates)}</>}
+              {d.estates > 0 && d.stakes > 0 && " · "}
+              {d.stakes > 0 && <>equity {moneyShort(d.stakes)}</>}
+            </span>
+          )}
         </div>
         <div className="kpi">
           <span className="kpi-l">Revenue (day)</span>

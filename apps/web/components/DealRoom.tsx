@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, TrendingUp } from "lucide-react";
-import { companies as lore, sectors } from "@trove/data";
+import { companies as lore, companyBlurb, sectors } from "@trove/data";
 import { companyValuation } from "@trove/engine";
 import { devAction, fetchCompanies, type DirEntry } from "@/lib/api";
 import { IS_STAGING } from "@/lib/config";
@@ -37,10 +37,73 @@ interface Row {
   stake: number;
 }
 
+/**
+ * One firm, as an offer rather than a row in a list. A name and a valuation
+ * told a player nothing about what they were buying — with 500 firms on the
+ * board that's a wall of near-identical numbers. The motto and the one-liner
+ * are what make a company a thing you can have an opinion about.
+ */
+function FirmCard({ r, onOpen }: { r: Row; onOpen: () => void }) {
+  const blurb = r.live ? undefined : companyBlurb(r.name);
+  return (
+    <button className={`deal-card ${r.stake > 0 ? "held" : ""}`} onClick={onOpen}>
+      <div className="dc-top">
+        <span className={`deal-mono t-${r.tier}`}>{initials(r.name)}</span>
+        <div className="dc-id">
+          <div className="deal-cardname">
+            {r.name}
+            {r.live && <span className="deal-livetag"> ● LIVE</span>}
+          </div>
+          <div className="deal-cardmeta">
+            {secName(r.sector)}
+            {!r.live && ` · ${TIER_LABEL[r.tier] ?? r.tier}`}
+          </div>
+        </div>
+        {r.stake > 0 && <span className="dc-owned">◆ {pct(r.stake)}</span>}
+      </div>
+
+      {blurb ? (
+        <div className="dc-blurb">
+          <span className="dc-motto">&ldquo;{blurb.tagline}&rdquo;</span>
+          <span className="dc-what">{blurb.what}.</span>
+        </div>
+      ) : (
+        <div className="dc-blurb">
+          <span className="dc-what">
+            A holding run by another player. Acquired only by negotiated buyout.
+          </span>
+        </div>
+      )}
+
+      <div className="dc-foot">
+        <span className="dc-metric">
+          <i>Valuation</i>
+          <b>{moneyShort(r.val)}</b>
+        </span>
+        {r.live ? (
+          <span className="dc-metric">
+            <i>Deal</i>
+            <b>Buyout</b>
+          </span>
+        ) : (
+          <span className="dc-metric up">
+            <i>Dividends</i>
+            <b>
+              <TrendingUp size={11} /> {money(r.income)}/per
+            </b>
+          </span>
+        )}
+      </div>
+    </button>
+  );
+}
+
 export function DealRoom() {
   const { state, desk, buyStakeIn, sellStakeIn, requestBuyout, orders, orderAct, notify, signIn } =
     useTrove();
   const [sec, setSec] = useState("All");
+  const PAGE = 60;
+  const [limit, setLimit] = useState(PAGE);
   const [sort, setSort] = useState<"val" | "div" | "mine">("val");
   const [sel, setSel] = useState<string | null>(null); // selected row key
   const [dir, setDir] = useState<DirEntry[] | null>(null);
@@ -142,6 +205,12 @@ export function DealRoom() {
           : b.val - a.val,
     );
   }, [rows, sec, sort]);
+  useEffect(() => setLimit(PAGE), [sec, sort]);
+
+  // The roster is 500+ firms and this view re-renders on every world tick, so
+  // rendering the whole list froze the page outright. Show a page at a time —
+  // which is also better than a 500-card wall to scroll through.
+  const shown = list.slice(0, limit);
 
   const incoming = (orders?.incoming ?? []).filter((o) => o.kind === "buyout");
   const outgoing = (orders?.outgoing ?? []).filter((o) => o.kind === "buyout");
@@ -475,34 +544,19 @@ export function DealRoom() {
       </div>
 
       <div className="deal-grid">
-        {list.map((r) => (
-          <button key={r.key} className="deal-card" onClick={() => setSel(r.key)}>
-            <span className={`deal-mono t-${r.tier}`}>{initials(r.name)}</span>
-            <div className="deal-cardmain">
-              <div className="deal-cardname">
-                {r.name}
-                {r.live && <span className="deal-livetag"> ● LIVE</span>}
-              </div>
-              <div className="deal-cardmeta">
-                {secName(r.sector)}
-                {!r.live && ` · ${TIER_LABEL[r.tier] ?? r.tier}`}
-              </div>
-            </div>
-            <div className="deal-cardright">
-              <div className="deal-cardval">{moneyShort(r.val)}</div>
-              {r.stake > 0 ? (
-                <div className="deal-cardstake">◆ {pct(r.stake)} owned</div>
-              ) : r.live ? (
-                <div className="deal-cardincome">buyout</div>
-              ) : (
-                <div className="deal-cardincome">
-                  <TrendingUp size={11} /> +{money(r.income)}/per
-                </div>
-              )}
-            </div>
-          </button>
+        {shown.map((r) => (
+          <FirmCard key={r.key} r={r} onOpen={() => setSel(r.key)} />
         ))}
       </div>
+
+      {list.length > shown.length && (
+        <button className="deal-more" onClick={() => setLimit((n) => n + PAGE)}>
+          Show more firms
+          <span>
+            {shown.length} of {list.length}
+          </span>
+        </button>
+      )}
 
       {pending?.kind === "sell" && (
         <ConfirmDeal

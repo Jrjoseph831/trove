@@ -58,6 +58,8 @@ export function emptyLedger(): Ledger {
     soldUnits: 0,
     soldRev: 0,
     upkeep: 0,
+    rentRev: 0,
+    divRev: 0,
     items: {},
   };
 }
@@ -512,7 +514,13 @@ function settleProperties(state: WorldState): void {
   for (const op of list) {
     const p = propById.get(op.propId);
     if (!p) continue;
-    if (p.rentYield > 0) state.cash += p.price * p.rentYield;
+    if (p.rentYield > 0) {
+      const rent = p.price * p.rentYield;
+      state.cash += rent;
+      // Booked, not just banked — rent used to raise cash with nothing in the
+      // report to explain where it came from.
+      if (state.ledger) state.ledger.rentRev = (state.ledger.rentRev ?? 0) + rent;
+    }
     const swing = (hash01(op.propId * 7919 + state.cycle) - 0.5) * 2 * p.volatility;
     const next = op.value * (1 + trend + swing);
     // Keep values sane: never below 30% of, nor above 4× the list price.
@@ -809,7 +817,9 @@ export function settleCycle(state: WorldState): void {
   settleProperties(state);
 
   // 5d. Deal Room: equity stakes pay dividends into cash.
-  state.cash += stakeDividends(state);
+  const divs = stakeDividends(state);
+  state.cash += divs;
+  if (state.ledger) state.ledger.divRev = (state.ledger.divRev ?? 0) + divs;
 
   // 6. Snapshot net worth + capture this period's report row.
   state.nwHist.push(netWorth(state, "YOU"));
@@ -975,6 +985,8 @@ function captureReport(state: WorldState): void {
       assetsValue(state, "YOU") + propertyValue(state) + stakeValue(state),
     ),
     debt: Math.round(state.debt),
+    estates: Math.round(propertyValue(state)),
+    stakes: Math.round(stakeValue(state)),
     flows: { ...state.ledger },
   });
   if (state.reports.length > 240) state.reports.shift();

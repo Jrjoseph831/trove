@@ -12,6 +12,7 @@ import newsJson from "../catalog/news.json" with { type: "json" };
 import taxonomyJson from "../catalog/taxonomy.json" with { type: "json" };
 import statsJson from "../catalog/stats.json" with { type: "json" };
 import loreJson from "../catalog/lore.json" with { type: "json" };
+import housesLoreJson from "../catalog/houses-lore.json" with { type: "json" };
 import companiesJson from "../catalog/companies.json" with { type: "json" };
 import newsroomJson from "../catalog/newsroom.json" with { type: "json" };
 import propertiesJson from "../catalog/properties.json" with { type: "json" };
@@ -115,6 +116,33 @@ export function getBrandBySlug(slug: string): Brand | undefined {
 
 export function getLore(name: string): BrandLore | undefined {
   return lore[name];
+}
+
+/** A firm's motto plus one line on what it actually does. */
+export interface CompanyBlurb {
+  tagline: string;
+  what: string;
+}
+
+/**
+ * What a firm IS, in one line — for anywhere a company is offered rather than
+ * merely named. The Deal Room especially: a name and a number gives a player
+ * nothing to decide on.
+ *
+ * Covers both halves of the roster — the brands that manufacture (described by
+ * what they make) and the trading houses that move, finance and resell what
+ * those brands produce (described by their trade).
+ */
+export function companyBlurb(name: string): CompanyBlurb | undefined {
+  const house = (housesLoreJson as Record<string, { tagline: string; what: string }>)[name];
+  if (house) return { tagline: house.tagline, what: house.what };
+  const b = lore[name];
+  if (!b) return undefined;
+  const cats = brandBySlug.get(brandSlug(name))?.categories ?? [];
+  return {
+    tagline: b.tagline,
+    what: cats.length ? `makes ${cats.join(", ").toLowerCase()}` : "trades the market",
+  };
 }
 
 /** Items made by a brand. */
