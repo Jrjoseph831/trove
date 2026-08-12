@@ -8740,12 +8740,52 @@ details.bay-modules > summary.bay-sub:hover {
   display: grid; gap: 12px;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
 }
+/* A firm card is an OFFER, not a list row: identity, what the firm actually
+   does, then the money. Three bands, so 500 of them stay scannable instead of
+   becoming a wall of near-identical numbers. */
 .deal-card {
-  display: flex; align-items: center; gap: 12px; text-align: left; cursor: pointer;
+  display: flex; flex-direction: column; gap: 10px; text-align: left; cursor: pointer;
   background: var(--paper); border: 1px solid var(--line); border-radius: var(--bento-r);
   padding: 14px 16px; transition: transform .12s, box-shadow .12s, border-color .12s;
 }
 .deal-card:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.14); border-color: var(--accent); }
+/* Already holding equity — worth spotting at a glance in a long list. */
+.deal-card.held { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+
+.dc-top { display: flex; align-items: center; gap: 12px; }
+.dc-id { min-width: 0; flex: 1; }
+.dc-owned {
+  flex: 0 0 auto; font-size: 11px; font-weight: 700; color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-radius: 999px; padding: 3px 9px; font-variant-numeric: tabular-nums;
+}
+
+/* Fixed min-height so cards in a row align even when one firm's line is
+   shorter — a ragged grid reads as broken rather than varied. */
+.dc-blurb { display: flex; flex-direction: column; gap: 3px; min-height: 36px; }
+.dc-motto {
+  font-size: 12.5px; font-style: italic; color: var(--ink);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.dc-what {
+  font-size: 12px; line-height: 1.4; color: var(--ink-dim);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.dc-foot {
+  display: flex; gap: 18px; align-items: baseline;
+  border-top: 1px solid var(--line); padding-top: 9px;
+}
+.dc-metric { display: flex; flex-direction: column; gap: 1px; }
+.dc-metric i {
+  font-style: normal; font-size: 10px; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.dc-metric b {
+  font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.dc-metric.up b { color: var(--up); }
 
 /* Monogram tile, tinted by tier */
 .deal-mono {
@@ -9929,4 +9969,20 @@ body {
   .sup-btn { grid-column: 2; justify-self: end; }
   .sup-place { margin-left: 0; width: 100%; }
   .sup-quote { gap: 14px; font-size: 13px; }
+}
+
+/* "Show more firms" — the Deal Room renders a page at a time. With 500+ firms
+   and a re-render on every world tick, drawing them all froze the page. */
+.deal-more {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; margin-top: 14px; padding: 12px 16px; cursor: pointer;
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: var(--bento-r); color: var(--ink);
+  font-size: 13px; font-weight: 600;
+  transition: border-color .12s, background .12s;
+}
+.deal-more:hover { border-color: var(--accent); }
+.deal-more span {
+  font-size: 11.5px; font-weight: 500; color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
 }
