@@ -1,8 +1,18 @@
 name: Deploy to GitHub Pages
 
+# NOT triggered by pushes any more. Company sites live at /<handle>, which is a
+# dynamic route — a player publishes a site and a new URL exists. That needs
+# `dynamicParams: true`, and Next refuses to combine it with `output: export`:
+#
+#   Error: "dynamicParams: true" cannot be used with "output: export"
+#
+# So a static export can no longer represent this app, and leaving the push
+# trigger on would mean a permanently red build on every merge to main. Vercel
+# serves production (trove.ceo) and handles the dynamic routes properly.
+#
+# Left dispatchable rather than deleted, and the existing Pages site keeps
+# serving whatever it last published — nothing goes down by turning this off.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
