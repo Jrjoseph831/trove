@@ -7,6 +7,7 @@ import type {
   DeskAuto,
   Factory,
   Infra,
+  LogEntry,
   OwnedProperty,
   PvpOrder,
   Report,
@@ -35,6 +36,7 @@ export interface ApiWorld {
   items: ApiItem[];
   front: ApiFront | null;
   archive: { head: string; kick: string; cycle: number }[];
+  log: LogEntry[];
 }
 export interface ApiStanding {
   handle: string;

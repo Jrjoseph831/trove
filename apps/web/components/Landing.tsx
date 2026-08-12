@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Briefcase, Building2, Factory, TrendingUp, Trophy } from "lucide-react";
 import { useTrove } from "@/lib/trove";
+import { LiveFeed } from "./LiveFeed";
 import { Ticker } from "./Ticker";
 
 const SEEN_KEY = "trove.landingSeen";
@@ -94,6 +95,8 @@ export function Landing() {
         </p>
 
         {actions}
+
+        <LiveFeed />
 
         <section className="landing-section">
           <div className="landing-section-h">How to play</div>

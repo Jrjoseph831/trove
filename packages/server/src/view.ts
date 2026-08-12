@@ -28,6 +28,11 @@ export interface PublicWorld {
   items: PublicItem[];
   front: PublicFront | null;
   archive: WorldDoc["archive"];
+  /** Recent floor activity ("X sold Y", "X bought Y from Z") — already
+   *  generated server-side (traderAct, named AI-to-AI trades), just never
+   *  exposed to a client before. No hidden signal in it (who/verb/it are
+   *  all already-public actions), safe for the anonymous read path. */
+  log: WorldDoc["log"];
 }
 
 export function publicView(doc: WorldDoc): PublicWorld {
@@ -49,5 +54,6 @@ export function publicView(doc: WorldDoc): PublicWorld {
         }
       : null,
     archive: doc.archive,
+    log: doc.log ?? [],
   };
 }

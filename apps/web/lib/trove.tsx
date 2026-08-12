@@ -113,6 +113,7 @@ function overlayWorld(live: WorldState, api: ApiWorld): void {
   live.cycle = api.cycle;
   if (api.front) live.front = { ...live.front, ...api.front } as WorldState["front"];
   if (api.archive) live.archive = api.archive;
+  if (api.log) live.log = api.log;
 }
 
 /** Overlay the signed-in player's own holdings/cash AND factory/sales/report

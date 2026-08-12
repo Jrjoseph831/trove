@@ -7011,6 +7011,78 @@ details.bay-modules > summary.bay-sub:hover {
   text-align: center;
   margin: 22px 0 0;
 }
+.landing-feed {
+  text-align: left;
+}
+.landing-feed-h {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.landing-feed-live {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.landing-feed-live i {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  animation: feedLivePulse 1.8s ease-in-out infinite;
+}
+.feed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.feed-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink-dim);
+  line-height: 1.5;
+}
+.feed-row b {
+  color: var(--ink);
+  font-weight: 700;
+}
+.feed-dot {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  margin-top: 5px;
+  background: var(--up, var(--accent));
+}
+.feed-row.dn .feed-dot {
+  background: var(--dn);
+}
+.feed-row.fresh {
+  animation: feedRowFresh 1.4s ease-out;
+}
+@keyframes feedLivePulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+@keyframes feedRowFresh {
+  0% {
+    background: color-mix(in srgb, var(--accent) 16%, transparent);
+  }
+  100% {
+    background: transparent;
+  }
+}
 .rename-btn {
   margin-left: 8px;
   background: none;
