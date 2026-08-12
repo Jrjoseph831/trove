@@ -55,6 +55,7 @@ export function DealRoom() {
 
   // staging dev tools
   const [devPrice, setDevPrice] = useState("5000000");
+  const [devCash, setDevCash] = useState("35000");
   const [devBusy, setDevBusy] = useState(false);
   const runDev = async (action: string, extra: Record<string, number> = {}) => {
     setDevBusy(true);
@@ -354,6 +355,21 @@ export function DealRoom() {
           <span className="ma-dev-h">🧪 Staging tools</span>
           <button disabled={devBusy} onClick={() => runDev("fund", { amount: 50_000_000 })}>
             Fund +$50M
+          </button>
+          {/* Exact figure, not a credit — for playing the opening from a given
+              bankroll without changing START_CASH for real players. */}
+          <input
+            className="ma-input"
+            type="number"
+            value={devCash}
+            onChange={(e) => setDevCash(e.target.value)}
+            style={{ maxWidth: 130 }}
+          />
+          <button
+            disabled={devBusy}
+            onClick={() => runDev("set-cash", { amount: Math.round(Number(devCash) || 0) })}
+          >
+            Set cash
           </button>
           <input
             className="ma-input"

@@ -48,6 +48,7 @@ import {
   sectorConsumptionPressure,
   setRng,
   settleCycle,
+  START_CASH,
   setStandingSource,
   traderAct,
   updatePlayerActivity,
@@ -84,7 +85,7 @@ describe("freshState", () => {
   it("primes every item to baseline with correct supply", () => {
     const S = freshState();
     expect(S.items.length).toBe(catalog.length);
-    expect(S.cash).toBe(25000);
+    expect(S.cash).toBe(START_CASH);
     for (const it of S.items) {
       expect(it.value).toBe(it.base);
       if (it.edition !== null) {

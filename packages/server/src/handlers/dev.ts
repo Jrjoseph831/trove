@@ -3,7 +3,8 @@
  * the /dev route isn't even mounted on the prod stack). Lets a signed-in tester
  * fund their account and summon a buyout offer so M&A can be exercised solo.
  *
- *   POST /dev { action: "fund", amount? }   credit your cash (default $50M)
+ *   POST /dev { action: "fund", amount? }     credit your cash (default $50M)
+ *   POST /dev { action: "set-cash", amount }  set your cash to an exact figure
  *   POST /dev { action: "offer-me", price? } a synthetic buyer offers to acquire
  *                                            your firm (accept it to test the exit)
  */
@@ -58,6 +59,21 @@ export async function handler(
         Math.max(1, Math.round(Number(body.amount) || 50_000_000)),
       );
       player.cash = (player.cash ?? 0) + amount;
+      await savePlayer(player);
+      const doc = await loadWorld();
+      return doc
+        ? json(200, buildPortfolio(doc as WorldDoc, player))
+        : json(200, { ok: true });
+    }
+    // Set cash to an EXACT figure, unlike "fund" which credits on top. For
+    // testing how the game plays from a given bankroll (e.g. dialling in a
+    // different opening balance) without touching START_CASH for real players.
+    case "set-cash": {
+      const amount = Math.min(
+        1_000_000_000_000,
+        Math.max(0, Math.round(Number(body.amount) || 0)),
+      );
+      player.cash = amount;
       await savePlayer(player);
       const doc = await loadWorld();
       return doc
