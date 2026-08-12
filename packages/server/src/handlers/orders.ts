@@ -17,6 +17,7 @@ import { getItem } from "@trove/data";
 import type { PvpOrder } from "@trove/engine";
 import {
   allPlayers,
+  findFirmByHandle,
   deleteOrder,
   getOrder,
   getPlayer,
@@ -143,9 +144,10 @@ export async function handler(
   if (!doc) return json(503, { error: "world not seeded" });
 
   const players = await allPlayers();
-  const seller = players.find(
-    (p) => p.site?.handle === body.sellerHandle && p.site?.published,
-  );
+  // Resolves by published handle OR the one derived from the holding's name.
+  // Requiring a published website meant a real, named firm could not be sent an
+  // offer at all — you can't acquire a company that hasn't built a homepage.
+  const seller = findFirmByHandle(players, String(body.sellerHandle ?? ""));
   if (!seller) return json(404, { error: "no such company" });
   if (seller.playerId === me) return json(400, { error: "that's your own company" });
 

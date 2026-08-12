@@ -709,6 +709,28 @@ function ownerHoldings(doc: WorldDoc, ownerKey: string) {
 
 const houseHandle = (name: string) =>
   name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+
+/**
+ * A firm's stable address. Its published site handle if it has one, otherwise
+ * derived from the holding name — because a firm's IDENTITY shouldn't depend on
+ * whether its owner has built a website. Order routing and the Deal Room key on
+ * this, so a holding can be traded with from the moment it's named.
+ */
+export function firmHandle(p: Player): string {
+  return p.site?.handle ?? houseHandle(p.name ?? p.playerId);
+}
+
+/**
+ * Find the player a deal is addressed to. Prefers an exact published-site
+ * handle (the canonical address) and falls back to the derived one, so an
+ * offer reaches a firm that has never published a page.
+ */
+export function findFirmByHandle(players: Player[], handle: string): Player | undefined {
+  return (
+    players.find((p) => p.site?.handle === handle && p.site?.published) ??
+    players.find((p) => !!p.name && firmHandle(p) === handle)
+  );
+}
 const houseName = (name: string) => name.replace(/_/g, " ");
 const HOUSE_SECTIONS: NonNullable<SiteConfig["sections"]> = [
   { id: "masthead", on: true },
@@ -723,6 +745,8 @@ export interface DirEntry {
   sector: string;
   accent: string;
   netWorth: number;
+  /** Has a public company page. Unpublished firms are still tradeable. */
+  published?: boolean;
 }
 
 /** The whole directory: every published player company + every AI house, as the
@@ -730,16 +754,23 @@ export interface DirEntry {
 export function companyEntries(doc: WorldDoc, players: Player[]): DirEntry[] {
   const entries: DirEntry[] = [];
   for (const p of players) {
-    if (!p.site?.handle || !p.site.published || !p.name) continue;
+    // A named holding is a firm whether or not it has published a website.
+    // Requiring a published site here made a real firm invisible in the Deal
+    // Room and impossible to send an offer to — you can't acquire a company
+    // that hasn't got round to building a homepage.
+    if (!p.name) continue;
     const sectors = companySectors(p, storefrontOf(doc, p));
     const { assets } = ownerHoldings(doc, p.playerId);
     entries.push({
-      handle: p.site.handle,
+      handle: firmHandle(p),
       name: p.name,
       kind: "player",
       sector: sectors[0] ?? "",
-      accent: p.site.accent ?? "gold",
+      accent: p.site?.accent ?? "gold",
       netWorth: Math.round((p.cash ?? 0) - (p.debt ?? 0) + assets),
+      // Only a published firm has a public page to visit; everyone can still
+      // be traded with.
+      published: !!p.site?.published,
     });
   }
   for (const t of doc.traders ?? []) {
