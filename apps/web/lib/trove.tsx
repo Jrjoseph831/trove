@@ -271,6 +271,10 @@ interface Trove {
   dismissRecap: () => void;
   /** The signed-in player's own company-site config (null until loaded / set). */
   mySite: SiteConfig | null;
+  /** The SERVER's valuation of your firm. The client can only approximate it —
+   *  it never sees other firms' treasuries — so anything comparing you against
+   *  the rest of the world must use this, not a local recompute. */
+  serverNet: number | null;
   /** Save the player's site config; resolves to the updated public view or null. */
   saveSite: (patch: Partial<SiteConfig>) => Promise<CompanySite | null>;
   /** Player-to-player order book (incoming as seller, outgoing as buyer). */
@@ -380,6 +384,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [dailyReport, setDailyReport] = useState<Report | null>(null);
   const [recap, setRecap] = useState<Recap | null>(null);
   const [mySite, setMySite] = useState<SiteConfig | null>(null);
+  const [serverNet, setServerNet] = useState<number | null>(null);
   const [orders, setOrders] = useState<OrderBook | null>(null);
   const lastReportRef = useRef(-1);
   const recapCheckedRef = useRef(false);
@@ -437,6 +442,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
             if (alive) {
               overlayPortfolio(worldsRef.current!.live, p);
               setMySite(p.site ?? null);
+              setServerNet(p.netWorth);
               if (!recapCheckedRef.current) {
                 recapCheckedRef.current = true;
                 const built = buildRecap(
@@ -675,6 +681,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         const p = await fetchPortfolio();
         overlayPortfolio(worldsRef.current!.live, p);
         setMySite(p.site ?? null);
+              setServerNet(p.netWorth);
       }
     } catch {
       /* best-effort */
@@ -1526,6 +1533,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       recap,
       dismissRecap,
       mySite,
+      serverNet,
       saveSite,
       orders,
       requestOrder,
@@ -1591,6 +1599,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       recap,
       dismissRecap,
       mySite,
+      serverNet,
       saveSite,
       orders,
       requestOrder,

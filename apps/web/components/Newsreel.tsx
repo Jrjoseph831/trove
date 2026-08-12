@@ -197,9 +197,9 @@ export function Wheel({
   embedded?: boolean;
   onClose?: () => void;
 }) {
-  const { state, desk, mode: appMode } = useTrove();
+  const { state, desk, mode: appMode, serverNet } = useTrove();
   const myLabel = desk?.name?.trim() || "Your Holding";
-  const board = useLeaderboard(state, appMode, myLabel);
+  const board = useLeaderboard(state, appMode, myLabel, serverNet);
   const stateRef = useRef(state);
   stateRef.current = state;
   const loopRef = useRef(0);

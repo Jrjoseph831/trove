@@ -13,7 +13,7 @@ import type { WireStory } from "./Broadcast";
 import { Newsreel, Wheel } from "./Newsreel";
 
 export function Wire() {
-  const { state, desk, mode } = useTrove();
+  const { state, desk, mode, serverNet } = useTrove();
   const [studioOpen, setStudioOpen] = useState(false);
   // The telegraphed market-event Breaking beat — refreshed on its own clock.
   const [now, setNow] = useState(() => Date.now());
@@ -55,7 +55,7 @@ export function Wire() {
   // the top 12, but always includes you (with your true rank). Your own row shows
   // your Holding name; live players get a marker.
   const myLabel = desk?.name?.trim() || "Your Holding";
-  const ranked = useLeaderboard(state, mode, myLabel);
+  const ranked = useLeaderboard(state, mode, myLabel, serverNet);
   const top = ranked.slice(0, 12);
   const me = ranked.find((e) => e.id === "YOU");
   const board = top.some((e) => e.id === "YOU") ? top : me ? [...top, me] : top;

@@ -11,7 +11,7 @@ import { Tile } from "./Tile";
 import { WhileYouWereAwayCard } from "./WhileYouWereAway";
 
 export function Trending() {
-  const { state, desk, mode } = useTrove();
+  const { state, desk, mode, serverNet } = useTrove();
   const f = state.front;
   const { ups, dns } = impliedSectors(f);
   const [now, setNow] = useState(() => Date.now());
@@ -29,7 +29,7 @@ export function Trending() {
   // Standings beside the headline — competitive context (observable), not a
   // give-away sector readout. Top firms + you.
   const myLabel = desk?.name?.trim() || "Your Holding";
-  const ranked = useLeaderboard(state, mode, myLabel);
+  const ranked = useLeaderboard(state, mode, myLabel, serverNet);
   const standTop = ranked.slice(0, 9);
   const meRow = ranked.find((e) => e.id === "YOU");
   const standings =
