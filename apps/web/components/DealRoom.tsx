@@ -52,7 +52,6 @@ function FirmCard({ r, onOpen }: { r: Row; onOpen: () => void }) {
         <div className="dc-id">
           <div className="deal-cardname">
             {r.name}
-            {r.live && <span className="deal-livetag"> ● LIVE</span>}
           </div>
           <div className="deal-cardmeta">
             {secName(r.sector)}
@@ -69,9 +68,7 @@ function FirmCard({ r, onOpen }: { r: Row; onOpen: () => void }) {
         </div>
       ) : (
         <div className="dc-blurb">
-          <span className="dc-what">
-            A holding run by another player. Acquired only by negotiated buyout.
-          </span>
+          <span className="dc-what">Acquired by negotiated buyout.</span>
         </div>
       )}
 
@@ -235,7 +232,7 @@ export function DealRoom() {
             <div>
               <h1 className="est-h1">{selRow.name}</h1>
               <div className="deal-sub">
-                {secName(selRow.sector)} · <span className="deal-livetag">● LIVE PLAYER</span>
+                {secName(selRow.sector)}
               </div>
             </div>
           </div>

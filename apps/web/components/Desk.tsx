@@ -59,7 +59,7 @@ function IncomingCard({ o, held, act }: { o: PvpOrder; held: number; act: OrderA
         <div className="pvp-wait">Countered {money(o.price)} · awaiting their reply</div>
       ) : (
         <>
-          {!o.countered && (
+          {(
             <div className="oc-bidrow">
               <span className="oc-bidlbl">Counter</span>
               <input
@@ -101,6 +101,9 @@ function IncomingCard({ o, held, act }: { o: PvpOrder; held: number; act: OrderA
 function OutgoingCard({ o, cash, act }: { o: PvpOrder; cash: number; act: OrderAct }) {
   const yourMove = o.turn === "buyer"; // the seller countered back to you
   const afford = cash >= o.price;
+  const [bid, setBid] = useState(String(Math.round(o.price * 0.92)));
+  const bidNum = Math.round(Number(bid));
+  const valid = Number.isFinite(bidNum) && bidNum > 0;
   return (
     <div className="ordercard offer pvp out">
       <div className="oc-co">→ {manufacturingName(o.sellerName)}</div>
@@ -116,6 +119,28 @@ function OutgoingCard({ o, cash, act }: { o: PvpOrder; cash: number; act: OrderA
         </span>
         <span>{yourMove ? "your move" : "awaiting seller"}</span>
       </div>
+      {/* Countering used to be the seller's move only, and only once — so the
+          moment they countered, the buyer could accept or walk away and
+          nothing else. A negotiation you can't negotiate. */}
+      {yourMove && (
+        <div className="oc-bidrow">
+          <span className="oc-bidlbl">Counter</span>
+          <input
+            className="oc-bid"
+            type="number"
+            min={1}
+            value={bid}
+            onChange={(e) => setBid(e.target.value)}
+          />
+          <button
+            className="oc-counter"
+            disabled={!valid}
+            onClick={() => act(o.id, "counter", bidNum)}
+          >
+            Send
+          </button>
+        </div>
+      )}
       <div className="oc-actions">
         <button className="oc-decline" onClick={() => act(o.id, "withdraw")}>
           Withdraw

@@ -1295,6 +1295,18 @@ export async function settleBuyout(orderId: string, retries = 4): Promise<DealRe
       floorSlots: STARTING_SLOTS,
       infra: { ...FRESH_INFRA },
       site: undefined,
+      // The firm was SOLD — the name went with it, along with everything else.
+      // Keeping it meant a player walked away from a full liquidation still
+      // trading under the banner they'd just handed over, and never saw the
+      // onboarding that a fresh start is supposed to begin with. Clearing it
+      // is what makes the naming gate fire again (Terminal treats a nameless
+      // holding as a new one).
+      name: undefined,
+      reputation: 0,
+      orders: [],
+      reports: [],
+      ledger: emptyLedger(),
+      periodNo: 0,
     };
 
     try {
