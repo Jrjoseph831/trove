@@ -4122,6 +4122,22 @@ body {
 .oc-profit.neg b {
   color: var(--danger, #c0492b);
 }
+/* Why an under-cost offer isn't a dead order — sits under the margin line so
+   it reads as the explanation for the red number directly above it. */
+.oc-hint {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-dim);
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  border-left: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  padding: 7px 10px;
+  border-radius: 0 8px 8px 0;
+  margin: -4px 0 12px;
+}
+.oc-hint b {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
 .oc-bar {
   height: 5px;
   border-radius: 999px;

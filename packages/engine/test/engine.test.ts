@@ -27,6 +27,7 @@ import {
   setMarketEvent,
   fulfillSandboxOrder,
   generateSandboxOrder,
+  SANDBOX_TIMING,
   held,
   listedUnitPrice,
   makerMark,
@@ -1150,5 +1151,53 @@ describe("maker attribution — goods belong to whoever made them", () => {
     );
     expect(makerVariantName("Cowhide", null, 7)).toBe("Cowhide");
     expect(makerVariantName("Cowhide", "   ", 7)).toBe("Cowhide");
+  });
+});
+
+describe("order desk — a contract must be worth taking", () => {
+  it("never offers a reseller LESS than the floor charges to source it", () => {
+    // Goods you don't produce are bought on the floor at market and handed on,
+    // so the buyer has to clear that cost or the contract is a guaranteed loss.
+    // This used to assume you sourced at 0.7x market, which put the buyer's own
+    // ceiling below your cost: every reseller order was unwinnable, and
+    // countering to anything sane made them walk.
+    setRng(mulberry32(4242));
+    const S = createWorld(0);
+    S.reputation = 10;
+    let sampled = 0;
+    const bad: string[] = [];
+    for (let i = 0; i < 4000 && sampled < 400; i++) {
+      const o = generateSandboxOrder(S, Date.now(), SANDBOX_TIMING);
+      if (!o) continue;
+      if (S.factories.some((f) => f.itemId === o.itemId)) continue; // reseller only
+      const it = S.items.find((x) => x.id === o.itemId)!;
+      const source = it.value * o.qty; // exactly what serverBuy charges
+      sampled++;
+      // The ceiling is what they'd pay at an absolute stretch — if THAT is
+      // under cost there is no number you could counter with that isn't a loss.
+      if (o.budget < source) bad.push();
+      // And the target (where they settle without a fight) must clear it too.
+      if (o.target < source) bad.push();
+    }
+    expect(sampled).toBeGreaterThan(50); // the sample actually exercised this
+    expect(bad.slice(0, 5)).toEqual([]);
+  });
+
+  it("leaves real room to negotiate above cost, not a token cent", () => {
+    setRng(mulberry32(77));
+    const S = createWorld(0);
+    S.reputation = 10;
+    const margins: number[] = [];
+    for (let i = 0; i < 3000 && margins.length < 200; i++) {
+      const o = generateSandboxOrder(S, Date.now(), SANDBOX_TIMING);
+      if (!o) continue;
+      if (S.factories.some((f) => f.itemId === o.itemId)) continue;
+      const it = S.items.find((x) => x.id === o.itemId)!;
+      margins.push((o.budget - it.value * o.qty) / (it.value * o.qty));
+    }
+    const median = margins.sort((a, b) => a - b)[Math.floor(margins.length / 2)]!;
+    // Enough to be worth the click, not so much that reselling beats making.
+    expect(median).toBeGreaterThan(0.08);
+    expect(median).toBeLessThan(0.3);
   });
 });

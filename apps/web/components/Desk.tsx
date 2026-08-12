@@ -246,18 +246,26 @@ function timeLeft(expiresAt: number): string {
 /** A live negotiation: their standing offer, your ask, accept/counter/walk. */
 function OfferCard({ o }: { o: DeskOrder }) {
   const { acceptOrder, counterOrder, declineOrder, state } = useTrove();
-  // Default ask: a healthy premium over your sourcing cost.
+
+  const makeCost = makeCostOf(state, o);
+  // What filling this contract actually costs YOU: your production cost if you
+  // make it, otherwise the floor price, because buying the units is the only
+  // way to deliver them. Resellers used to get no margin line at all, so an
+  // offer under water looked identical to a good one.
+  const cost = makeCost ?? o.marketValue;
+  const profit = o.companyOffer - cost;
+  const margin = o.companyOffer > 0 ? Math.round((profit / o.companyOffer) * 100) : 0;
+
+  // Default ask: a premium over cost. Tighter for reselling — a buyer's
+  // ceiling on goods you don't make sits ~20% over the floor price, so opening
+  // at +30% there just gets a flat refusal.
   const suggested = Math.max(
     o.companyOffer + 1,
-    Math.round(o.marketValue * 1.3),
+    Math.round(cost * (o.youProduce ? 1.3 : 1.15)),
   );
   const [bid, setBid] = useState(String(suggested));
   const bidNum = Math.round(Number(bid));
   const valid = Number.isFinite(bidNum) && bidNum > 0;
-
-  const makeCost = makeCostOf(state, o);
-  const profit = makeCost != null ? o.companyOffer - makeCost : null;
-  const margin = profit != null ? Math.round((profit / o.companyOffer) * 100) : 0;
 
   return (
     <div className="ordercard offer">
@@ -286,14 +294,29 @@ function OfferCard({ o }: { o: DeskOrder }) {
           )}
         </span>
       </div>
-      {makeCost != null && profit != null && (
-        <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
-          {profit >= 0 ? "Profit if you make " : "Loss if you make "}
-          <b>
-            {profit >= 0 ? "+" : ""}
-            {money(profit)}
-          </b>
-          {profit >= 0 && o.companyOffer > 0 && ` · ${margin}% margin`}
+      <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
+        {profit >= 0
+          ? o.youProduce
+            ? "Profit if you make "
+            : "Profit if you resell "
+          : o.youProduce
+            ? "Loss if you make "
+            : "Loss if you resell "}
+        <b>
+          {profit >= 0 ? "+" : ""}
+          {money(profit)}
+        </b>
+        {profit >= 0 && o.companyOffer > 0 && ` · ${margin}% margin`}
+      </div>
+      {profit < 0 && (
+        // The point Joe kept hitting: an opening offer under your cost isn't a
+        // dead order, it's the start of a haggle. Say so, and say the number.
+        <div className="oc-hint">
+          {o.youProduce
+            ? "Their opening bid is under your cost — counter, don't accept."
+            : "You don't make this, so you'd buy it on the floor to fill it. Counter above "}
+          {!o.youProduce && <b>{money(cost)}</b>}
+          {!o.youProduce && " or you're paying them to take it."}
         </div>
       )}
 
