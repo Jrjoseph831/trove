@@ -124,7 +124,11 @@ describe("determinism", () => {
       return netWorth(S, "YOU");
     };
     expect(run()).toBe(run());
-  }, 20000);
+    // Two full 300-step sims over a 501-firm roster. Budgets on the long sims
+    // are generous because CI runners are markedly slower than a dev machine,
+    // and a timeout here reads as "the economy broke" when it only means the
+    // world got bigger — the roster went from 101 firms to 501.
+  }, 60000);
 });
 
 describe("supply invariants over a long sim", () => {
@@ -151,7 +155,9 @@ describe("supply invariants over a long sim", () => {
       }
     }
     expect(violations).toEqual([]);
-  }, 20000);
+    // 200 cycles x every one of 501 firms acting, plus a full per-item scan
+    // each cycle. Five times the work it was at 101 firms.
+  }, 90000);
 });
 
 describe("no wealth from nothing", () => {
@@ -831,7 +837,8 @@ describe("production + listings stay consistent", () => {
     }
     expect(issues).toEqual([]);
     expect(Number.isFinite(netWorth(S, "YOU"))).toBe(true);
-  }, 20000);
+    // Same class as the other long sims: a cycle loop over a 501-firm world.
+  }, 45000);
 });
 
 describe("standing sources never leak into a market-buy fallback", () => {
