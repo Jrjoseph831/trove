@@ -17,6 +17,7 @@ import { getItem } from "@trove/data";
 import type { PvpOrder } from "@trove/engine";
 import {
   allPlayers,
+  findFirmByHandle,
   deleteOrder,
   getOrder,
   getPlayer,
@@ -49,6 +50,10 @@ function parseBody<T>(event: APIGatewayProxyEventV2WithJWTAuthorizer): T | null 
     return null;
   }
 }
+
+/** Counters allowed in total, across both sides. Generous enough for a real
+ *  back-and-forth, bounded so an order can't be haggled forever. */
+const MAX_COUNTERS = 6;
 
 const newId = () =>
   `o_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
@@ -105,17 +110,26 @@ export async function handler(
         return json(200, { ok: true });
       }
       case "counter": {
-        if (!isSeller || order.turn !== "seller")
-          return json(409, { error: "can't counter now" });
-        if (order.countered) return json(409, { error: "already countered once" });
+        // EITHER side can counter, on their turn. This used to be seller-only
+        // and once-only, so the moment a seller countered, the buyer's only
+        // moves were accept or withdraw — a negotiation that couldn't be
+        // negotiated. Now it goes back and forth like a real haggle, capped
+        // only so it can't run forever.
+        const myTurn =
+          (isSeller && order.turn === "seller") || (isBuyer && order.turn === "buyer");
+        if (!myTurn) return json(409, { error: "not your move" });
+        const rounds = order.rounds ?? (order.countered ? 1 : 0);
+        if (rounds >= MAX_COUNTERS)
+          return json(409, { error: "this deal has gone as far as it can — accept or walk" });
         const price = Math.round(Number(body.price));
         if (!Number.isFinite(price) || price <= 0)
           return json(400, { error: "invalid counter price" });
         const next: PvpOrder = {
           ...order,
           price,
-          turn: "buyer",
+          turn: isSeller ? "buyer" : "seller",
           countered: true,
+          rounds: rounds + 1,
           updatedAt: Date.now(),
         };
         await putOrder(next);
@@ -143,9 +157,10 @@ export async function handler(
   if (!doc) return json(503, { error: "world not seeded" });
 
   const players = await allPlayers();
-  const seller = players.find(
-    (p) => p.site?.handle === body.sellerHandle && p.site?.published,
-  );
+  // Resolves by published handle OR the one derived from the holding's name.
+  // Requiring a published website meant a real, named firm could not be sent an
+  // offer at all — you can't acquire a company that hasn't built a homepage.
+  const seller = findFirmByHandle(players, String(body.sellerHandle ?? ""));
   if (!seller) return json(404, { error: "no such company" });
   if (seller.playerId === me) return json(400, { error: "that's your own company" });
 

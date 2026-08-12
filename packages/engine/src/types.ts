@@ -214,8 +214,12 @@ export interface PvpOrder {
   price: number;
   /** Whose move it is: the seller (a fresh offer) or the buyer (after a counter). */
   turn: "seller" | "buyer";
-  /** The seller has used their one counter. */
+  /** The seller has used their one counter. Kept for orders written before
+   *  negotiation went both ways; `rounds` is what the rules read now. */
   countered: boolean;
+  /** Counters exchanged so far, by either side. A real negotiation goes back
+   *  and forth — capped only so a haggle can't run forever. */
+  rounds?: number;
   createdAt: number;
   updatedAt: number;
 }

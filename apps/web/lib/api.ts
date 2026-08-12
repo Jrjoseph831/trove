@@ -119,6 +119,8 @@ export interface DirEntry {
   sector: string;
   accent: string;
   netWorth: number;
+  /** Has a public company page. Unpublished firms are still tradeable. */
+  published?: boolean;
 }
 
 // ── Player-to-player orders (multiplayer routing) ────────────────────────────
