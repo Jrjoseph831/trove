@@ -6816,14 +6816,21 @@ details.bay-modules > summary.bay-sub:hover {
   z-index: 200;
   background: var(--bg);
   display: flex;
-  align-items: center;
+  /* flex-start, not center — the page is tall multi-section content now,
+     and centering a scrollable flex container clips the top half above
+     the reachable scroll range once content overflows the viewport. */
+  align-items: flex-start;
   justify-content: center;
-  padding: 32px 20px;
+  padding: 60px 20px;
   overflow-y: auto;
 }
 .landing-card {
   width: min(94vw, 560px);
   text-align: center;
+}
+.landing-full {
+  width: min(94vw, 760px);
+  padding-bottom: 60px;
 }
 .landing-mark {
   font-family: var(--font-display);
@@ -6833,9 +6840,8 @@ details.bay-modules > summary.bay-sub:hover {
   margin-bottom: 10px;
 }
 .landing-kick {
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: 17px;
   color: var(--ink-dim);
   margin-bottom: 36px;
 }
@@ -6885,6 +6891,87 @@ details.bay-modules > summary.bay-sub:hover {
 }
 .landing-browse:hover {
   color: var(--ink);
+}
+.landing-section {
+  border-top: 1px solid var(--line);
+  margin-top: 44px;
+  padding-top: 44px;
+}
+.landing-section-h {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 26px;
+}
+.landing-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.landing-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.landing-step-n {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--accent);
+}
+.landing-step-h {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.landing-step-b {
+  font-size: 13px;
+  color: var(--ink-dim);
+  line-height: 1.5;
+}
+.landing-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  text-align: left;
+}
+.landing-feature {
+  border: 1px solid var(--line);
+  border-radius: var(--bento-r, 16px);
+  padding: 18px;
+  background: var(--paper);
+}
+.landing-feature svg {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.landing-feature-h {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+.landing-feature-b {
+  font-size: 12px;
+  color: var(--ink-dim);
+  line-height: 1.55;
+}
+.landing-footnote {
+  font-size: 12px;
+  color: var(--ink-faint);
+  text-align: center;
+  margin: 22px 0 0;
 }
 .rename-btn {
   margin-left: 8px;
