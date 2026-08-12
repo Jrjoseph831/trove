@@ -6,8 +6,6 @@ import { useTrove } from "@/lib/trove";
 import { LandingTape } from "./LandingTape";
 import { LiveFeed } from "./LiveFeed";
 
-const SEEN_KEY = "trove.landingSeen";
-
 const FEATURES = [
   {
     Icon: TrendingUp,
@@ -107,31 +105,28 @@ function Reveal({ children, className = "" }: { children: React.ReactNode; class
  *  drop-off driver. */
 export function Landing() {
   const { authReady, signedIn, signIn, setTab, state } = useTrove();
-  const [dismissed, setDismissed] = useState(
-    () => typeof window !== "undefined" && sessionStorage.getItem(SEEN_KEY) === "1",
-  );
+  // In-memory only, deliberately NOT persisted. The rule is: every visit to
+  // the site lands on the front page unless you're signed in, in which case
+  // you go straight to the game. "Browse the market" still gets a guest into
+  // the catalog for that visit, but it doesn't buy them a permanent bypass —
+  // a reload or a return trip shows the pitch again, which is the whole
+  // point of having one.
+  const [dismissed, setDismissed] = useState(false);
   const [stuck, setStuck] = useState(false);
   const gateRef = useRef<HTMLDivElement>(null);
 
-  // `dismissed` is otherwise a one-time read — without this, signing out
-  // leaves it stuck and the front cover never reappears.
+  // Signing out drops you back to the front page rather than into a
+  // restricted catalog with no explanation.
   const wasSignedIn = useRef(signedIn);
   useEffect(() => {
-    if (wasSignedIn.current && !signedIn) {
-      sessionStorage.removeItem(SEEN_KEY);
-      setDismissed(false);
-    }
+    if (wasSignedIn.current && !signedIn) setDismissed(false);
     wasSignedIn.current = signedIn;
   }, [signedIn]);
 
-  // Guests have no nav, so without this there is no route back to the front
-  // page once it's been dismissed for the session — the only way to see it
-  // again would be opening a fresh tab. The guest bar dispatches this.
+  // Guests have no nav, so the guest bar's wordmark dispatches this to get
+  // back here without needing a reload.
   useEffect(() => {
-    const show = () => {
-      sessionStorage.removeItem(SEEN_KEY);
-      setDismissed(false);
-    };
+    const show = () => setDismissed(false);
     window.addEventListener("trove:show-landing", show);
     return () => window.removeEventListener("trove:show-landing", show);
   }, []);
@@ -152,7 +147,6 @@ export function Landing() {
   if (!authReady || signedIn || dismissed) return null;
 
   const enter = () => {
-    sessionStorage.setItem(SEEN_KEY, "1");
     setDismissed(true);
     setTab("catalog");
   };
