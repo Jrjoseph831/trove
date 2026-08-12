@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Briefcase, Building2, ChevronDown, Factory, TrendingUp, Trophy } from "lucide-react";
+import { Briefcase, Building2, Factory, TrendingUp, Trophy } from "lucide-react";
 import { useTrove } from "@/lib/trove";
 import { LandingTape } from "./LandingTape";
 import { LiveFeed } from "./LiveFeed";
@@ -12,7 +12,7 @@ const FEATURES = [
   {
     Icon: TrendingUp,
     name: "The Market",
-    body: "Every price moves with real supply, demand, and breaking news on The Wire. Nothing is static.",
+    body: "Every price moves with real supply, demand, and breaking news. Nothing is on a script.",
   },
   {
     Icon: Factory,
@@ -22,7 +22,7 @@ const FEATURES = [
   {
     Icon: Briefcase,
     name: "The Deal Room",
-    body: "Buy into another firm's equity, collect dividends, or make a full offer to acquire their company outright.",
+    body: "Buy into a rival's equity, collect dividends, or acquire their company outright.",
   },
   {
     Icon: Building2,
@@ -38,72 +38,83 @@ const FEATURES = [
 
 const STEPS = [
   {
-    n: 1,
-    h: "Sign up, name your holding",
-    b: "Your firm's identity on the market — it's how you'll appear in the standings and on every order.",
+    n: "01",
+    h: "Claim your holding",
+    b: "Pick a name. It's how you'll show up in the standings and on every order you place.",
   },
   {
-    n: 2,
+    n: "02",
     h: "Trade the floor",
-    b: "Buy low, sell high, and watch prices move with breaking news across every sector.",
+    b: "Buy low, sell high, and read the news before the rest of the market does.",
   },
   {
-    n: 3,
-    h: "Build & grow",
-    b: "Stand up a factory, manufacture your own goods, and sell to the market or under contract.",
+    n: "03",
+    h: "Build the machine",
+    b: "Stand up factories, turn raw material into product, and supply the firms around you.",
   },
   {
-    n: 4,
-    h: "Climb the ranks",
-    b: "Grow your net worth, unlock new tools, and chase the top of the ladder.",
+    n: "04",
+    h: "Take the top",
+    b: "Compound your net worth, acquire your rivals, and climb to the top of the ladder.",
   },
 ];
 
-/** Reveals its children once scrolled into view — the whole page is
- *  scroll-snapped, so each screen gets its moment as it arrives instead of
- *  being pre-rendered flat. */
+/** Fades a section up as it enters the viewport — the standard modern
+ *  landing-page reveal, kept subtle so it never delays reading. */
 function Reveal({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
+  // Progressive enhancement, deliberately: content is VISIBLE by default and
+  // only becomes hideable once this mounts and opts in ("armed"). Starting
+  // hidden and relying on JS to reveal means any failure — IO unsupported, a
+  // hydration error, a blocked bundle — leaves a blank marketing page, which
+  // is the worst possible failure mode for a page whose whole job is
+  // converting visitors.
+  const [armed, setArmed] = useState(false);
   const [on, setOn] = useState(false);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const io = new IntersectionObserver(([e]) => setOn(!!e?.isIntersecting), {
-      threshold: 0.35,
-    });
+    if (typeof IntersectionObserver === "undefined") return; // stays visible
+    setArmed(true);
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e?.isIntersecting) {
+          setOn(true);
+          io.disconnect(); // reveal once; re-animating on every pass is noise
+        }
+      },
+      { threshold: 0.15 },
+    );
     io.observe(el);
     return () => io.disconnect();
   }, []);
   return (
-    <div ref={ref} className={`lreveal ${on ? "on" : ""} ${className}`}>
+    <div
+      ref={ref}
+      className={`lreveal ${armed ? "armed" : ""} ${on ? "on" : ""} ${className}`}
+    >
       {children}
     </div>
   );
 }
 
-function ScrollHint() {
-  return (
-    <div className="landing-scrollhint" aria-hidden="true">
-      <ChevronDown size={20} strokeWidth={1.75} />
-    </div>
-  );
-}
-
-/** The front cover: a full-screen, scroll-snapped pitch shown once per
- *  browser session to signed-out visitors. Sign In is the primary path, but
- *  "Browse the market" is an equally real one — the shared world is public;
- *  only Acquire/sell requires an account. */
+/** The front cover, built on the conversion structure these pages
+ *  consistently use in the wild (Linear / Raycast / Vercel): a sticky nav
+ *  that keeps the CTA permanently reachable, a benefit-led hero with the
+ *  live product surface as its visual proof, a stats bar, how-it-works,
+ *  features, and a closing CTA. Continuous scroll on purpose — mandatory
+ *  scroll-snap paces information slower than visitors read and is a known
+ *  drop-off driver. */
 export function Landing() {
   const { authReady, signedIn, signIn, setTab, state } = useTrove();
   const [dismissed, setDismissed] = useState(
     () => typeof window !== "undefined" && sessionStorage.getItem(SEEN_KEY) === "1",
   );
-  const [progress, setProgress] = useState(0);
+  const [stuck, setStuck] = useState(false);
   const gateRef = useRef<HTMLDivElement>(null);
 
   // `dismissed` is otherwise a one-time read — without this, signing out
-  // leaves it stuck at whatever it was during the signed-in session, so the
-  // front cover would never reappear.
+  // leaves it stuck and the front cover never reappears.
   const wasSignedIn = useRef(signedIn);
   useEffect(() => {
     if (wasSignedIn.current && !signedIn) {
@@ -113,16 +124,18 @@ export function Landing() {
     wasSignedIn.current = signedIn;
   }, [signedIn]);
 
+  // Depends on authReady/signedIn too: the gate returns null until auth
+  // resolves, so on first run gateRef.current is still null. Without those
+  // deps the effect never re-ran once the element actually mounted and the
+  // nav never picked up its scrolled background.
   useEffect(() => {
     const el = gateRef.current;
     if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollHeight - el.clientHeight;
-      setProgress(max > 0 ? el.scrollTop / max : 0);
-    };
+    const onScroll = () => setStuck(el.scrollTop > 24);
+    onScroll();
     el.addEventListener("scroll", onScroll, { passive: true });
     return () => el.removeEventListener("scroll", onScroll);
-  }, [dismissed]);
+  }, [dismissed, authReady, signedIn]);
 
   if (!authReady || signedIn || dismissed) return null;
 
@@ -132,91 +145,122 @@ export function Landing() {
     setTab("catalog");
   };
 
-  const actions = (
-    <div className="landing-actions">
-      <button className="landing-go" onClick={signIn}>
-        Sign In to Trade
-      </button>
-      <button className="landing-browse" onClick={enter}>
-        Browse the market →
-      </button>
-    </div>
-  );
-
   const firms = state.traders.length;
   const goods = state.items.length;
 
   return (
     <div className="landing-gate" ref={gateRef}>
-      <div className="landing-progress" style={{ transform: `scaleX(${progress})` }} />
+      <header className={`lnav ${stuck ? "stuck" : ""}`}>
+        <div className="lnav-in">
+          <span className="lnav-mark">TROVE</span>
+          <nav className="lnav-actions">
+            <button className="lnav-ghost" onClick={enter}>
+              Browse the market
+            </button>
+            <button className="lnav-cta" onClick={signIn}>
+              Sign In
+            </button>
+          </nav>
+        </div>
+      </header>
 
-      <section className="landing-screen landing-hero">
+      <section className="lsec lhero">
         <div className="landing-glow" aria-hidden="true" />
-        <div className="landing-inner">
-          <h1 className="landing-mark">TROVE</h1>
-          <div className="landing-kick">One market. Every firm. Your fortune to build.</div>
-
-          <p className="landing-lede">
-            A persistent, shared-world economy where prices move in real
-            time, hundreds of firms compete for the same customers, and
-            every trade is visible to everyone playing right now.
-          </p>
-
-          {actions}
-
-          <div className="landing-stats">
-            <div className="lstat">
-              <b>{firms.toLocaleString()}</b>
-              <span>firms trading</span>
+        <div className="lwrap">
+          <div className="lhero-grid">
+            <div className="lhero-copy">
+              <div className="lhero-proof">
+                <span className="lhero-proof-dot" />
+                {firms.toLocaleString()} firms trading right now
+              </div>
+              <h1 className="lhero-h1">
+                Build an empire in a market that never stops.
+              </h1>
+              <p className="lhero-sub">
+                TROVE is a persistent, shared-world economy. Prices move in
+                real time, hundreds of firms compete for the same customers,
+                and the world keeps running whether you're online or not.
+              </p>
+              <div className="lhero-cta">
+                <button className="lbtn lbtn-primary" onClick={signIn}>
+                  Start trading — it's free
+                </button>
+                <button className="lbtn lbtn-ghost" onClick={enter}>
+                  Browse the market →
+                </button>
+              </div>
+              <div className="lhero-note">
+                No account needed to look around.
+              </div>
             </div>
-            <div className="lstat">
-              <b>{goods.toLocaleString()}</b>
-              <span>goods on the market</span>
-            </div>
-            <div className="lstat">
-              <b>24/7</b>
-              <span>the world keeps running</span>
+
+            <div className="lhero-panel">
+              <div className="lpanel-label">Live floor activity</div>
+              <LiveFeed />
             </div>
           </div>
         </div>
-        <div className="landing-tapewrap">
+        <div className="lhero-tape">
           <LandingTape />
         </div>
-        <ScrollHint />
       </section>
 
-      <section className="landing-screen landing-screen-feed">
-        <div className="landing-inner">
+      <section className="lsec lstats-sec">
+        <div className="lwrap">
           <Reveal>
-            <div className="landing-screen-kick">Happening right now</div>
-            <h2 className="landing-screen-h">The floor never sleeps.</h2>
+            <div className="lstats">
+              <div className="lstat">
+                <b>{firms.toLocaleString()}</b>
+                <span>Firms on the floor</span>
+              </div>
+              <div className="lstat">
+                <b>{goods.toLocaleString()}</b>
+                <span>Goods being traded</span>
+              </div>
+              <div className="lstat">
+                <b>24/7</b>
+                <span>The economy runs</span>
+              </div>
+              <div className="lstat">
+                <b>6h</b>
+                <span>Every market turn</span>
+              </div>
+            </div>
           </Reveal>
-          <LiveFeed />
         </div>
-        <ScrollHint />
       </section>
 
-      {STEPS.map((s) => (
-        <section className="landing-screen landing-screen-step" key={s.n}>
-          <div className="landing-inner">
-            <Reveal>
-              <div className="landing-step-bign">{String(s.n).padStart(2, "0")}</div>
-              <h2 className="landing-step-bigh">{s.h}</h2>
-              <p className="landing-step-bigb">{s.b}</p>
-            </Reveal>
-          </div>
-          <ScrollHint />
-        </section>
-      ))}
-
-      <section className="landing-screen landing-screen-features">
-        <div className="landing-inner">
+      <section className="lsec">
+        <div className="lwrap">
           <Reveal>
-            <div className="landing-screen-kick">What's inside</div>
+            <div className="lsec-head">
+              <div className="lsec-kick">How it works</div>
+              <h2 className="lsec-h2">From one trade to a holding company.</h2>
+            </div>
+            <div className="lsteps">
+              {STEPS.map((s) => (
+                <div className="lstep" key={s.n}>
+                  <div className="lstep-n">{s.n}</div>
+                  <h3 className="lstep-h">{s.h}</h3>
+                  <p className="lstep-b">{s.b}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="lsec">
+        <div className="lwrap">
+          <Reveal>
+            <div className="lsec-head">
+              <div className="lsec-kick">What's inside</div>
+              <h2 className="lsec-h2">Five ways to grow what you own.</h2>
+            </div>
             <div className="landing-features">
               {FEATURES.map((f) => (
                 <div className="landing-feature" key={f.name}>
-                  <f.Icon size={24} strokeWidth={1.6} />
+                  <f.Icon size={22} strokeWidth={1.6} />
                   <div className="landing-feature-h">{f.name}</div>
                   <div className="landing-feature-b">{f.body}</div>
                 </div>
@@ -228,17 +272,27 @@ export function Landing() {
             </p>
           </Reveal>
         </div>
-        <ScrollHint />
       </section>
 
-      <section className="landing-screen landing-screen-close">
+      <section className="lsec lfinal">
         <div className="landing-glow" aria-hidden="true" />
-        <div className="landing-inner">
+        <div className="lwrap">
           <Reveal>
-            <h2 className="landing-closeh">Every empire starts with one trade.</h2>
-            <div className="landing-mark landing-mark-sm">TROVE</div>
-            {actions}
+            <h2 className="lfinal-h">Every empire starts with one trade.</h2>
+            <p className="lfinal-sub">
+              The market is open and the firms are already moving. Claim your
+              holding and get in.
+            </p>
+            <div className="lhero-cta lfinal-cta">
+              <button className="lbtn lbtn-primary" onClick={signIn}>
+                Start trading — it's free
+              </button>
+              <button className="lbtn lbtn-ghost" onClick={enter}>
+                Browse the market →
+              </button>
+            </div>
           </Reveal>
+          <div className="lfoot">TROVE · a shared-world market</div>
         </div>
       </section>
     </div>
