@@ -19,6 +19,7 @@ import {
   loadWorld,
   putOrder,
   savePlayer,
+  setPlayerCash,
   type Player,
   type WorldDoc,
 } from "../repo";
@@ -73,12 +74,10 @@ export async function handler(
         1_000_000_000_000,
         Math.max(0, Math.round(Number(body.amount) || 0)),
       );
-      player.cash = amount;
-      await savePlayer(player);
-      const doc = await loadWorld();
-      return doc
-        ? json(200, buildPortfolio(doc as WorldDoc, player))
-        : json(200, { ok: true });
+      // Atomic single-attribute write: a savePlayer() here is a full-item Put
+      // that production.ts's next tick overwrites from its own stale snapshot.
+      const cash = await setPlayerCash(me, amount);
+      return json(200, { ok: true, cash });
     }
     case "offer-me": {
       const price = Math.max(1, Math.round(Number(body.price) || 1_000_000));

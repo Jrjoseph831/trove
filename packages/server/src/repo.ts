@@ -738,6 +738,24 @@ export async function savePlayer(p: Player): Promise<void> {
   await ddb.send(new PutCommand({ TableName: PLAYERS, Item: p }));
 }
 
+/** Atomically set just cash, touching no other attribute — same reasoning as
+ *  touchLastSeen. A read-modify-write savePlayer() here loses to production.ts,
+ *  which rewrites whole player items every 5 minutes from a snapshot taken at
+ *  tick start: the cash lands, then the next tick puts the stale record back
+ *  and the change silently evaporates. Returns the value actually stored. */
+export async function setPlayerCash(playerId: string, cash: number): Promise<number> {
+  const res = await ddb.send(
+    new UpdateCommand({
+      TableName: PLAYERS,
+      Key: { playerId },
+      UpdateExpression: "SET cash = :c",
+      ExpressionAttributeValues: { ":c": cash },
+      ReturnValues: "UPDATED_NEW",
+    }),
+  );
+  return Number(res.Attributes?.cash ?? cash);
+}
+
 /** Fetch specific players by id (BatchGetItem, chunked to Dynamo's 100-key
  *  cap). For targeted lookups — e.g. standing-order sellers referenced by a
  *  handful of buyers' factories — where a full `allPlayers()` scan would be

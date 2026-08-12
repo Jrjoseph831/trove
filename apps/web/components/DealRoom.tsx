@@ -74,6 +74,10 @@ export function DealRoom() {
       notify(r.error);
       return;
     }
+    // Echo what the server actually stored, so "it did nothing" can be told
+    // apart from "it stored the wrong thing" without digging through Dynamo.
+    const cash = (r as { cash?: number }).cash;
+    if (typeof cash === "number") notify(`Cash set to ${money(cash)}`);
     if (typeof window !== "undefined") window.location.reload();
   };
 
