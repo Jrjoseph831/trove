@@ -23,7 +23,7 @@ import { Vault } from "./Vault";
 import { Wire } from "./Wire";
 
 export function Terminal() {
-  const { mounted, mode, tab, navOpen, setNavOpen, reveal, signedIn } = useTrove();
+  const { mounted, mode, tab, navOpen, setNavOpen, reveal, signedIn, signIn } = useTrove();
 
   // Boot gate: render a deterministic shell on the server and the first client
   // paint (the engine uses randomness, so live data must be client-only).
@@ -39,24 +39,32 @@ export function Terminal() {
   const effectiveTab = canBrowseFull ? tab : "catalog";
 
   return (
-    <div className={`app ${navOpen ? "navopen" : ""}`}>
-      {navOpen && (
+    <div className={`app ${navOpen ? "navopen" : ""} ${canBrowseFull ? "" : "no-rail"}`}>
+      {canBrowseFull && navOpen && (
         <button
           className="nav-scrim"
           aria-label="Close navigation"
           onClick={() => setNavOpen(false)}
         />
       )}
-      <Rail />
+      {canBrowseFull ? (
+        <Rail />
+      ) : (
+        <button className="guest-signin" onClick={signIn}>
+          Sign In
+        </button>
+      )}
       <div className={`main ${mode === "sandbox" ? "sandbox" : ""}`}>
         <div className="topbar">
-          <button
-            className="navtoggle"
-            onClick={() => setNavOpen(!navOpen)}
-            aria-label="Toggle navigation"
-          >
-            ☰
-          </button>
+          {canBrowseFull && (
+            <button
+              className="navtoggle"
+              onClick={() => setNavOpen(!navOpen)}
+              aria-label="Toggle navigation"
+            >
+              ☰
+            </button>
+          )}
           <Clock />
           <Ticker />
         </div>

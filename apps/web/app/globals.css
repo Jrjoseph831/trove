@@ -122,6 +122,29 @@ body {
   height: 100dvh; /* dynamic viewport — nothing hidden under mobile browser UI */
   background: var(--bg);
 }
+/* Signed-out on the real LIVE world: no Rail column at all, Catalog fills
+   the screen, just a floating sign-in button. */
+.app.no-rail {
+  grid-template-columns: 1fr;
+}
+.guest-signin {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 60;
+  background: var(--ink);
+  color: var(--paper);
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.guest-signin:hover {
+  opacity: 0.88;
+}
 
 /* ---- rail ---- */
 .rail {
