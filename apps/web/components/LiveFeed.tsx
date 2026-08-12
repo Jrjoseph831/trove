@@ -89,27 +89,14 @@ export function LiveFeed() {
 
   return (
     <div className="floorbox">
-      <div className="floorbox-bar">
-        <span className="floorbox-dots" aria-hidden="true">
-          <i />
-          <i />
-          <i />
-        </span>
-        <span className="floorbox-title">trove · floor activity</span>
-        <span className="floorbox-live">
-          <i />
-          LIVE
-        </span>
-      </div>
       <div className="floorbox-body">
         {rows.length === 0 ? (
-          <div className="floorbox-empty">Connecting to the floor…</div>
+          <div className="floorbox-empty">Listening to the floor…</div>
         ) : (
           rows.map((e, i) => (
             <div
               className={`feed-row ${e.verb === "sold" ? "dn" : "up"} ${i === 0 ? "entering" : ""}`}
               key={`${e.who}|${e.verb}|${e.it}|${rows.length - i}`}
-              style={{ opacity: Math.max(0.25, 1 - i * 0.1) }}
             >
               <i className="feed-dot" />
               <span className="feed-txt">

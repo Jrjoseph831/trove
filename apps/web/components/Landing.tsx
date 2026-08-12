@@ -153,9 +153,6 @@ export function Landing() {
       <section className="landing-screen landing-hero">
         <div className="landing-glow" aria-hidden="true" />
         <div className="landing-inner">
-          <div className="landing-eyebrow">
-            <i /> The market is open
-          </div>
           <h1 className="landing-mark">TROVE</h1>
           <div className="landing-kick">One market. Every firm. Your fortune to build.</div>
 
