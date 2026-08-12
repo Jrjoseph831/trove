@@ -552,16 +552,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82701,
+    "lastEventCycle": 82709,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Aperture Compute — Clarity, cycle after cycle",
-        "body": "Aperture was founded by hardware obsessives who believed a machine should think as cleanly as it looks. They build processors, servers, and workstations spanning the family desktop to the dense premium rack. The entry boards keep classrooms and offices humming; the top silicon crunches loads that would melt lesser gear. Reviewers call their thermals uncanny and their reliability boring, which is the highest praise. Compute without compromise, built to run quiet and run long.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "breakthrough",
@@ -786,6 +778,16 @@
         "size": "standard",
         "head": "Aperture Compute Beats as Emberline Supply Pact Front-Loads Revenue",
         "body": "Aperture posted quarterly revenue of $1.9B, up 34% year over year, as initial shipments under the $2.6B Emberline pact landed ahead of schedule. CEO Marisol Venn said the Dawnmere III writedown was now 'fully behind us,' with the reset unit swinging to an operating profit two quarters early. Management raised full-year guidance on the strength of a lengthening Emberline order book.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82709,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Aperture Compute to Break Ground on Second Emberline Fabrication Site",
+        "body": "Riding momentum from its $2.6B supply pact, Aperture said it will build a second Emberline production facility in the Corrent Valley, adding capacity CEO Marisol Venn claims will double output by 2028. The $1.4B project is partly funded by front-loaded pact revenue. Venn set an aggressive 18-month timeline that some suppliers privately called tight.",
         "effects": {
           "technology": 0.13
         }
@@ -2347,7 +2349,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82692,
+    "lastEventCycle": 82709,
     "events": [
       {
         "cycle": 0,
@@ -2473,6 +2475,16 @@
         "size": "standard",
         "head": "Brunforge Holdings to Open Ten New Vellan Flagships in Measured National Push",
         "body": "Brunforge unveiled plans to add ten Vellan flagship locations over 18 months, each pairing its household goods showrooms with the ramping Vellan Kitchen line. CEO Kestrel Bramm characterized the rollout as 'deliberate, funded from operations, and unhurried,' noting no new debt would be required. The move follows three consecutive quarters of earnings beats.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82709,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunforge Holdings Tops Estimates Again as Vellan Flagships Lift Food Service Margins",
+        "body": "Brunforge posted quarterly revenue of $4.3B, up 9%, with the Vellan Kitchen line contributing a bigger-than-expected slice as the first new flagships opened ahead of schedule. CEO Kestrel Bramm credited disciplined rollout pacing and cross-selling into the household goods segment. Management reaffirmed the ten-store national plan without accelerating spend.",
         "effects": {
           "consumer": 0.13
         }
@@ -4976,7 +4988,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82697,
+    "lastEventCycle": 82709,
     "events": [
       {
         "cycle": 0,
@@ -5132,6 +5144,16 @@
         "size": "flash",
         "head": "Cranecraft Stretches Streak to Ten as Farm and Textile Demand Holds",
         "body": "Cranecraft posted its tenth consecutive quarterly beat, with revenue up 4% on steady farm-equipment orders and firm raw-textile pricing. Mira Garr credited disciplined inventory management and reaffirmed full-year guidance without fanfare.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82709,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Extends Streak to Eleven as Textile Pricing and Farm Orders Hold",
+        "body": "Cranecraft reported its eleventh consecutive beat with revenue of $920M, as firm raw-textile pricing offset a slight softening in farm-equipment volumes. CEO Mira Garr credited steady order books and disciplined cost control. Guidance was left unchanged.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -5781,7 +5803,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82693,
+    "lastEventCycle": 82709,
     "events": [
       {
         "cycle": 0,
@@ -5907,6 +5929,16 @@
         "size": "standard",
         "head": "Drustcyon Expands Coastal Foundry as Marine-Grade Anchor Backlog Swells",
         "body": "Drustcyon Industries approved a $220M expansion of its Coastal Foundry to double marine-grade anchor output, citing an order backlog stretching more than three quarters. Aurelia Kessler said demand from harbor and offshore projects had 'outrun even our optimistic ramp,' with the added lines slated to open next year. The company said it is also qualifying a second alloy supplier to protect delivery timelines.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82709,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drustcyon Lands $540M Harbor-Authority Supply Contract for Marine-Grade Anchors",
+        "body": "Drustcyon secured a multi-year deal to supply its marine-grade anchor system across a consortium of port and harbor authorities, its largest single order to date. CEO Aurelia Kessler said the contract underwrites the coastal foundry's second expansion phase and locks in demand through 2029. Deliveries begin next quarter.",
         "effects": {
           "construction": 0.13
         }
@@ -8460,25 +8492,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1972,
-    "ceo": "Ilse Marren",
+    "ceo": "Petra Vandel",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.86,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82704,
+    "lastEventCycle": 82709,
     "events": [
-      {
-        "cycle": 82570,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Halhold Systems Adds Third Northgate Campus to Chase Client Backlog",
-        "body": "Halhold Systems announced a $2.1 billion buildout of a third Northgate compute campus, citing a client waitlist that now stretches into next year following the Ultra Tier launch. CEO Dahlia Renn said capacity constraints, not demand, remain the sole bottleneck, and pledged first racks online within nine months. The move roughly doubles Halhold's committed compute footprint.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82575,
         "kind": "outage",
@@ -8702,6 +8724,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82709,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Systems Ousts Ilse Marren as Board Moves to Contain Reliability Scandal",
+        "body": "Halhold's board removed CEO Ilse Marren effective immediately, citing loss of confidence amid the widening probe into concealed reliability failures and the pending shareholder suit. Director of operations Petra Vandel steps in as interim chief with a mandate to overhaul quality controls and cooperate with investigators. Shares have shed roughly a third of their value since the memos surfaced.",
+        "effects": {}
       }
     ]
   },
@@ -10115,7 +10145,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82696,
+    "lastEventCycle": 82709,
     "events": [
       {
         "cycle": 0,
@@ -10298,6 +10328,16 @@
         "head": "Kessel Drive Names Turnaround Veteran Aldric Venn as Permanent CEO",
         "body": "Kessel Drive's board appointed Aldric Venn as permanent chief executive, ending an interim stretch that began when Neave Corliss was removed amid the storage crisis. Venn, brought in from outside the company, pledged to settle the shareholder suit, stabilize the vehicles unit, and decide the fate of the halted storage line within ninety days. The board said the search prioritized crisis restructuring over the headline-driven style of recent years.",
         "effects": {}
+      },
+      {
+        "cycle": 82709,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Kessel Drive Bets Turnaround on Redesigned Vanta Storage Cell in Splashy Venn Debut",
+        "body": "In his first major move as permanent CEO, Aldric Venn unveiled the Vanta cell, a ground-up redesign that Kessel Drive says resolves the thermal failures behind last year's crisis, backed by a five-year replacement guarantee. Venn touted $1.9B in pre-orders and staged the launch at the reopened Halden plant, framing it as a clean break from the Corliss era. Independent validation of the new cell remains ongoing.",
+        "effects": {
+          "automotive": 0.22
+        }
       }
     ]
   },
@@ -10914,18 +10954,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82703,
+    "lastEventCycle": 82709,
     "events": [
-      {
-        "cycle": 82531,
-        "kind": "award",
-        "size": "flash",
-        "head": "Korrwright Works Velloux Heritage Series Wins Carrowmore Craft Prize",
-        "body": "The Velloux Heritage Series took top honors in the enamel-dial category at the annual Carrowmore Craft Prize, the first such recognition since Korrwright absorbed Velloux. Judges praised the restored kiln-firing technique recovered from Velloux's archives. Dunmore Carrow called the award 'proof the heritage was worth buying.'",
-        "effects": {
-          "luxury": 0.06
-        }
-      },
       {
         "cycle": 82539,
         "kind": "expansion",
@@ -11152,6 +11182,16 @@
         "body": "In its boldest move yet, CEO Dunmore Carrow struck an $780M deal to buy the 44-boutique Verenne retail network, giving Korrwright direct shelf presence across premium markets for the first time. The acquisition marks a shift from Carrow's movement-maker buying spree toward controlling how Meridienne flagships reach buyers. Analysts note the deal roughly doubles Korrwright's retail footprint and layers integration risk onto an already busy balance sheet.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82709,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Korrwright Works Folds Verenne Into New Retail Division as Integration Begins",
+        "body": "Korrwright unveiled a reorganization creating a dedicated retail arm to absorb the $780M Verenne chain, consolidating boutiques under a single Meridienne-branded storefront strategy. CEO Dunmore Carrow said the move eliminates roughly 40 overlapping locations while adding flagship space in three new markets. Integration costs will weigh on next-quarter margins.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -14410,7 +14450,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82686,
+    "lastEventCycle": 82709,
     "events": [
       {
         "cycle": 0,
@@ -14496,6 +14536,16 @@
         "size": "flash",
         "head": "Tillage & Co. Extends Steady Run With Yet Another In-Line Quarter",
         "body": "Kestrel Fenn reported revenue of $289 million, a hair above estimates, as the blending facility again ran at full output through the season. Farm-input demand held firm across all regions, with no meaningful shift in pricing. Fenn reiterated the company's long-standing conservative outlook.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82709,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Tillage & Co. Delivers Another In-Line Quarter as Input Demand Stays Firm",
+        "body": "Tillage & Co. reported flat-to-modestly-higher revenue of $1.1B, extending its long run of dependable results as blending capacity held near full. CEO Kestrel Fenn pointed to steady contract renewals and stable fertilizer pricing. The company reaffirmed its full-year outlook.",
         "effects": {
           "agriculture": 0.06
         }
