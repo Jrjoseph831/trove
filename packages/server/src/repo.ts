@@ -1249,6 +1249,16 @@ export async function mutatePlayerWorld<T>(
       const v = it.owners["YOU"] ?? 0;
       if (v > 0) f.owners[playerId] = v;
       else delete f.owners[playerId];
+      // playerView strips the owners map down to just YOU, so any OTHER owner
+      // sitting here was created by the engine during this very operation —
+      // an AI company taking delivery of a contract it just paid for. Those
+      // are deltas from zero, so they add on. Reading only YOU (as this did)
+      // meant the buyer's goods were dropped on the way to the doc and the
+      // units vanished from the world.
+      for (const [owner, qty] of Object.entries(it.owners)) {
+        if (owner === "YOU" || !(qty > 0)) continue;
+        f.owners[owner] = (f.owners[owner] ?? 0) + qty;
+      }
     }
     // Persist any AI-company treasury changes (e.g. an order fulfilment debits
     // the buyer company's cash — the closed loop).

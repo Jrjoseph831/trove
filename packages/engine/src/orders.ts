@@ -569,6 +569,12 @@ export function fulfillSandboxOrder(
     const left = have - take;
     if (left > 0) it.owners["YOU"] = left;
     else delete it.owners["YOU"];
+    // The buyer TAKES DELIVERY of what it paid for. Without this the units
+    // simply ceased to exist on fulfilment and the company's net worth fell by
+    // the whole payment — it bought goods and booked nothing against the cash.
+    // Now the trade is symmetric on both sides, and the goods stay in the world
+    // for that company to trade back onto the floor later.
+    it.owners[o.company] = (it.owners[o.company] ?? 0) + take;
     // Drain the produced count too (orders sell your produced stock).
     if (state.producedQty?.[it.id]) {
       state.producedQty[it.id] = Math.max(0, state.producedQty[it.id]! - take);

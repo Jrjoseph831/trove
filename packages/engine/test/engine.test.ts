@@ -941,6 +941,50 @@ describe("order desk runs on company treasuries", () => {
     expect(S.cash).toBeCloseTo(playerCash0 + quote, 6); // player paid
     expect(buyer.cash).toBeCloseTo(buyerCash0 - quote, 6); // company debited
     expect(item.owners["YOU"] ?? 0).toBe(0); // goods delivered
+    // ...and the company actually RECEIVED them. The cash left its treasury
+    // either way, so without this the goods evaporated and its net worth fell
+    // by the whole payment for nothing.
+    expect(item.owners[buyer.name] ?? 0).toBe(5);
+  });
+
+  it("a fulfilment moves value, it doesn't destroy it", () => {
+    setRng(mulberry32(31));
+    const S = createWorld(0);
+    const buyer = S.traders[0]!;
+    const item = S.items.find((i) => i.edition === null)!;
+    item.owners["YOU"] = 8;
+    const unitsBefore =
+      Object.values(item.owners).reduce((a, b) => a + b, 0) + item.stock;
+    const quote = 900;
+    const worthBefore = buyer.cash + (item.owners[buyer.name] ?? 0) * item.value;
+    S.orders = [
+      {
+        id: "o2",
+        company: buyer.name,
+        sector: "construction",
+        itemId: item.id,
+        qty: 8,
+        companyOffer: quote,
+        budget: quote,
+        target: quote,
+        round: 1,
+        maxRounds: 3,
+        quote,
+        status: "accepted",
+        createdAt: 0,
+        expiresAt: 9e15,
+      },
+    ];
+    expect(fulfillSandboxOrder(S, "o2", 1000).ok).toBe(true);
+
+    // No units created or destroyed by the delivery.
+    const unitsAfter =
+      Object.values(item.owners).reduce((a, b) => a + b, 0) + item.stock;
+    expect(unitsAfter).toBe(unitsBefore);
+    // The company is down only the premium it agreed over market, not the
+    // entire payment — it holds goods against the cash it spent.
+    const worthAfter = buyer.cash + (item.owners[buyer.name] ?? 0) * item.value;
+    expect(worthAfter).toBeCloseTo(worthBefore - quote + 8 * item.value, 6);
   });
 });
 

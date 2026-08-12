@@ -170,6 +170,13 @@ export async function handler(): Promise<{ producers: number; worked: number }> 
         const v = it.owners["YOU"] ?? 0;
         if (v > 0) f.owners[p.playerId] = v;
         else delete f.owners[p.playerId];
+        // Same reason as mutatePlayerWorld: playerView leaves only YOU here, so
+        // any other owner was created during this tick — an AI buyer taking
+        // delivery from autoFulfillOrders. Deltas from zero, so add them on.
+        for (const [owner, qty] of Object.entries(it.owners)) {
+          if (owner === "YOU" || !(qty > 0)) continue;
+          f.owners[owner] = (f.owners[owner] ?? 0) + qty;
+        }
       }
       updated.push({ ...extractPlayer(pv, p), lastProdTick: tick, lastFlip: flip });
     }
