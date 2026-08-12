@@ -7,7 +7,13 @@
  * GET /standings
  */
 import type { APIGatewayProxyResultV2 } from "aws-lambda";
-import { allPlayers, loadWorld } from "../repo";
+import {
+  allPlayers,
+  loadWorld,
+  propertyValueOf,
+  stakeValueOf,
+  type WorldDoc,
+} from "../repo";
 
 const json = (status: number, body: unknown): APIGatewayProxyResultV2 => ({
   statusCode: status,
@@ -47,7 +53,16 @@ export async function handler(): Promise<APIGatewayProxyResultV2> {
     rows.push({
       handle: p.name?.trim() || `Holding-${p.playerId.slice(0, 4)}`,
       id: p.playerId.slice(0, 8),
-      net: p.cash - p.debt + (assets[p.playerId] ?? 0),
+      // Cash + goods + real estate + equity — the SAME four terms /portfolio
+      // uses. Counting only the first two ranked anyone holding property or a
+      // stake in another house below what their own screen said they were
+      // worth, with no way to tell which figure was lying.
+      net:
+        p.cash -
+        p.debt +
+        (assets[p.playerId] ?? 0) +
+        propertyValueOf(p) +
+        stakeValueOf(doc as WorldDoc, p),
       isAI: false,
     });
   }

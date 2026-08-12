@@ -10,7 +10,14 @@
  */
 import { describe, expect, it } from "vitest";
 import { createWorld, START_CASH } from "@trove/engine";
-import { buildPortfolio, worldToDoc, type Player, type WorldDoc } from "./repo";
+import {
+  buildPortfolio,
+  propertyValueOf,
+  stakeValueOf,
+  worldToDoc,
+  type Player,
+  type WorldDoc,
+} from "./repo";
 
 const ME = "player-1";
 
@@ -41,6 +48,41 @@ describe("portfolio reporting", () => {
     const view = buildPortfolio(doc, { playerId: ME, cash: START_CASH, debt: 0 });
     expect(view.holdings.find((h) => h.id === itemId)).toBeUndefined();
     expect(view.netWorth).toBe(START_CASH);
+  });
+
+  it("values a firm the same way the leaderboard does", () => {
+    // These are two endpoints answering one question: what is this firm worth?
+    // /standings counted only cash and goods, so anyone holding real estate or
+    // equity was ranked below what their own screen told them — with nothing to
+    // say which figure was lying. Both must sum the same four terms.
+    const { doc, itemId } = docHolding(ME, 6);
+    const house = doc.traders[0]!;
+    const player: Player = {
+      playerId: ME,
+      cash: 100_000,
+      debt: 10_000,
+      properties: [{ id: 1, name: "A yard", value: 250_000 } as never],
+      stakes: { [house.name]: 0.25 },
+    };
+
+    const view = buildPortfolio(doc, player);
+
+    // Rebuild the leaderboard's sum from its own parts, as standings does.
+    const goods =
+      (doc.items.find((i) => i.id === itemId)!.owners![ME] ?? 0) *
+      doc.items.find((i) => i.id === itemId)!.value;
+    const board =
+      player.cash -
+      player.debt +
+      goods +
+      propertyValueOf(player) +
+      stakeValueOf(doc, player);
+
+    expect(board).toBeCloseTo(view.netWorth, 6);
+    // And the extra terms are actually material — otherwise this passes for
+    // the wrong reason on a firm that owns neither.
+    expect(propertyValueOf(player)).toBe(250_000);
+    expect(stakeValueOf(doc, player)).toBeGreaterThan(0);
   });
 
   it("never reports NaN money, even from a record missing its cash field", () => {

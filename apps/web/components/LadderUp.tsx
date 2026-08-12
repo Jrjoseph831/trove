@@ -11,8 +11,11 @@ const SEEN_KEY = "trove.ladder.seen";
  *  during the session. On first load it just syncs the baseline (no surprise
  *  popup on refresh) — only live climbs trigger the flash. */
 export function LadderUp() {
-  const { state, signedIn } = useTrove();
-  const nw = netWorth(state, "YOU");
+  const { state, signedIn, mode, serverNet } = useTrove();
+  // Same source as the rail and the leaderboard — a rank-up should fire off
+  // the valuation everyone else can see, not a local recompute.
+  const nw =
+    mode === "live" && serverNet != null ? serverNet : netWorth(state, "YOU");
   const [show, setShow] = useState<number | null>(null);
   const synced = useRef(false);
 

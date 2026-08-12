@@ -54,6 +54,7 @@ export function Rail() {
     signIn,
     signOut,
     desk,
+    serverNet,
     startRename,
   } = useTrove();
   const pendingOrders = desk?.orders.filter((o) => o.status === "offer").length ?? 0;
@@ -66,14 +67,20 @@ export function Rail() {
     setNavOpen(false);
   };
 
-  const nw = netWorth(state, "YOU");
+  // Live: the SERVER's valuation of this firm — the same figure the board
+  // ranks it by. The client cannot price an equity stake, because it never
+  // sees another firm's treasury; recomputing here produced a headline net
+  // worth that disagreed with the leaderboard by orders of magnitude, with
+  // nothing to say which was right. Sandbox has no server, so local is truth.
+  const nw =
+    mode === "live" && serverNet != null ? serverNet : netWorth(state, "YOU");
   const prev = state.nwHist[state.nwHist.length - 1] ?? nw;
   const chg = nw - prev;
   const pct = pctChange(nw, prev);
-  // Everything netWorth() counts besides cash/debt — item holdings PLUS real
-  // estate and Deal Room equity stakes — so this breakdown actually sums to
-  // Net Worth above it. assetsValue() alone is item holdings only.
-  const assets = assetsValue(state, "YOU") + propertyValue(state) + stakeValue(state);
+  // Everything besides cash and debt: goods, real estate and equity. Derived
+  // from the headline rather than recomputed, so the breakdown always sums to
+  // the number printed above it, whichever source that number came from.
+  const assets = nw - (state.cash - state.debt);
 
   // The Ladder — rank by peak net worth (never drops mid-stream).
   const peak = Math.max(nw, getPeak());

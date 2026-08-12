@@ -441,6 +441,38 @@ export interface PortfolioView {
 
 /** Build the player's portfolio snapshot from the shared doc + their record.
  *  Holdings + their values come from the doc; everything else from the player. */
+/**
+ * A firm is worth its cash, its goods, its REAL ESTATE and its EQUITY. All four,
+ * everywhere — the portfolio and the leaderboard used to disagree, because the
+ * board counted only cash and goods. Any player holding property or a stake in
+ * another house was therefore ranked below what their own screen told them they
+ * were worth, with no way to tell which number was lying.
+ *
+ * Split into pieces rather than one function because the standings endpoint
+ * sums every owner's goods in a single pass over the doc and shouldn't redo
+ * that per player.
+ */
+export function propertyValueOf(player: Player): number {
+  let v = 0;
+  for (const op of player.properties ?? []) v += op.value;
+  return v;
+}
+
+/** The market value of a player's equity in AI houses (their % of each firm's
+ *  cash + holdings). Valued off the DOC — the only place every firm's treasury
+ *  is actually known. */
+export function stakeValueOf(doc: WorldDoc, player: Player): number {
+  const stakes = player.stakes ?? {};
+  if (!Object.keys(stakes).length) return 0;
+  const tByName = new Map((doc.traders ?? []).map((t) => [t.name, t]));
+  let v = 0;
+  for (const [name, pct] of Object.entries(stakes)) {
+    const t = tByName.get(name);
+    if (t) v += pct * (t.cash + ownerHoldings(doc, name).assets);
+  }
+  return v;
+}
+
 export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
   const holdings: { id: number; qty: number; value: number }[] = [];
   let assets = 0;
@@ -460,17 +492,8 @@ export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
   const cash = Number.isFinite(player.cash) ? player.cash : START_CASH;
   const debt = Number.isFinite(player.debt) ? player.debt : 0;
   const props = player.properties ?? [];
-  let propValue = 0;
-  for (const op of props) propValue += op.value;
-  const stakes = player.stakes ?? {};
-  let stakeVal = 0;
-  if (Object.keys(stakes).length) {
-    const tByName = new Map((doc.traders ?? []).map((t) => [t.name, t]));
-    for (const [name, pct] of Object.entries(stakes)) {
-      const t = tByName.get(name);
-      if (t) stakeVal += pct * (t.cash + ownerHoldings(doc, name).assets);
-    }
-  }
+  const propValue = propertyValueOf(player);
+  const stakeVal = stakeValueOf(doc, player);
   return {
     cash,
     debt,
@@ -483,7 +506,7 @@ export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
     supplyOrders: player.supplyOrders ?? [],
     reorders: player.reorders ?? [],
     properties: props,
-    stakes,
+    stakes: player.stakes ?? {},
     listPrices: player.listPrices ?? {},
     producedQty: player.producedQty ?? {},
     listed: player.listed ?? {},
