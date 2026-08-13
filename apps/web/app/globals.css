@@ -10273,7 +10273,6 @@ body {
 .wreel {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   min-width: 0;
 }
 .wreel-frame {
@@ -10304,23 +10303,6 @@ body {
 .wreel-frame:hover .wreel-hit {
   background: color-mix(in srgb, var(--accent) 10%, transparent);
 }
-.wreel-open {
-  align-self: flex-start;
-  border: 0;
-  padding: 0;
-  background: none;
-  font-family: inherit;
-  font-size: 10px;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  cursor: pointer;
-  transition: color 0.15s ease;
-}
-.wreel-open:hover {
-  color: var(--accent);
-}
-
 /* ── the lead ── */
 .wlead h1 {
   font-family: var(--font-display);

@@ -206,16 +206,14 @@ export function Wire() {
                   <Wheel embedded mode={live ? "news" : "filler"} />
                   {/* The reel renders as a dialog, so the click target sits over
                       it rather than wrapping it — a button around a button is
-                      invalid, and the whole panel should open the full screen. */}
+                      invalid. The panel itself is the way in; the masthead's
+                      Watch button is the other. */}
                   <button
                     className="wreel-hit"
                     onClick={() => setStudioOpen(true)}
                     aria-label="Open the full reel"
                   />
                 </div>
-                <button className="wreel-open" onClick={() => setStudioOpen(true)}>
-                  {live ? "On air now" : "Off-peak reel"} — watch full screen →
-                </button>
               </div>
             </div>
 
