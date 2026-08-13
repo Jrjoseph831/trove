@@ -10216,36 +10216,57 @@ body {
    clock said nothing about which edge it belonged to; this is the folded
    rail's own handle. Hidden by default: while the rail is on screen there's
    nothing to open. */
-.nav-peek {
-  display: none;
+/* One casing for all three edge handles — the nav's open and close tabs, and
+   the product page's way back. They were three copies of the same values,
+   which is exactly how they drifted apart every time one got tuned.
+   Only position and default display differ; those are set per selector below.
+
+   Slim on purpose. The chevron keeps the accent so it stays findable, but the
+   casing recedes: at 25x80 behind a heavy gold edge it competed with the copy
+   on a reading screen like the Wire. Presence comes back on hover, which is
+   when it's actually wanted. */
+.nav-peek,
+.nav-collapse,
+.page-peek {
   position: fixed;
-  left: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 38; /* under the drawer rail (40) and its scrim */
+  z-index: 38; /* under the drawer rail (40) and its scrim (39) */
   align-items: center;
   justify-content: center;
-  /* Sized and coloured to be found, not just to exist. At 22px wide in the
-     muted grey it read as a seam in the page rather than a control — the one
-     thing on screen that has to be discoverable, because with the rail closed
-     it is the only way back to it. 30x96 overcorrected and started to intrude,
-     so it sits between the two. */
-  width: 25px;
-  height: 80px;
+  width: 19px;
+  height: 66px;
   padding: 0;
   background: var(--paper);
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--line));
   border-left: 0;
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 8px 8px 0;
   color: var(--accent);
   cursor: pointer;
-  box-shadow:
-    3px 0 10px -4px rgba(27, 23, 20, 0.28),
-    6px 0 26px -12px rgba(27, 23, 20, 0.5);
+  box-shadow: 2px 0 9px -6px rgba(27, 23, 20, 0.35);
   transition:
     width 0.16s ease,
     background 0.16s ease,
-    color 0.16s ease;
+    border-color 0.16s ease;
+}
+.nav-peek:hover,
+.nav-collapse:hover,
+.page-peek:hover {
+  width: 26px;
+  background: color-mix(in srgb, var(--accent) 12%, var(--paper));
+  border-color: color-mix(in srgb, var(--accent) 48%, var(--line));
+}
+.nav-peek {
+  display: none;
+  left: 0;
+}
+.nav-collapse {
+  display: inline-flex;
+  left: var(--rail);
+}
+.page-peek {
+  display: inline-flex;
+  left: 0;
 }
 /* A quiet pulse on the edge, so the eye catches it once without it becoming
    something that blinks at you for the whole stream. */
@@ -10268,46 +10289,10 @@ body {
 .nav-peek.show {
   display: flex;
 }
-.nav-peek:hover {
-  width: 32px;
-  background: color-mix(in srgb, var(--accent) 14%, var(--paper));
-  color: var(--accent);
-}
 
-/* The collapse handle: the same tab, on the rail's far edge, pointing back the
-   other way — opening and closing as one gesture in two directions. It rides
-   the rail's own width, so it stays attached if that ever changes. Hidden on
-   narrow screens, where the rail is a drawer and the scrim already closes it. */
-.nav-collapse {
-  position: fixed;
-  left: var(--rail);
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 38;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 25px;
-  height: 80px;
-  padding: 0;
-  background: var(--paper);
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
-  border-left: 0;
-  border-radius: 0 12px 12px 0;
-  color: var(--accent);
-  cursor: pointer;
-  box-shadow:
-    3px 0 10px -4px rgba(27, 23, 20, 0.28),
-    6px 0 26px -12px rgba(27, 23, 20, 0.5);
-  transition:
-    width 0.16s ease,
-    background 0.16s ease,
-    color 0.16s ease;
-}
-.nav-collapse:hover {
-  width: 32px;
-  background: color-mix(in srgb, var(--accent) 14%, var(--paper));
-}
+/* The collapse handle rides the rail's own width, so it stays attached to the
+   edge if that width ever changes. Everything else about it is the shared
+   casing above. */
 @media (max-width: 780px) {
   /* On a narrow screen the rail is a drawer that stays MOUNTED when closed,
      just parked off-canvas — so visibility has to follow the drawer being
@@ -10328,40 +10313,10 @@ body {
   }
 }
 
-/* The product page's edge handle. Same tab as the terminal's, in the same
-   place, so the gesture doesn't move between screens — but this route has no
-   rail, so it goes back to the market and points that way. Shown at every
-   width: on a phone it's the only way out that isn't the browser's back
-   button, and on a desktop it costs nothing to be consistent. */
-.page-peek {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 38;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 25px;
-  height: 80px;
-  padding: 0;
-  background: var(--paper);
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
-  border-left: 0;
-  border-radius: 0 12px 12px 0;
-  color: var(--accent);
-  cursor: pointer;
-  box-shadow:
-    3px 0 10px -4px rgba(27, 23, 20, 0.28),
-    6px 0 26px -12px rgba(27, 23, 20, 0.5);
-  transition:
-    width 0.16s ease,
-    background 0.16s ease;
-}
-.page-peek:hover {
-  width: 32px;
-  background: color-mix(in srgb, var(--accent) 14%, var(--paper));
-}
+/* The product page's edge handle takes the shared casing above. This route has
+   no rail, so it goes back to the market and points that way. Shown at every
+   width: on a phone it's the only way out that isn't the browser's own back
+   button. */
 /* On narrow screens the rail is a drawer — mounted, but off-canvas — so the
    handle is the only way in regardless of which page you're on. */
 @media (max-width: 780px) {

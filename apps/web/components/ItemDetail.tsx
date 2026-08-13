@@ -29,7 +29,7 @@ export function ItemDetail({ item }: { item: Item }) {
           phone it's the only way out of a product page that doesn't involve
           the browser's own back button. */}
       <Link href="/" className="page-peek" aria-label="Back to the market" title="Back to the market">
-        <ChevronLeft size={17} strokeWidth={2} />
+        <ChevronLeft size={15} strokeWidth={2} />
       </Link>
 
       <nav className="item-bread">
