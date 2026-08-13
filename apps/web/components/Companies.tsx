@@ -665,14 +665,21 @@ function RequestModal({
   // product.price is the per-UNIT listed price from the server.
   const unitPrice = product.price;
   const startQty = Math.min(10, product.available) || 1;
-  const [qty, setQty] = useState(startQty);
-  const [offer, setOffer] = useState(unitPrice * startQty);
+  // Both fields hold TEXT and coerce on read. Clamping per keystroke made them
+  // impossible to clear — deleting the last digit snapped straight back to 1,
+  // so you could only ever append to the number already there.
+  const [qtyText, setQtyText] = useState(String(startQty));
+  const [offerText, setOfferText] = useState(String(unitPrice * startQty));
   const [busy, setBusy] = useState(false);
+  const qty = Math.max(0, Math.floor(Number(qtyText) || 0));
+  const offer = Math.max(0, Math.round(Number(offerText) || 0));
 
-  const setQtyClamped = (n: number) => {
-    const q = Math.max(1, Math.min(product.available, Math.floor(n || 1)));
-    setQty(q);
-    setOffer(unitPrice * q); // re-anchor the offer to list price on qty change
+  /** On blur, settle the field to something legal and re-anchor the offer to
+   *  list price for the new quantity. */
+  const settleQty = () => {
+    const q = Math.max(1, Math.min(product.available, qty || 1));
+    setQtyText(String(q));
+    setOfferText(String(unitPrice * q));
   };
 
   const send = async () => {
@@ -700,8 +707,9 @@ function RequestModal({
             type="number"
             min={1}
             max={product.available}
-            value={qty}
-            onChange={(e) => setQtyClamped(Number(e.target.value))}
+            value={qtyText}
+            onChange={(e) => setQtyText(e.target.value)}
+            onBlur={settleQty}
           />
         </label>
 
@@ -710,8 +718,9 @@ function RequestModal({
           <input
             type="number"
             min={1}
-            value={Math.round(offer)}
-            onChange={(e) => setOffer(Number(e.target.value))}
+            value={offerText}
+            onChange={(e) => setOfferText(e.target.value)}
+            onBlur={() => setOfferText(String(Math.max(1, offer)))}
           />
         </label>
         <div className="req-meta">
@@ -723,7 +732,11 @@ function RequestModal({
           <button className="site-btn ghost" onClick={onClose} disabled={busy}>
             Cancel
           </button>
-          <button className="site-btn" onClick={send} disabled={busy || short}>
+          <button
+            className="site-btn"
+            onClick={send}
+            disabled={busy || short || qty < 1 || offer < 1}
+          >
             {busy ? "Sending…" : "Send request"}
           </button>
         </div>

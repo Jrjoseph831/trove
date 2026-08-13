@@ -540,7 +540,14 @@ function findAiToAiPair(
     const rep = representativeItem(buyer.name, buyer.bias);
     const recipe = rep && recipeOf(rep);
     if (!recipe) continue;
+    // The buyer must need at least a WHOLE unit of the input: consumeFor floors
+    // transfers to whole units (a fractional credit could phantom-create one
+    // when traderAct later decrements by exactly 1). A boutique with appetite
+    // 0.15 on a rate-3 product needs 0.45 units — which floors to zero and
+    // trades nothing, so such a pair proves nothing about AI-to-AI trading.
+    const rate = effectiveSpec(rep, []).rate * AI_APPETITE_MUL[buyer.tier ?? "mid"];
     for (const inp of recipe.inputs) {
+      if (inp.qty * rate < 1) continue;
       for (const seller of S.traders) {
         if (seller.name === buyer.name || !seller.bias) continue;
         const sellerRep = representativeItem(seller.name, seller.bias);
@@ -573,6 +580,24 @@ describe("named AI-to-AI trading — a company buys inputs from a real producer"
     seller.bias = null;
   }
 
+  /**
+   * Give EVERY input of the buyer's recipe ample floor stock.
+   *
+   * fillScale is the min across all inputs, so one input the catalog happens
+   * to leave thin gates the whole recipe to zero and no trade occurs — point
+   * (1) in the note above, which the tests only honoured for the single item
+   * being traded. That made them depend on which pair findAiToAiPair returned,
+   * so they broke the moment companies spread across the catalog rather than
+   * crowding its first few items.
+   */
+  function stockRecipe(S: WorldState, buyer: Trader): void {
+    const rep = representativeItem(buyer.name, buyer.bias);
+    for (const inp of (rep && recipeOf(rep))?.inputs ?? []) {
+      const it = S.items.find((x) => x.id === inp.itemId);
+      if (it) it.stock = 1_000_000;
+    }
+  }
+
   it("moves cash + goods between exactly the two companies, at the item's market value", () => {
     const S = createWorld(0);
     const pair = findAiToAiPair(S);
@@ -581,7 +606,8 @@ describe("named AI-to-AI trading — a company buys inputs from a real producer"
     isolateSeller(seller);
     buyer.cash = 50_000_000;
     seller.cash = 100_000;
-    S.traders = [buyer, seller]; // isolate — nobody else's balance should move
+    S.traders = [buyer, seller];
+    stockRecipe(S, buyer); // isolate — nobody else's balance should move
     const it = S.items.find((x) => x.id === itemId)!;
     // Ample — must fully cover the buyer's need so NONE of it falls back to
     // the market, which would make the buyer's total spend exceed just the
@@ -616,6 +642,7 @@ describe("named AI-to-AI trading — a company buys inputs from a real producer"
     buyer.cash = 50_000_000;
     seller.cash = 100_000;
     S.traders = [buyer, seller];
+    stockRecipe(S, buyer);
     const it = S.items.find((x) => x.id === itemId)!;
     it.owners[seller.name] = 1; // barely anything to sell
     it.stock = 1_000_000; // the floor has plenty
@@ -638,6 +665,7 @@ describe("named AI-to-AI trading — a company buys inputs from a real producer"
     buyer.cash = buyerFloor + 500; // just above reserve
     seller.cash = sellerFloor; // at reserve — receiving cash can't violate this
     S.traders = [buyer, seller];
+    stockRecipe(S, buyer);
     const it = S.items.find((x) => x.id === itemId)!;
     it.owners[seller.name] = 50_000; // ample stock to sell
     it.stock = 1_000_000;
@@ -655,6 +683,7 @@ describe("named AI-to-AI trading — a company buys inputs from a real producer"
     isolateSeller(seller);
     buyer.cash = 50_000_000;
     S.traders = [buyer, seller];
+    stockRecipe(S, buyer);
     const it = S.items.find((x) => x.id === itemId)!;
     it.owners[seller.name] = 5000;
     it.stock = 1_000_000;

@@ -164,7 +164,12 @@ function OrderRow({
   // Default to roughly a full settlement of cover, bounded by what's actually
   // on the floor and what you can pay for.
   const suggested = Math.max(1, Math.min(Math.floor(need.floorStock), need.perTick * 72));
-  const [qty, setQty] = useState(suggested);
+  // Held as TEXT, coerced only when read. Clamping on every keystroke made the
+  // field impossible to clear: deleting the last digit produced "", which
+  // coerced straight back to 1, so you could never type a different number —
+  // only append to the one already there.
+  const [qtyText, setQtyText] = useState(String(suggested));
+  const qty = Math.max(0, Math.floor(Number(qtyText) || 0));
   const q = supplyQuote(need.it, Math.max(1, qty));
   const tooMuch = qty > need.floorStock;
   const tooDear = q.total > cash;
@@ -177,8 +182,9 @@ function OrderRow({
           <input
             type="number"
             min={1}
-            value={qty}
-            onChange={(e) => setQty(Math.max(1, Math.floor(Number(e.target.value) || 1)))}
+            value={qtyText}
+            onChange={(e) => setQtyText(e.target.value)}
+            onBlur={() => setQtyText(String(Math.max(1, qty)))}
           />
         </label>
         <div className="sup-quote">
@@ -197,10 +203,12 @@ function OrderRow({
         </div>
         <button
           className="sup-place"
-          disabled={tooMuch || tooDear}
+          disabled={qty < 1 || tooMuch || tooDear}
           onClick={() => onOrder(qty)}
         >
-          {tooMuch
+          {qty < 1
+            ? "Enter a quantity"
+            : tooMuch
             ? "More than the floor has"
             : tooDear
               ? "Not enough cash"
