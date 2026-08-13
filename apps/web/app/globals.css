@@ -10294,22 +10294,11 @@ body {
    edge if that width ever changes. Everything else about it is the shared
    casing above. */
 @media (max-width: 780px) {
-  /* On a narrow screen the rail is a drawer that stays MOUNTED when closed,
-     just parked off-canvas — so visibility has to follow the drawer being
-     open, not the rail existing, or the handle floats against nothing.
-     Closing was only ever "tap the dimmed area", which you have to already
-     know about; the handle sits on the drawer's own edge and says so. */
+  /* No collapse handle on a phone. The drawer already carries its own close
+     button (.rail-close, top-right), so a second control was redundant — and
+     it landed over the drawer's contents rather than on its edge. */
   .nav-collapse {
     display: none;
-  }
-  .app.navopen .nav-collapse {
-    display: inline-flex;
-    /* Match the drawer's real width. It's capped at the rail width but goes
-       narrower on a small phone, and a fixed 256px would leave the handle
-       detached from the edge it belongs to. */
-    left: min(86vw, var(--rail));
-    /* Above the drawer (40) and its scrim (39), or the scrim eats the tap. */
-    z-index: 41;
   }
 }
 
@@ -10332,24 +10321,28 @@ body {
     display: none;
   }
 }
-/* The toolbar menu button — mobile only, since the edge handle serves desktop. */
+/* The toolbar menu button — mobile only, since the edge handle serves desktop.
+   It fills the toolbar's height and is divided from the clock by a rule,
+   rather than floating in it as a bordered square: the toolbar is only 42px
+   tall and already carries the clock and the ticker, so a box inside a box
+   read as crammed. A full-height segment belongs to the bar instead of
+   sitting on it. */
 .nav-menu {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 100%;
   flex: none;
-  margin-right: 2px;
   padding: 0;
-  background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 9px;
+  background: var(--paper);
+  border: 0;
+  border-right: 1px solid var(--line);
   color: var(--ink);
   cursor: pointer;
 }
 .nav-menu:active {
-  background: color-mix(in srgb, var(--ink) 8%, transparent);
+  background: var(--paper-2);
 }
 @media (max-width: 780px) {
   .nav-menu {

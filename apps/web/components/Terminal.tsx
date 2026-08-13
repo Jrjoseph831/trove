@@ -116,7 +116,7 @@ export function Terminal() {
               anyone would look for it. */}
           {canBrowseFull && (
             <button className="nav-menu" onClick={openRail} aria-label="Open navigation">
-              <Menu size={17} strokeWidth={2} />
+              <Menu size={18} strokeWidth={1.9} />
             </button>
           )}
           <Clock />
