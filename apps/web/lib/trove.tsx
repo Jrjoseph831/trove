@@ -688,27 +688,50 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const dismissDailyReport = useCallback(() => setDailyReport(null), []);
   const dismissRecap = useCallback(() => setRecap(null), []);
 
-  // Deep link: /?brand=<slug> opens the Catalog filtered to that company.
+  // Deep link: /?brand=<slug> opens the Catalog filtered to that company, and
+  // /?q=<name>&hl=<id> opens it focused on one item. Item and brand pages link
+  // back this way.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+    let consumed = false;
     const slug = params.get("brand");
     if (slug) {
       const brand = getBrandBySlug(slug);
       if (brand) {
         setCatBrand(brand.name);
         setTab("catalog");
+        consumed = true;
       }
     }
     const q = params.get("q");
     if (q) {
       setCatSearch(q);
       setTab("catalog");
+      consumed = true;
     }
     const hl = params.get("hl");
     if (hl && /^\d+$/.test(hl)) {
       setHlItem(Number(hl));
       setTab("catalog");
+      consumed = true;
       window.setTimeout(() => setHlItem(null), 6000);
+    }
+    // Spend the link, then take it out of the URL. These params used to
+    // survive forever: follow one item link, and every refresh from then on
+    // re-ran this effect and dragged you back to the Catalog no matter which
+    // page you'd since navigated to. A deep link should place you once, not
+    // permanently outrank the page you're actually on. Read the hash fresh —
+    // setTab above has already written the current tab into it.
+    if (consumed) {
+      params.delete("brand");
+      params.delete("q");
+      params.delete("hl");
+      const qs = params.toString();
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname + (qs ? `?${qs}` : "") + window.location.hash,
+      );
     }
   }, []);
 
