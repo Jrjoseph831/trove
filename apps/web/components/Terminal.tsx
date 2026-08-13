@@ -247,7 +247,11 @@ function Onboarding() {
     );
   }
 
-  const preview = holdingName(val);
+  // Default ON: the suffix is what makes a name read like a firm, and most
+  // players want it. But forcing it means someone who wants a bare name is
+  // simply told no, which is a silly thing to be told about your own company.
+  const [addSuffix, setAddSuffix] = useState(true);
+  const preview = addSuffix ? holdingName(val) : val.trim().replace(/\s+/g, " ");
   const check = preview ? validateHoldingName(preview) : { ok: false };
   const submit = () => {
     if (!preview || !check.ok) return;
@@ -281,9 +285,19 @@ function Onboarding() {
             if (e.key === "Enter") submit();
           }}
         />
+        <label className="ob-suffix">
+          <input
+            type="checkbox"
+            checked={addSuffix}
+            onChange={(e) => setAddSuffix(e.target.checked)}
+          />
+          Add &ldquo;Holdings&rdquo;
+        </label>
         <div className={`ob-preview ${preview && !check.ok ? "bad" : ""}`}>
           {!preview
-            ? "We'll add “Holdings” unless you include your own (Capital, Group, House…)"
+            ? addSuffix
+              ? "We'll add “Holdings” unless you include your own (Capital, Group, House…)"
+              : "Your name, exactly as you type it."
             : check.ok
               ? (
                   <>

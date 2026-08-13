@@ -26,6 +26,7 @@ import {
 } from "@trove/engine";
 import type { LineModule } from "@trove/data";
 import { manufacturingName, money, moneyShort } from "@/lib/format";
+import { TICKS_PER_TVT_HOUR } from "@/lib/tvt";
 import { useTrove } from "@/lib/trove";
 import { InboundStrip, SupplyPanel } from "./SupplyPanel";
 import { FactoryFloor } from "@/components/FactoryFloor";
@@ -76,10 +77,12 @@ function recipeText(out: Item): string {
 }
 
 export function Factory() {
-  const { state, buildLine, desk, mySite } = useTrove();
+  const { state, buildLine, desk, mySite, mfgName, renameMfg } = useTrove();
   const [picking, setPicking] = useState(false);
   const [view, setView] = useState<"lines" | "floor">("lines");
-  const mfg = manufacturingName(desk?.name ?? null);
+  // One source: the owner's own name if they set one, else derived.
+  const mfg = mfgName;
+  const [renaming, setRenaming] = useState(false);
   // Under your own mark, the product links to YOU — not to the catalog brand
   // that originated the design. Your line makes your product.
   const myHref = mySite?.published && mySite.handle ? `/${mySite.handle}` : null;
@@ -90,10 +93,21 @@ export function Factory() {
     <div className="view">
       <div className="cat-head">
         <h2 className="serif">{mfg}</h2>
+        <button className="mfg-rename" onClick={() => setRenaming(true)}>
+          rename
+        </button>
         <div className="fac-cash">
           Cash <b>{moneyShort(state.cash)}</b>
         </div>
       </div>
+
+      {renaming && (
+        <RenameMfg
+          current={mfg}
+          onClose={() => setRenaming(false)}
+          onSave={renameMfg}
+        />
+      )}
 
       <InboundStrip />
       <SupplyPanel />
@@ -409,15 +423,19 @@ function LineBay({
       )}
 
       <div className="bay-econ">
+        {/* "Per cycle" meant nothing without saying how long a cycle is, and
+            "5 min" is real time while every other clock in the game is TVT. A
+            run is 10 TVT minutes, six to the Trove hour. */}
         <div className="be-head">
-          Per cycle · every ~5 min{throttled ? " · potential" : ""}
+          Per run · every 10 min TVT ({TICKS_PER_TVT_HOUR}× an hour)
+          {throttled ? " · potential" : ""}
         </div>
         <div className="be-grid">
           <div className="be-cell">
             <span className="be-lab">Output</span>
             <span className="be-val">
               {eff.rate.toLocaleString()}
-              <small>/cy</small>
+              <small>/run</small>
             </span>
             {f.modules.length > 0 && (
               <span className="be-sub">base {base.rate.toLocaleString()}</span>
@@ -442,7 +460,7 @@ function LineBay({
             <span className={`be-val ${profitCy >= 0 ? "pos" : "neg"}`}>
               {profitCy >= 0 ? "+" : ""}
               {money(profitCy)}
-              <small>/cy</small>
+              <small>/run</small>
             </span>
             <span className="be-sub">{Math.round(margin * 100)}% margin</span>
           </div>
@@ -815,6 +833,80 @@ function BuildPicker({
             </div>
           </>
         )}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Rename the manufacturing arm. Deliberately NOT part of onboarding: asking a
+ * new player to name a manufacturer before they've seen a factory is asking
+ * them to name something they don't understand yet, on the screen where people
+ * already bounce. The derived name carries them until they care.
+ */
+function RenameMfg({
+  current,
+  onClose,
+  onSave,
+}: {
+  current: string;
+  onClose: () => void;
+  onSave: (name: string) => Promise<boolean>;
+}) {
+  const [val, setVal] = useState(current);
+  const [busy, setBusy] = useState(false);
+  const clean = val.trim().replace(/\s+/g, " ");
+  const ok = clean.length >= 2 && clean.length <= 40;
+
+  const save = async () => {
+    if (!ok || busy) return;
+    setBusy(true);
+    const done = await onSave(clean);
+    setBusy(false);
+    if (done) onClose();
+  };
+
+  return (
+    <div
+      className="reveal-bg show"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+    >
+      <div className="onboard">
+        <div className="ob-kick">Your manufacturing arm</div>
+        <h2 className="ob-h">Name the factory</h2>
+        <p className="ob-sub">
+          What everything you build is stamped with, and what buyers see on your
+          goods. Your holding still owns it.
+        </p>
+        <input
+          className="ob-input"
+          value={val}
+          maxLength={40}
+          autoFocus
+          onChange={(e) => setVal(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") void save();
+          }}
+        />
+        <div className="ob-preview">
+          {ok ? (
+            <>
+              Goods will read <b>{clean}</b>
+            </>
+          ) : (
+            "A bit short — give it a name."
+          )}
+        </div>
+        <div className="bb-actions">
+          <button className="bb-cancel" onClick={onClose} disabled={busy}>
+            Cancel
+          </button>
+          <button className="bb-buy" onClick={save} disabled={!ok || busy}>
+            {busy ? "Saving…" : "Save name"}
+          </button>
+        </div>
       </div>
     </div>
   );

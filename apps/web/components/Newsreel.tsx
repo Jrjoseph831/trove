@@ -39,6 +39,7 @@ import {
   type SectorKey,
 } from "@trove/data";
 import { type WorldState } from "@trove/engine";
+import { tvtClock } from "@/lib/tvt";
 import { useLeaderboard } from "@/lib/useLeaderboard";
 import { money, moneyShort, pctChange } from "@/lib/format";
 import { moversByAbsMove } from "@/lib/ui";
@@ -313,10 +314,10 @@ export function Wheel({
     onClose?.();
   };
 
-  // real broadcast clock (UTC) — the channel runs on the same 6h marks the
-  // world settles on, so the time on screen is the time the floor turns.
-  const nowUtc = new Date();
-  const clock = `${String(nowUtc.getUTCHours()).padStart(2, "0")}:${String(nowUtc.getUTCMinutes()).padStart(2, "0")} UTC`;
+  // The broadcast clock is TVT — the clock the world actually runs on and the
+  // one already in the terminal header. UTC here put a second, unrelated time
+  // on screen that matched nothing else in the game.
+  const clock = `${tvtClock()} TVT`;
   const tape = moversByAbsMove(state).slice(0, 12);
 
   const slide = slidesRef.current[idx];

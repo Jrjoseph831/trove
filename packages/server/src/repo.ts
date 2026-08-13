@@ -321,6 +321,11 @@ export interface Player {
   debt: number;
   /** The Holding's display name (set at onboarding). */
   name?: string;
+  /** What this firm calls its manufacturing arm. Defaults to a name derived
+   *  from the holding ("Shore Holdings" -> "Shore Manufacturing"), which is
+   *  what communicates the parent-owns-subsidiary structure for free. Set only
+   *  when the owner has renamed it. */
+  mfgName?: string;
   /** Order-Desk standing — rises on fulfilment, dips on missed contracts. */
   reputation?: number;
   orders?: Order[];
@@ -488,6 +493,8 @@ export interface PortfolioView {
   deskAuto: DeskAuto;
   reports: Report[];
   periodNo: number;
+  /** The manufacturing arm's name, when the owner has set their own. */
+  mfgName?: string;
   site: SiteConfig | null;
   /** The player's previous lastSeenAt (ms), or null if this is their first
    *  fetch ever. Read-only snapshot — buildPortfolio does not stamp it. */
@@ -570,6 +577,7 @@ export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
     deskAuto: player.deskAuto ?? { ...FRESH_DESKAUTO },
     reports: player.reports ?? [],
     periodNo: player.periodNo ?? 0,
+    mfgName: player.mfgName,
     site: player.site ?? null,
     awaySince: player.lastSeenAt ?? null,
   };

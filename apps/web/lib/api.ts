@@ -73,6 +73,8 @@ export interface ApiPortfolio {
   deskAuto?: DeskAuto;
   reports?: Report[];
   periodNo?: number;
+  /** The manufacturing arm's name, when the owner has set their own. */
+  mfgName?: string;
   /** The player's own company-site config (so the owner can edit a draft). */
   site?: SiteConfig | null;
   /** The player's previous lastSeenAt (ms), or null on their first fetch ever. */
@@ -241,6 +243,7 @@ export type FactoryAction =
   | { action: "infra"; id: "power" | "router" | "qc" }
   | { action: "order-supply"; itemId: number; qty: number }
   | { action: "reorder"; itemId: number; floor: number; qty: number }
+  | { action: "mfg-name"; name: string }
   | {
       action: "deskauto";
       patch: { specialist?: boolean; autoFulfill?: boolean; minMargin?: number };

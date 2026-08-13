@@ -13,6 +13,7 @@ import type {
   APIGatewayProxyEventV2WithJWTAuthorizer,
   APIGatewayProxyResultV2,
 } from "aws-lambda";
+import { validateHoldingName } from "@trove/data";
 import {
   buildFactory,
   buyProperty,
@@ -69,6 +70,7 @@ const freshPlayer = (playerId: string): Player => ({
 
 interface Body {
   action?: string;
+  name?: string;
   itemId?: number;
   qty?: number;
   floor?: number;
@@ -165,6 +167,9 @@ async function apply(state: WorldState, b: Body, playerId: string): Promise<stri
     case "reorder":
       setReorder(state, Number(b.itemId), Number(b.floor ?? 0), Number(b.qty ?? 0));
       return null;
+    case "mfg-name":
+      // Handled on the player record, not the world view — see the caller.
+      return null;
     case "deskauto":
       setDeskAuto(state, b.patch ?? {});
       return null;
@@ -207,6 +212,18 @@ export async function handler(
     if (err) return json(409, { error: err });
 
     const updated = extractPlayer(state, player);
+
+    // The manufacturing arm's name lives on the player record, not in the
+    // world view the engine runs on, so it's applied here. Held to the same
+    // standards as a holding name — no real companies, nothing foul — because
+    // it's just as public: it's stamped on every unit this firm makes.
+    if (body.action === "mfg-name") {
+      const raw = String(body.name ?? "").trim().replace(/\s+/g, " ").slice(0, 40);
+      if (raw.length < 2) return json(400, { error: "A bit short — give it a name." });
+      const check = validateHoldingName(raw);
+      if (!check.ok) return json(400, { error: check.reason ?? "Pick another name." });
+      updated.mfgName = raw;
+    }
 
     // Placing a bulk supply order takes the material OFF the shared floor, so
     // unlike every other action here it mutates the world doc and not just the

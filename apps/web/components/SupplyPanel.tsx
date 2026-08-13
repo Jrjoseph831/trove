@@ -4,9 +4,11 @@ import { useMemo, useState } from "react";
 import { recipeOf, effectiveSpec, getItem } from "@trove/data";
 import { held, supplyQuote, type RuntimeItem } from "@trove/engine";
 import { money, moneyShort } from "@/lib/format";
+import { perHour, ticksToTvt } from "@/lib/tvt";
 import { useTrove } from "@/lib/trove";
 
-/** How many production ticks of cover counts as comfortable / tight. */
+/** Cover thresholds, in production ticks. Shown to the player as Trove hours
+ *  (6 ticks to the hour) — roughly 7h comfortable, 2h tight. */
 const COVER_OK = 40;
 const COVER_LOW = 12;
 
@@ -65,7 +67,7 @@ export function SupplyPanel() {
       <div className="supply-h">
         <span className="supply-t">Supply</span>
         <span className="supply-why">
-          what your lines consume · cover is at current output
+          what your lines consume · per Trove hour, at current output
         </span>
       </div>
 
@@ -88,16 +90,15 @@ export function SupplyPanel() {
                   <em>on hand</em>
                 </span>
                 <span className="sup-burn">
-                  {n.perTick.toLocaleString()}/tick
+                  {Math.round(perHour(n.perTick)).toLocaleString()}/hr
                   <em>burn</em>
                 </span>
                 <span className="sup-cover">
-                  {cover === Infinity
-                    ? "—"
-                    : cover >= 999
-                      ? "999+"
-                      : `${Math.floor(cover)}`}
-                  <em>ticks cover</em>
+                  {/* Was "N ticks cover" — a unit nothing on screen defined,
+                      so "0 ticks" told you nothing about whether this mattered
+                      in ten minutes or ten hours. */}
+                  {cover === Infinity ? "—" : ticksToTvt(cover)}
+                  <em>cover left</em>
                 </span>
                 {n.inbound > 0 && (
                   <span className="sup-inbound">
@@ -180,7 +181,7 @@ function OrderRow({
             {moneyShort(q.total)}<em>total</em>
           </span>
           <span>
-            {q.lead}<em>tick lead</em>
+            {ticksToTvt(q.lead)}<em>delivery</em>
           </span>
         </div>
         <button
@@ -231,7 +232,7 @@ export function InboundStrip() {
         return (
           <span className="inbound-pill" key={o.id}>
             {o.qty.toLocaleString()}× {it?.name ?? "material"}
-            <em>{left === 0 ? "arriving" : `${left} tick${left === 1 ? "" : "s"}`}</em>
+            <em>{left === 0 ? "arriving" : `in ${ticksToTvt(left)}`}</em>
           </span>
         );
       })}

@@ -9986,3 +9986,23 @@ body {
   font-size: 11.5px; font-weight: 500; color: var(--ink-dim);
   font-variant-numeric: tabular-nums;
 }
+
+/* Rename control on the Factory header — quiet until wanted, same weight as
+   the holding rename in the rail. */
+.mfg-rename {
+  margin-left: 10px; padding: 3px 9px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line); border-radius: 999px;
+  color: var(--ink-dim); font-size: 11px; letter-spacing: .02em;
+  transition: color .12s, border-color .12s;
+}
+.mfg-rename:hover { color: var(--ink); border-color: var(--accent); }
+
+/* Suffix opt-out on the naming gate. Default on — it's what makes a name read
+   like a firm — but a player who wants a bare name shouldn't be told no. */
+.ob-suffix {
+  display: flex; align-items: center; gap: 8px; cursor: pointer;
+  margin: 10px 0 2px; font-size: 12.5px; color: var(--ink-dim);
+  user-select: none;
+}
+.ob-suffix input { width: 14px; height: 14px; accent-color: var(--accent); cursor: pointer; }
+.ob-suffix:hover { color: var(--ink); }

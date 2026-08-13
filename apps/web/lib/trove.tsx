@@ -286,6 +286,11 @@ interface Trove {
    *  it never sees other firms' treasuries — so anything comparing you against
    *  the rest of the world must use this, not a local recompute. */
   serverNet: number | null;
+  /** What this firm calls its manufacturing arm — the owner's own name if they
+   *  set one, otherwise derived from the holding. */
+  mfgName: string;
+  /** Rename the manufacturing arm. */
+  renameMfg: (name: string) => Promise<boolean>;
   /** Save the player's site config; resolves to the updated public view or null. */
   saveSite: (patch: Partial<SiteConfig>) => Promise<CompanySite | null>;
   /** Player-to-player order book (incoming as seller, outgoing as buyer). */
@@ -396,6 +401,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [recap, setRecap] = useState<Recap | null>(null);
   const [mySite, setMySite] = useState<SiteConfig | null>(null);
   const [serverNet, setServerNet] = useState<number | null>(null);
+  const [mfgOwn, setMfgOwn] = useState<string | null>(null);
   const [orders, setOrders] = useState<OrderBook | null>(null);
   const lastReportRef = useRef(-1);
   const recapCheckedRef = useRef(false);
@@ -454,6 +460,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
               overlayPortfolio(worldsRef.current!.live, p);
               setMySite(p.site ?? null);
               setServerNet(p.netWorth);
+              setMfgOwn(p.mfgName ?? null);
               if (!recapCheckedRef.current) {
                 recapCheckedRef.current = true;
                 const built = buildRecap(
@@ -693,6 +700,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         overlayPortfolio(worldsRef.current!.live, p);
         setMySite(p.site ?? null);
               setServerNet(p.netWorth);
+              setMfgOwn(p.mfgName ?? null);
       }
     } catch {
       /* best-effort */
@@ -1210,6 +1218,26 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     [refresh, liveFactory],
   );
 
+  /** The manufacturing arm's name: the owner's own if set, else derived from
+   *  the holding — which is what communicates the parent/subsidiary structure
+   *  without anyone having to name a thing they haven't seen yet. */
+  const mfgName = mfgOwn ?? manufacturingName(desk?.name ?? null);
+
+  const renameMfg = useCallback(
+    async (name: string) => {
+      const r = await factoryAction({ action: "mfg-name", name });
+      if ("error" in r) {
+        showToast(r.status === 401 ? "Session expired — sign in again" : r.error);
+        return false;
+      }
+      setMfgOwn(r.mfgName ?? null);
+      overlayPortfolio(worldsRef.current!.live, r);
+      refresh();
+      return true;
+    },
+    [refresh, showToast],
+  );
+
   const setDeskAutomation = useCallback(
     (patch: { specialist?: boolean; autoFulfill?: boolean; minMargin?: number }) => {
       if (modeRef.current === "live") {
@@ -1545,6 +1573,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       dismissRecap,
       mySite,
       serverNet,
+      mfgName,
+      renameMfg,
       saveSite,
       orders,
       requestOrder,
@@ -1611,6 +1641,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       dismissRecap,
       mySite,
       serverNet,
+      mfgName,
+      renameMfg,
       saveSite,
       orders,
       requestOrder,

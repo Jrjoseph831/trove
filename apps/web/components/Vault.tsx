@@ -8,10 +8,10 @@ import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 
 export function Vault() {
-  const { state, sell, setListing, doBorrow, doRepay, desk, mySite } = useTrove();
+  const { state, sell, setListing, doBorrow, doRepay, desk, mySite, mfgName } = useTrove();
   // Goods off your own line are yours: they carry your manufacturing mark and
   // link to your page, not to the catalog brand that originated the design.
-  const myMark = manufacturingName(desk?.name);
+  const myMark = mfgName;
   const myHref = mySite?.published && mySite.handle ? `/${mySite.handle}` : null;
   const mine = state.items.filter((i) => held(i, "YOU") > 0);
   const lim = creditLimit(state);
