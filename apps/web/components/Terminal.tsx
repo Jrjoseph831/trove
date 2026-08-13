@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Menu } from "lucide-react";
 import { validateHoldingName } from "@trove/data";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
@@ -93,14 +93,10 @@ export function Terminal() {
         </button>
       )}
 
-      {/* A tab on the left edge rather than a hamburger in the toolbar. It sits
-          where the rail would be, so it reads as the nav folded away and the
-          chevron points at what opening it does — instead of a generic icon
-          parked next to the clock with no relationship to anything. */}
-      {/* Always mounted when a rail is possible; CSS shows it only when the rail
-          isn't actually on screen — collapsed on the Catalog, or folded into a
-          drawer on narrow screens. Gating the render on railHidden alone would
-          strand the nav on mobile, where the rail is mounted but off-canvas. */}
+      {/* Desktop's way in: a tab on the left edge, where the rail would be, so
+          it reads as the nav folded away and the chevron points at what opening
+          it does. It's hidden on narrow screens — see the toolbar button below
+          — because with no margin beside the content it sits on the text. */}
       {canBrowseFull && (
         <button
           className={`nav-peek ${railHidden ? "show" : ""}`}
@@ -114,6 +110,15 @@ export function Terminal() {
 
       <div className={`main ${mode === "sandbox" ? "sandbox" : ""}`}>
         <div className="topbar">
+          {/* Mobile's way into the nav. The edge handle can't do this job on a
+              phone — there's no margin for it to sit in, so it lands on the
+              text. A control in the toolbar is both out of the way and where
+              anyone would look for it. */}
+          {canBrowseFull && (
+            <button className="nav-menu" onClick={openRail} aria-label="Open navigation">
+              <Menu size={17} strokeWidth={2} />
+            </button>
+          )}
           <Clock />
           <Ticker />
         </div>
