@@ -10212,26 +10212,52 @@ body {
   z-index: 38; /* under the drawer rail (40) and its scrim */
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 74px;
+  /* Sized and coloured to be found, not just to exist. At 22px wide in the
+     muted grey it read as a seam in the page rather than a control — the one
+     thing on screen that has to be discoverable, because with the rail closed
+     it is the only way back to it. */
+  width: 30px;
+  height: 96px;
   padding: 0;
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
   border-left: 0;
-  border-radius: 0 10px 10px 0;
-  color: var(--muted);
+  border-radius: 0 12px 12px 0;
+  color: var(--accent);
   cursor: pointer;
-  box-shadow: 2px 0 14px -8px rgba(27, 23, 20, 0.4);
+  box-shadow:
+    3px 0 10px -4px rgba(27, 23, 20, 0.28),
+    6px 0 26px -12px rgba(27, 23, 20, 0.5);
   transition:
     width 0.16s ease,
+    background 0.16s ease,
     color 0.16s ease;
+}
+/* A quiet pulse on the edge, so the eye catches it once without it becoming
+   something that blinks at you for the whole stream. */
+.nav-peek::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
+  animation: nav-peek-cue 3.2s ease-out 3;
+}
+@keyframes nav-peek-cue {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 40%, transparent); }
+  40%, 100% { box-shadow: 0 0 0 9px transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-peek::after { animation: none; }
 }
 .nav-peek.show {
   display: flex;
 }
 .nav-peek:hover {
-  width: 28px;
-  color: var(--ink);
+  width: 38px;
+  background: color-mix(in srgb, var(--accent) 14%, var(--paper));
+  color: var(--accent);
 }
 /* On narrow screens the rail is a drawer — mounted, but off-canvas — so the
    handle is the only way in regardless of which page you're on. */

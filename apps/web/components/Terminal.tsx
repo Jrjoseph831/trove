@@ -79,7 +79,7 @@ export function Terminal() {
           aria-label="Open navigation"
           title="Open navigation"
         >
-          <ChevronRight size={15} strokeWidth={2.5} />
+          <ChevronRight size={19} strokeWidth={2.75} />
         </button>
       )}
 
