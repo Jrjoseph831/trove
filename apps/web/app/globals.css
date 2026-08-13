@@ -10080,4 +10080,7 @@ body {
 .oc-metric.lead { margin-left: auto; text-align: right; }
 .oc-metric.lead.pos b { color: var(--up); }
 .oc-metric.lead.neg b { color: var(--danger, #c0492b); }
+/* A lead cell with no tone (an offer awaiting the other side) stays neutral —
+   "waiting" is neither good news nor bad. */
+.oc-metric.lead b { white-space: nowrap; }
 .oc-alt { font-size: 11.5px; color: var(--ink-dim); margin: -4px 0 12px; }
