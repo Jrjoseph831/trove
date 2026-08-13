@@ -10043,3 +10043,13 @@ body {
 .bay-status.mothballed { color: var(--ink-dim); }
 .bay-run.moth { border-color: var(--accent); color: var(--ink); }
 .bay-run.moth:disabled { opacity: .5; cursor: not-allowed; border-color: var(--line); }
+
+/* The Catalog collapses the app rail — it has its own department sidebar, and
+   two navigations on the left leave the storefront squeezed. The ☰ has to stay
+   reachable on desktop there, since it's the only way back to the rail
+   (everywhere else the rail is simply present). */
+.navtoggle.always {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

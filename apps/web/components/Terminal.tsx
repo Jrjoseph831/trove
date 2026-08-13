@@ -38,8 +38,13 @@ export function Terminal() {
   const canBrowseFull = signedIn || mode === "sandbox";
   const effectiveTab = canBrowseFull ? tab : "catalog";
 
+  // The Catalog carries its OWN department sidebar, so showing the app rail
+  // beside it puts two navigations on the left and squeezes the storefront.
+  // Collapse it there and give the grid the room; the ☰ brings it back.
+  const railHidden = !canBrowseFull || (effectiveTab === "catalog" && !navOpen);
+
   return (
-    <div className={`app ${navOpen ? "navopen" : ""} ${canBrowseFull ? "" : "no-rail"}`}>
+    <div className={`app ${navOpen ? "navopen" : ""} ${railHidden ? "no-rail" : ""}`}>
       {canBrowseFull && navOpen && (
         <button
           className="nav-scrim"
@@ -47,12 +52,12 @@ export function Terminal() {
           onClick={() => setNavOpen(false)}
         />
       )}
-      {canBrowseFull && <Rail />}
+      {canBrowseFull && !railHidden && <Rail />}
       <div className={`main ${mode === "sandbox" ? "sandbox" : ""}`}>
         <div className="topbar">
           {canBrowseFull && (
             <button
-              className="navtoggle"
+              className={`navtoggle ${effectiveTab === "catalog" ? "always" : ""}`}
               onClick={() => setNavOpen(!navOpen)}
               aria-label="Toggle navigation"
             >

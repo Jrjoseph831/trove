@@ -92,6 +92,22 @@ import {
 } from "@trove/engine";
 
 const REPORTS_KEY = "trove.reports.v1";
+/** The tab you were last on. Item pages (/item/123) are real routes, so
+ *  clicking a product navigates away from the terminal entirely — without
+ *  this, coming back or refreshing dropped you on the default tab and the URL
+ *  looked like it had "saved" the last item you opened. */
+const TAB_KEY = "trove.tab.v1";
+
+const TAB_IDS: readonly TabId[] = [
+  "trending", "catalog", "wire", "vault", "orders", "factory",
+  "estates", "deals", "report", "companies", "goals",
+];
+
+function storedTab(): TabId {
+  if (typeof window === "undefined") return "trending";
+  const v = window.localStorage.getItem(TAB_KEY);
+  return TAB_IDS.includes(v as TabId) ? (v as TabId) : "trending";
+}
 
 /** A warmed world whose clock is pinned to the current UTC 6h block, so its
  *  next settlement lands on the next 6h mark — in lockstep with the newsroom. */
@@ -389,7 +405,14 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
   const [tick, setTick] = useState(0);
   const [mode, setModeState] = useState<Mode>("live");
-  const [tab, setTab] = useState<TabId>("trending");
+  // Restored lazily, not read during render on the server — a mismatch between
+  // the server's "trending" and the client's stored tab would hydrate wrong.
+  const [tab, setTabState] = useState<TabId>("trending");
+  useEffect(() => setTabState(storedTab()), []);
+  const setTab = useCallback((t: TabId) => {
+    setTabState(t);
+    if (typeof window !== "undefined") window.localStorage.setItem(TAB_KEY, t);
+  }, []);
   const [warp, setWarp] = useState(2000);
   const [navOpen, setNavOpen] = useState(false);
   const [reveal, setReveal] = useState<RevealInfo | null>(null);
