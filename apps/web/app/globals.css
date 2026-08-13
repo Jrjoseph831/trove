@@ -10309,8 +10309,22 @@ body {
   background: color-mix(in srgb, var(--accent) 14%, var(--paper));
 }
 @media (max-width: 780px) {
+  /* On a narrow screen the rail is a drawer that stays MOUNTED when closed,
+     just parked off-canvas — so visibility has to follow the drawer being
+     open, not the rail existing, or the handle floats against nothing.
+     Closing was only ever "tap the dimmed area", which you have to already
+     know about; the handle sits on the drawer's own edge and says so. */
   .nav-collapse {
     display: none;
+  }
+  .app.navopen .nav-collapse {
+    display: inline-flex;
+    /* Match the drawer's real width. It's capped at the rail width but goes
+       narrower on a small phone, and a fixed 256px would leave the handle
+       detached from the edge it belongs to. */
+    left: min(86vw, var(--rail));
+    /* Above the drawer (40) and its scrim (39), or the scrim eats the tap. */
+    z-index: 41;
   }
 }
 
