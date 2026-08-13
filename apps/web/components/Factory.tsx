@@ -656,11 +656,13 @@ const STAT_TIP: Record<CvyStat, { feed: string; flow: string }> = {
   idle: { feed: "Idle", flow: "Idle" },
 };
 
-/** The assembly line: stations linked by a belt with product flowing
- *  Source → … → Pack → 🚚. The belt is one transform-driven track (boxes are
- *  glued to it, so they ride at a single speed with a seamless loop — no
- *  flicker, no back-and-forth). Each station carries a status dot that maps to
- *  real mechanics. Belt speed + box count scale with the line's rate. */
+/** The assembly line: stations linked by a belt, with ONE unit travelling the
+ *  whole run Source → … → Pack → 🚚. Each belt segment used to loop its own
+ *  crowd of boxes independently, which meant boxes appeared from nowhere at
+ *  every gap and nothing ever arrived anywhere — motion, but no story. A single
+ *  piece that enters at the feed, passes behind each station and reaches the
+ *  bay is the thing the line actually does. Each station carries a status dot
+ *  that maps to real mechanics; travel time scales with the line's rate. */
 function Conveyor({
   stages,
   rate,
@@ -672,10 +674,10 @@ function Conveyor({
   status: "building" | "running" | "idle" | "mothballed";
   stageStat: Record<string, CvyStat>;
 }) {
-  // Faster belt + more boxes for higher throughput.
+  // A busier line moves a piece through faster. One traverse per cycle, so this
+  // is how long a single unit takes to cross the whole run.
   const lg = Math.log10(Math.max(1, rate));
-  const beltDur = Math.max(0.9, Math.min(3.2, 3.4 - lg * 0.45)); // s per loop
-  const boxes = Math.max(2, Math.min(6, Math.round(lg + 1)));
+  const rideDur = Math.max(1.8, Math.min(6.5, 6.5 - lg * 0.95)); // s per traverse
   const flowing = status === "running";
 
   const icon = (kind: string) =>
@@ -687,26 +689,17 @@ function Conveyor({
       <Cog size={16} strokeWidth={1.75} />
     );
 
-  // One carriage of N boxes, doubled so a translateX(-50% → 0) loops seamlessly.
-  const Belt = () => (
-    <div className="cvy-belt">
-      <div
-        className="cvy-flow"
-        style={flowing ? { animationDuration: `${beltDur}s` } : undefined}
-      >
-        {[0, 1].map((half) => (
-          <span className="cvy-half" key={half} aria-hidden>
-            {Array.from({ length: boxes }).map((_, b) => (
-              <i className="cvy-box" key={b} />
-            ))}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
+  // The segments are now just track — the unit that rides them spans the whole
+  // conveyor, so it can't live inside any one of them.
+  const Belt = () => <div className="cvy-belt" />;
 
   return (
     <div className={`cvy ${status}`}>
+      {/* Rendered first so it paints behind the stations: the piece slides in
+          one side of a machine and out the other, rather than over the top. */}
+      {flowing && (
+        <i className="cvy-rider" style={{ animationDuration: `${rideDur}s` }} aria-hidden />
+      )}
       {stages.map((s, i) => {
         const st = stageStat[s.key] ?? "idle";
         const tip = s.kind === "feed" ? STAT_TIP[st].feed : STAT_TIP[st].flow;

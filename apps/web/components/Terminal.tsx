@@ -24,11 +24,20 @@ import { Vault } from "./Vault";
 import { Wire } from "./Wire";
 
 export function Terminal() {
-  const { mounted, mode, tab, navOpen, setNavOpen, reveal, signedIn, signIn } = useTrove();
+  const { mounted, authReady, mode, tab, navOpen, setNavOpen, reveal, signedIn, signIn } =
+    useTrove();
 
   // Boot gate: render a deterministic shell on the server and the first client
   // paint (the engine uses randomness, so live data must be client-only).
-  if (!mounted) return <BootShell />;
+  //
+  // Waiting for authReady matters as much as waiting for mount. Signed-in is
+  // not known until a Cognito token refresh comes back over the network, and
+  // until then signedIn is false — which sends the fallback below to the
+  // Catalog. That's why a refresh appeared to forget your page: the tab was
+  // restored correctly, then overridden for as long as the token call took,
+  // which on a slow connection is seconds rather than a flicker. Show the
+  // shell until we actually know, then land on the right screen once.
+  if (!mounted || !authReady) return <BootShell />;
 
   // Signed-out visitors browse the Catalog only in the real LIVE world —
   // Sandbox is a private practice world that's never required sign-in, so
