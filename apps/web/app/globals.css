@@ -2273,6 +2273,10 @@ body {
   .tile:hover {
     transform: none;
   }
+  /* The unit rests at the head of the line instead of running it. */
+  .cvy-rider {
+    animation: none;
+  }
   .fadein,
   .reveal {
     animation: none;
@@ -4606,6 +4610,7 @@ body {
   margin: 16px 0 4px;
   overflow-x: auto;
   padding-bottom: 4px;
+  position: relative; /* the travelling unit is positioned against the whole run */
 }
 .cvy-station {
   flex: none;
@@ -4716,47 +4721,37 @@ body {
     transparent 5px 14px
   );
 }
-/* The product carriage: two identical halves; translating -50% → 0 rides the
-   boxes rightward in one smooth, seamless, GPU-accelerated loop. */
-.cvy-flow {
+/* The unit in production. One piece crosses the entire conveyor, from the
+   centre of the first station to the centre of the bay — 29px is half a
+   station, so it enters and leaves under the icons rather than at the edges of
+   the frame. `top: 50%` lands it exactly on the belt bar, which the segments
+   centre on the same axis. */
+.cvy-rider {
   position: absolute;
   top: 50%;
-  left: 0;
-  margin-top: -6px;
-  height: 12px;
-  display: flex;
-  width: max-content;
-  transform: translateX(-50%);
-  will-change: transform;
-}
-.cvy.running .cvy-flow {
-  animation: cvy-roll 1.4s linear infinite;
-}
-@keyframes cvy-roll {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-.cvy-half {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding-right: 14px;
-}
-.cvy-box {
-  flex: none;
-  width: 12px;
-  height: 10px;
+  left: 29px;
+  z-index: 0;
+  width: 13px;
+  height: 11px;
+  margin: -5px 0 0 -6px;
   border-radius: 2px;
   background: var(--accent);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
+  animation-name: cvy-ride;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
-/* A stalled line shows its product sitting still (no roll). */
-.cvy:not(.running) .cvy-box {
-  opacity: 0.4;
+@keyframes cvy-ride {
+  from {
+    left: 29px;
+  }
+  to {
+    left: calc(100% - 29px);
+  }
+}
+/* Stations sit above the track so the piece disappears into each one. */
+.cvy-station {
+  z-index: 1;
 }
 /* The output bay pulses while the line runs — it feels alive. */
 .cvy.running .cvy-station.bay .cvy-ic {
@@ -4804,14 +4799,19 @@ details.bay-modules > summary.bay-sub {
 details.bay-modules > summary.bay-sub::-webkit-details-marker {
   display: none;
 }
-details.bay-modules > summary.bay-sub::after {
+/* The chevron leads the label rather than trailing the installed-count on the
+   far right, where it read as decoration on the end of a heading — a
+   disclosure triangle only says "this opens" if it sits where the row starts.
+   Brighter than the label for the same reason. */
+details.bay-modules > summary.bay-sub::before {
   content: "▾";
-  font-size: 9px;
+  display: inline-block;
+  font-size: 10px;
   letter-spacing: 0;
-  color: var(--ink-faint);
+  color: var(--ink-dim);
   transition: transform 0.15s ease;
 }
-details.bay-modules:not([open]) > summary.bay-sub::after {
+details.bay-modules:not([open]) > summary.bay-sub::before {
   transform: rotate(-90deg);
 }
 details.bay-modules > summary.bay-sub:hover {
