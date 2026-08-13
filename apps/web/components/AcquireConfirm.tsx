@@ -22,7 +22,10 @@ export function AcquireConfirm({
   const { buy, state, signedIn, mode, signIn } = useTrove();
   const isEdition = item.edition !== null;
   const lot = lotSize(item);
-  const [qty, setQty] = useState(lot);
+  // TEXT, coerced on read — clamping per keystroke made the field impossible
+  // to clear, so you could only append to the number already in it.
+  const [qtyText, setQtyText] = useState(String(lot));
+  const qty = Math.max(0, Math.floor(Number(qtyText) || 0));
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -103,7 +106,7 @@ export function AcquireConfirm({
             <button
               onClick={() => {
                 setError(null);
-                setQty((q) => Math.max(lot, q - lot));
+                setQtyText(String(Math.max(lot, qty - lot)));
               }}
               aria-label="Fewer"
             >
@@ -114,19 +117,19 @@ export function AcquireConfirm({
                 type="number"
                 min={lot}
                 step={lot}
-                value={qty}
+                value={qtyText}
                 onChange={(e) => {
                   setError(null);
-                  setQty(Math.max(1, Math.floor(Number(e.target.value) || 1)));
+                  setQtyText(e.target.value);
                 }}
-                onBlur={() => setQty(effQty)}
+                onBlur={() => setQtyText(String(effQty))}
               />
               <span>units</span>
             </div>
             <button
               onClick={() => {
                 setError(null);
-                setQty((q) => q + lot);
+                setQtyText(String(qty + lot));
               }}
               aria-label="More"
             >
