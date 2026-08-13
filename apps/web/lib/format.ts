@@ -7,16 +7,23 @@ export function money(n: number): string {
   return sign + Math.round(a).toLocaleString();
 }
 
-/** Money, but collapsed to "$1.24B" / "$3.40T" once it reaches ten figures —
- *  for net worth, cash, assets, debt, and company valuations shown at a
- *  glance (sidebar, standings, Deal Room). Below a billion, identical to
- *  money(). The Reports page keeps exact money() throughout — that's where
- *  the real digits matter. */
+/** Money, collapsed to "$12.48M" / "$1.24B" / "$3.40T" from a MILLION up —
+ *  for net worth, cash, assets, debt, and company valuations shown at a glance
+ *  (sidebar, standings, Deal Room, Supply, Order Desk). Seven-plus digits read
+ *  as a shape rather than a figure: "$12,481,930" takes a beat to place,
+ *  "$12.48M" doesn't, and the trailing digits churn constantly without ever
+ *  mattering at a glance. Below a million the exact number still earns its
+ *  space. The Reports page keeps exact money() throughout — that's where the
+ *  real digits matter. */
 export function moneyShort(n: number): string {
   const a = Math.abs(n);
   const sign = n < 0 ? "-$" : "$";
-  if (a >= 1e12) return sign + (a / 1e12).toFixed(2) + "T";
-  if (a >= 1e9) return sign + (a / 1e9).toFixed(2) + "B";
+  // Boundaries sit just below each round number because the value is shown to
+  // two decimals: $999,999,999 is under a billion but renders as "1000.00M",
+  // which is a four-digit mantissa nobody wants to read. Promote it instead.
+  if (a >= 999.995e9) return sign + (a / 1e12).toFixed(2) + "T";
+  if (a >= 999.995e6) return sign + (a / 1e9).toFixed(2) + "B";
+  if (a >= 1e6) return sign + (a / 1e6).toFixed(2) + "M";
   return money(n);
 }
 

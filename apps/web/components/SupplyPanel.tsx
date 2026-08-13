@@ -9,6 +9,9 @@ import { useTrove } from "@/lib/trove";
 
 /** Cover thresholds, in production ticks. Shown to the player as Trove hours
  *  (6 ticks to the hour) — roughly 7h comfortable, 2h tight. */
+/** One decimal, for showing a stored unit-count back as hours. */
+const round1 = (n: number) => Math.round(n * 10) / 10;
+
 const COVER_OK = 40;
 const COVER_LOW = 12;
 
@@ -170,6 +173,17 @@ function OrderRow({
   // only append to the one already there.
   const [qtyText, setQtyText] = useState(String(suggested));
   const qty = Math.max(0, Math.floor(Number(qtyText) || 0));
+
+  // Auto-reorder, in hours of cover — the same unit the card above reads in.
+  // Converted to units here because that's what the rule stores and what the
+  // engine compares against on-hand.
+  const perHourBurn = perHour(need.perTick);
+  const [belowText, setBelowText] = useState(String(rule ? round1(rule.floor / (perHourBurn || 1)) : 2));
+  const [buyText, setBuyText] = useState(String(rule ? round1(rule.qty / (perHourBurn || 1)) : 12));
+  const belowHrs = Math.max(0, Number(belowText) || 0);
+  const buyHrs = Math.max(0, Number(buyText) || 0);
+  const autoFloor = Math.max(1, Math.round(belowHrs * perHourBurn));
+  const autoQty = Math.max(1, Math.round(buyHrs * perHourBurn));
   const q = supplyQuote(need.it, Math.max(1, qty));
   const tooMuch = qty > need.floorStock;
   const tooDear = q.total > cash;
@@ -215,10 +229,39 @@ function OrderRow({
               : `Order · ${moneyShort(q.total)}`}
         </button>
       </div>
+      {/* Both numbers are yours. They were fixed at "trigger at 12 ticks of
+          cover, buy 72 ticks' worth" — reasonable defaults, but a line you're
+          scaling and a line you're winding down want very different rules, and
+          neither could say so. Set in HOURS, because that's what the rest of
+          the floor now reads in; the engine still stores units. */}
       <div className="sup-auto">
-        <span>
-          Auto-reorder when cover drops below{" "}
-          <b>{Math.floor(need.perTick * 12).toLocaleString()}</b> units
+        <span className="sa-lab">Auto-reorder</span>
+        <label className="sa-field">
+          below
+          <input
+            type="number"
+            min={0}
+            step={0.5}
+            value={belowText}
+            onChange={(e) => setBelowText(e.target.value)}
+            onBlur={() => setBelowText(String(belowHrs || 2))}
+          />
+          h cover
+        </label>
+        <label className="sa-field">
+          buy
+          <input
+            type="number"
+            min={0}
+            step={1}
+            value={buyText}
+            onChange={(e) => setBuyText(e.target.value)}
+            onBlur={() => setBuyText(String(buyHrs || 12))}
+          />
+          h
+        </label>
+        <span className="sa-preview">
+          ≈ {autoQty.toLocaleString()} units · {moneyShort(supplyQuote(need.it, Math.max(1, autoQty)).total)}
         </span>
         {rule ? (
           <button className="sup-autobtn on" onClick={() => onReorder(0, 0)}>
@@ -227,12 +270,20 @@ function OrderRow({
         ) : (
           <button
             className="sup-autobtn"
-            onClick={() => onReorder(Math.max(1, need.perTick * 12), suggested)}
+            disabled={autoFloor < 1 || autoQty < 1}
+            onClick={() => onReorder(autoFloor, autoQty)}
           >
             Turn on
           </button>
         )}
       </div>
+      {rule && (
+        <div className="sa-active">
+          Ordering {rule.qty.toLocaleString()} units whenever you drop below{" "}
+          {rule.floor.toLocaleString()}. Change the numbers and turn it off, then
+          on, to update.
+        </div>
+      )}
     </div>
   );
 }
