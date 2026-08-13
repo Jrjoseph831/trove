@@ -4609,7 +4609,10 @@ body {
   gap: 0;
   margin: 16px 0 4px;
   overflow-x: auto;
-  padding-bottom: 4px;
+  /* Reserves room for the horizontal scrollbar so it can't sit over the station
+     labels. The rider subtracts it back out — see .cvy-rider. */
+  --cvy-pad-b: 4px;
+  padding-bottom: var(--cvy-pad-b);
   position: relative; /* the travelling unit is positioned against the whole run */
 }
 .cvy-station {
@@ -4728,12 +4731,16 @@ body {
    centre on the same axis. */
 .cvy-rider {
   position: absolute;
-  top: 50%;
+  /* NOT top: 50%. A percentage top resolves against the containing block's
+     PADDING box, but the belt is a flex item centred in the CONTENT box, so
+     50% sat the unit half the scrollbar gutter below the bar — riding under
+     the belt instead of on it. Subtracting the gutter puts it on the line. */
+  top: calc((100% - var(--cvy-pad-b)) / 2);
   left: 29px;
   z-index: 0;
   width: 13px;
   height: 11px;
-  margin: -5px 0 0 -6px;
+  margin: -5.5px 0 0 -6px;
   border-radius: 2px;
   background: var(--accent);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
