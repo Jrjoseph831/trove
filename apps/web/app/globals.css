@@ -10253,7 +10253,12 @@ body {
    runs the full width underneath both. */
 .wtop {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
+  /* The LEAD is what gets capped, not the reel. Sizing the lead at 1fr and the
+     reel at a fixed width only moved the dead space: the column kept growing
+     with the viewport while the text inside it stopped at its measure, so the
+     gap reopened between the two. Capping the lead at a readable measure and
+     giving the reel the remainder means the space is always spent. */
+  grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
   gap: 30px;
   align-items: start;
   padding-bottom: 24px;
@@ -10275,6 +10280,15 @@ body {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
+}
+/* The embedded reel holds a strict 16:9, which is what kept reintroducing a
+   gap: pinned to that ratio it could only fill the width by growing absurdly
+   tall, so it had to be capped, and the cap left dead space again. Width now
+   takes whatever the band has left and the height is set directly. The
+   backdrop is object-fit: cover, so it reframes rather than distorting. */
+.wreel .reel.embedded {
+  aspect-ratio: auto;
+  height: clamp(250px, 20vw, 420px);
 }
 /* The reel renders with role="dialog", so its click target is laid over it
    rather than wrapping it — nesting a button inside one is invalid, and the
@@ -10514,43 +10528,18 @@ body {
 }
 .wbrief.mine .wbrief-head { color: var(--accent); }
 
-/* The reel's embedded styles were tuned for a wide in-grid player. At preview
-   width the top bar's network line wrapped onto a second row and the live
-   badge broke mid-word, so the chrome is scaled down for this slot only. */
-.wreel .reel.embedded .reel-bar {
-  height: 26px;
-  gap: 7px;
-  padding: 0 9px;
-}
+/* Now that the reel takes the remainder of the band it sits at roughly the
+   width its embedded styles were drawn for, so those are left alone. The only
+   thing that still needs saying is that the top bar must stay on one line —
+   the network line wrapped to a second row and pushed the badge into breaking
+   mid-word, which no amount of font sizing fixes on its own. */
 .wreel .reel.embedded .reel-live {
-  font-size: 7.5px;
-  letter-spacing: 0.1em;
-  padding: 2px 6px;
   white-space: nowrap;
   flex: none;
 }
 .wreel .reel.embedded .reel-net {
-  font-size: 7.5px;
-  letter-spacing: 0.07em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
-}
-.wreel .reel.embedded .reel-segment-name { font-size: 19px; }
-.wreel .reel.embedded .reel-ident-name,
-.wreel .reel.embedded .reel-bumper-t { font-size: 15px; }
-.wreel .reel.embedded .reel-head { font-size: 15px; }
-.wreel .reel.embedded .reel-body { font-size: 11px; max-width: 34ch; }
-.wreel .reel.embedded .reel-kick { font-size: 8px; }
-.wreel .reel.embedded .reel-panel-h { font-size: 12px; }
-.wreel .reel.embedded .reel-row {
-  font-size: 10px;
-  padding: 5px 0;
-}
-.wreel .reel.embedded .reel-ad-brand {
-  font-size: 20px;
-}
-.wreel .reel.embedded .reel-ad-tag {
-  font-size: 11px;
 }
