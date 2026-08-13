@@ -165,7 +165,7 @@ export function Vault() {
             </div>
             <div className="line">
               <span>Available {moneyShort(avail)}</span>
-              <span>0.05%/cycle</span>
+              <span>0.05% / 12h</span>
             </div>
             <div className="dbtns">
               <button className="borrow" disabled={avail <= 0} onClick={doBorrow}>

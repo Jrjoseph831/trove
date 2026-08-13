@@ -41,6 +41,21 @@ export function ticksToTvt(ticks: number): string {
   return `${Math.round(h / 24)}d`;
 }
 
+/**
+ * TVT hours in one MARKET cycle — the 6-real-hour settlement beat the world
+ * turns on. A different clock from the production tick, and the reason "cycle"
+ * was ambiguous on screen: it meant 10 minutes on the Factory and 12 hours on
+ * the debt line.
+ */
+export const MARKET_CYCLE_TVT_HOURS = 12;
+
+/** A count of market cycles as a readable TVT duration. */
+export function cyclesToTvt(cycles: number): string {
+  const h = cycles * MARKET_CYCLE_TVT_HOURS;
+  if (h < 48) return `${Math.round(h)}h`;
+  return `${Math.round(h / 24)}d`;
+}
+
 /** The current TVT wall clock, e.g. "14:56". */
 export function tvtClock(now: number = Date.now()): string {
   const g = (now * TROVE_SPEED) % 86_400_000;

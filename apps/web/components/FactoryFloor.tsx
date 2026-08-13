@@ -10,6 +10,7 @@ import {
   lineLanes,
 } from "@trove/engine";
 import { money } from "@/lib/format";
+import { perHour } from "@/lib/tvt";
 import { useTrove } from "@/lib/trove";
 
 const clip = (s: string, n: number) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
@@ -74,7 +75,7 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
         ? "warn"
         : "ok";
   const statusMsg = overCap
-    ? `Jammed — losing ${lostTot.toLocaleString()}/cy to congestion`
+    ? `Jammed — losing ${Math.round(perHour(lostTot)).toLocaleString()}/hr to congestion`
     : !anyRunning
       ? "Floor idle — no lines running"
       : util >= 0.85
@@ -110,14 +111,14 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
       <div className="floor-kpis">
         <div className="fk">
           <span className="fk-lab">Shipping</span>
-          <span className="fk-val">{realizedTot.toLocaleString()}<small>/cy</small></span>
+          <span className="fk-val">{Math.round(perHour(realizedTot)).toLocaleString()}<small>/hr</small></span>
           <span className="fk-sub">of {potentialTot.toLocaleString()} built</span>
         </div>
         <div className={`fk ${lostTot > 0 ? "lost" : ""}`}>
           <span className="fk-lab">Lost to jams</span>
           <span className="fk-val">
             {lostTot > 0 ? `−${lostTot.toLocaleString()}` : "none"}
-            {lostTot > 0 ? <small>/cy</small> : null}
+            {lostTot > 0 ? <small>/hr</small> : null}
           </span>
           <span className="fk-sub">{lostTot > 0 ? "add dock capacity" : "all flowing"}</span>
         </div>
@@ -140,7 +141,7 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
         <span className="cons-status-dot" />
         <span className="cons-status-msg">{statusMsg}</span>
         <span className="cons-status-sub">
-          {realizedTot.toLocaleString()}/cy shipping · {lines.length} line
+          {Math.round(perHour(realizedTot)).toLocaleString()}/hr shipping · {lines.length} line
           {lines.length === 1 ? "" : "s"} · {docks} dock{docks === 1 ? "" : "s"}
         </span>
       </div>
@@ -169,7 +170,7 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
                       ? "coming online…"
                       : l.idle
                         ? "no inputs"
-                        : `${realized.toLocaleString()}/cy${throttled ? ` of ${l.rate.toLocaleString()}` : ""} · ${l.lanes} lane${l.lanes === 1 ? "" : "s"}`}
+                        : `${Math.round(perHour(realized)).toLocaleString()}/hr${throttled ? ` of ${Math.round(perHour(l.rate)).toLocaleString()}` : ""} · ${l.lanes} lane${l.lanes === 1 ? "" : "s"}`}
                   </span>
                 </div>
                 <span className={`cons-tag ${st.dot}`}>{st.tag}</span>
