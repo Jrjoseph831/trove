@@ -29,6 +29,23 @@
 
   --r: 10px;
   --rail: 256px;
+
+  /* Elevation, as one token rather than a value copied per component.
+     Three stacked shadows — a tight contact edge, a short ambient, and a long
+     soft one — because a single blur reads as a drop-shadow effect while a
+     stack reads as an object sitting on a surface. --lift-2 is the hover.
+     Cards used to be flat outlines at rest, which is most of why the app
+     looked like a wireframe. */
+  --lift-1:
+    0 1px 1px rgba(0, 0, 0, 0.04),
+    0 2px 6px -2px rgba(0, 0, 0, 0.06),
+    0 12px 28px -20px rgba(0, 0, 0, 0.28);
+  --lift-2:
+    0 1px 1px rgba(0, 0, 0, 0.05),
+    0 6px 14px -6px rgba(0, 0, 0, 0.12),
+    0 22px 46px -24px rgba(0, 0, 0, 0.5);
+  /* A hairline of light on the top edge, as if the surface caught it. */
+  --edge: inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
 /* Dark mode — a premium gallery-dark counterpart (warm near-black, brighter
@@ -39,6 +56,19 @@
   --paper-2: #1d1a14;
   --line: #29251f;
   --line-2: #3a352b;
+
+  /* Dark needs deeper shadow to separate a near-black card from a near-black
+     page, and the top-edge highlight has to drop to a whisper or it turns
+     into a visible white line rather than caught light. */
+  --lift-1:
+    0 1px 1px rgba(0, 0, 0, 0.3),
+    0 2px 8px -2px rgba(0, 0, 0, 0.35),
+    0 14px 32px -20px rgba(0, 0, 0, 0.75);
+  --lift-2:
+    0 1px 1px rgba(0, 0, 0, 0.35),
+    0 8px 18px -6px rgba(0, 0, 0, 0.5),
+    0 26px 52px -24px rgba(0, 0, 0, 0.9);
+  --edge: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 
   --ink: #ece7dd;
   --ink-dim: #a39c8f;
@@ -747,6 +777,7 @@ body::after {
   align-items: start;
 }
 .bento-card {
+  box-shadow: var(--lift-1);
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--bento-r);
@@ -760,7 +791,7 @@ body::after {
 }
 .bento-card.hoverable:hover {
   border-color: var(--line-2);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+  box-shadow: var(--lift-2);
 }
 .bento-card.hoverable:active {
   transform: translateY(1px) scale(0.997);
@@ -1189,6 +1220,7 @@ body::after {
   gap: 16px;
 }
 .tile {
+  box-shadow: var(--lift-1);
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--bento-r);
@@ -3956,6 +3988,7 @@ body::after {
   margin: 22px 0 10px;
 }
 .ordercard {
+  box-shadow: var(--lift-1);
   border: 1px solid var(--line);
   border-radius: var(--bento-r);
   padding: 16px 18px;
@@ -4564,6 +4597,7 @@ body::after {
 
 /* ── Factory engineering bay ─────────────────────────────────────────────── */
 .bay {
+  box-shadow: var(--lift-1);
   border: 1px solid var(--line);
   border-left: 3px solid var(--line);
   border-radius: 12px;
@@ -5068,6 +5102,7 @@ details.bay-modules > summary.bay-sub:hover {
   gap: 10px;
 }
 .modcard {
+  box-shadow: var(--lift-1);
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -7705,11 +7740,12 @@ details.bay-modules > summary.bay-sub:hover {
   cursor: pointer;
   overflow: hidden;
   transition: border-color 0.16s ease, box-shadow 0.18s ease, transform 0.13s ease;
+  box-shadow: var(--lift-1);
 }
 .site-card:hover {
   border-color: var(--line-2);
   background: var(--paper-2);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+  box-shadow: var(--lift-2);
 }
 .site-card:active {
   transform: translateY(1px) scale(0.997);
@@ -8715,12 +8751,17 @@ details.bay-modules > summary.bay-sub:hover {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 .est-card {
+  box-shadow: var(--lift-1);
   text-align: left; padding: 0; cursor: pointer; overflow: hidden;
   background: var(--paper); border: 1px solid var(--line); border-radius: var(--bento-r);
   transition: transform .14s, box-shadow .14s, border-color .14s;
   display: flex; flex-direction: column;
 }
-.est-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.18); border-color: var(--accent); }
+.est-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--lift-2);
+  border-color: var(--accent);
+}
 
 .est-photo, .est-hero {
   position: relative; overflow: hidden; display: flex;
@@ -8812,11 +8853,12 @@ details.bay-modules > summary.bay-sub:hover {
    does, then the money. Three bands, so 500 of them stay scannable instead of
    becoming a wall of near-identical numbers. */
 .deal-card {
+  box-shadow: var(--lift-1);
   display: flex; flex-direction: column; gap: 10px; text-align: left; cursor: pointer;
   background: var(--paper); border: 1px solid var(--line); border-radius: var(--bento-r);
   padding: 14px 16px; transition: transform .12s, box-shadow .12s, border-color .12s;
 }
-.deal-card:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.14); border-color: var(--accent); }
+.deal-card:hover { transform: translateY(-2px); box-shadow: var(--lift-2); border-color: var(--accent); }
 /* Already holding equity — worth spotting at a glance in a long list. */
 .deal-card.held { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
 
@@ -9142,9 +9184,12 @@ body {
    Clickable cards lifted flatly (no depth). Give tiles + the spotlight a soft
    shadow on hover, and the mover rows a subtle highlight — one consistent,
    premium interaction language across the page. */
-.tile:hover { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16); }
+/* One elevation language. These were single-blur shadows, which read as a
+   drop-shadow filter rather than a lift, and being later in the file they also
+   overrode the token set on .tile above. */
+.tile:hover { box-shadow: var(--lift-2); }
 .spotlight { transition: border-color 0.15s ease, box-shadow 0.18s ease, transform 0.13s ease; }
-.spotlight:hover { border-color: var(--line-2); box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16); }
+.spotlight:hover { border-color: var(--line-2); box-shadow: var(--lift-2); }
 .spotlight:active { transform: translateY(1px) scale(0.997); }
 .brow { transition: background 0.12s ease; border-radius: 8px; }
 .brow:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
@@ -9378,28 +9423,12 @@ body {
   background: var(--paper);
   overflow: hidden;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  /* Cards previously sat flat on the page and only lifted on hover, so a grid
-     at rest was a set of outlines. Three stacked shadows — a tight contact
-     edge, a short ambient, and a long soft one — read as an object on a
-     surface where a single blur reads as a drop-shadow effect. */
-  box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.04),
-    0 2px 6px -2px rgba(0, 0, 0, 0.06),
-    0 12px 28px -20px rgba(0, 0, 0, 0.28);
-}
-:root[data-theme="dark"] .pcard {
-  box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.3),
-    0 2px 8px -2px rgba(0, 0, 0, 0.35),
-    0 14px 32px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--lift-1);
 }
 .pcard:hover {
   transform: translateY(-3px);
   border-color: color-mix(in srgb, var(--accent) 38%, var(--line));
-  box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.05),
-    0 6px 14px -6px rgba(0, 0, 0, 0.12),
-    0 22px 46px -24px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--lift-2);
 }
 /* The item plate. A flat 4% wash behind every icon is what made the grid read
    as placeholder tiles — 1,456 identical grey squares. These are built from
@@ -9931,6 +9960,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 .sup-card {
+  box-shadow: var(--lift-1);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -10182,26 +10212,93 @@ body {
   z-index: 38; /* under the drawer rail (40) and its scrim */
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 74px;
+  /* Sized and coloured to be found, not just to exist. At 22px wide in the
+     muted grey it read as a seam in the page rather than a control — the one
+     thing on screen that has to be discoverable, because with the rail closed
+     it is the only way back to it. 30x96 overcorrected and started to intrude,
+     so it sits between the two. */
+  width: 25px;
+  height: 80px;
   padding: 0;
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
   border-left: 0;
-  border-radius: 0 10px 10px 0;
-  color: var(--muted);
+  border-radius: 0 12px 12px 0;
+  color: var(--accent);
   cursor: pointer;
-  box-shadow: 2px 0 14px -8px rgba(27, 23, 20, 0.4);
+  box-shadow:
+    3px 0 10px -4px rgba(27, 23, 20, 0.28),
+    6px 0 26px -12px rgba(27, 23, 20, 0.5);
   transition:
     width 0.16s ease,
+    background 0.16s ease,
     color 0.16s ease;
+}
+/* A quiet pulse on the edge, so the eye catches it once without it becoming
+   something that blinks at you for the whole stream. */
+.nav-peek::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
+  animation: nav-peek-cue 3.2s ease-out 3;
+}
+@keyframes nav-peek-cue {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 40%, transparent); }
+  40%, 100% { box-shadow: 0 0 0 9px transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-peek::after { animation: none; }
 }
 .nav-peek.show {
   display: flex;
 }
 .nav-peek:hover {
-  width: 28px;
-  color: var(--ink);
+  width: 32px;
+  background: color-mix(in srgb, var(--accent) 14%, var(--paper));
+  color: var(--accent);
+}
+
+/* The collapse handle: the same tab, on the rail's far edge, pointing back the
+   other way — opening and closing as one gesture in two directions. It rides
+   the rail's own width, so it stays attached if that ever changes. Hidden on
+   narrow screens, where the rail is a drawer and the scrim already closes it. */
+.nav-collapse {
+  position: fixed;
+  left: var(--rail);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 38;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 80px;
+  padding: 0;
+  background: var(--paper);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  border-left: 0;
+  border-radius: 0 12px 12px 0;
+  color: var(--accent);
+  cursor: pointer;
+  box-shadow:
+    3px 0 10px -4px rgba(27, 23, 20, 0.28),
+    6px 0 26px -12px rgba(27, 23, 20, 0.5);
+  transition:
+    width 0.16s ease,
+    background 0.16s ease,
+    color 0.16s ease;
+}
+.nav-collapse:hover {
+  width: 32px;
+  background: color-mix(in srgb, var(--accent) 14%, var(--paper));
+}
+@media (max-width: 780px) {
+  .nav-collapse {
+    display: none;
+  }
 }
 /* On narrow screens the rail is a drawer — mounted, but off-canvas — so the
    handle is the only way in regardless of which page you're on. */
