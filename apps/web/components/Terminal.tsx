@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { validateHoldingName } from "@trove/data";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
@@ -26,6 +26,8 @@ import { Wire } from "./Wire";
 export function Terminal() {
   const { mounted, authReady, mode, tab, navOpen, setNavOpen, reveal, signedIn, signIn } =
     useTrove();
+  // Declared above the boot gate: hooks can't sit after a conditional return.
+  const [railClosed, setRailClosed] = useState(false);
 
   // Boot gate: render a deterministic shell on the server and the first client
   // paint (the engine uses randomness, so live data must be client-only).
@@ -49,20 +51,47 @@ export function Terminal() {
   const effectiveTab = canBrowseFull ? tab : "catalog";
 
   // The Catalog carries its OWN department sidebar, so showing the app rail
-  // beside it puts two navigations on the left and squeezes the storefront.
-  // Collapse it there and give the grid the room; the ☰ brings it back.
-  const railHidden = !canBrowseFull || (effectiveTab === "catalog" && !navOpen);
+  // beside it puts two navigations on the left and squeezes the storefront —
+  // it starts folded there and the handle brings it back. Everywhere else the
+  // rail starts open, and `railClosed` is the player folding it away by hand.
+  //
+  // Two flags rather than one because they answer different questions:
+  // navOpen is "the drawer is pulled out", which is the only thing that means
+  // anything on a narrow screen, while railClosed is a deliberate collapse on
+  // a wide one. Collapsing sets both, so the rail can't end up mounted but
+  // parked off-canvas with no way to reach it.
+  const railOpen = effectiveTab === "catalog" ? navOpen : !railClosed;
+  const railHidden = !canBrowseFull || !railOpen;
+  const openRail = () => {
+    setRailClosed(false);
+    setNavOpen(true);
+  };
+  const closeRail = () => {
+    setRailClosed(true);
+    setNavOpen(false);
+  };
 
   return (
     <div className={`app ${navOpen ? "navopen" : ""} ${railHidden ? "no-rail" : ""}`}>
       {canBrowseFull && navOpen && (
-        <button
-          className="nav-scrim"
-          aria-label="Close navigation"
-          onClick={() => setNavOpen(false)}
-        />
+        <button className="nav-scrim" aria-label="Close navigation" onClick={closeRail} />
       )}
       {canBrowseFull && !railHidden && <Rail />}
+
+      {/* The way back out. Mirrors the open handle on the rail's far edge, with
+          the chevron pointing the other way, so opening and closing are the
+          same gesture in opposite directions. Desktop only — on a narrow
+          screen the rail is a drawer and the scrim already closes it. */}
+      {canBrowseFull && !railHidden && (
+        <button
+          className="nav-collapse"
+          onClick={closeRail}
+          aria-label="Collapse navigation"
+          title="Collapse navigation"
+        >
+          <ChevronLeft size={17} strokeWidth={2.75} />
+        </button>
+      )}
 
       {/* A tab on the left edge rather than a hamburger in the toolbar. It sits
           where the rail would be, so it reads as the nav folded away and the
@@ -75,11 +104,11 @@ export function Terminal() {
       {canBrowseFull && (
         <button
           className={`nav-peek ${railHidden ? "show" : ""}`}
-          onClick={() => setNavOpen(true)}
+          onClick={openRail}
           aria-label="Open navigation"
           title="Open navigation"
         >
-          <ChevronRight size={19} strokeWidth={2.75} />
+          <ChevronRight size={17} strokeWidth={2.75} />
         </button>
       )}
 

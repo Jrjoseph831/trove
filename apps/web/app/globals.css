@@ -10215,9 +10215,10 @@ body {
   /* Sized and coloured to be found, not just to exist. At 22px wide in the
      muted grey it read as a seam in the page rather than a control — the one
      thing on screen that has to be discoverable, because with the rail closed
-     it is the only way back to it. */
-  width: 30px;
-  height: 96px;
+     it is the only way back to it. 30x96 overcorrected and started to intrude,
+     so it sits between the two. */
+  width: 25px;
+  height: 80px;
   padding: 0;
   background: var(--paper);
   border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
@@ -10255,9 +10256,49 @@ body {
   display: flex;
 }
 .nav-peek:hover {
-  width: 38px;
+  width: 32px;
   background: color-mix(in srgb, var(--accent) 14%, var(--paper));
   color: var(--accent);
+}
+
+/* The collapse handle: the same tab, on the rail's far edge, pointing back the
+   other way — opening and closing as one gesture in two directions. It rides
+   the rail's own width, so it stays attached if that ever changes. Hidden on
+   narrow screens, where the rail is a drawer and the scrim already closes it. */
+.nav-collapse {
+  position: fixed;
+  left: var(--rail);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 38;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 80px;
+  padding: 0;
+  background: var(--paper);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  border-left: 0;
+  border-radius: 0 12px 12px 0;
+  color: var(--accent);
+  cursor: pointer;
+  box-shadow:
+    3px 0 10px -4px rgba(27, 23, 20, 0.28),
+    6px 0 26px -12px rgba(27, 23, 20, 0.5);
+  transition:
+    width 0.16s ease,
+    background 0.16s ease,
+    color 0.16s ease;
+}
+.nav-collapse:hover {
+  width: 32px;
+  background: color-mix(in srgb, var(--accent) 14%, var(--paper));
+}
+@media (max-width: 780px) {
+  .nav-collapse {
+    display: none;
+  }
 }
 /* On narrow screens the rail is a drawer — mounted, but off-canvas — so the
    handle is the only way in regardless of which page you're on. */
