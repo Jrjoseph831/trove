@@ -80,42 +80,53 @@ export function SupplyPanel() {
             const level = cover >= COVER_OK ? "ok" : cover >= COVER_LOW ? "low" : "crit";
             const rule = (state.reorders ?? []).find((r) => r.itemId === n.it.id);
             return (
-              <div className={`sup-row ${level}`} key={n.it.id}>
-                <span className="sup-nm">
-                  <i className="sup-dot" />
-                  {n.it.name}
-                </span>
-                <span className="sup-hold">
-                  {Math.floor(n.onHand).toLocaleString()}
-                  <em>on hand</em>
-                </span>
-                <span className="sup-burn">
-                  {Math.round(perHour(n.perTick)).toLocaleString()}/hr
-                  <em>burn</em>
-                </span>
-                <span className="sup-cover">
-                  {/* Was "N ticks cover" — a unit nothing on screen defined,
-                      so "0 ticks" told you nothing about whether this mattered
-                      in ten minutes or ten hours. */}
-                  {cover === Infinity ? "—" : ticksToTvt(cover)}
-                  <em>cover left</em>
-                </span>
-                {n.inbound > 0 && (
-                  <span className="sup-inbound">
-                    +{n.inbound.toLocaleString()} inbound
+              <div className={`sup-card ${level}`} key={n.it.id}>
+                <div className="sc-top">
+                  <span className="sup-nm">
+                    <i className="sup-dot" />
+                    {n.it.name}
                   </span>
-                )}
-                {rule && (
-                  <span className="sup-rule" title="Auto-reorder is on">
-                    auto ≤{rule.floor.toLocaleString()}
+                  <button
+                    className="sup-btn"
+                    onClick={() => setOpenFor(openFor === n.it.id ? null : n.it.id)}
+                  >
+                    {openFor === n.it.id ? "Close" : "Order"}
+                  </button>
+                </div>
+
+                {/* The three numbers that decide whether to act, in the same
+                    label-under-value shape the Deal Room cards use. Cover is
+                    the headline — it's the one that answers "do I care yet?" */}
+                <div className="sc-metrics">
+                  <span className="sc-metric">
+                    <b>{Math.floor(n.onHand).toLocaleString()}</b>
+                    <i>on hand</i>
                   </span>
+                  <span className="sc-metric">
+                    <b>{Math.round(perHour(n.perTick)).toLocaleString()}/hr</b>
+                    <i>burn</i>
+                  </span>
+                  <span className={`sc-metric lead ${level}`}>
+                    <b>{cover === Infinity ? "—" : ticksToTvt(cover)}</b>
+                    <i>cover left</i>
+                  </span>
+                </div>
+
+                {(n.inbound > 0 || rule) && (
+                  <div className="sc-tags">
+                    {n.inbound > 0 && (
+                      <span className="sup-inbound">
+                        +{n.inbound.toLocaleString()} inbound
+                      </span>
+                    )}
+                    {rule && (
+                      <span className="sup-rule" title="Auto-reorder is on">
+                        auto ≤{rule.floor.toLocaleString()}
+                      </span>
+                    )}
+                  </div>
                 )}
-                <button
-                  className="sup-btn"
-                  onClick={() => setOpenFor(openFor === n.it.id ? null : n.it.id)}
-                >
-                  {openFor === n.it.id ? "Close" : "Order"}
-                </button>
+
                 {openFor === n.it.id && (
                   <OrderRow
                     need={n}

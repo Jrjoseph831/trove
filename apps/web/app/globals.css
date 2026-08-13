@@ -9798,53 +9798,61 @@ body {
   font-size: 11.5px;
   color: var(--ink-faint);
 }
+/* Supply reads as CARDS, not a dense table row. Seven columns of small
+   numbers is a spreadsheet — the question here is only ever "is anything about
+   to stop?", and a card answers that from across the room. Same metric shape
+   as the Deal Room so the two screens speak one visual language. */
 .supply-list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.sup-card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-.sup-row {
-  display: grid;
-  grid-template-columns: 1.6fr repeat(3, 0.8fr) auto auto auto;
-  align-items: center;
-  gap: 12px;
-  padding: 11px 12px;
+  gap: 10px;
+  padding: 13px 14px;
   border: 1px solid var(--line);
-  border-radius: 11px;
-  font-size: 13px;
+  border-radius: 12px;
+  background: var(--paper);
+  transition: border-color .12s;
 }
-.sup-row em {
-  display: block;
-  font-style: normal;
-  font-size: 9.5px;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  margin-top: 2px;
-}
+/* The border IS the alarm — spotted before any number is read. */
+.sup-card.low { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); }
+.sup-card.crit { border-color: color-mix(in srgb, var(--danger, #c0492b) 55%, var(--line)); }
+
+.sc-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .sup-nm {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-weight: 650;
-  color: var(--ink);
+  display: flex; align-items: center; gap: 7px; min-width: 0;
+  font-size: 13px; font-weight: 600; color: var(--ink);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .sup-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  flex: none;
+  flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%;
   background: var(--up);
 }
-.sup-row.low .sup-dot { background: var(--accent); }
-.sup-row.crit .sup-dot { background: var(--danger, #c0492b); }
-.sup-row.crit { border-color: color-mix(in srgb, var(--danger, #c0492b) 45%, var(--line)); }
-.sup-hold,
-.sup-burn,
-.sup-cover {
-  font-variant-numeric: tabular-nums;
-  color: var(--ink);
+.sup-card.low .sup-dot { background: var(--accent); }
+.sup-card.crit .sup-dot { background: var(--danger, #c0492b); }
+
+.sc-metrics {
+  display: flex; gap: 16px; align-items: baseline;
+  border-top: 1px solid var(--line); padding-top: 9px;
 }
+.sc-metric { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.sc-metric b {
+  font-size: 15px; font-weight: 700; color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.sc-metric i {
+  font-style: normal; font-size: 9.5px; letter-spacing: .11em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+/* Cover is the headline: it's the number that answers "do I care yet?" */
+.sc-metric.lead { margin-left: auto; text-align: right; }
+.sc-metric.lead.low b { color: var(--accent); }
+.sc-metric.lead.crit b { color: var(--danger, #c0492b); }
+
+.sc-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .sup-inbound,
 .sup-rule {
   font-size: 10.5px;
@@ -9862,7 +9870,6 @@ body {
 }
 .sup-btn:hover { color: var(--ink); border-color: var(--ink-faint); }
 .sup-order {
-  grid-column: 1 / -1;
   border-top: 1px solid var(--line);
   margin-top: 10px;
   padding-top: 12px;
@@ -9962,11 +9969,8 @@ body {
   color: var(--accent);
 }
 @media (max-width: 860px) {
-  .sup-row {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10px;
-  }
-  .sup-btn { grid-column: 2; justify-self: end; }
+  /* Cards already stack via auto-fill; only the order panel inside one needs
+     to give up its side-by-side layout on a narrow screen. */
   .sup-place { margin-left: 0; width: 100%; }
   .sup-quote { gap: 14px; font-size: 13px; }
 }
