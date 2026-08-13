@@ -2116,18 +2116,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82706,
+    "lastEventCycle": 82712,
     "events": [
-      {
-        "cycle": 82564,
-        "kind": "earnings_miss",
-        "size": "major",
-        "head": "Bruncrest Works Plunges as Post-Meridian Overhaul Fails to Stem Losses",
-        "body": "Bruncrest Works reported a quarterly loss of $310 million, far wider than expected, as the exit from its Meridian segment left a revenue hole the reset has yet to fill. CEO Corwin Hale conceded the turnaround was 'moving slower than I promised,' warning of a second round of cost cuts as the Meridian lawsuit grinds on.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82570,
         "kind": "leadership_change",
@@ -2352,6 +2342,16 @@
         "body": "Bruncrest posted revenue of $3.4 billion, up 41% year over year, as both Aria Prime lines ran near full capacity against the $5.2B supply pact. CEO Ines Marlow raised full-year guidance and hinted at a third line, saying demand 'has not blinked.' Operating margins widened to 22% from 17% a year earlier.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82712,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Bruncrest Works Unveils Aria Ultra as Marlow Bets House's Future on Next-Gen Compute",
+        "body": "CEO Ines Marlow took the stage to launch Aria Ultra, a compute platform she called 'the biggest leap since we started building,' promising a threefold density gain over the current Aria Prime line. Bruncrest committed $3.8B to retooling both Aria lines for the new architecture, a move Marlow framed as decisive despite the disruption to running orders. Analysts noted the launch places nearly the entire near-term backlog on a single unproven product.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -2936,18 +2936,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82706,
+    "lastEventCycle": 82712,
     "events": [
-      {
-        "cycle": 82543,
-        "kind": "restructure",
-        "size": "major",
-        "head": "Brunstone & Sons Kills Ardent Line, Cuts 2,000 Jobs in Sweeping Reset",
-        "body": "New CEO Royce Lambourne announced the permanent discontinuation of the Ardent Hauler and a 15% workforce reduction, roughly 2,000 roles, as the company retrenches around its Power & Storage unit. Lambourne pledged a redesigned pack architecture and a fresh vehicle platform by 2028, calling the recall 'a failure we will not repeat.' The company took a further charge to close Ardent tooling and settle supplier contracts.",
-        "effects": {
-          "automotive": -0.22
-        }
-      },
       {
         "cycle": 82550,
         "kind": "product_launch",
@@ -3173,6 +3163,16 @@
         "head": "Brunstone & Sons Ousts Halden Crowe as Board Moves to Contain Vault Cell Crisis",
         "body": "The board removed CEO Halden Crowe on Thursday, naming operations veteran Dagny Frost to steer the company through the widening Vault Cell probe and mounting recall bills. Frost inherits a $2.1 billion litigation reserve and a regulator demanding sworn testimony on what executives knew and when. Directors said the change was needed to 'restore credibility with authorities and the public.'",
         "effects": {}
+      },
+      {
+        "cycle": 82712,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Brunstone & Sons Hit With Class Action Over Vault Cell Recall as Losses Deepen",
+        "body": "A consolidated class action seeking $900M was filed against Brunstone & Sons over the 1.4 million recalled Vault Cell Guard Pro units, alleging the company knew of the defect months before regulators forced action. New CEO Dagny Frost pledged to 'fight where we're right and settle where we're wrong,' but the suit compounds a quarter already scarred by recall charges. Interim leadership has frozen the Power & Storage expansion plan pending the outcome.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -5201,7 +5201,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82697,
+    "lastEventCycle": 82712,
     "events": [
       {
         "cycle": 0,
@@ -5329,6 +5329,16 @@
         "body": "Cranegrove edged past forecasts with a 6% revenue gain as its $1.2B corridor framework began contributing steady earthmoving deployments. Vale Calder noted both corridor depots are now running at target utilization, with backlog secured through 2029.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82712,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Cranegrove Extends Corridor Framework With $650M Add-On Through 2030",
+        "body": "Cranegrove secured a $650M expansion of its corridor framework contract, extending committed earthmoving work through 2030 and pushing the backlog to a record. CEO Vale Calder said the add-on 'rewards the delivery record' and would be served largely from the two existing corridor depots. The house reaffirmed its disciplined pace on further capacity additions.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -5487,7 +5497,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82698,
+    "lastEventCycle": 82712,
     "events": [
       {
         "cycle": 0,
@@ -5623,6 +5633,16 @@
         "size": "standard",
         "head": "Drossware Widens Cleaning-Line Recall as Regulators Cite Second Labeling Defect",
         "body": "Nadia Wold expanded the recall to cover 1.9 million additional units after the ongoing regulatory review uncovered a separate concentration error in a downstream batch. The broadened action is expected to cost $95 million and prompted Drossware to halt one cleaning-line facility for a full audit. Wold said the company is overhauling its labeling controls but stopped short of forecasting when the line would resume full output.",
+        "effects": {
+          "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82712,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Drossware Overhauls Cleaning Division as Wold Draws Line Under Labeling Crisis",
+        "body": "CEO Nadia Wold announced a full restructuring of the Cleaning & Jansan unit, consolidating three plants into two and installing new quality oversight after twin labeling defects triggered a widening recall. The move carries a $180M charge but Wold said it 'ends the improvisation and rebuilds trust from the floor up.' Regulators were briefed on the plan as their review of the line continues.",
         "effects": {
           "consumer": -0.13
         }
@@ -7034,7 +7054,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82698,
+    "lastEventCycle": 82712,
     "events": [
       {
         "cycle": 0,
@@ -7170,6 +7190,16 @@
         "size": "standard",
         "head": "Forgegrave Industries Wins Regional Distributor Network in Second Beyond-Meridian Deal",
         "body": "Petra Thorne secured a $310 million contract to supply material-handling systems to the Ridgeway distributor network, extending Forgegrave's reach into a third territory. The multi-year agreement builds directly on the Coastward win and lifts the company's out-of-region revenue mix above 30% for the first time. Thorne called the pace 'deliberate' and reaffirmed existing capacity plans.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82712,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Forgegrave Industries Beats as Beyond-Meridian Deals Drive Broadest Quarter Yet",
+        "body": "Forgegrave topped estimates with revenue up 9% as the Coastward and regional distributor contracts contributed a full quarter of material-handling volume. CEO Petra Thorne said the expansion beyond Meridian had 'proven the model travels,' with new-region customers now near a fifth of the book. The house raised its full-year outlook modestly.",
         "effects": {
           "logistics": 0.13
         }
@@ -10668,7 +10698,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82701,
+    "lastEventCycle": 82712,
     "events": [
       {
         "cycle": 0,
@@ -10824,6 +10854,16 @@
         "size": "flash",
         "head": "Korrworks Beats Again as First Hub Sustains Above-Plan Volumes",
         "body": "Korrworks edged past estimates as its inaugural cross-region hub held throughput roughly 12% above plan for a second straight quarter. CEO Rhys Throne said construction on the second hub remained on schedule with anchor-tenant talks 'well advanced.' Material-handling utilization reached a company record during the period.",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82712,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Korrworks Beats a Third Time as First Hub Holds Above-Plan Pace",
+        "body": "Korrworks posted a third consecutive beat, with the cross-region hub sustaining volumes roughly 12% above initial plan. CEO Rhys Throne said construction on the second hub remains on schedule, calling the early performance 'a template we intend to copy.' Handling margins ticked up on improved utilization.",
         "effects": {
           "logistics": 0.06
         }
@@ -11986,7 +12026,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82699,
+    "lastEventCycle": 82712,
     "events": [
       {
         "cycle": 0,
@@ -12132,6 +12172,16 @@
         "size": "flash",
         "head": "Marrowcyon Logs Fourth Straight Quiet Beat as Plumbing Margins Firm",
         "body": "Marrowcyon reported earnings a hair above guidance for the fourth consecutive quarter, with fixtures margins expanding roughly 40 basis points on stable input costs. CEO Theo Orne credited disciplined inventory management across both apparel and plumbing lines, and reaffirmed the full-year outlook without change.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82712,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Notches Fifth Straight Quiet Beat as Apparel Volumes Hold",
+        "body": "Marrowcyon reported another modest quarterly beat, its fifth in a row, with revenue up 2.1% as steady apparel orders offset flat fixtures demand. CEO Theo Orne, in his customary brief remarks, credited 'the same discipline that's carried us for decades.' Margins held within a narrow band, extending the house's reputation for undramatic consistency.",
         "effects": {
           "consumer": 0.06
         }
@@ -16918,7 +16968,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82694,
+    "lastEventCycle": 82712,
     "events": [
       {
         "cycle": 0,
@@ -17026,6 +17076,16 @@
         "body": "Wrenhaus posted a modest earnings beat, with fixture volumes up 6% ahead of the second Riverside plant's opening. CEO Quinn Thorne credited disciplined cost control and steady distribution-hub throughput. The new plant is expected to come online next quarter, adding capacity without disrupting the company's measured expansion cadence.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82712,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Wrenhaus Opens Second Riverside Fixture Plant, Lifting Corridor Capacity by a Third",
+        "body": "Wrenhaus brought its second Riverside fixture plant online, expanding total corridor output by an estimated 34% as demand for plumbing fixtures stays firm. CEO Quinn Thorne, keeping to the house's measured style, said the facility 'came in on plan and will pay for itself the way the first one did.' Initial lines are running at partial capacity with a staged ramp through year-end.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
