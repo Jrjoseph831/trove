@@ -46,12 +46,21 @@ function IncomingCard({ o, held, act }: { o: PvpOrder; held: number; act: OrderA
           {o.itemName}
         </Link>
       </div>
-      <div className="oc-meta">
-        <span>
-          Offer <b>{money(o.price)}</b> ({money(Math.round(o.price / o.qty))}/u)
+      <div className="oc-metrics">
+        <span className="oc-metric">
+          <b>{money(o.price)}</b>
+          <i>their offer</i>
         </span>
-        <span className={enough ? "pvp-ok" : "pvp-short"}>
-          you hold {held.toLocaleString()} {enough ? "✓" : `/ ${o.qty.toLocaleString()}`}
+        <span className="oc-metric">
+          <b>{money(Math.round(o.price / o.qty))}</b>
+          <i>each</i>
+        </span>
+        <span className={`oc-metric lead ${enough ? "pos" : "neg"}`}>
+          <b>
+            {held.toLocaleString()}
+            {enough ? "" : `/${o.qty.toLocaleString()}`}
+          </b>
+          <i>{enough ? "you can deliver" : "short"}</i>
         </span>
       </div>
 
@@ -113,11 +122,19 @@ function OutgoingCard({ o, cash, act }: { o: PvpOrder; cash: number; act: OrderA
           {o.itemName}
         </Link>
       </div>
-      <div className="oc-meta">
-        <span>
-          {yourMove ? "Their counter" : "Your offer"} <b>{money(o.price)}</b>
+      <div className="oc-metrics">
+        <span className="oc-metric">
+          <b>{money(o.price)}</b>
+          <i>{yourMove ? "their counter" : "your offer"}</i>
         </span>
-        <span>{yourMove ? "your move" : "awaiting seller"}</span>
+        <span className="oc-metric">
+          <b>{money(Math.round(o.price / Math.max(1, o.qty)))}</b>
+          <i>each</i>
+        </span>
+        <span className={`oc-metric lead ${yourMove ? "pos" : ""}`}>
+          <b>{yourMove ? "Your move" : "Sent"}</b>
+          <i>{yourMove ? "accept or counter" : "awaiting seller"}</i>
+        </span>
       </div>
       {/* Countering used to be the seller's move only, and only once — so the
           moment they countered, the buyer could accept or walk away and
@@ -455,25 +472,30 @@ export function Desk() {
                     </Link>
                     {o.youProduce && <span className="oc-make">◆ you make this</span>}
                   </div>
-                  <div className="oc-meta">
-                    <span>
-                      Pays <b>{money(o.quote)}</b>
-                      {makeCost != null && <> · ~{money(makeCost)} to make</>}
+                  {/* Same card language as the offers above — an accepted
+                      contract is the same decision one step later, and the two
+                      shouldn't look like different screens. */}
+                  <div className="oc-metrics">
+                    <span className="oc-metric">
+                      <b>{money(o.quote)}</b>
+                      <i>pays</i>
                     </span>
-                    <span>
-                      In vault: {o.held.toLocaleString()} / {o.qty.toLocaleString()}
-                    </span>
-                  </div>
-                  {profit != null && (
-                    <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
-                      {profit >= 0 ? "Profit " : "Loss "}
+                    <span className="oc-metric">
                       <b>
-                        {profit >= 0 ? "+" : ""}
-                        {money(profit)}
-                      </b>{" "}
-                      on delivery
-                    </div>
-                  )}
+                        {o.held.toLocaleString()}/{o.qty.toLocaleString()}
+                      </b>
+                      <i>in vault</i>
+                    </span>
+                    {profit != null && (
+                      <span className={`oc-metric lead ${profit >= 0 ? "pos" : "neg"}`}>
+                        <b>
+                          {profit >= 0 ? "+" : ""}
+                          {money(profit)}
+                        </b>
+                        <i>{profit >= 0 ? "on delivery" : "at a loss"}</i>
+                      </span>
+                    )}
+                  </div>
                   <div className="oc-bar">
                     <i
                       style={{ width: `${Math.min(100, (o.held / o.qty) * 100)}%` }}
