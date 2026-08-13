@@ -103,8 +103,27 @@ const TAB_IDS: readonly TabId[] = [
   "estates", "deals", "report", "companies", "goals",
 ];
 
+/**
+ * The tab the URL is currently pointing at, if any.
+ *
+ * Tabs live in the HASH (`/#factory`) rather than as real paths, because the
+ * root already has a catch-all route for company pages (`/[handle]`) — a
+ * `/factory` path would be ambiguous with a firm that happens to be called
+ * Factory. The hash gives real, shareable addresses and working back/forward
+ * without that collision, and without a server round trip to change screens.
+ */
+function hashTab(): TabId | null {
+  if (typeof window === "undefined") return null;
+  const v = window.location.hash.replace(/^#/, "");
+  return TAB_IDS.includes(v as TabId) ? (v as TabId) : null;
+}
+
 function storedTab(): TabId {
   if (typeof window === "undefined") return "trending";
+  // The URL wins: a link someone sent, or a back/forward step, should decide
+  // the screen. localStorage is only the memory of where you left off.
+  const fromUrl = hashTab();
+  if (fromUrl) return fromUrl;
   const v = window.localStorage.getItem(TAB_KEY);
   return TAB_IDS.includes(v as TabId) ? (v as TabId) : "trending";
 }
@@ -408,10 +427,34 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   // Restored lazily, not read during render on the server — a mismatch between
   // the server's "trending" and the client's stored tab would hydrate wrong.
   const [tab, setTabState] = useState<TabId>("trending");
-  useEffect(() => setTabState(storedTab()), []);
+  useEffect(() => {
+    const initial = storedTab();
+    setTabState(initial);
+    // Coming back from an item page lands on "/" with no hash. Name the screen
+    // in the address bar so the two agree — replace, not push, so it doesn't
+    // leave a phantom entry between you and the page you came from.
+    if (!hashTab()) window.history.replaceState(null, "", `#${initial}`);
+    // Back/forward, and any link that changes only the hash, must move the
+    // screen — otherwise the address bar and the page disagree, which is what
+    // made refreshing feel like it lost your place.
+    const onNav = () => {
+      const t = hashTab();
+      if (t) setTabState(t);
+    };
+    window.addEventListener("hashchange", onNav);
+    window.addEventListener("popstate", onNav);
+    return () => {
+      window.removeEventListener("hashchange", onNav);
+      window.removeEventListener("popstate", onNav);
+    };
+  }, []);
   const setTab = useCallback((t: TabId) => {
     setTabState(t);
-    if (typeof window !== "undefined") window.localStorage.setItem(TAB_KEY, t);
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem(TAB_KEY, t);
+    // A real history entry, so the address bar names the screen and Back
+    // returns to the previous one instead of leaving the app.
+    if (hashTab() !== t) window.history.pushState(null, "", `#${t}`);
   }, []);
   const [warp, setWarp] = useState(2000);
   const [navOpen, setNavOpen] = useState(false);

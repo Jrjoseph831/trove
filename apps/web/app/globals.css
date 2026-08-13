@@ -2230,9 +2230,6 @@ body {
 }
 
 /* ---- responsive: rail → drawer ---- */
-.navtoggle {
-  display: none;
-}
 @media (max-width: 780px) {
   .app {
     grid-template-columns: 1fr;
@@ -2253,20 +2250,6 @@ body {
   }
   .toast {
     left: 50%;
-  }
-  .navtoggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 100%;
-    flex: none;
-    background: var(--paper);
-    border: 0;
-    border-right: 1px solid var(--line);
-    color: var(--ink);
-    cursor: pointer;
-    font-size: 16px;
   }
 }
 
@@ -10044,14 +10027,51 @@ body {
 .bay-run.moth { border-color: var(--accent); color: var(--ink); }
 .bay-run.moth:disabled { opacity: .5; cursor: not-allowed; border-color: var(--line); }
 
-/* The Catalog collapses the app rail — it has its own department sidebar, and
-   two navigations on the left leave the storefront squeezed. The ☰ has to stay
-   reachable on desktop there, since it's the only way back to the rail
-   (everywhere else the rail is simply present). */
-.navtoggle.always {
-  display: inline-flex;
+/* The way back to the rail when the rail isn't there — a tab protruding from
+   the middle of the left edge, where the rail itself would be, with the
+   chevron pointing at what opening it does. A hamburger parked next to the
+   clock said nothing about which edge it belonged to; this is the folded
+   rail's own handle. Hidden by default: while the rail is on screen there's
+   nothing to open. */
+.nav-peek {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 38; /* under the drawer rail (40) and its scrim */
   align-items: center;
   justify-content: center;
+  width: 22px;
+  height: 74px;
+  padding: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 0;
+  border-radius: 0 10px 10px 0;
+  color: var(--muted);
+  cursor: pointer;
+  box-shadow: 2px 0 14px -8px rgba(27, 23, 20, 0.4);
+  transition:
+    width 0.16s ease,
+    color 0.16s ease;
+}
+.nav-peek.show {
+  display: flex;
+}
+.nav-peek:hover {
+  width: 28px;
+  color: var(--ink);
+}
+/* On narrow screens the rail is a drawer — mounted, but off-canvas — so the
+   handle is the only way in regardless of which page you're on. */
+@media (max-width: 780px) {
+  .nav-peek {
+    display: flex;
+  }
+  .app.navopen .nav-peek {
+    display: none;
+  }
 }
 
 /* Order Desk contracts, in the same card language as the Deal Room and Supply:

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { ChevronRight } from "lucide-react";
 import { validateHoldingName } from "@trove/data";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
@@ -53,17 +54,28 @@ export function Terminal() {
         />
       )}
       {canBrowseFull && !railHidden && <Rail />}
+
+      {/* A tab on the left edge rather than a hamburger in the toolbar. It sits
+          where the rail would be, so it reads as the nav folded away and the
+          chevron points at what opening it does — instead of a generic icon
+          parked next to the clock with no relationship to anything. */}
+      {/* Always mounted when a rail is possible; CSS shows it only when the rail
+          isn't actually on screen — collapsed on the Catalog, or folded into a
+          drawer on narrow screens. Gating the render on railHidden alone would
+          strand the nav on mobile, where the rail is mounted but off-canvas. */}
+      {canBrowseFull && (
+        <button
+          className={`nav-peek ${railHidden ? "show" : ""}`}
+          onClick={() => setNavOpen(true)}
+          aria-label="Open navigation"
+          title="Open navigation"
+        >
+          <ChevronRight size={15} strokeWidth={2.5} />
+        </button>
+      )}
+
       <div className={`main ${mode === "sandbox" ? "sandbox" : ""}`}>
         <div className="topbar">
-          {canBrowseFull && (
-            <button
-              className={`navtoggle ${effectiveTab === "catalog" ? "always" : ""}`}
-              onClick={() => setNavOpen(!navOpen)}
-              aria-label="Toggle navigation"
-            >
-              ☰
-            </button>
-          )}
           <Clock />
           <Ticker />
         </div>
