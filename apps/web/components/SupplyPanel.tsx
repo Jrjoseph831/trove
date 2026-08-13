@@ -231,7 +231,7 @@ function OrderRow({
 
 /** Materials in transit — paid for, not yet landed. */
 export function InboundStrip() {
-  const { state } = useTrove();
+  const { state, factoryCycle } = useTrove();
   const orders = state.supplyOrders ?? [];
   if (orders.length === 0) return null;
   return (
@@ -239,7 +239,12 @@ export function InboundStrip() {
       <span className="inbound-h">In transit</span>
       {orders.map((o) => {
         const it = getItem(o.itemId);
-        const left = Math.max(0, o.arrivesCycle - state.cycle);
+        // arrivesCycle is stamped on the PRODUCTION clock (wallProdCycle), so it
+        // has to be compared against the production clock. Subtracting the
+        // market cycle instead — a completely different, much slower counter —
+        // left a difference of ~5.9M ticks and rendered deliveries as arriving
+        // in forty thousand days.
+        const left = Math.max(0, o.arrivesCycle - factoryCycle);
         return (
           <span className="inbound-pill" key={o.id}>
             {o.qty.toLocaleString()}× {it?.name ?? "material"}

@@ -34,8 +34,10 @@ export const perHour = (perTick: number): number => perTick * TICKS_PER_TVT_HOUR
 export function ticksToTvt(ticks: number): string {
   if (!Number.isFinite(ticks)) return "—";
   const mins = ticks * (PROD_SEC_PER_CYCLE * TROVE_SPEED) / 60; // TVT minutes
-  if (mins < 1) return "minutes";
-  if (mins < 60) return `${Math.round(mins)}m`;
+  // Always a figure, never a word. "minutes" sat where a number belonged and
+  // read as a broken value rather than a short one.
+  if (mins <= 0) return "0m";
+  if (mins < 60) return `${Math.max(1, Math.round(mins))}m`;
   const h = mins / 60;
   if (h < 48) return `${h < 10 ? h.toFixed(1) : Math.round(h)}h`;
   return `${Math.round(h / 24)}d`;
