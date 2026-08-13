@@ -197,6 +197,8 @@ function LineBay({
     setLineSource,
     setStandingLineSource,
     setSellPrice,
+    runNow,
+    mode,
   } = useTrove();
   const out = state.items.find((i) => i.id === f.itemId);
   if (!out) return null;
@@ -263,19 +265,38 @@ function LineBay({
       feeders,
     };
   });
-  // Run-readiness mirrors the engine: in-house needs vault stock; market
-  // auto-buys the shortfall (so it just needs cash).
+  // Run-readiness mirrors the engine exactly — in-house needs vault stock;
+  // market auto-buys the shortfall, which needs BOTH cash and the floor to
+  // actually hold it. That last condition was missing here, so the card could
+  // claim a line was running while the engine was idling it on empty stock.
   let cashCost = 0;
-  let canRun = true;
+  const shortInHouse: string[] = [];
+  const shortFloor: string[] = [];
   for (const b of batch) {
     if (b.inHouse) {
-      if (b.have < b.need) canRun = false;
+      if (b.have < b.need) shortInHouse.push(b.name);
     } else {
-      cashCost += Math.max(0, b.need - b.have) * b.value;
+      const short = Math.max(0, b.need - b.have);
+      const onFloor = state.items.find((i) => i.id === b.id)?.stock ?? 0;
+      if (short > onFloor) shortFloor.push(b.name);
+      cashCost += short * b.value;
     }
   }
+  const canRun = shortInHouse.length === 0 && shortFloor.length === 0;
   const ready = canRun && state.cash >= cashCost;
   const status = building ? "building" : ready ? "running" : "idle";
+
+  // Exactly why it isn't running — a line stops for one of three reasons and
+  // the player can fix all three, but only if told which.
+  const list = (names: string[]) =>
+    names.length > 2 ? `${names.slice(0, 2).join(", ")} +${names.length - 2}` : names.join(", ");
+  const stallReason = ready
+    ? null
+    : shortInHouse.length
+      ? `Waiting on your own supply of ${list(shortInHouse)} — order it, or set a feeder line.`
+      : shortFloor.length
+        ? `The market is out of ${list(shortFloor)} — it restocks each settlement, or buy ahead in bulk.`
+        : `Short ${money(cashCost - state.cash)} to cover this run's materials.`;
 
   // Cost to make one unit: per-input source cost (× input multiplier) + upkeep.
   const matPerUnit =
@@ -332,6 +353,28 @@ function LineBay({
               : "◐ idle"}
         </span>
       </div>
+
+      {/* An idle line used to say only "idle". A line stops for exactly one of
+          three reasons and the player can fix all three — but not if nobody
+          tells them which. It restarts on its own the moment the reason is
+          gone: status is recomputed every run, never latched. */}
+      {!building && status !== "running" && stallReason && (
+        <div className="bay-stall">
+          <span className="bs-why">{stallReason}</span>
+          <span className="bs-auto">
+            Restarts by itself once fixed — next run in {ticksToTvt(1)} or less.
+          </span>
+        </div>
+      )}
+
+      {/* Fixed the problem and don't want to wait out the clock. Only runs what
+          the clock already owes you, so it can't make a batch that wasn't due —
+          it just collapses the wait. */}
+      {!building && mode === "live" && (
+        <button className="bay-run" onClick={() => void runNow()}>
+          {ready ? "Run now" : "Retry now"}
+        </button>
+      )}
 
       <Conveyor
         stages={stages}

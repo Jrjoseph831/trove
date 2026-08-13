@@ -10010,3 +10010,26 @@ body {
 }
 .ob-suffix input { width: 14px; height: 14px; accent-color: var(--accent); cursor: pointer; }
 .ob-suffix:hover { color: var(--ink); }
+
+/* Why a line stopped. It used to say only "idle", which is the one thing the
+   player already knew — a line halts for three fixable reasons and needs to
+   say which. */
+.bay-stall {
+  display: flex; flex-direction: column; gap: 3px;
+  margin: 0 0 12px; padding: 9px 12px;
+  border-left: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  border-radius: 0 8px 8px 0;
+}
+.bs-why { font-size: 12.5px; color: var(--ink); line-height: 1.45; }
+.bs-auto { font-size: 11px; color: var(--ink-dim); }
+
+/* "Run now" — collapse the wait for production the clock already owes you.
+   Quiet by design: the line restarts on its own, this is only for impatience. */
+.bay-run {
+  align-self: flex-start; margin: 0 0 12px; padding: 6px 13px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line); border-radius: 999px;
+  color: var(--ink-dim); font-size: 11.5px; font-weight: 600;
+  transition: color .12s, border-color .12s;
+}
+.bay-run:hover { color: var(--ink); border-color: var(--accent); }

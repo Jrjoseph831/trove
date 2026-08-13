@@ -31,6 +31,7 @@ import {
   setSource,
   setStandingSource,
   orderSupply,
+  runProduction,
   setReorder,
   START_CASH,
   uninstallModule,
@@ -167,6 +168,7 @@ async function apply(state: WorldState, b: Body, playerId: string): Promise<stri
     case "reorder":
       setReorder(state, Number(b.itemId), Number(b.floor ?? 0), Number(b.qty ?? 0));
       return null;
+    case "run-now":
     case "mfg-name":
       // Handled on the player record, not the world view — see the caller.
       return null;
@@ -217,6 +219,30 @@ export async function handler(
     // world view the engine runs on, so it's applied here. Held to the same
     // standards as a holding name — no real companies, nothing foul — because
     // it's just as public: it's stamped on every unit this firm makes.
+    // "Run now": attempt production immediately instead of waiting up to a full
+    // tick. Strictly bounded to the runs the cron ALREADY owes this player
+    // (lastProdTick .. wallProdCycle), so it can never manufacture a run that
+    // wasn't due — it only collapses the wait. A line that still can't source
+    // its inputs simply idles again, exactly as the cron would leave it.
+    if (body.action === "run-now") {
+      const target = wallProdCycle();
+      let tick = updated.lastProdTick ?? target - 1;
+      if (tick >= target) {
+        return json(409, { error: "already up to date — nothing owed yet" });
+      }
+      const pv = playerView(doc as WorldDoc, updated);
+      let ran = 0;
+      while (tick < target && ran < 12) {
+        tick++;
+        pv.cycle = tick;
+        runProduction(pv);
+        ran++;
+      }
+      const after = extractPlayer(pv, updated);
+      after.lastProdTick = tick;
+      Object.assign(updated, after);
+    }
+
     if (body.action === "mfg-name") {
       const raw = String(body.name ?? "").trim().replace(/\s+/g, " ").slice(0, 40);
       if (raw.length < 2) return json(400, { error: "A bit short — give it a name." });

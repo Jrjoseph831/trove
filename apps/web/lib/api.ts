@@ -244,6 +244,7 @@ export type FactoryAction =
   | { action: "order-supply"; itemId: number; qty: number }
   | { action: "reorder"; itemId: number; floor: number; qty: number }
   | { action: "mfg-name"; name: string }
+  | { action: "run-now" }
   | {
       action: "deskauto";
       patch: { specialist?: boolean; autoFulfill?: boolean; minMargin?: number };

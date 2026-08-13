@@ -385,6 +385,22 @@ const FRESH_DESKAUTO: DeskAuto = {
  * id, not "YOU") onto their record. For paths that run the engine on the whole
  * world rather than a per-player view — the trade endpoint, chiefly.
  */
+/**
+ * Write a player's goods INTO a full world state, keyed by their player id.
+ * The mirror of syncHoldings, and mandatory before running the engine on a
+ * doc-derived world: holdings live on the player record now, so a world built
+ * from the doc alone has this player owning nothing.
+ */
+export function hydrateHoldings(full: WorldState, player: Player): void {
+  const mine = player.holdings;
+  if (!mine) return; // pre-migration record: the doc still carries their goods
+  const byId = new Map(full.items.map((it) => [it.id, it]));
+  for (const [idStr, qty] of Object.entries(mine)) {
+    const it = byId.get(Number(idStr));
+    if (it && qty > 0) it.owners[player.playerId] = qty;
+  }
+}
+
 export function syncHoldings(full: WorldState, player: Player): void {
   const holdings: Record<number, number> = {};
   for (const it of full.items) {
@@ -1492,9 +1508,14 @@ export async function mutateTrade<T>(
     const player: Player = existing ?? { playerId, cash: START_CASH, debt: 0 };
 
     const state = docToWorld(cur);
+    // Put the player's OWN goods back into the world before the engine runs.
+    // They live on the player record now, not in the doc, so a world built
+    // straight from the doc shows this player owning nothing — and then
+    // syncHoldings would write that back as the truth. Every purchase would
+    // erase everything else they held, and a sell would find no stock.
+    hydrateHoldings(state, player);
     const result = fn(state, player); // throws TradeError to reject
-    // The engine wrote the bought/sold units into the doc's owners map; mirror
-    // them onto the player's own record, which is now where holdings live.
+    // ...and back onto the record, which is where holdings live.
     syncHoldings(state, player);
     const next = worldToDoc(state, cur.version + 1);
 
