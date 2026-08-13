@@ -4695,6 +4695,11 @@ body {
   position: relative;
   overflow: hidden;
   align-self: center;
+  /* Bottom of the three conveyor layers: track, then the unit riding it, then
+     the machines. Without an explicit z-index the track is `auto`, which paints
+     in DOM order — and the unit is the first child, so every segment's opaque
+     bar covered it and the box ran underneath the belt instead of along it. */
+  z-index: 0;
 }
 /* A static belt frame with faint directional chevrons (no animation here, so
    nothing fights the boxes). */
@@ -4737,7 +4742,7 @@ body {
      the belt instead of on it. Subtracting the gutter puts it on the line. */
   top: calc((100% - var(--cvy-pad-b)) / 2);
   left: 29px;
-  z-index: 0;
+  z-index: 1; /* on the track, under the machines */
   width: 13px;
   height: 11px;
   margin: -5.5px 0 0 -6px;
@@ -4756,9 +4761,9 @@ body {
     left: calc(100% - 29px);
   }
 }
-/* Stations sit above the track so the piece disappears into each one. */
+/* Machines sit above the unit, so the piece disappears into each one. */
 .cvy-station {
-  z-index: 1;
+  z-index: 2;
 }
 /* The output bay pulses while the line runs — it feels alive. */
 .cvy.running .cvy-station.bay .cvy-ic {
