@@ -89,7 +89,7 @@ export function Terminal() {
           aria-label="Collapse navigation"
           title="Collapse navigation"
         >
-          <ChevronLeft size={17} strokeWidth={2} />
+          <ChevronLeft size={15} strokeWidth={2} />
         </button>
       )}
 
@@ -108,7 +108,7 @@ export function Terminal() {
           aria-label="Open navigation"
           title="Open navigation"
         >
-          <ChevronRight size={17} strokeWidth={2} />
+          <ChevronRight size={15} strokeWidth={2} />
         </button>
       )}
 
