@@ -8,6 +8,7 @@ import {
 } from "@trove/data";
 import { money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
+import { itemPlate } from "@/lib/texture";
 import { archLabel, itemCopy, tierLabel } from "@/lib/itemcopy";
 
 export function ItemDetail({ item }: { item: Item }) {
@@ -30,7 +31,9 @@ export function ItemDetail({ item }: { item: Item }) {
       </nav>
 
       <div className="item-hero">
-        <div className="item-art">
+        {/* Same plate as the item's catalogue card, so following a product
+            through lands somewhere that looks like where you came from. */}
+        <div className="item-art" style={itemPlate(item)}>
           <ItemIcon it={item} size={88} />
           {isEd && (
             <span className="item-edbadge">

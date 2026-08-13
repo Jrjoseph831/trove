@@ -16,6 +16,7 @@ import { canBuy, held } from "@trove/engine";
 import { money, pctChange } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { primarySectorLabel, stockState } from "@/lib/ui";
+import { itemPlate } from "@/lib/texture";
 import { useTrove } from "@/lib/trove";
 import { AcquireConfirm } from "./AcquireConfirm";
 
@@ -324,9 +325,13 @@ export function Catalog() {
                                 id={`floor-item-${it.id}`}
                                 style={hlId === it.id ? HL_STYLE : undefined}
                               >
+                                {/* The plate is drawn from the item's own id, so
+                                    no two cards share a face and none of it is
+                                    an asset. */}
                                 <Link
                                   href={`/item/${it.id}`}
                                   className="pcard-media"
+                                  style={itemPlate(it)}
                                 >
                                   <ItemIcon it={it} size={54} />
                                   {isEd && (
