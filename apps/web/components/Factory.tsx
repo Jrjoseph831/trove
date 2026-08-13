@@ -26,6 +26,7 @@ import {
 } from "@trove/engine";
 import type { LineModule } from "@trove/data";
 import { manufacturingName, money, moneyShort } from "@/lib/format";
+import { TICKS_PER_TVT_HOUR } from "@/lib/tvt";
 import { useTrove } from "@/lib/trove";
 import { InboundStrip, SupplyPanel } from "./SupplyPanel";
 import { FactoryFloor } from "@/components/FactoryFloor";
@@ -422,15 +423,19 @@ function LineBay({
       )}
 
       <div className="bay-econ">
+        {/* "Per cycle" meant nothing without saying how long a cycle is, and
+            "5 min" is real time while every other clock in the game is TVT. A
+            run is 10 TVT minutes, six to the Trove hour. */}
         <div className="be-head">
-          Per cycle · every ~5 min{throttled ? " · potential" : ""}
+          Per run · every 10 min TVT ({TICKS_PER_TVT_HOUR}× an hour)
+          {throttled ? " · potential" : ""}
         </div>
         <div className="be-grid">
           <div className="be-cell">
             <span className="be-lab">Output</span>
             <span className="be-val">
               {eff.rate.toLocaleString()}
-              <small>/cy</small>
+              <small>/run</small>
             </span>
             {f.modules.length > 0 && (
               <span className="be-sub">base {base.rate.toLocaleString()}</span>
@@ -455,7 +460,7 @@ function LineBay({
             <span className={`be-val ${profitCy >= 0 ? "pos" : "neg"}`}>
               {profitCy >= 0 ? "+" : ""}
               {money(profitCy)}
-              <small>/cy</small>
+              <small>/run</small>
             </span>
             <span className="be-sub">{Math.round(margin * 100)}% margin</span>
           </div>
