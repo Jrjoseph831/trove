@@ -261,8 +261,15 @@ export function representativeItem(name: string, bias: SectorKey | null): Item |
         : (buckets?.raw ?? []);
   let result: Item | null = null;
   if (pool.length) {
-    const window = Math.min(5, pool.length);
-    result = pool[Math.floor(hash01(name) * window)] ?? pool[0]!;
+    // Spread across the WHOLE pool, not a five-item window at the front of it.
+    // That window was sized when the roster was ~100 firms; at 501 it had every
+    // company in a sector crowding the same handful of products, so the entire
+    // economy's material demand landed on ~33 items out of 1,866 and the rest
+    // of the catalog was never consumed by anyone. A second hash keeps the
+    // draw deterministic while decorrelating it from the tier roll above, so
+    // material specialists don't all pick the same slot as goods producers.
+    const idx = Math.floor(hash01(`${name}:rep`) * pool.length);
+    result = pool[Math.min(idx, pool.length - 1)] ?? pool[0]!;
   }
   _repItemCache.set(name, result);
   return result;
