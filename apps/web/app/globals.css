@@ -10245,11 +10245,69 @@ body {
   .wpage { grid-template-columns: 1fr; gap: 26px; }
 }
 
-/* ── the lead ── */
-.wlead {
+/* ── the top band: lead on the left, the reel filling the gap beside it ──
+   The lead's measure is capped so it stays readable, which left a dead column
+   between it and the rail. The reel lives there now: the page gets something
+   that moves without anything scrolling, and the broadcast stops being hidden
+   behind a button. The rule belongs to the band rather than the lead, so it
+   runs the full width underneath both. */
+.wtop {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 30px;
+  align-items: start;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--line);
 }
+@media (max-width: 1180px) {
+  .wtop {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+.wreel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.wreel-frame {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+/* The reel renders with role="dialog", so its click target is laid over it
+   rather than wrapping it — nesting a button inside one is invalid, and the
+   whole panel should open the full screen. */
+.wreel-hit {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.wreel-frame:hover .wreel-hit {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+.wreel-open {
+  align-self: flex-start;
+  border: 0;
+  padding: 0;
+  background: none;
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+.wreel-open:hover {
+  color: var(--accent);
+}
+
+/* ── the lead ── */
 .wlead h1 {
   font-family: var(--font-display);
   font-size: clamp(27px, 3.4vw, 42px);
@@ -10455,3 +10513,44 @@ body {
   color: var(--ink);
 }
 .wbrief.mine .wbrief-head { color: var(--accent); }
+
+/* The reel's embedded styles were tuned for a wide in-grid player. At preview
+   width the top bar's network line wrapped onto a second row and the live
+   badge broke mid-word, so the chrome is scaled down for this slot only. */
+.wreel .reel.embedded .reel-bar {
+  height: 26px;
+  gap: 7px;
+  padding: 0 9px;
+}
+.wreel .reel.embedded .reel-live {
+  font-size: 7.5px;
+  letter-spacing: 0.1em;
+  padding: 2px 6px;
+  white-space: nowrap;
+  flex: none;
+}
+.wreel .reel.embedded .reel-net {
+  font-size: 7.5px;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+.wreel .reel.embedded .reel-segment-name { font-size: 19px; }
+.wreel .reel.embedded .reel-ident-name,
+.wreel .reel.embedded .reel-bumper-t { font-size: 15px; }
+.wreel .reel.embedded .reel-head { font-size: 15px; }
+.wreel .reel.embedded .reel-body { font-size: 11px; max-width: 34ch; }
+.wreel .reel.embedded .reel-kick { font-size: 8px; }
+.wreel .reel.embedded .reel-panel-h { font-size: 12px; }
+.wreel .reel.embedded .reel-row {
+  font-size: 10px;
+  padding: 5px 0;
+}
+.wreel .reel.embedded .reel-ad-brand {
+  font-size: 20px;
+}
+.wreel .reel.embedded .reel-ad-tag {
+  font-size: 11px;
+}

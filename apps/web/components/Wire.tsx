@@ -10,7 +10,7 @@ import { moneyShort } from "@/lib/format";
 import { tvtClock } from "@/lib/tvt";
 import { tnnLive } from "@/lib/ui";
 import { useTrove } from "@/lib/trove";
-import { Newsreel } from "./Newsreel";
+import { Newsreel, Wheel } from "./Newsreel";
 
 /** A market cycle is 6 real hours and TVT runs at 2×, so one cycle is 12 hours
  *  on the only clock a player is ever shown. */
@@ -182,19 +182,42 @@ export function Wire() {
       ) : (
         <div className="wpage">
           <main className="wmain">
-            <article className={`wlead ${lead.mine ? "mine" : ""}`}>
-              <div className="wkick">
-                <span className="wkick-sec">{lead.kicker}</span>
-                {lead.mine && <span className="wmine">your house</span>}
-                {agoLabel(lead.agoHours) && (
-                  <span className="wago">{agoLabel(lead.agoHours)}</span>
-                )}
+            {/* Lead and reel share the top band. The lead's measure is capped
+                for reading, which left a dead column beside it — the reel fills
+                it and gives the page something that moves without anything
+                scrolling. */}
+            <div className="wtop">
+              <article className={`wlead ${lead.mine ? "mine" : ""}`}>
+                <div className="wkick">
+                  <span className="wkick-sec">{lead.kicker}</span>
+                  {lead.mine && <span className="wmine">your house</span>}
+                  {agoLabel(lead.agoHours) && (
+                    <span className="wago">{agoLabel(lead.agoHours)}</span>
+                  )}
+                </div>
+                <h1>{lead.head}</h1>
+                {lead.body && <p className="wstand">{lead.body}</p>}
+                {lead.quote && <blockquote className="wquote">{lead.quote}</blockquote>}
+                <div className="wbyline">By the Trove Wire</div>
+              </article>
+
+              <div className="wreel">
+                <div className="wreel-frame">
+                  <Wheel embedded mode={live ? "news" : "filler"} />
+                  {/* The reel renders as a dialog, so the click target sits over
+                      it rather than wrapping it — a button around a button is
+                      invalid, and the whole panel should open the full screen. */}
+                  <button
+                    className="wreel-hit"
+                    onClick={() => setStudioOpen(true)}
+                    aria-label="Open the full reel"
+                  />
+                </div>
+                <button className="wreel-open" onClick={() => setStudioOpen(true)}>
+                  {live ? "On air now" : "Off-peak reel"} — watch full screen →
+                </button>
               </div>
-              <h1>{lead.head}</h1>
-              {lead.body && <p className="wstand">{lead.body}</p>}
-              {lead.quote && <blockquote className="wquote">{lead.quote}</blockquote>}
-              <div className="wbyline">By the Trove Wire</div>
-            </article>
+            </div>
 
             {secondary.length > 0 && (
               <div className="wgrid">
