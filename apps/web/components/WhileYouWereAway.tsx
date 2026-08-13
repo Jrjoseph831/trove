@@ -3,6 +3,7 @@
 import { flowRows } from "./Report";
 import { humanizeAway } from "@/lib/recap";
 import { money, moneyShort } from "@/lib/format";
+import { cyclesToTvt } from "@/lib/tvt";
 import { useTrove } from "@/lib/trove";
 
 /** The dismissible bento tile that summarizes what happened while a
@@ -20,7 +21,8 @@ export function WhileYouWereAwayCard() {
       <div className="dr-head">
         <span className="brk-card-kick">
           While you were away · {humanizeAway(recap.awayMs)}
-          {recap.cyclesAway > 1 ? ` · ${recap.cyclesAway} cycles` : ""}
+          {/* "3 cycles" says nothing without knowing how long a cycle is. */}
+          {recap.cyclesAway > 1 ? ` · ${cyclesToTvt(recap.cyclesAway)} of trading` : ""}
         </span>
         <button className="dr-x" onClick={dismissRecap} aria-label="Dismiss">
           ✕

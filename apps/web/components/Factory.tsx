@@ -26,7 +26,7 @@ import {
 } from "@trove/engine";
 import type { LineModule } from "@trove/data";
 import { manufacturingName, money, moneyShort } from "@/lib/format";
-import { TICKS_PER_TVT_HOUR } from "@/lib/tvt";
+import { perHour, ticksToTvt } from "@/lib/tvt";
 import { useTrove } from "@/lib/trove";
 import { InboundStrip, SupplyPanel } from "./SupplyPanel";
 import { FactoryFloor } from "@/components/FactoryFloor";
@@ -326,7 +326,7 @@ function LineBay({
         </div>
         <span className={`bay-status ${status}`}>
           {building
-            ? `building · ${cyclesLeft} cy`
+            ? `building · ${ticksToTvt(cyclesLeft)}`
             : status === "running"
               ? "● running"
               : "◐ idle"}
@@ -348,7 +348,7 @@ function LineBay({
 
       {inputs.length > 0 && (
         <div className="bay-inputs">
-          <div className="bay-sub">Feed / cycle · source</div>
+          <div className="bay-sub">Feed / hour · source</div>
           {batch.map((b) => {
             const short = b.inHouse && b.have < b.need;
             return (
@@ -395,7 +395,7 @@ function LineBay({
                 <span className="bay-need">
                   {b.inHouse
                     ? `${b.have.toLocaleString()} / ${b.need.toLocaleString()}`
-                    : `${b.need.toLocaleString()}/cy`}
+                    : `${Math.round(perHour(b.need)).toLocaleString()}/hr`}
                 </span>
               </div>
             );
@@ -417,7 +417,7 @@ function LineBay({
       {throttled && (
         <div className="bay-throttle">
           ⚠ Floor jammed — actually shipping{" "}
-          <b>{shipRate.toLocaleString()}/cy</b> of {eff.rate.toLocaleString()} (
+          <b>{Math.round(perHour(shipRate)).toLocaleString()}/hr</b> of {Math.round(perHour(eff.rate)).toLocaleString()} (
           {throttlePct}%). Add dock capacity on the <b>Floor</b> to recover.
         </div>
       )}
@@ -427,18 +427,20 @@ function LineBay({
             "5 min" is real time while every other clock in the game is TVT. A
             run is 10 TVT minutes, six to the Trove hour. */}
         <div className="be-head">
-          Per run · every 10 min TVT ({TICKS_PER_TVT_HOUR}× an hour)
+          Per hour
           {throttled ? " · potential" : ""}
         </div>
         <div className="be-grid">
           <div className="be-cell">
             <span className="be-lab">Output</span>
             <span className="be-val">
-              {eff.rate.toLocaleString()}
-              <small>/run</small>
+              {Math.round(perHour(eff.rate)).toLocaleString()}
+              <small>/hr</small>
             </span>
             {f.modules.length > 0 && (
-              <span className="be-sub">base {base.rate.toLocaleString()}</span>
+              <span className="be-sub">
+                base {Math.round(perHour(base.rate)).toLocaleString()}
+              </span>
             )}
           </div>
           <div className="be-cell">
@@ -459,8 +461,8 @@ function LineBay({
             <span className="be-lab">Profit</span>
             <span className={`be-val ${profitCy >= 0 ? "pos" : "neg"}`}>
               {profitCy >= 0 ? "+" : ""}
-              {money(profitCy)}
-              <small>/run</small>
+              {money(perHour(profitCy))}
+              <small>/hr</small>
             </span>
             <span className="be-sub">{Math.round(margin * 100)}% margin</span>
           </div>
@@ -534,7 +536,7 @@ function LineBay({
                 <div className="mc-foot">
                   {!installed && m.rateMul !== 1 && (
                     <span className="mc-prev">
-                      {eff.rate.toLocaleString()} → <b>{afterRate.toLocaleString()}</b>/cy
+                      {Math.round(perHour(eff.rate)).toLocaleString()} → <b>{Math.round(perHour(afterRate)).toLocaleString()}</b>/hr
                     </span>
                   )}
                   <button
@@ -643,7 +645,7 @@ function Conveyor({
           <Truck size={16} strokeWidth={1.75} />
         </span>
         <span className="cvy-lbl">
-          {flowing ? `${rate.toLocaleString()}/cy` : "Bay"}
+          {flowing ? `${Math.round(perHour(rate)).toLocaleString()}/hr` : "Bay"}
         </span>
       </div>
     </div>
@@ -746,7 +748,7 @@ function BuildPicker({
         </div>
         <div className="fp-r-recipe">{recipeText(e.it)}</div>
         <div className="fp-r-econ">
-          <span>{spec.rate.toLocaleString()}/cy</span>
+          <span>{Math.round(perHour(spec.rate)).toLocaleString()}/hr</span>
           <span className={afford ? "" : "fp-cant"}>
             build {money(spec.buildCost)}
           </span>
