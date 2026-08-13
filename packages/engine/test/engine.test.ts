@@ -18,6 +18,8 @@ import {
   buildFactory,
   buyProperty,
   canBuy,
+  demolishFactory,
+  setSource,
   createWorld,
   demandHeat,
   elasticity,
@@ -1220,7 +1222,8 @@ describe("bulk supply orders — capital ahead of production", () => {
   });
 
   it("auto-reorders when the vault dips below the floor, and not while one is inbound", () => {
-    const { S, mat } = supplyWorld();
+    const { S, out, mat } = supplyWorld();
+    buildFactory(S, out.id); // a line that actually eats this material
     const qty = Math.min(1000, Math.floor(mat.stock));
     setReorder(S, mat.id, 500, qty);
 
@@ -1235,13 +1238,82 @@ describe("bulk supply orders — capital ahead of production", () => {
   });
 
   it("clearing a reorder rule stops it firing", () => {
-    const { S, mat } = supplyWorld();
+    const { S, out, mat } = supplyWorld();
+    buildFactory(S, out.id);
     setReorder(S, mat.id, 500, 1000);
     setReorder(S, mat.id, 0, 0);
     expect(S.reorders.length).toBe(0);
     S.cycle++;
     runProduction(S);
     expect(S.supplyOrders.length).toBe(0);
+  });
+
+  it("stops buying a material once nothing on the floor consumes it", () => {
+    const { S, out, mat } = supplyWorld();
+    const line = buildFactory(S, out.id)!;
+    setReorder(S, mat.id, 500, Math.min(1000, Math.floor(mat.stock)));
+
+    S.cycle++;
+    runProduction(S);
+    expect(S.supplyOrders.length).toBe(1); // fine while the line exists
+
+    demolishFactory(S, line.id);
+    S.supplyOrders = [];
+    const cashAfterTeardown = S.cash;
+
+    // The rule outlived its line. It must not keep spending on material with
+    // no consumer — the bug was a torn-down line's reorder buying wafers and
+    // copper every tick, forever, for a product no longer made.
+    for (let i = 0; i < 5; i++) {
+      S.cycle++;
+      runProduction(S);
+    }
+    expect(S.supplyOrders.length).toBe(0);
+    expect(S.cash).toBe(cashAfterTeardown);
+  });
+
+  it("resumes that rule if the line is rebuilt", () => {
+    const { S, out, mat } = supplyWorld();
+    const line = buildFactory(S, out.id)!;
+    setReorder(S, mat.id, 500, Math.min(1000, Math.floor(mat.stock)));
+    demolishFactory(S, line.id);
+
+    S.cycle++;
+    runProduction(S);
+    expect(S.supplyOrders.length).toBe(0);
+
+    // Kept, not deleted — standing the line back up revives it.
+    expect(S.reorders.some((r) => r.itemId === mat.id)).toBe(true);
+    buildFactory(S, out.id);
+    S.cycle++;
+    runProduction(S);
+    expect(S.supplyOrders.length).toBe(1);
+  });
+
+  it("drops a feeder link when the line feeding it is torn down", () => {
+    const { S, out, mat } = supplyWorld();
+    const consumer = buildFactory(S, out.id)!;
+    const feeder = buildFactory(S, mat.id)!;
+
+    expect(setSource(S, consumer.id, mat.id, feeder.id)).toBe(true);
+    expect(consumer.sources?.[mat.id]).toBe(feeder.id);
+
+    // Tearing down the feeder must take the reference with it. Left dangling,
+    // the input silently stopped reading as in-house and the line went back to
+    // buying on the market with nothing on screen saying so.
+    demolishFactory(S, feeder.id);
+    expect(consumer.sources?.[mat.id]).toBeUndefined();
+  });
+
+  it("repairs a save that already carries a dead feeder link", () => {
+    const { S, out, mat } = supplyWorld();
+    const consumer = buildFactory(S, out.id)!;
+    // Exactly the shape a world saved before the demolish fix is left in.
+    consumer.sources = { [mat.id]: "f-torn-down-long-ago" };
+
+    S.cycle++;
+    runProduction(S);
+    expect(consumer.sources?.[mat.id]).toBeUndefined();
   });
 });
 

@@ -915,13 +915,50 @@ function deliverSupplyOrders(state: WorldState): void {
   state.supplyOrders = still;
 }
 
+/** Drop feeder links pointing at lines that no longer exist.
+ *
+ *  demolishFactory clears these going forward, but worlds saved before it did
+ *  still carry the dangling ids, and nothing else ever resolves them: the input
+ *  silently reads as bought-on-the-market, and the "routes an input in-house"
+ *  goal counts a link to a line that was torn down. Cheap to sweep every tick,
+ *  so damaged saves repair themselves instead of needing a migration. */
+function pruneDeadSources(state: WorldState): void {
+  const alive = new Set((state.factories ?? []).map((f) => f.id));
+  for (const f of state.factories ?? []) {
+    if (!f.sources) continue;
+    for (const [inputId, feederId] of Object.entries(f.sources)) {
+      if (!alive.has(feederId)) delete f.sources[Number(inputId)];
+    }
+  }
+}
+
+/** Every material the lines currently on the floor actually consume. */
+function consumedInputs(state: WorldState): Set<number> {
+  const need = new Set<number>();
+  for (const f of state.factories) {
+    const made = state.items.find((i) => i.id === f.itemId);
+    if (!made) continue;
+    for (const inp of recipeOf(made)?.inputs ?? []) need.add(inp.itemId);
+  }
+  return need;
+}
+
 /** Auto-reorder: top a material back up whenever the vault dips below its
- *  floor and nothing is already inbound for it. */
+ *  floor and nothing is already inbound for it.
+ *
+ *  Only for materials something on the floor still eats. A rule used to
+ *  outlive the line it was created for, so tearing a line down left its
+ *  reorder quietly buying wafers and copper every tick, forever, for a
+ *  product no longer made — spending real cash on stock with no consumer and
+ *  filling the vault with material the player never asked for again. The rule
+ *  is kept rather than deleted, so rebuilding the line resumes it. */
 function runReorders(state: WorldState): void {
   const rules = state.reorders ?? [];
   if (rules.length === 0) return;
+  const wanted = consumedInputs(state);
   const inbound = new Set((state.supplyOrders ?? []).map((o) => o.itemId));
   for (const r of rules) {
+    if (!wanted.has(r.itemId)) continue;
     if (inbound.has(r.itemId)) continue;
     const it = state.items.find((x) => x.id === r.itemId);
     if (!it) continue;
@@ -1166,6 +1203,16 @@ export function demolishFactory(state: WorldState, id: string): boolean {
   const i = state.factories.findIndex((f) => f.id === id);
   if (i < 0) return false;
   state.factories.splice(i, 1);
+  // Any line drawing an input from this one is now pointing at a line that
+  // doesn't exist. Nothing ever resolved the dangling id, so those inputs
+  // quietly stopped counting as in-house and the line went back to buying on
+  // the market without saying so. The reference dies with the line.
+  for (const f of state.factories) {
+    if (!f.sources) continue;
+    for (const [inputId, feederId] of Object.entries(f.sources)) {
+      if (feederId === id) delete f.sources[Number(inputId)];
+    }
+  }
   return true;
 }
 
@@ -1305,6 +1352,7 @@ function produceFactories(state: WorldState): void {
   // two production paths: the live Production Lambda calls runProduction, but
   // the sandbox produces inside settleCycle. Hanging them off runProduction
   // meant sandbox orders were paid for and never arrived.
+  pruneDeadSources(state);
   deliverSupplyOrders(state);
   runReorders(state);
   // Older persisted world docs (e.g. the live singleton) predate factories.
