@@ -1264,7 +1264,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82693,
+    "lastEventCycle": 82714,
     "events": [
       {
         "cycle": 0,
@@ -1360,6 +1360,16 @@
         "size": "flash",
         "head": "Blackmoor Nudges Ahead as Depth Kit and Wide-Row Drill Sustain Attach Rates",
         "body": "Blackmoor posted a modest quarterly beat, with revenue up 4% as precision depth-kit attach rates held near record levels across the Holloway range. Soren Dray reiterated the company's patient stance, pointing to steady reorder patterns rather than new launches. Management left full-year guidance unchanged.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82714,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Blackmoor Adds Ridge-Till Attachment to Holloway Seed-Drill Range",
+        "body": "Soren Dray introduced a ridge-till attachment compatible with the existing Holloway drills and the popular depth kit, targeting growers in heavier soils. The measured addition extends an attach-rate strategy that has steadied earnings across three quarters. Field trials ran two full seasons before release.",
         "effects": {
           "agriculture": 0.06
         }
@@ -5384,7 +5394,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82697,
+    "lastEventCycle": 82714,
     "events": [
       {
         "cycle": 0,
@@ -5510,6 +5520,16 @@
         "size": "standard",
         "head": "Drayton Freight Wins National Distributor Fleet Deal for Pallet-Lift Handlers",
         "body": "Drayton Freight signed a multi-year agreement to supply pallet-lift material handlers to a national distribution operator, a deal management valued at roughly $210M over three years. Emil Holt said the win locks in output from both assembly plants and marks the company's largest single order to date.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82714,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drayton Freight Lifts Guidance as National Fleet Deal Ramps Faster Than Expected",
+        "body": "Emil Holt reported quarterly revenue up 14% and raised full-year guidance, crediting an accelerated rollout of pallet-lift handlers under the national distributor contract. Both assembly plants are now running at full utilization, with management noting inbound inquiries from clients citing rivals' terminal disruptions. Order backlog has narrowed to under six weeks.",
         "effects": {
           "logistics": 0.13
         }
@@ -8100,7 +8120,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82703,
+    "lastEventCycle": 82714,
     "events": [
       {
         "cycle": 0,
@@ -8268,6 +8288,16 @@
         "body": "Riding the sold-out success of the Meridian Tourbillon, CEO Iris Marrow unveiled a 250-piece Meridian Skeleton edition priced at a steep premium to the base line. Marrow staged a public launch event and pointed to reservation lists already exceeding the run before shipments begin. The release doubles down on the flagship line that drove last quarter's blowout results.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82714,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Halcrest Cools as Skeleton Edition Margins Disappoint Despite Strong Sell-Through",
+        "body": "Iris Marrow reported the limited Meridian Skeleton edition sold out but delivered thinner margins than the base Tourbillon, as intricate casework drove up unit costs. Quarterly profit fell short of expectations even as revenue held, and Marrow acknowledged she 'pushed complexity ahead of the workshop's capacity.' The firm signaled a slower cadence for upcoming limited runs.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -8629,18 +8659,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82709,
+    "lastEventCycle": 82714,
     "events": [
-      {
-        "cycle": 82575,
-        "kind": "outage",
-        "size": "major",
-        "head": "Halhold Systems Reels as Northgate Campus Failure Darkens Client Workloads",
-        "body": "A cooling-system failure at Halhold's second Northgate campus triggered a rolling outage that took client workloads offline for nearly 14 hours, the longest disruption in company history. CEO Dahlia Renn issued a public apology and confirmed penalty clauses with two anchor clients may be triggered, with restoration crews still stabilizing the site. Shares of the compute house fell sharply as customers questioned the pace of its campus buildout.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82581,
         "kind": "restructure",
@@ -8862,6 +8882,16 @@
         "head": "Halhold Systems Ousts Ilse Marren as Board Moves to Contain Reliability Scandal",
         "body": "Halhold's board removed CEO Ilse Marren effective immediately, citing loss of confidence amid the widening probe into concealed reliability failures and the pending shareholder suit. Director of operations Petra Vandel steps in as interim chief with a mandate to overhaul quality controls and cooperate with investigators. Shares have shed roughly a third of their value since the memos surfaced.",
         "effects": {}
+      },
+      {
+        "cycle": 82714,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Halhold Systems Faces Regulatory Probe as Reliability Scandal Widens Beyond Shareholders",
+        "body": "A national commerce regulator opened a formal inquiry into whether Halhold Systems misrepresented compute reliability figures to enterprise clients, days after new CEO Petra Vandel took the helm. Two anchor customers filed breach-of-contract claims totaling $340M, and Vandel disclosed an internal audit had found the failures were documented as early as last spring. The board set aside a $150M reserve against potential penalties and settlements.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -13582,7 +13612,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82702,
+    "lastEventCycle": 82714,
     "events": [
       {
         "cycle": 0,
@@ -13744,6 +13774,16 @@
         "size": "major",
         "head": "Skarnvale Vosk Junction Suffers Second Failure as Recovery Effort Falters",
         "body": "Vosk Junction went dark again this week when a partially restored handling system tripped during load testing, halting throughput for a second time in two months. Recovery chief Elin Marsh acknowledged the setback strained an already fragile timeline, with CEO Dorn Vaskell facing mounting pressure from lenders over covenant terms. Analysts estimate the repeat outage adds $60M to recovery costs and pushes full reactivation into next year.",
+        "effects": {
+          "logistics": -0.22
+        }
+      },
+      {
+        "cycle": 82714,
+        "kind": "outage",
+        "size": "major",
+        "head": "Skarnvale Vosk Junction Collapses in Third Failure as Recovery Chief Resigns",
+        "body": "The Vosk Junction terminal suffered a total shutdown for the third time in two months, halting all regional material-handling throughput and stranding an estimated $220M in queued freight. Recovery chief Halden Roe resigned within hours, and Dorn Vaskell faces mounting pressure from major distributor clients threatening to reroute contracts. Two national customers confirmed they have suspended new volume pending an independent review.",
         "effects": {
           "logistics": -0.22
         }
@@ -14415,16 +14455,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82705,
+    "lastEventCycle": 82714,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Thronehaus & Co. — Few make them. Fewer own them",
-        "body": "Thronehaus & Co. makes one thing, and makes it as though nothing else matters: the timepiece. A single workshop, a handful of master horologists, and a waiting list measured in years. Every movement is built, tuned, and tested by hand until it keeps faith with time itself. There is no entry tier, only the summit. To wear a Thronehaus is to carry an argument that patience, in the end, outvalues everything.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "major_deal",
@@ -14653,6 +14685,16 @@
         "body": "Thronehaus & Co. announced an $1.8B acquisition of Coristel, a specialist supplier of precious casing alloys, securing upstream materials for its award-winning Marchwick line. CEO Cora Dray called the deal a decisive move to control quality and cost 'from ore to dial,' and said the Ferrault casework wing would be first to draw on Coristel stock. The purchase marks Thronehaus's largest ever, financed through cash and a new credit facility.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82714,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Thronehaus & Co. Debuts In-House Alloy From Coristel Integration Ahead of Schedule",
+        "body": "Cora Dray unveiled a proprietary case alloy produced entirely at the newly acquired Coristel works, six months after the $1.8B deal closed. The firm said the vertical link cuts rare-metals lead times by roughly 40% and will underpin next year's Marchwick expansion. Early samples are being fitted to prototype casework at the Ferrault wing.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -15182,25 +15224,15 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1893,
-    "ceo": "Lucien Marchetti",
+    "ceo": "Beatrix Coyle",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.71,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82704,
+    "lastEventCycle": 82714,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "scandal",
-        "size": "standard",
-        "head": "Varnvale House Pressed Over Ember Sourcing Claims",
-        "body": "Varnvale House faced sharp questions after a guild publication challenged the 'single-origin lacquer' claims behind its Ember capsule. Petra Holt fired back publicly, calling the report 'lazy and jealous,' before agreeing to an outside audit. The spat turned a glossy launch into a messy week.",
-        "effects": {
-          "luxury": -0.13
-        }
-      },
       {
         "cycle": 82527,
         "kind": "lawsuit",
@@ -15419,6 +15451,14 @@
         "size": "major",
         "head": "Varnvale House Ousts Adrienne Sole After Sovereign Supply Missteps",
         "body": "The Varnvale board removed CEO Adrienne Sole following two quarters of strained Sovereign output and the botched Regent rollout, naming longtime operations head Lucien Marchetti to steady the house. Marchetti said he would slow the top-tier expansion and rebuild waitlists rather than chase headline launches. The move ends Sole's brief, volatile tenure marked by bold public bets.",
+        "effects": {}
+      },
+      {
+        "cycle": 82714,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Varnvale House Names Turnaround Veteran Beatrix Coyle to Steady Sovereign Line",
+        "body": "Chairman Lucien Marchetti appointed Beatrix Coyle, former operations head at a rival goods maker, as chief executive after a three-week search. Coyle inherits a Regent Timepiece backlog stretching past nine months and pledged to pause new Sovereign tier launches until supply stabilizes. Marchetti called the pick 'a return to discipline over spectacle.'",
         "effects": {}
       }
     ]
@@ -16563,7 +16603,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82695,
+    "lastEventCycle": 82714,
     "events": [
       {
         "cycle": 0,
@@ -16671,6 +16711,16 @@
         "body": "Mara Marrow launched a companion Heritage household goods collection, rolling it into all four showrooms after the lighting debut's strong sell-through. Early pre-orders covered roughly a third of initial stock. Marrow said the line broadens the heritage banner without straining the showroom model.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82714,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wold & Bramm Signs Lease for Fifth Showroom in Measured Regional Push",
+        "body": "Mara Marrow confirmed a lease for a fifth showroom, set to open next spring, extending the Heritage range into a new region. The company said the site will anchor both lighting and the newer household line, funded entirely from operating cash. Marrow reiterated a preference for 'one door at a time.'",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]

@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-13T07:36:54.453Z",
+  "generatedAt": "2026-08-13T13:14:35.790Z",
   "beats": [
+    {
+      "company": "Blackmoor",
+      "sector": "agriculture",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Blackmoor Adds Ridge-Till Attachment to Holloway Seed-Drill Range",
+      "body": "Soren Dray introduced a ridge-till attachment compatible with the existing Holloway drills and the popular depth kit, targeting growers in heavier soils. The measured addition extends an attach-rate strategy that has steadied earnings across three quarters. Field trials ran two full seasons before release.",
+      "cycle": 82714,
+      "dur": 1
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drayton Freight Lifts Guidance as National Fleet Deal Ramps Faster Than Expected",
+      "body": "Emil Holt reported quarterly revenue up 14% and raised full-year guidance, crediting an accelerated rollout of pallet-lift handlers under the national distributor contract. Both assembly plants are now running at full utilization, with management noting inbound inquiries from clients citing rivals' terminal disruptions. Order backlog has narrowed to under six weeks.",
+      "cycle": 82714,
+      "dur": 2
+    },
+    {
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Halcrest Cools as Skeleton Edition Margins Disappoint Despite Strong Sell-Through",
+      "body": "Iris Marrow reported the limited Meridian Skeleton edition sold out but delivered thinner margins than the base Tourbillon, as intricate casework drove up unit costs. Quarterly profit fell short of expectations even as revenue held, and Marrow acknowledged she 'pushed complexity ahead of the workshop's capacity.' The firm signaled a slower cadence for upcoming limited runs.",
+      "cycle": 82714,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Halhold Systems Faces Regulatory Probe as Reliability Scandal Widens Beyond Shareholders",
+      "body": "A national commerce regulator opened a formal inquiry into whether Halhold Systems misrepresented compute reliability figures to enterprise clients, days after new CEO Petra Vandel took the helm. Two anchor customers filed breach-of-contract claims totaling $340M, and Vandel disclosed an internal audit had found the failures were documented as early as last spring. The board set aside a $150M reserve against potential penalties and settlements.",
+      "cycle": 82714,
+      "dur": 8
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "outage",
+      "size": "major",
+      "head": "Skarnvale Vosk Junction Collapses in Third Failure as Recovery Chief Resigns",
+      "body": "The Vosk Junction terminal suffered a total shutdown for the third time in two months, halting all regional material-handling throughput and stranding an estimated $220M in queued freight. Recovery chief Halden Roe resigned within hours, and Dorn Vaskell faces mounting pressure from major distributor clients threatening to reroute contracts. Two national customers confirmed they have suspended new volume pending an independent review.",
+      "cycle": 82714,
+      "dur": 8
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "breakthrough",
+      "size": "standard",
+      "head": "Thronehaus & Co. Debuts In-House Alloy From Coristel Integration Ahead of Schedule",
+      "body": "Cora Dray unveiled a proprietary case alloy produced entirely at the newly acquired Coristel works, six months after the $1.8B deal closed. The firm said the vertical link cuts rare-metals lead times by roughly 40% and will underpin next year's Marchwick expansion. Early samples are being fitted to prototype casework at the Ferrault wing.",
+      "cycle": 82714,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Varnvale House Names Turnaround Veteran Beatrix Coyle to Steady Sovereign Line",
+      "body": "Chairman Lucien Marchetti appointed Beatrix Coyle, former operations head at a rival goods maker, as chief executive after a three-week search. Coyle inherits a Regent Timepiece backlog stretching past nine months and pledged to pause new Sovereign tier launches until supply stabilizes. Marchetti called the pick 'a return to discipline over spectacle.'",
+      "cycle": 82714,
+      "dur": 2
+    },
+    {
+      "company": "Wold & Bramm",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Wold & Bramm Signs Lease for Fifth Showroom in Measured Regional Push",
+      "body": "Mara Marrow confirmed a lease for a fifth showroom, set to open next spring, extending the Heritage range into a new region. The company said the site will anchor both lighting and the newer household line, funded entirely from operating cash. Marrow reiterated a preference for 'one door at a time.'",
+      "cycle": 82714,
+      "dur": 1
+    },
     {
       "company": "Aldousspire Group",
       "sector": "consumer",
@@ -20,26 +100,6 @@
       "body": "Fresh off a strong quarter, Calderforge committed $520M to a fourth Stormwell hall, citing sold-out capacity on its next-gen compute tier. CEO Nadia Throne said pre-commitments already cover roughly 60% of the planned floor, targeting startup within eighteen months. The move extends an aggressive buildout that has doubled Calderforge's footprint in three years.",
       "cycle": 82713,
       "dur": 2
-    },
-    {
-      "company": "Castlegear Group",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Castlegear Group Inches Ahead as Sterile Tray Contract Reaches Full Volume",
-      "body": "Castlegear delivered a small beat with income up 4%, as the regional network supply contract for sterile trays reached full shipment volume ahead of schedule. CEO Sable Brandt credited disciplined capacity planning and steady equipment backlog conversion. The company reaffirmed its conservative full-year outlook.",
-      "cycle": 82713,
-      "dur": 1
-    },
-    {
-      "company": "Greenmarsh Agro",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Greenmarsh Agro Edges Past Estimates as Distribution Pact Lifts Bundle Volumes",
-      "body": "Greenmarsh reported a modest beat with revenue up 6%, as the new regional distribution pact began moving seed-coating and soil-blend bundles into more channels. CEO Petra Kessler noted the ramp remains early and reaffirmed the company's patient, multi-season rollout. Farm-input volumes rose steadily while equipment held flat.",
-      "cycle": 82713,
-      "dur": 1
     },
     {
       "company": "Greywater Grid",
@@ -100,46 +160,6 @@
       "body": "A consolidated class action seeking $900M was filed against Brunstone & Sons over the 1.4 million recalled Vault Cell Guard Pro units, alleging the company knew of the defect months before regulators forced action. New CEO Dagny Frost pledged to 'fight where we're right and settle where we're wrong,' but the suit compounds a quarter already scarred by recall charges. Interim leadership has frozen the Power & Storage expansion plan pending the outcome.",
       "cycle": 82712,
       "dur": 8
-    },
-    {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Cranegrove Extends Corridor Framework With $650M Add-On Through 2030",
-      "body": "Cranegrove secured a $650M expansion of its corridor framework contract, extending committed earthmoving work through 2030 and pushing the backlog to a record. CEO Vale Calder said the add-on 'rewards the delivery record' and would be served largely from the two existing corridor depots. The house reaffirmed its disciplined pace on further capacity additions.",
-      "cycle": 82712,
-      "dur": 2
-    },
-    {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Drossware Overhauls Cleaning Division as Wold Draws Line Under Labeling Crisis",
-      "body": "CEO Nadia Wold announced a full restructuring of the Cleaning & Jansan unit, consolidating three plants into two and installing new quality oversight after twin labeling defects triggered a widening recall. The move carries a $180M charge but Wold said it 'ends the improvisation and rebuilds trust from the floor up.' Regulators were briefed on the plan as their review of the line continues.",
-      "cycle": 82712,
-      "dur": 2
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Forgegrave Industries Beats as Beyond-Meridian Deals Drive Broadest Quarter Yet",
-      "body": "Forgegrave topped estimates with revenue up 9% as the Coastward and regional distributor contracts contributed a full quarter of material-handling volume. CEO Petra Thorne said the expansion beyond Meridian had 'proven the model travels,' with new-region customers now near a fifth of the book. The house raised its full-year outlook modestly.",
-      "cycle": 82712,
-      "dur": 2
-    },
-    {
-      "company": "Wrenhaus",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Wrenhaus Opens Second Riverside Fixture Plant, Lifting Corridor Capacity by a Third",
-      "body": "Wrenhaus brought its second Riverside fixture plant online, expanding total corridor output by an estimated 34% as demand for plumbing fixtures stays firm. CEO Quinn Thorne, keeping to the house's measured style, said the facility 'came in on plan and will pay for itself the way the first one did.' Initial lines are running at partial capacity with a staged ramp through year-end.",
-      "cycle": 82712,
-      "dur": 2
     },
     {
       "company": "Ironcrestton",
@@ -219,36 +239,6 @@
       "head": "Marlgear Supply Splits Devices and Machines Units in Sweeping Post-Kessel Overhaul",
       "body": "New CEO Dane Kessler unveiled a full restructuring that separates Marlgear's Devices and Industrial Machines businesses into standalone divisions, alongside a new safety-oversight office reporting directly to the board. The plan follows the Verrant probe into suppressed Kessel fault reports and includes a $180M charge for remediation and layoffs of roughly 900 staff. Kessler said the company must 'rebuild trust from the machine floor up.'",
       "cycle": 82707,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Brunstone & Sons Ousts Halden Crowe as Board Moves to Contain Vault Cell Crisis",
-      "body": "The board removed CEO Halden Crowe on Thursday, naming operations veteran Dagny Frost to steer the company through the widening Vault Cell probe and mounting recall bills. Frost inherits a $2.1 billion litigation reserve and a regulator demanding sworn testimony on what executives knew and when. Directors said the change was needed to 'restore credibility with authorities and the public.'",
-      "cycle": 82706,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Castlestone Signs $12B Grid-Core Supply Pact, Largest in Company History",
-      "body": "Castlestone locked in a multi-year, $12 billion Grid-Core supply agreement with a consortium of data-hub operators, more than doubling its committed backlog. CEO Pell Karsh said the two new lines and the fresh campus were built 'precisely for this moment' and pledged first deliveries within nine months. The pact secures capacity through 2031 and front-loads roughly $3 billion in early payments.",
-      "cycle": 82706,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Vossenspire Holdings Faces Formal Safety Probe After Storage Bank Failure",
-      "body": "Regulators opened a formal investigation into the commissioning failure of Vossenspire's grid-scale storage bank, freezing energization of two further sites pending findings. CEO Halden Roe conceded the $6.8B pact timeline is now 'under active review' and set aside $400 million against remediation and penalties. Independent inspectors have been granted site access for at least 90 days.",
-      "cycle": 82706,
       "dur": 8
     }
   ]
