@@ -305,28 +305,30 @@ function OfferCard({ o }: { o: DeskOrder }) {
         </Link>
         {o.youProduce && <span className="oc-make">◆ you make this</span>}
       </div>
-      <div className="oc-meta">
-        <span>
-          Their offer <b>{money(o.companyOffer)}</b>
+      {/* The three figures a contract turns on, in the same label-under-value
+          shape the Deal Room and Supply cards use — one visual language across
+          the app rather than each screen inventing its own. Margin leads,
+          because it's the number that decides accept or counter. */}
+      <div className="oc-metrics">
+        <span className="oc-metric">
+          <b>{money(o.companyOffer)}</b>
+          <i>their offer</i>
         </span>
-        <span>
-          ~{money(o.marketValue)} to source
-          {makeCost != null && (
-            <>
-              {" · "}
-              ~<b>{money(makeCost)}</b> to make
-            </>
-          )}
+        <span className="oc-metric">
+          <b>{money(makeCost ?? o.marketValue)}</b>
+          <i>{makeCost != null ? "to make" : "to source"}</i>
         </span>
-      </div>
-      {makeCost != null && (
-        <div className={`oc-profit ${profit >= 0 ? "pos" : "neg"}`}>
-          {profit >= 0 ? "Profit if you make " : "Loss if you make "}
+        <span className={`oc-metric lead ${profit >= 0 ? "pos" : "neg"}`}>
           <b>
             {profit >= 0 ? "+" : ""}
             {money(profit)}
           </b>
-          {profit >= 0 && o.companyOffer > 0 && ` · ${margin}% margin`}
+          <i>{profit >= 0 ? `margin ${margin}%` : "at a loss"}</i>
+        </span>
+      </div>
+      {makeCost != null && (
+        <div className="oc-alt">
+          or {money(o.marketValue)} to source it on the floor instead
         </div>
       )}
 
