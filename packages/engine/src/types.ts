@@ -70,8 +70,19 @@ export interface Factory {
    *  resolves `sellerId` itself. `sellerHandle` is denormalized for display
    *  only — `sellerId` is the only field settlement logic trusts. */
   standingSources?: Record<number, { sellerId: string; sellerHandle: string }>;
-  /** Last settle outcome, for UI: building → running → idle (short on inputs). */
-  status: "building" | "running" | "idle";
+  /** Last settle outcome, for UI: building → running → idle (short on inputs)
+   *  → mothballed (couldn't pay upkeep; billing stopped). */
+  status: "building" | "running" | "idle" | "mothballed";
+  /**
+   * The line was shut down because its owner couldn't cover upkeep, and is no
+   * longer billing. STICKY on purpose — unlike `status`, which is recomputed
+   * every run. Upkeep used to bill whether or not a line could run, with no
+   * floor on cash, so being broke kept you broke: the line couldn't afford
+   * materials, idled, charged rent anyway, and the balance fell forever with
+   * no way back. Stopping the meter is the exit; restarting is a deliberate
+   * act, because a line that silently resumed would just walk back into it.
+   */
+  mothballed?: boolean;
 }
 
 /** One line/input's material need this cycle, as computed by produceFactories'

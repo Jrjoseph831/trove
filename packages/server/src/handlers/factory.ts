@@ -31,6 +31,7 @@ import {
   setSource,
   setStandingSource,
   orderSupply,
+  restartLine,
   runProduction,
   setReorder,
   START_CASH,
@@ -165,6 +166,10 @@ async function apply(state: WorldState, b: Body, playerId: string): Promise<stri
       return orderSupply(state, Number(b.itemId), Number(b.qty))
         ? null
         : "can't order that much";
+    case "restart-line":
+      return restartLine(state, String(b.lineId ?? b.factoryId))
+        ? null
+        : "can't restart that line — you need a run's upkeep in cash";
     case "reorder":
       setReorder(state, Number(b.itemId), Number(b.floor ?? 0), Number(b.qty ?? 0));
       return null;

@@ -1312,10 +1312,24 @@ function produceFactories(state: WorldState): void {
   if (lines.length === 0) return;
 
   const upMul = upkeepFactor(state); // Power Plant cuts upkeep
-  // Floor (bay) upkeep burns every cycle the floor is in use.
-  const bayUpkeep = Math.round(floorBays(state.floorSlots) * BAY_UPKEEP * upMul);
-  state.cash -= bayUpkeep;
-  state.ledger.upkeep += bayUpkeep;
+  // Floor (bay) upkeep burns every cycle the floor is IN USE. A floor whose
+  // every line is mothballed isn't in use, and charging for it would reopen
+  // the exact hole mothballing closes — the line stops billing, the docks
+  // carry on, and the balance still falls forever. If the floor can't be paid
+  // for either, everything goes dark rather than into debt.
+  const live = lines.filter((f) => !f.mothballed);
+  if (live.length > 0) {
+    const bayUpkeep = Math.round(floorBays(state.floorSlots) * BAY_UPKEEP * upMul);
+    if (state.cash < bayUpkeep) {
+      for (const f of live) {
+        f.mothballed = true;
+        f.status = "mothballed";
+      }
+      return;
+    }
+    state.cash -= bayUpkeep;
+    state.ledger.upkeep += bayUpkeep;
+  }
 
   const plans = new Map(buildLineNeedPlans(state).map((p) => [p.factory.id, p]));
 
@@ -1327,8 +1341,25 @@ function produceFactories(state: WorldState): void {
     const plan = plans.get(f.id);
     if (!plan) return; // output item missing from the catalog (shouldn't happen)
     const { out, rate, spec, inputs } = plan;
+
+    // A mothballed line is off: no upkeep, no output, until its owner restarts
+    // it. Sticky by design — see Factory.mothballed.
+    if (f.mothballed) {
+      f.status = "mothballed";
+      return;
+    }
+
     const lineUpkeep = Math.round(spec.upkeep * upMul);
-    state.cash -= lineUpkeep; // upkeep always burns
+    // Can't cover the rent? Shut the line down rather than bill into a hole.
+    // Upkeep used to burn unconditionally with no floor on cash, so a player
+    // who ran short idled, kept being charged, and went further negative every
+    // run with no way back. The meter stops here instead.
+    if (state.cash < lineUpkeep) {
+      f.mothballed = true;
+      f.status = "mothballed";
+      return;
+    }
+    state.cash -= lineUpkeep; // upkeep burns whenever the line is live
     state.ledger.upkeep += lineUpkeep;
 
     // Each input is either IN-HOUSE (pull from the vault, which a feeder line
@@ -1474,4 +1505,22 @@ export function advance(state: WorldState, dt: number): void {
     state.cycleFrac -= 1;
     settleCycle(state);
   }
+}
+
+/**
+ * Bring a mothballed line back online. Refuses unless the owner can cover at
+ * least one run's upkeep, so restarting can't drop them straight back into the
+ * hole the mothball just pulled them out of.
+ */
+export function restartLine(state: WorldState, lineId: string): boolean {
+  const f = (state.factories ?? []).find((x) => x.id === lineId);
+  if (!f || !f.mothballed) return false;
+  const out = state.items.find((i) => i.id === f.itemId);
+  if (!out) return false;
+  const spec = effectiveSpec(out, f.modules);
+  const upkeep = Math.round(spec.upkeep * upkeepFactor(state));
+  if (state.cash < upkeep) return false;
+  f.mothballed = false;
+  f.status = "idle"; // the next run decides whether it can actually produce
+  return true;
 }

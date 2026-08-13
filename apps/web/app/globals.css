@@ -10033,3 +10033,13 @@ body {
   transition: color .12s, border-color .12s;
 }
 .bay-run:hover { color: var(--ink); border-color: var(--accent); }
+
+/* Mothballed: the line is OFF and costing nothing — a different thing from
+   idle, which is still live and still billing. */
+.bay-stall.moth {
+  border-left-color: color-mix(in srgb, var(--ink-dim) 55%, transparent);
+  background: color-mix(in srgb, var(--ink-dim) 8%, transparent);
+}
+.bay-status.mothballed { color: var(--ink-dim); }
+.bay-run.moth { border-color: var(--accent); color: var(--ink); }
+.bay-run.moth:disabled { opacity: .5; cursor: not-allowed; border-color: var(--line); }

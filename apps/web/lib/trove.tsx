@@ -61,6 +61,7 @@ import {
   expandFloor as engineExpandFloor,
   installModule,
   routeFactory as engineRouteFactory,
+  restartLine as engineRestartLine,
   setSource as engineSetSource,
   setListPrice as engineSetListPrice,
   setListed as engineSetListed,
@@ -293,6 +294,8 @@ interface Trove {
   renameMfg: (name: string) => Promise<boolean>;
   /** Run any production the clock already owes you, without waiting. */
   runNow: () => Promise<void>;
+  /** Bring a mothballed line back online. */
+  restartLine: (lineId: string) => Promise<void>;
   /** Save the player's site config; resolves to the updated public view or null. */
   saveSite: (patch: Partial<SiteConfig>) => Promise<CompanySite | null>;
   /** Player-to-player order book (incoming as seller, outgoing as buyer). */
@@ -1251,6 +1254,21 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
     refresh();
   }, [refresh, showToast]);
 
+  const restartLine = useCallback(async (lineId: string) => {
+    if (modeRef.current !== "live") {
+      engineRestartLine(worldsRef.current!.sandbox, lineId);
+      refresh();
+      return;
+    }
+    const r = await factoryAction({ action: "restart-line", lineId });
+    if ("error" in r) {
+      showToast(r.status === 401 ? "Session expired — sign in again" : r.error);
+      return;
+    }
+    overlayPortfolio(worldsRef.current!.live, r);
+    refresh();
+  }, [refresh, showToast]);
+
   const setDeskAutomation = useCallback(
     (patch: { specialist?: boolean; autoFulfill?: boolean; minMargin?: number }) => {
       if (modeRef.current === "live") {
@@ -1589,6 +1607,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       mfgName,
       renameMfg,
       runNow,
+      restartLine,
       saveSite,
       orders,
       requestOrder,
@@ -1658,6 +1677,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       mfgName,
       renameMfg,
       runNow,
+      restartLine,
       saveSite,
       orders,
       requestOrder,
