@@ -2368,7 +2368,9 @@ body::after {
 /* ====================== BRAND DOSSIER ====================== */
 .brandpage {
   height: 100vh;
+  height: 100dvh; /* same reason as .itempage — mobile chrome collapses */
   overflow-y: auto;
+  overscroll-behavior-y: contain;
   background: var(--bg);
 }
 .dossier-wrap {
@@ -3445,13 +3447,24 @@ body::after {
 }
 
 /* ── Item detail page (Amazon-style product page) ───────────────────────── */
+/* The document itself never scrolls — html and body are locked so the terminal
+   can own its own scrolling — so every standalone route has to be its own
+   scroll container. The company page does this; the product page never did,
+   which left it unable to scroll at all. It went unnoticed on a desktop
+   viewport because the content happened to fit, and only bit on a phone where
+   it doesn't. dvh rather than vh so a mobile browser's collapsing chrome can't
+   put the bottom of the page permanently out of reach. */
 .itempage {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 40px 24px 80px;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
 }
 .itempage-inner {
   font-family: var(--font-body);
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
 }
 .item-bread {
   display: flex;
@@ -10299,6 +10312,41 @@ body {
   .nav-collapse {
     display: none;
   }
+}
+
+/* The product page's edge handle. Same tab as the terminal's, in the same
+   place, so the gesture doesn't move between screens — but this route has no
+   rail, so it goes back to the market and points that way. Shown at every
+   width: on a phone it's the only way out that isn't the browser's back
+   button, and on a desktop it costs nothing to be consistent. */
+.page-peek {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 38;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 80px;
+  padding: 0;
+  background: var(--paper);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  border-left: 0;
+  border-radius: 0 12px 12px 0;
+  color: var(--accent);
+  cursor: pointer;
+  box-shadow:
+    3px 0 10px -4px rgba(27, 23, 20, 0.28),
+    6px 0 26px -12px rgba(27, 23, 20, 0.5);
+  transition:
+    width 0.16s ease,
+    background 0.16s ease;
+}
+.page-peek:hover {
+  width: 32px;
+  background: color-mix(in srgb, var(--accent) 14%, var(--paper));
 }
 /* On narrow screens the rail is a drawer — mounted, but off-canvas — so the
    handle is the only way in regardless of which page you're on. */

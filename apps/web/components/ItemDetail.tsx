@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
 import {
   brandSlug,
   itemsByBrand,
@@ -22,6 +23,15 @@ export function ItemDetail({ item }: { item: Item }) {
 
   return (
     <div className="itempage-inner">
+      {/* The same edge handle the terminal carries, so the gesture is in the
+          same place here. This route has no rail to slide out, so it means the
+          honest thing instead — back to the market — and points that way. On a
+          phone it's the only way out of a product page that doesn't involve
+          the browser's own back button. */}
+      <Link href="/" className="page-peek" aria-label="Back to the market" title="Back to the market">
+        <ChevronLeft size={17} strokeWidth={2} />
+      </Link>
+
       <nav className="item-bread">
         <Link href="/">The Market</Link>
         <span>/</span>
