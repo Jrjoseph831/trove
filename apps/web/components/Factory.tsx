@@ -198,6 +198,7 @@ function LineBay({
     setStandingLineSource,
     setSellPrice,
     runNow,
+    restartLine,
     mode,
   } = useTrove();
   const out = state.items.find((i) => i.id === f.itemId);
@@ -284,7 +285,15 @@ function LineBay({
   }
   const canRun = shortInHouse.length === 0 && shortFloor.length === 0;
   const ready = canRun && state.cash >= cashCost;
-  const status = building ? "building" : ready ? "running" : "idle";
+  const mothballed = !!f.mothballed;
+  const upkeepDue = Math.round(eff.upkeep);
+  const status = mothballed
+    ? "mothballed"
+    : building
+      ? "building"
+      : ready
+        ? "running"
+        : "idle";
 
   // Exactly why it isn't running — a line stops for one of three reasons and
   // the player can fix all three, but only if told which.
@@ -348,9 +357,11 @@ function LineBay({
         <span className={`bay-status ${status}`}>
           {building
             ? `building · ${ticksToTvt(cyclesLeft)}`
-            : status === "running"
-              ? "● running"
-              : "◐ idle"}
+            : status === "mothballed"
+              ? "◼ mothballed"
+              : status === "running"
+                ? "● running"
+                : "◐ idle"}
         </span>
       </div>
 
@@ -358,22 +369,50 @@ function LineBay({
           three reasons and the player can fix all three — but not if nobody
           tells them which. It restarts on its own the moment the reason is
           gone: status is recomputed every run, never latched. */}
-      {!building && status !== "running" && stallReason && (
-        <div className="bay-stall">
-          <span className="bs-why">{stallReason}</span>
+      {/* Mothballed is its own state, and the opposite of idle: the line is OFF
+          and costing nothing. It got here because upkeep couldn't be paid, and
+          it stays here until restarted — a line that quietly switched itself
+          back on would walk straight back into the hole it just escaped. */}
+      {mothballed ? (
+        <div className="bay-stall moth">
+          <span className="bs-why">
+            Mothballed — you couldn&apos;t cover upkeep, so the line was shut down
+            and stopped billing.
+          </span>
           <span className="bs-auto">
-            Restarts by itself once fixed — next run in {ticksToTvt(1)} or less.
+            Costs nothing while off. Restarting needs {money(upkeepDue)} in hand.
           </span>
         </div>
+      ) : (
+        !building &&
+        status !== "running" &&
+        stallReason && (
+          <div className="bay-stall">
+            <span className="bs-why">{stallReason}</span>
+            <span className="bs-auto">
+              Restarts by itself once fixed — next run in {ticksToTvt(1)} or less.
+            </span>
+          </div>
+        )
       )}
 
-      {/* Fixed the problem and don't want to wait out the clock. Only runs what
-          the clock already owes you, so it can't make a batch that wasn't due —
-          it just collapses the wait. */}
       {!building && mode === "live" && (
-        <button className="bay-run" onClick={() => void runNow()}>
-          {ready ? "Run now" : "Retry now"}
-        </button>
+        mothballed ? (
+          <button
+            className="bay-run moth"
+            disabled={state.cash < upkeepDue}
+            title={state.cash < upkeepDue ? "Not enough cash to cover a run's upkeep" : ""}
+            onClick={() => void restartLine(f.id)}
+          >
+            Restart line
+          </button>
+        ) : (
+          /* Fixed it and don't want to wait out the clock. Only runs what the
+             clock already owes, so it can't make a batch that wasn't due. */
+          <button className="bay-run" onClick={() => void runNow()}>
+            {ready ? "Run now" : "Retry now"}
+          </button>
+        )
       )}
 
       <Conveyor
@@ -630,7 +669,7 @@ function Conveyor({
 }: {
   stages: { key: string; label: string; kind: "feed" | "process" | "output" }[];
   rate: number;
-  status: "building" | "running" | "idle";
+  status: "building" | "running" | "idle" | "mothballed";
   stageStat: Record<string, CvyStat>;
 }) {
   // Faster belt + more boxes for higher throughput.

@@ -39,6 +39,7 @@ import {
   playerSell,
   priceItem,
   reconcileCompanies,
+  restartLine,
   runProduction,
   setReorder,
   supplyQuote,
@@ -1335,5 +1336,67 @@ describe("estates and equity are visible in the books", () => {
     // Broken out OF assets, not added on top — the two must still reconcile.
     expect(r.estates!).toBeLessThanOrEqual(r.assets);
     expect(r.cash + r.assets - r.debt).toBeCloseTo(r.netWorth, 2);
+  });
+});
+
+describe("a broke line stops billing instead of digging", () => {
+  /** A built, online line whose owner is left with `cash`. */
+  function strandedLine(cash: number) {
+    setRng(mulberry32(9));
+    const S = createWorld(0);
+    S.cash = 5_000_000;
+    const target = catalog.find(
+      (i) => canProduce(i as never) && (recipeOf(i as never)?.inputs.length ?? 0) > 0,
+    )!;
+    expect(buildFactory(S, target.id)).toBeTruthy();
+    S.factories[0]!.onlineCycle = 0;
+    S.cash = cash;
+    return S;
+  }
+
+  it("mothballs rather than charging a player it can't charge", () => {
+    // Upkeep used to burn unconditionally with no floor: a line that couldn't
+    // afford materials idled, kept billing, and the balance fell forever with
+    // no way back. Being broke kept you broke.
+    const S = strandedLine(500);
+    for (let c = 1; c <= 10; c++) {
+      S.cycle = c;
+      runProduction(S);
+    }
+    expect(S.factories[0]!.status).toBe("mothballed");
+    expect(S.factories[0]!.mothballed).toBe(true);
+    expect(S.cash).toBeGreaterThanOrEqual(0); // never dug a hole
+  });
+
+  it("stays off until restarted, so it can't walk back into the hole", () => {
+    const S = strandedLine(500);
+    S.cycle = 1;
+    runProduction(S);
+    expect(S.factories[0]!.mothballed).toBe(true);
+
+    // Cash arrives. The line must NOT quietly switch itself back on.
+    S.cash = 5_000_000;
+    S.cycle = 2;
+    runProduction(S);
+    expect(S.factories[0]!.mothballed).toBe(true);
+    expect(S.cash).toBe(5_000_000); // and charged nothing while off
+  });
+
+  it("restarts only when a run's upkeep is actually covered", () => {
+    const S = strandedLine(500);
+    S.cycle = 1;
+    runProduction(S);
+    const line = S.factories[0]!;
+
+    expect(restartLine(S, line.id)).toBe(false); // still broke
+    expect(line.mothballed).toBe(true);
+
+    S.cash = 5_000_000;
+    expect(restartLine(S, line.id)).toBe(true);
+    expect(line.mothballed).toBe(false);
+
+    S.cycle = 2;
+    runProduction(S);
+    expect(S.cash).toBeLessThan(5_000_000); // live again, and billing again
   });
 });
