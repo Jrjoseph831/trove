@@ -10317,13 +10317,45 @@ body {
    no rail, so it goes back to the market and points that way. Shown at every
    width: on a phone it's the only way out that isn't the browser's own back
    button. */
-/* On narrow screens the rail is a drawer — mounted, but off-canvas — so the
-   handle is the only way in regardless of which page you're on. */
+/* No floating edge handles on a phone. A tab pinned to the middle of the left
+   edge works on a desktop because there is margin either side of the content
+   for it to live in. On a narrow screen there is no margin — the text runs to
+   the edge — so the handle lands directly on top of the article being read.
+   Mobile gets a toolbar button instead, which is where a menu control belongs
+   on a phone anyway.
+
+   The drawer's CLOSE chevron stays: it only appears over the drawer itself,
+   never over the page, so it covers nothing. */
 @media (max-width: 780px) {
-  .nav-peek {
-    display: flex;
+  .nav-peek,
+  .page-peek {
+    display: none;
   }
-  .app.navopen .nav-peek {
+}
+/* The toolbar menu button — mobile only, since the edge handle serves desktop. */
+.nav-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  margin-right: 2px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.nav-menu:active {
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+}
+@media (max-width: 780px) {
+  .nav-menu {
+    display: inline-flex;
+  }
+  .app.navopen .nav-menu {
     display: none;
   }
 }
