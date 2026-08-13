@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-13T02:05:48.956Z",
+  "generatedAt": "2026-08-13T07:36:54.453Z",
   "beats": [
+    {
+      "company": "Aldousspire Group",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Aldousspire Group to Open Twelve New Heirloom Concept Stores After Strong Everyday Line",
+      "body": "Building on momentum from the Heirloom Everyday line, Aldousspire announced plans to open twelve additional concept stores over the next year, its largest single expansion in a decade. CEO Mira Ashby said broadening buyer demographics justified the $88M rollout across new metro markets. Existing stores continue to post double-digit traffic growth.",
+      "cycle": 82713,
+      "dur": 2
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Calderforge Adds Fourth Stormwell Hall as Next-Gen Tier Sells Through",
+      "body": "Fresh off a strong quarter, Calderforge committed $520M to a fourth Stormwell hall, citing sold-out capacity on its next-gen compute tier. CEO Nadia Throne said pre-commitments already cover roughly 60% of the planned floor, targeting startup within eighteen months. The move extends an aggressive buildout that has doubled Calderforge's footprint in three years.",
+      "cycle": 82713,
+      "dur": 2
+    },
+    {
+      "company": "Castlegear Group",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castlegear Group Inches Ahead as Sterile Tray Contract Reaches Full Volume",
+      "body": "Castlegear delivered a small beat with income up 4%, as the regional network supply contract for sterile trays reached full shipment volume ahead of schedule. CEO Sable Brandt credited disciplined capacity planning and steady equipment backlog conversion. The company reaffirmed its conservative full-year outlook.",
+      "cycle": 82713,
+      "dur": 1
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Greenmarsh Agro Edges Past Estimates as Distribution Pact Lifts Bundle Volumes",
+      "body": "Greenmarsh reported a modest beat with revenue up 6%, as the new regional distribution pact began moving seed-coating and soil-blend bundles into more channels. CEO Petra Kessler noted the ramp remains early and reaffirmed the company's patient, multi-season rollout. Farm-input volumes rose steadily while equipment held flat.",
+      "cycle": 82713,
+      "dur": 1
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "breakthrough",
+      "size": "standard",
+      "head": "Greywater Grid Reports Closed-Loop System Recovers 94% of Reservoir Water in Early Runs",
+      "body": "Greywater Grid said pilot data from its $1.9B closed-loop retrofit shows 94% water recovery, exceeding the 88% threshold regulators set as a condition for resuming buildout. CEO Sable Renwick called the result 'the turning point' and said the company will petition to lift the remaining draw restrictions. Full reservoir-compute expansion could restart within two quarters if approvals hold.",
+      "cycle": 82713,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Halhold Works Misses Badly as Aveline Recall and Legal Costs Gut Quarterly Results",
+      "body": "Halhold reported a 41% drop in operating income, missing estimates by a wide margin as recall provisions and mounting legal reserves swelled to $214M. CEO Priya Vantt acknowledged the Aveline III fallout has spread to device and wire orders as hospital clients pause purchasing. The company withdrew its full-year guidance pending resolution of the hospital-network suit.",
+      "cycle": 82713,
+      "dur": 8
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Marrowstone Build Beats Again as Port and Inland Rail Orders Drive Backlog to Record",
+      "body": "Marrowstone posted revenue up 34% year-over-year, topping estimates as the $680M port package and $310M inland rail order fed a record $1.4B backlog. CEO Delphine Vaugh said fleet utilization hit 91% and margins improved on the split-deployment model. The company raised its delivery outlook for the second half.",
+      "cycle": 82713,
+      "dur": 2
+    },
+    {
+      "company": "Palettstead Holdings",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Palettstead Holdings Rolls Out Modular Insulated Packaging as Fourth Chain Goes Live",
+      "body": "With its fourth cold-chain facility now operational, Palettstead introduced a modular insulated packaging line engineered to cut cold-loss by an estimated 22% in transit. CEO Orla Marrow said the launch pairs the new facility's throughput with a product designed to retain anchor tenants and win overflow business. The line begins shipping to regional distributors next quarter.",
+      "cycle": 82713,
+      "dur": 2
+    },
     {
       "company": "Bruncrest Works",
       "sector": "technology",
@@ -52,26 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Korrworks Beats a Third Time as First Hub Holds Above-Plan Pace",
-      "body": "Korrworks posted a third consecutive beat, with the cross-region hub sustaining volumes roughly 12% above initial plan. CEO Rhys Throne said construction on the second hub remains on schedule, calling the early performance 'a template we intend to copy.' Handling margins ticked up on improved utilization.",
-      "cycle": 82712,
-      "dur": 1
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowcyon Notches Fifth Straight Quiet Beat as Apparel Volumes Hold",
-      "body": "Marrowcyon reported another modest quarterly beat, its fifth in a row, with revenue up 2.1% as steady apparel orders offset flat fixtures demand. CEO Theo Orne, in his customary brief remarks, credited 'the same discipline that's carried us for decades.' Margins held within a narrow band, extending the house's reputation for undramatic consistency.",
-      "cycle": 82712,
-      "dur": 1
-    },
-    {
       "company": "Wrenhaus",
       "sector": "construction",
       "kind": "expansion",
@@ -79,56 +139,6 @@
       "head": "Wrenhaus Opens Second Riverside Fixture Plant, Lifting Corridor Capacity by a Third",
       "body": "Wrenhaus brought its second Riverside fixture plant online, expanding total corridor output by an estimated 34% as demand for plumbing fixtures stays firm. CEO Quinn Thorne, keeping to the house's measured style, said the facility 'came in on plan and will pay for itself the way the first one did.' Initial lines are running at partial capacity with a staged ramp through year-end.",
       "cycle": 82712,
-      "dur": 2
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Blackhold Beats Again as Second Storage Campus Comes Online Ahead of Schedule",
-      "body": "Halden Dabney posted a second consecutive clean quarter, with revenue up 22% to $840 million as the newly commissioned campus began fulfilling the $1.2B grid mandate two months early. The independent testing unit cleared its first external audit without exceptions, cementing regulator confidence. Dabney signaled a third campus could follow if demand holds.",
-      "cycle": 82711,
-      "dur": 2
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Blackton Industries Names Turnaround Veteran Sable Renwick to Steady Halvern Fallout",
-      "body": "Weeks after ousting Cassian Rode, Blackton's board installed Sable Renwick as chief executive, tasked with resolving the Halvern class action and rebuilding supplier trust. Renwick, who led two prior parts-industry recoveries, pledged an independent quality overhaul and a settlement framework within ninety days. Marlow Denhart moves to executive chairman as the boardroom reset completes.",
-      "cycle": 82711,
-      "dur": 2
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Boreas Power Acquires Compute Specialist Halvane in $1.4B Push to Pair Power With Silicon",
-      "body": "Restless as ever, Mira Thorne struck a $1.4 billion deal for compute-hardware maker Halvane, aiming to bundle Boreas storage output with on-site processing capacity. The acquisition arrives as the Vantel campus nears full ramp, giving Boreas an end-to-end offering rivals lack. Thorne said the combination positions the company for 'the next decade of grid-and-compute convergence.'",
-      "cycle": 82711,
-      "dur": 2
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Carrowforge Misses as Renn's Roe-Era Split Drags Costs Into the Red",
-      "body": "Dahlia Renn's first full quarter came in below expectations, with a $210 million restructuring charge tied to separating the legacy product lines pushing the company to a narrow loss. Renn insisted the pain was front-loaded and reaffirmed that the core Industrial Machines unit grew orders 9% underneath the noise. Analysts flagged execution risk as the overhaul enters its costliest phase.",
-      "cycle": 82711,
-      "dur": 2
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "standard",
-      "head": "Castlestone Faces Safety Probe Into Grid-Core Campus After Reported Coolant Failure",
-      "body": "Regulators opened an inquiry into Castlestone's flagship Grid-Core facility following a coolant-system failure that forced a partial shutdown days into full production. Pell Karsh downplayed the incident as 'a commissioning hiccup,' but the probe casts a shadow over the $12B supply pact signed only weeks ago. Customers on the backlog are seeking assurances that delivery timelines hold.",
-      "cycle": 82711,
       "dur": 2
     },
     {
@@ -140,26 +150,6 @@
       "body": "A consumer-protection authority filed suit against Ironcrestton alleging the Meridian line's 'single-origin artisan' labeling was materially false, seeking penalties north of $400 million and a full product injunction. Thea Blackwood defended the launch but suspended Meridian shipments pending review, wiping out the margin gains that anchored her turnaround narrative. Three sourcing executives were placed on leave as an internal probe widened.",
       "cycle": 82711,
       "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Lhaus Industries Offloads Carved-Out Grid-Storage Unit to Kessering Group for $900M",
-      "body": "Cole Brandt announced the sale of the ring-fenced grid-storage division to private holding firm Kessering Group for $900 million, transferring the bulk of the overheating litigation exposure with it. Brandt framed the deal as clearing the deck for a renewed push into vehicles and auto parts, calling storage 'a chapter we no longer need.' The buyer assumes the pending $1.8B partner claims as part of the terms.",
-      "cycle": 82711,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Maison & Vale Strikes $1.5B Deal for Cleaning-Supplies Group Vestrand",
-      "body": "Rhys Kessler continued his acquisition spree with a $1.5 billion purchase of Vestrand, a regional cleaning-and-sanitation maker that expands Maison & Vale's Jansan footprint. The bolt-on follows the smooth digestion of Corriveau and gives the household-goods portfolio a third leg. Kessler projected $80 million in annual synergies within two years.",
-      "cycle": 82711,
-      "dur": 2
     },
     {
       "company": "Thaldale Group",
@@ -259,16 +249,6 @@
       "head": "Vossenspire Holdings Faces Formal Safety Probe After Storage Bank Failure",
       "body": "Regulators opened a formal investigation into the commissioning failure of Vossenspire's grid-scale storage bank, freezing energization of two further sites pending findings. CEO Halden Roe conceded the $6.8B pact timeline is now 'under active review' and set aside $400 million against remediation and penalties. Independent inspectors have been granted site access for at least 90 days.",
       "cycle": 82706,
-      "dur": 8
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Thronehaus & Co. Acquires Rare-Metals House Coristel in $1.8B Vertical Push",
-      "body": "Thronehaus & Co. announced an $1.8B acquisition of Coristel, a specialist supplier of precious casing alloys, securing upstream materials for its award-winning Marchwick line. CEO Cora Dray called the deal a decisive move to control quality and cost 'from ore to dial,' and said the Ferrault casework wing would be first to draw on Coristel stock. The purchase marks Thronehaus's largest ever, financed through cash and a new credit facility.",
-      "cycle": 82705,
       "dur": 8
     }
   ]

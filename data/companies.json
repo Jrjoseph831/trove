@@ -429,7 +429,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82696,
+    "lastEventCycle": 82713,
     "events": [
       {
         "cycle": 0,
@@ -535,6 +535,16 @@
         "size": "standard",
         "head": "Aldousspire Group Beats as Heirloom Everyday Line Broadens Buyer Base",
         "body": "Aldousspire topped estimates with same-store sales up 11%, driven by the Heirloom Everyday line drawing a younger, higher-frequency shopper into the concept stores. CEO Mira Ashby said the everyday range now accounts for a third of concept-store volume without diluting the premium tier. The company signaled it may add four more concept locations next year.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82713,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Aldousspire Group to Open Twelve New Heirloom Concept Stores After Strong Everyday Line",
+        "body": "Building on momentum from the Heirloom Everyday line, Aldousspire announced plans to open twelve additional concept stores over the next year, its largest single expansion in a decade. CEO Mira Ashby said broadening buyer demographics justified the $88M rollout across new metro markets. Existing stores continue to post double-digit traffic growth.",
         "effects": {
           "consumer": 0.13
         }
@@ -3330,7 +3340,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82705,
+    "lastEventCycle": 82713,
     "events": [
       {
         "cycle": 0,
@@ -3556,6 +3566,16 @@
         "size": "standard",
         "head": "Calderforge Beats as Next-Gen Compute Tier Fills Stormwell Halls",
         "body": "Calderforge reported quarterly revenue of $840M, ahead of the $790M consensus, driven by rapid uptake of its next-gen compute tier across the first two Stormwell halls. CEO Nadia Throne said the third hall is already 70% pre-committed, though she cautioned that ramp costs would pressure near-term margins. The company reaffirmed its aggressive capacity targets for the year.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82713,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Calderforge Adds Fourth Stormwell Hall as Next-Gen Tier Sells Through",
+        "body": "Fresh off a strong quarter, Calderforge committed $520M to a fourth Stormwell hall, citing sold-out capacity on its next-gen compute tier. CEO Nadia Throne said pre-commitments already cover roughly 60% of the planned floor, targeting startup within eighteen months. The move extends an aggressive buildout that has doubled Calderforge's footprint in three years.",
         "effects": {
           "technology": 0.13
         }
@@ -4328,7 +4348,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82686,
+    "lastEventCycle": 82713,
     "events": [
       {
         "cycle": 0,
@@ -4404,6 +4424,16 @@
         "size": "flash",
         "head": "Castlegear Group Nudges Past Estimates as Regional Trays Contract Ramps",
         "body": "Sable Brandt posted a modest beat with revenue of $418 million as the regional network sterile-tray contract began contributing meaningfully. Equipment orders held steady, and Brandt reaffirmed a cautious outlook while noting a healthy consumables backlog. The quarter marks a fourth consecutive period of measured growth.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82713,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlegear Group Inches Ahead as Sterile Tray Contract Reaches Full Volume",
+        "body": "Castlegear delivered a small beat with income up 4%, as the regional network supply contract for sterile trays reached full shipment volume ahead of schedule. CEO Sable Brandt credited disciplined capacity planning and steady equipment backlog conversion. The company reaffirmed its conservative full-year outlook.",
         "effects": {
           "medical": 0.06
         }
@@ -7473,7 +7503,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82693,
+    "lastEventCycle": 82713,
     "events": [
       {
         "cycle": 0,
@@ -7572,6 +7602,16 @@
         "effects": {
           "agriculture": 0.13
         }
+      },
+      {
+        "cycle": 82713,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Greenmarsh Agro Edges Past Estimates as Distribution Pact Lifts Bundle Volumes",
+        "body": "Greenmarsh reported a modest beat with revenue up 6%, as the new regional distribution pact began moving seed-coating and soil-blend bundles into more channels. CEO Petra Kessler noted the ramp remains early and reaffirmed the company's patient, multi-season rollout. Farm-input volumes rose steadily while equipment held flat.",
+        "effects": {
+          "agriculture": 0.06
+        }
       }
     ]
   },
@@ -7586,7 +7626,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82704,
+    "lastEventCycle": 82713,
     "events": [
       {
         "cycle": 0,
@@ -7788,6 +7828,16 @@
         "size": "standard",
         "head": "Greywater Grid Revives Reservoir Plan With $1.9B Closed-Loop Water Deal",
         "body": "Greywater Grid signed a $1.9B agreement with regional utilities to resume its reservoir-compute buildout using a closed-loop cooling design that cuts fresh-water draw by an estimated 70%. CEO Sable Renwick framed the pact as clearing the path past the regulatory pressure that halted work last quarter. Two of the three original compute sites will restart construction within 90 days.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82713,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Greywater Grid Reports Closed-Loop System Recovers 94% of Reservoir Water in Early Runs",
+        "body": "Greywater Grid said pilot data from its $1.9B closed-loop retrofit shows 94% water recovery, exceeding the 88% threshold regulators set as a condition for resuming buildout. CEO Sable Renwick called the result 'the turning point' and said the company will petition to lift the remaining draw restrictions. Full reservoir-compute expansion could restart within two quarters if approvals hold.",
         "effects": {
           "energy": 0.13
         }
@@ -8826,18 +8876,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82708,
+    "lastEventCycle": 82713,
     "events": [
-      {
-        "cycle": 82579,
-        "kind": "safety_probe",
-        "size": "major",
-        "head": "Halhold Works Faces Formal Safety Probe as Verity Pro Failures Tied to Patient Incidents",
-        "body": "National regulators opened a formal safety investigation into Halhold Works after linking at least nine patient-harm reports to the recalled Verity Pro medical units. CEO Gunnar Vale said the company would 'cooperate without reservation,' but internal testing records dating to the prior leadership are now subject to subpoena. Shares in the technology house came under heavy pressure as the probe threatened its Medical Equipment licenses.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82585,
         "kind": "lawsuit",
@@ -9058,6 +9098,16 @@
         "size": "major",
         "head": "Halhold Works Sued by Hospital Network Over Aveline III Monitor Failures",
         "body": "A consortium of nine hospital systems filed suit against Halhold seeking $310M in damages tied to alarm failures on recalled Aveline III monitors, alleging patient-safety incidents during the rollout. Priya Vantt said the company would defend itself while accelerating a replacement program, as the nationwide recall and regulatory action continue to weigh on the medical unit.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82713,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Halhold Works Misses Badly as Aveline Recall and Legal Costs Gut Quarterly Results",
+        "body": "Halhold reported a 41% drop in operating income, missing estimates by a wide margin as recall provisions and mounting legal reserves swelled to $214M. CEO Priya Vantt acknowledged the Aveline III fallout has spread to device and wire orders as hospital clients pause purchasing. The company withdrew its full-year guidance pending resolution of the hospital-network suit.",
         "effects": {
           "technology": -0.22
         }
@@ -12372,7 +12422,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82702,
+    "lastEventCycle": 82713,
     "events": [
       {
         "cycle": 0,
@@ -12534,6 +12584,16 @@
         "size": "standard",
         "head": "Marrowstone Build Adds $310M Inland Rail Earthmoving Order",
         "body": "Marrowstone Build has won a $310M contract to supply and service earthmoving fleets for a regional inland rail corridor. CEO Delphine Vaugh said the award leverages the same split-fleet model used on the $680M port package, keeping the new assembly line at full utilization through 2027. Deliveries begin in the second quarter with a dedicated maintenance crew stationed on-site.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82713,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Marrowstone Build Beats Again as Port and Inland Rail Orders Drive Backlog to Record",
+        "body": "Marrowstone posted revenue up 34% year-over-year, topping estimates as the $680M port package and $310M inland rail order fed a record $1.4B backlog. CEO Delphine Vaugh said fleet utilization hit 91% and margins improved on the split-deployment model. The company raised its delivery outlook for the second half.",
         "effects": {
           "construction": 0.13
         }
@@ -12867,7 +12927,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82695,
+    "lastEventCycle": 82713,
     "events": [
       {
         "cycle": 0,
@@ -12983,6 +13043,16 @@
         "size": "standard",
         "head": "Palettstead Holdings Beats as Fourth Cold-Chain Nears Startup With Anchor Locked",
         "body": "Orla Marrow posted results above consensus, crediting the pre-committed fourth cold-chain anchor volume for de-risking the ramp. Revenue rose 14% year-on-year as the three-chain network held full stride. Marrow guided to a smooth cutover once the fourth chain commissions next quarter.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82713,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Palettstead Holdings Rolls Out Modular Insulated Packaging as Fourth Chain Goes Live",
+        "body": "With its fourth cold-chain facility now operational, Palettstead introduced a modular insulated packaging line engineered to cut cold-loss by an estimated 22% in transit. CEO Orla Marrow said the launch pairs the new facility's throughput with a product designed to retain anchor tenants and win overflow business. The line begins shipping to regional distributors next quarter.",
         "effects": {
           "logistics": 0.13
         }
