@@ -76,10 +76,12 @@ function recipeText(out: Item): string {
 }
 
 export function Factory() {
-  const { state, buildLine, desk, mySite } = useTrove();
+  const { state, buildLine, desk, mySite, mfgName, renameMfg } = useTrove();
   const [picking, setPicking] = useState(false);
   const [view, setView] = useState<"lines" | "floor">("lines");
-  const mfg = manufacturingName(desk?.name ?? null);
+  // One source: the owner's own name if they set one, else derived.
+  const mfg = mfgName;
+  const [renaming, setRenaming] = useState(false);
   // Under your own mark, the product links to YOU — not to the catalog brand
   // that originated the design. Your line makes your product.
   const myHref = mySite?.published && mySite.handle ? `/${mySite.handle}` : null;
@@ -90,10 +92,21 @@ export function Factory() {
     <div className="view">
       <div className="cat-head">
         <h2 className="serif">{mfg}</h2>
+        <button className="mfg-rename" onClick={() => setRenaming(true)}>
+          rename
+        </button>
         <div className="fac-cash">
           Cash <b>{moneyShort(state.cash)}</b>
         </div>
       </div>
+
+      {renaming && (
+        <RenameMfg
+          current={mfg}
+          onClose={() => setRenaming(false)}
+          onSave={renameMfg}
+        />
+      )}
 
       <InboundStrip />
       <SupplyPanel />
@@ -815,6 +828,80 @@ function BuildPicker({
             </div>
           </>
         )}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Rename the manufacturing arm. Deliberately NOT part of onboarding: asking a
+ * new player to name a manufacturer before they've seen a factory is asking
+ * them to name something they don't understand yet, on the screen where people
+ * already bounce. The derived name carries them until they care.
+ */
+function RenameMfg({
+  current,
+  onClose,
+  onSave,
+}: {
+  current: string;
+  onClose: () => void;
+  onSave: (name: string) => Promise<boolean>;
+}) {
+  const [val, setVal] = useState(current);
+  const [busy, setBusy] = useState(false);
+  const clean = val.trim().replace(/\s+/g, " ");
+  const ok = clean.length >= 2 && clean.length <= 40;
+
+  const save = async () => {
+    if (!ok || busy) return;
+    setBusy(true);
+    const done = await onSave(clean);
+    setBusy(false);
+    if (done) onClose();
+  };
+
+  return (
+    <div
+      className="reveal-bg show"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+    >
+      <div className="onboard">
+        <div className="ob-kick">Your manufacturing arm</div>
+        <h2 className="ob-h">Name the factory</h2>
+        <p className="ob-sub">
+          What everything you build is stamped with, and what buyers see on your
+          goods. Your holding still owns it.
+        </p>
+        <input
+          className="ob-input"
+          value={val}
+          maxLength={40}
+          autoFocus
+          onChange={(e) => setVal(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") void save();
+          }}
+        />
+        <div className="ob-preview">
+          {ok ? (
+            <>
+              Goods will read <b>{clean}</b>
+            </>
+          ) : (
+            "A bit short — give it a name."
+          )}
+        </div>
+        <div className="bb-actions">
+          <button className="bb-cancel" onClick={onClose} disabled={busy}>
+            Cancel
+          </button>
+          <button className="bb-buy" onClick={save} disabled={!ok || busy}>
+            {busy ? "Saving…" : "Save name"}
+          </button>
+        </div>
       </div>
     </div>
   );
