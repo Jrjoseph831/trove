@@ -582,18 +582,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82709,
+    "lastEventCycle": 82719,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "breakthrough",
-        "size": "standard",
-        "head": "Aperture Compute Shows Off Faster Interconnect at Dawnmere",
-        "body": "Halden Dray rushed a new high-bandwidth interconnect to the Dawnmere tech week, claiming a sharp drop in cross-rack latency. Headline-hungry as always, Dray streamed the benchmark live and dared rivals to match it. The demo dominated the show floor's chatter.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "funding",
@@ -820,6 +810,16 @@
         "body": "Riding momentum from its $2.6B supply pact, Aperture said it will build a second Emberline production facility in the Corrent Valley, adding capacity CEO Marisol Venn claims will double output by 2028. The $1.4B project is partly funded by front-loaded pact revenue. Venn set an aggressive 18-month timeline that some suppliers privately called tight.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82719,
+        "kind": "breakthrough",
+        "size": "major",
+        "head": "Aperture Compute Unveils Next-Gen Emberline Node, Claiming Double the Output Per Site",
+        "body": "Marisol Venn took the stage to reveal the Emberline-2 process, which she said doubles Compute throughput per fabrication site while cutting power draw by a third. Venn moved the second Emberline groundbreaking forward and said three unnamed customers have already reserved capacity through 2029. The announcement caps a breakneck rise from the Dawnmere collapse just two years ago.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -6802,16 +6802,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82710,
+    "lastEventCycle": 82719,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Fennmoor — Precision, scaled to the moment",
-        "body": "Fennmoor spans the whole arc of modern hardware, from the everyday to the irreplaceable. Consumer devices for the value crowd, industrial machines for the factory floor, and medical equipment where margins for error vanish entirely. The flagship luxury instruments are exacting enough to set their own benchmarks. It is rare for one house to be trusted across so wide a field, yet hospitals, plants and households all reach for the name. Fennmoor builds at every tier and lowers its standards at none.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "major_deal",
@@ -7040,6 +7032,16 @@
         "body": "Following two quarters of deeper-than-guided integration costs, Fennmoor installed veteran operator Lena Voss to run the troubled Medical Systems division and pledged to complete the Corvane–Threll merger by year-end. CEO Dorian Brandt admitted the folding-in 'took longer than we told the market,' and paused further acquisitions until synergies materialize. The company guided to roughly $180M in one-time charges before the unit turns accretive.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82719,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fennmoor Returns to Growth as Medical Systems Integration Nears Deadline",
+        "body": "Dorian Brandt reported the first clean quarter since the Corvane and Threll folds, as newly installed division chief Lena Corsaw brought integration costs back within guidance ahead of the set deadline. Medical Equipment revenue rose 11% and the company said cross-selling into Industrial Machines has begun. Brandt hinted the House is again 'scanning for the next addition.'",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -9005,25 +9007,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1971,
-    "ceo": "Priya Vantt",
+    "ceo": "Anselm Rocha",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.89,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82713,
+    "lastEventCycle": 82719,
     "events": [
-      {
-        "cycle": 82585,
-        "kind": "lawsuit",
-        "size": "major",
-        "head": "Halhold Works Hit With Class Action Over Verity Pro Failures as Damages Sought Top $600M",
-        "body": "A consolidated class action was filed against Halhold Works on behalf of clinics and patients affected by the Verity Pro recall, seeking more than $600M in damages tied to the medical unit malfunctions. Gunnar Vale acknowledged the suit as 'a defining test' and set aside a $180M reserve, though analysts warn the figure may climb as the parallel safety probe continues. Shares of the turbulent house have shed roughly a third of their value since the recall began.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82590,
         "kind": "leadership_change",
@@ -9247,6 +9239,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82719,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Works Ousts CEO Priya Vantt as Aveline Fallout Claims the Top Job",
+        "body": "The board removed Priya Vantt after three straight quarters dominated by the Aveline III recall, the hospital-network suit, and a gutted earnings print. Director Anselm Rocha will serve as interim chief while the board searches for a permanent successor, pledging a full review of the Medical Equipment line. Shares of the House have been battered since the nationwide recall action.",
+        "effects": {}
       }
     ]
   },
@@ -9404,7 +9404,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82703,
+    "lastEventCycle": 82719,
     "events": [
       {
         "cycle": 0,
@@ -9550,6 +9550,16 @@
         "size": "standard",
         "head": "Hesperforge Supply Commits $600M to Fourth Mill as Marine Backlog Overwhelms Capacity",
         "body": "CEO Sable Halloran approved construction of a fourth mill at the Caldreach site, citing marine-grade order backlog that has now stretched delivery windows past eighteen months. The facility is slated to add roughly 40% to structural-materials output when it reaches full run rate in 2029. Halloran framed the move as a rare aggressive step, tied directly to the $1.4B framework deal signed last quarter.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82719,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Hesperforge Beats Again as Marine-Grade Framework Deliveries Begin",
+        "body": "Sable Halloran posted a firm quarter as initial shipments under the $1.4B marine-grade framework began flowing, lifting Structural Materials revenue 14%. The company said the fourth mill remains on schedule for a phased opening next year, with backlog still exceeding current capacity. Halloran flagged tightening raw-textile input costs as the one caution ahead.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -11513,18 +11523,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82711,
+    "lastEventCycle": 82719,
     "events": [
-      {
-        "cycle": 82565,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Lhaus Industries Breaks Ground on Dedicated Cell-Pack Plant to Feed $9B Fleet Pact",
-        "body": "Lhaus committed $1.6B to a new Power & Storage facility at Merrow Bend, designed to produce 30 GWh of cell packs annually once fully online in 2028. CEO Cole Brandt said the plant would secure supply for the recently signed fleet pact and 'leave room for the next three deals we haven't announced yet.' The site is expected to add roughly 900 jobs.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82572,
         "kind": "breakthrough",
@@ -11751,6 +11751,16 @@
         "size": "standard",
         "head": "Lhaus Industries Offloads Carved-Out Grid-Storage Unit to Kessering Group for $900M",
         "body": "Cole Brandt announced the sale of the ring-fenced grid-storage division to private holding firm Kessering Group for $900 million, transferring the bulk of the overheating litigation exposure with it. Brandt framed the deal as clearing the deck for a renewed push into vehicles and auto parts, calling storage 'a chapter we no longer need.' The buyer assumes the pending $1.8B partner claims as part of the terms.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82719,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Lhaus Industries Redeploys Kessering Proceeds Into $650M Vehicle-Platform Buyout",
+        "body": "Fresh off shedding its grid-storage unit, Cole Brandt moved fast to acquire drivetrain specialist Marnick Motive for $650M, folding it into the core Vehicles arm. Executives said the deal restores the growth narrative after two turbulent quarters and adds three assembly lines. Brandt called it a return to 'what Lhaus was built to do.'",
         "effects": {
           "automotive": 0.13
         }
@@ -13937,7 +13947,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82705,
+    "lastEventCycle": 82719,
     "events": [
       {
         "cycle": 0,
@@ -14103,6 +14113,16 @@
         "size": "flash",
         "head": "Steg Tooling Runs Streak to Twelve as Third Kelmar Cell Ramps",
         "body": "Steg Tooling reported a twelfth consecutive earnings beat, with the newly online third Kelmar cell contributing its first full quarter of fastener output. CEO Iris Vossen credited disciplined utilization rates and steady auto-parts demand, holding to her measured expansion cadence. Full-year guidance was reaffirmed.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82719,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Steg Tooling Pushes Streak to Thirteen as Kelmar Output Hits Full Stride",
+        "body": "Iris Vossen's disciplined run continued with a thirteenth consecutive beat, as the fully ramped third Kelmar cell lifted Fasteners & Fixings volumes 9% year over year. Management nudged full-year margin guidance up 40 basis points while reiterating no new capital commitments. Vossen credited 'steady hands and full order books.'",
         "effects": {
           "manufacturing": 0.06
         }
@@ -14969,7 +14989,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82703,
+    "lastEventCycle": 82719,
     "events": [
       {
         "cycle": 0,
@@ -15108,6 +15128,16 @@
         "effects": {
           "logistics": 0.06
         }
+      },
+      {
+        "cycle": 82719,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Delivers Steady Beat as Diversification Strategy Matures",
+        "body": "Halden Vossen reported another modest beat as the two non-grocery contracts reached full run-rate, lifting Packaging volumes 6%. Margins held firm on tight cost control, and the company reaffirmed its measured full-year outlook. Vossen said the diversification push has 'done exactly what we asked of it.'",
+        "effects": {
+          "logistics": 0.06
+        }
       }
     ]
   },
@@ -15122,18 +15152,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82708,
+    "lastEventCycle": 82719,
     "events": [
-      {
-        "cycle": 82534,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Varnvale & Sons Debuts First Bellmont-Crafted Timepiece Collection",
-        "body": "Varnvale unveiled the Meridian line, its first series pairing in-house movements with leatherwork from the newly folded Bellmont atelier. Bram Wold said the collection, priced from 4,200, marks the start of a broader push to integrate fine goods across its houses. Initial production was capped at 3,000 pieces.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82541,
         "kind": "award",
@@ -15362,6 +15382,16 @@
         "body": "The Corvane-sourced grand complication unveiled last quarter won the Aiguille d'Or at the Geneval Salon, the industry's most watched jury prize. Bram Wold said the recognition validated the vertical push into rare-metals sourcing and would anchor a limited run of 60 pieces.",
         "effects": {
           "luxury": 0.06
+        }
+      },
+      {
+        "cycle": 82719,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Varnvale & Sons to Open Flagship Ateliers in Three New Capitals on Complication Demand",
+        "body": "Buoyed by the Geneval win, Bram Wold committed $220M to open flagship ateliers in Marenne, Ostreve, and Caldon, each pairing a Timepieces salon with a Fine Goods hall. The company said Corvane-sourced inventory would supply a limited 400-piece run of the award-winning Grand Complication across the new sites. Wold framed the buildout as the House's largest retail expansion in four decades.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
