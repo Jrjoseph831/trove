@@ -195,6 +195,7 @@ export class TroveStack extends Stack {
         allowMethods: [
           CorsHttpMethod.GET,
           CorsHttpMethod.POST,
+          CorsHttpMethod.DELETE,
           CorsHttpMethod.OPTIONS,
         ],
         allowHeaders: ["content-type", "authorization"],
@@ -359,6 +360,30 @@ export class TroveStack extends Stack {
       methods: [HttpMethod.POST],
       integration: new HttpLambdaIntegration("FactoryIntegration", factory),
       authorizer,
+    });
+
+    // ── Company Studio: presentation-layer customization ($4.99 unlock) ─────
+    const studio = fn("Studio", "studio.ts", Duration.seconds(15));
+    market.grantReadData(studio);
+    players.grantReadWriteData(studio);
+    api.addRoutes({
+      path: "/studio",
+      methods: [HttpMethod.POST],
+      integration: new HttpLambdaIntegration("StudioIntegration", studio),
+      authorizer,
+    });
+    api.addRoutes({
+      path: "/studio/report",
+      methods: [HttpMethod.POST],
+      integration: new HttpLambdaIntegration("StudioReportIntegration", studio),
+      authorizer,
+    });
+    // Admin removal — no route auth (relies on x-admin-secret header).
+    // DELETE is not in the CORS allowlist, so add it here.
+    api.addRoutes({
+      path: "/admin/studio",
+      methods: [HttpMethod.DELETE],
+      integration: new HttpLambdaIntegration("AdminStudioIntegration", studio),
     });
 
     // ── Company websites: public directory + sites, authorized save ─────────

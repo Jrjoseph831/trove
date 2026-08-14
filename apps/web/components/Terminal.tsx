@@ -7,6 +7,7 @@ import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 import { Catalog } from "./Catalog";
 import { Companies } from "./Companies";
+import { Studio } from "./Studio";
 import { Desk } from "./Desk";
 import { Factory as FactoryView } from "./Factory";
 import { GoalUp } from "./GoalUp";
@@ -116,6 +117,7 @@ export function Terminal() {
         {effectiveTab === "deals" && <DealRoom />}
         {effectiveTab === "report" && <ReportView />}
         {effectiveTab === "companies" && <Companies />}
+        {effectiveTab === "studio" && <Studio />}
         {effectiveTab === "goals" && <Goals />}
       </div>
       {!canBrowseFull && (

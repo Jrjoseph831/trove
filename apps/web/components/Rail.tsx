@@ -10,6 +10,7 @@ import {
   LayoutGrid,
   type LucideIcon,
   Newspaper,
+  Sparkles,
   TrendingUp,
   Trophy,
   Vault as VaultIcon,
@@ -269,6 +270,15 @@ export function Rail({ onClose }: { onClose: () => void }) {
             <Globe size={15} strokeWidth={1.75} />
           </span>{" "}
           Companies
+        </button>
+        <button
+          className={tab === "studio" ? "on" : ""}
+          onClick={() => go("studio")}
+        >
+          <span className="ic">
+            <Sparkles size={15} strokeWidth={1.75} />
+          </span>{" "}
+          Studio
         </button>
       </div>
 

@@ -4,10 +4,12 @@
  * token.
  */
 import type {
+  CompanyStudio,
   DeskAuto,
   Factory,
   Infra,
   LogEntry,
+  ProductCustomization,
   ReorderRule,
   SupplyOrder,
   OwnedProperty,
@@ -77,6 +79,10 @@ export interface ApiPortfolio {
   mfgName?: string;
   /** The player's own company-site config (so the owner can edit a draft). */
   site?: SiteConfig | null;
+  /** Company Studio unlock state. */
+  studio?: CompanyStudio | null;
+  /** Presentation overrides keyed by canonical item id. */
+  customizations?: Record<number, ProductCustomization>;
   /** The player's previous lastSeenAt (ms), or null on their first fetch ever. */
   awaySince?: number | null;
 }
@@ -424,4 +430,60 @@ export async function postTrade(
     return { error: msg, status: res.status };
   }
   return res.json() as Promise<TradeResult>;
+}
+
+// ── Company Studio ────────────────────────────────────────────────────────────
+
+export type StudioAction =
+  | { action: "unlock" }
+  | { action: "add-slots" }
+  | { action: "branding"; logoUrl?: string; bannerUrl?: string }
+  | {
+      action: "customize";
+      itemId: number;
+      displayName?: string;
+      customImageUrl?: string;
+      customDescription?: string;
+    }
+  | { action: "remove"; itemId: number };
+
+export async function studioAction(
+  body: StudioAction,
+): Promise<ApiPortfolio | { error: string; status: number }> {
+  const token = getIdToken();
+  if (!token) return { error: "unauthorized", status: 401 };
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}/studio`, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: token },
+      body: JSON.stringify(body),
+    });
+  } catch {
+    return { error: "network error", status: 0 };
+  }
+  if (!res.ok) {
+    let msg = `failed (${res.status})`;
+    try {
+      msg = (await res.json()).error ?? msg;
+    } catch {
+      /* keep */
+    }
+    return { error: msg, status: res.status };
+  }
+  return res.json() as Promise<ApiPortfolio>;
+}
+
+export async function reportStudioContent(body: {
+  reportedPlayerId: string;
+  itemId?: number;
+  reason?: string;
+}): Promise<void> {
+  const token = getIdToken();
+  if (!token) return;
+  await fetch(`${API_BASE}/studio/report`, {
+    method: "POST",
+    headers: { "content-type": "application/json", authorization: token },
+    body: JSON.stringify(body),
+  });
 }

@@ -204,6 +204,33 @@ export interface SiteConfig {
   autoSupply?: boolean;
 }
 
+/** Presentation-only override for one canonical catalog item. The economy
+ *  (pricing, recipes, contracts, sector effects) always runs on the canonical
+ *  item — only the name/image/description shown to other players changes. */
+export interface ProductCustomization {
+  canonicalItemId: number;
+  /** Custom display name shown on the storefront and vault. Max 60 chars. */
+  displayName?: string;
+  /** HTTPS URL to a custom product image (hosted by the player). */
+  customImageUrl?: string;
+  /** One-line tagline / product description. Max 200 chars. */
+  customDescription?: string;
+}
+
+/** A player's Company Studio subscription state. */
+export interface CompanyStudio {
+  /** Has the player paid for the Studio unlock? */
+  unlocked: boolean;
+  /** Timestamp (ms) when it was unlocked. */
+  unlockedAt?: number;
+  /** How many products the player may customize. Starts at 5; sold in +10 packs. */
+  productSlots: number;
+  /** HTTPS URL to the company logo image. */
+  logoUrl?: string;
+  /** HTTPS URL to the company page banner image. */
+  bannerUrl?: string;
+}
+
 /** A player-to-player bulk order (multiplayer routing). A buyer requests goods
  *  from a seller's storefront; one counter round of haggling, then it settles
  *  atomically (goods seller→buyer, cash buyer→seller). `turn` is whose move it

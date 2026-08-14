@@ -23,13 +23,15 @@ import {
   fetchOrders,
   orderAction as apiOrderAction,
   saveSite as apiSaveSite,
+  studioAction as apiStudioAction,
   type ApiPortfolio,
   type ApiWorld,
   type CompanySite,
   type Desk,
   type FactoryAction,
+  type StudioAction,
 } from "./api";
-import type { PvpOrder, SiteConfig } from "@trove/engine";
+import type { CompanyStudio, ProductCustomization, PvpOrder, SiteConfig } from "@trove/engine";
 
 export interface OrderBook {
   incoming: PvpOrder[];
@@ -203,6 +205,17 @@ function overlayPortfolio(live: WorldState, p: ApiPortfolio): void {
   if (p.periodNo !== undefined) live.periodNo = p.periodNo;
 }
 
+/** Pull studio + customizations off a portfolio response into a side-store. */
+function extractStudio(p: ApiPortfolio): {
+  studio: CompanyStudio | null;
+  customizations: Record<number, ProductCustomization>;
+} {
+  return {
+    studio: p.studio ?? null,
+    customizations: p.customizations ?? {},
+  };
+}
+
 export type TabId =
   | "trending"
   | "catalog"
@@ -214,6 +227,7 @@ export type TabId =
   | "deals"
   | "report"
   | "companies"
+  | "studio"
   | "goals";
 export type Mode = "live" | "sandbox";
 
@@ -333,6 +347,12 @@ interface Trove {
   restartLine: (lineId: string) => Promise<void>;
   /** Save the player's site config; resolves to the updated public view or null. */
   saveSite: (patch: Partial<SiteConfig>) => Promise<CompanySite | null>;
+  /** Company Studio state (null = not yet loaded or not unlocked). */
+  myStudio: CompanyStudio | null;
+  /** Presentation customizations keyed by canonical item id. */
+  myCustomizations: Record<number, ProductCustomization>;
+  /** Perform a Company Studio action; resolves to error string or null. */
+  doStudio: (action: StudioAction) => Promise<string | null>;
   /** Player-to-player order book (incoming as seller, outgoing as buyer). */
   orders: OrderBook | null;
   /** Buyer: request a bulk order from a company storefront. */
@@ -471,6 +491,8 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
   const [dailyReport, setDailyReport] = useState<Report | null>(null);
   const [recap, setRecap] = useState<Recap | null>(null);
   const [mySite, setMySite] = useState<SiteConfig | null>(null);
+  const [myStudio, setMyStudio] = useState<CompanyStudio | null>(null);
+  const [myCustomizations, setMyCustomizations] = useState<Record<number, ProductCustomization>>({});
   const [serverNet, setServerNet] = useState<number | null>(null);
   const [mfgOwn, setMfgOwn] = useState<string | null>(null);
   const [orders, setOrders] = useState<OrderBook | null>(null);
@@ -530,6 +552,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
             if (alive) {
               overlayPortfolio(worldsRef.current!.live, p);
               setMySite(p.site ?? null);
+              const _s = extractStudio(p); setMyStudio(_s.studio); setMyCustomizations(_s.customizations);
               setServerNet(p.netWorth);
               setMfgOwn(p.mfgName ?? null);
               if (!recapCheckedRef.current) {
@@ -793,6 +816,7 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
         const p = await fetchPortfolio();
         overlayPortfolio(worldsRef.current!.live, p);
         setMySite(p.site ?? null);
+        const _ps = extractStudio(p); setMyStudio(_ps.studio); setMyCustomizations(_ps.customizations);
               setServerNet(p.netWorth);
               setMfgOwn(p.mfgName ?? null);
       }
@@ -825,6 +849,24 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       return r.view;
     },
     [showToast],
+  );
+
+  const doStudio = useCallback(
+    async (action: StudioAction): Promise<string | null> => {
+      if (!isSignedIn()) { authSignIn(); return "not signed in"; }
+      const r = await apiStudioAction(action);
+      if ("error" in r) {
+        showToast(r.error);
+        return r.error;
+      }
+      const s = extractStudio(r);
+      setMyStudio(s.studio);
+      setMyCustomizations(s.customizations);
+      if (worldsRef.current) overlayPortfolio(worldsRef.current.live, r);
+      refresh();
+      return null;
+    },
+    [refresh, showToast],
   );
 
   const refreshOrders = useCallback(async () => {
@@ -1692,6 +1734,9 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       recap,
       dismissRecap,
       mySite,
+      myStudio,
+      myCustomizations,
+      doStudio,
       serverNet,
       mfgName,
       renameMfg,
@@ -1762,6 +1807,9 @@ export function TroveProvider({ children }: { children: React.ReactNode }) {
       recap,
       dismissRecap,
       mySite,
+      myStudio,
+      myCustomizations,
+      doStudio,
       serverNet,
       mfgName,
       renameMfg,

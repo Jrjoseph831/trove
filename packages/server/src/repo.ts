@@ -41,6 +41,8 @@ import {
   type ReorderRule,
   type SupplyOrder,
   type RuntimeItem,
+  type CompanyStudio,
+  type ProductCustomization,
   type SiteConfig,
   type WorldState,
 } from "@trove/engine";
@@ -359,6 +361,12 @@ export interface Player {
   lastFlip?: number;
   /** The player's company website (manufacturing storefront). */
   site?: SiteConfig;
+  /** Company Studio unlock state ($4.99 one-time). */
+  studio?: CompanyStudio;
+  /** Presentation-only overrides for produced catalog items. Keyed by canonical
+   *  item id. Economy (pricing, contracts, sector effects) always uses the
+   *  canonical item — only display (name/image/description) changes here. */
+  customizations?: Record<number, ProductCustomization>;
   /** Last time (ms) this player's portfolio was fetched — the "last seen"
    *  watermark the "While You Were Away" recap diffs against. */
   lastSeenAt?: number;
@@ -512,6 +520,8 @@ export interface PortfolioView {
   /** The manufacturing arm's name, when the owner has set their own. */
   mfgName?: string;
   site: SiteConfig | null;
+  studio: CompanyStudio | null;
+  customizations: Record<number, ProductCustomization>;
   /** The player's previous lastSeenAt (ms), or null if this is their first
    *  fetch ever. Read-only snapshot — buildPortfolio does not stamp it. */
   awaySince: number | null;
@@ -595,6 +605,8 @@ export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
     periodNo: player.periodNo ?? 0,
     mfgName: player.mfgName,
     site: player.site ?? null,
+    studio: player.studio ?? null,
+    customizations: player.customizations ?? {},
     awaySince: player.lastSeenAt ?? null,
   };
 }
@@ -604,11 +616,16 @@ export function buildPortfolio(doc: WorldDoc, player: Player): PortfolioView {
 /** A product on a company's public storefront (a LISTED produced good). */
 export interface CompanyProduct {
   id: number;
+  /** Canonical item name — always present as fallback and market identity. */
   name: string;
   /** Listed unit price (market value × the seller's markup × QC premium). */
   price: number;
   /** Units the seller has produced and holds (available to order). */
   available: number;
+  /** Company Studio presentation overrides (present only when Studio is unlocked). */
+  displayName?: string;
+  customImageUrl?: string;
+  customDescription?: string;
 }
 
 /** A directory row — the public card for one company. */
@@ -685,6 +702,7 @@ export function storefrontOf(doc: WorldDoc, player: Player): CompanyProduct[] {
     const it = doc.items.find((i) => i.id === id);
     if (!it) continue;
     const mult = player.listPrices?.[id] ?? 1;
+    const custom = player.customizations?.[id];
     out.push({
       id,
       // These units came off THIS firm's line, so they're sold under this
@@ -694,6 +712,10 @@ export function storefrontOf(doc: WorldDoc, player: Player): CompanyProduct[] {
       // Same canonical formula the engine uses for listing sales + order pricing.
       price: Math.round(listedUnitPrice(it.value, mult, qcOn)),
       available: qty,
+      // Studio presentation overrides — only included when the player has set them.
+      ...(custom?.displayName && { displayName: custom.displayName }),
+      ...(custom?.customImageUrl && { customImageUrl: custom.customImageUrl }),
+      ...(custom?.customDescription && { customDescription: custom.customDescription }),
     });
   }
   return out.sort((a, b) => b.price - a.price);
