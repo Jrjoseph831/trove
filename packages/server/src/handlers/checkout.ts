@@ -65,7 +65,10 @@ export async function handler(
       success_url: `${SITE_URL}/?studio=${action === "unlock" ? "unlocked" : "slots-added"}`,
       cancel_url: `${SITE_URL}/`,
       metadata: { playerId, action },
-    });
+      // Managed Payments requires a tax_code on every product. Opting out here
+      // since Studio is a digital game feature, not a taxable physical sale.
+      managed_payments: { enabled: false },
+    } as Parameters<typeof stripe.checkout.sessions.create>[0]);
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     console.error("[checkout] stripe error:", msg);
