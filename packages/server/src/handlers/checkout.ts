@@ -57,15 +57,19 @@ export async function handler(
   if (!process.env.STRIPE_SECRET_KEY)
     return json(503, { error: "payments not configured" });
 
-  const session = await stripe.checkout.sessions.create({
-    mode: "payment",
-    line_items: [{ price: priceId, quantity: 1 }],
-    success_url: `${SITE_URL}/?studio=${action === "unlock" ? "unlocked" : "slots-added"}`,
-    cancel_url: `${SITE_URL}/`,
-    metadata: { playerId, action },
-    // Show the player's email pre-filled if we ever add email to player records.
-    // customer_email: playerEmail,
-  });
+  let session: Stripe.Checkout.Session;
+  try {
+    session = await stripe.checkout.sessions.create({
+      mode: "payment",
+      line_items: [{ price: priceId, quantity: 1 }],
+      success_url: `${SITE_URL}/?studio=${action === "unlock" ? "unlocked" : "slots-added"}`,
+      cancel_url: `${SITE_URL}/`,
+      metadata: { playerId, action },
+    });
+  } catch (err) {
+    console.error("[checkout] stripe error:", err);
+    return json(502, { error: "payment provider error — try again" });
+  }
 
   return json(200, { url: session.url });
 }

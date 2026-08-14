@@ -488,13 +488,13 @@ export async function reportStudioContent(body: {
   });
 }
 
-/** Start a Stripe Checkout session for a Studio purchase. Resolves to the
- *  Stripe-hosted checkout URL, or null on error. The caller redirects to it. */
+/** Start a Stripe Checkout session for a Studio purchase.
+ *  Resolves to { url } on success or { error } with a human-readable reason. */
 export async function studioCheckout(
   action: "unlock" | "add-slots",
-): Promise<string | null> {
+): Promise<{ url: string } | { error: string }> {
   const token = getIdToken();
-  if (!token) return null;
+  if (!token) return { error: "not signed in" };
   let res: Response;
   try {
     res = await fetch(`${API_BASE}/studio/checkout`, {
@@ -503,9 +503,15 @@ export async function studioCheckout(
       body: JSON.stringify({ action }),
     });
   } catch {
-    return null;
+    return { error: "network error" };
   }
-  if (!res.ok) return null;
-  const data = await res.json() as { url?: string };
-  return data.url ?? null;
+  let data: { url?: string; error?: string };
+  try {
+    data = await res.json() as typeof data;
+  } catch {
+    data = {};
+  }
+  if (!res.ok) return { error: data.error ?? `server error (${res.status})` };
+  if (!data.url) return { error: "no checkout URL returned" };
+  return { url: data.url };
 }

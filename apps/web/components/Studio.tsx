@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Image, Lock, Package, Palette, Plus, Trash2, X } from "lucide-react";
+import { Image, Package, Palette, Plus, Trash2, X } from "lucide-react";
 import { held } from "@trove/engine";
 import { reportStudioContent, studioCheckout } from "@/lib/api";
 import { resolveDisplay } from "@/lib/display";
@@ -14,7 +14,7 @@ function SlotBar({ used, total }: { used: number; total: number }) {
   return (
     <div className="studio-slots">
       <span className="ss-label">
-        {used}/{total} product slots used
+        {used}/{total} slots used
       </span>
       <div className="ss-bar">
         <div className="ss-fill" style={{ width: `${Math.min(100, (used / total) * 100)}%` }} />
@@ -87,18 +87,15 @@ function Customizer({
           </button>
         </div>
 
-        {/* Canonical identity — always visible, never editable */}
         <div className="sm-canonical">
           <span className="sm-canon-name">{itemName}</span>
           <span className="sm-canon-class">{canonicalClass}</span>
           <span className="sm-canon-value">{money(itemValue)}</span>
         </div>
         <div className="sm-disclosure">
-          Market classification, pricing, and all contract terms stay tied to the
-          canonical item. Only how it's presented to other players changes.
+          Market price and contract terms never change — only how it looks on your storefront.
         </div>
 
-        {/* Image preview + URL input */}
         <div className="sm-field">
           <label className="sm-lbl">
             <Image size={13} /> Product image URL
@@ -121,18 +118,17 @@ function Customizer({
             onChange={(e) => { setImageUrl(e.target.value); setImgError(false); }}
           />
           <span className="sm-hint">
-            Must be HTTPS. Hosted anywhere publicly accessible.
-            <br />
-            <label>
-              <input type="checkbox" style={{ marginRight: 4 }} required />I confirm I have the right to use this image.
+            Must be HTTPS and publicly accessible.{" "}
+            <label style={{ display: "inline" }}>
+              <input type="checkbox" style={{ marginRight: 4 }} />
+              I have the right to use this image.
             </label>
           </span>
         </div>
 
-        {/* Custom display name */}
         <div className="sm-field">
           <label className="sm-lbl">
-            <Package size={13} /> Product display name{" "}
+            <Package size={13} /> Display name{" "}
             <span className="sm-hint">({displayName.length}/60)</span>
           </label>
           <input
@@ -145,10 +141,9 @@ function Customizer({
           />
         </div>
 
-        {/* Custom tagline */}
         <div className="sm-field">
           <label className="sm-lbl">
-            Tagline / description{" "}
+            Tagline{" "}
             <span className="sm-hint">({description.length}/200)</span>
           </label>
           <textarea
@@ -274,41 +269,50 @@ export function ReportStudioButton({
 
 // ── Main Studio component ─────────────────────────────────────────────────────
 export function Studio() {
-  const { state, myStudio, myCustomizations, doStudio, notify, signedIn, signIn } = useTrove();
+  const { state, myStudio, myCustomizations, doStudio, notify, signedIn, signIn, setTab } = useTrove();
   const [customizing, setCustomizing] = useState<number | null>(null);
   const [unlocking, setUnlocking] = useState(false);
+  const [addingSlots, setAddingSlots] = useState(false);
 
   // Show a success toast when Stripe redirects back with ?studio=unlocked
   useEffect(() => {
     if (typeof window === "undefined") return;
     const params = new URLSearchParams(window.location.search);
     const result = params.get("studio");
-    if (result === "unlocked") notify("Company Studio unlocked — welcome to the Studio!");
+    if (result === "unlocked") notify("Company Studio unlocked!");
     if (result === "slots-added") notify("+10 product slots added");
     if (result) {
-      // Clean the query param without a reload
       const url = new URL(window.location.href);
       url.searchParams.delete("studio");
       window.history.replaceState({}, "", url.toString());
     }
   }, [notify]);
 
-  // All items the player currently holds that they produced themselves.
   const myProduced = useMemo(
     () => state.items.filter((it) => (state.producedQty[it.id] ?? 0) > 0 && held(it, "YOU") > 0),
     [state],
   );
 
+  const hasFactories = (state.factories?.length ?? 0) > 0;
+
   const handleUnlock = async () => {
     if (!signedIn) { signIn(); return; }
     setUnlocking(true);
-    const url = await studioCheckout("unlock");
-    if (url) {
-      window.location.href = url;
+    const result = await studioCheckout("unlock");
+    if ("url" in result) {
+      window.location.href = result.url;
     } else {
-      notify("Couldn't start checkout — try again");
+      notify(`Checkout failed: ${result.error}`);
       setUnlocking(false);
     }
+  };
+
+  const handleAddSlots = async () => {
+    setAddingSlots(true);
+    const err = await doStudio({ action: "add-slots" });
+    setAddingSlots(false);
+    if (!err) notify("+10 slots added");
+    else notify(err);
   };
 
   const handleCustomize = useCallback(
@@ -329,7 +333,7 @@ export function Studio() {
   );
 
   const slotsUsed = Object.keys(myCustomizations).length;
-  const totalSlots = myStudio?.productSlots ?? 5;
+  const totalSlots = myStudio?.productSlots ?? 20;
 
   // ── Locked state ──────────────────────────────────────────────────────────
   if (!myStudio?.unlocked) {
@@ -340,41 +344,103 @@ export function Studio() {
             <h2 className="serif">Company Studio</h2>
           </header>
           <div className="bento-card col-12 studio-locked">
-            <div className="studio-lock-icon">
-              <Lock size={32} />
+            <div className="studio-hero">
+              <h3 className="studio-hero-title">Your brand. Your storefront.</h3>
+              <p className="studio-hero-sub">
+                Upload product images, write custom names and descriptions, and put a logo on your company page.
+              </p>
             </div>
-            <h3 className="studio-lock-title">Build your own brand</h3>
-            <p className="studio-lock-body">
-              Give your products their own name, image, and story — without
-              changing a single market price or contract term.
-            </p>
-            <ul className="studio-perks">
-              <li>Custom names and images for 5 products</li>
-              <li>Company logo + page banner</li>
-              <li>Canonical classification always visible — market integrity intact</li>
-              <li>Expand later: +10 product slots for $2.99</li>
-            </ul>
-            <div className="studio-price-row">
-              <span className="studio-price">$4.99</span>
-              <span className="studio-price-note">one-time unlock · not a subscription</span>
+
+            <div className="studio-pillars">
+              <div className="studio-pillar">
+                <div className="sp-icon"><Image size={22} /></div>
+                <strong>Product images</strong>
+                <span>Replace the default icon with your own photo or artwork for any item you sell.</span>
+              </div>
+              <div className="studio-pillar">
+                <div className="sp-icon"><Package size={22} /></div>
+                <strong>Custom names & taglines</strong>
+                <span>Give products their own name and a short description shown on your storefront.</span>
+              </div>
+              <div className="studio-pillar">
+                <div className="sp-icon"><Palette size={22} /></div>
+                <strong>Logo & banner</strong>
+                <span>Brand your company page with a custom logo and header image.</span>
+              </div>
             </div>
-            <button
-              className="tbtn studio-unlock-btn"
-              onClick={handleUnlock}
-              disabled={unlocking}
-            >
-              {unlocking ? "Unlocking…" : "Unlock Company Studio — $4.99"}
-            </button>
-            <p className="studio-fine">
-              Secure payment via Stripe. You'll be redirected to complete your purchase.
+
+            <p className="studio-economy-note">
+              Prices, recipes, and contract terms stay with the market. Studio is display only.
             </p>
+
+            <div className="studio-cta-block">
+              <div className="studio-price-row">
+                <span className="studio-price">$4.99</span>
+                <span className="studio-price-note">one-time · not a subscription</span>
+              </div>
+              <button
+                className="tbtn studio-unlock-btn"
+                onClick={handleUnlock}
+                disabled={unlocking}
+              >
+                {unlocking ? "Opening checkout…" : "Unlock Studio"}
+              </button>
+              <p className="studio-fine">Secure payment via Stripe</p>
+            </div>
           </div>
         </div>
       </div>
     );
   }
 
-  // ── Unlocked state ────────────────────────────────────────────────────────
+  // ── Unlocked + no factory built yet ──────────────────────────────────────
+  if (!hasFactories) {
+    return (
+      <div className="view">
+        <div className="bento">
+          <header className="cat-head col-12">
+            <h2 className="serif">Company Studio</h2>
+          </header>
+          <div className="bento-card col-12 studio-empty-state">
+            <div className="ses-icon"><Package size={28} /></div>
+            <h3 className="ses-title">Studio is ready — build something to sell</h3>
+            <p className="ses-body">
+              Head to the Factory tab and set up a production line. Once you have items in stock, you can customize how they look here.
+            </p>
+            <button className="tbtn sell ses-cta" onClick={() => setTab("factory" as never)}>
+              Go to Factory
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Unlocked + factory running + nothing produced yet ─────────────────────
+  if (myProduced.length === 0) {
+    return (
+      <div className="view">
+        <div className="bento">
+          <header className="cat-head col-12">
+            <h2 className="serif">Company Studio</h2>
+          </header>
+          <BrandingPanel />
+          <div className="bento-card col-8 studio-empty-state">
+            <div className="ses-icon"><Package size={24} /></div>
+            <h3 className="ses-title">Nothing to customize yet</h3>
+            <p className="ses-body">
+              Your factory is set up. Products appear here once your first production run completes — or hit "Run Now" in the Factory tab to move things along.
+            </p>
+            <button className="tbtn ses-cta" onClick={() => setTab("factory" as never)}>
+              Go to Factory
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Fully unlocked with products ──────────────────────────────────────────
   const activeItem = customizing != null
     ? state.items.find((it) => it.id === customizing)
     : null;
@@ -385,89 +451,76 @@ export function Studio() {
         <header className="cat-head col-12">
           <h2 className="serif">Company Studio</h2>
           <div className="vault-sum">
-            <span className="vs"><i>Products customized</i><b>{slotsUsed}</b></span>
-            <span className="vs"><i>Slots available</i><b>{totalSlots - slotsUsed}</b></span>
+            <span className="vs"><i>Customized</i><b>{slotsUsed}</b></span>
+            <span className="vs"><i>Slots left</i><b>{totalSlots - slotsUsed}</b></span>
           </div>
         </header>
 
-        {/* Branding panel */}
         <BrandingPanel />
 
-        {/* Product list */}
         <div className="bento-card col-8">
           <div className="bc-h">
             <span className="t"><Package size={14} /> Products</span>
-            <span className="why">{myProduced.length} producible item{myProduced.length !== 1 ? "s" : ""}</span>
+            <span className="why">{myProduced.length} item{myProduced.length !== 1 ? "s" : ""} in production</span>
           </div>
           <SlotBar used={slotsUsed} total={totalSlots} />
 
-          {myProduced.length === 0 ? (
-            <div className="empty">
-              Build a factory line to start producing goods — then customize how
-              they appear on your storefront.
-            </div>
-          ) : (
-            myProduced.map((it) => {
-              const custom = myCustomizations[it.id];
-              const { displayName, customImageUrl } = resolveDisplay(it, myCustomizations);
-              const isCustomized = !!custom;
-              return (
-                <div className="crow studio-product-row" key={it.id}>
-                  {customImageUrl ? (
-                    <img
-                      className="studio-thumb"
-                      src={customImageUrl}
-                      alt={displayName}
-                      onError={(e) => (e.currentTarget.style.display = "none")}
-                    />
-                  ) : (
-                    <ItemIcon it={it} size={18} className="ic" />
+          {myProduced.map((it) => {
+            const custom = myCustomizations[it.id];
+            const { displayName, customImageUrl } = resolveDisplay(it, myCustomizations);
+            const isCustomized = !!custom;
+            return (
+              <div className="crow studio-product-row" key={it.id}>
+                {customImageUrl ? (
+                  <img
+                    className="studio-thumb"
+                    src={customImageUrl}
+                    alt={displayName}
+                    onError={(e) => (e.currentTarget.style.display = "none")}
+                  />
+                ) : (
+                  <ItemIcon it={it} size={18} className="ic" />
+                )}
+                <span className="nm">
+                  <span className={isCustomized ? "studio-custom-name" : ""}>{displayName}</span>
+                  {isCustomized && displayName !== it.name && (
+                    <span className="studio-canon-hint"> ({it.name})</span>
                   )}
-                  <span className="nm">
-                    <span className={isCustomized ? "studio-custom-name" : ""}>{displayName}</span>
-                    {isCustomized && displayName !== it.name && (
-                      <span className="studio-canon-hint"> ({it.name})</span>
-                    )}
-                  </span>
-                  <span className="pr">{money(it.value)}</span>
-                  <button
-                    className={`tbtn ${isCustomized ? "" : "sell"}`}
-                    onClick={() => setCustomizing(it.id)}
-                    disabled={!isCustomized && slotsUsed >= totalSlots}
-                    title={
-                      !isCustomized && slotsUsed >= totalSlots
-                        ? "No slots remaining — buy more"
-                        : isCustomized
-                          ? "Edit customization"
-                          : "Customize this product"
-                    }
-                  >
-                    {isCustomized ? "Edit" : "Customize"}
-                  </button>
-                </div>
-              );
-            })
-          )}
+                </span>
+                <span className="pr">{money(it.value)}</span>
+                <button
+                  className={`tbtn ${isCustomized ? "" : "sell"}`}
+                  onClick={() => setCustomizing(it.id)}
+                  disabled={!isCustomized && slotsUsed >= totalSlots}
+                  title={
+                    !isCustomized && slotsUsed >= totalSlots
+                      ? "No slots left — get more below"
+                      : isCustomized
+                        ? "Edit customization"
+                        : "Customize this product"
+                  }
+                >
+                  {isCustomized ? "Edit" : "Customize"}
+                </button>
+              </div>
+            );
+          })}
 
           {slotsUsed >= totalSlots && (
             <div className="studio-add-slots">
-              <span>Slot limit reached.</span>
+              <span>All {totalSlots} slots used.</span>
               <button
-                className="tbtn"
-                onClick={async () => {
-                  const url = await studioCheckout("add-slots");
-                  if (url) window.location.href = url;
-                  else notify("Couldn't start checkout — try again");
-                }}
+                className="tbtn sell"
+                onClick={handleAddSlots}
+                disabled={addingSlots}
               >
-                <Plus size={13} /> Add 10 slots — $2.99
+                <Plus size={13} /> {addingSlots ? "Adding…" : "Get 10 more slots"}
               </button>
             </div>
           )}
         </div>
       </div>
 
-      {/* Customizer modal */}
       {activeItem && (
         <Customizer
           itemId={activeItem.id}

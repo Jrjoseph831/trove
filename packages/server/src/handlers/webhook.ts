@@ -75,7 +75,7 @@ export async function handler(
         player.studio = {
           unlocked: true,
           unlockedAt: Date.now(),
-          productSlots: 5,
+          productSlots: 20,
           logoUrl: player.studio?.logoUrl,
           bannerUrl: player.studio?.bannerUrl,
         };
