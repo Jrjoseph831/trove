@@ -3746,7 +3746,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82699,
+    "lastEventCycle": 82716,
     "events": [
       {
         "cycle": 0,
@@ -3882,6 +3882,16 @@
         "size": "standard",
         "head": "Carrowcyon & Sons Beats Handily as National Smart-Dimming Rollout Scales",
         "body": "Carrowcyon & Sons reported a double-digit revenue jump as its national retail rollout of the smart-dimming line reached full shelf presence ahead of schedule. CEO Cole Brandt said sell-through outpaced restocking in several regions, prompting an expanded production run. Lighting now accounts for a growing share of group sales alongside household goods.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82716,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Carrowcyon & Sons to Add Third Line as Smart-Dimming Demand Outstrips Capacity",
+        "body": "Carrowcyon & Sons announced a $95M investment to open a third production line dedicated to its smart-dimming lighting range, targeting a 40% capacity increase by next year. CEO Cole Brandt said the move follows three consecutive quarters of national retail sell-through outpacing forecasts. The expansion is expected to add roughly 300 jobs at the company's main works.",
         "effects": {
           "consumer": 0.13
         }
@@ -4084,7 +4094,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82702,
+    "lastEventCycle": 82716,
     "events": [
       {
         "cycle": 0,
@@ -4238,6 +4248,16 @@
         "size": "standard",
         "head": "Carrowwell Beats as $1.1B Follow-On and New Plant Drive Record Machines Output",
         "body": "Carrowwell posted quarterly revenue of $1.9B, up 24%, as the dedicated machines plant ramped to full capacity against the extended reindustrialization contract. CEO Mara Voss highlighted early traction for the automated material-handling system, which secured its first external orders outside the government program. The company lifted its backlog figure to $4.6B and reaffirmed margin targets.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82716,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Carrowwell Breaks Ground on Second Machines Plant to Meet $1.1B Contract",
+        "body": "Carrowwell committed $520M to a second industrial-machines facility to serve the extended $1.1B reindustrialization contract, with output slated for late next year. CEO Mara Voss said the plant will also house expanded material-handling assembly following strong reception of the automated system launched this year. The company expects the site to add about 450 skilled positions.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -4461,18 +4481,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82705,
+    "lastEventCycle": 82716,
     "events": [
-      {
-        "cycle": 82525,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Castlehold Splits Saltmere Into Standalone Unit After Storm-Season Faults",
-        "body": "Castlehold has carved its troubled Saltmere Banks coastal operation into a separate division with its own management and a 95-million hardening budget for sea-wall and drainage upgrades. CEO Soren Skarn framed the move as 'ring-fencing the problem so the core book stays clean,' isolating Saltmere's losses from the company's stable inland storage business. Analysts noted the restructure quietly walks back Skarn's earlier coastal-expansion ambitions.",
-        "effects": {
-          "energy": -0.13
-        }
-      },
       {
         "cycle": 82531,
         "kind": "scandal",
@@ -4693,6 +4703,16 @@
         "size": "standard",
         "head": "Castlehold Wins $750M Supply Deal for High-Capacity Modular Storage",
         "body": "Castlehold secured a $750M multi-year supply agreement to deliver its new high-capacity modular line to a regional grid operator, its largest order to date. CEO Halden Voss said the second plant's completion would be timed to first deliveries, though he acknowledged execution risk in the compressed schedule. The deal validates the platform Voss has raced to scale since taking the helm.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82716,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Castlehold Beats as $750M Supply Deal Ships First Modular Units",
+        "body": "Castlehold posted quarterly revenue of $412M, up 34% year-on-year, as initial deliveries under its $750M storage supply agreement began flowing from the completed second plant. CEO Halden Voss credited the high-capacity modular line for lifting gross margins to 28%, though he cautioned that ramp costs would weigh on the coming quarter. The company reaffirmed full-year output targets.",
         "effects": {
           "energy": 0.13
         }
@@ -6332,7 +6352,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82705,
+    "lastEventCycle": 82716,
     "events": [
       {
         "cycle": 0,
@@ -6528,6 +6548,16 @@
         "size": "standard",
         "head": "Erretmark Works Opens Third Veyron Hall to Serve 2,400-Unit Contract",
         "body": "Erretmark Works commissioned a third Veyron assembly hall to support its landmark 2,400-unit cross-border contract, lifting total capacity by roughly 40%. CEO Aurelia Garr said the expansion positions the company to pursue additional international tenders, noting talks are underway on two further large orders. Hiring at the new hall is expected to add several hundred roles.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82716,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Erretmark Works Beats as Third Veyron Hall Lifts Delivery Pace",
+        "body": "Erretmark Works posted revenue of $2.1B, up 27%, as the newly opened third Veyron hall pushed quarterly deliveries to a record 640 units against its 2,400-unit contract. CEO Aurelia Garr said cross-border demand remains firm and hinted at pursuing further order books beyond the current backlog. Operating margins widened to 15% on improved hall utilization.",
         "effects": {
           "automotive": 0.13
         }
@@ -11144,18 +11174,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82709,
+    "lastEventCycle": 82716,
     "events": [
-      {
-        "cycle": 82539,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Korrwright Works Folds Velloux Dial Craft Into New Heritage Atelier",
-        "body": "Riding three straight wins of acclaim, Dunmore Carrow has authorized a dedicated Heritage Atelier in the Carrowmore district to house Velloux's restored dial presses alongside Korrwright's master finishers. The 40,000-square-foot site will lift annual hand-finished output by roughly 18 percent and consolidate two formerly separate workshops. Carrow called it 'the natural next acquisition of space, now that we own the talent.'",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82548,
         "kind": "major_deal",
@@ -11382,6 +11402,16 @@
         "body": "Korrwright unveiled a reorganization creating a dedicated retail arm to absorb the $780M Verenne chain, consolidating boutiques under a single Meridienne-branded storefront strategy. CEO Dunmore Carrow said the move eliminates roughly 40 overlapping locations while adding flagship space in three new markets. Integration costs will weigh on next-quarter margins.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82716,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Works Beats as Verenne Retail Integration Lifts Direct Sales",
+        "body": "Korrwright Works reported a 22% revenue rise to $610M in its first full quarter with the Verenne retail division consolidated, as direct-to-boutique sales of Alvence-movement pieces expanded margins to 41%. CEO Dunmore Carrow said controlling distribution has already trimmed discounting and improved inventory turns. He signaled appetite for further boutique acquisitions in key luxury corridors.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -11855,18 +11885,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82707,
+    "lastEventCycle": 82716,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Marlgear Supply Books First Atlas Order From Drennan Mills",
-        "body": "Marlgear Supply secured its first major Atlas press order from Drennan Mills, a sizable fabricator in the southern works belt. Halden Vossen said the deal validates the firm's leap into industrial machines. Delivery is slated across two phases this year.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82527,
         "kind": "major_deal",
@@ -12089,6 +12109,16 @@
         "size": "major",
         "head": "Marlgear Supply Splits Devices and Machines Units in Sweeping Post-Kessel Overhaul",
         "body": "New CEO Dane Kessler unveiled a full restructuring that separates Marlgear's Devices and Industrial Machines businesses into standalone divisions, alongside a new safety-oversight office reporting directly to the board. The plan follows the Verrant probe into suppressed Kessel fault reports and includes a $180M charge for remediation and layoffs of roughly 900 staff. Kessler said the company must 'rebuild trust from the machine floor up.'",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82716,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Marlgear Supply Hit With Class Action Over Suppressed Kessel Fault Reports",
+        "body": "A consolidated class action was filed against Marlgear Supply seeking $1.4B in damages on behalf of customers and injured parties tied to the Kessel fault it allegedly concealed. The suit names former CEO Ferran and cites internal documents surfaced in the Verrant probe. New CEO Dane Kessler pledged full cooperation but warned the litigation could take years to resolve and pressure the freshly split Devices unit.",
         "effects": {
           "technology": -0.22
         }
@@ -13376,7 +13406,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82700,
+    "lastEventCycle": 82716,
     "events": [
       {
         "cycle": 0,
@@ -13512,6 +13542,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Wins Kelvarn Terminal-Span Award, Extending Signature Project",
         "body": "Skarngrove secured the terminal-span package of the Kelvarn Interchange, a $290M award covering the final approach structures and anchorages. Quinn Fenn said the win locks structural-materials volumes through the next two years and builds directly on the fourth-phase viaduct work now in production. The measured chief called Kelvarn 'the backbone of our order book.'",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82716,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarngrove & Sons Beats Again as Kelvarn Terminal-Span Work Ramps",
+        "body": "Skarngrove & Sons reported revenue of $684M, up 19%, as terminal-span and viaduct volumes on the Kelvarn fourth phase reached peak activity. CEO Quinn Fenn pointed to steady structural-materials pricing and disciplined fastener margins for the beat. Management raised full-year guidance modestly, citing the signature project's extended runway.",
         "effects": {
           "construction": 0.13
         }
@@ -16072,18 +16112,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82707,
+    "lastEventCycle": 82716,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Vossenspire Supply Acquires Coachbuilder Renmark",
-        "body": "Quinn Marrow broadened Vossenspire beyond timepieces with the purchase of luxury coachbuilder Renmark, signaling a serious push into vehicles. The deal brings a small but prized workshop in the Highmoor. Marrow described it as 'two crafts, one obsession with finish.'",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82527,
         "kind": "product_launch",
@@ -16310,6 +16340,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Acquires Larkmoor Case-Maker Thelvane in Vertical Push",
         "body": "Vossenspire Supply agreed to acquire heritage case and dial workshop Thelvane for $340M, securing in-house production for its sold-out Halvane-powered Corveil timepieces. CEO Quinn Marrow called the deal a way to 'own the craft end to end' as waitlists across Larkmoor salons continue to swell. The purchase adds roughly 260 artisans to Vossenspire's payroll.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82716,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vossenspire Debuts Thelvane-Cased Corveil Reserve at Larkmoor Flagship",
+        "body": "Vossenspire Supply unveiled the Corveil Reserve, the first timepiece built entirely around its newly acquired Thelvane case works and doubled Halvane movement capacity. CEO Quinn Marrow said the limited 500-piece run carries a $38,000 list price and is aimed at cementing the house's vertical control over its supply chain. Early salon allocations sold through within days.",
         "effects": {
           "luxury": 0.13
         }
