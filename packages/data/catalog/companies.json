@@ -918,7 +918,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82688,
+    "lastEventCycle": 82717,
     "events": [
       {
         "cycle": 0,
@@ -1004,6 +1004,16 @@
         "size": "flash",
         "head": "Ashbystead Holdings Notches Eighth Straight Beat on Steady Hospital Orders",
         "body": "Cora Holt's medical-equipment house posted another modest beat, with revenue of $488 million edging past estimates on reliable renewal cycles. Management again declined to raise guidance, citing its long-held preference for measured targets. The streak marks two full years of consecutive beats.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82717,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Logs Ninth Straight Beat on Reliable Equipment Renewals",
+        "body": "Ashbystead Holdings reported a ninth consecutive quarterly beat, with revenue up 2.1% on continued hospital renewal contracts across its imaging and monitoring lines. CEO Cora Holt again declined to raise full-year guidance, citing the same steady replacement cadence that has defined the company for decades. Margins held flat at 18.4%.",
         "effects": {
           "medical": 0.06
         }
@@ -1887,18 +1897,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82706,
+    "lastEventCycle": 82717,
     "events": [
-      {
-        "cycle": 82527,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Bruncraft Industries Tops Forecasts as Runabout Sells Through",
-        "body": "Bruncraft posted quarterly revenue of £612 million, up 14% year on year, with the Foundry City Runabout clearing its first production run weeks ahead of schedule. Orla Marrow told reporters that order books for the compact were 'comfortably full into next year' and hinted at a second assembly line. Margins widened on stronger parts pricing.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82535,
         "kind": "major_deal",
@@ -2121,6 +2121,16 @@
         "body": "Marcus Vane struck again, agreeing to acquire specialty builder Vanguard Coachworks for $1.8 billion to add heavy-duty vehicle capacity beyond the reopened Halloran plant. Vane called it 'the second leg of the comeback,' arguing the deal lets Bruncraft chase larger fleet tenders it previously couldn't staff. The transaction is expected to close within two quarters, subject to review.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82717,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Bruncraft Reorganizes Around Vanguard Unit as Vane Consolidates Coachworks Operations",
+        "body": "Bruncraft Industries folded newly acquired Vanguard Coachworks into a dedicated Specialty Vehicles division, naming Vanguard veteran Lena Prosk to lead the unit under Marcus Vane. The reshuffle carries a $310 million integration charge and cuts roughly 640 overlapping back-office roles, though management insists the Halloran plant and $4.3 billion fleet backlog remain untouched. Vane framed the move as clearing runway for further deals rather than a retreat.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -2785,7 +2795,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82702,
+    "lastEventCycle": 82717,
     "events": [
       {
         "cycle": 0,
@@ -2939,6 +2949,16 @@
         "size": "standard",
         "head": "Brunridge Works Signs Multi-Category Supply Pact With National Retail Group",
         "body": "Brunridge Works has secured a three-year, $430M supply agreement to stock apparel, cleaning and packaging lines across a 900-store national retail group. CEO Halia Brennt said the deal 'rewards the discipline that brought our cordless line back,' broadening exposure beyond the recovered device segment. Shipments are slated to begin next quarter under a phased category rollout.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82717,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunridge Works Beats as National Retail Pact Lifts Multi-Category Volumes",
+        "body": "Brunridge Works topped estimates with revenue up 6.8%, crediting early shipments under its multi-category supply pact with National Retail Group across cleaning, devices, and packaging lines. CEO Halia Brennt said cordless and jansan categories both gained shelf space, and raised full-year guidance modestly. The company flagged higher freight costs as the one soft spot in the quarter.",
         "effects": {
           "consumer": 0.13
         }
@@ -3207,7 +3227,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82699,
+    "lastEventCycle": 82717,
     "events": [
       {
         "cycle": 0,
@@ -3333,6 +3353,16 @@
         "size": "flash",
         "head": "Caldercraft Holdings Beats as Weatherproof Line Additions Lift Volumes",
         "body": "Caldercraft Holdings edged past estimates as recent additions to its weatherproof range, including insulated chests and modular racks, drove a mid-single-digit volume gain. CEO Vale Fenn noted the new regional distribution center is now running at planned throughput. Household goods and hardware both contributed to the balanced quarter.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82717,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Caldercraft Holdings Rounds Out Weatherproof Line With Reinforced Deck Cabinets",
+        "body": "Caldercraft Holdings added reinforced deck cabinets to its expanding weatherproof line, priced from $180 to $340 and built to match the existing insulated chests and utility racks. CEO Vale Fenn said the addition completes the core outdoor-storage range and should support continued volume gains through the coming season. The launch drew little fanfare, consistent with the company's understated approach.",
         "effects": {
           "consumer": 0.06
         }
@@ -4823,18 +4853,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82711,
+    "lastEventCycle": 82717,
     "events": [
-      {
-        "cycle": 82567,
-        "kind": "restructure",
-        "size": "major",
-        "head": "Castlestone's Karsh Halts Second Campus, Cuts 900 Jobs in Sweeping Turnaround",
-        "body": "New CEO Pell Karsh froze construction on the second Vellmont campus and eliminated 900 roles, roughly 12% of staff, as part of a $1.1 billion writedown aimed at stemming the twin-campus losses. Karsh said the company would consolidate compute output at the completed site and refocus on the Vellmont order book rather than expansion. He pledged a return to positive cash flow within four quarters.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82574,
         "kind": "product_launch",
@@ -5063,6 +5083,16 @@
         "body": "Regulators opened an inquiry into Castlestone's flagship Grid-Core facility following a coolant-system failure that forced a partial shutdown days into full production. Pell Karsh downplayed the incident as 'a commissioning hiccup,' but the probe casts a shadow over the $12B supply pact signed only weeks ago. Customers on the backlog are seeking assurances that delivery timelines hold.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82717,
+        "kind": "outage",
+        "size": "major",
+        "head": "Castlestone Grid-Core Campus Goes Dark for Days as Coolant Probe Widens",
+        "body": "A cascading shutdown knocked Castlestone's flagship Grid-Core campus offline for nearly four days, halting deliveries against its $12 billion supply pact and forcing the company to warn of missed shipment milestones. The outage traced back to the same coolant systems already under safety review, and Pell Karsh confirmed at least two anchor customers have invoked delay clauses. Castlestone estimated a $480 million revenue hit and pledged an independent teardown of the campus infrastructure.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -6991,7 +7021,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82699,
+    "lastEventCycle": 82717,
     "events": [
       {
         "cycle": 0,
@@ -7119,6 +7149,16 @@
         "body": "Fennvale Mfg. announced a 48 million expansion to add a dedicated auto-parts assembly line adjacent to its existing fastener plant. CEO Theo Vossen said lengthening order books across both segments justified the capacity, with commissioning targeted within 18 months. The move extends a steady, self-funded growth posture the firm has maintained for decades.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82717,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Fennvale Mfg. Delivers Steady Beat as New Auto-Parts Line Nears First Output",
+        "body": "Fennvale Mfg. edged past estimates with revenue up 2.6%, carried by its fully ramped second fastener shift as the recently broken-ground auto-parts line moves toward initial production. Theo Vossen said equipment installation at the new line is on schedule for a first run next quarter. Margins held steady at 14.9% with no change to guidance.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -7905,16 +7945,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82710,
+    "lastEventCycle": 82717,
     "events": [
-      {
-        "cycle": 82568,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Gromford Works Ousts Mira Ashby as Board Moves to Contain Aurelian Noir Fallout",
-        "body": "After 128 years of famously restless leadership, Mira Ashby stepped down under board pressure as the concealment inquiry deepened and the Aurelian Noir recall topped 60,000 units. The board named longtime operations chief Delphine Vaugh to steer the house through the widening regulatory probe, promising an internal review of every timepiece line. Vaugh takes over with a settlement fund reportedly reaching 40 million marks.",
-        "effects": {}
-      },
       {
         "cycle": 82573,
         "kind": "leadership_change",
@@ -8133,6 +8165,16 @@
         "size": "standard",
         "head": "Gromford Works Rebounds as Slimmed Halvard-Era Timepiece Line Clears Shelves",
         "body": "Gromford posted a surprise return to growth, with quarterly revenue up 9% as the limited timepiece debut sold through at nearly 40% above internal targets. CEO Halvard Pryce touted the result as proof his leaner strategy is working, though Fine Goods remained flat and analysts flagged that the beat leaned heavily on a single scarce release. Pryce hinted at 'three more launches this year,' drawing both applause and caution over pacing.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82717,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Unveils Emblem Collection to Push Beyond Timepieces Under Pryce",
+        "body": "Halvard Pryce broadened Gromford's revival with the Emblem Collection, a line of fine leather goods and desk accessories priced from $900 to $6,400, its first meaningful move outside timepieces since the Meridian collapse. Pryce staged a splashy waterfront launch and pledged the first 5,000 pieces would ship within eight weeks. Skeptics noted the rapid category jump strains a still-thin design bench.",
         "effects": {
           "luxury": 0.13
         }
@@ -12309,7 +12351,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82703,
+    "lastEventCycle": 82717,
     "events": [
       {
         "cycle": 0,
@@ -12467,6 +12509,16 @@
         "body": "CEO Dorian Steg announced the acquisition of the Eastgate hospitality property, marking a disciplined third pillar alongside the fully occupied Westline and Northbrook sites. The addition expands the company's cleaning and household-goods servicing footprint by roughly a quarter. Steg emphasized measured integration, targeting stabilized occupancy within two quarters.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82717,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Extends Streak as Eastgate Ramps Alongside Full Legacy Base",
+        "body": "Marrowmoor Holdings posted another modest beat, with revenue up 3.4% as the newly added Eastgate property began contributing and Westline and Northbrook held near-full occupancy. Dorian Steg said Eastgate is tracking ahead of the integration timeline and should reach steady-state by next quarter. Guidance was left unchanged in Steg's characteristically measured tone.",
+        "effects": {
+          "hospitality": 0.06
         }
       }
     ]

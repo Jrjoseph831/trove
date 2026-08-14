@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-14T02:03:28.742Z",
+  "generatedAt": "2026-08-14T07:26:46.562Z",
   "beats": [
+    {
+      "company": "Ashbystead Holdings",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ashbystead Holdings Logs Ninth Straight Beat on Reliable Equipment Renewals",
+      "body": "Ashbystead Holdings reported a ninth consecutive quarterly beat, with revenue up 2.1% on continued hospital renewal contracts across its imaging and monitoring lines. CEO Cora Holt again declined to raise full-year guidance, citing the same steady replacement cadence that has defined the company for decades. Margins held flat at 18.4%.",
+      "cycle": 82717,
+      "dur": 1
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Bruncraft Reorganizes Around Vanguard Unit as Vane Consolidates Coachworks Operations",
+      "body": "Bruncraft Industries folded newly acquired Vanguard Coachworks into a dedicated Specialty Vehicles division, naming Vanguard veteran Lena Prosk to lead the unit under Marcus Vane. The reshuffle carries a $310 million integration charge and cuts roughly 640 overlapping back-office roles, though management insists the Halloran plant and $4.3 billion fleet backlog remain untouched. Vane framed the move as clearing runway for further deals rather than a retreat.",
+      "cycle": 82717,
+      "dur": 2
+    },
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunridge Works Beats as National Retail Pact Lifts Multi-Category Volumes",
+      "body": "Brunridge Works topped estimates with revenue up 6.8%, crediting early shipments under its multi-category supply pact with National Retail Group across cleaning, devices, and packaging lines. CEO Halia Brennt said cordless and jansan categories both gained shelf space, and raised full-year guidance modestly. The company flagged higher freight costs as the one soft spot in the quarter.",
+      "cycle": 82717,
+      "dur": 2
+    },
+    {
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Caldercraft Holdings Rounds Out Weatherproof Line With Reinforced Deck Cabinets",
+      "body": "Caldercraft Holdings added reinforced deck cabinets to its expanding weatherproof line, priced from $180 to $340 and built to match the existing insulated chests and utility racks. CEO Vale Fenn said the addition completes the core outdoor-storage range and should support continued volume gains through the coming season. The launch drew little fanfare, consistent with the company's understated approach.",
+      "cycle": 82717,
+      "dur": 1
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "outage",
+      "size": "major",
+      "head": "Castlestone Grid-Core Campus Goes Dark for Days as Coolant Probe Widens",
+      "body": "A cascading shutdown knocked Castlestone's flagship Grid-Core campus offline for nearly four days, halting deliveries against its $12 billion supply pact and forcing the company to warn of missed shipment milestones. The outage traced back to the same coolant systems already under safety review, and Pell Karsh confirmed at least two anchor customers have invoked delay clauses. Castlestone estimated a $480 million revenue hit and pledged an independent teardown of the campus infrastructure.",
+      "cycle": 82717,
+      "dur": 8
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Fennvale Mfg. Delivers Steady Beat as New Auto-Parts Line Nears First Output",
+      "body": "Fennvale Mfg. edged past estimates with revenue up 2.6%, carried by its fully ramped second fastener shift as the recently broken-ground auto-parts line moves toward initial production. Theo Vossen said equipment installation at the new line is on schedule for a first run next quarter. Margins held steady at 14.9% with no change to guidance.",
+      "cycle": 82717,
+      "dur": 1
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Gromford Works Unveils Emblem Collection to Push Beyond Timepieces Under Pryce",
+      "body": "Halvard Pryce broadened Gromford's revival with the Emblem Collection, a line of fine leather goods and desk accessories priced from $900 to $6,400, its first meaningful move outside timepieces since the Meridian collapse. Pryce staged a splashy waterfront launch and pledged the first 5,000 pieces would ship within eight weeks. Skeptics noted the rapid category jump strains a still-thin design bench.",
+      "cycle": 82717,
+      "dur": 2
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowmoor Holdings Extends Streak as Eastgate Ramps Alongside Full Legacy Base",
+      "body": "Marrowmoor Holdings posted another modest beat, with revenue up 3.4% as the newly added Eastgate property began contributing and Westline and Northbrook held near-full occupancy. Dorian Steg said Eastgate is tracking ahead of the integration timeline and should reach steady-state by next quarter. Guidance was left unchanged in Steg's characteristically measured tone.",
+      "cycle": 82717,
+      "dur": 1
+    },
     {
       "company": "Carrowcyon & Sons",
       "sector": "consumer",
@@ -159,26 +239,6 @@
       "head": "Woldmark Cratits as Halcyon 4 Sales Collapse and Frayne Concedes Turnaround Stalled",
       "body": "Woldmark reported a stunning 22% revenue drop as Halcyon 4 orders fell off a cliff, with channel inventory piling up and two large buyers canceling repeat orders. CEO Isolde Frayne, who had declared the turnaround 'done' just months ago, told a tense briefing that 'we got ahead of ourselves' and withdrew full-year guidance entirely. The reversal marks a sharp humbling for the outspoken chief and puts pressure on the next Halcyon cycle to salvage credibility.",
       "cycle": 82710,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Halhold Systems Ousts Ilse Marren as Board Moves to Contain Reliability Scandal",
-      "body": "Halhold's board removed CEO Ilse Marren effective immediately, citing loss of confidence amid the widening probe into concealed reliability failures and the pending shareholder suit. Director of operations Petra Vandel steps in as interim chief with a mandate to overhaul quality controls and cooperate with investigators. Shares have shed roughly a third of their value since the memos surfaced.",
-      "cycle": 82709,
-      "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Kessel Drive Bets Turnaround on Redesigned Vanta Storage Cell in Splashy Venn Debut",
-      "body": "In his first major move as permanent CEO, Aldric Venn unveiled the Vanta cell, a ground-up redesign that Kessel Drive says resolves the thermal failures behind last year's crisis, backed by a five-year replacement guarantee. Venn touted $1.9B in pre-orders and staged the launch at the reopened Halden plant, framing it as a clean break from the Corliss era. Independent validation of the new cell remains ongoing.",
-      "cycle": 82709,
       "dur": 8
     }
   ]
