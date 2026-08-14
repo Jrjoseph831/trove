@@ -25,10 +25,33 @@ import { Vault } from "./Vault";
 import { Wire } from "./Wire";
 
 export function Terminal() {
-  const { mounted, authReady, mode, tab, navOpen, setNavOpen, reveal, signedIn, signIn } =
+  const { mounted, authReady, mode, tab, navOpen, setNavOpen, reveal, signedIn, signIn, setTab, notify } =
     useTrove();
   // Declared above the boot gate: hooks can't sit after a conditional return.
   const [railClosed, setRailClosed] = useState(false);
+
+  // Capture and immediately clean any ?studio= param left by a Stripe redirect.
+  // This runs in the lazy initializer (synchronously on first render) so the URL
+  // is clean before any child mounts — no child needs to detect it themselves.
+  const [studioReturn] = useState<string>(() => {
+    if (typeof window === "undefined") return "";
+    const p = new URLSearchParams(window.location.search).get("studio") ?? "";
+    if (p) {
+      const u = new URL(window.location.href);
+      u.searchParams.delete("studio");
+      window.history.replaceState({}, "", u.toString());
+    }
+    return p;
+  });
+
+  // Once the app is fully mounted and auth is resolved, act on the return.
+  // Dep array re-triggers when mounted/authReady flip true after a cold load.
+  useEffect(() => {
+    if (!studioReturn || !mounted || !authReady) return;
+    setTab("studio");
+    if (studioReturn === "unlocked") notify("Studio unlocked — welcome!");
+    else if (studioReturn === "slots-added") notify("+10 product slots added");
+  }, [studioReturn, mounted, authReady, setTab, notify]);
 
   // Boot gate: render a deterministic shell on the server and the first client
   // paint (the engine uses randomness, so live data must be client-only).

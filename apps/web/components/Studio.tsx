@@ -274,19 +274,6 @@ export function Studio() {
   const [unlocking, setUnlocking] = useState(false);
   const [addingSlots, setAddingSlots] = useState(false);
 
-  // Show a success toast when Stripe redirects back with ?studio=unlocked
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const params = new URLSearchParams(window.location.search);
-    const result = params.get("studio");
-    if (result === "unlocked") notify("Company Studio unlocked!");
-    if (result === "slots-added") notify("+10 product slots added");
-    if (result) {
-      const url = new URL(window.location.href);
-      url.searchParams.delete("studio");
-      window.history.replaceState({}, "", url.toString());
-    }
-  }, [notify]);
 
   const myProduced = useMemo(
     () => state.items.filter((it) => (state.producedQty[it.id] ?? 0) > 0 && held(it, "YOU") > 0),
