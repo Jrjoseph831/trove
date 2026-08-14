@@ -38,7 +38,7 @@ const TABS: { id: TabId; Icon: LucideIcon; label: string }[] = [
   { id: "wire", Icon: Newspaper, label: "The Wire" },
 ];
 
-export function Rail() {
+export function Rail({ onClose }: { onClose: () => void }) {
   const {
     state,
     mode,
@@ -97,7 +97,7 @@ export function Rail() {
       <button
         className="rail-close"
         aria-label="Close menu"
-        onClick={() => setNavOpen(false)}
+        onClick={onClose}
       >
         <X size={20} />
       </button>

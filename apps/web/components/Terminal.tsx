@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { validateHoldingName } from "@trove/data";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
@@ -76,37 +76,17 @@ export function Terminal() {
       {canBrowseFull && navOpen && (
         <button className="nav-scrim" aria-label="Close navigation" onClick={closeRail} />
       )}
-      {canBrowseFull && !railHidden && <Rail />}
+      {canBrowseFull && !railHidden && <Rail onClose={closeRail} />}
 
       {/* The way back out. Mirrors the open handle on the rail's far edge, with
           the chevron pointing the other way, so opening and closing are the
           same gesture in opposite directions. Desktop only — on a narrow
           screen the rail is a drawer and the scrim already closes it. */}
-      {canBrowseFull && !railHidden && (
-        <button
-          className="nav-collapse"
-          onClick={closeRail}
-          aria-label="Collapse navigation"
-          title="Collapse navigation"
-        >
-          <ChevronLeft size={15} strokeWidth={2} />
-        </button>
-      )}
 
       {/* Desktop's way in: a tab on the left edge, where the rail would be, so
           it reads as the nav folded away and the chevron points at what opening
           it does. It's hidden on narrow screens — see the toolbar button below
           — because with no margin beside the content it sits on the text. */}
-      {canBrowseFull && (
-        <button
-          className={`nav-peek ${railHidden ? "show" : ""}`}
-          onClick={openRail}
-          aria-label="Open navigation"
-          title="Open navigation"
-        >
-          <ChevronRight size={15} strokeWidth={2} />
-        </button>
-      )}
 
       <div className={`main ${mode === "sandbox" ? "sandbox" : ""}`}>
         <div className="topbar">
@@ -115,7 +95,11 @@ export function Terminal() {
               text. A control in the toolbar is both out of the way and where
               anyone would look for it. */}
           {canBrowseFull && (
-            <button className="nav-menu" onClick={openRail} aria-label="Open navigation">
+            <button
+              className={`nav-menu ${railHidden ? "show" : ""}`}
+              onClick={openRail}
+              aria-label="Open navigation"
+            >
               <Menu size={18} strokeWidth={1.9} />
             </button>
           )}
