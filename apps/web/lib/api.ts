@@ -487,3 +487,25 @@ export async function reportStudioContent(body: {
     body: JSON.stringify(body),
   });
 }
+
+/** Start a Stripe Checkout session for a Studio purchase. Resolves to the
+ *  Stripe-hosted checkout URL, or null on error. The caller redirects to it. */
+export async function studioCheckout(
+  action: "unlock" | "add-slots",
+): Promise<string | null> {
+  const token = getIdToken();
+  if (!token) return null;
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}/studio/checkout`, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: token },
+      body: JSON.stringify({ action }),
+    });
+  } catch {
+    return null;
+  }
+  if (!res.ok) return null;
+  const data = await res.json() as { url?: string };
+  return data.url ?? null;
+}

@@ -130,6 +130,18 @@ export class TroveStack extends Stack {
     });
 
     // ── Lambda factory ──────────────────────────────────────────────────────
+    // Stripe keys are stored as SSM SecureString parameters; the Lambda reads
+    // them at deploy time via CDK context or environment. For test mode set
+    // STRIPE_SECRET_KEY / STRIPE_WEBHOOK_SECRET in the CDK context or as
+    // env overrides. Never hardcode these values here.
+    const stripeEnv = {
+      STRIPE_SECRET_KEY: this.node.tryGetContext("stripeSecretKey") ?? "",
+      STRIPE_WEBHOOK_SECRET: this.node.tryGetContext("stripeWebhookSecret") ?? "",
+      STUDIO_UNLOCK_PRICE: this.node.tryGetContext("studioUnlockPrice") ?? "price_1U4FOJA2N7ffDsShipggVOMb",
+      STUDIO_SLOTS_PRICE: this.node.tryGetContext("studioSlotsPrice") ?? "price_1U4FOJA2N7ffDsShkVUaT5G5",
+      SITE_URL: isProd ? "https://trove.ceo" : "https://beta.trove.ceo",
+    };
+
     const fn = (name: string, entry: string, timeout = Duration.seconds(30)) =>
       new lambdaNode.NodejsFunction(this, name, {
         entry: path.join(HANDLERS, entry),
@@ -384,6 +396,32 @@ export class TroveStack extends Stack {
       path: "/admin/studio",
       methods: [HttpMethod.DELETE],
       integration: new HttpLambdaIntegration("AdminStudioIntegration", studio),
+    });
+
+    // ── Stripe Checkout: creates a hosted payment session for Studio ─────────
+    const checkout = fn("Checkout", "checkout.ts", Duration.seconds(15));
+    checkout.addEnvironment("STRIPE_SECRET_KEY", stripeEnv.STRIPE_SECRET_KEY);
+    checkout.addEnvironment("STUDIO_UNLOCK_PRICE", stripeEnv.STUDIO_UNLOCK_PRICE);
+    checkout.addEnvironment("STUDIO_SLOTS_PRICE", stripeEnv.STUDIO_SLOTS_PRICE);
+    checkout.addEnvironment("SITE_URL", stripeEnv.SITE_URL);
+    api.addRoutes({
+      path: "/studio/checkout",
+      methods: [HttpMethod.POST],
+      integration: new HttpLambdaIntegration("CheckoutIntegration", checkout),
+      authorizer,
+    });
+
+    // ── Stripe Webhook: verifies payment and grants the Studio unlock ─────────
+    // Public (no JWT) — Stripe calls this; signature is verified inside.
+    const webhook = fn("Webhook", "webhook.ts", Duration.seconds(15));
+    players.grantReadWriteData(webhook);
+    webhook.addEnvironment("STRIPE_SECRET_KEY", stripeEnv.STRIPE_SECRET_KEY);
+    webhook.addEnvironment("STRIPE_WEBHOOK_SECRET", stripeEnv.STRIPE_WEBHOOK_SECRET);
+    api.addRoutes({
+      path: "/stripe/webhook",
+      methods: [HttpMethod.POST],
+      integration: new HttpLambdaIntegration("WebhookIntegration", webhook),
+      // No authorizer — Stripe signs its own requests; we verify in-handler.
     });
 
     // ── Company websites: public directory + sites, authorized save ─────────

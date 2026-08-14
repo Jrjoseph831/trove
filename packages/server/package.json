@@ -14,10 +14,11 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.700.0",
+    "@aws-sdk/lib-dynamodb": "^3.700.0",
     "@trove/data": "*",
     "@trove/engine": "*",
-    "@aws-sdk/client-dynamodb": "^3.700.0",
-    "@aws-sdk/lib-dynamodb": "^3.700.0"
+    "stripe": "^22.5.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.145",

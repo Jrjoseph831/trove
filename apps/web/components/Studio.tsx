@@ -1,9 +1,9 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Image, Lock, Package, Palette, Plus, Trash2, X } from "lucide-react";
 import { held } from "@trove/engine";
-import { reportStudioContent } from "@/lib/api";
+import { reportStudioContent, studioCheckout } from "@/lib/api";
 import { resolveDisplay } from "@/lib/display";
 import { money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
@@ -278,6 +278,21 @@ export function Studio() {
   const [customizing, setCustomizing] = useState<number | null>(null);
   const [unlocking, setUnlocking] = useState(false);
 
+  // Show a success toast when Stripe redirects back with ?studio=unlocked
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const result = params.get("studio");
+    if (result === "unlocked") notify("Company Studio unlocked — welcome to the Studio!");
+    if (result === "slots-added") notify("+10 product slots added");
+    if (result) {
+      // Clean the query param without a reload
+      const url = new URL(window.location.href);
+      url.searchParams.delete("studio");
+      window.history.replaceState({}, "", url.toString());
+    }
+  }, [notify]);
+
   // All items the player currently holds that they produced themselves.
   const myProduced = useMemo(
     () => state.items.filter((it) => (state.producedQty[it.id] ?? 0) > 0 && held(it, "YOU") > 0),
@@ -287,9 +302,13 @@ export function Studio() {
   const handleUnlock = async () => {
     if (!signedIn) { signIn(); return; }
     setUnlocking(true);
-    const err = await doStudio({ action: "unlock" });
-    setUnlocking(false);
-    if (!err) notify("Company Studio unlocked");
+    const url = await studioCheckout("unlock");
+    if (url) {
+      window.location.href = url;
+    } else {
+      notify("Couldn't start checkout — try again");
+      setUnlocking(false);
+    }
   };
 
   const handleCustomize = useCallback(
@@ -347,7 +366,7 @@ export function Studio() {
               {unlocking ? "Unlocking…" : "Unlock Company Studio — $4.99"}
             </button>
             <p className="studio-fine">
-              Stripe payment coming soon — click to unlock in preview.
+              Secure payment via Stripe. You'll be redirected to complete your purchase.
             </p>
           </div>
         </div>
@@ -435,7 +454,11 @@ export function Studio() {
               <span>Slot limit reached.</span>
               <button
                 className="tbtn"
-                onClick={() => doStudio({ action: "add-slots" })}
+                onClick={async () => {
+                  const url = await studioCheckout("add-slots");
+                  if (url) window.location.href = url;
+                  else notify("Couldn't start checkout — try again");
+                }}
               >
                 <Plus size={13} /> Add 10 slots — $2.99
               </button>
