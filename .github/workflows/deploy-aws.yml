@@ -71,12 +71,16 @@ jobs:
         working-directory: infra
         # main → TroveShared (prod); beta → TroveStaging (isolated staging world).
         # Google federation turns on when these are set (empty = email-only).
+        # Stripe keys are passed as context so they land in Lambda env vars without
+        # touching source code; the secrets live in GitHub repo secrets.
         run: >-
           npx cdk deploy
           ${{ github.ref_name == 'beta' && 'TroveStaging' || 'TroveShared' }}
           --require-approval never --outputs-file cdk-outputs.json
           -c googleClientId="${{ vars.GOOGLE_CLIENT_ID }}"
           -c googleClientSecret="${{ secrets.GOOGLE_CLIENT_SECRET }}"
+          -c stripeSecretKey="${{ secrets.STRIPE_SECRET_KEY }}"
+          -c stripeWebhookSecret="${{ secrets.STRIPE_WEBHOOK_SECRET }}"
       - name: Show outputs
         working-directory: infra
         run: cat cdk-outputs.json
