@@ -7866,6 +7866,34 @@ details.bay-modules > summary.bay-sub:hover {
   padding-bottom: 18px;
   margin-bottom: 22px;
 }
+
+/* Studio banner + logo on company page */
+.site-brand-banner {
+  width: 100%;
+  height: 130px;
+  background: var(--bg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.site-brand-logo {
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  border: 2px solid var(--surface, #161618);
+  background: var(--bg);
+  object-fit: contain;
+}
+.site-masthead-body { padding-left: 0; }
+/* When a logo is set without a banner, indent body to clear the logo */
+.site-brand-banner:not([style]) + .site-masthead-body {
+  padding-left: 64px;
+}
 .site-eyebrow {
   font-size: 10px;
   letter-spacing: 0.12em;
@@ -7949,10 +7977,23 @@ details.bay-modules > summary.bay-sub:hover {
   color: var(--site-accent, var(--accent));
   margin-bottom: 2px;
 }
+.store-custom-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 2px;
+}
 .store-nm {
   font-size: 13px;
   line-height: 1.25;
   min-height: 2.4em;
+}
+.store-desc {
+  font-size: 11px;
+  color: var(--ink-faint);
+  line-height: 1.35;
+  margin-bottom: 2px;
 }
 .store-pr {
   font-size: 16px;
@@ -10985,6 +11026,25 @@ body {
   border-top: 1px solid var(--border);
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+/* Vault custom product image (Studio) */
+.vault-custom-img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* Factory line bay — Studio product image thumbnail */
+.bay-product-img {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-right: 4px;
 }
 
 /* Branding panel — full-width card with controls + live preview side by side */

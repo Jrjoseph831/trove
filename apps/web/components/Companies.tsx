@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ArrowDown, ArrowUp, Globe, Pencil } from "lucide-react";
+import { ArrowDown, ArrowUp, Building2, Globe, Pencil } from "lucide-react";
 import { getItem, recipeOf, sectorLabel, type SectorKey } from "@trove/data";
 import {
   listedUnitPrice,
@@ -17,6 +17,7 @@ import {
   type CompanySite,
   type DirEntry,
 } from "@/lib/api";
+import { resolveDisplay } from "@/lib/display";
 import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
@@ -40,10 +41,12 @@ const label = (key: string): string =>
   key ? sectorLabel(key as SectorKey) : "—";
 
 /** Build the signed-in player's own storefront from the live world state, so the
- *  owner gets an instant preview (their listed produced goods, at their price). */
+ *  owner gets an instant preview (their listed produced goods, at their price).
+ *  Applies Studio customizations so the preview matches exactly what buyers see. */
 function ownStorefront(
   state: ReturnType<typeof useTrove>["state"],
   holding: string | null | undefined,
+  customizations: ReturnType<typeof useTrove>["myCustomizations"],
 ): CompanyProduct[] {
   const prod = state.producedQty ?? {};
   const qcOn = !!state.infra?.qc;
@@ -56,22 +59,22 @@ function ownStorefront(
     const it = state.items.find((i) => i.id === id);
     if (!it) continue;
     const mult = state.listPrices?.[id] ?? 1;
+    const c = customizations[id];
     out.push({
       id,
-      // Same designation storefrontOf() stamps server-side, so the owner's
-      // preview names the goods exactly as buyers will see them.
       name: makerVariantName(it.name, holding, id),
-      // Same canonical formula the server storefront + engine use, so the
-      // owner's preview matches exactly what others see and what orders charge.
       price: Math.round(listedUnitPrice(it.value, mult, qcOn)),
       available: qty,
+      ...(c?.displayName && { displayName: c.displayName }),
+      ...(c?.customImageUrl && { customImageUrl: c.customImageUrl }),
+      ...(c?.customDescription && { customDescription: c.customDescription }),
     });
   }
   return out.sort((a, b) => b.price - a.price);
 }
 
 export function Companies() {
-  const { mode, state, mySite, desk, signedIn, signIn } = useTrove();
+  const { mode, state, mySite, myStudio, myCustomizations, desk, signedIn, signIn } = useTrove();
   const [open, setOpen] = useState<string | null>(null); // handle being viewed
   const [editing, setEditing] = useState(false);
 
@@ -125,7 +128,7 @@ export function Companies() {
         />
       );
     }
-    const site = ownPreview(mySite, desk?.name ?? null, ownStorefront(state, manufacturingName(desk?.name)), state);
+    const site = ownPreview(mySite, desk?.name ?? null, ownStorefront(state, manufacturingName(desk?.name), myCustomizations), state, myStudio);
     return (
       <SiteView
         site={site}
@@ -181,6 +184,7 @@ function ownPreview(
   name: string | null,
   storefront: CompanyProduct[],
   state: ReturnType<typeof useTrove>["state"],
+  studio?: ReturnType<typeof useTrove>["myStudio"],
 ): CompanySite {
   const sectors = dominantSectors(storefront, state);
   const fin = ownFinances(state);
@@ -203,6 +207,8 @@ function ownPreview(
       lines: state.factories.length,
       sectors,
     },
+    ...(studio?.unlocked && studio?.logoUrl ? { logoUrl: studio.logoUrl } : {}),
+    ...(studio?.unlocked && studio?.bannerUrl ? { bannerUrl: studio.bannerUrl } : {}),
   };
 }
 
@@ -470,9 +476,21 @@ export function SiteView({
           if (sec.id === "masthead")
             return (
               <header className="site-masthead" key="masthead">
-                <div className="site-eyebrow">{eyebrow}</div>
-                <h1>{displayName}</h1>
-                {site.tagline && <p className="site-tag">{site.tagline}</p>}
+                {(site.bannerUrl || site.logoUrl) && (
+                  <div
+                    className="site-brand-banner"
+                    style={site.bannerUrl ? { backgroundImage: `url(${site.bannerUrl})` } : undefined}
+                  >
+                    {site.logoUrl && (
+                      <img className="site-brand-logo" src={site.logoUrl} alt={displayName} />
+                    )}
+                  </div>
+                )}
+                <div className="site-masthead-body">
+                  <div className="site-eyebrow">{eyebrow}</div>
+                  <h1>{displayName}</h1>
+                  {site.tagline && <p className="site-tag">{site.tagline}</p>}
+                </div>
               </header>
             );
           if (sec.id === "about" && sec.on && !isHouse)
@@ -575,12 +593,19 @@ function Storefront({
         <div className="store-grid">
           {products.map((p) => {
             const it = getItem(p.id);
+            const label = p.displayName ?? p.name;
             return (
               <div className="store-card" key={p.id}>
                 <span className="store-ic">
-                  {it ? <ItemIcon it={it} size={22} /> : null}
+                  {p.customImageUrl
+                    ? <img className="store-custom-img" src={p.customImageUrl} alt={label} />
+                    : it ? <ItemIcon it={it} size={22} /> : null
+                  }
                 </span>
-                <span className="store-nm">{p.name}</span>
+                <span className="store-nm">{label}</span>
+                {p.customDescription && (
+                  <span className="store-desc">{p.customDescription}</span>
+                )}
                 <span className="store-pr">{money(p.price)}</span>
                 <span className="store-av">{p.available.toLocaleString()} available</span>
                 <button
@@ -747,7 +772,7 @@ function RequestModal({
 
 // ── The modular builder ─────────────────────────────────────────────────────
 function Builder({ onDone }: { onDone: () => void }) {
-  const { mySite, saveSite, desk, state } = useTrove();
+  const { mySite, myStudio, myCustomizations, saveSite, desk, state } = useTrove();
   const baseHandle = useMemo(
     () =>
       mySite?.handle ||
@@ -786,8 +811,9 @@ function Builder({ onDone }: { onDone: () => void }) {
   const preview = ownPreview(
     { handle, tagline, about, accent, sections },
     desk?.name ?? null,
-    ownStorefront(state, manufacturingName(desk?.name)),
+    ownStorefront(state, manufacturingName(desk?.name), myCustomizations),
     state,
+    myStudio,
   );
 
   const save = async (publish: boolean) => {

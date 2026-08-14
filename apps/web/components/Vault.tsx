@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { brandSlug } from "@trove/data";
 import { creditLimit, held, makerVariantName } from "@trove/engine";
+import { resolveDisplay } from "@/lib/display";
 import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
 
 export function Vault() {
-  const { state, sell, setListing, doBorrow, doRepay, desk, mySite, mfgName } = useTrove();
+  const { state, sell, setListing, doBorrow, doRepay, desk, mySite, mfgName, myCustomizations } = useTrove();
   // Goods off your own line are yours: they carry your manufacturing mark and
   // link to your page, not to the catalog brand that originated the design.
   const myMark = mfgName;
@@ -76,9 +77,18 @@ export function Vault() {
               // Made it yourself → it's your product, under your mark. Bought
               // it on the floor → it's still the originating brand's.
               const isMine = produced > 0;
+              // For the player's own produced goods, resolve the Studio display
+              // name + image. Falls back to the canonical name if no override.
+              const { displayName: studioName, customImageUrl } = isMine
+                ? resolveDisplay(it, myCustomizations)
+                : { displayName: it.name, customImageUrl: null };
+              const itemLabel = isMine ? studioName : it.name;
               return (
                 <div className="crow" key={it.id}>
-                  <ItemIcon it={it} size={18} className="ic" />
+                  {isMine && customImageUrl
+                    ? <img className="vault-custom-img ic" src={customImageUrl} alt={itemLabel} />
+                    : <ItemIcon it={it} size={18} className="ic" />
+                  }
                   <span className="nm">
                     {isMine ? (
                       myHref ? (
@@ -100,7 +110,7 @@ export function Vault() {
                       href={isMine && myHref ? myHref : `/item/${it.id}`}
                       className="it-link"
                     >
-                      {isMine ? makerVariantName(it.name, myMark, it.id) : it.name}
+                      {itemLabel}
                     </Link>
                     {q > 1 ? ` ×${q.toLocaleString()}` : ""}
                     {edNo}

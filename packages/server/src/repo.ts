@@ -663,6 +663,9 @@ export interface CompanySite extends CompanyCard {
   cash: number;
   holdings: Holding[];
   standing: { rank: number | null; lines: number; sectors: string[] };
+  /** Company Studio branding (present only when Studio is unlocked and set). */
+  logoUrl?: string;
+  bannerUrl?: string;
 }
 
 const DEFAULT_SECTIONS: NonNullable<SiteConfig["sections"]> = [
@@ -858,6 +861,12 @@ export function companySite(
     cash: Math.round(player.cash ?? 0),
     holdings: holdings.slice(0, 12),
     standing: { rank, lines: (player.factories ?? []).length, sectors },
+    ...(player.studio?.unlocked && player.studio?.logoUrl
+      ? { logoUrl: player.studio.logoUrl }
+      : {}),
+    ...(player.studio?.unlocked && player.studio?.bannerUrl
+      ? { bannerUrl: player.studio.bannerUrl }
+      : {}),
   };
 }
 

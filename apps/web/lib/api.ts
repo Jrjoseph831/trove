@@ -90,9 +90,14 @@ export interface ApiPortfolio {
 // ── Company websites (manufacturing storefront) ──────────────────────────────
 export interface CompanyProduct {
   id: number;
+  /** Canonical item name — always present. */
   name: string;
   price: number;
   available: number;
+  /** Company Studio presentation overrides (present only when Studio is unlocked). */
+  displayName?: string;
+  customImageUrl?: string;
+  customDescription?: string;
 }
 export interface CompanyCard {
   handle: string;
@@ -117,6 +122,9 @@ export interface CompanySite extends CompanyCard {
   cash: number;
   holdings: Holding[];
   standing: { rank: number | null; lines: number; sectors: string[] };
+  /** Company Studio branding (present only when Studio is unlocked and set). */
+  logoUrl?: string;
+  bannerUrl?: string;
 }
 
 /** One row in the unified company directory (player or AI house — same shape). */

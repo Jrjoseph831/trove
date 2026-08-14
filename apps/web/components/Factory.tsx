@@ -25,6 +25,7 @@ import {
   type Factory as FactoryLine,
 } from "@trove/engine";
 import type { LineModule } from "@trove/data";
+import { resolveDisplay } from "@/lib/display";
 import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { perHour, ticksToTvt } from "@/lib/tvt";
 import { useTrove } from "@/lib/trove";
@@ -190,6 +191,7 @@ function LineBay({
 }) {
   const {
     state,
+    myCustomizations,
     factoryCycle,
     demolishLine,
     addModule,
@@ -203,6 +205,7 @@ function LineBay({
   } = useTrove();
   const out = state.items.find((i) => i.id === f.itemId);
   if (!out) return null;
+  const { displayName: studioName, customImageUrl: studioImg } = resolveDisplay(out, myCustomizations);
 
   const base = factorySpec(out);
   const eff = effectiveSpec(out, f.modules);
@@ -344,13 +347,16 @@ function LineBay({
     <div className={`bay ${status}`}>
       <div className="bay-head">
         <div className="bay-title">
+          {studioImg && <img className="bay-product-img" src={studioImg} alt={studioName} />}
           <span className="bay-mfg">{mfg}</span>
           {myHref ? (
             <Link href={myHref} className="it-link">
-              {makerVariantName(out.name, mfg, out.id)}
+              {studioName !== out.name ? studioName : makerVariantName(out.name, mfg, out.id)}
             </Link>
           ) : (
-            <span className="it-link">{makerVariantName(out.name, mfg, out.id)}</span>
+            <span className="it-link">
+              {studioName !== out.name ? studioName : makerVariantName(out.name, mfg, out.id)}
+            </span>
           )}{" "}
           Line
         </div>
