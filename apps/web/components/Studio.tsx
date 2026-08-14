@@ -1,9 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { Image, Package, Palette, Plus, Trash2, X } from "lucide-react";
+import { useCallback, useMemo, useRef, useState } from "react";
+import { Building2, Image, Package, Palette, Plus, Trash2, X } from "lucide-react";
 import { held } from "@trove/engine";
-import { reportStudioContent, studioCheckout } from "@/lib/api";
+import { reportStudioContent, studioCheckout, studioUpload } from "@/lib/api";
 import { resolveDisplay } from "@/lib/display";
 import { money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
@@ -48,11 +48,14 @@ function Customizer({
   onRemove,
   onClose,
 }: CustomizerProps) {
+  const { notify } = useTrove();
   const [displayName, setDisplayName] = useState(initial.displayName ?? "");
   const [imageUrl, setImageUrl] = useState(initial.customImageUrl ?? "");
   const [description, setDescription] = useState(initial.customDescription ?? "");
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [imgError, setImgError] = useState(false);
+  const imgInputRef = useRef<HTMLInputElement>(null);
 
   const hasChanges =
     displayName !== (initial.displayName ?? "") ||
@@ -77,6 +80,19 @@ function Customizer({
     onClose();
   };
 
+  const handleImgUpload = async (file: File) => {
+    if (file.size > 2 * 1024 * 1024) {
+      notify("Image too large — max 2 MB");
+      return;
+    }
+    setUploading(true);
+    const url = await studioUpload(file, "product");
+    setUploading(false);
+    if (!url) { notify("Upload failed — try again"); return; }
+    setImageUrl(url);
+    setImgError(false);
+  };
+
   return (
     <div className="studio-overlay" onClick={onClose}>
       <div className="studio-modal" onClick={(e) => e.stopPropagation()}>
@@ -98,8 +114,9 @@ function Customizer({
 
         <div className="sm-field">
           <label className="sm-lbl">
-            <Image size={13} /> Product image URL
+            <Image size={13} /> Product image
           </label>
+
           {imageUrl && !imgError ? (
             <div className="sm-img-preview">
               <img
@@ -110,6 +127,34 @@ function Customizer({
               />
             </div>
           ) : null}
+
+          <div className="sm-img-upload-row">
+            <button
+              className="tbtn sell"
+              onClick={() => imgInputRef.current?.click()}
+              disabled={uploading || saving}
+            >
+              {uploading ? "Uploading…" : imageUrl ? "Replace image" : "Upload image"}
+            </button>
+            {imageUrl && (
+              <button className="tbtn" onClick={() => { setImageUrl(""); setImgError(false); }}>
+                Remove
+              </button>
+            )}
+            <input
+              ref={imgInputRef}
+              type="file"
+              accept="image/png,image/jpeg,image/webp,image/gif"
+              style={{ display: "none" }}
+              onChange={(e) => {
+                const f = e.target.files?.[0];
+                if (f) handleImgUpload(f);
+                e.target.value = "";
+              }}
+            />
+          </div>
+
+          <span className="sm-hint">Or paste a URL below · max 2 MB · PNG, JPG, WebP, GIF</span>
           <input
             className="sm-input"
             type="url"
@@ -117,13 +162,6 @@ function Customizer({
             value={imageUrl}
             onChange={(e) => { setImageUrl(e.target.value); setImgError(false); }}
           />
-          <span className="sm-hint">
-            Must be HTTPS and publicly accessible.{" "}
-            <label style={{ display: "inline" }}>
-              <input type="checkbox" style={{ marginRight: 4 }} />
-              I have the right to use this image.
-            </label>
-          </span>
         </div>
 
         <div className="sm-field">
@@ -181,67 +219,161 @@ function Customizer({
   );
 }
 
-// ── Branding editor (logo + banner) ──────────────────────────────────────────
+// ── Branding editor (logo + banner) with live company page preview ────────────
 function BrandingPanel() {
   const { myStudio, doStudio, notify } = useTrove();
   const [logoUrl, setLogoUrl] = useState(myStudio?.logoUrl ?? "");
   const [bannerUrl, setBannerUrl] = useState(myStudio?.bannerUrl ?? "");
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState<"logo" | "banner" | null>(null);
+  const logoRef = useRef<HTMLInputElement>(null);
+  const bannerRef = useRef<HTMLInputElement>(null);
 
   const hasChanges =
     logoUrl !== (myStudio?.logoUrl ?? "") ||
     bannerUrl !== (myStudio?.bannerUrl ?? "");
 
+  const pickFile = async (file: File, type: "logo" | "banner") => {
+    const maxMB = type === "logo" ? 1 : 2;
+    if (file.size > maxMB * 1024 * 1024) {
+      notify(`File too large — max ${maxMB} MB`);
+      return;
+    }
+    setUploading(type);
+    const url = await studioUpload(file, type);
+    setUploading(null);
+    if (!url) { notify("Upload failed — try again"); return; }
+    if (type === "logo") setLogoUrl(url);
+    else setBannerUrl(url);
+  };
+
   const handleSave = async () => {
     setSaving(true);
-    const err = await doStudio({ action: "branding", logoUrl: logoUrl || undefined, bannerUrl: bannerUrl || undefined });
+    const err = await doStudio({
+      action: "branding",
+      logoUrl: logoUrl || undefined,
+      bannerUrl: bannerUrl || undefined,
+    });
     setSaving(false);
     if (!err) notify("Branding saved");
   };
 
   return (
-    <div className="bento-card col-4 studio-branding">
+    <div className="bento-card col-12 studio-branding-panel">
       <div className="bc-h">
         <span className="t"><Palette size={14} /> Company branding</span>
+        <button
+          className="tbtn sm-save"
+          onClick={handleSave}
+          disabled={saving || !hasChanges || uploading !== null}
+        >
+          {saving ? "Saving…" : "Save"}
+        </button>
       </div>
-      <div className="sm-field">
-        <label className="sm-lbl">Logo URL</label>
-        <input
-          className="sm-input"
-          type="url"
-          placeholder="https://…"
-          value={logoUrl}
-          onChange={(e) => setLogoUrl(e.target.value)}
-        />
-        {logoUrl && (
-          <div className="branding-preview logo-preview">
-            <img src={logoUrl} alt="logo" onError={(e) => (e.currentTarget.style.display = "none")} />
+
+      <div className="sbp-layout">
+        {/* ── Upload controls ── */}
+        <div className="sbp-controls">
+
+          {/* Logo */}
+          <div className="sbp-field">
+            <div className="sbp-field-header">
+              <span className="sbp-label">Logo</span>
+              <span className="sm-hint">Square · max 1 MB</span>
+            </div>
+            <div className="sbp-logo-row">
+              <div className="sbp-logo-thumb">
+                {logoUrl
+                  ? <img src={logoUrl} alt="logo" onError={(e) => (e.currentTarget.style.display = "none")} />
+                  : <Building2 size={20} className="sbp-empty-icon" />
+                }
+              </div>
+              <div className="sbp-upload-btns">
+                <button
+                  className="tbtn sell"
+                  onClick={() => logoRef.current?.click()}
+                  disabled={uploading !== null}
+                >
+                  {uploading === "logo" ? "Uploading…" : logoUrl ? "Change" : "Upload logo"}
+                </button>
+                {logoUrl && (
+                  <button className="tbtn" onClick={() => setLogoUrl("")} disabled={uploading !== null}>
+                    Remove
+                  </button>
+                )}
+              </div>
+            </div>
+            <input
+              ref={logoRef}
+              type="file"
+              accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml"
+              style={{ display: "none" }}
+              onChange={(e) => { const f = e.target.files?.[0]; if (f) pickFile(f, "logo"); e.target.value = ""; }}
+            />
           </div>
-        )}
-      </div>
-      <div className="sm-field">
-        <label className="sm-lbl">Banner URL</label>
-        <input
-          className="sm-input"
-          type="url"
-          placeholder="https://…"
-          value={bannerUrl}
-          onChange={(e) => setBannerUrl(e.target.value)}
-        />
-        {bannerUrl && (
-          <div className="branding-preview banner-preview">
-            <img src={bannerUrl} alt="banner" onError={(e) => (e.currentTarget.style.display = "none")} />
+
+          {/* Banner */}
+          <div className="sbp-field">
+            <div className="sbp-field-header">
+              <span className="sbp-label">Banner</span>
+              <span className="sm-hint">Wide photo · 16:5 ratio · max 2 MB</span>
+            </div>
+            <div className="sbp-banner-thumb">
+              {bannerUrl
+                ? <img src={bannerUrl} alt="banner" onError={(e) => (e.currentTarget.style.display = "none")} />
+                : <span className="sbp-empty-icon">No banner</span>
+              }
+            </div>
+            <div className="sbp-upload-btns">
+              <button
+                className="tbtn sell"
+                onClick={() => bannerRef.current?.click()}
+                disabled={uploading !== null}
+              >
+                {uploading === "banner" ? "Uploading…" : bannerUrl ? "Change banner" : "Upload banner"}
+              </button>
+              {bannerUrl && (
+                <button className="tbtn" onClick={() => setBannerUrl("")} disabled={uploading !== null}>
+                  Remove
+                </button>
+              )}
+            </div>
+            <input
+              ref={bannerRef}
+              type="file"
+              accept="image/png,image/jpeg,image/webp,image/gif"
+              style={{ display: "none" }}
+              onChange={(e) => { const f = e.target.files?.[0]; if (f) pickFile(f, "banner"); e.target.value = ""; }}
+            />
           </div>
-        )}
+        </div>
+
+        {/* ── Live company page preview ── */}
+        <div className="sbp-preview-wrap">
+          <span className="sbp-preview-label">Live preview</span>
+          <div className="sbp-preview-card">
+            <div
+              className="sbp-preview-banner"
+              style={bannerUrl ? { backgroundImage: `url(${bannerUrl})` } : undefined}
+            >
+              {!bannerUrl && <span className="sbp-banner-placeholder">Banner</span>}
+              <div className={`sbp-preview-logo ${logoUrl ? "" : "sbp-logo-empty"}`}>
+                {logoUrl
+                  ? <img src={logoUrl} alt="logo" onError={(e) => (e.currentTarget.style.display = "none")} />
+                  : <Building2 size={18} />
+                }
+              </div>
+            </div>
+            <div className="sbp-preview-body">
+              <div className="sbp-preview-name">Your Company</div>
+              <div className="sbp-preview-meta">Company page on Trove</div>
+            </div>
+          </div>
+          <p className="sbp-preview-note">
+            This is how your logo and banner appear on your company page.
+          </p>
+        </div>
       </div>
-      <button
-        className="tbtn sm-save"
-        onClick={handleSave}
-        disabled={saving || !hasChanges}
-        style={{ marginTop: 8 }}
-      >
-        {saving ? "Saving…" : "Save branding"}
-      </button>
     </div>
   );
 }
@@ -412,7 +544,7 @@ export function Studio() {
             <h2 className="serif">Company Studio</h2>
           </header>
           <BrandingPanel />
-          <div className="bento-card col-8 studio-empty-state">
+          <div className="bento-card col-12 studio-empty-state">
             <div className="ses-icon"><Package size={24} /></div>
             <h3 className="ses-title">Nothing to customize yet</h3>
             <p className="ses-body">
@@ -445,7 +577,7 @@ export function Studio() {
 
         <BrandingPanel />
 
-        <div className="bento-card col-8">
+        <div className="bento-card col-12">
           <div className="bc-h">
             <span className="t"><Package size={14} /> Products</span>
             <span className="why">{myProduced.length} item{myProduced.length !== 1 ? "s" : ""} in production</span>

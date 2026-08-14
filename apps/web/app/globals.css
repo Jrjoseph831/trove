@@ -10987,13 +10987,159 @@ body {
   color: var(--muted);
 }
 
-/* Branding panel */
-.studio-branding { display: flex; flex-direction: column; gap: 12px; }
-.branding-preview { margin-top: 6px; border-radius: 6px; overflow: hidden; }
-.logo-preview { width: 80px; height: 80px; }
-.logo-preview img { width: 100%; height: 100%; object-fit: contain; }
-.banner-preview { width: 100%; height: 60px; }
-.banner-preview img { width: 100%; height: 100%; object-fit: cover; }
+/* Branding panel — full-width card with controls + live preview side by side */
+.studio-branding-panel { display: flex; flex-direction: column; gap: 0; }
+
+.sbp-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+@media (max-width: 780px) {
+  .sbp-layout { grid-template-columns: 1fr; }
+}
+
+/* Controls column */
+.sbp-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-right: 1px solid var(--border);
+  padding: 16px;
+  gap: 20px;
+}
+@media (max-width: 780px) {
+  .sbp-controls { border-right: none; border-bottom: 1px solid var(--border); }
+}
+
+.sbp-field { display: flex; flex-direction: column; gap: 8px; }
+
+.sbp-field-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.sbp-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-dim);
+}
+
+.sbp-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sbp-logo-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.sbp-logo-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.sbp-empty-icon { color: var(--ink-faint); }
+
+.sbp-banner-thumb {
+  width: 100%;
+  height: 56px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sbp-banner-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.sbp-banner-thumb .sbp-empty-icon { font-size: 0.78rem; }
+
+.sbp-upload-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+
+/* Preview column */
+.sbp-preview-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 20px;
+}
+.sbp-preview-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* The preview card itself — mirrors the company page layout */
+.sbp-preview-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface);
+  max-width: 380px;
+}
+.sbp-preview-banner {
+  height: 96px;
+  background: var(--bg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sbp-banner-placeholder {
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.sbp-preview-logo {
+  position: absolute;
+  bottom: -18px;
+  left: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 2px solid var(--surface);
+  background: var(--bg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sbp-preview-logo img { width: 100%; height: 100%; object-fit: contain; }
+.sbp-logo-empty { color: var(--ink-faint); }
+.sbp-preview-body {
+  padding: 26px 16px 14px;
+}
+.sbp-preview-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.sbp-preview-meta { font-size: 0.78rem; color: var(--ink-faint); }
+.sbp-preview-note {
+  font-size: 0.73rem;
+  color: var(--ink-faint);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Customizer modal — image upload row */
+.sm-img-upload-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
 
 /* Customizer modal */
 .studio-overlay {

@@ -488,6 +488,39 @@ export async function reportStudioContent(body: {
   });
 }
 
+/** Upload a Studio asset (logo / banner / product image) directly to S3 via a
+ *  presigned URL. Returns the public URL of the uploaded file, or null on error. */
+export async function studioUpload(
+  file: File,
+  type: "logo" | "banner" | "product",
+): Promise<string | null> {
+  const token = getIdToken();
+  if (!token) return null;
+  let presigned: { uploadUrl: string; publicUrl: string };
+  try {
+    const res = await fetch(`${API_BASE}/studio/upload`, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: token },
+      body: JSON.stringify({ filename: file.name, contentType: file.type, type }),
+    });
+    if (!res.ok) return null;
+    presigned = (await res.json()) as typeof presigned;
+  } catch {
+    return null;
+  }
+  try {
+    const up = await fetch(presigned.uploadUrl, {
+      method: "PUT",
+      headers: { "content-type": file.type },
+      body: file,
+    });
+    if (!up.ok) return null;
+  } catch {
+    return null;
+  }
+  return presigned.publicUrl;
+}
+
 /** Start a Stripe Checkout session for a Studio purchase.
  *  Resolves to { url } on success or { error } with a human-readable reason. */
 export async function studioCheckout(
