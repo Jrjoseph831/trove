@@ -10365,7 +10365,12 @@ body {
   display: inline-flex;
 }
 @media (max-width: 780px) {
-  .nav-menu:not(.show) { display: none; }
+  /* On mobile the hamburger must always be visible when the drawer is closed,
+     regardless of whether JS thinks the rail is "open" (it might be open on
+     desktop but still off-screen as a drawer). Hide it only when the drawer
+     is actually pulled out (.app.navopen). */
+  .nav-menu { display: inline-flex; }
+  .app.navopen .nav-menu { display: none; }
 }
 
 /* Order Desk contracts, in the same card language as the Deal Room and Supply:

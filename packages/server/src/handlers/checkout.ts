@@ -67,8 +67,9 @@ export async function handler(
       metadata: { playerId, action },
     });
   } catch (err) {
-    console.error("[checkout] stripe error:", err);
-    return json(502, { error: "payment provider error — try again" });
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error("[checkout] stripe error:", msg);
+    return json(502, { error: msg });
   }
 
   return json(200, { url: session.url });
