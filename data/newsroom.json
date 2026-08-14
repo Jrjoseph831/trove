@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-14T07:26:46.562Z",
+  "generatedAt": "2026-08-14T13:09:37.511Z",
   "beats": [
     {
-      "company": "Ashbystead Holdings",
-      "sector": "medical",
+      "company": "Aldouscyon",
+      "sector": "consumer",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Ashbystead Holdings Logs Ninth Straight Beat on Reliable Equipment Renewals",
-      "body": "Ashbystead Holdings reported a ninth consecutive quarterly beat, with revenue up 2.1% on continued hospital renewal contracts across its imaging and monitoring lines. CEO Cora Holt again declined to raise full-year guidance, citing the same steady replacement cadence that has defined the company for decades. Margins held flat at 18.4%.",
-      "cycle": 82717,
+      "head": "Aldouscyon Beats Modestly as Sixth-City Conversion Begins Contributing",
+      "body": "The house delivered a small beat as its sixth-city lighting conversion moved from installation to billing ahead of schedule. Chief executive Petra Mercer said the conversion model's predictable, staged revenue continues to underpin steady margins. A seventh-city evaluation is underway, though no agreement has been signed.",
+      "cycle": 82718,
       "dur": 1
+    },
+    {
+      "company": "Aldousmont & Sons",
+      "sector": "medical",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Aldousmont & Sons Rolls Out Antimicrobial Wound-Care Range to Extend Consumables Portfolio",
+      "body": "The house introduced a 14-item antimicrobial dressing and wound-care line, its first meaningful category addition since the sterile field kits. Chief executive Dunmore Calder said the range answers requests from the same hospital network that awarded last quarter's supply contract, with initial shipments slated across three regional distribution hubs. Management framed the launch as incremental rather than transformative, consistent with the house's measured cadence.",
+      "cycle": 82718,
+      "dur": 2
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "breakthrough",
+      "size": "major",
+      "head": "Bruncrest Works Says Aria Ultra Clears Validation, Doubling Throughput in Marlow's Big Bet",
+      "body": "Chief executive Ines Marlow announced Aria Ultra passed independent performance validation showing roughly 2.1x the throughput of the prior Aria Prime generation at comparable power draw. Marlow said three anchor customers have committed to early-volume orders, converting part of the $5.2B supply pact to the new platform. The result vindicates the house's aggressive pivot, though management acknowledged yield ramp remains the near-term challenge.",
+      "cycle": 82718,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "recall",
+      "size": "major",
+      "head": "Brunmark Motors Widens Veyra S Recall to 340,000 Units as Battery Fix Falters",
+      "body": "Chief executive Iris Calvagh announced the recall's expansion to 340,000 vehicles after interim battery-pack repairs failed to fully resolve thermal faults, pushing total recall provisions past $1.4B. The company will replace complete pack assemblies rather than individual modules, a costlier remedy that halts Veyra S deliveries for at least a quarter. Calvagh conceded the earlier fix was inadequate but pledged the fuller solution would 'end the uncertainty for owners.'",
+      "cycle": 82718,
+      "dur": 8
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Dunmorewright Expands Foundry Capacity to Deliver $780M Waterworks Contract",
+      "body": "Following its largest-ever award, Dunmorewright committed $190M to expand earthmoving and heavy-plumbing fabrication at its Halbrook works to meet inland waterworks milestones. Chief executive Emil Skarn said the investment adds roughly 300 skilled positions and positions the house for adjacent flood-control tenders. Coastal defense revenue continues to taper as the new contract ramps.",
+      "cycle": 82718,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestcrest Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ironcrestcrest Supply Edges Past Forecasts as Contractor-Grade Line Steadies",
+      "body": "The house posted a third consecutive modest beat, with contractor-grade lighting now accounting for roughly 22% of quarterly revenue, up from 18%. Chief executive Dorian Garr credited disciplined inventory management and repeat orders from mid-sized building suppliers. Guidance was left unchanged, in keeping with the house's quietly incremental approach.",
+      "cycle": 82718,
+      "dur": 1
+    },
+    {
+      "company": "Stegreach",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Stegreach Adds $410M Substation Fixings Order as Riverport Grid Work Broadens",
+      "body": "Building on the $1.2B grid contract now at full stride, Stegreach secured a follow-on $410M order for substation fasteners, fixings and cable assemblies over four years. Chief executive Halden Ashby said the award leverages the expanded Riverport capacity brought online last year and locks in utilization through 2029. The deal deepens the house's ties to the regional grid operator without requiring fresh capital outlay.",
+      "cycle": 82718,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Vossenspire Holdings Misses Sharply as Storage-Bank Fallout and Probe Freeze Revenue",
+      "body": "The house reported quarterly revenue down 38% after the grid-scale storage pact was suspended pending the ongoing safety probe, forcing a reversal of previously front-loaded milestone income. Chief executive Halden Roe disclosed $220M in remediation and legal reserves and withdrew full-year guidance. Roe faced pointed questions over commissioning oversight but insisted the compute division remains 'the stable core' as the storage arm is restructured.",
+      "cycle": 82718,
+      "dur": 8
     },
     {
       "company": "Bruncraft Industries",
@@ -32,16 +102,6 @@
       "dur": 2
     },
     {
-      "company": "Caldercraft Holdings",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Caldercraft Holdings Rounds Out Weatherproof Line With Reinforced Deck Cabinets",
-      "body": "Caldercraft Holdings added reinforced deck cabinets to its expanding weatherproof line, priced from $180 to $340 and built to match the existing insulated chests and utility racks. CEO Vale Fenn said the addition completes the core outdoor-storage range and should support continued volume gains through the coming season. The launch drew little fanfare, consistent with the company's understated approach.",
-      "cycle": 82717,
-      "dur": 1
-    },
-    {
       "company": "Castlestone",
       "sector": "technology",
       "kind": "outage",
@@ -50,16 +110,6 @@
       "body": "A cascading shutdown knocked Castlestone's flagship Grid-Core campus offline for nearly four days, halting deliveries against its $12 billion supply pact and forcing the company to warn of missed shipment milestones. The outage traced back to the same coolant systems already under safety review, and Pell Karsh confirmed at least two anchor customers have invoked delay clauses. Castlestone estimated a $480 million revenue hit and pledged an independent teardown of the campus infrastructure.",
       "cycle": 82717,
       "dur": 8
-    },
-    {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Fennvale Mfg. Delivers Steady Beat as New Auto-Parts Line Nears First Output",
-      "body": "Fennvale Mfg. edged past estimates with revenue up 2.6%, carried by its fully ramped second fastener shift as the recently broken-ground auto-parts line moves toward initial production. Theo Vossen said equipment installation at the new line is on schedule for a first run next quarter. Margins held steady at 14.9% with no change to guidance.",
-      "cycle": 82717,
-      "dur": 1
     },
     {
       "company": "Gromford Works",
@@ -72,66 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Extends Streak as Eastgate Ramps Alongside Full Legacy Base",
-      "body": "Marrowmoor Holdings posted another modest beat, with revenue up 3.4% as the newly added Eastgate property began contributing and Westline and Northbrook held near-full occupancy. Dorian Steg said Eastgate is tracking ahead of the integration timeline and should reach steady-state by next quarter. Guidance was left unchanged in Steg's characteristically measured tone.",
-      "cycle": 82717,
-      "dur": 1
-    },
-    {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Carrowcyon & Sons to Add Third Line as Smart-Dimming Demand Outstrips Capacity",
-      "body": "Carrowcyon & Sons announced a $95M investment to open a third production line dedicated to its smart-dimming lighting range, targeting a 40% capacity increase by next year. CEO Cole Brandt said the move follows three consecutive quarters of national retail sell-through outpacing forecasts. The expansion is expected to add roughly 300 jobs at the company's main works.",
-      "cycle": 82716,
-      "dur": 2
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Carrowwell Breaks Ground on Second Machines Plant to Meet $1.1B Contract",
-      "body": "Carrowwell committed $520M to a second industrial-machines facility to serve the extended $1.1B reindustrialization contract, with output slated for late next year. CEO Mara Voss said the plant will also house expanded material-handling assembly following strong reception of the automated system launched this year. The company expects the site to add about 450 skilled positions.",
-      "cycle": 82716,
-      "dur": 2
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Castlehold Beats as $750M Supply Deal Ships First Modular Units",
-      "body": "Castlehold posted quarterly revenue of $412M, up 34% year-on-year, as initial deliveries under its $750M storage supply agreement began flowing from the completed second plant. CEO Halden Voss credited the high-capacity modular line for lifting gross margins to 28%, though he cautioned that ramp costs would weigh on the coming quarter. The company reaffirmed full-year output targets.",
-      "cycle": 82716,
-      "dur": 2
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Erretmark Works Beats as Third Veyron Hall Lifts Delivery Pace",
-      "body": "Erretmark Works posted revenue of $2.1B, up 27%, as the newly opened third Veyron hall pushed quarterly deliveries to a record 640 units against its 2,400-unit contract. CEO Aurelia Garr said cross-border demand remains firm and hinted at pursuing further order books beyond the current backlog. Operating margins widened to 15% on improved hall utilization.",
-      "cycle": 82716,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Korrwright Works Beats as Verenne Retail Integration Lifts Direct Sales",
-      "body": "Korrwright Works reported a 22% revenue rise to $610M in its first full quarter with the Verenne retail division consolidated, as direct-to-boutique sales of Alvence-movement pieces expanded margins to 41%. CEO Dunmore Carrow said controlling distribution has already trimmed discounting and improved inventory turns. He signaled appetite for further boutique acquisitions in key luxury corridors.",
-      "cycle": 82716,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "lawsuit",
@@ -140,26 +130,6 @@
       "body": "A consolidated class action was filed against Marlgear Supply seeking $1.4B in damages on behalf of customers and injured parties tied to the Kessel fault it allegedly concealed. The suit names former CEO Ferran and cites internal documents surfaced in the Verrant probe. New CEO Dane Kessler pledged full cooperation but warned the litigation could take years to resolve and pressure the freshly split Devices unit.",
       "cycle": 82716,
       "dur": 8
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarngrove & Sons Beats Again as Kelvarn Terminal-Span Work Ramps",
-      "body": "Skarngrove & Sons reported revenue of $684M, up 19%, as terminal-span and viaduct volumes on the Kelvarn fourth phase reached peak activity. CEO Quinn Fenn pointed to steady structural-materials pricing and disciplined fastener margins for the beat. Management raised full-year guidance modestly, citing the signature project's extended runway.",
-      "cycle": 82716,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Vossenspire Debuts Thelvane-Cased Corveil Reserve at Larkmoor Flagship",
-      "body": "Vossenspire Supply unveiled the Corveil Reserve, the first timepiece built entirely around its newly acquired Thelvane case works and doubled Halvane movement capacity. CEO Quinn Marrow said the limited 500-piece run carries a $38,000 list price and is aimed at cementing the house's vertical control over its supply chain. Early salon allocations sold through within days.",
-      "cycle": 82716,
-      "dur": 2
     },
     {
       "company": "Halhold Systems",
@@ -219,26 +189,6 @@
       "head": "Ironcrestton Sued by Regulators Over Meridian Line as Sourcing Scandal Deepens",
       "body": "A consumer-protection authority filed suit against Ironcrestton alleging the Meridian line's 'single-origin artisan' labeling was materially false, seeking penalties north of $400 million and a full product injunction. Thea Blackwood defended the launch but suspended Meridian shipments pending review, wiping out the margin gains that anchored her turnaround narrative. Three sourcing executives were placed on leave as an internal probe widened.",
       "cycle": 82711,
-      "dur": 8
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Thaldale Group Ousts Vale as Fastening Scandal Fallout Forces Board Shakeup",
-      "body": "The Thaldale board removed CEO Corin Vale amid the widening fastening-fund diversion probe and shareholder restatement suit, appointing turnaround specialist Marta Holloway as chief with a mandate to restore trust. Holloway pledged an independent forensic review and said the carved-out Fastening unit would be sold or wound down entirely. The abrupt exit caps a turbulent debut year that began with a sweeping overhaul and ended in crisis.",
-      "cycle": 82710,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Woldmark Cratits as Halcyon 4 Sales Collapse and Frayne Concedes Turnaround Stalled",
-      "body": "Woldmark reported a stunning 22% revenue drop as Halcyon 4 orders fell off a cliff, with channel inventory piling up and two large buyers canceling repeat orders. CEO Isolde Frayne, who had declared the turnaround 'done' just months ago, told a tense briefing that 'we got ahead of ourselves' and withdrew full-year guidance entirely. The reversal marks a sharp humbling for the outspoken chief and puts pressure on the next Halcyon cycle to salvage credibility.",
-      "cycle": 82710,
       "dur": 8
     }
   ]

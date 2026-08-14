@@ -153,7 +153,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82701,
+    "lastEventCycle": 82718,
     "events": [
       {
         "cycle": 0,
@@ -282,6 +282,16 @@
         "effects": {
           "consumer": 0.06
         }
+      },
+      {
+        "cycle": 82718,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscyon Beats Modestly as Sixth-City Conversion Begins Contributing",
+        "body": "The house delivered a small beat as its sixth-city lighting conversion moved from installation to billing ahead of schedule. Chief executive Petra Mercer said the conversion model's predictable, staged revenue continues to underpin steady margins. A seventh-city evaluation is underway, though no agreement has been signed.",
+        "effects": {
+          "consumer": 0.06
+        }
       }
     ]
   },
@@ -296,7 +306,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82698,
+    "lastEventCycle": 82718,
     "events": [
       {
         "cycle": 0,
@@ -414,6 +424,16 @@
         "body": "Fresh off its network supply award, Dunmore Calder committed $70 million to a new sterile field kit production line to scale volume for the multi-hospital contract. The addition is expected to lift consumables capacity by roughly 25% once fully operational next year. Calder described the investment as measured and fully funded from operating cash flow.",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82718,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Aldousmont & Sons Rolls Out Antimicrobial Wound-Care Range to Extend Consumables Portfolio",
+        "body": "The house introduced a 14-item antimicrobial dressing and wound-care line, its first meaningful category addition since the sterile field kits. Chief executive Dunmore Calder said the range answers requests from the same hospital network that awarded last quarter's supply contract, with initial shipments slated across three regional distribution hubs. Management framed the launch as incremental rather than transformative, consistent with the house's measured cadence.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -2146,16 +2166,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82712,
+    "lastEventCycle": 82718,
     "events": [
-      {
-        "cycle": 82570,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Bruncrest Works Ousts CEO Corwin Hale as Losses Mount and Board Loses Patience",
-        "body": "Bruncrest Works' board removed CEO Corwin Hale after a fourth consecutive disappointing quarter, ending a turbulent tenure marked by the collapsed Meridian pact and a costly overhaul. The company named turnaround veteran Ines Marlow as chief executive, tasking her with stabilizing finances and settling the outstanding Meridian litigation. Shares had shed nearly 60% of their value since the Meridian dispute erupted.",
-        "effects": {}
-      },
       {
         "cycle": 82576,
         "kind": "leadership_change",
@@ -2383,6 +2395,16 @@
         "effects": {
           "technology": 0.22
         }
+      },
+      {
+        "cycle": 82718,
+        "kind": "breakthrough",
+        "size": "major",
+        "head": "Bruncrest Works Says Aria Ultra Clears Validation, Doubling Throughput in Marlow's Big Bet",
+        "body": "Chief executive Ines Marlow announced Aria Ultra passed independent performance validation showing roughly 2.1x the throughput of the prior Aria Prime generation at comparable power draw. Marlow said three anchor customers have committed to early-volume orders, converting part of the $5.2B supply pact to the new platform. The result vindicates the house's aggressive pivot, though management acknowledged yield ramp remains the near-term challenge.",
+        "effects": {
+          "technology": 0.22
+        }
       }
     ]
   },
@@ -2550,16 +2572,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82708,
+    "lastEventCycle": 82718,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Brunmark Motors — Every part earns its place",
-        "body": "Brunmark began as a parts shop fixing what bigger makers got wrong, and never lost that fixer's eye. Now they forge components, assemble power and storage units, and roll complete vehicles off lines that span the whole market. The budget runabout shares its bones with the flagship; both are obsessive about the bits you never see. Mechanics keep Brunmark catalogs dog-eared. From the humble bracket to the crowning coupe, nothing leaves half-considered.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "product_launch",
@@ -2781,6 +2795,16 @@
         "head": "Brunmark Motors Names Iris Calvagh Interim Chief to Steer Recovery",
         "body": "Days after ousting Halvard Renn, Brunmark's board appointed veteran operations head Iris Calvagh as interim chief executive, tasking her with completing the 240,000-unit Veyra S recall and rebuilding regulator relations. Calvagh said a redesigned battery pack would be validated before any resumption of Veyra S deliveries.",
         "effects": {}
+      },
+      {
+        "cycle": 82718,
+        "kind": "recall",
+        "size": "major",
+        "head": "Brunmark Motors Widens Veyra S Recall to 340,000 Units as Battery Fix Falters",
+        "body": "Chief executive Iris Calvagh announced the recall's expansion to 340,000 vehicles after interim battery-pack repairs failed to fully resolve thermal faults, pushing total recall provisions past $1.4B. The company will replace complete pack assemblies rather than individual modules, a costlier remedy that halts Veyra S deliveries for at least a quarter. Calvagh conceded the earlier fix was inadequate but pledged the fuller solution would 'end the uncertainty for owners.'",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -6239,7 +6263,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82701,
+    "lastEventCycle": 82718,
     "events": [
       {
         "cycle": 0,
@@ -6367,6 +6391,16 @@
         "body": "Dunmorewright won a $780M multi-year contract to rebuild an aging inland waterworks network, eclipsing its own coastal-defense record set last year. CEO Emil Skarn called the award 'the defining project of a generation for this company,' spanning both its earthmoving and plumbing-and-fixtures lines. The deal lifts Dunmorewright's backlog above $2B for the first time in its history.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82718,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Dunmorewright Expands Foundry Capacity to Deliver $780M Waterworks Contract",
+        "body": "Following its largest-ever award, Dunmorewright committed $190M to expand earthmoving and heavy-plumbing fabrication at its Halbrook works to meet inland waterworks milestones. Chief executive Emil Skarn said the investment adds roughly 300 skilled positions and positions the house for adjacent flood-control tenders. Coastal defense revenue continues to taper as the new contract ramps.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -10025,7 +10059,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82697,
+    "lastEventCycle": 82718,
     "events": [
       {
         "cycle": 0,
@@ -10131,6 +10165,16 @@
         "size": "flash",
         "head": "Ironcrestcrest Supply Posts Modest Gains as Contractor-Grade Line Widens Reach",
         "body": "Ironcrestcrest reported a 3% revenue rise as its contractor-grade lighting line gained shelf space with regional distributors. Dorian Garr said the fifth warehouse continued to absorb higher volumes efficiently, keeping margins stable.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82718,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Edges Past Forecasts as Contractor-Grade Line Steadies",
+        "body": "The house posted a third consecutive modest beat, with contractor-grade lighting now accounting for roughly 22% of quarterly revenue, up from 18%. Chief executive Dorian Garr credited disciplined inventory management and repeat orders from mid-sized building suppliers. Guidance was left unchanged, in keeping with the house's quietly incremental approach.",
         "effects": {
           "consumer": 0.06
         }
@@ -14239,7 +14283,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82697,
+    "lastEventCycle": 82718,
     "events": [
       {
         "cycle": 0,
@@ -14345,6 +14389,16 @@
         "size": "standard",
         "head": "Stegreach Beats as Grid Contract Hits Full Stride Across Riverport",
         "body": "Second-quarter revenue climbed 18% as the $1.2B grid modernization contract reached peak billing, with the expanded Riverport wiring plant running near capacity. Halden Ashby said fixings and lighting volumes also firmed, lifting margins a full point above forecast.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82718,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Stegreach Adds $410M Substation Fixings Order as Riverport Grid Work Broadens",
+        "body": "Building on the $1.2B grid contract now at full stride, Stegreach secured a follow-on $410M order for substation fasteners, fixings and cable assemblies over four years. Chief executive Halden Ashby said the award leverages the expanded Riverport capacity brought online last year and locks in utilization through 2029. The deal deepens the house's ties to the regional grid operator without requiring fresh capital outlay.",
         "effects": {
           "construction": 0.13
         }
@@ -15995,7 +16049,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82706,
+    "lastEventCycle": 82718,
     "events": [
       {
         "cycle": 0,
@@ -16147,6 +16201,16 @@
         "size": "major",
         "head": "Vossenspire Holdings Faces Formal Safety Probe After Storage Bank Failure",
         "body": "Regulators opened a formal investigation into the commissioning failure of Vossenspire's grid-scale storage bank, freezing energization of two further sites pending findings. CEO Halden Roe conceded the $6.8B pact timeline is now 'under active review' and set aside $400 million against remediation and penalties. Independent inspectors have been granted site access for at least 90 days.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82718,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Vossenspire Holdings Misses Sharply as Storage-Bank Fallout and Probe Freeze Revenue",
+        "body": "The house reported quarterly revenue down 38% after the grid-scale storage pact was suspended pending the ongoing safety probe, forcing a reversal of previously front-loaded milestone income. Chief executive Halden Roe disclosed $220M in remediation and legal reserves and withdrew full-year guidance. Roe faced pointed questions over commissioning oversight but insisted the compute division remains 'the stable core' as the storage arm is restructured.",
         "effects": {
           "energy": -0.22
         }
