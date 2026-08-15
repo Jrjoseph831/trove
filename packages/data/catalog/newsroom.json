@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-15T06:40:25.100Z",
+  "generatedAt": "2026-08-15T12:40:15.918Z",
   "beats": [
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Boreas Power Unveils Halvane-Built Compute Modules Tuned for Storage Sites",
+      "body": "Boreas Power launched its first co-designed compute-and-storage racks, pairing Halvane silicon with the company's power blocks under a single cabinet standard. CEO Mira Thorne said early units are earmarked for the Vantel campus, with commercial shipments targeted within two quarters. The line marks the first tangible product from the $1.4B Halvane acquisition.",
+      "cycle": 82722,
+      "dur": 2
+    },
+    {
+      "company": "Garrweave Mills",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Garrweave Mills Edges Up Again as Northfield Volumes Hold Steady",
+      "body": "Garrweave reported a slight uptick as its Northfield renewal continued to keep looms fully utilized through the period. CEO Lorne Veldt reiterated the mill's long-horizon stance, noting no plans to chase spot demand. Raw textile shipments were broadly in line with prior quarters.",
+      "cycle": 82722,
+      "dur": 1
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Holtforge Group Sets Order-Book Record as Interconnector Beat Streak Continues",
+      "body": "Holtforge posted another quarter ahead of guidance, with the offshore interconnector backlog crossing a company record after recent extensions. CEO Yvette Bramm said cable output ran near capacity and margins held steady despite input costs. The firm nudged full-year revenue guidance higher.",
+      "cycle": 82722,
+      "dur": 2
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Maison & Vale Beats as Vestrand and Corriveau Deals Broaden Supply Base",
+      "body": "Maison & Vale beat expectations as cleaning-supplies volumes from the $1.5B Vestrand deal began contributing alongside a maturing Corriveau household-goods line. CEO Rhys Kessler said integration costs came in below plan, aiding margins. The company said it continues to evaluate further bolt-on targets.",
+      "cycle": 82722,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Ornewright Supply Beats as Dunmere Cold-Chain Pact Lifts Food-Service Volumes",
+      "body": "Ornewright topped estimates in its first full quarter with the Dunmere hub operational, crediting the new multi-year cold-chain pact for stronger food-service throughput. CEO Rhys Throne said the sanitation concentrate line also continued to build customers. Management raised the low end of its annual outlook.",
+      "cycle": 82722,
+      "dur": 2
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Thaldale Group's Holloway Launches Sweeping Overhaul, Winds Down Fastening Unit",
+      "body": "New CEO Marta Holloway detailed a restructuring plan that fully unwinds the carved-out fastening operation at the center of the diversion scandal and consolidates hardware production into two core plants. The company took a charge tied to the exit and named an interim controller to oversee financial cleanup. Holloway pledged fresh governance controls to reassure shareholders still pursuing litigation.",
+      "cycle": 82722,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Thronehaus & Co. Debuts Landmark Aurel Collection Forged From In-House Coristel Alloy",
+      "body": "Thronehaus unveiled the Aurel collection, its first flagship timepiece line built entirely on the proprietary alloy developed after the $1.8B Coristel acquisition, positioning it as the house's most significant launch in a generation. CEO Cora Dray said limited early allocations are already spoken for by top salons, with a broader rollout planned across the year. The debut caps a rapid vertical-integration push that Dray called the foundation of the next decade.",
+      "cycle": 82722,
+      "dur": 8
+    },
+    {
+      "company": "Wrenspire",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Wrenspire Adds Household-Goods SKUs to Everyroom Grower Channel",
+      "body": "Wrenspire quietly extended its Everyroom bundling program into household goods sold through its new grower-supply network, widening the range on offer to farm customers. CEO Theo Aldous framed the move as a natural cross-sell rather than a new market. Management flagged modest near-term contribution with fuller impact next fiscal year.",
+      "cycle": 82722,
+      "dur": 1
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -20,16 +100,6 @@
       "body": "CEO Sable Renwick announced a sweeping restructuring that carves the troubled Halvern line into a standalone division with dedicated quality oversight. The plan includes roughly 600 job cuts and a $120M charge, but Renwick said it would ringfence liabilities from the ongoing class action while stabilizing the core parts business. Analysts called it an aggressive but necessary reset for a company still bleeding from the failures scandal.",
       "cycle": 82721,
       "dur": 2
-    },
-    {
-      "company": "Castlestead",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Castlestead Posts Slim Beat as Farm Inputs Offset Softer Earthmoving",
-      "body": "Castlestead edged past estimates as steady Farm Inputs demand cushioned a modest dip in Earthmoving orders. CEO Aurelia Calder characterized the quarter as unremarkable, with the mature Harrowfield deal continuing to bill on schedule. Management reaffirmed its conservative full-year outlook.",
-      "cycle": 82721,
-      "dur": 1
     },
     {
       "company": "Dunmorestone",
@@ -92,26 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drustcraft Wins Multi-Year Fixings Contract to Anchor Third Product Line",
-      "body": "Drustcraft secured a $640M five-year fixings supply agreement with a regional builder network, further broadening a business once concentrated in fasteners. CEO Cora Fenn said the deal complements the recent auto-parts win and gives the company 'three legs to stand on.' Deliveries begin next quarter from an expanded Eastfield facility.",
-      "cycle": 82720,
-      "dur": 2
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Halcrow & Vance Lands $1.8B Follow-On Mandate on Strength of Vetask Delivery",
-      "body": "Building on its Contractor of the Year recognition, Halcrow & Vance secured a $1.8B follow-on earthmoving mandate for a coastal infrastructure program. CEO Mira Skarn said the award reflects the on-time performance across the two Vetask yards and will keep both at capacity into 2028. The company will add a third yard to absorb the new work.",
-      "cycle": 82720,
-      "dur": 2
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "scandal",
@@ -120,26 +170,6 @@
       "body": "Leaked internal correspondence showed senior staff flagged Compute reliability defects as far back as 2023, deepening the scandal that ousted former chief Ilse Marren. The disclosures triggered a widened regulatory inquiry and prompted three major customers to suspend orders. CEO Petra Vandel apologized publicly and announced an independent review, but stopped short of confirming further departures.",
       "cycle": 82720,
       "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Kessel Drive Misses as Vanta Cell Ramp Stumbles on Supply Bottlenecks",
-      "body": "Kessel Drive fell short of forecasts in Venn's first full quarter, citing component shortages that throttled the redesigned Vanta cell ramp to roughly 60% of planned output. CEO Aldric Venn downplayed the miss as 'a scaling problem, not a demand problem,' pointing to a growing order backlog. Investors remained wary given the storage crisis that toppled his predecessor.",
-      "cycle": 82720,
-      "dur": 2
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vencyon Beats and Raises a Third Time as Modular Rollout Nears Full Deployment",
-      "body": "Vencyon topped estimates again, with operating margin widening to 18% as the fourth and fifth hubs reached near-full capacity on the modular platform. CEO Iris Halloran raised full-year guidance and confirmed early talks on a sixth-hub option tied to the original $2.3B mandate. She cautioned that the pace of new milestones would slow as the deployment matures.",
-      "cycle": 82720,
-      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -209,26 +239,6 @@
       "head": "Marlgear Supply Hit With Class Action Over Suppressed Kessel Fault Reports",
       "body": "A consolidated class action was filed against Marlgear Supply seeking $1.4B in damages on behalf of customers and injured parties tied to the Kessel fault it allegedly concealed. The suit names former CEO Ferran and cites internal documents surfaced in the Verrant probe. New CEO Dane Kessler pledged full cooperation but warned the litigation could take years to resolve and pressure the freshly split Devices unit.",
       "cycle": 82716,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Halhold Systems Faces Regulatory Probe as Reliability Scandal Widens Beyond Shareholders",
-      "body": "A national commerce regulator opened a formal inquiry into whether Halhold Systems misrepresented compute reliability figures to enterprise clients, days after new CEO Petra Vandel took the helm. Two anchor customers filed breach-of-contract claims totaling $340M, and Vandel disclosed an internal audit had found the failures were documented as early as last spring. The board set aside a $150M reserve against potential penalties and settlements.",
-      "cycle": 82714,
-      "dur": 8
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "outage",
-      "size": "major",
-      "head": "Skarnvale Vosk Junction Collapses in Third Failure as Recovery Chief Resigns",
-      "body": "The Vosk Junction terminal suffered a total shutdown for the third time in two months, halting all regional material-handling throughput and stranding an estimated $220M in queued freight. Recovery chief Halden Roe resigned within hours, and Dorn Vaskell faces mounting pressure from major distributor clients threatening to reroute contracts. Two national customers confirmed they have suspended new volume pending an independent review.",
-      "cycle": 82714,
       "dur": 8
     }
   ]

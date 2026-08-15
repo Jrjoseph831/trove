@@ -1666,18 +1666,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82711,
+    "lastEventCycle": 82722,
     "events": [
-      {
-        "cycle": 82558,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Boreas Power Fast-Tracks Hollowmere Phase Three as Storage Demand Climbs",
-        "body": "Riding momentum from the Calderwick-anchored grid-storage pact, Mira Thorne greenlit an accelerated Phase Three at Hollowmere, adding 900 MWh of capacity ahead of schedule. The $1.1B outlay brings total committed spend at the site above $3B and reflects Thorne's acquisitive push to consolidate regional storage. Boreas said early commissioning could begin within nine months.",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82565,
         "kind": "earnings_beat",
@@ -1904,6 +1894,16 @@
         "size": "standard",
         "head": "Boreas Power Acquires Compute Specialist Halvane in $1.4B Push to Pair Power With Silicon",
         "body": "Restless as ever, Mira Thorne struck a $1.4 billion deal for compute-hardware maker Halvane, aiming to bundle Boreas storage output with on-site processing capacity. The acquisition arrives as the Vantel campus nears full ramp, giving Boreas an end-to-end offering rivals lack. Thorne said the combination positions the company for 'the next decade of grid-and-compute convergence.'",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82722,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Boreas Power Unveils Halvane-Built Compute Modules Tuned for Storage Sites",
+        "body": "Boreas Power launched its first co-designed compute-and-storage racks, pairing Halvane silicon with the company's power blocks under a single cabinet standard. CEO Mira Thorne said early units are earmarked for the Vantel campus, with commercial shipments targeted within two quarters. The line marks the first tangible product from the $1.4B Halvane acquisition.",
         "effects": {
           "energy": 0.13
         }
@@ -7570,7 +7570,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82691,
+    "lastEventCycle": 82722,
     "events": [
       {
         "cycle": 0,
@@ -7646,6 +7646,16 @@
         "size": "flash",
         "head": "Garrweave Mills Inches Up as Northfield Renewal Keeps Looms at Full Run",
         "body": "Garrweave reported a slight quarterly gain as the renewed Northfield supply agreement kept its primary line at full output. CEO Lorne Veldt reiterated the mill's long-horizon focus, pointing to stable raw-textile volumes rather than price gains. No changes to capacity plans were announced.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82722,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Garrweave Mills Edges Up Again as Northfield Volumes Hold Steady",
+        "body": "Garrweave reported a slight uptick as its Northfield renewal continued to keep looms fully utilized through the period. CEO Lorne Veldt reiterated the mill's long-horizon stance, noting no plans to chase spot demand. Raw textile shipments were broadly in line with prior quarters.",
         "effects": {
           "textiles": 0.06
         }
@@ -9621,7 +9631,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82705,
+    "lastEventCycle": 82722,
     "events": [
       {
         "cycle": 0,
@@ -9757,6 +9767,16 @@
         "size": "standard",
         "head": "Holtforge Group Extends Beat Streak as Interconnector Book Nears Record",
         "body": "Holtforge Group posted earnings of $2.10 per share against a $1.94 estimate, with margins lifted by the sequencing of its $1.6B and $900M offshore cable orders. CEO Yvette Bramm noted the order book now stretches nearly three years out and said the Marden plant would add a second casing line to keep pace. Guidance was nudged modestly higher.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82722,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtforge Group Sets Order-Book Record as Interconnector Beat Streak Continues",
+        "body": "Holtforge posted another quarter ahead of guidance, with the offshore interconnector backlog crossing a company record after recent extensions. CEO Yvette Bramm said cable output ran near capacity and margins held steady despite input costs. The firm nudged full-year revenue guidance higher.",
         "effects": {
           "construction": 0.13
         }
@@ -11860,7 +11880,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82711,
+    "lastEventCycle": 82722,
     "events": [
       {
         "cycle": 0,
@@ -12046,6 +12066,16 @@
         "size": "standard",
         "head": "Maison & Vale Strikes $1.5B Deal for Cleaning-Supplies Group Vestrand",
         "body": "Rhys Kessler continued his acquisition spree with a $1.5 billion purchase of Vestrand, a regional cleaning-and-sanitation maker that expands Maison & Vale's Jansan footprint. The bolt-on follows the smooth digestion of Corriveau and gives the household-goods portfolio a third leg. Kessler projected $80 million in annual synergies within two years.",
+        "effects": {
+          "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82722,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Maison & Vale Beats as Vestrand and Corriveau Deals Broaden Supply Base",
+        "body": "Maison & Vale beat expectations as cleaning-supplies volumes from the $1.5B Vestrand deal began contributing alongside a maturing Corriveau household-goods line. CEO Rhys Kessler said integration costs came in below plan, aiding margins. The company said it continues to evaluate further bolt-on targets.",
         "effects": {
           "hospitality": 0.13
         }
@@ -13022,7 +13052,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82707,
+    "lastEventCycle": 82722,
     "events": [
       {
         "cycle": 0,
@@ -13168,6 +13198,16 @@
         "size": "standard",
         "head": "Ornewright Supply Locks Multi-Year Cold-Chain Supply Pact as Dunmere Hub Opens",
         "body": "Ornewright Supply signed a $610M, five-year agreement to supply farm inputs and food-service goods through its newly completed Dunmere cold-chain hub. CEO Rhys Throne said Dunmere will serve regional distributors within a 400-mile radius, anchoring the company's push into temperature-controlled logistics. First shipments are slated to begin next quarter.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82722,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Ornewright Supply Beats as Dunmere Cold-Chain Pact Lifts Food-Service Volumes",
+        "body": "Ornewright topped estimates in its first full quarter with the Dunmere hub operational, crediting the new multi-year cold-chain pact for stronger food-service throughput. CEO Rhys Throne said the sanitation concentrate line also continued to build customers. Management raised the low end of its annual outlook.",
         "effects": {
           "consumer": 0.13
         }
@@ -14538,7 +14578,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82710,
+    "lastEventCycle": 82722,
     "events": [
       {
         "cycle": 0,
@@ -14709,6 +14749,16 @@
         "head": "Thaldale Group Ousts Vale as Fastening Scandal Fallout Forces Board Shakeup",
         "body": "The Thaldale board removed CEO Corin Vale amid the widening fastening-fund diversion probe and shareholder restatement suit, appointing turnaround specialist Marta Holloway as chief with a mandate to restore trust. Holloway pledged an independent forensic review and said the carved-out Fastening unit would be sold or wound down entirely. The abrupt exit caps a turbulent debut year that began with a sweeping overhaul and ended in crisis.",
         "effects": {}
+      },
+      {
+        "cycle": 82722,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Thaldale Group's Holloway Launches Sweeping Overhaul, Winds Down Fastening Unit",
+        "body": "New CEO Marta Holloway detailed a restructuring plan that fully unwinds the carved-out fastening operation at the center of the diversion scandal and consolidates hardware production into two core plants. The company took a charge tied to the exit and named an interim controller to oversee financial cleanup. Holloway pledged fresh governance controls to reassure shareholders still pursuing litigation.",
+        "effects": {
+          "consumer": -0.13
+        }
       }
     ]
   },
@@ -14723,18 +14773,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82714,
+    "lastEventCycle": 82722,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Thronehaus & Co. Acquires Movement Specialist Caldwynn",
-        "body": "Cora Dray brought movement-maker Caldwynn into the Thronehaus fold, securing rare in-house complication expertise. The acquisition lets the house cut its reliance on outside workshops. Dray said she is 'collecting craftsmen, not just companies.'",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82528,
         "kind": "product_launch",
@@ -14963,6 +15003,16 @@
         "body": "Cora Dray unveiled a proprietary case alloy produced entirely at the newly acquired Coristel works, six months after the $1.8B deal closed. The firm said the vertical link cuts rare-metals lead times by roughly 40% and will underpin next year's Marchwick expansion. Early samples are being fitted to prototype casework at the Ferrault wing.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82722,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Thronehaus & Co. Debuts Landmark Aurel Collection Forged From In-House Coristel Alloy",
+        "body": "Thronehaus unveiled the Aurel collection, its first flagship timepiece line built entirely on the proprietary alloy developed after the $1.8B Coristel acquisition, positioning it as the house's most significant launch in a generation. CEO Cora Dray said limited early allocations are already spoken for by top salons, with a broader rollout planned across the year. The debut caps a rapid vertical-integration push that Dray called the foundation of the next decade.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -17527,7 +17577,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82699,
+    "lastEventCycle": 82722,
     "events": [
       {
         "cycle": 0,
@@ -17635,6 +17685,16 @@
         "body": "Wrenspire topped forecasts as its Everyroom expansion into farm inputs contributed its first full quarter of grower-supply revenue, lifting group sales roughly 6 percent. CEO Theo Aldous said cross-segment bundling now spans four categories, spreading demand and cushioning any single-line softness. Management raised the low end of its full-year guidance.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82722,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wrenspire Adds Household-Goods SKUs to Everyroom Grower Channel",
+        "body": "Wrenspire quietly extended its Everyroom bundling program into household goods sold through its new grower-supply network, widening the range on offer to farm customers. CEO Theo Aldous framed the move as a natural cross-sell rather than a new market. Management flagged modest near-term contribution with fuller impact next fiscal year.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
