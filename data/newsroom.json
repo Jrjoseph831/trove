@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-15T01:18:54.434Z",
+  "generatedAt": "2026-08-15T06:40:25.100Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Blackhold Under Regulatory Probe After Storage Campus Overheating Incident",
+      "body": "Regulators opened a formal safety review of Blackhold's second storage campus following a thermal event that forced a partial shutdown of the site last week. The independent testing unit that once secured the company's $1.2B mandate is now itself under scrutiny, with officials questioning whether the campus was rushed online ahead of schedule. CEO Halden Dabney pledged full cooperation but declined to say whether commissioning timelines would be affected.",
+      "cycle": 82721,
+      "dur": 8
+    },
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Blackton Industries Unveils Renwick Overhaul, Splitting Off Halvern Unit",
+      "body": "CEO Sable Renwick announced a sweeping restructuring that carves the troubled Halvern line into a standalone division with dedicated quality oversight. The plan includes roughly 600 job cuts and a $120M charge, but Renwick said it would ringfence liabilities from the ongoing class action while stabilizing the core parts business. Analysts called it an aggressive but necessary reset for a company still bleeding from the failures scandal.",
+      "cycle": 82721,
+      "dur": 2
+    },
+    {
+      "company": "Castlestead",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Castlestead Posts Slim Beat as Farm Inputs Offset Softer Earthmoving",
+      "body": "Castlestead edged past estimates as steady Farm Inputs demand cushioned a modest dip in Earthmoving orders. CEO Aurelia Calder characterized the quarter as unremarkable, with the mature Harrowfield deal continuing to bill on schedule. Management reaffirmed its conservative full-year outlook.",
+      "cycle": 82721,
+      "dur": 1
+    },
+    {
+      "company": "Dunmorestone",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Dunmorestone Expands Plumbing & Fixtures Plant to Meet Rising Order Book",
+      "body": "Dunmorestone will invest $85M to expand its Kelbridge fixtures facility, adding two production lines and roughly 240 jobs over 18 months. CEO Orla Mercer framed the move as a measured response to demand, noting the restaurant supply contract has freed capital to modernize the older plumbing segment. The expansion is expected to lift fixtures output by about 30% once fully ramped.",
+      "cycle": 82721,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Ironcrestton Ousts Thea Blackwood as Meridian Scandal Engulfs Board",
+      "body": "Ironcrestton's board removed CEO Thea Blackwood after the regulatory suit over Meridian sourcing claims widened to include allegations of falsified supplier records. The company suspended Meridian sales entirely and warned of a material writedown, with the shares reeling from Blackwood's rapid rise and fall. Incoming chief Dara Ostwick, a compliance-focused veteran, said her first task is rebuilding credibility with regulators.",
+      "cycle": 82721,
+      "dur": 8
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Korrwright Group Secures $420M Structural Materials Award for Harbor Redevelopment",
+      "body": "Korrwright won a $420M contract to supply structural materials for a multi-year harbor redevelopment, extending its backlog well into the decade. CEO Halden Fenn said the award pairs naturally with the existing corridor and rail-bridge work, allowing shared logistics and steadier plant utilization. The company now carries one of its largest combined backlogs in recent memory.",
+      "cycle": 82721,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Ornewright Goods Wins Multi-Region Cleaning & Jansan Supply Contract",
+      "body": "Ornewright Goods secured a three-year contract to supply cleaning and sanitation products across a national facilities-management group, worth an estimated $190M. CEO Petra Veldt said the deal builds on the firming cleaning lines that have driven recent beats, adding predictable volume without straining capacity. The company expects the contract to begin contributing next quarter.",
+      "cycle": 82721,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Woldmark Removes Isolde Frayne After Halcyon 4 Collapse Wipes Out Turnaround",
+      "body": "Woldmark's board dismissed CEO Isolde Frayne following a third straight quarter of deteriorating Halcyon 4 sales, ending a turnaround she had publicly championed then abandoned. The company named steady-hand operator Corwin Vale as chief executive, tasking him with steadying the Compute line and restoring investor confidence after Frayne's public swings. Vale said Woldmark would pause new launches and focus on cost discipline and existing customers.",
+      "cycle": 82721,
+      "dur": 8
+    },
     {
       "company": "Brunstone & Sons",
       "sector": "automotive",
@@ -42,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtware Co. Nudges Past Estimates as Cordless Demand Cools Only Slightly",
-      "body": "Holtware posted a fourth straight beat, with revenue up 4% as the cordless range held firm despite softer seasonal demand. CEO Aurelia Dray noted the two fulfillment hubs kept dispatch times steady through a busy quarter, though she flagged more moderate growth ahead as the chain rollout nears completion.",
-      "cycle": 82720,
-      "dur": 1
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "earnings_miss",
@@ -60,16 +130,6 @@
       "body": "Kessel Drive fell short of forecasts in Venn's first full quarter, citing component shortages that throttled the redesigned Vanta cell ramp to roughly 60% of planned output. CEO Aldric Venn downplayed the miss as 'a scaling problem, not a demand problem,' pointing to a growing order backlog. Investors remained wary given the storage crisis that toppled his predecessor.",
       "cycle": 82720,
       "dur": 2
-    },
-    {
-      "company": "Skarnstone Industries",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Skarnstone Industries Posts Steady Quarter as Throughput Gains Hold",
-      "body": "Skarnstone edged past forecasts once more, with revenue up 3% as the second loading bay sustained faster consumables dispatch. CEO Yvette Aldous reaffirmed the company's long-horizon approach, noting demand remained stable and backorders stayed cleared for a third consecutive quarter.",
-      "cycle": 82720,
-      "dur": 1
     },
     {
       "company": "Vencyon",
@@ -92,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fennmoor Returns to Growth as Medical Systems Integration Nears Deadline",
-      "body": "Dorian Brandt reported the first clean quarter since the Corvane and Threll folds, as newly installed division chief Lena Corsaw brought integration costs back within guidance ahead of the set deadline. Medical Equipment revenue rose 11% and the company said cross-selling into Industrial Machines has begun. Brandt hinted the House is again 'scanning for the next addition.'",
-      "cycle": 82719,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "leadership_change",
@@ -110,36 +160,6 @@
       "body": "The board removed Priya Vantt after three straight quarters dominated by the Aveline III recall, the hospital-network suit, and a gutted earnings print. Director Anselm Rocha will serve as interim chief while the board searches for a permanent successor, pledging a full review of the Medical Equipment line. Shares of the House have been battered since the nationwide recall action.",
       "cycle": 82719,
       "dur": 8
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Hesperforge Beats Again as Marine-Grade Framework Deliveries Begin",
-      "body": "Sable Halloran posted a firm quarter as initial shipments under the $1.4B marine-grade framework began flowing, lifting Structural Materials revenue 14%. The company said the fourth mill remains on schedule for a phased opening next year, with backlog still exceeding current capacity. Halloran flagged tightening raw-textile input costs as the one caution ahead.",
-      "cycle": 82719,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Lhaus Industries Redeploys Kessering Proceeds Into $650M Vehicle-Platform Buyout",
-      "body": "Fresh off shedding its grid-storage unit, Cole Brandt moved fast to acquire drivetrain specialist Marnick Motive for $650M, folding it into the core Vehicles arm. Executives said the deal restores the growth narrative after two turbulent quarters and adds three assembly lines. Brandt called it a return to 'what Lhaus was built to do.'",
-      "cycle": 82719,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Varnvale & Sons to Open Flagship Ateliers in Three New Capitals on Complication Demand",
-      "body": "Buoyed by the Geneval win, Bram Wold committed $220M to open flagship ateliers in Marenne, Ostreve, and Caldon, each pairing a Timepieces salon with a Fine Goods hall. The company said Corvane-sourced inventory would supply a limited 400-piece run of the award-winning Grand Complication across the new sites. Wold framed the buildout as the House's largest retail expansion in four decades.",
-      "cycle": 82719,
-      "dur": 2
     },
     {
       "company": "Bruncrest Works",
@@ -209,16 +229,6 @@
       "head": "Skarnvale Vosk Junction Collapses in Third Failure as Recovery Chief Resigns",
       "body": "The Vosk Junction terminal suffered a total shutdown for the third time in two months, halting all regional material-handling throughput and stranding an estimated $220M in queued freight. Recovery chief Halden Roe resigned within hours, and Dorn Vaskell faces mounting pressure from major distributor clients threatening to reroute contracts. Two national customers confirmed they have suspended new volume pending an independent review.",
       "cycle": 82714,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Halhold Works Misses Badly as Aveline Recall and Legal Costs Gut Quarterly Results",
-      "body": "Halhold reported a 41% drop in operating income, missing estimates by a wide margin as recall provisions and mounting legal reserves swelled to $214M. CEO Priya Vantt acknowledged the Aveline III fallout has spread to device and wire orders as hospital clients pause purchasing. The company withdrew its full-year guidance pending resolution of the hospital-network suit.",
-      "cycle": 82713,
       "dur": 8
     }
   ]

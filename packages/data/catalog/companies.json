@@ -1051,16 +1051,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82711,
+    "lastEventCycle": 82721,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Blackhold — Hold the charge, hold the line",
-        "body": "Blackhold stores energy and gives it back when it counts. Their power and storage gear runs from consumer cells you toss in a drawer to premium banks wired into homes and worksites that can't afford a flicker. The cheap stuff is honest about what it is. The premium systems are sealed tight, thermally disciplined, and built to cycle for years without sulking. When the grid stutters, Blackhold is the quiet box in the corner still doing its job.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "expansion",
@@ -1280,6 +1272,16 @@
         "effects": {
           "energy": 0.13
         }
+      },
+      {
+        "cycle": 82721,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Blackhold Under Regulatory Probe After Storage Campus Overheating Incident",
+        "body": "Regulators opened a formal safety review of Blackhold's second storage campus following a thermal event that forced a partial shutdown of the site last week. The independent testing unit that once secured the company's $1.2B mandate is now itself under scrutiny, with officials questioning whether the campus was rushed online ahead of schedule. CEO Halden Dabney pledged full cooperation but declined to say whether commissioning timelines would be affected.",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },
@@ -1417,16 +1419,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82711,
+    "lastEventCycle": 82721,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Blackton Industries — Fits right, lasts longer",
-        "body": "Blackton Industries stamps, casts, and machines the auto parts that keep older and newer vehicles honest. From budget replacements that get a car back on the road to premium components spec'd for tight tolerances and hard miles, the catalogue runs deep. Mechanics trust the fit because the engineering is real, not reverse-guessed. The premium line is where Blackton flexes: parts that outlast the originals they replace. A workhorse name that quietly underpins a lot of garages.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "major_deal",
@@ -1648,6 +1642,16 @@
         "head": "Blackton Industries Names Turnaround Veteran Sable Renwick to Steady Halvern Fallout",
         "body": "Weeks after ousting Cassian Rode, Blackton's board installed Sable Renwick as chief executive, tasked with resolving the Halvern class action and rebuilding supplier trust. Renwick, who led two prior parts-industry recoveries, pledged an independent quality overhaul and a settlement framework within ninety days. Marlow Denhart moves to executive chairman as the boardroom reset completes.",
         "effects": {}
+      },
+      {
+        "cycle": 82721,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Blackton Industries Unveils Renwick Overhaul, Splitting Off Halvern Unit",
+        "body": "CEO Sable Renwick announced a sweeping restructuring that carves the troubled Halvern line into a standalone division with dedicated quality oversight. The plan includes roughly 600 job cuts and a $120M charge, but Renwick said it would ringfence liabilities from the ongoing class action while stabilizing the core parts business. Analysts called it an aggressive but necessary reset for a company still bleeding from the failures scandal.",
+        "effects": {
+          "automotive": -0.13
+        }
       }
     ]
   },
@@ -4784,7 +4788,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82690,
+    "lastEventCycle": 82721,
     "events": [
       {
         "cycle": 0,
@@ -4860,6 +4864,16 @@
         "size": "flash",
         "head": "Castlestead Posts Another Quiet Beat as Harrowfield Deal Steadies",
         "body": "The agriculture house reported a slim beat with revenue up 3%, as the Harrowfield supply deal held at full volume and low-till equipment sales stayed firm. CEO Aurelia Calder maintained the company's conservative full-year outlook, citing 'no surprises we didn't plan for.' Nutrient-blend lines continued to pair steadily with equipment orders.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82721,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlestead Posts Slim Beat as Farm Inputs Offset Softer Earthmoving",
+        "body": "Castlestead edged past estimates as steady Farm Inputs demand cushioned a modest dip in Earthmoving orders. CEO Aurelia Calder characterized the quarter as unremarkable, with the mature Harrowfield deal continuing to bill on schedule. Management reaffirmed its conservative full-year outlook.",
         "effects": {
           "agriculture": 0.06
         }
@@ -6140,7 +6154,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82700,
+    "lastEventCycle": 82721,
     "events": [
       {
         "cycle": 0,
@@ -6258,6 +6272,16 @@
         "body": "Dunmorestone edged past estimates with revenue of $940M, aided by the first full quarter of shipments under its regional restaurant group deal. Orla Mercer credited disciplined fixtures pricing and steady food-service reorders, reiterating full-year guidance. The result extends the house's long run of quiet, unglamorous outperformance.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82721,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Dunmorestone Expands Plumbing & Fixtures Plant to Meet Rising Order Book",
+        "body": "Dunmorestone will invest $85M to expand its Kelbridge fixtures facility, adding two production lines and roughly 240 jobs over 18 months. CEO Orla Mercer framed the move as a measured response to demand, noting the restaurant supply contract has freed capital to modernize the older plumbing segment. The expansion is expected to lift fixtures output by about 30% once fully ramped.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -10225,14 +10249,14 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1921,
-    "ceo": "Thea Blackwood",
+    "ceo": "Dara Ostwick",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82711,
+    "lastEventCycle": 82721,
     "events": [
       {
         "cycle": 0,
@@ -10457,6 +10481,14 @@
         "effects": {
           "luxury": -0.22
         }
+      },
+      {
+        "cycle": 82721,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Ironcrestton Ousts Thea Blackwood as Meridian Scandal Engulfs Board",
+        "body": "Ironcrestton's board removed CEO Thea Blackwood after the regulatory suit over Meridian sourcing claims widened to include allegations of falsified supplier records. The company suspended Meridian sales entirely and warned of a material writedown, with the shares reeling from Blackwood's rapid rise and fall. Incoming chief Dara Ostwick, a compliance-focused veteran, said her first task is rebuilding credibility with regulators.",
+        "effects": {}
       }
     ]
   },
@@ -11127,7 +11159,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82708,
+    "lastEventCycle": 82721,
     "events": [
       {
         "cycle": 0,
@@ -11293,6 +11325,16 @@
         "size": "standard",
         "head": "Korrwright Group Beats as Corridor and Rail-Bridge Backlog Both Bill",
         "body": "Korrwright posted quarterly revenue of $1.14B, up 18% year on year, as its $600M rail-bridge job and the corridor wire-and-cable award began billing in parallel. Halden Fenn pointed to a backlog now exceeding $2.6B, the deepest in the group's recorded history.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82721,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Korrwright Group Secures $420M Structural Materials Award for Harbor Redevelopment",
+        "body": "Korrwright won a $420M contract to supply structural materials for a multi-year harbor redevelopment, extending its backlog well into the decade. CEO Halden Fenn said the award pairs naturally with the existing corridor and rail-bridge work, allowing shared logistics and steadier plant utilization. The company now carries one of its largest combined backlogs in recent memory.",
         "effects": {
           "construction": 0.13
         }
@@ -12817,7 +12859,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82705,
+    "lastEventCycle": 82721,
     "events": [
       {
         "cycle": 0,
@@ -12955,6 +12997,16 @@
         "body": "Ornewright Goods edged past estimates once more, with revenue up 3% as cleaning, farm-inputs, and food-service segments all held firm. CEO Petra Veldt described the quarter as 'unremarkable in the best way,' reaffirming steady full-year guidance. Margins were flat sequentially.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82721,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Ornewright Goods Wins Multi-Region Cleaning & Jansan Supply Contract",
+        "body": "Ornewright Goods secured a three-year contract to supply cleaning and sanitation products across a national facilities-management group, worth an estimated $190M. CEO Petra Veldt said the deal builds on the firming cleaning lines that have driven recent beats, adding predictable volume without straining capacity. The company expects the contract to begin contributing next quarter.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -16975,14 +17027,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1983,
-    "ceo": "Isolde Frayne",
+    "ceo": "Corwin Vale",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.64,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82710,
+    "lastEventCycle": 82721,
     "events": [
       {
         "cycle": 0,
@@ -17187,6 +17239,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82721,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Woldmark Removes Isolde Frayne After Halcyon 4 Collapse Wipes Out Turnaround",
+        "body": "Woldmark's board dismissed CEO Isolde Frayne following a third straight quarter of deteriorating Halcyon 4 sales, ending a turnaround she had publicly championed then abandoned. The company named steady-hand operator Corwin Vale as chief executive, tasking him with steadying the Compute line and restoring investor confidence after Frayne's public swings. Vale said Woldmark would pause new launches and focus on cost discipline and existing customers.",
+        "effects": {}
       }
     ]
   },
