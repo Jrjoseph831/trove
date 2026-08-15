@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-14T18:56:25.483Z",
+  "generatedAt": "2026-08-15T01:18:54.434Z",
   "beats": [
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Brunstone & Sons Unveils Redesigned Vault II Cell as Frost Stakes Recovery on Comeback",
+      "body": "CEO Dagny Frost took the stage in a defiant relaunch, introducing the Vault II cell with a redesigned thermal housing the company says addresses the failures behind last year's costly recall. Frost pledged a $900M retooling of two plants and offered free upgrades to affected owners, framing the launch as a make-or-break bid to restore trust. The class action remains unresolved, but Frost insisted the company had 'turned the corner in the open.'",
+      "cycle": 82720,
+      "dur": 8
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drustcraft Wins Multi-Year Fixings Contract to Anchor Third Product Line",
+      "body": "Drustcraft secured a $640M five-year fixings supply agreement with a regional builder network, further broadening a business once concentrated in fasteners. CEO Cora Fenn said the deal complements the recent auto-parts win and gives the company 'three legs to stand on.' Deliveries begin next quarter from an expanded Eastfield facility.",
+      "cycle": 82720,
+      "dur": 2
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Halcrow & Vance Lands $1.8B Follow-On Mandate on Strength of Vetask Delivery",
+      "body": "Building on its Contractor of the Year recognition, Halcrow & Vance secured a $1.8B follow-on earthmoving mandate for a coastal infrastructure program. CEO Mira Skarn said the award reflects the on-time performance across the two Vetask yards and will keep both at capacity into 2028. The company will add a third yard to absorb the new work.",
+      "cycle": 82720,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Halhold Systems Rocked as Internal Memos Reveal Reliability Failures Were Known for Years",
+      "body": "Leaked internal correspondence showed senior staff flagged Compute reliability defects as far back as 2023, deepening the scandal that ousted former chief Ilse Marren. The disclosures triggered a widened regulatory inquiry and prompted three major customers to suspend orders. CEO Petra Vandel apologized publicly and announced an independent review, but stopped short of confirming further departures.",
+      "cycle": 82720,
+      "dur": 8
+    },
+    {
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtware Co. Nudges Past Estimates as Cordless Demand Cools Only Slightly",
+      "body": "Holtware posted a fourth straight beat, with revenue up 4% as the cordless range held firm despite softer seasonal demand. CEO Aurelia Dray noted the two fulfillment hubs kept dispatch times steady through a busy quarter, though she flagged more moderate growth ahead as the chain rollout nears completion.",
+      "cycle": 82720,
+      "dur": 1
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Kessel Drive Misses as Vanta Cell Ramp Stumbles on Supply Bottlenecks",
+      "body": "Kessel Drive fell short of forecasts in Venn's first full quarter, citing component shortages that throttled the redesigned Vanta cell ramp to roughly 60% of planned output. CEO Aldric Venn downplayed the miss as 'a scaling problem, not a demand problem,' pointing to a growing order backlog. Investors remained wary given the storage crisis that toppled his predecessor.",
+      "cycle": 82720,
+      "dur": 2
+    },
+    {
+      "company": "Skarnstone Industries",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Skarnstone Industries Posts Steady Quarter as Throughput Gains Hold",
+      "body": "Skarnstone edged past forecasts once more, with revenue up 3% as the second loading bay sustained faster consumables dispatch. CEO Yvette Aldous reaffirmed the company's long-horizon approach, noting demand remained stable and backorders stayed cleared for a third consecutive quarter.",
+      "cycle": 82720,
+      "dur": 1
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vencyon Beats and Raises a Third Time as Modular Rollout Nears Full Deployment",
+      "body": "Vencyon topped estimates again, with operating margin widening to 18% as the fourth and fifth hubs reached near-full capacity on the modular platform. CEO Iris Halloran raised full-year guidance and confirmed early talks on a sixth-hub option tied to the original $2.3B mandate. She cautioned that the pace of new milestones would slow as the deployment matures.",
+      "cycle": 82720,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -52,26 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Steg Tooling Pushes Streak to Thirteen as Kelmar Output Hits Full Stride",
-      "body": "Iris Vossen's disciplined run continued with a thirteenth consecutive beat, as the fully ramped third Kelmar cell lifted Fasteners & Fixings volumes 9% year over year. Management nudged full-year margin guidance up 40 basis points while reiterating no new capital commitments. Vossen credited 'steady hands and full order books.'",
-      "cycle": 82719,
-      "dur": 1
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Delivers Steady Beat as Diversification Strategy Matures",
-      "body": "Halden Vossen reported another modest beat as the two non-grocery contracts reached full run-rate, lifting Packaging volumes 6%. Margins held firm on tight cost control, and the company reaffirmed its measured full-year outlook. Vossen said the diversification push has 'done exactly what we asked of it.'",
-      "cycle": 82719,
-      "dur": 1
-    },
-    {
       "company": "Varnvale & Sons",
       "sector": "luxury",
       "kind": "expansion",
@@ -79,16 +139,6 @@
       "head": "Varnvale & Sons to Open Flagship Ateliers in Three New Capitals on Complication Demand",
       "body": "Buoyed by the Geneval win, Bram Wold committed $220M to open flagship ateliers in Marenne, Ostreve, and Caldon, each pairing a Timepieces salon with a Fine Goods hall. The company said Corvane-sourced inventory would supply a limited 400-piece run of the award-winning Grand Complication across the new sites. Wold framed the buildout as the House's largest retail expansion in four decades.",
       "cycle": 82719,
-      "dur": 2
-    },
-    {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Aldousmont & Sons Rolls Out Antimicrobial Wound-Care Range to Extend Consumables Portfolio",
-      "body": "The house introduced a 14-item antimicrobial dressing and wound-care line, its first meaningful category addition since the sterile field kits. Chief executive Dunmore Calder said the range answers requests from the same hospital network that awarded last quarter's supply contract, with initial shipments slated across three regional distribution hubs. Management framed the launch as incremental rather than transformative, consistent with the house's measured cadence.",
-      "cycle": 82718,
       "dur": 2
     },
     {
@@ -110,26 +160,6 @@
       "body": "Chief executive Iris Calvagh announced the recall's expansion to 340,000 vehicles after interim battery-pack repairs failed to fully resolve thermal faults, pushing total recall provisions past $1.4B. The company will replace complete pack assemblies rather than individual modules, a costlier remedy that halts Veyra S deliveries for at least a quarter. Calvagh conceded the earlier fix was inadequate but pledged the fuller solution would 'end the uncertainty for owners.'",
       "cycle": 82718,
       "dur": 8
-    },
-    {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Dunmorewright Expands Foundry Capacity to Deliver $780M Waterworks Contract",
-      "body": "Following its largest-ever award, Dunmorewright committed $190M to expand earthmoving and heavy-plumbing fabrication at its Halbrook works to meet inland waterworks milestones. Chief executive Emil Skarn said the investment adds roughly 300 skilled positions and positions the house for adjacent flood-control tenders. Coastal defense revenue continues to taper as the new contract ramps.",
-      "cycle": 82718,
-      "dur": 2
-    },
-    {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Stegreach Adds $410M Substation Fixings Order as Riverport Grid Work Broadens",
-      "body": "Building on the $1.2B grid contract now at full stride, Stegreach secured a follow-on $410M order for substation fasteners, fixings and cable assemblies over four years. Chief executive Halden Ashby said the award leverages the expanded Riverport capacity brought online last year and locks in utilization through 2029. The deal deepens the house's ties to the regional grid operator without requiring fresh capital outlay.",
-      "cycle": 82718,
-      "dur": 2
     },
     {
       "company": "Vossenspire Holdings",
@@ -189,26 +219,6 @@
       "head": "Halhold Works Misses Badly as Aveline Recall and Legal Costs Gut Quarterly Results",
       "body": "Halhold reported a 41% drop in operating income, missing estimates by a wide margin as recall provisions and mounting legal reserves swelled to $214M. CEO Priya Vantt acknowledged the Aveline III fallout has spread to device and wire orders as hospital clients pause purchasing. The company withdrew its full-year guidance pending resolution of the hospital-network suit.",
       "cycle": 82713,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Bruncrest Works Unveils Aria Ultra as Marlow Bets House's Future on Next-Gen Compute",
-      "body": "CEO Ines Marlow took the stage to launch Aria Ultra, a compute platform she called 'the biggest leap since we started building,' promising a threefold density gain over the current Aria Prime line. Bruncrest committed $3.8B to retooling both Aria lines for the new architecture, a move Marlow framed as decisive despite the disruption to running orders. Analysts noted the launch places nearly the entire near-term backlog on a single unproven product.",
-      "cycle": 82712,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Brunstone & Sons Hit With Class Action Over Vault Cell Recall as Losses Deepen",
-      "body": "A consolidated class action seeking $900M was filed against Brunstone & Sons over the 1.4 million recalled Vault Cell Guard Pro units, alleging the company knew of the defect months before regulators forced action. New CEO Dagny Frost pledged to 'fight where we're right and settle where we're wrong,' but the suit compounds a quarter already scarred by recall charges. Interim leadership has frozen the Power & Storage expansion plan pending the outcome.",
-      "cycle": 82712,
       "dur": 8
     }
   ]

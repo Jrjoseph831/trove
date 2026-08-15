@@ -3000,18 +3000,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82712,
+    "lastEventCycle": 82720,
     "events": [
-      {
-        "cycle": 82550,
-        "kind": "product_launch",
-        "size": "major",
-        "head": "Brunstone & Sons Bets the House on Meridian Line in Post-Ardent Relaunch",
-        "body": "CEO Royce Lambourne unveiled the Meridian vehicle and paired storage platform as the centerpiece of Brunstone's reset, staking the company's recovery on a single flagship program after the Ardent collapse. Lambourne committed 900 million to the launch and told reporters the line 'is the whole comeback, and I've said as much to the board.' The move drew scrutiny given the 2,000 recent job cuts, but Lambourne insisted the leaner structure was built expressly to carry Meridian.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82557,
         "kind": "earnings_miss",
@@ -3236,6 +3226,16 @@
         "body": "A consolidated class action seeking $900M was filed against Brunstone & Sons over the 1.4 million recalled Vault Cell Guard Pro units, alleging the company knew of the defect months before regulators forced action. New CEO Dagny Frost pledged to 'fight where we're right and settle where we're wrong,' but the suit compounds a quarter already scarred by recall charges. Interim leadership has frozen the Power & Storage expansion plan pending the outcome.",
         "effects": {
           "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82720,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Brunstone & Sons Unveils Redesigned Vault II Cell as Frost Stakes Recovery on Comeback",
+        "body": "CEO Dagny Frost took the stage in a defiant relaunch, introducing the Vault II cell with a redesigned thermal housing the company says addresses the failures behind last year's costly recall. Frost pledged a $900M retooling of two plants and offered free upgrades to affected owners, framing the launch as a make-or-break bid to restore trust. The class action remains unresolved, but Frost insisted the company had 'turned the corner in the open.'",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -5784,7 +5784,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82707,
+    "lastEventCycle": 82720,
     "events": [
       {
         "cycle": 0,
@@ -5962,6 +5962,16 @@
         "body": "Drustcraft edged past estimates with revenue of $540M as its newer auto-parts contract shipped alongside the ramping 280M fastener deal. CEO Cora Fenn said the diversified base is smoothing quarterly swings and improving factory utilization. Margins held steady despite modest input-cost pressure.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82720,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drustcraft Wins Multi-Year Fixings Contract to Anchor Third Product Line",
+        "body": "Drustcraft secured a $640M five-year fixings supply agreement with a regional builder network, further broadening a business once concentrated in fasteners. CEO Cora Fenn said the deal complements the recent auto-parts win and gives the company 'three legs to stand on.' Deliveries begin next quarter from an expanded Eastfield facility.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -8421,7 +8431,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82704,
+    "lastEventCycle": 82720,
     "events": [
       {
         "cycle": 0,
@@ -8559,6 +8569,16 @@
         "body": "Halcrow & Vance received the regional Builders' Council top honor, citing on-schedule delivery across the $2.1B Vetask mandate's opening phases. CEO Mira Skarn credited the firm's second-yard earthmoving crews for the pace. The recognition arrives as the company weighs bids on two adjacent development corridors.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82720,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halcrow & Vance Lands $1.8B Follow-On Mandate on Strength of Vetask Delivery",
+        "body": "Building on its Contractor of the Year recognition, Halcrow & Vance secured a $1.8B follow-on earthmoving mandate for a coastal infrastructure program. CEO Mira Skarn said the award reflects the on-time performance across the two Vetask yards and will keep both at capacity into 2028. The company will add a third yard to absorb the new work.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -8767,18 +8787,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82714,
+    "lastEventCycle": 82720,
     "events": [
-      {
-        "cycle": 82581,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Halhold Systems Overhauls Campus Operations After Northgate Failure",
-        "body": "Dahlia Renn announced a sweeping reorganization of Halhold's compute division, splitting site reliability into a standalone unit and pledging $220 million in redundant power and cooling upgrades across all three Northgate campuses. The restructuring follows last month's outage that darkened client workloads for eleven hours, and includes the departure of two senior operations directors. Renn conceded the company 'grew faster than its foundations,' vowing tighter controls before the next capacity push.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82587,
         "kind": "outage",
@@ -8997,6 +9007,16 @@
         "size": "major",
         "head": "Halhold Systems Faces Regulatory Probe as Reliability Scandal Widens Beyond Shareholders",
         "body": "A national commerce regulator opened a formal inquiry into whether Halhold Systems misrepresented compute reliability figures to enterprise clients, days after new CEO Petra Vandel took the helm. Two anchor customers filed breach-of-contract claims totaling $340M, and Vandel disclosed an internal audit had found the failures were documented as early as last spring. The board set aside a $150M reserve against potential penalties and settlements.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82720,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Halhold Systems Rocked as Internal Memos Reveal Reliability Failures Were Known for Years",
+        "body": "Leaked internal correspondence showed senior staff flagged Compute reliability defects as far back as 2023, deepening the scandal that ousted former chief Ilse Marren. The disclosures triggered a widened regulatory inquiry and prompted three major customers to suspend orders. CEO Petra Vandel apologized publicly and announced an independent review, but stopped short of confirming further departures.",
         "effects": {
           "technology": -0.22
         }
@@ -9926,7 +9946,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82702,
+    "lastEventCycle": 82720,
     "events": [
       {
         "cycle": 0,
@@ -10052,6 +10072,16 @@
         "size": "flash",
         "head": "Holtware Co. Extends Streak as Second Hub Lifts Fulfillment Speed",
         "body": "Holtware Co. reported quarterly revenue up 11% as its second fulfillment hub cut average delivery times and supported the national chain rollout. CEO Aurelia Dray noted the lifetime-warranty range now accounts for a third of hardware sales. Management raised full-year guidance modestly, citing steady cordless demand.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82720,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtware Co. Nudges Past Estimates as Cordless Demand Cools Only Slightly",
+        "body": "Holtware posted a fourth straight beat, with revenue up 4% as the cordless range held firm despite softer seasonal demand. CEO Aurelia Dray noted the two fulfillment hubs kept dispatch times steady through a busy quarter, though she flagged more moderate growth ahead as the chain rollout nears completion.",
         "effects": {
           "consumer": 0.06
         }
@@ -10441,7 +10471,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82709,
+    "lastEventCycle": 82720,
     "events": [
       {
         "cycle": 0,
@@ -10633,6 +10663,16 @@
         "body": "In his first major move as permanent CEO, Aldric Venn unveiled the Vanta cell, a ground-up redesign that Kessel Drive says resolves the thermal failures behind last year's crisis, backed by a five-year replacement guarantee. Venn touted $1.9B in pre-orders and staged the launch at the reopened Halden plant, framing it as a clean break from the Corliss era. Independent validation of the new cell remains ongoing.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82720,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Kessel Drive Misses as Vanta Cell Ramp Stumbles on Supply Bottlenecks",
+        "body": "Kessel Drive fell short of forecasts in Venn's first full quarter, citing component shortages that throttled the redesigned Vanta cell ramp to roughly 60% of planned output. CEO Aldric Venn downplayed the miss as 'a scaling problem, not a demand problem,' pointing to a growing order backlog. Investors remained wary given the storage crisis that toppled his predecessor.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -13675,7 +13715,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82688,
+    "lastEventCycle": 82720,
     "events": [
       {
         "cycle": 0,
@@ -13741,6 +13781,16 @@
         "size": "flash",
         "head": "Skarnstone Industries Holds Steady as Second Loading Bay Lifts Throughput",
         "body": "The consumables maker reported in-line-to-slightly-ahead results, with dispatch volumes up 6% since the second loading bay opened. Yvette Aldous credited faster order turnaround for holding backorders near zero. The company reiterated its slow-and-steady capacity roadmap.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82720,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarnstone Industries Posts Steady Quarter as Throughput Gains Hold",
+        "body": "Skarnstone edged past forecasts once more, with revenue up 3% as the second loading bay sustained faster consumables dispatch. CEO Yvette Aldous reaffirmed the company's long-horizon approach, noting demand remained stable and backorders stayed cleared for a third consecutive quarter.",
         "effects": {
           "medical": 0.06
         }
@@ -15793,7 +15843,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82707,
+    "lastEventCycle": 82720,
     "events": [
       {
         "cycle": 0,
@@ -15959,6 +16009,16 @@
         "size": "standard",
         "head": "Vencyon Beats and Raises Again as Fourth and Fifth Hub Rollout Hits Milestones",
         "body": "Vencyon reported quarterly revenue of $1.9B, up 12% year over year, as the fourth and fifth hub modular platform installations reached the halfway mark ahead of schedule. CEO Iris Halloran lifted full-year guidance for the second consecutive quarter, citing a $2.3B fleet rollout tracking under budget. Management flagged early interest in a sixth hub conversion.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82720,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vencyon Beats and Raises a Third Time as Modular Rollout Nears Full Deployment",
+        "body": "Vencyon topped estimates again, with operating margin widening to 18% as the fourth and fifth hubs reached near-full capacity on the modular platform. CEO Iris Halloran raised full-year guidance and confirmed early talks on a sixth-hub option tied to the original $2.3B mandate. She cautioned that the pace of new milestones would slow as the deployment matures.",
         "effects": {
           "logistics": 0.13
         }
