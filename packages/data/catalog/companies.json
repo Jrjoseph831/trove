@@ -3408,16 +3408,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82713,
+    "lastEventCycle": 82723,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Calderforge — Quiet silicon, relentless work",
-        "body": "Calderforge cut its teeth assembling the unglamorous guts of computing: boards, modules, and the compute units nobody photographs but everybody depends on. The mass line keeps offices and labs humming on a budget. The premium silicon goes where downtime costs real money. Engineers describe their machines the way pilots describe a reliable airframe, which is to say with relief. No theatrics, just throughput that holds under load.",
-        "effects": {}
-      },
       {
         "cycle": 82515,
         "kind": "expansion",
@@ -3646,6 +3638,16 @@
         "body": "Fresh off a strong quarter, Calderforge committed $520M to a fourth Stormwell hall, citing sold-out capacity on its next-gen compute tier. CEO Nadia Throne said pre-commitments already cover roughly 60% of the planned floor, targeting startup within eighteen months. The move extends an aggressive buildout that has doubled Calderforge's footprint in three years.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82723,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Calderforge Slips as Fourth Stormwell Hall Ramp Runs Behind Schedule",
+        "body": "Calderforge posted quarterly revenue of $3.1B, roughly $240M short of guidance, after the fourth Stormwell hall came online weeks late amid power-hookup delays. Nadia Throne acknowledged the ramp was 'bumpier than we'd like' but insisted next-gen tier demand remained fully booked. Management held its full-year outlook, banking on a steeper second-half fill rate.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -4891,18 +4893,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82717,
+    "lastEventCycle": 82723,
     "events": [
-      {
-        "cycle": 82574,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Castlestone's Karsh Unveils Halo Compute Line in First Post-Turnaround Bet",
-        "body": "CEO Pell Karsh took the stage to launch the Halo compute series, the first major release since he cut 900 jobs and shuttered the second campus. Karsh promised the leaner Halo lineup would carry a 30% lower production cost per unit while targeting the mid-tier market Castlestone had abandoned under Iris Garr. Analysts called it a make-or-break debut for the turnaround thesis.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82579,
         "kind": "earnings_beat",
@@ -5132,6 +5124,16 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82723,
+        "kind": "recall",
+        "size": "major",
+        "head": "Castlestone Recalls Grid-Core Coolant Units as Probe Pins Fault on Supplier Valve",
+        "body": "Castlestone announced a full recall of the coolant assemblies across its Grid-Core campus after investigators traced the outage to a defective pressure valve from an outside supplier, a program the company estimates at $900M. Pell Karsh, in a combative briefing, said the $12B supply pact 'stands' but conceded first deliveries will slip by at least a quarter. Two regional regulators kept the safety probe open pending re-certification of the rebuilt lines.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -5146,7 +5148,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82709,
+    "lastEventCycle": 82723,
     "events": [
       {
         "cycle": 0,
@@ -5312,6 +5314,16 @@
         "size": "flash",
         "head": "Cranecraft Extends Streak to Eleven as Textile Pricing and Farm Orders Hold",
         "body": "Cranecraft reported its eleventh consecutive beat with revenue of $920M, as firm raw-textile pricing offset a slight softening in farm-equipment volumes. CEO Mira Garr credited steady order books and disciplined cost control. Guidance was left unchanged.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82723,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Runs Streak to Twelve as Farm Orders Firm Into Planting Season",
+        "body": "Cranecraft posted its twelfth consecutive beat, with farm-equipment bookings up 6% ahead of the planting season and raw-textile pricing holding steady. Mira Garr credited disciplined inventory management and stable input costs for the quarter. The company reaffirmed guidance for the balance of the year.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -8628,7 +8640,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82708,
+    "lastEventCycle": 82723,
     "events": [
       {
         "cycle": 0,
@@ -8804,6 +8816,16 @@
         "size": "standard",
         "head": "Halcyon Industries Breaks Ground on Northgate Plant With Six Planned Lines",
         "body": "Halcyon confirmed a $420M investment in the Northgate site, with construction crews arriving on schedule for the first two of six planned packaging lines. Dorian Ashby said the phased buildout would add roughly 45% to group output by the time all lines reach rate, easing pressure on a Southport complex now running at capacity.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82723,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halcyon Industries Debuts Recycled-Fiber Packaging Grade Ahead of Northgate Startup",
+        "body": "Halcyon introduced its EverFold recycled-fiber line, a curbside-recyclable grade aimed at retail shippers, with initial volumes to run through the near-capacity Southport plant. Dorian Ashby said early commitments from three national distributors cover roughly 40% of the first year's planned output. The grade is slated to move to Northgate's first two lines once they come online next year.",
         "effects": {
           "logistics": 0.13
         }
@@ -9315,7 +9337,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82706,
+    "lastEventCycle": 82723,
     "events": [
       {
         "cycle": 0,
@@ -9441,6 +9463,16 @@
         "size": "flash",
         "head": "Hearthstone Group Extends Depot Line With Bulk Refill Stations",
         "body": "Hearthstone rolled out in-store bulk refill stations for its concentrate range across 340 Depot locations, letting customers top up household cleaners at a lower per-use cost. CEO Aurelia Aldous framed the move as a natural extension of the concentrate strategy that has steadied margins. Early pilots showed a modest lift in repeat visits.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82723,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Hearthstone Group Edges Up as Bulk Refill Stations Lift Depot Traffic",
+        "body": "Hearthstone reported a modest beat, with same-depot sales up 3% as newly installed bulk refill stations drew repeat household-goods buyers. Aurelia Aldous said the refill format is now live in more than 200 depots and driving higher basket sizes. The company held its outlook steady.",
         "effects": {
           "hospitality": 0.06
         }
@@ -13521,7 +13553,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82701,
+    "lastEventCycle": 82723,
     "events": [
       {
         "cycle": 0,
@@ -13627,6 +13659,16 @@
         "size": "flash",
         "head": "Skarngrave Stretches Streak With Fresh Sterilizer Reorders",
         "body": "Skarngrave posted another modest beat as hospital-network clients placed follow-on sterilizer orders, extending its run of consecutive quarters ahead of estimates. CEO Orla Dray credited on-time delivery and a low return rate for the repeat business. The company nudged full-year guidance up slightly, calling demand 'durable.'",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82723,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrave Extends Streak Again as Sterilizer Service Contracts Renew",
+        "body": "Skarngrave logged another modest beat, with revenue up 4% as hospital clients renewed multi-year sterilizer service and maintenance agreements. Orla Dray pointed to a 96% renewal rate and a steady flow of jansan reorders as the backbone of the quarter. The company nudged its full-year margin guidance up slightly.",
         "effects": {
           "medical": 0.06
         }
@@ -16858,7 +16900,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82695,
+    "lastEventCycle": 82723,
     "events": [
       {
         "cycle": 0,
@@ -16936,6 +16978,16 @@
         "body": "Quinn Skarn reported a steady quarter with the fleet seeder rollout on pace and margins up modestly on fuel-saving demand. Revenue rose 6% with no surprises. Skarn maintained the company's conservative outlook and flagged only incremental input orders ahead.",
         "effects": {
           "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82723,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vossenwright Holdings to Expand Seeder Plant as Fleet Order Sells Through",
+        "body": "Vossenwright approved a $210M expansion of its main assembly plant, adding a fourth line to keep pace with reorders following the regional fleet seeder deal. Quinn Skarn described the move as 'measured,' noting the line is backed by existing commitments rather than speculative demand. Construction begins next quarter, with output expected within eighteen months.",
+        "effects": {
+          "agriculture": 0.13
         }
       }
     ]
@@ -17311,7 +17363,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82704,
+    "lastEventCycle": 82723,
     "events": [
       {
         "cycle": 0,
@@ -17427,6 +17479,16 @@
         "size": "standard",
         "head": "Wrengrove Group Beats Again as Sterile-Kit Backlog Hits Record",
         "body": "Wrengrove Group topped forecasts for a third straight quarter, with sterile-kit revenue up 19% and an order backlog reaching a record as its fourth plant nears completion. CEO Rhys Vossen said early commissioning of the new plant could pull forward capacity by a quarter. Consumables margins widened on improved sourcing terms.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82723,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Wrengrove Group Wins Multi-Year Sterile-Kit Supply Contract for National Hospital Network",
+        "body": "Wrengrove signed a five-year, $780M agreement to supply sterile procedure kits to a 40-hospital network, its largest single contract to date. Rhys Vossen said the deal anchors output from the fourth plant now under construction and locks in pricing through the term. Deliveries begin next quarter, with volumes ramping as the new facility opens.",
         "effects": {
           "medical": 0.13
         }

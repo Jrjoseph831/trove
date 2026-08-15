@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-15T12:40:15.918Z",
+  "generatedAt": "2026-08-15T18:31:45.764Z",
   "beats": [
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Calderforge Slips as Fourth Stormwell Hall Ramp Runs Behind Schedule",
+      "body": "Calderforge posted quarterly revenue of $3.1B, roughly $240M short of guidance, after the fourth Stormwell hall came online weeks late amid power-hookup delays. Nadia Throne acknowledged the ramp was 'bumpier than we'd like' but insisted next-gen tier demand remained fully booked. Management held its full-year outlook, banking on a steeper second-half fill rate.",
+      "cycle": 82723,
+      "dur": 2
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "recall",
+      "size": "major",
+      "head": "Castlestone Recalls Grid-Core Coolant Units as Probe Pins Fault on Supplier Valve",
+      "body": "Castlestone announced a full recall of the coolant assemblies across its Grid-Core campus after investigators traced the outage to a defective pressure valve from an outside supplier, a program the company estimates at $900M. Pell Karsh, in a combative briefing, said the $12B supply pact 'stands' but conceded first deliveries will slip by at least a quarter. Two regional regulators kept the safety probe open pending re-certification of the rebuilt lines.",
+      "cycle": 82723,
+      "dur": 8
+    },
+    {
+      "company": "Cranecraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Cranecraft Runs Streak to Twelve as Farm Orders Firm Into Planting Season",
+      "body": "Cranecraft posted its twelfth consecutive beat, with farm-equipment bookings up 6% ahead of the planting season and raw-textile pricing holding steady. Mira Garr credited disciplined inventory management and stable input costs for the quarter. The company reaffirmed guidance for the balance of the year.",
+      "cycle": 82723,
+      "dur": 1
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halcyon Industries Debuts Recycled-Fiber Packaging Grade Ahead of Northgate Startup",
+      "body": "Halcyon introduced its EverFold recycled-fiber line, a curbside-recyclable grade aimed at retail shippers, with initial volumes to run through the near-capacity Southport plant. Dorian Ashby said early commitments from three national distributors cover roughly 40% of the first year's planned output. The grade is slated to move to Northgate's first two lines once they come online next year.",
+      "cycle": 82723,
+      "dur": 2
+    },
+    {
+      "company": "Hearthstone Group",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Hearthstone Group Edges Up as Bulk Refill Stations Lift Depot Traffic",
+      "body": "Hearthstone reported a modest beat, with same-depot sales up 3% as newly installed bulk refill stations drew repeat household-goods buyers. Aurelia Aldous said the refill format is now live in more than 200 depots and driving higher basket sizes. The company held its outlook steady.",
+      "cycle": 82723,
+      "dur": 1
+    },
+    {
+      "company": "Skarngrave",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Skarngrave Extends Streak Again as Sterilizer Service Contracts Renew",
+      "body": "Skarngrave logged another modest beat, with revenue up 4% as hospital clients renewed multi-year sterilizer service and maintenance agreements. Orla Dray pointed to a 96% renewal rate and a steady flow of jansan reorders as the backbone of the quarter. The company nudged its full-year margin guidance up slightly.",
+      "cycle": 82723,
+      "dur": 1
+    },
+    {
+      "company": "Vossenwright Holdings",
+      "sector": "agriculture",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Vossenwright Holdings to Expand Seeder Plant as Fleet Order Sells Through",
+      "body": "Vossenwright approved a $210M expansion of its main assembly plant, adding a fourth line to keep pace with reorders following the regional fleet seeder deal. Quinn Skarn described the move as 'measured,' noting the line is backed by existing commitments rather than speculative demand. Construction begins next quarter, with output expected within eighteen months.",
+      "cycle": 82723,
+      "dur": 2
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Wrengrove Group Wins Multi-Year Sterile-Kit Supply Contract for National Hospital Network",
+      "body": "Wrengrove signed a five-year, $780M agreement to supply sterile procedure kits to a 40-hospital network, its largest single contract to date. Rhys Vossen said the deal anchors output from the fourth plant now under construction and locks in pricing through the term. Deliveries begin next quarter, with volumes ramping as the new facility opens.",
+      "cycle": 82723,
+      "dur": 2
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -10,16 +90,6 @@
       "body": "Boreas Power launched its first co-designed compute-and-storage racks, pairing Halvane silicon with the company's power blocks under a single cabinet standard. CEO Mira Thorne said early units are earmarked for the Vantel campus, with commercial shipments targeted within two quarters. The line marks the first tangible product from the $1.4B Halvane acquisition.",
       "cycle": 82722,
       "dur": 2
-    },
-    {
-      "company": "Garrweave Mills",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Garrweave Mills Edges Up Again as Northfield Volumes Hold Steady",
-      "body": "Garrweave reported a slight uptick as its Northfield renewal continued to keep looms fully utilized through the period. CEO Lorne Veldt reiterated the mill's long-horizon stance, noting no plans to chase spot demand. Raw textile shipments were broadly in line with prior quarters.",
-      "cycle": 82722,
-      "dur": 1
     },
     {
       "company": "Holtforge Group",
@@ -72,16 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Wrenspire",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Wrenspire Adds Household-Goods SKUs to Everyroom Grower Channel",
-      "body": "Wrenspire quietly extended its Everyroom bundling program into household goods sold through its new grower-supply network, widening the range on offer to farm customers. CEO Theo Aldous framed the move as a natural cross-sell rather than a new market. Management flagged modest near-term contribution with fuller impact next fiscal year.",
-      "cycle": 82722,
-      "dur": 1
-    },
-    {
       "company": "Blackhold",
       "sector": "energy",
       "kind": "safety_probe",
@@ -92,26 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Blackton Industries Unveils Renwick Overhaul, Splitting Off Halvern Unit",
-      "body": "CEO Sable Renwick announced a sweeping restructuring that carves the troubled Halvern line into a standalone division with dedicated quality oversight. The plan includes roughly 600 job cuts and a $120M charge, but Renwick said it would ringfence liabilities from the ongoing class action while stabilizing the core parts business. Analysts called it an aggressive but necessary reset for a company still bleeding from the failures scandal.",
-      "cycle": 82721,
-      "dur": 2
-    },
-    {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Dunmorestone Expands Plumbing & Fixtures Plant to Meet Rising Order Book",
-      "body": "Dunmorestone will invest $85M to expand its Kelbridge fixtures facility, adding two production lines and roughly 240 jobs over 18 months. CEO Orla Mercer framed the move as a measured response to demand, noting the restaurant supply contract has freed capital to modernize the older plumbing segment. The expansion is expected to lift fixtures output by about 30% once fully ramped.",
-      "cycle": 82721,
-      "dur": 2
-    },
-    {
       "company": "Ironcrestton",
       "sector": "luxury",
       "kind": "leadership_change",
@@ -120,26 +160,6 @@
       "body": "Ironcrestton's board removed CEO Thea Blackwood after the regulatory suit over Meridian sourcing claims widened to include allegations of falsified supplier records. The company suspended Meridian sales entirely and warned of a material writedown, with the shares reeling from Blackwood's rapid rise and fall. Incoming chief Dara Ostwick, a compliance-focused veteran, said her first task is rebuilding credibility with regulators.",
       "cycle": 82721,
       "dur": 8
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrwright Group Secures $420M Structural Materials Award for Harbor Redevelopment",
-      "body": "Korrwright won a $420M contract to supply structural materials for a multi-year harbor redevelopment, extending its backlog well into the decade. CEO Halden Fenn said the award pairs naturally with the existing corridor and rail-bridge work, allowing shared logistics and steadier plant utilization. The company now carries one of its largest combined backlogs in recent memory.",
-      "cycle": 82721,
-      "dur": 2
-    },
-    {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Ornewright Goods Wins Multi-Region Cleaning & Jansan Supply Contract",
-      "body": "Ornewright Goods secured a three-year contract to supply cleaning and sanitation products across a national facilities-management group, worth an estimated $190M. CEO Petra Veldt said the deal builds on the firming cleaning lines that have driven recent beats, adding predictable volume without straining capacity. The company expects the contract to begin contributing next quarter.",
-      "cycle": 82721,
-      "dur": 2
     },
     {
       "company": "Woldmark",
