@@ -7441,7 +7441,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82710,
+    "lastEventCycle": 82725,
     "events": [
       {
         "cycle": 0,
@@ -7587,6 +7587,16 @@
         "size": "flash",
         "head": "Garrware Adds Marrow Valley Warehouse Wing as Fourth Line Runs Flat Out",
         "body": "With the Marrow Valley fourth line now at full rate, Garrware broke ground on a modest 60,000-square-foot storage wing to ease shipping bottlenecks. CEO Orla Holt described the addition as 'a natural next step, nothing more,' keeping to the disciplined cadence that has defined her long tenure. The project is expected to open within two quarters at minimal capital cost.",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82725,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Garrware Edges Higher as Marrow Valley Wing Lifts Throughput",
+        "body": "Orla Holt's packaging house posted a modest beat, with revenue up 3.1% to $221M as the new Marrow Valley warehouse wing improved order turnaround. The fourth line continued running at full rate, and management noted no capacity constraints heading into peak season. Holt reaffirmed the firm's measured expansion plan.",
         "effects": {
           "logistics": 0.06
         }
@@ -9124,16 +9134,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82719,
+    "lastEventCycle": 82725,
     "events": [
-      {
-        "cycle": 82590,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Halhold Works Ousts Gunnar Vale as Board Moves to Contain Verity Pro Fallout",
-        "body": "Halhold's board removed CEO Gunnar Vale following mounting pressure from the recall, safety probe, and $600M-plus class action tied to Verity Pro medical units. Incoming chief Lena Faircloth, a former quality-and-compliance executive, pledged an immediate top-to-bottom review of the medical division and a settlement framework for affected claimants. Shares of the wire, devices, and equipment maker have been battered through the ordeal.",
-        "effects": {}
-      },
       {
         "cycle": 82596,
         "kind": "restructure",
@@ -9356,6 +9358,14 @@
         "size": "major",
         "head": "Halhold Works Ousts CEO Priya Vantt as Aveline Fallout Claims the Top Job",
         "body": "The board removed Priya Vantt after three straight quarters dominated by the Aveline III recall, the hospital-network suit, and a gutted earnings print. Director Anselm Rocha will serve as interim chief while the board searches for a permanent successor, pledging a full review of the Medical Equipment line. Shares of the House have been battered since the nationwide recall action.",
+        "effects": {}
+      },
+      {
+        "cycle": 82725,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Halhold Works Installs Turnaround Chief Anselm Rocha as Aveline Cleanup Begins",
+        "body": "The board formally seated Anselm Rocha as chief executive, tasking him with steadying the firm after the Aveline III monitor recall and pending hospital-network suit. Rocha, known for aggressive but volatile restructurings, pledged an independent review of the Medical Equipment unit and a phased Aveline replacement program for affected clients. He warned that near-term results would remain 'uncomfortable' as legal reserves build.",
         "effects": {}
       }
     ]
@@ -12159,18 +12169,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82716,
+    "lastEventCycle": 82725,
     "events": [
-      {
-        "cycle": 82527,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Marlgear Supply Lands Landmark Atlas Order From Carrow Group",
-        "body": "Marlgear signed a £240 million framework with manufacturing conglomerate Carrow Group to supply 90 Atlas Industrial Presses across eleven plants over three years, the largest order in the company's history. Halden Vossen called it 'the day the working floor changed hands,' staking Marlgear's expansion plans on the deal. Shares of the Drennan Mills supply chain are expected to ramp through next quarter.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82535,
         "kind": "earnings_beat",
@@ -12393,6 +12393,16 @@
         "size": "major",
         "head": "Marlgear Supply Hit With Class Action Over Suppressed Kessel Fault Reports",
         "body": "A consolidated class action was filed against Marlgear Supply seeking $1.4B in damages on behalf of customers and injured parties tied to the Kessel fault it allegedly concealed. The suit names former CEO Ferran and cites internal documents surfaced in the Verrant probe. New CEO Dane Kessler pledged full cooperation but warned the litigation could take years to resolve and pressure the freshly split Devices unit.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82725,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Regulators Open Formal Probe Into Marlgear Supply Over Kessel Fault Disclosures",
+        "body": "A national safety authority launched a formal investigation into whether Marlgear Supply concealed known defects in its Kessel industrial machines, escalating pressure amid the pending class action. Investigators subpoenaed internal inspection records spanning three years and can impose penalties reaching $200M. CEO Dane Kessler publicly vowed 'total cooperation' but drew scrutiny for a combative statement blaming prior management for the disclosure failures.",
         "effects": {
           "technology": -0.22
         }
@@ -13434,7 +13444,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82707,
+    "lastEventCycle": 82725,
     "events": [
       {
         "cycle": 0,
@@ -13570,6 +13580,16 @@
         "size": "standard",
         "head": "Palettstone & Sons Beats as Heirloom Pro Fastening Line Hits National Shelves",
         "body": "Palettstone & Sons reported revenue of $780M, up 9%, as the award-winning Heirloom Pro fastening system rolled out through its new national distribution network. CEO Cole Fenn said sell-through in the first six weeks exceeded internal targets by roughly 20%. The company is now weighing an accelerated expansion of the Heirloom Pro tool range.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82725,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Palettstone & Sons Expands Foundry to Feed Heirloom Pro Demand",
+        "body": "Cole Fenn greenlit a $95M expansion of the Ridgeline foundry after the Heirloom Pro fastening line outpaced national shelf forecasts by 22%. The added capacity is expected to lift output by roughly a third and come online within twelve months. Fenn said the move positions the house to court a second national retail partner without straining existing commitments.",
         "effects": {
           "consumer": 0.13
         }
@@ -14358,7 +14378,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82710,
+    "lastEventCycle": 82725,
     "events": [
       {
         "cycle": 0,
@@ -14504,6 +14524,16 @@
         "size": "standard",
         "head": "Stegforge Locks In Multi-Year Rail Plate Supply Pact as Consortium Deepens Ties",
         "body": "Stegforge signed a five-year supply agreement with its rail consortium partners valued at roughly $2.3B, effectively pre-selling much of the capacity from its second rail plate line now under construction. CEO Aurelia Steg called the deal 'the anchor we needed before laying more steel,' securing demand well ahead of the new line's startup. The pact extends the company's structural materials order book to its longest horizon in decades.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82725,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Stegforge Beats as Second Rail Plate Line Nears Startup",
+        "body": "Aurelia Steg's house edged past estimates with quarterly revenue of $1.28B, up 8% on full utilization of the first rail plate mill and firming Structural Materials orders. Management said the second rail plate line remains on schedule to begin trial runs next quarter, backed by the recently extended consortium pact. Steg held guidance steady, citing input-cost discipline.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -15635,18 +15665,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82714,
+    "lastEventCycle": 82725,
     "events": [
-      {
-        "cycle": 82527,
-        "kind": "lawsuit",
-        "size": "major",
-        "head": "Varnvale House Sued Over Ember Capsule Sourcing Disclosures",
-        "body": "A consumer coalition filed suit against Varnvale House, alleging the Ember Fine-Goods Capsule was marketed with origin claims the company could not substantiate. The complaint seeks £30 million and pulls directly from the scandal that erupted weeks ago; Petra Holt called the action 'opportunistic' but confirmed the capsule has been pulled from select counters pending review. An independent audit of suppliers is underway.",
-        "effects": {
-          "luxury": -0.22
-        }
-      },
       {
         "cycle": 82536,
         "kind": "earnings_miss",
@@ -15864,6 +15884,16 @@
         "head": "Varnvale House Names Turnaround Veteran Beatrix Coyle to Steady Sovereign Line",
         "body": "Chairman Lucien Marchetti appointed Beatrix Coyle, former operations head at a rival goods maker, as chief executive after a three-week search. Coyle inherits a Regent Timepiece backlog stretching past nine months and pledged to pause new Sovereign tier launches until supply stabilizes. Marchetti called the pick 'a return to discipline over spectacle.'",
         "effects": {}
+      },
+      {
+        "cycle": 82725,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Varnvale House Unveils Reborn Sovereign Line as Coyle Bets Big on Comeback",
+        "body": "In her boldest move since arriving, Beatrix Coyle relaunched the flagship Sovereign timepiece collection with a fully rebuilt supply chain and a hand-finished Regent tourbillon priced at $84,000. Coyle staked her turnaround on the launch, telling a packed showcase that the house had 'closed the chapter on the misstep' and secured raw movement components under three-year fixed contracts. Preorders opened alongside a limited run of 500 numbered pieces.",
+        "effects": {
+          "luxury": 0.22
+        }
       }
     ]
   },
@@ -15878,7 +15908,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82708,
+    "lastEventCycle": 82725,
     "events": [
       {
         "cycle": 0,
@@ -16006,6 +16036,16 @@
         "body": "Veldtreach secured the mass-excavation and embankment package for the Merrow Basin reservoir, its largest single award to date at $540M over four years. Petra Steg called it a decisive step beyond rail, and signaled a fourth excavation fleet would be evaluated to run the two megaprojects concurrently.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82725,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Veldtreach & Sons Beats as Inland Reservoir Works Ramp Up",
+        "body": "Petra Steg's firm topped estimates with revenue of $388M, up 11%, as early-stage earthworks on the $540M inland reservoir package began contributing. All three excavation fleets ran at high utilization, and management flagged possible mobilization of a fourth fleet if follow-on coastal rail bids land. Steg said margins held despite fuel and equipment cost pressure.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -16751,7 +16791,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82710,
+    "lastEventCycle": 82725,
     "events": [
       {
         "cycle": 0,
@@ -16919,6 +16959,16 @@
         "body": "Vossenstead extended its beat streak to thirteen straight quarters, with revenue up 6% as Food Service customers rebuilt inventories heading into peak season. CEO Bram Thorne credited 'the same boring consistency' and reaffirmed that the fourth distribution center is now fully ramped. Fixtures demand held steady, giving little drama but plenty of reliability.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82725,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenstead Supply Stretches Streak to Fourteen as Fifth Center Approaches",
+        "body": "Bram Thorne's house posted its fourteenth consecutive beat, with quarterly revenue up 6.3% to $412M on firm Plumbing & Fixtures orders and steady Food Service volumes. Management confirmed the fifth distribution center is on track for a mid-year opening, adding roughly 180,000 square feet of capacity. Thorne reiterated the firm's cautious posture, declining to raise full-year guidance.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
