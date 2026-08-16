@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-16T12:41:24.563Z",
+  "generatedAt": "2026-08-16T18:31:13.920Z",
   "beats": [
+    {
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldouscraft Mfg. Beats Again as All Four Extrusion Lines Run at Full Rate",
+      "body": "Soren Ashby's mill posted a slim beat with feeder and grid-cable volumes both holding firm and the fourth extrusion line now at nameplate output. Revenue rose 4.5% while utilization climbed to 94%, its highest reading in three years. Ashby reaffirmed guidance, noting the order backlog stretches into next year.",
+      "cycle": 82727,
+      "dur": 1
+    },
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Aperture Compute Lands Landmark $2.6B Emberline Supply Pact for Next-Gen Node",
+      "body": "Marisol Venn secured a multi-year commitment worth $2.6B to supply the newly unveiled Emberline node, the largest single agreement in Aperture's history and enough to fill most of the second fabrication site's planned capacity. Venn said the deal front-loads deliveries beginning next quarter and locks in a marquee anchor customer through 1959. Shares of narrative momentum aside, management now expects the second site to reach breakeven a full year early.",
+      "cycle": 82727,
+      "dur": 8
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Boreas Power Beats as Vantel Campus and Halvane Modules Pair Up in First Full Quarter",
+      "body": "Mira Thorne's house topped estimates as the Vantel storage campus came online alongside Halvane-built compute modules, delivering the first quarter of the combined power-and-silicon strategy. Revenue rose 9% to $1.1B, with management crediting bundled contracts that pair storage capacity with on-site compute. Thorne signaled appetite for another bolt-on acquisition to deepen the module lineup.",
+      "cycle": 82727,
+      "dur": 2
+    },
+    {
+      "company": "Brunforge Holdings",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Brunforge Holdings Extends Vellan Rollout With Second Wave of Fifteen Flagships",
+      "body": "Kestrel Bramm approved a follow-on expansion adding fifteen Vellan flagships across new metro markets, building on the ten-store push now nearing completion. The measured buildout is expected to lift food-service capacity by roughly a fifth and carries a committed outlay of $310M through 1957. Bramm stressed the pace remains deliberate, with each site backed by existing demand data.",
+      "cycle": 82727,
+      "dur": 2
+    },
+    {
+      "company": "Forgegrave Industries",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Forgegrave Industries Beats as Integrated Beyond-Meridian Network Lifts Volumes",
+      "body": "Petra Thorne reported the broadest quarter on record repeating, with material-handling throughput up 11% as the two Beyond-Meridian acquisitions finished integrating onto a single dispatch system. Revenue reached $840M against expectations near $790M, and Thorne raised the full-year outlook for the first time in six quarters. Synergy savings ran ahead of the original $45M target.",
+      "cycle": 82727,
+      "dur": 2
+    },
+    {
+      "company": "Holtgate Group",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Group Adds Another Slim Beat as Guild Mill Volumes Stay Reliable",
+      "body": "Dorian Throne's mills delivered a fourth consecutive narrow beat, with raw-textile output steady and guild orders repeating at expected levels. Revenue rose 2.4% and margins held flat, in line with the house's dependable cadence. Throne reaffirmed guidance without adjustment.",
+      "cycle": 82727,
+      "dur": 1
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Lhaus Industries Rolls Out First Vehicle Line Built on Newly Acquired Platform",
+      "body": "Cole Brandt debuted the Verrant midsize range, the first models engineered on the $650M platform Lhaus bought earlier this year, targeting 120,000 units in the first full production year. Brandt framed the launch as proof the acquisition-heavy strategy is bearing fruit, telling reporters the platform will underpin at least four nameplates by 1957. Early dealer commitments cover roughly 40% of planned volume.",
+      "cycle": 82727,
+      "dur": 2
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowcyon Extends Run to Sixth Straight Quiet Beat as Fixtures Demand Steadies",
+      "body": "Theo Orne's house edged past expectations again, with plumbing and fixtures revenue up 3.1% and apparel holding flat on stable seasonal orders. Management left full-year guidance unchanged, citing balanced demand across both segments. Margins ticked up 20 basis points on modest input-cost relief.",
+      "cycle": 82727,
+      "dur": 1
+    },
     {
       "company": "Bruncraft Industries",
       "sector": "automotive",
@@ -52,16 +132,6 @@
       "dur": 8
     },
     {
-      "company": "Kesselgrove Co.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Kesselgrove Co. Edges Past Estimates as Second Bay Trims Press Backlog Further",
-      "body": "Kesselgrove reported another quarter above consensus, with the second assembly bay lifting deliveries and shaving the record press backlog to roughly nine months from twelve. Orla Steg noted throughput gains remained modest but steady, holding to the company's disciplined ramp. Margins were flat as onboarding costs offset volume gains.",
-      "cycle": 82726,
-      "dur": 1
-    },
-    {
       "company": "Korrworks",
       "sector": "logistics",
       "kind": "expansion",
@@ -82,16 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Halhold Works Installs Turnaround Chief Anselm Rocha as Aveline Cleanup Begins",
-      "body": "The board formally seated Anselm Rocha as chief executive, tasking him with steadying the firm after the Aveline III monitor recall and pending hospital-network suit. Rocha, known for aggressive but volatile restructurings, pledged an independent review of the Medical Equipment unit and a phased Aveline replacement program for affected clients. He warned that near-term results would remain 'uncomfortable' as legal reserves build.",
-      "cycle": 82725,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "safety_probe",
@@ -102,26 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Palettstone & Sons",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Palettstone & Sons Expands Foundry to Feed Heirloom Pro Demand",
-      "body": "Cole Fenn greenlit a $95M expansion of the Ridgeline foundry after the Heirloom Pro fastening line outpaced national shelf forecasts by 22%. The added capacity is expected to lift output by roughly a third and come online within twelve months. Fenn said the move positions the house to court a second national retail partner without straining existing commitments.",
-      "cycle": 82725,
-      "dur": 2
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Stegforge Beats as Second Rail Plate Line Nears Startup",
-      "body": "Aurelia Steg's house edged past estimates with quarterly revenue of $1.28B, up 8% on full utilization of the first rail plate mill and firming Structural Materials orders. Management said the second rail plate line remains on schedule to begin trial runs next quarter, backed by the recently extended consortium pact. Steg held guidance steady, citing input-cost discipline.",
-      "cycle": 82725,
-      "dur": 2
-    },
-    {
       "company": "Varnvale House",
       "sector": "luxury",
       "kind": "product_launch",
@@ -130,26 +170,6 @@
       "body": "In her boldest move since arriving, Beatrix Coyle relaunched the flagship Sovereign timepiece collection with a fully rebuilt supply chain and a hand-finished Regent tourbillon priced at $84,000. Coyle staked her turnaround on the launch, telling a packed showcase that the house had 'closed the chapter on the misstep' and secured raw movement components under three-year fixed contracts. Preorders opened alongside a limited run of 500 numbered pieces.",
       "cycle": 82725,
       "dur": 8
-    },
-    {
-      "company": "Veldtreach & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Veldtreach & Sons Beats as Inland Reservoir Works Ramp Up",
-      "body": "Petra Steg's firm topped estimates with revenue of $388M, up 11%, as early-stage earthworks on the $540M inland reservoir package began contributing. All three excavation fleets ran at high utilization, and management flagged possible mobilization of a fourth fleet if follow-on coastal rail bids land. Steg said margins held despite fuel and equipment cost pressure.",
-      "cycle": 82725,
-      "dur": 2
-    },
-    {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenstead Supply Stretches Streak to Fourteen as Fifth Center Approaches",
-      "body": "Bram Thorne's house posted its fourteenth consecutive beat, with quarterly revenue up 6.3% to $412M on firm Plumbing & Fixtures orders and steady Food Service volumes. Management confirmed the fifth distribution center is on track for a mid-year opening, adding roughly 180,000 square feet of capacity. Thorne reiterated the firm's cautious posture, declining to raise full-year guidance.",
-      "cycle": 82725,
-      "dur": 2
     },
     {
       "company": "Bruncrest Works",
@@ -239,26 +259,6 @@
       "head": "Halhold Systems Rocked as Internal Memos Reveal Reliability Failures Were Known for Years",
       "body": "Leaked internal correspondence showed senior staff flagged Compute reliability defects as far back as 2023, deepening the scandal that ousted former chief Ilse Marren. The disclosures triggered a widened regulatory inquiry and prompted three major customers to suspend orders. CEO Petra Vandel apologized publicly and announced an independent review, but stopped short of confirming further departures.",
       "cycle": 82720,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "breakthrough",
-      "size": "major",
-      "head": "Aperture Compute Unveils Next-Gen Emberline Node, Claiming Double the Output Per Site",
-      "body": "Marisol Venn took the stage to reveal the Emberline-2 process, which she said doubles Compute throughput per fabrication site while cutting power draw by a third. Venn moved the second Emberline groundbreaking forward and said three unnamed customers have already reserved capacity through 2029. The announcement caps a breakneck rise from the Dawnmere collapse just two years ago.",
-      "cycle": 82719,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Halhold Works Ousts CEO Priya Vantt as Aveline Fallout Claims the Top Job",
-      "body": "The board removed Priya Vantt after three straight quarters dominated by the Aveline III recall, the hospital-network suit, and a gutted earnings print. Director Anselm Rocha will serve as interim chief while the board searches for a permanent successor, pledging a full review of the Medical Equipment line. Shares of the House have been battered since the nationwide recall action.",
-      "cycle": 82719,
       "dur": 8
     }
   ]

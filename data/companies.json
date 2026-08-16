@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82708,
+    "lastEventCycle": 82727,
     "events": [
       {
         "cycle": 0,
@@ -136,6 +136,16 @@
         "size": "flash",
         "head": "Aldouscraft Mfg. Edges Higher as Feeder Cable Demand Holds Firm",
         "body": "Aldouscraft reported a modest quarterly beat, with feeder-cable shipments steady as the fourth extrusion line settled into full-rate production. Soren Ashby noted grid-order visibility now extends into the following year, keeping utilization near 95%.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82727,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscraft Mfg. Beats Again as All Four Extrusion Lines Run at Full Rate",
+        "body": "Soren Ashby's mill posted a slim beat with feeder and grid-cable volumes both holding firm and the fourth extrusion line now at nameplate output. Revenue rose 4.5% while utilization climbed to 94%, its highest reading in three years. Ashby reaffirmed guidance, noting the order backlog stretches into next year.",
         "effects": {
           "construction": 0.06
         }
@@ -582,18 +592,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82719,
+    "lastEventCycle": 82727,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "funding",
-        "size": "standard",
-        "head": "Aperture Compute Secures Backing to Scale Dawnmere Interconnect",
-        "body": "Fresh off its Dawnmere splash, Aperture Compute lined up a sizable financing round led by the Vell Harbor merchant houses to mass-produce its interconnect. Halden Dray said the funds will fast-track a new fabrication line. He vowed shipping product 'before anyone copies the slide.'",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82527,
         "kind": "expansion",
@@ -818,6 +818,16 @@
         "size": "major",
         "head": "Aperture Compute Unveils Next-Gen Emberline Node, Claiming Double the Output Per Site",
         "body": "Marisol Venn took the stage to reveal the Emberline-2 process, which she said doubles Compute throughput per fabrication site while cutting power draw by a third. Venn moved the second Emberline groundbreaking forward and said three unnamed customers have already reserved capacity through 2029. The announcement caps a breakneck rise from the Dawnmere collapse just two years ago.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82727,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Aperture Compute Lands Landmark $2.6B Emberline Supply Pact for Next-Gen Node",
+        "body": "Marisol Venn secured a multi-year commitment worth $2.6B to supply the newly unveiled Emberline node, the largest single agreement in Aperture's history and enough to fill most of the second fabrication site's planned capacity. Venn said the deal front-loads deliveries beginning next quarter and locks in a marquee anchor customer through 1959. Shares of narrative momentum aside, management now expects the second site to reach breakeven a full year early.",
         "effects": {
           "technology": 0.22
         }
@@ -1666,18 +1676,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82722,
+    "lastEventCycle": 82727,
     "events": [
-      {
-        "cycle": 82565,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Boreas Power Tops Estimates as Calderwick Integration Lifts Storage Revenue",
-        "body": "Boreas reported storage-segment revenue up 27% to $890M, driven by the Calderwick Fields fleet and early Hollowmere Phase Three output. CEO Mira Thorne said integration synergies arrived ahead of schedule and hinted at further consolidation, adding the company is 'actively reviewing two more targets.' Compute-segment results were flat as capacity was reallocated toward grid contracts.",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82571,
         "kind": "expansion",
@@ -1904,6 +1904,16 @@
         "size": "standard",
         "head": "Boreas Power Unveils Halvane-Built Compute Modules Tuned for Storage Sites",
         "body": "Boreas Power launched its first co-designed compute-and-storage racks, pairing Halvane silicon with the company's power blocks under a single cabinet standard. CEO Mira Thorne said early units are earmarked for the Vantel campus, with commercial shipments targeted within two quarters. The line marks the first tangible product from the $1.4B Halvane acquisition.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82727,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Boreas Power Beats as Vantel Campus and Halvane Modules Pair Up in First Full Quarter",
+        "body": "Mira Thorne's house topped estimates as the Vantel storage campus came online alongside Halvane-built compute modules, delivering the first quarter of the combined power-and-silicon strategy. Revenue rose 9% to $1.1B, with management crediting bundled contracts that pair storage capacity with on-site compute. Thorne signaled appetite for another bolt-on acquisition to deepen the module lineup.",
         "effects": {
           "energy": 0.13
         }
@@ -2425,7 +2435,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82709,
+    "lastEventCycle": 82727,
     "events": [
       {
         "cycle": 0,
@@ -2561,6 +2571,16 @@
         "size": "standard",
         "head": "Brunforge Holdings Tops Estimates Again as Vellan Flagships Lift Food Service Margins",
         "body": "Brunforge posted quarterly revenue of $4.3B, up 9%, with the Vellan Kitchen line contributing a bigger-than-expected slice as the first new flagships opened ahead of schedule. CEO Kestrel Bramm credited disciplined rollout pacing and cross-selling into the household goods segment. Management reaffirmed the ten-store national plan without accelerating spend.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82727,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunforge Holdings Extends Vellan Rollout With Second Wave of Fifteen Flagships",
+        "body": "Kestrel Bramm approved a follow-on expansion adding fifteen Vellan flagships across new metro markets, building on the ten-store push now nearing completion. The measured buildout is expected to lift food-service capacity by roughly a fifth and carries a committed outlay of $310M through 1957. Bramm stressed the pace remains deliberate, with each site backed by existing demand data.",
         "effects": {
           "consumer": 0.13
         }
@@ -7298,7 +7318,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82712,
+    "lastEventCycle": 82727,
     "events": [
       {
         "cycle": 0,
@@ -7444,6 +7464,16 @@
         "size": "standard",
         "head": "Forgegrave Industries Beats as Beyond-Meridian Deals Drive Broadest Quarter Yet",
         "body": "Forgegrave topped estimates with revenue up 9% as the Coastward and regional distributor contracts contributed a full quarter of material-handling volume. CEO Petra Thorne said the expansion beyond Meridian had 'proven the model travels,' with new-region customers now near a fifth of the book. The house raised its full-year outlook modestly.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82727,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Forgegrave Industries Beats as Integrated Beyond-Meridian Network Lifts Volumes",
+        "body": "Petra Thorne reported the broadest quarter on record repeating, with material-handling throughput up 11% as the two Beyond-Meridian acquisitions finished integrating onto a single dispatch system. Revenue reached $840M against expectations near $790M, and Thorne raised the full-year outlook for the first time in six quarters. Synergy savings ran ahead of the original $45M target.",
         "effects": {
           "logistics": 0.13
         }
@@ -9993,7 +10023,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82703,
+    "lastEventCycle": 82727,
     "events": [
       {
         "cycle": 0,
@@ -10079,6 +10109,16 @@
         "size": "flash",
         "head": "Holtgate Group Extends Beat Streak With Another Slim Margin Gain",
         "body": "CEO Dorian Throne delivered yet another narrow beat, crediting renewed guild volumes and consistent mill utilization for the incremental gain. Raw-textile output held steady with no meaningful shifts in cost or demand. Throne offered his customary understated outlook, guiding for continued stability into next quarter.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82727,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Group Adds Another Slim Beat as Guild Mill Volumes Stay Reliable",
+        "body": "Dorian Throne's mills delivered a fourth consecutive narrow beat, with raw-textile output steady and guild orders repeating at expected levels. Revenue rose 2.4% and margins held flat, in line with the house's dependable cadence. Throne reaffirmed guidance without adjustment.",
         "effects": {
           "textiles": 0.06
         }
@@ -11751,18 +11791,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82719,
+    "lastEventCycle": 82727,
     "events": [
-      {
-        "cycle": 82572,
-        "kind": "breakthrough",
-        "size": "major",
-        "head": "Lhaus Industries Debuts Fast-Charge Cell Pack With Record Cycle Life",
-        "body": "Lhaus unveiled a second-generation cell pack it says retains 90% capacity after 4,000 cycles while accepting an 80% charge in under twelve minutes. Chief engineer Marta Voss said the breakthrough came from a new electrode chemistry developed at the company's Fenwick lab, and Cole Brandt hinted the technology could underpin a broader push beyond fleet customers. Analysts called it the most significant Power & Storage advance since the division launched.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82578,
         "kind": "major_deal",
@@ -11989,6 +12019,16 @@
         "size": "standard",
         "head": "Lhaus Industries Redeploys Kessering Proceeds Into $650M Vehicle-Platform Buyout",
         "body": "Fresh off shedding its grid-storage unit, Cole Brandt moved fast to acquire drivetrain specialist Marnick Motive for $650M, folding it into the core Vehicles arm. Executives said the deal restores the growth narrative after two turbulent quarters and adds three assembly lines. Brandt called it a return to 'what Lhaus was built to do.'",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82727,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Lhaus Industries Rolls Out First Vehicle Line Built on Newly Acquired Platform",
+        "body": "Cole Brandt debuted the Verrant midsize range, the first models engineered on the $650M platform Lhaus bought earlier this year, targeting 120,000 units in the first full production year. Brandt framed the launch as proof the acquisition-heavy strategy is bearing fruit, telling reporters the platform will underpin at least four nameplates by 1957. Early dealer commitments cover roughly 40% of planned volume.",
         "effects": {
           "automotive": 0.13
         }
@@ -12470,7 +12510,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82712,
+    "lastEventCycle": 82727,
     "events": [
       {
         "cycle": 0,
@@ -12626,6 +12666,16 @@
         "size": "flash",
         "head": "Marrowcyon Notches Fifth Straight Quiet Beat as Apparel Volumes Hold",
         "body": "Marrowcyon reported another modest quarterly beat, its fifth in a row, with revenue up 2.1% as steady apparel orders offset flat fixtures demand. CEO Theo Orne, in his customary brief remarks, credited 'the same discipline that's carried us for decades.' Margins held within a narrow band, extending the house's reputation for undramatic consistency.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82727,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Extends Run to Sixth Straight Quiet Beat as Fixtures Demand Steadies",
+        "body": "Theo Orne's house edged past expectations again, with plumbing and fixtures revenue up 3.1% and apparel holding flat on stable seasonal orders. Management left full-year guidance unchanged, citing balanced demand across both segments. Margins ticked up 20 basis points on modest input-cost relief.",
         "effects": {
           "consumer": 0.06
         }
