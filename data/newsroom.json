@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-15T18:31:45.764Z",
+  "generatedAt": "2026-08-16T01:23:38.495Z",
   "beats": [
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Bruncrest Works Lands Landmark Aria Ultra Order as Marlow's Bet Pays Off",
+      "body": "Bruncrest Works secured a $1.6B supply agreement for its next-gen Aria Ultra compute units, the largest contract in the house's history and a decisive vindication of CEO Ines Marlow's future-staking wager. Deliveries begin next quarter, with the customer holding options that could push total value past $2.4B. Marlow said the deal proves the doubled-throughput platform 'is not a science project but a product the market was starving for.'",
+      "cycle": 82724,
+      "dur": 8
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Carrowforge's Renn Names New Machines Chief to Steady Post-Split Operations",
+      "body": "Carrowforge appointed veteran plant operator Teller Voss to head its streamlined Industrial Machines division as CEO Dahlia Renn moves to stabilize costs after last quarter's loss. The house said the reorganization consolidates three facilities into two and targets $40M in annualized savings by year-end. Renn told staff the 'hardest cuts are now behind us,' framing the shift as the pivot from teardown to rebuild.",
+      "cycle": 82724,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Castlehold Fires Up Second Plant as Modular Backlog Swells to $1.2B",
+      "body": "Castlehold formally opened its second manufacturing plant, roughly doubling capacity for its high-capacity modular storage line as the order backlog climbed to $1.2B. CEO Halden Voss said the facility will reach full output within two quarters and hire some 400 workers. Voss acknowledged the aggressive ramp carries execution risk but insisted demand 'leaves us no choice but to move fast.'",
+      "cycle": 82724,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fenncyon Posts Another Beat as Grand Loop Enters Full-Scale Earthwork",
+      "body": "Fenncyon reported quarterly revenue of $612M, up 21% year-over-year, as the Eastfield Grand Loop shifted from mobilization into peak earthmoving activity. CEO Nadia Ashby credited the twin staging yards for keeping fleet utilization above 90%, and raised full-year guidance modestly. The house said the first completed loop segment is now three weeks ahead of the contract schedule.",
+      "cycle": 82724,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Greywater Grid Signs $2.4B Compute Supply Pact Anchored by Closed-Loop Sites",
+      "body": "Greywater Grid landed a $2.4B multi-year agreement to supply compute capacity from facilities running its 94%-recovery closed-loop water system. CEO Sable Renwick said the deal 'turns a regulatory headache into our biggest selling point,' with the first tranche of capacity going live within six months. The pact vaults Greywater past its prior order book and validates the pivot from the halted reservoir buildout.",
+      "cycle": 82724,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "recall",
+      "size": "standard",
+      "head": "Gromford Works Pulls Emblem Collection Pieces Over Clasp Defect",
+      "body": "Gromford Works issued a voluntary recall of roughly 9,400 Emblem Collection items after reports of a failing clasp mechanism on the flagship pendant line. CEO Halvard Pryce called the move 'precautionary but necessary,' pledging free repairs and estimating a $18M charge against the quarter. The recall lands just weeks after the collection's high-profile debut, testing Pryce's rapid-expansion push beyond timepieces.",
+      "cycle": 82724,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Korrwright Works Strikes $1.1B Deal for Movement-Maker Halbrook in Vertical Leap",
+      "body": "Korrwright Works agreed to acquire in-house movement specialist Halbrook Manufacture for $1.1B, its largest deal ever, securing control of a critical supply link long outsourced. CEO Dunmore Carrow said pairing Halbrook's movements with the Verenne retail network gives Korrwright end-to-end command 'from bench to boutique.' The purchase, expected to close next quarter, adds roughly 1,300 workers and two workshops to the house.",
+      "cycle": 82724,
+      "dur": 8
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenspire Supply Beats as Thelvane Vertical Push Widens Margins",
+      "body": "Vossenspire Supply reported revenue up 17% to $488M, with gross margin expanding 260 basis points as in-house Thelvane cases cut sourcing costs on the Corveil Reserve line. CEO Quinn Marrow said Corveil waitlists remain 'stubbornly long' even after the Halvane movement output doubling. Marrow hinted further vertical acquisitions remain on the table as the house tightens control of its own supply chain.",
+      "cycle": 82724,
+      "dur": 2
+    },
     {
       "company": "Calderforge",
       "sector": "technology",
@@ -22,16 +102,6 @@
       "dur": 8
     },
     {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Runs Streak to Twelve as Farm Orders Firm Into Planting Season",
-      "body": "Cranecraft posted its twelfth consecutive beat, with farm-equipment bookings up 6% ahead of the planting season and raw-textile pricing holding steady. Mira Garr credited disciplined inventory management and stable input costs for the quarter. The company reaffirmed guidance for the balance of the year.",
-      "cycle": 82723,
-      "dur": 1
-    },
-    {
       "company": "Halcyon Industries",
       "sector": "logistics",
       "kind": "product_launch",
@@ -40,26 +110,6 @@
       "body": "Halcyon introduced its EverFold recycled-fiber line, a curbside-recyclable grade aimed at retail shippers, with initial volumes to run through the near-capacity Southport plant. Dorian Ashby said early commitments from three national distributors cover roughly 40% of the first year's planned output. The grade is slated to move to Northgate's first two lines once they come online next year.",
       "cycle": 82723,
       "dur": 2
-    },
-    {
-      "company": "Hearthstone Group",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Hearthstone Group Edges Up as Bulk Refill Stations Lift Depot Traffic",
-      "body": "Hearthstone reported a modest beat, with same-depot sales up 3% as newly installed bulk refill stations drew repeat household-goods buyers. Aurelia Aldous said the refill format is now live in more than 200 depots and driving higher basket sizes. The company held its outlook steady.",
-      "cycle": 82723,
-      "dur": 1
-    },
-    {
-      "company": "Skarngrave",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Skarngrave Extends Streak Again as Sterilizer Service Contracts Renew",
-      "body": "Skarngrave logged another modest beat, with revenue up 4% as hospital clients renewed multi-year sterilizer service and maintenance agreements. Orla Dray pointed to a 96% renewal rate and a steady flow of jansan reorders as the backbone of the quarter. The company nudged its full-year margin guidance up slightly.",
-      "cycle": 82723,
-      "dur": 1
     },
     {
       "company": "Vossenwright Holdings",
@@ -79,56 +129,6 @@
       "head": "Wrengrove Group Wins Multi-Year Sterile-Kit Supply Contract for National Hospital Network",
       "body": "Wrengrove signed a five-year, $780M agreement to supply sterile procedure kits to a 40-hospital network, its largest single contract to date. Rhys Vossen said the deal anchors output from the fourth plant now under construction and locks in pricing through the term. Deliveries begin next quarter, with volumes ramping as the new facility opens.",
       "cycle": 82723,
-      "dur": 2
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Boreas Power Unveils Halvane-Built Compute Modules Tuned for Storage Sites",
-      "body": "Boreas Power launched its first co-designed compute-and-storage racks, pairing Halvane silicon with the company's power blocks under a single cabinet standard. CEO Mira Thorne said early units are earmarked for the Vantel campus, with commercial shipments targeted within two quarters. The line marks the first tangible product from the $1.4B Halvane acquisition.",
-      "cycle": 82722,
-      "dur": 2
-    },
-    {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Holtforge Group Sets Order-Book Record as Interconnector Beat Streak Continues",
-      "body": "Holtforge posted another quarter ahead of guidance, with the offshore interconnector backlog crossing a company record after recent extensions. CEO Yvette Bramm said cable output ran near capacity and margins held steady despite input costs. The firm nudged full-year revenue guidance higher.",
-      "cycle": 82722,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Maison & Vale Beats as Vestrand and Corriveau Deals Broaden Supply Base",
-      "body": "Maison & Vale beat expectations as cleaning-supplies volumes from the $1.5B Vestrand deal began contributing alongside a maturing Corriveau household-goods line. CEO Rhys Kessler said integration costs came in below plan, aiding margins. The company said it continues to evaluate further bolt-on targets.",
-      "cycle": 82722,
-      "dur": 2
-    },
-    {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Ornewright Supply Beats as Dunmere Cold-Chain Pact Lifts Food-Service Volumes",
-      "body": "Ornewright topped estimates in its first full quarter with the Dunmere hub operational, crediting the new multi-year cold-chain pact for stronger food-service throughput. CEO Rhys Throne said the sanitation concentrate line also continued to build customers. Management raised the low end of its annual outlook.",
-      "cycle": 82722,
-      "dur": 2
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Thaldale Group's Holloway Launches Sweeping Overhaul, Winds Down Fastening Unit",
-      "body": "New CEO Marta Holloway detailed a restructuring plan that fully unwinds the carved-out fastening operation at the center of the diversion scandal and consolidates hardware production into two core plants. The company took a charge tied to the exit and named an interim controller to oversee financial cleanup. Holloway pledged fresh governance controls to reassure shareholders still pursuing litigation.",
-      "cycle": 82722,
       "dur": 2
     },
     {
@@ -249,16 +249,6 @@
       "head": "Castlestone Grid-Core Campus Goes Dark for Days as Coolant Probe Widens",
       "body": "A cascading shutdown knocked Castlestone's flagship Grid-Core campus offline for nearly four days, halting deliveries against its $12 billion supply pact and forcing the company to warn of missed shipment milestones. The outage traced back to the same coolant systems already under safety review, and Pell Karsh confirmed at least two anchor customers have invoked delay clauses. Castlestone estimated a $480 million revenue hit and pledged an independent teardown of the campus infrastructure.",
       "cycle": 82717,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Marlgear Supply Hit With Class Action Over Suppressed Kessel Fault Reports",
-      "body": "A consolidated class action was filed against Marlgear Supply seeking $1.4B in damages on behalf of customers and injured parties tied to the Kessel fault it allegedly concealed. The suit names former CEO Ferran and cites internal documents surfaced in the Verrant probe. New CEO Dane Kessler pledged full cooperation but warned the litigation could take years to resolve and pressure the freshly split Devices unit.",
-      "cycle": 82716,
       "dur": 8
     }
   ]

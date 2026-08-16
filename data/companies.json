@@ -2170,16 +2170,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82718,
+    "lastEventCycle": 82724,
     "events": [
-      {
-        "cycle": 82576,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Bruncrest Works Names Ines Marlow CEO in Bid to Halt the Bleeding",
-        "body": "The board tapped former operations chief Ines Marlow to succeed the ousted Corwin Hale, betting her turnaround record can stabilize a Compute unit that has burned through cash since the Meridian exit. In her first address, Marlow pledged a 'no-sacred-cows' review and hinted at deeper cuts to the Compute portfolio within ninety days. Investors welcomed the clarity but flagged execution risk given three leadership shifts in eighteen months.",
-        "effects": {}
-      },
       {
         "cycle": 82582,
         "kind": "restructure",
@@ -2406,6 +2398,16 @@
         "size": "major",
         "head": "Bruncrest Works Says Aria Ultra Clears Validation, Doubling Throughput in Marlow's Big Bet",
         "body": "Chief executive Ines Marlow announced Aria Ultra passed independent performance validation showing roughly 2.1x the throughput of the prior Aria Prime generation at comparable power draw. Marlow said three anchor customers have committed to early-volume orders, converting part of the $5.2B supply pact to the new platform. The result vindicates the house's aggressive pivot, though management acknowledged yield ramp remains the near-term challenge.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82724,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Bruncrest Works Lands Landmark Aria Ultra Order as Marlow's Bet Pays Off",
+        "body": "Bruncrest Works secured a $1.6B supply agreement for its next-gen Aria Ultra compute units, the largest contract in the house's history and a decisive vindication of CEO Ines Marlow's future-staking wager. Deliveries begin next quarter, with the customer holding options that could push total value past $2.4B. Marlow said the deal proves the doubled-throughput platform 'is not a science project but a product the market was starving for.'",
         "effects": {
           "technology": 0.22
         }
@@ -3969,7 +3971,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82711,
+    "lastEventCycle": 82724,
     "events": [
       {
         "cycle": 0,
@@ -4137,6 +4139,16 @@
         "size": "standard",
         "head": "Carrowforge Misses as Renn's Roe-Era Split Drags Costs Into the Red",
         "body": "Dahlia Renn's first full quarter came in below expectations, with a $210 million restructuring charge tied to separating the legacy product lines pushing the company to a narrow loss. Renn insisted the pain was front-loaded and reaffirmed that the core Industrial Machines unit grew orders 9% underneath the noise. Analysts flagged execution risk as the overhaul enters its costliest phase.",
+        "effects": {
+          "manufacturing": -0.13
+        }
+      },
+      {
+        "cycle": 82724,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Carrowforge's Renn Names New Machines Chief to Steady Post-Split Operations",
+        "body": "Carrowforge appointed veteran plant operator Teller Voss to head its streamlined Industrial Machines division as CEO Dahlia Renn moves to stabilize costs after last quarter's loss. The house said the reorganization consolidates three facilities into two and targets $40M in annualized savings by year-end. Renn told staff the 'hardest cuts are now behind us,' framing the shift as the pivot from teardown to rebuild.",
         "effects": {
           "manufacturing": -0.13
         }
@@ -4541,18 +4553,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82716,
+    "lastEventCycle": 82724,
     "events": [
-      {
-        "cycle": 82531,
-        "kind": "scandal",
-        "size": "major",
-        "head": "Castlehold Faces Probe Over Withheld Saltmere Fault Reports",
-        "body": "Regulators opened an inquiry after internal documents suggested Castlehold knew of structural weaknesses at Saltmere Banks before last season's storm failures. The disclosures, surfacing weeks after the unit was spun into a standalone entity, have prompted calls for an independent review of Soren Skarn's leadership. Shares slid sharply as Skarn defended the restructure as 'transparent, not evasive.'",
-        "effects": {
-          "energy": -0.22
-        }
-      },
       {
         "cycle": 82539,
         "kind": "leadership_change",
@@ -4773,6 +4775,16 @@
         "size": "standard",
         "head": "Castlehold Beats as $750M Supply Deal Ships First Modular Units",
         "body": "Castlehold posted quarterly revenue of $412M, up 34% year-on-year, as initial deliveries under its $750M storage supply agreement began flowing from the completed second plant. CEO Halden Voss credited the high-capacity modular line for lifting gross margins to 28%, though he cautioned that ramp costs would weigh on the coming quarter. The company reaffirmed full-year output targets.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82724,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Castlehold Fires Up Second Plant as Modular Backlog Swells to $1.2B",
+        "body": "Castlehold formally opened its second manufacturing plant, roughly doubling capacity for its high-capacity modular storage line as the order backlog climbed to $1.2B. CEO Halden Voss said the facility will reach full output within two quarters and hire some 400 workers. Voss acknowledged the aggressive ramp carries execution risk but insisted demand 'leaves us no choice but to move fast.'",
         "effects": {
           "energy": 0.13
         }
@@ -6685,7 +6697,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82707,
+    "lastEventCycle": 82724,
     "events": [
       {
         "cycle": 0,
@@ -6831,6 +6843,16 @@
         "size": "standard",
         "head": "Fenncyon Opens Second Eastfield Staging Yard to Speed Grand Loop Deliveries",
         "body": "Fenncyon has commissioned a 40-acre staging yard south of the Eastfield Grand Loop corridor, adding equipment marshaling capacity as the $3.4B megaproject enters its heavy-earthmoving phase. CEO Nadia Ashby said the facility will house up to 220 machines and cut mobilization delays across three active work fronts. The move positions Fenncyon to absorb additional scope tenders expected later this year.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82724,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fenncyon Posts Another Beat as Grand Loop Enters Full-Scale Earthwork",
+        "body": "Fenncyon reported quarterly revenue of $612M, up 21% year-over-year, as the Eastfield Grand Loop shifted from mobilization into peak earthmoving activity. CEO Nadia Ashby credited the twin staging yards for keeping fleet utilization above 90%, and raised full-year guidance modestly. The house said the first completed loop segment is now three weeks ahead of the contract schedule.",
         "effects": {
           "construction": 0.13
         }
@@ -7808,7 +7830,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82713,
+    "lastEventCycle": 82724,
     "events": [
       {
         "cycle": 0,
@@ -8023,6 +8045,16 @@
         "effects": {
           "energy": 0.13
         }
+      },
+      {
+        "cycle": 82724,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Greywater Grid Signs $2.4B Compute Supply Pact Anchored by Closed-Loop Sites",
+        "body": "Greywater Grid landed a $2.4B multi-year agreement to supply compute capacity from facilities running its 94%-recovery closed-loop water system. CEO Sable Renwick said the deal 'turns a regulatory headache into our biggest selling point,' with the first tranche of capacity going live within six months. The pact vaults Greywater past its prior order book and validates the pivot from the halted reservoir buildout.",
+        "effects": {
+          "energy": 0.13
+        }
       }
     ]
   },
@@ -8037,16 +8069,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82717,
+    "lastEventCycle": 82724,
     "events": [
-      {
-        "cycle": 82573,
-        "kind": "leadership_change",
-        "size": "standard",
-        "head": "Gromford Works Names Turnaround Veteran Corin Aldwych as Chief Executive",
-        "body": "Gromford Works appointed Corin Aldwych as CEO, tasking the former restructuring chief with steering the house out of the Aurelian Noir clasp scandal and pending litigation. Interim leader Delphine Vaugh will step back to a board advisory role after months of firefighting, as Aldwych pledged a full clasp redesign and independent quality review.",
-        "effects": {}
-      },
       {
         "cycle": 82579,
         "kind": "product_launch",
@@ -8269,6 +8293,16 @@
         "body": "Halvard Pryce broadened Gromford's revival with the Emblem Collection, a line of fine leather goods and desk accessories priced from $900 to $6,400, its first meaningful move outside timepieces since the Meridian collapse. Pryce staged a splashy waterfront launch and pledged the first 5,000 pieces would ship within eight weeks. Skeptics noted the rapid category jump strains a still-thin design bench.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82724,
+        "kind": "recall",
+        "size": "standard",
+        "head": "Gromford Works Pulls Emblem Collection Pieces Over Clasp Defect",
+        "body": "Gromford Works issued a voluntary recall of roughly 9,400 Emblem Collection items after reports of a failing clasp mechanism on the flagship pendant line. CEO Halvard Pryce called the move 'precautionary but necessary,' pledging free repairs and estimating a $18M charge against the quarter. The recall lands just weeks after the collection's high-profile debut, testing Pryce's rapid-expansion push beyond timepieces.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -11404,18 +11438,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82716,
+    "lastEventCycle": 82724,
     "events": [
-      {
-        "cycle": 82548,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Korrwright Works Secures Exclusive Movement Supply Pact for Heritage Atelier",
-        "body": "Korrwright Works has signed a five-year exclusivity agreement with escapement specialist Loewen & Fisk, locking up rare hairspring alloys for its new Heritage Atelier at a reported 42 million per annum. CEO Dunmore Carrow called the deal 'the connective tissue between the Velloux acquisition and everything that follows,' hinting at further vertical purchases. Analysts note the pact removes a key supply bottleneck that had capped Velloux output.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82556,
         "kind": "product_launch",
@@ -11642,6 +11666,16 @@
         "body": "Korrwright Works reported a 22% revenue rise to $610M in its first full quarter with the Verenne retail division consolidated, as direct-to-boutique sales of Alvence-movement pieces expanded margins to 41%. CEO Dunmore Carrow said controlling distribution has already trimmed discounting and improved inventory turns. He signaled appetite for further boutique acquisitions in key luxury corridors.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82724,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Korrwright Works Strikes $1.1B Deal for Movement-Maker Halbrook in Vertical Leap",
+        "body": "Korrwright Works agreed to acquire in-house movement specialist Halbrook Manufacture for $1.1B, its largest deal ever, securing control of a critical supply link long outsourced. CEO Dunmore Carrow said pairing Halbrook's movements with the Verenne retail network gives Korrwright end-to-end command 'from bench to boutique.' The purchase, expected to close next quarter, adds roughly 1,300 workers and two workshops to the house.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -16462,18 +16496,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82716,
+    "lastEventCycle": 82724,
     "events": [
-      {
-        "cycle": 82527,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Vossenspire Supply Unveils Renmark-Built Tourer",
-        "body": "Vossenspire revealed the Renmark Grand Tourer, the first vehicle built on the coachbuilder it acquired earlier this year, pairing hand-finished bodywork with its in-house drivetrain. Quinn Marrow positioned the £140,000 tourer as proof the Renmark deal 'already earns its keep.' Initial allocation is capped at 300 units.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82536,
         "kind": "major_deal",
@@ -16700,6 +16724,16 @@
         "size": "standard",
         "head": "Vossenspire Debuts Thelvane-Cased Corveil Reserve at Larkmoor Flagship",
         "body": "Vossenspire Supply unveiled the Corveil Reserve, the first timepiece built entirely around its newly acquired Thelvane case works and doubled Halvane movement capacity. CEO Quinn Marrow said the limited 500-piece run carries a $38,000 list price and is aimed at cementing the house's vertical control over its supply chain. Early salon allocations sold through within days.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82724,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenspire Supply Beats as Thelvane Vertical Push Widens Margins",
+        "body": "Vossenspire Supply reported revenue up 17% to $488M, with gross margin expanding 260 basis points as in-house Thelvane cases cut sourcing costs on the Corveil Reserve line. CEO Quinn Marrow said Corveil waitlists remain 'stubbornly long' even after the Halvane movement output doubling. Marrow hinted further vertical acquisitions remain on the table as the house tightens control of its own supply chain.",
         "effects": {
           "luxury": 0.13
         }
