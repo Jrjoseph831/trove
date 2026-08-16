@@ -1921,18 +1921,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82717,
+    "lastEventCycle": 82726,
     "events": [
-      {
-        "cycle": 82535,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Bruncraft Industries Strikes Fleet Deal to Supply 12,000 Runabouts to Halvenport Transit",
-        "body": "Bruncraft has signed a five-year agreement to deliver 12,000 Foundry City Runabouts to the Halvenport Transit Authority, its largest single fleet order on record at an estimated 840 million. CEO Orla Marrow called the deal 'the beginning of a wider municipal push,' hinting at talks with three additional regional authorities. The first 2,000 units are slated for delivery by spring.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82542,
         "kind": "expansion",
@@ -2155,6 +2145,16 @@
         "body": "Bruncraft Industries folded newly acquired Vanguard Coachworks into a dedicated Specialty Vehicles division, naming Vanguard veteran Lena Prosk to lead the unit under Marcus Vane. The reshuffle carries a $310 million integration charge and cuts roughly 640 overlapping back-office roles, though management insists the Halloran plant and $4.3 billion fleet backlog remain untouched. Vane framed the move as clearing runway for further deals rather than a retreat.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82726,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Bruncraft Unveils Coachline Flagship, First Model Built Under Consolidated Vanguard Unit",
+        "body": "Bruncraft launched the Coachline GT, a hand-finished flagship that Marcus Vane called 'proof the Vanguard acquisition can build, not just backfill.' The model draws on Vanguard Coachworks' interior craftsmanship and carries an $189,000 starting price, with initial allocations targeted at fleet buyers already tied to the $4.3 billion backlog. Deliveries from the reopened Halloran plant begin next quarter.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -3665,7 +3665,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82708,
+    "lastEventCycle": 82726,
     "events": [
       {
         "cycle": 0,
@@ -3791,6 +3791,16 @@
         "size": "standard",
         "head": "Calderworks Beats as Vaultridge Pact Anchors Record Kiln Output",
         "body": "Calderworks reported revenue of $690M, up 22%, as its fourth kiln ran at full rate against the newly signed $780M Vaultridge corridor supply pact. Kestrel Halloran said the multi-year commitment underpinned utilization through the medium term and reduced exposure to spot demand swings.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82726,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Calderworks Commits to Fifth Kiln as Vaultridge Demand Outstrips Record Output",
+        "body": "Calderworks approved construction of a fifth kiln, a $220 million commitment, after the Vaultridge Corridor pact pushed the existing four kilns to record utilization. Kestrel Halloran, guiding the firm into its 118th year, said the addition secures capacity through the multi-year supply commitment without straining margins. The new kiln is slated to come online in about 18 months.",
         "effects": {
           "construction": 0.13
         }
@@ -6025,7 +6035,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82709,
+    "lastEventCycle": 82726,
     "events": [
       {
         "cycle": 0,
@@ -6161,6 +6171,16 @@
         "size": "standard",
         "head": "Drustcyon Lands $540M Harbor-Authority Supply Contract for Marine-Grade Anchors",
         "body": "Drustcyon secured a multi-year deal to supply its marine-grade anchor system across a consortium of port and harbor authorities, its largest single order to date. CEO Aurelia Kessler said the contract underwrites the coastal foundry's second expansion phase and locks in demand through 2029. Deliveries begin next quarter.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82726,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcyon Beats as Harbor-Authority Contract Powers Record Marine-Grade Shipments",
+        "body": "Drustcyon topped estimates as first shipments under the $540M harbor-authority pact combined with a maturing coastal foundry to drive record marine-grade anchor output. Aurelia Kessler said the expanded foundry reached 80% of targeted run-rate ahead of schedule, easing the backlog that had constrained prior quarters. Management raised full-year revenue guidance modestly.",
         "effects": {
           "construction": 0.13
         }
@@ -8328,7 +8348,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82714,
+    "lastEventCycle": 82726,
     "events": [
       {
         "cycle": 0,
@@ -8506,6 +8526,16 @@
         "body": "Iris Marrow reported the limited Meridian Skeleton edition sold out but delivered thinner margins than the base Tourbillon, as intricate casework drove up unit costs. Quarterly profit fell short of expectations even as revenue held, and Marrow acknowledged she 'pushed complexity ahead of the workshop's capacity.' The firm signaled a slower cadence for upcoming limited runs.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82726,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Halcrest Stakes Comeback on Meridian Grand Complication in Iris Marrow's Boldest Bet Yet",
+        "body": "After the Skeleton Edition's margin stumble, Iris Marrow unveiled the Meridian Grand Complication, a $340,000 minute-repeater capped at 88 pieces and positioned as the house's most ambitious release in a generation. Marrow staged a spectacle-heavy launch and told buyers the piece 'answers whether Halcrest still leads or merely follows,' pinning the brand's premium narrative on the line. Early order interest was described as brisk, though analysts flagged execution risk on such low volumes.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -8887,18 +8917,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82720,
+    "lastEventCycle": 82726,
     "events": [
-      {
-        "cycle": 82587,
-        "kind": "outage",
-        "size": "major",
-        "head": "Halhold Systems Hit by Second Northgate Blackout, Client Contracts in Question",
-        "body": "Barely a quarter after its restructure, Halhold suffered a cascading power and cooling failure that darkened two of its three Northgate campuses for nearly nine hours, disrupting workloads for at least forty enterprise clients. Two anchor customers have invoked exit clauses, and CEO Dahlia Renn faces mounting pressure as the overhaul she championed fails its first major stress test.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82593,
         "kind": "scandal",
@@ -9117,6 +9137,16 @@
         "size": "major",
         "head": "Halhold Systems Rocked as Internal Memos Reveal Reliability Failures Were Known for Years",
         "body": "Leaked internal correspondence showed senior staff flagged Compute reliability defects as far back as 2023, deepening the scandal that ousted former chief Ilse Marren. The disclosures triggered a widened regulatory inquiry and prompted three major customers to suspend orders. CEO Petra Vandel apologized publicly and announced an independent review, but stopped short of confirming further departures.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82726,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Halhold Systems Hit With Landmark Settlement Demand as Regulators Widen Reliability Case",
+        "body": "Regulators formally expanded their action against Halhold, seeking a settlement figure people close to the matter put near $1.2 billion and demanding an independent monitor over its compute reliability practices. The move follows internal memos showing failures were known internally for years, and now names three former executives in addition to ousted chief Ilse Marren. CEO Petra Vandel said the company would 'contest the scope but engage in good faith,' pledging a full remediation program.",
         "effects": {
           "technology": -0.22
         }
@@ -10816,7 +10846,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82710,
+    "lastEventCycle": 82726,
     "events": [
       {
         "cycle": 0,
@@ -10965,6 +10995,16 @@
         "effects": {
           "manufacturing": 0.13
         }
+      },
+      {
+        "cycle": 82726,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Kesselgrove Co. Edges Past Estimates as Second Bay Trims Press Backlog Further",
+        "body": "Kesselgrove reported another quarter above consensus, with the second assembly bay lifting deliveries and shaving the record press backlog to roughly nine months from twelve. Orla Steg noted throughput gains remained modest but steady, holding to the company's disciplined ramp. Margins were flat as onboarding costs offset volume gains.",
+        "effects": {
+          "manufacturing": 0.06
+        }
       }
     ]
   },
@@ -11072,7 +11112,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82712,
+    "lastEventCycle": 82726,
     "events": [
       {
         "cycle": 0,
@@ -11240,6 +11280,16 @@
         "body": "Korrworks posted a third consecutive beat, with the cross-region hub sustaining volumes roughly 12% above initial plan. CEO Rhys Throne said construction on the second hub remains on schedule, calling the early performance 'a template we intend to copy.' Handling margins ticked up on improved utilization.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82726,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrworks Fast-Tracks Second Hub as Rhys Throne Adds Third Site to Pipeline",
+        "body": "Korrworks moved up the completion timeline on its second cross-region hub by roughly four months and disclosed early site work on a third facility, citing sustained above-plan volumes. CEO Rhys Throne, in his 58th year at the helm, framed the buildout as 'measured but opportunistic,' committing an additional $310 million in capital spending. The second hub is now expected to begin partial operations by year-end.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -13996,7 +14046,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82714,
+    "lastEventCycle": 82726,
     "events": [
       {
         "cycle": 0,
@@ -14168,6 +14218,16 @@
         "size": "major",
         "head": "Skarnvale Vosk Junction Collapses in Third Failure as Recovery Chief Resigns",
         "body": "The Vosk Junction terminal suffered a total shutdown for the third time in two months, halting all regional material-handling throughput and stranding an estimated $220M in queued freight. Recovery chief Halden Roe resigned within hours, and Dorn Vaskell faces mounting pressure from major distributor clients threatening to reroute contracts. Two national customers confirmed they have suspended new volume pending an independent review.",
+        "effects": {
+          "logistics": -0.22
+        }
+      },
+      {
+        "cycle": 82726,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Skarnvale Abandons Vosk Junction Retrofit and Launches Sweeping Overhaul After Triple Failure",
+        "body": "Skarnvale scrapped the troubled Vosk Junction retrofit entirely, taking a $260 million writedown and pledging a ground-up rebuild under a newly assembled crisis board. Dorn Vaskell, whose recovery chief resigned amid the third collapse, said the company would 'stop patching a broken program' and shift affected volumes to partner sites through next year. The move caps a turbulent stretch that has erased the retrofit's projected capacity gains.",
         "effects": {
           "logistics": -0.22
         }

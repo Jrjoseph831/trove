@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-16T06:41:33.625Z",
+  "generatedAt": "2026-08-16T12:41:24.563Z",
   "beats": [
     {
-      "company": "Garrware",
-      "sector": "logistics",
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Bruncraft Unveils Coachline Flagship, First Model Built Under Consolidated Vanguard Unit",
+      "body": "Bruncraft launched the Coachline GT, a hand-finished flagship that Marcus Vane called 'proof the Vanguard acquisition can build, not just backfill.' The model draws on Vanguard Coachworks' interior craftsmanship and carries an $189,000 starting price, with initial allocations targeted at fleet buyers already tied to the $4.3 billion backlog. Deliveries from the reopened Halloran plant begin next quarter.",
+      "cycle": 82726,
+      "dur": 2
+    },
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Calderworks Commits to Fifth Kiln as Vaultridge Demand Outstrips Record Output",
+      "body": "Calderworks approved construction of a fifth kiln, a $220 million commitment, after the Vaultridge Corridor pact pushed the existing four kilns to record utilization. Kestrel Halloran, guiding the firm into its 118th year, said the addition secures capacity through the multi-year supply commitment without straining margins. The new kiln is slated to come online in about 18 months.",
+      "cycle": 82726,
+      "dur": 2
+    },
+    {
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drustcyon Beats as Harbor-Authority Contract Powers Record Marine-Grade Shipments",
+      "body": "Drustcyon topped estimates as first shipments under the $540M harbor-authority pact combined with a maturing coastal foundry to drive record marine-grade anchor output. Aurelia Kessler said the expanded foundry reached 80% of targeted run-rate ahead of schedule, easing the backlog that had constrained prior quarters. Management raised full-year revenue guidance modestly.",
+      "cycle": 82726,
+      "dur": 2
+    },
+    {
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Halcrest Stakes Comeback on Meridian Grand Complication in Iris Marrow's Boldest Bet Yet",
+      "body": "After the Skeleton Edition's margin stumble, Iris Marrow unveiled the Meridian Grand Complication, a $340,000 minute-repeater capped at 88 pieces and positioned as the house's most ambitious release in a generation. Marrow staged a spectacle-heavy launch and told buyers the piece 'answers whether Halcrest still leads or merely follows,' pinning the brand's premium narrative on the line. Early order interest was described as brisk, though analysts flagged execution risk on such low volumes.",
+      "cycle": 82726,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Halhold Systems Hit With Landmark Settlement Demand as Regulators Widen Reliability Case",
+      "body": "Regulators formally expanded their action against Halhold, seeking a settlement figure people close to the matter put near $1.2 billion and demanding an independent monitor over its compute reliability practices. The move follows internal memos showing failures were known internally for years, and now names three former executives in addition to ousted chief Ilse Marren. CEO Petra Vandel said the company would 'contest the scope but engage in good faith,' pledging a full remediation program.",
+      "cycle": 82726,
+      "dur": 8
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Garrware Edges Higher as Marrow Valley Wing Lifts Throughput",
-      "body": "Orla Holt's packaging house posted a modest beat, with revenue up 3.1% to $221M as the new Marrow Valley warehouse wing improved order turnaround. The fourth line continued running at full rate, and management noted no capacity constraints heading into peak season. Holt reaffirmed the firm's measured expansion plan.",
-      "cycle": 82725,
+      "head": "Kesselgrove Co. Edges Past Estimates as Second Bay Trims Press Backlog Further",
+      "body": "Kesselgrove reported another quarter above consensus, with the second assembly bay lifting deliveries and shaving the record press backlog to roughly nine months from twelve. Orla Steg noted throughput gains remained modest but steady, holding to the company's disciplined ramp. Margins were flat as onboarding costs offset volume gains.",
+      "cycle": 82726,
       "dur": 1
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Korrworks Fast-Tracks Second Hub as Rhys Throne Adds Third Site to Pipeline",
+      "body": "Korrworks moved up the completion timeline on its second cross-region hub by roughly four months and disclosed early site work on a third facility, citing sustained above-plan volumes. CEO Rhys Throne, in his 58th year at the helm, framed the buildout as 'measured but opportunistic,' committing an additional $310 million in capital spending. The second hub is now expected to begin partial operations by year-end.",
+      "cycle": 82726,
+      "dur": 2
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Skarnvale Abandons Vosk Junction Retrofit and Launches Sweeping Overhaul After Triple Failure",
+      "body": "Skarnvale scrapped the troubled Vosk Junction retrofit entirely, taking a $260 million writedown and pledging a ground-up rebuild under a newly assembled crisis board. Dorn Vaskell, whose recovery chief resigned amid the third collapse, said the company would 'stop patching a broken program' and shift affected volumes to partner sites through next year. The move caps a turbulent stretch that has erased the retrofit's projected capacity gains.",
+      "cycle": 82726,
+      "dur": 8
     },
     {
       "company": "Halhold Works",
@@ -92,56 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Carrowforge's Renn Names New Machines Chief to Steady Post-Split Operations",
-      "body": "Carrowforge appointed veteran plant operator Teller Voss to head its streamlined Industrial Machines division as CEO Dahlia Renn moves to stabilize costs after last quarter's loss. The house said the reorganization consolidates three facilities into two and targets $40M in annualized savings by year-end. Renn told staff the 'hardest cuts are now behind us,' framing the shift as the pivot from teardown to rebuild.",
-      "cycle": 82724,
-      "dur": 2
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Castlehold Fires Up Second Plant as Modular Backlog Swells to $1.2B",
-      "body": "Castlehold formally opened its second manufacturing plant, roughly doubling capacity for its high-capacity modular storage line as the order backlog climbed to $1.2B. CEO Halden Voss said the facility will reach full output within two quarters and hire some 400 workers. Voss acknowledged the aggressive ramp carries execution risk but insisted demand 'leaves us no choice but to move fast.'",
-      "cycle": 82724,
-      "dur": 2
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fenncyon Posts Another Beat as Grand Loop Enters Full-Scale Earthwork",
-      "body": "Fenncyon reported quarterly revenue of $612M, up 21% year-over-year, as the Eastfield Grand Loop shifted from mobilization into peak earthmoving activity. CEO Nadia Ashby credited the twin staging yards for keeping fleet utilization above 90%, and raised full-year guidance modestly. The house said the first completed loop segment is now three weeks ahead of the contract schedule.",
-      "cycle": 82724,
-      "dur": 2
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Greywater Grid Signs $2.4B Compute Supply Pact Anchored by Closed-Loop Sites",
-      "body": "Greywater Grid landed a $2.4B multi-year agreement to supply compute capacity from facilities running its 94%-recovery closed-loop water system. CEO Sable Renwick said the deal 'turns a regulatory headache into our biggest selling point,' with the first tranche of capacity going live within six months. The pact vaults Greywater past its prior order book and validates the pivot from the halted reservoir buildout.",
-      "cycle": 82724,
-      "dur": 2
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "recall",
-      "size": "standard",
-      "head": "Gromford Works Pulls Emblem Collection Pieces Over Clasp Defect",
-      "body": "Gromford Works issued a voluntary recall of roughly 9,400 Emblem Collection items after reports of a failing clasp mechanism on the flagship pendant line. CEO Halvard Pryce called the move 'precautionary but necessary,' pledging free repairs and estimating a $18M charge against the quarter. The recall lands just weeks after the collection's high-profile debut, testing Pryce's rapid-expansion push beyond timepieces.",
-      "cycle": 82724,
-      "dur": 2
-    },
-    {
       "company": "Korrwright Works",
       "sector": "luxury",
       "kind": "major_deal",
@@ -150,16 +170,6 @@
       "body": "Korrwright Works agreed to acquire in-house movement specialist Halbrook Manufacture for $1.1B, its largest deal ever, securing control of a critical supply link long outsourced. CEO Dunmore Carrow said pairing Halbrook's movements with the Verenne retail network gives Korrwright end-to-end command 'from bench to boutique.' The purchase, expected to close next quarter, adds roughly 1,300 workers and two workshops to the house.",
       "cycle": 82724,
       "dur": 8
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenspire Supply Beats as Thelvane Vertical Push Widens Margins",
-      "body": "Vossenspire Supply reported revenue up 17% to $488M, with gross margin expanding 260 basis points as in-house Thelvane cases cut sourcing costs on the Corveil Reserve line. CEO Quinn Marrow said Corveil waitlists remain 'stubbornly long' even after the Halvane movement output doubling. Marrow hinted further vertical acquisitions remain on the table as the house tightens control of its own supply chain.",
-      "cycle": 82724,
-      "dur": 2
     },
     {
       "company": "Castlestone",
@@ -249,36 +259,6 @@
       "head": "Halhold Works Ousts CEO Priya Vantt as Aveline Fallout Claims the Top Job",
       "body": "The board removed Priya Vantt after three straight quarters dominated by the Aveline III recall, the hospital-network suit, and a gutted earnings print. Director Anselm Rocha will serve as interim chief while the board searches for a permanent successor, pledging a full review of the Medical Equipment line. Shares of the House have been battered since the nationwide recall action.",
       "cycle": 82719,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "breakthrough",
-      "size": "major",
-      "head": "Bruncrest Works Says Aria Ultra Clears Validation, Doubling Throughput in Marlow's Big Bet",
-      "body": "Chief executive Ines Marlow announced Aria Ultra passed independent performance validation showing roughly 2.1x the throughput of the prior Aria Prime generation at comparable power draw. Marlow said three anchor customers have committed to early-volume orders, converting part of the $5.2B supply pact to the new platform. The result vindicates the house's aggressive pivot, though management acknowledged yield ramp remains the near-term challenge.",
-      "cycle": 82718,
-      "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "recall",
-      "size": "major",
-      "head": "Brunmark Motors Widens Veyra S Recall to 340,000 Units as Battery Fix Falters",
-      "body": "Chief executive Iris Calvagh announced the recall's expansion to 340,000 vehicles after interim battery-pack repairs failed to fully resolve thermal faults, pushing total recall provisions past $1.4B. The company will replace complete pack assemblies rather than individual modules, a costlier remedy that halts Veyra S deliveries for at least a quarter. Calvagh conceded the earlier fix was inadequate but pledged the fuller solution would 'end the uncertainty for owners.'",
-      "cycle": 82718,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Vossenspire Holdings Misses Sharply as Storage-Bank Fallout and Probe Freeze Revenue",
-      "body": "The house reported quarterly revenue down 38% after the grid-scale storage pact was suspended pending the ongoing safety probe, forcing a reversal of previously front-loaded milestone income. Chief executive Halden Roe disclosed $220M in remediation and legal reserves and withdrew full-year guidance. Roe faced pointed questions over commissioning oversight but insisted the compute division remains 'the stable core' as the storage arm is restructured.",
-      "cycle": 82718,
       "dur": 8
     }
   ]
