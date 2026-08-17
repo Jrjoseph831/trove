@@ -1429,18 +1429,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82721,
+    "lastEventCycle": 82729,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Blackton Industries Wins Parts Contract With Halvern Motors",
-        "body": "Mara Mercer landed a multi-year auto-parts supply contract with Halvern Motors, a sizable win for the ambitious house. The deal covers brake and suspension components across Halvern's mid-range fleet. Mercer called it 'the contract that puts us on the map north of the river.'",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "restructure",
@@ -1659,6 +1649,16 @@
         "size": "standard",
         "head": "Blackton Industries Unveils Renwick Overhaul, Splitting Off Halvern Unit",
         "body": "CEO Sable Renwick announced a sweeping restructuring that carves the troubled Halvern line into a standalone division with dedicated quality oversight. The plan includes roughly 600 job cuts and a $120M charge, but Renwick said it would ringfence liabilities from the ongoing class action while stabilizing the core parts business. Analysts called it an aggressive but necessary reset for a company still bleeding from the failures scandal.",
+        "effects": {
+          "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82729,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Blackton Industries Misses as Halvern Split Costs Weigh on Renwick's First Full Quarter",
+        "body": "Blackton posted a wider-than-expected loss in Sable Renwick's first full quarter, citing $180M in separation charges tied to carving out the Halvern unit. Renwick called the pain 'front-loaded and necessary,' pointing to a leaner Auto Parts core with orders up 6%. Management held to its target of returning to profit by year-end.",
         "effects": {
           "automotive": -0.13
         }
@@ -2180,18 +2180,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82724,
+    "lastEventCycle": 82729,
     "events": [
-      {
-        "cycle": 82582,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Bruncrest Works Unveils Sweeping Overhaul as Marlow Slashes Product Lines",
-        "body": "In her first major move, CEO Ines Marlow announced plans to cut the compute portfolio by 40% and consolidate three facilities into a single flagship plant, targeting $220 million in annual savings. Marlow told staff the company would 'stop trying to be everything' and stake its recovery on a narrow high-margin server line, a gamble that drew mixed reactions from the board.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82588,
         "kind": "earnings_miss",
@@ -2420,6 +2410,16 @@
         "body": "Bruncrest Works secured a $1.6B supply agreement for its next-gen Aria Ultra compute units, the largest contract in the house's history and a decisive vindication of CEO Ines Marlow's future-staking wager. Deliveries begin next quarter, with the customer holding options that could push total value past $2.4B. Marlow said the deal proves the doubled-throughput platform 'is not a science project but a product the market was starving for.'",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82729,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Bruncrest Works Breaks Ground on New Compute Line to Meet Aria Ultra Demand",
+        "body": "Riding the landmark Aria Ultra order, Bruncrest committed $420M to a second production line to double capacity by next year. CEO Ines Marlow said backorders now stretch three quarters out and framed the buildout as 'proof the bet is compounding.' The house also opened a validation lab to accelerate the next Aria generation.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -5393,7 +5393,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82712,
+    "lastEventCycle": 82729,
     "events": [
       {
         "cycle": 0,
@@ -5532,6 +5532,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82729,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Cranegrove Beats Again as Corridor Add-On Lifts Backlog to Record $3.4B",
+        "body": "Cranegrove reported earnings ahead of estimates for the third straight quarter, with the $650M add-on pushing its Earthmoving backlog to a record $3.4B. CEO Vale Calder credited disciplined equipment utilization above 91% and reaffirmed full-year targets. Operating margin held at a steady 17.8%.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -5546,7 +5556,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82714,
+    "lastEventCycle": 82729,
     "events": [
       {
         "cycle": 0,
@@ -5684,6 +5694,16 @@
         "body": "Emil Holt reported quarterly revenue up 14% and raised full-year guidance, crediting an accelerated rollout of pallet-lift handlers under the national distributor contract. Both assembly plants are now running at full utilization, with management noting inbound inquiries from clients citing rivals' terminal disruptions. Order backlog has narrowed to under six weeks.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82729,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Drayton Freight Wins Continent-Spanning Warehouse Automation Contract Worth $900M",
+        "body": "Drayton Freight landed its largest-ever award, a $900M multi-year deal to outfit a national warehouse operator with pallet-lift handlers and material-handling systems. CEO Emil Holt, in a rare bold stroke, said the contract secures both assembly plants at full capacity through 2029. Management expects it to lift Material Handling revenue by a quarter next year.",
+        "effects": {
+          "logistics": 0.22
         }
       }
     ]
@@ -6940,18 +6960,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82719,
+    "lastEventCycle": 82729,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Fennmoor Acquires Diagnostics Maker Larkspur Medical",
-        "body": "Dorian Brandt extended Fennmoor's reach into medical equipment with the purchase of Larkspur Medical, a maker of portable diagnostic units. The acquisition rounds out Fennmoor's spread across devices, machines, and now clinical gear. Brandt said the house 'grows by addition, not patience.'",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82527,
         "kind": "product_launch",
@@ -7178,6 +7188,16 @@
         "size": "standard",
         "head": "Fennmoor Returns to Growth as Medical Systems Integration Nears Deadline",
         "body": "Dorian Brandt reported the first clean quarter since the Corvane and Threll folds, as newly installed division chief Lena Corsaw brought integration costs back within guidance ahead of the set deadline. Medical Equipment revenue rose 11% and the company said cross-selling into Industrial Machines has begun. Brandt hinted the House is again 'scanning for the next addition.'",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82729,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fennmoor Clears Medical Systems Integration Deadline, Posts Best Quarter in Two Years",
+        "body": "Fennmoor confirmed the Medical Systems unit hit its integration deadline on schedule, with segment margins recovering to 14.2% from a low of 6.1%. CEO Dorian Brandt, closing a rare bumpy chapter, told analysts the house is 'back on offense' and hinted at fresh targets in the Devices space. Quarterly revenue rose 9% to $4.8B, topping guidance.",
         "effects": {
           "technology": 0.13
         }
@@ -10445,23 +10465,15 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1921,
-    "ceo": "Dara Ostwick",
+    "ceo": "Corwin Vale",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82721,
+    "lastEventCycle": 82729,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Ironcrestton — Made for the few who notice",
-        "body": "Ironcrestton deals in fine goods and very little else. Each piece passes through a small bench of makers who measure twice and apologize for nothing. The premium line is exacting; the luxury line is uncompromising, finished by hands that have done it for thirty years. Owners speak of these objects the way others speak of heirlooms. Scarce by intent, coveted by reputation, and worth the wait.",
-        "effects": {}
-      },
       {
         "cycle": 82520,
         "kind": "award",
@@ -10684,6 +10696,14 @@
         "size": "major",
         "head": "Ironcrestton Ousts Thea Blackwood as Meridian Scandal Engulfs Board",
         "body": "Ironcrestton's board removed CEO Thea Blackwood after the regulatory suit over Meridian sourcing claims widened to include allegations of falsified supplier records. The company suspended Meridian sales entirely and warned of a material writedown, with the shares reeling from Blackwood's rapid rise and fall. Incoming chief Dara Ostwick, a compliance-focused veteran, said her first task is rebuilding credibility with regulators.",
+        "effects": {}
+      },
+      {
+        "cycle": 82729,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Ironcrestton Names Restructuring Specialist Corwin Vale to Steer Meridian Cleanup",
+        "body": "Ironcrestton appointed Corwin Vale as chief executive to stabilize the house after the Meridian Line sourcing scandal toppled the prior board. Vale pledged a full sourcing audit and said the disputed Meridian Line would be pulled from shelves pending certification. The move comes as regulators press their suit over misleading provenance claims.",
         "effects": {}
       }
     ]
@@ -13441,7 +13461,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82713,
+    "lastEventCycle": 82729,
     "events": [
       {
         "cycle": 0,
@@ -13567,6 +13587,16 @@
         "size": "standard",
         "head": "Palettstead Holdings Rolls Out Modular Insulated Packaging as Fourth Chain Goes Live",
         "body": "With its fourth cold-chain facility now operational, Palettstead introduced a modular insulated packaging line engineered to cut cold-loss by an estimated 22% in transit. CEO Orla Marrow said the launch pairs the new facility's throughput with a product designed to retain anchor tenants and win overflow business. The line begins shipping to regional distributors next quarter.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82729,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Palettstead Holdings Beats as Fourth Cold-Chain and Modular Packaging Ramp Together",
+        "body": "Palettstead topped estimates as its newly live fourth cold-chain ran at 82% utilization within the quarter, aided by strong uptake of the modular insulated packaging line. CEO Orla Marrow said the anchor tenant alone accounted for a third of new volume. Revenue climbed 11% to $2.1B.",
         "effects": {
           "logistics": 0.13
         }
@@ -16500,14 +16530,14 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1979,
-    "ceo": "Halden Roe",
+    "ceo": "Corin Alderidge",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.58,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82718,
+    "lastEventCycle": 82729,
     "events": [
       {
         "cycle": 0,
@@ -16672,6 +16702,14 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82729,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Vossenspire Holdings Ousts Halden Roe as Storage-Bank Probe Turns Damning",
+        "body": "Vossenspire's board removed CEO Halden Roe after investigators found commissioning protocols on the failed grid-scale storage bank had been rushed against internal warnings. Director Mara Venn will serve as interim chair while the search proceeds, and the house suspended two further storage projects pending review. Shares have shed nearly half their value since the outage.",
+        "effects": {}
       }
     ]
   },

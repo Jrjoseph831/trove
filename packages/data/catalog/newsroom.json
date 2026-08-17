@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-17T01:20:10.280Z",
+  "generatedAt": "2026-08-17T06:57:57.952Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Blackton Industries Misses as Halvern Split Costs Weigh on Renwick's First Full Quarter",
+      "body": "Blackton posted a wider-than-expected loss in Sable Renwick's first full quarter, citing $180M in separation charges tied to carving out the Halvern unit. Renwick called the pain 'front-loaded and necessary,' pointing to a leaner Auto Parts core with orders up 6%. Management held to its target of returning to profit by year-end.",
+      "cycle": 82729,
+      "dur": 2
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Bruncrest Works Breaks Ground on New Compute Line to Meet Aria Ultra Demand",
+      "body": "Riding the landmark Aria Ultra order, Bruncrest committed $420M to a second production line to double capacity by next year. CEO Ines Marlow said backorders now stretch three quarters out and framed the buildout as 'proof the bet is compounding.' The house also opened a validation lab to accelerate the next Aria generation.",
+      "cycle": 82729,
+      "dur": 2
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Cranegrove Beats Again as Corridor Add-On Lifts Backlog to Record $3.4B",
+      "body": "Cranegrove reported earnings ahead of estimates for the third straight quarter, with the $650M add-on pushing its Earthmoving backlog to a record $3.4B. CEO Vale Calder credited disciplined equipment utilization above 91% and reaffirmed full-year targets. Operating margin held at a steady 17.8%.",
+      "cycle": 82729,
+      "dur": 2
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Drayton Freight Wins Continent-Spanning Warehouse Automation Contract Worth $900M",
+      "body": "Drayton Freight landed its largest-ever award, a $900M multi-year deal to outfit a national warehouse operator with pallet-lift handlers and material-handling systems. CEO Emil Holt, in a rare bold stroke, said the contract secures both assembly plants at full capacity through 2029. Management expects it to lift Material Handling revenue by a quarter next year.",
+      "cycle": 82729,
+      "dur": 8
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fennmoor Clears Medical Systems Integration Deadline, Posts Best Quarter in Two Years",
+      "body": "Fennmoor confirmed the Medical Systems unit hit its integration deadline on schedule, with segment margins recovering to 14.2% from a low of 6.1%. CEO Dorian Brandt, closing a rare bumpy chapter, told analysts the house is 'back on offense' and hinted at fresh targets in the Devices space. Quarterly revenue rose 9% to $4.8B, topping guidance.",
+      "cycle": 82729,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "standard",
+      "head": "Ironcrestton Names Restructuring Specialist Corwin Vale to Steer Meridian Cleanup",
+      "body": "Ironcrestton appointed Corwin Vale as chief executive to stabilize the house after the Meridian Line sourcing scandal toppled the prior board. Vale pledged a full sourcing audit and said the disputed Meridian Line would be pulled from shelves pending certification. The move comes as regulators press their suit over misleading provenance claims.",
+      "cycle": 82729,
+      "dur": 2
+    },
+    {
+      "company": "Palettstead Holdings",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Palettstead Holdings Beats as Fourth Cold-Chain and Modular Packaging Ramp Together",
+      "body": "Palettstead topped estimates as its newly live fourth cold-chain ran at 82% utilization within the quarter, aided by strong uptake of the modular insulated packaging line. CEO Orla Marrow said the anchor tenant alone accounted for a third of new volume. Revenue climbed 11% to $2.1B.",
+      "cycle": 82729,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Vossenspire Holdings Ousts Halden Roe as Storage-Bank Probe Turns Damning",
+      "body": "Vossenspire's board removed CEO Halden Roe after investigators found commissioning protocols on the failed grid-scale storage bank had been rushed against internal warnings. Director Mara Venn will serve as interim chair while the search proceeds, and the house suspended two further storage projects pending review. Shares have shed nearly half their value since the outage.",
+      "cycle": 82729,
+      "dur": 8
+    },
     {
       "company": "Brunmark Motors",
       "sector": "automotive",
@@ -42,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Drossware Steadies as Overhauled Cleaning Division Returns to Growth",
-      "body": "Drossware Industries reported cleaning-line revenue rose 6% for the first time since the labeling crisis, signaling stabilization after the division's overhaul. CEO Nadia Wold said new packaging controls have cleared regulatory review with no further defects flagged.",
-      "cycle": 82728,
-      "dur": 1
-    },
-    {
       "company": "Erretmark Works",
       "sector": "automotive",
       "kind": "major_deal",
@@ -90,46 +160,6 @@
       "body": "Marisol Venn secured a multi-year commitment worth $2.6B to supply the newly unveiled Emberline node, the largest single agreement in Aperture's history and enough to fill most of the second fabrication site's planned capacity. Venn said the deal front-loads deliveries beginning next quarter and locks in a marquee anchor customer through 1959. Shares of narrative momentum aside, management now expects the second site to reach breakeven a full year early.",
       "cycle": 82727,
       "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Boreas Power Beats as Vantel Campus and Halvane Modules Pair Up in First Full Quarter",
-      "body": "Mira Thorne's house topped estimates as the Vantel storage campus came online alongside Halvane-built compute modules, delivering the first quarter of the combined power-and-silicon strategy. Revenue rose 9% to $1.1B, with management crediting bundled contracts that pair storage capacity with on-site compute. Thorne signaled appetite for another bolt-on acquisition to deepen the module lineup.",
-      "cycle": 82727,
-      "dur": 2
-    },
-    {
-      "company": "Brunforge Holdings",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Brunforge Holdings Extends Vellan Rollout With Second Wave of Fifteen Flagships",
-      "body": "Kestrel Bramm approved a follow-on expansion adding fifteen Vellan flagships across new metro markets, building on the ten-store push now nearing completion. The measured buildout is expected to lift food-service capacity by roughly a fifth and carries a committed outlay of $310M through 1957. Bramm stressed the pace remains deliberate, with each site backed by existing demand data.",
-      "cycle": 82727,
-      "dur": 2
-    },
-    {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Forgegrave Industries Beats as Integrated Beyond-Meridian Network Lifts Volumes",
-      "body": "Petra Thorne reported the broadest quarter on record repeating, with material-handling throughput up 11% as the two Beyond-Meridian acquisitions finished integrating onto a single dispatch system. Revenue reached $840M against expectations near $790M, and Thorne raised the full-year outlook for the first time in six quarters. Synergy savings ran ahead of the original $45M target.",
-      "cycle": 82727,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Lhaus Industries Rolls Out First Vehicle Line Built on Newly Acquired Platform",
-      "body": "Cole Brandt debuted the Verrant midsize range, the first models engineered on the $650M platform Lhaus bought earlier this year, targeting 120,000 units in the first full production year. Brandt framed the launch as proof the acquisition-heavy strategy is bearing fruit, telling reporters the platform will underpin at least four nameplates by 1957. Early dealer commitments cover roughly 40% of planned volume.",
-      "cycle": 82727,
-      "dur": 2
     },
     {
       "company": "Halcrest",
@@ -219,36 +249,6 @@
       "head": "Thronehaus & Co. Debuts Landmark Aurel Collection Forged From In-House Coristel Alloy",
       "body": "Thronehaus unveiled the Aurel collection, its first flagship timepiece line built entirely on the proprietary alloy developed after the $1.8B Coristel acquisition, positioning it as the house's most significant launch in a generation. CEO Cora Dray said limited early allocations are already spoken for by top salons, with a broader rollout planned across the year. The debut caps a rapid vertical-integration push that Dray called the foundation of the next decade.",
       "cycle": 82722,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Blackhold Under Regulatory Probe After Storage Campus Overheating Incident",
-      "body": "Regulators opened a formal safety review of Blackhold's second storage campus following a thermal event that forced a partial shutdown of the site last week. The independent testing unit that once secured the company's $1.2B mandate is now itself under scrutiny, with officials questioning whether the campus was rushed online ahead of schedule. CEO Halden Dabney pledged full cooperation but declined to say whether commissioning timelines would be affected.",
-      "cycle": 82721,
-      "dur": 8
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Ironcrestton Ousts Thea Blackwood as Meridian Scandal Engulfs Board",
-      "body": "Ironcrestton's board removed CEO Thea Blackwood after the regulatory suit over Meridian sourcing claims widened to include allegations of falsified supplier records. The company suspended Meridian sales entirely and warned of a material writedown, with the shares reeling from Blackwood's rapid rise and fall. Incoming chief Dara Ostwick, a compliance-focused veteran, said her first task is rebuilding credibility with regulators.",
-      "cycle": 82721,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Woldmark Removes Isolde Frayne After Halcyon 4 Collapse Wipes Out Turnaround",
-      "body": "Woldmark's board dismissed CEO Isolde Frayne following a third straight quarter of deteriorating Halcyon 4 sales, ending a turnaround she had publicly championed then abandoned. The company named steady-hand operator Corwin Vale as chief executive, tasking him with steadying the Compute line and restoring investor confidence after Frayne's public swings. Vale said Woldmark would pause new launches and focus on cost discipline and existing customers.",
-      "cycle": 82721,
       "dur": 8
     }
   ]
