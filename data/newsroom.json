@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-16T18:31:13.920Z",
+  "generatedAt": "2026-08-17T01:20:10.280Z",
   "beats": [
     {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Brunmark Motors Hit With $900M Class Action as Veyra S Recall Failures Mount",
+      "body": "A consolidated class action seeking $900 million was filed against Brunmark Motors, alleging the twice-failed Veyra S battery fix left owners with unusable vehicles. CEO Iris Calvagh acknowledged the 340,000-unit recall remains unresolved and set aside a $250 million provision, warning the quarter would show a steep loss.",
+      "cycle": 82728,
+      "dur": 8
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunstone & Sons Beats as Vault II Orders Signal Turn in Frost's Recovery Bid",
+      "body": "Brunstone & Sons posted quarterly revenue of $1.9 billion, ahead of guidance, as early Vault II cell orders offset lingering recall costs. CEO Dagny Frost said warranty claims fell 38% and that two fleet customers who paused orders during the crisis have returned.",
+      "cycle": 82728,
+      "dur": 2
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowwell Beats Again as Second Machines Plant Nears Startup",
+      "body": "Carrowwell posted record quarterly machines output and revenue of $1.4 billion, topping estimates as the $1.1B reindustrialization contract ramped. CEO Mara Voss said the second plant remains on schedule to begin production next quarter, adding capacity for the extended order book.",
+      "cycle": 82728,
+      "dur": 2
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Castlestone Relaunches Grid-Core Campus With Redesigned Cooling as Karsh Draws Line",
+      "body": "Castlestone brought its Grid-Core campus back online with a fully redesigned coolant system built around dual-sourced valves, ending months of outage. CEO Pell Karsh said the rebuilt facility carries 20% more capacity and that the supplier blamed for the failed valve has been dropped.",
+      "cycle": 82728,
+      "dur": 2
+    },
+    {
+      "company": "Drossware Industries",
+      "sector": "consumer",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldouscraft Mfg. Beats Again as All Four Extrusion Lines Run at Full Rate",
-      "body": "Soren Ashby's mill posted a slim beat with feeder and grid-cable volumes both holding firm and the fourth extrusion line now at nameplate output. Revenue rose 4.5% while utilization climbed to 94%, its highest reading in three years. Ashby reaffirmed guidance, noting the order backlog stretches into next year.",
-      "cycle": 82727,
+      "head": "Drossware Steadies as Overhauled Cleaning Division Returns to Growth",
+      "body": "Drossware Industries reported cleaning-line revenue rose 6% for the first time since the labeling crisis, signaling stabilization after the division's overhaul. CEO Nadia Wold said new packaging controls have cleared regulatory review with no further defects flagged.",
+      "cycle": 82728,
       "dur": 1
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Erretmark Works Adds 1,600-Unit Veyron Extension as Cross-Border Push Deepens",
+      "body": "Erretmark Works signed a 1,600-unit follow-on to its landmark Veyron contract, lifting the combined program to 4,000 units. CEO Aurelia Garr said the third hall's ramp gave the client confidence to expand, with deliveries scheduled through 2029.",
+      "cycle": 82728,
+      "dur": 2
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Marrowstone Build Wins $420M Highway Interchange Package as Vaugh Presses Advantage",
+      "body": "Marrowstone Build secured a $420 million earthmoving contract for the Kessreach highway interchange, its largest single roadworks award to date. CEO Delphine Vaugh said the win leverages equipment freed up as the $680M port package nears completion, pushing total backlog past $2.1 billion.",
+      "cycle": 82728,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Varnvale & Sons Acquires Corvane Movement House to Secure Complication Supply",
+      "body": "Varnvale & Sons agreed to buy longtime supplier Corvane Manufacture for an undisclosed sum, bringing its prized movement-making in-house. CEO Bram Wold called the deal a safeguard against the sourcing bottlenecks that constrained last year's Grand Complication run, adding capacity for roughly 900 additional pieces annually.",
+      "cycle": 82728,
+      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -52,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Holtgate Group",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Group Adds Another Slim Beat as Guild Mill Volumes Stay Reliable",
-      "body": "Dorian Throne's mills delivered a fourth consecutive narrow beat, with raw-textile output steady and guild orders repeating at expected levels. Revenue rose 2.4% and margins held flat, in line with the house's dependable cadence. Throne reaffirmed guidance without adjustment.",
-      "cycle": 82727,
-      "dur": 1
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "product_launch",
@@ -69,46 +129,6 @@
       "head": "Lhaus Industries Rolls Out First Vehicle Line Built on Newly Acquired Platform",
       "body": "Cole Brandt debuted the Verrant midsize range, the first models engineered on the $650M platform Lhaus bought earlier this year, targeting 120,000 units in the first full production year. Brandt framed the launch as proof the acquisition-heavy strategy is bearing fruit, telling reporters the platform will underpin at least four nameplates by 1957. Early dealer commitments cover roughly 40% of planned volume.",
       "cycle": 82727,
-      "dur": 2
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowcyon Extends Run to Sixth Straight Quiet Beat as Fixtures Demand Steadies",
-      "body": "Theo Orne's house edged past expectations again, with plumbing and fixtures revenue up 3.1% and apparel holding flat on stable seasonal orders. Management left full-year guidance unchanged, citing balanced demand across both segments. Margins ticked up 20 basis points on modest input-cost relief.",
-      "cycle": 82727,
-      "dur": 1
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Bruncraft Unveils Coachline Flagship, First Model Built Under Consolidated Vanguard Unit",
-      "body": "Bruncraft launched the Coachline GT, a hand-finished flagship that Marcus Vane called 'proof the Vanguard acquisition can build, not just backfill.' The model draws on Vanguard Coachworks' interior craftsmanship and carries an $189,000 starting price, with initial allocations targeted at fleet buyers already tied to the $4.3 billion backlog. Deliveries from the reopened Halloran plant begin next quarter.",
-      "cycle": 82726,
-      "dur": 2
-    },
-    {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Calderworks Commits to Fifth Kiln as Vaultridge Demand Outstrips Record Output",
-      "body": "Calderworks approved construction of a fifth kiln, a $220 million commitment, after the Vaultridge Corridor pact pushed the existing four kilns to record utilization. Kestrel Halloran, guiding the firm into its 118th year, said the addition secures capacity through the multi-year supply commitment without straining margins. The new kiln is slated to come online in about 18 months.",
-      "cycle": 82726,
-      "dur": 2
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drustcyon Beats as Harbor-Authority Contract Powers Record Marine-Grade Shipments",
-      "body": "Drustcyon topped estimates as first shipments under the $540M harbor-authority pact combined with a maturing coastal foundry to drive record marine-grade anchor output. Aurelia Kessler said the expanded foundry reached 80% of targeted run-rate ahead of schedule, easing the backlog that had constrained prior quarters. Management raised full-year revenue guidance modestly.",
-      "cycle": 82726,
       "dur": 2
     },
     {
@@ -130,16 +150,6 @@
       "body": "Regulators formally expanded their action against Halhold, seeking a settlement figure people close to the matter put near $1.2 billion and demanding an independent monitor over its compute reliability practices. The move follows internal memos showing failures were known internally for years, and now names three former executives in addition to ousted chief Ilse Marren. CEO Petra Vandel said the company would 'contest the scope but engage in good faith,' pledging a full remediation program.",
       "cycle": 82726,
       "dur": 8
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Korrworks Fast-Tracks Second Hub as Rhys Throne Adds Third Site to Pipeline",
-      "body": "Korrworks moved up the completion timeline on its second cross-region hub by roughly four months and disclosed early site work on a third facility, citing sustained above-plan volumes. CEO Rhys Throne, in his 58th year at the helm, framed the buildout as 'measured but opportunistic,' committing an additional $310 million in capital spending. The second hub is now expected to begin partial operations by year-end.",
-      "cycle": 82726,
-      "dur": 2
     },
     {
       "company": "Skarnvale",
@@ -239,26 +249,6 @@
       "head": "Woldmark Removes Isolde Frayne After Halcyon 4 Collapse Wipes Out Turnaround",
       "body": "Woldmark's board dismissed CEO Isolde Frayne following a third straight quarter of deteriorating Halcyon 4 sales, ending a turnaround she had publicly championed then abandoned. The company named steady-hand operator Corwin Vale as chief executive, tasking him with steadying the Compute line and restoring investor confidence after Frayne's public swings. Vale said Woldmark would pause new launches and focus on cost discipline and existing customers.",
       "cycle": 82721,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Brunstone & Sons Unveils Redesigned Vault II Cell as Frost Stakes Recovery on Comeback",
-      "body": "CEO Dagny Frost took the stage in a defiant relaunch, introducing the Vault II cell with a redesigned thermal housing the company says addresses the failures behind last year's costly recall. Frost pledged a $900M retooling of two plants and offered free upgrades to affected owners, framing the launch as a make-or-break bid to restore trust. The class action remains unresolved, but Frost insisted the company had 'turned the corner in the open.'",
-      "cycle": 82720,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Halhold Systems Rocked as Internal Memos Reveal Reliability Failures Were Known for Years",
-      "body": "Leaked internal correspondence showed senior staff flagged Compute reliability defects as far back as 2023, deepening the scandal that ousted former chief Ilse Marren. The disclosures triggered a widened regulatory inquiry and prompted three major customers to suspend orders. CEO Petra Vandel apologized publicly and announced an independent review, but stopped short of confirming further departures.",
-      "cycle": 82720,
       "dur": 8
     }
   ]

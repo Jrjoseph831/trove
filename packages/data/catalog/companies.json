@@ -2598,18 +2598,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82718,
+    "lastEventCycle": 82728,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Brunmark Motors Launches the Veyra Compact With In-House Packs",
-        "body": "Yvette Calder introduced the Veyra, a compact vehicle built on Brunmark's own power-and-storage packs, marking the firm's tightest integration yet. Calder pitched it as proof the house can do parts, power, and vehicles under one roof. First deliveries are promised for the coming season.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "earnings_miss",
@@ -2831,6 +2821,16 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82728,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Brunmark Motors Hit With $900M Class Action as Veyra S Recall Failures Mount",
+        "body": "A consolidated class action seeking $900 million was filed against Brunmark Motors, alleging the twice-failed Veyra S battery fix left owners with unusable vehicles. CEO Iris Calvagh acknowledged the 340,000-unit recall remains unresolved and set aside a $250 million provision, warning the quarter would show a steep loss.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -3026,18 +3026,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82720,
+    "lastEventCycle": 82728,
     "events": [
-      {
-        "cycle": 82557,
-        "kind": "earnings_miss",
-        "size": "major",
-        "head": "Brunstone & Sons Craters as Meridian Line Launch Falls Flat",
-        "body": "Royce Lambourne's all-in bet on the Meridian line unraveled as first-quarter deliveries came in 45% below target, driving a $620 million loss and a fresh guidance cut. With the Ardent shutdown still fresh and cash reserves tightening, Lambourne faced pointed questions about whether the company misjudged demand for the relaunch it staked its future on.",
-        "effects": {
-          "automotive": -0.22
-        }
-      },
       {
         "cycle": 82564,
         "kind": "restructure",
@@ -3262,6 +3252,16 @@
         "body": "CEO Dagny Frost took the stage in a defiant relaunch, introducing the Vault II cell with a redesigned thermal housing the company says addresses the failures behind last year's costly recall. Frost pledged a $900M retooling of two plants and offered free upgrades to affected owners, framing the launch as a make-or-break bid to restore trust. The class action remains unresolved, but Frost insisted the company had 'turned the corner in the open.'",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82728,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunstone & Sons Beats as Vault II Orders Signal Turn in Frost's Recovery Bid",
+        "body": "Brunstone & Sons posted quarterly revenue of $1.9 billion, ahead of guidance, as early Vault II cell orders offset lingering recall costs. CEO Dagny Frost said warranty claims fell 38% and that two fleet customers who paused orders during the crisis have returned.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -4196,7 +4196,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82716,
+    "lastEventCycle": 82728,
     "events": [
       {
         "cycle": 0,
@@ -4360,6 +4360,16 @@
         "size": "standard",
         "head": "Carrowwell Breaks Ground on Second Machines Plant to Meet $1.1B Contract",
         "body": "Carrowwell committed $520M to a second industrial-machines facility to serve the extended $1.1B reindustrialization contract, with output slated for late next year. CEO Mara Voss said the plant will also house expanded material-handling assembly following strong reception of the automated system launched this year. The company expects the site to add about 450 skilled positions.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82728,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowwell Beats Again as Second Machines Plant Nears Startup",
+        "body": "Carrowwell posted record quarterly machines output and revenue of $1.4 billion, topping estimates as the $1.1B reindustrialization contract ramped. CEO Mara Voss said the second plant remains on schedule to begin production next quarter, adding capacity for the extended order book.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -4935,18 +4945,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82723,
+    "lastEventCycle": 82728,
     "events": [
-      {
-        "cycle": 82579,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Castlestone Returns to Growth as Halo Compute Orders Beat First-Quarter Targets",
-        "body": "Castlestone posted its first revenue gain in five quarters, with Halo Compute bookings topping internal targets by roughly 18 percent. CEO Pell Karsh framed the result as vindication of the turnaround, though he cautioned that the halted second campus had trimmed capacity headroom. Restructuring charges of 140 million narrowed the reported profit.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82585,
         "kind": "product_launch",
@@ -5175,6 +5175,16 @@
         "body": "Castlestone announced a full recall of the coolant assemblies across its Grid-Core campus after investigators traced the outage to a defective pressure valve from an outside supplier, a program the company estimates at $900M. Pell Karsh, in a combative briefing, said the $12B supply pact 'stands' but conceded first deliveries will slip by at least a quarter. Two regional regulators kept the safety probe open pending re-certification of the rebuilt lines.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82728,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Castlestone Relaunches Grid-Core Campus With Redesigned Cooling as Karsh Draws Line",
+        "body": "Castlestone brought its Grid-Core campus back online with a fully redesigned coolant system built around dual-sourced valves, ending months of outage. CEO Pell Karsh said the rebuilt facility carries 20% more capacity and that the supplier blamed for the failed valve has been dropped.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -5689,7 +5699,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82712,
+    "lastEventCycle": 82728,
     "events": [
       {
         "cycle": 0,
@@ -5837,6 +5847,16 @@
         "body": "CEO Nadia Wold announced a full restructuring of the Cleaning & Jansan unit, consolidating three plants into two and installing new quality oversight after twin labeling defects triggered a widening recall. The move carries a $180M charge but Wold said it 'ends the improvisation and rebuilds trust from the floor up.' Regulators were briefed on the plan as their review of the line continues.",
         "effects": {
           "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82728,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drossware Steadies as Overhauled Cleaning Division Returns to Growth",
+        "body": "Drossware Industries reported cleaning-line revenue rose 6% for the first time since the labeling crisis, signaling stabilization after the division's overhaul. CEO Nadia Wold said new packaging controls have cleared regulatory review with no further defects flagged.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -6514,7 +6534,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82716,
+    "lastEventCycle": 82728,
     "events": [
       {
         "cycle": 0,
@@ -6720,6 +6740,16 @@
         "size": "standard",
         "head": "Erretmark Works Beats as Third Veyron Hall Lifts Delivery Pace",
         "body": "Erretmark Works posted revenue of $2.1B, up 27%, as the newly opened third Veyron hall pushed quarterly deliveries to a record 640 units against its 2,400-unit contract. CEO Aurelia Garr said cross-border demand remains firm and hinted at pursuing further order books beyond the current backlog. Operating margins widened to 15% on improved hall utilization.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82728,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Erretmark Works Adds 1,600-Unit Veyron Extension as Cross-Border Push Deepens",
+        "body": "Erretmark Works signed a 1,600-unit follow-on to its landmark Veyron contract, lifting the combined program to 4,000 units. CEO Aurelia Garr said the third hall's ramp gave the client confidence to expand, with deliveries scheduled through 2029.",
         "effects": {
           "automotive": 0.13
         }
@@ -12876,7 +12906,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82713,
+    "lastEventCycle": 82728,
     "events": [
       {
         "cycle": 0,
@@ -13048,6 +13078,16 @@
         "size": "standard",
         "head": "Marrowstone Build Beats Again as Port and Inland Rail Orders Drive Backlog to Record",
         "body": "Marrowstone posted revenue up 34% year-over-year, topping estimates as the $680M port package and $310M inland rail order fed a record $1.4B backlog. CEO Delphine Vaugh said fleet utilization hit 91% and margins improved on the split-deployment model. The company raised its delivery outlook for the second half.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82728,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Marrowstone Build Wins $420M Highway Interchange Package as Vaugh Presses Advantage",
+        "body": "Marrowstone Build secured a $420 million earthmoving contract for the Kessreach highway interchange, its largest single roadworks award to date. CEO Delphine Vaugh said the win leverages equipment freed up as the $680M port package nears completion, pushing total backlog past $2.1 billion.",
         "effects": {
           "construction": 0.13
         }
@@ -15520,18 +15560,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82719,
+    "lastEventCycle": 82728,
     "events": [
-      {
-        "cycle": 82541,
-        "kind": "award",
-        "size": "standard",
-        "head": "Varnvale's First Bellmont Timepiece Named Collection of the Year at Geldst Salon",
-        "body": "The debut Bellmont-crafted collection took top honors at the Geldst Horological Salon, a rare win for a first-year line. Judges cited the hand-stitched leather integration as 'a genuine marriage of two crafts,' vindicating CEO Bram Wold's aggressive Bellmont acquisition. Varnvale said the flagship piece has already sold out its initial 400-unit run.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82549,
         "kind": "major_deal",
@@ -15758,6 +15788,16 @@
         "size": "standard",
         "head": "Varnvale & Sons to Open Flagship Ateliers in Three New Capitals on Complication Demand",
         "body": "Buoyed by the Geneval win, Bram Wold committed $220M to open flagship ateliers in Marenne, Ostreve, and Caldon, each pairing a Timepieces salon with a Fine Goods hall. The company said Corvane-sourced inventory would supply a limited 400-piece run of the award-winning Grand Complication across the new sites. Wold framed the buildout as the House's largest retail expansion in four decades.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82728,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Varnvale & Sons Acquires Corvane Movement House to Secure Complication Supply",
+        "body": "Varnvale & Sons agreed to buy longtime supplier Corvane Manufacture for an undisclosed sum, bringing its prized movement-making in-house. CEO Bram Wold called the deal a safeguard against the sourcing bottlenecks that constrained last year's Grand Complication run, adding capacity for roughly 900 additional pieces annually.",
         "effects": {
           "luxury": 0.13
         }
