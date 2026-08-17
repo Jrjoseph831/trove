@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-17T12:46:35.100Z",
+  "generatedAt": "2026-08-17T18:41:17.015Z",
   "beats": [
+    {
+      "company": "Ardent Health",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Ardent Health Beats Again as Service Add-On Lifts Continental Fleet Margins",
+      "body": "Orla Halloran's firm posted a beat as the service-and-upgrade extension on its continental imaging fleet contract began generating recurring revenue, up 5% on the quarter. The higher-margin service stream helped offset heavier delivery costs on the underlying fleet order. Halloran pointed to the growing installed base as a durable earnings anchor for years ahead.",
+      "cycle": 82731,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Castlehold Lands Landmark $2B Grid-Storage Framework, Its Largest Ever",
+      "body": "Halden Voss secured a multi-year framework worth up to $2B to supply high-capacity modular storage to a consortium of regional utilities, more than doubling the firm's existing backlog to over $3B. Deliveries begin next quarter and will require Castlehold to accelerate a planned third plant. The deal cements Voss's aggressive first-year expansion, though it also raises execution risk given how fast the order book has swelled.",
+      "cycle": 82731,
+      "dur": 8
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drustcraft Beats as Three-Line Strategy Delivers Record Balanced Quarter",
+      "body": "Cora Fenn's firm posted revenue up 7% with all three product lines—auto parts, fasteners and the newly anchored fixings contract—contributing meaningfully for the first time. Margins widened 120 basis points as the fixings deal ramped ahead of schedule. Fenn credited the diversification push she began two years ago for smoothing out the quarter's results.",
+      "cycle": 82731,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Halhold Systems Ousts Petra Vandel as Reliability Settlement Forces Board's Hand",
+      "body": "The board removed CEO Petra Vandel after regulators finalized a $650M settlement over concealed reliability failures, the largest penalty in the firm's history. Directors named restructuring veteran Marcus Thorne as chief executive with a mandate to rebuild oversight and stabilize a shaken customer base. The exit closes a scandal that spread from shareholders to regulators over three brutal quarters.",
+      "cycle": 82731,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halhold Works Unveils Redesigned Aveline Successor as Rocha Bets on Clean Slate",
+      "body": "CEO Anselm Rocha introduced the Meridian line of medical monitors, built on an all-new safety architecture and rushed through an accelerated 14-month validation cycle. The launch marks Halhold's first major release since the Aveline recall wiped roughly $400M from last year's results, with Rocha staking his turnaround on early hospital orders. Analysts noted the compressed timeline as a point of concern given the company's recent quality record.",
+      "cycle": 82731,
+      "dur": 2
+    },
+    {
+      "company": "Korrgrave Mfg.",
+      "sector": "agriculture",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Korrgrave Mfg. Commissions Southern Blending Line, Adds Specialty Input Range",
+      "body": "Aurelia Halloran's company brought its Southern blending line into full commissioning on schedule, adding a modest specialty farm-input range aimed at regional growers. The line adds roughly 8% to blending capacity and complements the steady Northern plant. Management expects a gradual ramp consistent with its long-horizon approach.",
+      "cycle": 82731,
+      "dur": 1
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowmoor Holdings Notches Another Beat as Four-Property Base Runs Near Capacity",
+      "body": "Dorian Steg's group reported occupancy of 96% across the Northbrook, Westline, Eastgate and legacy portfolio, edging past guidance for a seventh straight quarter. Revenue rose 4% on modest room-rate gains, with the newly ramped Eastgate now contributing a full quarter of results. Steg reiterated the firm's preference for disciplined, self-funded growth.",
+      "cycle": 82731,
+      "dur": 1
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Steg Tooling Approves Fourth Kelmar Cell as Fastener Demand Outruns Capacity",
+      "body": "Iris Vossen greenlit a $90M fourth production cell at the Kelmar complex after the third cell reached full output a quarter ahead of plan. The expansion targets fasteners and fixings, where backlog now stretches into next year, and is expected to come online within 18 months. Vossen framed the move as measured capacity-matching rather than a bet on faster growth.",
+      "cycle": 82731,
+      "dur": 2
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -10,16 +90,6 @@
       "body": "Regulators expanded their inquiry into the overheating incident, ordering Blackhold to fully suspend operations at the second storage campus while investigators examine a suspected thermal-management defect across multiple units. The shutdown jeopardizes roughly $1.2B in grid-mandate obligations, and CEO Halden Dabney faces mounting pressure after acknowledging the campus was brought online ahead of schedule. Officials said the campus will remain dark until independent certification, with no firm restart date.",
       "cycle": 82730,
       "dur": 8
-    },
-    {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Brunridge Works Edges Ahead as Packaging and Cleaning Lines Round Out Retail Pact",
-      "body": "Brunridge posted a third straight beat as the National Retail Group agreement pulled Packaging and Cleaning & Jansan volumes onto shelves alongside its Devices and Apparel lines. Halia Brennt credited disciplined cross-category execution, noting the pact now spans four of the house's five segments. Guidance was nudged modestly higher for the coming quarter.",
-      "cycle": 82730,
-      "dur": 1
     },
     {
       "company": "Calderforge",
@@ -72,46 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Wrenhaus",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Wrenhaus Tops Estimates as Second Riverside Plant Ramps to Full Output",
-      "body": "Wrenhaus beat modestly as its newly opened second Riverside plant reached full production, lifting corridor fixture volumes without straining pricing. Quinn Thorne kept guidance conservative, citing steady rather than surging demand. The quiet expansion continues to underpin the house's slow-and-steady margin gains.",
-      "cycle": 82730,
-      "dur": 1
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Blackton Industries Misses as Halvern Split Costs Weigh on Renwick's First Full Quarter",
-      "body": "Blackton posted a wider-than-expected loss in Sable Renwick's first full quarter, citing $180M in separation charges tied to carving out the Halvern unit. Renwick called the pain 'front-loaded and necessary,' pointing to a leaner Auto Parts core with orders up 6%. Management held to its target of returning to profit by year-end.",
-      "cycle": 82729,
-      "dur": 2
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Bruncrest Works Breaks Ground on New Compute Line to Meet Aria Ultra Demand",
-      "body": "Riding the landmark Aria Ultra order, Bruncrest committed $420M to a second production line to double capacity by next year. CEO Ines Marlow said backorders now stretch three quarters out and framed the buildout as 'proof the bet is compounding.' The house also opened a validation lab to accelerate the next Aria generation.",
-      "cycle": 82729,
-      "dur": 2
-    },
-    {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Cranegrove Beats Again as Corridor Add-On Lifts Backlog to Record $3.4B",
-      "body": "Cranegrove reported earnings ahead of estimates for the third straight quarter, with the $650M add-on pushing its Earthmoving backlog to a record $3.4B. CEO Vale Calder credited disciplined equipment utilization above 91% and reaffirmed full-year targets. Operating margin held at a steady 17.8%.",
-      "cycle": 82729,
-      "dur": 2
-    },
-    {
       "company": "Drayton Freight",
       "sector": "logistics",
       "kind": "major_deal",
@@ -120,36 +150,6 @@
       "body": "Drayton Freight landed its largest-ever award, a $900M multi-year deal to outfit a national warehouse operator with pallet-lift handlers and material-handling systems. CEO Emil Holt, in a rare bold stroke, said the contract secures both assembly plants at full capacity through 2029. Management expects it to lift Material Handling revenue by a quarter next year.",
       "cycle": 82729,
       "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fennmoor Clears Medical Systems Integration Deadline, Posts Best Quarter in Two Years",
-      "body": "Fennmoor confirmed the Medical Systems unit hit its integration deadline on schedule, with segment margins recovering to 14.2% from a low of 6.1%. CEO Dorian Brandt, closing a rare bumpy chapter, told analysts the house is 'back on offense' and hinted at fresh targets in the Devices space. Quarterly revenue rose 9% to $4.8B, topping guidance.",
-      "cycle": 82729,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Ironcrestton Names Restructuring Specialist Corwin Vale to Steer Meridian Cleanup",
-      "body": "Ironcrestton appointed Corwin Vale as chief executive to stabilize the house after the Meridian Line sourcing scandal toppled the prior board. Vale pledged a full sourcing audit and said the disputed Meridian Line would be pulled from shelves pending certification. The move comes as regulators press their suit over misleading provenance claims.",
-      "cycle": 82729,
-      "dur": 2
-    },
-    {
-      "company": "Palettstead Holdings",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Palettstead Holdings Beats as Fourth Cold-Chain and Modular Packaging Ramp Together",
-      "body": "Palettstead topped estimates as its newly live fourth cold-chain ran at 82% utilization within the quarter, aided by strong uptake of the modular insulated packaging line. CEO Orla Marrow said the anchor tenant alone accounted for a third of new volume. Revenue climbed 11% to $2.1B.",
-      "cycle": 82729,
-      "dur": 2
     },
     {
       "company": "Vossenspire Holdings",
@@ -249,16 +249,6 @@
       "head": "Korrwright Works Strikes $1.1B Deal for Movement-Maker Halbrook in Vertical Leap",
       "body": "Korrwright Works agreed to acquire in-house movement specialist Halbrook Manufacture for $1.1B, its largest deal ever, securing control of a critical supply link long outsourced. CEO Dunmore Carrow said pairing Halbrook's movements with the Verenne retail network gives Korrwright end-to-end command 'from bench to boutique.' The purchase, expected to close next quarter, adds roughly 1,300 workers and two workshops to the house.",
       "cycle": 82724,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "recall",
-      "size": "major",
-      "head": "Castlestone Recalls Grid-Core Coolant Units as Probe Pins Fault on Supplier Valve",
-      "body": "Castlestone announced a full recall of the coolant assemblies across its Grid-Core campus after investigators traced the outage to a defective pressure valve from an outside supplier, a program the company estimates at $900M. Pell Karsh, in a combative briefing, said the $12B supply pact 'stands' but conceded first deliveries will slip by at least a quarter. Two regional regulators kept the safety probe open pending re-certification of the rebuilt lines.",
-      "cycle": 82723,
       "dur": 8
     }
   ]

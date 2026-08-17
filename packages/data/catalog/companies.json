@@ -845,7 +845,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82706,
+    "lastEventCycle": 82731,
     "events": [
       {
         "cycle": 0,
@@ -931,6 +931,16 @@
         "size": "standard",
         "head": "Ardent Health Extends Continental Fleet Deal With Service and Upgrade Add-On",
         "body": "Ardent broadened its continental imaging framework with a multi-year service, maintenance, and sensor-upgrade agreement valued at roughly $900 million. CEO Orla Halloran said the recurring contract 'turns a one-time win into a decade of relationships,' locking in installed-base revenue. The add-on covers over 1,200 units already ordered under the fleet program.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82731,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Ardent Health Beats Again as Service Add-On Lifts Continental Fleet Margins",
+        "body": "Orla Halloran's firm posted a beat as the service-and-upgrade extension on its continental imaging fleet contract began generating recurring revenue, up 5% on the quarter. The higher-margin service stream helped offset heavier delivery costs on the underlying fleet order. Halloran pointed to the growing installed base as a durable earnings anchor for years ahead.",
         "effects": {
           "medical": 0.13
         }
@@ -4603,16 +4613,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82724,
+    "lastEventCycle": 82731,
     "events": [
-      {
-        "cycle": 82539,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Castlehold's Skarn Steps Down as Saltmere Fault-Reporting Probe Widens",
-        "body": "Soren Skarn, who led Castlehold for more than five decades, has resigned as the investigation into withheld Saltmere fault reports expanded to cover senior management disclosures. The board named former Saltmere unit head Maren Voss as chief executive, tasking her with a full disclosure overhaul and cooperation with regulators. Shares of confidence in the firm's governance had eroded steadily since the storm-season faults first surfaced.",
-        "effects": {}
-      },
       {
         "cycle": 82546,
         "kind": "leadership_change",
@@ -4837,6 +4839,16 @@
         "body": "Castlehold formally opened its second manufacturing plant, roughly doubling capacity for its high-capacity modular storage line as the order backlog climbed to $1.2B. CEO Halden Voss said the facility will reach full output within two quarters and hire some 400 workers. Voss acknowledged the aggressive ramp carries execution risk but insisted demand 'leaves us no choice but to move fast.'",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82731,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Castlehold Lands Landmark $2B Grid-Storage Framework, Its Largest Ever",
+        "body": "Halden Voss secured a multi-year framework worth up to $2B to supply high-capacity modular storage to a consortium of regional utilities, more than doubling the firm's existing backlog to over $3B. Deliveries begin next quarter and will require Castlehold to accelerate a planned third plant. The deal cements Voss's aggressive first-year expansion, though it also raises execution risk given how fast the order book has swelled.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -5902,7 +5914,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82720,
+    "lastEventCycle": 82731,
     "events": [
       {
         "cycle": 0,
@@ -6088,6 +6100,16 @@
         "size": "standard",
         "head": "Drustcraft Wins Multi-Year Fixings Contract to Anchor Third Product Line",
         "body": "Drustcraft secured a $640M five-year fixings supply agreement with a regional builder network, further broadening a business once concentrated in fasteners. CEO Cora Fenn said the deal complements the recent auto-parts win and gives the company 'three legs to stand on.' Deliveries begin next quarter from an expanded Eastfield facility.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82731,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcraft Beats as Three-Line Strategy Delivers Record Balanced Quarter",
+        "body": "Cora Fenn's firm posted revenue up 7% with all three product lines—auto parts, fasteners and the newly anchored fixings contract—contributing meaningfully for the first time. Margins widened 120 basis points as the fixings deal ramped ahead of schedule. Fenn credited the diversification push she began two years ago for smoothing out the quarter's results.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -9000,25 +9022,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1972,
-    "ceo": "Petra Vandel",
+    "ceo": "Marcus Thorne",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.86,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82726,
+    "lastEventCycle": 82731,
     "events": [
-      {
-        "cycle": 82593,
-        "kind": "scandal",
-        "size": "major",
-        "head": "Halhold Systems Rocked as Internal Memo Reveals Northgate Warnings Were Ignored",
-        "body": "Leaked documents show engineers flagged failing power infrastructure at the Northgate campus months before the twin blackouts, contradicting management's public assurances. CEO Dahlia Renn faces a widening client exodus, with three major accounts moving to terminate contracts and a board committee opening an internal review. Analysts estimate exposure at over $150 million in lost commitments.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82599,
         "kind": "leadership_change",
@@ -9240,6 +9252,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82731,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Systems Ousts Petra Vandel as Reliability Settlement Forces Board's Hand",
+        "body": "The board removed CEO Petra Vandel after regulators finalized a $650M settlement over concealed reliability failures, the largest penalty in the firm's history. Directors named restructuring veteran Marcus Thorne as chief executive with a mandate to rebuild oversight and stabilize a shaken customer base. The exit closes a scandal that spread from shareholders to regulators over three brutal quarters.",
+        "effects": {}
       }
     ]
   },
@@ -9254,18 +9274,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82725,
+    "lastEventCycle": 82731,
     "events": [
-      {
-        "cycle": 82596,
-        "kind": "restructure",
-        "size": "major",
-        "head": "Halhold Works to Wind Down Verity Pro Line as Faircloth Unveils Sweeping Medical Overhaul",
-        "body": "New CEO Lena Faircloth announced the discontinuation of the entire Verity Pro medical line and a $340M charge to fund a full redesign under a rebuilt quality division. The plan cuts roughly 900 roles across two plants and installs former Fennmoor engineer Sana Roeper as chief quality officer, with a pledged independent oversight board reporting quarterly. Faircloth called it 'a painful reset that buys us a future.'",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82602,
         "kind": "product_launch",
@@ -9487,6 +9497,16 @@
         "head": "Halhold Works Installs Turnaround Chief Anselm Rocha as Aveline Cleanup Begins",
         "body": "The board formally seated Anselm Rocha as chief executive, tasking him with steadying the firm after the Aveline III monitor recall and pending hospital-network suit. Rocha, known for aggressive but volatile restructurings, pledged an independent review of the Medical Equipment unit and a phased Aveline replacement program for affected clients. He warned that near-term results would remain 'uncomfortable' as legal reserves build.",
         "effects": {}
+      },
+      {
+        "cycle": 82731,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Works Unveils Redesigned Aveline Successor as Rocha Bets on Clean Slate",
+        "body": "CEO Anselm Rocha introduced the Meridian line of medical monitors, built on an all-new safety architecture and rushed through an accelerated 14-month validation cycle. The launch marks Halhold's first major release since the Aveline recall wiped roughly $400M from last year's results, with Rocha staking his turnaround on early hospital orders. Analysts noted the compressed timeline as a point of concern given the company's recent quality record.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -11119,7 +11139,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82703,
+    "lastEventCycle": 82731,
     "events": [
       {
         "cycle": 0,
@@ -11195,6 +11215,16 @@
         "size": "flash",
         "head": "Korrgrave Mfg. Holds Streak as Southern Blending Line Nears Commissioning",
         "body": "CEO Aurelia Halloran reported another steady quarter, with the Northern plant at full output and the new Southern blending line on track to commission early next year. Farm-input demand held firm across the season, keeping margins within the company's narrow historical band. Halloran reiterated her long-horizon stance, declining to accelerate the Southern ramp.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82731,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Korrgrave Mfg. Commissions Southern Blending Line, Adds Specialty Input Range",
+        "body": "Aurelia Halloran's company brought its Southern blending line into full commissioning on schedule, adding a modest specialty farm-input range aimed at regional growers. The line adds roughly 8% to blending capacity and complements the steady Northern plant. Management expects a gradual ramp consistent with its long-horizon approach.",
         "effects": {
           "agriculture": 0.06
         }
@@ -12753,7 +12783,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82717,
+    "lastEventCycle": 82731,
     "events": [
       {
         "cycle": 0,
@@ -12919,6 +12949,16 @@
         "size": "flash",
         "head": "Marrowmoor Holdings Extends Streak as Eastgate Ramps Alongside Full Legacy Base",
         "body": "Marrowmoor Holdings posted another modest beat, with revenue up 3.4% as the newly added Eastgate property began contributing and Westline and Northbrook held near-full occupancy. Dorian Steg said Eastgate is tracking ahead of the integration timeline and should reach steady-state by next quarter. Guidance was left unchanged in Steg's characteristically measured tone.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82731,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Notches Another Beat as Four-Property Base Runs Near Capacity",
+        "body": "Dorian Steg's group reported occupancy of 96% across the Northbrook, Westline, Eastgate and legacy portfolio, edging past guidance for a seventh straight quarter. Revenue rose 4% on modest room-rate gains, with the newly ramped Eastgate now contributing a full quarter of results. Steg reiterated the firm's preference for disciplined, self-funded growth.",
         "effects": {
           "hospitality": 0.06
         }
@@ -14385,7 +14425,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82719,
+    "lastEventCycle": 82731,
     "events": [
       {
         "cycle": 0,
@@ -14563,6 +14603,16 @@
         "body": "Iris Vossen's disciplined run continued with a thirteenth consecutive beat, as the fully ramped third Kelmar cell lifted Fasteners & Fixings volumes 9% year over year. Management nudged full-year margin guidance up 40 basis points while reiterating no new capital commitments. Vossen credited 'steady hands and full order books.'",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82731,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Steg Tooling Approves Fourth Kelmar Cell as Fastener Demand Outruns Capacity",
+        "body": "Iris Vossen greenlit a $90M fourth production cell at the Kelmar complex after the third cell reached full output a quarter ahead of plan. The expansion targets fasteners and fixings, where backlog now stretches into next year, and is expected to come online within 18 months. Vossen framed the move as measured capacity-matching rather than a bet on faster growth.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
