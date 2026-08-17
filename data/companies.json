@@ -1061,18 +1061,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82721,
+    "lastEventCycle": 82730,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "expansion",
-        "size": "major",
-        "head": "Blackhold Commits to Massive Greycliff Storage Build",
-        "body": "Mira Marrow staked the firm's future on Greycliff, a colossal storage installation meant to anchor power across the northern reach. The ambitious project is the largest in Blackhold's history and carries heavy upfront cost. Marrow told the assembly the house would 'either define the region or learn a hard lesson.'",
-        "effects": {
-          "energy": 0.22
-        }
-      },
       {
         "cycle": 82515,
         "kind": "leadership_change",
@@ -1289,6 +1279,16 @@
         "size": "major",
         "head": "Blackhold Under Regulatory Probe After Storage Campus Overheating Incident",
         "body": "Regulators opened a formal safety review of Blackhold's second storage campus following a thermal event that forced a partial shutdown of the site last week. The independent testing unit that once secured the company's $1.2B mandate is now itself under scrutiny, with officials questioning whether the campus was rushed online ahead of schedule. CEO Halden Dabney pledged full cooperation but declined to say whether commissioning timelines would be affected.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82730,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Blackhold Ordered to Idle Second Storage Campus as Probe Widens to Design Flaws",
+        "body": "Regulators expanded their inquiry into the overheating incident, ordering Blackhold to fully suspend operations at the second storage campus while investigators examine a suspected thermal-management defect across multiple units. The shutdown jeopardizes roughly $1.2B in grid-mandate obligations, and CEO Halden Dabney faces mounting pressure after acknowledging the campus was brought online ahead of schedule. Officials said the campus will remain dark until independent certification, with no firm restart date.",
         "effects": {
           "energy": -0.22
         }
@@ -2845,7 +2845,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82717,
+    "lastEventCycle": 82730,
     "events": [
       {
         "cycle": 0,
@@ -3011,6 +3011,16 @@
         "body": "Brunridge Works topped estimates with revenue up 6.8%, crediting early shipments under its multi-category supply pact with National Retail Group across cleaning, devices, and packaging lines. CEO Halia Brennt said cordless and jansan categories both gained shelf space, and raised full-year guidance modestly. The company flagged higher freight costs as the one soft spot in the quarter.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82730,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Brunridge Works Edges Ahead as Packaging and Cleaning Lines Round Out Retail Pact",
+        "body": "Brunridge posted a third straight beat as the National Retail Group agreement pulled Packaging and Cleaning & Jansan volumes onto shelves alongside its Devices and Apparel lines. Halia Brennt credited disciplined cross-category execution, noting the pact now spans four of the house's five segments. Guidance was nudged modestly higher for the coming quarter.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -3430,18 +3440,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82723,
+    "lastEventCycle": 82730,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Calderforge Adds Second Compute Hall at Embergate",
-        "body": "Nadia Throne announced a second compute hall at the firm's Embergate site, nearly doubling capacity to chase a wave of new contracts. The ambitious build runs alongside an aging first hall that Throne admits needs work. She promised both would 'hum as one' by year's end.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82515,
         "kind": "outage",
@@ -3670,6 +3670,16 @@
         "body": "Calderforge posted quarterly revenue of $3.1B, roughly $240M short of guidance, after the fourth Stormwell hall came online weeks late amid power-hookup delays. Nadia Throne acknowledged the ramp was 'bumpier than we'd like' but insisted next-gen tier demand remained fully booked. Management held its full-year outlook, banking on a steeper second-half fill rate.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82730,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Calderforge Cuts Guidance as Fourth Stormwell Hall Delays Compound and Yields Falter",
+        "body": "Calderforge missed a second straight quarter and slashed full-year guidance as the fourth Stormwell hall ramp fell further behind and next-gen tier yields came in below plan. Nadia Throne conceded the house over-committed on capacity ahead of demand, and disclosed a charge tied to idled equipment. The turbulent update marks Calderforge's sharpest setback in years, with Throne pledging a cost review across the Stormwell footprint.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -8179,18 +8189,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82724,
+    "lastEventCycle": 82730,
     "events": [
-      {
-        "cycle": 82579,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Gromford Works Debuts Meridian Timepiece Line as Aldwych Pushes Past Aurelian Noir",
-        "body": "New chief Corin Aldwych unveiled the Meridian collection of skeleton-dial watches at a flagship event in Halbrook, calling it a 'clean page' for the embattled house. The launch arrives with the Aurelian Noir clasp litigation still unresolved, and Aldwych pledged full material disclosure on every Meridian piece. Analysts noted the aggressive timeline, with 12 references shipping within six weeks.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82585,
         "kind": "award",
@@ -8413,6 +8413,16 @@
         "body": "Gromford Works issued a voluntary recall of roughly 9,400 Emblem Collection items after reports of a failing clasp mechanism on the flagship pendant line. CEO Halvard Pryce called the move 'precautionary but necessary,' pledging free repairs and estimating a $18M charge against the quarter. The recall lands just weeks after the collection's high-profile debut, testing Pryce's rapid-expansion push beyond timepieces.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82730,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Relaunches Emblem Collection With Reinforced Clasp Under Pryce",
+        "body": "Halvard Pryce fast-tracked the return of the Emblem Collection just eleven weeks after the clasp recall, touting a redesigned twin-lock closure certified by outside inspectors. Pryce called the relaunch 'proof Gromford moves faster than its stumbles,' with initial allocations to flagship boutiques prioritizing customers affected by the earlier pull. Analysts noted the compressed timeline is classic Pryce, though some questioned whether the goodwill offer will dent near-term margins.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -13910,7 +13920,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82716,
+    "lastEventCycle": 82730,
     "events": [
       {
         "cycle": 0,
@@ -14056,6 +14066,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Beats Again as Kelvarn Terminal-Span Work Ramps",
         "body": "Skarngrove & Sons reported revenue of $684M, up 19%, as terminal-span and viaduct volumes on the Kelvarn fourth phase reached peak activity. CEO Quinn Fenn pointed to steady structural-materials pricing and disciplined fastener margins for the beat. Management raised full-year guidance modestly, citing the signature project's extended runway.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82730,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Skarngrove & Sons Wins Kelvarn Approach-Roads Package, Rounding Out Corridor Work",
+        "body": "Quinn Fenn secured the approach-roads and abutment package tied to the Kelvarn project, adding an estimated $340M to the firm's signature corridor backlog. The award consolidates Skarngrove's grip on nearly the entire Kelvarn crossing, from viaduct to terminal span. Fenn called it 'a measured extension of work we already know cold.'",
         "effects": {
           "construction": 0.13
         }
@@ -15059,18 +15079,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82722,
+    "lastEventCycle": 82730,
     "events": [
-      {
-        "cycle": 82528,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Thronehaus & Co. Debuts Caldwynn-Powered Regent Tourbillon",
-        "body": "Fresh off its acquisition of movement specialist Caldwynn, Thronehaus unveiled the Regent Tourbillon, the first timepiece to house an in-built Caldwynn caliber. Priced at 240,000 per piece and capped at 75 units, the launch marks Cora Dray's push to control the craft end-to-end. Early allocations sold out within the first showing in the maison's flagship salon.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82537,
         "kind": "major_deal",
@@ -15299,6 +15309,16 @@
         "body": "Thronehaus unveiled the Aurel collection, its first flagship timepiece line built entirely on the proprietary alloy developed after the $1.8B Coristel acquisition, positioning it as the house's most significant launch in a generation. CEO Cora Dray said limited early allocations are already spoken for by top salons, with a broader rollout planned across the year. The debut caps a rapid vertical-integration push that Dray called the foundation of the next decade.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82730,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Thronehaus & Co. Beats as Aurel Collection Sells Through on In-House Alloy Margins",
+        "body": "Cora Dray's vertical bet paid off early, with the Aurel Collection clearing initial runs at gross margins well above the house average thanks to the Coristel-sourced alloy. Thronehaus reported the integration is already trimming outside-metal costs, and Dray signaled appetite for further bolt-on acquisitions. Waitlists on top-tier Aurel pieces now stretch into next year.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -17401,14 +17421,14 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1983,
-    "ceo": "Corwin Vale",
+    "ceo": "Petra Sonn",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.64,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82721,
+    "lastEventCycle": 82730,
     "events": [
       {
         "cycle": 0,
@@ -17621,6 +17641,14 @@
         "head": "Woldmark Removes Isolde Frayne After Halcyon 4 Collapse Wipes Out Turnaround",
         "body": "Woldmark's board dismissed CEO Isolde Frayne following a third straight quarter of deteriorating Halcyon 4 sales, ending a turnaround she had publicly championed then abandoned. The company named steady-hand operator Corwin Vale as chief executive, tasking him with steadying the Compute line and restoring investor confidence after Frayne's public swings. Vale said Woldmark would pause new launches and focus on cost discipline and existing customers.",
         "effects": {}
+      },
+      {
+        "cycle": 82730,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Woldmark Names Turnaround Veteran Petra Sonn to Steady Post-Halcyon Compute Line",
+        "body": "Weeks after removing Isolde Frayne, Woldmark's board installed Petra Sonn as chief executive, tapping her track record of stabilizing troubled hardware houses. Corwin Vale, who backed the change, said Sonn will conduct a full review of the Halcyon roadmap before committing to any successor product. Sonn told staff her first priority is 'rebuilding credibility one shipment at a time.'",
+        "effects": {}
       }
     ]
   },
@@ -17778,7 +17806,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82712,
+    "lastEventCycle": 82730,
     "events": [
       {
         "cycle": 0,
@@ -17896,6 +17924,16 @@
         "body": "Wrenhaus brought its second Riverside fixture plant online, expanding total corridor output by an estimated 34% as demand for plumbing fixtures stays firm. CEO Quinn Thorne, keeping to the house's measured style, said the facility 'came in on plan and will pay for itself the way the first one did.' Initial lines are running at partial capacity with a staged ramp through year-end.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82730,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wrenhaus Tops Estimates as Second Riverside Plant Ramps to Full Output",
+        "body": "Wrenhaus beat modestly as its newly opened second Riverside plant reached full production, lifting corridor fixture volumes without straining pricing. Quinn Thorne kept guidance conservative, citing steady rather than surging demand. The quiet expansion continues to underpin the house's slow-and-steady margin gains.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
