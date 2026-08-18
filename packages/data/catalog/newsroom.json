@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-18T12:49:30.376Z",
+  "generatedAt": "2026-08-18T18:40:06.432Z",
   "beats": [
+    {
+      "company": "Aldouscyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldouscyon Edges Past Estimates as Conversion Slate Stays on Track",
+      "body": "Aldouscyon posted a modest beat with revenue of $640 million as the sixth-city lighting conversion continued contributing steadily. Petra Mercer said demand across converted markets remained consistent and reaffirmed the pacing of the rollout. Margins held flat versus the prior quarter.",
+      "cycle": 82735,
+      "dur": 1
+    },
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Aperture Compute Faces Regulatory Probe Over Emberline Fabrication Site Conditions",
+      "body": "Regulators opened a formal inquiry into safety and environmental practices at Aperture Compute's Emberline fabrication sites following reports of ventilation and chemical-handling failures at the second facility now under construction. Marisol Venn said the company was cooperating fully and had paused some site work, but the probe casts a shadow over the $2.6 billion supply pact signed only weeks earlier. Shares tumbled on the news.",
+      "cycle": 82735,
+      "dur": 8
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Bruncraft Misses as Coachline Ramp Costs Outrun Vane's Guidance",
+      "body": "Bruncraft posted quarterly profit of $310 million, well short of the $420 million analysts expected, as tooling and labor costs tied to the Coachline flagship launch ran higher than forecast. Marcus Vane conceded that consolidating the Vanguard unit had absorbed more capital than planned but insisted the flagship's order book remained intact. Shares of the automaker have been volatile since the $1.8 billion buyout closed.",
+      "cycle": 82735,
+      "dur": 2
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Bruncrest Works Signs $3.4B Aria Ultra Framework, Its Largest Order on Record",
+      "body": "Ines Marlow announced a $3.4 billion multi-year framework agreement anchoring output from the new compute line, roughly tripling the size of the earlier landmark Aria Ultra order. The pact locks in dedicated capacity through the decade and validates Marlow's contested throughput bet. Deliveries are slated to begin once the newly broken-ground line reaches qualification.",
+      "cycle": 82735,
+      "dur": 8
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Dunmorewright Beats as Waterworks Billings Ramp Ahead of Schedule",
+      "body": "Dunmorewright reported revenue of $1.9 billion, topping estimates, as early billings on the $780 million inland waterworks contract flowed faster than projected. Emil Skarn credited the recently expanded foundry capacity for pulling delivery milestones forward by nearly a quarter. Management reaffirmed full-year guidance.",
+      "cycle": 82735,
+      "dur": 2
+    },
+    {
+      "company": "Holtgate Cloth",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Cloth Delivers Another Quiet Beat as Renewed Pact Holds Volumes",
+      "body": "Holtgate Cloth reported steady revenue of $290 million, marginally ahead of estimates, as raw-textile shipments under its renewed supply pact held firm. Dorian Carrow again offered little commentary beyond noting stable order flow. The house has now strung together consecutive quiet beats without changing guidance.",
+      "cycle": 82735,
+      "dur": 1
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Maison & Vale Unveils $4.2B Merger with Household-Goods Giant Larenthal in Kessler's Boldest Move",
+      "body": "Rhys Kessler capped an aggressive acquisition streak with a $4.2 billion agreement to absorb Larenthal Group, more than doubling the size of the company's Household Goods division. Executives said the combined operation would rank among the largest hospitality-supply houses by revenue, though integration costs are expected to weigh on margins for at least three quarters. The deal follows the Corriveau and Vestrand bolt-ons that steadied recent earnings.",
+      "cycle": 82735,
+      "dur": 8
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Varnvale & Sons Integrates Corvane, Doubles Complication Output at Reopened Movement House",
+      "body": "Bram Wold said the newly acquired Corvane Movement House has been fully brought in-house, doubling annual grand-complication capacity and easing the supply bottleneck behind the award-winning line. The company added forty master watchmakers and reopened a shuttered atelier wing to support the ramp. Wold hinted further movement-house talks remain on the table.",
+      "cycle": 82735,
+      "dur": 2
+    },
     {
       "company": "Brunstone & Sons",
       "sector": "automotive",
@@ -20,26 +100,6 @@
       "body": "Castlestone posted revenue of $2.1B against $2.7B expected, with the relaunched Grid-Core campus still running at 60% of rated capacity months after Karsh 'drew a line.' The house slashed full-year guidance by nearly a fifth and disclosed that two anchor Compute clients had deferred contracts, sending Karsh into a combative call where he vowed the setback was 'the last one.'",
       "cycle": 82734,
       "dur": 8
-    },
-    {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Fennvale Mfg. Ships First Auto-Parts Units as New Line Comes Online",
-      "body": "Fennvale confirmed first commercial output from its new auto-parts line, hitting the timeline Vossen laid out at groundbreaking. Initial volumes cover suspension brackets for two existing fastener customers, with management describing a deliberate ramp toward full utilization by year-end.",
-      "cycle": 82734,
-      "dur": 1
-    },
-    {
-      "company": "Greenmarsh Agro",
-      "sector": "agriculture",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Greenmarsh Agro Adds Second Blending Line to Meet Bundle Demand",
-      "body": "Greenmarsh committed to a modest second soil-blend line at its home works after the distribution pact pushed bundle volumes past existing capacity. Kessler framed the move as 'measured to demand we can already see,' with the line expected to reach output within three quarters.",
-      "cycle": 82734,
-      "dur": 1
     },
     {
       "company": "Halcrow & Vance",
@@ -100,36 +160,6 @@
       "body": "Regulators opened a formal inquiry into Greywater Grid's closed-loop water figures after inspectors flagged discrepancies between reported and measured discharge at two reservoir sites. The probe casts a shadow over the $2.4B compute pact anchored to those facilities, portions of which include performance clauses tied to water recovery. Sable Renwick said the company 'stands fully behind its data' and is cooperating, but acknowledged the review could delay site certifications.",
       "cycle": 82733,
       "dur": 8
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Korrwright Group Beats as Harbor and Corridor Awards Begin Billing",
-      "body": "Korrwright posted a beat on revenue of $1.48B, with the $420M Harbor redevelopment and $310M Corridor wire award both entering the billing cycle. Halden Fenn said combined backlog now stands at a record $2.1B, giving the group visibility deep into next year. Management nudged full-year guidance modestly higher on the strength of the structural segment.",
-      "cycle": 82733,
-      "dur": 2
-    },
-    {
-      "company": "Thaldale Group",
-      "sector": "consumer",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Thaldale Group Misses as Overhaul Costs Weigh on First Post-Scandal Quarter",
-      "body": "Thaldale reported revenue of $610M, short of guidance, as one-time charges tied to winding down the fastening unit dragged results into the red. Marta Holloway said restructuring costs totaled $140M this quarter and warned of continued pressure into the next, while insisting the cleanup is 'ahead of plan.' The restatement-related legal reserve was raised by an additional $45M.",
-      "cycle": 82733,
-      "dur": 2
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Vencyon Completes Modular Rollout, Debuts Unified Hub Platform",
-      "body": "With all five hubs now live, Iris Halloran unveiled the Vencyon Unified Hub platform, a standardized control layer linking sortation and retrieval across every site. The company said the modular buildout finished two months ahead of schedule at a total cost of $680M, and framed the platform as the foundation for its next growth phase. Halloran called it 'the payoff for four years of disciplined construction.'",
-      "cycle": 82733,
-      "dur": 2
     },
     {
       "company": "Marlgear Supply",
@@ -219,16 +249,6 @@
       "head": "Brunmark Motors Hit With $900M Class Action as Veyra S Recall Failures Mount",
       "body": "A consolidated class action seeking $900 million was filed against Brunmark Motors, alleging the twice-failed Veyra S battery fix left owners with unusable vehicles. CEO Iris Calvagh acknowledged the 340,000-unit recall remains unresolved and set aside a $250 million provision, warning the quarter would show a steep loss.",
       "cycle": 82728,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Aperture Compute Lands Landmark $2.6B Emberline Supply Pact for Next-Gen Node",
-      "body": "Marisol Venn secured a multi-year commitment worth $2.6B to supply the newly unveiled Emberline node, the largest single agreement in Aperture's history and enough to fill most of the second fabrication site's planned capacity. Venn said the deal front-loads deliveries beginning next quarter and locks in a marquee anchor customer through 1959. Shares of narrative momentum aside, management now expects the second site to reach breakeven a full year early.",
-      "cycle": 82727,
       "dur": 8
     }
   ]

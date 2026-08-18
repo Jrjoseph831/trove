@@ -163,7 +163,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82718,
+    "lastEventCycle": 82735,
     "events": [
       {
         "cycle": 0,
@@ -299,6 +299,16 @@
         "size": "flash",
         "head": "Aldouscyon Beats Modestly as Sixth-City Conversion Begins Contributing",
         "body": "The house delivered a small beat as its sixth-city lighting conversion moved from installation to billing ahead of schedule. Chief executive Petra Mercer said the conversion model's predictable, staged revenue continues to underpin steady margins. A seventh-city evaluation is underway, though no agreement has been signed.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82735,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscyon Edges Past Estimates as Conversion Slate Stays on Track",
+        "body": "Aldouscyon posted a modest beat with revenue of $640 million as the sixth-city lighting conversion continued contributing steadily. Petra Mercer said demand across converted markets remained consistent and reaffirmed the pacing of the rollout. Margins held flat versus the prior quarter.",
         "effects": {
           "consumer": 0.06
         }
@@ -602,18 +612,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82727,
+    "lastEventCycle": 82735,
     "events": [
-      {
-        "cycle": 82527,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Aperture Compute Breaks Ground on Second Dawnmere Site",
-        "body": "Flush with fresh backing, Aperture Compute began construction on a second Dawnmere facility built around its faster interconnect, targeting a 60% lift in capacity. Halden Dray promised first racks online within nine months and teased customer pilots already lined up. The £200 million build will add roughly 400 jobs to the region.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82537,
         "kind": "product_launch",
@@ -840,6 +840,16 @@
         "body": "Marisol Venn secured a multi-year commitment worth $2.6B to supply the newly unveiled Emberline node, the largest single agreement in Aperture's history and enough to fill most of the second fabrication site's planned capacity. Venn said the deal front-loads deliveries beginning next quarter and locks in a marquee anchor customer through 1959. Shares of narrative momentum aside, management now expects the second site to reach breakeven a full year early.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82735,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Aperture Compute Faces Regulatory Probe Over Emberline Fabrication Site Conditions",
+        "body": "Regulators opened a formal inquiry into safety and environmental practices at Aperture Compute's Emberline fabrication sites following reports of ventilation and chemical-handling failures at the second facility now under construction. Marisol Venn said the company was cooperating fully and had paused some site work, but the probe casts a shadow over the $2.6 billion supply pact signed only weeks earlier. Shares tumbled on the news.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -1951,18 +1961,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82726,
+    "lastEventCycle": 82735,
     "events": [
-      {
-        "cycle": 82542,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Bruncraft Industries Buys Coachline Plant to Scale Runabout Output",
-        "body": "Bruncraft Industries acquired the shuttered Coachline assembly plant near Halvenport for an undisclosed sum, aiming to add roughly 40,000 units of annual Runabout capacity to meet the transit fleet order. CEO Orla Marrow, true to her acquisitive streak, said the deal 'turns a backlog into a promise we can actually keep.' Production is expected to begin within nine months after retooling.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82552,
         "kind": "product_launch",
@@ -2186,6 +2186,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82735,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Bruncraft Misses as Coachline Ramp Costs Outrun Vane's Guidance",
+        "body": "Bruncraft posted quarterly profit of $310 million, well short of the $420 million analysts expected, as tooling and labor costs tied to the Coachline flagship launch ran higher than forecast. Marcus Vane conceded that consolidating the Vanguard unit had absorbed more capital than planned but insisted the flagship's order book remained intact. Shares of the automaker have been volatile since the $1.8 billion buyout closed.",
+        "effects": {
+          "automotive": -0.13
+        }
       }
     ]
   },
@@ -2200,18 +2210,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82729,
+    "lastEventCycle": 82735,
     "events": [
-      {
-        "cycle": 82588,
-        "kind": "earnings_miss",
-        "size": "standard",
-        "head": "Bruncrest Works Slides as Marlow's Cuts Bite Into Quarterly Sales",
-        "body": "Revenue fell 18% to $1.04 billion as the discontinued product lines dragged top-line figures faster than restructuring savings could offset. Chief executive Ines Marlow defended the pain as 'the cost of a clean foundation,' promising the compute division would return to growth within three quarters even as margins remain under pressure.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82594,
         "kind": "product_launch",
@@ -2440,6 +2440,16 @@
         "body": "Riding the landmark Aria Ultra order, Bruncrest committed $420M to a second production line to double capacity by next year. CEO Ines Marlow said backorders now stretch three quarters out and framed the buildout as 'proof the bet is compounding.' The house also opened a validation lab to accelerate the next Aria generation.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82735,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Bruncrest Works Signs $3.4B Aria Ultra Framework, Its Largest Order on Record",
+        "body": "Ines Marlow announced a $3.4 billion multi-year framework agreement anchoring output from the new compute line, roughly tripling the size of the earlier landmark Aria Ultra order. The pact locks in dedicated capacity through the decade and validates Marlow's contested throughput bet. Deliveries are slated to begin once the newly broken-ground line reaches qualification.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -6453,7 +6463,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82718,
+    "lastEventCycle": 82735,
     "events": [
       {
         "cycle": 0,
@@ -6589,6 +6599,16 @@
         "size": "standard",
         "head": "Dunmorewright Expands Foundry Capacity to Deliver $780M Waterworks Contract",
         "body": "Following its largest-ever award, Dunmorewright committed $190M to expand earthmoving and heavy-plumbing fabrication at its Halbrook works to meet inland waterworks milestones. Chief executive Emil Skarn said the investment adds roughly 300 skilled positions and positions the house for adjacent flood-control tenders. Coastal defense revenue continues to taper as the new contract ramps.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82735,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Dunmorewright Beats as Waterworks Billings Ramp Ahead of Schedule",
+        "body": "Dunmorewright reported revenue of $1.9 billion, topping estimates, as early billings on the $780 million inland waterworks contract flowed faster than projected. Emil Skarn credited the recently expanded foundry capacity for pulling delivery milestones forward by nearly a quarter. Management reaffirmed full-year guidance.",
         "effects": {
           "construction": 0.13
         }
@@ -10090,7 +10110,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82704,
+    "lastEventCycle": 82735,
     "events": [
       {
         "cycle": 0,
@@ -10166,6 +10186,16 @@
         "size": "flash",
         "head": "Holtgate Cloth Marks Another Quiet Beat as Raw-Textile Volumes Edge Higher",
         "body": "Holtgate Cloth reported a modestly better quarter, with raw-textile volumes up 2% on steady mill demand and its long-running supply pacts intact. CEO Dorian Carrow offered his customary brief note, citing 'orderly demand and stable pricing.' The company reaffirmed its unchanged outlook for the year.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82735,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Cloth Delivers Another Quiet Beat as Renewed Pact Holds Volumes",
+        "body": "Holtgate Cloth reported steady revenue of $290 million, marginally ahead of estimates, as raw-textile shipments under its renewed supply pact held firm. Dorian Carrow again offered little commentary beyond noting stable order flow. The house has now strung together consecutive quiet beats without changing guidance.",
         "effects": {
           "textiles": 0.06
         }
@@ -12236,7 +12266,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82722,
+    "lastEventCycle": 82735,
     "events": [
       {
         "cycle": 0,
@@ -12434,6 +12464,16 @@
         "body": "Maison & Vale beat expectations as cleaning-supplies volumes from the $1.5B Vestrand deal began contributing alongside a maturing Corriveau household-goods line. CEO Rhys Kessler said integration costs came in below plan, aiding margins. The company said it continues to evaluate further bolt-on targets.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82735,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Maison & Vale Unveils $4.2B Merger with Household-Goods Giant Larenthal in Kessler's Boldest Move",
+        "body": "Rhys Kessler capped an aggressive acquisition streak with a $4.2 billion agreement to absorb Larenthal Group, more than doubling the size of the company's Household Goods division. Executives said the combined operation would rank among the largest hospitality-supply houses by revenue, though integration costs are expected to weigh on margins for at least three quarters. The deal follows the Corriveau and Vestrand bolt-ons that steadied recent earnings.",
+        "effects": {
+          "hospitality": 0.22
         }
       }
     ]
@@ -15790,18 +15830,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82728,
+    "lastEventCycle": 82735,
     "events": [
-      {
-        "cycle": 82549,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Varnvale & Sons Acquires Historic Corveau Dial Foundry in Landmark Deal",
-        "body": "Bram Wold has agreed to buy the century-old Corveau dial foundry for a reported 340 million, vertically integrating the enamel and guilloché work that had lifted the award-winning Bellmont collection. The purchase hands Varnvale exclusive control of a supplier long shared with rival houses and marks Wold's fourth acquisition in eighteen months. Analysts see it as a bid to lock in craftsmanship as timepiece demand tightens supply industry-wide.",
-        "effects": {
-          "luxury": 0.22
-        }
-      },
       {
         "cycle": 82557,
         "kind": "product_launch",
@@ -16028,6 +16058,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Acquires Corvane Movement House to Secure Complication Supply",
         "body": "Varnvale & Sons agreed to buy longtime supplier Corvane Manufacture for an undisclosed sum, bringing its prized movement-making in-house. CEO Bram Wold called the deal a safeguard against the sourcing bottlenecks that constrained last year's Grand Complication run, adding capacity for roughly 900 additional pieces annually.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82735,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Varnvale & Sons Integrates Corvane, Doubles Complication Output at Reopened Movement House",
+        "body": "Bram Wold said the newly acquired Corvane Movement House has been fully brought in-house, doubling annual grand-complication capacity and easing the supply bottleneck behind the award-winning line. The company added forty master watchmakers and reopened a shuttered atelier wing to support the ramp. Wold hinted further movement-house talks remain on the table.",
         "effects": {
           "luxury": 0.13
         }
