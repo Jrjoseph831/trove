@@ -1696,18 +1696,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82727,
+    "lastEventCycle": 82733,
     "events": [
-      {
-        "cycle": 82571,
-        "kind": "expansion",
-        "size": "major",
-        "head": "Boreas Power Breaks Ground on $5.2B Compute-and-Storage Campus at Hollowmere",
-        "body": "Mira Thorne unveiled the house's most ambitious project to date, pairing a massive compute complex with grid-scale storage at the expanded Hollowmere site. The build folds in the momentum from Calderwick integration and Phase Three, targeting first power within 18 months and creating an estimated 2,400 permanent roles. Thorne said Boreas was 'done waiting for demand to slow down, because it won't.'",
-        "effects": {
-          "energy": 0.22
-        }
-      },
       {
         "cycle": 82576,
         "kind": "major_deal",
@@ -1936,6 +1926,16 @@
         "body": "Mira Thorne's house topped estimates as the Vantel storage campus came online alongside Halvane-built compute modules, delivering the first quarter of the combined power-and-silicon strategy. Revenue rose 9% to $1.1B, with management crediting bundled contracts that pair storage capacity with on-site compute. Thorne signaled appetite for another bolt-on acquisition to deepen the module lineup.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82733,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Boreas Power Strikes $3.2B Deal to Build Compute-Paired Power Campuses Nationwide",
+        "body": "Mira Thorne announced a $3.2B agreement with infrastructure partner Delmar Holdings to co-develop six power-and-compute campuses over four years, pairing Boreas storage with Halvane-built modules at each site. The deal, the largest in company history, locks in long-term offtake commitments Thorne valued at more than $9B across the contract life. 'This is the model we bought Halvane to build,' Thorne said, calling it the culmination of her acquisition strategy.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -4417,7 +4417,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82706,
+    "lastEventCycle": 82733,
     "events": [
       {
         "cycle": 0,
@@ -4503,6 +4503,16 @@
         "size": "flash",
         "head": "Castle Devices Logs Another Steady Quarter as Consumables Demand Holds",
         "body": "Castle Devices reported revenue up 4% with margins flat, extending its long run of predictable results on steady hospital consumables volumes. CEO Bram Calder reaffirmed guidance and noted a modest expansion of the distribution network in two new regions. Free cash flow again covered the dividend comfortably.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82733,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castle Devices Logs Yet Another Steady Quarter on Consumables Demand",
+        "body": "Castle Devices reported revenue of $520M, in line with expectations, as consumables volumes held firm across hospital and clinic channels. Bram Calder pointed to renewed multi-year supply agreements as the backbone of the quarter's stability. The company left guidance unchanged for the fourth straight period.",
         "effects": {
           "medical": 0.06
         }
@@ -7982,7 +7992,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82724,
+    "lastEventCycle": 82733,
     "events": [
       {
         "cycle": 0,
@@ -8206,6 +8216,16 @@
         "body": "Greywater Grid landed a $2.4B multi-year agreement to supply compute capacity from facilities running its 94%-recovery closed-loop water system. CEO Sable Renwick said the deal 'turns a regulatory headache into our biggest selling point,' with the first tranche of capacity going live within six months. The pact vaults Greywater past its prior order book and validates the pivot from the halted reservoir buildout.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82733,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Greywater Grid Faces Regulatory Probe Over Closed-Loop Reservoir Discharge Claims",
+        "body": "Regulators opened a formal inquiry into Greywater Grid's closed-loop water figures after inspectors flagged discrepancies between reported and measured discharge at two reservoir sites. The probe casts a shadow over the $2.4B compute pact anchored to those facilities, portions of which include performance clauses tied to water recovery. Sable Renwick said the company 'stands fully behind its data' and is cooperating, but acknowledged the review could delay site certifications.",
+        "effects": {
+          "energy": -0.22
         }
       }
     ]
@@ -11465,7 +11485,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82721,
+    "lastEventCycle": 82733,
     "events": [
       {
         "cycle": 0,
@@ -11641,6 +11661,16 @@
         "size": "standard",
         "head": "Korrwright Group Secures $420M Structural Materials Award for Harbor Redevelopment",
         "body": "Korrwright won a $420M contract to supply structural materials for a multi-year harbor redevelopment, extending its backlog well into the decade. CEO Halden Fenn said the award pairs naturally with the existing corridor and rail-bridge work, allowing shared logistics and steadier plant utilization. The company now carries one of its largest combined backlogs in recent memory.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82733,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Group Beats as Harbor and Corridor Awards Begin Billing",
+        "body": "Korrwright posted a beat on revenue of $1.48B, with the $420M Harbor redevelopment and $310M Corridor wire award both entering the billing cycle. Halden Fenn said combined backlog now stands at a record $2.1B, giving the group visibility deep into next year. Management nudged full-year guidance modestly higher on the strength of the structural segment.",
         "effects": {
           "construction": 0.13
         }
@@ -14964,7 +14994,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82722,
+    "lastEventCycle": 82733,
     "events": [
       {
         "cycle": 0,
@@ -15142,6 +15172,16 @@
         "size": "standard",
         "head": "Thaldale Group's Holloway Launches Sweeping Overhaul, Winds Down Fastening Unit",
         "body": "New CEO Marta Holloway detailed a restructuring plan that fully unwinds the carved-out fastening operation at the center of the diversion scandal and consolidates hardware production into two core plants. The company took a charge tied to the exit and named an interim controller to oversee financial cleanup. Holloway pledged fresh governance controls to reassure shareholders still pursuing litigation.",
+        "effects": {
+          "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82733,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Thaldale Group Misses as Overhaul Costs Weigh on First Post-Scandal Quarter",
+        "body": "Thaldale reported revenue of $610M, short of guidance, as one-time charges tied to winding down the fastening unit dragged results into the red. Marta Holloway said restructuring costs totaled $140M this quarter and warned of continued pressure into the next, while insisting the cleanup is 'ahead of plan.' The restatement-related legal reserve was raised by an additional $45M.",
         "effects": {
           "consumer": -0.13
         }
@@ -15414,7 +15454,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82709,
+    "lastEventCycle": 82733,
     "events": [
       {
         "cycle": 0,
@@ -15513,6 +15553,16 @@
         "effects": {
           "agriculture": 0.06
         }
+      },
+      {
+        "cycle": 82733,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Tillage & Co. Keeps Its Streak Alive With Another In-Line Quarter",
+        "body": "Tillage & Co. reported quarterly revenue of $1.12B, edging past guidance as blending capacity stayed near full. Kestrel Fenn credited stable input demand and steady contract renewals, noting margins held flat year over year. The company reaffirmed its full-year outlook without changes.",
+        "effects": {
+          "agriculture": 0.06
+        }
       }
     ]
   },
@@ -15527,7 +15577,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82719,
+    "lastEventCycle": 82733,
     "events": [
       {
         "cycle": 0,
@@ -15673,6 +15723,16 @@
         "size": "flash",
         "head": "Vantor Lines Delivers Steady Beat as Diversification Strategy Matures",
         "body": "Halden Vossen reported another modest beat as the two non-grocery contracts reached full run-rate, lifting Packaging volumes 6%. Margins held firm on tight cost control, and the company reaffirmed its measured full-year outlook. Vossen said the diversification push has 'done exactly what we asked of it.'",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82733,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Posts Another Steady Beat as Non-Grocery Mix Grows",
+        "body": "Vantor Lines delivered revenue of $840M, a modest beat, with non-grocery contracts now accounting for 28% of volume, up from 19% a year ago. Halden Vossen said the diversification push continues to smooth seasonal swings, and reaffirmed full-year targets. Packaging utilization held steady near 90%.",
         "effects": {
           "logistics": 0.06
         }
@@ -16341,7 +16401,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82720,
+    "lastEventCycle": 82733,
     "events": [
       {
         "cycle": 0,
@@ -16517,6 +16577,16 @@
         "size": "standard",
         "head": "Vencyon Beats and Raises a Third Time as Modular Rollout Nears Full Deployment",
         "body": "Vencyon topped estimates again, with operating margin widening to 18% as the fourth and fifth hubs reached near-full capacity on the modular platform. CEO Iris Halloran raised full-year guidance and confirmed early talks on a sixth-hub option tied to the original $2.3B mandate. She cautioned that the pace of new milestones would slow as the deployment matures.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82733,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Vencyon Completes Modular Rollout, Debuts Unified Hub Platform",
+        "body": "With all five hubs now live, Iris Halloran unveiled the Vencyon Unified Hub platform, a standardized control layer linking sortation and retrieval across every site. The company said the modular buildout finished two months ahead of schedule at a total cost of $680M, and framed the platform as the foundation for its next growth phase. Halloran called it 'the payoff for four years of disciplined construction.'",
         "effects": {
           "logistics": 0.13
         }
