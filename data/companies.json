@@ -3056,18 +3056,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82728,
+    "lastEventCycle": 82734,
     "events": [
-      {
-        "cycle": 82564,
-        "kind": "restructure",
-        "size": "major",
-        "head": "Brunstone & Sons Guts Meridian Line and Replaces CEO in Emergency Reset",
-        "body": "Weeks after the Meridian launch flopped, Brunstone & Sons said it would halt Meridian production, take a $480 million writedown, and cut a further 3,500 jobs. Royce Lambourne will step aside as part of the overhaul, with the board handing operational control to a stabilization committee while it searches for permanent leadership.",
-        "effects": {
-          "automotive": -0.22
-        }
-      },
       {
         "cycle": 82571,
         "kind": "product_launch",
@@ -3292,6 +3282,16 @@
         "body": "Brunstone & Sons posted quarterly revenue of $1.9 billion, ahead of guidance, as early Vault II cell orders offset lingering recall costs. CEO Dagny Frost said warranty claims fell 38% and that two fleet customers who paused orders during the crisis have returned.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82734,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Brunstone & Sons Lands $900M Fleet Supply Pact for Vault II Cells",
+        "body": "Brunstone secured a five-year, $900M agreement to supply Vault II cells to a national commercial-vehicle fleet operator, its largest single order since the recall crisis. Frost called the deal 'proof the comeback is real,' noting it effectively resolves the demand questions that lingered even after the class action; the pact commits Brunstone to a third assembly shift by next spring.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -4987,18 +4987,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82728,
+    "lastEventCycle": 82734,
     "events": [
-      {
-        "cycle": 82585,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Castlestone Extends Halo Line With High-Density Compute Tier",
-        "body": "Building on its post-turnaround momentum, Castlestone launched Halo Ultra, a high-density compute tier aimed at large data operators, with Pell Karsh promising 40% more throughput per rack. The bold-swinging chief said early commitments already cover the first two production runs. The launch marks Castlestone's second major bet since Karsh halted the second campus and cut 900 jobs.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82592,
         "kind": "major_deal",
@@ -5227,6 +5217,16 @@
         "body": "Castlestone brought its Grid-Core campus back online with a fully redesigned coolant system built around dual-sourced valves, ending months of outage. CEO Pell Karsh said the rebuilt facility carries 20% more capacity and that the supplier blamed for the failed valve has been dropped.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82734,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Castlestone Misses Badly as Grid-Core Delays Bleed Into Guidance Cut",
+        "body": "Castlestone posted revenue of $2.1B against $2.7B expected, with the relaunched Grid-Core campus still running at 60% of rated capacity months after Karsh 'drew a line.' The house slashed full-year guidance by nearly a fifth and disclosed that two anchor Compute clients had deferred contracts, sending Karsh into a combative call where he vowed the setback was 'the last one.'",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -7267,7 +7267,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82717,
+    "lastEventCycle": 82734,
     "events": [
       {
         "cycle": 0,
@@ -7403,6 +7403,16 @@
         "size": "flash",
         "head": "Fennvale Mfg. Delivers Steady Beat as New Auto-Parts Line Nears First Output",
         "body": "Fennvale Mfg. edged past estimates with revenue up 2.6%, carried by its fully ramped second fastener shift as the recently broken-ground auto-parts line moves toward initial production. Theo Vossen said equipment installation at the new line is on schedule for a first run next quarter. Margins held steady at 14.9% with no change to guidance.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82734,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Fennvale Mfg. Ships First Auto-Parts Units as New Line Comes Online",
+        "body": "Fennvale confirmed first commercial output from its new auto-parts line, hitting the timeline Vossen laid out at groundbreaking. Initial volumes cover suspension brackets for two existing fastener customers, with management describing a deliberate ramp toward full utilization by year-end.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -7869,7 +7879,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82713,
+    "lastEventCycle": 82734,
     "events": [
       {
         "cycle": 0,
@@ -7975,6 +7985,16 @@
         "size": "flash",
         "head": "Greenmarsh Agro Edges Past Estimates as Distribution Pact Lifts Bundle Volumes",
         "body": "Greenmarsh reported a modest beat with revenue up 6%, as the new regional distribution pact began moving seed-coating and soil-blend bundles into more channels. CEO Petra Kessler noted the ramp remains early and reaffirmed the company's patient, multi-season rollout. Farm-input volumes rose steadily while equipment held flat.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82734,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Greenmarsh Agro Adds Second Blending Line to Meet Bundle Demand",
+        "body": "Greenmarsh committed to a modest second soil-blend line at its home works after the distribution pact pushed bundle volumes past existing capacity. Kessler framed the move as 'measured to demand we can already see,' with the line expected to reach output within three quarters.",
         "effects": {
           "agriculture": 0.06
         }
@@ -8693,7 +8713,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82720,
+    "lastEventCycle": 82734,
     "events": [
       {
         "cycle": 0,
@@ -8842,6 +8862,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82734,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcrow & Vance Opens Third Yard to Absorb Swelling Vetask Backlog",
+        "body": "Halcrow & Vance commissioned a third earthmoving yard to service the combined $3.6B Vetask book following its recent follow-on mandate. Skarn said the yard adds roughly 30% to fleet-maintenance and staging capacity, positioning the house to bid adjacent regional infrastructure work as the flagship program peaks.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -8856,7 +8886,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82723,
+    "lastEventCycle": 82734,
     "events": [
       {
         "cycle": 0,
@@ -9042,6 +9072,16 @@
         "size": "standard",
         "head": "Halcyon Industries Debuts Recycled-Fiber Packaging Grade Ahead of Northgate Startup",
         "body": "Halcyon introduced its EverFold recycled-fiber line, a curbside-recyclable grade aimed at retail shippers, with initial volumes to run through the near-capacity Southport plant. Dorian Ashby said early commitments from three national distributors cover roughly 40% of the first year's planned output. The grade is slated to move to Northgate's first two lines once they come online next year.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82734,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcyon Industries Beats as Recycled-Fiber Grade Wins Early Orders",
+        "body": "Halcyon reported a modest earnings beat, with the newly debuted recycled-fiber packaging grade drawing faster-than-expected commitments from consumer-goods clients ahead of Northgate's startup. Ashby said two of Northgate's six planned lines have been earmarked for the new grade, calling demand 'stickier than we modeled.'",
         "effects": {
           "logistics": 0.13
         }
@@ -11688,18 +11728,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82724,
+    "lastEventCycle": 82734,
     "events": [
-      {
-        "cycle": 82556,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Korrwright Works Debuts Velloux Atelier Series, First Line From New Heritage Workshop",
-        "body": "Korrwright Works unveiled the Velloux Atelier Series, the inaugural collection produced entirely at its recently consolidated Heritage Atelier. CEO Dunmore Carrow said the movement-supply pact secured earlier this year enabled a limited run of 1,200 pieces, each priced above the prior Heritage tier. Early demand from three key salons has already reserved half the initial allotment.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82564,
         "kind": "award",
@@ -11926,6 +11956,16 @@
         "body": "Korrwright Works agreed to acquire in-house movement specialist Halbrook Manufacture for $1.1B, its largest deal ever, securing control of a critical supply link long outsourced. CEO Dunmore Carrow said pairing Halbrook's movements with the Verenne retail network gives Korrwright end-to-end command 'from bench to boutique.' The purchase, expected to close next quarter, adds roughly 1,300 workers and two workshops to the house.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82734,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Korrwright Works Debuts In-House Escapement as Halbrook Integration Bears Fruit",
+        "body": "Six months after the $1.1B Halbrook acquisition, Korrwright unveiled its first fully in-house escapement mechanism, ending decades of reliance on outside movement suppliers. Carrow told assembled press the milestone 'closes the last open link in our chain,' and hinted that a limited grand-complication series would follow within the year.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -16005,18 +16045,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82725,
+    "lastEventCycle": 82734,
     "events": [
-      {
-        "cycle": 82536,
-        "kind": "earnings_miss",
-        "size": "standard",
-        "head": "Varnvale House Posts Softer Quarter as Ember Fallout Lingers",
-        "body": "Quarterly revenue fell 9 percent against guidance as the Ember sourcing lawsuit weighed on demand and legal costs climbed to 24 million units. Petra Holt struck a defiant tone, vowing to 'fight every line of the complaint' and pledging an independent sourcing audit by year-end. Fine-goods bookings outside the Ember line held steady, cushioning the miss.",
-        "effects": {
-          "luxury": -0.13
-        }
-      },
       {
         "cycle": 82543,
         "kind": "leadership_change",
@@ -16233,6 +16263,16 @@
         "body": "In her boldest move since arriving, Beatrix Coyle relaunched the flagship Sovereign timepiece collection with a fully rebuilt supply chain and a hand-finished Regent tourbillon priced at $84,000. Coyle staked her turnaround on the launch, telling a packed showcase that the house had 'closed the chapter on the misstep' and secured raw movement components under three-year fixed contracts. Preorders opened alongside a limited run of 500 numbered pieces.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82734,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Varnvale House Tops Estimates as Reborn Sovereign Line Clears Early Inventory",
+        "body": "Varnvale reported quarterly revenue up 14% to $840M, crediting brisk sell-through of the relaunched Sovereign line that Coyle staked her tenure on. Direct-boutique orders outpaced forecasts, though management cautioned that second-run production must keep pace to avoid the supply gaps that felled her predecessor.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]

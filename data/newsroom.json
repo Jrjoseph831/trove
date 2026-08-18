@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-18T06:45:06.941Z",
+  "generatedAt": "2026-08-18T12:49:30.376Z",
   "beats": [
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Brunstone & Sons Lands $900M Fleet Supply Pact for Vault II Cells",
+      "body": "Brunstone secured a five-year, $900M agreement to supply Vault II cells to a national commercial-vehicle fleet operator, its largest single order since the recall crisis. Frost called the deal 'proof the comeback is real,' noting it effectively resolves the demand questions that lingered even after the class action; the pact commits Brunstone to a third assembly shift by next spring.",
+      "cycle": 82734,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Castlestone Misses Badly as Grid-Core Delays Bleed Into Guidance Cut",
+      "body": "Castlestone posted revenue of $2.1B against $2.7B expected, with the relaunched Grid-Core campus still running at 60% of rated capacity months after Karsh 'drew a line.' The house slashed full-year guidance by nearly a fifth and disclosed that two anchor Compute clients had deferred contracts, sending Karsh into a combative call where he vowed the setback was 'the last one.'",
+      "cycle": 82734,
+      "dur": 8
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
+      "kind": "product_launch",
+      "size": "flash",
+      "head": "Fennvale Mfg. Ships First Auto-Parts Units as New Line Comes Online",
+      "body": "Fennvale confirmed first commercial output from its new auto-parts line, hitting the timeline Vossen laid out at groundbreaking. Initial volumes cover suspension brackets for two existing fastener customers, with management describing a deliberate ramp toward full utilization by year-end.",
+      "cycle": 82734,
+      "dur": 1
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Greenmarsh Agro Adds Second Blending Line to Meet Bundle Demand",
+      "body": "Greenmarsh committed to a modest second soil-blend line at its home works after the distribution pact pushed bundle volumes past existing capacity. Kessler framed the move as 'measured to demand we can already see,' with the line expected to reach output within three quarters.",
+      "cycle": 82734,
+      "dur": 1
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Halcrow & Vance Opens Third Yard to Absorb Swelling Vetask Backlog",
+      "body": "Halcrow & Vance commissioned a third earthmoving yard to service the combined $3.6B Vetask book following its recent follow-on mandate. Skarn said the yard adds roughly 30% to fleet-maintenance and staging capacity, positioning the house to bid adjacent regional infrastructure work as the flagship program peaks.",
+      "cycle": 82734,
+      "dur": 2
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halcyon Industries Beats as Recycled-Fiber Grade Wins Early Orders",
+      "body": "Halcyon reported a modest earnings beat, with the newly debuted recycled-fiber packaging grade drawing faster-than-expected commitments from consumer-goods clients ahead of Northgate's startup. Ashby said two of Northgate's six planned lines have been earmarked for the new grade, calling demand 'stickier than we modeled.'",
+      "cycle": 82734,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "breakthrough",
+      "size": "standard",
+      "head": "Korrwright Works Debuts In-House Escapement as Halbrook Integration Bears Fruit",
+      "body": "Six months after the $1.1B Halbrook acquisition, Korrwright unveiled its first fully in-house escapement mechanism, ending decades of reliance on outside movement suppliers. Carrow told assembled press the milestone 'closes the last open link in our chain,' and hinted that a limited grand-complication series would follow within the year.",
+      "cycle": 82734,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Varnvale House Tops Estimates as Reborn Sovereign Line Clears Early Inventory",
+      "body": "Varnvale reported quarterly revenue up 14% to $840M, crediting brisk sell-through of the relaunched Sovereign line that Coyle staked her tenure on. Direct-boutique orders outpaced forecasts, though management cautioned that second-run production must keep pace to avoid the supply gaps that felled her predecessor.",
+      "cycle": 82734,
+      "dur": 2
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -10,16 +90,6 @@
       "body": "Mira Thorne announced a $3.2B agreement with infrastructure partner Delmar Holdings to co-develop six power-and-compute campuses over four years, pairing Boreas storage with Halvane-built modules at each site. The deal, the largest in company history, locks in long-term offtake commitments Thorne valued at more than $9B across the contract life. 'This is the model we bought Halvane to build,' Thorne said, calling it the culmination of her acquisition strategy.",
       "cycle": 82733,
       "dur": 8
-    },
-    {
-      "company": "Castle Devices",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Castle Devices Logs Yet Another Steady Quarter on Consumables Demand",
-      "body": "Castle Devices reported revenue of $520M, in line with expectations, as consumables volumes held firm across hospital and clinic channels. Bram Calder pointed to renewed multi-year supply agreements as the backbone of the quarter's stability. The company left guidance unchanged for the fourth straight period.",
-      "cycle": 82733,
-      "dur": 1
     },
     {
       "company": "Greywater Grid",
@@ -52,26 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Tillage & Co.",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Tillage & Co. Keeps Its Streak Alive With Another In-Line Quarter",
-      "body": "Tillage & Co. reported quarterly revenue of $1.12B, edging past guidance as blending capacity stayed near full. Kestrel Fenn credited stable input demand and steady contract renewals, noting margins held flat year over year. The company reaffirmed its full-year outlook without changes.",
-      "cycle": 82733,
-      "dur": 1
-    },
-    {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Posts Another Steady Beat as Non-Grocery Mix Grows",
-      "body": "Vantor Lines delivered revenue of $840M, a modest beat, with non-grocery contracts now accounting for 28% of volume, up from 19% a year ago. Halden Vossen said the diversification push continues to smooth seasonal swings, and reaffirmed full-year targets. Packaging utilization held steady near 90%.",
-      "cycle": 82733,
-      "dur": 1
-    },
-    {
       "company": "Vencyon",
       "sector": "logistics",
       "kind": "product_launch",
@@ -79,46 +129,6 @@
       "head": "Vencyon Completes Modular Rollout, Debuts Unified Hub Platform",
       "body": "With all five hubs now live, Iris Halloran unveiled the Vencyon Unified Hub platform, a standardized control layer linking sortation and retrieval across every site. The company said the modular buildout finished two months ahead of schedule at a total cost of $680M, and framed the platform as the foundation for its next growth phase. Halloran called it 'the payoff for four years of disciplined construction.'",
       "cycle": 82733,
-      "dur": 2
-    },
-    {
-      "company": "Aldousspire Group",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Aldousspire Group Beats as Twelve New Heirloom Stores Open Ahead of Schedule",
-      "body": "Mira Ashby reported quarterly revenue of $1.32 billion, up 11% year over year, with all twelve new Heirloom concept stores now trading and the Everyday line accounting for a third of unit sales. Same-store sales rose 6.4% as the broadened buyer base held. Ashby signaled a measured pause on further openings to consolidate gains.",
-      "cycle": 82732,
-      "dur": 2
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Hesperforge Supply Extends Marine Framework Franchise With $780M Follow-On Order",
-      "body": "Sable Halloran confirmed a $780 million follow-on contract from shipbuilder Vantry Marine, extending the landmark framework program through 2031. The award lifts Hesperforge's structural-materials backlog past $3 billion and firms utilization at the new fourth mill from its first day. Halloran said deliveries would begin once the Kelder mill reaches full commissioning next year.",
-      "cycle": 82732,
-      "dur": 2
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "breakthrough",
-      "size": "standard",
-      "head": "Kessel Drive Clears Vanta Bottleneck With New Cathode Supply Pact",
-      "body": "Aldric Venn told a packed briefing that Kessel had secured a dual-source cathode agreement with mineral processor Dunmere Refined, unlocking full-line production at its Halvern plant. Management now projects Vanta cell output tripling to 90,000 units a month by the third quarter. Venn called the fix 'the moment the turnaround stops being a promise.'",
-      "cycle": 82732,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Lhaus Industries Beats as New Platform Vehicle Line Outsells Forecasts",
-      "body": "Cole Brandt reported revenue of $2.4 billion, up 9%, as the first vehicle line built on the acquired platform sold 42,000 units in its opening quarter, beating internal targets by a fifth. The Kessering divestiture proceeds continued to fund a leaner, vehicle-focused footprint. Brandt hinted at 'one or two more bolt-ons' to round out the auto-parts side.",
-      "cycle": 82732,
       "dur": 2
     },
     {
@@ -219,36 +229,6 @@
       "head": "Aperture Compute Lands Landmark $2.6B Emberline Supply Pact for Next-Gen Node",
       "body": "Marisol Venn secured a multi-year commitment worth $2.6B to supply the newly unveiled Emberline node, the largest single agreement in Aperture's history and enough to fill most of the second fabrication site's planned capacity. Venn said the deal front-loads deliveries beginning next quarter and locks in a marquee anchor customer through 1959. Shares of narrative momentum aside, management now expects the second site to reach breakeven a full year early.",
       "cycle": 82727,
-      "dur": 8
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Halcrest Stakes Comeback on Meridian Grand Complication in Iris Marrow's Boldest Bet Yet",
-      "body": "After the Skeleton Edition's margin stumble, Iris Marrow unveiled the Meridian Grand Complication, a $340,000 minute-repeater capped at 88 pieces and positioned as the house's most ambitious release in a generation. Marrow staged a spectacle-heavy launch and told buyers the piece 'answers whether Halcrest still leads or merely follows,' pinning the brand's premium narrative on the line. Early order interest was described as brisk, though analysts flagged execution risk on such low volumes.",
-      "cycle": 82726,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Halhold Systems Hit With Landmark Settlement Demand as Regulators Widen Reliability Case",
-      "body": "Regulators formally expanded their action against Halhold, seeking a settlement figure people close to the matter put near $1.2 billion and demanding an independent monitor over its compute reliability practices. The move follows internal memos showing failures were known internally for years, and now names three former executives in addition to ousted chief Ilse Marren. CEO Petra Vandel said the company would 'contest the scope but engage in good faith,' pledging a full remediation program.",
-      "cycle": 82726,
-      "dur": 8
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Skarnvale Abandons Vosk Junction Retrofit and Launches Sweeping Overhaul After Triple Failure",
-      "body": "Skarnvale scrapped the troubled Vosk Junction retrofit entirely, taking a $260 million writedown and pledging a ground-up rebuild under a newly assembled crisis board. Dorn Vaskell, whose recovery chief resigned amid the third collapse, said the company would 'stop patching a broken program' and shift affected volumes to partner sites through next year. The move caps a turbulent stretch that has erased the retrofit's projected capacity gains.",
-      "cycle": 82726,
       "dur": 8
     }
   ]
