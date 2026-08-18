@@ -459,7 +459,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82713,
+    "lastEventCycle": 82732,
     "events": [
       {
         "cycle": 0,
@@ -575,6 +575,16 @@
         "size": "standard",
         "head": "Aldousspire Group to Open Twelve New Heirloom Concept Stores After Strong Everyday Line",
         "body": "Building on momentum from the Heirloom Everyday line, Aldousspire announced plans to open twelve additional concept stores over the next year, its largest single expansion in a decade. CEO Mira Ashby said broadening buyer demographics justified the $88M rollout across new metro markets. Existing stores continue to post double-digit traffic growth.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82732,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Aldousspire Group Beats as Twelve New Heirloom Stores Open Ahead of Schedule",
+        "body": "Mira Ashby reported quarterly revenue of $1.32 billion, up 11% year over year, with all twelve new Heirloom concept stores now trading and the Everyday line accounting for a third of unit sales. Same-store sales rose 6.4% as the broadened buyer base held. Ashby signaled a measured pause on further openings to consolidate gains.",
         "effects": {
           "consumer": 0.13
         }
@@ -9674,7 +9684,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82719,
+    "lastEventCycle": 82732,
     "events": [
       {
         "cycle": 0,
@@ -9830,6 +9840,16 @@
         "size": "standard",
         "head": "Hesperforge Beats Again as Marine-Grade Framework Deliveries Begin",
         "body": "Sable Halloran posted a firm quarter as initial shipments under the $1.4B marine-grade framework began flowing, lifting Structural Materials revenue 14%. The company said the fourth mill remains on schedule for a phased opening next year, with backlog still exceeding current capacity. Halloran flagged tightening raw-textile input costs as the one caution ahead.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82732,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Hesperforge Supply Extends Marine Framework Franchise With $780M Follow-On Order",
+        "body": "Sable Halloran confirmed a $780 million follow-on contract from shipbuilder Vantry Marine, extending the landmark framework program through 2031. The award lifts Hesperforge's structural-materials backlog past $3 billion and firms utilization at the new fourth mill from its first day. Halloran said deliveries would begin once the Kelder mill reaches full commissioning next year.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -10749,7 +10769,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82720,
+    "lastEventCycle": 82732,
     "events": [
       {
         "cycle": 0,
@@ -10951,6 +10971,16 @@
         "body": "Kessel Drive fell short of forecasts in Venn's first full quarter, citing component shortages that throttled the redesigned Vanta cell ramp to roughly 60% of planned output. CEO Aldric Venn downplayed the miss as 'a scaling problem, not a demand problem,' pointing to a growing order backlog. Investors remained wary given the storage crisis that toppled his predecessor.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82732,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Kessel Drive Clears Vanta Bottleneck With New Cathode Supply Pact",
+        "body": "Aldric Venn told a packed briefing that Kessel had secured a dual-source cathode agreement with mineral processor Dunmere Refined, unlocking full-line production at its Halvern plant. Management now projects Vanta cell output tripling to 90,000 units a month by the third quarter. Venn called the fix 'the moment the turnaround stops being a promise.'",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -11881,18 +11911,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82727,
+    "lastEventCycle": 82732,
     "events": [
-      {
-        "cycle": 82578,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Lhaus Industries Signs $14B Second Fleet Pact on Strength of Fast-Charge Packs",
-        "body": "Building on its record cycle-life breakthrough, Lhaus landed a 14-billion-mark, seven-year agreement to supply cell packs to a major commercial hauler consortium. Cole Brandt said the win validates the dedicated cell-pack plant now nearing completion, and confirmed Lhaus will break ground on a second facility to meet combined demand from both fleet contracts.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82585,
         "kind": "expansion",
@@ -12119,6 +12139,16 @@
         "size": "standard",
         "head": "Lhaus Industries Rolls Out First Vehicle Line Built on Newly Acquired Platform",
         "body": "Cole Brandt debuted the Verrant midsize range, the first models engineered on the $650M platform Lhaus bought earlier this year, targeting 120,000 units in the first full production year. Brandt framed the launch as proof the acquisition-heavy strategy is bearing fruit, telling reporters the platform will underpin at least four nameplates by 1957. Early dealer commitments cover roughly 40% of planned volume.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82732,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Lhaus Industries Beats as New Platform Vehicle Line Outsells Forecasts",
+        "body": "Cole Brandt reported revenue of $2.4 billion, up 9%, as the first vehicle line built on the acquired platform sold 42,000 units in its opening quarter, beating internal targets by a fifth. The Kessering divestiture proceeds continued to fund a leaner, vehicle-focused footprint. Brandt hinted at 'one or two more bolt-ons' to round out the auto-parts side.",
         "effects": {
           "automotive": 0.13
         }
@@ -12349,18 +12379,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82725,
+    "lastEventCycle": 82732,
     "events": [
-      {
-        "cycle": 82535,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Marlgear Supply Posts Record Quarter as Atlas Backlog Swells",
-        "body": "Marlgear reported quarterly revenue of 1.2 billion, up 31% year over year, driven entirely by Atlas Industrial Press demand from the Drennan and Carrow contracts. The order backlog now stretches 14 months, prompting CEO Halden Vossen to declare the press line 'the most important machine we have ever built.' Vossen also teased a second assembly site to ease the bottleneck.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82542,
         "kind": "safety_probe",
@@ -12583,6 +12603,16 @@
         "size": "major",
         "head": "Regulators Open Formal Probe Into Marlgear Supply Over Kessel Fault Disclosures",
         "body": "A national safety authority launched a formal investigation into whether Marlgear Supply concealed known defects in its Kessel industrial machines, escalating pressure amid the pending class action. Investigators subpoenaed internal inspection records spanning three years and can impose penalties reaching $200M. CEO Dane Kessler publicly vowed 'total cooperation' but drew scrutiny for a combative statement blaming prior management for the disclosure failures.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82732,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Marlgear Supply Documents Show Executives Ordered Kessel Fault Records Destroyed",
+        "body": "Internal memos surfaced in the widening probe showing senior Marlgear leaders directed staff to purge Kessel fault logs weeks before regulators arrived, according to filings reviewed at a public hearing. Dane Kessler denied personal knowledge but placed two divisional heads on leave as the board opened an independent review. Shares of confidence cratered as the class action added the document allegations to its complaint.",
         "effects": {
           "technology": -0.22
         }
@@ -16504,7 +16534,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82707,
+    "lastEventCycle": 82732,
     "events": [
       {
         "cycle": 0,
@@ -16590,6 +16620,16 @@
         "size": "flash",
         "head": "Venline & Sons Extends Streak With Modest Beat as Second Marden Cleanroom Advances",
         "body": "Venline & Sons posted a narrow beat with revenue of $412M, marking its ninth consecutive quarter above consensus as the first Marden cleanroom held at full capacity. CEO Mara Garr said construction on the second cleanroom remains on track for commissioning next year. Consumables demand continues to outpace current output.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82732,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Venline & Sons Extends Streak as Second Marden Cleanroom Nears Completion",
+        "body": "Mara Garr posted another modest beat, with revenue of $412 million up 4% and margins holding steady on disciplined pricing. The second Marden cleanroom is now roughly 80% complete and on track for qualification runs next quarter. Garr reiterated the company's long-horizon stance, resisting calls to accelerate spending.",
         "effects": {
           "medical": 0.06
         }
@@ -16794,18 +16834,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82724,
+    "lastEventCycle": 82732,
     "events": [
-      {
-        "cycle": 82536,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Vossenspire Supply Buys Timepiece Specialist Aldecourt",
-        "body": "Quinn Marrow continued the firm's acquisition streak with the purchase of heritage movement-maker Aldecourt for a reported 680 million units, folding its workshops into the Vossenspire timepiece division. The deal pairs Aldecourt's in-house calibers with the recently acquired Renmark coachbuilding arm, signaling Marrow's push to control craft at both ends of the catalogue. Integration is expected to span two years.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82544,
         "kind": "restructure",
@@ -17034,6 +17064,16 @@
         "body": "Vossenspire Supply reported revenue up 17% to $488M, with gross margin expanding 260 basis points as in-house Thelvane cases cut sourcing costs on the Corveil Reserve line. CEO Quinn Marrow said Corveil waitlists remain 'stubbornly long' even after the Halvane movement output doubling. Marrow hinted further vertical acquisitions remain on the table as the house tightens control of its own supply chain.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82732,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Vossenspire Supply Strikes $2.1B Deal to Acquire Rival House Corriveaux",
+        "body": "Quinn Marrow unveiled the largest acquisition in Vossenspire's century-long history, absorbing storied timepiece and coachbuilding house Corriveaux for $2.1 billion. The deal combines Vossenspire's Thelvane case works with Corriveaux's renowned movement ateliers, creating a top-tier luxury conglomerate. Marrow said the integration would 'complete the vertical chain from raw brass to boutique.'",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -17345,7 +17385,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82714,
+    "lastEventCycle": 82732,
     "events": [
       {
         "cycle": 0,
@@ -17461,6 +17501,16 @@
         "size": "flash",
         "head": "Wold & Bramm Signs Lease for Fifth Showroom in Measured Regional Push",
         "body": "Mara Marrow confirmed a lease for a fifth showroom, set to open next spring, extending the Heritage range into a new region. The company said the site will anchor both lighting and the newer household line, funded entirely from operating cash. Marrow reiterated a preference for 'one door at a time.'",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82732,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Wold & Bramm Adds Heritage Lighting Range as Fifth Showroom Opens",
+        "body": "Mara Marrow debuted a new Heritage lighting collection of table and wall fixtures priced from $180 to $640, timed to the opening of the company's fifth regional showroom. The launch pairs the lighting range with existing household lines to lift average basket size. Marrow described the rollout as 'a deliberate step, not a leap.'",
         "effects": {
           "consumer": 0.06
         }
