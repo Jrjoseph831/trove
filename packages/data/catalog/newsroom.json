@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-18T18:40:06.432Z",
+  "generatedAt": "2026-08-19T01:19:16.997Z",
   "beats": [
     {
-      "company": "Aldouscyon",
+      "company": "Blackmoor",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Blackmoor Inches Higher as Ridge-Till Attachment Lifts Holloway Range",
+      "body": "Blackmoor reported revenue of $196M, up 4%, with the new ridge-till attachment lifting attach rates on the Holloway seed-drill range past 40%. CEO Soren Dray, in his characteristically unhurried tone, emphasized multi-season durability data over near-term volume. The company reaffirmed its slow-build outlook into next planting cycle.",
+      "cycle": 82736,
+      "dur": 1
+    },
+    {
+      "company": "Caldercraft Holdings",
       "sector": "consumer",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldouscyon Edges Past Estimates as Conversion Slate Stays on Track",
-      "body": "Aldouscyon posted a modest beat with revenue of $640 million as the sixth-city lighting conversion continued contributing steadily. Petra Mercer said demand across converted markets remained consistent and reaffirmed the pacing of the rollout. Margins held flat versus the prior quarter.",
-      "cycle": 82735,
+      "head": "Caldercraft Holdings Edges Ahead as Weatherproof Range Fills Out",
+      "body": "Caldercraft posted a modest beat with revenue of $288M, up 6%, as the completed weatherproof line — racks, cabinets and reinforced fittings — lifted average order size across hardware channels. CEO Vale Fenn described demand as 'steady and unremarkable, in the best sense,' pointing to consistent reorder patterns from regional distributors.",
+      "cycle": 82736,
       "dur": 1
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowcyon & Sons Tops Estimates as Third Smart-Dimming Line Comes Online",
+      "body": "The 130-year-old house reported quarterly revenue of $412M, up 19% year over year, as its newly commissioned third production line began clearing a backlog of national retail orders. CEO Cole Brandt credited disciplined ramp-up, noting attach rates on companion lighting fixtures rose to 34%. Margins widened 210 basis points as scale absorbed the earlier capacity crunch.",
+      "cycle": 82736,
+      "dur": 2
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowforge Returns to Profit as Renn's Post-Split Machines Unit Steadies",
+      "body": "Carrowforge swung back to a $31M quarterly profit from a prior loss, as newly appointed Machines Chief Tobias Kade trimmed overlapping product lines and cut lead times by 18%. CEO Dahlia Renn called the quarter 'proof the split was worth the pain,' though she cautioned that legacy Roe-era divestitures remain incomplete. Order intake for industrial presses rose 12% sequentially.",
+      "cycle": 82736,
+      "dur": 2
+    },
+    {
+      "company": "Cranecraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Cranecraft Runs Streak to Thirteen as Planting-Season Orders Peak",
+      "body": "Cranecraft extended its consecutive-beat streak to thirteen quarters, with revenue of $344M as farm-equipment orders crested with the planting season and textile pricing held firm. CEO Mira Garr noted the streak now spans more than three years, crediting balanced exposure across farm and raw-textile lines. Backlog stood at a record $210M.",
+      "cycle": 82736,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "flash",
+      "head": "Gromford Works' Reinforced Emblem Collection Takes Guild Design Honor",
+      "body": "The relaunched Emblem Collection won the Continental Craft Guild's annual accessories citation, a reputational lift for CEO Halvard Pryce after the earlier clasp recall. Judges praised the reinforced clasp mechanism and enamel detailing. Pryce said the award 'closes the book' on a bruising launch cycle and vowed a broader Emblem expansion by year-end.",
+      "cycle": 82736,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halhold Works Ships Aveline Successor to First Markets as Rocha's Reset Advances",
+      "body": "Halhold began commercial shipments of its redesigned device, the successor to the troubled Aveline line, into three initial markets under CEO Anselm Rocha's turnaround plan. Early orders totaled $85M, with Rocha touting a rebuilt medical-equipment interface and stricter component sourcing to distance the product from prior recalls. Rocha called the launch 'the first real test of whether the cleanup took hold.'",
+      "cycle": 82736,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Ornewright Goods Beats as Multi-Region Jansan Contract Begins Shipping",
+      "body": "Ornewright posted revenue of $267M, up 9%, as its recently won multi-region cleaning and janitorial supply contract began contributing shipments. CEO Petra Veldt said the deal added roughly $40M in annualized run-rate while farm-inputs demand stayed 'reliably flat.' Management guided for a fuller contract ramp over the next two quarters.",
+      "cycle": 82736,
+      "dur": 2
     },
     {
       "company": "Aperture Compute",
@@ -52,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Holtgate Cloth",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Cloth Delivers Another Quiet Beat as Renewed Pact Holds Volumes",
-      "body": "Holtgate Cloth reported steady revenue of $290 million, marginally ahead of estimates, as raw-textile shipments under its renewed supply pact held firm. Dorian Carrow again offered little commentary beyond noting stable order flow. The house has now strung together consecutive quiet beats without changing guidance.",
-      "cycle": 82735,
-      "dur": 1
-    },
-    {
       "company": "Maison & Vale",
       "sector": "hospitality",
       "kind": "major_deal",
@@ -100,46 +160,6 @@
       "body": "Castlestone posted revenue of $2.1B against $2.7B expected, with the relaunched Grid-Core campus still running at 60% of rated capacity months after Karsh 'drew a line.' The house slashed full-year guidance by nearly a fifth and disclosed that two anchor Compute clients had deferred contracts, sending Karsh into a combative call where he vowed the setback was 'the last one.'",
       "cycle": 82734,
       "dur": 8
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halcrow & Vance Opens Third Yard to Absorb Swelling Vetask Backlog",
-      "body": "Halcrow & Vance commissioned a third earthmoving yard to service the combined $3.6B Vetask book following its recent follow-on mandate. Skarn said the yard adds roughly 30% to fleet-maintenance and staging capacity, positioning the house to bid adjacent regional infrastructure work as the flagship program peaks.",
-      "cycle": 82734,
-      "dur": 2
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcyon Industries Beats as Recycled-Fiber Grade Wins Early Orders",
-      "body": "Halcyon reported a modest earnings beat, with the newly debuted recycled-fiber packaging grade drawing faster-than-expected commitments from consumer-goods clients ahead of Northgate's startup. Ashby said two of Northgate's six planned lines have been earmarked for the new grade, calling demand 'stickier than we modeled.'",
-      "cycle": 82734,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "breakthrough",
-      "size": "standard",
-      "head": "Korrwright Works Debuts In-House Escapement as Halbrook Integration Bears Fruit",
-      "body": "Six months after the $1.1B Halbrook acquisition, Korrwright unveiled its first fully in-house escapement mechanism, ending decades of reliance on outside movement suppliers. Carrow told assembled press the milestone 'closes the last open link in our chain,' and hinted that a limited grand-complication series would follow within the year.",
-      "cycle": 82734,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Varnvale House Tops Estimates as Reborn Sovereign Line Clears Early Inventory",
-      "body": "Varnvale reported quarterly revenue up 14% to $840M, crediting brisk sell-through of the relaunched Sovereign line that Coyle staked her tenure on. Direct-boutique orders outpaced forecasts, though management cautioned that second-run production must keep pace to avoid the supply gaps that felled her predecessor.",
-      "cycle": 82734,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -239,16 +259,6 @@
       "head": "Vossenspire Holdings Ousts Halden Roe as Storage-Bank Probe Turns Damning",
       "body": "Vossenspire's board removed CEO Halden Roe after investigators found commissioning protocols on the failed grid-scale storage bank had been rushed against internal warnings. Director Mara Venn will serve as interim chair while the search proceeds, and the house suspended two further storage projects pending review. Shares have shed nearly half their value since the outage.",
       "cycle": 82729,
-      "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Brunmark Motors Hit With $900M Class Action as Veyra S Recall Failures Mount",
-      "body": "A consolidated class action seeking $900 million was filed against Brunmark Motors, alleging the twice-failed Veyra S battery fix left owners with unusable vehicles. CEO Iris Calvagh acknowledged the 340,000-unit recall remains unresolved and set aside a $250 million provision, warning the quarter would show a steep loss.",
-      "cycle": 82728,
       "dur": 8
     }
   ]

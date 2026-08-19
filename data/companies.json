@@ -1336,7 +1336,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82714,
+    "lastEventCycle": 82736,
     "events": [
       {
         "cycle": 0,
@@ -1442,6 +1442,16 @@
         "size": "flash",
         "head": "Blackmoor Adds Ridge-Till Attachment to Holloway Seed-Drill Range",
         "body": "Soren Dray introduced a ridge-till attachment compatible with the existing Holloway drills and the popular depth kit, targeting growers in heavier soils. The measured addition extends an attach-rate strategy that has steadied earnings across three quarters. Field trials ran two full seasons before release.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82736,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Blackmoor Inches Higher as Ridge-Till Attachment Lifts Holloway Range",
+        "body": "Blackmoor reported revenue of $196M, up 4%, with the new ridge-till attachment lifting attach rates on the Holloway seed-drill range past 40%. CEO Soren Dray, in his characteristically unhurried tone, emphasized multi-season durability data over near-term volume. The company reaffirmed its slow-build outlook into next planting cycle.",
         "effects": {
           "agriculture": 0.06
         }
@@ -3317,7 +3327,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82717,
+    "lastEventCycle": 82736,
     "events": [
       {
         "cycle": 0,
@@ -3453,6 +3463,16 @@
         "size": "flash",
         "head": "Caldercraft Holdings Rounds Out Weatherproof Line With Reinforced Deck Cabinets",
         "body": "Caldercraft Holdings added reinforced deck cabinets to its expanding weatherproof line, priced from $180 to $340 and built to match the existing insulated chests and utility racks. CEO Vale Fenn said the addition completes the core outdoor-storage range and should support continued volume gains through the coming season. The launch drew little fanfare, consistent with the company's understated approach.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82736,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Caldercraft Holdings Edges Ahead as Weatherproof Range Fills Out",
+        "body": "Caldercraft posted a modest beat with revenue of $288M, up 6%, as the completed weatherproof line — racks, cabinets and reinforced fittings — lifted average order size across hardware channels. CEO Vale Fenn described demand as 'steady and unremarkable, in the best sense,' pointing to consistent reorder patterns from regional distributors.",
         "effects": {
           "consumer": 0.06
         }
@@ -3878,7 +3898,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82716,
+    "lastEventCycle": 82736,
     "events": [
       {
         "cycle": 0,
@@ -4027,6 +4047,16 @@
         "effects": {
           "consumer": 0.13
         }
+      },
+      {
+        "cycle": 82736,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Tops Estimates as Third Smart-Dimming Line Comes Online",
+        "body": "The 130-year-old house reported quarterly revenue of $412M, up 19% year over year, as its newly commissioned third production line began clearing a backlog of national retail orders. CEO Cole Brandt credited disciplined ramp-up, noting attach rates on companion lighting fixtures rose to 34%. Margins widened 210 basis points as scale absorbed the earlier capacity crunch.",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -4041,7 +4071,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82724,
+    "lastEventCycle": 82736,
     "events": [
       {
         "cycle": 0,
@@ -4221,6 +4251,16 @@
         "body": "Carrowforge appointed veteran plant operator Teller Voss to head its streamlined Industrial Machines division as CEO Dahlia Renn moves to stabilize costs after last quarter's loss. The house said the reorganization consolidates three facilities into two and targets $40M in annualized savings by year-end. Renn told staff the 'hardest cuts are now behind us,' framing the shift as the pivot from teardown to rebuild.",
         "effects": {
           "manufacturing": -0.13
+        }
+      },
+      {
+        "cycle": 82736,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowforge Returns to Profit as Renn's Post-Split Machines Unit Steadies",
+        "body": "Carrowforge swung back to a $31M quarterly profit from a prior loss, as newly appointed Machines Chief Tobias Kade trimmed overlapping product lines and cut lead times by 18%. CEO Dahlia Renn called the quarter 'proof the split was worth the pain,' though she cautioned that legacy Roe-era divestitures remain incomplete. Order intake for industrial presses rose 12% sequentially.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -5252,7 +5292,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82723,
+    "lastEventCycle": 82736,
     "events": [
       {
         "cycle": 0,
@@ -5430,6 +5470,16 @@
         "body": "Cranecraft posted its twelfth consecutive beat, with farm-equipment bookings up 6% ahead of the planting season and raw-textile pricing holding steady. Mira Garr credited disciplined inventory management and stable input costs for the quarter. The company reaffirmed guidance for the balance of the year.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82736,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Cranecraft Runs Streak to Thirteen as Planting-Season Orders Peak",
+        "body": "Cranecraft extended its consecutive-beat streak to thirteen quarters, with revenue of $344M as farm-equipment orders crested with the planting season and textile pricing held firm. CEO Mira Garr noted the streak now spans more than three years, crediting balanced exposure across farm and raw-textile lines. Backlog stood at a record $210M.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -8281,18 +8331,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82730,
+    "lastEventCycle": 82736,
     "events": [
-      {
-        "cycle": 82585,
-        "kind": "award",
-        "size": "flash",
-        "head": "Gromford Works' Meridian Line Wins Top Honor at Guild Design Salon",
-        "body": "The Meridian Timepiece collection took the top craftsmanship prize at the annual Guild Design Salon, an early validation of Corin Aldwych's push to move Gromford past the Aurelian Noir scandal. Aldwych, ever eager for headlines, called the award 'the turning of the page.' The recognition lifts sentiment as the house rebuilds its fine-goods reputation.",
-        "effects": {
-          "luxury": 0.06
-        }
-      },
       {
         "cycle": 82592,
         "kind": "expansion",
@@ -8515,6 +8555,16 @@
         "body": "Halvard Pryce fast-tracked the return of the Emblem Collection just eleven weeks after the clasp recall, touting a redesigned twin-lock closure certified by outside inspectors. Pryce called the relaunch 'proof Gromford moves faster than its stumbles,' with initial allocations to flagship boutiques prioritizing customers affected by the earlier pull. Analysts noted the compressed timeline is classic Pryce, though some questioned whether the goodwill offer will dent near-term margins.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82736,
+        "kind": "award",
+        "size": "flash",
+        "head": "Gromford Works' Reinforced Emblem Collection Takes Guild Design Honor",
+        "body": "The relaunched Emblem Collection won the Continental Craft Guild's annual accessories citation, a reputational lift for CEO Halvard Pryce after the earlier clasp recall. Judges praised the reinforced clasp mechanism and enamel detailing. Pryce said the award 'closes the book' on a bruising launch cycle and vowed a broader Emblem expansion by year-end.",
+        "effects": {
+          "luxury": 0.06
         }
       }
     ]
@@ -9364,18 +9414,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82731,
+    "lastEventCycle": 82736,
     "events": [
-      {
-        "cycle": 82602,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Halhold Works Debuts Aveline Diagnostic Platform as Faircloth Bids to Turn Page on Verity Pro",
-        "body": "Halhold unveiled Aveline, a modular diagnostic imaging system it calls the cornerstone of its rebuilt medical division, with first shipments slated for the next two quarters. CEO Lena Faircloth said the platform underwent 14 months of independent validation before launch, an explicit contrast to the Verity Pro rollout. Analysts noted the launch does little to resolve the pending $600M class action but signals the overhaul is moving from cuts to product.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82607,
         "kind": "major_deal",
@@ -9594,6 +9634,16 @@
         "size": "standard",
         "head": "Halhold Works Unveils Redesigned Aveline Successor as Rocha Bets on Clean Slate",
         "body": "CEO Anselm Rocha introduced the Meridian line of medical monitors, built on an all-new safety architecture and rushed through an accelerated 14-month validation cycle. The launch marks Halhold's first major release since the Aveline recall wiped roughly $400M from last year's results, with Rocha staking his turnaround on early hospital orders. Analysts noted the compressed timeline as a point of concern given the company's recent quality record.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82736,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Works Ships Aveline Successor to First Markets as Rocha's Reset Advances",
+        "body": "Halhold began commercial shipments of its redesigned device, the successor to the troubled Aveline line, into three initial markets under CEO Anselm Rocha's turnaround plan. Early orders totaled $85M, with Rocha touting a rebuilt medical-equipment interface and stricter component sourcing to distance the product from prior recalls. Rocha called the launch 'the first real test of whether the cleanup took hold.'",
         "effects": {
           "technology": 0.13
         }
@@ -13315,7 +13365,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82721,
+    "lastEventCycle": 82736,
     "events": [
       {
         "cycle": 0,
@@ -13461,6 +13511,16 @@
         "size": "standard",
         "head": "Ornewright Goods Wins Multi-Region Cleaning & Jansan Supply Contract",
         "body": "Ornewright Goods secured a three-year contract to supply cleaning and sanitation products across a national facilities-management group, worth an estimated $190M. CEO Petra Veldt said the deal builds on the firming cleaning lines that have driven recent beats, adding predictable volume without straining capacity. The company expects the contract to begin contributing next quarter.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82736,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Ornewright Goods Beats as Multi-Region Jansan Contract Begins Shipping",
+        "body": "Ornewright posted revenue of $267M, up 9%, as its recently won multi-region cleaning and janitorial supply contract began contributing shipments. CEO Petra Veldt said the deal added roughly $40M in annualized run-rate while farm-inputs demand stayed 'reliably flat.' Management guided for a fuller contract ramp over the next two quarters.",
         "effects": {
           "consumer": 0.13
         }
