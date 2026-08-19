@@ -1101,16 +1101,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82730,
+    "lastEventCycle": 82739,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "leadership_change",
-        "size": "standard",
-        "head": "Blackhold Names New Operations Chief to Steer Greycliff",
-        "body": "With the Greycliff build straining its ranks, Blackhold appointed veteran builder Tomas Vren as chief operating officer to manage delivery. Mira Marrow said the hire frees her to 'court capital while Tomas pours concrete.' The move signals how seriously the house is treating the high-stakes project.",
-        "effects": {}
-      },
       {
         "cycle": 82529,
         "kind": "outage",
@@ -1329,6 +1321,16 @@
         "size": "major",
         "head": "Blackhold Ordered to Idle Second Storage Campus as Probe Widens to Design Flaws",
         "body": "Regulators expanded their inquiry into the overheating incident, ordering Blackhold to fully suspend operations at the second storage campus while investigators examine a suspected thermal-management defect across multiple units. The shutdown jeopardizes roughly $1.2B in grid-mandate obligations, and CEO Halden Dabney faces mounting pressure after acknowledging the campus was brought online ahead of schedule. Officials said the campus will remain dark until independent certification, with no firm restart date.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82739,
+        "kind": "recall",
+        "size": "major",
+        "head": "Blackhold Orders Full Recall of Storage Units as Design Flaw Confirmed Across Fleet",
+        "body": "Blackhold issued a sweeping recall of storage units built to the flawed second-campus design after regulators confirmed a systemic thermal fault, halting shipments industry-wide. Halden Dabney conceded the fix could cost upward of $600M and delay revenue by three quarters. The company withdrew its full-year outlook pending remediation.",
         "effects": {
           "energy": -0.22
         }
@@ -1726,18 +1728,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82733,
+    "lastEventCycle": 82739,
     "events": [
-      {
-        "cycle": 82576,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Boreas Power Lands Landmark Storage Supply Pact Anchoring Hollowmere Campus",
-        "body": "Boreas signed a ten-year, $3.4B agreement to supply Power & Storage capacity to a consortium of regional grid operators, effectively pre-selling much of the Hollowmere campus output. CEO Mira Thorne called it 'the cornerstone that de-risks Phase Three,' and said the deal opens the door to a follow-on Compute allocation for the same partners. The pact locks in demand years ahead of the campus coming online.",
-        "effects": {
-          "energy": 0.22
-        }
-      },
       {
         "cycle": 82583,
         "kind": "major_deal",
@@ -1966,6 +1958,16 @@
         "body": "Mira Thorne announced a $3.2B agreement with infrastructure partner Delmar Holdings to co-develop six power-and-compute campuses over four years, pairing Boreas storage with Halvane-built modules at each site. The deal, the largest in company history, locks in long-term offtake commitments Thorne valued at more than $9B across the contract life. 'This is the model we bought Halvane to build,' Thorne said, calling it the culmination of her acquisition strategy.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82739,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Boreas Power Breaks Ground on First Two Compute-Paired Campuses Under $3.2B Program",
+        "body": "Boreas Power began construction on the initial two sites of its nationwide compute-paired power campus program, committing $740M to the first phase. Mira Thorne said the Halvane module and Vantel campus pairing will anchor each location. The company expects the first campus to energize within four quarters.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -3493,25 +3495,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1968,
-    "ceo": "Nadia Throne",
-    "ceoSince": 1968,
+    "ceo": "Vellin Marsh",
+    "ceoSince": 2026,
     "personality": {
       "volatility": 0.7,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82730,
+    "lastEventCycle": 82739,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "outage",
-        "size": "standard",
-        "head": "Calderforge Hit by Cooling Failure at Aging Embergate Hall",
-        "body": "Calderforge's original Embergate hall suffered a cooling failure that forced an emergency shutdown, briefly idling part of its capacity during the second-hall buildout. Nadia Throne conceded the old hall had been 'pushed too hard' to meet demand. Engineers restored service within a day, but the turbulence rattled clients.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82527,
         "kind": "restructure",
@@ -3741,6 +3733,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82739,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Calderforge Ousts Nadia Throne After Decades at the Helm Amid Stormwell Fallout",
+        "body": "The Calderforge board removed longtime chief Nadia Throne following three consecutive stumbles tied to the troubled Fourth Stormwell Hall, ending a tenure that began in 1968. Directors named turnaround specialist Vellin Marsh as chief executive, tasking her with stabilizing yields and restoring guidance credibility. The company also disclosed a $480M write-down against the delayed capacity.",
+        "effects": {}
       }
     ]
   },
@@ -6382,7 +6382,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82721,
+    "lastEventCycle": 82739,
     "events": [
       {
         "cycle": 0,
@@ -6510,6 +6510,16 @@
         "body": "Dunmorestone will invest $85M to expand its Kelbridge fixtures facility, adding two production lines and roughly 240 jobs over 18 months. CEO Orla Mercer framed the move as a measured response to demand, noting the restaurant supply contract has freed capital to modernize the older plumbing segment. The expansion is expected to lift fixtures output by about 30% once fully ramped.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82739,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Dunmorestone Posts Steady Beat as Fixtures Expansion and Restaurant Contract Both Ramp",
+        "body": "Dunmorestone edged past estimates as its expanded Plumbing & Fixtures plant lifted output alongside the maturing regional restaurant supply deal. Orla Mercer pointed to balanced growth across both segments and reaffirmed full-year guidance. Order backlog rose 9% on the quarter.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -6688,7 +6698,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82728,
+    "lastEventCycle": 82739,
     "events": [
       {
         "cycle": 0,
@@ -6907,6 +6917,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82739,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Erretmark Works Seals $2.1B Fleet Accord as Cross-Border Push Reaches Continental Scale",
+        "body": "Aurelia Garr's restless expansion crested with a $2.1B multi-year agreement to supply 5,000 Veyron-class vehicles to a continental transit consortium. The pact commits Erretmark to a fifth Veyron Hall and locks delivery windows through the decade. Garr called it the largest single order in the company's 106-year history.",
+        "effects": {
+          "automotive": 0.22
+        }
       }
     ]
   },
@@ -6921,7 +6941,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82724,
+    "lastEventCycle": 82739,
     "events": [
       {
         "cycle": 0,
@@ -7077,6 +7097,16 @@
         "size": "standard",
         "head": "Fenncyon Posts Another Beat as Grand Loop Enters Full-Scale Earthwork",
         "body": "Fenncyon reported quarterly revenue of $612M, up 21% year-over-year, as the Eastfield Grand Loop shifted from mobilization into peak earthmoving activity. CEO Nadia Ashby credited the twin staging yards for keeping fleet utilization above 90%, and raised full-year guidance modestly. The house said the first completed loop segment is now three weeks ahead of the contract schedule.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82739,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Fenncyon Mobilizes Northern Spur as Grand Loop Earthwork Hits Peak Season",
+        "body": "Fenncyon opened a Northern Spur worksite to run parallel to the Eastfield Grand Loop, deploying additional fleets as earthwork volumes crest. Nadia Ashby said the expansion locks in the project's mid-phase schedule and positions the firm for adjacent bids. The move adds roughly 220 field crew and three excavation teams.",
         "effects": {
           "construction": 0.13
         }
@@ -7685,7 +7715,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82725,
+    "lastEventCycle": 82739,
     "events": [
       {
         "cycle": 0,
@@ -7841,6 +7871,16 @@
         "size": "flash",
         "head": "Garrware Edges Higher as Marrow Valley Wing Lifts Throughput",
         "body": "Orla Holt's packaging house posted a modest beat, with revenue up 3.1% to $221M as the new Marrow Valley warehouse wing improved order turnaround. The fourth line continued running at full rate, and management noted no capacity constraints heading into peak season. Holt reaffirmed the firm's measured expansion plan.",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82739,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Garrware Commissions Fifth Marrow Valley Line as Backlog Tightens",
+        "body": "Garrware added a fifth packaging line at its Marrow Valley site, extending a steady buildout under Orla Holt. The line lifts site capacity roughly 15% as demand outpaces the recently commissioned wing. Management said staffing is already in place for a phased ramp.",
         "effects": {
           "logistics": 0.06
         }
@@ -14892,7 +14932,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82725,
+    "lastEventCycle": 82739,
     "events": [
       {
         "cycle": 0,
@@ -15048,6 +15088,16 @@
         "size": "standard",
         "head": "Stegforge Beats as Second Rail Plate Line Nears Startup",
         "body": "Aurelia Steg's house edged past estimates with quarterly revenue of $1.28B, up 8% on full utilization of the first rail plate mill and firming Structural Materials orders. Management said the second rail plate line remains on schedule to begin trial runs next quarter, backed by the recently extended consortium pact. Steg held guidance steady, citing input-cost discipline.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82739,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Stegforge Beats as Second Rail Plate Line Reaches Full Production",
+        "body": "Stegforge topped estimates after its second rail plate line entered full-rate output, lifting structural materials volumes 18% quarter-on-quarter. Aurelia Steg credited the consortium's extended orders for near-complete line utilization. Margins widened modestly as the new line reached scale ahead of internal targets.",
         "effects": {
           "manufacturing": 0.13
         }
