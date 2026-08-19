@@ -326,7 +326,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82718,
+    "lastEventCycle": 82737,
     "events": [
       {
         "cycle": 0,
@@ -452,6 +452,16 @@
         "size": "standard",
         "head": "Aldousmont & Sons Rolls Out Antimicrobial Wound-Care Range to Extend Consumables Portfolio",
         "body": "The house introduced a 14-item antimicrobial dressing and wound-care line, its first meaningful category addition since the sterile field kits. Chief executive Dunmore Calder said the range answers requests from the same hospital network that awarded last quarter's supply contract, with initial shipments slated across three regional distribution hubs. Management framed the launch as incremental rather than transformative, consistent with the house's measured cadence.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82737,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Aldousmont & Sons Signs Multi-Year Consumables Pact With Regional Trauma Alliance",
+        "body": "The company secured a four-year supply agreement valued at $340M covering sterile field kits, antimicrobial wound-care lines, and standard consumables across the eleven-hospital Meridian Trauma Alliance. CEO Dunmore Calder called it a natural extension of last quarter's network award, noting the deal locks in roughly 18% of the antimicrobial range's output. Deliveries begin next quarter from the recently expanded sterile-kit line.",
         "effects": {
           "medical": 0.13
         }
@@ -1469,18 +1479,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82729,
+    "lastEventCycle": 82737,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Blackton Industries Overhauls Plants to Meet Halvern Demand",
-        "body": "To deliver on the Halvern deal, Blackton Industries announced a sweeping reorganization of its three plants, consolidating brake lines and shifting suspension work to a single hub. Mara Mercer admitted the shuffle would be 'rough for a quarter' but necessary for scale. The turbulent retooling temporarily slowed other orders.",
-        "effects": {
-          "automotive": -0.13
-        }
-      },
       {
         "cycle": 82528,
         "kind": "earnings_beat",
@@ -1701,6 +1701,16 @@
         "body": "Blackton posted a wider-than-expected loss in Sable Renwick's first full quarter, citing $180M in separation charges tied to carving out the Halvern unit. Renwick called the pain 'front-loaded and necessary,' pointing to a leaner Auto Parts core with orders up 6%. Management held to its target of returning to profit by year-end.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82737,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Blackton Industries Returns to Profit as Halvern Split Costs Recede",
+        "body": "The auto-parts maker beat expectations with quarterly earnings of $0.44 a share, reversing the prior quarter's miss as one-time costs from the Halvern unit divestiture rolled off. CEO Sable Renwick said the leaner structure lifted core auto-parts margins to 14% and freed capital for tooling upgrades. The turnaround veteran called it the first clean quarter since taking the helm.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -7082,18 +7092,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82729,
+    "lastEventCycle": 82737,
     "events": [
-      {
-        "cycle": 82527,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Fennmoor Debuts Larkspur-Branded Diagnostics Line",
-        "body": "Fennmoor launched its first medical product since acquiring Larkspur Medical, a benchtop diagnostics unit aimed at regional clinics and priced to undercut incumbents. Dorian Brandt said the integration 'moved faster than anyone expected,' with Larkspur's lab team now embedded in Fennmoor's device division. The company is targeting 1,200 unit placements in the first year.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82536,
         "kind": "major_deal",
@@ -7320,6 +7320,16 @@
         "size": "standard",
         "head": "Fennmoor Clears Medical Systems Integration Deadline, Posts Best Quarter in Two Years",
         "body": "Fennmoor confirmed the Medical Systems unit hit its integration deadline on schedule, with segment margins recovering to 14.2% from a low of 6.1%. CEO Dorian Brandt, closing a rare bumpy chapter, told analysts the house is 'back on offense' and hinted at fresh targets in the Devices space. Quarterly revenue rose 9% to $4.8B, topping guidance.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82737,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Fennmoor Acquires Halquist Instruments to Bolster Medical Systems Unit",
+        "body": "Fresh off clearing its integration deadline, Fennmoor agreed to acquire diagnostic-device maker Halquist Instruments for $620M, folding it into the newly stabilized Medical Systems division. CEO Dorian Brandt said the deal adds imaging consumables and a service network that complements Fennmoor's medical equipment lines. The purchase marks the acquisitive chief's first major move since the costly overrun-driven restructure.",
         "effects": {
           "technology": 0.13
         }
@@ -9169,16 +9179,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82731,
+    "lastEventCycle": 82737,
     "events": [
-      {
-        "cycle": 82599,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Halhold Systems Ousts Dahlia Renn as Board Moves to Contain Northgate Fallout",
-        "body": "The Halhold board removed CEO Dahlia Renn on Thursday, capping weeks of turmoil after leaked memos showed Northgate blackout warnings had been dismissed. Director Marcus Vell will serve as chair of a transition committee while operations veteran Sela Marchetti steps in to steady client relations, three of which had threatened to void contracts. The company also disclosed a $410 million charge tied to service credits and remediation.",
-        "effects": {}
-      },
       {
         "cycle": 82606,
         "kind": "leadership_change",
@@ -9400,6 +9402,16 @@
         "head": "Halhold Systems Ousts Petra Vandel as Reliability Settlement Forces Board's Hand",
         "body": "The board removed CEO Petra Vandel after regulators finalized a $650M settlement over concealed reliability failures, the largest penalty in the firm's history. Directors named restructuring veteran Marcus Thorne as chief executive with a mandate to rebuild oversight and stabilize a shaken customer base. The exit closes a scandal that spread from shareholders to regulators over three brutal quarters.",
         "effects": {}
+      },
+      {
+        "cycle": 82737,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Halhold Systems Ordered to Pay $2.1B as Reliability Case Reaches Verdict",
+        "body": "A regulatory tribunal ruled against Halhold Systems, imposing a $2.1B penalty and mandatory five-year oversight after finding the compute maker concealed known failure rates in its core server line. CEO Marcus Thorne, who inherited the case, said the company would not appeal and would fund the payment through asset sales and a suspended dividend. The ruling caps the fallout that began with the leaked internal memos and forced out predecessor Petra Vandel.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -9997,7 +10009,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82722,
+    "lastEventCycle": 82737,
     "events": [
       {
         "cycle": 0,
@@ -10143,6 +10155,16 @@
         "size": "standard",
         "head": "Holtforge Group Sets Order-Book Record as Interconnector Beat Streak Continues",
         "body": "Holtforge posted another quarter ahead of guidance, with the offshore interconnector backlog crossing a company record after recent extensions. CEO Yvette Bramm said cable output ran near capacity and margins held steady despite input costs. The firm nudged full-year revenue guidance higher.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82737,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtforge Group Delivers Record Quarter as Interconnector Work Ramps",
+        "body": "The wire-and-cable maker posted quarterly revenue of $1.4B, up 12% year over year, as production against the $900M interconnector extension moved into full swing. CEO Yvette Bramm said the order book remains at record levels with visibility stretching more than two years. Operating margins widened to 19% on improved plant utilization.",
         "effects": {
           "construction": 0.13
         }
@@ -10529,7 +10551,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82718,
+    "lastEventCycle": 82737,
     "events": [
       {
         "cycle": 0,
@@ -10645,6 +10667,16 @@
         "size": "flash",
         "head": "Ironcrestcrest Supply Edges Past Forecasts as Contractor-Grade Line Steadies",
         "body": "The house posted a third consecutive modest beat, with contractor-grade lighting now accounting for roughly 22% of quarterly revenue, up from 18%. Chief executive Dorian Garr credited disciplined inventory management and repeat orders from mid-sized building suppliers. Guidance was left unchanged, in keeping with the house's quietly incremental approach.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82737,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Notches Another Quarter as Contractor Line Holds Firm",
+        "body": "The lighting supplier edged past forecasts for the fourth straight quarter, posting revenue of $214M on continued strength in its contractor-grade range. CEO Dorian Garr credited disciplined inventory management and steady distributor reorders. Margins held flat as the company kept pricing unchanged amid stable input costs.",
         "effects": {
           "consumer": 0.06
         }
@@ -14426,7 +14458,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82726,
+    "lastEventCycle": 82737,
     "events": [
       {
         "cycle": 0,
@@ -14610,6 +14642,16 @@
         "body": "Skarnvale scrapped the troubled Vosk Junction retrofit entirely, taking a $260 million writedown and pledging a ground-up rebuild under a newly assembled crisis board. Dorn Vaskell, whose recovery chief resigned amid the third collapse, said the company would 'stop patching a broken program' and shift affected volumes to partner sites through next year. The move caps a turbulent stretch that has erased the retrofit's projected capacity gains.",
         "effects": {
           "logistics": -0.22
+        }
+      },
+      {
+        "cycle": 82737,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Skarnvale Debuts Rebuilt Vosk Junction Handling System Under Overhaul Plan",
+        "body": "Skarnvale unveiled the first phase of its sweeping overhaul, launching a redesigned modular conveyor and sortation system to replace the failed Vosk Junction retrofit. CEO Dorn Vaskell said early trials cleared a 30-day continuous-run test without fault, a direct answer to the triple failure that toppled the prior recovery chief. Full site cutover is targeted for the coming quarter.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -17299,7 +17341,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82725,
+    "lastEventCycle": 82737,
     "events": [
       {
         "cycle": 0,
@@ -17475,6 +17517,16 @@
         "size": "standard",
         "head": "Vossenstead Supply Stretches Streak to Fourteen as Fifth Center Approaches",
         "body": "Bram Thorne's house posted its fourteenth consecutive beat, with quarterly revenue up 6.3% to $412M on firm Plumbing & Fixtures orders and steady Food Service volumes. Management confirmed the fifth distribution center is on track for a mid-year opening, adding roughly 180,000 square feet of capacity. Thorne reiterated the firm's cautious posture, declining to raise full-year guidance.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82737,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vossenstead Supply Opens Fifth Distribution Center, Ending Beat Streak Suspense",
+        "body": "The company brought its long-signaled fifth distribution center online in the Calderport corridor, adding 480,000 square feet of capacity for food service and plumbing fixtures. CEO Bram Thorne said the facility would cut regional lead times by nearly a third and support the next leg of demand that drove fourteen consecutive earnings beats. Full throughput is expected within two quarters.",
         "effects": {
           "consumer": 0.13
         }
