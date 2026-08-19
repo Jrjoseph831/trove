@@ -2648,18 +2648,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82728,
+    "lastEventCycle": 82738,
     "events": [
-      {
-        "cycle": 82515,
-        "kind": "earnings_miss",
-        "size": "standard",
-        "head": "Brunmark Motors Slips as Veyra Ramp Strains Supply",
-        "body": "Brunmark Motors reported a softer quarter as its in-house pack lines struggled to keep pace with Veyra demand, forcing rationed shipments. Yvette Calder called the bottleneck 'a problem of success' but conceded margins took a hit. The turbulent ramp left some early orders unfilled.",
-        "effects": {
-          "automotive": -0.13
-        }
-      },
       {
         "cycle": 82528,
         "kind": "restructure",
@@ -2878,6 +2868,16 @@
         "size": "major",
         "head": "Brunmark Motors Hit With $900M Class Action as Veyra S Recall Failures Mount",
         "body": "A consolidated class action seeking $900 million was filed against Brunmark Motors, alleging the twice-failed Veyra S battery fix left owners with unusable vehicles. CEO Iris Calvagh acknowledged the 340,000-unit recall remains unresolved and set aside a $250 million provision, warning the quarter would show a steep loss.",
+        "effects": {
+          "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82738,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Brunmark Motors Slashes 4,200 Jobs and Halts Veyra S Line as Calvagh Forces Reset",
+        "body": "Brunmark announced a sweeping restructuring, cutting 4,200 roles and idling Veyra S production to redirect resources into a redesigned battery module. Iris Calvagh, confirmed permanent chief last month, said the company would take a $1.1B charge and exit two underperforming parts facilities. The move follows the $900M class action and stalled recall repairs that battered confidence.",
         "effects": {
           "automotive": -0.22
         }
@@ -4693,16 +4693,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82731,
+    "lastEventCycle": 82738,
     "events": [
-      {
-        "cycle": 82546,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Castlehold Names Outsider Ivo Reneth as CEO as Voss Exits Amid Saltmere Fallout",
-        "body": "Maren Voss resigned after the Saltmere fault-reporting probe implicated the executive suite, capping a turbulent tenure begun only in 2026. The board tapped former grid-operator chief Ivo Reneth to steady the company, pledging a full external audit of storm-season disclosures and a rebuilt safety office.",
-        "effects": {}
-      },
       {
         "cycle": 82555,
         "kind": "safety_probe",
@@ -4927,6 +4919,16 @@
         "size": "major",
         "head": "Castlehold Lands Landmark $2B Grid-Storage Framework, Its Largest Ever",
         "body": "Halden Voss secured a multi-year framework worth up to $2B to supply high-capacity modular storage to a consortium of regional utilities, more than doubling the firm's existing backlog to over $3B. Deliveries begin next quarter and will require Castlehold to accelerate a planned third plant. The deal cements Voss's aggressive first-year expansion, though it also raises execution risk given how fast the order book has swelled.",
+        "effects": {
+          "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82738,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Castlehold Smashes Estimates as $2B Framework and Twin Plants Drive Record Quarter",
+        "body": "Castlehold reported record revenue of $980M, up 62%, as its landmark $2B grid-storage framework began delivering and both modular plants ran near capacity. Halden Voss said backlog now exceeds $2.8B and hinted at a third facility to keep pace. Net income tripled to $166M, though Voss cautioned that scaling this fast carries execution risk.",
         "effects": {
           "energy": 0.22
         }
@@ -8590,7 +8592,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82726,
+    "lastEventCycle": 82738,
     "events": [
       {
         "cycle": 0,
@@ -8776,6 +8778,16 @@
         "size": "major",
         "head": "Halcrest Stakes Comeback on Meridian Grand Complication in Iris Marrow's Boldest Bet Yet",
         "body": "After the Skeleton Edition's margin stumble, Iris Marrow unveiled the Meridian Grand Complication, a $340,000 minute-repeater capped at 88 pieces and positioned as the house's most ambitious release in a generation. Marrow staged a spectacle-heavy launch and told buyers the piece 'answers whether Halcrest still leads or merely follows,' pinning the brand's premium narrative on the line. Early order interest was described as brisk, though analysts flagged execution risk on such low volumes.",
+        "effects": {
+          "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82738,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Halcrest Roars Back as Meridian Grand Complication Sells Out, Vindicating Iris Marrow",
+        "body": "Halcrest reported its strongest quarter in a decade, with the Grand Complication's entire 250-piece allocation sold and a waitlist of over 1,900 names. The high-margin flagship lifted net income 41% to $310M and reversed the prior Skeleton Edition disappointment. Iris Marrow called it proof that 'bold bets, made whole, still define this house.'",
         "effects": {
           "luxury": 0.22
         }
@@ -10398,7 +10410,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82720,
+    "lastEventCycle": 82738,
     "events": [
       {
         "cycle": 0,
@@ -10536,6 +10548,16 @@
         "body": "Holtware posted a fourth straight beat, with revenue up 4% as the cordless range held firm despite softer seasonal demand. CEO Aurelia Dray noted the two fulfillment hubs kept dispatch times steady through a busy quarter, though she flagged more moderate growth ahead as the chain rollout nears completion.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82738,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Holtware Co. Broadens Cordless Line With Modular Battery Platform Under Aurelia Dray",
+        "body": "Holtware unveiled its Unifit modular battery system, allowing a single pack to power its expanded cordless drill, saw, and chain lineup. CEO Aurelia Dray framed the launch as a way to lock in repeat buyers as first-wave cordless demand plateaus. Early orders from three regional distributors totaled $88M ahead of the retail rollout.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -10694,18 +10716,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82729,
+    "lastEventCycle": 82738,
     "events": [
-      {
-        "cycle": 82520,
-        "kind": "award",
-        "size": "standard",
-        "head": "Ironcrestton Sweeps Coveted Artisan's Circle Honors",
-        "body": "Ironcrestton took three of five top prizes at this year's Artisan's Circle gala, including Object of the Year for its hand-finished travel case. CEO Sable Carrow, never shy of a stage, declared the wins 'proof that the few who notice are noticing us.'",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82528,
         "kind": "product_launch",
@@ -10927,6 +10939,16 @@
         "head": "Ironcrestton Names Restructuring Specialist Corwin Vale to Steer Meridian Cleanup",
         "body": "Ironcrestton appointed Corwin Vale as chief executive to stabilize the house after the Meridian Line sourcing scandal toppled the prior board. Vale pledged a full sourcing audit and said the disputed Meridian Line would be pulled from shelves pending certification. The move comes as regulators press their suit over misleading provenance claims.",
         "effects": {}
+      },
+      {
+        "cycle": 82738,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Ironcrestton Retires Meridian Line and Rebuilds Supply Chain Under Corwin Vale",
+        "body": "Corwin Vale announced Ironcrestton will discontinue the tainted Meridian line and consolidate sourcing under a newly audited supplier network. The cleanup carries a $220M writedown but resolves a key regulator demand tied to the ongoing lawsuit. Vale said a replacement collection, built on certified materials, is targeted for next year.",
+        "effects": {
+          "luxury": -0.13
+        }
       }
     ]
   },
@@ -12093,18 +12115,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82732,
+    "lastEventCycle": 82738,
     "events": [
-      {
-        "cycle": 82585,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Lhaus Industries Adds Third Cell-Pack Line as Fleet Backlog Swells to $23B",
-        "body": "Cole Brandt announced a $2.1B expansion of the flagship cell-pack complex, adding a third line to keep pace with a combined fleet backlog now topping $23B across two pacts. The restless chief also confirmed talks to acquire a regional power-storage supplier, saying Lhaus 'cannot build fast enough' to meet demand. The new line is expected to reach volume output within 14 months.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82592,
         "kind": "major_deal",
@@ -12331,6 +12343,16 @@
         "size": "standard",
         "head": "Lhaus Industries Beats as New Platform Vehicle Line Outsells Forecasts",
         "body": "Cole Brandt reported revenue of $2.4 billion, up 9%, as the first vehicle line built on the acquired platform sold 42,000 units in its opening quarter, beating internal targets by a fifth. The Kessering divestiture proceeds continued to fund a leaner, vehicle-focused footprint. Brandt hinted at 'one or two more bolt-ons' to round out the auto-parts side.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82738,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Lhaus Industries Buys Parts Supplier Verrund for $480M to Deepen Platform Control",
+        "body": "Restless as ever, Cole Brandt struck again, acquiring drivetrain specialist Verrund for $480M to bring key components of its new vehicle platform in-house. The deal is expected to trim per-unit costs by 9% and secure supply as the platform line outsells forecasts. Brandt said vertical integration was 'the natural next move' after the strong launch.",
         "effects": {
           "automotive": 0.13
         }
@@ -15043,7 +15065,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82718,
+    "lastEventCycle": 82738,
     "events": [
       {
         "cycle": 0,
@@ -15159,6 +15181,16 @@
         "size": "standard",
         "head": "Stegreach Adds $410M Substation Fixings Order as Riverport Grid Work Broadens",
         "body": "Building on the $1.2B grid contract now at full stride, Stegreach secured a follow-on $410M order for substation fasteners, fixings and cable assemblies over four years. Chief executive Halden Ashby said the award leverages the expanded Riverport capacity brought online last year and locks in utilization through 2029. The deal deepens the house's ties to the regional grid operator without requiring fresh capital outlay.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82738,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Stegreach Beats Again as Riverport Grid Work and Substation Order Lift Margins",
+        "body": "Stegreach posted quarterly revenue of $1.36B, up 14%, as the $410M substation fixings order began shipping alongside its broader Riverport grid contracts. CEO Halden Ashby credited disciplined pricing on wire and cable for a 60-basis-point margin gain. Management raised full-year guidance modestly, citing a healthy fixings backlog.",
         "effects": {
           "construction": 0.13
         }
@@ -15381,18 +15413,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82730,
+    "lastEventCycle": 82738,
     "events": [
-      {
-        "cycle": 82537,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Thronehaus & Co. Buys Dial Maker Verreil to Bring Craft In-House",
-        "body": "Restless as ever, CEO Cora Dray announced the acquisition of enamel-dial specialist Verreil for an undisclosed sum, the second purchase in under a year following Caldwynn. The deal secures the artisan dials used in the Regent Tourbillon and removes a key supplier bottleneck. Analysts see Thronehaus assembling a fully vertical timepiece operation.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82545,
         "kind": "product_launch",
@@ -15619,6 +15641,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Beats as Aurel Collection Sells Through on In-House Alloy Margins",
         "body": "Cora Dray's vertical bet paid off early, with the Aurel Collection clearing initial runs at gross margins well above the house average thanks to the Coristel-sourced alloy. Thronehaus reported the integration is already trimming outside-metal costs, and Dray signaled appetite for further bolt-on acquisitions. Waitlists on top-tier Aurel pieces now stretch into next year.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82738,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Thronehaus & Co. Expands Coristel Alloy Foundry to Feed Growing Aurel Demand",
+        "body": "Thronehaus committed $190M to double capacity at its Coristel alloy foundry after the Aurel collection sold through faster than planned. Cora Dray said the expansion would also supply a second collection in development and open the door to limited alloy sales to select partners. The new lines are slated to come online within 14 months.",
         "effects": {
           "luxury": 0.13
         }
