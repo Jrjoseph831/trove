@@ -22,6 +22,7 @@
 import {
   autoFulfillOrders,
   captureFlip,
+  pushLog,
   runProduction,
   wallCycle,
   wallProdCycle,
@@ -31,6 +32,7 @@ import {
   allPlayers,
   commitSettlement,
   docToWorld,
+  effectiveHeat,
   extractPlayer,
   getPlayers,
   holdingsOf,
@@ -42,6 +44,8 @@ import {
   type WorldDoc,
 } from "../repo";
 import { planStandingSettlements } from "../standingOrders";
+import { applyScandal } from "../scandal";
+import { applyFlipOverhead, applyPayroll } from "../overhead";
 
 const MAX_PROD_CATCHUP = 12; // ~1h of ticks if the cron was down; else 1/run
 const MAX_FLIP_CATCHUP = 4; // ~1 day of missed report flips
@@ -202,13 +206,54 @@ export async function handler(): Promise<{ producers: number; worked: number }> 
       // 2. Auto-Fulfill ready contracts (no-op unless armed + coverable).
       if (autoFulfillOrders(pv, now)) changed = true;
 
-      // 3. Report capture per 6h market flip.
+      // 3. Report capture per 6h market flip + per-flip overhead.
       let flip = p.lastFlip ?? flipTarget;
       let fc = 0;
       while (flip < flipTarget && fc < MAX_FLIP_CATCHUP) {
         captureFlip(pv);
+        // Warehousing + progressive tax — charged AFTER captureFlip so the
+        // report snapshot shows pre-overhead net worth, same as a real balance
+        // sheet (the P&L row, then the tax line below it).
+        applyFlipOverhead(pv);
         flip++;
         fc++;
+        changed = true;
+      }
+
+      // Legit rep: +1 per completed production tick. Running a live factory is
+      // the primary accumulation path — slow, steady, and impossible to fake.
+      if (pc > 0) {
+        pv.legitRep = (pv.legitRep ?? 0) + pc;
+        // Payroll: deducted per tick per active (running or idle) factory line.
+        // Separate from the engine's existing lineUpkeep (capital/machinery) —
+        // this is the labor line. Overflow to debt keeps cash non-negative.
+        applyPayroll(pv, pc);
+      }
+
+      // Heat tier consequences. Runs against every active producer regardless
+      // of whether their lines made anything — the risk clock doesn't pause
+      // because a factory was idle.
+      const curHeat = effectiveHeat(p);
+      if (curHeat >= 75) {
+        // UNDER INVESTIGATION: 2% bust chance per tick (~4-hour expected window).
+        // Regulatory Immunity (Legit T3): institutional cover compresses bust
+        // probability 5× (0.4% vs 2%) — near-untouchable, not fully immune.
+        const immune = p.unlockedNodes?.includes("regulatory-immunity") ?? false;
+        if (Math.random() < (immune ? 0.004 : 0.02)) {
+          const fine = Math.max(5_000, Math.round(pv.cash * 0.08));
+          pv.cash = Math.max(0, pv.cash - fine);
+          p.heat = 0;
+          p.heatDecayAt = Date.now();
+          pushLog(full, "TROVE Wire", "regulatory action against", p.name ?? "a market operator");
+          applyScandal(full, p, full.cycle);
+          changed = true;
+        }
+      } else if (curHeat >= 50) {
+        // FLAGGED: passive overhead scaling with heat.
+        // Audit Familiarity (Legit T1): overhead cut in half.
+        const factor = p.unlockedNodes?.includes("audit-familiarity") ? 25 : 50;
+        const overhead = Math.round((curHeat - 49) * factor);
+        pv.cash = Math.max(0, pv.cash - overhead);
         changed = true;
       }
 

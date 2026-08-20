@@ -102,7 +102,7 @@ const TAB_KEY = "trove.tab.v1";
 
 const TAB_IDS: readonly TabId[] = [
   "trending", "catalog", "wire", "vault", "orders", "factory",
-  "estates", "deals", "report", "companies", "goals",
+  "estates", "deals", "report", "companies", "goals", "reputation",
 ];
 
 /**
@@ -228,7 +228,8 @@ export type TabId =
   | "report"
   | "companies"
   | "studio"
-  | "goals";
+  | "goals"
+  | "reputation";
 export type Mode = "live" | "sandbox";
 
 export interface RevealInfo {

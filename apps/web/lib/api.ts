@@ -529,6 +529,59 @@ export async function studioUpload(
   return presigned.publicUrl;
 }
 
+// ── Reputation + Skill Tree ──────────────────────────────────────────────────
+
+export interface RepNodeStatus {
+  id: string;
+  branch: "shadow" | "legit";
+  tier: 1 | 2 | 3;
+  name: string;
+  description: string;
+  repRequired: number;
+  cost: number;
+  state: "locked" | "eligible" | "unlocked";
+  blockedBy: string | null;
+}
+
+export interface RepView {
+  shadowRep: number;
+  legitRep: number;
+  heat: number;
+  heatTier: "CLEAN" | "WATCHED" | "FLAGGED" | "UNDER INVESTIGATION";
+  unlockedNodes: string[];
+  nodes: RepNodeStatus[];
+}
+
+export const fetchReputation = (): Promise<RepView> =>
+  get<RepView>("/reputation", true);
+
+export async function unlockNode(
+  nodeId: string,
+): Promise<RepView | { error: string; status: number }> {
+  const token = getIdToken();
+  if (!token) return { error: "unauthorized", status: 401 };
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}/reputation`, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: token },
+      body: JSON.stringify({ action: "unlock", nodeId }),
+    });
+  } catch {
+    return { error: "network error", status: 0 };
+  }
+  if (!res.ok) {
+    let msg = `failed (${res.status})`;
+    try {
+      msg = (await res.json()).error ?? msg;
+    } catch {
+      /* keep */
+    }
+    return { error: msg, status: res.status };
+  }
+  return res.json() as Promise<RepView>;
+}
+
 /** Start a Stripe Checkout session for a Studio purchase.
  *  Resolves to { url } on success or { error } with a human-readable reason. */
 export async function studioCheckout(

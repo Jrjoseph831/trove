@@ -76,6 +76,7 @@ export function itemFlow(led: Ledger, id: number): ItemFlow {
 }
 
 export * from "./types";
+export * from "./skillTree";
 export * from "./orders";
 export * from "./maker";
 export { setRng, resetRng, rand, rexp, mulberry32 } from "./rng";
@@ -257,6 +258,10 @@ export function freshState(): WorldState {
     listed: {},
     orders: [],
     reputation: 0,
+    shadowRep: 0,
+    legitRep: 0,
+    heat: 0,
+    unlockedNodes: [],
     deskAuto: { specialist: false, autoFulfill: true, minMargin: 0.1 },
     lastOrderAt: 0,
     ledger: emptyLedger(),

@@ -357,6 +357,16 @@ export class TroveStack extends Stack {
       authorizer,
     });
 
+    // ── Reputation (authorized): dual-axis rep, heat, skill-tree unlocks ──────
+    const reputation = fn("Reputation", "reputation.ts", Duration.seconds(10));
+    players.grantReadWriteData(reputation);
+    api.addRoutes({
+      path: "/reputation",
+      methods: [HttpMethod.GET, HttpMethod.POST],
+      integration: new HttpLambdaIntegration("ReputationIntegration", reputation),
+      authorizer,
+    });
+
     // ── Factory (authorized): the production floor. Pure player-record writes
     //    (lines/infra/listings); produced stock is created by Settlement. ──────
     const factory = fn("Factory", "factory.ts", Duration.seconds(15));

@@ -23,6 +23,7 @@ import { Ticker } from "./Ticker";
 import { Trending } from "./Trending";
 import { Vault } from "./Vault";
 import { Wire } from "./Wire";
+import { Reputation } from "./Reputation";
 
 export function Terminal() {
   const { mounted, authReady, mode, tab, navOpen, setNavOpen, reveal, signedIn, signIn, setTab, notify } =
@@ -142,6 +143,7 @@ export function Terminal() {
         {effectiveTab === "companies" && <Companies />}
         {effectiveTab === "studio" && <Studio />}
         {effectiveTab === "goals" && <Goals />}
+        {effectiveTab === "reputation" && <Reputation />}
       </div>
       {!canBrowseFull && (
         <div className="guestbar">

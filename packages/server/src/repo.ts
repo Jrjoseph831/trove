@@ -175,6 +175,10 @@ export function docToWorld(doc: WorldDoc): WorldState {
     listed: {},
     orders: [],
     reputation: 0,
+    shadowRep: 0,
+    legitRep: 0,
+    heat: 0,
+    unlockedNodes: [],
     deskAuto: { specialist: false, autoFulfill: false, minMargin: 0.1 },
     lastOrderAt: 0,
     ledger: emptyLedger(),
@@ -330,6 +334,16 @@ export interface Player {
   mfgName?: string;
   /** Order-Desk standing — rises on fulfilment, dips on missed contracts. */
   reputation?: number;
+  /** Lifetime Shadow Rep (risky/illicit actions). Never decreases. */
+  shadowRep?: number;
+  /** Lifetime Legit Rep (transparent play). Never decreases. */
+  legitRep?: number;
+  /** Heat snapshot 0–100 at the time of the last heat mutation (heatDecayAt). */
+  heat?: number;
+  /** ms timestamp when heat was last mutated — decay is computed lazily. */
+  heatDecayAt?: number;
+  /** Skill-tree node IDs this player has unlocked. */
+  unlockedNodes?: string[];
   orders?: Order[];
   /** Last time a new order was rolled onto the desk (ms). */
   lastOrderAt?: number;
@@ -428,6 +442,36 @@ export function holdingsOf(doc: WorldDoc, player: Player): Record<number, number
   return out;
 }
 
+/** Heat decays 1 point per 5-minute production tick without any cron sweep.
+ *  Call this anywhere you need the live heat value; mutators snapshot the
+ *  decayed value before adding/subtracting, then stamp heatDecayAt = now. */
+export function effectiveHeat(player: Player): number {
+  const h = player.heat ?? 0;
+  if (h <= 0) return 0;
+  const lastAt = player.heatDecayAt ?? Date.now();
+  const elapsed = Date.now() - lastAt;
+  // Fixer Contacts (Shadow T1): passive 2× decay rate — same formula, doubled.
+  const decayMul = (player.unlockedNodes ?? []).includes("fixer-contacts") ? 2 : 1;
+  const decayed = (elapsed / (5 * 60 * 1000)) * decayMul;
+  return Math.max(0, Math.round(h - decayed));
+}
+
+/** Award shadow rep and raise heat. Call inside a guarded write. */
+export function awardShadowRep(player: Player, amount: number, heatGain = 5): void {
+  player.shadowRep = (player.shadowRep ?? 0) + amount;
+  const cur = effectiveHeat(player);
+  player.heat = Math.min(100, cur + heatGain);
+  player.heatDecayAt = Date.now();
+}
+
+/** Award legit rep and reduce heat slightly. Call inside a guarded write. */
+export function awardLegitRep(player: Player, amount: number, heatLoss = 1): void {
+  player.legitRep = (player.legitRep ?? 0) + amount;
+  const cur = effectiveHeat(player);
+  player.heat = Math.max(0, cur - heatLoss);
+  player.heatDecayAt = Date.now();
+}
+
 export function playerView(doc: WorldDoc, player: Player): WorldState {
   const w = docToWorld(doc);
   const mineById = holdingsOf(doc, player);
@@ -438,6 +482,10 @@ export function playerView(doc: WorldDoc, player: Player): WorldState {
   w.cash = player.cash;
   w.debt = player.debt;
   w.reputation = player.reputation ?? 0;
+  w.shadowRep = player.shadowRep ?? 0;
+  w.legitRep = player.legitRep ?? 0;
+  w.heat = effectiveHeat(player);
+  w.unlockedNodes = player.unlockedNodes ?? [];
   w.orders = player.orders ?? [];
   w.lastOrderAt = player.lastOrderAt ?? 0;
   w.factories = player.factories ?? [];
@@ -474,6 +522,9 @@ export function extractPlayer(state: WorldState, player: Player): Player {
     cash: state.cash,
     debt: state.debt,
     reputation: state.reputation,
+    shadowRep: state.shadowRep,
+    legitRep: state.legitRep,
+    unlockedNodes: state.unlockedNodes,
     orders: state.orders,
     lastOrderAt: state.lastOrderAt,
     factories: state.factories,
@@ -1213,12 +1264,20 @@ export async function settleDeal(orderId: string, retries = 4): Promise<DealResu
       ...buyer,
       cash: buyer.cash - order.price,
       holdings: buyerHoldings,
+      legitRep: (buyer.legitRep ?? 0) + 1,
     };
+    // Institutional Access (Legit T2): doubles Legit Rep earned per settled deal.
+    const sellerLegitGain = (seller.unlockedNodes ?? []).includes("institutional-access")
+      ? 6
+      : 3;
     const nextSeller: Player = {
       ...seller,
       cash: seller.cash + order.price,
       reputation: (seller.reputation ?? 0) + 2,
       holdings: sellerHoldings,
+      legitRep: (seller.legitRep ?? 0) + sellerLegitGain,
+      heat: Math.max(0, effectiveHeat(seller) - 1),
+      heatDecayAt: Date.now(),
     };
     // The doc still moves forward so the version CAS keeps this serialised
     // against production and settlement, even though the goods no longer

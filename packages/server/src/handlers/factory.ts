@@ -44,6 +44,7 @@ import {
   buildPortfolio,
   commitSettlement,
   docToWorld,
+  effectiveHeat,
   extractPlayer,
   worldToDoc,
   getPlayer,
@@ -217,6 +218,20 @@ export async function handler(
     state.cycle = wallProdCycle();
     const err = await apply(state, body, playerId);
     if (err) return json(409, { error: err });
+
+    // Rep hooks — run inside the CAS retry loop so a retry picks up a fresh
+    // player read from the top, keeping rep mutations from stacking per attempt.
+    if (body.action === "build") {
+      // Commissioning a production line is transparent capital investment.
+      state.legitRep = (state.legitRep ?? 0) + 5;
+    } else if (body.action === "order-supply") {
+      // Bulk-buying supply off the shared floor — cornering material is shadow.
+      // Market Manipulation Suite (Shadow T3): doubles Shadow Rep per order.
+      const shadowGain = state.unlockedNodes.includes("market-manipulation") ? 10 : 5;
+      state.shadowRep = (state.shadowRep ?? 0) + shadowGain;
+      player.heat = Math.min(100, effectiveHeat(player) + 3);
+      player.heatDecayAt = Date.now();
+    }
 
     const updated = extractPlayer(state, player);
 

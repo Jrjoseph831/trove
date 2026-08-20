@@ -11314,3 +11314,207 @@ body {
   padding: 2px 6px;
 }
 .studio-reported { font-size: 0.75rem; color: var(--muted); }
+
+/* ============================================================ *
+ * REPUTATION — dual-axis rep, heat meter, skill tree
+ * ============================================================ */
+
+/* Rep score — large Georgia numeral, same display rhythm as net-worth */
+.rep-score {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.0;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.rep-score-shadow { color: var(--up); }
+.rep-score-legit  { color: var(--dn); }
+
+/* Rep progress bar */
+.rep-track-wrap { margin-bottom: 8px; }
+.rep-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--track-bg);
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.rep-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+.rep-fill-shadow { background: var(--up); }
+.rep-fill-legit  { background: var(--dn); }
+
+.rep-thresh {
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+.rep-desc {
+  font-size: 13px;
+  color: var(--ink-dim);
+  line-height: 1.5;
+  margin-top: 14px;
+}
+
+/* Heat card */
+.heat-card .bc-h { margin-bottom: 20px; }
+.heat-body {}
+
+.heat-tier-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+/* tier 0 = CLEAN (steel), 1 = WATCHED (faint), 2 = FLAGGED (bronze), 3 = UNDER INVESTIGATION (accent) */
+.heat-name-0 { color: var(--dn); }
+.heat-name-1 { color: var(--ink-faint); }
+.heat-name-2 { color: var(--up); }
+.heat-name-3 { color: var(--accent); }
+
+.heat-meter { display: flex; flex-direction: column; gap: 8px; }
+.heat-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--track-bg);
+  overflow: hidden;
+}
+.heat-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+.heat-fill-0 { background: var(--dn); }
+.heat-fill-1 { background: var(--ink-faint); }
+.heat-fill-2 { background: var(--up); }
+.heat-fill-3 { background: var(--accent); }
+
+.heat-labels {
+  display: flex;
+  justify-content: space-between;
+}
+.heat-label {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.heat-label.on { color: var(--ink-dim); }
+
+.heat-note { margin-top: 16px; }
+
+/* Skill tree */
+.tree-card { }
+.tree-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.tree-branch { display: flex; flex-direction: column; gap: 10px; }
+.tree-branch-label {
+  display: block;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2px;
+}
+.tree-shadow-lbl { color: var(--up); }
+.tree-legit-lbl  { color: var(--dn); }
+.tree-nodes { display: flex; flex-direction: column; gap: 10px; }
+
+/* Skill node cards */
+.node-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  background: var(--paper);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.node-card.node-locked {
+  background: var(--paper-2);
+  opacity: 0.65;
+}
+.node-card.node-eligible {
+  border-color: var(--up);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--up) 18%, transparent);
+}
+.node-card.node-unlocked {
+  background: color-mix(in srgb, var(--ink) 4%, var(--paper));
+  border-color: var(--line-2);
+}
+
+.node-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.node-tier-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.node-state-icon { color: var(--ink-faint); display: flex; }
+.node-card.node-unlocked .node-state-icon { color: var(--ink); }
+
+.node-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 5px;
+}
+.node-card.node-locked .node-name { color: var(--ink-dim); }
+
+.node-desc {
+  font-size: 12px;
+  color: var(--ink-dim);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.node-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.node-req {
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.node-unlock-btn {
+  background: var(--ink);
+  color: var(--paper);
+  border: 0;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.14s ease;
+}
+.node-unlock-btn:hover { opacity: 0.82; }
+.node-unlock-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.node-blocked {
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+@media (max-width: 860px) {
+  .tree-grid { grid-template-columns: 1fr; }
+}

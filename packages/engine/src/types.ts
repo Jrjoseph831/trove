@@ -399,6 +399,14 @@ export interface WorldState {
   orders: Order[];
   /** Desk standing — rises on fulfilment, dips on missed contracts. */
   reputation: number;
+  /** Lifetime Shadow Rep earned (risky/illicit actions). Never decreases. */
+  shadowRep: number;
+  /** Lifetime Legit Rep earned (transparent play). Never decreases. */
+  legitRep: number;
+  /** Heat 0–100 (volatile). Lazy-decayed — read via effectiveHeat(). */
+  heat: number;
+  /** Skill-tree node IDs this player has unlocked. */
+  unlockedNodes: string[];
   /** Order-Desk automation settings (rep-gated). */
   deskAuto: DeskAuto;
   /** Last time (ms) an order was rolled onto the desk. */

@@ -10,6 +10,7 @@ import {
   LayoutGrid,
   type LucideIcon,
   Newspaper,
+  ShieldAlert,
   Sparkles,
   TrendingUp,
   Trophy,
@@ -279,6 +280,15 @@ export function Rail({ onClose }: { onClose: () => void }) {
             <Sparkles size={15} strokeWidth={1.75} />
           </span>{" "}
           Studio
+        </button>
+        <button
+          className={tab === "reputation" ? "on" : ""}
+          onClick={() => go("reputation")}
+        >
+          <span className="ic">
+            <ShieldAlert size={15} strokeWidth={1.75} />
+          </span>{" "}
+          Reputation
         </button>
       </div>
 
