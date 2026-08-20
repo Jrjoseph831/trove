@@ -216,9 +216,7 @@ export function Wire() {
                 ))}
               </div>
             )}
-          </main>
 
-          <aside className="wrail">
             <div className="wreel">
               <div className="wreel-frame">
                 <Wheel embedded mode={live ? "news" : "filler"} />
@@ -229,7 +227,9 @@ export function Wire() {
                 />
               </div>
             </div>
+          </main>
 
+          <aside className="wrail">
             <section className="wpanel">
               <h3>Most valuable</h3>
               {board.map((e) => (

@@ -10559,20 +10559,21 @@ body {
   padding-bottom: 24px;
   border-bottom: 1px solid var(--line);
 }
-/* ── the sidebar reel ── */
+/* ── the below-articles reel ── */
 .wreel {
   min-width: 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
 }
 .wreel-frame {
   position: relative;
   border-radius: var(--bento-r);
   overflow: hidden;
 }
-/* In the sidebar the reel fills the full 296px column width; height is fixed
-   so the frame doesn't collapse to zero while the broadcast is loading. */
 .wreel .reel.embedded {
   aspect-ratio: auto;
-  height: 180px;
+  height: clamp(220px, 22vw, 360px);
 }
 /* The reel renders with role="dialog", so its click target is laid over it
    rather than wrapping it — nesting a button inside one is invalid, and the
