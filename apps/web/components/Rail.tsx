@@ -133,7 +133,7 @@ export function Rail({ onClose }: { onClose: () => void }) {
         </div>
         {desk?.name && (
           <div className="holdingline">
-            {desk.name} <span>· rep {desk.reputation}</span>
+            {desk.name}
             <button className="rename-btn" onClick={startRename}>
               edit
             </button>
