@@ -11,7 +11,7 @@ import {
   sectorKeys,
   sectors,
 } from "@trove/data";
-import type { RuntimeItem } from "@trove/engine";
+import type { ActiveStory, LogEntry, RuntimeItem } from "@trove/engine";
 import { canBuy, held } from "@trove/engine";
 import { money, pctChange } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
@@ -21,6 +21,47 @@ import { useTrove } from "@/lib/trove";
 import { AcquireConfirm } from "./AcquireConfirm";
 
 type SortKey = "featured" | "price-asc" | "price-desc" | "change" | "name";
+
+/** Find the active news story most responsible for this item's price movement.
+ *  Matches on sector weights: the story that pushes the item's primary sectors
+ *  hardest wins. In sandbox the active list is exact; in live it is the local
+ *  warmup approximation — close enough to give players a meaningful "why". */
+function reasonFor(it: RuntimeItem, active: ActiveStory[]): string | null {
+  let best: { head: string; mag: number } | null = null;
+  for (const { news } of active) {
+    for (const [sec, eff] of Object.entries(news.effects)) {
+      const w = (it.weights as Record<string, number>)[sec] ?? 0;
+      if (w <= 0) continue;
+      const mag = Math.abs(eff) * w;
+      if (!best || mag > best.mag) best = { head: news.head, mag };
+    }
+  }
+  return best?.head ?? null;
+}
+
+const TRADE_VERBS = new Set(["bought", "sold", "acquired"]);
+
+/** Horizontal ticker tape of recent named-firm trade activity. Pure CSS
+ *  animation — no interval needed. Only renders when there is real activity. */
+function CatalogTicker({ log }: { log: LogEntry[] }) {
+  const entries = log.filter(
+    (e) => e.who !== "YOU" && e.who !== "Market" && TRADE_VERBS.has(e.verb),
+  );
+  if (entries.length === 0) return null;
+  const tape = [...entries, ...entries]; // duplicate for seamless loop
+  return (
+    <div className="shop-tape" aria-hidden="true">
+      <div className="shop-tape-run">
+        {tape.map((e, i) => (
+          <span key={i} className={e.verb === "sold" ? "dn" : "up"}>
+            <i className="shop-tape-dot" />
+            {e.who} · {e.verb} {e.it}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 const SORTS: { key: SortKey; label: string }[] = [
   { key: "featured", label: "Featured" },
@@ -196,6 +237,7 @@ export function Catalog() {
           </div>
         </div>
 
+        <CatalogTicker log={state.log} />
         <div className="shop-body">
           {/* Filter rail */}
           <aside className="shop-filters">
@@ -318,6 +360,10 @@ export function Catalog() {
                             const mine = held(it, "YOU");
                             const lot = lotSize(it);
                             const isEd = it.edition !== null;
+                            const reason =
+                              Math.abs(dp) >= 0.5
+                                ? reasonFor(it, state.active)
+                                : null;
                             return (
                               <article
                                 className="pcard"
@@ -375,6 +421,13 @@ export function Catalog() {
                                       {Math.abs(dp).toFixed(1)}%
                                     </span>
                                   </div>
+                                  {reason && (
+                                    <div className="pcard-reason">
+                                      {reason.length > 36
+                                        ? reason.slice(0, 34) + "…"
+                                        : reason}
+                                    </div>
+                                  )}
                                   <div className={`pcard-stock ${ss ?? ""}`}>
                                     {ss === "scarce"
                                       ? "Only a few left"

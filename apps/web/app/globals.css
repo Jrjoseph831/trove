@@ -9642,6 +9642,66 @@ body {
   cursor: not-allowed;
 }
 
+/* ── catalog activity tape ─────────────────────────────────────────────────── */
+/* A horizontal ticker strip between the search bar and the filter/results body.
+   Streams recent named-firm buy/sell events from state.log. Pure CSS scroll —
+   no JS interval — with the content duplicated so the loop is seamless. */
+.shop-tape {
+  flex: none;
+  height: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--ink) 3%, var(--paper));
+}
+@keyframes ctick {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.shop-tape-run {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  white-space: nowrap;
+  animation: ctick 52s linear infinite;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+}
+.shop-tape-run > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 22px;
+  color: var(--ink-dim);
+  border-right: 1px solid var(--line);
+}
+.shop-tape-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink-faint);
+  flex: none;
+}
+.shop-tape-run > span.up .shop-tape-dot { background: var(--up); }
+.shop-tape-run > span.dn .shop-tape-dot { background: var(--dn); }
+
+/* ── per-card news reason tag ───────────────────────────────────────────────── */
+/* Appears below the price delta when an active news story is affecting this
+   item's sector(s) and the price moved ≥ 0.5%. Connects "I saw a headline" to
+   "this specific card moved" without the player having to cross-reference
+   two different views. */
+.pcard-reason {
+  font-size: 10px;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: italic;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
 /* Guest note inside the acquire dialog */
 .bb-guest {
   font-size: 12px;
@@ -10611,17 +10671,18 @@ body {
   border-radius: 999px;
   position: relative;
   overflow: hidden;
-  transition: height 0.12s;
   cursor: default;
 }
 .rc-bar.seekable { cursor: pointer; }
-.rc-bar.seekable:hover { height: 5px; }
 .rc-fill {
   position: absolute;
   inset: 0 auto 0 0;
+  width: 100%;
   background: #fff;
   border-radius: inherit;
-  transition: width 0.25s linear;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.25s linear;
 }
 .rc-badge {
   font-size: 9px;

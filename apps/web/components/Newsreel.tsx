@@ -630,7 +630,7 @@ export function Wheel({
             role={mode === "filler" ? "slider" : undefined}
             aria-label={mode === "filler" ? "Seek" : undefined}
           >
-            <div className="rc-fill" style={{ width: `${ctrlProgress * 100}%` }} />
+            <div className="rc-fill" style={{ transform: `scaleX(${ctrlProgress})` }} />
           </div>
           {mode === "news" ? (
             <span className="rc-badge live">LIVE</span>
