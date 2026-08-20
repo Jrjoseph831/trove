@@ -11,6 +11,7 @@ import {
   Gem,
   HardHat,
   type LucideIcon,
+  Maximize2,
   Megaphone,
   Newspaper,
   Pause,
@@ -185,6 +186,12 @@ function buildFiller(s: WorldState, loop: { current: number }): Slide[] {
   return slides;
 }
 
+function fmtMs(ms: number): string {
+  const s = Math.floor(Math.max(0, ms) / 1000);
+  const m = Math.floor(s / 60);
+  return `${m}:${String(s % 60).padStart(2, "0")}`;
+}
+
 export function Newsreel({ onClose }: { onClose: () => void }) {
   return <Wheel mode="news" onClose={onClose} />;
 }
@@ -193,10 +200,12 @@ export function Wheel({
   mode = "news",
   embedded = false,
   onClose,
+  onExpand,
 }: {
   mode?: "news" | "filler";
   embedded?: boolean;
   onClose?: () => void;
+  onExpand?: () => void;
 }) {
   const { state, desk, mode: appMode, serverNet } = useTrove();
   const myLabel = desk?.name?.trim() || "Your Holding";
@@ -261,6 +270,7 @@ export function Wheel({
   const [started, setStarted] = useState(embedded);
   const [paused, setPaused] = useState(false);
   const [muted, setMuted] = useState(false);
+  const [elapsed, setElapsed] = useState(0);
   const ambient = useRef(embedded ? null : createAmbient());
 
   const advance = useCallback(() => {
@@ -315,6 +325,18 @@ export function Wheel({
     }
   }, [idx, started]);
 
+  // Reset elapsed counter whenever the slide changes.
+  useEffect(() => {
+    setElapsed(0);
+  }, [idx]);
+
+  // Tick elapsed every 250ms while the embedded reel is playing.
+  useEffect(() => {
+    if (!embedded || !started || paused) return;
+    const t = setInterval(() => setElapsed((e) => e + 250), 250);
+    return () => clearInterval(t);
+  }, [embedded, started, paused, idx]);
+
   useEffect(() => {
     const a = ambient.current;
     return () => a?.stop();
@@ -335,6 +357,29 @@ export function Wheel({
   const close = () => {
     ambient.current?.stop();
     onClose?.();
+  };
+
+  // Controls state: progress through the broadcast.
+  const ctrlSlides = slidesRef.current;
+  const ctrlTotalDur = ctrlSlides.reduce((s, sl) => s + sl.dur, 0);
+  const ctrlPastDur = ctrlSlides.slice(0, idx).reduce((s, sl) => s + sl.dur, 0);
+  const ctrlSlideDur = ctrlSlides[idx]?.dur ?? 0;
+  const ctrlProgress =
+    ctrlTotalDur > 0
+      ? Math.min((ctrlPastDur + Math.min(elapsed, ctrlSlideDur)) / ctrlTotalDur, 1)
+      : 0;
+
+  const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (mode !== "filler") return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    const targetMs = pct * ctrlTotalDur;
+    let cum = 0;
+    for (let i = 0; i < ctrlSlides.length; i++) {
+      cum += ctrlSlides[i]!.dur;
+      if (cum > targetMs) { setIdx(i); return; }
+    }
+    setIdx(Math.max(0, ctrlSlides.length - 1));
   };
 
   // The broadcast clock is TVT — the clock the world actually runs on and the
@@ -565,6 +610,44 @@ export function Wheel({
                   ))}
               </div>
             </div>
+          )}
+        </div>
+      )}
+
+      {/* embedded player controls */}
+      {embedded && started && (
+        <div className="reel-controls">
+          <button
+            className="rc-btn"
+            onClick={() => setPaused((p) => !p)}
+            aria-label={paused ? "Play" : "Pause"}
+          >
+            {paused ? <Play size={11} /> : <Pause size={11} />}
+          </button>
+          <div
+            className={`rc-bar${mode === "filler" ? " seekable" : ""}`}
+            onClick={handleSeek}
+            role={mode === "filler" ? "slider" : undefined}
+            aria-label={mode === "filler" ? "Seek" : undefined}
+          >
+            <div className="rc-fill" style={{ width: `${ctrlProgress * 100}%` }} />
+          </div>
+          {mode === "news" ? (
+            <span className="rc-badge live">LIVE</span>
+          ) : (
+            <span className="rc-time">
+              {fmtMs(ctrlPastDur + Math.min(elapsed, ctrlSlideDur))} /{" "}
+              {fmtMs(ctrlTotalDur)}
+            </span>
+          )}
+          {onExpand && (
+            <button
+              className="rc-expand"
+              onClick={onExpand}
+              aria-label="Open full broadcast"
+            >
+              <Maximize2 size={11} />
+            </button>
           )}
         </div>
       )}

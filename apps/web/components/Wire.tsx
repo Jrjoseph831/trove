@@ -219,11 +219,10 @@ export function Wire() {
 
             <div className="wreel">
               <div className="wreel-frame">
-                <Wheel embedded mode={live ? "news" : "filler"} />
-                <button
-                  className="wreel-hit"
-                  onClick={() => setStudioOpen(true)}
-                  aria-label="Open the full broadcast"
+                <Wheel
+                  embedded
+                  mode={live ? "news" : "filler"}
+                  onExpand={() => setStudioOpen(true)}
                 />
               </div>
             </div>
