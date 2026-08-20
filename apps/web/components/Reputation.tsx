@@ -96,7 +96,7 @@ export function Reputation() {
           <div className="rep-score rep-score-shadow">{view.shadowRep}</div>
           <div className="rep-track-wrap">
             <div className="rep-track">
-              <i className="rep-fill rep-fill-shadow" style={{ width: `${Math.round(sp.pct * 100)}%` }} />
+              <i className="rep-fill rep-fill-shadow" style={{ transform: `scaleX(${sp.pct.toFixed(3)})` }} />
             </div>
             <span className="rep-thresh">
               {sp.toNext != null
@@ -119,7 +119,7 @@ export function Reputation() {
           <div className="rep-score rep-score-legit">{view.legitRep}</div>
           <div className="rep-track-wrap">
             <div className="rep-track">
-              <i className="rep-fill rep-fill-legit" style={{ width: `${Math.round(lp.pct * 100)}%` }} />
+              <i className="rep-fill rep-fill-legit" style={{ transform: `scaleX(${lp.pct.toFixed(3)})` }} />
             </div>
             <span className="rep-thresh">
               {lp.toNext != null
@@ -143,7 +143,7 @@ export function Reputation() {
             <div className={`heat-tier-name heat-name-${heatIdx}`}>{view.heatTier}</div>
             <div className="heat-meter">
               <div className="heat-track">
-                <i className={`heat-fill heat-fill-${heatIdx}`} style={{ width: `${view.heat}%` }} />
+                <i className={`heat-fill heat-fill-${heatIdx}`} style={{ transform: `scaleX(${(view.heat / 100).toFixed(3)})` }} />
               </div>
               <div className="heat-labels">
                 {HEAT_TIERS.map((t, i) => (
