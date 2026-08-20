@@ -47,7 +47,7 @@ import { createAmbient } from "@/lib/ambient";
 import { useTrove } from "@/lib/trove";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const bgUrl = (name: string) => `${BASE}/news-bg/${name}.png`;
+const bgUrl = (name: string) => `${BASE}/news-bg/${name}.webp`;
 
 const SECTOR_META: Record<string, { icon: LucideIcon; grad: string }> = {
   construction: { icon: HardHat, grad: "linear-gradient(135deg,#3a2a12,#0d0a06)" },
@@ -291,6 +291,29 @@ export function Wheel({
     const t = setTimeout(advance, dur);
     return () => clearTimeout(t);
   }, [idx, started, paused, advance]);
+
+  // Preload the next slide's background so transitions are instant.
+  useEffect(() => {
+    if (!started) return;
+    const next = slidesRef.current[idx + 1];
+    if (!next) return;
+    const nextSector =
+      next.type === "headline" ? next.story.sector
+      : next.type === "segment" ? next.sector
+      : undefined;
+    const nextBg =
+      next.type === "weather" ? "weather"
+      : next.type === "ad" ? (next.ad.img ? null : `ad-${next.ad.tone}`)
+      : (nextSector ?? "bumper");
+    if (nextBg) {
+      const img = new window.Image();
+      img.src = bgUrl(nextBg);
+    }
+    if (next.type === "ad" && next.ad.img) {
+      const img = new window.Image();
+      img.src = `${BASE}/news-bg/ads/${next.ad.img}`;
+    }
+  }, [idx, started]);
 
   useEffect(() => {
     const a = ambient.current;

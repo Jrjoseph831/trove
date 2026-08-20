@@ -8792,14 +8792,14 @@ details.bay-modules > summary.bay-sub:hover {
 }
 .est-pf .k { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-dim); }
 .est-pf .v { display: block; font-size: 18px; font-weight: 800; color: var(--ink); margin-top: 2px; }
-.est-pf .v.rent { color: #2e9c5e; }
+.est-pf .v.rent { color: var(--up); }
 
 .est-filters { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
 .est-chips { display: flex; gap: 7px; flex-wrap: wrap; }
 .est-chip {
   border: 1px solid var(--line); background: var(--paper); color: var(--ink-dim);
   border-radius: 999px; padding: 6px 13px; font-size: 12.5px; font-weight: 600; cursor: pointer;
-  transition: all .12s;
+  transition: color .12s, border-color .12s, background-color .12s;
 }
 .est-chip:hover { color: var(--ink); border-color: var(--accent); }
 .est-chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
@@ -8879,7 +8879,7 @@ details.bay-modules > summary.bay-sub:hover {
 .est-priceline { font-size: 22px; font-weight: 850; color: var(--ink); margin-bottom: 16px; }
 .est-nowworth { font-size: 13px; font-weight: 500; color: var(--ink-dim); }
 .est-nowworth em { font-style: normal; font-weight: 800; }
-.est-nowworth em.up { color: #2e9c5e; }
+.est-nowworth em.up { color: var(--up); }
 .est-nowworth em.down { color: var(--danger, #d04b46); }
 
 .est-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
@@ -9093,7 +9093,7 @@ details.bay-modules > summary.bay-sub:hover {
 }
 .cfm-row span { color: var(--ink-dim); }
 .cfm-row b { color: var(--ink); font-weight: 800; }
-.cfm-row b.cfm-up { color: #2e9c5e; }
+.cfm-row b.cfm-up { color: var(--up); }
 .cfm-row b.cfm-down { color: var(--danger, #d04b46); }
 .cfm-acts { display: flex; gap: 10px; }
 .cfm-cancel {
@@ -9202,10 +9202,10 @@ body {
 .pulse-nm { color: var(--ink-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pulse-bar { height: 6px; background: var(--line); border-radius: 999px; overflow: hidden; }
 .pulse-bar i { display: block; height: 100%; border-radius: 999px; }
-.pulse-bar i.up { background: #2e9c5e; }
+.pulse-bar i.up { background: var(--up); }
 .pulse-bar i.down { background: var(--danger, #d04b46); }
 .pulse-pct { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
-.pulse-pct.up { color: #2e9c5e; }
+.pulse-pct.up { color: var(--up); }
 .pulse-pct.down { color: var(--danger, #d04b46); }
 @media (max-width: 860px) { .trend-hero { grid-template-columns: 1fr; } }
 
@@ -9239,7 +9239,7 @@ body {
   font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
-.spot-price .chg.pos { background: color-mix(in srgb, #2e9c5e 15%, transparent); color: #2e9c5e; }
+.spot-price .chg.pos { background: color-mix(in srgb, var(--up) 15%, transparent); color: var(--up); }
 .spot-price .chg.neg { background: color-mix(in srgb, var(--danger, #d04b46) 15%, transparent); color: var(--danger, #d04b46); }
 
 /* ── Polish loop · iteration 5: cohesive card elevation on Trending ───────────

@@ -24,19 +24,19 @@ export interface AdSpot {
 
 export const ads: AdSpot[] = [
   // ── Tech ───────────────────────────────────────────────────────────────
-  { id: "nimbus", brand: "NimbusOS 12", line: "Now with feelings. (Beta.)", sub: "Your laptop may cry. This is normal.", tone: "tech", img: "nimbus.png" },
+  { id: "nimbus", brand: "NimbusOS 12", line: "Now with feelings. (Beta.)", sub: "Your laptop may cry. This is normal.", tone: "tech", img: "nimbus.webp" },
   { id: "quanta", brand: "QuantaCharge", line: "Your whole life, charged in four seconds.", sub: "Side effects may include mild time travel.", tone: "tech" },
   { id: "halcyon", brand: "Halcyon Earbuds", line: "Hear everything. Regret most of it.", sub: "Noise-cancelling, conscience optional.", tone: "tech" },
   { id: "orbital", brand: "Orbital Wi-Fi", line: "Internet so fast, your regrets load instantly.", sub: "Coverage not guaranteed indoors. Or outdoors.", tone: "tech" },
   { id: "bullhorn", brand: "Bullhorn Coin", line: "It can only go up.*", sub: "*Down. It can also go down.", tone: "tech" },
 
   // ── Edible products ─────────────────────────────────────────────────────
-  { id: "gribble", brand: "Gribble's Microwave Lasagna", line: "It's basically Italy.", sub: "Eight minutes on high. Cool for a geological age.", tone: "food", img: "gribble.png" },
-  { id: "megagulp", brand: "MEGAGULP Energy", line: "Sleep is a competitor. Crush it.", sub: "Do not operate feelings while consuming.", tone: "food", img: "megagulp.png" },
+  { id: "gribble", brand: "Gribble's Microwave Lasagna", line: "It's basically Italy.", sub: "Eight minutes on high. Cool for a geological age.", tone: "food", img: "gribble.webp" },
+  { id: "megagulp", brand: "MEGAGULP Energy", line: "Sleep is a competitor. Crush it.", sub: "Do not operate feelings while consuming.", tone: "food", img: "megagulp.webp" },
   { id: "tinsel", brand: "Tinsel Snack Cakes", line: "Sixty percent air. One hundred percent joy.", sub: "Now in a slightly smaller box for the same price.", tone: "food" },
   { id: "boyardunno", brand: "Chef Boyar-Dunno", line: "Dinner. Probably.", sub: "A meal-adjacent experience for the whole family.", tone: "food" },
   { id: "petunia", brand: "Aunt Petunia's Pickled Everything", line: "If it fits in a jar, we've pickled it.", sub: "Yes. Even that. Especially that.", tone: "food" },
-  { id: "greasemonkey", brand: "Grease Monkey Deluxe", line: "It's not just a burger. It's a lifestyle.", sub: "Burgers · shakes · bad decisions.", tone: "food", img: "greasemonkey.png" },
+  { id: "greasemonkey", brand: "Grease Monkey Deluxe", line: "It's not just a burger. It's a lifestyle.", sub: "Burgers · shakes · bad decisions.", tone: "food", img: "greasemonkey.webp" },
 
   // ── Cigarettes & smokes (retro, satirical) ──────────────────────────────
   { id: "camembert", brand: "Camembert Cigarettes", line: "The smooth taste of poor decisions.", sub: "Doctors no longer return our calls.", tone: "smoke" },
@@ -56,5 +56,5 @@ export const ads: AdSpot[] = [
   { id: "solvent", brand: "Solvent Mutual Insurance", line: "We'll be there. Probably.", sub: "Coverage subject to a clause we hope you don't read.", tone: "studio" },
   { id: "existential", brand: "Existential Mattresses", line: "Why are we here? At least be comfortable.", sub: "100-night trial. The void is forever.", tone: "studio" },
   { id: "gravelking", brand: "Gravel King Cement", line: "We're not soft. Neither is this.", sub: "If you can read this, you're standing on us.", tone: "studio" },
-  { id: "ferris", brand: "Ferris & Dunne Brokerage", line: "Buy high. We won't judge.", sub: "Past performance is a cry for help, not a guarantee.", tone: "studio", img: "ferris.png" },
+  { id: "ferris", brand: "Ferris & Dunne Brokerage", line: "Buy high. We won't judge.", sub: "Past performance is a cry for help, not a guarantee.", tone: "studio", img: "ferris.webp" },
 ];
