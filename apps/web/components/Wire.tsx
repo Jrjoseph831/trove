@@ -183,10 +183,6 @@ export function Wire() {
       ) : (
         <div className="wpage">
           <main className="wmain">
-            {/* Lead and reel share the top band. The lead's measure is capped
-                for reading, which left a dead column beside it — the reel fills
-                it and gives the page something that moves without anything
-                scrolling. */}
             <div className="wtop">
               <article className={`wlead ${lead.mine ? "mine" : ""}`}>
                 <div className="wkick">
@@ -201,21 +197,6 @@ export function Wire() {
                 {lead.quote && <blockquote className="wquote">{lead.quote}</blockquote>}
                 <div className="wbyline">By the Trove Wire</div>
               </article>
-
-              <div className="wreel">
-                <div className="wreel-frame">
-                  <Wheel embedded mode={live ? "news" : "filler"} />
-                  {/* The reel renders as a dialog, so the click target sits over
-                      it rather than wrapping it — a button around a button is
-                      invalid. The panel itself is the way in; the masthead's
-                      Watch button is the other. */}
-                  <button
-                    className="wreel-hit"
-                    onClick={() => setStudioOpen(true)}
-                    aria-label="Open the full reel"
-                  />
-                </div>
-              </div>
             </div>
 
             {secondary.length > 0 && (
@@ -238,6 +219,17 @@ export function Wire() {
           </main>
 
           <aside className="wrail">
+            <div className="wreel">
+              <div className="wreel-frame">
+                <Wheel embedded mode={live ? "news" : "filler"} />
+                <button
+                  className="wreel-hit"
+                  onClick={() => setStudioOpen(true)}
+                  aria-label="Open the full broadcast"
+                />
+              </div>
+            </div>
+
             <section className="wpanel">
               <h3>Most valuable</h3>
               {board.map((e) => (

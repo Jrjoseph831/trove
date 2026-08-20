@@ -10554,34 +10554,13 @@ body {
   .wpage { grid-template-columns: 1fr; gap: 26px; }
 }
 
-/* ── the top band: lead on the left, the reel filling the gap beside it ──
-   The lead's measure is capped so it stays readable, which left a dead column
-   between it and the rail. The reel lives there now: the page gets something
-   that moves without anything scrolling, and the broadcast stops being hidden
-   behind a button. The rule belongs to the band rather than the lead, so it
-   runs the full width underneath both. */
+/* ── the lead band ── */
 .wtop {
-  display: grid;
-  /* The LEAD is what gets capped, not the reel. Sizing the lead at 1fr and the
-     reel at a fixed width only moved the dead space: the column kept growing
-     with the viewport while the text inside it stopped at its measure, so the
-     gap reopened between the two. Capping the lead at a readable measure and
-     giving the reel the remainder means the space is always spent. */
-  grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
-  gap: 30px;
-  align-items: start;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--line);
 }
-@media (max-width: 1180px) {
-  .wtop {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-}
+/* ── the sidebar reel ── */
 .wreel {
-  display: flex;
-  flex-direction: column;
   min-width: 0;
 }
 .wreel-frame {
@@ -10589,14 +10568,11 @@ body {
   border-radius: var(--bento-r);
   overflow: hidden;
 }
-/* The embedded reel holds a strict 16:9, which is what kept reintroducing a
-   gap: pinned to that ratio it could only fill the width by growing absurdly
-   tall, so it had to be capped, and the cap left dead space again. Width now
-   takes whatever the band has left and the height is set directly. The
-   backdrop is object-fit: cover, so it reframes rather than distorting. */
+/* In the sidebar the reel fills the full 296px column width; height is fixed
+   so the frame doesn't collapse to zero while the broadcast is loading. */
 .wreel .reel.embedded {
   aspect-ratio: auto;
-  height: clamp(250px, 20vw, 420px);
+  height: 180px;
 }
 /* The reel renders with role="dialog", so its click target is laid over it
    rather than wrapping it — nesting a button inside one is invalid, and the
