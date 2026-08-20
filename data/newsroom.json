@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-20T12:52:26.248Z",
+  "generatedAt": "2026-08-20T18:40:40.938Z",
   "beats": [
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Carrowwell Debuts Automated Material-Handling Line as Second Machines Plant Comes Online",
+      "body": "With its second plant now running, Mara Voss introduced a new automated material-handling series aimed at warehouse and logistics buyers, diversifying beyond the $1.1B machines contract. The line launches with two anchor customers and a stated goal of $300M in first-year bookings. Voss said the move hedges Carrowwell's revenue against single-contract concentration.",
+      "cycle": 82743,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Gromford Works Lands Landmark Retail Partnership to Sell Emblem Line in Global Department Chain",
+      "body": "Riding the momentum of its award-winning reinforced Emblem Collection, Gromford signed an exclusive placement deal with a 40-country luxury department chain worth an estimated $650M over five years. Halvard Pryce called it 'the biggest distribution win in the house's history,' committing to double timepiece output at the Emblem workshop. The deal caps a rapid rebound from last year's clasp recall.",
+      "cycle": 82743,
+      "dur": 8
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Halhold Systems Launches Sweeping Restructure to Fund $2.1B Reliability Payout",
+      "body": "Facing the $2.1B verdict, Marcus Thorne unveiled a restructuring plan cutting 12% of the workforce and divesting two non-core compute divisions to raise an estimated $1.4B. The board also approved a wholesale overhaul of quality-assurance operations to satisfy regulators. Thorne acknowledged 'a painful reset' but insisted the core compute business would emerge leaner.",
+      "cycle": 82743,
+      "dur": 8
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Kessel Drive Beats as Vanta Cell Volumes Recover on Secured Cathode Supply",
+      "body": "With the cathode bottleneck resolved, Kessel Drive posted its first profitable quarter under Aldric Venn as Vanta storage cell shipments climbed 34% sequentially. Venn touted a return to full-line production and reaffirmed a splashy target of one million cells shipped next year. The beat marks a sharp turn from the prior quarter's ramp-driven miss.",
+      "cycle": 82743,
+      "dur": 2
+    },
+    {
+      "company": "Palettstone & Sons",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Palettstone & Sons Extends Heirloom Pro Line With Cordless Driver System",
+      "body": "Building on the Heirloom Pro fastening rollout, Palettstone unveiled a companion cordless driver system engineered to pair with its national fastener catalog. Cole Fenn framed the launch as a natural pull-through play, projecting the tools could add $180M in annual revenue within two years. Early orders from three regional hardware chains have already been booked ahead of shelf placement.",
+      "cycle": 82743,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Varnvale & Sons Beats as Corvane Integration Lifts Complication Margins",
+      "body": "In-house movement production from the reopened Corvane house drove a 22% jump in complication segment margins, pushing quarterly profit past guidance. Bram Wold credited vertical integration for shielding Varnvale from rising component costs as the three new capital ateliers opened on schedule. The house raised its full-year outlook on sustained order flow.",
+      "cycle": 82743,
+      "dur": 2
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Wrengrove Group Adds Second Shift at New Plant to Clear Record Sterile-Kit Backlog",
+      "body": "To service its multi-year national hospital contract, Rhys Vossen authorized a second production shift at the recently opened fourth plant, adding an estimated 400 jobs. The move is expected to cut the record backlog by roughly a third within two quarters. Vossen said capacity now positions Wrengrove to bid on additional regional network contracts.",
+      "cycle": 82743,
+      "dur": 2
+    },
+    {
+      "company": "Wrenspire",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Wrenspire Beats Again as Everyroom Cross-Sell Deepens in Grower Channel",
+      "body": "Theo Aldous reported a fifth straight quarter of gains as household-goods SKUs added to the Everyroom grower channel lifted revenue 9% year-over-year. Management pointed to strong attach rates between farm inputs and household lines, with the combined channel now representing 18% of consumer sales. Wrenspire modestly raised its dividend, extending a decades-long streak.",
+      "cycle": 82743,
+      "dur": 2
+    },
     {
       "company": "Bruncraft Industries",
       "sector": "automotive",
@@ -32,16 +112,6 @@
       "dur": 2
     },
     {
-      "company": "Castlegear Group",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Castlegear Group Edges Past Estimates as Consumables Volume Holds Steady",
-      "body": "Castlegear reported a modest beat, with sterile tray and consumables volumes holding at full contract levels and quarterly revenue of $288M. Sable Brandt reaffirmed the company's conservative outlook, citing stable demand across its regional network. Margins were unchanged at 16%.",
-      "cycle": 82742,
-      "dur": 1
-    },
-    {
       "company": "Drustcraft",
       "sector": "manufacturing",
       "kind": "major_deal",
@@ -62,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Kesselgrove Co.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Kesselgrove Co. Tops Estimates Again as Press Backlog Falls Below One Year",
-      "body": "Kesselgrove reported its third consecutive beat, with the industrial press backlog dropping under twelve months for the first time since 2029 as both assembly bays ran at full shift. Orla Steg credited disciplined throughput gains rather than new capacity. Operating margin held steady at 19%.",
-      "cycle": 82742,
-      "dur": 1
-    },
-    {
       "company": "Veldtreach & Sons",
       "sector": "construction",
       "kind": "expansion",
@@ -90,36 +150,6 @@
       "body": "Revenue jumped 61% to $2.9B as the record Aria Ultra order moved from framework to shipment, with the new compute line reaching full output ahead of schedule. Chief executive Ines Marlow raised full-year guidance and said backlog now stretches beyond eighteen months. The result caps a bold expansion bet that pushed capacity spending to historic highs.",
       "cycle": 82741,
       "dur": 8
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drustcyon Lands Second Harbor-Authority Award for Marine-Grade Anchors Worth $310M",
-      "body": "The construction house secured a follow-on $310M supply agreement covering three additional port districts, extending its marine-grade anchor franchise. Chief executive Aurelia Kessler said the expanded coastal foundry can absorb the volume without further capital outlay. The award builds directly on the record shipments from the prior $540M contract.",
-      "cycle": 82741,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "standard",
-      "head": "Korrwright Works Wins Grand Prix at Verenne Horology Salon for In-House Escapement",
-      "body": "The reborn escapement, developed after the $1.1B Halbrook acquisition, took top honors at the prestigious Verenne salon, a first for the 118-year-old house. Chief executive Dunmore Carrow said the award validates the vertical-integration strategy and lifts order visibility into next year. The recognition arrives as direct sales from Verenne retail continue to outpace wholesale.",
-      "cycle": 82741,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Varnvale House Extends Comeback With Sovereign Complication Line Under Coyle",
-      "body": "Building on the reborn Sovereign line's strong debut, chief executive Beatrix Coyle unveiled a higher-priced complication series aimed at reclaiming the house's premium tier. The launch carries expanded fine-goods pairings and targets a 20% lift in average selling price. Coyle called it the next stage of a full-line revival after early inventory cleared faster than planned.",
-      "cycle": 82741,
-      "dur": 2
     },
     {
       "company": "Vossenspire Holdings",
@@ -219,36 +249,6 @@
       "head": "Halhold Systems Ordered to Pay $2.1B as Reliability Case Reaches Verdict",
       "body": "A regulatory tribunal ruled against Halhold Systems, imposing a $2.1B penalty and mandatory five-year oversight after finding the compute maker concealed known failure rates in its core server line. CEO Marcus Thorne, who inherited the case, said the company would not appeal and would fund the payment through asset sales and a suspended dividend. The ruling caps the fallout that began with the leaked internal memos and forced out predecessor Petra Vandel.",
       "cycle": 82737,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Aperture Compute Faces Regulatory Probe Over Emberline Fabrication Site Conditions",
-      "body": "Regulators opened a formal inquiry into safety and environmental practices at Aperture Compute's Emberline fabrication sites following reports of ventilation and chemical-handling failures at the second facility now under construction. Marisol Venn said the company was cooperating fully and had paused some site work, but the probe casts a shadow over the $2.6 billion supply pact signed only weeks earlier. Shares tumbled on the news.",
-      "cycle": 82735,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Bruncrest Works Signs $3.4B Aria Ultra Framework, Its Largest Order on Record",
-      "body": "Ines Marlow announced a $3.4 billion multi-year framework agreement anchoring output from the new compute line, roughly tripling the size of the earlier landmark Aria Ultra order. The pact locks in dedicated capacity through the decade and validates Marlow's contested throughput bet. Deliveries are slated to begin once the newly broken-ground line reaches qualification.",
-      "cycle": 82735,
-      "dur": 8
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Maison & Vale Unveils $4.2B Merger with Household-Goods Giant Larenthal in Kessler's Boldest Move",
-      "body": "Rhys Kessler capped an aggressive acquisition streak with a $4.2 billion agreement to absorb Larenthal Group, more than doubling the size of the company's Household Goods division. Executives said the combined operation would rank among the largest hospitality-supply houses by revenue, though integration costs are expected to weigh on margins for at least three quarters. The deal follows the Corriveau and Vestrand bolt-ons that steadied recent earnings.",
-      "cycle": 82735,
       "dur": 8
     }
   ]
