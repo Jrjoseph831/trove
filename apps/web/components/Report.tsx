@@ -118,7 +118,7 @@ export function flowRows(r: { flows: Ledger }) {
     { k: "Stake dividends", v: f.divRev ?? 0, money: true, good: true },
     { k: "Upkeep + inputs", v: -f.upkeep, money: true, good: false },
     { k: "Payroll", v: -(f.payroll ?? 0), money: true, good: false },
-    { k: "Warehousing & tax", v: -(f.fees ?? 0), money: true, good: false },
+    { k: "Storage & tax", v: -(f.fees ?? 0), money: true, good: false },
   ].filter((row) => row.v !== 0 || (row.u ?? 0) !== 0);
 }
 
@@ -135,10 +135,7 @@ export function ReportView() {
           <div className="cat-head">
             <h2 className="serif">Reports</h2>
           </div>
-          <div className="empty">
-            No reports yet — a report is filed every time the market flips (twice a
-            Trove day). Once you produce or trade, a dashboard builds here.
-          </div>
+          <div className="empty">No data yet.</div>
         </div>
       </div>
     );
@@ -287,7 +284,7 @@ export function ReportView() {
         <div className="dash-card">
           <div className="dash-h">Revenue mix · Day {d.day}</div>
           {revenue === 0 ? (
-            <div className="rc-quiet">No sales this day.</div>
+            <div className="rc-quiet">—</div>
           ) : (
             revBars.map((b) => (
               <div key={b.k} className="bar-row">
@@ -328,15 +325,13 @@ export function ReportView() {
               <span>Upkeep + inputs</span>
               <b className="rc-dn">{money(f.upkeep)}</b>
             </div>
-            {(f.payroll ?? 0) > 0 && (
-              <div className="act">
-                <span>Payroll</span>
-                <b className="rc-dn">{money(f.payroll ?? 0)}</b>
-              </div>
-            )}
+            <div className="act">
+              <span>Payroll</span>
+              <b className="rc-dn">{(f.payroll ?? 0) > 0 ? money(f.payroll ?? 0) : "—"}</b>
+            </div>
             {(f.fees ?? 0) > 0 && (
               <div className="act">
-                <span>Warehousing & tax</span>
+                <span>Storage & tax</span>
                 <b className="rc-dn">{money(f.fees ?? 0)}</b>
               </div>
             )}
@@ -434,7 +429,7 @@ export function DailyReportCard() {
             </b>
           </div>
         ))}
-        {flowRows(r).length === 0 && <div className="rc-quiet">A quiet shift.</div>}
+        {flowRows(r).length === 0 && <div className="rc-quiet">—</div>}
       </div>
     </div>
   );

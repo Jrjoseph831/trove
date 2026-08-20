@@ -11,6 +11,9 @@ import { emptyLedger, type WorldState } from "@trove/engine";
 /** Flat labor cost per active (running or idle) factory line per production tick. */
 export const PAYROLL_PER_LINE = 20; // $20/tick → at 5 lines: $100/tick, $1,200/hr
 
+/** Second Shift module raises labor cost by this factor (matches its upkeepMul). */
+const SECOND_SHIFT_MUL = 1.8;
+
 /**
  * Deduct payroll for `ticks` production cycles. Only fires when ticks > 0, so
  * a zero-production run (already caught up) charges nothing. Overflow to debt
@@ -22,11 +25,16 @@ export function applyPayroll(pv: WorldState, ticks: number): void {
   if (ticks <= 0) return;
   // "running" = produced this tick; "idle" = live but short on inputs.
   // Both still employ workers — only "mothballed" lines have laid off their crew.
-  const activeLines = pv.factories.filter(
+  const active = pv.factories.filter(
     (f) => f.status === "running" || f.status === "idle",
-  ).length;
-  if (activeLines === 0) return;
-  const amount = activeLines * PAYROLL_PER_LINE * ticks;
+  );
+  if (active.length === 0) return;
+  const amount = Math.round(
+    active.reduce(
+      (s, f) => s + PAYROLL_PER_LINE * (f.modules.includes("shift") ? SECOND_SHIFT_MUL : 1),
+      0,
+    ) * ticks,
+  );
   pv.ledger ??= emptyLedger();
   pv.ledger.payroll = (pv.ledger.payroll ?? 0) + amount;
   pv.cash -= amount;
