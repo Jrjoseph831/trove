@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-20T06:48:22.487Z",
+  "generatedAt": "2026-08-20T12:52:26.248Z",
   "beats": [
     {
-      "company": "Ashbystead Holdings",
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Bruncraft Cuts Coachline Output and Trims Vanguard Staff as Vane Reins In Costs",
+      "body": "Following last quarter's miss, Marcus Vane announced a scaling back of Coachline flagship production and roughly 600 job cuts across the Vanguard unit, targeting $150M in annualized savings. Vane conceded the ramp had 'moved faster than the market,' pledging tighter cost control. The restructuring follows the aggressive consolidation Vane pushed through earlier in the year.",
+      "cycle": 82742,
+      "dur": 2
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "major",
+      "size": "major",
+      "head": "Brunstone & Sons Doubles Vault II Capacity as Frost Declares Recovery 'Complete'",
+      "body": "Dagny Frost announced a $1.4B expansion to triple Vault II cell output at the Harlow and Denvers plants, following the $900M fleet pact and a second order backlog now topping 2.1 million units. Frost, addressing shareholders, called the turnaround 'complete' and set a target of doubling storage revenue within eighteen months. Analysts noted the bold timeline is characteristic of Frost, who staked her tenure on the comeback.",
+      "cycle": 82742,
+      "dur": 8
+    },
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Calderworks Beats as Fifth Kiln Commitment Draws Fresh Corridor Demand",
+      "body": "Calderworks posted revenue of $494M, up 11%, as the Vaultridge Corridor pact drove kiln utilization to record highs ahead of the fifth kiln's completion. Kestrel Halloran reported two additional supply inquiries tied to corridor expansion. The fifth kiln remains on track for commissioning within three quarters.",
+      "cycle": 82742,
+      "dur": 2
+    },
+    {
+      "company": "Castlegear Group",
       "sector": "medical",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Ashbystead Holdings Logs Tenth Straight Beat on Steady Equipment Renewal Cycle",
-      "body": "The medical-equipment maker notched a tenth consecutive quarterly beat, with revenue up 4% on reliable hospital renewals and service contracts. Chief executive Cora Holt credited long-standing institutional relationships and a conservative order book. Guidance was left unchanged for the remainder of the year.",
-      "cycle": 82741,
+      "head": "Castlegear Group Edges Past Estimates as Consumables Volume Holds Steady",
+      "body": "Castlegear reported a modest beat, with sterile tray and consumables volumes holding at full contract levels and quarterly revenue of $288M. Sable Brandt reaffirmed the company's conservative outlook, citing stable demand across its regional network. Margins were unchanged at 16%.",
+      "cycle": 82742,
       "dur": 1
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Drustcraft Wins $320M Auto-Parts Supply Pact, Extending Three-Line Momentum",
+      "body": "Cora Fenn secured a four-year, $320M auto-parts supply agreement with a national assembly network, building on the record balanced quarter across all three product lines. The deal locks in roughly 40% of the auto-parts line's forward capacity. Fenn said the win validates the diversified strategy she has steadily built.",
+      "cycle": 82742,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halhold Works Beats as Aveline Successor Sales Outpace Rocha's Reset Targets",
+      "body": "Halhold posted quarterly revenue of $612M, up 14% year-over-year, as the Aveline successor line cleared 800,000 units across its opening markets. Anselm Rocha said the device unit had returned to profitability a quarter ahead of plan, though Wire & Cable margins remained under pressure. The result marks the first clean beat since Rocha took over the cleanup.",
+      "cycle": 82742,
+      "dur": 2
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Kesselgrove Co. Tops Estimates Again as Press Backlog Falls Below One Year",
+      "body": "Kesselgrove reported its third consecutive beat, with the industrial press backlog dropping under twelve months for the first time since 2029 as both assembly bays ran at full shift. Orla Steg credited disciplined throughput gains rather than new capacity. Operating margin held steady at 19%.",
+      "cycle": 82742,
+      "dur": 1
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Veldtreach & Sons Orders Fourth Earthmoving Fleet as Reservoir Works Accelerate",
+      "body": "Petra Steg committed $210M to a fourth earthmoving fleet to service the $540M Inland Reservoir package and a growing pipeline of regional works. The fleet, expected operational within two quarters, will lift Veldtreach's deployable capacity by roughly 30%. Steg framed the move as a measured response to sustained utilization rather than speculative growth.",
+      "cycle": 82742,
+      "dur": 2
     },
     {
       "company": "Bruncrest Works",
@@ -32,16 +102,6 @@
       "dur": 2
     },
     {
-      "company": "Forgegrave Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Forgegrave Industries Beats Again as Beyond-Meridian Network Sustains Volume Gains",
-      "body": "The logistics house topped estimates for a third straight quarter, with material-handling volumes up 5% across the integrated Beyond-Meridian distributor network. Chief executive Petra Thorne said synergies from the combined regional footprint are now fully realized. Guidance held steady with margins broadly flat.",
-      "cycle": 82741,
-      "dur": 1
-    },
-    {
       "company": "Korrwright Works",
       "sector": "luxury",
       "kind": "award",
@@ -50,16 +110,6 @@
       "body": "The reborn escapement, developed after the $1.1B Halbrook acquisition, took top honors at the prestigious Verenne salon, a first for the 118-year-old house. Chief executive Dunmore Carrow said the award validates the vertical-integration strategy and lifts order visibility into next year. The recognition arrives as direct sales from Verenne retail continue to outpace wholesale.",
       "cycle": 82741,
       "dur": 2
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowcyon Extends Streak to Seventh Straight Quiet Beat as Apparel and Fixtures Hold",
-      "body": "The consumer house posted a modest 3% revenue gain, its seventh consecutive quarter topping estimates, with plumbing margins and apparel volumes both steady. Chief executive Theo Orne reaffirmed guidance and flagged no changes to the outlook. The unremarkable, dependable cadence again drew little market reaction.",
-      "cycle": 82741,
-      "dur": 1
     },
     {
       "company": "Varnvale House",
@@ -92,16 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Korrworks Signs $260M Material-Handling Fit-Out as Third Hub Site Locks Anchor Tenant",
-      "body": "Korrworks secured a $260M multi-year contract to supply automated racking and conveyor systems for a regional distribution operator anchoring its planned third hub. Rhys Throne said the deal de-risks the fast-tracked pipeline, with the anchor tenant committing to a 12-year lease covering nearly 60% of the site's throughput. Groundwork is slated to begin next quarter.",
-      "cycle": 82740,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "leadership_change",
@@ -110,46 +150,6 @@
       "body": "Marlgear's board removed Dane Kessler for cause amid the widening scandal over destroyed Kessel fault records, appointing former industrial-safety executive Corin Blakely as CEO with a mandate to overhaul disclosure practices. The board also formed an independent oversight committee and pledged full cooperation with the ongoing regulatory probe. Shares of the device maker remain under pressure as the class action proceeds and remediation costs are estimated to exceed $200M.",
       "cycle": 82740,
       "dur": 8
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Marrowstone Build Beats as Highway and Rail Wins Push Backlog Past $1.4B",
-      "body": "Marrowstone posted another quarterly beat, with revenue up 22% and backlog reaching a record $1.4B on the strength of the recent interchange and inland rail packages. Delphine Vaugh said fleet utilization hit 91% and flagged plans to add earthmoving capacity to service the swelling order book. Margins widened 180 basis points on improved project sequencing.",
-      "cycle": 82740,
-      "dur": 2
-    },
-    {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Ornewright Supply Breaks Ground on Second Cold-Chain Hub at Vellhorn to Extend Dunmere Reach",
-      "body": "Ornewright confirmed a $185M second cold-storage facility at Vellhorn, roughly 90 miles north of the flagship Dunmere hub, targeting operational readiness within 14 months. Rhys Throne framed the move as answering demand that has already outstripped Dunmere's committed capacity, with two food-service clients pre-committing to combined annual volumes of 240,000 pallet positions. The expansion is expected to lift regional distribution coverage by an estimated 35%.",
-      "cycle": 82740,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Vossenspire Folds Corriveaux Into Timepiece Arm as Marrow Targets $140M in Synergies",
-      "body": "Vossenspire began integrating newly acquired Corriveaux, consolidating three overlapping ateliers and shifting Corriveaux movement production into its Thelvane vertical supply chain. Quinn Marrow guided to $140M in annual cost synergies by 2027 and confirmed the Corriveaux marque would survive as a distinct luxury line rather than be absorbed. Roughly 400 back-office roles are expected to be eliminated during integration.",
-      "cycle": 82740,
-      "dur": 2
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Woldmark Unveils Meridian Compute Line as Sonn Retires Halcyon Brand",
-      "body": "Petra Sonn used her first major appearance to launch Meridian, a rebuilt compute platform that formally retires the Halcyon name after the Halcyon 4 collapse. Sonn narrowed the initial rollout to two enterprise-grade configurations and secured three design-partner commitments ahead of general availability, calling the leaner launch a deliberate break from prior overreach. Early bookings cover an estimated 45,000 units over 18 months.",
-      "cycle": 82740,
-      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -249,26 +249,6 @@
       "head": "Maison & Vale Unveils $4.2B Merger with Household-Goods Giant Larenthal in Kessler's Boldest Move",
       "body": "Rhys Kessler capped an aggressive acquisition streak with a $4.2 billion agreement to absorb Larenthal Group, more than doubling the size of the company's Household Goods division. Executives said the combined operation would rank among the largest hospitality-supply houses by revenue, though integration costs are expected to weigh on margins for at least three quarters. The deal follows the Corriveau and Vestrand bolt-ons that steadied recent earnings.",
       "cycle": 82735,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Brunstone & Sons Lands $900M Fleet Supply Pact for Vault II Cells",
-      "body": "Brunstone secured a five-year, $900M agreement to supply Vault II cells to a national commercial-vehicle fleet operator, its largest single order since the recall crisis. Frost called the deal 'proof the comeback is real,' noting it effectively resolves the demand questions that lingered even after the class action; the pact commits Brunstone to a third assembly shift by next spring.",
-      "cycle": 82734,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Castlestone Misses Badly as Grid-Core Delays Bleed Into Guidance Cut",
-      "body": "Castlestone posted revenue of $2.1B against $2.7B expected, with the relaunched Grid-Core campus still running at 60% of rated capacity months after Karsh 'drew a line.' The house slashed full-year guidance by nearly a fifth and disclosed that two anchor Compute clients had deferred contracts, sending Karsh into a combative call where he vowed the setback was 'the last one.'",
-      "cycle": 82734,
       "dur": 8
     }
   ]

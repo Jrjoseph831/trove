@@ -1993,18 +1993,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82735,
+    "lastEventCycle": 82742,
     "events": [
-      {
-        "cycle": 82552,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Bruncraft Industries Launches Runabout Cargo to Widen Fleet Lineup",
-        "body": "Fresh off the Coachline acquisition, Bruncraft unveiled the Runabout Cargo, a van-bodied variant pitched squarely at delivery and trades customers. Orla Marrow said the Coachline plant will handle initial builds, targeting 40,000 units in the first year. Halvenport Transit has already signaled interest in a light-utility follow-on order.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82561,
         "kind": "major_deal",
@@ -2225,6 +2215,16 @@
         "size": "standard",
         "head": "Bruncraft Misses as Coachline Ramp Costs Outrun Vane's Guidance",
         "body": "Bruncraft posted quarterly profit of $310 million, well short of the $420 million analysts expected, as tooling and labor costs tied to the Coachline flagship launch ran higher than forecast. Marcus Vane conceded that consolidating the Vanguard unit had absorbed more capital than planned but insisted the flagship's order book remained intact. Shares of the automaker have been volatile since the $1.8 billion buyout closed.",
+        "effects": {
+          "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82742,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Bruncraft Cuts Coachline Output and Trims Vanguard Staff as Vane Reins In Costs",
+        "body": "Following last quarter's miss, Marcus Vane announced a scaling back of Coachline flagship production and roughly 600 job cuts across the Vanguard unit, targeting $150M in annualized savings. Vane conceded the ramp had 'moved faster than the market,' pledging tighter cost control. The restructuring follows the aggressive consolidation Vane pushed through earlier in the year.",
         "effects": {
           "automotive": -0.13
         }
@@ -3098,18 +3098,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82734,
+    "lastEventCycle": 82742,
     "events": [
-      {
-        "cycle": 82571,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Brunstone & Sons Pivots to Storage With Debut of Lambourne-Era Vault Cells",
-        "body": "Fresh off the emergency reset, new CEO Royce Lambourne steered the house away from vehicles and toward its Power & Storage arm, unveiling the Vault modular battery line. The launch leans on Brunstone's steadier storage business rather than another consumer-facing gamble, with initial capacity of 120,000 units earmarked for commercial buyers. Analysts framed it as a deliberately smaller bet after the Meridian collapse.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82578,
         "kind": "earnings_beat",
@@ -3335,6 +3325,14 @@
         "effects": {
           "automotive": 0.22
         }
+      },
+      {
+        "cycle": 82742,
+        "kind": "major",
+        "size": "major",
+        "head": "Brunstone & Sons Doubles Vault II Capacity as Frost Declares Recovery 'Complete'",
+        "body": "Dagny Frost announced a $1.4B expansion to triple Vault II cell output at the Harlow and Denvers plants, following the $900M fleet pact and a second order backlog now topping 2.1 million units. Frost, addressing shareholders, called the turnaround 'complete' and set a target of doubling storage revenue within eighteen months. Analysts noted the bold timeline is characteristic of Frost, who staked her tenure on the comeback.",
+        "effects": {}
       }
     ]
   },
@@ -3765,7 +3763,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82726,
+    "lastEventCycle": 82742,
     "events": [
       {
         "cycle": 0,
@@ -3901,6 +3899,16 @@
         "size": "standard",
         "head": "Calderworks Commits to Fifth Kiln as Vaultridge Demand Outstrips Record Output",
         "body": "Calderworks approved construction of a fifth kiln, a $220 million commitment, after the Vaultridge Corridor pact pushed the existing four kilns to record utilization. Kestrel Halloran, guiding the firm into its 118th year, said the addition secures capacity through the multi-year supply commitment without straining margins. The new kiln is slated to come online in about 18 months.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82742,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderworks Beats as Fifth Kiln Commitment Draws Fresh Corridor Demand",
+        "body": "Calderworks posted revenue of $494M, up 11%, as the Vaultridge Corridor pact drove kiln utilization to record highs ahead of the fifth kiln's completion. Kestrel Halloran reported two additional supply inquiries tied to corridor expansion. The fifth kiln remains on track for commissioning within three quarters.",
         "effects": {
           "construction": 0.13
         }
@@ -4600,7 +4608,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82713,
+    "lastEventCycle": 82742,
     "events": [
       {
         "cycle": 0,
@@ -4686,6 +4694,16 @@
         "size": "flash",
         "head": "Castlegear Group Inches Ahead as Sterile Tray Contract Reaches Full Volume",
         "body": "Castlegear delivered a small beat with income up 4%, as the regional network supply contract for sterile trays reached full shipment volume ahead of schedule. CEO Sable Brandt credited disciplined capacity planning and steady equipment backlog conversion. The company reaffirmed its conservative full-year outlook.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82742,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlegear Group Edges Past Estimates as Consumables Volume Holds Steady",
+        "body": "Castlegear reported a modest beat, with sterile tray and consumables volumes holding at full contract levels and quarterly revenue of $288M. Sable Brandt reaffirmed the company's conservative outlook, citing stable demand across its regional network. Margins were unchanged at 16%.",
         "effects": {
           "medical": 0.06
         }
@@ -6016,7 +6034,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82731,
+    "lastEventCycle": 82742,
     "events": [
       {
         "cycle": 0,
@@ -6212,6 +6230,16 @@
         "size": "standard",
         "head": "Drustcraft Beats as Three-Line Strategy Delivers Record Balanced Quarter",
         "body": "Cora Fenn's firm posted revenue up 7% with all three product lines—auto parts, fasteners and the newly anchored fixings contract—contributing meaningfully for the first time. Margins widened 120 basis points as the fixings deal ramped ahead of schedule. Fenn credited the diversification push she began two years ago for smoothing out the quarter's results.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82742,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drustcraft Wins $320M Auto-Parts Supply Pact, Extending Three-Line Momentum",
+        "body": "Cora Fenn secured a four-year, $320M auto-parts supply agreement with a national assembly network, building on the record balanced quarter across all three product lines. The deal locks in roughly 40% of the auto-parts line's forward capacity. Fenn said the win validates the diversified strategy she has steadily built.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -9508,18 +9536,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82736,
+    "lastEventCycle": 82742,
     "events": [
-      {
-        "cycle": 82607,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Halhold Works Lands Hospital Network Contract for Aveline Platform",
-        "body": "Halhold Works signed a $310 million agreement to roll out its Aveline Diagnostic Platform across a 22-site hospital network, its first major medical win since the Verity Pro wind-down. Lena Faircloth called the deal a turning point, saying it validated the overhaul and would anchor recurring service revenue. Installations begin next quarter.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82612,
         "kind": "product_launch",
@@ -9738,6 +9756,16 @@
         "size": "standard",
         "head": "Halhold Works Ships Aveline Successor to First Markets as Rocha's Reset Advances",
         "body": "Halhold began commercial shipments of its redesigned device, the successor to the troubled Aveline line, into three initial markets under CEO Anselm Rocha's turnaround plan. Early orders totaled $85M, with Rocha touting a rebuilt medical-equipment interface and stricter component sourcing to distance the product from prior recalls. Rocha called the launch 'the first real test of whether the cleanup took hold.'",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82742,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halhold Works Beats as Aveline Successor Sales Outpace Rocha's Reset Targets",
+        "body": "Halhold posted quarterly revenue of $612M, up 14% year-over-year, as the Aveline successor line cleared 800,000 units across its opening markets. Anselm Rocha said the device unit had returned to profitability a quarter ahead of plan, though Wire & Cable margins remained under pressure. The result marks the first clean beat since Rocha took over the cleanup.",
         "effects": {
           "technology": 0.13
         }
@@ -11270,7 +11298,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82726,
+    "lastEventCycle": 82742,
     "events": [
       {
         "cycle": 0,
@@ -11426,6 +11454,16 @@
         "size": "flash",
         "head": "Kesselgrove Co. Edges Past Estimates as Second Bay Trims Press Backlog Further",
         "body": "Kesselgrove reported another quarter above consensus, with the second assembly bay lifting deliveries and shaving the record press backlog to roughly nine months from twelve. Orla Steg noted throughput gains remained modest but steady, holding to the company's disciplined ramp. Margins were flat as onboarding costs offset volume gains.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82742,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Kesselgrove Co. Tops Estimates Again as Press Backlog Falls Below One Year",
+        "body": "Kesselgrove reported its third consecutive beat, with the industrial press backlog dropping under twelve months for the first time since 2029 as both assembly bays ran at full shift. Orla Steg credited disciplined throughput gains rather than new capacity. Operating margin held steady at 19%.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -16592,7 +16630,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82725,
+    "lastEventCycle": 82742,
     "events": [
       {
         "cycle": 0,
@@ -16728,6 +16766,16 @@
         "size": "standard",
         "head": "Veldtreach & Sons Beats as Inland Reservoir Works Ramp Up",
         "body": "Petra Steg's firm topped estimates with revenue of $388M, up 11%, as early-stage earthworks on the $540M inland reservoir package began contributing. All three excavation fleets ran at high utilization, and management flagged possible mobilization of a fourth fleet if follow-on coastal rail bids land. Steg said margins held despite fuel and equipment cost pressure.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82742,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Veldtreach & Sons Orders Fourth Earthmoving Fleet as Reservoir Works Accelerate",
+        "body": "Petra Steg committed $210M to a fourth earthmoving fleet to service the $540M Inland Reservoir package and a growing pipeline of regional works. The fleet, expected operational within two quarters, will lift Veldtreach's deployable capacity by roughly 30%. Steg framed the move as a measured response to sustained utilization rather than speculative growth.",
         "effects": {
           "construction": 0.13
         }
