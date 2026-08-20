@@ -160,6 +160,7 @@ export function Wire() {
 
   return (
     <div className="view wire">
+      <div className="wire-wrap">
       <header className="wmast">
         <span className="wmast-name">
           The Trove Wire
@@ -266,6 +267,7 @@ export function Wire() {
         </div>
       )}
 
+      </div>
       {studioOpen && <Newsreel onClose={() => setStudioOpen(false)} />}
     </div>
   );

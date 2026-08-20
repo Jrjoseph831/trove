@@ -8423,31 +8423,19 @@ details.bay-modules > summary.bay-sub:hover {
   color: var(--ink-dim);
   font-variant-numeric: tabular-nums;
 }
-.gl-head {
+.gl-track-wrap {
   display: flex;
   align-items: center;
-  gap: 12px;
-  max-width: 720px;
-  margin: 4px 0 16px;
-}
-.gl-count {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--ink);
-}
-.gl-count small {
-  font-size: 13px;
-  color: var(--ink-faint);
-  font-weight: 600;
+  gap: 14px;
+  margin: 0 0 24px;
 }
 .gl-bar {
   flex: 1;
-  height: 8px;
+  max-width: 280px;
+  height: 6px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--ink) 10%, var(--paper));
   overflow: hidden;
-  max-width: 320px;
 }
 .gl-bar i {
   display: block;
@@ -8464,16 +8452,15 @@ details.bay-modules > summary.bay-sub:hover {
 .gl-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 10px;
-  max-width: 920px;
+  gap: var(--bento-gap);
 }
 .gl-card {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 12px;
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 13px 14px;
+  border-radius: var(--bento-r);
+  padding: 14px 16px;
   background: var(--paper);
 }
 .gl-card.done {
@@ -8481,9 +8468,9 @@ details.bay-modules > summary.bay-sub:hover {
   background: color-mix(in srgb, var(--accent) 5%, var(--paper));
 }
 .gl-ic {
-  width: 30px;
-  height: 30px;
-  border-radius: 9px;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
   display: grid;
   place-items: center;
   flex: none;
@@ -8494,7 +8481,7 @@ details.bay-modules > summary.bay-sub:hover {
 .gl-card.done .gl-ic {
   border-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 14%, var(--paper));
-  color: #a86f16;
+  color: var(--accent);
 }
 .gl-body {
   display: flex;
@@ -8524,7 +8511,7 @@ details.bay-modules > summary.bay-sub:hover {
   padding: 3px 8px;
   flex: none;
   background: color-mix(in srgb, var(--accent) 14%, transparent);
-  color: #a86f16;
+  color: var(--accent);
 }
 
 /* ── Telegraphed market-event banner ───────────────────────────────────────── */
@@ -10469,6 +10456,10 @@ body {
    headlines and looked like a placeholder for news rather than news. They are
    the page now, set the way a paper sets them — one lead with room to breathe,
    a rule under it, then columns. */
+.wire-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .wmast {
   display: flex;
   align-items: flex-end;
@@ -10595,7 +10586,7 @@ body {
 }
 .wreel-frame {
   position: relative;
-  border-radius: 12px;
+  border-radius: var(--bento-r);
   overflow: hidden;
 }
 /* The embedded reel holds a strict 16:9, which is what kept reintroducing a
@@ -10750,9 +10741,9 @@ body {
 }
 .wpanel {
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: var(--bento-r);
   background: var(--paper);
-  padding: 13px 15px 14px;
+  padding: 14px 16px 15px;
 }
 .wpanel h3 {
   margin: 0 0 9px;

@@ -13,46 +13,47 @@ export function Goals() {
   const total = ACHIEVEMENTS.length;
 
   return (
-    <div className="view goals">
-      <div className="cat-head">
-        <h2 className="serif">Goals</h2>
-      </div>
-
-      <div className="gl-head">
-        <span className="gl-count">
-          {count}
-          <small> / {total}</small>
-        </span>
-        <div className="gl-bar">
-          <i style={{ width: `${(count / total) * 100}%` }} />
+    <div className="view">
+      <div className="page-col">
+        <div className="cat-head">
+          <h2 className="serif">Goals</h2>
+          <span className="eyebrow" style={{ marginLeft: "auto" }}>
+            {count} / {total} complete
+          </span>
         </div>
-        <span className="gl-sub">
-          {count === total
-            ? "All cleared — you're a machine."
-            : `${total - count} to go`}
-        </span>
-      </div>
 
-      <div className="gl-grid">
-        {ACHIEVEMENTS.map((a) => {
-          const ok = done.has(a.id);
-          return (
-            <div key={a.id} className={`gl-card ${ok ? "done" : ""}`}>
-              <span className="gl-ic">
-                {ok ? (
-                  <Check size={16} strokeWidth={2.5} />
-                ) : (
-                  <Lock size={13} strokeWidth={2} />
-                )}
-              </span>
-              <div className="gl-body">
-                <span className="gl-name">{a.name}</span>
-                <span className="gl-desc">{a.desc}</span>
+        <div className="gl-track-wrap">
+          <div className="gl-bar">
+            <i style={{ width: `${(count / total) * 100}%` }} />
+          </div>
+          <span className="gl-sub">
+            {count === total
+              ? "All cleared — you're a machine."
+              : `${total - count} to go`}
+          </span>
+        </div>
+
+        <div className="gl-grid">
+          {ACHIEVEMENTS.map((a) => {
+            const ok = done.has(a.id);
+            return (
+              <div key={a.id} className={`gl-card ${ok ? "done" : ""}`}>
+                <span className="gl-ic">
+                  {ok ? (
+                    <Check size={16} strokeWidth={2.5} />
+                  ) : (
+                    <Lock size={13} strokeWidth={2} />
+                  )}
+                </span>
+                <div className="gl-body">
+                  <span className="gl-name">{a.name}</span>
+                  <span className="gl-desc">{a.desc}</span>
+                </div>
+                {ok && <span className="gl-tag">Done</span>}
               </div>
-              {ok && <span className="gl-tag">Done</span>}
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
