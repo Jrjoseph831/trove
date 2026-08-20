@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-19T18:37:33.799Z",
+  "generatedAt": "2026-08-20T01:18:50.467Z",
   "beats": [
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Castlestone Slashes 1,800 Jobs and Splits Grid-Core Unit as Karsh Owns Guidance Miss",
+      "body": "Castlestone announced a sweeping restructure cutting roughly 1,800 roles, about 11% of headcount, and carving the troubled Grid-Core campus into a standalone compute division with its own P&L. Pell Karsh, in a notably subdued briefing, said the company would take a $340M charge and pause two planned campus builds to protect the balance sheet after the guidance cut. The Grid-Core spinout will report directly to Karsh pending appointment of a dedicated unit head.",
+      "cycle": 82740,
+      "dur": 8
+    },
+    {
+      "company": "Hearthstone Group",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Hearthstone Group Ticks Higher as Refill Stations Reach 300th Depot",
+      "body": "Hearthstone reported modest growth as bulk refill stations rolled out to their 300th depot location, lifting repeat-purchase rates in the household goods segment. Aurelia Aldous noted steady low-single-digit volume gains and reaffirmed full-year guidance without fanfare. The concentrates line continued to expand shelf presence across partner depots.",
+      "cycle": 82740,
+      "dur": 1
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Korrworks Signs $260M Material-Handling Fit-Out as Third Hub Site Locks Anchor Tenant",
+      "body": "Korrworks secured a $260M multi-year contract to supply automated racking and conveyor systems for a regional distribution operator anchoring its planned third hub. Rhys Throne said the deal de-risks the fast-tracked pipeline, with the anchor tenant committing to a 12-year lease covering nearly 60% of the site's throughput. Groundwork is slated to begin next quarter.",
+      "cycle": 82740,
+      "dur": 2
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Marlgear Supply Ousts Dane Kessler as Board Names Outsider to Clean Up Kessel Fault Scandal",
+      "body": "Marlgear's board removed Dane Kessler for cause amid the widening scandal over destroyed Kessel fault records, appointing former industrial-safety executive Corin Blakely as CEO with a mandate to overhaul disclosure practices. The board also formed an independent oversight committee and pledged full cooperation with the ongoing regulatory probe. Shares of the device maker remain under pressure as the class action proceeds and remediation costs are estimated to exceed $200M.",
+      "cycle": 82740,
+      "dur": 8
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Marrowstone Build Beats as Highway and Rail Wins Push Backlog Past $1.4B",
+      "body": "Marrowstone posted another quarterly beat, with revenue up 22% and backlog reaching a record $1.4B on the strength of the recent interchange and inland rail packages. Delphine Vaugh said fleet utilization hit 91% and flagged plans to add earthmoving capacity to service the swelling order book. Margins widened 180 basis points on improved project sequencing.",
+      "cycle": 82740,
+      "dur": 2
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Ornewright Supply Breaks Ground on Second Cold-Chain Hub at Vellhorn to Extend Dunmere Reach",
+      "body": "Ornewright confirmed a $185M second cold-storage facility at Vellhorn, roughly 90 miles north of the flagship Dunmere hub, targeting operational readiness within 14 months. Rhys Throne framed the move as answering demand that has already outstripped Dunmere's committed capacity, with two food-service clients pre-committing to combined annual volumes of 240,000 pallet positions. The expansion is expected to lift regional distribution coverage by an estimated 35%.",
+      "cycle": 82740,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Vossenspire Folds Corriveaux Into Timepiece Arm as Marrow Targets $140M in Synergies",
+      "body": "Vossenspire began integrating newly acquired Corriveaux, consolidating three overlapping ateliers and shifting Corriveaux movement production into its Thelvane vertical supply chain. Quinn Marrow guided to $140M in annual cost synergies by 2027 and confirmed the Corriveaux marque would survive as a distinct luxury line rather than be absorbed. Roughly 400 back-office roles are expected to be eliminated during integration.",
+      "cycle": 82740,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Woldmark Unveils Meridian Compute Line as Sonn Retires Halcyon Brand",
+      "body": "Petra Sonn used her first major appearance to launch Meridian, a rebuilt compute platform that formally retires the Halcyon name after the Halcyon 4 collapse. Sonn narrowed the initial rollout to two enterprise-grade configurations and secured three design-partner commitments ahead of general availability, calling the leaner launch a deliberate break from prior overreach. Early bookings cover an estimated 45,000 units over 18 months.",
+      "cycle": 82740,
+      "dur": 2
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -32,16 +112,6 @@
       "dur": 8
     },
     {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Dunmorestone Posts Steady Beat as Fixtures Expansion and Restaurant Contract Both Ramp",
-      "body": "Dunmorestone edged past estimates as its expanded Plumbing & Fixtures plant lifted output alongside the maturing regional restaurant supply deal. Orla Mercer pointed to balanced growth across both segments and reaffirmed full-year guidance. Order backlog rose 9% on the quarter.",
-      "cycle": 82739,
-      "dur": 1
-    },
-    {
       "company": "Erretmark Works",
       "sector": "automotive",
       "kind": "major_deal",
@@ -60,16 +130,6 @@
       "body": "Fenncyon opened a Northern Spur worksite to run parallel to the Eastfield Grand Loop, deploying additional fleets as earthwork volumes crest. Nadia Ashby said the expansion locks in the project's mid-phase schedule and positions the firm for adjacent bids. The move adds roughly 220 field crew and three excavation teams.",
       "cycle": 82739,
       "dur": 2
-    },
-    {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Garrware Commissions Fifth Marrow Valley Line as Backlog Tightens",
-      "body": "Garrware added a fifth packaging line at its Marrow Valley site, extending a steady buildout under Orla Holt. The line lifts site capacity roughly 15% as demand outpaces the recently commissioned wing. Management said staffing is already in place for a phased ramp.",
-      "cycle": 82739,
-      "dur": 1
     },
     {
       "company": "Stegforge",
@@ -110,56 +170,6 @@
       "body": "Halcrest reported its strongest quarter in a decade, with the Grand Complication's entire 250-piece allocation sold and a waitlist of over 1,900 names. The high-margin flagship lifted net income 41% to $310M and reversed the prior Skeleton Edition disappointment. Iris Marrow called it proof that 'bold bets, made whole, still define this house.'",
       "cycle": 82738,
       "dur": 8
-    },
-    {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Holtware Co. Broadens Cordless Line With Modular Battery Platform Under Aurelia Dray",
-      "body": "Holtware unveiled its Unifit modular battery system, allowing a single pack to power its expanded cordless drill, saw, and chain lineup. CEO Aurelia Dray framed the launch as a way to lock in repeat buyers as first-wave cordless demand plateaus. Early orders from three regional distributors totaled $88M ahead of the retail rollout.",
-      "cycle": 82738,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Ironcrestton Retires Meridian Line and Rebuilds Supply Chain Under Corwin Vale",
-      "body": "Corwin Vale announced Ironcrestton will discontinue the tainted Meridian line and consolidate sourcing under a newly audited supplier network. The cleanup carries a $220M writedown but resolves a key regulator demand tied to the ongoing lawsuit. Vale said a replacement collection, built on certified materials, is targeted for next year.",
-      "cycle": 82738,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Lhaus Industries Buys Parts Supplier Verrund for $480M to Deepen Platform Control",
-      "body": "Restless as ever, Cole Brandt struck again, acquiring drivetrain specialist Verrund for $480M to bring key components of its new vehicle platform in-house. The deal is expected to trim per-unit costs by 9% and secure supply as the platform line outsells forecasts. Brandt said vertical integration was 'the natural next move' after the strong launch.",
-      "cycle": 82738,
-      "dur": 2
-    },
-    {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Stegreach Beats Again as Riverport Grid Work and Substation Order Lift Margins",
-      "body": "Stegreach posted quarterly revenue of $1.36B, up 14%, as the $410M substation fixings order began shipping alongside its broader Riverport grid contracts. CEO Halden Ashby credited disciplined pricing on wire and cable for a 60-basis-point margin gain. Management raised full-year guidance modestly, citing a healthy fixings backlog.",
-      "cycle": 82738,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Thronehaus & Co. Expands Coristel Alloy Foundry to Feed Growing Aurel Demand",
-      "body": "Thronehaus committed $190M to double capacity at its Coristel alloy foundry after the Aurel collection sold through faster than planned. Cora Dray said the expansion would also supply a second collection in development and open the door to limited alloy sales to select partners. The new lines are slated to come online within 14 months.",
-      "cycle": 82738,
-      "dur": 2
     },
     {
       "company": "Halhold Systems",
@@ -239,26 +249,6 @@
       "head": "Greywater Grid Faces Regulatory Probe Over Closed-Loop Reservoir Discharge Claims",
       "body": "Regulators opened a formal inquiry into Greywater Grid's closed-loop water figures after inspectors flagged discrepancies between reported and measured discharge at two reservoir sites. The probe casts a shadow over the $2.4B compute pact anchored to those facilities, portions of which include performance clauses tied to water recovery. Sable Renwick said the company 'stands fully behind its data' and is cooperating, but acknowledged the review could delay site certifications.",
       "cycle": 82733,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Marlgear Supply Documents Show Executives Ordered Kessel Fault Records Destroyed",
-      "body": "Internal memos surfaced in the widening probe showing senior Marlgear leaders directed staff to purge Kessel fault logs weeks before regulators arrived, according to filings reviewed at a public hearing. Dane Kessler denied personal knowledge but placed two divisional heads on leave as the board opened an independent review. Shares of confidence cratered as the class action added the document allegations to its complaint.",
-      "cycle": 82732,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Vossenspire Supply Strikes $2.1B Deal to Acquire Rival House Corriveaux",
-      "body": "Quinn Marrow unveiled the largest acquisition in Vossenspire's century-long history, absorbing storied timepiece and coachbuilding house Corriveaux for $2.1 billion. The deal combines Vossenspire's Thelvane case works with Corriveaux's renowned movement ateliers, creating a top-tier luxury conglomerate. Marrow said the integration would 'complete the vertical chain from raw brass to boutique.'",
-      "cycle": 82732,
       "dur": 8
     }
   ]
