@@ -988,7 +988,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82717,
+    "lastEventCycle": 82741,
     "events": [
       {
         "cycle": 0,
@@ -1084,6 +1084,16 @@
         "size": "flash",
         "head": "Ashbystead Holdings Logs Ninth Straight Beat on Reliable Equipment Renewals",
         "body": "Ashbystead Holdings reported a ninth consecutive quarterly beat, with revenue up 2.1% on continued hospital renewal contracts across its imaging and monitoring lines. CEO Cora Holt again declined to raise full-year guidance, citing the same steady replacement cadence that has defined the company for decades. Margins held flat at 18.4%.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82741,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Logs Tenth Straight Beat on Steady Equipment Renewal Cycle",
+        "body": "The medical-equipment maker notched a tenth consecutive quarterly beat, with revenue up 4% on reliable hospital renewals and service contracts. Chief executive Cora Holt credited long-standing institutional relationships and a conservative order book. Guidance was left unchanged for the remainder of the year.",
         "effects": {
           "medical": 0.06
         }
@@ -2232,18 +2242,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82735,
+    "lastEventCycle": 82741,
     "events": [
-      {
-        "cycle": 82594,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Bruncrest Works Bets on Leaner Lineup With Debut of Streamlined Aria Compute Series",
-        "body": "Ines Marlow introduced the Aria series, a pared-down compute line she framed as the payoff from her controversial product cuts. The launch narrows Bruncrest to three core configurations aimed at cost-conscious buyers, with Marlow promising faster shipping and thinner overhead. Early orders will test whether her aggressive overhaul can restart growth after last quarter's sales slide.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82601,
         "kind": "earnings_beat",
@@ -2470,6 +2470,16 @@
         "size": "major",
         "head": "Bruncrest Works Signs $3.4B Aria Ultra Framework, Its Largest Order on Record",
         "body": "Ines Marlow announced a $3.4 billion multi-year framework agreement anchoring output from the new compute line, roughly tripling the size of the earlier landmark Aria Ultra order. The pact locks in dedicated capacity through the decade and validates Marlow's contested throughput bet. Deliveries are slated to begin once the newly broken-ground line reaches qualification.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82741,
+        "kind": "earnings_beat",
+        "size": "major",
+        "head": "Bruncrest Works Crushes Estimates as $3.4B Aria Ultra Framework Ramps to Full Volume",
+        "body": "Revenue jumped 61% to $2.9B as the record Aria Ultra order moved from framework to shipment, with the new compute line reaching full output ahead of schedule. Chief executive Ines Marlow raised full-year guidance and said backlog now stretches beyond eighteen months. The result caps a bold expansion bet that pushed capacity spending to historic highs.",
         "effects": {
           "technology": 0.22
         }
@@ -6219,7 +6229,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82726,
+    "lastEventCycle": 82741,
     "events": [
       {
         "cycle": 0,
@@ -6365,6 +6375,16 @@
         "size": "standard",
         "head": "Drustcyon Beats as Harbor-Authority Contract Powers Record Marine-Grade Shipments",
         "body": "Drustcyon topped estimates as first shipments under the $540M harbor-authority pact combined with a maturing coastal foundry to drive record marine-grade anchor output. Aurelia Kessler said the expanded foundry reached 80% of targeted run-rate ahead of schedule, easing the backlog that had constrained prior quarters. Management raised full-year revenue guidance modestly.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82741,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drustcyon Lands Second Harbor-Authority Award for Marine-Grade Anchors Worth $310M",
+        "body": "The construction house secured a follow-on $310M supply agreement covering three additional port districts, extending its marine-grade anchor franchise. Chief executive Aurelia Kessler said the expanded coastal foundry can absorb the volume without further capital outlay. The award builds directly on the record shipments from the prior $540M contract.",
         "effects": {
           "construction": 0.13
         }
@@ -7542,7 +7562,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82727,
+    "lastEventCycle": 82741,
     "events": [
       {
         "cycle": 0,
@@ -7700,6 +7720,16 @@
         "body": "Petra Thorne reported the broadest quarter on record repeating, with material-handling throughput up 11% as the two Beyond-Meridian acquisitions finished integrating onto a single dispatch system. Revenue reached $840M against expectations near $790M, and Thorne raised the full-year outlook for the first time in six quarters. Synergy savings ran ahead of the original $45M target.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82741,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Forgegrave Industries Beats Again as Beyond-Meridian Network Sustains Volume Gains",
+        "body": "The logistics house topped estimates for a third straight quarter, with material-handling volumes up 5% across the integrated Beyond-Meridian distributor network. Chief executive Petra Thorne said synergies from the combined regional footprint are now fully realized. Guidance held steady with margins broadly flat.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -11922,18 +11952,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82734,
+    "lastEventCycle": 82741,
     "events": [
-      {
-        "cycle": 82564,
-        "kind": "award",
-        "size": "flash",
-        "head": "Korrwright Works' Velloux Atelier Series Named Timepiece of the Year by Chronard Guild",
-        "body": "The debut line from Korrwright's new Heritage Atelier took top honors at the Chronard Guild awards, with judges praising the revived Velloux dial craft. Chief executive Dunmore Carrow said the recognition 'validates every acquisition we've made to bring this workshop under one roof.'",
-        "effects": {
-          "luxury": 0.06
-        }
-      },
       {
         "cycle": 82571,
         "kind": "major_deal",
@@ -12158,6 +12178,16 @@
         "size": "standard",
         "head": "Korrwright Works Debuts In-House Escapement as Halbrook Integration Bears Fruit",
         "body": "Six months after the $1.1B Halbrook acquisition, Korrwright unveiled its first fully in-house escapement mechanism, ending decades of reliance on outside movement suppliers. Carrow told assembled press the milestone 'closes the last open link in our chain,' and hinted that a limited grand-complication series would follow within the year.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82741,
+        "kind": "award",
+        "size": "standard",
+        "head": "Korrwright Works Wins Grand Prix at Verenne Horology Salon for In-House Escapement",
+        "body": "The reborn escapement, developed after the $1.1B Halbrook acquisition, took top honors at the prestigious Verenne salon, a first for the 118-year-old house. Chief executive Dunmore Carrow said the award validates the vertical-integration strategy and lifts order visibility into next year. The recognition arrives as direct sales from Verenne retail continue to outpace wholesale.",
         "effects": {
           "luxury": 0.13
         }
@@ -12902,7 +12932,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82727,
+    "lastEventCycle": 82741,
     "events": [
       {
         "cycle": 0,
@@ -13068,6 +13098,16 @@
         "size": "flash",
         "head": "Marrowcyon Extends Run to Sixth Straight Quiet Beat as Fixtures Demand Steadies",
         "body": "Theo Orne's house edged past expectations again, with plumbing and fixtures revenue up 3.1% and apparel holding flat on stable seasonal orders. Management left full-year guidance unchanged, citing balanced demand across both segments. Margins ticked up 20 basis points on modest input-cost relief.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82741,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Extends Streak to Seventh Straight Quiet Beat as Apparel and Fixtures Hold",
+        "body": "The consumer house posted a modest 3% revenue gain, its seventh consecutive quarter topping estimates, with plumbing margins and apparel volumes both steady. Chief executive Theo Orne reaffirmed guidance and flagged no changes to the outlook. The unremarkable, dependable cadence again drew little market reaction.",
         "effects": {
           "consumer": 0.06
         }
@@ -16307,16 +16347,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82734,
+    "lastEventCycle": 82741,
     "events": [
-      {
-        "cycle": 82543,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Varnvale House Ousts Petra Holt as Ember Sourcing Scandal Deepens",
-        "body": "After 132 years of family stewardship, the board removed Petra Holt following a third consecutive disappointing quarter and mounting legal exposure over Ember capsule sourcing claims. Directors appointed former compliance chief Marisol Venn to steady the house, pledging a full audit of supplier disclosures and a settlement framework for the pending suit. Venn said restoring 'the truth of every claim we make' would be her first priority.",
-        "effects": {}
-      },
       {
         "cycle": 82551,
         "kind": "leadership_change",
@@ -16533,6 +16565,16 @@
         "size": "standard",
         "head": "Varnvale House Tops Estimates as Reborn Sovereign Line Clears Early Inventory",
         "body": "Varnvale reported quarterly revenue up 14% to $840M, crediting brisk sell-through of the relaunched Sovereign line that Coyle staked her tenure on. Direct-boutique orders outpaced forecasts, though management cautioned that second-run production must keep pace to avoid the supply gaps that felled her predecessor.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82741,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale House Extends Comeback With Sovereign Complication Line Under Coyle",
+        "body": "Building on the reborn Sovereign line's strong debut, chief executive Beatrix Coyle unveiled a higher-priced complication series aimed at reclaiming the house's premium tier. The launch carries expanded fine-goods pairings and targets a 20% lift in average selling price. Coyle called it the next stage of a full-line revival after early inventory cleared faster than planned.",
         "effects": {
           "luxury": 0.13
         }
@@ -17012,14 +17054,14 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1979,
-    "ceo": "Corin Alderidge",
+    "ceo": "Maren Vok",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.58,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82729,
+    "lastEventCycle": 82741,
     "events": [
       {
         "cycle": 0,
@@ -17191,6 +17233,14 @@
         "size": "major",
         "head": "Vossenspire Holdings Ousts Halden Roe as Storage-Bank Probe Turns Damning",
         "body": "Vossenspire's board removed CEO Halden Roe after investigators found commissioning protocols on the failed grid-scale storage bank had been rushed against internal warnings. Director Mara Venn will serve as interim chair while the search proceeds, and the house suspended two further storage projects pending review. Shares have shed nearly half their value since the outage.",
+        "effects": {}
+      },
+      {
+        "cycle": 82741,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Vossenspire Holdings Installs Corin Alderidge Successor Maren Vok as Probe Nears Verdict",
+        "body": "The board named Maren Vok, formerly head of grid operations at a rival power house, as chief executive after Corin Alderidge's turbulent tenure ended amid the ongoing storage-bank probe. Vok inherits a frozen revenue base and a regulatory review expected to conclude within two quarters, and pledged an immediate top-to-bottom audit of the Storage division. Analysts pegged the leadership reset as the last chance to stabilize before penalties land.",
         "effects": {}
       }
     ]
