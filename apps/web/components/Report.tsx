@@ -32,10 +32,12 @@ const LEDGER_KEYS = [
   "soldUnits",
   "soldRev",
   "upkeep",
-  // Optional on ledgers persisted before estates were reported, hence the ?? 0
+  // Optional on ledgers persisted before this field existed, hence the ?? 0
   // when summing — an older row simply contributes nothing.
   "rentRev",
   "divRev",
+  "payroll",
+  "fees",
 ] as const;
 
 function aggregateDays(reports: Report[]): DayAgg[] {
@@ -115,6 +117,8 @@ export function flowRows(r: { flows: Ledger }) {
     { k: "Estate rent", v: f.rentRev ?? 0, money: true, good: true },
     { k: "Stake dividends", v: f.divRev ?? 0, money: true, good: true },
     { k: "Upkeep + inputs", v: -f.upkeep, money: true, good: false },
+    { k: "Payroll", v: -(f.payroll ?? 0), money: true, good: false },
+    { k: "Warehousing & tax", v: -(f.fees ?? 0), money: true, good: false },
   ].filter((row) => row.v !== 0 || (row.u ?? 0) !== 0);
 }
 
@@ -147,7 +151,7 @@ export function ReportView() {
   const delta = prev ? d.netWorth - prev.netWorth : 0;
   const f = d.flows;
   const revenue = f.listingRev + f.orderRev + f.soldRev;
-  const costs = f.spent + f.upkeep;
+  const costs = f.spent + f.upkeep + (f.payroll ?? 0) + (f.fees ?? 0);
 
   // ── Net-worth line/area chart over all days ─────────────────────────────
   const W = 680;
@@ -324,6 +328,18 @@ export function ReportView() {
               <span>Upkeep + inputs</span>
               <b className="rc-dn">{money(f.upkeep)}</b>
             </div>
+            {(f.payroll ?? 0) > 0 && (
+              <div className="act">
+                <span>Payroll</span>
+                <b className="rc-dn">{money(f.payroll ?? 0)}</b>
+              </div>
+            )}
+            {(f.fees ?? 0) > 0 && (
+              <div className="act">
+                <span>Warehousing & tax</span>
+                <b className="rc-dn">{money(f.fees ?? 0)}</b>
+              </div>
+            )}
           </div>
         </div>
       </div>

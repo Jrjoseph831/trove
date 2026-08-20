@@ -325,6 +325,10 @@ export interface Ledger {
   rentRev?: number;
   /** Dividends paid by equity stakes this period (same reasoning as rentRev). */
   divRev?: number;
+  /** Labor cost: $20/tick × active factory lines (optional for old ledgers). */
+  payroll?: number;
+  /** Warehousing (0.75%/flip of inventory) + progressive wealth tax (optional for old ledgers). */
+  fees?: number;
   /** Per-item breakdown (itemId → flow). */
   items: Record<number, ItemFlow>;
 }

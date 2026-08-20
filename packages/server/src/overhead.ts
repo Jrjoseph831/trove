@@ -6,7 +6,7 @@
  * applyPayroll   — charged per production tick per active factory line
  * applyFlipOverhead — charged per 6h market flip (warehousing + progressive tax)
  */
-import type { WorldState } from "@trove/engine";
+import { emptyLedger, type WorldState } from "@trove/engine";
 
 /** Flat labor cost per active (running or idle) factory line per production tick. */
 export const PAYROLL_PER_LINE = 20; // $20/tick → at 5 lines: $100/tick, $1,200/hr
@@ -26,7 +26,10 @@ export function applyPayroll(pv: WorldState, ticks: number): void {
     (f) => f.status === "running" || f.status === "idle",
   ).length;
   if (activeLines === 0) return;
-  pv.cash -= activeLines * PAYROLL_PER_LINE * ticks;
+  const amount = activeLines * PAYROLL_PER_LINE * ticks;
+  pv.ledger ??= emptyLedger();
+  pv.ledger.payroll = (pv.ledger.payroll ?? 0) + amount;
+  pv.cash -= amount;
   if (pv.cash < 0) {
     pv.debt += -pv.cash;
     pv.cash = 0;
@@ -76,6 +79,8 @@ export function applyFlipOverhead(pv: WorldState): void {
   const total = storage + tax;
 
   if (total > 0) {
+    pv.ledger ??= emptyLedger();
+    pv.ledger.fees = (pv.ledger.fees ?? 0) + total;
     pv.cash -= total;
     if (pv.cash < 0) {
       pv.debt += -pv.cash;

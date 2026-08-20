@@ -60,6 +60,8 @@ export function emptyLedger(): Ledger {
     upkeep: 0,
     rentRev: 0,
     divRev: 0,
+    payroll: 0,
+    fees: 0,
     items: {},
   };
 }
