@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-21T06:50:12.781Z",
+  "generatedAt": "2026-08-21T12:50:31.563Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Blackton Industries Launches Renwick's Streamlined Drivetrain Parts Line",
+      "body": "Blackton unveiled a consolidated drivetrain components range, the first clean-sheet product family since the Halvern split. CEO Sable Renwick said the leaner catalog cuts tooling costs by an estimated 18% while targeting two large assembly customers. The rollout marks Renwick's first offensive move after a turbulent stretch of restructuring charges.",
+      "cycle": 82746,
+      "dur": 2
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Boreas Power Adds Two More Compute-Paired Campuses as Thorne Widens $3.2B Program",
+      "body": "Boreas Power broke ground on its third and fourth compute-paired power campuses near Vantel and Halvane, bringing committed sites to four just months into the program. CEO Mira Thorne said early demand from anchor tenants had pulled forward the build schedule by roughly two quarters. The company reaffirmed the $3.2B envelope but hinted an expansion could be needed if bookings hold.",
+      "cycle": 82746,
+      "dur": 2
+    },
+    {
+      "company": "Drayton Freight",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drayton Freight Beats and Raises as Warehouse Automation Contract Begins Booking",
+      "body": "Drayton Freight topped estimates as the first installations under its $900M continent-spanning automation contract began contributing revenue. CEO Emil Holt lifted full-year guidance for the second time, citing faster-than-planned deployment across three regional hubs. The company said the pallet-lift fleet deal continues to run at full ramp alongside the new work.",
+      "cycle": 82746,
+      "dur": 2
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Fennmoor Bolts On Second Target, Buying Diagnostics Maker Carrow for $1.1B",
+      "body": "Fresh off folding in Halquist Instruments, Fennmoor agreed to acquire diagnostics specialist Carrow Systems for $1.1B, deepening its push into hospital-grade equipment. CEO Dorian Brandt framed the back-to-back deals as building an end-to-end medical platform, though analysts flagged rising integration risk from two overlapping efforts. Carrow's imaging line is expected to slot under the Medical Systems unit by year-end.",
+      "cycle": 82746,
+      "dur": 2
+    },
+    {
+      "company": "Hesperforge Supply",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Hesperforge Supply Beats as Fourth Mill Nears Startup and Marine Backlog Holds",
+      "body": "Hesperforge posted another beat as marine-grade framework deliveries against its $780M follow-on order accelerated. CEO Sable Halloran said the $600M fourth mill remains on track to begin production next quarter, easing capacity strain that has capped output. Management said the marine backlog still stretches beyond twelve months.",
+      "cycle": 82746,
+      "dur": 2
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Maison & Vale Details Larenthal Integration Plan, Cutting Overlapping Brands",
+      "body": "As the $4.2B Larenthal merger closes, Maison & Vale outlined a plan to consolidate roughly 40 overlapping household-goods labels and combine three distribution networks. CEO Rhys Kessler targeted $310M in annual cost synergies by the second year while pledging no disruption to Vestrand supply lines. Investors will watch execution risk as Kessler digests his largest deal yet.",
+      "cycle": 82746,
+      "dur": 2
+    },
+    {
+      "company": "Palettstead Holdings",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Palettstead Holdings Commits $340M to Fifth Cold-Chain After Fourth Sells Out",
+      "body": "With its fourth cold-chain running near capacity, Palettstead greenlit a fifth facility backed by a $340M outlay and a pre-signed anchor tenant. CEO Orla Marrow said modular insulated packaging demand had reinforced the case for adding integrated cold storage. The site is slated to break ground within two quarters.",
+      "cycle": 82746,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "flash",
+      "head": "Thronehaus & Co. Aurel Piece Named Timepiece of the Year at Vellcourt Salon",
+      "body": "The flagship Aurel chronograph, forged from in-house Coristel alloy, took top honors at the annual Vellcourt Salon. CEO Cora Dray called the recognition validation of the vertical foundry strategy that has widened margins. The award is expected to lift order interest as the expanded foundry ramps.",
+      "cycle": 82746,
+      "dur": 1
+    },
     {
       "company": "Aldouscraft Mfg.",
       "sector": "construction",
@@ -92,16 +172,6 @@
       "dur": 8
     },
     {
-      "company": "Brunridge Works",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunridge Works Debuts Aldercraft Fine Goods Line Under National Retail Banner",
-      "body": "Brunridge launched Aldercraft, a premium fine-goods range rolling into 1,200 partner stores under its multi-category retail pact. CEO Halia Brennt called it the company's first push upmarket, pairing the new line with refreshed packaging developed in-house. Early placement covers apparel accessories and desk goods, with a devices tie-in planned for later in the year.",
-      "cycle": 82744,
-      "dur": 2
-    },
-    {
       "company": "Greywater Grid",
       "sector": "energy",
       "kind": "scandal",
@@ -110,46 +180,6 @@
       "body": "Leaked engineering memos reveal that the celebrated 94% recovery rate held only in controlled early runs, with live sites averaging closer to 71%, contradicting public claims tied to the $2.4B compute pact. CEO Sable Renwick, who championed the closed-loop rollout, faces mounting pressure as anchor customers demand contract reviews and regulators widen the discharge probe. Two site directors have been placed on leave pending an internal inquiry.",
       "cycle": 82744,
       "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Lhaus Industries Beats as Verrund Integration Cuts Parts Costs",
-      "body": "Lhaus posted a quarterly beat as the newly acquired Verrund supplier trimmed component costs on its fast-selling platform vehicle line. CEO Cole Brandt credited tighter parts control for a 3-point margin gain and hinted at further supply-chain deals ahead. Vehicle deliveries continued to outpace forecasts.",
-      "cycle": 82744,
-      "dur": 2
-    },
-    {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Marrowmoor Holdings Acquires Southfield Property to Push Base to Five",
-      "body": "Marrowmoor agreed to acquire the Southfield property, extending its regional cluster to five sites as its four-property base runs near capacity. CEO Dorian Steg said the addition absorbs overflow demand without straining existing operations, with integration expected to be gradual. Terms were not disclosed.",
-      "cycle": 82744,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarngrove & Sons Beats as Full Kelvarn Corridor Enters Peak Build",
-      "body": "Skarngrove reported a strong quarter as the terminal-span, approach-roads, and legacy corridor packages all hit peak construction simultaneously. CEO Quinn Fenn said structural-materials throughput reached a multi-year high, with fasteners and fixings running fully committed. The firm reaffirmed guidance through the corridor's completion.",
-      "cycle": 82744,
-      "dur": 2
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Steg Tooling Runs Streak to Fourteen as Fastener Backlog Holds Firm",
-      "body": "Steg posted its fourteenth consecutive quarterly beat, with fastener revenue up 9% as demand continued to outrun the three live Kelmar cells. CEO Iris Vossen said groundwork on the fourth cell is proceeding on schedule, with commissioning targeted for the next fiscal year. Fixings margins widened on stable input costs.",
-      "cycle": 82744,
-      "dur": 2
     },
     {
       "company": "Gromford Works",
@@ -249,36 +279,6 @@
       "head": "Erretmark Works Seals $2.1B Fleet Accord as Cross-Border Push Reaches Continental Scale",
       "body": "Aurelia Garr's restless expansion crested with a $2.1B multi-year agreement to supply 5,000 Veyron-class vehicles to a continental transit consortium. The pact commits Erretmark to a fifth Veyron Hall and locks delivery windows through the decade. Garr called it the largest single order in the company's 106-year history.",
       "cycle": 82739,
-      "dur": 8
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Brunmark Motors Slashes 4,200 Jobs and Halts Veyra S Line as Calvagh Forces Reset",
-      "body": "Brunmark announced a sweeping restructuring, cutting 4,200 roles and idling Veyra S production to redirect resources into a redesigned battery module. Iris Calvagh, confirmed permanent chief last month, said the company would take a $1.1B charge and exit two underperforming parts facilities. The move follows the $900M class action and stalled recall repairs that battered confidence.",
-      "cycle": 82738,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "earnings_beat",
-      "size": "major",
-      "head": "Castlehold Smashes Estimates as $2B Framework and Twin Plants Drive Record Quarter",
-      "body": "Castlehold reported record revenue of $980M, up 62%, as its landmark $2B grid-storage framework began delivering and both modular plants ran near capacity. Halden Voss said backlog now exceeds $2.8B and hinted at a third facility to keep pace. Net income tripled to $166M, though Voss cautioned that scaling this fast carries execution risk.",
-      "cycle": 82738,
-      "dur": 8
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "major",
-      "head": "Halcrest Roars Back as Meridian Grand Complication Sells Out, Vindicating Iris Marrow",
-      "body": "Halcrest reported its strongest quarter in a decade, with the Grand Complication's entire 250-piece allocation sold and a waitlist of over 1,900 names. The high-margin flagship lifted net income 41% to $310M and reversed the prior Skeleton Edition disappointment. Iris Marrow called it proof that 'bold bets, made whole, still define this house.'",
-      "cycle": 82738,
       "dur": 8
     }
   ]
