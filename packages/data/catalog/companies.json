@@ -2252,18 +2252,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82741,
+    "lastEventCycle": 82747,
     "events": [
-      {
-        "cycle": 82601,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Bruncrest Works Rebounds as Streamlined Aria Series Fuels Margin Recovery",
-        "body": "Bruncrest reported quarterly revenue of 2.3B, up 11% sequentially, with operating margins expanding 340 basis points as the leaner Aria Compute lineup carried lower production overhead. CEO Ines Marlow declared the overhaul 'vindicated,' touting the fewest product SKUs in a decade while unit shipments climbed 7%. Analysts noted the beat marks the first upside surprise since Marlow's restructure began.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82607,
         "kind": "major_deal",
@@ -2493,6 +2483,16 @@
         "effects": {
           "technology": 0.22
         }
+      },
+      {
+        "cycle": 82747,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Bruncrest Works Adds Second Compute Line as Aria Ultra Backlog Swells Past $5B",
+        "body": "Riding momentum from its $3.4B framework, Bruncrest Works committed $1.6B to a second Aria Ultra production line, citing an order backlog that has climbed beyond $5B. CEO Ines Marlow said the expansion should lift annual output by roughly 40% once the line reaches volume in late 2027. The company expects to add 1,200 workers at its northern campus.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -2680,18 +2680,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82738,
+    "lastEventCycle": 82747,
     "events": [
-      {
-        "cycle": 82528,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Brunmark Motors Splits Out Power Unit to Steady Veyra Supply",
-        "body": "Reeling from a bruising quarter, Brunmark moved its Power & Storage operation into a standalone unit with its own supply chain and dedicated cell lines. Yvette Calder said the carve-out would 'stop the Veyra ramp from starving the rest of the house,' and named pack production as the top fix. The reorganization affects roughly 2,600 staff across three plants.",
-        "effects": {
-          "automotive": -0.13
-        }
-      },
       {
         "cycle": 82538,
         "kind": "earnings_beat",
@@ -2912,6 +2902,16 @@
         "body": "Brunmark announced a sweeping restructuring, cutting 4,200 roles and idling Veyra S production to redirect resources into a redesigned battery module. Iris Calvagh, confirmed permanent chief last month, said the company would take a $1.1B charge and exit two underperforming parts facilities. The move follows the $900M class action and stalled recall repairs that battered confidence.",
         "effects": {
           "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82747,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunmark Motors Relaunches Veyra Line With Redesigned Battery Pack as Calvagh Bets on Reset",
+        "body": "Brunmark Motors restarted its halted assembly line with the Veyra R, built around an all-new battery pack from supplier Halden Cells that the company says resolves the thermal faults behind its 340,000-unit recall. CEO Iris Calvagh staked her turnaround on the model, opening pre-orders with an extended 10-year pack warranty. Analysts remain wary given the unresolved $900M class action.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -3533,25 +3533,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1968,
-    "ceo": "Vellin Marsh",
+    "ceo": "Perra Vann",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.7,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82739,
+    "lastEventCycle": 82747,
     "events": [
-      {
-        "cycle": 82527,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Calderforge to Retire Aging Embergate Hall After Outage",
-        "body": "Calderforge announced it will decommission the original Embergate compute hall, source of last month's cooling failure, and redirect workloads to its newer second hall. Nadia Throne pledged £55 million toward modern cooling systems and a phased migration over six months. The company conceded the older hall had been 'running past its years.'",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82535,
         "kind": "product_launch",
@@ -3778,6 +3768,14 @@
         "size": "major",
         "head": "Calderforge Ousts Nadia Throne After Decades at the Helm Amid Stormwell Fallout",
         "body": "The Calderforge board removed longtime chief Nadia Throne following three consecutive stumbles tied to the troubled Fourth Stormwell Hall, ending a tenure that began in 1968. Directors named turnaround specialist Vellin Marsh as chief executive, tasking her with stabilizing yields and restoring guidance credibility. The company also disclosed a $480M write-down against the delayed capacity.",
+        "effects": {}
+      },
+      {
+        "cycle": 82747,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Calderforge Names Turnaround Veteran Perra Vann to Rescue Stalled Stormwell Program",
+        "body": "Calderforge's board appointed Perra Vann, formerly operations chief at a rival compute house, as chief executive following the ouster of longtime leader Nadia Throne. Vann inherits the troubled fourth Stormwell Hall, where ramp delays and faltering yields forced two straight guidance cuts. She pledged a 90-day review of the entire Stormwell buildout before setting new targets.",
         "effects": {}
       }
     ]
@@ -5117,18 +5115,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82740,
+    "lastEventCycle": 82747,
     "events": [
-      {
-        "cycle": 82597,
-        "kind": "earnings_beat",
-        "size": "major",
-        "head": "Castlestone Smashes Estimates as National Data Grid Pact Powers Record Quarter",
-        "body": "Castlestone reported quarterly revenue of $4.2B, up 71% year over year, as first deliveries under the $9.5B National Data Grid contract began recognizing. CEO Pell Karsh declared the quarter 'the moment Halo went from a product to an infrastructure,' and lifted full-year guidance by roughly 18%. High-density tier orders alone contributed $1.1B, prompting management to flag capacity expansion at two fabrication sites.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82603,
         "kind": "major_deal",
@@ -5357,6 +5345,16 @@
         "body": "Castlestone announced a sweeping restructure cutting roughly 1,800 roles, about 11% of headcount, and carving the troubled Grid-Core campus into a standalone compute division with its own P&L. Pell Karsh, in a notably subdued briefing, said the company would take a $340M charge and pause two planned campus builds to protect the balance sheet after the guidance cut. The Grid-Core spinout will report directly to Karsh pending appointment of a dedicated unit head.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82747,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Castlestone Steadies as Grid-Core Split and Cost Cuts Fuel First Beat Under Reset",
+        "body": "Castlestone posted quarterly revenue of $2.9B, edging past the $2.7B consensus, as the newly independent Grid-Core unit delivered its first on-time compute shipments since the redesigned cooling relaunch. CEO Pell Karsh credited the 1,800-role reduction and unit split for restoring margins, though he cautioned that the recovery remains 'one quarter old.' Operating margin recovered to 11% from a razor-thin 3% a quarter earlier.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -10908,18 +10906,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82738,
+    "lastEventCycle": 82747,
     "events": [
-      {
-        "cycle": 82528,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Ironcrestton Turns Award Buzz Into the Carrow Atelier Line",
-        "body": "Riding its Artisan's Circle sweep, Ironcrestton launched the Carrow Atelier collection, a tightly limited run of fine goods showcasing the techniques that earned the honors. Sable Carrow staged a single-night unveiling that drew a waitlist exceeding the production run of 300 pieces. The house said allocations would favor existing patrons before any wider release.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82537,
         "kind": "expansion",
@@ -11140,6 +11128,16 @@
         "body": "Corwin Vale announced Ironcrestton will discontinue the tainted Meridian line and consolidate sourcing under a newly audited supplier network. The cleanup carries a $220M writedown but resolves a key regulator demand tied to the ongoing lawsuit. Vale said a replacement collection, built on certified materials, is targeted for next year.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82747,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Ironcrestton Unveils Aurelian Collection as Vale Draws Line Under Meridian Era",
+        "body": "Ironcrestton launched its Aurelian line of fine goods, the first collection built entirely on the rebuilt supply chain Corwin Vale installed after retiring the scandal-tainted Meridian range. Vale positioned Aurelian as a 'clean slate,' backed by traceable sourcing certificates for every piece. The house committed $180M to marketing and boutique refits over the next year.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -12835,18 +12833,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82740,
+    "lastEventCycle": 82747,
     "events": [
-      {
-        "cycle": 82552,
-        "kind": "recall",
-        "size": "major",
-        "head": "Marlgear Supply Recalls Atlas Line as Drennan Probe Widens",
-        "body": "Marlgear announced a full recall of roughly 6,200 Atlas industrial machines after regulators linked the Drennan Mills failures to a defective drive assembly. Halden Vossen took an unusually public stance, pledging free retrofits and a $120 million charge while insisting the Carrow Group order will still ship on a revised timeline. Shares had already been under pressure since the probe opened.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82560,
         "kind": "scandal",
@@ -13070,6 +13058,16 @@
         "head": "Marlgear Supply Ousts Dane Kessler as Board Names Outsider to Clean Up Kessel Fault Scandal",
         "body": "Marlgear's board removed Dane Kessler for cause amid the widening scandal over destroyed Kessel fault records, appointing former industrial-safety executive Corin Blakely as CEO with a mandate to overhaul disclosure practices. The board also formed an independent oversight committee and pledged full cooperation with the ongoing regulatory probe. Shares of the device maker remain under pressure as the class action proceeds and remediation costs are estimated to exceed $200M.",
         "effects": {}
+      },
+      {
+        "cycle": 82747,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Regulators Widen Marlgear Supply Probe to Full Device Line as Kessel Fault Scandal Deepens",
+        "body": "Regulators escalated their inquiry into Marlgear Supply, expanding the Kessel fault investigation to cover the company's entire Devices catalog after new filings suggested the destroyed records touched multiple product families. New CEO Halvard Renn pledged full cooperation and voluntarily suspended shipments of three Kessel-based lines pending review. The widened probe threatens roughly a third of Marlgear's device revenue.",
+        "effects": {
+          "technology": -0.22
+        }
       }
     ]
   },
@@ -14800,7 +14798,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82737,
+    "lastEventCycle": 82747,
     "events": [
       {
         "cycle": 0,
@@ -14992,6 +14990,16 @@
         "size": "standard",
         "head": "Skarnvale Debuts Rebuilt Vosk Junction Handling System Under Overhaul Plan",
         "body": "Skarnvale unveiled the first phase of its sweeping overhaul, launching a redesigned modular conveyor and sortation system to replace the failed Vosk Junction retrofit. CEO Dorn Vaskell said early trials cleared a 30-day continuous-run test without fault, a direct answer to the triple failure that toppled the prior recovery chief. Full site cutover is targeted for the coming quarter.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82747,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarnvale Beats as Rebuilt Vosk Junction Runs Clean Through First Full Quarter",
+        "body": "Skarnvale reported its first uninterrupted quarter at Vosk Junction since the triple failure, lifting revenue to $780M and beating the $720M consensus as the rebuilt handling system held steady. CEO Dorn Vaskell said throughput at the hub had recovered to 96% of pre-collapse levels. The company reinstated its full-year guidance after pulling it during the crisis.",
         "effects": {
           "logistics": 0.13
         }
@@ -17498,18 +17506,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82740,
+    "lastEventCycle": 82747,
     "events": [
-      {
-        "cycle": 82552,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Vossenspire Supply Debuts Heritage Collection Pairing Renmark and Aldecourt",
-        "body": "The newly formed Heritage Division launched its first co-branded release: a limited Renmark Tourer accompanied by a matched Aldecourt timepiece, priced from $310,000 as a set. Quinn Marrow said just 250 pairings will be produced, calling the launch proof that the restructuring has created something greater than its parts. Early allocations to flagship boutiques are said to be spoken for.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82561,
         "kind": "award",
@@ -17738,6 +17736,16 @@
         "body": "Vossenspire began integrating newly acquired Corriveaux, consolidating three overlapping ateliers and shifting Corriveaux movement production into its Thelvane vertical supply chain. Quinn Marrow guided to $140M in annual cost synergies by 2027 and confirmed the Corriveaux marque would survive as a distinct luxury line rather than be absorbed. Roughly 400 back-office roles are expected to be eliminated during integration.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82747,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenspire Supply Beats as Corriveaux Integration Delivers Early Synergies",
+        "body": "Vossenspire Supply topped estimates with $1.4B in quarterly revenue, as the folded-in Corriveaux timepiece operations began contributing ahead of schedule. CEO Quinn Marrow said the house had already captured $52M of its targeted $140M in synergies, driven by shared component sourcing. Timepiece margins widened to 34%, a new high for the combined unit.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
