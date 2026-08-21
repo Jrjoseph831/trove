@@ -622,18 +622,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82735,
+    "lastEventCycle": 82744,
     "events": [
-      {
-        "cycle": 82537,
-        "kind": "product_launch",
-        "size": "major",
-        "head": "Aperture Compute Unveils Dawnmere Interconnect, Cutting Latency by Half",
-        "body": "At a packed event, CEO Halden Dray launched the production Dawnmere interconnect, claiming a 51 percent latency reduction over the prior generation and shipments beginning next quarter. Three major data-center operators have signed as launch customers, with combined commitments exceeding 600 million. The second Dawnmere site is being fast-tracked to meet what Dray called 'unrelenting' demand.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82548,
         "kind": "earnings_beat",
@@ -858,6 +848,16 @@
         "size": "major",
         "head": "Aperture Compute Faces Regulatory Probe Over Emberline Fabrication Site Conditions",
         "body": "Regulators opened a formal inquiry into safety and environmental practices at Aperture Compute's Emberline fabrication sites following reports of ventilation and chemical-handling failures at the second facility now under construction. Marisol Venn said the company was cooperating fully and had paused some site work, but the probe casts a shadow over the $2.6 billion supply pact signed only weeks earlier. Shares tumbled on the news.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82744,
+        "kind": "outage",
+        "size": "major",
+        "head": "Aperture Compute Halts Emberline Output After Fabrication Site Shutdown",
+        "body": "Aperture suspended production at its flagship Emberline fabrication site after regulators ordered a stoppage tied to the ongoing conditions probe, freezing an estimated $2.6B in committed supply. CEO Marisol Venn said restart hinges on completing safety remediation across three lines, with no firm timeline given. The company warned that the delay could push node deliveries beyond contracted windows.",
         "effects": {
           "technology": -0.22
         }
@@ -2907,7 +2907,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82730,
+    "lastEventCycle": 82744,
     "events": [
       {
         "cycle": 0,
@@ -3083,6 +3083,16 @@
         "body": "Brunridge posted a third straight beat as the National Retail Group agreement pulled Packaging and Cleaning & Jansan volumes onto shelves alongside its Devices and Apparel lines. Halia Brennt credited disciplined cross-category execution, noting the pact now spans four of the house's five segments. Guidance was nudged modestly higher for the coming quarter.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82744,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunridge Works Debuts Aldercraft Fine Goods Line Under National Retail Banner",
+        "body": "Brunridge launched Aldercraft, a premium fine-goods range rolling into 1,200 partner stores under its multi-category retail pact. CEO Halia Brennt called it the company's first push upmarket, pairing the new line with refreshed packaging developed in-house. Early placement covers apparel accessories and desk goods, with a devices tie-in planned for later in the year.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -8202,16 +8212,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82733,
+    "lastEventCycle": 82744,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Greywater Grid — Power, balanced to the watt",
-        "body": "Greywater Grid grew out of a workshop wiring up scattered, stubborn power sources into something coherent. They make storage banks, controllers, and the compute that keeps the flow in balance. The value tier electrifies remote cabins and modest installs; the premium controllers conduct sprawling networks with a maestro's calm. Their kit thrives where the grid grows thin and tempers grow short. Efficiency as a discipline, not a slogan, every joule accounted for.",
-        "effects": {}
-      },
       {
         "cycle": 82518,
         "kind": "breakthrough",
@@ -8434,6 +8436,16 @@
         "size": "major",
         "head": "Greywater Grid Faces Regulatory Probe Over Closed-Loop Reservoir Discharge Claims",
         "body": "Regulators opened a formal inquiry into Greywater Grid's closed-loop water figures after inspectors flagged discrepancies between reported and measured discharge at two reservoir sites. The probe casts a shadow over the $2.4B compute pact anchored to those facilities, portions of which include performance clauses tied to water recovery. Sable Renwick said the company 'stands fully behind its data' and is cooperating, but acknowledged the review could delay site certifications.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82744,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Greywater Grid Rocked as Internal Memos Show Discharge Figures Were Overstated",
+        "body": "Leaked engineering memos reveal that the celebrated 94% recovery rate held only in controlled early runs, with live sites averaging closer to 71%, contradicting public claims tied to the $2.4B compute pact. CEO Sable Renwick, who championed the closed-loop rollout, faces mounting pressure as anchor customers demand contract reviews and regulators widen the discharge probe. Two site directors have been placed on leave pending an internal inquiry.",
         "effects": {
           "energy": -0.22
         }
@@ -12265,18 +12277,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82738,
+    "lastEventCycle": 82744,
     "events": [
-      {
-        "cycle": 82592,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Lhaus Industries Clinches $31B Cell-Pack Deal, Its Largest Ever",
-        "body": "Lhaus signed a supply-and-licensing pact valued at up to $31B to furnish fast-charge cell packs to a coalition of regional transit operators, lifting its total backlog past $54B. Brandt said the agreement 'locks in a decade of demand' and would require a fourth production line to be announced within months.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82597,
         "kind": "expansion",
@@ -12503,6 +12505,16 @@
         "size": "standard",
         "head": "Lhaus Industries Buys Parts Supplier Verrund for $480M to Deepen Platform Control",
         "body": "Restless as ever, Cole Brandt struck again, acquiring drivetrain specialist Verrund for $480M to bring key components of its new vehicle platform in-house. The deal is expected to trim per-unit costs by 9% and secure supply as the platform line outsells forecasts. Brandt said vertical integration was 'the natural next move' after the strong launch.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82744,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Lhaus Industries Beats as Verrund Integration Cuts Parts Costs",
+        "body": "Lhaus posted a quarterly beat as the newly acquired Verrund supplier trimmed component costs on its fast-selling platform vehicle line. CEO Cole Brandt credited tighter parts control for a 3-point margin gain and hinted at further supply-chain deals ahead. Vehicle deliveries continued to outpace forecasts.",
         "effects": {
           "automotive": 0.13
         }
@@ -13185,7 +13197,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82731,
+    "lastEventCycle": 82744,
     "events": [
       {
         "cycle": 0,
@@ -13363,6 +13375,16 @@
         "body": "Dorian Steg's group reported occupancy of 96% across the Northbrook, Westline, Eastgate and legacy portfolio, edging past guidance for a seventh straight quarter. Revenue rose 4% on modest room-rate gains, with the newly ramped Eastgate now contributing a full quarter of results. Steg reiterated the firm's preference for disciplined, self-funded growth.",
         "effects": {
           "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82744,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Marrowmoor Holdings Acquires Southfield Property to Push Base to Five",
+        "body": "Marrowmoor agreed to acquire the Southfield property, extending its regional cluster to five sites as its four-property base runs near capacity. CEO Dorian Steg said the addition absorbs overflow demand without straining existing operations, with integration expected to be gradual. Terms were not disclosed.",
+        "effects": {
+          "hospitality": 0.13
         }
       }
     ]
@@ -14269,7 +14291,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82723,
+    "lastEventCycle": 82744,
     "events": [
       {
         "cycle": 0,
@@ -14388,6 +14410,16 @@
         "effects": {
           "medical": 0.06
         }
+      },
+      {
+        "cycle": 82744,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrave Extends Streak as Medical Equipment Orders Firm Up",
+        "body": "Skarngrave logged another quarterly beat, adding a modest lift from medical-equipment orders alongside its steady sterilizer service base. CEO Orla Dray pointed to renewed hospital maintenance contracts as the quarter's quiet driver. Margins held flat against stable demand.",
+        "effects": {
+          "medical": 0.06
+        }
       }
     ]
   },
@@ -14402,7 +14434,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82730,
+    "lastEventCycle": 82744,
     "events": [
       {
         "cycle": 0,
@@ -14558,6 +14590,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Wins Kelvarn Approach-Roads Package, Rounding Out Corridor Work",
         "body": "Quinn Fenn secured the approach-roads and abutment package tied to the Kelvarn project, adding an estimated $340M to the firm's signature corridor backlog. The award consolidates Skarngrove's grip on nearly the entire Kelvarn crossing, from viaduct to terminal span. Fenn called it 'a measured extension of work we already know cold.'",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82744,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarngrove & Sons Beats as Full Kelvarn Corridor Enters Peak Build",
+        "body": "Skarngrove reported a strong quarter as the terminal-span, approach-roads, and legacy corridor packages all hit peak construction simultaneously. CEO Quinn Fenn said structural-materials throughput reached a multi-year high, with fasteners and fixings running fully committed. The firm reaffirmed guidance through the corridor's completion.",
         "effects": {
           "construction": 0.13
         }
@@ -14877,7 +14919,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82731,
+    "lastEventCycle": 82744,
     "events": [
       {
         "cycle": 0,
@@ -15063,6 +15105,16 @@
         "size": "standard",
         "head": "Steg Tooling Approves Fourth Kelmar Cell as Fastener Demand Outruns Capacity",
         "body": "Iris Vossen greenlit a $90M fourth production cell at the Kelmar complex after the third cell reached full output a quarter ahead of plan. The expansion targets fasteners and fixings, where backlog now stretches into next year, and is expected to come online within 18 months. Vossen framed the move as measured capacity-matching rather than a bet on faster growth.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82744,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Steg Tooling Runs Streak to Fourteen as Fastener Backlog Holds Firm",
+        "body": "Steg posted its fourteenth consecutive quarterly beat, with fastener revenue up 9% as demand continued to outrun the three live Kelmar cells. CEO Iris Vossen said groundwork on the fourth cell is proceeding on schedule, with commissioning targeted for the next fiscal year. Fixings margins widened on stable input costs.",
         "effects": {
           "manufacturing": 0.13
         }

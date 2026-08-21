@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-20T18:40:40.938Z",
+  "generatedAt": "2026-08-21T01:22:19.745Z",
   "beats": [
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "outage",
+      "size": "major",
+      "head": "Aperture Compute Halts Emberline Output After Fabrication Site Shutdown",
+      "body": "Aperture suspended production at its flagship Emberline fabrication site after regulators ordered a stoppage tied to the ongoing conditions probe, freezing an estimated $2.6B in committed supply. CEO Marisol Venn said restart hinges on completing safety remediation across three lines, with no firm timeline given. The company warned that the delay could push node deliveries beyond contracted windows.",
+      "cycle": 82744,
+      "dur": 8
+    },
+    {
+      "company": "Brunridge Works",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Brunridge Works Debuts Aldercraft Fine Goods Line Under National Retail Banner",
+      "body": "Brunridge launched Aldercraft, a premium fine-goods range rolling into 1,200 partner stores under its multi-category retail pact. CEO Halia Brennt called it the company's first push upmarket, pairing the new line with refreshed packaging developed in-house. Early placement covers apparel accessories and desk goods, with a devices tie-in planned for later in the year.",
+      "cycle": 82744,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Greywater Grid Rocked as Internal Memos Show Discharge Figures Were Overstated",
+      "body": "Leaked engineering memos reveal that the celebrated 94% recovery rate held only in controlled early runs, with live sites averaging closer to 71%, contradicting public claims tied to the $2.4B compute pact. CEO Sable Renwick, who championed the closed-loop rollout, faces mounting pressure as anchor customers demand contract reviews and regulators widen the discharge probe. Two site directors have been placed on leave pending an internal inquiry.",
+      "cycle": 82744,
+      "dur": 8
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Lhaus Industries Beats as Verrund Integration Cuts Parts Costs",
+      "body": "Lhaus posted a quarterly beat as the newly acquired Verrund supplier trimmed component costs on its fast-selling platform vehicle line. CEO Cole Brandt credited tighter parts control for a 3-point margin gain and hinted at further supply-chain deals ahead. Vehicle deliveries continued to outpace forecasts.",
+      "cycle": 82744,
+      "dur": 2
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Marrowmoor Holdings Acquires Southfield Property to Push Base to Five",
+      "body": "Marrowmoor agreed to acquire the Southfield property, extending its regional cluster to five sites as its four-property base runs near capacity. CEO Dorian Steg said the addition absorbs overflow demand without straining existing operations, with integration expected to be gradual. Terms were not disclosed.",
+      "cycle": 82744,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrave",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Skarngrave Extends Streak as Medical Equipment Orders Firm Up",
+      "body": "Skarngrave logged another quarterly beat, adding a modest lift from medical-equipment orders alongside its steady sterilizer service base. CEO Orla Dray pointed to renewed hospital maintenance contracts as the quarter's quiet driver. Margins held flat against stable demand.",
+      "cycle": 82744,
+      "dur": 1
+    },
+    {
+      "company": "Skarngrove & Sons",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Skarngrove & Sons Beats as Full Kelvarn Corridor Enters Peak Build",
+      "body": "Skarngrove reported a strong quarter as the terminal-span, approach-roads, and legacy corridor packages all hit peak construction simultaneously. CEO Quinn Fenn said structural-materials throughput reached a multi-year high, with fasteners and fixings running fully committed. The firm reaffirmed guidance through the corridor's completion.",
+      "cycle": 82744,
+      "dur": 2
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Steg Tooling Runs Streak to Fourteen as Fastener Backlog Holds Firm",
+      "body": "Steg posted its fourteenth consecutive quarterly beat, with fastener revenue up 9% as demand continued to outrun the three live Kelmar cells. CEO Iris Vossen said groundwork on the fourth cell is proceeding on schedule, with commissioning targeted for the next fiscal year. Fixings margins widened on stable input costs.",
+      "cycle": 82744,
+      "dur": 2
+    },
     {
       "company": "Carrowwell",
       "sector": "manufacturing",
@@ -82,16 +162,6 @@
       "dur": 2
     },
     {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Bruncraft Cuts Coachline Output and Trims Vanguard Staff as Vane Reins In Costs",
-      "body": "Following last quarter's miss, Marcus Vane announced a scaling back of Coachline flagship production and roughly 600 job cuts across the Vanguard unit, targeting $150M in annualized savings. Vane conceded the ramp had 'moved faster than the market,' pledging tighter cost control. The restructuring follows the aggressive consolidation Vane pushed through earlier in the year.",
-      "cycle": 82742,
-      "dur": 2
-    },
-    {
       "company": "Brunstone & Sons",
       "sector": "automotive",
       "kind": "major",
@@ -100,46 +170,6 @@
       "body": "Dagny Frost announced a $1.4B expansion to triple Vault II cell output at the Harlow and Denvers plants, following the $900M fleet pact and a second order backlog now topping 2.1 million units. Frost, addressing shareholders, called the turnaround 'complete' and set a target of doubling storage revenue within eighteen months. Analysts noted the bold timeline is characteristic of Frost, who staked her tenure on the comeback.",
       "cycle": 82742,
       "dur": 8
-    },
-    {
-      "company": "Calderworks Holdings",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Calderworks Beats as Fifth Kiln Commitment Draws Fresh Corridor Demand",
-      "body": "Calderworks posted revenue of $494M, up 11%, as the Vaultridge Corridor pact drove kiln utilization to record highs ahead of the fifth kiln's completion. Kestrel Halloran reported two additional supply inquiries tied to corridor expansion. The fifth kiln remains on track for commissioning within three quarters.",
-      "cycle": 82742,
-      "dur": 2
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drustcraft Wins $320M Auto-Parts Supply Pact, Extending Three-Line Momentum",
-      "body": "Cora Fenn secured a four-year, $320M auto-parts supply agreement with a national assembly network, building on the record balanced quarter across all three product lines. The deal locks in roughly 40% of the auto-parts line's forward capacity. Fenn said the win validates the diversified strategy she has steadily built.",
-      "cycle": 82742,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halhold Works Beats as Aveline Successor Sales Outpace Rocha's Reset Targets",
-      "body": "Halhold posted quarterly revenue of $612M, up 14% year-over-year, as the Aveline successor line cleared 800,000 units across its opening markets. Anselm Rocha said the device unit had returned to profitability a quarter ahead of plan, though Wire & Cable margins remained under pressure. The result marks the first clean beat since Rocha took over the cleanup.",
-      "cycle": 82742,
-      "dur": 2
-    },
-    {
-      "company": "Veldtreach & Sons",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Veldtreach & Sons Orders Fourth Earthmoving Fleet as Reservoir Works Accelerate",
-      "body": "Petra Steg committed $210M to a fourth earthmoving fleet to service the $540M Inland Reservoir package and a growing pipeline of regional works. The fleet, expected operational within two quarters, will lift Veldtreach's deployable capacity by roughly 30%. Steg framed the move as a measured response to sustained utilization rather than speculative growth.",
-      "cycle": 82742,
-      "dur": 2
     },
     {
       "company": "Bruncrest Works",
