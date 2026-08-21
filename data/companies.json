@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82727,
+    "lastEventCycle": 82745,
     "events": [
       {
         "cycle": 0,
@@ -148,6 +148,16 @@
         "body": "Soren Ashby's mill posted a slim beat with feeder and grid-cable volumes both holding firm and the fourth extrusion line now at nameplate output. Revenue rose 4.5% while utilization climbed to 94%, its highest reading in three years. Ashby reaffirmed guidance, noting the order backlog stretches into next year.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82745,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Aldouscraft Mfg. Approves Fifth Extrusion Line to Meet Sustained Cable Demand",
+        "body": "With all four existing extrusion lines running at full rate, Aldouscraft Mfg. sanctioned a $95M fifth line to expand Wire & Cable capacity by roughly 20%. CEO Soren Ashby said feeder cable order books remain firm through the year and the addition should reach commissioning in about 14 months. The expansion is being funded entirely from operating cash flow.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -2497,7 +2507,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82727,
+    "lastEventCycle": 82745,
     "events": [
       {
         "cycle": 0,
@@ -2643,6 +2653,16 @@
         "size": "standard",
         "head": "Brunforge Holdings Extends Vellan Rollout With Second Wave of Fifteen Flagships",
         "body": "Kestrel Bramm approved a follow-on expansion adding fifteen Vellan flagships across new metro markets, building on the ten-store push now nearing completion. The measured buildout is expected to lift food-service capacity by roughly a fifth and carries a committed outlay of $310M through 1957. Bramm stressed the pace remains deliberate, with each site backed by existing demand data.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82745,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunforge Holdings Beats Once More as Second-Wave Flagships Begin Contributing",
+        "body": "Brunforge Holdings reported quarterly revenue of $1.94B, up 11% year over year, as the first of its second-wave Vellan flagships opened ahead of schedule. Food Service margins expanded another 60 basis points, and CEO Kestrel Bramm reaffirmed the full 15-store target while noting the company will 'hold the same measured cadence' rather than accelerate. Household Goods also posted modest growth on restocking demand.",
         "effects": {
           "consumer": 0.13
         }
@@ -4741,18 +4761,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82738,
+    "lastEventCycle": 82745,
     "events": [
-      {
-        "cycle": 82555,
-        "kind": "safety_probe",
-        "size": "major",
-        "head": "Regulators Order Full Saltmere Shutdown as Castlehold Probe Turns Criminal",
-        "body": "The national energy authority has ordered Castlehold to idle the entire Saltmere storage complex pending a criminal referral over the withheld fault reports, pulling an estimated 900 megawatts of capacity offline. New CEO Ivo Reneth said the company will 'cooperate fully' while warning of a material charge against the current quarter, with cleanup and remediation costs still being tallied. Two former reporting officers have been named in the referral.",
-        "effects": {
-          "energy": -0.22
-        }
-      },
       {
         "cycle": 82565,
         "kind": "scandal",
@@ -4979,6 +4989,16 @@
         "body": "Castlehold reported record revenue of $980M, up 62%, as its landmark $2B grid-storage framework began delivering and both modular plants ran near capacity. Halden Voss said backlog now exceeds $2.8B and hinted at a third facility to keep pace. Net income tripled to $166M, though Voss cautioned that scaling this fast carries execution risk.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82745,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Castlehold Faces Regulatory Probe After Grid-Storage Incident at Second Plant",
+        "body": "Regulators opened a formal safety investigation into Castlehold following a thermal event at its newly commissioned second plant that forced a temporary shutdown of one storage array. No injuries were reported, but the probe casts a shadow over the $2B grid-storage framework and the aggressive dual-plant expansion driven by CEO Halden Voss. The company said it is cooperating fully and has paused new array energization pending review.",
+        "effects": {
+          "energy": -0.22
         }
       }
     ]
@@ -5555,7 +5575,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82729,
+    "lastEventCycle": 82745,
     "events": [
       {
         "cycle": 0,
@@ -5701,6 +5721,16 @@
         "size": "standard",
         "head": "Cranegrove Beats Again as Corridor Add-On Lifts Backlog to Record $3.4B",
         "body": "Cranegrove reported earnings ahead of estimates for the third straight quarter, with the $650M add-on pushing its Earthmoving backlog to a record $3.4B. CEO Vale Calder credited disciplined equipment utilization above 91% and reaffirmed full-year targets. Operating margin held at a steady 17.8%.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82745,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Cranegrove Tops Estimates Again as Record Backlog Underpins Steady Growth",
+        "body": "Cranegrove reported earnings ahead of expectations, with Earthmoving revenue up 9% as work on the extended Corridor framework accelerated. CEO Vale Calder pointed to the record $3.4B backlog as providing 'visibility well into the decade' and reaffirmed a disciplined capital plan focused on fleet renewal. Margins held steady despite modest wage pressure.",
         "effects": {
           "construction": 0.13
         }
@@ -5881,7 +5911,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82728,
+    "lastEventCycle": 82745,
     "events": [
       {
         "cycle": 0,
@@ -6039,6 +6069,16 @@
         "body": "Drossware Industries reported cleaning-line revenue rose 6% for the first time since the labeling crisis, signaling stabilization after the division's overhaul. CEO Nadia Wold said new packaging controls have cleared regulatory review with no further defects flagged.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82745,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Drossware Unveils Reformulated Cleaning & Jansan Line With Redesigned Labeling",
+        "body": "Drossware Industries launched its revamped Purevance cleaning range, the first products fully developed under the overhauled division that Nadia Wold restructured after last year's labeling crisis. The line features simplified, triple-verified labeling and ships to 4,200 retail accounts beginning next month, with management projecting the range to recover roughly two-thirds of shelf space lost during the recall. Wold called the launch 'the clean break we promised, quite literally.'",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -11821,7 +11861,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82733,
+    "lastEventCycle": 82745,
     "events": [
       {
         "cycle": 0,
@@ -12007,6 +12047,16 @@
         "size": "standard",
         "head": "Korrwright Group Beats as Harbor and Corridor Awards Begin Billing",
         "body": "Korrwright posted a beat on revenue of $1.48B, with the $420M Harbor redevelopment and $310M Corridor wire award both entering the billing cycle. Halden Fenn said combined backlog now stands at a record $2.1B, giving the group visibility deep into next year. Management nudged full-year guidance modestly higher on the strength of the structural segment.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82745,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrwright Group Beats as Harbor Redevelopment Enters Peak Billing",
+        "body": "Korrwright Group posted revenue of $1.31B, ahead of estimates, as the $420M Harbor redevelopment award moved into its heaviest structural-materials phase. CEO Halden Fenn said combined harbor and corridor billing lifted Structural Materials volumes to a two-year high, though he flagged tighter input costs on Wire & Cable. Full-year guidance was nudged upward.",
         "effects": {
           "construction": 0.13
         }
@@ -15458,7 +15508,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82733,
+    "lastEventCycle": 82745,
     "events": [
       {
         "cycle": 0,
@@ -15646,6 +15696,16 @@
         "size": "standard",
         "head": "Thaldale Group Misses as Overhaul Costs Weigh on First Post-Scandal Quarter",
         "body": "Thaldale reported revenue of $610M, short of guidance, as one-time charges tied to winding down the fastening unit dragged results into the red. Marta Holloway said restructuring costs totaled $140M this quarter and warned of continued pressure into the next, while insisting the cleanup is 'ahead of plan.' The restatement-related legal reserve was raised by an additional $45M.",
+        "effects": {
+          "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82745,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Thaldale Group Consolidates Tooling Plants as Holloway Presses Cost Reset",
+        "body": "Marta Holloway announced the closure of two aging Hardware & Tools facilities and the consolidation of output into a modernized flagship plant, part of a $180M efficiency program aimed at restoring margins bruised by the fastening scandal. The move eliminates an estimated 900 roles but is projected to lift gross margin by 300 basis points once complete in early next year. Holloway framed it as 'the last heavy lift before we build again.'",
         "effects": {
           "consumer": -0.13
         }
@@ -16877,7 +16937,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82733,
+    "lastEventCycle": 82745,
     "events": [
       {
         "cycle": 0,
@@ -17065,6 +17125,16 @@
         "body": "With all five hubs now live, Iris Halloran unveiled the Vencyon Unified Hub platform, a standardized control layer linking sortation and retrieval across every site. The company said the modular buildout finished two months ahead of schedule at a total cost of $680M, and framed the platform as the foundation for its next growth phase. Halloran called it 'the payoff for four years of disciplined construction.'",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82745,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Vencyon Signs $1.5B Framework to Deploy Unified Hub Platform Across National Distributor",
+        "body": "Vencyon secured its largest contract to date, a five-year, $1.5B agreement to roll out its newly completed Unified Hub Platform across a national distribution network spanning 22 sites. CEO Iris Halloran, in a rare aggressive move, said the deal validates the multi-year modular investment and pushes committed backlog past $4B. Deployment begins next quarter with the first eight sites targeted for completion within twelve months.",
+        "effects": {
+          "logistics": 0.22
         }
       }
     ]
