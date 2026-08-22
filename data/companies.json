@@ -489,7 +489,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82732,
+    "lastEventCycle": 82750,
     "events": [
       {
         "cycle": 0,
@@ -617,6 +617,16 @@
         "body": "Mira Ashby reported quarterly revenue of $1.32 billion, up 11% year over year, with all twelve new Heirloom concept stores now trading and the Everyday line accounting for a third of unit sales. Same-store sales rose 6.4% as the broadened buyer base held. Ashby signaled a measured pause on further openings to consolidate gains.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82750,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldousspire Group Posts Steady Beat as Heirloom Concept Stores Turn Profitable",
+        "body": "Aldousspire delivered a modest beat as the twelve new Heirloom concept stores reached collective profitability faster than planned, contributing a 6% lift in apparel revenue. Mira Ashby said foot traffic at the new locations exceeded projections, and same-store sales at legacy shops held firm. She signaled a more selective pace of openings for the coming year.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -6671,7 +6681,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82735,
+    "lastEventCycle": 82750,
     "events": [
       {
         "cycle": 0,
@@ -6817,6 +6827,16 @@
         "size": "standard",
         "head": "Dunmorewright Beats as Waterworks Billings Ramp Ahead of Schedule",
         "body": "Dunmorewright reported revenue of $1.9 billion, topping estimates, as early billings on the $780 million inland waterworks contract flowed faster than projected. Emil Skarn credited the recently expanded foundry capacity for pulling delivery milestones forward by nearly a quarter. Management reaffirmed full-year guidance.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82750,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Dunmorewright Beats Again as Waterworks Nears Halfway Milestone Ahead of Plan",
+        "body": "Dunmorewright topped estimates for a second straight quarter as billings on the $780M inland waterworks contract crossed the 45% completion mark ahead of schedule. Emil Skarn said the expanded foundry is now supplying plumbing and fixture components internally, trimming input costs. Management hinted at bidding on a second regional waterworks tender next year.",
         "effects": {
           "construction": 0.13
         }
@@ -7525,7 +7545,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82734,
+    "lastEventCycle": 82750,
     "events": [
       {
         "cycle": 0,
@@ -7673,6 +7693,16 @@
         "body": "Fennvale confirmed first commercial output from its new auto-parts line, hitting the timeline Vossen laid out at groundbreaking. Initial volumes cover suspension brackets for two existing fastener customers, with management describing a deliberate ramp toward full utilization by year-end.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82750,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fennvale Mfg. Beats as Auto-Parts Line Ramps to Full Volume in First Full Quarter",
+        "body": "Fennvale reported a quarterly beat with revenue up 11% as the new auto-parts line reached full capacity ahead of Theo Vossen's internal targets. Fastener demand held steady, and management said the second production shift added earlier this quarter is already near full utilization. Vossen kept guidance measured, noting he prefers to 'let the line prove itself over four quarters, not one.'",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -8054,7 +8084,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82722,
+    "lastEventCycle": 82750,
     "events": [
       {
         "cycle": 0,
@@ -8142,6 +8172,16 @@
         "body": "Garrweave reported a slight uptick as its Northfield renewal continued to keep looms fully utilized through the period. CEO Lorne Veldt reiterated the mill's long-horizon stance, noting no plans to chase spot demand. Raw textile shipments were broadly in line with prior quarters.",
         "effects": {
           "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82750,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Garrweave Mills Signs Long-Term Southcombe Supply Pact, Extending Beyond Northfield",
+        "body": "In a rare strategic move for the slow-moving mill, Lorne Veldt secured a five-year raw-textile supply agreement with apparel group Southcombe worth an estimated $190M in cumulative volume. The deal diversifies Garrweave beyond its Northfield anchor and is expected to keep a second weaving shed at full run. Veldt framed the pact as 'a horizon, not a headline,' consistent with his patient approach.",
+        "effects": {
+          "textiles": 0.13
         }
       }
     ]
@@ -12405,18 +12445,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82744,
+    "lastEventCycle": 82750,
     "events": [
-      {
-        "cycle": 82597,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Lhaus Industries Breaks Ground on Fourth Cell-Pack Line to Clear Record Backlog",
-        "body": "Lhaus began construction on a fourth cell-pack line at its Torren works, a $1.8B investment aimed at servicing a backlog that has swelled past $50B after its record deal. CEO Cole Brandt said the added capacity would 'take delivery risk off the table' for fleet customers waiting into next year. The line is targeted to reach volume output within 14 months.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82603,
         "kind": "earnings_miss",
@@ -12645,6 +12675,16 @@
         "body": "Lhaus posted a quarterly beat as the newly acquired Verrund supplier trimmed component costs on its fast-selling platform vehicle line. CEO Cole Brandt credited tighter parts control for a 3-point margin gain and hinted at further supply-chain deals ahead. Vehicle deliveries continued to outpace forecasts.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82750,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Lhaus Industries to Acquire Battery Maker Kellstrom for $2.1B in Push Into Power & Storage",
+        "body": "Cole Brandt unveiled the $2.1B cash-and-stock purchase of Kellstrom, a maker of grid and vehicle storage cells, in the largest deal of his seven-decade run atop Lhaus. The move vertically links Kellstrom's cell output to Lhaus's Power & Storage unit and its platform vehicle line, though it lifts the company's debt load to a decade high. Brandt called storage 'the next platform' and said Kellstrom's two plants would run under Lhaus branding by year-end.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -16392,18 +16432,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82743,
+    "lastEventCycle": 82750,
     "events": [
-      {
-        "cycle": 82566,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Varnvale & Sons Buys Bellmont Master Casemaker in 880-Million Vertical Play",
-        "body": "Restless as ever, Bram Wold has folded the storied Halvren Case Atelier into Varnvale for 880 million, giving the house control of both dials and casings for its flagship Bellmont line. The deal secures the last independent supplier of Varnvale's signature guilloché cases and marks Wold's third acquisition in eighteen months. Analysts note the maker now owns nearly every step of its timepiece production.",
-        "effects": {
-          "luxury": 0.22
-        }
-      },
       {
         "cycle": 82573,
         "kind": "product_launch",
@@ -16633,6 +16663,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82750,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Varnvale & Sons Acquires Case-Maker Thessaly Works to Round Out Vertical Supply",
+        "body": "Fresh off integrating Corvane, Bram Wold struck a $260M deal for Thessaly Works, a specialist in precious-metal cases and dials. The acquisition gives Varnvale & Sons control of nearly every step of its timepiece production and follows Wold's stated goal of ending reliance on outside suppliers. Analysts noted the back-to-back deals signal an aggressive consolidation phase for the century-old house.",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -16647,16 +16687,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82741,
+    "lastEventCycle": 82750,
     "events": [
-      {
-        "cycle": 82551,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Varnvale House Names Outsider Idris Calloway CEO to Steady Ember Fallout",
-        "body": "Marisol Venn stepped down as chief executive amid ongoing scrutiny over Ember Capsule sourcing, with the board appointing former luxury-group operator Idris Calloway to lead a reset. Calloway pledged a full supply-chain audit and a pause on new capsule releases while litigation proceeds. Shares had shed roughly a third of their value across the scandal's arc.",
-        "effects": {}
-      },
       {
         "cycle": 82559,
         "kind": "product_launch",
@@ -16875,6 +16907,16 @@
         "size": "standard",
         "head": "Varnvale House Extends Comeback With Sovereign Complication Line Under Coyle",
         "body": "Building on the reborn Sovereign line's strong debut, chief executive Beatrix Coyle unveiled a higher-priced complication series aimed at reclaiming the house's premium tier. The launch carries expanded fine-goods pairings and targets a 20% lift in average selling price. Coyle called it the next stage of a full-line revival after early inventory cleared faster than planned.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82750,
+        "kind": "award",
+        "size": "standard",
+        "head": "Varnvale House Sovereign Complication Named Timepiece of the Year at Grand Horology Salon",
+        "body": "The Sovereign Complication took top honors at the Grand Horology Salon, capping a comeback year that Beatrix Coyle staked her reputation on. Judges cited the reborn line's perpetual calendar and hand-finished movement, and Coyle used the podium to promise a limited Sovereign Anniversary run of 300 pieces. The award vindicates a bet that many inside the house had privately doubted eighteen months ago.",
         "effects": {
           "luxury": 0.13
         }
@@ -18044,7 +18086,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82723,
+    "lastEventCycle": 82750,
     "events": [
       {
         "cycle": 0,
@@ -18132,6 +18174,16 @@
         "body": "Vossenwright approved a $210M expansion of its main assembly plant, adding a fourth line to keep pace with reorders following the regional fleet seeder deal. Quinn Skarn described the move as 'measured,' noting the line is backed by existing commitments rather than speculative demand. Construction begins next quarter, with output expected within eighteen months.",
         "effects": {
           "agriculture": 0.13
+        }
+      },
+      {
+        "cycle": 82750,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenwright Holdings Edges Higher as Expanded Seeder Plant Nears Completion",
+        "body": "Vossenwright posted a modest beat, with fleet seeder deliveries continuing on schedule and the plant expansion tracking for commissioning next quarter. Quinn Skarn reiterated a conservative outlook, citing steady but unremarkable demand for farm inputs. The quiet result was in keeping with the company's low-drama reputation.",
+        "effects": {
+          "agriculture": 0.06
         }
       }
     ]

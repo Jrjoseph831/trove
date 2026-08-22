@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-22T06:42:04.731Z",
+  "generatedAt": "2026-08-22T12:41:10.257Z",
   "beats": [
+    {
+      "company": "Aldousspire Group",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldousspire Group Posts Steady Beat as Heirloom Concept Stores Turn Profitable",
+      "body": "Aldousspire delivered a modest beat as the twelve new Heirloom concept stores reached collective profitability faster than planned, contributing a 6% lift in apparel revenue. Mira Ashby said foot traffic at the new locations exceeded projections, and same-store sales at legacy shops held firm. She signaled a more selective pace of openings for the coming year.",
+      "cycle": 82750,
+      "dur": 1
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Dunmorewright Beats Again as Waterworks Nears Halfway Milestone Ahead of Plan",
+      "body": "Dunmorewright topped estimates for a second straight quarter as billings on the $780M inland waterworks contract crossed the 45% completion mark ahead of schedule. Emil Skarn said the expanded foundry is now supplying plumbing and fixture components internally, trimming input costs. Management hinted at bidding on a second regional waterworks tender next year.",
+      "cycle": 82750,
+      "dur": 2
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fennvale Mfg. Beats as Auto-Parts Line Ramps to Full Volume in First Full Quarter",
+      "body": "Fennvale reported a quarterly beat with revenue up 11% as the new auto-parts line reached full capacity ahead of Theo Vossen's internal targets. Fastener demand held steady, and management said the second production shift added earlier this quarter is already near full utilization. Vossen kept guidance measured, noting he prefers to 'let the line prove itself over four quarters, not one.'",
+      "cycle": 82750,
+      "dur": 2
+    },
+    {
+      "company": "Garrweave Mills",
+      "sector": "textiles",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Garrweave Mills Signs Long-Term Southcombe Supply Pact, Extending Beyond Northfield",
+      "body": "In a rare strategic move for the slow-moving mill, Lorne Veldt secured a five-year raw-textile supply agreement with apparel group Southcombe worth an estimated $190M in cumulative volume. The deal diversifies Garrweave beyond its Northfield anchor and is expected to keep a second weaving shed at full run. Veldt framed the pact as 'a horizon, not a headline,' consistent with his patient approach.",
+      "cycle": 82750,
+      "dur": 2
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Lhaus Industries to Acquire Battery Maker Kellstrom for $2.1B in Push Into Power & Storage",
+      "body": "Cole Brandt unveiled the $2.1B cash-and-stock purchase of Kellstrom, a maker of grid and vehicle storage cells, in the largest deal of his seven-decade run atop Lhaus. The move vertically links Kellstrom's cell output to Lhaus's Power & Storage unit and its platform vehicle line, though it lifts the company's debt load to a decade high. Brandt called storage 'the next platform' and said Kellstrom's two plants would run under Lhaus branding by year-end.",
+      "cycle": 82750,
+      "dur": 8
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Varnvale & Sons Acquires Case-Maker Thessaly Works to Round Out Vertical Supply",
+      "body": "Fresh off integrating Corvane, Bram Wold struck a $260M deal for Thessaly Works, a specialist in precious-metal cases and dials. The acquisition gives Varnvale & Sons control of nearly every step of its timepiece production and follows Wold's stated goal of ending reliance on outside suppliers. Analysts noted the back-to-back deals signal an aggressive consolidation phase for the century-old house.",
+      "cycle": 82750,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale House",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "standard",
+      "head": "Varnvale House Sovereign Complication Named Timepiece of the Year at Grand Horology Salon",
+      "body": "The Sovereign Complication took top honors at the Grand Horology Salon, capping a comeback year that Beatrix Coyle staked her reputation on. Judges cited the reborn line's perpetual calendar and hand-finished movement, and Coyle used the podium to promise a limited Sovereign Anniversary run of 300 pieces. The award vindicates a bet that many inside the house had privately doubted eighteen months ago.",
+      "cycle": 82750,
+      "dur": 2
+    },
+    {
+      "company": "Vossenwright Holdings",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vossenwright Holdings Edges Higher as Expanded Seeder Plant Nears Completion",
+      "body": "Vossenwright posted a modest beat, with fleet seeder deliveries continuing on schedule and the plant expansion tracking for commissioning next quarter. Quinn Skarn reiterated a conservative outlook, citing steady but unremarkable demand for farm inputs. The quiet result was in keeping with the company's low-drama reputation.",
+      "cycle": 82750,
+      "dur": 1
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -72,16 +152,6 @@
       "dur": 2
     },
     {
-      "company": "Vossenstead Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vossenstead Supply Restarts Streak at Fifteen as Fifth Center Ships Early",
-      "body": "Vossenstead Supply returned to its winning cadence with a fifteenth beat, as the newly opened fifth distribution center began fulfilling Food Service orders ahead of schedule. CEO Bram Thorne noted Plumbing & Fixtures volumes also firmed on steady contractor demand. Management characterized the quarter as a clean return to form after the expansion's start-up costs.",
-      "cycle": 82749,
-      "dur": 1
-    },
-    {
       "company": "Brunstone & Sons",
       "sector": "automotive",
       "kind": "earnings_miss",
@@ -90,46 +160,6 @@
       "body": "Just one quarter after declaring the recovery 'complete,' Brunstone reported a steep earnings miss as the doubled Vault II line ran well below breakeven utilization, forcing a $210M inventory writedown. Dagny Frost conceded the capacity expansion 'moved faster than the order book,' and the company withdrew its prior full-year targets. The fleet supply pact remains intact but its volumes fell short of ramp assumptions.",
       "cycle": 82748,
       "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Gromford Works Extends Emblem Line Into Timepieces as Pryce Presses Retail Momentum",
-      "body": "Building on the department-chain partnership, Halvard Pryce unveiled an Emblem-branded timepiece series carrying the collection's reinforced-clasp motif, targeting the same global retail footprint. First shipments are slated within the quarter across 400 doors. Pryce framed the move as 'turning one hit collection into a house signature.'",
-      "cycle": 82748,
-      "dur": 2
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halcrow & Vance Beats as Third Yard Clears Vetask Backlog Ahead of Plan",
-      "body": "Halcrow reported a solid beat, with the new yard lifting throughput enough to trim the Vetask backlog by 18% while holding margins steady. Mira Skarn said the added capacity 'positions us to bid the next mandate cycle from strength.' Order book coverage now extends into late 2027.",
-      "cycle": 82748,
-      "dur": 2
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Halcyon Industries Signs Multi-Year Supply Pact Anchoring Northgate Recycled-Fiber Output",
-      "body": "Halcyon secured a four-year, $640M packaging supply agreement with a national grocery distributor, committing roughly a third of Northgate's initial three lines to recycled-fiber grades. Dorian Ashby said the deal 'gives us the demand certainty to bring the remaining lines forward on schedule.' The contract locks pricing through 2029 with volume step-ups tied to Northgate's ramp.",
-      "cycle": 82748,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "standard",
-      "head": "Halhold Works Faces Regulatory Review Over Aveline Successor Battery Heating Reports",
-      "body": "A national safety body opened a formal inquiry after 47 reports of overheating in the Aveline successor's charging module, temporarily halting sales in two markets. Anselm Rocha called the reports 'isolated' but confirmed a firmware pause and a supplier audit of the cell pack. The probe lands just weeks after Halhold touted the device's sales beat.",
-      "cycle": 82748,
-      "dur": 2
     },
     {
       "company": "Marlgear Supply",
@@ -199,16 +229,6 @@
       "head": "Halhold Systems Launches Sweeping Restructure to Fund $2.1B Reliability Payout",
       "body": "Facing the $2.1B verdict, Marcus Thorne unveiled a restructuring plan cutting 12% of the workforce and divesting two non-core compute divisions to raise an estimated $1.4B. The board also approved a wholesale overhaul of quality-assurance operations to satisfy regulators. Thorne acknowledged 'a painful reset' but insisted the core compute business would emerge leaner.",
       "cycle": 82743,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "major",
-      "size": "major",
-      "head": "Brunstone & Sons Doubles Vault II Capacity as Frost Declares Recovery 'Complete'",
-      "body": "Dagny Frost announced a $1.4B expansion to triple Vault II cell output at the Harlow and Denvers plants, following the $900M fleet pact and a second order backlog now topping 2.1 million units. Frost, addressing shareholders, called the turnaround 'complete' and set a target of doubling storage revenue within eighteen months. Analysts noted the bold timeline is characteristic of Frost, who staked her tenure on the comeback.",
-      "cycle": 82742,
       "dur": 8
     }
   ]
