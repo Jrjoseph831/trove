@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-22T01:18:12.856Z",
+  "generatedAt": "2026-08-22T06:42:04.731Z",
   "beats": [
+    {
+      "company": "Blackhold",
+      "sector": "energy",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Blackhold Hit With Investor Suit Over Storage Fleet Defect as Losses Mount",
+      "body": "A consolidated shareholder suit filed against Blackhold alleges executives understated known thermal risks in the storage fleet ahead of the recall, seeking damages exceeding $1.4 billion. The complaint names CEO Halden Dabney directly and cites internal design reviews from before the first overheating incident. Blackhold said it would contest the claims, but disclosed the recall and remediation have already cost $780 million.",
+      "cycle": 82749,
+      "dur": 8
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Bruncraft Returns to Profit as Vane's Coachline Cuts Restore Margins",
+      "body": "Bruncraft posted a narrow quarterly profit, reversing the prior miss after CEO Marcus Vane's output cuts and Vanguard staffing trims took hold. The leaner Coachline line ran at a sell-through pace that lifted per-unit margins by roughly seven points. Vane said the flagship is now positioned for measured, demand-matched growth rather than the aggressive ramp that overran earlier guidance.",
+      "cycle": 82749,
+      "dur": 2
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Carrowforge Lands $940M Heavy-Press Order as Renn Bets Split Frees Capacity",
+      "body": "Carrowforge secured a $940 million multi-year contract to supply forming presses to a continental fabrication group, its largest single order since the Roe-era split. Machines Chief Owen Talbourne said the deal locks the unit's flagship line at full utilization through 2028. CEO Dahlia Renn called it proof that the leaner post-split structure can win work the old combined house couldn't service.",
+      "cycle": 82749,
+      "dur": 2
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Erretmark Works Beats as $2.1B Fleet Accord Feeds Record Delivery Quarter",
+      "body": "Erretmark Works reported deliveries up 18% on the quarter, driven by first shipments under the continental fleet accord and sustained output from the three Veyron halls. CEO Aurelia Garr said margin held firm despite the cross-border ramp, crediting standardized tooling across the expanded network. The house lifted full-year delivery guidance for the second consecutive quarter.",
+      "cycle": 82749,
+      "dur": 2
+    },
+    {
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Halcrest Signs Flagship Boutique Accord to Ride Meridian Momentum",
+      "body": "Halcrest struck a distribution accord to open twelve owned boutiques across three luxury capitals, capitalizing on the sold-out Meridian Grand Complication. CEO Iris Marrow framed the roughly $210 million rollout as converting a hit product into a controlled retail footprint. The first flagship is slated to open within six months, timed to a limited Meridian follow-up series.",
+      "cycle": 82749,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Halhold Systems Misses Again as Reliability Payout and Restructure Bite",
+      "body": "Halhold posted quarterly revenue of $3.6 billion, short of the $4.0 billion guided, as the $2.1 billion reliability payout and severance charges weighed on results. CEO Marcus Thorne said Compute order backlogs remain intact but conceded customer confidence is still rebuilding after the verdict. The company reaffirmed it expects the restructure to be fully absorbed by mid-next year.",
+      "cycle": 82749,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Korrwright Works Breaks Ground on Halbrook Movement Campus to Triple Escapement Output",
+      "body": "Fresh off its Verenne Grand Prix, Korrwright Works committed $320 million to a new movement campus adjacent to the acquired Halbrook works. CEO Dunmore Carrow said the expansion will triple in-house escapement capacity by 2029 and end reliance on outside suppliers entirely. The facility is expected to add roughly 600 skilled positions at peak.",
+      "cycle": 82749,
+      "dur": 2
+    },
+    {
+      "company": "Vossenstead Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vossenstead Supply Restarts Streak at Fifteen as Fifth Center Ships Early",
+      "body": "Vossenstead Supply returned to its winning cadence with a fifteenth beat, as the newly opened fifth distribution center began fulfilling Food Service orders ahead of schedule. CEO Bram Thorne noted Plumbing & Fixtures volumes also firmed on steady contractor demand. Management characterized the quarter as a clean return to form after the expansion's start-up costs.",
+      "cycle": 82749,
+      "dur": 1
+    },
     {
       "company": "Brunstone & Sons",
       "sector": "automotive",
@@ -10,16 +90,6 @@
       "body": "Just one quarter after declaring the recovery 'complete,' Brunstone reported a steep earnings miss as the doubled Vault II line ran well below breakeven utilization, forcing a $210M inventory writedown. Dagny Frost conceded the capacity expansion 'moved faster than the order book,' and the company withdrew its prior full-year targets. The fleet supply pact remains intact but its volumes fell short of ramp assumptions.",
       "cycle": 82748,
       "dur": 8
-    },
-    {
-      "company": "Cranecraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Cranecraft Stretches Streak to Fourteen as Post-Planting Farm Orders Hold",
-      "body": "Cranecraft posted its fourteenth consecutive beat, though growth eased as planting-season demand cooled into a steadier maintenance-order mix. Mira Garr noted textile pricing 'remained firm enough to offset seasonal softening in equipment.' The company kept guidance unchanged.",
-      "cycle": 82748,
-      "dur": 1
     },
     {
       "company": "Gromford Works",
@@ -62,76 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Extends Run With Narrow Beat as Non-Grocery Book Steadies",
-      "body": "Vantor posted a modest quarterly beat, with non-grocery contracts now representing 38% of revenue, up two points sequentially. Halden Vossen credited 'consistent renewals and disciplined pricing' rather than any single win. Management reaffirmed full-year guidance without revision.",
-      "cycle": 82748,
-      "dur": 1
-    },
-    {
-      "company": "Wrenhaus",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Wrenhaus Adds Distribution Hub to Serve Riverside Corridor Output",
-      "body": "Wrenhaus opened a regional distribution hub near the Riverside corridor to shorten delivery times as its second plant runs at full output. Quinn Thorne said the facility 'takes strain off the plants and gets fixtures to contractors faster.' The investment was modest, funded from operating cash flow.",
-      "cycle": 82748,
-      "dur": 1
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Bruncrest Works Adds Second Compute Line as Aria Ultra Backlog Swells Past $5B",
-      "body": "Riding momentum from its $3.4B framework, Bruncrest Works committed $1.6B to a second Aria Ultra production line, citing an order backlog that has climbed beyond $5B. CEO Ines Marlow said the expansion should lift annual output by roughly 40% once the line reaches volume in late 2027. The company expects to add 1,200 workers at its northern campus.",
-      "cycle": 82747,
-      "dur": 2
-    },
-    {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Brunmark Motors Relaunches Veyra Line With Redesigned Battery Pack as Calvagh Bets on Reset",
-      "body": "Brunmark Motors restarted its halted assembly line with the Veyra R, built around an all-new battery pack from supplier Halden Cells that the company says resolves the thermal faults behind its 340,000-unit recall. CEO Iris Calvagh staked her turnaround on the model, opening pre-orders with an extended 10-year pack warranty. Analysts remain wary given the unresolved $900M class action.",
-      "cycle": 82747,
-      "dur": 2
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "standard",
-      "head": "Calderforge Names Turnaround Veteran Perra Vann to Rescue Stalled Stormwell Program",
-      "body": "Calderforge's board appointed Perra Vann, formerly operations chief at a rival compute house, as chief executive following the ouster of longtime leader Nadia Throne. Vann inherits the troubled fourth Stormwell Hall, where ramp delays and faltering yields forced two straight guidance cuts. She pledged a 90-day review of the entire Stormwell buildout before setting new targets.",
-      "cycle": 82747,
-      "dur": 2
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Castlestone Steadies as Grid-Core Split and Cost Cuts Fuel First Beat Under Reset",
-      "body": "Castlestone posted quarterly revenue of $2.9B, edging past the $2.7B consensus, as the newly independent Grid-Core unit delivered its first on-time compute shipments since the redesigned cooling relaunch. CEO Pell Karsh credited the 1,800-role reduction and unit split for restoring margins, though he cautioned that the recovery remains 'one quarter old.' Operating margin recovered to 11% from a razor-thin 3% a quarter earlier.",
-      "cycle": 82747,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Ironcrestton Unveils Aurelian Collection as Vale Draws Line Under Meridian Era",
-      "body": "Ironcrestton launched its Aurelian line of fine goods, the first collection built entirely on the rebuilt supply chain Corwin Vale installed after retiring the scandal-tainted Meridian range. Vale positioned Aurelian as a 'clean slate,' backed by traceable sourcing certificates for every piece. The house committed $180M to marketing and boutique refits over the next year.",
-      "cycle": 82747,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "safety_probe",
@@ -140,26 +140,6 @@
       "body": "Regulators escalated their inquiry into Marlgear Supply, expanding the Kessel fault investigation to cover the company's entire Devices catalog after new filings suggested the destroyed records touched multiple product families. New CEO Halvard Renn pledged full cooperation and voluntarily suspended shipments of three Kessel-based lines pending review. The widened probe threatens roughly a third of Marlgear's device revenue.",
       "cycle": 82747,
       "dur": 8
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarnvale Beats as Rebuilt Vosk Junction Runs Clean Through First Full Quarter",
-      "body": "Skarnvale reported its first uninterrupted quarter at Vosk Junction since the triple failure, lifting revenue to $780M and beating the $720M consensus as the rebuilt handling system held steady. CEO Dorn Vaskell said throughput at the hub had recovered to 96% of pre-collapse levels. The company reinstated its full-year guidance after pulling it during the crisis.",
-      "cycle": 82747,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenspire Supply Beats as Corriveaux Integration Delivers Early Synergies",
-      "body": "Vossenspire Supply topped estimates with $1.4B in quarterly revenue, as the folded-in Corriveaux timepiece operations began contributing ahead of schedule. CEO Quinn Marrow said the house had already captured $52M of its targeted $140M in synergies, driven by shared component sourcing. Timepiece margins widened to 34%, a new high for the combined unit.",
-      "cycle": 82747,
-      "dur": 2
     },
     {
       "company": "Castlehold",
@@ -229,26 +209,6 @@
       "head": "Brunstone & Sons Doubles Vault II Capacity as Frost Declares Recovery 'Complete'",
       "body": "Dagny Frost announced a $1.4B expansion to triple Vault II cell output at the Harlow and Denvers plants, following the $900M fleet pact and a second order backlog now topping 2.1 million units. Frost, addressing shareholders, called the turnaround 'complete' and set a target of doubling storage revenue within eighteen months. Analysts noted the bold timeline is characteristic of Frost, who staked her tenure on the comeback.",
       "cycle": 82742,
-      "dur": 8
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "major",
-      "head": "Bruncrest Works Crushes Estimates as $3.4B Aria Ultra Framework Ramps to Full Volume",
-      "body": "Revenue jumped 61% to $2.9B as the record Aria Ultra order moved from framework to shipment, with the new compute line reaching full output ahead of schedule. Chief executive Ines Marlow raised full-year guidance and said backlog now stretches beyond eighteen months. The result caps a bold expansion bet that pushed capacity spending to historic highs.",
-      "cycle": 82741,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Vossenspire Holdings Installs Corin Alderidge Successor Maren Vok as Probe Nears Verdict",
-      "body": "The board named Maren Vok, formerly head of grid operations at a rival power house, as chief executive after Corin Alderidge's turbulent tenure ended amid the ongoing storage-bank probe. Vok inherits a frozen revenue base and a regulatory review expected to conclude within two quarters, and pledged an immediate top-to-bottom audit of the Storage division. Analysts pegged the leadership reset as the last chance to stabilize before penalties land.",
-      "cycle": 82741,
       "dur": 8
     }
   ]

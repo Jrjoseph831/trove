@@ -1121,18 +1121,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82739,
+    "lastEventCycle": 82749,
     "events": [
-      {
-        "cycle": 82529,
-        "kind": "outage",
-        "size": "standard",
-        "head": "Blackhold Grid Fault Knocks Out Greycliff Test Bank Hours After Launch",
-        "body": "A thermal fault in the newly commissioned Greycliff storage array forced an emergency shutdown of three test cells late Tuesday, cutting supply to two regional substations for roughly four hours. New Operations Chief Lena Voss said the trip was contained and no permanent damage occurred, but CEO Tomas Vren faced sharp questions over whether the aggressive build timeline outpaced safety checks. Blackhold pledged a full review before bringing the bank back online.",
-        "effects": {
-          "energy": -0.13
-        }
-      },
       {
         "cycle": 82539,
         "kind": "safety_probe",
@@ -1351,6 +1341,16 @@
         "size": "major",
         "head": "Blackhold Orders Full Recall of Storage Units as Design Flaw Confirmed Across Fleet",
         "body": "Blackhold issued a sweeping recall of storage units built to the flawed second-campus design after regulators confirmed a systemic thermal fault, halting shipments industry-wide. Halden Dabney conceded the fix could cost upward of $600M and delay revenue by three quarters. The company withdrew its full-year outlook pending remediation.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82749,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Blackhold Hit With Investor Suit Over Storage Fleet Defect as Losses Mount",
+        "body": "A consolidated shareholder suit filed against Blackhold alleges executives understated known thermal risks in the storage fleet ahead of the recall, seeking damages exceeding $1.4 billion. The complaint names CEO Halden Dabney directly and cites internal design reviews from before the first overheating incident. Blackhold said it would contest the claims, but disclosed the recall and remediation have already cost $780 million.",
         "effects": {
           "energy": -0.22
         }
@@ -2003,18 +2003,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82742,
+    "lastEventCycle": 82749,
     "events": [
-      {
-        "cycle": 82561,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Bruncraft Industries Seals Landmark 40,000-Vehicle Order With Continental Freightways",
-        "body": "Bruncraft has clinched its largest contract in decades, agreeing to supply 40,000 Runabout Cargo vans to Continental Freightways over five years in a deal valued near 2.1 billion. Orla Marrow said the freshly acquired Coachline plant would run at full tilt to meet delivery schedules beginning next quarter. The order cements Bruncraft as the dominant commercial-vehicle supplier in the northern corridor.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82568,
         "kind": "expansion",
@@ -2237,6 +2227,16 @@
         "body": "Following last quarter's miss, Marcus Vane announced a scaling back of Coachline flagship production and roughly 600 job cuts across the Vanguard unit, targeting $150M in annualized savings. Vane conceded the ramp had 'moved faster than the market,' pledging tighter cost control. The restructuring follows the aggressive consolidation Vane pushed through earlier in the year.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82749,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Bruncraft Returns to Profit as Vane's Coachline Cuts Restore Margins",
+        "body": "Bruncraft posted a narrow quarterly profit, reversing the prior miss after CEO Marcus Vane's output cuts and Vanguard staffing trims took hold. The leaner Coachline line ran at a sell-through pace that lifted per-unit margins by roughly seven points. Vane said the flagship is now positioned for measured, demand-matched growth rather than the aggressive ramp that overran earlier guidance.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -4127,7 +4127,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82736,
+    "lastEventCycle": 82749,
     "events": [
       {
         "cycle": 0,
@@ -4315,6 +4315,16 @@
         "size": "standard",
         "head": "Carrowforge Returns to Profit as Renn's Post-Split Machines Unit Steadies",
         "body": "Carrowforge swung back to a $31M quarterly profit from a prior loss, as newly appointed Machines Chief Tobias Kade trimmed overlapping product lines and cut lead times by 18%. CEO Dahlia Renn called the quarter 'proof the split was worth the pain,' though she cautioned that legacy Roe-era divestitures remain incomplete. Order intake for industrial presses rose 12% sequentially.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82749,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Carrowforge Lands $940M Heavy-Press Order as Renn Bets Split Frees Capacity",
+        "body": "Carrowforge secured a $940 million multi-year contract to supply forming presses to a continental fabrication group, its largest single order since the Roe-era split. Machines Chief Owen Talbourne said the deal locks the unit's flagship line at full utilization through 2028. CEO Dahlia Renn called it proof that the leaner post-split structure can win work the old combined house couldn't service.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -6824,7 +6834,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82739,
+    "lastEventCycle": 82749,
     "events": [
       {
         "cycle": 0,
@@ -7052,6 +7062,16 @@
         "body": "Aurelia Garr's restless expansion crested with a $2.1B multi-year agreement to supply 5,000 Veyron-class vehicles to a continental transit consortium. The pact commits Erretmark to a fifth Veyron Hall and locks delivery windows through the decade. Garr called it the largest single order in the company's 106-year history.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82749,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Erretmark Works Beats as $2.1B Fleet Accord Feeds Record Delivery Quarter",
+        "body": "Erretmark Works reported deliveries up 18% on the quarter, driven by first shipments under the continental fleet accord and sustained output from the three Veyron halls. CEO Aurelia Garr said margin held firm despite the cross-border ramp, crediting standardized tooling across the expanded network. The house lifted full-year delivery guidance for the second consecutive quarter.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -8770,7 +8790,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82738,
+    "lastEventCycle": 82749,
     "events": [
       {
         "cycle": 0,
@@ -8968,6 +8988,16 @@
         "body": "Halcrest reported its strongest quarter in a decade, with the Grand Complication's entire 250-piece allocation sold and a waitlist of over 1,900 names. The high-margin flagship lifted net income 41% to $310M and reversed the prior Skeleton Edition disappointment. Iris Marrow called it proof that 'bold bets, made whole, still define this house.'",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82749,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halcrest Signs Flagship Boutique Accord to Ride Meridian Momentum",
+        "body": "Halcrest struck a distribution accord to open twelve owned boutiques across three luxury capitals, capitalizing on the sold-out Meridian Grand Complication. CEO Iris Marrow framed the roughly $210 million rollout as converting a hit product into a controlled retail footprint. The first flagship is slated to open within six months, timed to a limited Meridian follow-up series.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -9389,18 +9419,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82743,
+    "lastEventCycle": 82749,
     "events": [
-      {
-        "cycle": 82612,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Halhold Systems to Split Northgate Unit as Vale Launches Recovery Plan",
-        "body": "New chief Corin Vale announced a carve-out of the troubled Northgate compute division and roughly 1,800 job cuts, about 9% of the workforce. Vale framed the move as 'clearing the wreckage' from the ignored-warnings scandal, pledging $600 million in restructuring costs over 18 months. The remaining core will refocus on higher-margin server platforms.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82617,
         "kind": "restructure",
@@ -9623,6 +9643,16 @@
         "body": "Facing the $2.1B verdict, Marcus Thorne unveiled a restructuring plan cutting 12% of the workforce and divesting two non-core compute divisions to raise an estimated $1.4B. The board also approved a wholesale overhaul of quality-assurance operations to satisfy regulators. Thorne acknowledged 'a painful reset' but insisted the core compute business would emerge leaner.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82749,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Halhold Systems Misses Again as Reliability Payout and Restructure Bite",
+        "body": "Halhold posted quarterly revenue of $3.6 billion, short of the $4.0 billion guided, as the $2.1 billion reliability payout and severance charges weighed on results. CEO Marcus Thorne said Compute order backlogs remain intact but conceded customer confidence is still rebuilding after the verdict. The company reaffirmed it expects the restructure to be fully absorbed by mid-next year.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -12122,18 +12152,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82741,
+    "lastEventCycle": 82749,
     "events": [
-      {
-        "cycle": 82571,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Korrwright Works Buys Rival Heritage Maker Sennfeld in Landmark Deal",
-        "body": "Dunmore Carrow announced the $2.1B acquisition of storied competitor Sennfeld Chronometers, folding its ateliers and movement archive into the Velloux operation. The purchase, Korrwright's largest ever, doubles its skilled watchmaker headcount and secures a century of proprietary complications. Carrow said the combined house would 'define the top of the market,' capping a run that began with the Velloux launch and its Timepiece of the Year win.",
-        "effects": {
-          "luxury": 0.22
-        }
-      },
       {
         "cycle": 82578,
         "kind": "restructure",
@@ -12358,6 +12378,16 @@
         "size": "standard",
         "head": "Korrwright Works Wins Grand Prix at Verenne Horology Salon for In-House Escapement",
         "body": "The reborn escapement, developed after the $1.1B Halbrook acquisition, took top honors at the prestigious Verenne salon, a first for the 118-year-old house. Chief executive Dunmore Carrow said the award validates the vertical-integration strategy and lifts order visibility into next year. The recognition arrives as direct sales from Verenne retail continue to outpace wholesale.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82749,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrwright Works Breaks Ground on Halbrook Movement Campus to Triple Escapement Output",
+        "body": "Fresh off its Verenne Grand Prix, Korrwright Works committed $320 million to a new movement campus adjacent to the acquired Halbrook works. CEO Dunmore Carrow said the expansion will triple in-house escapement capacity by 2029 and end reliance on outside suppliers entirely. The facility is expected to add roughly 600 skilled positions at peak.",
         "effects": {
           "luxury": 0.13
         }
@@ -17801,7 +17831,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82737,
+    "lastEventCycle": 82749,
     "events": [
       {
         "cycle": 0,
@@ -17989,6 +18019,16 @@
         "body": "The company brought its long-signaled fifth distribution center online in the Calderport corridor, adding 480,000 square feet of capacity for food service and plumbing fixtures. CEO Bram Thorne said the facility would cut regional lead times by nearly a third and support the next leg of demand that drove fourteen consecutive earnings beats. Full throughput is expected within two quarters.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82749,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenstead Supply Restarts Streak at Fifteen as Fifth Center Ships Early",
+        "body": "Vossenstead Supply returned to its winning cadence with a fifteenth beat, as the newly opened fifth distribution center began fulfilling Food Service orders ahead of schedule. CEO Bram Thorne noted Plumbing & Fixtures volumes also firmed on steady contractor demand. Management characterized the quarter as a clean return to form after the expansion's start-up costs.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
