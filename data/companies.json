@@ -3128,18 +3128,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82742,
+    "lastEventCycle": 82748,
     "events": [
-      {
-        "cycle": 82578,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Brunstone & Sons Rebounds as Vault Cell Orders Outrun Forecasts",
-        "body": "Brunstone posted quarterly revenue of 3.1 billion marks, up 22% on the prior period, as demand for its Lambourne-era Vault Cells filled two full production shifts. Royce Lambourne, prone to grand pronouncements, called it 'the first clean quarter since the reset' but warned margins remain thin until the second cell line opens next spring.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82585,
         "kind": "major_deal",
@@ -3363,6 +3353,16 @@
         "head": "Brunstone & Sons Doubles Vault II Capacity as Frost Declares Recovery 'Complete'",
         "body": "Dagny Frost announced a $1.4B expansion to triple Vault II cell output at the Harlow and Denvers plants, following the $900M fleet pact and a second order backlog now topping 2.1 million units. Frost, addressing shareholders, called the turnaround 'complete' and set a target of doubling storage revenue within eighteen months. Analysts noted the bold timeline is characteristic of Frost, who staked her tenure on the comeback.",
         "effects": {}
+      },
+      {
+        "cycle": 82748,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Brunstone & Sons Misses Badly as Vault II Capacity Ramp Outpaces Demand",
+        "body": "Just one quarter after declaring the recovery 'complete,' Brunstone reported a steep earnings miss as the doubled Vault II line ran well below breakeven utilization, forcing a $210M inventory writedown. Dagny Frost conceded the capacity expansion 'moved faster than the order book,' and the company withdrew its prior full-year targets. The fleet supply pact remains intact but its volumes fell short of ramp assumptions.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -5370,7 +5370,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82736,
+    "lastEventCycle": 82748,
     "events": [
       {
         "cycle": 0,
@@ -5558,6 +5558,16 @@
         "body": "Cranecraft extended its consecutive-beat streak to thirteen quarters, with revenue of $344M as farm-equipment orders crested with the planting season and textile pricing held firm. CEO Mira Garr noted the streak now spans more than three years, crediting balanced exposure across farm and raw-textile lines. Backlog stood at a record $210M.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82748,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Stretches Streak to Fourteen as Post-Planting Farm Orders Hold",
+        "body": "Cranecraft posted its fourteenth consecutive beat, though growth eased as planting-season demand cooled into a steadier maintenance-order mix. Mira Garr noted textile pricing 'remained firm enough to offset seasonal softening in equipment.' The company kept guidance unchanged.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -8511,18 +8521,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82743,
+    "lastEventCycle": 82748,
     "events": [
-      {
-        "cycle": 82598,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Gromford Works Tops Estimates as Meridian Sales Fuel Flagship Traffic",
-        "body": "Quarterly revenue rose 19% to 340 million marks, driven by Meridian Timepiece demand and strong foot traffic at the newly opened flagship salon. Aldwych credited the award-season buzz and hinted at a limited Meridian complication series before year-end. Fine Goods margins held steady despite raw-metal cost pressure.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82604,
         "kind": "product_launch",
@@ -8745,6 +8745,16 @@
         "body": "Riding the momentum of its award-winning reinforced Emblem Collection, Gromford signed an exclusive placement deal with a 40-country luxury department chain worth an estimated $650M over five years. Halvard Pryce called it 'the biggest distribution win in the house's history,' committing to double timepiece output at the Emblem workshop. The deal caps a rapid rebound from last year's clasp recall.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82748,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Extends Emblem Line Into Timepieces as Pryce Presses Retail Momentum",
+        "body": "Building on the department-chain partnership, Halvard Pryce unveiled an Emblem-branded timepiece series carrying the collection's reinforced-clasp motif, targeting the same global retail footprint. First shipments are slated within the quarter across 400 doors. Pryce framed the move as 'turning one hit collection into a house signature.'",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -8973,7 +8983,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82734,
+    "lastEventCycle": 82748,
     "events": [
       {
         "cycle": 0,
@@ -9132,6 +9142,16 @@
         "effects": {
           "construction": 0.13
         }
+      },
+      {
+        "cycle": 82748,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcrow & Vance Beats as Third Yard Clears Vetask Backlog Ahead of Plan",
+        "body": "Halcrow reported a solid beat, with the new yard lifting throughput enough to trim the Vetask backlog by 18% while holding margins steady. Mira Skarn said the added capacity 'positions us to bid the next mandate cycle from strength.' Order book coverage now extends into late 2027.",
+        "effects": {
+          "construction": 0.13
+        }
       }
     ]
   },
@@ -9146,7 +9166,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82734,
+    "lastEventCycle": 82748,
     "events": [
       {
         "cycle": 0,
@@ -9342,6 +9362,16 @@
         "size": "standard",
         "head": "Halcyon Industries Beats as Recycled-Fiber Grade Wins Early Orders",
         "body": "Halcyon reported a modest earnings beat, with the newly debuted recycled-fiber packaging grade drawing faster-than-expected commitments from consumer-goods clients ahead of Northgate's startup. Ashby said two of Northgate's six planned lines have been earmarked for the new grade, calling demand 'stickier than we modeled.'",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82748,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halcyon Industries Signs Multi-Year Supply Pact Anchoring Northgate Recycled-Fiber Output",
+        "body": "Halcyon secured a four-year, $640M packaging supply agreement with a national grocery distributor, committing roughly a third of Northgate's initial three lines to recycled-fiber grades. Dorian Ashby said the deal 'gives us the demand certainty to bring the remaining lines forward on schedule.' The contract locks pricing through 2029 with volume step-ups tied to Northgate's ramp.",
         "effects": {
           "logistics": 0.13
         }
@@ -9608,18 +9638,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82742,
+    "lastEventCycle": 82748,
     "events": [
-      {
-        "cycle": 82612,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Halhold Works Expands Aveline Line With Bedside Monitoring Suite",
-        "body": "Lena Faircloth introduced Aveline Bedside, a compact monitoring suite designed to plug into the platform already deployed across its first hospital network client. The launch targets a $2 billion addressable market and marks the second product built on the Aveline architecture. Faircloth said pilot installations would begin at three regional hospitals this quarter.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82618,
         "kind": "earnings_beat",
@@ -9840,6 +9860,16 @@
         "body": "Halhold posted quarterly revenue of $612M, up 14% year-over-year, as the Aveline successor line cleared 800,000 units across its opening markets. Anselm Rocha said the device unit had returned to profitability a quarter ahead of plan, though Wire & Cable margins remained under pressure. The result marks the first clean beat since Rocha took over the cleanup.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82748,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Halhold Works Faces Regulatory Review Over Aveline Successor Battery Heating Reports",
+        "body": "A national safety body opened a formal inquiry after 47 reports of overheating in the Aveline successor's charging module, temporarily halting sales in two markets. Anselm Rocha called the reports 'isolated' but confirmed a firmware pause and a supplier audit of the cell pack. The probe lands just weeks after Halhold touted the device's sales beat.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -16149,7 +16179,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82733,
+    "lastEventCycle": 82748,
     "events": [
       {
         "cycle": 0,
@@ -16305,6 +16335,16 @@
         "size": "flash",
         "head": "Vantor Lines Posts Another Steady Beat as Non-Grocery Mix Grows",
         "body": "Vantor Lines delivered revenue of $840M, a modest beat, with non-grocery contracts now accounting for 28% of volume, up from 19% a year ago. Halden Vossen said the diversification push continues to smooth seasonal swings, and reaffirmed full-year targets. Packaging utilization held steady near 90%.",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82748,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Extends Run With Narrow Beat as Non-Grocery Book Steadies",
+        "body": "Vantor posted a modest quarterly beat, with non-grocery contracts now representing 38% of revenue, up two points sequentially. Halden Vossen credited 'consistent renewals and disciplined pricing' rather than any single win. Management reaffirmed full-year guidance without revision.",
         "effects": {
           "logistics": 0.06
         }
@@ -18608,7 +18648,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82730,
+    "lastEventCycle": 82748,
     "events": [
       {
         "cycle": 0,
@@ -18734,6 +18774,16 @@
         "size": "flash",
         "head": "Wrenhaus Tops Estimates as Second Riverside Plant Ramps to Full Output",
         "body": "Wrenhaus beat modestly as its newly opened second Riverside plant reached full production, lifting corridor fixture volumes without straining pricing. Quinn Thorne kept guidance conservative, citing steady rather than surging demand. The quiet expansion continues to underpin the house's slow-and-steady margin gains.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82748,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wrenhaus Adds Distribution Hub to Serve Riverside Corridor Output",
+        "body": "Wrenhaus opened a regional distribution hub near the Riverside corridor to shorten delivery times as its second plant runs at full output. Quinn Thorne said the facility 'takes strain off the plants and gets fixtures to contractors faster.' The investment was modest, funded from operating cash flow.",
         "effects": {
           "construction": 0.06
         }
