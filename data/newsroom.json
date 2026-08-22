@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-22T12:41:10.257Z",
+  "generatedAt": "2026-08-22T18:32:46.055Z",
   "beats": [
     {
-      "company": "Aldousspire Group",
-      "sector": "consumer",
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Boreas Power Adds $900M Financing to Accelerate Compute-Paired Campus Rollout",
+      "body": "Boreas Power closed a $900M project-financing facility to fast-track the remaining sites in its $3.2B compute-paired campus program, bringing the number of campuses under construction to six. CEO Mira Thorne said the funding lets the company 'compress two years of buildout into eighteen months' and hinted at a further site announcement before year-end. The financing carries staged draws tied to construction milestones.",
+      "cycle": 82751,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Castlehold Ordered to Halt Second Plant as Probe Escalates and Framework Delivery Slips",
+      "body": "Regulators widened their investigation into Castlehold's grid-storage incident, ordering a full shutdown of the second plant pending a design review and citing 'systemic containment concerns.' The halt jeopardizes near-term deliveries under the company's flagship $2B framework, and CEO Halden Voss acknowledged 'material schedule risk' while insisting the underlying technology is sound. Two customers have requested contract reviews.",
+      "cycle": 82751,
+      "dur": 8
+    },
+    {
+      "company": "Castlestead",
+      "sector": "agriculture",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldousspire Group Posts Steady Beat as Heirloom Concept Stores Turn Profitable",
-      "body": "Aldousspire delivered a modest beat as the twelve new Heirloom concept stores reached collective profitability faster than planned, contributing a 6% lift in apparel revenue. Mira Ashby said foot traffic at the new locations exceeded projections, and same-store sales at legacy shops held firm. She signaled a more selective pace of openings for the coming year.",
-      "cycle": 82750,
+      "head": "Castlestead Notches Narrow Beat as Farm Equipment Firms Against Flat Earthmoving",
+      "body": "Castlestead reported quarterly revenue of $4.11B, edging past the $4.06B consensus, with strength in seasonal Farm Equipment sales offsetting a still-soft Earthmoving segment. CEO Aurelia Calder reaffirmed full-year guidance and noted dealer inventories remain 'comfortably in balance.' Margins held steady at 18.3%.",
+      "cycle": 82751,
       "dur": 1
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Holtforge Group Extends Streak as Interconnector Work Lifts Margins to Multi-Year High",
+      "body": "Holtforge Group reported a fifth consecutive beat, with revenue of $2.84B and operating margin climbing to 15.1%, its best in six years, as high-value interconnector cable contracts moved into peak production. CEO Yvette Bramm credited disciplined execution and a firmed-up copper supply agreement for the margin gains. The order book held near its record level.",
+      "cycle": 82751,
+      "dur": 2
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Korrworks Breaks Ground on Third Hub as Anchor Tenant Triggers Early Build",
+      "body": "Korrworks began construction on its third material-handling hub weeks ahead of schedule after the anchor tenant from its $260M fit-out exercised an early-occupancy clause. CEO Rhys Throne said the site is now expected to reach initial operating capacity within 14 months, calling the pace 'the fastest ramp in the company's pipeline.' The move brings committed hub capacity to roughly triple the level of two years ago.",
+      "cycle": 82751,
+      "dur": 2
+    },
+    {
+      "company": "Marrowstone Build",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Marrowstone Build Wins $780M Coastal Rail Corridor, Its Largest Single Award",
+      "body": "Marrowstone Build secured a $780M design-and-build package for the first phase of a coastal freight rail corridor, its biggest single contract on record and enough to push backlog beyond $2.1B. CEO Delphine Vaugh said the win 'changes the scale of what we can bid on' and confirmed the company is expanding its heavy earthmoving fleet to service the multi-year program. Work is slated to begin next quarter.",
+      "cycle": 82751,
+      "dur": 8
+    },
+    {
+      "company": "Vossenspire Holdings",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Vossenspire Holdings Splits Compute and Power Units in Vok's Post-Probe Overhaul",
+      "body": "New CEO Maren Vok unveiled a sweeping restructure that separates Vossenspire's compute operations from its troubled Power & Storage arm, with a $610M charge tied to the shuttered storage-bank program. Vok said the split lets the company 'ring-fence the past and fund the future,' pledging to exit the facilities named in the resolved regulatory probe. The plan cuts roughly 1,400 roles across the storage division.",
+      "cycle": 82751,
+      "dur": 8
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "breakthrough",
+      "size": "major",
+      "head": "Woldmark's Meridian Doubles Throughput in Landmark Benchmark as Sonn Declares Comeback",
+      "body": "Woldmark disclosed independently verified results showing its Meridian compute modules deliver 2.1x the sustained throughput of the retired Halcyon line at comparable power draw. CEO Petra Sonn, never shy of a headline, called Meridian 'the machine that erases the last two years,' and confirmed three unnamed hyperscale customers have moved to full production orders. The results mark the first clear technical vindication since the Halcyon 4 collapse.",
+      "cycle": 82751,
+      "dur": 8
     },
     {
       "company": "Dunmorewright Industries",
@@ -72,16 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Vossenwright Holdings",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vossenwright Holdings Edges Higher as Expanded Seeder Plant Nears Completion",
-      "body": "Vossenwright posted a modest beat, with fleet seeder deliveries continuing on schedule and the plant expansion tracking for commissioning next quarter. Quinn Skarn reiterated a conservative outlook, citing steady but unremarkable demand for farm inputs. The quiet result was in keeping with the company's low-drama reputation.",
-      "cycle": 82750,
-      "dur": 1
-    },
-    {
       "company": "Blackhold",
       "sector": "energy",
       "kind": "lawsuit",
@@ -90,66 +150,6 @@
       "body": "A consolidated shareholder suit filed against Blackhold alleges executives understated known thermal risks in the storage fleet ahead of the recall, seeking damages exceeding $1.4 billion. The complaint names CEO Halden Dabney directly and cites internal design reviews from before the first overheating incident. Blackhold said it would contest the claims, but disclosed the recall and remediation have already cost $780 million.",
       "cycle": 82749,
       "dur": 8
-    },
-    {
-      "company": "Bruncraft Industries",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Bruncraft Returns to Profit as Vane's Coachline Cuts Restore Margins",
-      "body": "Bruncraft posted a narrow quarterly profit, reversing the prior miss after CEO Marcus Vane's output cuts and Vanguard staffing trims took hold. The leaner Coachline line ran at a sell-through pace that lifted per-unit margins by roughly seven points. Vane said the flagship is now positioned for measured, demand-matched growth rather than the aggressive ramp that overran earlier guidance.",
-      "cycle": 82749,
-      "dur": 2
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Carrowforge Lands $940M Heavy-Press Order as Renn Bets Split Frees Capacity",
-      "body": "Carrowforge secured a $940 million multi-year contract to supply forming presses to a continental fabrication group, its largest single order since the Roe-era split. Machines Chief Owen Talbourne said the deal locks the unit's flagship line at full utilization through 2028. CEO Dahlia Renn called it proof that the leaner post-split structure can win work the old combined house couldn't service.",
-      "cycle": 82749,
-      "dur": 2
-    },
-    {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Erretmark Works Beats as $2.1B Fleet Accord Feeds Record Delivery Quarter",
-      "body": "Erretmark Works reported deliveries up 18% on the quarter, driven by first shipments under the continental fleet accord and sustained output from the three Veyron halls. CEO Aurelia Garr said margin held firm despite the cross-border ramp, crediting standardized tooling across the expanded network. The house lifted full-year delivery guidance for the second consecutive quarter.",
-      "cycle": 82749,
-      "dur": 2
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Halcrest Signs Flagship Boutique Accord to Ride Meridian Momentum",
-      "body": "Halcrest struck a distribution accord to open twelve owned boutiques across three luxury capitals, capitalizing on the sold-out Meridian Grand Complication. CEO Iris Marrow framed the roughly $210 million rollout as converting a hit product into a controlled retail footprint. The first flagship is slated to open within six months, timed to a limited Meridian follow-up series.",
-      "cycle": 82749,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Halhold Systems Misses Again as Reliability Payout and Restructure Bite",
-      "body": "Halhold posted quarterly revenue of $3.6 billion, short of the $4.0 billion guided, as the $2.1 billion reliability payout and severance charges weighed on results. CEO Marcus Thorne said Compute order backlogs remain intact but conceded customer confidence is still rebuilding after the verdict. The company reaffirmed it expects the restructure to be fully absorbed by mid-next year.",
-      "cycle": 82749,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Korrwright Works Breaks Ground on Halbrook Movement Campus to Triple Escapement Output",
-      "body": "Fresh off its Verenne Grand Prix, Korrwright Works committed $320 million to a new movement campus adjacent to the acquired Halbrook works. CEO Dunmore Carrow said the expansion will triple in-house escapement capacity by 2029 and end reliance on outside suppliers entirely. The facility is expected to add roughly 600 skilled positions at peak.",
-      "cycle": 82749,
-      "dur": 2
     },
     {
       "company": "Brunstone & Sons",
@@ -209,26 +209,6 @@
       "head": "Greywater Grid Rocked as Internal Memos Show Discharge Figures Were Overstated",
       "body": "Leaked engineering memos reveal that the celebrated 94% recovery rate held only in controlled early runs, with live sites averaging closer to 71%, contradicting public claims tied to the $2.4B compute pact. CEO Sable Renwick, who championed the closed-loop rollout, faces mounting pressure as anchor customers demand contract reviews and regulators widen the discharge probe. Two site directors have been placed on leave pending an internal inquiry.",
       "cycle": 82744,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Gromford Works Lands Landmark Retail Partnership to Sell Emblem Line in Global Department Chain",
-      "body": "Riding the momentum of its award-winning reinforced Emblem Collection, Gromford signed an exclusive placement deal with a 40-country luxury department chain worth an estimated $650M over five years. Halvard Pryce called it 'the biggest distribution win in the house's history,' committing to double timepiece output at the Emblem workshop. The deal caps a rapid rebound from last year's clasp recall.",
-      "cycle": 82743,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Halhold Systems Launches Sweeping Restructure to Fund $2.1B Reliability Payout",
-      "body": "Facing the $2.1B verdict, Marcus Thorne unveiled a restructuring plan cutting 12% of the workforce and divesting two non-core compute divisions to raise an estimated $1.4B. The board also approved a wholesale overhaul of quality-assurance operations to satisfy regulators. Thorne acknowledged 'a painful reset' but insisted the core compute business would emerge leaner.",
-      "cycle": 82743,
       "dur": 8
     }
   ]

@@ -1758,18 +1758,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82746,
+    "lastEventCycle": 82751,
     "events": [
-      {
-        "cycle": 82589,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Boreas Power Signs Third Hollowmere Tenant in $680M Compute Commitment",
-        "body": "Boreas locked in a third anchor tenant for the Hollowmere campus under a ten-year, 680 million mark compute-and-power agreement. Mira Thorne said the site is now more than 70 percent pre-leased ahead of its first phase opening. The deal deepens Boreas's shift toward long-dated capacity contracts.",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82595,
         "kind": "expansion",
@@ -1996,6 +1986,16 @@
         "size": "standard",
         "head": "Boreas Power Adds Two More Compute-Paired Campuses as Thorne Widens $3.2B Program",
         "body": "Boreas Power broke ground on its third and fourth compute-paired power campuses near Vantel and Halvane, bringing committed sites to four just months into the program. CEO Mira Thorne said early demand from anchor tenants had pulled forward the build schedule by roughly two quarters. The company reaffirmed the $3.2B envelope but hinted an expansion could be needed if bookings hold.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82751,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Boreas Power Adds $900M Financing to Accelerate Compute-Paired Campus Rollout",
+        "body": "Boreas Power closed a $900M project-financing facility to fast-track the remaining sites in its $3.2B compute-paired campus program, bringing the number of campuses under construction to six. CEO Mira Thorne said the funding lets the company 'compress two years of buildout into eighteen months' and hinted at a further site announcement before year-end. The financing carries staged draws tied to construction milestones.",
         "effects": {
           "energy": 0.13
         }
@@ -4779,18 +4779,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82745,
+    "lastEventCycle": 82751,
     "events": [
-      {
-        "cycle": 82565,
-        "kind": "scandal",
-        "size": "major",
-        "head": "Castlehold Rocked as Saltmere Indictments Name Former Executives Over Falsified Fault Logs",
-        "body": "Prosecutors unsealed charges against three former Castlehold engineers and ex-operations chief Darel Skarn, alleging systematic falsification of Saltmere fault-reporting records dating back to 2023. CEO Ivo Reneth pledged full cooperation and announced a $420M charge to cover legal reserves and remediation, calling the disclosures 'a wound we will not hide from.' Shares slid as the company confirmed Saltmere will remain offline through at least next year.",
-        "effects": {
-          "energy": -0.22
-        }
-      },
       {
         "cycle": 82575,
         "kind": "restructure",
@@ -5018,6 +5008,16 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82751,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Castlehold Ordered to Halt Second Plant as Probe Escalates and Framework Delivery Slips",
+        "body": "Regulators widened their investigation into Castlehold's grid-storage incident, ordering a full shutdown of the second plant pending a design review and citing 'systemic containment concerns.' The halt jeopardizes near-term deliveries under the company's flagship $2B framework, and CEO Halden Voss acknowledged 'material schedule risk' while insisting the underlying technology is sound. Two customers have requested contract reviews.",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },
@@ -5032,7 +5032,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82721,
+    "lastEventCycle": 82751,
     "events": [
       {
         "cycle": 0,
@@ -5118,6 +5118,16 @@
         "size": "flash",
         "head": "Castlestead Posts Slim Beat as Farm Inputs Offset Softer Earthmoving",
         "body": "Castlestead edged past estimates as steady Farm Inputs demand cushioned a modest dip in Earthmoving orders. CEO Aurelia Calder characterized the quarter as unremarkable, with the mature Harrowfield deal continuing to bill on schedule. Management reaffirmed its conservative full-year outlook.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82751,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlestead Notches Narrow Beat as Farm Equipment Firms Against Flat Earthmoving",
+        "body": "Castlestead reported quarterly revenue of $4.11B, edging past the $4.06B consensus, with strength in seasonal Farm Equipment sales offsetting a still-soft Earthmoving segment. CEO Aurelia Calder reaffirmed full-year guidance and noted dealer inventories remain 'comfortably in balance.' Margins held steady at 18.3%.",
         "effects": {
           "agriculture": 0.06
         }
@@ -10311,7 +10321,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82737,
+    "lastEventCycle": 82751,
     "events": [
       {
         "cycle": 0,
@@ -10467,6 +10477,16 @@
         "size": "standard",
         "head": "Holtforge Group Delivers Record Quarter as Interconnector Work Ramps",
         "body": "The wire-and-cable maker posted quarterly revenue of $1.4B, up 12% year over year, as production against the $900M interconnector extension moved into full swing. CEO Yvette Bramm said the order book remains at record levels with visibility stretching more than two years. Operating margins widened to 19% on improved plant utilization.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82751,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtforge Group Extends Streak as Interconnector Work Lifts Margins to Multi-Year High",
+        "body": "Holtforge Group reported a fifth consecutive beat, with revenue of $2.84B and operating margin climbing to 15.1%, its best in six years, as high-value interconnector cable contracts moved into peak production. CEO Yvette Bramm credited disciplined execution and a firmed-up copper supply agreement for the margin gains. The order book held near its record level.",
         "effects": {
           "construction": 0.13
         }
@@ -11776,7 +11796,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82740,
+    "lastEventCycle": 82751,
     "events": [
       {
         "cycle": 0,
@@ -11962,6 +11982,16 @@
         "size": "standard",
         "head": "Korrworks Signs $260M Material-Handling Fit-Out as Third Hub Site Locks Anchor Tenant",
         "body": "Korrworks secured a $260M multi-year contract to supply automated racking and conveyor systems for a regional distribution operator anchoring its planned third hub. Rhys Throne said the deal de-risks the fast-tracked pipeline, with the anchor tenant committing to a 12-year lease covering nearly 60% of the site's throughput. Groundwork is slated to begin next quarter.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82751,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrworks Breaks Ground on Third Hub as Anchor Tenant Triggers Early Build",
+        "body": "Korrworks began construction on its third material-handling hub weeks ahead of schedule after the anchor tenant from its $260M fit-out exercised an early-occupancy clause. CEO Rhys Throne said the site is now expected to reach initial operating capacity within 14 months, calling the pace 'the fastest ramp in the company's pipeline.' The move brings committed hub capacity to roughly triple the level of two years ago.",
         "effects": {
           "logistics": 0.13
         }
@@ -13578,7 +13608,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82740,
+    "lastEventCycle": 82751,
     "events": [
       {
         "cycle": 0,
@@ -13772,6 +13802,16 @@
         "body": "Marrowstone posted another quarterly beat, with revenue up 22% and backlog reaching a record $1.4B on the strength of the recent interchange and inland rail packages. Delphine Vaugh said fleet utilization hit 91% and flagged plans to add earthmoving capacity to service the swelling order book. Margins widened 180 basis points on improved project sequencing.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82751,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Marrowstone Build Wins $780M Coastal Rail Corridor, Its Largest Single Award",
+        "body": "Marrowstone Build secured a $780M design-and-build package for the first phase of a coastal freight rail corridor, its biggest single contract on record and enough to push backlog beyond $2.1B. CEO Delphine Vaugh said the win 'changes the scale of what we can bid on' and confirmed the company is expanding its heavy earthmoving fleet to service the multi-year program. Work is slated to begin next quarter.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -17423,7 +17463,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82741,
+    "lastEventCycle": 82751,
     "events": [
       {
         "cycle": 0,
@@ -17604,6 +17644,16 @@
         "head": "Vossenspire Holdings Installs Corin Alderidge Successor Maren Vok as Probe Nears Verdict",
         "body": "The board named Maren Vok, formerly head of grid operations at a rival power house, as chief executive after Corin Alderidge's turbulent tenure ended amid the ongoing storage-bank probe. Vok inherits a frozen revenue base and a regulatory review expected to conclude within two quarters, and pledged an immediate top-to-bottom audit of the Storage division. Analysts pegged the leadership reset as the last chance to stabilize before penalties land.",
         "effects": {}
+      },
+      {
+        "cycle": 82751,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Vossenspire Holdings Splits Compute and Power Units in Vok's Post-Probe Overhaul",
+        "body": "New CEO Maren Vok unveiled a sweeping restructure that separates Vossenspire's compute operations from its troubled Power & Storage arm, with a $610M charge tied to the shuttered storage-bank program. Vok said the split lets the company 'ring-fence the past and fund the future,' pledging to exit the facilities named in the resolved regulatory probe. The plan cuts roughly 1,400 roles across the storage division.",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },
@@ -18342,16 +18392,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82740,
+    "lastEventCycle": 82751,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Woldmark — Compute without the drama",
-        "body": "Woldmark builds the machines that do the actual thinking, processors and systems pitched from value desktops to premium workstations that chew through heavy loads. They earned standing the hard way, shipping boards that boot the first time and run cool the thousandth. There is no theatre to the brand, just specs that hold up and support that answers. People who depend on the work, not the badge, keep coming back, and that quiet loyalty is the whole story.",
-        "effects": {}
-      },
       {
         "cycle": 82524,
         "kind": "product_launch",
@@ -18572,6 +18614,16 @@
         "body": "Petra Sonn used her first major appearance to launch Meridian, a rebuilt compute platform that formally retires the Halcyon name after the Halcyon 4 collapse. Sonn narrowed the initial rollout to two enterprise-grade configurations and secured three design-partner commitments ahead of general availability, calling the leaner launch a deliberate break from prior overreach. Early bookings cover an estimated 45,000 units over 18 months.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82751,
+        "kind": "breakthrough",
+        "size": "major",
+        "head": "Woldmark's Meridian Doubles Throughput in Landmark Benchmark as Sonn Declares Comeback",
+        "body": "Woldmark disclosed independently verified results showing its Meridian compute modules deliver 2.1x the sustained throughput of the retired Halcyon line at comparable power draw. CEO Petra Sonn, never shy of a headline, called Meridian 'the machine that erases the last two years,' and confirmed three unnamed hyperscale customers have moved to full production orders. The results mark the first clear technical vindication since the Halcyon 4 collapse.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
