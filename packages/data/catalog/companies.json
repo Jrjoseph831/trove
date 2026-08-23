@@ -3158,18 +3158,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82748,
+    "lastEventCycle": 82754,
     "events": [
-      {
-        "cycle": 82585,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Brunstone & Sons Lands Grid-Scale Vault Cell Order Worth $1.8B",
-        "body": "Royce Lambourne unveiled a $1.8B contract to supply Vault Cells to a regional utility consortium, the largest single order since his emergency reset last year. Lambourne, never shy of the spotlight, framed the deal as proof that the storage pivot 'has fully replaced' the gutted Meridian line. Deliveries begin next quarter and run through 2029.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82591,
         "kind": "product_launch",
@@ -3393,6 +3383,16 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82754,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Brunstone & Sons Idles Vault II Lines and Cuts 1,400 Jobs After Demand Shortfall",
+        "body": "Reversing last quarter's triumphant capacity doubling, Dagny Frost announced Brunstone will mothball two of its four Vault II lines and eliminate roughly 1,400 positions to realign output with tepid orders. The company took a $320M restructuring charge and withdrew full-year guidance, with Frost conceding the expansion had 'run ahead of the market.' The whiplash from her earlier 'recovery complete' declaration drew sharp criticism from the board.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -3580,18 +3580,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82747,
+    "lastEventCycle": 82754,
     "events": [
-      {
-        "cycle": 82535,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Calderforge Opens Next-Generation Stormwell Hall to Replace Retired Embergate Capacity",
-        "body": "Calderforge brought its new Stormwell compute hall online, restoring and exceeding the capacity lost when the aging Embergate facility was retired after last quarter's cooling failure. CEO Nadia Throne said Stormwell features a redundant liquid-cooling system 'designed so a single fault can never take a hall offline again.' The facility represents a 520 million investment and triples Embergate's former throughput.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82545,
         "kind": "earnings_beat",
@@ -3817,6 +3807,16 @@
         "head": "Calderforge Names Turnaround Veteran Perra Vann to Rescue Stalled Stormwell Program",
         "body": "Calderforge's board appointed Perra Vann, formerly operations chief at a rival compute house, as chief executive following the ouster of longtime leader Nadia Throne. Vann inherits the troubled fourth Stormwell Hall, where ramp delays and faltering yields forced two straight guidance cuts. She pledged a 90-day review of the entire Stormwell buildout before setting new targets.",
         "effects": {}
+      },
+      {
+        "cycle": 82754,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Calderforge Reports First Stable Yields at Stormwell Hall Four Under Vann",
+        "body": "In her first major update, Perra Vann said the long-stalled fourth Stormwell hall has reached stable production yields for the first time, clearing a milestone that had eluded the prior regime. Vann reported the hall is now running at 60% of target capacity and expects full ramp within two quarters, though she cautioned demand recovery lags the fix. The news marks the first tangible progress in Calderforge's turnaround.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -8257,7 +8257,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82734,
+    "lastEventCycle": 82754,
     "events": [
       {
         "cycle": 0,
@@ -8373,6 +8373,16 @@
         "size": "flash",
         "head": "Greenmarsh Agro Adds Second Blending Line to Meet Bundle Demand",
         "body": "Greenmarsh committed to a modest second soil-blend line at its home works after the distribution pact pushed bundle volumes past existing capacity. Kessler framed the move as 'measured to demand we can already see,' with the line expected to reach output within three quarters.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82754,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Greenmarsh Agro Tops Estimates as Second Blending Line Lifts Output",
+        "body": "Petra Kessler's Greenmarsh delivered a slight beat as its newly commissioned second blending line pushed soil-blend volumes up 8% quarter-over-quarter. The distribution pact continued to feed steady bundle demand across two regions, and management nudged full-year guidance modestly higher. Kessler reiterated her preference for measured, long-horizon growth.",
         "effects": {
           "agriculture": 0.06
         }
@@ -9512,25 +9522,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1972,
-    "ceo": "Marcus Thorne",
+    "ceo": "Ines Corvalan",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.86,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82749,
+    "lastEventCycle": 82754,
     "events": [
-      {
-        "cycle": 82617,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Halhold Systems Completes Northgate Carve-Out as Vale Names New Core Compute Chief",
-        "body": "Corin Vale finalized the separation of the troubled Northgate unit into a standalone entity, taking a $340 million one-time charge but freeing the core compute business to refocus. Vale installed operations veteran Priya Sund to lead the streamlined division and reiterated that recovery targets remain on schedule for the next fiscal year.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82623,
         "kind": "earnings_miss",
@@ -9754,6 +9754,14 @@
         "effects": {
           "technology": -0.13
         }
+      },
+      {
+        "cycle": 82754,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Systems Ousts Marcus Thorne as Losses and Payout Weigh",
+        "body": "The Halhold board removed Marcus Thorne after a third consecutive miss and mounting fallout from the $2.1B reliability payout, naming reliability-engineering chief Ines Corvalan as chief executive. Corvalan pledged to stabilize Compute yields and rebuild customer trust, warning that a return to growth remains 'several quarters out.' The shakeup ends Thorne's turbulent tenure that began just last year.",
+        "effects": {}
       }
     ]
   },
@@ -11343,7 +11351,7 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82743,
+    "lastEventCycle": 82754,
     "events": [
       {
         "cycle": 0,
@@ -11563,6 +11571,16 @@
         "size": "standard",
         "head": "Kessel Drive Beats as Vanta Cell Volumes Recover on Secured Cathode Supply",
         "body": "With the cathode bottleneck resolved, Kessel Drive posted its first profitable quarter under Aldric Venn as Vanta storage cell shipments climbed 34% sequentially. Venn touted a return to full-line production and reaffirmed a splashy target of one million cells shipped next year. The beat marks a sharp turn from the prior quarter's ramp-driven miss.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82754,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Kessel Drive Unveils Vanta Ultra Pack With 20% Range Gain",
+        "body": "Riding the momentum of recovered cell volumes, Aldric Venn took the stage in Corvin Bay to launch the Vanta Ultra, a storage pack Kessel Drive claims delivers a 20% range improvement at a 12% lower cost per kilowatt-hour. Venn promised first deliveries within two quarters and touted pre-orders from three fleet operators, though he offered no firm figures. Analysts noted the aggressive timeline mirrors Venn's pattern of headline-first announcements.",
         "effects": {
           "automotive": 0.13
         }
@@ -13282,7 +13300,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82741,
+    "lastEventCycle": 82754,
     "events": [
       {
         "cycle": 0,
@@ -13458,6 +13476,16 @@
         "size": "flash",
         "head": "Marrowcyon Extends Streak to Seventh Straight Quiet Beat as Apparel and Fixtures Hold",
         "body": "The consumer house posted a modest 3% revenue gain, its seventh consecutive quarter topping estimates, with plumbing margins and apparel volumes both steady. Chief executive Theo Orne reaffirmed guidance and flagged no changes to the outlook. The unremarkable, dependable cadence again drew little market reaction.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82754,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Stretches Streak to Eighth Straight Quiet Beat",
+        "body": "Theo Orne's Marrowcyon posted another modest beat, edging estimates by two cents as apparel volumes ticked up 3% and fixtures held flat. Management reaffirmed its unchanged full-year outlook and again declined to hold a call, letting the numbers speak. The uneventful result extended one of the sector's steadiest runs.",
         "effects": {
           "consumer": 0.06
         }
@@ -16011,18 +16039,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82746,
+    "lastEventCycle": 82754,
     "events": [
-      {
-        "cycle": 82554,
-        "kind": "award",
-        "size": "standard",
-        "head": "Thronehaus Sovereign Collection Takes Top Honor at Verrand Watch Salon",
-        "body": "The in-house Sovereign Collection won the Grande Complication prize at the annual Verrand Salon, a first for Thronehaus since it brought dial-making in-house via the Verreil purchase. Cora Dray called the award vindication of the vertical-integration strategy, noting order books for the Regent Tourbillon had lengthened to 14 months. The recognition burnished the maison's push into fully self-made movements.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82562,
         "kind": "major_deal",
@@ -16252,6 +16270,16 @@
         "effects": {
           "luxury": 0.06
         }
+      },
+      {
+        "cycle": 82754,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Thronehaus & Co. Acquires Meridian Dial Works to Secure Complications Talent",
+        "body": "Cora Dray struck again, agreeing to buy specialist movement house Meridian Dial Works for a reported $180M to bring perpetual-calendar and tourbillon expertise in-house. The deal folds Meridian's 40-person atelier into the Aurel program and secures a supply of complications Thronehaus had previously sourced externally. Dray framed the purchase as 'vertical craftsmanship,' extending her long record of acquisitive expansion.",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -16266,7 +16294,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82733,
+    "lastEventCycle": 82754,
     "events": [
       {
         "cycle": 0,
@@ -16372,6 +16400,16 @@
         "size": "flash",
         "head": "Tillage & Co. Keeps Its Streak Alive With Another In-Line Quarter",
         "body": "Tillage & Co. reported quarterly revenue of $1.12B, edging past guidance as blending capacity stayed near full. Kestrel Fenn credited stable input demand and steady contract renewals, noting margins held flat year over year. The company reaffirmed its full-year outlook without changes.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82754,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Tillage & Co. Logs Another In-Line Quarter as Input Demand Holds",
+        "body": "Kestrel Fenn's Tillage & Co. reported results squarely in line with expectations, with farm-input volumes flat and margins unchanged from the prior period. Management characterized the quarter as 'exactly what we planned' and left guidance untouched. The dependable print continued the house's long, unflashy streak.",
         "effects": {
           "agriculture": 0.06
         }

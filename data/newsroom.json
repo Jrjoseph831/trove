@@ -1,14 +1,84 @@
 {
-  "generatedAt": "2026-08-23T06:42:28.129Z",
+  "generatedAt": "2026-08-23T12:42:22.127Z",
   "beats": [
     {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "restructure",
+      "size": "major",
+      "head": "Brunstone & Sons Idles Vault II Lines and Cuts 1,400 Jobs After Demand Shortfall",
+      "body": "Reversing last quarter's triumphant capacity doubling, Dagny Frost announced Brunstone will mothball two of its four Vault II lines and eliminate roughly 1,400 positions to realign output with tepid orders. The company took a $320M restructuring charge and withdrew full-year guidance, with Frost conceding the expansion had 'run ahead of the market.' The whiplash from her earlier 'recovery complete' declaration drew sharp criticism from the board.",
+      "cycle": 82754,
+      "dur": 8
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "breakthrough",
+      "size": "standard",
+      "head": "Calderforge Reports First Stable Yields at Stormwell Hall Four Under Vann",
+      "body": "In her first major update, Perra Vann said the long-stalled fourth Stormwell hall has reached stable production yields for the first time, clearing a milestone that had eluded the prior regime. Vann reported the hall is now running at 60% of target capacity and expects full ramp within two quarters, though she cautioned demand recovery lags the fix. The news marks the first tangible progress in Calderforge's turnaround.",
+      "cycle": 82754,
+      "dur": 2
+    },
+    {
+      "company": "Greenmarsh Agro",
+      "sector": "agriculture",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldousmont & Sons Posts Steady Beat as Trauma Alliance Pact Ramps",
-      "body": "Aldousmont delivered a quiet beat with revenue up 8%, as the regional trauma alliance consumables pact and the new sterile-kit line both moved into steady ordering. Dunmore Calder credited the antimicrobial wound-care range for incremental share gains across the hospital network. Guidance was raised slightly to reflect fuller utilization of the new line.",
-      "cycle": 82753,
+      "head": "Greenmarsh Agro Tops Estimates as Second Blending Line Lifts Output",
+      "body": "Petra Kessler's Greenmarsh delivered a slight beat as its newly commissioned second blending line pushed soil-blend volumes up 8% quarter-over-quarter. The distribution pact continued to feed steady bundle demand across two regions, and management nudged full-year guidance modestly higher. Kessler reiterated her preference for measured, long-horizon growth.",
+      "cycle": 82754,
+      "dur": 1
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Halhold Systems Ousts Marcus Thorne as Losses and Payout Weigh",
+      "body": "The Halhold board removed Marcus Thorne after a third consecutive miss and mounting fallout from the $2.1B reliability payout, naming reliability-engineering chief Ines Corvalan as chief executive. Corvalan pledged to stabilize Compute yields and rebuild customer trust, warning that a return to growth remains 'several quarters out.' The shakeup ends Thorne's turbulent tenure that began just last year.",
+      "cycle": 82754,
+      "dur": 8
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Kessel Drive Unveils Vanta Ultra Pack With 20% Range Gain",
+      "body": "Riding the momentum of recovered cell volumes, Aldric Venn took the stage in Corvin Bay to launch the Vanta Ultra, a storage pack Kessel Drive claims delivers a 20% range improvement at a 12% lower cost per kilowatt-hour. Venn promised first deliveries within two quarters and touted pre-orders from three fleet operators, though he offered no firm figures. Analysts noted the aggressive timeline mirrors Venn's pattern of headline-first announcements.",
+      "cycle": 82754,
+      "dur": 2
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowcyon Stretches Streak to Eighth Straight Quiet Beat",
+      "body": "Theo Orne's Marrowcyon posted another modest beat, edging estimates by two cents as apparel volumes ticked up 3% and fixtures held flat. Management reaffirmed its unchanged full-year outlook and again declined to hold a call, letting the numbers speak. The uneventful result extended one of the sector's steadiest runs.",
+      "cycle": 82754,
+      "dur": 1
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Thronehaus & Co. Acquires Meridian Dial Works to Secure Complications Talent",
+      "body": "Cora Dray struck again, agreeing to buy specialist movement house Meridian Dial Works for a reported $180M to bring perpetual-calendar and tourbillon expertise in-house. The deal folds Meridian's 40-person atelier into the Aurel program and secures a supply of complications Thronehaus had previously sourced externally. Dray framed the purchase as 'vertical craftsmanship,' extending her long record of acquisitive expansion.",
+      "cycle": 82754,
+      "dur": 2
+    },
+    {
+      "company": "Tillage & Co.",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Tillage & Co. Logs Another In-Line Quarter as Input Demand Holds",
+      "body": "Kestrel Fenn's Tillage & Co. reported results squarely in line with expectations, with farm-input volumes flat and margins unchanged from the prior period. Management characterized the quarter as 'exactly what we planned' and left guidance untouched. The dependable print continued the house's long, unflashy streak.",
+      "cycle": 82754,
       "dur": 1
     },
     {
@@ -62,16 +132,6 @@
       "dur": 8
     },
     {
-      "company": "Holtware Co.",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtware Co. Edges Estimates as Modular Battery Platform Draws Early Uptake",
-      "body": "Holtware reported a modest beat with revenue up 6% year-over-year, as the newly launched modular battery platform attracted stronger-than-expected attachment rates among existing cordless customers. Aurelia Dray noted the platform lifted average basket size by 9% in its first full quarter. Guidance was left unchanged amid a still-soft broader tool market.",
-      "cycle": 82753,
-      "dur": 1
-    },
-    {
       "company": "Ornewright Supply",
       "sector": "consumer",
       "kind": "major_deal",
@@ -90,26 +150,6 @@
       "body": "Castlestone secured a $2.1 billion, multi-year Grid-Core compute supply agreement with the Vantor Industrial Group, its largest deal ever and a striking reversal from last year's guidance cut. CEO Pell Karsh, who cut 1,800 jobs and split the Grid-Core unit during the reset, called it 'vindication for the hard calls.' The award sent management to raise full-year revenue guidance for the first time since the restructure.",
       "cycle": 82752,
       "dur": 8
-    },
-    {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Garrware Beats as Fifth Marrow Valley Line Clears Backlog",
-      "body": "Garrware reported quarterly revenue of $612 million, above the $590 million estimate, as the newly commissioned fifth Marrow Valley line began working down a tight packaging backlog. CEO Orla Holt said utilization across all five lines remained near capacity and order visibility extended further than a year ago. The firm nudged its throughput outlook higher.",
-      "cycle": 82752,
-      "dur": 2
-    },
-    {
-      "company": "Skarnstone Industries",
-      "sector": "medical",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Skarnstone Industries Locks Multi-Year Consumables Supply Pact With Regional Hospital Network",
-      "body": "Skarnstone signed a six-year agreement to supply medical consumables to the Merrick Health Consortium, a deal management valued at roughly $310 million over its term. CEO Yvette Aldous said the two new loading bays and recent throughput gains gave the firm the confidence to commit to the volumes. First shipments are slated to begin next quarter.",
-      "cycle": 82752,
-      "dur": 2
     },
     {
       "company": "Castlehold",
