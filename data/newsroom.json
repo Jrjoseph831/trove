@@ -1,25 +1,85 @@
 {
-  "generatedAt": "2026-08-23T01:24:34.837Z",
+  "generatedAt": "2026-08-23T06:42:28.129Z",
   "beats": [
     {
-      "company": "Aldouscyon",
-      "sector": "consumer",
+      "company": "Aldousmont & Sons",
+      "sector": "medical",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldouscyon Tops Estimates Again as Sixth-City Conversion Matures",
-      "body": "Aldouscyon reported earnings of $0.71 per share, two cents ahead of consensus, as the sixth-city lighting conversion moved from ramp-up to steady contribution. CEO Petra Mercer described demand as 'orderly and predictable,' with no changes to the conversion slate. Margins were flat quarter over quarter.",
-      "cycle": 82752,
+      "head": "Aldousmont & Sons Posts Steady Beat as Trauma Alliance Pact Ramps",
+      "body": "Aldousmont delivered a quiet beat with revenue up 8%, as the regional trauma alliance consumables pact and the new sterile-kit line both moved into steady ordering. Dunmore Calder credited the antimicrobial wound-care range for incremental share gains across the hospital network. Guidance was raised slightly to reflect fuller utilization of the new line.",
+      "cycle": 82753,
       "dur": 1
     },
     {
-      "company": "Caldercraft Holdings",
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Bruncrest Works Beats Again as Second Compute Line Clears Aria Ultra Backlog",
+      "body": "Bruncrest posted revenue of $1.9B for the quarter, up 34% year-over-year, as the second compute line drew the Aria Ultra backlog down from $5B to $4.1B. Ines Marlow told the call that yield on the new line hit target six weeks ahead of plan, though she cautioned that margins would tighten as ramp costs peak next quarter. Order inquiries beyond Aria Ultra rose sharply.",
+      "cycle": 82753,
+      "dur": 2
+    },
+    {
+      "company": "Carrowcyon & Sons",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Carrowcyon & Sons Unveils Ambient Series to Broaden Smart-Dimming Beyond Homes",
+      "body": "Cole Brandt introduced the Ambient Series, a commercial-grade smart-dimming range aimed at offices, hospitality and retail floors, priced roughly 20% above the flagship residential line. The launch leans on the three-line capacity buildout completed last quarter, with early pilot installs booked across four regional hotel chains. Management framed the move as a natural extension of demand that has consistently outrun consumer supply.",
+      "cycle": 82753,
+      "dur": 2
+    },
+    {
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Greywater Grid Sued by Compute Partner as Discharge Scandal Triggers $2.4B Pact Dispute",
+      "body": "The anchor customer behind Greywater's $2.4B closed-loop supply pact filed suit to void the agreement, citing the leaked memos showing overstated discharge figures as a material misrepresentation. The complaint seeks the return of $310M in prepayments and damages, and names Sable Renwick directly. Renwick called the claims 'opportunistic' but confirmed outside counsel has been retained and that two smaller site contracts are now under review.",
+      "cycle": 82753,
+      "dur": 8
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Gromford Works Tops Estimates as Emblem Timepieces Lift Margins",
+      "body": "Gromford beat expectations with revenue up 22%, driven by the Emblem timepiece extension and the global department-chain rollout reaching 140 storefronts. Halvard Pryce said timepieces carried a gross margin roughly eight points above the fine-goods average, boosting overall profitability. Pryce signaled a limited-edition Emblem release timed for the coming holiday window.",
+      "cycle": 82753,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "recall",
+      "size": "major",
+      "head": "Halhold Works Issues Full Recall of Aveline Successor as Battery Probe Widens",
+      "body": "Anselm Rocha announced a complete recall of the Aveline Successor device line after regulators linked the earlier heating reports to 41 confirmed thermal incidents, including three minor injuries. The recall covers an estimated 620,000 units and is expected to cost between $180M and $240M, effectively erasing the reset program's early sales gains. Rocha said shipments would halt until a redesigned battery module is certified, a delay of at least two quarters.",
+      "cycle": 82753,
+      "dur": 8
+    },
+    {
+      "company": "Holtware Co.",
       "sector": "consumer",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Caldercraft Holdings Beats as Weatherproof Range Sustains Volume Gains",
-      "body": "Caldercraft posted revenue of $963 million, just ahead of the $951 million consensus, as the now-complete weatherproof line held its volume momentum across Hardware & Tools and Household Goods. CEO Vale Fenn said Raw Textiles remained stable and flagged no unusual input-cost pressure. Guidance was left intact.",
-      "cycle": 82752,
+      "head": "Holtware Co. Edges Estimates as Modular Battery Platform Draws Early Uptake",
+      "body": "Holtware reported a modest beat with revenue up 6% year-over-year, as the newly launched modular battery platform attracted stronger-than-expected attachment rates among existing cordless customers. Aurelia Dray noted the platform lifted average basket size by 9% in its first full quarter. Guidance was left unchanged amid a still-soft broader tool market.",
+      "cycle": 82753,
       "dur": 1
+    },
+    {
+      "company": "Ornewright Supply",
+      "sector": "consumer",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Ornewright Supply Adds National Grocer to Cold-Chain Network Ahead of Vellhorn Opening",
+      "body": "Rhys Throne signed a three-year cold-chain distribution agreement with a national grocery group, projected to add $190M in annual food-service and farm-input volumes. The deal is structured to draw on the forthcoming Vellhorn hub, which remains on schedule to open next quarter. Throne said combined Dunmere and Vellhorn capacity would cover the new commitments with room to spare.",
+      "cycle": 82753,
+      "dur": 2
     },
     {
       "company": "Castlestone",
@@ -42,26 +102,6 @@
       "dur": 2
     },
     {
-      "company": "Holtgate Group",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Group Stretches Beat Streak on Steady Guild Mill Output",
-      "body": "Holtgate delivered another narrow beat, with revenue of $274 million topping the $270 million consensus on dependable Raw Textiles volumes from its guild mill partners. CEO Dorian Throne again pointed to consistency rather than growth, noting order patterns 'as reliable as ever.' Margins were essentially unchanged from the prior quarter.",
-      "cycle": 82752,
-      "dur": 1
-    },
-    {
-      "company": "Ornewright Goods",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ornewright Goods Logs Slim Beat as Multi-Region Jansan Volumes Normalize",
-      "body": "Ornewright reported quarterly revenue of $1.42 billion, edging past the $1.40 billion consensus, as the multi-region Cleaning & Jansan contract settled into a steady shipping cadence. CEO Petra Veldt credited balanced contribution across Farm Inputs and Food Service, noting no single line drove the result. Management reaffirmed full-year guidance.",
-      "cycle": 82752,
-      "dur": 1
-    },
-    {
       "company": "Skarnstone Industries",
       "sector": "medical",
       "kind": "major_deal",
@@ -69,26 +109,6 @@
       "head": "Skarnstone Industries Locks Multi-Year Consumables Supply Pact With Regional Hospital Network",
       "body": "Skarnstone signed a six-year agreement to supply medical consumables to the Merrick Health Consortium, a deal management valued at roughly $310 million over its term. CEO Yvette Aldous said the two new loading bays and recent throughput gains gave the firm the confidence to commit to the volumes. First shipments are slated to begin next quarter.",
       "cycle": 82752,
-      "dur": 2
-    },
-    {
-      "company": "Wold & Bramm",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Wold & Bramm Beats Modestly as Fifth Showroom Ramps",
-      "body": "Wold & Bramm posted quarterly sales of $488 million against a $472 million estimate, with the newly opened fifth showroom contributing its first partial quarter of Heritage Lighting revenue. CEO Mara Marrow said foot traffic across the older four showrooms held firm even as the new location scaled. The company kept its measured expansion outlook unchanged.",
-      "cycle": 82752,
-      "dur": 1
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Boreas Power Adds $900M Financing to Accelerate Compute-Paired Campus Rollout",
-      "body": "Boreas Power closed a $900M project-financing facility to fast-track the remaining sites in its $3.2B compute-paired campus program, bringing the number of campuses under construction to six. CEO Mira Thorne said the funding lets the company 'compress two years of buildout into eighteen months' and hinted at a further site announcement before year-end. The financing carries staged draws tied to construction milestones.",
-      "cycle": 82751,
       "dur": 2
     },
     {
@@ -100,26 +120,6 @@
       "body": "Regulators widened their investigation into Castlehold's grid-storage incident, ordering a full shutdown of the second plant pending a design review and citing 'systemic containment concerns.' The halt jeopardizes near-term deliveries under the company's flagship $2B framework, and CEO Halden Voss acknowledged 'material schedule risk' while insisting the underlying technology is sound. Two customers have requested contract reviews.",
       "cycle": 82751,
       "dur": 8
-    },
-    {
-      "company": "Holtforge Group",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Holtforge Group Extends Streak as Interconnector Work Lifts Margins to Multi-Year High",
-      "body": "Holtforge Group reported a fifth consecutive beat, with revenue of $2.84B and operating margin climbing to 15.1%, its best in six years, as high-value interconnector cable contracts moved into peak production. CEO Yvette Bramm credited disciplined execution and a firmed-up copper supply agreement for the margin gains. The order book held near its record level.",
-      "cycle": 82751,
-      "dur": 2
-    },
-    {
-      "company": "Korrworks",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Korrworks Breaks Ground on Third Hub as Anchor Tenant Triggers Early Build",
-      "body": "Korrworks began construction on its third material-handling hub weeks ahead of schedule after the anchor tenant from its $260M fit-out exercised an early-occupancy clause. CEO Rhys Throne said the site is now expected to reach initial operating capacity within 14 months, calling the pace 'the fastest ramp in the company's pipeline.' The move brings committed hub capacity to roughly triple the level of two years ago.",
-      "cycle": 82751,
-      "dur": 2
     },
     {
       "company": "Marrowstone Build",
@@ -189,26 +189,6 @@
       "head": "Regulators Widen Marlgear Supply Probe to Full Device Line as Kessel Fault Scandal Deepens",
       "body": "Regulators escalated their inquiry into Marlgear Supply, expanding the Kessel fault investigation to cover the company's entire Devices catalog after new filings suggested the destroyed records touched multiple product families. New CEO Halvard Renn pledged full cooperation and voluntarily suspended shipments of three Kessel-based lines pending review. The widened probe threatens roughly a third of Marlgear's device revenue.",
       "cycle": 82747,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Castlehold Faces Regulatory Probe After Grid-Storage Incident at Second Plant",
-      "body": "Regulators opened a formal safety investigation into Castlehold following a thermal event at its newly commissioned second plant that forced a temporary shutdown of one storage array. No injuries were reported, but the probe casts a shadow over the $2B grid-storage framework and the aggressive dual-plant expansion driven by CEO Halden Voss. The company said it is cooperating fully and has paused new array energization pending review.",
-      "cycle": 82745,
-      "dur": 8
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Vencyon Signs $1.5B Framework to Deploy Unified Hub Platform Across National Distributor",
-      "body": "Vencyon secured its largest contract to date, a five-year, $1.5B agreement to roll out its newly completed Unified Hub Platform across a national distribution network spanning 22 sites. CEO Iris Halloran, in a rare aggressive move, said the deal validates the multi-year modular investment and pushes committed backlog past $4B. Deployment begins next quarter with the first eight sites targeted for completion within twelve months.",
-      "cycle": 82745,
       "dur": 8
     }
   ]
