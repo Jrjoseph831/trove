@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-22T18:32:46.055Z",
+  "generatedAt": "2026-08-23T01:24:34.837Z",
   "beats": [
+    {
+      "company": "Aldouscyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldouscyon Tops Estimates Again as Sixth-City Conversion Matures",
+      "body": "Aldouscyon reported earnings of $0.71 per share, two cents ahead of consensus, as the sixth-city lighting conversion moved from ramp-up to steady contribution. CEO Petra Mercer described demand as 'orderly and predictable,' with no changes to the conversion slate. Margins were flat quarter over quarter.",
+      "cycle": 82752,
+      "dur": 1
+    },
+    {
+      "company": "Caldercraft Holdings",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Caldercraft Holdings Beats as Weatherproof Range Sustains Volume Gains",
+      "body": "Caldercraft posted revenue of $963 million, just ahead of the $951 million consensus, as the now-complete weatherproof line held its volume momentum across Hardware & Tools and Household Goods. CEO Vale Fenn said Raw Textiles remained stable and flagged no unusual input-cost pressure. Guidance was left intact.",
+      "cycle": 82752,
+      "dur": 1
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Castlestone Lands Landmark Grid-Core Compute Contract in Karsh Comeback",
+      "body": "Castlestone secured a $2.1 billion, multi-year Grid-Core compute supply agreement with the Vantor Industrial Group, its largest deal ever and a striking reversal from last year's guidance cut. CEO Pell Karsh, who cut 1,800 jobs and split the Grid-Core unit during the reset, called it 'vindication for the hard calls.' The award sent management to raise full-year revenue guidance for the first time since the restructure.",
+      "cycle": 82752,
+      "dur": 8
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Garrware Beats as Fifth Marrow Valley Line Clears Backlog",
+      "body": "Garrware reported quarterly revenue of $612 million, above the $590 million estimate, as the newly commissioned fifth Marrow Valley line began working down a tight packaging backlog. CEO Orla Holt said utilization across all five lines remained near capacity and order visibility extended further than a year ago. The firm nudged its throughput outlook higher.",
+      "cycle": 82752,
+      "dur": 2
+    },
+    {
+      "company": "Holtgate Group",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Group Stretches Beat Streak on Steady Guild Mill Output",
+      "body": "Holtgate delivered another narrow beat, with revenue of $274 million topping the $270 million consensus on dependable Raw Textiles volumes from its guild mill partners. CEO Dorian Throne again pointed to consistency rather than growth, noting order patterns 'as reliable as ever.' Margins were essentially unchanged from the prior quarter.",
+      "cycle": 82752,
+      "dur": 1
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ornewright Goods Logs Slim Beat as Multi-Region Jansan Volumes Normalize",
+      "body": "Ornewright reported quarterly revenue of $1.42 billion, edging past the $1.40 billion consensus, as the multi-region Cleaning & Jansan contract settled into a steady shipping cadence. CEO Petra Veldt credited balanced contribution across Farm Inputs and Food Service, noting no single line drove the result. Management reaffirmed full-year guidance.",
+      "cycle": 82752,
+      "dur": 1
+    },
+    {
+      "company": "Skarnstone Industries",
+      "sector": "medical",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Skarnstone Industries Locks Multi-Year Consumables Supply Pact With Regional Hospital Network",
+      "body": "Skarnstone signed a six-year agreement to supply medical consumables to the Merrick Health Consortium, a deal management valued at roughly $310 million over its term. CEO Yvette Aldous said the two new loading bays and recent throughput gains gave the firm the confidence to commit to the volumes. First shipments are slated to begin next quarter.",
+      "cycle": 82752,
+      "dur": 2
+    },
+    {
+      "company": "Wold & Bramm",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Wold & Bramm Beats Modestly as Fifth Showroom Ramps",
+      "body": "Wold & Bramm posted quarterly sales of $488 million against a $472 million estimate, with the newly opened fifth showroom contributing its first partial quarter of Heritage Lighting revenue. CEO Mara Marrow said foot traffic across the older four showrooms held firm even as the new location scaled. The company kept its measured expansion outlook unchanged.",
+      "cycle": 82752,
+      "dur": 1
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -20,16 +100,6 @@
       "body": "Regulators widened their investigation into Castlehold's grid-storage incident, ordering a full shutdown of the second plant pending a design review and citing 'systemic containment concerns.' The halt jeopardizes near-term deliveries under the company's flagship $2B framework, and CEO Halden Voss acknowledged 'material schedule risk' while insisting the underlying technology is sound. Two customers have requested contract reviews.",
       "cycle": 82751,
       "dur": 8
-    },
-    {
-      "company": "Castlestead",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Castlestead Notches Narrow Beat as Farm Equipment Firms Against Flat Earthmoving",
-      "body": "Castlestead reported quarterly revenue of $4.11B, edging past the $4.06B consensus, with strength in seasonal Farm Equipment sales offsetting a still-soft Earthmoving segment. CEO Aurelia Calder reaffirmed full-year guidance and noted dealer inventories remain 'comfortably in balance.' Margins held steady at 18.3%.",
-      "cycle": 82751,
-      "dur": 1
     },
     {
       "company": "Holtforge Group",
@@ -82,36 +152,6 @@
       "dur": 8
     },
     {
-      "company": "Dunmorewright Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Dunmorewright Beats Again as Waterworks Nears Halfway Milestone Ahead of Plan",
-      "body": "Dunmorewright topped estimates for a second straight quarter as billings on the $780M inland waterworks contract crossed the 45% completion mark ahead of schedule. Emil Skarn said the expanded foundry is now supplying plumbing and fixture components internally, trimming input costs. Management hinted at bidding on a second regional waterworks tender next year.",
-      "cycle": 82750,
-      "dur": 2
-    },
-    {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fennvale Mfg. Beats as Auto-Parts Line Ramps to Full Volume in First Full Quarter",
-      "body": "Fennvale reported a quarterly beat with revenue up 11% as the new auto-parts line reached full capacity ahead of Theo Vossen's internal targets. Fastener demand held steady, and management said the second production shift added earlier this quarter is already near full utilization. Vossen kept guidance measured, noting he prefers to 'let the line prove itself over four quarters, not one.'",
-      "cycle": 82750,
-      "dur": 2
-    },
-    {
-      "company": "Garrweave Mills",
-      "sector": "textiles",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Garrweave Mills Signs Long-Term Southcombe Supply Pact, Extending Beyond Northfield",
-      "body": "In a rare strategic move for the slow-moving mill, Lorne Veldt secured a five-year raw-textile supply agreement with apparel group Southcombe worth an estimated $190M in cumulative volume. The deal diversifies Garrweave beyond its Northfield anchor and is expected to keep a second weaving shed at full run. Veldt framed the pact as 'a horizon, not a headline,' consistent with his patient approach.",
-      "cycle": 82750,
-      "dur": 2
-    },
-    {
       "company": "Lhaus Industries",
       "sector": "automotive",
       "kind": "major_deal",
@@ -120,26 +160,6 @@
       "body": "Cole Brandt unveiled the $2.1B cash-and-stock purchase of Kellstrom, a maker of grid and vehicle storage cells, in the largest deal of his seven-decade run atop Lhaus. The move vertically links Kellstrom's cell output to Lhaus's Power & Storage unit and its platform vehicle line, though it lifts the company's debt load to a decade high. Brandt called storage 'the next platform' and said Kellstrom's two plants would run under Lhaus branding by year-end.",
       "cycle": 82750,
       "dur": 8
-    },
-    {
-      "company": "Varnvale & Sons",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Varnvale & Sons Acquires Case-Maker Thessaly Works to Round Out Vertical Supply",
-      "body": "Fresh off integrating Corvane, Bram Wold struck a $260M deal for Thessaly Works, a specialist in precious-metal cases and dials. The acquisition gives Varnvale & Sons control of nearly every step of its timepiece production and follows Wold's stated goal of ending reliance on outside suppliers. Analysts noted the back-to-back deals signal an aggressive consolidation phase for the century-old house.",
-      "cycle": 82750,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "standard",
-      "head": "Varnvale House Sovereign Complication Named Timepiece of the Year at Grand Horology Salon",
-      "body": "The Sovereign Complication took top honors at the Grand Horology Salon, capping a comeback year that Beatrix Coyle staked her reputation on. Judges cited the reborn line's perpetual calendar and hand-finished movement, and Coyle used the podium to promise a limited Sovereign Anniversary run of 300 pieces. The award vindicates a bet that many inside the house had privately doubted eighteen months ago.",
-      "cycle": 82750,
-      "dur": 2
     },
     {
       "company": "Blackhold",
@@ -189,26 +209,6 @@
       "head": "Vencyon Signs $1.5B Framework to Deploy Unified Hub Platform Across National Distributor",
       "body": "Vencyon secured its largest contract to date, a five-year, $1.5B agreement to roll out its newly completed Unified Hub Platform across a national distribution network spanning 22 sites. CEO Iris Halloran, in a rare aggressive move, said the deal validates the multi-year modular investment and pushes committed backlog past $4B. Deployment begins next quarter with the first eight sites targeted for completion within twelve months.",
       "cycle": 82745,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "outage",
-      "size": "major",
-      "head": "Aperture Compute Halts Emberline Output After Fabrication Site Shutdown",
-      "body": "Aperture suspended production at its flagship Emberline fabrication site after regulators ordered a stoppage tied to the ongoing conditions probe, freezing an estimated $2.6B in committed supply. CEO Marisol Venn said restart hinges on completing safety remediation across three lines, with no firm timeline given. The company warned that the delay could push node deliveries beyond contracted windows.",
-      "cycle": 82744,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Greywater Grid Rocked as Internal Memos Show Discharge Figures Were Overstated",
-      "body": "Leaked engineering memos reveal that the celebrated 94% recovery rate held only in controlled early runs, with live sites averaging closer to 71%, contradicting public claims tied to the $2.4B compute pact. CEO Sable Renwick, who championed the closed-loop rollout, faces mounting pressure as anchor customers demand contract reviews and regulators widen the discharge probe. Two site directors have been placed on leave pending an internal inquiry.",
-      "cycle": 82744,
       "dur": 8
     }
   ]

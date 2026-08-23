@@ -173,7 +173,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82735,
+    "lastEventCycle": 82752,
     "events": [
       {
         "cycle": 0,
@@ -319,6 +319,16 @@
         "size": "flash",
         "head": "Aldouscyon Edges Past Estimates as Conversion Slate Stays on Track",
         "body": "Aldouscyon posted a modest beat with revenue of $640 million as the sixth-city lighting conversion continued contributing steadily. Petra Mercer said demand across converted markets remained consistent and reaffirmed the pacing of the rollout. Margins held flat versus the prior quarter.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82752,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscyon Tops Estimates Again as Sixth-City Conversion Matures",
+        "body": "Aldouscyon reported earnings of $0.71 per share, two cents ahead of consensus, as the sixth-city lighting conversion moved from ramp-up to steady contribution. CEO Petra Mercer described demand as 'orderly and predictable,' with no changes to the conversion slate. Margins were flat quarter over quarter.",
         "effects": {
           "consumer": 0.06
         }
@@ -3387,7 +3397,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82736,
+    "lastEventCycle": 82752,
     "events": [
       {
         "cycle": 0,
@@ -3533,6 +3543,16 @@
         "size": "flash",
         "head": "Caldercraft Holdings Edges Ahead as Weatherproof Range Fills Out",
         "body": "Caldercraft posted a modest beat with revenue of $288M, up 6%, as the completed weatherproof line — racks, cabinets and reinforced fittings — lifted average order size across hardware channels. CEO Vale Fenn described demand as 'steady and unremarkable, in the best sense,' pointing to consistent reorder patterns from regional distributors.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82752,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Caldercraft Holdings Beats as Weatherproof Range Sustains Volume Gains",
+        "body": "Caldercraft posted revenue of $963 million, just ahead of the $951 million consensus, as the now-complete weatherproof line held its volume momentum across Hardware & Tools and Household Goods. CEO Vale Fenn said Raw Textiles remained stable and flagged no unusual input-cost pressure. Guidance was left intact.",
         "effects": {
           "consumer": 0.06
         }
@@ -5145,18 +5165,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82747,
+    "lastEventCycle": 82752,
     "events": [
-      {
-        "cycle": 82603,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Castlestone Lands $14B Compute Framework, Doubling Down on National Data Grid",
-        "body": "Castlestone signed a $14 billion multi-phase framework to supply the second and third build stages of the National Data Grid, its largest commitment on record. CEO Pell Karsh called it \"the deal that defines the decade,\" pledging two new fabrication halls and a tripling of the Halo high-density tier. Skeptics questioned whether Castlestone can scale delivery without straining its balance sheet after back-to-back record awards.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82609,
         "kind": "safety_probe",
@@ -5385,6 +5395,16 @@
         "body": "Castlestone posted quarterly revenue of $2.9B, edging past the $2.7B consensus, as the newly independent Grid-Core unit delivered its first on-time compute shipments since the redesigned cooling relaunch. CEO Pell Karsh credited the 1,800-role reduction and unit split for restoring margins, though he cautioned that the recovery remains 'one quarter old.' Operating margin recovered to 11% from a razor-thin 3% a quarter earlier.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82752,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Castlestone Lands Landmark Grid-Core Compute Contract in Karsh Comeback",
+        "body": "Castlestone secured a $2.1 billion, multi-year Grid-Core compute supply agreement with the Vantor Industrial Group, its largest deal ever and a striking reversal from last year's guidance cut. CEO Pell Karsh, who cut 1,800 jobs and split the Grid-Core unit during the reset, called it 'vindication for the hard calls.' The award sent management to raise full-year revenue guidance for the first time since the restructure.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -7911,7 +7931,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82739,
+    "lastEventCycle": 82752,
     "events": [
       {
         "cycle": 0,
@@ -8079,6 +8099,16 @@
         "body": "Garrware added a fifth packaging line at its Marrow Valley site, extending a steady buildout under Orla Holt. The line lifts site capacity roughly 15% as demand outpaces the recently commissioned wing. Management said staffing is already in place for a phased ramp.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82752,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Garrware Beats as Fifth Marrow Valley Line Clears Backlog",
+        "body": "Garrware reported quarterly revenue of $612 million, above the $590 million estimate, as the newly commissioned fifth Marrow Valley line began working down a tight packaging backlog. CEO Orla Holt said utilization across all five lines remained near capacity and order visibility extended further than a year ago. The firm nudged its throughput outlook higher.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -10607,7 +10637,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82727,
+    "lastEventCycle": 82752,
     "events": [
       {
         "cycle": 0,
@@ -10703,6 +10733,16 @@
         "size": "flash",
         "head": "Holtgate Group Adds Another Slim Beat as Guild Mill Volumes Stay Reliable",
         "body": "Dorian Throne's mills delivered a fourth consecutive narrow beat, with raw-textile output steady and guild orders repeating at expected levels. Revenue rose 2.4% and margins held flat, in line with the house's dependable cadence. Throne reaffirmed guidance without adjustment.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82752,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Group Stretches Beat Streak on Steady Guild Mill Output",
+        "body": "Holtgate delivered another narrow beat, with revenue of $274 million topping the $270 million consensus on dependable Raw Textiles volumes from its guild mill partners. CEO Dorian Throne again pointed to consistency rather than growth, noting order patterns 'as reliable as ever.' Margins were essentially unchanged from the prior quarter.",
         "effects": {
           "textiles": 0.06
         }
@@ -13827,7 +13867,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82736,
+    "lastEventCycle": 82752,
     "events": [
       {
         "cycle": 0,
@@ -13985,6 +14025,16 @@
         "body": "Ornewright posted revenue of $267M, up 9%, as its recently won multi-region cleaning and janitorial supply contract began contributing shipments. CEO Petra Veldt said the deal added roughly $40M in annualized run-rate while farm-inputs demand stayed 'reliably flat.' Management guided for a fuller contract ramp over the next two quarters.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82752,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Logs Slim Beat as Multi-Region Jansan Volumes Normalize",
+        "body": "Ornewright reported quarterly revenue of $1.42 billion, edging past the $1.40 billion consensus, as the multi-region Cleaning & Jansan contract settled into a steady shipping cadence. CEO Petra Veldt credited balanced contribution across Farm Inputs and Food Service, noting no single line drove the result. Management reaffirmed full-year guidance.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -14845,7 +14895,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82720,
+    "lastEventCycle": 82752,
     "events": [
       {
         "cycle": 0,
@@ -14923,6 +14973,16 @@
         "body": "Skarnstone edged past forecasts once more, with revenue up 3% as the second loading bay sustained faster consumables dispatch. CEO Yvette Aldous reaffirmed the company's long-horizon approach, noting demand remained stable and backorders stayed cleared for a third consecutive quarter.",
         "effects": {
           "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82752,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Skarnstone Industries Locks Multi-Year Consumables Supply Pact With Regional Hospital Network",
+        "body": "Skarnstone signed a six-year agreement to supply medical consumables to the Merrick Health Consortium, a deal management valued at roughly $310 million over its term. CEO Yvette Aldous said the two new loading bays and recent throughput gains gave the firm the confidence to commit to the volumes. First shipments are slated to begin next quarter.",
+        "effects": {
+          "medical": 0.13
         }
       }
     ]
@@ -18249,7 +18309,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82732,
+    "lastEventCycle": 82752,
     "events": [
       {
         "cycle": 0,
@@ -18375,6 +18435,16 @@
         "size": "flash",
         "head": "Wold & Bramm Adds Heritage Lighting Range as Fifth Showroom Opens",
         "body": "Mara Marrow debuted a new Heritage lighting collection of table and wall fixtures priced from $180 to $640, timed to the opening of the company's fifth regional showroom. The launch pairs the lighting range with existing household lines to lift average basket size. Marrow described the rollout as 'a deliberate step, not a leap.'",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82752,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wold & Bramm Beats Modestly as Fifth Showroom Ramps",
+        "body": "Wold & Bramm posted quarterly sales of $488 million against a $472 million estimate, with the newly opened fifth showroom contributing its first partial quarter of Heritage Lighting revenue. CEO Mara Marrow said foot traffic across the older four showrooms held firm even as the new location scaled. The company kept its measured expansion outlook unchanged.",
         "effects": {
           "consumer": 0.06
         }
