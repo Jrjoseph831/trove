@@ -662,18 +662,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82744,
+    "lastEventCycle": 82755,
     "events": [
-      {
-        "cycle": 82548,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Aperture Compute Beats as Dawnmere Interconnect Orders Flood In",
-        "body": "Aperture Compute posted quarterly revenue of 1.28 billion, up 34 percent, driven by early Dawnmere Interconnect shipments that outpaced internal forecasts by roughly 20 percent. CEO Halden Dray touted a doubling of order backlog and confirmed the second Dawnmere site will open ahead of schedule. Margins widened as the halved-latency design commanded premium pricing across data-center clients.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82557,
         "kind": "breakthrough",
@@ -900,6 +890,16 @@
         "body": "Aperture suspended production at its flagship Emberline fabrication site after regulators ordered a stoppage tied to the ongoing conditions probe, freezing an estimated $2.6B in committed supply. CEO Marisol Venn said restart hinges on completing safety remediation across three lines, with no firm timeline given. The company warned that the delay could push node deliveries beyond contracted windows.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82755,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Aperture Compute Ships First Next-Gen Node as Emberline Output Roars Back Online",
+        "body": "CEO Marisol Venn declared the fabrication crisis 'behind us' as Emberline resumed full output and delivered its first shipment of the next-gen node to consortium partners, six weeks ahead of the revised timeline. The site cleared its remediation review after $180M in safety upgrades, and Venn confirmed the $2.6B supply pact remains fully intact. Early yield figures reportedly exceeded internal targets by 12%.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -2710,18 +2710,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82747,
+    "lastEventCycle": 82755,
     "events": [
-      {
-        "cycle": 82538,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Brunmark Motors Rebounds as Veyra Output Hits Stride",
-        "body": "Yvette Calder reported quarterly deliveries of 41,000 Veyra compacts, beating internal targets after the Power unit split stabilized pack supply. Margins recovered 180 basis points sequentially, and Calder said the standalone power division has cleared its order backlog. The turnaround eased concerns raised during the bruising ramp earlier this year.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82548,
         "kind": "product_launch",
@@ -2942,6 +2932,16 @@
         "body": "Brunmark Motors restarted its halted assembly line with the Veyra R, built around an all-new battery pack from supplier Halden Cells that the company says resolves the thermal faults behind its 340,000-unit recall. CEO Iris Calvagh staked her turnaround on the model, opening pre-orders with an extended 10-year pack warranty. Analysts remain wary given the unresolved $900M class action.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82755,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Brunmark Motors Misses as Veyra Relaunch Costs Weigh on Turnaround Quarter",
+        "body": "Brunmark reported a loss of $1.12 per share, worse than the $0.74 loss expected, as relaunch marketing and idled-capacity charges outweighed early Veyra sales. Iris Calvagh defended the reset, noting redesigned battery-pack orders were 'building steadily' with 41,000 pre-orders logged, but conceded profitability remains 'several quarters out.'",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -6182,7 +6182,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82742,
+    "lastEventCycle": 82755,
     "events": [
       {
         "cycle": 0,
@@ -6388,6 +6388,16 @@
         "size": "standard",
         "head": "Drustcraft Wins $320M Auto-Parts Supply Pact, Extending Three-Line Momentum",
         "body": "Cora Fenn secured a four-year, $320M auto-parts supply agreement with a national assembly network, building on the record balanced quarter across all three product lines. The deal locks in roughly 40% of the auto-parts line's forward capacity. Fenn said the win validates the diversified strategy she has steadily built.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82755,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcraft Posts Record Quarter as Auto-Parts Pact Ramps Across Three Lines",
+        "body": "Drustcraft reported earnings of $2.38 per share against estimates of $2.11, with the new $320M auto-parts contract now contributing to all three product lines. Cora Fenn said the balanced three-line strategy delivered its strongest margins in a decade at 21.4%, and hinted at capacity studies for a possible fourth line.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -7157,7 +7167,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82739,
+    "lastEventCycle": 82755,
     "events": [
       {
         "cycle": 0,
@@ -7323,6 +7333,16 @@
         "size": "standard",
         "head": "Fenncyon Mobilizes Northern Spur as Grand Loop Earthwork Hits Peak Season",
         "body": "Fenncyon opened a Northern Spur worksite to run parallel to the Eastfield Grand Loop, deploying additional fleets as earthwork volumes crest. Nadia Ashby said the expansion locks in the project's mid-phase schedule and positions the firm for adjacent bids. The move adds roughly 220 field crew and three excavation teams.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82755,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fenncyon Beats Again as Grand Loop Earthwork Crosses Halfway Mark",
+        "body": "Fenncyon posted quarterly revenue of $1.14B, up 19% year over year, as the Grand Loop project passed its 50% earthwork completion milestone. Nadia Ashby credited the Northern Spur mobilization and the two Eastfield staging yards for keeping delivery cadence ahead of schedule, and lifted full-year guidance for the second time this year.",
         "effects": {
           "construction": 0.13
         }
@@ -11598,7 +11618,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82742,
+    "lastEventCycle": 82755,
     "events": [
       {
         "cycle": 0,
@@ -11764,6 +11784,16 @@
         "size": "flash",
         "head": "Kesselgrove Co. Tops Estimates Again as Press Backlog Falls Below One Year",
         "body": "Kesselgrove reported its third consecutive beat, with the industrial press backlog dropping under twelve months for the first time since 2029 as both assembly bays ran at full shift. Orla Steg credited disciplined throughput gains rather than new capacity. Operating margin held steady at 19%.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82755,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Kesselgrove Co. Nudges Past Estimates as Press Backlog Nears Historic Low",
+        "body": "Kesselgrove edged past forecasts with earnings of $1.63 per share as the second assembly bay drove the press backlog down to just under nine months, its lowest in over a decade. Orla Steg said the disciplined ramp had 'done exactly what we asked of it' and signaled focus would shift toward maintaining margins.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -13051,18 +13081,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82747,
+    "lastEventCycle": 82755,
     "events": [
-      {
-        "cycle": 82560,
-        "kind": "scandal",
-        "size": "major",
-        "head": "Marlgear Supply Rocked as Internal Memos Reveal Atlas Defects Were Flagged Before Launch",
-        "body": "Leaked internal documents show Marlgear engineers warned of Atlas machine load failures months before the Drennan Mills incidents, raising questions over CEO Halden Vossen's handling of the launch. The disclosures widen the ongoing probe and prompted a board review of executive oversight. Marlgear said it is cooperating fully but did not address the timeline of the warnings.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82569,
         "kind": "lawsuit",
@@ -13283,6 +13303,16 @@
         "size": "major",
         "head": "Regulators Widen Marlgear Supply Probe to Full Device Line as Kessel Fault Scandal Deepens",
         "body": "Regulators escalated their inquiry into Marlgear Supply, expanding the Kessel fault investigation to cover the company's entire Devices catalog after new filings suggested the destroyed records touched multiple product families. New CEO Halvard Renn pledged full cooperation and voluntarily suspended shipments of three Kessel-based lines pending review. The widened probe threatens roughly a third of Marlgear's device revenue.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82755,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Marlgear Supply Slapped With $1.4B Suit as Regulators Refer Kessel Fault Case for Prosecution",
+        "body": "A consolidated class action seeking $1.4B was filed against Marlgear over the Kessel fault, hours after regulators referred the records-destruction findings for criminal prosecution of former executives. New CEO Priya Vantell pledged full cooperation and set aside a $600M reserve, warning that the full device-line probe could yield further liabilities. Ousted chief Dane Kessler now faces personal charges.",
         "effects": {
           "technology": -0.22
         }
@@ -15498,7 +15528,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82739,
+    "lastEventCycle": 82755,
     "events": [
       {
         "cycle": 0,
@@ -15664,6 +15694,16 @@
         "size": "standard",
         "head": "Stegforge Beats as Second Rail Plate Line Reaches Full Production",
         "body": "Stegforge topped estimates after its second rail plate line entered full-rate output, lifting structural materials volumes 18% quarter-on-quarter. Aurelia Steg credited the consortium's extended orders for near-complete line utilization. Margins widened modestly as the new line reached scale ahead of internal targets.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82755,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Stegforge Breaks Ground on Third Rail Plate Line as Consortium Demand Outpaces Capacity",
+        "body": "With both existing rail plate lines running at full production, Aurelia Steg approved a $410M expansion to add a third line at the Holldenreach works, targeting startup in 18 months. Steg cited a consortium order book stretching into the next decade and called the move 'a measured answer to demand we can no longer meet.'",
         "effects": {
           "manufacturing": 0.13
         }
@@ -17806,18 +17846,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82747,
+    "lastEventCycle": 82755,
     "events": [
-      {
-        "cycle": 82561,
-        "kind": "award",
-        "size": "flash",
-        "head": "Vossenspire Heritage Collection Wins Grand Prize at Elberran Design Salon",
-        "body": "The debut Heritage Collection took top honors at the annual Elberran Design Salon, with judges praising the Renmark-Aldecourt pairing for 'restraint and craft.' The recognition arrives just months after Quinn Marrow folded the two houses into a single division. Vossenspire said early demand for the collection has outpaced initial production runs.",
-        "effects": {
-          "luxury": 0.06
-        }
-      },
       {
         "cycle": 82568,
         "kind": "expansion",
@@ -18044,6 +18074,16 @@
         "size": "standard",
         "head": "Vossenspire Supply Beats as Corriveaux Integration Delivers Early Synergies",
         "body": "Vossenspire Supply topped estimates with $1.4B in quarterly revenue, as the folded-in Corriveaux timepiece operations began contributing ahead of schedule. CEO Quinn Marrow said the house had already captured $52M of its targeted $140M in synergies, driven by shared component sourcing. Timepiece margins widened to 34%, a new high for the combined unit.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82755,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenspire Supply Beats as Corriveaux Synergies Run Ahead of $140M Target",
+        "body": "Vossenspire reported the Corriveaux integration has already captured $98M in annualized synergies, well ahead of pace on Quinn Marrow's $140M goal. Timepiece revenue climbed 14% and Marrow said the vehicle arm would be 'next in line' for consolidation opportunities, fueling speculation of another acquisition.",
         "effects": {
           "luxury": 0.13
         }

@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-23T12:42:22.127Z",
+  "generatedAt": "2026-08-23T18:31:52.179Z",
   "beats": [
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Aperture Compute Ships First Next-Gen Node as Emberline Output Roars Back Online",
+      "body": "CEO Marisol Venn declared the fabrication crisis 'behind us' as Emberline resumed full output and delivered its first shipment of the next-gen node to consortium partners, six weeks ahead of the revised timeline. The site cleared its remediation review after $180M in safety upgrades, and Venn confirmed the $2.6B supply pact remains fully intact. Early yield figures reportedly exceeded internal targets by 12%.",
+      "cycle": 82755,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Brunmark Motors Misses as Veyra Relaunch Costs Weigh on Turnaround Quarter",
+      "body": "Brunmark reported a loss of $1.12 per share, worse than the $0.74 loss expected, as relaunch marketing and idled-capacity charges outweighed early Veyra sales. Iris Calvagh defended the reset, noting redesigned battery-pack orders were 'building steadily' with 41,000 pre-orders logged, but conceded profitability remains 'several quarters out.'",
+      "cycle": 82755,
+      "dur": 2
+    },
+    {
+      "company": "Drustcraft",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drustcraft Posts Record Quarter as Auto-Parts Pact Ramps Across Three Lines",
+      "body": "Drustcraft reported earnings of $2.38 per share against estimates of $2.11, with the new $320M auto-parts contract now contributing to all three product lines. Cora Fenn said the balanced three-line strategy delivered its strongest margins in a decade at 21.4%, and hinted at capacity studies for a possible fourth line.",
+      "cycle": 82755,
+      "dur": 2
+    },
+    {
+      "company": "Fenncyon",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fenncyon Beats Again as Grand Loop Earthwork Crosses Halfway Mark",
+      "body": "Fenncyon posted quarterly revenue of $1.14B, up 19% year over year, as the Grand Loop project passed its 50% earthwork completion milestone. Nadia Ashby credited the Northern Spur mobilization and the two Eastfield staging yards for keeping delivery cadence ahead of schedule, and lifted full-year guidance for the second time this year.",
+      "cycle": 82755,
+      "dur": 2
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Kesselgrove Co. Nudges Past Estimates as Press Backlog Nears Historic Low",
+      "body": "Kesselgrove edged past forecasts with earnings of $1.63 per share as the second assembly bay drove the press backlog down to just under nine months, its lowest in over a decade. Orla Steg said the disciplined ramp had 'done exactly what we asked of it' and signaled focus would shift toward maintaining margins.",
+      "cycle": 82755,
+      "dur": 1
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "lawsuit",
+      "size": "major",
+      "head": "Marlgear Supply Slapped With $1.4B Suit as Regulators Refer Kessel Fault Case for Prosecution",
+      "body": "A consolidated class action seeking $1.4B was filed against Marlgear over the Kessel fault, hours after regulators referred the records-destruction findings for criminal prosecution of former executives. New CEO Priya Vantell pledged full cooperation and set aside a $600M reserve, warning that the full device-line probe could yield further liabilities. Ousted chief Dane Kessler now faces personal charges.",
+      "cycle": 82755,
+      "dur": 8
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Stegforge Breaks Ground on Third Rail Plate Line as Consortium Demand Outpaces Capacity",
+      "body": "With both existing rail plate lines running at full production, Aurelia Steg approved a $410M expansion to add a third line at the Holldenreach works, targeting startup in 18 months. Steg cited a consortium order book stretching into the next decade and called the move 'a measured answer to demand we can no longer meet.'",
+      "cycle": 82755,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vossenspire Supply Beats as Corriveaux Synergies Run Ahead of $140M Target",
+      "body": "Vossenspire reported the Corriveaux integration has already captured $98M in annualized synergies, well ahead of pace on Quinn Marrow's $140M goal. Timepiece revenue climbed 14% and Marrow said the vehicle arm would be 'next in line' for consolidation opportunities, fueling speculation of another acquisition.",
+      "cycle": 82755,
+      "dur": 2
+    },
     {
       "company": "Brunstone & Sons",
       "sector": "automotive",
@@ -20,16 +100,6 @@
       "body": "In her first major update, Perra Vann said the long-stalled fourth Stormwell hall has reached stable production yields for the first time, clearing a milestone that had eluded the prior regime. Vann reported the hall is now running at 60% of target capacity and expects full ramp within two quarters, though she cautioned demand recovery lags the fix. The news marks the first tangible progress in Calderforge's turnaround.",
       "cycle": 82754,
       "dur": 2
-    },
-    {
-      "company": "Greenmarsh Agro",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Greenmarsh Agro Tops Estimates as Second Blending Line Lifts Output",
-      "body": "Petra Kessler's Greenmarsh delivered a slight beat as its newly commissioned second blending line pushed soil-blend volumes up 8% quarter-over-quarter. The distribution pact continued to feed steady bundle demand across two regions, and management nudged full-year guidance modestly higher. Kessler reiterated her preference for measured, long-horizon growth.",
-      "cycle": 82754,
-      "dur": 1
     },
     {
       "company": "Halhold Systems",
@@ -52,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowcyon Stretches Streak to Eighth Straight Quiet Beat",
-      "body": "Theo Orne's Marrowcyon posted another modest beat, edging estimates by two cents as apparel volumes ticked up 3% and fixtures held flat. Management reaffirmed its unchanged full-year outlook and again declined to hold a call, letting the numbers speak. The uneventful result extended one of the sector's steadiest runs.",
-      "cycle": 82754,
-      "dur": 1
-    },
-    {
       "company": "Thronehaus & Co.",
       "sector": "luxury",
       "kind": "major_deal",
@@ -69,36 +129,6 @@
       "head": "Thronehaus & Co. Acquires Meridian Dial Works to Secure Complications Talent",
       "body": "Cora Dray struck again, agreeing to buy specialist movement house Meridian Dial Works for a reported $180M to bring perpetual-calendar and tourbillon expertise in-house. The deal folds Meridian's 40-person atelier into the Aurel program and secures a supply of complications Thronehaus had previously sourced externally. Dray framed the purchase as 'vertical craftsmanship,' extending her long record of acquisitive expansion.",
       "cycle": 82754,
-      "dur": 2
-    },
-    {
-      "company": "Tillage & Co.",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Tillage & Co. Logs Another In-Line Quarter as Input Demand Holds",
-      "body": "Kestrel Fenn's Tillage & Co. reported results squarely in line with expectations, with farm-input volumes flat and margins unchanged from the prior period. Management characterized the quarter as 'exactly what we planned' and left guidance untouched. The dependable print continued the house's long, unflashy streak.",
-      "cycle": 82754,
-      "dur": 1
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Bruncrest Works Beats Again as Second Compute Line Clears Aria Ultra Backlog",
-      "body": "Bruncrest posted revenue of $1.9B for the quarter, up 34% year-over-year, as the second compute line drew the Aria Ultra backlog down from $5B to $4.1B. Ines Marlow told the call that yield on the new line hit target six weeks ahead of plan, though she cautioned that margins would tighten as ramp costs peak next quarter. Order inquiries beyond Aria Ultra rose sharply.",
-      "cycle": 82753,
-      "dur": 2
-    },
-    {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Carrowcyon & Sons Unveils Ambient Series to Broaden Smart-Dimming Beyond Homes",
-      "body": "Cole Brandt introduced the Ambient Series, a commercial-grade smart-dimming range aimed at offices, hospitality and retail floors, priced roughly 20% above the flagship residential line. The launch leans on the three-line capacity buildout completed last quarter, with early pilot installs booked across four regional hotel chains. Management framed the move as a natural extension of demand that has consistently outrun consumer supply.",
-      "cycle": 82753,
       "dur": 2
     },
     {
@@ -112,16 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Gromford Works Tops Estimates as Emblem Timepieces Lift Margins",
-      "body": "Gromford beat expectations with revenue up 22%, driven by the Emblem timepiece extension and the global department-chain rollout reaching 140 storefronts. Halvard Pryce said timepieces carried a gross margin roughly eight points above the fine-goods average, boosting overall profitability. Pryce signaled a limited-edition Emblem release timed for the coming holiday window.",
-      "cycle": 82753,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "recall",
@@ -130,16 +150,6 @@
       "body": "Anselm Rocha announced a complete recall of the Aveline Successor device line after regulators linked the earlier heating reports to 41 confirmed thermal incidents, including three minor injuries. The recall covers an estimated 620,000 units and is expected to cost between $180M and $240M, effectively erasing the reset program's early sales gains. Rocha said shipments would halt until a redesigned battery module is certified, a delay of at least two quarters.",
       "cycle": 82753,
       "dur": 8
-    },
-    {
-      "company": "Ornewright Supply",
-      "sector": "consumer",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Ornewright Supply Adds National Grocer to Cold-Chain Network Ahead of Vellhorn Opening",
-      "body": "Rhys Throne signed a three-year cold-chain distribution agreement with a national grocery group, projected to add $190M in annual food-service and farm-input volumes. The deal is structured to draw on the forthcoming Vellhorn hub, which remains on schedule to open next quarter. Throne said combined Dunmere and Vellhorn capacity would cover the new commitments with room to spare.",
-      "cycle": 82753,
-      "dur": 2
     },
     {
       "company": "Castlestone",
@@ -219,16 +229,6 @@
       "head": "Brunstone & Sons Misses Badly as Vault II Capacity Ramp Outpaces Demand",
       "body": "Just one quarter after declaring the recovery 'complete,' Brunstone reported a steep earnings miss as the doubled Vault II line ran well below breakeven utilization, forcing a $210M inventory writedown. Dagny Frost conceded the capacity expansion 'moved faster than the order book,' and the company withdrew its prior full-year targets. The fleet supply pact remains intact but its volumes fell short of ramp assumptions.",
       "cycle": 82748,
-      "dur": 8
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Regulators Widen Marlgear Supply Probe to Full Device Line as Kessel Fault Scandal Deepens",
-      "body": "Regulators escalated their inquiry into Marlgear Supply, expanding the Kessel fault investigation to cover the company's entire Devices catalog after new filings suggested the destroyed records touched multiple product families. New CEO Halvard Renn pledged full cooperation and voluntarily suspended shipments of three Kessel-based lines pending review. The widened probe threatens roughly a third of Marlgear's device revenue.",
-      "cycle": 82747,
       "dur": 8
     }
   ]
