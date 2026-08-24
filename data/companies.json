@@ -2033,18 +2033,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82749,
+    "lastEventCycle": 82756,
     "events": [
-      {
-        "cycle": 82568,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Bruncraft Industries Acquires Halveston Axle Works to Secure Runabout Supply",
-        "body": "Continuing Orla Marrow's acquisitive streak, Bruncraft bought Halveston Axle Works for 78 million marks to bring key drivetrain components in-house ahead of the 40,000-vehicle Continental Freightways order. The deal adds two plants and roughly 900 workers. Marrow said vertical integration would protect delivery timelines as Runabout Cargo volumes climb.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82574,
         "kind": "major_deal",
@@ -2265,6 +2255,16 @@
         "size": "standard",
         "head": "Bruncraft Returns to Profit as Vane's Coachline Cuts Restore Margins",
         "body": "Bruncraft posted a narrow quarterly profit, reversing the prior miss after CEO Marcus Vane's output cuts and Vanguard staffing trims took hold. The leaner Coachline line ran at a sell-through pace that lifted per-unit margins by roughly seven points. Vane said the flagship is now positioned for measured, demand-matched growth rather than the aggressive ramp that overran earlier guidance.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82756,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Bruncraft Relaunches Leaner Coachline With Revamped Vanguard Trim",
+        "body": "Marcus Vane introduced a streamlined Coachline lineup built on the cost cuts that restored margins last quarter, cutting build variants from nine to four. The flagship Vanguard trim starts at $62,500 and shares a common platform to hold assembly costs down. Vane said the reset 'proves discipline and ambition aren't opposites.'",
         "effects": {
           "automotive": 0.13
         }
@@ -7788,7 +7788,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82741,
+    "lastEventCycle": 82756,
     "events": [
       {
         "cycle": 0,
@@ -7956,6 +7956,16 @@
         "body": "The logistics house topped estimates for a third straight quarter, with material-handling volumes up 5% across the integrated Beyond-Meridian distributor network. Chief executive Petra Thorne said synergies from the combined regional footprint are now fully realized. Guidance held steady with margins broadly flat.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82756,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Forgegrave Industries Opens Meridian Cross-Dock Hub to Anchor Network Growth",
+        "body": "Petra Thorne unveiled a $190M cross-dock hub at Meridian, adding 40% throughput capacity to the Beyond-Meridian network that has driven three straight beats. The facility consolidates four regional depots and is expected to shave a day off average handling time. Thorne framed the move as 'building ahead of the volumes we already see.'",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -10981,7 +10991,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82737,
+    "lastEventCycle": 82756,
     "events": [
       {
         "cycle": 0,
@@ -11107,6 +11117,16 @@
         "size": "flash",
         "head": "Ironcrestcrest Supply Notches Another Quarter as Contractor Line Holds Firm",
         "body": "The lighting supplier edged past forecasts for the fourth straight quarter, posting revenue of $214M on continued strength in its contractor-grade range. CEO Dorian Garr credited disciplined inventory management and steady distributor reorders. Margins held flat as the company kept pricing unchanged amid stable input costs.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82756,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Logs Steady Quarter as Contractor-Grade Line Adds Distributors",
+        "body": "Dorian Garr reported another modest beat, with the contractor-grade lighting line signing 14 new regional distributors. Revenue edged up 3% on stable margins and disciplined inventory. Garr reaffirmed the company's 'slow-and-firm' expansion stance.",
         "effects": {
           "consumer": 0.06
         }
@@ -12340,18 +12360,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82749,
+    "lastEventCycle": 82756,
     "events": [
-      {
-        "cycle": 82578,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Korrwright Works Folds Sennfeld Atelier Into Unified Heritage Division",
-        "body": "Dunmore Carrow announced Sennfeld's storied workshop will be merged into a single Korrwright Heritage Division, consolidating three ateliers and cutting an estimated 140 back-office roles. Carrow framed the move as 'protecting two centuries of craft under one roof,' though guild observers noted the pace of integration has unsettled Sennfeld's veteran finishers.",
-        "effects": {
-          "luxury": -0.13
-        }
-      },
       {
         "cycle": 82586,
         "kind": "product_launch",
@@ -12579,6 +12589,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82756,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Korrwright Works Unveils Halbrook Perpetual, First Complication Built Entirely In-House",
+        "body": "Dunmore Carrow presented the Halbrook Perpetual, a perpetual calendar priced at $148,000 and running on the house's own escapement and movement architecture. The launch marks the first Korrwright complication with zero outsourced components, a milestone Carrow called 'the payoff of the Halbrook campus.' Initial allocation of 220 pieces sold out to authorized salons within days.",
+        "effects": {
+          "luxury": 0.22
+        }
       }
     ]
   },
@@ -12593,18 +12613,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82750,
+    "lastEventCycle": 82756,
     "events": [
-      {
-        "cycle": 82603,
-        "kind": "earnings_miss",
-        "size": "standard",
-        "head": "Lhaus Misses as Fourth-Line Startup Costs Bite Into Margins",
-        "body": "Lhaus fell short of estimates despite record revenue, as commissioning costs for its fourth cell-pack line compressed margins to 8.2% from 12.5% a year earlier. CEO Cole Brandt defended the aggressive buildout, insisting the $31B backlog justifies near-term pain. Analysts flagged rising leverage as Lhaus stacks capacity faster than deliveries convert to cash.",
-        "effects": {
-          "automotive": -0.13
-        }
-      },
       {
         "cycle": 82608,
         "kind": "earnings_beat",
@@ -12833,6 +12843,16 @@
         "body": "Cole Brandt unveiled the $2.1B cash-and-stock purchase of Kellstrom, a maker of grid and vehicle storage cells, in the largest deal of his seven-decade run atop Lhaus. The move vertically links Kellstrom's cell output to Lhaus's Power & Storage unit and its platform vehicle line, though it lifts the company's debt load to a decade high. Brandt called storage 'the next platform' and said Kellstrom's two plants would run under Lhaus branding by year-end.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82756,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Lhaus Industries Forms Power & Storage Division Around Newly Acquired Kellstrom",
+        "body": "Cole Brandt confirmed the $2.1B Kellstrom deal has closed and will anchor a standalone Power & Storage division, folding in Lhaus's existing cell operations. The unit targets $1.4B in revenue within three years, with Kellstrom's Renfield plant retooled to supply Lhaus vehicle platforms directly. Brandt named the segment 'the third leg' alongside Auto Parts and Vehicles.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -13533,7 +13553,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82744,
+    "lastEventCycle": 82756,
     "events": [
       {
         "cycle": 0,
@@ -13721,6 +13741,16 @@
         "body": "Marrowmoor agreed to acquire the Southfield property, extending its regional cluster to five sites as its four-property base runs near capacity. CEO Dorian Steg said the addition absorbs overflow demand without straining existing operations, with integration expected to be gradual. Terms were not disclosed.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82756,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowmoor Holdings Extends Streak as Southfield Begins Contributing",
+        "body": "Dorian Steg reported another beat as the newly acquired Southfield property began ramping alongside the four-property legacy base. Household Goods and Jansan lines ran near capacity, lifting revenue 5%. Steg said Southfield integration is 'ahead of schedule and on budget.'",
+        "effects": {
+          "hospitality": 0.06
         }
       }
     ]
@@ -15315,7 +15345,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82744,
+    "lastEventCycle": 82756,
     "events": [
       {
         "cycle": 0,
@@ -15513,6 +15543,16 @@
         "body": "Steg posted its fourteenth consecutive quarterly beat, with fastener revenue up 9% as demand continued to outrun the three live Kelmar cells. CEO Iris Vossen said groundwork on the fourth cell is proceeding on schedule, with commissioning targeted for the next fiscal year. Fixings margins widened on stable input costs.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82756,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Steg Tooling Extends Streak to Fifteen as Kelmar Fourth Cell Comes Online",
+        "body": "Iris Vossen reported the fifteenth consecutive quarterly beat, with the newly commissioned fourth Kelmar cell contributing partial output. Fastener revenue rose 6% as the backlog held steady near record levels. Vossen said capacity additions remain 'deliberately paced against firm demand.'",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -15864,7 +15904,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82745,
+    "lastEventCycle": 82756,
     "events": [
       {
         "cycle": 0,
@@ -16064,6 +16104,16 @@
         "body": "Marta Holloway announced the closure of two aging Hardware & Tools facilities and the consolidation of output into a modernized flagship plant, part of a $180M efficiency program aimed at restoring margins bruised by the fastening scandal. The move eliminates an estimated 900 roles but is projected to lift gross margin by 300 basis points once complete in early next year. Holloway framed it as 'the last heavy lift before we build again.'",
         "effects": {
           "consumer": -0.13
+        }
+      },
+      {
+        "cycle": 82756,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Thaldale Group Returns to Profit as Holloway's Cost Reset Takes Hold",
+        "body": "Marta Holloway posted the first profitable quarter since the scandal, with consolidated tooling plants and the wound-down fastening unit lifting operating margins to 8%. Revenue slipped 4% on the narrower portfolio, but Holloway said the overhaul 'has stopped the bleeding and freed cash for the Hardware & Tools core.' The turn snaps a two-quarter loss streak.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]

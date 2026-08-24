@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-23T18:31:52.179Z",
+  "generatedAt": "2026-08-24T01:22:35.488Z",
   "beats": [
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Bruncraft Relaunches Leaner Coachline With Revamped Vanguard Trim",
+      "body": "Marcus Vane introduced a streamlined Coachline lineup built on the cost cuts that restored margins last quarter, cutting build variants from nine to four. The flagship Vanguard trim starts at $62,500 and shares a common platform to hold assembly costs down. Vane said the reset 'proves discipline and ambition aren't opposites.'",
+      "cycle": 82756,
+      "dur": 2
+    },
+    {
+      "company": "Forgegrave Industries",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Forgegrave Industries Opens Meridian Cross-Dock Hub to Anchor Network Growth",
+      "body": "Petra Thorne unveiled a $190M cross-dock hub at Meridian, adding 40% throughput capacity to the Beyond-Meridian network that has driven three straight beats. The facility consolidates four regional depots and is expected to shave a day off average handling time. Thorne framed the move as 'building ahead of the volumes we already see.'",
+      "cycle": 82756,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestcrest Supply",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ironcrestcrest Supply Logs Steady Quarter as Contractor-Grade Line Adds Distributors",
+      "body": "Dorian Garr reported another modest beat, with the contractor-grade lighting line signing 14 new regional distributors. Revenue edged up 3% on stable margins and disciplined inventory. Garr reaffirmed the company's 'slow-and-firm' expansion stance.",
+      "cycle": 82756,
+      "dur": 1
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Korrwright Works Unveils Halbrook Perpetual, First Complication Built Entirely In-House",
+      "body": "Dunmore Carrow presented the Halbrook Perpetual, a perpetual calendar priced at $148,000 and running on the house's own escapement and movement architecture. The launch marks the first Korrwright complication with zero outsourced components, a milestone Carrow called 'the payoff of the Halbrook campus.' Initial allocation of 220 pieces sold out to authorized salons within days.",
+      "cycle": 82756,
+      "dur": 8
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Lhaus Industries Forms Power & Storage Division Around Newly Acquired Kellstrom",
+      "body": "Cole Brandt confirmed the $2.1B Kellstrom deal has closed and will anchor a standalone Power & Storage division, folding in Lhaus's existing cell operations. The unit targets $1.4B in revenue within three years, with Kellstrom's Renfield plant retooled to supply Lhaus vehicle platforms directly. Brandt named the segment 'the third leg' alongside Auto Parts and Vehicles.",
+      "cycle": 82756,
+      "dur": 2
+    },
+    {
+      "company": "Marrowmoor Holdings",
+      "sector": "hospitality",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowmoor Holdings Extends Streak as Southfield Begins Contributing",
+      "body": "Dorian Steg reported another beat as the newly acquired Southfield property began ramping alongside the four-property legacy base. Household Goods and Jansan lines ran near capacity, lifting revenue 5%. Steg said Southfield integration is 'ahead of schedule and on budget.'",
+      "cycle": 82756,
+      "dur": 1
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Steg Tooling Extends Streak to Fifteen as Kelmar Fourth Cell Comes Online",
+      "body": "Iris Vossen reported the fifteenth consecutive quarterly beat, with the newly commissioned fourth Kelmar cell contributing partial output. Fastener revenue rose 6% as the backlog held steady near record levels. Vossen said capacity additions remain 'deliberately paced against firm demand.'",
+      "cycle": 82756,
+      "dur": 1
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Thaldale Group Returns to Profit as Holloway's Cost Reset Takes Hold",
+      "body": "Marta Holloway posted the first profitable quarter since the scandal, with consolidated tooling plants and the wound-down fastening unit lifting operating margins to 8%. Revenue slipped 4% on the narrower portfolio, but Holloway said the overhaul 'has stopped the bleeding and freed cash for the Hardware & Tools core.' The turn snaps a two-quarter loss streak.",
+      "cycle": 82756,
+      "dur": 2
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -40,16 +120,6 @@
       "body": "Fenncyon posted quarterly revenue of $1.14B, up 19% year over year, as the Grand Loop project passed its 50% earthwork completion milestone. Nadia Ashby credited the Northern Spur mobilization and the two Eastfield staging yards for keeping delivery cadence ahead of schedule, and lifted full-year guidance for the second time this year.",
       "cycle": 82755,
       "dur": 2
-    },
-    {
-      "company": "Kesselgrove Co.",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Kesselgrove Co. Nudges Past Estimates as Press Backlog Nears Historic Low",
-      "body": "Kesselgrove edged past forecasts with earnings of $1.63 per share as the second assembly bay drove the press backlog down to just under nine months, its lowest in over a decade. Orla Steg said the disciplined ramp had 'done exactly what we asked of it' and signaled focus would shift toward maintaining margins.",
-      "cycle": 82755,
-      "dur": 1
     },
     {
       "company": "Marlgear Supply",
@@ -92,16 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "breakthrough",
-      "size": "standard",
-      "head": "Calderforge Reports First Stable Yields at Stormwell Hall Four Under Vann",
-      "body": "In her first major update, Perra Vann said the long-stalled fourth Stormwell hall has reached stable production yields for the first time, clearing a milestone that had eluded the prior regime. Vann reported the hall is now running at 60% of target capacity and expects full ramp within two quarters, though she cautioned demand recovery lags the fix. The news marks the first tangible progress in Calderforge's turnaround.",
-      "cycle": 82754,
-      "dur": 2
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "leadership_change",
@@ -110,26 +170,6 @@
       "body": "The Halhold board removed Marcus Thorne after a third consecutive miss and mounting fallout from the $2.1B reliability payout, naming reliability-engineering chief Ines Corvalan as chief executive. Corvalan pledged to stabilize Compute yields and rebuild customer trust, warning that a return to growth remains 'several quarters out.' The shakeup ends Thorne's turbulent tenure that began just last year.",
       "cycle": 82754,
       "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Kessel Drive Unveils Vanta Ultra Pack With 20% Range Gain",
-      "body": "Riding the momentum of recovered cell volumes, Aldric Venn took the stage in Corvin Bay to launch the Vanta Ultra, a storage pack Kessel Drive claims delivers a 20% range improvement at a 12% lower cost per kilowatt-hour. Venn promised first deliveries within two quarters and touted pre-orders from three fleet operators, though he offered no firm figures. Analysts noted the aggressive timeline mirrors Venn's pattern of headline-first announcements.",
-      "cycle": 82754,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Thronehaus & Co. Acquires Meridian Dial Works to Secure Complications Talent",
-      "body": "Cora Dray struck again, agreeing to buy specialist movement house Meridian Dial Works for a reported $180M to bring perpetual-calendar and tourbillon expertise in-house. The deal folds Meridian's 40-person atelier into the Aurel program and secures a supply of complications Thronehaus had previously sourced externally. Dray framed the purchase as 'vertical craftsmanship,' extending her long record of acquisitive expansion.",
-      "cycle": 82754,
-      "dur": 2
     },
     {
       "company": "Greywater Grid",
@@ -219,16 +259,6 @@
       "head": "Blackhold Hit With Investor Suit Over Storage Fleet Defect as Losses Mount",
       "body": "A consolidated shareholder suit filed against Blackhold alleges executives understated known thermal risks in the storage fleet ahead of the recall, seeking damages exceeding $1.4 billion. The complaint names CEO Halden Dabney directly and cites internal design reviews from before the first overheating incident. Blackhold said it would contest the claims, but disclosed the recall and remediation have already cost $780 million.",
       "cycle": 82749,
-      "dur": 8
-    },
-    {
-      "company": "Brunstone & Sons",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Brunstone & Sons Misses Badly as Vault II Capacity Ramp Outpaces Demand",
-      "body": "Just one quarter after declaring the recovery 'complete,' Brunstone reported a steep earnings miss as the doubled Vault II line ran well below breakeven utilization, forcing a $210M inventory writedown. Dagny Frost conceded the capacity expansion 'moved faster than the order book,' and the company withdrew its prior full-year targets. The fleet supply pact remains intact but its volumes fell short of ramp assumptions.",
-      "cycle": 82748,
       "dur": 8
     }
   ]
