@@ -1144,25 +1144,15 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1972,
-    "ceo": "Halden Dabney",
+    "ceo": "Perrin Vale",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.68,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82749,
+    "lastEventCycle": 82758,
     "events": [
-      {
-        "cycle": 82539,
-        "kind": "safety_probe",
-        "size": "standard",
-        "head": "Regulators Open Safety Review of Blackhold's Greycliff Test Bank",
-        "body": "Days after a grid fault darkened the Greycliff test bank hours into operation, the regional energy authority has launched a formal safety review of the storage build's commissioning practices. Tomas Vren said Blackhold 'welcomes the scrutiny' but acknowledged the inquiry could delay the next 200-megawatt phase by up to two quarters. New operations chief Renna Cole is leading an internal fault audit running in parallel.",
-        "effects": {
-          "energy": -0.13
-        }
-      },
       {
         "cycle": 82547,
         "kind": "scandal",
@@ -1384,6 +1374,14 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82758,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Blackhold Ousts Dabney as Board Installs Turnaround Chief Amid Defect Fallout",
+        "body": "The board removed Halden Dabney after the recall costs and mounting investor litigation wiped out two quarters of projected earnings, naming restructuring veteran Perrin Vale as chief executive with a mandate to stabilize the storage business. Vale inherits an idled second campus, a fleet-wide recall, and the pending shareholder suit, and pledged an immediate top-to-bottom review of the flawed design. Shares had shed more than half their value across the crisis.",
+        "effects": {}
       }
     ]
   },
@@ -1398,7 +1396,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82736,
+    "lastEventCycle": 82758,
     "events": [
       {
         "cycle": 0,
@@ -1514,6 +1512,16 @@
         "size": "flash",
         "head": "Blackmoor Inches Higher as Ridge-Till Attachment Lifts Holloway Range",
         "body": "Blackmoor reported revenue of $196M, up 4%, with the new ridge-till attachment lifting attach rates on the Holloway seed-drill range past 40%. CEO Soren Dray, in his characteristically unhurried tone, emphasized multi-season durability data over near-term volume. The company reaffirmed its slow-build outlook into next planting cycle.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82758,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Blackmoor Rounds Out Holloway Range With Low-Disturbance Coulter Kit",
+        "body": "Dray added a low-disturbance coulter kit to the Holloway seed-drill lineup, targeting growers on erosion-prone ground who have driven the range's steady attach rates. The measured rollout mirrors Blackmoor's slow-and-steady cadence, with regional dealer stocking planned through the coming season. Management reiterated its unhurried, long-horizon approach to the product family.",
         "effects": {
           "agriculture": 0.06
         }
@@ -1778,18 +1786,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82751,
+    "lastEventCycle": 82758,
     "events": [
-      {
-        "cycle": 82595,
-        "kind": "expansion",
-        "size": "major",
-        "head": "Boreas Power Commits $1.9 Billion to Double Hollowmere Campus After Full Tenant Lease-Up",
-        "body": "With all initial capacity leased, Boreas Power announced a $1.9-billion phase-two buildout to double Hollowmere's compute and storage footprint. CEO Mira Thorne said demand from waitlisted customers justified the largest single-site commitment in the company's history. The expansion adds 900 megawatts of storage-backed capacity, with first tenants slated to move in within eighteen months.",
-        "effects": {
-          "energy": 0.22
-        }
-      },
       {
         "cycle": 82602,
         "kind": "earnings_beat",
@@ -2018,6 +2016,16 @@
         "body": "Boreas Power closed a $900M project-financing facility to fast-track the remaining sites in its $3.2B compute-paired campus program, bringing the number of campuses under construction to six. CEO Mira Thorne said the funding lets the company 'compress two years of buildout into eighteen months' and hinted at a further site announcement before year-end. The financing carries staged draws tied to construction milestones.",
         "effects": {
           "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82758,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Boreas Power Lands $4.5B Anchor Supply Pact for Compute-Paired Campus Network",
+        "body": "Thorne secured a decade-long offtake agreement with a consortium of data-center operators that commits nearly all output from the first six compute-paired campuses, valuing the deal at $4.5B over ten years. The pact converts the $3.2B build program from speculative buildout into contracted revenue and provides collateral for a further financing round Thorne has signaled is imminent. Analysts called it the largest single commitment in the company's history under the restless chief.",
+        "effects": {
+          "energy": 0.22
         }
       }
     ]
@@ -4829,18 +4837,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82751,
+    "lastEventCycle": 82758,
     "events": [
-      {
-        "cycle": 82575,
-        "kind": "restructure",
-        "size": "major",
-        "head": "Castlehold Unveils Sweeping Overhaul as Reneth Splits Off Saltmere Legacy Unit",
-        "body": "CEO Ivo Reneth announced a company-wide restructure that carves the shuttered Saltmere assets into a separate wind-down entity, ring-fencing an estimated 1.2 billion in liabilities from the core storage business. Reneth also named former safety chief Petra Vane to a new compliance office reporting directly to the board, pledging a 'clean slate' after months of criminal fallout. Roughly 900 roles will be cut across the legacy division as part of the shake-up.",
-        "effects": {
-          "energy": -0.22
-        }
-      },
       {
         "cycle": 82583,
         "kind": "lawsuit",
@@ -5065,6 +5063,16 @@
         "size": "major",
         "head": "Castlehold Ordered to Halt Second Plant as Probe Escalates and Framework Delivery Slips",
         "body": "Regulators widened their investigation into Castlehold's grid-storage incident, ordering a full shutdown of the second plant pending a design review and citing 'systemic containment concerns.' The halt jeopardizes near-term deliveries under the company's flagship $2B framework, and CEO Halden Voss acknowledged 'material schedule risk' while insisting the underlying technology is sound. Two customers have requested contract reviews.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82758,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Castlehold Slashes Guidance and Books $600M Charge as Framework Deal Collapses",
+        "body": "With its second plant still halted under the escalating probe, Castlehold's $2B framework partner exercised exit clauses tied to delivery slippage, forcing Voss to withdraw full-year guidance and record a $600M impairment. The turbulent chief announced a sweeping restructuring including a hiring freeze and the pause of a planned third plant. The reversal erased the record quarter that opened the year and rattled confidence in Voss's aggressive expansion.",
         "effects": {
           "energy": -0.22
         }
@@ -9826,18 +9834,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82753,
+    "lastEventCycle": 82758,
     "events": [
-      {
-        "cycle": 82623,
-        "kind": "safety_probe",
-        "size": "major",
-        "head": "Halhold Works Faces Safety Probe Over Aveline Bedside Monitors",
-        "body": "Regulators opened a formal review of the Aveline bedside monitoring suite after hospitals reported intermittent alarm failures across three network sites. Lena Faircloth pledged full cooperation and paused new deployments pending the inquiry, a sharp reversal for the platform that drove last quarter's medical equipment gains.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82628,
         "kind": "recall",
@@ -10058,6 +10056,16 @@
         "body": "Anselm Rocha announced a complete recall of the Aveline Successor device line after regulators linked the earlier heating reports to 41 confirmed thermal incidents, including three minor injuries. The recall covers an estimated 620,000 units and is expected to cost between $180M and $240M, effectively erasing the reset program's early sales gains. Rocha said shipments would halt until a redesigned battery module is certified, a delay of at least two quarters.",
         "effects": {
           "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82758,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Halhold Works Misses as Aveline Recall Costs Swamp Devices Division",
+        "body": "Rocha posted a quarterly miss with the Devices unit swinging to a loss under recall logistics and warranty provisions tied to the Aveline successor battery defect. Steady Wire & Cable and Medical Equipment revenue cushioned the blow but could not offset the flagship shortfall. Rocha said a redesigned successor is in development and vowed the reset would 'hold,' though the timeline for the device's return remains unset.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -14554,7 +14562,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82743,
+    "lastEventCycle": 82758,
     "events": [
       {
         "cycle": 0,
@@ -14710,6 +14718,16 @@
         "size": "standard",
         "head": "Palettstone & Sons Extends Heirloom Pro Line With Cordless Driver System",
         "body": "Building on the Heirloom Pro fastening rollout, Palettstone unveiled a companion cordless driver system engineered to pair with its national fastener catalog. Cole Fenn framed the launch as a natural pull-through play, projecting the tools could add $180M in annual revenue within two years. Early orders from three regional hardware chains have already been booked ahead of shelf placement.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82758,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Palettstone & Sons Wins National Retail Contract for Heirloom Pro Cordless System",
+        "body": "Fenn secured a multi-year shelf-placement agreement with a major home-improvement retail chain covering the full Heirloom Pro cordless driver system and fastening line. The deal guarantees prominent nationwide display and follows the foundry expansion built to meet exactly this kind of volume. Fenn called it a decisive step in scaling the Heirloom Pro brand from breakout product to franchise.",
         "effects": {
           "consumer": 0.13
         }
@@ -16740,18 +16758,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82750,
+    "lastEventCycle": 82758,
     "events": [
-      {
-        "cycle": 82573,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Varnvale & Sons Debuts Fully In-House Timepiece Built on Corveau and Bellmont Craft",
-        "body": "Varnvale & Sons unveiled the Meridian line, its first collection assembled entirely from newly acquired Corveau dials and Bellmont cases, priced from 12,400. Bram Wold called it proof of the firm's vertical strategy, with initial production capped at 3,000 pieces to protect margins as demand tests the integration.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82581,
         "kind": "major_deal",
@@ -16981,6 +16989,16 @@
         "effects": {
           "luxury": 0.13
         }
+      },
+      {
+        "cycle": 82758,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Varnvale & Sons Beats Again as Thessaly Case Integration Trims Costs",
+        "body": "Wold reported margins up 280 basis points as the newly acquired Thessaly Works began supplying cases in-house, eliminating third-party markups across the Timepieces division. Complication output rose 14% year-on-year with the fully integrated Corvane movement house running at capacity. Wold hinted the vertical push was 'not yet finished,' fueling talk of another dial or strap supplier in his sights.",
+        "effects": {
+          "luxury": 0.13
+        }
       }
     ]
   },
@@ -16995,18 +17013,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82750,
+    "lastEventCycle": 82758,
     "events": [
-      {
-        "cycle": 82559,
-        "kind": "product_launch",
-        "size": "major",
-        "head": "Varnvale House Bets Comeback on Bold New Meridian Timepiece Collection",
-        "body": "In his first major move, Idris Calloway staked Varnvale's recovery on the Meridian collection, a fully re-sourced line of timepieces launched with a splashy 60 million campaign meant to close the book on the Ember scandal. Every component is now traced through a newly certified supplier registry, addressing the failures that toppled his predecessor. Calloway called it 'a clean slate, publicly earned,' with pre-orders reportedly filling within days.",
-        "effects": {
-          "luxury": 0.22
-        }
-      },
       {
         "cycle": 82567,
         "kind": "earnings_beat",
@@ -17225,6 +17233,16 @@
         "size": "standard",
         "head": "Varnvale House Sovereign Complication Named Timepiece of the Year at Grand Horology Salon",
         "body": "The Sovereign Complication took top honors at the Grand Horology Salon, capping a comeback year that Beatrix Coyle staked her reputation on. Judges cited the reborn line's perpetual calendar and hand-finished movement, and Coyle used the podium to promise a limited Sovereign Anniversary run of 300 pieces. The award vindicates a bet that many inside the house had privately doubted eighteen months ago.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82758,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Varnvale House Opens Flagship Salon to Ride Sovereign Momentum Under Coyle",
+        "body": "Fresh off the Timepiece of the Year win, Coyle unveiled a marquee flagship boutique intended to showcase the reborn Sovereign complication line and draw high-net-worth clientele. The bold, publicity-heavy launch featured a limited numbered series that Coyle said sold through its allocation within days. Coyle framed the salon as proof the comeback has staying power beyond its early inventory clearance.",
         "effects": {
           "luxury": 0.13
         }
