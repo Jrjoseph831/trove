@@ -1531,18 +1531,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82746,
+    "lastEventCycle": 82757,
     "events": [
-      {
-        "cycle": 82537,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Blackton Industries Adds Second Line to Keep Pace With Halvern Orders",
-        "body": "Riding surging Halvern Motors volumes, Blackton Industries announced a 65 million expansion adding a second stamping line at its Mercer Works plant. CEO Mara Mercer said the move lifts auto-parts output capacity by 40 percent and supports a recently extended supply commitment. Hiring for 180 roles begins immediately.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82546,
         "kind": "recall",
@@ -1763,6 +1753,16 @@
         "body": "Blackton unveiled a consolidated drivetrain components range, the first clean-sheet product family since the Halvern split. CEO Sable Renwick said the leaner catalog cuts tooling costs by an estimated 18% while targeting two large assembly customers. The rollout marks Renwick's first offensive move after a turbulent stretch of restructuring charges.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82757,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Blackton Industries Wins $2.3B Multi-Year Drivetrain Supply Pact With National Fleet Builder",
+        "body": "Blackton secured a five-year, $2.3B contract to supply its new streamlined drivetrain line to a major commercial fleet manufacturer, the largest award in company history. Sable Renwick called the deal 'the payoff for eighteen months of turbulence,' and said Blackton will add a third production shift at its Halvern-successor plant. The contract locks in volume that should more than replace revenue lost in last year's Halvern split.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -4392,7 +4392,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82743,
+    "lastEventCycle": 82757,
     "events": [
       {
         "cycle": 0,
@@ -4576,6 +4576,16 @@
         "size": "standard",
         "head": "Carrowwell Debuts Automated Material-Handling Line as Second Machines Plant Comes Online",
         "body": "With its second plant now running, Mara Voss introduced a new automated material-handling series aimed at warehouse and logistics buyers, diversifying beyond the $1.1B machines contract. The line launches with two anchor customers and a stated goal of $300M in first-year bookings. Voss said the move hedges Carrowwell's revenue against single-contract concentration.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82757,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Carrowwell Beats as Second Machines Plant Ramps Toward Full Output",
+        "body": "Carrowwell reported earnings of $1.42 per share against expectations near $1.28, with the second Machines plant now running at roughly 70% of capacity against its $1.1B contract. Mara Voss said the automated material-handling line has already booked follow-on orders worth $180M. The company modestly raised its full-year outlook, citing steady demand across its four product lines.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -6415,7 +6425,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82741,
+    "lastEventCycle": 82757,
     "events": [
       {
         "cycle": 0,
@@ -6571,6 +6581,16 @@
         "size": "standard",
         "head": "Drustcyon Lands Second Harbor-Authority Award for Marine-Grade Anchors Worth $310M",
         "body": "The construction house secured a follow-on $310M supply agreement covering three additional port districts, extending its marine-grade anchor franchise. Chief executive Aurelia Kessler said the expanded coastal foundry can absorb the volume without further capital outlay. The award builds directly on the record shipments from the prior $540M contract.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82757,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Drustcyon Beats Again as Two Harbor-Authority Awards Drive Record Backlog",
+        "body": "Drustcyon posted record quarterly marine-grade anchor shipments, lifting revenue 19% to $290M as both Harbor-Authority contracts billed simultaneously. Aurelia Kessler said combined backlog reached an all-time high of $720M, giving the fastener maker visibility well into next year. The company raised its full-year margin outlook on favorable product mix.",
         "effects": {
           "construction": 0.13
         }
@@ -7360,18 +7380,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82746,
+    "lastEventCycle": 82757,
     "events": [
-      {
-        "cycle": 82544,
-        "kind": "breakthrough",
-        "size": "major",
-        "head": "Fennmoor's Larkspur Unit Clears Rapid Diagnostics Milestone",
-        "body": "Fennmoor announced that its Larkspur diagnostics platform achieved certification for a new panel that returns results in under eight minutes, a step that could reshape bedside testing across its contracted hospital network. Dorian Brandt called it 'the reason we bought Larkspur in the first place,' projecting 400 million in incremental annual revenue within three years. The company said rollout to partner hospitals begins immediately.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82554,
         "kind": "expansion",
@@ -7600,6 +7610,16 @@
         "body": "Fresh off folding in Halquist Instruments, Fennmoor agreed to acquire diagnostics specialist Carrow Systems for $1.1B, deepening its push into hospital-grade equipment. CEO Dorian Brandt framed the back-to-back deals as building an end-to-end medical platform, though analysts flagged rising integration risk from two overlapping efforts. Carrow's imaging line is expected to slot under the Medical Systems unit by year-end.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82757,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Fennmoor Folds Halquist and Carrow Into Single Medical Diagnostics Division",
+        "body": "Fennmoor said it will merge the recently acquired Halquist Instruments and Carrow units into a new Diagnostics & Imaging division, consolidating three facilities and eliminating an estimated 340 overlapping roles. Dorian Brandt framed the move as necessary to capture $90M in annual synergies, though integration charges of roughly $65M will hit the current quarter. Analysts noted the pace of dealmaking has left the balance sheet stretched heading into the reorganization.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -11144,18 +11164,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82747,
+    "lastEventCycle": 82757,
     "events": [
-      {
-        "cycle": 82537,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Ironcrestton Opens Carrow Atelier Showroom to Court New Clientele",
-        "body": "Building on its Artisan's Circle sweep, Ironcrestton opened a flagship showroom dedicated to the Carrow Atelier line, its first standalone retail space. CEO Sable Carrow said early waitlists for the collection prompted the rapid rollout, with two additional locations under consideration. The space showcases bespoke commissions alongside the award-winning core range.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82548,
         "kind": "scandal",
@@ -11374,6 +11384,16 @@
         "size": "standard",
         "head": "Ironcrestton Unveils Aurelian Collection as Vale Draws Line Under Meridian Era",
         "body": "Ironcrestton launched its Aurelian line of fine goods, the first collection built entirely on the rebuilt supply chain Corwin Vale installed after retiring the scandal-tainted Meridian range. Vale positioned Aurelian as a 'clean slate,' backed by traceable sourcing certificates for every piece. The house committed $180M to marketing and boutique refits over the next year.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82757,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Ironcrestton Beats as Aurelian Collection Sells Through Faster Than Forecast",
+        "body": "Ironcrestton posted quarterly revenue of $480M, up 14% year over year, as the Aurelian Collection sold through initial allocations weeks ahead of plan. Corwin Vale said margins expanded 220 basis points on the streamlined post-Meridian supply chain, and hinted a second Aurelian tier would arrive by year-end. The result marks the first clean quarter since Vale took over the restructuring.",
         "effects": {
           "luxury": 0.13
         }
@@ -12147,7 +12167,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82745,
+    "lastEventCycle": 82757,
     "events": [
       {
         "cycle": 0,
@@ -12345,6 +12365,16 @@
         "body": "Korrwright Group posted revenue of $1.31B, ahead of estimates, as the $420M Harbor redevelopment award moved into its heaviest structural-materials phase. CEO Halden Fenn said combined harbor and corridor billing lifted Structural Materials volumes to a two-year high, though he flagged tighter input costs on Wire & Cable. Full-year guidance was nudged upward.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82757,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Korrwright Group Edges Past Estimates as Harbor Billing Holds at Peak",
+        "body": "Korrwright reported a narrow beat with revenue of $610M as Harbor redevelopment billing held near its peak and the corridor award continued to ramp. Halden Fenn said structural-materials volumes stayed firm but flagged that Harbor billing would begin tapering next quarter. Management reaffirmed full-year guidance without raising it.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -15761,7 +15791,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82738,
+    "lastEventCycle": 82757,
     "events": [
       {
         "cycle": 0,
@@ -15887,6 +15917,16 @@
         "size": "standard",
         "head": "Stegreach Beats Again as Riverport Grid Work and Substation Order Lift Margins",
         "body": "Stegreach posted quarterly revenue of $1.36B, up 14%, as the $410M substation fixings order began shipping alongside its broader Riverport grid contracts. CEO Halden Ashby credited disciplined pricing on wire and cable for a 60-basis-point margin gain. Management raised full-year guidance modestly, citing a healthy fixings backlog.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82757,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Stegreach Extends Riverport Grid Program With $360M Wire & Cable Award",
+        "body": "Stegreach won a $360M award to supply wire and cable for the next phase of the Riverport grid buildout, broadening its role beyond fasteners and substation fixings. Halden Ashby said the win keeps the company's plants booked through the following year and deepens a relationship now worth well over $1B in cumulative orders. The award follows two consecutive margin-lifting quarters tied to Riverport.",
         "effects": {
           "construction": 0.13
         }
@@ -17365,7 +17405,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82745,
+    "lastEventCycle": 82757,
     "events": [
       {
         "cycle": 0,
@@ -17563,6 +17603,16 @@
         "body": "Vencyon secured its largest contract to date, a five-year, $1.5B agreement to roll out its newly completed Unified Hub Platform across a national distribution network spanning 22 sites. CEO Iris Halloran, in a rare aggressive move, said the deal validates the multi-year modular investment and pushes committed backlog past $4B. Deployment begins next quarter with the first eight sites targeted for completion within twelve months.",
         "effects": {
           "logistics": 0.22
+        }
+      },
+      {
+        "cycle": 82757,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Vencyon Opens Regional Deployment Centers to Support Unified Hub Rollout",
+        "body": "Vencyon announced three new regional deployment centers to service the $1.5B national-distributor framework, adding about 600 field and support staff. Iris Halloran said the centers will cut average Unified Hub installation time by a third and anchor the platform's expansion to additional customers. The investment totals roughly $210M over two years.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]

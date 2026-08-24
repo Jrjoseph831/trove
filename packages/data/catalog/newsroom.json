@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-24T01:22:35.488Z",
+  "generatedAt": "2026-08-24T07:01:01.522Z",
   "beats": [
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Blackton Industries Wins $2.3B Multi-Year Drivetrain Supply Pact With National Fleet Builder",
+      "body": "Blackton secured a five-year, $2.3B contract to supply its new streamlined drivetrain line to a major commercial fleet manufacturer, the largest award in company history. Sable Renwick called the deal 'the payoff for eighteen months of turbulence,' and said Blackton will add a third production shift at its Halvern-successor plant. The contract locks in volume that should more than replace revenue lost in last year's Halvern split.",
+      "cycle": 82757,
+      "dur": 8
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Carrowwell Beats as Second Machines Plant Ramps Toward Full Output",
+      "body": "Carrowwell reported earnings of $1.42 per share against expectations near $1.28, with the second Machines plant now running at roughly 70% of capacity against its $1.1B contract. Mara Voss said the automated material-handling line has already booked follow-on orders worth $180M. The company modestly raised its full-year outlook, citing steady demand across its four product lines.",
+      "cycle": 82757,
+      "dur": 2
+    },
+    {
+      "company": "Drustcyon Industries",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Drustcyon Beats Again as Two Harbor-Authority Awards Drive Record Backlog",
+      "body": "Drustcyon posted record quarterly marine-grade anchor shipments, lifting revenue 19% to $290M as both Harbor-Authority contracts billed simultaneously. Aurelia Kessler said combined backlog reached an all-time high of $720M, giving the fastener maker visibility well into next year. The company raised its full-year margin outlook on favorable product mix.",
+      "cycle": 82757,
+      "dur": 2
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Fennmoor Folds Halquist and Carrow Into Single Medical Diagnostics Division",
+      "body": "Fennmoor said it will merge the recently acquired Halquist Instruments and Carrow units into a new Diagnostics & Imaging division, consolidating three facilities and eliminating an estimated 340 overlapping roles. Dorian Brandt framed the move as necessary to capture $90M in annual synergies, though integration charges of roughly $65M will hit the current quarter. Analysts noted the pace of dealmaking has left the balance sheet stretched heading into the reorganization.",
+      "cycle": 82757,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Ironcrestton Beats as Aurelian Collection Sells Through Faster Than Forecast",
+      "body": "Ironcrestton posted quarterly revenue of $480M, up 14% year over year, as the Aurelian Collection sold through initial allocations weeks ahead of plan. Corwin Vale said margins expanded 220 basis points on the streamlined post-Meridian supply chain, and hinted a second Aurelian tier would arrive by year-end. The result marks the first clean quarter since Vale took over the restructuring.",
+      "cycle": 82757,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Korrwright Group Edges Past Estimates as Harbor Billing Holds at Peak",
+      "body": "Korrwright reported a narrow beat with revenue of $610M as Harbor redevelopment billing held near its peak and the corridor award continued to ramp. Halden Fenn said structural-materials volumes stayed firm but flagged that Harbor billing would begin tapering next quarter. Management reaffirmed full-year guidance without raising it.",
+      "cycle": 82757,
+      "dur": 1
+    },
+    {
+      "company": "Stegreach",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Stegreach Extends Riverport Grid Program With $360M Wire & Cable Award",
+      "body": "Stegreach won a $360M award to supply wire and cable for the next phase of the Riverport grid buildout, broadening its role beyond fasteners and substation fixings. Halden Ashby said the win keeps the company's plants booked through the following year and deepens a relationship now worth well over $1B in cumulative orders. The award follows two consecutive margin-lifting quarters tied to Riverport.",
+      "cycle": 82757,
+      "dur": 2
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Vencyon Opens Regional Deployment Centers to Support Unified Hub Rollout",
+      "body": "Vencyon announced three new regional deployment centers to service the $1.5B national-distributor framework, adding about 600 field and support staff. Iris Halloran said the centers will cut average Unified Hub installation time by a third and anchor the platform's expansion to additional customers. The investment totals roughly $210M over two years.",
+      "cycle": 82757,
+      "dur": 2
+    },
     {
       "company": "Bruncraft Industries",
       "sector": "automotive",
@@ -20,16 +100,6 @@
       "body": "Petra Thorne unveiled a $190M cross-dock hub at Meridian, adding 40% throughput capacity to the Beyond-Meridian network that has driven three straight beats. The facility consolidates four regional depots and is expected to shave a day off average handling time. Thorne framed the move as 'building ahead of the volumes we already see.'",
       "cycle": 82756,
       "dur": 2
-    },
-    {
-      "company": "Ironcrestcrest Supply",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Ironcrestcrest Supply Logs Steady Quarter as Contractor-Grade Line Adds Distributors",
-      "body": "Dorian Garr reported another modest beat, with the contractor-grade lighting line signing 14 new regional distributors. Revenue edged up 3% on stable margins and disciplined inventory. Garr reaffirmed the company's 'slow-and-firm' expansion stance.",
-      "cycle": 82756,
-      "dur": 1
     },
     {
       "company": "Korrwright Works",
@@ -52,26 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Extends Streak as Southfield Begins Contributing",
-      "body": "Dorian Steg reported another beat as the newly acquired Southfield property began ramping alongside the four-property legacy base. Household Goods and Jansan lines ran near capacity, lifting revenue 5%. Steg said Southfield integration is 'ahead of schedule and on budget.'",
-      "cycle": 82756,
-      "dur": 1
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Steg Tooling Extends Streak to Fifteen as Kelmar Fourth Cell Comes Online",
-      "body": "Iris Vossen reported the fifteenth consecutive quarterly beat, with the newly commissioned fourth Kelmar cell contributing partial output. Fastener revenue rose 6% as the backlog held steady near record levels. Vossen said capacity additions remain 'deliberately paced against firm demand.'",
-      "cycle": 82756,
-      "dur": 1
-    },
-    {
       "company": "Thaldale Group",
       "sector": "consumer",
       "kind": "earnings_beat",
@@ -92,36 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Brunmark Motors",
-      "sector": "automotive",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Brunmark Motors Misses as Veyra Relaunch Costs Weigh on Turnaround Quarter",
-      "body": "Brunmark reported a loss of $1.12 per share, worse than the $0.74 loss expected, as relaunch marketing and idled-capacity charges outweighed early Veyra sales. Iris Calvagh defended the reset, noting redesigned battery-pack orders were 'building steadily' with 41,000 pre-orders logged, but conceded profitability remains 'several quarters out.'",
-      "cycle": 82755,
-      "dur": 2
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drustcraft Posts Record Quarter as Auto-Parts Pact Ramps Across Three Lines",
-      "body": "Drustcraft reported earnings of $2.38 per share against estimates of $2.11, with the new $320M auto-parts contract now contributing to all three product lines. Cora Fenn said the balanced three-line strategy delivered its strongest margins in a decade at 21.4%, and hinted at capacity studies for a possible fourth line.",
-      "cycle": 82755,
-      "dur": 2
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fenncyon Beats Again as Grand Loop Earthwork Crosses Halfway Mark",
-      "body": "Fenncyon posted quarterly revenue of $1.14B, up 19% year over year, as the Grand Loop project passed its 50% earthwork completion milestone. Nadia Ashby credited the Northern Spur mobilization and the two Eastfield staging yards for keeping delivery cadence ahead of schedule, and lifted full-year guidance for the second time this year.",
-      "cycle": 82755,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "lawsuit",
@@ -130,26 +150,6 @@
       "body": "A consolidated class action seeking $1.4B was filed against Marlgear over the Kessel fault, hours after regulators referred the records-destruction findings for criminal prosecution of former executives. New CEO Priya Vantell pledged full cooperation and set aside a $600M reserve, warning that the full device-line probe could yield further liabilities. Ousted chief Dane Kessler now faces personal charges.",
       "cycle": 82755,
       "dur": 8
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Stegforge Breaks Ground on Third Rail Plate Line as Consortium Demand Outpaces Capacity",
-      "body": "With both existing rail plate lines running at full production, Aurelia Steg approved a $410M expansion to add a third line at the Holldenreach works, targeting startup in 18 months. Steg cited a consortium order book stretching into the next decade and called the move 'a measured answer to demand we can no longer meet.'",
-      "cycle": 82755,
-      "dur": 2
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vossenspire Supply Beats as Corriveaux Synergies Run Ahead of $140M Target",
-      "body": "Vossenspire reported the Corriveaux integration has already captured $98M in annualized synergies, well ahead of pace on Quinn Marrow's $140M goal. Timepiece revenue climbed 14% and Marrow said the vehicle arm would be 'next in line' for consolidation opportunities, fueling speculation of another acquisition.",
-      "cycle": 82755,
-      "dur": 2
     },
     {
       "company": "Brunstone & Sons",
@@ -249,16 +249,6 @@
       "head": "Lhaus Industries to Acquire Battery Maker Kellstrom for $2.1B in Push Into Power & Storage",
       "body": "Cole Brandt unveiled the $2.1B cash-and-stock purchase of Kellstrom, a maker of grid and vehicle storage cells, in the largest deal of his seven-decade run atop Lhaus. The move vertically links Kellstrom's cell output to Lhaus's Power & Storage unit and its platform vehicle line, though it lifts the company's debt load to a decade high. Brandt called storage 'the next platform' and said Kellstrom's two plants would run under Lhaus branding by year-end.",
       "cycle": 82750,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Blackhold Hit With Investor Suit Over Storage Fleet Defect as Losses Mount",
-      "body": "A consolidated shareholder suit filed against Blackhold alleges executives understated known thermal risks in the storage fleet ahead of the recall, seeking damages exceeding $1.4 billion. The complaint names CEO Halden Dabney directly and cites internal design reviews from before the first overheating incident. Blackhold said it would contest the claims, but disclosed the recall and remediation have already cost $780 million.",
-      "cycle": 82749,
       "dur": 8
     }
   ]
