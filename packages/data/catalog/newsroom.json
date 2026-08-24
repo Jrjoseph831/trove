@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-24T12:53:15.527Z",
+  "generatedAt": "2026-08-24T18:41:58.624Z",
   "beats": [
+    {
+      "company": "Ardent Health",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Ardent Health Beats as Continental Fleet Upgrades Roll Out on Schedule",
+      "body": "Ardent posted a modest beat as staged imaging-equipment upgrades under the Continental service add-on progressed on plan. CEO Orla Halloran credited recurring service revenue for smoothing quarterly results and reaffirmed the multi-year deployment timeline. No change to guidance was issued.",
+      "cycle": 82759,
+      "dur": 1
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Bruncrest Works Slips as Aria Ultra Ramp Costs Bite and Third-Line Push Weighs on Margins",
+      "body": "Bruncrest posted its first miss in three quarters as CEO Ines Marlow acknowledged that accelerated spending on a proposed third compute line outpaced revenue, trimming operating margin by 260 basis points. Marlow, prone to bold declarations, insisted the backlog remained \"rock solid past $5B\" and framed the shortfall as \"the price of moving first.\"",
+      "cycle": 82759,
+      "dur": 2
+    },
+    {
+      "company": "Calderworks Holdings",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Calderworks Lands $780M Corridor Framework as Fifth Kiln Draws Sweeping Structural Orders",
+      "body": "Calderworks signed a $780M multi-year framework to supply structural materials across the expanding Vaultridge corridor, its largest single agreement on record. CEO Kestrel Halloran said the fifth kiln would be dedicated almost entirely to the pact, with output committed through 2031. The deal locks in demand well beyond current record kiln capacity.",
+      "cycle": 82759,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "major",
+      "head": "Castlestone Unveils Grid-Core Ascend Platform as Karsh Bets Comeback on New Compute Line",
+      "body": "CEO Pell Karsh took the stage to launch Grid-Core Ascend, a next-generation compute platform he called \"the reason we survived the reset,\" pledging shipments within two quarters. The company committed $1.9B to production tooling and named the landmark contract signed last quarter as the anchor customer. Karsh, characteristically bold, told the room the platform would double throughput per unit or he would \"answer for it personally.\"",
+      "cycle": 82759,
+      "dur": 8
+    },
+    {
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halcyon Industries Beats as Northgate Recycled-Fiber Pact Fills Order Book",
+      "body": "Halcyon reported a solid beat as the multi-year Northgate supply pact drove recycled-fiber volumes above internal targets in its first full contribution. CEO Dorian Ashby said the Northgate line was running near capacity and pointed to disciplined cost control for the margin gain. He signaled a further recycled-grade expansion under study but set no timeline.",
+      "cycle": 82759,
+      "dur": 2
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Skarnvale Extends Overhaul Playbook to Two More Junctions After Vosk Success",
+      "body": "Buoyed by a clean quarter at rebuilt Vosk Junction, CEO Dorn Vaskell announced retrofits at the Harnwick and Delcourt nodes, committing $310M under the same overhaul framework. Vaskell said the phased rollout would begin immediately, though he acknowledged the earlier triple failure still \"weighs on every decision we make.\"",
+      "cycle": 82759,
+      "dur": 2
+    },
+    {
+      "company": "Veldtreach & Sons",
+      "sector": "construction",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Veldtreach & Sons Beats as Fourth Fleet Lifts Inland Reservoir Throughput",
+      "body": "The construction house reported a quarterly beat as its newly commissioned fourth earthmoving fleet pushed reservoir excavation ahead of schedule. CEO Petra Steg noted the $540M package was now 40% complete and hinted at bidding on an adjacent flood-control corridor. Margins held steady despite higher fuel and crew costs.",
+      "cycle": 82759,
+      "dur": 2
+    },
+    {
+      "company": "Venline & Sons",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Venline & Sons Extends Streak With Slim Beat as Second Marden Cleanroom Opens",
+      "body": "Venline notched another modest beat as the second Marden cleanroom came online, adding capacity for its consumables lines. CEO Mara Garr said initial output would ramp gradually through the year, keeping to the company's long-horizon cadence. Management reaffirmed full-year guidance without revision.",
+      "cycle": 82759,
+      "dur": 1
+    },
     {
       "company": "Blackhold",
       "sector": "energy",
@@ -10,16 +90,6 @@
       "body": "The board removed Halden Dabney after the recall costs and mounting investor litigation wiped out two quarters of projected earnings, naming restructuring veteran Perrin Vale as chief executive with a mandate to stabilize the storage business. Vale inherits an idled second campus, a fleet-wide recall, and the pending shareholder suit, and pledged an immediate top-to-bottom review of the flawed design. Shares had shed more than half their value across the crisis.",
       "cycle": 82758,
       "dur": 8
-    },
-    {
-      "company": "Blackmoor",
-      "sector": "agriculture",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Blackmoor Rounds Out Holloway Range With Low-Disturbance Coulter Kit",
-      "body": "Dray added a low-disturbance coulter kit to the Holloway seed-drill lineup, targeting growers on erosion-prone ground who have driven the range's steady attach rates. The measured rollout mirrors Blackmoor's slow-and-steady cadence, with regional dealer stocking planned through the coming season. Management reiterated its unhurried, long-horizon approach to the product family.",
-      "cycle": 82758,
-      "dur": 1
     },
     {
       "company": "Boreas Power",
@@ -90,66 +160,6 @@
       "body": "Blackton secured a five-year, $2.3B contract to supply its new streamlined drivetrain line to a major commercial fleet manufacturer, the largest award in company history. Sable Renwick called the deal 'the payoff for eighteen months of turbulence,' and said Blackton will add a third production shift at its Halvern-successor plant. The contract locks in volume that should more than replace revenue lost in last year's Halvern split.",
       "cycle": 82757,
       "dur": 8
-    },
-    {
-      "company": "Carrowwell",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Carrowwell Beats as Second Machines Plant Ramps Toward Full Output",
-      "body": "Carrowwell reported earnings of $1.42 per share against expectations near $1.28, with the second Machines plant now running at roughly 70% of capacity against its $1.1B contract. Mara Voss said the automated material-handling line has already booked follow-on orders worth $180M. The company modestly raised its full-year outlook, citing steady demand across its four product lines.",
-      "cycle": 82757,
-      "dur": 2
-    },
-    {
-      "company": "Drustcyon Industries",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drustcyon Beats Again as Two Harbor-Authority Awards Drive Record Backlog",
-      "body": "Drustcyon posted record quarterly marine-grade anchor shipments, lifting revenue 19% to $290M as both Harbor-Authority contracts billed simultaneously. Aurelia Kessler said combined backlog reached an all-time high of $720M, giving the fastener maker visibility well into next year. The company raised its full-year margin outlook on favorable product mix.",
-      "cycle": 82757,
-      "dur": 2
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Fennmoor Folds Halquist and Carrow Into Single Medical Diagnostics Division",
-      "body": "Fennmoor said it will merge the recently acquired Halquist Instruments and Carrow units into a new Diagnostics & Imaging division, consolidating three facilities and eliminating an estimated 340 overlapping roles. Dorian Brandt framed the move as necessary to capture $90M in annual synergies, though integration charges of roughly $65M will hit the current quarter. Analysts noted the pace of dealmaking has left the balance sheet stretched heading into the reorganization.",
-      "cycle": 82757,
-      "dur": 2
-    },
-    {
-      "company": "Ironcrestton",
-      "sector": "luxury",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Ironcrestton Beats as Aurelian Collection Sells Through Faster Than Forecast",
-      "body": "Ironcrestton posted quarterly revenue of $480M, up 14% year over year, as the Aurelian Collection sold through initial allocations weeks ahead of plan. Corwin Vale said margins expanded 220 basis points on the streamlined post-Meridian supply chain, and hinted a second Aurelian tier would arrive by year-end. The result marks the first clean quarter since Vale took over the restructuring.",
-      "cycle": 82757,
-      "dur": 2
-    },
-    {
-      "company": "Stegreach",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Stegreach Extends Riverport Grid Program With $360M Wire & Cable Award",
-      "body": "Stegreach won a $360M award to supply wire and cable for the next phase of the Riverport grid buildout, broadening its role beyond fasteners and substation fixings. Halden Ashby said the win keeps the company's plants booked through the following year and deepens a relationship now worth well over $1B in cumulative orders. The award follows two consecutive margin-lifting quarters tied to Riverport.",
-      "cycle": 82757,
-      "dur": 2
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Vencyon Opens Regional Deployment Centers to Support Unified Hub Rollout",
-      "body": "Vencyon announced three new regional deployment centers to service the $1.5B national-distributor framework, adding about 600 field and support staff. Iris Halloran said the centers will cut average Unified Hub installation time by a third and anchor the platform's expansion to additional customers. The investment totals roughly $210M over two years.",
-      "cycle": 82757,
-      "dur": 2
     },
     {
       "company": "Korrwright Works",
@@ -229,46 +239,6 @@
       "head": "Castlestone Lands Landmark Grid-Core Compute Contract in Karsh Comeback",
       "body": "Castlestone secured a $2.1 billion, multi-year Grid-Core compute supply agreement with the Vantor Industrial Group, its largest deal ever and a striking reversal from last year's guidance cut. CEO Pell Karsh, who cut 1,800 jobs and split the Grid-Core unit during the reset, called it 'vindication for the hard calls.' The award sent management to raise full-year revenue guidance for the first time since the restructure.",
       "cycle": 82752,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Castlehold Ordered to Halt Second Plant as Probe Escalates and Framework Delivery Slips",
-      "body": "Regulators widened their investigation into Castlehold's grid-storage incident, ordering a full shutdown of the second plant pending a design review and citing 'systemic containment concerns.' The halt jeopardizes near-term deliveries under the company's flagship $2B framework, and CEO Halden Voss acknowledged 'material schedule risk' while insisting the underlying technology is sound. Two customers have requested contract reviews.",
-      "cycle": 82751,
-      "dur": 8
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Marrowstone Build Wins $780M Coastal Rail Corridor, Its Largest Single Award",
-      "body": "Marrowstone Build secured a $780M design-and-build package for the first phase of a coastal freight rail corridor, its biggest single contract on record and enough to push backlog beyond $2.1B. CEO Delphine Vaugh said the win 'changes the scale of what we can bid on' and confirmed the company is expanding its heavy earthmoving fleet to service the multi-year program. Work is slated to begin next quarter.",
-      "cycle": 82751,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Vossenspire Holdings Splits Compute and Power Units in Vok's Post-Probe Overhaul",
-      "body": "New CEO Maren Vok unveiled a sweeping restructure that separates Vossenspire's compute operations from its troubled Power & Storage arm, with a $610M charge tied to the shuttered storage-bank program. Vok said the split lets the company 'ring-fence the past and fund the future,' pledging to exit the facilities named in the resolved regulatory probe. The plan cuts roughly 1,400 roles across the storage division.",
-      "cycle": 82751,
-      "dur": 8
-    },
-    {
-      "company": "Woldmark",
-      "sector": "technology",
-      "kind": "breakthrough",
-      "size": "major",
-      "head": "Woldmark's Meridian Doubles Throughput in Landmark Benchmark as Sonn Declares Comeback",
-      "body": "Woldmark disclosed independently verified results showing its Meridian compute modules deliver 2.1x the sustained throughput of the retired Halcyon line at comparable power draw. CEO Petra Sonn, never shy of a headline, called Meridian 'the machine that erases the last two years,' and confirmed three unnamed hyperscale customers have moved to full production orders. The results mark the first clear technical vindication since the Halcyon 4 collapse.",
-      "cycle": 82751,
       "dur": 8
     }
   ]

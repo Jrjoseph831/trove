@@ -915,7 +915,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82731,
+    "lastEventCycle": 82759,
     "events": [
       {
         "cycle": 0,
@@ -1013,6 +1013,16 @@
         "body": "Orla Halloran's firm posted a beat as the service-and-upgrade extension on its continental imaging fleet contract began generating recurring revenue, up 5% on the quarter. The higher-margin service stream helped offset heavier delivery costs on the underlying fleet order. Halloran pointed to the growing installed base as a durable earnings anchor for years ahead.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82759,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ardent Health Beats as Continental Fleet Upgrades Roll Out on Schedule",
+        "body": "Ardent posted a modest beat as staged imaging-equipment upgrades under the Continental service add-on progressed on plan. CEO Orla Halloran credited recurring service revenue for smoothing quarterly results and reaffirmed the multi-year deployment timeline. No change to guidance was issued.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -2290,18 +2300,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82753,
+    "lastEventCycle": 82759,
     "events": [
-      {
-        "cycle": 82614,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Bruncrest Works Doubles Aria Output With New Eastfield Assembly Line",
-        "body": "Fresh off the regional data campus order, CEO Ines Marlow committed $640 million to a second Aria Compute line at the Eastfield facility, targeting a doubling of rack capacity by mid-2027. Marlow told staff the expansion was a 'no-hedging bet' on sustained demand, drawing both praise and caution from analysts wary of her track record for aggressive timelines.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82621,
         "kind": "product_launch",
@@ -2530,6 +2530,16 @@
         "body": "Bruncrest posted revenue of $1.9B for the quarter, up 34% year-over-year, as the second compute line drew the Aria Ultra backlog down from $5B to $4.1B. Ines Marlow told the call that yield on the new line hit target six weeks ahead of plan, though she cautioned that margins would tighten as ramp costs peak next quarter. Order inquiries beyond Aria Ultra rose sharply.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82759,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Bruncrest Works Slips as Aria Ultra Ramp Costs Bite and Third-Line Push Weighs on Margins",
+        "body": "Bruncrest posted its first miss in three quarters as CEO Ines Marlow acknowledged that accelerated spending on a proposed third compute line outpaced revenue, trimming operating margin by 260 basis points. Marlow, prone to bold declarations, insisted the backlog remained \"rock solid past $5B\" and framed the shortfall as \"the price of moving first.\"",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -3839,7 +3849,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82742,
+    "lastEventCycle": 82759,
     "events": [
       {
         "cycle": 0,
@@ -3987,6 +3997,16 @@
         "body": "Calderworks posted revenue of $494M, up 11%, as the Vaultridge Corridor pact drove kiln utilization to record highs ahead of the fifth kiln's completion. Kestrel Halloran reported two additional supply inquiries tied to corridor expansion. The fifth kiln remains on track for commissioning within three quarters.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82759,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Calderworks Lands $780M Corridor Framework as Fifth Kiln Draws Sweeping Structural Orders",
+        "body": "Calderworks signed a $780M multi-year framework to supply structural materials across the expanding Vaultridge corridor, its largest single agreement on record. CEO Kestrel Halloran said the fifth kiln would be dedicated almost entirely to the pact, with output committed through 2031. The deal locks in demand well beyond current record kiln capacity.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -5203,18 +5223,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82752,
+    "lastEventCycle": 82759,
     "events": [
-      {
-        "cycle": 82609,
-        "kind": "safety_probe",
-        "size": "major",
-        "head": "Castlestone Faces Regulatory Probe Over National Data Grid Reliability Guarantees",
-        "body": "Regulators opened a formal inquiry into whether Castlestone overstated capacity-delivery commitments underpinning its combined $23.5 billion in National Data Grid pacts. The review follows reports of two brownout events at grid-linked facilities and questions over whether promised redundancy was ever installed. CEO Pell Karsh called the probe 'a distraction' but confirmed Castlestone would suspend new framework signings until it concludes.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82614,
         "kind": "earnings_miss",
@@ -5441,6 +5451,16 @@
         "size": "major",
         "head": "Castlestone Lands Landmark Grid-Core Compute Contract in Karsh Comeback",
         "body": "Castlestone secured a $2.1 billion, multi-year Grid-Core compute supply agreement with the Vantor Industrial Group, its largest deal ever and a striking reversal from last year's guidance cut. CEO Pell Karsh, who cut 1,800 jobs and split the Grid-Core unit during the reset, called it 'vindication for the hard calls.' The award sent management to raise full-year revenue guidance for the first time since the restructure.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82759,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Castlestone Unveils Grid-Core Ascend Platform as Karsh Bets Comeback on New Compute Line",
+        "body": "CEO Pell Karsh took the stage to launch Grid-Core Ascend, a next-generation compute platform he called \"the reason we survived the reset,\" pledging shipments within two quarters. The company committed $1.9B to production tooling and named the landmark contract signed last quarter as the anchor customer. Karsh, characteristically bold, told the room the platform would double throughput per unit or he would \"answer for it personally.\"",
         "effects": {
           "technology": 0.22
         }
@@ -9364,7 +9384,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82748,
+    "lastEventCycle": 82759,
     "events": [
       {
         "cycle": 0,
@@ -9570,6 +9590,16 @@
         "size": "standard",
         "head": "Halcyon Industries Signs Multi-Year Supply Pact Anchoring Northgate Recycled-Fiber Output",
         "body": "Halcyon secured a four-year, $640M packaging supply agreement with a national grocery distributor, committing roughly a third of Northgate's initial three lines to recycled-fiber grades. Dorian Ashby said the deal 'gives us the demand certainty to bring the remaining lines forward on schedule.' The contract locks pricing through 2029 with volume step-ups tied to Northgate's ramp.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82759,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halcyon Industries Beats as Northgate Recycled-Fiber Pact Fills Order Book",
+        "body": "Halcyon reported a solid beat as the multi-year Northgate supply pact drove recycled-fiber volumes above internal targets in its first full contribution. CEO Dorian Ashby said the Northgate line was running near capacity and pointed to disciplined cost control for the margin gain. He signaled a further recycled-grade expansion under study but set no timeline.",
         "effects": {
           "logistics": 0.13
         }
@@ -15174,7 +15204,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82747,
+    "lastEventCycle": 82759,
     "events": [
       {
         "cycle": 0,
@@ -15376,6 +15406,16 @@
         "size": "standard",
         "head": "Skarnvale Beats as Rebuilt Vosk Junction Runs Clean Through First Full Quarter",
         "body": "Skarnvale reported its first uninterrupted quarter at Vosk Junction since the triple failure, lifting revenue to $780M and beating the $720M consensus as the rebuilt handling system held steady. CEO Dorn Vaskell said throughput at the hub had recovered to 96% of pre-collapse levels. The company reinstated its full-year guidance after pulling it during the crisis.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82759,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Skarnvale Extends Overhaul Playbook to Two More Junctions After Vosk Success",
+        "body": "Buoyed by a clean quarter at rebuilt Vosk Junction, CEO Dorn Vaskell announced retrofits at the Harnwick and Delcourt nodes, committing $310M under the same overhaul framework. Vaskell said the phased rollout would begin immediately, though he acknowledged the earlier triple failure still \"weighs on every decision we make.\"",
         "effects": {
           "logistics": 0.13
         }
@@ -17260,7 +17300,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82742,
+    "lastEventCycle": 82759,
     "events": [
       {
         "cycle": 0,
@@ -17406,6 +17446,16 @@
         "size": "standard",
         "head": "Veldtreach & Sons Orders Fourth Earthmoving Fleet as Reservoir Works Accelerate",
         "body": "Petra Steg committed $210M to a fourth earthmoving fleet to service the $540M Inland Reservoir package and a growing pipeline of regional works. The fleet, expected operational within two quarters, will lift Veldtreach's deployable capacity by roughly 30%. Steg framed the move as a measured response to sustained utilization rather than speculative growth.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82759,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Veldtreach & Sons Beats as Fourth Fleet Lifts Inland Reservoir Throughput",
+        "body": "The construction house reported a quarterly beat as its newly commissioned fourth earthmoving fleet pushed reservoir excavation ahead of schedule. CEO Petra Steg noted the $540M package was now 40% complete and hinted at bidding on an adjacent flood-control corridor. Margins held steady despite higher fuel and crew costs.",
         "effects": {
           "construction": 0.13
         }
@@ -17646,7 +17696,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82732,
+    "lastEventCycle": 82759,
     "events": [
       {
         "cycle": 0,
@@ -17742,6 +17792,16 @@
         "size": "flash",
         "head": "Venline & Sons Extends Streak as Second Marden Cleanroom Nears Completion",
         "body": "Mara Garr posted another modest beat, with revenue of $412 million up 4% and margins holding steady on disciplined pricing. The second Marden cleanroom is now roughly 80% complete and on track for qualification runs next quarter. Garr reiterated the company's long-horizon stance, resisting calls to accelerate spending.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82759,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Venline & Sons Extends Streak With Slim Beat as Second Marden Cleanroom Opens",
+        "body": "Venline notched another modest beat as the second Marden cleanroom came online, adding capacity for its consumables lines. CEO Mara Garr said initial output would ramp gradually through the year, keeping to the company's long-horizon cadence. Management reaffirmed full-year guidance without revision.",
         "effects": {
           "medical": 0.06
         }
