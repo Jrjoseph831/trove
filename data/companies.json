@@ -3616,18 +3616,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82754,
+    "lastEventCycle": 82762,
     "events": [
-      {
-        "cycle": 82545,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Calderforge Rebounds as Stormwell Hall Lifts Quarterly Compute Output",
-        "body": "Calderforge reported quarterly revenue of $9.2B, up 14% year-over-year, as the new Stormwell Hall came online ahead of schedule and absorbed workloads lost during the Embergate shutdown. CEO Nadia Throne credited the recovery to a 'clean break from legacy infrastructure,' though she warned that ramp-up costs would weigh on margins into next quarter.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82557,
         "kind": "expansion",
@@ -3850,6 +3840,16 @@
         "size": "standard",
         "head": "Calderforge Reports First Stable Yields at Stormwell Hall Four Under Vann",
         "body": "In her first major update, Perra Vann said the long-stalled fourth Stormwell hall has reached stable production yields for the first time, clearing a milestone that had eluded the prior regime. Vann reported the hall is now running at 60% of target capacity and expects full ramp within two quarters, though she cautioned demand recovery lags the fix. The news marks the first tangible progress in Calderforge's turnaround.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82762,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderforge Beats as Stormwell Hall Four Ramps to Commercial Volume",
+        "body": "Revenue jumped 22% to $2.7B as stable yields at Hall Four translated into first meaningful Stormwell shipments under Perra Vann. Vann said defect rates fell below the 8% commercial threshold for the first time, unlocking delayed customer commitments worth an estimated $1.4B. The result marks the clearest sign yet that the troubled program has turned a corner.",
         "effects": {
           "technology": 0.13
         }
@@ -4223,7 +4223,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82749,
+    "lastEventCycle": 82762,
     "events": [
       {
         "cycle": 0,
@@ -4421,6 +4421,16 @@
         "size": "standard",
         "head": "Carrowforge Lands $940M Heavy-Press Order as Renn Bets Split Frees Capacity",
         "body": "Carrowforge secured a $940 million multi-year contract to supply forming presses to a continental fabrication group, its largest single order since the Roe-era split. Machines Chief Owen Talbourne said the deal locks the unit's flagship line at full utilization through 2028. CEO Dahlia Renn called it proof that the leaner post-split structure can win work the old combined house couldn't service.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82762,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Carrowforge Breaks Ground on Second Heavy-Press Line to Fill $940M Order Book",
+        "body": "Renn committed $310M to a new press bay at the flagship works, targeting first output within fourteen months to absorb the record heavy-press backlog. Machines chief Garrick Vale said the expansion adds roughly 40% forming capacity, though Renn acknowledged the timeline leaves 'no margin for slippage.' The move doubles down on the post-split thesis that a leaner Carrowforge can outpace legacy rivals on turnaround time.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -5902,7 +5912,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82746,
+    "lastEventCycle": 82762,
     "events": [
       {
         "cycle": 0,
@@ -6058,6 +6068,16 @@
         "size": "standard",
         "head": "Drayton Freight Beats and Raises as Warehouse Automation Contract Begins Booking",
         "body": "Drayton Freight topped estimates as the first installations under its $900M continent-spanning automation contract began contributing revenue. CEO Emil Holt lifted full-year guidance for the second time, citing faster-than-planned deployment across three regional hubs. The company said the pallet-lift fleet deal continues to run at full ramp alongside the new work.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82762,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drayton Freight Adds $420M Expansion to Warehouse Automation Contract",
+        "body": "Emil Holt secured an expanded scope on the continent-spanning automation deal, adding 22 sites and lifting total contract value to roughly $1.32B. The extension follows faster-than-expected booking on the original award and pulls forward material-handling deliveries into next year. Holt called the client's decision to widen the rollout 'the strongest validation yet' of Drayton's execution.",
         "effects": {
           "logistics": 0.13
         }
@@ -9038,7 +9058,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82749,
+    "lastEventCycle": 82762,
     "events": [
       {
         "cycle": 0,
@@ -9244,6 +9264,16 @@
         "size": "standard",
         "head": "Halcrest Signs Flagship Boutique Accord to Ride Meridian Momentum",
         "body": "Halcrest struck a distribution accord to open twelve owned boutiques across three luxury capitals, capitalizing on the sold-out Meridian Grand Complication. CEO Iris Marrow framed the roughly $210 million rollout as converting a hit product into a controlled retail footprint. The first flagship is slated to open within six months, timed to a limited Meridian follow-up series.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82762,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halcrest Extends Meridian Line With Slimmer Meridian Reserve at $28,500",
+        "body": "Iris Marrow unveiled the Meridian Reserve, a thinner three-day-power variant priced to widen the range below the sold-out Grand Complication. Initial allocation runs to 4,200 pieces across the new flagship boutiques, with Marrow calling it 'the volume engine the comeback needs.' The launch tests whether Halcrest can broaden Meridian's appeal without diluting its scarcity halo.",
         "effects": {
           "luxury": 0.13
         }
@@ -12771,18 +12801,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82756,
+    "lastEventCycle": 82762,
     "events": [
-      {
-        "cycle": 82608,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Lhaus Industries Rebounds as Fourth Cell-Pack Line Reaches Full Output",
-        "body": "Lhaus topped estimates with revenue of $9.8 billion, as the fourth cell-pack line ramped to full capacity and startup costs that dented prior margins rolled off. CEO Cole Brandt said the record backlog behind the $31B deal is now clearing 'faster than modeled,' with operating margin recovering to 14%. The company reaffirmed plans to evaluate a fifth line.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82616,
         "kind": "major_deal",
@@ -13011,6 +13031,16 @@
         "body": "Cole Brandt confirmed the $2.1B Kellstrom deal has closed and will anchor a standalone Power & Storage division, folding in Lhaus's existing cell operations. The unit targets $1.4B in revenue within three years, with Kellstrom's Renfield plant retooled to supply Lhaus vehicle platforms directly. Brandt named the segment 'the third leg' alongside Auto Parts and Vehicles.",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82762,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Lhaus Industries Debuts First Kellstrom-Based Storage Pack Under New Power Division",
+        "body": "Cole Brandt introduced the LX-Cell modular storage unit, the first product to emerge from the Kellstrom integration, targeting fleet depots and small grid installations. Division head Sable Ory said pre-orders cover 60,000 units, with shipments beginning next quarter from the retooled Kellstrom line. Brandt framed the launch as proof the $2.1B acquisition can move beyond parts synergies into standalone revenue.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -17929,7 +17959,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82751,
+    "lastEventCycle": 82762,
     "events": [
       {
         "cycle": 0,
@@ -18117,6 +18147,16 @@
         "size": "major",
         "head": "Vossenspire Holdings Splits Compute and Power Units in Vok's Post-Probe Overhaul",
         "body": "New CEO Maren Vok unveiled a sweeping restructure that separates Vossenspire's compute operations from its troubled Power & Storage arm, with a $610M charge tied to the shuttered storage-bank program. Vok said the split lets the company 'ring-fence the past and fund the future,' pledging to exit the facilities named in the resolved regulatory probe. The plan cuts roughly 1,400 roles across the storage division.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82762,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Vossenspire Holdings Hit With $1.6B Investor Suit Over Storage-Bank Probe Disclosures",
+        "body": "A consolidated shareholder action alleges Vossenspire concealed defects in its storage-bank line for nearly two years before the probe forced Halden Roe's ouster. The complaint seeks $1.6B and names former leadership, though it also drags newly split units into discovery. Maren Vok said the company would 'defend vigorously' while warning the litigation could overshadow the post-probe overhaul for several quarters.",
         "effects": {
           "energy": -0.22
         }
@@ -19125,7 +19165,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82743,
+    "lastEventCycle": 82762,
     "events": [
       {
         "cycle": 0,
@@ -19263,6 +19303,16 @@
         "body": "To service its multi-year national hospital contract, Rhys Vossen authorized a second production shift at the recently opened fourth plant, adding an estimated 400 jobs. The move is expected to cut the record backlog by roughly a third within two quarters. Vossen said capacity now positions Wrengrove to bid on additional regional network contracts.",
         "effects": {
           "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82762,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wrengrove Group Edges Past Estimates as Second Shift Trims Backlog",
+        "body": "Quarterly revenue rose 7% to $1.28B as the new plant's second shift began clearing the record sterile-kit backlog ahead of schedule. Vossen said fill rates on the national hospital contract reached 96%, easing earlier delivery strain. Margins held steady despite added labor costs, reflecting the steady cadence that has defined his tenure.",
+        "effects": {
+          "medical": 0.06
         }
       }
     ]
@@ -19431,7 +19481,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82743,
+    "lastEventCycle": 82762,
     "events": [
       {
         "cycle": 0,
@@ -19559,6 +19609,16 @@
         "body": "Theo Aldous reported a fifth straight quarter of gains as household-goods SKUs added to the Everyroom grower channel lifted revenue 9% year-over-year. Management pointed to strong attach rates between farm inputs and household lines, with the combined channel now representing 18% of consumer sales. Wrenspire modestly raised its dividend, extending a decades-long streak.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82762,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wrenspire Extends Everyroom Grower Channel Into Two New Regions",
+        "body": "Theo Aldous opened Everyroom distribution across the northern grower belt, adding roughly 1,800 farm accounts to the cross-sell network. The measured rollout brings household-goods and farm-inputs SKUs to regions previously served only by third parties. Aldous reiterated the goal of 'steady, defensible reach' over rapid land-grabs.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
