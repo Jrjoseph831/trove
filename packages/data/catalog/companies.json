@@ -2975,7 +2975,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82744,
+    "lastEventCycle": 82760,
     "events": [
       {
         "cycle": 0,
@@ -3159,6 +3159,16 @@
         "size": "standard",
         "head": "Brunridge Works Debuts Aldercraft Fine Goods Line Under National Retail Banner",
         "body": "Brunridge launched Aldercraft, a premium fine-goods range rolling into 1,200 partner stores under its multi-category retail pact. CEO Halia Brennt called it the company's first push upmarket, pairing the new line with refreshed packaging developed in-house. Early placement covers apparel accessories and desk goods, with a devices tie-in planned for later in the year.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82760,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Brunridge Works Lands Second National Retail Banner in Cross-Category Supply Pact",
+        "body": "Halia Brennt announced a multi-year agreement to supply Devices, Packaging, and the Aldercraft fine-goods range to a second national chain, Meriden Stores, worth an estimated $1.3B over four years. The deal broadens Brunridge beyond its founding retail partner and lifts committed volumes across five categories. Shipments begin next quarter from the company's Halverton and Pell River plants.",
         "effects": {
           "consumer": 0.13
         }
@@ -6037,7 +6047,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82745,
+    "lastEventCycle": 82760,
     "events": [
       {
         "cycle": 0,
@@ -6205,6 +6215,16 @@
         "body": "Drossware Industries launched its revamped Purevance cleaning range, the first products fully developed under the overhauled division that Nadia Wold restructured after last year's labeling crisis. The line features simplified, triple-verified labeling and ships to 4,200 retail accounts beginning next month, with management projecting the range to recover roughly two-thirds of shelf space lost during the recall. Wold called the launch 'the clean break we promised, quite literally.'",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82760,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drossware Steadies Further as Reformulated Cleaning Line Gains Shelf Space",
+        "body": "Nadia Wold posted a small beat as the redesigned Cleaning & Jansan range recovered lost retail placements, with distribution up in over 900 stores since the relaunch. Management said the labeling crisis is 'firmly behind us' and returning customer reorders drove the quarter. Lighting and Packaging held flat.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -6636,7 +6656,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82739,
+    "lastEventCycle": 82760,
     "events": [
       {
         "cycle": 0,
@@ -6774,6 +6794,16 @@
         "body": "Dunmorestone edged past estimates as its expanded Plumbing & Fixtures plant lifted output alongside the maturing regional restaurant supply deal. Orla Mercer pointed to balanced growth across both segments and reaffirmed full-year guidance. Order backlog rose 9% on the quarter.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82760,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Dunmorestone Wins Multi-Site Restaurant Group Contract for Food Service and Fixtures",
+        "body": "Orla Mercer secured a combined Food Service and Plumbing & Fixtures supply contract with the 210-location Caldwell Hospitality group, valued near $640M over five years. The award pairs the company's ramping restaurant business with output from its newly expanded fixtures plant. Mercer called it 'a natural extension of steady work well done.'",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -6962,16 +6992,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82749,
+    "lastEventCycle": 82760,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Erretmark Works — Driven by the very few",
-        "body": "Erretmark builds vehicles the way a tailor cuts a coat: slowly, by hand, for someone specific. Their premium and mid-range coupes carry the engineering, while the flagship luxury machines carry the legend, low production, longer waiting lists, coachwork measured in months. Owners speak of them in hushed tones at the right sort of gathering. Erretmark has never chased volume and never apologized for it. To drive one is to announce, without a word, exactly where you stand.",
-        "effects": {}
-      },
       {
         "cycle": 82518,
         "kind": "expansion",
@@ -7200,6 +7222,16 @@
         "body": "Erretmark Works reported deliveries up 18% on the quarter, driven by first shipments under the continental fleet accord and sustained output from the three Veyron halls. CEO Aurelia Garr said margin held firm despite the cross-border ramp, crediting standardized tooling across the expanded network. The house lifted full-year delivery guidance for the second consecutive quarter.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82760,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Erretmark Works Faces Cross-Border Probe Into Veyron Braking Systems After Fleet Reports",
+        "body": "Regulators in two of Erretmark's continental markets opened a joint investigation into braking-component failures on roughly 40,000 Veyron units delivered under the $2.1B fleet accord. Aurelia Garr said the company is 'fully cooperating' and has paused new Veyron deliveries pending review, a move that could disrupt the record delivery cadence touted last quarter. The fleet customer has withheld part of a scheduled payment.",
+        "effects": {
+          "automotive": -0.22
         }
       }
     ]
@@ -9617,18 +9649,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82754,
+    "lastEventCycle": 82760,
     "events": [
-      {
-        "cycle": 82623,
-        "kind": "earnings_miss",
-        "size": "standard",
-        "head": "Halhold Systems Misses as Carve-Out Costs Weigh on Vale's First Full Quarter",
-        "body": "Halhold posted margins of 11.2%, below the 14% guided, as one-time separation charges from the Northgate exit ran to $86 million. Corin Vale defended the shortfall as \"the price of a clean balance sheet,\" pointing to firming core Compute orders that he expects to lift results next period.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82629,
         "kind": "major_deal",
@@ -9850,6 +9872,16 @@
         "head": "Halhold Systems Ousts Marcus Thorne as Losses and Payout Weigh",
         "body": "The Halhold board removed Marcus Thorne after a third consecutive miss and mounting fallout from the $2.1B reliability payout, naming reliability-engineering chief Ines Corvalan as chief executive. Corvalan pledged to stabilize Compute yields and rebuild customer trust, warning that a return to growth remains 'several quarters out.' The shakeup ends Thorne's turbulent tenure that began just last year.",
         "effects": {}
+      },
+      {
+        "cycle": 82760,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Systems Debuts Meridian Compute Platform in First Move Under New Leadership",
+        "body": "Newly installed CEO Ines Corvalan unveiled the Meridian compute line, pitched as a reliability-first successor built around the redundancy systems funded by last year's $2.1B payout. The launch targets customers burned by prior outages, with early commitments from three enterprise accounts. Corvalan framed it as the turning point after a bruising stretch of misses and restructuring.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -10111,7 +10143,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82740,
+    "lastEventCycle": 82760,
     "events": [
       {
         "cycle": 0,
@@ -10260,6 +10292,16 @@
         "effects": {
           "hospitality": 0.06
         }
+      },
+      {
+        "cycle": 82760,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Hearthstone Group Nudges Higher as Refill Network Passes 340 Depots",
+        "body": "Aurelia Aldous reported a modest quarterly beat, with revenue up 4% as the bulk refill program reached 342 depots and same-depot traffic held firm. Cleaning & Jansan margins widened slightly on refill-cartridge reuse. Management reaffirmed its measured full-year outlook.",
+        "effects": {
+          "hospitality": 0.06
+        }
       }
     ]
   },
@@ -10274,7 +10316,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82746,
+    "lastEventCycle": 82760,
     "events": [
       {
         "cycle": 0,
@@ -10450,6 +10492,16 @@
         "size": "standard",
         "head": "Hesperforge Supply Beats as Fourth Mill Nears Startup and Marine Backlog Holds",
         "body": "Hesperforge posted another beat as marine-grade framework deliveries against its $780M follow-on order accelerated. CEO Sable Halloran said the $600M fourth mill remains on track to begin production next quarter, easing capacity strain that has capped output. Management said the marine backlog still stretches beyond twelve months.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82760,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Hesperforge Supply Beats as Fourth Mill Comes Online and Marine Backlog Extends",
+        "body": "Sable Halloran reported an 11% revenue gain as the fourth mill reached full startup, adding structural-materials capacity just as the marine framework backlog stretched into a third year. Deliveries under the $780M follow-on order began on schedule. Halloran raised the full-year output target modestly.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -12936,7 +12988,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82746,
+    "lastEventCycle": 82760,
     "events": [
       {
         "cycle": 0,
@@ -13154,6 +13206,16 @@
         "body": "As the $4.2B Larenthal merger closes, Maison & Vale outlined a plan to consolidate roughly 40 overlapping household-goods labels and combine three distribution networks. CEO Rhys Kessler targeted $310M in annual cost synergies by the second year while pledging no disruption to Vestrand supply lines. Investors will watch execution risk as Kessler digests his largest deal yet.",
         "effects": {
           "hospitality": -0.13
+        }
+      },
+      {
+        "cycle": 82760,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Maison & Vale Opens Consolidated Larenthal Distribution Hub as Kessler Eyes Next Target",
+        "body": "The combined group unveiled a 1.1-million-square-foot distribution hub in Torvane County, folding six legacy Larenthal warehouses into a single node expected to shave 14% off fulfillment costs. Rhys Kessler told analysts the integration is 'ahead of pace' and hinted the balance sheet could support a further tuck-in acquisition within two quarters. Household Goods volumes rose 9% sequentially as the merged brand roster settled.",
+        "effects": {
+          "hospitality": 0.13
         }
       }
     ]
