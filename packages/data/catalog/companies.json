@@ -2555,7 +2555,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82745,
+    "lastEventCycle": 82761,
     "events": [
       {
         "cycle": 0,
@@ -2711,6 +2711,16 @@
         "size": "standard",
         "head": "Brunforge Holdings Beats Once More as Second-Wave Flagships Begin Contributing",
         "body": "Brunforge Holdings reported quarterly revenue of $1.94B, up 11% year over year, as the first of its second-wave Vellan flagships opened ahead of schedule. Food Service margins expanded another 60 basis points, and CEO Kestrel Bramm reaffirmed the full 15-store target while noting the company will 'hold the same measured cadence' rather than accelerate. Household Goods also posted modest growth on restocking demand.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82761,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Brunforge Holdings Launches Third Vellan Wave, Pushing Flagship Count Past Forty",
+        "body": "Kestrel Bramm confirmed a third wave of twelve Vellan flagships, bringing the total network beyond forty locations across Devices, Fine Goods and Food Service formats. The disciplined rollout follows two straight quarters of margin-accretive results from earlier waves. Bramm said the pace remains 'deliberate, funded from operations, and self-limiting.'",
         "effects": {
           "consumer": 0.13
         }
@@ -3179,25 +3189,15 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1894,
-    "ceo": "Dagny Frost",
+    "ceo": "Ansel Voight",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.81,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82754,
+    "lastEventCycle": 82761,
     "events": [
-      {
-        "cycle": 82591,
-        "kind": "product_launch",
-        "size": "major",
-        "head": "Brunstone & Sons Unveils Vault Cell Pro as Lambourne Doubles Down on Storage",
-        "body": "CEO Royce Lambourne took the stage to launch Vault Cell Pro, a higher-density grid module claiming a 30% capacity gain per unit and a nine-year service warranty. Lambourne framed the release as proof the storage pivot is the company's future, pledging to convert two vehicle lines to cell production. Early commitments were said to build on the recent $1.8B grid-scale order.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82598,
         "kind": "safety_probe",
@@ -3421,6 +3421,14 @@
         "effects": {
           "automotive": -0.22
         }
+      },
+      {
+        "cycle": 82761,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Brunstone & Sons Ousts Frost as Board Seeks Steadier Hand After Vault II Whiplash",
+        "body": "The board removed Dagny Frost following the demand shortfall and 1,400-job restructure that erased her earlier recovery claims, naming operations chief Ansel Voight as chief executive effective immediately. Voight pledged a 'no-surprises' operating plan and paused all further Vault II capacity decisions pending a demand review. Shares had swung violently through Frost's tenure of bold public reversals.",
+        "effects": {}
       }
     ]
   },
@@ -4641,7 +4649,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82733,
+    "lastEventCycle": 82761,
     "events": [
       {
         "cycle": 0,
@@ -4737,6 +4745,16 @@
         "size": "flash",
         "head": "Castle Devices Logs Yet Another Steady Quarter on Consumables Demand",
         "body": "Castle Devices reported revenue of $520M, in line with expectations, as consumables volumes held firm across hospital and clinic channels. Bram Calder pointed to renewed multi-year supply agreements as the backbone of the quarter's stability. The company left guidance unchanged for the fourth straight period.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82761,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castle Devices Marks Another Steady Quarter as Consumables Volumes Hold Firm",
+        "body": "Bram Calder posted broadly flat results in line with expectations, with Medical Consumables shipments holding across hospital and clinic channels. Operating margin held at 19 percent for the fourth straight period. Calder reiterated the house's focus on reliable supply over expansion.",
         "effects": {
           "medical": 0.06
         }
@@ -5488,7 +5506,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82748,
+    "lastEventCycle": 82761,
     "events": [
       {
         "cycle": 0,
@@ -5684,6 +5702,16 @@
         "size": "flash",
         "head": "Cranecraft Stretches Streak to Fourteen as Post-Planting Farm Orders Hold",
         "body": "Cranecraft posted its fourteenth consecutive beat, though growth eased as planting-season demand cooled into a steadier maintenance-order mix. Mira Garr noted textile pricing 'remained firm enough to offset seasonal softening in equipment.' The company kept guidance unchanged.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82761,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Extends Streak to Fifteen as Textile Orders Cushion Seasonal Lull",
+        "body": "Mira Garr reported a fifteenth consecutive quarterly beat, with Raw Textiles demand offsetting the expected post-planting dip in Farm Equipment. Revenue edged up 2 percent to 388 million on stable margins. Garr characterized the result as 'steady work in a quiet season.'",
         "effects": {
           "manufacturing": 0.06
         }
@@ -8761,18 +8789,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82753,
+    "lastEventCycle": 82761,
     "events": [
-      {
-        "cycle": 82610,
-        "kind": "award",
-        "size": "flash",
-        "head": "Gromford Works Meridian Skeleton Series Earns Horological Design Honor",
-        "body": "The limited Meridian skeleton line took a design commendation at the annual Timepiece Guild showcase, adding shine to Corin Aldwych's momentum run. The recognition arrives as the small-batch series nears sell-through just weeks after launch.",
-        "effects": {
-          "luxury": 0.06
-        }
-      },
       {
         "cycle": 82616,
         "kind": "product_launch",
@@ -8993,6 +9011,16 @@
         "size": "standard",
         "head": "Gromford Works Tops Estimates as Emblem Timepieces Lift Margins",
         "body": "Gromford beat expectations with revenue up 22%, driven by the Emblem timepiece extension and the global department-chain rollout reaching 140 storefronts. Halvard Pryce said timepieces carried a gross margin roughly eight points above the fine-goods average, boosting overall profitability. Pryce signaled a limited-edition Emblem release timed for the coming holiday window.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82761,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Gromford Works Debuts Emblem Signature Editions as Pryce Chases Prestige Halo",
+        "body": "Halvard Pryce unveiled a limited Emblem Signature range spanning hand-finished Fine Goods and a 500-piece skeletonized timepiece priced at four times standard Emblem tiers. The launch, timed to the winter gifting window, aims to cement the line's move upmarket after its department-chain expansion. Pryce told the audience the editions would 'redefine what the Emblem name commands.'",
         "effects": {
           "luxury": 0.13
         }
@@ -11941,7 +11969,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82731,
+    "lastEventCycle": 82761,
     "events": [
       {
         "cycle": 0,
@@ -12027,6 +12055,16 @@
         "size": "flash",
         "head": "Korrgrave Mfg. Commissions Southern Blending Line, Adds Specialty Input Range",
         "body": "Aurelia Halloran's company brought its Southern blending line into full commissioning on schedule, adding a modest specialty farm-input range aimed at regional growers. The line adds roughly 8% to blending capacity and complements the steady Northern plant. Management expects a gradual ramp consistent with its long-horizon approach.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82761,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Korrgrave Mfg. Holds Streak as Southern Specialty Range Begins Contributing",
+        "body": "Aurelia Halloran reported a modest in-line beat as the newly commissioned southern blending line began adding specialty Farm Inputs revenue. Contribution was small but ahead of the house's cautious first-quarter targets. Halloran said adoption would 'build slowly, as these things do.'",
         "effects": {
           "agriculture": 0.06
         }
@@ -14980,7 +15018,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82744,
+    "lastEventCycle": 82761,
     "events": [
       {
         "cycle": 0,
@@ -15146,6 +15184,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Beats as Full Kelvarn Corridor Enters Peak Build",
         "body": "Skarngrove reported a strong quarter as the terminal-span, approach-roads, and legacy corridor packages all hit peak construction simultaneously. CEO Quinn Fenn said structural-materials throughput reached a multi-year high, with fasteners and fixings running fully committed. The firm reaffirmed guidance through the corridor's completion.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82761,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Skarngrove & Sons Secures Vantry Rail Junction Order as Kelvarn Winds Down",
+        "body": "Quinn Fenn confirmed a fixings-and-structural package for the Vantry rail junction valued at 210 million, sequencing the work to begin as Kelvarn corridor volumes taper. The deal extends Skarngrove's regional backlog by an estimated seven quarters. Fenn framed the win as 'the natural bridge from one build cycle into the next.'",
         "effects": {
           "construction": 0.13
         }
@@ -18341,7 +18389,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82749,
+    "lastEventCycle": 82761,
     "events": [
       {
         "cycle": 0,
@@ -18539,6 +18587,16 @@
         "body": "Vossenstead Supply returned to its winning cadence with a fifteenth beat, as the newly opened fifth distribution center began fulfilling Food Service orders ahead of schedule. CEO Bram Thorne noted Plumbing & Fixtures volumes also firmed on steady contractor demand. Management characterized the quarter as a clean return to form after the expansion's start-up costs.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82761,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenstead Supply Runs Streak to Sixteen as Fifth Center Reaches Full Throughput",
+        "body": "Bram Thorne logged a sixteenth consecutive beat as the newly opened fifth distribution center hit full shipping capacity ahead of schedule, lifting Food Service and Plumbing & Fixtures volumes. Revenue rose 6 percent to 512 million. Thorne signaled early scouting for a sixth site but stressed 'no commitment until the numbers earn it.'",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
