@@ -5739,7 +5739,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82745,
+    "lastEventCycle": 82763,
     "events": [
       {
         "cycle": 0,
@@ -5895,6 +5895,16 @@
         "size": "standard",
         "head": "Cranegrove Tops Estimates Again as Record Backlog Underpins Steady Growth",
         "body": "Cranegrove reported earnings ahead of expectations, with Earthmoving revenue up 9% as work on the extended Corridor framework accelerated. CEO Vale Calder pointed to the record $3.4B backlog as providing 'visibility well into the decade' and reaffirmed a disciplined capital plan focused on fleet renewal. Margins held steady despite modest wage pressure.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82763,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Cranegrove Opens Second Assembly Line to Clear Record Corridor Backlog",
+        "body": "Cranegrove commissioned a second earthmoving assembly line at its Halbeck facility to work through a record $3.4 billion backlog anchored by the Corridor Framework add-on. CEO Vale Calder, keeping to his measured cadence, framed the $180 million investment as capacity discipline rather than a growth gamble. The line is expected to reach full output by mid-2028.",
         "effects": {
           "construction": 0.13
         }
@@ -8551,25 +8561,15 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1983,
-    "ceo": "Sable Renwick",
+    "ceo": "Halden Voss",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.64,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82753,
+    "lastEventCycle": 82763,
     "events": [
-      {
-        "cycle": 82528,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Greywater Grid Signs Landmark Storage Pact to Anchor New Compute Campus",
-        "body": "Greywater inked a 12-year, 4.1 billion agreement to supply storage and balancing capacity for a sprawling compute campus, the largest contract in the company's history. The deal leans on the record-density cells revealed at the Halloran Facility, with first banks due online within 18 months. Vale Halloran called it 'the moment Greywater stops selling power and starts selling certainty.'",
-        "effects": {
-          "energy": 0.22
-        }
-      },
       {
         "cycle": 82539,
         "kind": "earnings_beat",
@@ -8795,6 +8795,14 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82763,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Greywater Grid Ousts Renwick as Board Installs Crisis Chief Amid Discharge Fallout",
+        "body": "Greywater Grid's board removed CEO Sable Renwick as the discharge scandal and $2.4 billion partner lawsuit engulfed the company, naming restructuring specialist Halden Voss to stabilize operations. Voss inherits a regulatory probe, a fractured compute partnership, and mounting demands for a full audit of the closed-loop reservoir claims. Directors said the leadership change was necessary to 'restore credibility with regulators and counterparties.'",
+        "effects": {}
       }
     ]
   },
@@ -12548,18 +12556,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82756,
+    "lastEventCycle": 82763,
     "events": [
-      {
-        "cycle": 82586,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Korrwright Works Debuts Sennfeld Revival Line Under Unified Heritage Division",
-        "body": "The luxury timepiece maker unveiled the Sennfeld Revival, a 12-model collection blending the acquired atelier's tourbillon craft with Korrwright's Velloux movement, priced from 38,000. CEO Dunmore Carrow called the launch 'proof the folding-in worked,' with initial allocations already committed to flagship boutiques in three markets.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82593,
         "kind": "earnings_beat",
@@ -12786,6 +12784,16 @@
         "body": "Dunmore Carrow presented the Halbrook Perpetual, a perpetual calendar priced at $148,000 and running on the house's own escapement and movement architecture. The launch marks the first Korrwright complication with zero outsourced components, a milestone Carrow called 'the payoff of the Halbrook campus.' Initial allocation of 220 pieces sold out to authorized salons within days.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82763,
+        "kind": "award",
+        "size": "standard",
+        "head": "Korrwright Works Takes Complication Prize at Verenne for Halbrook Perpetual",
+        "body": "The Halbrook Perpetual earned the Complication Prize at the Verenne Horology Salon, a second consecutive honor for Korrwright and validation of its fully in-house strategy. CEO Dunmore Carrow said the award confirms the wisdom of the Halbrook Movement Campus buildout now underway. Judges cited the escapement's precision and the achievement of a perpetual calendar built entirely without outside suppliers.",
+        "effects": {
+          "luxury": 0.13
         }
       }
     ]
@@ -13299,18 +13307,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82755,
+    "lastEventCycle": 82763,
     "events": [
-      {
-        "cycle": 82569,
-        "kind": "lawsuit",
-        "size": "major",
-        "head": "Marlgear Supply Hit With Class Action as Drennan Mills Injuries Mount",
-        "body": "A consortium of plaintiffs filed a class action seeking 480 million in damages, citing the leaked memos showing Atlas defects were flagged before launch. Halden Vossen, whose public defense of the line drew scrutiny, now faces calls from three major shareholders for an independent board review. Regulators signaled the safety probe could escalate to formal charges.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82576,
         "kind": "safety_probe",
@@ -13531,6 +13529,16 @@
         "size": "major",
         "head": "Marlgear Supply Slapped With $1.4B Suit as Regulators Refer Kessel Fault Case for Prosecution",
         "body": "A consolidated class action seeking $1.4B was filed against Marlgear over the Kessel fault, hours after regulators referred the records-destruction findings for criminal prosecution of former executives. New CEO Priya Vantell pledged full cooperation and set aside a $600M reserve, warning that the full device-line probe could yield further liabilities. Ousted chief Dane Kessler now faces personal charges.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82763,
+        "kind": "restructure",
+        "size": "major",
+        "head": "Marlgear Supply to Exit Consumer Devices, Slash 3,200 Jobs in Blakely Overhaul",
+        "body": "Marlgear Supply announced a sweeping restructuring that will wind down its consumer device unit and cut roughly 3,200 jobs as CEO Corin Blakely retreats to its industrial machines core amid the Kessel fault fallout. The company will take a $900 million charge and set aside reserves against the pending $1.4 billion suit and criminal referral. Blakely called the move 'painful but the only path to a clean, defensible business.'",
         "effects": {
           "technology": -0.22
         }
@@ -13964,7 +13972,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82751,
+    "lastEventCycle": 82763,
     "events": [
       {
         "cycle": 0,
@@ -14168,6 +14176,16 @@
         "body": "Marrowstone Build secured a $780M design-and-build package for the first phase of a coastal freight rail corridor, its biggest single contract on record and enough to push backlog beyond $2.1B. CEO Delphine Vaugh said the win 'changes the scale of what we can bid on' and confirmed the company is expanding its heavy earthmoving fleet to service the multi-year program. Work is slated to begin next quarter.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82763,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Marrowstone Build Beats Again as Coastal Rail Award Drives Backlog Past $2.2B",
+        "body": "Marrowstone posted another quarterly beat as the $780 million coastal rail corridor lifted its backlog beyond $2.2 billion, more than doubling year-over-year. CEO Delphine Vaugh credited disciplined bidding and said margins held despite the rapid intake of new work. She cautioned that near-term staffing needs would temper the pace of future awards.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -14559,7 +14577,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82746,
+    "lastEventCycle": 82763,
     "events": [
       {
         "cycle": 0,
@@ -14707,6 +14725,16 @@
         "body": "With its fourth cold-chain running near capacity, Palettstead greenlit a fifth facility backed by a $340M outlay and a pre-signed anchor tenant. CEO Orla Marrow said modular insulated packaging demand had reinforced the case for adding integrated cold storage. The site is slated to break ground within two quarters.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82763,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Palettstead Holdings Edges Past Estimates as Modular Packaging Demand Holds",
+        "body": "Palettstead reported a modest earnings beat as modular insulated packaging orders stayed firm and the fourth cold-chain ran near capacity. CEO Orla Marrow said the fifth cold-chain investment remains on schedule for a late-2028 startup. Volume growth offset softer pricing in legacy packaging lines.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -16367,18 +16395,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82754,
+    "lastEventCycle": 82763,
     "events": [
-      {
-        "cycle": 82562,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Thronehaus & Co. Acquires Casing Specialist Aldren to Deepen In-House Craft",
-        "body": "Fresh off its Sovereign Collection award, Thronehaus struck a deal to buy case-and-bracelet maker Aldren for a reported sum near 240 million, bringing another key component under one roof. CEO Cora Dray said vertical control now spans dials, movements, and casings, insulating the house from supplier bottlenecks. The purchase is expected to close within two quarters pending review.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82571,
         "kind": "expansion",
@@ -16605,6 +16623,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Acquires Meridian Dial Works to Secure Complications Talent",
         "body": "Cora Dray struck again, agreeing to buy specialist movement house Meridian Dial Works for a reported $180M to bring perpetual-calendar and tourbillon expertise in-house. The deal folds Meridian's 40-person atelier into the Aurel program and secures a supply of complications Thronehaus had previously sourced externally. Dray framed the purchase as 'vertical craftsmanship,' extending her long record of acquisitive expansion.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82763,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Thronehaus & Co. Debuts Aurel Grand Complication Powered by Meridian Dial Talent",
+        "body": "Thronehaus unveiled the Aurel Grand Complication, a perpetual-calendar minute repeater that marks the first release drawing on the newly acquired Meridian Dial Works team. CEO Cora Dray positioned the piece as a statement of vertical ambition, with production capped at 120 units and pricing that places it atop the house's catalog. The launch extends the momentum from the Aurel line's Timepiece of the Year win at Vellcourt.",
         "effects": {
           "luxury": 0.13
         }
@@ -18918,18 +18946,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82751,
+    "lastEventCycle": 82763,
     "events": [
-      {
-        "cycle": 82524,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Woldmark Unveils Halcyon Compute Line at Annual Showcase",
-        "body": "Woldmark introduced its Halcyon server family, promising 35% better throughput per rack than its prior generation. CEO Cole Carrow took the stage personally, declaring the launch 'the boring revolution our customers actually asked for.' Volume shipments are slated for early next quarter.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82534,
         "kind": "major_deal",
@@ -19148,6 +19166,16 @@
         "size": "major",
         "head": "Woldmark's Meridian Doubles Throughput in Landmark Benchmark as Sonn Declares Comeback",
         "body": "Woldmark disclosed independently verified results showing its Meridian compute modules deliver 2.1x the sustained throughput of the retired Halcyon line at comparable power draw. CEO Petra Sonn, never shy of a headline, called Meridian 'the machine that erases the last two years,' and confirmed three unnamed hyperscale customers have moved to full production orders. The results mark the first clear technical vindication since the Halcyon 4 collapse.",
+        "effects": {
+          "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82763,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Woldmark Lands $2.1B Meridian Supply Pact as Sonn Bets Big on Capacity",
+        "body": "Woldmark secured a landmark $2.1 billion multiyear supply agreement to furnish Meridian compute units to a consortium of enterprise buyers, its largest single contract since the Halcyon era. CEO Petra Sonn, characteristically bullish, pledged to double Meridian output within eighteen months and called the deal 'proof the comeback is real.' The pact locks in volume commitments that analysts say could underpin revenue guidance for years.",
         "effects": {
           "technology": 0.22
         }
