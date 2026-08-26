@@ -1048,7 +1048,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82741,
+    "lastEventCycle": 82765,
     "events": [
       {
         "cycle": 0,
@@ -1154,6 +1154,16 @@
         "size": "flash",
         "head": "Ashbystead Holdings Logs Tenth Straight Beat on Steady Equipment Renewal Cycle",
         "body": "The medical-equipment maker notched a tenth consecutive quarterly beat, with revenue up 4% on reliable hospital renewals and service contracts. Chief executive Cora Holt credited long-standing institutional relationships and a conservative order book. Guidance was left unchanged for the remainder of the year.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82765,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ashbystead Holdings Extends Streak to Eleven on Dependable Hospital Renewals",
+        "body": "Ashbystead posted its eleventh consecutive beat as hospital equipment renewal orders held steady across its core imaging and monitoring lines. Cora Holt credited long-standing service contracts and cautious inventory management for the unbroken run.",
         "effects": {
           "medical": 0.06
         }
@@ -1806,18 +1816,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82758,
+    "lastEventCycle": 82765,
     "events": [
-      {
-        "cycle": 82602,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Boreas Power Tops Estimates as Hollowmere Lease Revenue Flows In",
-        "body": "Boreas reported quarterly revenue of $1.24B, ahead of the $1.16B consensus, driven by contracted payments from its four Hollowmere anchor tenants coming fully online. CEO Mira Thorne said power-and-storage utilization at the campus hit 91%, and reaffirmed the $1.9B expansion timeline. Management flagged rising interconnection costs as the only near-term drag.",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82608,
         "kind": "major_deal",
@@ -2046,6 +2046,16 @@
         "body": "Thorne secured a decade-long offtake agreement with a consortium of data-center operators that commits nearly all output from the first six compute-paired campuses, valuing the deal at $4.5B over ten years. The pact converts the $3.2B build program from speculative buildout into contracted revenue and provides collateral for a further financing round Thorne has signaled is imminent. Analysts called it the largest single commitment in the company's history under the restless chief.",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82765,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Boreas Power Energizes First Compute-Paired Campus Under $4.5B Supply Pact",
+        "body": "Boreas brought its lead compute-paired campus online, the first delivery against the $4.5B anchor supply agreement. Mira Thorne said two further sites will follow within twelve months, lifting committed capacity across the program to 1.9 gigawatts. The house reaffirmed its widened $3.2B build plan remains fully financed.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -7506,18 +7516,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82757,
+    "lastEventCycle": 82765,
     "events": [
-      {
-        "cycle": 82554,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Fennmoor Buys Sensor Maker Threll to Feed Larkspur Diagnostics Line",
-        "body": "Dorian Brandt announced the 220 million acquisition of Threll Instruments, a specialist in micro-fluidic sensors that already supply the Larkspur diagnostics platform. Brandt framed the deal as securing the supply chain behind Larkspur's recent rapid-testing milestone, adding that Threll's 340 staff would fold into the medical unit. It marks Fennmoor's third bolt-on purchase in two years.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82563,
         "kind": "product_launch",
@@ -7746,6 +7746,16 @@
         "body": "Fennmoor said it will merge the recently acquired Halquist Instruments and Carrow units into a new Diagnostics & Imaging division, consolidating three facilities and eliminating an estimated 340 overlapping roles. Dorian Brandt framed the move as necessary to capture $90M in annual synergies, though integration charges of roughly $65M will hit the current quarter. Analysts noted the pace of dealmaking has left the balance sheet stretched heading into the reorganization.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82765,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fennmoor Beats as New Medical Diagnostics Division Posts First Combined Profit",
+        "body": "Fennmoor topped estimates as the unified Halquist-Carrow diagnostics division delivered its first profitable quarter since the mergers. Dorian Brandt said cross-selling into existing Devices and Industrial Machines channels drove diagnostics revenue up 22%, with integration savings tracking ahead of plan. Brandt hinted the house is 'far from done' scouting further medical targets.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -9973,25 +9983,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1971,
-    "ceo": "Anselm Rocha",
+    "ceo": "Naomi Fenwick",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.89,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82758,
+    "lastEventCycle": 82765,
     "events": [
-      {
-        "cycle": 82628,
-        "kind": "recall",
-        "size": "major",
-        "head": "Halhold Works Recalls Aveline Bedside Monitors as Probe Widens",
-        "body": "Halhold issued a voluntary recall of roughly 82,000 Aveline bedside monitors after regulators flagged intermittent alarm failures tied to the units under review. CEO Lena Faircloth acknowledged the recall would erase an estimated $190M in near-term revenue and suspend new Aveline shipments pending a firmware fix. The move came just weeks after the safety probe opened, deepening pressure on the company's flagship medical line.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82633,
         "kind": "lawsuit",
@@ -10213,6 +10213,14 @@
         "effects": {
           "technology": -0.13
         }
+      },
+      {
+        "cycle": 82765,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Halhold Works Ousts CEO Anselm Rocha as Board Moves On From Aveline Recall Fallout",
+        "body": "Halhold's board removed Anselm Rocha after the Aveline Successor recall swelled to an estimated $410M in charges and gutted Devices margins. Chair Idris Vale said the company needs 'stability and a clean safety culture' after two quarters of turbulence. Veteran operations chief Naomi Fenwick steps in immediately, pledging a full audit of the Wire & Cable and Medical Equipment lines.",
+        "effects": {}
       }
     ]
   },
@@ -12150,7 +12158,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82751,
+    "lastEventCycle": 82765,
     "events": [
       {
         "cycle": 0,
@@ -12346,6 +12354,16 @@
         "size": "standard",
         "head": "Korrworks Breaks Ground on Third Hub as Anchor Tenant Triggers Early Build",
         "body": "Korrworks began construction on its third material-handling hub weeks ahead of schedule after the anchor tenant from its $260M fit-out exercised an early-occupancy clause. CEO Rhys Throne said the site is now expected to reach initial operating capacity within 14 months, calling the pace 'the fastest ramp in the company's pipeline.' The move brings committed hub capacity to roughly triple the level of two years ago.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82765,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrworks Beats as Third-Hub Anchor Tenant Begins Ramp-Up Payments",
+        "body": "Korrworks topped forecasts as early lease and fit-out payments from its third-hub anchor tenant flowed through the books ahead of schedule. Rhys Throne said the $260M material-handling contract is now roughly 40% installed, with the hub tracking toward a phased opening. Management nudged full-year guidance higher on the faster ramp.",
         "effects": {
           "logistics": 0.13
         }
@@ -16823,7 +16841,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82748,
+    "lastEventCycle": 82765,
     "events": [
       {
         "cycle": 0,
@@ -16992,6 +17010,16 @@
         "effects": {
           "logistics": 0.06
         }
+      },
+      {
+        "cycle": 82765,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Notches Modest Beat as Packaging Volumes Hold Firm",
+        "body": "Vantor Lines edged past expectations again, with Halden Vossen citing steady non-grocery packaging demand and disciplined cost control. Quarterly margins held at 11.4%, extending the house's quiet, unbroken run of dependable results.",
+        "effects": {
+          "logistics": 0.06
+        }
       }
     ]
   },
@@ -17006,18 +17034,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82758,
+    "lastEventCycle": 82765,
     "events": [
-      {
-        "cycle": 82581,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Varnvale & Sons Acquires Heritage Jeweler Duquesne in $1.4-Billion Reach Into Fine Goods",
-        "body": "Bram Wold has struck again, folding storied gem house Duquesne et Fils into the Varnvale empire for $1.4 billion in a move that pairs the newly integrated timepiece works with a marquee jewelry name. Wold called it 'the final pillar of a truly complete luxury house,' pointing to Duquesne's stone-cutting ateliers as the crown of a two-year acquisition spree. Analysts note the deal pushes Varnvale's total buyout spending past $5 billion since the Corveau purchase.",
-        "effects": {
-          "luxury": 0.22
-        }
-      },
       {
         "cycle": 82588,
         "kind": "restructure",
@@ -17244,6 +17262,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Beats Again as Thessaly Case Integration Trims Costs",
         "body": "Wold reported margins up 280 basis points as the newly acquired Thessaly Works began supplying cases in-house, eliminating third-party markups across the Timepieces division. Complication output rose 14% year-on-year with the fully integrated Corvane movement house running at capacity. Wold hinted the vertical push was 'not yet finished,' fueling talk of another dial or strap supplier in his sights.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82765,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale & Sons Unveils Corvane Perpetual Line Built on In-House Thessaly Cases",
+        "body": "Varnvale launched its Corvane Perpetual collection, the first line fully cased at the recently acquired Thessaly Works. Bram Wold said vertical integration cut per-unit case costs by 18% while enabling a limited run priced above the house's prior flagships. Early allocations to Fine Goods boutiques are already committed through the season.",
         "effects": {
           "luxury": 0.13
         }
@@ -18242,18 +18270,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82755,
+    "lastEventCycle": 82765,
     "events": [
-      {
-        "cycle": 82568,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Vossenspire Supply Acquires Calderon Motorworks to Broaden Heritage Line",
-        "body": "Fresh off its Elberran Design Salon win, Vossenspire bought the storied Calderon Motorworks for 145 million marks to expand its Heritage Division into hand-built vehicles. CEO Quinn Marrow said Calderon's coachbuilding pedigree would pair naturally with the Renmark and Aldecourt marques. The acquisition adds a flagship workshop and an order book of bespoke commissions.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82578,
         "kind": "product_launch",
@@ -18482,6 +18500,16 @@
         "body": "Vossenspire reported the Corriveaux integration has already captured $98M in annualized synergies, well ahead of pace on Quinn Marrow's $140M goal. Timepiece revenue climbed 14% and Marrow said the vehicle arm would be 'next in line' for consolidation opportunities, fueling speculation of another acquisition.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82765,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Vossenspire Supply Strikes $620M Deal for Coachbuilder Meridian Carrosserie, Deepening Vehicles Push",
+        "body": "Fresh off three straight beats, Quinn Marrow unveiled the acquisition of storied coachbuilder Meridian Carrosserie for $620M, the house's largest outlay in a decade. Marrow said the deal hands Vossenspire bespoke bodywork capacity to pair with its Timepiece momentum, targeting a combined luxury order book north of $2B. Integration will run through a new Vehicles Atelier arm led by longtime lieutenant Sabine Corriveaux.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]

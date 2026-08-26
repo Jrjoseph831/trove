@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-26T01:23:09.254Z",
+  "generatedAt": "2026-08-26T06:52:39.414Z",
   "beats": [
     {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
-      "kind": "expansion",
+      "company": "Ashbystead Holdings",
+      "sector": "medical",
+      "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldouscraft Mfg. Breaks Ground on Fifth Line as Feeder Cable Orders Extend",
-      "body": "Aldouscraft confirmed site work has begun on its fifth extrusion line, with commissioning targeted within nine months at a stated cost of $95M. CEO Soren Ashby said feeder cable order books remain 'comfortably full into next year,' keeping the four existing lines at capacity. The company reiterated its full-year output guidance without change.",
-      "cycle": 82764,
+      "head": "Ashbystead Holdings Extends Streak to Eleven on Dependable Hospital Renewals",
+      "body": "Ashbystead posted its eleventh consecutive beat as hospital equipment renewal orders held steady across its core imaging and monitoring lines. Cora Holt credited long-standing service contracts and cautious inventory management for the unbroken run.",
+      "cycle": 82765,
       "dur": 1
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Boreas Power Energizes First Compute-Paired Campus Under $4.5B Supply Pact",
+      "body": "Boreas brought its lead compute-paired campus online, the first delivery against the $4.5B anchor supply agreement. Mira Thorne said two further sites will follow within twelve months, lifting committed capacity across the program to 1.9 gigawatts. The house reaffirmed its widened $3.2B build plan remains fully financed.",
+      "cycle": 82765,
+      "dur": 2
+    },
+    {
+      "company": "Fennmoor",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Fennmoor Beats as New Medical Diagnostics Division Posts First Combined Profit",
+      "body": "Fennmoor topped estimates as the unified Halquist-Carrow diagnostics division delivered its first profitable quarter since the mergers. Dorian Brandt said cross-selling into existing Devices and Industrial Machines channels drove diagnostics revenue up 22%, with integration savings tracking ahead of plan. Brandt hinted the house is 'far from done' scouting further medical targets.",
+      "cycle": 82765,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Halhold Works Ousts CEO Anselm Rocha as Board Moves On From Aveline Recall Fallout",
+      "body": "Halhold's board removed Anselm Rocha after the Aveline Successor recall swelled to an estimated $410M in charges and gutted Devices margins. Chair Idris Vale said the company needs 'stability and a clean safety culture' after two quarters of turbulence. Veteran operations chief Naomi Fenwick steps in immediately, pledging a full audit of the Wire & Cable and Medical Equipment lines.",
+      "cycle": 82765,
+      "dur": 8
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrworks Beats as Third-Hub Anchor Tenant Begins Ramp-Up Payments",
+      "body": "Korrworks topped forecasts as early lease and fit-out payments from its third-hub anchor tenant flowed through the books ahead of schedule. Rhys Throne said the $260M material-handling contract is now roughly 40% installed, with the hub tracking toward a phased opening. Management nudged full-year guidance higher on the faster ramp.",
+      "cycle": 82765,
+      "dur": 2
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vantor Lines Notches Modest Beat as Packaging Volumes Hold Firm",
+      "body": "Vantor Lines edged past expectations again, with Halden Vossen citing steady non-grocery packaging demand and disciplined cost control. Quarterly margins held at 11.4%, extending the house's quiet, unbroken run of dependable results.",
+      "cycle": 82765,
+      "dur": 1
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Varnvale & Sons Unveils Corvane Perpetual Line Built on In-House Thessaly Cases",
+      "body": "Varnvale launched its Corvane Perpetual collection, the first line fully cased at the recently acquired Thessaly Works. Bram Wold said vertical integration cut per-unit case costs by 18% while enabling a limited run priced above the house's prior flagships. Early allocations to Fine Goods boutiques are already committed through the season.",
+      "cycle": 82765,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Vossenspire Supply Strikes $620M Deal for Coachbuilder Meridian Carrosserie, Deepening Vehicles Push",
+      "body": "Fresh off three straight beats, Quinn Marrow unveiled the acquisition of storied coachbuilder Meridian Carrosserie for $620M, the house's largest outlay in a decade. Marrow said the deal hands Vossenspire bespoke bodywork capacity to pair with its Timepiece momentum, targeting a combined luxury order book north of $2B. Integration will run through a new Vehicles Atelier arm led by longtime lieutenant Sabine Corriveaux.",
+      "cycle": 82765,
+      "dur": 8
     },
     {
       "company": "Aperture Compute",
@@ -52,16 +122,6 @@
       "dur": 8
     },
     {
-      "company": "Holtgate Cloth",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Cloth Logs Another Quiet Beat as Raw-Textile Demand Holds",
-      "body": "Holtgate Cloth reported a fourth consecutive steady quarter, with raw-textile volumes flat to modestly higher under its renewed supply pact. CEO Dorian Carrow offered no change to the company's conservative outlook, citing 'no surprises' across its order base. Margins remained in line with prior periods.",
-      "cycle": 82764,
-      "dur": 1
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "major_deal",
@@ -69,26 +129,6 @@
       "head": "Kessel Drive Signs $1.1B Fleet Supply Pact for Vanta Ultra Packs",
       "body": "Kessel Drive landed a $1.1B agreement to supply Vanta Ultra battery packs to a national commercial fleet operator over three years. CEO Aldric Venn touted the deal as validation of the pack's 20% range gain, with first deliveries slated for next quarter. The company said secured cathode supply gives it confidence to meet the ramp.",
       "cycle": 82764,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrave",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Skarngrave Extends Streak as Jansan and Sterilizer Reorders Stay Steady",
-      "body": "Skarngrave posted another modest beat, marking its longest run of consecutive quarterly gains in over a decade on stable cleaning and sterilizer demand. CEO Orla Dray credited 'dependable reorder patterns' across hospital service contracts, with margins holding flat. The company nudged full-year guidance up by a narrow margin.",
-      "cycle": 82764,
-      "dur": 1
-    },
-    {
-      "company": "Cranegrove",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Cranegrove Opens Second Assembly Line to Clear Record Corridor Backlog",
-      "body": "Cranegrove commissioned a second earthmoving assembly line at its Halbeck facility to work through a record $3.4 billion backlog anchored by the Corridor Framework add-on. CEO Vale Calder, keeping to his measured cadence, framed the $180 million investment as capacity discipline rather than a growth gamble. The line is expected to reach full output by mid-2028.",
-      "cycle": 82763,
       "dur": 2
     },
     {
@@ -102,16 +142,6 @@
       "dur": 8
     },
     {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "standard",
-      "head": "Korrwright Works Takes Complication Prize at Verenne for Halbrook Perpetual",
-      "body": "The Halbrook Perpetual earned the Complication Prize at the Verenne Horology Salon, a second consecutive honor for Korrwright and validation of its fully in-house strategy. CEO Dunmore Carrow said the award confirms the wisdom of the Halbrook Movement Campus buildout now underway. Judges cited the escapement's precision and the achievement of a perpetual calendar built entirely without outside suppliers.",
-      "cycle": 82763,
-      "dur": 2
-    },
-    {
       "company": "Marlgear Supply",
       "sector": "technology",
       "kind": "restructure",
@@ -120,26 +150,6 @@
       "body": "Marlgear Supply announced a sweeping restructuring that will wind down its consumer device unit and cut roughly 3,200 jobs as CEO Corin Blakely retreats to its industrial machines core amid the Kessel fault fallout. The company will take a $900 million charge and set aside reserves against the pending $1.4 billion suit and criminal referral. Blakely called the move 'painful but the only path to a clean, defensible business.'",
       "cycle": 82763,
       "dur": 8
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Marrowstone Build Beats Again as Coastal Rail Award Drives Backlog Past $2.2B",
-      "body": "Marrowstone posted another quarterly beat as the $780 million coastal rail corridor lifted its backlog beyond $2.2 billion, more than doubling year-over-year. CEO Delphine Vaugh credited disciplined bidding and said margins held despite the rapid intake of new work. She cautioned that near-term staffing needs would temper the pace of future awards.",
-      "cycle": 82763,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Thronehaus & Co. Debuts Aurel Grand Complication Powered by Meridian Dial Talent",
-      "body": "Thronehaus unveiled the Aurel Grand Complication, a perpetual-calendar minute repeater that marks the first release drawing on the newly acquired Meridian Dial Works team. CEO Cora Dray positioned the piece as a statement of vertical ambition, with production capped at 120 units and pricing that places it atop the house's catalog. The launch extends the momentum from the Aurel line's Timepiece of the Year win at Vellcourt.",
-      "cycle": 82763,
-      "dur": 2
     },
     {
       "company": "Woldmark",
@@ -229,16 +239,6 @@
       "head": "Castlehold Slashes Guidance and Books $600M Charge as Framework Deal Collapses",
       "body": "With its second plant still halted under the escalating probe, Castlehold's $2B framework partner exercised exit clauses tied to delivery slippage, forcing Voss to withdraw full-year guidance and record a $600M impairment. The turbulent chief announced a sweeping restructuring including a hiring freeze and the pause of a planned third plant. The reversal erased the record quarter that opened the year and rattled confidence in Voss's aggressive expansion.",
       "cycle": 82758,
-      "dur": 8
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Blackton Industries Wins $2.3B Multi-Year Drivetrain Supply Pact With National Fleet Builder",
-      "body": "Blackton secured a five-year, $2.3B contract to supply its new streamlined drivetrain line to a major commercial fleet manufacturer, the largest award in company history. Sable Renwick called the deal 'the payoff for eighteen months of turbulence,' and said Blackton will add a third production shift at its Halvern-successor plant. The contract locks in volume that should more than replace revenue lost in last year's Halvern split.",
-      "cycle": 82757,
       "dur": 8
     }
   ]
