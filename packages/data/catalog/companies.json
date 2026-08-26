@@ -1181,18 +1181,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82758,
+    "lastEventCycle": 82767,
     "events": [
-      {
-        "cycle": 82547,
-        "kind": "scandal",
-        "size": "major",
-        "head": "Blackhold Faces Backlash as Greycliff Safety Filings Come Under Question",
-        "body": "The regulatory review of Blackhold's Greycliff test bank has widened after documents surfaced suggesting internal load warnings were downplayed before the launch-day fault. CEO Tomas Vren, in the role less than a year, faces mounting pressure as two board members reportedly demand an independent audit. The company's shares of confidence have eroded sharply amid calls for a full accounting of the outage timeline.",
-        "effects": {
-          "energy": -0.22
-        }
-      },
       {
         "cycle": 82558,
         "kind": "lawsuit",
@@ -1412,6 +1402,16 @@
         "head": "Blackhold Ousts Dabney as Board Installs Turnaround Chief Amid Defect Fallout",
         "body": "The board removed Halden Dabney after the recall costs and mounting investor litigation wiped out two quarters of projected earnings, naming restructuring veteran Perrin Vale as chief executive with a mandate to stabilize the storage business. Vale inherits an idled second campus, a fleet-wide recall, and the pending shareholder suit, and pledged an immediate top-to-bottom review of the flawed design. Shares had shed more than half their value across the crisis.",
         "effects": {}
+      },
+      {
+        "cycle": 82767,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Blackhold's New Chief Unveils Turnaround Plan, Splitting Storage Unit From Power",
+        "body": "Turnaround chief Perrin Vale laid out a plan to ring-fence the defective storage business into a standalone unit, absorb $190M in recall and remediation costs, and refocus core operations on power generation. Vale said the restructure would 'contain the damage and rebuild trust,' with redesigned storage units targeted for relaunch next year. The investor suit over the fleet defect remains unresolved.",
+        "effects": {
+          "energy": -0.13
+        }
       }
     ]
   },
@@ -1569,18 +1569,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82757,
+    "lastEventCycle": 82767,
     "events": [
-      {
-        "cycle": 82546,
-        "kind": "recall",
-        "size": "standard",
-        "head": "Blackton Industries Recalls Halvern Component Batch Over Weld Defect",
-        "body": "The automaker pulled roughly 84,000 units of a Halvern-line bracket after inspectors flagged inconsistent welds tied to the rapid second-line ramp. CEO Mara Mercer called the move precautionary but conceded the recall would dent near-term margins, warning of a one-time charge in the coming quarter.",
-        "effects": {
-          "automotive": -0.13
-        }
-      },
       {
         "cycle": 82556,
         "kind": "safety_probe",
@@ -1801,6 +1791,16 @@
         "body": "Blackton secured a five-year, $2.3B contract to supply its new streamlined drivetrain line to a major commercial fleet manufacturer, the largest award in company history. Sable Renwick called the deal 'the payoff for eighteen months of turbulence,' and said Blackton will add a third production shift at its Halvern-successor plant. The contract locks in volume that should more than replace revenue lost in last year's Halvern split.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82767,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Blackton Industries Breaks Ground on Second Drivetrain Plant to Serve Fleet Pact",
+        "body": "Riding its $2.3B national fleet contract, Blackton committed $410M to a new drivetrain facility in the Calder Basin, expected to add 900 jobs once online in 18 months. CEO Sable Renwick framed the expansion as necessary to meet supply commitments, though analysts flagged the aggressive spend so soon after the Halvern split. The plant will double streamlined drivetrain capacity at peak.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -3209,25 +3209,15 @@
     "aiOwned": true,
     "homeSector": "automotive",
     "founded": 1894,
-    "ceo": "Ansel Voight",
+    "ceo": "Della Halwick",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.81,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82761,
+    "lastEventCycle": 82767,
     "events": [
-      {
-        "cycle": 82598,
-        "kind": "safety_probe",
-        "size": "standard",
-        "head": "Brunstone & Sons Faces Regulatory Review Over Vault Cell Pro Thermal Reports",
-        "body": "Regulators opened a formal review after a handful of Vault Cell Pro units showed elevated thermal readings during grid-scale field trials. Lambourne, characteristically defiant, told reporters the incidents were 'isolated and overstated' and pledged an internal audit of the 12,000-unit deployment. Analysts note the probe lands just weeks after the $1.8B grid order that anchored the storage pivot.",
-        "effects": {
-          "automotive": -0.13
-        }
-      },
       {
         "cycle": 82607,
         "kind": "recall",
@@ -3448,6 +3438,14 @@
         "size": "major",
         "head": "Brunstone & Sons Ousts Frost as Board Seeks Steadier Hand After Vault II Whiplash",
         "body": "The board removed Dagny Frost following the demand shortfall and 1,400-job restructure that erased her earlier recovery claims, naming operations chief Ansel Voight as chief executive effective immediately. Voight pledged a 'no-surprises' operating plan and paused all further Vault II capacity decisions pending a demand review. Shares had swung violently through Frost's tenure of bold public reversals.",
+        "effects": {}
+      },
+      {
+        "cycle": 82767,
+        "kind": "leadership_change",
+        "size": "standard",
+        "head": "Brunstone & Sons Names Veteran Operator Halwick to Steady Post-Vault II Recovery",
+        "body": "The board appointed longtime manufacturing executive Della Halwick as CEO, tasking her with restoring discipline after the Vault II demand collapse and 1,400 job cuts. Halwick pledged a 'demand-first' approach and said idled lines would stay dark until orders justified restart. She inherits a balance sheet strained by the capacity overbuild.",
         "effects": {}
       }
     ]
@@ -6316,7 +6314,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82755,
+    "lastEventCycle": 82767,
     "events": [
       {
         "cycle": 0,
@@ -6534,6 +6532,16 @@
         "body": "Drustcraft reported earnings of $2.38 per share against estimates of $2.11, with the new $320M auto-parts contract now contributing to all three product lines. Cora Fenn said the balanced three-line strategy delivered its strongest margins in a decade at 21.4%, and hinted at capacity studies for a possible fourth line.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82767,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drustcraft Extends Streak With Steady Beat as Fasteners Line Firms Up",
+        "body": "Drustcraft delivered its fourth consecutive beat, with the fasteners and fixings line adding modest strength alongside the ramping auto-parts pact. CEO Cora Fenn described demand as 'orderly across all three lines,' guiding for continued balanced growth. Revenue rose 6% on flat input costs.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -8865,18 +8873,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82761,
+    "lastEventCycle": 82767,
     "events": [
-      {
-        "cycle": 82616,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Gromford Works Debuts Meridian Grand Complication Ahead of Holiday Season",
-        "body": "Building on its award-winning Skeleton series, Gromford unveiled the Meridian Grand Complication, a limited run of 250 pieces priced from $48,000. CEO Corin Aldwych said pre-orders 'moved faster than production can,' and confirmed the flagship boutique would host a private unveiling to capitalize on rising foot traffic.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82622,
         "kind": "earnings_beat",
@@ -9099,6 +9097,16 @@
         "body": "Halvard Pryce unveiled a limited Emblem Signature range spanning hand-finished Fine Goods and a 500-piece skeletonized timepiece priced at four times standard Emblem tiers. The launch, timed to the winter gifting window, aims to cement the line's move upmarket after its department-chain expansion. Pryce told the audience the editions would 'redefine what the Emblem name commands.'",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82767,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Gromford Works Reels as Emblem Signature Sourcing Claims Trigger Prestige Backlash",
+        "body": "An industry exposé alleged that Gromford's Emblem Signature Editions used undisclosed third-party casings while marketing them as fully in-house, undercutting the prestige positioning Pryce had chased. CEO Halvard Pryce issued a defensive statement promising a full sourcing audit, but two major stockists paused Signature orders and the Grand Horology Salon opened an inquiry. The controversy lands just as Gromford's margin story hinged on the premium halo.",
+        "effects": {
+          "luxury": -0.22
         }
       }
     ]
@@ -9773,18 +9781,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82760,
+    "lastEventCycle": 82767,
     "events": [
-      {
-        "cycle": 82629,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Halhold Systems Lands $900M Compute Supply Deal to Anchor Recovery",
-        "body": "Corin Vale secured a four-year, $900M contract to supply core compute capacity to a national logistics consortium, the largest single order since the Northgate carve-out. Vale framed the win as validation of the streamlined structure, projecting it will offset carve-out drag by the second half. Shares of the technology house had lagged after last quarter's miss.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82635,
         "kind": "product_launch",
@@ -10003,6 +10001,16 @@
         "size": "standard",
         "head": "Halhold Systems Debuts Meridian Compute Platform in First Move Under New Leadership",
         "body": "Newly installed CEO Ines Corvalan unveiled the Meridian compute line, pitched as a reliability-first successor built around the redundancy systems funded by last year's $2.1B payout. The launch targets customers burned by prior outages, with early commitments from three enterprise accounts. Corvalan framed it as the turning point after a bruising stretch of misses and restructuring.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82767,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halhold Systems Lands First Major Meridian Order as Corvalan Steadies Ship",
+        "body": "Halhold secured a $780M multi-year compute supply agreement with data infrastructure group Nyx Corridor, its first flagship win for the Meridian platform. CEO Ines Corvalan called the deal proof that the restructure is 'clearing the path,' though the contract's ramp will not fully hit revenue until next fiscal year. The reliability payout obligations from prior quarters remain a lingering drag on margins.",
         "effects": {
           "technology": 0.13
         }
@@ -14289,7 +14297,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82752,
+    "lastEventCycle": 82767,
     "events": [
       {
         "cycle": 0,
@@ -14455,6 +14463,16 @@
         "size": "flash",
         "head": "Ornewright Goods Logs Slim Beat as Multi-Region Jansan Volumes Normalize",
         "body": "Ornewright reported quarterly revenue of $1.42 billion, edging past the $1.40 billion consensus, as the multi-region Cleaning & Jansan contract settled into a steady shipping cadence. CEO Petra Veldt credited balanced contribution across Farm Inputs and Food Service, noting no single line drove the result. Management reaffirmed full-year guidance.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82767,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Ornewright Goods Rolls Out Concentrated Jansan Line to Cut Shipping Costs",
+        "body": "Ornewright introduced a concentrated cleaning and jansan formula aimed at trimming freight expense across its multi-region contract network. CEO Petra Veldt said the reformulation should lift per-unit margins slightly without disrupting existing supply commitments. Early rollout targets institutional customers first.",
         "effects": {
           "consumer": 0.06
         }
@@ -17329,18 +17347,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82758,
+    "lastEventCycle": 82767,
     "events": [
-      {
-        "cycle": 82567,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Varnvale House Steadies as Meridian Collection Lifts First Post-Scandal Quarter",
-        "body": "Varnvale House posted a 14% revenue rise to $312 million, its first clean beat since the Ember sourcing scandal, driven by strong sell-through of the new Meridian timepiece line. CEO Idris Calloway credited tightened supplier audits and said Meridian pre-orders had already sold out two boutiques' allocations. Margins remained pressured by the cost of the overhauled sourcing program.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82574,
         "kind": "expansion",
@@ -17559,6 +17567,16 @@
         "size": "standard",
         "head": "Varnvale House Opens Flagship Salon to Ride Sovereign Momentum Under Coyle",
         "body": "Fresh off the Timepiece of the Year win, Coyle unveiled a marquee flagship boutique intended to showcase the reborn Sovereign complication line and draw high-net-worth clientele. The bold, publicity-heavy launch featured a limited numbered series that Coyle said sold through its allocation within days. Coyle framed the salon as proof the comeback has staying power beyond its early inventory clearance.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82767,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Varnvale House Beats as Sovereign Line and New Salon Drive Record Luxury Quarter",
+        "body": "Varnvale posted revenue up 22% year-over-year, with the Sovereign Complication line and flagship salon fueling its strongest quarter since Coyle's arrival. CEO Beatrix Coyle credited the award-driven halo, noting waitlists on top complications now stretch past nine months. Operating margin widened to 31% on premium mix.",
         "effects": {
           "luxury": 0.13
         }
