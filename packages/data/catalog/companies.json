@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82745,
+    "lastEventCycle": 82764,
     "events": [
       {
         "cycle": 0,
@@ -158,6 +158,16 @@
         "body": "With all four existing extrusion lines running at full rate, Aldouscraft Mfg. sanctioned a $95M fifth line to expand Wire & Cable capacity by roughly 20%. CEO Soren Ashby said feeder cable order books remain firm through the year and the addition should reach commissioning in about 14 months. The expansion is being funded entirely from operating cash flow.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82764,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Aldouscraft Mfg. Breaks Ground on Fifth Line as Feeder Cable Orders Extend",
+        "body": "Aldouscraft confirmed site work has begun on its fifth extrusion line, with commissioning targeted within nine months at a stated cost of $95M. CEO Soren Ashby said feeder cable order books remain 'comfortably full into next year,' keeping the four existing lines at capacity. The company reiterated its full-year output guidance without change.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -662,18 +672,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82755,
+    "lastEventCycle": 82764,
     "events": [
-      {
-        "cycle": 82557,
-        "kind": "breakthrough",
-        "size": "major",
-        "head": "Aperture Compute Unveils Dawnmere II Interconnect, Setting New Industry Latency Record",
-        "body": "Halden Dray took the stage to reveal the Dawnmere II interconnect, which he claimed cuts latency another 60% over its record-setting predecessor while halving power draw. The headline-grabbing launch drew immediate interest from three major clients, and Dray declared Aperture had 'redrawn the map' for high-performance compute delivery.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82566,
         "kind": "major_deal",
@@ -900,6 +900,16 @@
         "body": "CEO Marisol Venn declared the fabrication crisis 'behind us' as Emberline resumed full output and delivered its first shipment of the next-gen node to consortium partners, six weeks ahead of the revised timeline. The site cleared its remediation review after $180M in safety upgrades, and Venn confirmed the $2.6B supply pact remains fully intact. Early yield figures reportedly exceeded internal targets by 12%.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82764,
+        "kind": "scandal",
+        "size": "major",
+        "head": "Aperture Compute Rocked as Emberline Safety Records Found Altered",
+        "body": "An internal review disclosed that inspection logs at the Emberline fabrication site were falsified ahead of the earlier regulatory probe, prompting the suspension of two site executives. CEO Marisol Venn called the findings 'unacceptable' and pledged a full external audit, but regulators signaled the probe will now widen to document tampering. Shares came under heavy pressure as several customers requested contract reviews.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -4888,25 +4898,15 @@
     "aiOwned": true,
     "homeSector": "energy",
     "founded": 1971,
-    "ceo": "Halden Voss",
+    "ceo": "Ingrid Mally",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.76,
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82758,
+    "lastEventCycle": 82764,
     "events": [
-      {
-        "cycle": 82583,
-        "kind": "lawsuit",
-        "size": "standard",
-        "head": "Castlehold Faces Investor Suit Over Saltmere Disclosures as Cleanup Costs Mount",
-        "body": "A group of shareholders filed suit alleging Castlehold concealed the scope of Saltmere's fault-log falsification before the criminal probe surfaced, seeking recovery of losses tied to the shutdown. CEO Ivo Reneth called the claims 'misdirected' and pointed to the recent split-off of the Saltmere legacy unit as evidence of accountability. Remediation and legal reserves now total an estimated $310M.",
-        "effects": {
-          "energy": -0.13
-        }
-      },
       {
         "cycle": 82592,
         "kind": "earnings_miss",
@@ -5134,6 +5134,14 @@
         "effects": {
           "energy": -0.22
         }
+      },
+      {
+        "cycle": 82764,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Castlehold Ousts Voss as Board Installs New Chief After Framework Collapse",
+        "body": "Castlehold's board removed CEO Halden Voss following the collapse of the Framework deal, the $600M charge, and the second-plant shutdown, naming turnaround veteran Ingrid Mally as chief executive. Mally said her first priority is resolving the outstanding regulatory probe and stabilizing grid-storage operations before pursuing new mandates. The board also suspended forward guidance pending a strategic review.",
+        "effects": {}
       }
     ]
   },
@@ -5261,18 +5269,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82759,
+    "lastEventCycle": 82764,
     "events": [
-      {
-        "cycle": 82614,
-        "kind": "earnings_miss",
-        "size": "major",
-        "head": "Castlestone Tumbles as Data Grid Probe Forces $2.1B Penalty and Reliability Rework",
-        "body": "Castlestone missed sharply after regulators concluded its National Data Grid reliability guarantees fell short, imposing a $2.1 billion penalty and mandating a costly infrastructure rework. CEO Pell Karsh, who had doubled down on the grid pact just quarters earlier, now faces investor demands for accountability as the company suspended its buyback and cut full-year guidance.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82622,
         "kind": "restructure",
@@ -5501,6 +5499,16 @@
         "body": "CEO Pell Karsh took the stage to launch Grid-Core Ascend, a next-generation compute platform he called \"the reason we survived the reset,\" pledging shipments within two quarters. The company committed $1.9B to production tooling and named the landmark contract signed last quarter as the anchor customer. Karsh, characteristically bold, told the room the platform would double throughput per unit or he would \"answer for it personally.\"",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82764,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Castlestone Slips as Grid-Core Ascend Ramp Costs Overrun Estimates",
+        "body": "Castlestone missed on the quarter as heavier-than-expected costs to scale the Grid-Core Ascend platform squeezed margins, sending operating profit below guidance. CEO Pell Karsh defended the spend as 'front-loaded investment' but conceded the ramp had run hot. The company held its landmark contract timeline while trimming near-term margin expectations.",
+        "effects": {
+          "technology": -0.13
         }
       }
     ]
@@ -9299,7 +9307,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82748,
+    "lastEventCycle": 82764,
     "events": [
       {
         "cycle": 0,
@@ -9467,6 +9475,16 @@
         "body": "Halcrow reported a solid beat, with the new yard lifting throughput enough to trim the Vetask backlog by 18% while holding margins steady. Mira Skarn said the added capacity 'positions us to bid the next mandate cycle from strength.' Order book coverage now extends into late 2027.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82764,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Halcrow & Vance Wins $4.2B Coastal Reclamation Program in Largest Award to Date",
+        "body": "Halcrow & Vance secured a multi-year $4.2B earthmoving mandate for the Corveth coastal reclamation program, the largest single award in the company's history. CEO Mira Skarn said the deal, layered atop the ongoing Vetask work, will require a fourth yard and roughly 900 additional operators. Management flagged phased revenue recognition beginning next quarter.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -10768,7 +10786,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82735,
+    "lastEventCycle": 82764,
     "events": [
       {
         "cycle": 0,
@@ -10854,6 +10872,16 @@
         "size": "flash",
         "head": "Holtgate Cloth Delivers Another Quiet Beat as Renewed Pact Holds Volumes",
         "body": "Holtgate Cloth reported steady revenue of $290 million, marginally ahead of estimates, as raw-textile shipments under its renewed supply pact held firm. Dorian Carrow again offered little commentary beyond noting stable order flow. The house has now strung together consecutive quiet beats without changing guidance.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82764,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Cloth Logs Another Quiet Beat as Raw-Textile Demand Holds",
+        "body": "Holtgate Cloth reported a fourth consecutive steady quarter, with raw-textile volumes flat to modestly higher under its renewed supply pact. CEO Dorian Carrow offered no change to the company's conservative outlook, citing 'no surprises' across its order base. Margins remained in line with prior periods.",
         "effects": {
           "textiles": 0.06
         }
@@ -11567,16 +11595,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82754,
+    "lastEventCycle": 82764,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Kessel Drive — Built to outlast its owners",
-        "body": "Kessel Drive cut its teeth on engines that wouldn't quit, then built whole vehicles around them. Today the range runs from a rugged everyman runabout to a hand-finished grand tourer, with power packs and battery systems that feed the lot. Their cells endure brutal cold; their cars hold the road like they own it. Owners pass the keys down a generation and find the car still eager. Engineering as inheritance, torque as a promise.",
-        "effects": {}
-      },
       {
         "cycle": 82520,
         "kind": "product_launch",
@@ -11797,6 +11817,16 @@
         "size": "standard",
         "head": "Kessel Drive Unveils Vanta Ultra Pack With 20% Range Gain",
         "body": "Riding the momentum of recovered cell volumes, Aldric Venn took the stage in Corvin Bay to launch the Vanta Ultra, a storage pack Kessel Drive claims delivers a 20% range improvement at a 12% lower cost per kilowatt-hour. Venn promised first deliveries within two quarters and touted pre-orders from three fleet operators, though he offered no firm figures. Analysts noted the aggressive timeline mirrors Venn's pattern of headline-first announcements.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82764,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Kessel Drive Signs $1.1B Fleet Supply Pact for Vanta Ultra Packs",
+        "body": "Kessel Drive landed a $1.1B agreement to supply Vanta Ultra battery packs to a national commercial fleet operator over three years. CEO Aldric Venn touted the deal as validation of the pack's 20% range gain, with first deliveries slated for next quarter. The company said secured cathode supply gives it confidence to meet the ramp.",
         "effects": {
           "automotive": 0.13
         }
@@ -14933,7 +14963,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82744,
+    "lastEventCycle": 82764,
     "events": [
       {
         "cycle": 0,
@@ -15059,6 +15089,16 @@
         "size": "flash",
         "head": "Skarngrave Extends Streak as Medical Equipment Orders Firm Up",
         "body": "Skarngrave logged another quarterly beat, adding a modest lift from medical-equipment orders alongside its steady sterilizer service base. CEO Orla Dray pointed to renewed hospital maintenance contracts as the quarter's quiet driver. Margins held flat against stable demand.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82764,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrave Extends Streak as Jansan and Sterilizer Reorders Stay Steady",
+        "body": "Skarngrave posted another modest beat, marking its longest run of consecutive quarterly gains in over a decade on stable cleaning and sterilizer demand. CEO Orla Dray credited 'dependable reorder patterns' across hospital service contracts, with margins holding flat. The company nudged full-year guidance up by a narrow margin.",
         "effects": {
           "medical": 0.06
         }

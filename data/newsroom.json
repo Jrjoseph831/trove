@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-25T18:41:20.414Z",
+  "generatedAt": "2026-08-26T01:23:09.254Z",
   "beats": [
+    {
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Aldouscraft Mfg. Breaks Ground on Fifth Line as Feeder Cable Orders Extend",
+      "body": "Aldouscraft confirmed site work has begun on its fifth extrusion line, with commissioning targeted within nine months at a stated cost of $95M. CEO Soren Ashby said feeder cable order books remain 'comfortably full into next year,' keeping the four existing lines at capacity. The company reiterated its full-year output guidance without change.",
+      "cycle": 82764,
+      "dur": 1
+    },
+    {
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "scandal",
+      "size": "major",
+      "head": "Aperture Compute Rocked as Emberline Safety Records Found Altered",
+      "body": "An internal review disclosed that inspection logs at the Emberline fabrication site were falsified ahead of the earlier regulatory probe, prompting the suspension of two site executives. CEO Marisol Venn called the findings 'unacceptable' and pledged a full external audit, but regulators signaled the probe will now widen to document tampering. Shares came under heavy pressure as several customers requested contract reviews.",
+      "cycle": 82764,
+      "dur": 8
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Castlehold Ousts Voss as Board Installs New Chief After Framework Collapse",
+      "body": "Castlehold's board removed CEO Halden Voss following the collapse of the Framework deal, the $600M charge, and the second-plant shutdown, naming turnaround veteran Ingrid Mally as chief executive. Mally said her first priority is resolving the outstanding regulatory probe and stabilizing grid-storage operations before pursuing new mandates. The board also suspended forward guidance pending a strategic review.",
+      "cycle": 82764,
+      "dur": 8
+    },
+    {
+      "company": "Castlestone",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Castlestone Slips as Grid-Core Ascend Ramp Costs Overrun Estimates",
+      "body": "Castlestone missed on the quarter as heavier-than-expected costs to scale the Grid-Core Ascend platform squeezed margins, sending operating profit below guidance. CEO Pell Karsh defended the spend as 'front-loaded investment' but conceded the ramp had run hot. The company held its landmark contract timeline while trimming near-term margin expectations.",
+      "cycle": 82764,
+      "dur": 2
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Halcrow & Vance Wins $4.2B Coastal Reclamation Program in Largest Award to Date",
+      "body": "Halcrow & Vance secured a multi-year $4.2B earthmoving mandate for the Corveth coastal reclamation program, the largest single award in the company's history. CEO Mira Skarn said the deal, layered atop the ongoing Vetask work, will require a fourth yard and roughly 900 additional operators. Management flagged phased revenue recognition beginning next quarter.",
+      "cycle": 82764,
+      "dur": 8
+    },
+    {
+      "company": "Holtgate Cloth",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Cloth Logs Another Quiet Beat as Raw-Textile Demand Holds",
+      "body": "Holtgate Cloth reported a fourth consecutive steady quarter, with raw-textile volumes flat to modestly higher under its renewed supply pact. CEO Dorian Carrow offered no change to the company's conservative outlook, citing 'no surprises' across its order base. Margins remained in line with prior periods.",
+      "cycle": 82764,
+      "dur": 1
+    },
+    {
+      "company": "Kessel Drive",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Kessel Drive Signs $1.1B Fleet Supply Pact for Vanta Ultra Packs",
+      "body": "Kessel Drive landed a $1.1B agreement to supply Vanta Ultra battery packs to a national commercial fleet operator over three years. CEO Aldric Venn touted the deal as validation of the pack's 20% range gain, with first deliveries slated for next quarter. The company said secured cathode supply gives it confidence to meet the ramp.",
+      "cycle": 82764,
+      "dur": 2
+    },
+    {
+      "company": "Skarngrave",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Skarngrave Extends Streak as Jansan and Sterilizer Reorders Stay Steady",
+      "body": "Skarngrave posted another modest beat, marking its longest run of consecutive quarterly gains in over a decade on stable cleaning and sterilizer demand. CEO Orla Dray credited 'dependable reorder patterns' across hospital service contracts, with margins holding flat. The company nudged full-year guidance up by a narrow margin.",
+      "cycle": 82764,
+      "dur": 1
+    },
     {
       "company": "Cranegrove",
       "sector": "construction",
@@ -52,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Palettstead Holdings",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Palettstead Holdings Edges Past Estimates as Modular Packaging Demand Holds",
-      "body": "Palettstead reported a modest earnings beat as modular insulated packaging orders stayed firm and the fourth cold-chain ran near capacity. CEO Orla Marrow said the fifth cold-chain investment remains on schedule for a late-2028 startup. Volume growth offset softer pricing in legacy packaging lines.",
-      "cycle": 82763,
-      "dur": 1
-    },
-    {
       "company": "Thronehaus & Co.",
       "sector": "luxury",
       "kind": "product_launch",
@@ -80,56 +150,6 @@
       "body": "Woldmark secured a landmark $2.1 billion multiyear supply agreement to furnish Meridian compute units to a consortium of enterprise buyers, its largest single contract since the Halcyon era. CEO Petra Sonn, characteristically bullish, pledged to double Meridian output within eighteen months and called the deal 'proof the comeback is real.' The pact locks in volume commitments that analysts say could underpin revenue guidance for years.",
       "cycle": 82763,
       "dur": 8
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Calderforge Beats as Stormwell Hall Four Ramps to Commercial Volume",
-      "body": "Revenue jumped 22% to $2.7B as stable yields at Hall Four translated into first meaningful Stormwell shipments under Perra Vann. Vann said defect rates fell below the 8% commercial threshold for the first time, unlocking delayed customer commitments worth an estimated $1.4B. The result marks the clearest sign yet that the troubled program has turned a corner.",
-      "cycle": 82762,
-      "dur": 2
-    },
-    {
-      "company": "Carrowforge",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Carrowforge Breaks Ground on Second Heavy-Press Line to Fill $940M Order Book",
-      "body": "Renn committed $310M to a new press bay at the flagship works, targeting first output within fourteen months to absorb the record heavy-press backlog. Machines chief Garrick Vale said the expansion adds roughly 40% forming capacity, though Renn acknowledged the timeline leaves 'no margin for slippage.' The move doubles down on the post-split thesis that a leaner Carrowforge can outpace legacy rivals on turnaround time.",
-      "cycle": 82762,
-      "dur": 2
-    },
-    {
-      "company": "Drayton Freight",
-      "sector": "logistics",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drayton Freight Adds $420M Expansion to Warehouse Automation Contract",
-      "body": "Emil Holt secured an expanded scope on the continent-spanning automation deal, adding 22 sites and lifting total contract value to roughly $1.32B. The extension follows faster-than-expected booking on the original award and pulls forward material-handling deliveries into next year. Holt called the client's decision to widen the rollout 'the strongest validation yet' of Drayton's execution.",
-      "cycle": 82762,
-      "dur": 2
-    },
-    {
-      "company": "Halcrest",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Halcrest Extends Meridian Line With Slimmer Meridian Reserve at $28,500",
-      "body": "Iris Marrow unveiled the Meridian Reserve, a thinner three-day-power variant priced to widen the range below the sold-out Grand Complication. Initial allocation runs to 4,200 pieces across the new flagship boutiques, with Marrow calling it 'the volume engine the comeback needs.' The launch tests whether Halcrest can broaden Meridian's appeal without diluting its scarcity halo.",
-      "cycle": 82762,
-      "dur": 2
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Lhaus Industries Debuts First Kellstrom-Based Storage Pack Under New Power Division",
-      "body": "Cole Brandt introduced the LX-Cell modular storage unit, the first product to emerge from the Kellstrom integration, targeting fleet depots and small grid installations. Division head Sable Ory said pre-orders cover 60,000 units, with shipments beginning next quarter from the retooled Kellstrom line. Brandt framed the launch as proof the $2.1B acquisition can move beyond parts synergies into standalone revenue.",
-      "cycle": 82762,
-      "dur": 2
     },
     {
       "company": "Vossenspire Holdings",
@@ -219,16 +239,6 @@
       "head": "Blackton Industries Wins $2.3B Multi-Year Drivetrain Supply Pact With National Fleet Builder",
       "body": "Blackton secured a five-year, $2.3B contract to supply its new streamlined drivetrain line to a major commercial fleet manufacturer, the largest award in company history. Sable Renwick called the deal 'the payoff for eighteen months of turbulence,' and said Blackton will add a third production shift at its Halvern-successor plant. The contract locks in volume that should more than replace revenue lost in last year's Halvern split.",
       "cycle": 82757,
-      "dur": 8
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "major",
-      "head": "Korrwright Works Unveils Halbrook Perpetual, First Complication Built Entirely In-House",
-      "body": "Dunmore Carrow presented the Halbrook Perpetual, a perpetual calendar priced at $148,000 and running on the house's own escapement and movement architecture. The launch marks the first Korrwright complication with zero outsourced components, a milestone Carrow called 'the payoff of the Halbrook campus.' Initial allocation of 220 pieces sold out to authorized salons within days.",
-      "cycle": 82756,
       "dur": 8
     }
   ]
