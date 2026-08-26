@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-26T06:52:39.414Z",
+  "generatedAt": "2026-08-26T12:55:00.981Z",
   "beats": [
     {
-      "company": "Ashbystead Holdings",
-      "sector": "medical",
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Bruncraft Lands $1.1B Fleet Order as Vane Pivots From Cuts to Growth",
+      "body": "Bruncraft Industries secured a $1.1 billion multi-year contract to supply 14,000 Coachline and Vanguard-trim vehicles to national courier operator Melloway Freight, its largest fleet deal in five years. CEO Marcus Vane framed the win as validation of the leaner Coachline relaunch, noting deliveries begin in the third quarter and run through 2029. Vane hinted at further fleet negotiations, saying the cost reset has 'freed the company to chase volume again.'",
+      "cycle": 82766,
+      "dur": 2
+    },
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "breakthrough",
+      "size": "major",
+      "head": "Bruncrest Works Unveils Aria Ultra X, Doubling Throughput Per Line",
+      "body": "Bruncrest Works revealed the Aria Ultra X, a redesigned compute unit that CEO Ines Marlow said delivers roughly twice the throughput of the current generation while cutting power draw by a third. Marlow claimed the breakthrough lets a single production line match the output of two, easing the margin pressure that dogged last quarter's third-line push. Early commitments from three data-center customers already exceed $3 billion, the company said.",
+      "cycle": 82766,
+      "dur": 8
+    },
+    {
+      "company": "Brunmark Motors",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunmark Motors Returns to Beat as Veyra Relaunch Finds Traction",
+      "body": "Brunmark Motors posted quarterly revenue of $6.3 billion, ahead of guidance, as redesigned Veyra deliveries climbed 22% sequentially and warranty claims on the new battery pack fell sharply. CEO Iris Calvagh said the turnaround had 'turned the corner,' with the halted Veyra S line set to resume limited production early next year. Margins recovered to 8.1% as the prior quarter's relaunch costs rolled off.",
+      "cycle": 82766,
+      "dur": 2
+    },
+    {
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Ashbystead Holdings Extends Streak to Eleven on Dependable Hospital Renewals",
-      "body": "Ashbystead posted its eleventh consecutive beat as hospital equipment renewal orders held steady across its core imaging and monitoring lines. Cora Holt credited long-standing service contracts and cautious inventory management for the unbroken run.",
-      "cycle": 82765,
+      "head": "Dunmorewright Edges Past Estimates as Waterworks Crosses Halfway Mark",
+      "body": "Dunmorewright Industries reported the $780M waterworks contract has passed its halfway milestone two weeks ahead of schedule, lifting quarterly billings 6%. CEO Emil Skarn credited the expanded foundry capacity for holding delivery timelines steady through a tight materials market. Management reaffirmed full-year guidance.",
+      "cycle": 82766,
       "dur": 1
+    },
+    {
+      "company": "Fennvale Mfg.",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Fennvale Mfg. Beats Again as Fasteners Volume Joins Auto-Parts Strength",
+      "body": "Fennvale Mfg. topped estimates for a third straight quarter as its ramped auto-parts line held full volume and fasteners orders rose 9%. CEO Theo Vossen said the plant's steady output had earned Fennvale two new supply agreements with regional assemblers. The company nudged its full-year revenue outlook higher.",
+      "cycle": 82766,
+      "dur": 1
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "flash",
+      "head": "Garrware Breaks Ground on Sixth Marrow Valley Line as Demand Holds",
+      "body": "Garrware began construction on a sixth production line at its Marrow Valley complex following three straight quarters of tight backlog. CEO Orla Holt said the $95 million addition should come online within a year and lift packaging throughput by an estimated 12%. Holt characterized the move as 'measured, in step with committed orders.'",
+      "cycle": 82766,
+      "dur": 1
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Holtforge Group Wins $640M Interconnector Contract, Extending Backlog Into 2030",
+      "body": "Holtforge Group secured a $640 million wire-and-cable supply contract for the cross-regional Saltmere interconnector, its largest single award to date. CEO Yvette Bramm said the deal locks in production through 2030 and builds on the record order book behind the company's recent beat streak. Work is expected to begin ramping late this year.",
+      "cycle": 82766,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Ironcrestton Opens Flagship Ateliers in Four Cities as Aurelian Demand Runs Hot",
+      "body": "Ironcrestton will open four new flagship ateliers over the next 18 months, backed by a $210 million investment, after the Aurelian Collection outpaced supply. CEO Corwin Vale said the expansion targets waitlists that have stretched past six months on signature pieces. The move marks the house's first retail footprint growth since Vale retired the Meridian line.",
+      "cycle": 82766,
+      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -52,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Notches Modest Beat as Packaging Volumes Hold Firm",
-      "body": "Vantor Lines edged past expectations again, with Halden Vossen citing steady non-grocery packaging demand and disciplined cost control. Quarterly margins held at 11.4%, extending the house's quiet, unbroken run of dependable results.",
-      "cycle": 82765,
-      "dur": 1
-    },
-    {
       "company": "Varnvale & Sons",
       "sector": "luxury",
       "kind": "product_launch",
@@ -102,16 +162,6 @@
       "dur": 8
     },
     {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "earnings_miss",
-      "size": "standard",
-      "head": "Castlestone Slips as Grid-Core Ascend Ramp Costs Overrun Estimates",
-      "body": "Castlestone missed on the quarter as heavier-than-expected costs to scale the Grid-Core Ascend platform squeezed margins, sending operating profit below guidance. CEO Pell Karsh defended the spend as 'front-loaded investment' but conceded the ramp had run hot. The company held its landmark contract timeline while trimming near-term margin expectations.",
-      "cycle": 82764,
-      "dur": 2
-    },
-    {
       "company": "Halcrow & Vance",
       "sector": "construction",
       "kind": "major_deal",
@@ -120,16 +170,6 @@
       "body": "Halcrow & Vance secured a multi-year $4.2B earthmoving mandate for the Corveth coastal reclamation program, the largest single award in the company's history. CEO Mira Skarn said the deal, layered atop the ongoing Vetask work, will require a fourth yard and roughly 900 additional operators. Management flagged phased revenue recognition beginning next quarter.",
       "cycle": 82764,
       "dur": 8
-    },
-    {
-      "company": "Kessel Drive",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Kessel Drive Signs $1.1B Fleet Supply Pact for Vanta Ultra Packs",
-      "body": "Kessel Drive landed a $1.1B agreement to supply Vanta Ultra battery packs to a national commercial fleet operator over three years. CEO Aldric Venn touted the deal as validation of the pack's 20% range gain, with first deliveries slated for next quarter. The company said secured cathode supply gives it confidence to meet the ramp.",
-      "cycle": 82764,
-      "dur": 2
     },
     {
       "company": "Greywater Grid",
@@ -209,36 +249,6 @@
       "head": "Castlestone Unveils Grid-Core Ascend Platform as Karsh Bets Comeback on New Compute Line",
       "body": "CEO Pell Karsh took the stage to launch Grid-Core Ascend, a next-generation compute platform he called \"the reason we survived the reset,\" pledging shipments within two quarters. The company committed $1.9B to production tooling and named the landmark contract signed last quarter as the anchor customer. Karsh, characteristically bold, told the room the platform would double throughput per unit or he would \"answer for it personally.\"",
       "cycle": 82759,
-      "dur": 8
-    },
-    {
-      "company": "Blackhold",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Blackhold Ousts Dabney as Board Installs Turnaround Chief Amid Defect Fallout",
-      "body": "The board removed Halden Dabney after the recall costs and mounting investor litigation wiped out two quarters of projected earnings, naming restructuring veteran Perrin Vale as chief executive with a mandate to stabilize the storage business. Vale inherits an idled second campus, a fleet-wide recall, and the pending shareholder suit, and pledged an immediate top-to-bottom review of the flawed design. Shares had shed more than half their value across the crisis.",
-      "cycle": 82758,
-      "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Boreas Power Lands $4.5B Anchor Supply Pact for Compute-Paired Campus Network",
-      "body": "Thorne secured a decade-long offtake agreement with a consortium of data-center operators that commits nearly all output from the first six compute-paired campuses, valuing the deal at $4.5B over ten years. The pact converts the $3.2B build program from speculative buildout into contracted revenue and provides collateral for a further financing round Thorne has signaled is imminent. Analysts called it the largest single commitment in the company's history under the restless chief.",
-      "cycle": 82758,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "major",
-      "head": "Castlehold Slashes Guidance and Books $600M Charge as Framework Deal Collapses",
-      "body": "With its second plant still halted under the escalating probe, Castlehold's $2B framework partner exercised exit clauses tied to delivery slippage, forcing Voss to withdraw full-year guidance and record a $600M impairment. The turbulent chief announced a sweeping restructuring including a hiring freeze and the pause of a planned third plant. The reversal erased the record quarter that opened the year and rattled confidence in Voss's aggressive expansion.",
-      "cycle": 82758,
       "dur": 8
     }
   ]

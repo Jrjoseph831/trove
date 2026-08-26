@@ -2071,18 +2071,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82756,
+    "lastEventCycle": 82766,
     "events": [
-      {
-        "cycle": 82574,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Bruncraft Industries Acquires Rival Maker Talvorne Motors in $2.7 Billion Deal",
-        "body": "Restless CEO Orla Marrow struck her biggest deal yet, agreeing to buy vehicle maker Talvorne Motors for $2.7 billion to fold its heavy-truck platform into Bruncraft's fleet lineup. The purchase, coming just after the Halveston Axle Works buy, would make Bruncraft the second-largest commercial vehicle producer on the continent. Marrow said combined output could reach 190,000 units annually once integration completes.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82581,
         "kind": "restructure",
@@ -2306,6 +2296,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82766,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Bruncraft Lands $1.1B Fleet Order as Vane Pivots From Cuts to Growth",
+        "body": "Bruncraft Industries secured a $1.1 billion multi-year contract to supply 14,000 Coachline and Vanguard-trim vehicles to national courier operator Melloway Freight, its largest fleet deal in five years. CEO Marcus Vane framed the win as validation of the leaner Coachline relaunch, noting deliveries begin in the third quarter and run through 2029. Vane hinted at further fleet negotiations, saying the cost reset has 'freed the company to chase volume again.'",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -2320,18 +2320,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82759,
+    "lastEventCycle": 82766,
     "events": [
-      {
-        "cycle": 82621,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Bruncrest Works Unveils Aria Pro Line as Marlow Bets Big on Premium Compute Tier",
-        "body": "CEO Ines Marlow took the stage in Eastfield to introduce the Aria Pro series, a higher-density rack tier that Bruncrest says delivers 40% more throughput per unit than the standard Aria line. Marlow promised the new tier would be 'the backbone of every serious campus by next year,' with first shipments slated for the coming quarter. Analysts noted the launch leans heavily on the recently expanded Eastfield capacity.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82626,
         "kind": "major_deal",
@@ -2561,6 +2551,16 @@
         "effects": {
           "technology": -0.13
         }
+      },
+      {
+        "cycle": 82766,
+        "kind": "breakthrough",
+        "size": "major",
+        "head": "Bruncrest Works Unveils Aria Ultra X, Doubling Throughput Per Line",
+        "body": "Bruncrest Works revealed the Aria Ultra X, a redesigned compute unit that CEO Ines Marlow said delivers roughly twice the throughput of the current generation while cutting power draw by a third. Marlow claimed the breakthrough lets a single production line match the output of two, easing the margin pressure that dogged last quarter's third-line push. Early commitments from three data-center customers already exceed $3 billion, the company said.",
+        "effects": {
+          "technology": 0.22
+        }
       }
     ]
   },
@@ -2758,18 +2758,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82755,
+    "lastEventCycle": 82766,
     "events": [
-      {
-        "cycle": 82548,
-        "kind": "product_launch",
-        "size": "major",
-        "head": "Brunmark Motors Unveils Veyra Long-Range as Flagship of Reworked Lineup",
-        "body": "Riding stabilized output, Brunmark Motors debuted the Veyra Long-Range, boasting a 40 percent range gain and drawing on the recently spun-out power unit for its new cell pack. CEO Yvette Calder called it 'the vehicle the restructure was built for,' targeting 90,000 units in the first year. The launch marks Brunmark's most ambitious release in a decade, though skeptics point to the company's history of turbulent ramps.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82558,
         "kind": "earnings_beat",
@@ -2990,6 +2980,16 @@
         "body": "Brunmark reported a loss of $1.12 per share, worse than the $0.74 loss expected, as relaunch marketing and idled-capacity charges outweighed early Veyra sales. Iris Calvagh defended the reset, noting redesigned battery-pack orders were 'building steadily' with 41,000 pre-orders logged, but conceded profitability remains 'several quarters out.'",
         "effects": {
           "automotive": -0.13
+        }
+      },
+      {
+        "cycle": 82766,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunmark Motors Returns to Beat as Veyra Relaunch Finds Traction",
+        "body": "Brunmark Motors posted quarterly revenue of $6.3 billion, ahead of guidance, as redesigned Veyra deliveries climbed 22% sequentially and warranty claims on the new battery pack fell sharply. CEO Iris Calvagh said the turnaround had 'turned the corner,' with the halted Veyra S line set to resume limited production early next year. Margins recovered to 8.1% as the prior quarter's relaunch costs rolled off.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -6895,7 +6895,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82750,
+    "lastEventCycle": 82766,
     "events": [
       {
         "cycle": 0,
@@ -7053,6 +7053,16 @@
         "body": "Dunmorewright topped estimates for a second straight quarter as billings on the $780M inland waterworks contract crossed the 45% completion mark ahead of schedule. Emil Skarn said the expanded foundry is now supplying plumbing and fixture components internally, trimming input costs. Management hinted at bidding on a second regional waterworks tender next year.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82766,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Dunmorewright Edges Past Estimates as Waterworks Crosses Halfway Mark",
+        "body": "Dunmorewright Industries reported the $780M waterworks contract has passed its halfway milestone two weeks ahead of schedule, lifting quarterly billings 6%. CEO Emil Skarn credited the expanded foundry capacity for holding delivery timelines steady through a tight materials market. Management reaffirmed full-year guidance.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -7771,7 +7781,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82750,
+    "lastEventCycle": 82766,
     "events": [
       {
         "cycle": 0,
@@ -7929,6 +7939,16 @@
         "body": "Fennvale reported a quarterly beat with revenue up 11% as the new auto-parts line reached full capacity ahead of Theo Vossen's internal targets. Fastener demand held steady, and management said the second production shift added earlier this quarter is already near full utilization. Vossen kept guidance measured, noting he prefers to 'let the line prove itself over four quarters, not one.'",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82766,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Fennvale Mfg. Beats Again as Fasteners Volume Joins Auto-Parts Strength",
+        "body": "Fennvale Mfg. topped estimates for a third straight quarter as its ramped auto-parts line held full volume and fasteners orders rose 9%. CEO Theo Vossen said the plant's steady output had earned Fennvale two new supply agreements with regional assemblers. The company nudged its full-year revenue outlook higher.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -8137,7 +8157,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82752,
+    "lastEventCycle": 82766,
     "events": [
       {
         "cycle": 0,
@@ -8315,6 +8335,16 @@
         "body": "Garrware reported quarterly revenue of $612 million, above the $590 million estimate, as the newly commissioned fifth Marrow Valley line began working down a tight packaging backlog. CEO Orla Holt said utilization across all five lines remained near capacity and order visibility extended further than a year ago. The firm nudged its throughput outlook higher.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82766,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Garrware Breaks Ground on Sixth Marrow Valley Line as Demand Holds",
+        "body": "Garrware began construction on a sixth production line at its Marrow Valley complex following three straight quarters of tight backlog. CEO Orla Holt said the $95 million addition should come online within a year and lift packaging throughput by an estimated 12%. Holt characterized the move as 'measured, in step with committed orders.'",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -10611,7 +10641,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82751,
+    "lastEventCycle": 82766,
     "events": [
       {
         "cycle": 0,
@@ -10777,6 +10807,16 @@
         "size": "standard",
         "head": "Holtforge Group Extends Streak as Interconnector Work Lifts Margins to Multi-Year High",
         "body": "Holtforge Group reported a fifth consecutive beat, with revenue of $2.84B and operating margin climbing to 15.1%, its best in six years, as high-value interconnector cable contracts moved into peak production. CEO Yvette Bramm credited disciplined execution and a firmed-up copper supply agreement for the margin gains. The order book held near its record level.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82766,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Holtforge Group Wins $640M Interconnector Contract, Extending Backlog Into 2030",
+        "body": "Holtforge Group secured a $640 million wire-and-cable supply contract for the cross-regional Saltmere interconnector, its largest single award to date. CEO Yvette Bramm said the deal locks in production through 2030 and builds on the record order book behind the company's recent beat streak. Work is expected to begin ramping late this year.",
         "effects": {
           "construction": 0.13
         }
@@ -11356,18 +11396,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82757,
+    "lastEventCycle": 82766,
     "events": [
-      {
-        "cycle": 82548,
-        "kind": "scandal",
-        "size": "standard",
-        "head": "Ironcrestton Faces Backlash Over Carrow Atelier Sourcing Claims",
-        "body": "A trade publication alleges that select Carrow Atelier pieces marketed as fully in-house were finished by outside subcontractors, contradicting Ironcrestton's 'single-bench' promise. CEO Sable Carrow issued a rapid statement pledging a full provenance audit, though at least two Artisan's Circle jurors have publicly requested clarification. The controversy has cast a shadow over the showroom's high-profile launch.",
-        "effects": {
-          "luxury": -0.13
-        }
-      },
       {
         "cycle": 82559,
         "kind": "safety_probe",
@@ -11586,6 +11616,16 @@
         "size": "standard",
         "head": "Ironcrestton Beats as Aurelian Collection Sells Through Faster Than Forecast",
         "body": "Ironcrestton posted quarterly revenue of $480M, up 14% year over year, as the Aurelian Collection sold through initial allocations weeks ahead of plan. Corwin Vale said margins expanded 220 basis points on the streamlined post-Meridian supply chain, and hinted a second Aurelian tier would arrive by year-end. The result marks the first clean quarter since Vale took over the restructuring.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82766,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Ironcrestton Opens Flagship Ateliers in Four Cities as Aurelian Demand Runs Hot",
+        "body": "Ironcrestton will open four new flagship ateliers over the next 18 months, backed by a $210 million investment, after the Aurelian Collection outpaced supply. CEO Corwin Vale said the expansion targets waitlists that have stretched past six months on signature pieces. The move marks the house's first retail footprint growth since Vale retired the Meridian line.",
         "effects": {
           "luxury": 0.13
         }
