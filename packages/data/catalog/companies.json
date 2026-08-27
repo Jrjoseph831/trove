@@ -183,7 +183,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82752,
+    "lastEventCycle": 82769,
     "events": [
       {
         "cycle": 0,
@@ -339,6 +339,16 @@
         "size": "flash",
         "head": "Aldouscyon Tops Estimates Again as Sixth-City Conversion Matures",
         "body": "Aldouscyon reported earnings of $0.71 per share, two cents ahead of consensus, as the sixth-city lighting conversion moved from ramp-up to steady contribution. CEO Petra Mercer described demand as 'orderly and predictable,' with no changes to the conversion slate. Margins were flat quarter over quarter.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82769,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscyon Beats as Seventh-City Conversion Enters Pipeline",
+        "body": "Petra Mercer's Aldouscyon again edged past estimates as the matured sixth-city conversion delivered full contribution and a seventh city entered the conversion slate. Revenue rose 2.8% with steady lighting margins. Mercer said the methodical city-by-city cadence remains unchanged.",
         "effects": {
           "consumer": 0.06
         }
@@ -4058,7 +4068,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82753,
+    "lastEventCycle": 82769,
     "events": [
       {
         "cycle": 0,
@@ -4224,6 +4234,16 @@
         "size": "standard",
         "head": "Carrowcyon & Sons Unveils Ambient Series to Broaden Smart-Dimming Beyond Homes",
         "body": "Cole Brandt introduced the Ambient Series, a commercial-grade smart-dimming range aimed at offices, hospitality and retail floors, priced roughly 20% above the flagship residential line. The launch leans on the three-line capacity buildout completed last quarter, with early pilot installs booked across four regional hotel chains. Management framed the move as a natural extension of demand that has consistently outrun consumer supply.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82769,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Signs Commercial Lighting Pact to Roll Out Ambient Series Across Retail Chain",
+        "body": "Cole Brandt landed a supply agreement placing the new Ambient Series smart-dimming systems in a national retail chain's 340 locations, the company's first large commercial deployment. The deal broadens Carrowcyon beyond its household roots and is expected to absorb much of the third line's added capacity. Brandt framed the pact as proof the Ambient bet on non-home markets is paying off.",
         "effects": {
           "consumer": 0.13
         }
@@ -12905,18 +12925,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82762,
+    "lastEventCycle": 82769,
     "events": [
-      {
-        "cycle": 82616,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Lhaus Industries Acquires Rival Cell-Pack Maker Delphin in $6.4 Billion Deal",
-        "body": "Lhaus agreed to buy fellow supplier Delphin Systems for $6.4 billion, its largest acquisition in two decades, folding four additional cell-pack facilities into a network already running near capacity. CEO Cole Brandt framed the purchase as a way to 'stop building lines one at a time,' and said combined output should clear the standing backlog by next year, pending regulatory review.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82624,
         "kind": "expansion",
@@ -13145,6 +13155,16 @@
         "body": "Cole Brandt introduced the LX-Cell modular storage unit, the first product to emerge from the Kellstrom integration, targeting fleet depots and small grid installations. Division head Sable Ory said pre-orders cover 60,000 units, with shipments beginning next quarter from the retooled Kellstrom line. Brandt framed the launch as proof the $2.1B acquisition can move beyond parts synergies into standalone revenue.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82769,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Lhaus Industries Wins $4.3B Fleet Storage Contract in Landmark Power Division Deal",
+        "body": "Cole Brandt secured a multi-year agreement to supply Kellstrom-based storage packs to a national logistics fleet operator, the largest single order in the young Power & Storage division's history. The $4.3B contract locks in output through 2032 and validates the $2.1B Kellstrom acquisition Brandt championed. Shares of the vertically integrated automaker reflected the strategic milestone as the division moved from launch to scale.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -13652,7 +13672,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82754,
+    "lastEventCycle": 82769,
     "events": [
       {
         "cycle": 0,
@@ -13838,6 +13858,16 @@
         "size": "flash",
         "head": "Marrowcyon Stretches Streak to Eighth Straight Quiet Beat",
         "body": "Theo Orne's Marrowcyon posted another modest beat, edging estimates by two cents as apparel volumes ticked up 3% and fixtures held flat. Management reaffirmed its unchanged full-year outlook and again declined to hold a call, letting the numbers speak. The uneventful result extended one of the sector's steadiest runs.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82769,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Runs Streak to Ninth Straight Quiet Beat",
+        "body": "Theo Orne's Marrowcyon posted another modest earnings beat, its ninth consecutive quarter above estimates, on steady apparel and plumbing-fixture demand. Revenue rose 3.1% with margins holding flat, continuing the company's reputation for undramatic consistency. Orne offered no change to full-year guidance.",
         "effects": {
           "consumer": 0.06
         }
@@ -14490,7 +14520,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82753,
+    "lastEventCycle": 82769,
     "events": [
       {
         "cycle": 0,
@@ -14666,6 +14696,16 @@
         "size": "standard",
         "head": "Ornewright Supply Adds National Grocer to Cold-Chain Network Ahead of Vellhorn Opening",
         "body": "Rhys Throne signed a three-year cold-chain distribution agreement with a national grocery group, projected to add $190M in annual food-service and farm-input volumes. The deal is structured to draw on the forthcoming Vellhorn hub, which remains on schedule to open next quarter. Throne said combined Dunmere and Vellhorn capacity would cover the new commitments with room to spare.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82769,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Ornewright Supply Opens Vellhorn Cold-Chain Hub, Doubling Network Reach",
+        "body": "Rhys Throne cut the ribbon on the second cold-chain hub at Vellhorn, adding 420,000 square feet of temperature-controlled capacity ahead of schedule. The facility extends the Dunmere partnership footprint and immediately begins serving the recently signed national grocer account. Throne said the network now covers roughly 70% of the regional food-service market.",
         "effects": {
           "consumer": 0.13
         }
@@ -15717,7 +15757,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82756,
+    "lastEventCycle": 82769,
     "events": [
       {
         "cycle": 0,
@@ -15923,6 +15963,16 @@
         "size": "flash",
         "head": "Steg Tooling Extends Streak to Fifteen as Kelmar Fourth Cell Comes Online",
         "body": "Iris Vossen reported the fifteenth consecutive quarterly beat, with the newly commissioned fourth Kelmar cell contributing partial output. Fastener revenue rose 6% as the backlog held steady near record levels. Vossen said capacity additions remain 'deliberately paced against firm demand.'",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82769,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Steg Tooling Extends Streak to Sixteen as Fastener Backlog Holds",
+        "body": "Iris Vossen's Steg Tooling logged its sixteenth straight earnings beat as the fourth Kelmar cell ran near capacity and the fastener backlog stayed firm. Revenue rose 5.4% on strong auto-parts and fixings demand. Vossen said utilization across the Kelmar cells remained above 90%.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -16286,7 +16336,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82756,
+    "lastEventCycle": 82769,
     "events": [
       {
         "cycle": 0,
@@ -16494,6 +16544,16 @@
         "size": "standard",
         "head": "Thaldale Group Returns to Profit as Holloway's Cost Reset Takes Hold",
         "body": "Marta Holloway posted the first profitable quarter since the scandal, with consolidated tooling plants and the wound-down fastening unit lifting operating margins to 8%. Revenue slipped 4% on the narrower portfolio, but Holloway said the overhaul 'has stopped the bleeding and freed cash for the Hardware & Tools core.' The turn snaps a two-quarter loss streak.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82769,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Thaldale Group Launches ProGrade Line as Holloway Bets Reset Savings on Growth",
+        "body": "Marta Holloway unveiled the ProGrade cordless tool range, the company's first major product push since the cost reset, targeting professional contractors with a 14-model lineup. Thaldale said it redirected roughly $180M in consolidation savings toward the launch, with initial rollout across three regional markets. Holloway called it 'the offense phase' after two years of defensive restructuring.",
         "effects": {
           "consumer": 0.13
         }
@@ -19482,7 +19542,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82748,
+    "lastEventCycle": 82769,
     "events": [
       {
         "cycle": 0,
@@ -19620,6 +19680,16 @@
         "body": "Wrenhaus opened a regional distribution hub near the Riverside corridor to shorten delivery times as its second plant runs at full output. Quinn Thorne said the facility 'takes strain off the plants and gets fixtures to contractors faster.' The investment was modest, funded from operating cash flow.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82769,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Wrenhaus Beats as New Distribution Hub Speeds Riverside Corridor Deliveries",
+        "body": "Quinn Thorne's Wrenhaus topped estimates as the recently opened distribution hub cut average corridor delivery times by 22%, lifting fixture volumes. Quarterly revenue climbed 9% with the second Riverside plant now at sustained full output. Thorne reaffirmed the disciplined expansion approach, citing improving inventory turns.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
