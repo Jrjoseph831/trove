@@ -529,7 +529,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82750,
+    "lastEventCycle": 82773,
     "events": [
       {
         "cycle": 0,
@@ -667,6 +667,16 @@
         "body": "Aldousspire delivered a modest beat as the twelve new Heirloom concept stores reached collective profitability faster than planned, contributing a 6% lift in apparel revenue. Mira Ashby said foot traffic at the new locations exceeded projections, and same-store sales at legacy shops held firm. She signaled a more selective pace of openings for the coming year.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82773,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Aldousspire Group to Extend Heirloom Format Abroad After Domestic Success",
+        "body": "Building on profitable concept stores, Mira Ashby announced plans to open the first fifteen Heirloom locations in overseas markets over the next 18 months. The rollout marks Aldousspire's largest international push in a generation, backed by a dedicated £90M fit-out budget. Ashby said the everyday line would anchor the new stores while heirloom pieces drive footfall.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -1826,18 +1836,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82765,
+    "lastEventCycle": 82773,
     "events": [
-      {
-        "cycle": 82608,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Boreas Power Lands $2.4B Anchor Tenant to Fill Expanded Hollowmere Campus",
-        "body": "Boreas signed a 15-year, $2.4 billion commitment with grid-services firm Corriden to occupy nearly the entire second phase of the doubled Hollowmere campus, effectively pre-leasing the $1.9B expansion before completion. CEO Mira Thorne called it 'the deal that validates the whole thesis,' and hinted at a third campus site under evaluation. The agreement lifts contracted campus revenue past $4 billion.",
-        "effects": {
-          "energy": 0.22
-        }
-      },
       {
         "cycle": 82614,
         "kind": "major_deal",
@@ -2064,6 +2064,16 @@
         "size": "standard",
         "head": "Boreas Power Energizes First Compute-Paired Campus Under $4.5B Supply Pact",
         "body": "Boreas brought its lead compute-paired campus online, the first delivery against the $4.5B anchor supply agreement. Mira Thorne said two further sites will follow within twelve months, lifting committed capacity across the program to 1.9 gigawatts. The house reaffirmed its widened $3.2B build plan remains fully financed.",
+        "effects": {
+          "energy": 0.13
+        }
+      },
+      {
+        "cycle": 82773,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Boreas Power Signs Second Anchor Pact to Extend Campus Network Eastward",
+        "body": "Mira Thorne secured a $2.8B supply agreement to underwrite a second cluster of compute-paired campuses, days after energizing the first site. The deal names an unspecified consortium as anchor offtaker and covers power and storage capacity through the next decade. Thorne said groundbreaking on the eastern cluster would begin within two quarters.",
         "effects": {
           "energy": 0.13
         }
@@ -4496,7 +4506,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82757,
+    "lastEventCycle": 82773,
     "events": [
       {
         "cycle": 0,
@@ -4692,6 +4702,16 @@
         "body": "Carrowwell reported earnings of $1.42 per share against expectations near $1.28, with the second Machines plant now running at roughly 70% of capacity against its $1.1B contract. Mara Voss said the automated material-handling line has already booked follow-on orders worth $180M. The company modestly raised its full-year outlook, citing steady demand across its four product lines.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82773,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Carrowwell Edges Past Estimates as Second Machines Plant Reaches Full Output",
+        "body": "Mara Voss reported a narrow beat as the second machines plant hit full production, lifting group revenue 9% on the quarter. Automated material-handling orders continued to build, though Voss flagged softening in auto parts demand as a watch item. Guidance for the year was left unchanged.",
+        "effects": {
+          "manufacturing": 0.06
         }
       }
     ]
@@ -11128,7 +11148,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82753,
+    "lastEventCycle": 82773,
     "events": [
       {
         "cycle": 0,
@@ -11286,6 +11306,16 @@
         "body": "Holtware reported a modest beat with revenue up 6% year-over-year, as the newly launched modular battery platform attracted stronger-than-expected attachment rates among existing cordless customers. Aurelia Dray noted the platform lifted average basket size by 9% in its first full quarter. Guidance was left unchanged amid a still-soft broader tool market.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82773,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Holtware Co. Extends Modular Platform Into Outdoor and Garden Tools",
+        "body": "Aurelia Dray unveiled a dozen new cordless outdoor tools sharing the modular battery platform introduced last year, targeting the higher-margin seasonal segment. The lineup includes trimmers, blowers and a compact mower, all cross-compatible with existing packs. Dray said early retailer commitments already exceed the initial platform rollout's.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
@@ -11950,7 +11980,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82755,
+    "lastEventCycle": 82773,
     "events": [
       {
         "cycle": 0,
@@ -12128,6 +12158,16 @@
         "body": "Kesselgrove edged past forecasts with earnings of $1.63 per share as the second assembly bay drove the press backlog down to just under nine months, its lowest in over a decade. Orla Steg said the disciplined ramp had 'done exactly what we asked of it' and signaled focus would shift toward maintaining margins.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82773,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Kesselgrove Co. to Add Third Bay as Press Backlog Hits Historic Low",
+        "body": "With its press backlog now at a record low, Orla Steg approved construction of a third assembly bay to capture demand that current capacity can no longer absorb quickly. The $180M project will lift annual press output by roughly a third when it reaches full production in two years. Steg framed the move as measured expansion rather than a departure from the company's disciplined pace.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -12702,18 +12742,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82763,
+    "lastEventCycle": 82773,
     "events": [
-      {
-        "cycle": 82593,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Korrwright Works Beats as Sennfeld Revival Line Drives Heritage Division Sales",
-        "body": "Quarterly revenue rose 14% to $612 million, powered by strong early demand for the Sennfeld Revival timepieces launched under the unified Heritage Division. CEO Dunmore Carrow said waitlists on flagship models had cleared expectations and hinted at further acquisitions in the coming year. Margins widened as integration savings from the Sennfeld deal began to land.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82600,
         "kind": "major_deal",
@@ -12940,6 +12970,16 @@
         "body": "The Halbrook Perpetual earned the Complication Prize at the Verenne Horology Salon, a second consecutive honor for Korrwright and validation of its fully in-house strategy. CEO Dunmore Carrow said the award confirms the wisdom of the Halbrook Movement Campus buildout now underway. Judges cited the escapement's precision and the achievement of a perpetual calendar built entirely without outside suppliers.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82773,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Korrwright Works Acquires Verenne Case-Maker Dovreux Frères in $620M Deal",
+        "body": "Dunmore Carrow announced the purchase of storied case and dial specialist Dovreux Frères, bringing another rung of the supply chain in-house just months after the Halbrook Perpetual's prize win. The all-cash deal absorbs Dovreux's three ateliers and roughly 480 finishers, and Carrow said its guilloché workshop would supply the entire Halbrook line by next season. Analysts noted it is Korrwright's largest single acquisition in over a decade.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -13446,25 +13486,15 @@
     "aiOwned": true,
     "homeSector": "technology",
     "founded": 1974,
-    "ceo": "Corin Blakely",
+    "ceo": "Renna Halvorsen",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.71,
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82763,
+    "lastEventCycle": 82773,
     "events": [
-      {
-        "cycle": 82576,
-        "kind": "safety_probe",
-        "size": "major",
-        "head": "Marlgear Supply Faces Federal Safety Probe as Drennan Findings Spread to Industrial Line",
-        "body": "Regulators opened a formal safety investigation spanning both the recalled Atlas Devices and Marlgear's Industrial Machines catalog, after Drennan Mills documents suggested defect testing gaps beyond a single product. CEO Halden Vossen, defiant in a combative briefing, insisted the issues were 'contained and overstated,' rattling investors already reeling from the class action. The probe could freeze new shipments pending audit, threatening the company's core order book.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82584,
         "kind": "lawsuit",
@@ -13688,6 +13718,14 @@
         "effects": {
           "technology": -0.22
         }
+      },
+      {
+        "cycle": 82773,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Marlgear Supply Ousts Corin Blakely as Board Names Turnaround Chief Amid Kessel Fallout",
+        "body": "The board removed Corin Blakely after the Kessel fault scandal, the $1.4B suit and the disruptive consumer exit eroded remaining investor confidence. Incoming chief Renna Halvorsen, a veteran of two industrial restructurings, will inherit the ongoing prosecution referral and a slimmed device line. Halvorsen pledged a full safety review and settlement talks as her first priorities.",
+        "effects": {}
       }
     ]
   },
@@ -16040,7 +16078,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82755,
+    "lastEventCycle": 82773,
     "events": [
       {
         "cycle": 0,
@@ -16216,6 +16254,16 @@
         "size": "standard",
         "head": "Stegforge Breaks Ground on Third Rail Plate Line as Consortium Demand Outpaces Capacity",
         "body": "With both existing rail plate lines running at full production, Aurelia Steg approved a $410M expansion to add a third line at the Holldenreach works, targeting startup in 18 months. Steg cited a consortium order book stretching into the next decade and called the move 'a measured answer to demand we can no longer meet.'",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82773,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Stegforge Beats Again as Consortium Locks Multi-Year Rail Plate Offtake",
+        "body": "Aurelia Steg reported quarterly earnings above consensus, crediting a newly signed multi-year offtake agreement that reserves the bulk of the coming third line's output. Order backlog rose 14% to a record, with structural materials margins widening on firmer plate pricing. Steg reaffirmed the third rail plate line remains on schedule for startup next year.",
         "effects": {
           "manufacturing": 0.13
         }

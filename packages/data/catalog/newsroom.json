@@ -1,24 +1,84 @@
 {
-  "generatedAt": "2026-08-27T21:55:30.803Z",
+  "generatedAt": "2026-08-28T10:07:06.319Z",
   "beats": [
     {
-      "company": "Caldercraft Holdings",
+      "company": "Aldousspire Group",
       "sector": "consumer",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Aldousspire Group to Extend Heirloom Format Abroad After Domestic Success",
+      "body": "Building on profitable concept stores, Mira Ashby announced plans to open the first fifteen Heirloom locations in overseas markets over the next 18 months. The rollout marks Aldousspire's largest international push in a generation, backed by a dedicated £90M fit-out budget. Ashby said the everyday line would anchor the new stores while heirloom pieces drive footfall.",
+      "cycle": 82773,
+      "dur": 2
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "major_deal",
+      "size": "standard",
+      "head": "Boreas Power Signs Second Anchor Pact to Extend Campus Network Eastward",
+      "body": "Mira Thorne secured a $2.8B supply agreement to underwrite a second cluster of compute-paired campuses, days after energizing the first site. The deal names an unspecified consortium as anchor offtaker and covers power and storage capacity through the next decade. Thorne said groundbreaking on the eastern cluster would begin within two quarters.",
+      "cycle": 82773,
+      "dur": 2
+    },
+    {
+      "company": "Carrowwell",
+      "sector": "manufacturing",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Caldercraft Holdings Beats as Weatherproof Range Holds Steady into Off-Season",
-      "body": "Caldercraft edged past estimates with revenue of $860M, as the reinforced deck cabinet line sustained demand through a typically softer quarter. Vale Fenn pointed to disciplined inventory management and steady reorder rates from hardware retail partners.",
-      "cycle": 82771,
+      "head": "Carrowwell Edges Past Estimates as Second Machines Plant Reaches Full Output",
+      "body": "Mara Voss reported a narrow beat as the second machines plant hit full production, lifting group revenue 9% on the quarter. Automated material-handling orders continued to build, though Voss flagged softening in auto parts demand as a watch item. Guidance for the year was left unchanged.",
+      "cycle": 82773,
       "dur": 1
     },
     {
-      "company": "Calderforge",
-      "sector": "technology",
+      "company": "Holtware Co.",
+      "sector": "consumer",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Holtware Co. Extends Modular Platform Into Outdoor and Garden Tools",
+      "body": "Aurelia Dray unveiled a dozen new cordless outdoor tools sharing the modular battery platform introduced last year, targeting the higher-margin seasonal segment. The lineup includes trimmers, blowers and a compact mower, all cross-compatible with existing packs. Dray said early retailer commitments already exceed the initial platform rollout's.",
+      "cycle": 82773,
+      "dur": 2
+    },
+    {
+      "company": "Kesselgrove Co.",
+      "sector": "manufacturing",
       "kind": "expansion",
       "size": "standard",
-      "head": "Calderforge Breaks Ground on Stormwell Hall Five to Extend Vann Recovery",
-      "body": "Riding commercial ramp at Hall Four, Calderforge committed $640M to build a fifth production hall at the Stormwell complex. Perra Vann said the expansion targets doubling compute output within two years, though she cautioned that ramp timelines remain aggressive and margins will stay compressed during buildout.",
-      "cycle": 82771,
+      "head": "Kesselgrove Co. to Add Third Bay as Press Backlog Hits Historic Low",
+      "body": "With its press backlog now at a record low, Orla Steg approved construction of a third assembly bay to capture demand that current capacity can no longer absorb quickly. The $180M project will lift annual press output by roughly a third when it reaches full production in two years. Steg framed the move as measured expansion rather than a departure from the company's disciplined pace.",
+      "cycle": 82773,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Works",
+      "sector": "luxury",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Korrwright Works Acquires Verenne Case-Maker Dovreux Frères in $620M Deal",
+      "body": "Dunmore Carrow announced the purchase of storied case and dial specialist Dovreux Frères, bringing another rung of the supply chain in-house just months after the Halbrook Perpetual's prize win. The all-cash deal absorbs Dovreux's three ateliers and roughly 480 finishers, and Carrow said its guilloché workshop would supply the entire Halbrook line by next season. Analysts noted it is Korrwright's largest single acquisition in over a decade.",
+      "cycle": 82773,
+      "dur": 8
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Marlgear Supply Ousts Corin Blakely as Board Names Turnaround Chief Amid Kessel Fallout",
+      "body": "The board removed Corin Blakely after the Kessel fault scandal, the $1.4B suit and the disruptive consumer exit eroded remaining investor confidence. Incoming chief Renna Halvorsen, a veteran of two industrial restructurings, will inherit the ongoing prosecution referral and a slimmed device line. Halvorsen pledged a full safety review and settlement talks as her first priorities.",
+      "cycle": 82773,
+      "dur": 8
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Stegforge Beats Again as Consortium Locks Multi-Year Rail Plate Offtake",
+      "body": "Aurelia Steg reported quarterly earnings above consensus, crediting a newly signed multi-year offtake agreement that reserves the bulk of the coming third line's output. Order backlog rose 14% to a record, with structural materials margins widening on firmer plate pricing. Steg reaffirmed the third rail plate line remains on schedule for startup next year.",
+      "cycle": 82773,
       "dur": 2
     },
     {
@@ -30,56 +90,6 @@
       "body": "Erretmark issued a global recall of 480,000 Veyron units after regulators confirmed a defect in the braking control module that could delay pressure response. The company set aside $310M for repairs and warned the $2.1B fleet accord may see delivery deferrals; Aurelia Garr called it 'a hard but necessary reset' and pledged a redesigned module within the quarter.",
       "cycle": 82771,
       "dur": 8
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fenncyon Beats Again as Grand Loop Earthwork Nears Two-Thirds Complete",
-      "body": "Fenncyon reported earnings of $1.90 per share against a $1.71 consensus, driven by peak-season output on the Grand Loop and steady progress on the Northern Spur. Nadia Ashby said cumulative earthwork has passed the 62% mark and flagged that early bidding has opened on a follow-on drainage package.",
-      "cycle": 82771,
-      "dur": 2
-    },
-    {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halcyon Industries Adds Second Recycled-Fiber Line at Northgate Amid Order Surge",
-      "body": "With the Northgate supply pact filling its order book, Halcyon committed $220M to a second recycled-fiber line to lift capacity by 35%. Dorian Ashby said the expansion answers sustained demand and positions the plant to pursue additional multi-year contracts through next year.",
-      "cycle": 82771,
-      "dur": 2
-    },
-    {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Keeps Streak Alive as Five-Property Base Stabilizes",
-      "body": "Marrowmoor posted its sixth consecutive quarterly beat, with occupancy across its five properties holding at 91%. Dorian Steg noted the Southfield addition has now fully absorbed integration costs, contributing a clean $18M to operating income.",
-      "cycle": 82771,
-      "dur": 1
-    },
-    {
-      "company": "Skarnvale",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarnvale Beats as Overhaul Playbook Spreads Across Three Junctions",
-      "body": "Skarnvale reported revenue up 19% to $410M as the two new junction rebuilds began contributing alongside the proven Vosk Junction system. Dorn Vaskell said throughput gains have exceeded internal targets, but flagged rising capital intensity as the overhaul program scales.",
-      "cycle": 82771,
-      "dur": 2
-    },
-    {
-      "company": "Vencyon",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Vencyon Beats as Unified Hub Deployments Ramp Across National Distributor",
-      "body": "Vencyon reported quarterly revenue of $2.4B, up 11% year-over-year, as more than 40 distributor sites went live on the Unified Hub Platform ahead of schedule. Iris Halloran credited the newly opened regional deployment centers for compressing installation timelines, and reaffirmed the $1.5B framework remains on track for full completion within eighteen months.",
-      "cycle": 82771,
-      "dur": 2
     },
     {
       "company": "Lhaus Industries",
@@ -109,56 +119,6 @@
       "head": "Bruncrest Works Unveils Aria Ultra X, Doubling Throughput Per Line",
       "body": "Bruncrest Works revealed the Aria Ultra X, a redesigned compute unit that CEO Ines Marlow said delivers roughly twice the throughput of the current generation while cutting power draw by a third. Marlow claimed the breakthrough lets a single production line match the output of two, easing the margin pressure that dogged last quarter's third-line push. Early commitments from three data-center customers already exceed $3 billion, the company said.",
       "cycle": 82766,
-      "dur": 8
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Halhold Works Ousts CEO Anselm Rocha as Board Moves On From Aveline Recall Fallout",
-      "body": "Halhold's board removed Anselm Rocha after the Aveline Successor recall swelled to an estimated $410M in charges and gutted Devices margins. Chair Idris Vale said the company needs 'stability and a clean safety culture' after two quarters of turbulence. Veteran operations chief Naomi Fenwick steps in immediately, pledging a full audit of the Wire & Cable and Medical Equipment lines.",
-      "cycle": 82765,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Supply",
-      "sector": "luxury",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Vossenspire Supply Strikes $620M Deal for Coachbuilder Meridian Carrosserie, Deepening Vehicles Push",
-      "body": "Fresh off three straight beats, Quinn Marrow unveiled the acquisition of storied coachbuilder Meridian Carrosserie for $620M, the house's largest outlay in a decade. Marrow said the deal hands Vossenspire bespoke bodywork capacity to pair with its Timepiece momentum, targeting a combined luxury order book north of $2B. Integration will run through a new Vehicles Atelier arm led by longtime lieutenant Sabine Corriveaux.",
-      "cycle": 82765,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "scandal",
-      "size": "major",
-      "head": "Aperture Compute Rocked as Emberline Safety Records Found Altered",
-      "body": "An internal review disclosed that inspection logs at the Emberline fabrication site were falsified ahead of the earlier regulatory probe, prompting the suspension of two site executives. CEO Marisol Venn called the findings 'unacceptable' and pledged a full external audit, but regulators signaled the probe will now widen to document tampering. Shares came under heavy pressure as several customers requested contract reviews.",
-      "cycle": 82764,
-      "dur": 8
-    },
-    {
-      "company": "Castlehold",
-      "sector": "energy",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Castlehold Ousts Voss as Board Installs New Chief After Framework Collapse",
-      "body": "Castlehold's board removed CEO Halden Voss following the collapse of the Framework deal, the $600M charge, and the second-plant shutdown, naming turnaround veteran Ingrid Mally as chief executive. Mally said her first priority is resolving the outstanding regulatory probe and stabilizing grid-storage operations before pursuing new mandates. The board also suspended forward guidance pending a strategic review.",
-      "cycle": 82764,
-      "dur": 8
-    },
-    {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Halcrow & Vance Wins $4.2B Coastal Reclamation Program in Largest Award to Date",
-      "body": "Halcrow & Vance secured a multi-year $4.2B earthmoving mandate for the Corveth coastal reclamation program, the largest single award in the company's history. CEO Mira Skarn said the deal, layered atop the ongoing Vetask work, will require a fourth yard and roughly 900 additional operators. Management flagged phased revenue recognition beginning next quarter.",
-      "cycle": 82764,
       "dur": 8
     }
   ]
