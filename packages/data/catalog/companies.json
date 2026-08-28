@@ -366,7 +366,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82753,
+    "lastEventCycle": 82775,
     "events": [
       {
         "cycle": 0,
@@ -512,6 +512,16 @@
         "size": "flash",
         "head": "Aldousmont & Sons Posts Steady Beat as Trauma Alliance Pact Ramps",
         "body": "Aldousmont delivered a quiet beat with revenue up 8%, as the regional trauma alliance consumables pact and the new sterile-kit line both moved into steady ordering. Dunmore Calder credited the antimicrobial wound-care range for incremental share gains across the hospital network. Guidance was raised slightly to reflect fuller utilization of the new line.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82775,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Aldousmont & Sons Adds Consumables Line to Meet Trauma Alliance Demand",
+        "body": "Aldousmont & Sons commissioned a second packaging line at its main plant to keep pace with volumes under its multi-year Regional Trauma Alliance pact. CEO Dunmore Calder described the modest expansion as 'demand-led and self-funded,' adding roughly 15% to antimicrobial wound-care output. No change to full-year guidance was announced.",
         "effects": {
           "medical": 0.06
         }
@@ -2340,18 +2350,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82766,
+    "lastEventCycle": 82775,
     "events": [
-      {
-        "cycle": 82626,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Bruncrest Works Lands Landmark 3.4B Aria Pro Order From National Compute Consortium",
-        "body": "Bruncrest secured a multi-year contract worth up to $3.4B to supply Aria Pro racks across a national compute build-out, its largest order ever. Marlow called the win 'the payoff for betting on the premium tier' and said Eastfield would run at full capacity through the coming year to meet delivery milestones.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82631,
         "kind": "outage",
@@ -2580,6 +2580,16 @@
         "body": "Bruncrest Works revealed the Aria Ultra X, a redesigned compute unit that CEO Ines Marlow said delivers roughly twice the throughput of the current generation while cutting power draw by a third. Marlow claimed the breakthrough lets a single production line match the output of two, easing the margin pressure that dogged last quarter's third-line push. Early commitments from three data-center customers already exceed $3 billion, the company said.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82775,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Bruncrest Works Beats as Aria Ultra X Ramps Ahead of Schedule and Third Line Nears Live",
+        "body": "Bruncrest posted a quarterly beat, with revenue up 19% as the doubled-throughput Aria Ultra X cleared its ramp faster than management guided. CEO Ines Marlow said the third production line will come online next quarter, lifting capacity guidance and easing the margin drag flagged earlier this year. The company raised full-year output targets by roughly 12%.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
@@ -5327,18 +5337,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82764,
+    "lastEventCycle": 82775,
     "events": [
-      {
-        "cycle": 82622,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Castlestone Splits Data Grid Unit Into Standalone Division After Penalty Fallout",
-        "body": "CEO Pell Karsh announced a sweeping reorganization, carving the troubled National Data Grid operations into a ring-fenced division led by a dedicated reliability chief. Karsh framed the move as a 'clean-room reset,' pledging $900M toward redundancy upgrades over 18 months while insisting the core Compute business remains 'the fastest-growing engine in the sector.' Analysts noted the restructuring absorbs the reliability rework mandated by regulators.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82629,
         "kind": "earnings_beat",
@@ -5567,6 +5567,16 @@
         "body": "Castlestone missed on the quarter as heavier-than-expected costs to scale the Grid-Core Ascend platform squeezed margins, sending operating profit below guidance. CEO Pell Karsh defended the spend as 'front-loaded investment' but conceded the ramp had run hot. The company held its landmark contract timeline while trimming near-term margin expectations.",
         "effects": {
           "technology": -0.13
+        }
+      },
+      {
+        "cycle": 82775,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Castlestone Vindicates Karsh as Grid-Core Ascend Wins $6.1B Multi-Region Compute Framework",
+        "body": "Castlestone secured a $6.1 billion, five-year framework agreement to supply Grid-Core Ascend compute across three national infrastructure programs, its largest single award on record. CEO Pell Karsh, who staked his comeback on the line despite a bruising ramp-cost overrun last quarter, said the deal validates the bet and locks in demand through 2031. Management now expects Ascend margins to turn positive by the second half as volume absorbs fixed costs.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -8933,18 +8943,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82767,
+    "lastEventCycle": 82775,
     "events": [
-      {
-        "cycle": 82622,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Gromford Works Posts Record Holiday Quarter on Meridian Grand Complication Demand",
-        "body": "The luxury house reported a 41% jump in Timepiece revenue, with the newly launched Grand Complication selling out its first allocation within weeks. CEO Corin Aldwych touted 'the strongest waitlist in the house's history' and hinted at further high-complication releases in the coming year.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82627,
         "kind": "product_launch",
@@ -9165,6 +9165,16 @@
         "size": "major",
         "head": "Gromford Works Reels as Emblem Signature Sourcing Claims Trigger Prestige Backlash",
         "body": "An industry exposé alleged that Gromford's Emblem Signature Editions used undisclosed third-party casings while marketing them as fully in-house, undercutting the prestige positioning Pryce had chased. CEO Halvard Pryce issued a defensive statement promising a full sourcing audit, but two major stockists paused Signature orders and the Grand Horology Salon opened an inquiry. The controversy lands just as Gromford's margin story hinged on the premium halo.",
+        "effects": {
+          "luxury": -0.22
+        }
+      },
+      {
+        "cycle": 82775,
+        "kind": "lawsuit",
+        "size": "major",
+        "head": "Gromford Works Sued Over Emblem Signature Sourcing Claims as Regulators Join Prestige Probe",
+        "body": "A coalition of luxury retailers filed suit against Gromford Works, alleging the Emblem Signature editions were marketed with provenance claims the company could not substantiate, seeking damages and rescinded contracts. A market-conduct regulator confirmed a parallel inquiry into Gromford's sourcing disclosures. CEO Halvard Pryce, whose rapid prestige push drove the line's launch, said the company 'stands behind Emblem' but has suspended new Signature shipments pending review.",
         "effects": {
           "luxury": -0.22
         }
@@ -9851,18 +9861,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82767,
+    "lastEventCycle": 82775,
     "events": [
-      {
-        "cycle": 82635,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Halhold Systems Unveils Next-Gen Compute Platform to Fulfill $900M Supply Pact",
-        "body": "Corin Vale introduced the Meridian compute line at Halhold's Northgate campus, calling it the backbone of the company's turnaround after two turbulent quarters. Core Compute chief Dala Reyes said initial units will ship to the anchor customer within 60 days, with capacity targeted to cover the full $900 million commitment by year-end. Vale framed the launch as proof the costly carve-out is finally clearing the way for growth.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82640,
         "kind": "earnings_beat",
@@ -10084,6 +10084,16 @@
         "effects": {
           "technology": 0.13
         }
+      },
+      {
+        "cycle": 82775,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halhold Systems Returns to Profit as Meridian Compute Orders Build Under Corvalan",
+        "body": "Halhold Systems swung back to an operating profit, reversing the losses that ended Marcus Thorne's tenure, as Meridian Compute shipments accelerated on the back of its first major order. CEO Ines Corvalan said the order book has since widened to four named customers and reaffirmed a return to steady payouts next year. Cost discipline and a leaner product roadmap were cited as key to the turnaround.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -10098,18 +10108,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82765,
+    "lastEventCycle": 82775,
     "events": [
-      {
-        "cycle": 82633,
-        "kind": "lawsuit",
-        "size": "major",
-        "head": "Halhold Works Sued by Hospital Networks as Aveline Monitor Failures Cited in Patient Harm",
-        "body": "A coalition of seven hospital networks filed suit against Halhold Works, alleging the recalled Aveline bedside monitors delivered faulty readings tied to at least a dozen adverse patient events. The complaint seeks $780M in damages and contract voiding; CEO Lena Faircloth said the company 'strongly disputes the causation claims' but has set aside a reserve pending review.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82639,
         "kind": "scandal",
@@ -10329,6 +10329,16 @@
         "head": "Halhold Works Ousts CEO Anselm Rocha as Board Moves On From Aveline Recall Fallout",
         "body": "Halhold's board removed Anselm Rocha after the Aveline Successor recall swelled to an estimated $410M in charges and gutted Devices margins. Chair Idris Vale said the company needs 'stability and a clean safety culture' after two quarters of turbulence. Veteran operations chief Naomi Fenwick steps in immediately, pledging a full audit of the Wire & Cable and Medical Equipment lines.",
         "effects": {}
+      },
+      {
+        "cycle": 82775,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halhold Works Relaunches Devices Line With Aveline Reborn as Fenwick Seeks Clean Break",
+        "body": "New CEO Naomi Fenwick unveiled the Aveline Reborn handset range, built on a redesigned power cell from supplier Corveth Energy and independently certified after last year's recall. Fenwick pledged staged shipments and a 24-month warranty to rebuild confidence in the Devices division, which bore the brunt of recall costs. Early orders from two regional carriers were described as 'encouraging but measured.'",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -13250,7 +13260,7 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82760,
+    "lastEventCycle": 82775,
     "events": [
       {
         "cycle": 0,
@@ -13476,6 +13486,16 @@
         "size": "standard",
         "head": "Maison & Vale Opens Consolidated Larenthal Distribution Hub as Kessler Eyes Next Target",
         "body": "The combined group unveiled a 1.1-million-square-foot distribution hub in Torvane County, folding six legacy Larenthal warehouses into a single node expected to shave 14% off fulfillment costs. Rhys Kessler told analysts the integration is 'ahead of pace' and hinted the balance sheet could support a further tuck-in acquisition within two quarters. Household Goods volumes rose 9% sequentially as the merged brand roster settled.",
+        "effects": {
+          "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82775,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Maison & Vale Strikes $1.3B Deal for Cleaning-Products Maker Sennhold as Kessler Presses Next Target",
+        "body": "Fresh off the Larenthal integration, Maison & Vale agreed to acquire jansan specialist Sennhold for $1.3 billion, extending its reach into institutional cleaning supplies. CEO Rhys Kessler framed the purchase as a natural bolt-on that leverages the newly opened distribution hub. The company expects Sennhold to add roughly $400 million in annual revenue once folded into the consolidated network.",
         "effects": {
           "hospitality": 0.13
         }
@@ -16669,18 +16689,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82763,
+    "lastEventCycle": 82775,
     "events": [
-      {
-        "cycle": 82571,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Thronehaus & Co. Opens Aldren-Backed Casing Foundry in Verrand",
-        "body": "Cora Dray cut the ribbon on a 40,000-square-foot casing foundry built around the newly acquired Aldren team, consolidating shell and bracelet work under one roof. The site is projected to lift in-house component output by roughly 35% within its first year and marks the first physical footprint added since the Sovereign Collection launch. Dray called it 'the next hungry step,' hinting at further supplier acquisitions to follow.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82580,
         "kind": "earnings_beat",
@@ -16907,6 +16917,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Debuts Aurel Grand Complication Powered by Meridian Dial Talent",
         "body": "Thronehaus unveiled the Aurel Grand Complication, a perpetual-calendar minute repeater that marks the first release drawing on the newly acquired Meridian Dial Works team. CEO Cora Dray positioned the piece as a statement of vertical ambition, with production capped at 120 units and pricing that places it atop the house's catalog. The launch extends the momentum from the Aurel line's Timepiece of the Year win at Vellcourt.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82775,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Thronehaus & Co. Opens Flagship Atelier to House Meridian Complications Under One Roof",
+        "body": "Thronehaus unveiled a new master atelier consolidating its Aurel line and the recently acquired Meridian Dial Works complications team into a single 40-artisan workshop. CEO Cora Dray said the facility triples annual grand-complication capacity and shortens lead times for bespoke commissions. The move follows the Aurel Grand Complication's strong reception at last season's Vellcourt Salon.",
         "effects": {
           "luxury": 0.13
         }
