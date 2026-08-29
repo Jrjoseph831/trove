@@ -1,24 +1,84 @@
 {
-  "generatedAt": "2026-08-28T21:47:58.887Z",
+  "generatedAt": "2026-08-29T06:05:50.137Z",
   "beats": [
     {
-      "company": "Aldousmont & Sons",
-      "sector": "medical",
+      "company": "Aperture Compute",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Aperture Compute Faces Formal Investigation as Regulators Seize Emberline Records",
+      "body": "Authorities opened a formal safety-records probe into the Emberline fabrication site after evidence that inspection logs had been altered, ordering the seizure of internal documents and interviews with plant leadership. Marisol Venn placed two site executives on leave and suspended a portion of Emberline output pending review, warning of possible near-term shipment delays. The company disclosed it is cooperating fully but declined to quantify the financial impact.",
+      "cycle": 82777,
+      "dur": 8
+    },
+    {
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
       "kind": "expansion",
+      "size": "standard",
+      "head": "Bruncraft Adds Second Coachline Shift to Meet $1.1B Fleet Order",
+      "body": "Marcus Vane announced a second production shift at the Vanguard assembly plant and roughly 400 new hires to fulfill the recently won $1.1B fleet contract. The expansion lifts annual capacity by an estimated 35% and marks Bruncraft's first hiring wave since Vane's cost-cutting era. Vane framed it as proof the company has 'turned the corner from repair to growth.'",
+      "cycle": 82777,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Castlehold's Mally Launches Sweeping Turnaround, Exits Storage-Framework Ambitions",
+      "body": "New chief Ingrid Mally unveiled a 90-day reset plan that shelves the abandoned Framework program entirely and refocuses the company on its core Power & Storage baseload contracts. The plan targets $220M in annual savings and consolidates operations around the two plants cleared by regulators, while the halted second plant remains offline pending final review. Mally called the previous strategy 'overextended' and pledged a return to disciplined delivery.",
+      "cycle": 82777,
+      "dur": 2
+    },
+    {
+      "company": "Forgegrave Industries",
+      "sector": "logistics",
+      "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldousmont & Sons Adds Consumables Line to Meet Trauma Alliance Demand",
-      "body": "Aldousmont & Sons commissioned a second packaging line at its main plant to keep pace with volumes under its multi-year Regional Trauma Alliance pact. CEO Dunmore Calder described the modest expansion as 'demand-led and self-funded,' adding roughly 15% to antimicrobial wound-care output. No change to full-year guidance was announced.",
-      "cycle": 82775,
+      "head": "Forgegrave Industries Edges Past Estimates as Meridian Cross-Dock Ramps",
+      "body": "Petra Thorne reported a modest beat with volumes up 6%, as the newly opened Meridian cross-dock hub began contributing to network throughput ahead of schedule. Management reaffirmed full-year guidance and noted the hub is running at roughly 40% of target capacity. Thorne described the quarter as 'steady and on plan.'",
+      "cycle": 82777,
       "dur": 1
     },
     {
-      "company": "Bruncrest Works",
-      "sector": "technology",
+      "company": "Greywater Grid",
+      "sector": "energy",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Greywater Grid Posts Steep Loss as Discharge Fallout Erases Compute Revenue",
+      "body": "The crisis chief's first report revealed a quarterly loss of $410M as the collapsed $2.4B compute pact and departing customers gutted revenue, which fell 38% year over year. The company took additional charges tied to the discharge restatement and warned of continued cash burn while the partner lawsuit proceeds. Management withdrew forward guidance, citing 'unresolved litigation and rebuilding trust.'",
+      "cycle": 82777,
+      "dur": 8
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Korrwright Group Wins $3.4B Transit Corridor Contract in Largest Award in Its History",
+      "body": "Halden Fenn secured the multi-year Eastreach Corridor package, supplying structural materials and wire & cable for a regional rail and utility spine. The award, worth $3.4B over six years, arrives just as Harbor redevelopment billing peaks, giving Korrwright a rare double-anchor backlog. Fenn said the win 'extends visibility well into the next decade' and lifts total backlog past $9B.",
+      "cycle": 82777,
+      "dur": 8
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
       "kind": "earnings_beat",
       "size": "standard",
-      "head": "Bruncrest Works Beats as Aria Ultra X Ramps Ahead of Schedule and Third Line Nears Live",
-      "body": "Bruncrest posted a quarterly beat, with revenue up 19% as the doubled-throughput Aria Ultra X cleared its ramp faster than management guided. CEO Ines Marlow said the third production line will come online next quarter, lifting capacity guidance and easing the margin drag flagged earlier this year. The company raised full-year output targets by roughly 12%.",
-      "cycle": 82775,
+      "head": "Varnvale & Sons Beats as Corvane Perpetual Line Drives Timepiece Margins Higher",
+      "body": "Bram Wold reported quarterly revenue up 14% with timepiece margins expanding 310 basis points, crediting strong early demand for the in-house Corvane Perpetual line and continued Thessaly case cost savings. The company raised its full-year outlook and noted order backlog for the Corvane collection now stretches nine months. Wold hinted at 'further vertical opportunities' under review.",
+      "cycle": 82777,
+      "dur": 2
+    },
+    {
+      "company": "Vossenspire Supply",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Vossenspire Supply Forms Dedicated Vehicles Division to House Meridian and Corriveaux",
+      "body": "Quinn Marrow announced a reorganization splitting the company into distinct Timepieces and Vehicles units, folding the newly acquired Meridian Carrosserie and prior Corriveaux assets under a single coachbuilding arm. The move is aimed at capturing an additional $90M in combined synergies and clarifying reporting as the Vehicles push scales. Marrow named the division a 'growth engine' for the coming years.",
+      "cycle": 82777,
       "dur": 2
     },
     {
@@ -40,46 +100,6 @@
       "body": "A coalition of luxury retailers filed suit against Gromford Works, alleging the Emblem Signature editions were marketed with provenance claims the company could not substantiate, seeking damages and rescinded contracts. A market-conduct regulator confirmed a parallel inquiry into Gromford's sourcing disclosures. CEO Halvard Pryce, whose rapid prestige push drove the line's launch, said the company 'stands behind Emblem' but has suspended new Signature shipments pending review.",
       "cycle": 82775,
       "dur": 8
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halhold Systems Returns to Profit as Meridian Compute Orders Build Under Corvalan",
-      "body": "Halhold Systems swung back to an operating profit, reversing the losses that ended Marcus Thorne's tenure, as Meridian Compute shipments accelerated on the back of its first major order. CEO Ines Corvalan said the order book has since widened to four named customers and reaffirmed a return to steady payouts next year. Cost discipline and a leaner product roadmap were cited as key to the turnaround.",
-      "cycle": 82775,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Works",
-      "sector": "technology",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Halhold Works Relaunches Devices Line With Aveline Reborn as Fenwick Seeks Clean Break",
-      "body": "New CEO Naomi Fenwick unveiled the Aveline Reborn handset range, built on a redesigned power cell from supplier Corveth Energy and independently certified after last year's recall. Fenwick pledged staged shipments and a 24-month warranty to rebuild confidence in the Devices division, which bore the brunt of recall costs. Early orders from two regional carriers were described as 'encouraging but measured.'",
-      "cycle": 82775,
-      "dur": 2
-    },
-    {
-      "company": "Maison & Vale",
-      "sector": "hospitality",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Maison & Vale Strikes $1.3B Deal for Cleaning-Products Maker Sennhold as Kessler Presses Next Target",
-      "body": "Fresh off the Larenthal integration, Maison & Vale agreed to acquire jansan specialist Sennhold for $1.3 billion, extending its reach into institutional cleaning supplies. CEO Rhys Kessler framed the purchase as a natural bolt-on that leverages the newly opened distribution hub. The company expects Sennhold to add roughly $400 million in annual revenue once folded into the consolidated network.",
-      "cycle": 82775,
-      "dur": 2
-    },
-    {
-      "company": "Thronehaus & Co.",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Thronehaus & Co. Opens Flagship Atelier to House Meridian Complications Under One Roof",
-      "body": "Thronehaus unveiled a new master atelier consolidating its Aurel line and the recently acquired Meridian Dial Works complications team into a single 40-artisan workshop. CEO Cora Dray said the facility triples annual grand-complication capacity and shortens lead times for bespoke commissions. The move follows the Aurel Grand Complication's strong reception at last season's Vellcourt Salon.",
-      "cycle": 82775,
-      "dur": 2
     },
     {
       "company": "Korrwright Works",
@@ -109,16 +129,6 @@
       "head": "Erretmark Works Recalls 480,000 Veyron Vehicles as Braking Probe Concludes",
       "body": "Erretmark issued a global recall of 480,000 Veyron units after regulators confirmed a defect in the braking control module that could delay pressure response. The company set aside $310M for repairs and warned the $2.1B fleet accord may see delivery deferrals; Aurelia Garr called it 'a hard but necessary reset' and pledged a redesigned module within the quarter.",
       "cycle": 82771,
-      "dur": 8
-    },
-    {
-      "company": "Lhaus Industries",
-      "sector": "automotive",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Lhaus Industries Wins $4.3B Fleet Storage Contract in Landmark Power Division Deal",
-      "body": "Cole Brandt secured a multi-year agreement to supply Kellstrom-based storage packs to a national logistics fleet operator, the largest single order in the young Power & Storage division's history. The $4.3B contract locks in output through 2032 and validates the $2.1B Kellstrom acquisition Brandt championed. Shares of the vertically integrated automaker reflected the strategic milestone as the division moved from launch to scale.",
-      "cycle": 82769,
       "dur": 8
     }
   ]

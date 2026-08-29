@@ -702,18 +702,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82764,
+    "lastEventCycle": 82777,
     "events": [
-      {
-        "cycle": 82566,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Aperture Compute Signs 1.4-Billion Dawnmere II Rollout With Regional Backbone Operator",
-        "body": "Halden Dray secured a 1.4-billion agreement to supply Dawnmere II interconnects across the Merrow backbone network, the largest single order since the record-setting launch. The multi-year deal locks in Aperture's latency-leading hardware for a network handling a growing share of inland compute traffic. Dray called it 'proof the record wasn't a stunt.'",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82574,
         "kind": "earnings_beat",
@@ -938,6 +928,16 @@
         "size": "major",
         "head": "Aperture Compute Rocked as Emberline Safety Records Found Altered",
         "body": "An internal review disclosed that inspection logs at the Emberline fabrication site were falsified ahead of the earlier regulatory probe, prompting the suspension of two site executives. CEO Marisol Venn called the findings 'unacceptable' and pledged a full external audit, but regulators signaled the probe will now widen to document tampering. Shares came under heavy pressure as several customers requested contract reviews.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82777,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Aperture Compute Faces Formal Investigation as Regulators Seize Emberline Records",
+        "body": "Authorities opened a formal safety-records probe into the Emberline fabrication site after evidence that inspection logs had been altered, ordering the seizure of internal documents and interviews with plant leadership. Marisol Venn placed two site executives on leave and suspended a portion of Emberline output pending review, warning of possible near-term shipment delays. The company disclosed it is cooperating fully but declined to quantify the financial impact.",
         "effects": {
           "technology": -0.22
         }
@@ -2101,18 +2101,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82766,
+    "lastEventCycle": 82777,
     "events": [
-      {
-        "cycle": 82581,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Bruncraft Industries Launches Integration Push to Absorb Talvorne Motors",
-        "body": "Following its $2.7-billion Talvorne acquisition, Bruncraft detailed a consolidation plan that will merge overlapping assembly lines and retire the Talvorne runabout badge in favor of a unified Bruncraft lineup. Orla Marrow projected $180 million in annual savings by combining the Halveston axle supply with Talvorne's plants, though the plan includes closing two redundant facilities. Union representatives requested talks over affected workers.",
-        "effects": {
-          "automotive": -0.13
-        }
-      },
       {
         "cycle": 82588,
         "kind": "recall",
@@ -2333,6 +2323,16 @@
         "size": "standard",
         "head": "Bruncraft Lands $1.1B Fleet Order as Vane Pivots From Cuts to Growth",
         "body": "Bruncraft Industries secured a $1.1 billion multi-year contract to supply 14,000 Coachline and Vanguard-trim vehicles to national courier operator Melloway Freight, its largest fleet deal in five years. CEO Marcus Vane framed the win as validation of the leaner Coachline relaunch, noting deliveries begin in the third quarter and run through 2029. Vane hinted at further fleet negotiations, saying the cost reset has 'freed the company to chase volume again.'",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82777,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Bruncraft Adds Second Coachline Shift to Meet $1.1B Fleet Order",
+        "body": "Marcus Vane announced a second production shift at the Vanguard assembly plant and roughly 400 new hires to fulfill the recently won $1.1B fleet contract. The expansion lifts annual capacity by an estimated 35% and marks Bruncraft's first hiring wave since Vane's cost-cutting era. Vane framed it as proof the company has 'turned the corner from repair to growth.'",
         "effects": {
           "automotive": 0.13
         }
@@ -4973,18 +4973,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82764,
+    "lastEventCycle": 82777,
     "events": [
-      {
-        "cycle": 82592,
-        "kind": "earnings_miss",
-        "size": "standard",
-        "head": "Castlehold Misses as Saltmere Cleanup Bill Swells to $1.9B",
-        "body": "Castlehold posted quarterly revenue of $6.4B, below its $7.1B guidance, after booking a $640M charge tied to remediation and legal reserves for the Saltmere fault-log affair. Reneth told analysts the storage division 'held its own' but conceded the litigation overhang would weigh on results 'well into next year.'",
-        "effects": {
-          "energy": -0.13
-        }
-      },
       {
         "cycle": 82599,
         "kind": "safety_probe",
@@ -5210,6 +5200,16 @@
         "head": "Castlehold Ousts Voss as Board Installs New Chief After Framework Collapse",
         "body": "Castlehold's board removed CEO Halden Voss following the collapse of the Framework deal, the $600M charge, and the second-plant shutdown, naming turnaround veteran Ingrid Mally as chief executive. Mally said her first priority is resolving the outstanding regulatory probe and stabilizing grid-storage operations before pursuing new mandates. The board also suspended forward guidance pending a strategic review.",
         "effects": {}
+      },
+      {
+        "cycle": 82777,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Castlehold's Mally Launches Sweeping Turnaround, Exits Storage-Framework Ambitions",
+        "body": "New chief Ingrid Mally unveiled a 90-day reset plan that shelves the abandoned Framework program entirely and refocuses the company on its core Power & Storage baseload contracts. The plan targets $220M in annual savings and consolidates operations around the two plants cleared by regulators, while the halted second plant remains offline pending final review. Mally called the previous strategy 'overextended' and pledged a return to disciplined delivery.",
+        "effects": {
+          "energy": -0.13
+        }
       }
     ]
   },
@@ -8042,7 +8042,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82756,
+    "lastEventCycle": 82777,
     "events": [
       {
         "cycle": 0,
@@ -8220,6 +8220,16 @@
         "body": "Petra Thorne unveiled a $190M cross-dock hub at Meridian, adding 40% throughput capacity to the Beyond-Meridian network that has driven three straight beats. The facility consolidates four regional depots and is expected to shave a day off average handling time. Thorne framed the move as 'building ahead of the volumes we already see.'",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82777,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Forgegrave Industries Edges Past Estimates as Meridian Cross-Dock Ramps",
+        "body": "Petra Thorne reported a modest beat with volumes up 6%, as the newly opened Meridian cross-dock hub began contributing to network throughput ahead of schedule. Management reaffirmed full-year guidance and noted the hub is running at roughly 40% of target capacity. Thorne described the quarter as 'steady and on plan.'",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -8694,18 +8704,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82763,
+    "lastEventCycle": 82777,
     "events": [
-      {
-        "cycle": 82539,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Greywater Grid Tops Forecasts as Compute-Campus Pact Lifts Backlog",
-        "body": "Greywater Grid reported quarterly revenue of $1.42 billion, up 11 percent and ahead of guidance, with the new compute-campus storage pact adding $640 million to its multi-year backlog. Vale Halloran credited the record-density rollout at the Halloran Facility for margin gains, citing storage gross margin up 230 basis points. The company raised its full-year outlook for the second time this year.",
-        "effects": {
-          "energy": 0.13
-        }
-      },
       {
         "cycle": 82550,
         "kind": "product_launch",
@@ -8929,6 +8929,16 @@
         "head": "Greywater Grid Ousts Renwick as Board Installs Crisis Chief Amid Discharge Fallout",
         "body": "Greywater Grid's board removed CEO Sable Renwick as the discharge scandal and $2.4 billion partner lawsuit engulfed the company, naming restructuring specialist Halden Voss to stabilize operations. Voss inherits a regulatory probe, a fractured compute partnership, and mounting demands for a full audit of the closed-loop reservoir claims. Directors said the leadership change was necessary to 'restore credibility with regulators and counterparties.'",
         "effects": {}
+      },
+      {
+        "cycle": 82777,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Greywater Grid Posts Steep Loss as Discharge Fallout Erases Compute Revenue",
+        "body": "The crisis chief's first report revealed a quarterly loss of $410M as the collapsed $2.4B compute pact and departing customers gutted revenue, which fell 38% year over year. The company took additional charges tied to the discharge restatement and warned of continued cash burn while the partner lawsuit proceeds. Management withdrew forward guidance, citing 'unresolved litigation and rebuilding trust.'",
+        "effects": {
+          "energy": -0.22
+        }
       }
     ]
   },
@@ -12529,7 +12539,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82757,
+    "lastEventCycle": 82777,
     "events": [
       {
         "cycle": 0,
@@ -12737,6 +12747,16 @@
         "body": "Korrwright reported a narrow beat with revenue of $610M as Harbor redevelopment billing held near its peak and the corridor award continued to ramp. Halden Fenn said structural-materials volumes stayed firm but flagged that Harbor billing would begin tapering next quarter. Management reaffirmed full-year guidance without raising it.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82777,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Korrwright Group Wins $3.4B Transit Corridor Contract in Largest Award in Its History",
+        "body": "Halden Fenn secured the multi-year Eastreach Corridor package, supplying structural materials and wire & cable for a regional rail and utility spine. The award, worth $3.4B over six years, arrives just as Harbor redevelopment billing peaks, giving Korrwright a rare double-anchor backlog. Fenn said the win 'extends visibility well into the next decade' and lifts total backlog past $9B.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -17270,18 +17290,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82765,
+    "lastEventCycle": 82777,
     "events": [
-      {
-        "cycle": 82588,
-        "kind": "restructure",
-        "size": "standard",
-        "head": "Varnvale & Sons Consolidates Corveau, Bellmont and Duquesne Under New Maisons Division",
-        "body": "Following a $2.3-billion acquisition spree, the luxury house unified its casemaking, movement and jewelry operations into a single Varnvale Maisons division to streamline its newly vertical supply chain. CEO Bram Wold appointed longtime deputy Sabine Reuther to head the division, acknowledging integration costs would weigh on near-term margins.",
-        "effects": {
-          "luxury": -0.13
-        }
-      },
       {
         "cycle": 82595,
         "kind": "product_launch",
@@ -17508,6 +17518,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Unveils Corvane Perpetual Line Built on In-House Thessaly Cases",
         "body": "Varnvale launched its Corvane Perpetual collection, the first line fully cased at the recently acquired Thessaly Works. Bram Wold said vertical integration cut per-unit case costs by 18% while enabling a limited run priced above the house's prior flagships. Early allocations to Fine Goods boutiques are already committed through the season.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82777,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Varnvale & Sons Beats as Corvane Perpetual Line Drives Timepiece Margins Higher",
+        "body": "Bram Wold reported quarterly revenue up 14% with timepiece margins expanding 310 basis points, crediting strong early demand for the in-house Corvane Perpetual line and continued Thessaly case cost savings. The company raised its full-year outlook and noted order backlog for the Corvane collection now stretches nine months. Wold hinted at 'further vertical opportunities' under review.",
         "effects": {
           "luxury": 0.13
         }
@@ -18516,18 +18536,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82765,
+    "lastEventCycle": 82777,
     "events": [
-      {
-        "cycle": 82578,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Vossenspire Supply Unveils First Calderon-Built Grand Tourer Under Heritage Badge",
-        "body": "Just eight months after acquiring Calderon Motorworks, Vossenspire debuted the Aldecourt GTR, a limited run of 250 hand-assembled tourers priced from 480,000 marks. Quinn Marrow told the unveiling crowd the model 'proves the Calderon deal was never about factories, but about souls,' hinting that two further coachbuilt lines are already in development.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82587,
         "kind": "major_deal",
@@ -18756,6 +18766,16 @@
         "body": "Fresh off three straight beats, Quinn Marrow unveiled the acquisition of storied coachbuilder Meridian Carrosserie for $620M, the house's largest outlay in a decade. Marrow said the deal hands Vossenspire bespoke bodywork capacity to pair with its Timepiece momentum, targeting a combined luxury order book north of $2B. Integration will run through a new Vehicles Atelier arm led by longtime lieutenant Sabine Corriveaux.",
         "effects": {
           "luxury": 0.22
+        }
+      },
+      {
+        "cycle": 82777,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Vossenspire Supply Forms Dedicated Vehicles Division to House Meridian and Corriveaux",
+        "body": "Quinn Marrow announced a reorganization splitting the company into distinct Timepieces and Vehicles units, folding the newly acquired Meridian Carrosserie and prior Corriveaux assets under a single coachbuilding arm. The move is aimed at capturing an additional $90M in combined synergies and clarifying reporting as the Vehicles push scales. Marrow named the division a 'growth engine' for the coming years.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
