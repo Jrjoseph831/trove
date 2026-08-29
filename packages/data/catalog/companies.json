@@ -1211,18 +1211,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82767,
+    "lastEventCycle": 82779,
     "events": [
-      {
-        "cycle": 82558,
-        "kind": "lawsuit",
-        "size": "major",
-        "head": "Blackhold Hit With Investor Suit Over Greycliff Safety Filings",
-        "body": "A consortium of institutional shareholders filed a $1.9B suit accusing Blackhold of misstating the readiness of its Greycliff test bank ahead of launch. The filing cites internal documents suggesting Tomas Vren's team fast-tracked certification despite unresolved fault warnings, hours before the grid failure that took the bank offline. Blackhold called the claims 'meritless' but confirmed regulators had expanded their review to include the disputed filings.",
-        "effects": {
-          "energy": -0.22
-        }
-      },
       {
         "cycle": 82567,
         "kind": "earnings_miss",
@@ -1442,6 +1432,16 @@
         "effects": {
           "energy": -0.13
         }
+      },
+      {
+        "cycle": 82779,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Blackhold Misses as Storage-Unit Split Costs Bite and Defect Warranty Claims Pile Up",
+        "body": "Blackhold posted a wider-than-expected loss as separation charges from the storage-power split and mounting warranty claims on the defective fleet weighed on results. CEO Perrin Vale said the quarter 'reflects the price of cleaning house' but reaffirmed the turnaround timeline. The investor suit over the defect remains unresolved, keeping pressure on the newly reshaped structure.",
+        "effects": {
+          "energy": -0.13
+        }
       }
     ]
   },
@@ -1599,18 +1599,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82767,
+    "lastEventCycle": 82779,
     "events": [
-      {
-        "cycle": 82556,
-        "kind": "safety_probe",
-        "size": "major",
-        "head": "Blackton Industries Under Formal Safety Probe as Halvern Weld Concerns Spread",
-        "body": "Regulators at the Motorworks Safety Board opened a formal investigation into Blackton's Halvern components after additional weld failures were reported beyond the original recalled batch. CEO Mara Mercer confirmed the second production line has been paused while inspectors review the entire Halvern run, a setback estimated to cost the firm 40 million in delayed orders. The probe casts doubt on the rapid expansion Mercer championed just months ago.",
-        "effects": {
-          "automotive": -0.22
-        }
-      },
       {
         "cycle": 82565,
         "kind": "lawsuit",
@@ -1829,6 +1819,16 @@
         "size": "standard",
         "head": "Blackton Industries Breaks Ground on Second Drivetrain Plant to Serve Fleet Pact",
         "body": "Riding its $2.3B national fleet contract, Blackton committed $410M to a new drivetrain facility in the Calder Basin, expected to add 900 jobs once online in 18 months. CEO Sable Renwick framed the expansion as necessary to meet supply commitments, though analysts flagged the aggressive spend so soon after the Halvern split. The plant will double streamlined drivetrain capacity at peak.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82779,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Blackton Industries Beats as Drivetrain Pact Ramps and Second Plant Nears Completion",
+        "body": "Blackton Industries topped estimates with revenue up 22% as the $2.3B fleet supply pact reached early-stage volume ahead of schedule. Sable Renwick said the second drivetrain plant is tracking to open ahead of plan, positioning the company for a further step-up next year. The streamlined parts line is now Blackton's largest revenue contributor.",
         "effects": {
           "automotive": 0.13
         }
@@ -4301,7 +4301,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82762,
+    "lastEventCycle": 82779,
     "events": [
       {
         "cycle": 0,
@@ -4511,6 +4511,16 @@
         "body": "Renn committed $310M to a new press bay at the flagship works, targeting first output within fourteen months to absorb the record heavy-press backlog. Machines chief Garrick Vale said the expansion adds roughly 40% forming capacity, though Renn acknowledged the timeline leaves 'no margin for slippage.' The move doubles down on the post-split thesis that a leaner Carrowforge can outpace legacy rivals on turnaround time.",
         "effects": {
           "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82779,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Carrowforge Faces Safety Review After Heavy-Press Weld Fault Surfaces at New Line",
+        "body": "Regulators opened an inspection into Carrowforge's second heavy-press line after workers flagged inconsistent weld seams on three initial frames, halting output for at least two weeks. CEO Dahlia Renn insisted the fault is 'isolated to early tooling calibration' and pledged full cooperation, though the pause threatens delivery timing on the $940M order book. Analysts warn any delay could pressure the freshly restored profit margin.",
+        "effects": {
+          "manufacturing": -0.13
         }
       }
     ]
@@ -4870,7 +4880,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82742,
+    "lastEventCycle": 82779,
     "events": [
       {
         "cycle": 0,
@@ -4966,6 +4976,16 @@
         "size": "flash",
         "head": "Castlegear Group Edges Past Estimates as Consumables Volume Holds Steady",
         "body": "Castlegear reported a modest beat, with sterile tray and consumables volumes holding at full contract levels and quarterly revenue of $288M. Sable Brandt reaffirmed the company's conservative outlook, citing stable demand across its regional network. Margins were unchanged at 16%.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82779,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlegear Group Tops Estimates Again as Sterile Tray and Consumables Demand Steadies",
+        "body": "Castlegear Group posted another modest beat as sterile tray shipments held at full volume and consumables demand stayed resilient, lifting revenue 4%. Sable Brandt cited disciplined cost control and reliable regional contracts as the durable core of results. The company reaffirmed its steady full-year outlook.",
         "effects": {
           "medical": 0.06
         }
@@ -6627,7 +6647,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82757,
+    "lastEventCycle": 82779,
     "events": [
       {
         "cycle": 0,
@@ -6795,6 +6815,16 @@
         "body": "Drustcyon posted record quarterly marine-grade anchor shipments, lifting revenue 19% to $290M as both Harbor-Authority contracts billed simultaneously. Aurelia Kessler said combined backlog reached an all-time high of $720M, giving the fastener maker visibility well into next year. The company raised its full-year margin outlook on favorable product mix.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82779,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Drustcyon Edges Past Estimates as Marine-Grade Backlog Converts to Steady Revenue",
+        "body": "Drustcyon topped forecasts modestly as the two Harbor-Authority awards continued shipping on schedule, lifting quarterly revenue 6%. Aurelia Kessler noted the marine-grade anchor line is now running at full utilization with backlog visibility into next year. The measured result extends the company's streak of contract-driven beats.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
@@ -9212,7 +9242,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82762,
+    "lastEventCycle": 82779,
     "events": [
       {
         "cycle": 0,
@@ -9428,6 +9458,16 @@
         "size": "standard",
         "head": "Halcrest Extends Meridian Line With Slimmer Meridian Reserve at $28,500",
         "body": "Iris Marrow unveiled the Meridian Reserve, a thinner three-day-power variant priced to widen the range below the sold-out Grand Complication. Initial allocation runs to 4,200 pieces across the new flagship boutiques, with Marrow calling it 'the volume engine the comeback needs.' The launch tests whether Halcrest can broaden Meridian's appeal without diluting its scarcity halo.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82779,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Halcrest Secures Rare Movement Supply Accord to Guard Meridian Expansion",
+        "body": "Halcrest signed a ten-year exclusive supply agreement with movement specialist Corvane Manufacture, locking in escapement components as Meridian demand outstrips capacity. Iris Marrow framed the pact as 'a fortress around our finest calibers,' with terms said to guarantee 40,000 movements annually. The deal follows the sold-out Meridian Grand Complication and the newly launched Reserve line.",
         "effects": {
           "luxury": 0.13
         }
@@ -11761,18 +11801,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82764,
+    "lastEventCycle": 82779,
     "events": [
-      {
-        "cycle": 82520,
-        "kind": "product_launch",
-        "size": "major",
-        "head": "Kessel Drive Debuts Long-Range Touring Vehicle in Splashy Reveal",
-        "body": "Kessel Drive pulled the covers off its flagship 'Meridian' touring model, paired with a new high-capacity storage cell promising 30% longer service life. CEO Dorian Brandt staged the launch before 2,000 guests, claiming pre-orders topped 6,500 units within 48 hours — the company's biggest rollout in a decade.",
-        "effects": {
-          "automotive": 0.22
-        }
-      },
       {
         "cycle": 82529,
         "kind": "major_deal",
@@ -11993,6 +12023,16 @@
         "size": "standard",
         "head": "Kessel Drive Signs $1.1B Fleet Supply Pact for Vanta Ultra Packs",
         "body": "Kessel Drive landed a $1.1B agreement to supply Vanta Ultra battery packs to a national commercial fleet operator over three years. CEO Aldric Venn touted the deal as validation of the pack's 20% range gain, with first deliveries slated for next quarter. The company said secured cathode supply gives it confidence to meet the ramp.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82779,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Kessel Drive Breaks Ground on Vanta Ultra Gigafactory to Feed $1.1B Fleet Pact",
+        "body": "Kessel Drive began construction on a 4.2 million-square-foot cell plant to meet the Vanta Ultra fleet supply pact, targeting first output within 18 months. CEO Aldric Venn said the facility will triple Ultra Pack capacity and add roughly 2,600 jobs. The move comes as secured cathode supply steadies volumes and range gains draw fresh fleet interest.",
         "effects": {
           "automotive": 0.13
         }
@@ -17565,18 +17605,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82767,
+    "lastEventCycle": 82779,
     "events": [
-      {
-        "cycle": 82574,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Varnvale House Opens Flagship Maison as Calloway Extends Meridian Momentum",
-        "body": "Riding the Meridian collection's strong first quarter, CEO Idris Calloway unveiled a new flagship maison in the capital's luxury district, the brand's first store opening since the Ember scandal. The 12,000-square-foot space anchors a planned rollout of six boutiques over 18 months. Calloway framed the investment as a signal that Varnvale has 'closed the book on crisis and opened one on craft.'",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82582,
         "kind": "scandal",
@@ -17795,6 +17825,16 @@
         "size": "standard",
         "head": "Varnvale House Beats as Sovereign Line and New Salon Drive Record Luxury Quarter",
         "body": "Varnvale posted revenue up 22% year-over-year, with the Sovereign Complication line and flagship salon fueling its strongest quarter since Coyle's arrival. CEO Beatrix Coyle credited the award-driven halo, noting waitlists on top complications now stretch past nine months. Operating margin widened to 31% on premium mix.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82779,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Varnvale House Unveils Sovereign Minute Repeater at $185,000 Amid Salon Buzz",
+        "body": "Building on its Timepiece of the Year win, Varnvale House introduced the Sovereign Minute Repeater, a limited run of 75 pieces priced at $185,000. Beatrix Coyle called it 'the loudest statement in our quietest craft,' with the first 40 units already spoken for at the flagship salon. The launch cements Varnvale's push up-market after a record luxury quarter.",
         "effects": {
           "luxury": 0.13
         }
