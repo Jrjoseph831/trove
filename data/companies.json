@@ -3035,7 +3035,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82760,
+    "lastEventCycle": 82778,
     "events": [
       {
         "cycle": 0,
@@ -3232,6 +3232,16 @@
         "effects": {
           "consumer": 0.13
         }
+      },
+      {
+        "cycle": 82778,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunridge Works Beats Again as Two-Banner Retail Push Lifts Cross-Category Sales",
+        "body": "CEO Halia Brennt reported quarterly revenue up 14% to $1.9B, crediting the second national retail banner and strong early Aldercraft fine-goods reorders. Cleaning and packaging volumes held steady while apparel margins improved on freight normalization. Brennt raised full-year guidance modestly, calling the multi-category model 'finally firing on all cylinders.'",
+        "effects": {
+          "consumer": 0.13
+        }
       }
     ]
   },
@@ -3246,18 +3256,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82767,
+    "lastEventCycle": 82778,
     "events": [
-      {
-        "cycle": 82607,
-        "kind": "recall",
-        "size": "major",
-        "head": "Brunstone & Sons Recalls Vault Cell Pro as Regulators Confirm Thermal Fault",
-        "body": "Brunstone & Sons announced a global recall of roughly 240,000 Vault Cell Pro units after regulators verified a thermal-runaway defect linked to a supplier cell coating. Royce Lambourne, who had staked the company's storage push on the product, said the recall would cost an estimated $420 million and vowed a redesigned unit within six months. The $1.8B grid-scale order remains under review pending replacement hardware.",
-        "effects": {
-          "automotive": -0.22
-        }
-      },
       {
         "cycle": 82615,
         "kind": "leadership_change",
@@ -3477,6 +3477,16 @@
         "head": "Brunstone & Sons Names Veteran Operator Halwick to Steady Post-Vault II Recovery",
         "body": "The board appointed longtime manufacturing executive Della Halwick as CEO, tasking her with restoring discipline after the Vault II demand collapse and 1,400 job cuts. Halwick pledged a 'demand-first' approach and said idled lines would stay dark until orders justified restart. She inherits a balance sheet strained by the capacity overbuild.",
         "effects": {}
+      },
+      {
+        "cycle": 82778,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Brunstone & Sons Relaunches Vault as Halwick Scales Back Ambitions to Fleet Storage",
+        "body": "In her first major move, CEO Della Halwick unveiled the pared-down Vault III, a modular storage unit aimed squarely at commercial fleet operators rather than the consumer market that stranded its predecessor. Halwick told a Dearford briefing the line targets a narrower 40,000-unit annual run, with the two idled Vault II lines partially reactivated to serve pre-orders. Analysts noted the pivot marks a sharp retreat from Frost's mass-market gamble.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -7604,18 +7614,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82765,
+    "lastEventCycle": 82778,
     "events": [
-      {
-        "cycle": 82563,
-        "kind": "product_launch",
-        "size": "major",
-        "head": "Fennmoor Launches Larkspur One Diagnostics System Built on Threll Sensors",
-        "body": "Fennmoor unveiled Larkspur One, its flagship rapid-diagnostics platform integrating the recently acquired Threll sensor technology, with launch orders spanning three hospital networks. CEO Dorian Brandt called it the payoff of an aggressive acquisition streak, projecting the medical unit could double its revenue contribution within two years. The company also signaled further deal appetite to broaden the Larkspur ecosystem.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82571,
         "kind": "major_deal",
@@ -7844,6 +7844,16 @@
         "body": "Fennmoor topped estimates as the unified Halquist-Carrow diagnostics division delivered its first profitable quarter since the mergers. Dorian Brandt said cross-selling into existing Devices and Industrial Machines channels drove diagnostics revenue up 22%, with integration savings tracking ahead of plan. Brandt hinted the house is 'far from done' scouting further medical targets.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82778,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Fennmoor Strikes $3.4B Merger to Fold Machine-Tool Giant Voight Into Industrial Arm",
+        "body": "Chairman Dorian Brandt, now in his sixth decade at the helm, announced the largest acquisition in company history, absorbing precision machine-tool maker Voight to bolster Fennmoor's Industrial Machines division. The cash-and-stock deal follows the successful integration of Halquist and Carrow, and Brandt said it would lift industrial revenue past the medical segment for the first time. Regulators are expected to review the tie-up over the coming months.",
+        "effects": {
+          "technology": 0.22
         }
       }
     ]
@@ -13025,18 +13035,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82769,
+    "lastEventCycle": 82778,
     "events": [
-      {
-        "cycle": 82624,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Lhaus Industries Folds Delphin Plants Into Unified Cell-Pack Network",
-        "body": "Cole Brandt confirmed the integration of Delphin's three facilities alongside Lhaus's own four lines, creating a combined footprint the company says will lift annual cell-pack output by 42 percent. The consolidation will center operations at the expanded Harrowgate campus, with Brandt naming Delphin's former operations head Ilse Marren to run the merged unit. Management reaffirmed cost-synergy targets of $310 million by 2028.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82631,
         "kind": "expansion",
@@ -13265,6 +13265,16 @@
         "body": "Cole Brandt secured a multi-year agreement to supply Kellstrom-based storage packs to a national logistics fleet operator, the largest single order in the young Power & Storage division's history. The $4.3B contract locks in output through 2032 and validates the $2.1B Kellstrom acquisition Brandt championed. Shares of the vertically integrated automaker reflected the strategic milestone as the division moved from launch to scale.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82778,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Lhaus Industries Beats as Power Division Deliveries Begin Under $4.3B Fleet Deal",
+        "body": "CEO Cole Brandt posted a quarterly profit of $610M, ahead of expectations, as first shipments under the landmark fleet storage contract began recognizing revenue. The Kellstrom-based Power & Storage unit contributed 22% of group sales in its first full quarter. Brandt hinted at further bolt-on acquisitions to feed the fast-growing division.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -15014,7 +15024,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82758,
+    "lastEventCycle": 82778,
     "events": [
       {
         "cycle": 0,
@@ -15182,6 +15192,16 @@
         "body": "Fenn secured a multi-year shelf-placement agreement with a major home-improvement retail chain covering the full Heirloom Pro cordless driver system and fastening line. The deal guarantees prominent nationwide display and follows the foundry expansion built to meet exactly this kind of volume. Fenn called it a decisive step in scaling the Heirloom Pro brand from breakout product to franchise.",
         "effects": {
           "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82778,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Palettstone & Sons Tops Estimates as Heirloom Pro Cordless Hits Retail Shelves",
+        "body": "CEO Cole Fenn reported revenue up 9% to $340M in the first quarter of national retail availability for the Heirloom Pro cordless system. The expanded foundry ran near capacity, and Fenn said reorder rates from the retail partner exceeded internal forecasts. The house nudged its full-year outlook higher.",
+        "effects": {
+          "consumer": 0.06
         }
       }
     ]
@@ -18321,7 +18341,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82762,
+    "lastEventCycle": 82778,
     "events": [
       {
         "cycle": 0,
@@ -18519,6 +18539,16 @@
         "size": "major",
         "head": "Vossenspire Holdings Hit With $1.6B Investor Suit Over Storage-Bank Probe Disclosures",
         "body": "A consolidated shareholder action alleges Vossenspire concealed defects in its storage-bank line for nearly two years before the probe forced Halden Roe's ouster. The complaint seeks $1.6B and names former leadership, though it also drags newly split units into discovery. Maren Vok said the company would 'defend vigorously' while warning the litigation could overshadow the post-probe overhaul for several quarters.",
+        "effects": {
+          "energy": -0.22
+        }
+      },
+      {
+        "cycle": 82778,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Vossenspire Holdings Faces New Regulatory Probe as Storage-Bank Fault Spreads to Field Units",
+        "body": "Regulators opened a fresh inquiry after reports of thermal faults in deployed storage banks, widening the scope of the crisis that toppled Corin Alderidge. CEO Maren Vok ordered a voluntary field inspection of some 12,000 installed units and set aside $220M for remediation. The disclosure lands atop the pending $1.6B investor suit, deepening pressure on Vok's turnaround.",
         "effects": {
           "energy": -0.22
         }
@@ -19127,7 +19157,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82752,
+    "lastEventCycle": 82778,
     "events": [
       {
         "cycle": 0,
@@ -19266,6 +19296,16 @@
         "effects": {
           "consumer": 0.06
         }
+      },
+      {
+        "cycle": 82778,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Wold & Bramm Scouts Sixth Showroom Site in Continued Measured Push",
+        "body": "CEO Mara Marrow confirmed the century-old house is in early talks for a sixth regional showroom, extending the disciplined cadence that has defined her long tenure. The prospective location would anchor the heritage lighting range that debuted at the fifth site. Marrow reiterated there are no plans to accelerate beyond one opening per cycle.",
+        "effects": {
+          "consumer": 0.06
+        }
       }
     ]
   },
@@ -19280,18 +19320,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82763,
+    "lastEventCycle": 82778,
     "events": [
-      {
-        "cycle": 82534,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Woldmark Wins Landmark Halcyon Supply Pact Worth 2.1 Billion",
-        "body": "Woldmark signed a five-year agreement to supply its newly launched Halcyon compute line to data infrastructure operator Brennan Yards, in a deal valued at 2.1 billion. Cole Carrow called it the largest single order in company history and said three new fabrication shifts would be added to meet demand. Delivery begins next quarter.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82544,
         "kind": "earnings_beat",
@@ -19512,6 +19542,16 @@
         "body": "Woldmark secured a landmark $2.1 billion multiyear supply agreement to furnish Meridian compute units to a consortium of enterprise buyers, its largest single contract since the Halcyon era. CEO Petra Sonn, characteristically bullish, pledged to double Meridian output within eighteen months and called the deal 'proof the comeback is real.' The pact locks in volume commitments that analysts say could underpin revenue guidance for years.",
         "effects": {
           "technology": 0.22
+        }
+      },
+      {
+        "cycle": 82778,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Woldmark Breaks Ground on Second Meridian Fab to Meet $2.1B Pact",
+        "body": "CEO Petra Sonn confirmed a $900M plant in the Kessel corridor, projected to add 60% more Meridian capacity by late next year to service the recently signed supply commitment. Sonn said the facility would create roughly 1,100 skilled roles, framing it as proof the comeback narrative has legs. The company reaffirmed its output guidance despite tight component supply.",
+        "effects": {
+          "technology": 0.13
         }
       }
     ]
