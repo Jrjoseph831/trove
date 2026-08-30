@@ -2605,7 +2605,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82761,
+    "lastEventCycle": 82781,
     "events": [
       {
         "cycle": 0,
@@ -2771,6 +2771,16 @@
         "size": "standard",
         "head": "Brunforge Holdings Launches Third Vellan Wave, Pushing Flagship Count Past Forty",
         "body": "Kestrel Bramm confirmed a third wave of twelve Vellan flagships, bringing the total network beyond forty locations across Devices, Fine Goods and Food Service formats. The disciplined rollout follows two straight quarters of margin-accretive results from earlier waves. Bramm said the pace remains 'deliberate, funded from operations, and self-limiting.'",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82781,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunforge Holdings Beats as Third Vellan Wave Lifts Flagship Contribution",
+        "body": "Brunforge Holdings topped estimates with revenue of $1.42B versus the $1.36B consensus, as the third Vellan wave pushed its flagship count past forty and drove device and fine-goods sales. CEO Kestrel Bramm said mature first-wave stores are now delivering full-year contributions while newer flagships ramp. Operating margin expanded to 11.8%.",
         "effects": {
           "consumer": 0.13
         }
@@ -6424,7 +6434,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82767,
+    "lastEventCycle": 82781,
     "events": [
       {
         "cycle": 0,
@@ -6652,6 +6662,16 @@
         "body": "Drustcraft delivered its fourth consecutive beat, with the fasteners and fixings line adding modest strength alongside the ramping auto-parts pact. CEO Cora Fenn described demand as 'orderly across all three lines,' guiding for continued balanced growth. Revenue rose 6% on flat input costs.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82781,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Drustcraft Wins $260M Fasteners Supply Deal, Broadening Beyond Auto Parts",
+        "body": "Drustcraft secured a $260M three-year fasteners and fixings supply agreement with a regional appliance maker, deepening its second product line beyond the auto-parts pact now ramping across three lines. CEO Cora Fenn called the award a deliberate step to balance the business, adding that the fasteners line will add a fourth shift to meet volumes. The deal lifts committed backlog to roughly $840M.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -8621,7 +8641,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82754,
+    "lastEventCycle": 82781,
     "events": [
       {
         "cycle": 0,
@@ -8747,6 +8767,16 @@
         "size": "flash",
         "head": "Greenmarsh Agro Tops Estimates as Second Blending Line Lifts Output",
         "body": "Petra Kessler's Greenmarsh delivered a slight beat as its newly commissioned second blending line pushed soil-blend volumes up 8% quarter-over-quarter. The distribution pact continued to feed steady bundle demand across two regions, and management nudged full-year guidance modestly higher. Kessler reiterated her preference for measured, long-horizon growth.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82781,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Greenmarsh Agro Extends Distribution Pact Into Two New Regions",
+        "body": "Greenmarsh Agro widened its bundle-distribution agreement to cover the Halden Vale and Trescott growing regions, adding roughly 40 depots to its reach. CEO Petra Kessler said the measured rollout reflects steady demand from the second blending line rather than a push for rapid scale. No capital outlay figure was disclosed.",
         "effects": {
           "agriculture": 0.06
         }
@@ -10433,7 +10463,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82760,
+    "lastEventCycle": 82781,
     "events": [
       {
         "cycle": 0,
@@ -10589,6 +10619,16 @@
         "size": "flash",
         "head": "Hearthstone Group Nudges Higher as Refill Network Passes 340 Depots",
         "body": "Aurelia Aldous reported a modest quarterly beat, with revenue up 4% as the bulk refill program reached 342 depots and same-depot traffic held firm. Cleaning & Jansan margins widened slightly on refill-cartridge reuse. Management reaffirmed its measured full-year outlook.",
+        "effects": {
+          "hospitality": 0.06
+        }
+      },
+      {
+        "cycle": 82781,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Hearthstone Group Inches Higher as Refill Network Nears 360 Depots",
+        "body": "Hearthstone Group reported a modest earnings beat, with revenue of $284M against $279M expected, as bulk refill stations reached 358 depots. CEO Aurelia Aldous said depot traffic and household-goods attach rates held steady through the quarter. The company reaffirmed its target of 400 refill locations by year-end.",
         "effects": {
           "hospitality": 0.06
         }
@@ -14306,7 +14346,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82763,
+    "lastEventCycle": 82781,
     "events": [
       {
         "cycle": 0,
@@ -14518,6 +14558,16 @@
         "size": "standard",
         "head": "Marrowstone Build Beats Again as Coastal Rail Award Drives Backlog Past $2.2B",
         "body": "Marrowstone posted another quarterly beat as the $780 million coastal rail corridor lifted its backlog beyond $2.2 billion, more than doubling year-over-year. CEO Delphine Vaugh credited disciplined bidding and said margins held despite the rapid intake of new work. She cautioned that near-term staffing needs would temper the pace of future awards.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82781,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Marrowstone Build Unveils Next-Gen Excavator Line to Serve Rail Backlog",
+        "body": "Marrowstone Build introduced its Vantage series of earthmoving machines, a lineup of four excavator and grader models built for the heavy grading demands of its coastal rail and highway work. CEO Delphine Vaugh said the fleet will first deploy on the $780M Coastal Rail Corridor, with the company committing $95M to retool its assembly hall in Marrowstone. The launch marks the firm's first major equipment refresh in six years.",
         "effects": {
           "construction": 0.13
         }
@@ -15450,7 +15500,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82761,
+    "lastEventCycle": 82781,
     "events": [
       {
         "cycle": 0,
@@ -15626,6 +15676,16 @@
         "size": "standard",
         "head": "Skarngrove & Sons Secures Vantry Rail Junction Order as Kelvarn Winds Down",
         "body": "Quinn Fenn confirmed a fixings-and-structural package for the Vantry rail junction valued at 210 million, sequencing the work to begin as Kelvarn corridor volumes taper. The deal extends Skarngrove's regional backlog by an estimated seven quarters. Fenn framed the win as 'the natural bridge from one build cycle into the next.'",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82781,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarngrove & Sons Beats as Vantry Junction Ramps and Kelvarn Tails Off",
+        "body": "Skarngrove & Sons posted quarterly revenue of $612M, ahead of the $580M consensus, as the Vantry Rail Junction order began contributing while the winding-down Kelvarn corridor delivered final billings. CEO Quinn Fenn credited disciplined sequencing of the two programs for holding margins at 14.2%. Backlog closed the quarter at $1.9B.",
         "effects": {
           "construction": 0.13
         }
@@ -16421,7 +16481,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82757,
+    "lastEventCycle": 82781,
     "events": [
       {
         "cycle": 0,
@@ -16559,6 +16619,16 @@
         "body": "Stegreach won a $360M award to supply wire and cable for the next phase of the Riverport grid buildout, broadening its role beyond fasteners and substation fixings. Halden Ashby said the win keeps the company's plants booked through the following year and deepens a relationship now worth well over $1B in cumulative orders. The award follows two consecutive margin-lifting quarters tied to Riverport.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82781,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Stegreach Lands $1.1B Grid-Modernization Framework, Its Largest Ever",
+        "body": "Stegreach secured a five-year, $1.1B framework agreement to supply fasteners, lighting, and wire and cable across a nationwide substation upgrade program, dwarfing its recent Riverport awards. CEO Halden Ashby called the deal a defining moment, noting it locks in three of the company's four product lines through 2031 and roughly doubles its committed forward workload. The award follows two years of steady Riverport grid wins that positioned Stegreach as the preferred supplier.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -17064,7 +17134,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82754,
+    "lastEventCycle": 82781,
     "events": [
       {
         "cycle": 0,
@@ -17180,6 +17250,16 @@
         "size": "flash",
         "head": "Tillage & Co. Logs Another In-Line Quarter as Input Demand Holds",
         "body": "Kestrel Fenn's Tillage & Co. reported results squarely in line with expectations, with farm-input volumes flat and margins unchanged from the prior period. Management characterized the quarter as 'exactly what we planned' and left guidance untouched. The dependable print continued the house's long, unflashy streak.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82781,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Tillage & Co. Extends Streak With Another Steady In-Line Quarter",
+        "body": "Tillage & Co. reported revenue of $198M, matching estimates, as farm-input demand held firm across its core regions. CEO Kestrel Fenn pointed to stable order patterns and consistent pricing as the drivers of the company's unbroken run of in-line results. Guidance was left unchanged.",
         "effects": {
           "agriculture": 0.06
         }
