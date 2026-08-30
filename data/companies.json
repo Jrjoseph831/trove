@@ -2350,18 +2350,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82775,
+    "lastEventCycle": 82783,
     "events": [
-      {
-        "cycle": 82631,
-        "kind": "outage",
-        "size": "major",
-        "head": "Bruncrest Works Halts Eastfield Line as Component Shortage Threatens Aria Pro Deliveries",
-        "body": "Ines Marlow confirmed a two-week suspension of the Eastfield assembly line after a critical substrate supplier missed shipments, jeopardizing early deliveries on the $3.4 billion National Compute Consortium order. Marlow, known for bold public bets, admitted the premium Aria Pro ramp had left little inventory buffer. The company is scrambling to secure alternate supply while penalty clauses loom over the marquee contract.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82637,
         "kind": "major_deal",
@@ -2588,6 +2578,16 @@
         "size": "standard",
         "head": "Bruncrest Works Beats as Aria Ultra X Ramps Ahead of Schedule and Third Line Nears Live",
         "body": "Bruncrest posted a quarterly beat, with revenue up 19% as the doubled-throughput Aria Ultra X cleared its ramp faster than management guided. CEO Ines Marlow said the third production line will come online next quarter, lifting capacity guidance and easing the margin drag flagged earlier this year. The company raised full-year output targets by roughly 12%.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82783,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Bruncrest Works Fires Up Third Line as Aria Ultra X Demand Outruns Capacity",
+        "body": "Bruncrest Works brought its long-awaited third line live this week, adding roughly 40% to nameplate compute output. CEO Ines Marlow, never shy with a forecast, told reporters the line was 'sold out before the first unit shipped' and floated a fourth line for review by summer. Backlog now stretches into the following year at current run rates.",
         "effects": {
           "technology": 0.13
         }
@@ -3694,18 +3694,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82771,
+    "lastEventCycle": 82783,
     "events": [
-      {
-        "cycle": 82566,
-        "kind": "outage",
-        "size": "standard",
-        "head": "Calderforge Halts Stormwell Hall After Cooling-Loop Failure",
-        "body": "A cooling-loop rupture forced Calderforge to idle roughly a third of its Stormwell Hall compute capacity for four days, disrupting output just as the third wing nears completion. Nadia Throne said crews restored full operation over the weekend and pledged a redundancy retrofit across all Stormwell lines. The stoppage lands during the house's steepest demand stretch in years.",
-        "effects": {
-          "technology": -0.13
-        }
-      },
       {
         "cycle": 82577,
         "kind": "product_launch",
@@ -3928,6 +3918,16 @@
         "size": "standard",
         "head": "Calderforge Breaks Ground on Stormwell Hall Five to Extend Vann Recovery",
         "body": "Riding commercial ramp at Hall Four, Calderforge committed $640M to build a fifth production hall at the Stormwell complex. Perra Vann said the expansion targets doubling compute output within two years, though she cautioned that ramp timelines remain aggressive and margins will stay compressed during buildout.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82783,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Calderforge Beats Again as Stormwell Hall Four Runs Full and Hall Five Framing Rises",
+        "body": "Calderforge posted quarterly compute revenue of $2.1B, up 28% year over year, as Stormwell Hall Four held near-full utilization for a second straight quarter. CEO Perra Vann said Hall Five steelwork is now topped out and remains on track for first yields early next year, calling the recovery 'no longer fragile.' Margins widened to 31% as ramp costs eased.",
         "effects": {
           "technology": 0.13
         }
@@ -5875,7 +5875,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82763,
+    "lastEventCycle": 82783,
     "events": [
       {
         "cycle": 0,
@@ -6043,6 +6043,16 @@
         "body": "Cranegrove commissioned a second earthmoving assembly line at its Halbeck facility to work through a record $3.4 billion backlog anchored by the Corridor Framework add-on. CEO Vale Calder, keeping to his measured cadence, framed the $180 million investment as capacity discipline rather than a growth gamble. The line is expected to reach full output by mid-2028.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82783,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Cranegrove Lands Landmark $1.2B Fleet Order as Corridor Program Widens",
+        "body": "Cranegrove signed its largest single order on record, a $1.2B multi-year earthmoving fleet commitment tied to an expanded transit corridor build-out. CEO Vale Calder said the deal lifts backlog to a fresh record above $4.5B and will keep both assembly lines running at capacity through the decade. The company will evaluate a third line to service the order without disrupting existing schedules.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -8355,7 +8365,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82766,
+    "lastEventCycle": 82783,
     "events": [
       {
         "cycle": 0,
@@ -8543,6 +8553,16 @@
         "body": "Garrware began construction on a sixth production line at its Marrow Valley complex following three straight quarters of tight backlog. CEO Orla Holt said the $95 million addition should come online within a year and lift packaging throughput by an estimated 12%. Holt characterized the move as 'measured, in step with committed orders.'",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82783,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Garrware Beats as Sixth Marrow Valley Line Nears Commissioning",
+        "body": "Garrware topped estimates with packaging revenue of $520M, up 19% year over year, as its five running Marrow Valley lines held full utilization. CEO Orla Holt said the sixth line remains on schedule to commission next quarter and that demand has yet to soften despite the added capacity. Backlog remains near record levels.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -10248,18 +10268,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82775,
+    "lastEventCycle": 82783,
     "events": [
-      {
-        "cycle": 82639,
-        "kind": "scandal",
-        "size": "major",
-        "head": "Halhold Works Rocked as Internal Memos Show Aveline Monitor Flaws Known Before Launch",
-        "body": "Leaked correspondence revealed that Halhold engineers flagged voltage instability in the Aveline bedside monitors nearly a year before shipment, warnings that senior management reportedly overrode to meet a launch window. Lena Faircloth faces mounting calls from the board and hospital plaintiffs to testify, and shares tumbled 22% as three institutional partners suspended orders. The disclosure transforms what had been a product failure into a governance crisis at the heart of Halhold's medical division.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82645,
         "kind": "leadership_change",
@@ -10478,6 +10488,16 @@
         "body": "New CEO Naomi Fenwick unveiled the Aveline Reborn handset range, built on a redesigned power cell from supplier Corveth Energy and independently certified after last year's recall. Fenwick pledged staged shipments and a 24-month warranty to rebuild confidence in the Devices division, which bore the brunt of recall costs. Early orders from two regional carriers were described as 'encouraging but measured.'",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82783,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Halhold Works Under Regulatory Probe as Reborn Aveline Faces Fresh Fault Reports",
+        "body": "The Devices Safety Directorate opened a formal inquiry into Halhold Works after 14 field reports of overheating in the relaunched Aveline line, just five months after its debut. CEO Naomi Fenwick, who staked her turnaround on a 'clean break' from the original recall, said the company is cooperating fully and has paused shipments to two regional distributors. Shares of the Devices division's parent came under heavy pressure as the probe reopened wounds from last year's $180M recall.",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]
@@ -15021,7 +15041,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82763,
+    "lastEventCycle": 82783,
     "events": [
       {
         "cycle": 0,
@@ -15179,6 +15199,16 @@
         "body": "Palettstead reported a modest earnings beat as modular insulated packaging orders stayed firm and the fourth cold-chain ran near capacity. CEO Orla Marrow said the fifth cold-chain investment remains on schedule for a late-2028 startup. Volume growth offset softer pricing in legacy packaging lines.",
         "effects": {
           "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82783,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Palettstead Holdings Breaks Ground on Fifth Cold-Chain as Modular Line Books Fill",
+        "body": "Palettstead Holdings began construction on its $340M fifth cold-chain facility this week, targeting a startup within 18 months. CEO Orla Marrow said modular packaging orders have filled the current book solid through the coming year, prompting the company to fast-track the new site. The fourth cold-chain remains sold out.",
+        "effects": {
+          "logistics": 0.13
         }
       }
     ]
@@ -17317,7 +17347,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82765,
+    "lastEventCycle": 82783,
     "events": [
       {
         "cycle": 0,
@@ -17493,6 +17523,16 @@
         "size": "flash",
         "head": "Vantor Lines Notches Modest Beat as Packaging Volumes Hold Firm",
         "body": "Vantor Lines edged past expectations again, with Halden Vossen citing steady non-grocery packaging demand and disciplined cost control. Quarterly margins held at 11.4%, extending the house's quiet, unbroken run of dependable results.",
+        "effects": {
+          "logistics": 0.06
+        }
+      },
+      {
+        "cycle": 82783,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vantor Lines Keeps Streak Alive With Slim Beat as Packaging Mix Firms",
+        "body": "Vantor Lines edged past estimates once more, posting packaging revenue of $890M against a $884M consensus. CEO Halden Vossen credited continued gains in the non-grocery book, which now accounts for 44% of volumes. Guidance was left unchanged.",
         "effects": {
           "logistics": 0.06
         }
@@ -19264,7 +19304,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82750,
+    "lastEventCycle": 82783,
     "events": [
       {
         "cycle": 0,
@@ -19360,6 +19400,16 @@
         "size": "flash",
         "head": "Vossenwright Holdings Edges Higher as Expanded Seeder Plant Nears Completion",
         "body": "Vossenwright posted a modest beat, with fleet seeder deliveries continuing on schedule and the plant expansion tracking for commissioning next quarter. Quinn Skarn reiterated a conservative outlook, citing steady but unremarkable demand for farm inputs. The quiet result was in keeping with the company's low-drama reputation.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82783,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Vossenwright Holdings Posts Steady Beat as Expanded Seeder Plant Comes Online",
+        "body": "Vossenwright Holdings reported farm equipment revenue of $610M, a touch above forecasts, as the newly expanded seeder plant began contributing volume late in the quarter. CEO Quinn Skarn said the added capacity should fully absorb the current fleet order backlog by year-end. Farm inputs held flat.",
         "effects": {
           "agriculture": 0.06
         }

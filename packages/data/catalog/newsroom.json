@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-30T16:14:40.522Z",
+  "generatedAt": "2026-08-30T20:42:45.541Z",
   "beats": [
+    {
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Bruncrest Works Fires Up Third Line as Aria Ultra X Demand Outruns Capacity",
+      "body": "Bruncrest Works brought its long-awaited third line live this week, adding roughly 40% to nameplate compute output. CEO Ines Marlow, never shy with a forecast, told reporters the line was 'sold out before the first unit shipped' and floated a fourth line for review by summer. Backlog now stretches into the following year at current run rates.",
+      "cycle": 82783,
+      "dur": 2
+    },
+    {
+      "company": "Calderforge",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Calderforge Beats Again as Stormwell Hall Four Runs Full and Hall Five Framing Rises",
+      "body": "Calderforge posted quarterly compute revenue of $2.1B, up 28% year over year, as Stormwell Hall Four held near-full utilization for a second straight quarter. CEO Perra Vann said Hall Five steelwork is now topped out and remains on track for first yields early next year, calling the recovery 'no longer fragile.' Margins widened to 31% as ramp costs eased.",
+      "cycle": 82783,
+      "dur": 2
+    },
+    {
+      "company": "Cranegrove",
+      "sector": "construction",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Cranegrove Lands Landmark $1.2B Fleet Order as Corridor Program Widens",
+      "body": "Cranegrove signed its largest single order on record, a $1.2B multi-year earthmoving fleet commitment tied to an expanded transit corridor build-out. CEO Vale Calder said the deal lifts backlog to a fresh record above $4.5B and will keep both assembly lines running at capacity through the decade. The company will evaluate a third line to service the order without disrupting existing schedules.",
+      "cycle": 82783,
+      "dur": 8
+    },
+    {
+      "company": "Garrware",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Garrware Beats as Sixth Marrow Valley Line Nears Commissioning",
+      "body": "Garrware topped estimates with packaging revenue of $520M, up 19% year over year, as its five running Marrow Valley lines held full utilization. CEO Orla Holt said the sixth line remains on schedule to commission next quarter and that demand has yet to soften despite the added capacity. Backlog remains near record levels.",
+      "cycle": 82783,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "safety_probe",
+      "size": "major",
+      "head": "Halhold Works Under Regulatory Probe as Reborn Aveline Faces Fresh Fault Reports",
+      "body": "The Devices Safety Directorate opened a formal inquiry into Halhold Works after 14 field reports of overheating in the relaunched Aveline line, just five months after its debut. CEO Naomi Fenwick, who staked her turnaround on a 'clean break' from the original recall, said the company is cooperating fully and has paused shipments to two regional distributors. Shares of the Devices division's parent came under heavy pressure as the probe reopened wounds from last year's $180M recall.",
+      "cycle": 82783,
+      "dur": 8
+    },
+    {
+      "company": "Palettstead Holdings",
+      "sector": "logistics",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Palettstead Holdings Breaks Ground on Fifth Cold-Chain as Modular Line Books Fill",
+      "body": "Palettstead Holdings began construction on its $340M fifth cold-chain facility this week, targeting a startup within 18 months. CEO Orla Marrow said modular packaging orders have filled the current book solid through the coming year, prompting the company to fast-track the new site. The fourth cold-chain remains sold out.",
+      "cycle": 82783,
+      "dur": 2
+    },
+    {
+      "company": "Vantor Lines",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vantor Lines Keeps Streak Alive With Slim Beat as Packaging Mix Firms",
+      "body": "Vantor Lines edged past estimates once more, posting packaging revenue of $890M against a $884M consensus. CEO Halden Vossen credited continued gains in the non-grocery book, which now accounts for 44% of volumes. Guidance was left unchanged.",
+      "cycle": 82783,
+      "dur": 1
+    },
+    {
+      "company": "Vossenwright Holdings",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Vossenwright Holdings Posts Steady Beat as Expanded Seeder Plant Comes Online",
+      "body": "Vossenwright Holdings reported farm equipment revenue of $610M, a touch above forecasts, as the newly expanded seeder plant began contributing volume late in the quarter. CEO Quinn Skarn said the added capacity should fully absorb the current fleet order backlog by year-end. Farm inputs held flat.",
+      "cycle": 82783,
+      "dur": 1
+    },
     {
       "company": "Boreas Power",
       "sector": "energy",
@@ -42,16 +122,6 @@
       "dur": 2
     },
     {
-      "company": "Dunmorestone",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Dunmorestone Edges Past Estimates as Restaurant Contract Reaches Full Ramp",
-      "body": "Dunmorestone posted a modest quarterly beat as its multi-site restaurant group contract reached full deployment across food service and fixtures. CEO Orla Mercer noted the fixtures expansion is now running at roughly 90% utilization. Margins held steady, with management reaffirming full-year guidance.",
-      "cycle": 82782,
-      "dur": 1
-    },
-    {
       "company": "Halhold Systems",
       "sector": "technology",
       "kind": "major_deal",
@@ -79,46 +149,6 @@
       "head": "Korrwright Works Debuts First Timepiece Built on Newly Acquired Dovreux Cases",
       "body": "Just months after the $620M Dovreux Frères deal, CEO Dunmore Carrow unveiled the Halbrook Meridian, the first Korrwright piece using in-house-controlled Dovreux casework. The limited run of 300 carries a list price near $148,000 and showcases the vertical integration Carrow promised at acquisition. Early allocations to Verenne dealers sold through within days.",
       "cycle": 82782,
-      "dur": 2
-    },
-    {
-      "company": "Brunforge Holdings",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Brunforge Holdings Beats as Third Vellan Wave Lifts Flagship Contribution",
-      "body": "Brunforge Holdings topped estimates with revenue of $1.42B versus the $1.36B consensus, as the third Vellan wave pushed its flagship count past forty and drove device and fine-goods sales. CEO Kestrel Bramm said mature first-wave stores are now delivering full-year contributions while newer flagships ramp. Operating margin expanded to 11.8%.",
-      "cycle": 82781,
-      "dur": 2
-    },
-    {
-      "company": "Drustcraft",
-      "sector": "manufacturing",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Drustcraft Wins $260M Fasteners Supply Deal, Broadening Beyond Auto Parts",
-      "body": "Drustcraft secured a $260M three-year fasteners and fixings supply agreement with a regional appliance maker, deepening its second product line beyond the auto-parts pact now ramping across three lines. CEO Cora Fenn called the award a deliberate step to balance the business, adding that the fasteners line will add a fourth shift to meet volumes. The deal lifts committed backlog to roughly $840M.",
-      "cycle": 82781,
-      "dur": 2
-    },
-    {
-      "company": "Marrowstone Build",
-      "sector": "construction",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Marrowstone Build Unveils Next-Gen Excavator Line to Serve Rail Backlog",
-      "body": "Marrowstone Build introduced its Vantage series of earthmoving machines, a lineup of four excavator and grader models built for the heavy grading demands of its coastal rail and highway work. CEO Delphine Vaugh said the fleet will first deploy on the $780M Coastal Rail Corridor, with the company committing $95M to retool its assembly hall in Marrowstone. The launch marks the firm's first major equipment refresh in six years.",
-      "cycle": 82781,
-      "dur": 2
-    },
-    {
-      "company": "Skarngrove & Sons",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarngrove & Sons Beats as Vantry Junction Ramps and Kelvarn Tails Off",
-      "body": "Skarngrove & Sons posted quarterly revenue of $612M, ahead of the $580M consensus, as the Vantry Rail Junction order began contributing while the winding-down Kelvarn corridor delivered final billings. CEO Quinn Fenn credited disciplined sequencing of the two programs for holding margins at 14.2%. Backlog closed the quarter at $1.9B.",
-      "cycle": 82781,
       "dur": 2
     },
     {
@@ -199,26 +229,6 @@
       "head": "Korrwright Group Wins $3.4B Transit Corridor Contract in Largest Award in Its History",
       "body": "Halden Fenn secured the multi-year Eastreach Corridor package, supplying structural materials and wire & cable for a regional rail and utility spine. The award, worth $3.4B over six years, arrives just as Harbor redevelopment billing peaks, giving Korrwright a rare double-anchor backlog. Fenn said the win 'extends visibility well into the next decade' and lifts total backlog past $9B.",
       "cycle": 82777,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Castlestone Vindicates Karsh as Grid-Core Ascend Wins $6.1B Multi-Region Compute Framework",
-      "body": "Castlestone secured a $6.1 billion, five-year framework agreement to supply Grid-Core Ascend compute across three national infrastructure programs, its largest single award on record. CEO Pell Karsh, who staked his comeback on the line despite a bruising ramp-cost overrun last quarter, said the deal validates the bet and locks in demand through 2031. Management now expects Ascend margins to turn positive by the second half as volume absorbs fixed costs.",
-      "cycle": 82775,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "lawsuit",
-      "size": "major",
-      "head": "Gromford Works Sued Over Emblem Signature Sourcing Claims as Regulators Join Prestige Probe",
-      "body": "A coalition of luxury retailers filed suit against Gromford Works, alleging the Emblem Signature editions were marketed with provenance claims the company could not substantiate, seeking damages and rescinded contracts. A market-conduct regulator confirmed a parallel inquiry into Gromford's sourcing disclosures. CEO Halvard Pryce, whose rapid prestige push drove the line's launch, said the company 'stands behind Emblem' but has suspended new Signature shipments pending review.",
-      "cycle": 82775,
       "dur": 8
     }
   ]
