@@ -2788,18 +2788,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82766,
+    "lastEventCycle": 82780,
     "events": [
-      {
-        "cycle": 82558,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Brunmark Motors Beats Again as Veyra Long-Range Orders Surge",
-        "body": "Yvette Calder reported quarterly revenue of $4.2B, up 14% year over year, driven by strong pre-orders for the Veyra Long-Range flagship. The reworked lineup and steadied power unit helped margins expand 220 basis points, marking a second consecutive quarter of gains. Calder raised full-year guidance but cautioned that battery input costs remained a wildcard.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82567,
         "kind": "expansion",
@@ -3020,6 +3010,16 @@
         "body": "Brunmark Motors posted quarterly revenue of $6.3 billion, ahead of guidance, as redesigned Veyra deliveries climbed 22% sequentially and warranty claims on the new battery pack fell sharply. CEO Iris Calvagh said the turnaround had 'turned the corner,' with the halted Veyra S line set to resume limited production early next year. Margins recovered to 8.1% as the prior quarter's relaunch costs rolled off.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82780,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Brunmark Motors Wins $1.9B Fleet Order as Veyra Turnaround Lands Its Biggest Prize Yet",
+        "body": "Brunmark Motors secured a $1.9B multi-year contract to supply Veyra vehicles and Power & Storage packs to national logistics operator Halden Freightways. CEO Iris Calvagh called the deal 'the proof point the reset was built for,' with first deliveries slated within eight months. The order roughly doubles Brunmark's commercial backlog and marks the largest single win in Calvagh's tenure.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -3935,7 +3935,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82759,
+    "lastEventCycle": 82780,
     "events": [
       {
         "cycle": 0,
@@ -4093,6 +4093,16 @@
         "body": "Calderworks signed a $780M multi-year framework to supply structural materials across the expanding Vaultridge corridor, its largest single agreement on record. CEO Kestrel Halloran said the fifth kiln would be dedicated almost entirely to the pact, with output committed through 2031. The deal locks in demand well beyond current record kiln capacity.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82780,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Calderworks Fires Fifth Kiln as Corridor Framework Orders Begin Flowing",
+        "body": "Calderworks brought its fifth kiln online, lifting Structural Materials capacity roughly 22% to meet the recently signed $780M corridor framework. CEO Kestrel Halloran said early throughput exceeded ramp targets, with the kiln already committed for the next three quarters. Management flagged a possible sixth-kiln study should corridor demand persist.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -5622,7 +5632,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82761,
+    "lastEventCycle": 82780,
     "events": [
       {
         "cycle": 0,
@@ -5828,6 +5838,16 @@
         "size": "flash",
         "head": "Cranecraft Extends Streak to Fifteen as Textile Orders Cushion Seasonal Lull",
         "body": "Mira Garr reported a fifteenth consecutive quarterly beat, with Raw Textiles demand offsetting the expected post-planting dip in Farm Equipment. Revenue edged up 2 percent to 388 million on stable margins. Garr characterized the result as 'steady work in a quiet season.'",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82780,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Cranecraft Extends Streak to Sixteen as Textile Contracts Renew",
+        "body": "Cranecraft logged a sixteenth straight beat with revenue of $1.1B, just ahead of forecasts. CEO Mira Garr pointed to multi-year Raw Textiles renewals that offset a modest dip in off-season farm equipment demand. Guidance held steady for the coming quarter.",
         "effects": {
           "manufacturing": 0.06
         }
@@ -11401,7 +11421,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82756,
+    "lastEventCycle": 82780,
     "events": [
       {
         "cycle": 0,
@@ -11540,6 +11560,16 @@
         "effects": {
           "consumer": 0.06
         }
+      },
+      {
+        "cycle": 82780,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ironcrestcrest Supply Adds Another Quarter as Distributor Count Climbs",
+        "body": "Ironcrestcrest Supply posted a modest beat with revenue of $640M, driven by twelve new contractor-grade distributor agreements. CEO Dorian Garr emphasized steady, disciplined expansion rather than headline growth. Margins held flat as the Lighting line kept its footing.",
+        "effects": {
+          "consumer": 0.06
+        }
       }
     ]
   },
@@ -11554,18 +11584,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82766,
+    "lastEventCycle": 82780,
     "events": [
-      {
-        "cycle": 82559,
-        "kind": "safety_probe",
-        "size": "standard",
-        "head": "Ironcrestton Draws Regulator Scrutiny Over Carrow Atelier Origin Labels",
-        "body": "The Consumer Standards Board opened a formal inquiry into whether Carrow Atelier pieces were accurately labeled as regionally handcrafted, following the sourcing backlash. Sable Carrow, defiant as ever, called the probe 'a distraction from craftsmanship' while pledging full cooperation. The line generated roughly 140 million in first-quarter sales before the questions surfaced.",
-        "effects": {
-          "luxury": -0.13
-        }
-      },
       {
         "cycle": 82567,
         "kind": "lawsuit",
@@ -11786,6 +11806,16 @@
         "body": "Ironcrestton will open four new flagship ateliers over the next 18 months, backed by a $210 million investment, after the Aurelian Collection outpaced supply. CEO Corwin Vale said the expansion targets waitlists that have stretched past six months on signature pieces. The move marks the house's first retail footprint growth since Vale retired the Meridian line.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82780,
+        "kind": "scandal",
+        "size": "standard",
+        "head": "Ironcrestton Faces Backlash as Aurelian Sourcing Claims Draw Scrutiny",
+        "body": "Ironcrestton came under fire after an industry review questioned 'heritage-sourced' labeling on select Aurelian pieces, alleging materials came from unverified suppliers. CEO Corwin Vale, known for aggressive marketing, defended the collection but announced an external audit of the atelier supply chain. Two flagship openings were quietly delayed as the review proceeds.",
+        "effects": {
+          "luxury": -0.13
         }
       }
     ]
@@ -12366,7 +12396,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82765,
+    "lastEventCycle": 82780,
     "events": [
       {
         "cycle": 0,
@@ -12572,6 +12602,16 @@
         "size": "standard",
         "head": "Korrworks Beats as Third-Hub Anchor Tenant Begins Ramp-Up Payments",
         "body": "Korrworks topped forecasts as early lease and fit-out payments from its third-hub anchor tenant flowed through the books ahead of schedule. Rhys Throne said the $260M material-handling contract is now roughly 40% installed, with the hub tracking toward a phased opening. Management nudged full-year guidance higher on the faster ramp.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82780,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrworks Beats as Third Hub Approaches Structural Completion",
+        "body": "Korrworks reported quarterly revenue of $410M, above the $388M consensus, as the third hub advanced ahead of schedule. CEO Rhys Throne noted the anchor tenant's ramp-up payments have grown for a second straight period and a second tenant is in advanced talks. The material-handling fit-out remains on budget with commissioning expected next quarter.",
         "effects": {
           "logistics": 0.13
         }
@@ -17852,7 +17892,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82759,
+    "lastEventCycle": 82780,
     "events": [
       {
         "cycle": 0,
@@ -18010,6 +18050,16 @@
         "body": "The construction house reported a quarterly beat as its newly commissioned fourth earthmoving fleet pushed reservoir excavation ahead of schedule. CEO Petra Steg noted the $540M package was now 40% complete and hinted at bidding on an adjacent flood-control corridor. Margins held steady despite higher fuel and crew costs.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82780,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Veldtreach & Sons Awarded $1.2B Inland Reservoir Expansion in Signature Steg Bet",
+        "body": "Veldtreach & Sons won the prime contract for Phase II of the Coldwater Basin reservoir program, valued at $1.2B over four years. CEO Petra Steg said the win vindicates the earlier decision to commission a fourth earthmoving fleet ahead of demand. The award nearly triples the firm's reservoir-related backlog and secures work through the decade's end.",
+        "effects": {
+          "construction": 0.22
         }
       }
     ]
@@ -18861,7 +18911,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82761,
+    "lastEventCycle": 82780,
     "events": [
       {
         "cycle": 0,
@@ -19067,6 +19117,16 @@
         "size": "standard",
         "head": "Vossenstead Supply Runs Streak to Sixteen as Fifth Center Reaches Full Throughput",
         "body": "Bram Thorne logged a sixteenth consecutive beat as the newly opened fifth distribution center hit full shipping capacity ahead of schedule, lifting Food Service and Plumbing & Fixtures volumes. Revenue rose 6 percent to 512 million. Thorne signaled early scouting for a sixth site but stressed 'no commitment until the numbers earn it.'",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82780,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vossenstead Supply Pushes Streak to Seventeen as Plumbing Line Joins the Rally",
+        "body": "Vossenstead Supply reported its seventeenth consecutive beat, with revenue of $2.4B edging past the $2.31B consensus. CEO Bram Thorne credited a 9% jump in Plumbing & Fixtures orders, noting the fifth distribution center has begun cross-shipping fixtures alongside food service stock. Margins widened 40 basis points as freight lanes matured.",
         "effects": {
           "consumer": 0.13
         }
