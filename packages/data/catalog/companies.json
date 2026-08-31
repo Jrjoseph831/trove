@@ -1456,7 +1456,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82758,
+    "lastEventCycle": 82784,
     "events": [
       {
         "cycle": 0,
@@ -1582,6 +1582,16 @@
         "size": "flash",
         "head": "Blackmoor Rounds Out Holloway Range With Low-Disturbance Coulter Kit",
         "body": "Dray added a low-disturbance coulter kit to the Holloway seed-drill lineup, targeting growers on erosion-prone ground who have driven the range's steady attach rates. The measured rollout mirrors Blackmoor's slow-and-steady cadence, with regional dealer stocking planned through the coming season. Management reiterated its unhurried, long-horizon approach to the product family.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82784,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Blackmoor Edges Up as Completed Holloway Range Lifts Order Book",
+        "body": "Blackmoor posted a slim gain as the newly rounded-out Holloway seed-drill range, now including the low-disturbance coulter kit, drew steady pre-season orders. CEO Soren Dray said the full lineup should support gradual share gains through the coming planting cycle.",
         "effects": {
           "agriculture": 0.06
         }
@@ -7266,18 +7276,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82771,
+    "lastEventCycle": 82784,
     "events": [
-      {
-        "cycle": 82528,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Erretmark Works Buys Engine Atelier Sorne to Pair With Velmonte",
-        "body": "Continuing Aurelia Garr's buying spree, Erretmark acquired bespoke engine atelier Sorne for an undisclosed sum, slotting it alongside recently purchased coachbuilder Velmonte. The pairing gives Erretmark in-house control of both bodywork and powertrain for its low-volume commissions. Garr said the goal is 'a car built entirely under one roof for clients who count in dozens, not thousands.'",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82540,
         "kind": "product_launch",
@@ -7506,6 +7506,16 @@
         "body": "Erretmark issued a global recall of 480,000 Veyron units after regulators confirmed a defect in the braking control module that could delay pressure response. The company set aside $310M for repairs and warned the $2.1B fleet accord may see delivery deferrals; Aurelia Garr called it 'a hard but necessary reset' and pledged a redesigned module within the quarter.",
         "effects": {
           "automotive": -0.22
+        }
+      },
+      {
+        "cycle": 82784,
+        "kind": "earnings_miss",
+        "size": "standard",
+        "head": "Erretmark Works Slips as Veyron Recall Costs Bite Into Quarterly Result",
+        "body": "Erretmark Works missed expectations, posting a 12% profit decline after absorbing $340M in Veyron recall and repair costs alongside a temporary halt to affected deliveries. CEO Aurelia Garr said replacement braking components were now shipping to service centers and reaffirmed her appetite for bolt-on acquisitions once the campaign clears.",
+        "effects": {
+          "automotive": -0.13
         }
       }
     ]
@@ -8578,7 +8588,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82750,
+    "lastEventCycle": 82784,
     "events": [
       {
         "cycle": 0,
@@ -8674,6 +8684,16 @@
         "size": "standard",
         "head": "Garrweave Mills Signs Long-Term Southcombe Supply Pact, Extending Beyond Northfield",
         "body": "In a rare strategic move for the slow-moving mill, Lorne Veldt secured a five-year raw-textile supply agreement with apparel group Southcombe worth an estimated $190M in cumulative volume. The deal diversifies Garrweave beyond its Northfield anchor and is expected to keep a second weaving shed at full run. Veldt framed the pact as 'a horizon, not a headline,' consistent with his patient approach.",
+        "effects": {
+          "textiles": 0.13
+        }
+      },
+      {
+        "cycle": 82784,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Garrweave Mills Firms Up as Southcombe Pact Adds Second Steady Base",
+        "body": "Garrweave Mills reported firmer results as the newly signed Southcombe supply pact began contributing volume alongside its long-running Northfield business. CEO Lorne Veldt said the twin-anchor arrangement should keep looms at full run well into next year without further capital outlay.",
         "effects": {
           "textiles": 0.13
         }
@@ -9086,25 +9106,15 @@
     "aiOwned": true,
     "homeSector": "luxury",
     "founded": 1897,
-    "ceo": "Halvard Pryce",
+    "ceo": "Adelheid Corven",
     "ceoSince": 2026,
     "personality": {
       "volatility": 0.85,
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82775,
+    "lastEventCycle": 82784,
     "events": [
-      {
-        "cycle": 82627,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Gromford Works Unveils Meridian Tourbillon Line to Extend Complication Run",
-        "body": "Riding record holiday demand, Gromford Works launched a Meridian tourbillon collection priced above its Grand Complication tier, targeting collectors with a limited allocation of 400 pieces. CEO Corin Aldwych staged a splashy unveiling and confirmed a waitlist opened within hours. Analysts noted the move deepens Gromford's high-margin mix but warned that rapid line extensions risk diluting the Meridian name.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82632,
         "kind": "scandal",
@@ -9328,6 +9338,14 @@
         "effects": {
           "luxury": -0.22
         }
+      },
+      {
+        "cycle": 82784,
+        "kind": "leadership_change",
+        "size": "major",
+        "head": "Gromford Works Ousts Halvard Pryce as Board Seeks Reset From Emblem Crisis",
+        "body": "The Gromford Works board removed chief executive Halvard Pryce after an emergency session, citing the deepening Emblem Signature sourcing scandal and mounting legal exposure now estimated near $900M. Incoming chief Adelheid Corven, a veteran of the group's Timepieces division, pledged an independent audit of every supply line and a suspension of the Signature Editions program pending review.",
+        "effects": {}
       }
     ]
   },
@@ -9585,7 +9603,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82764,
+    "lastEventCycle": 82784,
     "events": [
       {
         "cycle": 0,
@@ -9763,6 +9781,16 @@
         "body": "Halcrow & Vance secured a multi-year $4.2B earthmoving mandate for the Corveth coastal reclamation program, the largest single award in the company's history. CEO Mira Skarn said the deal, layered atop the ongoing Vetask work, will require a fourth yard and roughly 900 additional operators. Management flagged phased revenue recognition beginning next quarter.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82784,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Halcrow & Vance Stands Up Coastal Base Camp to Anchor $4.2B Reclamation Push",
+        "body": "Halcrow & Vance opened a purpose-built staging depot near the Vetask estuary to service its record coastal reclamation program, deploying 140 additional earthmoving units and roughly 600 crew. CEO Mira Skarn said the facility would double as a permanent regional hub, positioning the firm for follow-on dredging tenders expected next year.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -11215,7 +11243,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82752,
+    "lastEventCycle": 82784,
     "events": [
       {
         "cycle": 0,
@@ -11321,6 +11349,16 @@
         "size": "flash",
         "head": "Holtgate Group Stretches Beat Streak on Steady Guild Mill Output",
         "body": "Holtgate delivered another narrow beat, with revenue of $274 million topping the $270 million consensus on dependable Raw Textiles volumes from its guild mill partners. CEO Dorian Throne again pointed to consistency rather than growth, noting order patterns 'as reliable as ever.' Margins were essentially unchanged from the prior quarter.",
+        "effects": {
+          "textiles": 0.06
+        }
+      },
+      {
+        "cycle": 82784,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Holtgate Group Notches Another Slim Beat on Dependable Guild Mill Runs",
+        "body": "Holtgate Group extended its beat streak with a narrow margin gain, as steady Guild Mill throughput offset soft raw-fiber pricing. CEO Dorian Throne reiterated the firm's preference for reliability over rapid expansion.",
         "effects": {
           "textiles": 0.06
         }
@@ -13723,18 +13761,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82773,
+    "lastEventCycle": 82784,
     "events": [
-      {
-        "cycle": 82584,
-        "kind": "lawsuit",
-        "size": "major",
-        "head": "Marlgear Supply Faces Combined Federal Action and Multi-State Suit Over Atlas and Drennan Lines",
-        "body": "State attorneys from six jurisdictions joined the federal probe into a consolidated complaint alleging Marlgear shipped Atlas devices and Drennan Mills machines despite documented defect warnings. Regulators are seeking upward of 900 million in penalties and a mandatory recall, and CEO Halden Vossen's combative public statements were cited as evidence of 'reckless disregard,' sending the case toward trial rather than settlement.",
-        "effects": {
-          "technology": -0.22
-        }
-      },
       {
         "cycle": 82593,
         "kind": "recall",
@@ -13956,6 +13984,16 @@
         "head": "Marlgear Supply Ousts Corin Blakely as Board Names Turnaround Chief Amid Kessel Fallout",
         "body": "The board removed Corin Blakely after the Kessel fault scandal, the $1.4B suit and the disruptive consumer exit eroded remaining investor confidence. Incoming chief Renna Halvorsen, a veteran of two industrial restructurings, will inherit the ongoing prosecution referral and a slimmed device line. Halvorsen pledged a full safety review and settlement talks as her first priorities.",
         "effects": {}
+      },
+      {
+        "cycle": 82784,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Marlgear Supply Doubles Down on Industrial Machines as Turnaround Chief Sets New Course",
+        "body": "New chief executive Petra Illsworth unveiled a plan to concentrate Marlgear around its Industrial Machines line, folding remaining Devices operations into a single wind-down unit slated to close by year-end. The firm booked a $310M restructuring charge and set aside a further $200M reserve tied to the ongoing Kessel fault prosecution.",
+        "effects": {
+          "technology": -0.13
+        }
       }
     ]
   },
@@ -16115,7 +16153,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82769,
+    "lastEventCycle": 82784,
     "events": [
       {
         "cycle": 0,
@@ -16331,6 +16369,16 @@
         "size": "flash",
         "head": "Steg Tooling Extends Streak to Sixteen as Fastener Backlog Holds",
         "body": "Iris Vossen's Steg Tooling logged its sixteenth straight earnings beat as the fourth Kelmar cell ran near capacity and the fastener backlog stayed firm. Revenue rose 5.4% on strong auto-parts and fixings demand. Vossen said utilization across the Kelmar cells remained above 90%.",
+        "effects": {
+          "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82784,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Steg Tooling Stretches Streak to Seventeen as Kelmar Cells Run Full",
+        "body": "Steg Tooling reported its seventeenth consecutive quarterly beat, with fastener and auto-parts volumes holding steady across all four Kelmar cells. CEO Iris Vossen credited disciplined order pacing and hinted at a modest capacity study for a fifth cell next year.",
         "effects": {
           "manufacturing": 0.06
         }

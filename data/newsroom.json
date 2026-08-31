@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-08-30T20:42:45.541Z",
+  "generatedAt": "2026-08-31T04:18:17.595Z",
   "beats": [
+    {
+      "company": "Blackmoor",
+      "sector": "agriculture",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Blackmoor Edges Up as Completed Holloway Range Lifts Order Book",
+      "body": "Blackmoor posted a slim gain as the newly rounded-out Holloway seed-drill range, now including the low-disturbance coulter kit, drew steady pre-season orders. CEO Soren Dray said the full lineup should support gradual share gains through the coming planting cycle.",
+      "cycle": 82784,
+      "dur": 1
+    },
+    {
+      "company": "Erretmark Works",
+      "sector": "automotive",
+      "kind": "earnings_miss",
+      "size": "standard",
+      "head": "Erretmark Works Slips as Veyron Recall Costs Bite Into Quarterly Result",
+      "body": "Erretmark Works missed expectations, posting a 12% profit decline after absorbing $340M in Veyron recall and repair costs alongside a temporary halt to affected deliveries. CEO Aurelia Garr said replacement braking components were now shipping to service centers and reaffirmed her appetite for bolt-on acquisitions once the campaign clears.",
+      "cycle": 82784,
+      "dur": 2
+    },
+    {
+      "company": "Garrweave Mills",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Garrweave Mills Firms Up as Southcombe Pact Adds Second Steady Base",
+      "body": "Garrweave Mills reported firmer results as the newly signed Southcombe supply pact began contributing volume alongside its long-running Northfield business. CEO Lorne Veldt said the twin-anchor arrangement should keep looms at full run well into next year without further capital outlay.",
+      "cycle": 82784,
+      "dur": 2
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "leadership_change",
+      "size": "major",
+      "head": "Gromford Works Ousts Halvard Pryce as Board Seeks Reset From Emblem Crisis",
+      "body": "The Gromford Works board removed chief executive Halvard Pryce after an emergency session, citing the deepening Emblem Signature sourcing scandal and mounting legal exposure now estimated near $900M. Incoming chief Adelheid Corven, a veteran of the group's Timepieces division, pledged an independent audit of every supply line and a suspension of the Signature Editions program pending review.",
+      "cycle": 82784,
+      "dur": 8
+    },
+    {
+      "company": "Halcrow & Vance",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Halcrow & Vance Stands Up Coastal Base Camp to Anchor $4.2B Reclamation Push",
+      "body": "Halcrow & Vance opened a purpose-built staging depot near the Vetask estuary to service its record coastal reclamation program, deploying 140 additional earthmoving units and roughly 600 crew. CEO Mira Skarn said the facility would double as a permanent regional hub, positioning the firm for follow-on dredging tenders expected next year.",
+      "cycle": 82784,
+      "dur": 2
+    },
+    {
+      "company": "Holtgate Group",
+      "sector": "textiles",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Holtgate Group Notches Another Slim Beat on Dependable Guild Mill Runs",
+      "body": "Holtgate Group extended its beat streak with a narrow margin gain, as steady Guild Mill throughput offset soft raw-fiber pricing. CEO Dorian Throne reiterated the firm's preference for reliability over rapid expansion.",
+      "cycle": 82784,
+      "dur": 1
+    },
+    {
+      "company": "Marlgear Supply",
+      "sector": "technology",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Marlgear Supply Doubles Down on Industrial Machines as Turnaround Chief Sets New Course",
+      "body": "New chief executive Petra Illsworth unveiled a plan to concentrate Marlgear around its Industrial Machines line, folding remaining Devices operations into a single wind-down unit slated to close by year-end. The firm booked a $310M restructuring charge and set aside a further $200M reserve tied to the ongoing Kessel fault prosecution.",
+      "cycle": 82784,
+      "dur": 2
+    },
+    {
+      "company": "Steg Tooling",
+      "sector": "manufacturing",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Steg Tooling Stretches Streak to Seventeen as Kelmar Cells Run Full",
+      "body": "Steg Tooling reported its seventeenth consecutive quarterly beat, with fastener and auto-parts volumes holding steady across all four Kelmar cells. CEO Iris Vossen credited disciplined order pacing and hinted at a modest capacity study for a fifth cell next year.",
+      "cycle": 82784,
+      "dur": 1
+    },
     {
       "company": "Bruncrest Works",
       "sector": "technology",
@@ -62,26 +142,6 @@
       "dur": 2
     },
     {
-      "company": "Vantor Lines",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vantor Lines Keeps Streak Alive With Slim Beat as Packaging Mix Firms",
-      "body": "Vantor Lines edged past estimates once more, posting packaging revenue of $890M against a $884M consensus. CEO Halden Vossen credited continued gains in the non-grocery book, which now accounts for 44% of volumes. Guidance was left unchanged.",
-      "cycle": 82783,
-      "dur": 1
-    },
-    {
-      "company": "Vossenwright Holdings",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Vossenwright Holdings Posts Steady Beat as Expanded Seeder Plant Comes Online",
-      "body": "Vossenwright Holdings reported farm equipment revenue of $610M, a touch above forecasts, as the newly expanded seeder plant began contributing volume late in the quarter. CEO Quinn Skarn said the added capacity should fully absorb the current fleet order backlog by year-end. Farm inputs held flat.",
-      "cycle": 82783,
-      "dur": 1
-    },
-    {
       "company": "Boreas Power",
       "sector": "energy",
       "kind": "major_deal",
@@ -100,56 +160,6 @@
       "body": "Castlestone completed its turnaround with a blowout quarter, as the $6.1B multi-region framework drove compute revenue up 71% year-over-year. CEO Pell Karsh, who staked his tenure on the Grid-Core Ascend line, said the platform is now shipping across four regions with a second framework in negotiation. The result fully reverses the earlier ramp-cost overrun that had dogged the launch.",
       "cycle": 82782,
       "dur": 8
-    },
-    {
-      "company": "Drayton Freight",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Drayton Freight Beats and Raises Again as Expanded Automation Contract Books Fully",
-      "body": "Drayton Freight topped estimates and lifted full-year guidance as the $420M expansion to its warehouse automation contract began booking alongside the base $900M program. CEO Emil Holt said material handling utilization hit a company record during the quarter. The combined contract is now Drayton's largest ever, representing over a third of annual revenue.",
-      "cycle": 82782,
-      "dur": 2
-    },
-    {
-      "company": "Drossware Industries",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Drossware Extends Reformulation Push Into Packaging With Recyclable Line",
-      "body": "Building on the success of its overhauled cleaning range, Drossware introduced a new fully recyclable packaging line under CEO Nadia Wold. The rollout covers 40 formats across food and consumer segments, with two anchor retail partners already committed to phased adoption. Wold framed the launch as 'the natural next step after cleaning proved the model works.'",
-      "cycle": 82782,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "standard",
-      "head": "Halhold Systems Wins Second Meridian Framework as Corvalan's Bet Gains Traction",
-      "body": "Halhold Systems secured a second major Meridian compute framework valued at $1.9B, extending the momentum CEO Ines Corvalan built after returning the company to profit. The order doubles Meridian's committed pipeline and pulls forward capacity plans by two quarters. Corvalan cautioned that scaling delivery 'will test our operations,' a nod to the turbulence that has marked her tenure.",
-      "cycle": 82782,
-      "dur": 2
-    },
-    {
-      "company": "Hesperforge Supply",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Hesperforge Supply Breaks Ground on Fifth Mill as Marine Backlog Tops $2B",
-      "body": "CEO Sable Halloran committed $510M to a fifth mill at the company's Harroway complex, citing a marine framework backlog that has now climbed past $2B. The facility is expected to add roughly 18% to structural materials capacity when it reaches full output in late 1915. Halloran called the move 'a measured bet on demand we can already see on the order book.'",
-      "cycle": 82782,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Korrwright Works Debuts First Timepiece Built on Newly Acquired Dovreux Cases",
-      "body": "Just months after the $620M Dovreux Frères deal, CEO Dunmore Carrow unveiled the Halbrook Meridian, the first Korrwright piece using in-house-controlled Dovreux casework. The limited run of 300 carries a list price near $148,000 and showcases the vertical integration Carrow promised at acquisition. Early allocations to Verenne dealers sold through within days.",
-      "cycle": 82782,
-      "dur": 2
     },
     {
       "company": "Stegreach",
