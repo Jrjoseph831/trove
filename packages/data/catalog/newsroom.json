@@ -1,35 +1,85 @@
 {
-  "generatedAt": "2026-08-31T04:18:17.595Z",
+  "generatedAt": "2026-08-31T12:58:53.543Z",
   "beats": [
     {
-      "company": "Blackmoor",
-      "sector": "agriculture",
-      "kind": "earnings_beat",
+      "company": "Aldouscraft Mfg.",
+      "sector": "construction",
+      "kind": "expansion",
       "size": "flash",
-      "head": "Blackmoor Edges Up as Completed Holloway Range Lifts Order Book",
-      "body": "Blackmoor posted a slim gain as the newly rounded-out Holloway seed-drill range, now including the low-disturbance coulter kit, drew steady pre-season orders. CEO Soren Dray said the full lineup should support gradual share gains through the coming planting cycle.",
-      "cycle": 82784,
+      "head": "Aldouscraft Mfg. Tops Out Fifth Extrusion Line Ahead of Schedule",
+      "body": "Aldouscraft completed the building shell for its fifth extrusion line weeks ahead of plan, with equipment installation now underway. CEO Soren Ashby said feeder cable orders continue to extend, supporting the decision to add capacity. Commissioning is expected within two quarters, lifting nameplate output roughly 20%.",
+      "cycle": 82786,
       "dur": 1
     },
     {
-      "company": "Erretmark Works",
-      "sector": "automotive",
-      "kind": "earnings_miss",
+      "company": "Dunmorewright Industries",
+      "sector": "construction",
+      "kind": "major_deal",
       "size": "standard",
-      "head": "Erretmark Works Slips as Veyron Recall Costs Bite Into Quarterly Result",
-      "body": "Erretmark Works missed expectations, posting a 12% profit decline after absorbing $340M in Veyron recall and repair costs alongside a temporary halt to affected deliveries. CEO Aurelia Garr said replacement braking components were now shipping to service centers and reaffirmed her appetite for bolt-on acquisitions once the campaign clears.",
-      "cycle": 82784,
+      "head": "Dunmorewright Wins $410M Regional Sewer Modernization Contract",
+      "body": "Dunmorewright secured a $410M contract to modernize sewer and waterworks infrastructure across three regional districts, its largest award in a decade. CEO Emil Skarn said the deal builds on momentum from the current waterworks program, which recently crossed its halfway mark ahead of plan. The new work is expected to begin billing next year and extend the backlog into 2031.",
+      "cycle": 82786,
       "dur": 2
     },
     {
-      "company": "Garrweave Mills",
-      "sector": "textiles",
+      "company": "Halcyon Industries",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Halcyon Industries Beats as Second Northgate Line Ramps",
+      "body": "Halcyon reported revenue of $274M, above the $268M consensus, as the newly added recycled-fiber line at Northgate began contributing output. CEO Dorian Ashby said the second line reached 70% of rated capacity within its first quarter, ahead of the internal plan. The order book remains filled into next year under the multi-year supply pact.",
+      "cycle": 82786,
+      "dur": 1
+    },
+    {
+      "company": "Holtforge Group",
+      "sector": "construction",
       "kind": "earnings_beat",
       "size": "standard",
-      "head": "Garrweave Mills Firms Up as Southcombe Pact Adds Second Steady Base",
-      "body": "Garrweave Mills reported firmer results as the newly signed Southcombe supply pact began contributing volume alongside its long-running Northfield business. CEO Lorne Veldt said the twin-anchor arrangement should keep looms at full run well into next year without further capital outlay.",
-      "cycle": 82784,
+      "head": "Holtforge Group Stretches Streak as Interconnector Backlog Powers Fourth Beat",
+      "body": "Holtforge posted a fourth consecutive record quarter, with revenue of $498M topping estimates as interconnector cable shipments accelerated. CEO Yvette Bramm said the $640M contract signed last quarter is now billing ahead of schedule, keeping capacity fully committed through 2030. Operating margin held at a multi-year high of 18.2%.",
+      "cycle": 82786,
       "dur": 2
+    },
+    {
+      "company": "Marrowcyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Marrowcyon Runs Streak to Tenth Straight Quiet Beat",
+      "body": "Marrowcyon posted its tenth consecutive earnings beat, with revenue of $189M just ahead of estimates as apparel and fixtures held steady. CEO Theo Orne offered no surprises, citing stable demand and consistent input costs. Margins were flat, extending one of the sector's least eventful winning streaks.",
+      "cycle": 82786,
+      "dur": 1
+    },
+    {
+      "company": "Thaldale Group",
+      "sector": "consumer",
+      "kind": "safety_probe",
+      "size": "standard",
+      "head": "Thaldale Group ProGrade Line Draws Safety Probe Over Motor Overheating Reports",
+      "body": "Regulators opened a review of Thaldale's flagship ProGrade cordless drills after 47 reports of overheating battery packs, some causing minor burns. Holloway, who staked reset savings on the launch, said the company is cooperating fully and has paused shipments of two affected models pending an internal inspection. Analysts warned the probe could stall the growth push just months after the line's debut.",
+      "cycle": 82786,
+      "dur": 2
+    },
+    {
+      "company": "Thronehaus & Co.",
+      "sector": "luxury",
+      "kind": "award",
+      "size": "standard",
+      "head": "Thronehaus & Co. Aurel Grand Complication Named Timepiece of the Year",
+      "body": "The Aurel Grand Complication took top honors at the Geneva Horological Grand Prix, validating Cora Dray's costly bet on the Meridian Dial acquisition. Judges praised its perpetual calendar and minute repeater, both engineered by the newly integrated complications team. Dray said demand for the limited 90-piece run has already outstripped supply.",
+      "cycle": 82786,
+      "dur": 2
+    },
+    {
+      "company": "Wrengrove Group",
+      "sector": "medical",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Wrengrove Group Posts Third Straight Beat as Backlog Clears",
+      "body": "Wrengrove reported quarterly revenue of $312M, edging past the $305M consensus as the second shift finally worked through the sterile-kit backlog. CEO Rhys Vossen said on-time delivery rates returned to 98%, restoring headroom under the national hospital network contract. Margins ticked up 60 basis points on improved plant utilization.",
+      "cycle": 82786,
+      "dur": 1
     },
     {
       "company": "Gromford Works",
@@ -42,66 +92,6 @@
       "dur": 8
     },
     {
-      "company": "Halcrow & Vance",
-      "sector": "construction",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Halcrow & Vance Stands Up Coastal Base Camp to Anchor $4.2B Reclamation Push",
-      "body": "Halcrow & Vance opened a purpose-built staging depot near the Vetask estuary to service its record coastal reclamation program, deploying 140 additional earthmoving units and roughly 600 crew. CEO Mira Skarn said the facility would double as a permanent regional hub, positioning the firm for follow-on dredging tenders expected next year.",
-      "cycle": 82784,
-      "dur": 2
-    },
-    {
-      "company": "Holtgate Group",
-      "sector": "textiles",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Holtgate Group Notches Another Slim Beat on Dependable Guild Mill Runs",
-      "body": "Holtgate Group extended its beat streak with a narrow margin gain, as steady Guild Mill throughput offset soft raw-fiber pricing. CEO Dorian Throne reiterated the firm's preference for reliability over rapid expansion.",
-      "cycle": 82784,
-      "dur": 1
-    },
-    {
-      "company": "Marlgear Supply",
-      "sector": "technology",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Marlgear Supply Doubles Down on Industrial Machines as Turnaround Chief Sets New Course",
-      "body": "New chief executive Petra Illsworth unveiled a plan to concentrate Marlgear around its Industrial Machines line, folding remaining Devices operations into a single wind-down unit slated to close by year-end. The firm booked a $310M restructuring charge and set aside a further $200M reserve tied to the ongoing Kessel fault prosecution.",
-      "cycle": 82784,
-      "dur": 2
-    },
-    {
-      "company": "Steg Tooling",
-      "sector": "manufacturing",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Steg Tooling Stretches Streak to Seventeen as Kelmar Cells Run Full",
-      "body": "Steg Tooling reported its seventeenth consecutive quarterly beat, with fastener and auto-parts volumes holding steady across all four Kelmar cells. CEO Iris Vossen credited disciplined order pacing and hinted at a modest capacity study for a fifth cell next year.",
-      "cycle": 82784,
-      "dur": 1
-    },
-    {
-      "company": "Bruncrest Works",
-      "sector": "technology",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Bruncrest Works Fires Up Third Line as Aria Ultra X Demand Outruns Capacity",
-      "body": "Bruncrest Works brought its long-awaited third line live this week, adding roughly 40% to nameplate compute output. CEO Ines Marlow, never shy with a forecast, told reporters the line was 'sold out before the first unit shipped' and floated a fourth line for review by summer. Backlog now stretches into the following year at current run rates.",
-      "cycle": 82783,
-      "dur": 2
-    },
-    {
-      "company": "Calderforge",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Calderforge Beats Again as Stormwell Hall Four Runs Full and Hall Five Framing Rises",
-      "body": "Calderforge posted quarterly compute revenue of $2.1B, up 28% year over year, as Stormwell Hall Four held near-full utilization for a second straight quarter. CEO Perra Vann said Hall Five steelwork is now topped out and remains on track for first yields early next year, calling the recovery 'no longer fragile.' Margins widened to 31% as ramp costs eased.",
-      "cycle": 82783,
-      "dur": 2
-    },
-    {
       "company": "Cranegrove",
       "sector": "construction",
       "kind": "major_deal",
@@ -112,16 +102,6 @@
       "dur": 8
     },
     {
-      "company": "Garrware",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Garrware Beats as Sixth Marrow Valley Line Nears Commissioning",
-      "body": "Garrware topped estimates with packaging revenue of $520M, up 19% year over year, as its five running Marrow Valley lines held full utilization. CEO Orla Holt said the sixth line remains on schedule to commission next quarter and that demand has yet to soften despite the added capacity. Backlog remains near record levels.",
-      "cycle": 82783,
-      "dur": 2
-    },
-    {
       "company": "Halhold Works",
       "sector": "technology",
       "kind": "safety_probe",
@@ -130,16 +110,6 @@
       "body": "The Devices Safety Directorate opened a formal inquiry into Halhold Works after 14 field reports of overheating in the relaunched Aveline line, just five months after its debut. CEO Naomi Fenwick, who staked her turnaround on a 'clean break' from the original recall, said the company is cooperating fully and has paused shipments to two regional distributors. Shares of the Devices division's parent came under heavy pressure as the probe reopened wounds from last year's $180M recall.",
       "cycle": 82783,
       "dur": 8
-    },
-    {
-      "company": "Palettstead Holdings",
-      "sector": "logistics",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Palettstead Holdings Breaks Ground on Fifth Cold-Chain as Modular Line Books Fill",
-      "body": "Palettstead Holdings began construction on its $340M fifth cold-chain facility this week, targeting a startup within 18 months. CEO Orla Marrow said modular packaging orders have filled the current book solid through the coming year, prompting the company to fast-track the new site. The fourth cold-chain remains sold out.",
-      "cycle": 82783,
-      "dur": 2
     },
     {
       "company": "Boreas Power",
@@ -189,56 +159,6 @@
       "head": "Veldtreach & Sons Awarded $1.2B Inland Reservoir Expansion in Signature Steg Bet",
       "body": "Veldtreach & Sons won the prime contract for Phase II of the Coldwater Basin reservoir program, valued at $1.2B over four years. CEO Petra Steg said the win vindicates the earlier decision to commission a fourth earthmoving fleet ahead of demand. The award nearly triples the firm's reservoir-related backlog and secures work through the decade's end.",
       "cycle": 82780,
-      "dur": 8
-    },
-    {
-      "company": "Fennmoor",
-      "sector": "technology",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Fennmoor Strikes $3.4B Merger to Fold Machine-Tool Giant Voight Into Industrial Arm",
-      "body": "Chairman Dorian Brandt, now in his sixth decade at the helm, announced the largest acquisition in company history, absorbing precision machine-tool maker Voight to bolster Fennmoor's Industrial Machines division. The cash-and-stock deal follows the successful integration of Halquist and Carrow, and Brandt said it would lift industrial revenue past the medical segment for the first time. Regulators are expected to review the tie-up over the coming months.",
-      "cycle": 82778,
-      "dur": 8
-    },
-    {
-      "company": "Vossenspire Holdings",
-      "sector": "energy",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Vossenspire Holdings Faces New Regulatory Probe as Storage-Bank Fault Spreads to Field Units",
-      "body": "Regulators opened a fresh inquiry after reports of thermal faults in deployed storage banks, widening the scope of the crisis that toppled Corin Alderidge. CEO Maren Vok ordered a voluntary field inspection of some 12,000 installed units and set aside $220M for remediation. The disclosure lands atop the pending $1.6B investor suit, deepening pressure on Vok's turnaround.",
-      "cycle": 82778,
-      "dur": 8
-    },
-    {
-      "company": "Aperture Compute",
-      "sector": "technology",
-      "kind": "safety_probe",
-      "size": "major",
-      "head": "Aperture Compute Faces Formal Investigation as Regulators Seize Emberline Records",
-      "body": "Authorities opened a formal safety-records probe into the Emberline fabrication site after evidence that inspection logs had been altered, ordering the seizure of internal documents and interviews with plant leadership. Marisol Venn placed two site executives on leave and suspended a portion of Emberline output pending review, warning of possible near-term shipment delays. The company disclosed it is cooperating fully but declined to quantify the financial impact.",
-      "cycle": 82777,
-      "dur": 8
-    },
-    {
-      "company": "Greywater Grid",
-      "sector": "energy",
-      "kind": "earnings_miss",
-      "size": "major",
-      "head": "Greywater Grid Posts Steep Loss as Discharge Fallout Erases Compute Revenue",
-      "body": "The crisis chief's first report revealed a quarterly loss of $410M as the collapsed $2.4B compute pact and departing customers gutted revenue, which fell 38% year over year. The company took additional charges tied to the discharge restatement and warned of continued cash burn while the partner lawsuit proceeds. Management withdrew forward guidance, citing 'unresolved litigation and rebuilding trust.'",
-      "cycle": 82777,
-      "dur": 8
-    },
-    {
-      "company": "Korrwright Group",
-      "sector": "construction",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Korrwright Group Wins $3.4B Transit Corridor Contract in Largest Award in Its History",
-      "body": "Halden Fenn secured the multi-year Eastreach Corridor package, supplying structural materials and wire & cable for a regional rail and utility spine. The award, worth $3.4B over six years, arrives just as Harbor redevelopment billing peaks, giving Korrwright a rare double-anchor backlog. Fenn said the win 'extends visibility well into the next decade' and lifts total backlog past $9B.",
-      "cycle": 82777,
       "dur": 8
     }
   ]

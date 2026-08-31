@@ -10,7 +10,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82764,
+    "lastEventCycle": 82786,
     "events": [
       {
         "cycle": 0,
@@ -166,6 +166,16 @@
         "size": "flash",
         "head": "Aldouscraft Mfg. Breaks Ground on Fifth Line as Feeder Cable Orders Extend",
         "body": "Aldouscraft confirmed site work has begun on its fifth extrusion line, with commissioning targeted within nine months at a stated cost of $95M. CEO Soren Ashby said feeder cable order books remain 'comfortably full into next year,' keeping the four existing lines at capacity. The company reiterated its full-year output guidance without change.",
+        "effects": {
+          "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82786,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Aldouscraft Mfg. Tops Out Fifth Extrusion Line Ahead of Schedule",
+        "body": "Aldouscraft completed the building shell for its fifth extrusion line weeks ahead of plan, with equipment installation now underway. CEO Soren Ashby said feeder cable orders continue to extend, supporting the decision to add capacity. Commissioning is expected within two quarters, lifting nameplate output roughly 20%.",
         "effects": {
           "construction": 0.06
         }
@@ -7093,7 +7103,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82766,
+    "lastEventCycle": 82786,
     "events": [
       {
         "cycle": 0,
@@ -7261,6 +7271,16 @@
         "body": "Dunmorewright Industries reported the $780M waterworks contract has passed its halfway milestone two weeks ahead of schedule, lifting quarterly billings 6%. CEO Emil Skarn credited the expanded foundry capacity for holding delivery timelines steady through a tight materials market. Management reaffirmed full-year guidance.",
         "effects": {
           "construction": 0.06
+        }
+      },
+      {
+        "cycle": 82786,
+        "kind": "major_deal",
+        "size": "standard",
+        "head": "Dunmorewright Wins $410M Regional Sewer Modernization Contract",
+        "body": "Dunmorewright secured a $410M contract to modernize sewer and waterworks infrastructure across three regional districts, its largest award in a decade. CEO Emil Skarn said the deal builds on momentum from the current waterworks program, which recently crossed its halfway mark ahead of plan. The new work is expected to begin billing next year and extend the backlog into 2031.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -9806,7 +9826,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82771,
+    "lastEventCycle": 82786,
     "events": [
       {
         "cycle": 0,
@@ -10034,6 +10054,16 @@
         "body": "With the Northgate supply pact filling its order book, Halcyon committed $220M to a second recycled-fiber line to lift capacity by 35%. Dorian Ashby said the expansion answers sustained demand and positions the plant to pursue additional multi-year contracts through next year.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82786,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Halcyon Industries Beats as Second Northgate Line Ramps",
+        "body": "Halcyon reported revenue of $274M, above the $268M consensus, as the newly added recycled-fiber line at Northgate began contributing output. CEO Dorian Ashby said the second line reached 70% of rated capacity within its first quarter, ahead of the internal plan. The order book remains filled into next year under the multi-year supply pact.",
+        "effects": {
+          "logistics": 0.06
         }
       }
     ]
@@ -10937,7 +10967,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82766,
+    "lastEventCycle": 82786,
     "events": [
       {
         "cycle": 0,
@@ -11113,6 +11143,16 @@
         "size": "standard",
         "head": "Holtforge Group Wins $640M Interconnector Contract, Extending Backlog Into 2030",
         "body": "Holtforge Group secured a $640 million wire-and-cable supply contract for the cross-regional Saltmere interconnector, its largest single award to date. CEO Yvette Bramm said the deal locks in production through 2030 and builds on the record order book behind the company's recent beat streak. Work is expected to begin ramping late this year.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82786,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Holtforge Group Stretches Streak as Interconnector Backlog Powers Fourth Beat",
+        "body": "Holtforge posted a fourth consecutive record quarter, with revenue of $498M topping estimates as interconnector cable shipments accelerated. CEO Yvette Bramm said the $640M contract signed last quarter is now billing ahead of schedule, keeping capacity fully committed through 2030. Operating margin held at a multi-year high of 18.2%.",
         "effects": {
           "construction": 0.13
         }
@@ -14008,7 +14048,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82769,
+    "lastEventCycle": 82786,
     "events": [
       {
         "cycle": 0,
@@ -14204,6 +14244,16 @@
         "size": "flash",
         "head": "Marrowcyon Runs Streak to Ninth Straight Quiet Beat",
         "body": "Theo Orne's Marrowcyon posted another modest earnings beat, its ninth consecutive quarter above estimates, on steady apparel and plumbing-fixture demand. Revenue rose 3.1% with margins holding flat, continuing the company's reputation for undramatic consistency. Orne offered no change to full-year guidance.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82786,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Marrowcyon Runs Streak to Tenth Straight Quiet Beat",
+        "body": "Marrowcyon posted its tenth consecutive earnings beat, with revenue of $189M just ahead of estimates as apparel and fixtures held steady. CEO Theo Orne offered no surprises, citing stable demand and consistent input costs. Margins were flat, extending one of the sector's least eventful winning streaks.",
         "effects": {
           "consumer": 0.06
         }
@@ -16762,7 +16812,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82769,
+    "lastEventCycle": 82786,
     "events": [
       {
         "cycle": 0,
@@ -16983,6 +17033,16 @@
         "effects": {
           "consumer": 0.13
         }
+      },
+      {
+        "cycle": 82786,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Thaldale Group ProGrade Line Draws Safety Probe Over Motor Overheating Reports",
+        "body": "Regulators opened a review of Thaldale's flagship ProGrade cordless drills after 47 reports of overheating battery packs, some causing minor burns. Holloway, who staked reset savings on the launch, said the company is cooperating fully and has paused shipments of two affected models pending an internal inspection. Analysts warned the probe could stall the growth push just months after the line's debut.",
+        "effects": {
+          "consumer": -0.13
+        }
       }
     ]
   },
@@ -16997,18 +17057,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82775,
+    "lastEventCycle": 82786,
     "events": [
-      {
-        "cycle": 82580,
-        "kind": "earnings_beat",
-        "size": "standard",
-        "head": "Thronehaus & Co. Beats as Aldren Foundry Lifts Margins on In-House Casing",
-        "body": "Thronehaus posted quarterly revenue of 214 million, up 18% year on year, crediting the Verrand casing foundry for trimming external supplier costs. Cora Dray said in-house production of Sovereign Collection cases had lifted gross margin by roughly three points. Dray hinted the acquisitive streak is not over, citing 'several conversations' around dial and movement specialists.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82589,
         "kind": "product_launch",
@@ -17235,6 +17285,16 @@
         "size": "standard",
         "head": "Thronehaus & Co. Opens Flagship Atelier to House Meridian Complications Under One Roof",
         "body": "Thronehaus unveiled a new master atelier consolidating its Aurel line and the recently acquired Meridian Dial Works complications team into a single 40-artisan workshop. CEO Cora Dray said the facility triples annual grand-complication capacity and shortens lead times for bespoke commissions. The move follows the Aurel Grand Complication's strong reception at last season's Vellcourt Salon.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82786,
+        "kind": "award",
+        "size": "standard",
+        "head": "Thronehaus & Co. Aurel Grand Complication Named Timepiece of the Year",
+        "body": "The Aurel Grand Complication took top honors at the Geneva Horological Grand Prix, validating Cora Dray's costly bet on the Meridian Dial acquisition. Judges praised its perpetual calendar and minute repeater, both engineered by the newly integrated complications team. Dray said demand for the limited 90-piece run has already outstripped supply.",
         "effects": {
           "luxury": 0.13
         }
@@ -19885,7 +19945,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82762,
+    "lastEventCycle": 82786,
     "events": [
       {
         "cycle": 0,
@@ -20031,6 +20091,16 @@
         "size": "flash",
         "head": "Wrengrove Group Edges Past Estimates as Second Shift Trims Backlog",
         "body": "Quarterly revenue rose 7% to $1.28B as the new plant's second shift began clearing the record sterile-kit backlog ahead of schedule. Vossen said fill rates on the national hospital contract reached 96%, easing earlier delivery strain. Margins held steady despite added labor costs, reflecting the steady cadence that has defined his tenure.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82786,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wrengrove Group Posts Third Straight Beat as Backlog Clears",
+        "body": "Wrengrove reported quarterly revenue of $312M, edging past the $305M consensus as the second shift finally worked through the sterile-kit backlog. CEO Rhys Vossen said on-time delivery rates returned to 98%, restoring headroom under the national hospital network contract. Margins ticked up 60 basis points on improved plant utilization.",
         "effects": {
           "medical": 0.06
         }
