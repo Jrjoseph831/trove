@@ -2121,18 +2121,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82777,
+    "lastEventCycle": 82787,
     "events": [
-      {
-        "cycle": 82588,
-        "kind": "recall",
-        "size": "standard",
-        "head": "Bruncraft Industries Recalls 140,000 Runabouts Over Halveston Axle Defect",
-        "body": "The automaker issued a voluntary recall of roughly 140,000 Runabout units after a batch of axles from newly acquired Halveston Axle Works showed premature wear under load testing. CEO Orla Marrow said the fault surfaced during post-acquisition quality integration and pledged free repairs, estimating a one-time charge of up to $85 million.",
-        "effects": {
-          "automotive": -0.13
-        }
-      },
       {
         "cycle": 82595,
         "kind": "safety_probe",
@@ -2353,6 +2343,16 @@
         "size": "standard",
         "head": "Bruncraft Adds Second Coachline Shift to Meet $1.1B Fleet Order",
         "body": "Marcus Vane announced a second production shift at the Vanguard assembly plant and roughly 400 new hires to fulfill the recently won $1.1B fleet contract. The expansion lifts annual capacity by an estimated 35% and marks Bruncraft's first hiring wave since Vane's cost-cutting era. Vane framed it as proof the company has 'turned the corner from repair to growth.'",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82787,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Bruncraft Beats as Second Coachline Shift Clears $1.1B Fleet Order Ahead of Schedule",
+        "body": "Marcus Vane delivered a solid beat, with deliveries under the $1.1B fleet order running ahead of plan after the added shift lifted Vanguard-trim output. Revenue climbed 17% and Vane signaled appetite for a follow-on order from the same customer. He hinted that further capacity expansion could follow if fleet demand holds.",
         "effects": {
           "automotive": 0.13
         }
@@ -3286,16 +3286,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82778,
+    "lastEventCycle": 82787,
     "events": [
-      {
-        "cycle": 82615,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Brunstone & Sons Ousts Royce Lambourne as Board Draws Line Under Vault Cell Pro Crisis",
-        "body": "The board voted to remove CEO Royce Lambourne after the Vault Cell Pro recall wiped an estimated $2.1 billion from the storage division's projected revenue and triggered three separate regulatory filings. Directors named turnaround veteran Halden Crowe as chief executive, effective immediately, tasking him with rebuilding the storage unit and restoring confidence among fleet customers. Crowe pledged an independent safety overhaul and a paused product cadence \"until every cell earns its place.\"",
-        "effects": {}
-      },
       {
         "cycle": 82624,
         "kind": "product_launch",
@@ -3514,6 +3506,16 @@
         "size": "standard",
         "head": "Brunstone & Sons Relaunches Vault as Halwick Scales Back Ambitions to Fleet Storage",
         "body": "In her first major move, CEO Della Halwick unveiled the pared-down Vault III, a modular storage unit aimed squarely at commercial fleet operators rather than the consumer market that stranded its predecessor. Halwick told a Dearford briefing the line targets a narrower 40,000-unit annual run, with the two idled Vault II lines partially reactivated to serve pre-orders. Analysts noted the pivot marks a sharp retreat from Frost's mass-market gamble.",
+        "effects": {
+          "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82787,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunstone & Sons Returns to Profit as Halwick's Fleet-Only Vault Finds Traction",
+        "body": "Della Halwick posted the company's first profitable quarter since the Vault II debacle, aided by tighter costs and steady demand for the pared-back fleet-storage Vault. Revenue rose 8% and the company narrowed its full-year loss forecast, with Halwick crediting a 'disciplined, unglamorous' focus. She cautioned against expecting a return to the aggressive expansion of the Frost era.",
         "effects": {
           "automotive": 0.13
         }
@@ -5043,18 +5045,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82777,
+    "lastEventCycle": 82787,
     "events": [
-      {
-        "cycle": 82599,
-        "kind": "safety_probe",
-        "size": "major",
-        "head": "Regulators Open Formal Safety Probe Into Castlehold's Saltmere Storage Sites",
-        "body": "A national energy regulator opened a formal investigation Friday into containment failures at Castlehold's Saltmere legacy storage facilities, escalating a crisis that has already produced a $1.9 billion cleanup bill and an investor suit. Ivo Reneth said the company is 'fully cooperating' but declined to estimate potential penalties. Two Saltmere sites were ordered offline pending inspection.",
-        "effects": {
-          "energy": -0.22
-        }
-      },
       {
         "cycle": 82606,
         "kind": "earnings_miss",
@@ -5277,6 +5269,16 @@
         "size": "standard",
         "head": "Castlehold's Mally Launches Sweeping Turnaround, Exits Storage-Framework Ambitions",
         "body": "New chief Ingrid Mally unveiled a 90-day reset plan that shelves the abandoned Framework program entirely and refocuses the company on its core Power & Storage baseload contracts. The plan targets $220M in annual savings and consolidates operations around the two plants cleared by regulators, while the halted second plant remains offline pending final review. Mally called the previous strategy 'overextended' and pledged a return to disciplined delivery.",
+        "effects": {
+          "energy": -0.13
+        }
+      },
+      {
+        "cycle": 82787,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Castlehold Sells Idle Storage Assets for $340M as Mally's Turnaround Sheds Legacy Weight",
+        "body": "Ingrid Mally continued dismantling the failed framework strategy, agreeing to sell three mothballed storage facilities for $340 million to fund debt reduction. The proceeds cut Castlehold's leverage ratio meaningfully and mark the largest single step in her turnaround plan. Mally said the leaner asset base positions the company to refocus on core grid-supply contracts.",
         "effects": {
           "energy": -0.13
         }
@@ -13293,18 +13295,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82778,
+    "lastEventCycle": 82787,
     "events": [
-      {
-        "cycle": 82631,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Lhaus Industries Breaks Ground on Fifth Cell-Pack Line as Brandt Chases Scale",
-        "body": "Fresh off absorbing Delphin's plants, Cole Brandt announced a $2.1 billion investment to add a fifth cell-pack line at the newly unified Halbrook complex. The move lifts targeted annual output past 40 gigawatt-hours and, Brandt told reporters, positions Lhaus to underbid rivals on volume contracts. Analysts noted the pace reflects Brandt's long habit of building faster than demand strictly requires.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82638,
         "kind": "earnings_miss",
@@ -13533,6 +13525,16 @@
         "body": "CEO Cole Brandt posted a quarterly profit of $610M, ahead of expectations, as first shipments under the landmark fleet storage contract began recognizing revenue. The Kellstrom-based Power & Storage unit contributed 22% of group sales in its first full quarter. Brandt hinted at further bolt-on acquisitions to feed the fast-growing division.",
         "effects": {
           "automotive": 0.13
+        }
+      },
+      {
+        "cycle": 82787,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Lhaus Industries Acquires Kellstrom Cell Maker Ardent Power in $9.2B Deal to Own Its Supply Chain",
+        "body": "Cole Brandt sealed the largest acquisition in company history, buying cell specialist Ardent Power for $9.2 billion to bring Kellstrom cell production fully in-house across its Power & Storage division. The deal locks in supply for the $4.3B fleet contract and gives Lhaus manufacturing capacity that management projects will lift Power margins by up to 400 basis points. Brandt framed the purchase as the anchor of a multi-year vertical-integration push.",
+        "effects": {
+          "automotive": 0.22
         }
       }
     ]
@@ -14733,7 +14735,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82767,
+    "lastEventCycle": 82787,
     "events": [
       {
         "cycle": 0,
@@ -14909,6 +14911,16 @@
         "size": "flash",
         "head": "Ornewright Goods Rolls Out Concentrated Jansan Line to Cut Shipping Costs",
         "body": "Ornewright introduced a concentrated cleaning and jansan formula aimed at trimming freight expense across its multi-region contract network. CEO Petra Veldt said the reformulation should lift per-unit margins slightly without disrupting existing supply commitments. Early rollout targets institutional customers first.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82787,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ornewright Goods Posts Steady Beat as Concentrated Jansan Line Lifts Shipping Efficiency",
+        "body": "Petra Veldt delivered a modest beat, with operating margin up 90 basis points as the new concentrated janitorial line cut freight costs faster than expected. Volumes across the multi-region contract held firm, and management reaffirmed guidance for the year. Veldt noted early interest from food-service customers in a similar concentrated format.",
         "effects": {
           "consumer": 0.06
         }
@@ -15964,7 +15976,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82771,
+    "lastEventCycle": 82787,
     "events": [
       {
         "cycle": 0,
@@ -16188,6 +16200,16 @@
         "body": "Skarnvale reported revenue up 19% to $410M as the two new junction rebuilds began contributing alongside the proven Vosk Junction system. Dorn Vaskell said throughput gains have exceeded internal targets, but flagged rising capital intensity as the overhaul program scales.",
         "effects": {
           "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82787,
+        "kind": "safety_probe",
+        "size": "standard",
+        "head": "Skarnvale Faces Regulatory Probe After Conveyor Failure at Newly Overhauled Dresk Junction",
+        "body": "Transit-safety regulators opened a formal inquiry into a gantry collapse at Dresk Junction, one of the three sites recently rebuilt under Vaskell's overhaul playbook, that halted operations for eleven hours. No injuries were reported, but inspectors flagged concerns that the rapid rollout may have outpaced load-testing protocols. Vaskell called the incident 'isolated' and pledged full cooperation, though shares wavered on the news.",
+        "effects": {
+          "logistics": -0.13
         }
       }
     ]
@@ -17658,18 +17680,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82777,
+    "lastEventCycle": 82787,
     "events": [
-      {
-        "cycle": 82595,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Varnvale & Sons Unveils First Maisons-Division Collection Blending Duquesne and Corveau",
-        "body": "The newly formed Maisons division debuted a 24-piece collection pairing Duquesne jeweling with Corveau timepiece movements, priced from $9,000 to $180,000. CEO Bram Wold framed the launch as proof the $1.4-billion Duquesne acquisition could yield unified craft rather than a loose portfolio. Initial allocations to flagship boutiques are already spoken for.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82602,
         "kind": "expansion",
@@ -17896,6 +17908,16 @@
         "size": "standard",
         "head": "Varnvale & Sons Beats as Corvane Perpetual Line Drives Timepiece Margins Higher",
         "body": "Bram Wold reported quarterly revenue up 14% with timepiece margins expanding 310 basis points, crediting strong early demand for the in-house Corvane Perpetual line and continued Thessaly case cost savings. The company raised its full-year outlook and noted order backlog for the Corvane collection now stretches nine months. Wold hinted at 'further vertical opportunities' under review.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82787,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Varnvale & Sons Opens Second Thessaly Casing Workshop to Scale Corvane Perpetual Output",
+        "body": "Bram Wold announced a new casing workshop to double in-house Thessaly production, easing a backlog on the high-margin Corvane Perpetual line that has run months behind demand. The investment, estimated near $180 million, will add specialist artisans over the next year. Wold framed the move as securing the supply of the component that now drives the group's richest timepiece margins.",
         "effects": {
           "luxury": 0.13
         }
@@ -18343,7 +18365,7 @@
       "trait": "steady, with the occasional bold move"
     },
     "arc": null,
-    "lastEventCycle": 82771,
+    "lastEventCycle": 82787,
     "events": [
       {
         "cycle": 0,
@@ -18559,6 +18581,16 @@
         "size": "standard",
         "head": "Vencyon Beats as Unified Hub Deployments Ramp Across National Distributor",
         "body": "Vencyon reported quarterly revenue of $2.4B, up 11% year-over-year, as more than 40 distributor sites went live on the Unified Hub Platform ahead of schedule. Iris Halloran credited the newly opened regional deployment centers for compressing installation timelines, and reaffirmed the $1.5B framework remains on track for full completion within eighteen months.",
+        "effects": {
+          "logistics": 0.13
+        }
+      },
+      {
+        "cycle": 82787,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Vencyon Beats Again as Regional Centers Push Unified Hub Toward Full National Coverage",
+        "body": "Halloran reported a third consecutive beat, with revenue up 14% as the last regional deployment centers came online and Unified Hub reached roughly 80% of the national distributor's sites. Management raised full-year guidance modestly, citing faster-than-planned installation cycles. Halloran said the remaining rollout should close by mid-next-year.",
         "effects": {
           "logistics": 0.13
         }

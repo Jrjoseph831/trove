@@ -1,15 +1,85 @@
 {
-  "generatedAt": "2026-08-31T12:58:53.543Z",
+  "generatedAt": "2026-08-31T22:36:15.423Z",
   "beats": [
     {
-      "company": "Aldouscraft Mfg.",
-      "sector": "construction",
-      "kind": "expansion",
+      "company": "Bruncraft Industries",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Bruncraft Beats as Second Coachline Shift Clears $1.1B Fleet Order Ahead of Schedule",
+      "body": "Marcus Vane delivered a solid beat, with deliveries under the $1.1B fleet order running ahead of plan after the added shift lifted Vanguard-trim output. Revenue climbed 17% and Vane signaled appetite for a follow-on order from the same customer. He hinted that further capacity expansion could follow if fleet demand holds.",
+      "cycle": 82787,
+      "dur": 2
+    },
+    {
+      "company": "Brunstone & Sons",
+      "sector": "automotive",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Brunstone & Sons Returns to Profit as Halwick's Fleet-Only Vault Finds Traction",
+      "body": "Della Halwick posted the company's first profitable quarter since the Vault II debacle, aided by tighter costs and steady demand for the pared-back fleet-storage Vault. Revenue rose 8% and the company narrowed its full-year loss forecast, with Halwick crediting a 'disciplined, unglamorous' focus. She cautioned against expecting a return to the aggressive expansion of the Frost era.",
+      "cycle": 82787,
+      "dur": 2
+    },
+    {
+      "company": "Castlehold",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Castlehold Sells Idle Storage Assets for $340M as Mally's Turnaround Sheds Legacy Weight",
+      "body": "Ingrid Mally continued dismantling the failed framework strategy, agreeing to sell three mothballed storage facilities for $340 million to fund debt reduction. The proceeds cut Castlehold's leverage ratio meaningfully and mark the largest single step in her turnaround plan. Mally said the leaner asset base positions the company to refocus on core grid-supply contracts.",
+      "cycle": 82787,
+      "dur": 2
+    },
+    {
+      "company": "Lhaus Industries",
+      "sector": "automotive",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Lhaus Industries Acquires Kellstrom Cell Maker Ardent Power in $9.2B Deal to Own Its Supply Chain",
+      "body": "Cole Brandt sealed the largest acquisition in company history, buying cell specialist Ardent Power for $9.2 billion to bring Kellstrom cell production fully in-house across its Power & Storage division. The deal locks in supply for the $4.3B fleet contract and gives Lhaus manufacturing capacity that management projects will lift Power margins by up to 400 basis points. Brandt framed the purchase as the anchor of a multi-year vertical-integration push.",
+      "cycle": 82787,
+      "dur": 8
+    },
+    {
+      "company": "Ornewright Goods",
+      "sector": "consumer",
+      "kind": "earnings_beat",
       "size": "flash",
-      "head": "Aldouscraft Mfg. Tops Out Fifth Extrusion Line Ahead of Schedule",
-      "body": "Aldouscraft completed the building shell for its fifth extrusion line weeks ahead of plan, with equipment installation now underway. CEO Soren Ashby said feeder cable orders continue to extend, supporting the decision to add capacity. Commissioning is expected within two quarters, lifting nameplate output roughly 20%.",
-      "cycle": 82786,
+      "head": "Ornewright Goods Posts Steady Beat as Concentrated Jansan Line Lifts Shipping Efficiency",
+      "body": "Petra Veldt delivered a modest beat, with operating margin up 90 basis points as the new concentrated janitorial line cut freight costs faster than expected. Volumes across the multi-region contract held firm, and management reaffirmed guidance for the year. Veldt noted early interest from food-service customers in a similar concentrated format.",
+      "cycle": 82787,
       "dur": 1
+    },
+    {
+      "company": "Skarnvale",
+      "sector": "logistics",
+      "kind": "safety_probe",
+      "size": "standard",
+      "head": "Skarnvale Faces Regulatory Probe After Conveyor Failure at Newly Overhauled Dresk Junction",
+      "body": "Transit-safety regulators opened a formal inquiry into a gantry collapse at Dresk Junction, one of the three sites recently rebuilt under Vaskell's overhaul playbook, that halted operations for eleven hours. No injuries were reported, but inspectors flagged concerns that the rapid rollout may have outpaced load-testing protocols. Vaskell called the incident 'isolated' and pledged full cooperation, though shares wavered on the news.",
+      "cycle": 82787,
+      "dur": 2
+    },
+    {
+      "company": "Varnvale & Sons",
+      "sector": "luxury",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Varnvale & Sons Opens Second Thessaly Casing Workshop to Scale Corvane Perpetual Output",
+      "body": "Bram Wold announced a new casing workshop to double in-house Thessaly production, easing a backlog on the high-margin Corvane Perpetual line that has run months behind demand. The investment, estimated near $180 million, will add specialist artisans over the next year. Wold framed the move as securing the supply of the component that now drives the group's richest timepiece margins.",
+      "cycle": 82787,
+      "dur": 2
+    },
+    {
+      "company": "Vencyon",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Vencyon Beats Again as Regional Centers Push Unified Hub Toward Full National Coverage",
+      "body": "Halloran reported a third consecutive beat, with revenue up 14% as the last regional deployment centers came online and Unified Hub reached roughly 80% of the national distributor's sites. Management raised full-year guidance modestly, citing faster-than-planned installation cycles. Halloran said the remaining rollout should close by mid-next-year.",
+      "cycle": 82787,
+      "dur": 2
     },
     {
       "company": "Dunmorewright Industries",
@@ -22,16 +92,6 @@
       "dur": 2
     },
     {
-      "company": "Halcyon Industries",
-      "sector": "logistics",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Halcyon Industries Beats as Second Northgate Line Ramps",
-      "body": "Halcyon reported revenue of $274M, above the $268M consensus, as the newly added recycled-fiber line at Northgate began contributing output. CEO Dorian Ashby said the second line reached 70% of rated capacity within its first quarter, ahead of the internal plan. The order book remains filled into next year under the multi-year supply pact.",
-      "cycle": 82786,
-      "dur": 1
-    },
-    {
       "company": "Holtforge Group",
       "sector": "construction",
       "kind": "earnings_beat",
@@ -40,16 +100,6 @@
       "body": "Holtforge posted a fourth consecutive record quarter, with revenue of $498M topping estimates as interconnector cable shipments accelerated. CEO Yvette Bramm said the $640M contract signed last quarter is now billing ahead of schedule, keeping capacity fully committed through 2030. Operating margin held at a multi-year high of 18.2%.",
       "cycle": 82786,
       "dur": 2
-    },
-    {
-      "company": "Marrowcyon",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowcyon Runs Streak to Tenth Straight Quiet Beat",
-      "body": "Marrowcyon posted its tenth consecutive earnings beat, with revenue of $189M just ahead of estimates as apparel and fixtures held steady. CEO Theo Orne offered no surprises, citing stable demand and consistent input costs. Margins were flat, extending one of the sector's least eventful winning streaks.",
-      "cycle": 82786,
-      "dur": 1
     },
     {
       "company": "Thaldale Group",
@@ -70,16 +120,6 @@
       "body": "The Aurel Grand Complication took top honors at the Geneva Horological Grand Prix, validating Cora Dray's costly bet on the Meridian Dial acquisition. Judges praised its perpetual calendar and minute repeater, both engineered by the newly integrated complications team. Dray said demand for the limited 90-piece run has already outstripped supply.",
       "cycle": 82786,
       "dur": 2
-    },
-    {
-      "company": "Wrengrove Group",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Wrengrove Group Posts Third Straight Beat as Backlog Clears",
-      "body": "Wrengrove reported quarterly revenue of $312M, edging past the $305M consensus as the second shift finally worked through the sterile-kit backlog. CEO Rhys Vossen said on-time delivery rates returned to 98%, restoring headroom under the national hospital network contract. Margins ticked up 60 basis points on improved plant utilization.",
-      "cycle": 82786,
-      "dur": 1
     },
     {
       "company": "Gromford Works",
