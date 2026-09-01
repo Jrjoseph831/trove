@@ -975,7 +975,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82759,
+    "lastEventCycle": 82791,
     "events": [
       {
         "cycle": 0,
@@ -1081,6 +1081,16 @@
         "size": "flash",
         "head": "Ardent Health Beats as Continental Fleet Upgrades Roll Out on Schedule",
         "body": "Ardent posted a modest beat as staged imaging-equipment upgrades under the Continental service add-on progressed on plan. CEO Orla Halloran credited recurring service revenue for smoothing quarterly results and reaffirmed the multi-year deployment timeline. No change to guidance was issued.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82791,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Ardent Health Beats Again as Continental Fleet Upgrades Complete Final Phase",
+        "body": "Orla Halloran delivered another modest beat as the last tranche of Continental fleet upgrades rolled out on schedule, locking in higher recurring service revenue. Operating margin ticked up 90 basis points on the completed deployment. Halloran said the mature contract now provides 'a very quiet, very reliable base.'",
         "effects": {
           "medical": 0.06
         }
@@ -1231,18 +1241,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82779,
+    "lastEventCycle": 82791,
     "events": [
-      {
-        "cycle": 82567,
-        "kind": "earnings_miss",
-        "size": "major",
-        "head": "Blackhold Craters as Greycliff Suit and Halted Test Bank Gut Quarterly Results",
-        "body": "Blackhold reported a quarterly loss of $214 million, swinging from a slim profit a year earlier, as the suspended Greycliff test bank stripped projected storage revenue and legal reserves ballooned to $90 million. CEO Tomas Vren conceded the Greycliff timeline had 'slipped indefinitely' and withdrew full-year guidance. The investor suit over safety filings now moves to discovery, with three institutional backers reportedly weighing whether to join.",
-        "effects": {
-          "energy": -0.22
-        }
-      },
       {
         "cycle": 82575,
         "kind": "leadership_change",
@@ -1461,6 +1461,16 @@
         "body": "Blackhold posted a wider-than-expected loss as separation charges from the storage-power split and mounting warranty claims on the defective fleet weighed on results. CEO Perrin Vale said the quarter 'reflects the price of cleaning house' but reaffirmed the turnaround timeline. The investor suit over the defect remains unresolved, keeping pressure on the newly reshaped structure.",
         "effects": {
           "energy": -0.13
+        }
+      },
+      {
+        "cycle": 82791,
+        "kind": "breakthrough",
+        "size": "standard",
+        "head": "Blackhold Clears Defect Backlog as Redesigned Storage Cells Pass Safety Certification",
+        "body": "Perrin Vale confirmed the root-cause fix for the cell defect has cleared independent certification, ending the warranty-claim surge that battered recent results. The newly separated Storage unit will ship the redesigned cells starting next quarter, with Vale calling it 'the line under the crisis.' Management said reserved warranty funds came in $40M below the worst-case estimate.",
+        "effects": {
+          "energy": 0.13
         }
       }
     ]
@@ -2828,18 +2838,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82780,
+    "lastEventCycle": 82791,
     "events": [
-      {
-        "cycle": 82567,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Brunmark Motors Adds Second Veyra Line at Halt Ridge to Clear Order Backlog",
-        "body": "Riding surging Veyra Long-Range demand, CEO Yvette Calder announced a $480 million second assembly line at the Halt Ridge complex, targeting an additional 120,000 units annually by late next year. Calder said backlog now stretches past nine months and the expansion would add roughly 1,100 jobs. The company reaffirmed its raised full-year delivery outlook.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82577,
         "kind": "earnings_beat",
@@ -3060,6 +3060,16 @@
         "body": "Brunmark Motors secured a $1.9B multi-year contract to supply Veyra vehicles and Power & Storage packs to national logistics operator Halden Freightways. CEO Iris Calvagh called the deal 'the proof point the reset was built for,' with first deliveries slated within eight months. The order roughly doubles Brunmark's commercial backlog and marks the largest single win in Calvagh's tenure.",
         "effects": {
           "automotive": 0.22
+        }
+      },
+      {
+        "cycle": 82791,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Brunmark Motors Beats as $1.9B Fleet Order Begins Feeding Revenue",
+        "body": "Iris Calvagh posted a second straight beat as initial deliveries against the landmark fleet contract lifted quarterly revenue 14%. The Veyra line ran at full capacity for the first time since its relaunch, and Calvagh raised full-year margin guidance. Parts and Power divisions also contributed with steady volume.",
+        "effects": {
+          "automotive": 0.13
         }
       }
     ]
@@ -3543,7 +3553,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82771,
+    "lastEventCycle": 82791,
     "events": [
       {
         "cycle": 0,
@@ -3709,6 +3719,16 @@
         "size": "flash",
         "head": "Caldercraft Holdings Beats as Weatherproof Range Holds Steady into Off-Season",
         "body": "Caldercraft edged past estimates with revenue of $860M, as the reinforced deck cabinet line sustained demand through a typically softer quarter. Vale Fenn pointed to disciplined inventory management and steady reorder rates from hardware retail partners.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82791,
+        "kind": "product_launch",
+        "size": "flash",
+        "head": "Caldercraft Holdings Extends Weatherproof Range Into Household Line",
+        "body": "Vale Fenn introduced a weatherproof household goods sub-range, carrying the hardware line's proven coatings into storage bins, outdoor fixtures, and tool chests. The extension leverages existing supply relationships to keep costs contained ahead of the spring selling season. Fenn described it as 'a natural stretch, not a gamble.'",
         "effects": {
           "consumer": 0.06
         }
@@ -12073,18 +12093,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82779,
+    "lastEventCycle": 82791,
     "events": [
-      {
-        "cycle": 82529,
-        "kind": "major_deal",
-        "size": "standard",
-        "head": "Kessel Drive Lands Fleet Order for Long-Range Touring Line",
-        "body": "Kessel Drive secured a 12,000-unit order from a national coach operator for its newly launched long-range touring vehicle, its biggest single fleet commitment in years. CEO Dorian Brandt called it validation of the splashy reveal, promising first deliveries within nine months. The deal includes a multi-year service and battery-storage maintenance package.",
-        "effects": {
-          "automotive": 0.13
-        }
-      },
       {
         "cycle": 82540,
         "kind": "major_deal",
@@ -12308,6 +12318,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82791,
+        "kind": "safety_probe",
+        "size": "major",
+        "head": "Kessel Drive Faces Regulatory Probe as Vanta Ultra Packs Reported Overheating in Field",
+        "body": "Aldric Venn confirmed that safety regulators have opened a formal investigation into thermal incidents involving Vanta Ultra packs deployed under the $1.1B fleet pact. At least nine overheating events have been logged, prompting a precautionary charging-rate limit across affected fleets while the gigafactory ramp continues. Venn insisted the issue is 'a firmware calibration matter, not a cell flaw,' but the fleet customer has paused further intake pending findings.",
+        "effects": {
+          "automotive": -0.22
+        }
       }
     ]
   },
@@ -12322,7 +12342,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82773,
+    "lastEventCycle": 82791,
     "events": [
       {
         "cycle": 0,
@@ -12508,6 +12528,16 @@
         "size": "standard",
         "head": "Kesselgrove Co. to Add Third Bay as Press Backlog Hits Historic Low",
         "body": "With its press backlog now at a record low, Orla Steg approved construction of a third assembly bay to capture demand that current capacity can no longer absorb quickly. The $180M project will lift annual press output by roughly a third when it reaches full production in two years. Steg framed the move as measured expansion rather than a departure from the company's disciplined pace.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82791,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Kesselgrove Co. Launches Meridian Press Line as Third Bay Comes Online",
+        "body": "Orla Steg unveiled the Meridian series of industrial presses, the first new platform in nine years, timed to fill the freshly commissioned third bay. The line targets high-tonnage forming work and carries a 20% energy-efficiency gain over prior models. Steg said early order interest already covers the first two production runs.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -13104,18 +13134,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82782,
+    "lastEventCycle": 82791,
     "events": [
-      {
-        "cycle": 82606,
-        "kind": "product_launch",
-        "size": "standard",
-        "head": "Korrwright Works Unveils First Timepieces Built on In-House Vellhorn Escapements",
-        "body": "Korrwright debuted its Meridian collection, the first line to feature escapements from the recently acquired Vellhorn Movements, priced from $8,400. CEO Dunmore Carrow said full vertical integration cuts reliance on outside suppliers and improves margins on the heritage division's flagship pieces. Initial allocations to boutiques are already spoken for.",
-        "effects": {
-          "luxury": 0.13
-        }
-      },
       {
         "cycle": 82613,
         "kind": "major_deal",
@@ -13342,6 +13362,16 @@
         "body": "Just months after the $620M Dovreux Frères deal, CEO Dunmore Carrow unveiled the Halbrook Meridian, the first Korrwright piece using in-house-controlled Dovreux casework. The limited run of 300 carries a list price near $148,000 and showcases the vertical integration Carrow promised at acquisition. Early allocations to Verenne dealers sold through within days.",
         "effects": {
           "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82791,
+        "kind": "expansion",
+        "size": "flash",
+        "head": "Korrwright Works Doubles Dovreux Frères Case Output to Ease Halbrook Waitlist",
+        "body": "Dunmore Carrow ordered a second production shift at the recently acquired Dovreux Frères workshop to address a swelling backlog for the prize-winning Halbrook Perpetual. The move adds roughly 4,000 cases of annual capacity and brings 60 additional artisans onto the payroll. Carrow said demand had 'outrun even our appetite.'",
+        "effects": {
+          "luxury": 0.06
         }
       }
     ]
@@ -18722,7 +18752,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82759,
+    "lastEventCycle": 82791,
     "events": [
       {
         "cycle": 0,
@@ -18828,6 +18858,16 @@
         "size": "flash",
         "head": "Venline & Sons Extends Streak With Slim Beat as Second Marden Cleanroom Opens",
         "body": "Venline notched another modest beat as the second Marden cleanroom came online, adding capacity for its consumables lines. CEO Mara Garr said initial output would ramp gradually through the year, keeping to the company's long-horizon cadence. Management reaffirmed full-year guidance without revision.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82791,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Venline & Sons Extends Streak as Second Marden Cleanroom Reaches Full Output",
+        "body": "Mara Garr reported another slim beat as the second Marden cleanroom ramped to full production, adding consumable volume without disrupting the company's long unbroken run. Revenue rose 4% on the quarter. Garr reaffirmed the deliberate, incremental cadence that has defined the house for decades.",
         "effects": {
           "medical": 0.06
         }
