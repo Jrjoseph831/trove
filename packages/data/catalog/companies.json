@@ -193,7 +193,7 @@
       "trait": "competent and rarely dramatic"
     },
     "arc": null,
-    "lastEventCycle": 82769,
+    "lastEventCycle": 82790,
     "events": [
       {
         "cycle": 0,
@@ -359,6 +359,16 @@
         "size": "flash",
         "head": "Aldouscyon Beats as Seventh-City Conversion Enters Pipeline",
         "body": "Petra Mercer's Aldouscyon again edged past estimates as the matured sixth-city conversion delivered full contribution and a seventh city entered the conversion slate. Revenue rose 2.8% with steady lighting margins. Mercer said the methodical city-by-city cadence remains unchanged.",
+        "effects": {
+          "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82790,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Aldouscyon Beats Modestly as Seventh-City Conversion Begins Ramp",
+        "body": "Petra Mercer delivered another quiet quarter, edging past estimates by two cents as the seventh-city lighting conversion entered early production. Revenue rose 6% to $840 million with steady lighting demand and no surprises on cost. Mercer reaffirmed the conversion slate through the year, keeping to the measured cadence that has defined her long tenure.",
         "effects": {
           "consumer": 0.06
         }
@@ -1619,18 +1629,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82779,
+    "lastEventCycle": 82790,
     "events": [
-      {
-        "cycle": 82565,
-        "kind": "lawsuit",
-        "size": "major",
-        "head": "Blackton Industries Sued by Halvern as Weld Defect Fallout Escalates",
-        "body": "Halvern filed a $650M suit against Blackton, alleging the defective weld batch forced a costly production halt and breached supply warranties. CEO Mara Mercer disputed the figure but confirmed Blackton has set aside $180M in reserves as the safety probe continues. The dispute threatens a contract that accounts for nearly a third of Blackton's annual revenue.",
-        "effects": {
-          "automotive": -0.22
-        }
-      },
       {
         "cycle": 82573,
         "kind": "earnings_miss",
@@ -1852,6 +1852,16 @@
         "effects": {
           "automotive": 0.13
         }
+      },
+      {
+        "cycle": 82790,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Blackton Industries Opens Second Drivetrain Plant, Unveils Next-Gen Axle Module",
+        "body": "Sable Renwick marked the completion of the second drivetrain plant by launching a new integrated axle module aimed at expanding beyond the national fleet pact. The plant adds capacity for 400,000 units annually and Renwick said early interest from two regional fleet builders could broaden the customer base. The launch caps a fast-moving first year, though Renwick acknowledged the ramp has pushed capital spending to the top of guidance.",
+        "effects": {
+          "automotive": 0.13
+        }
       }
     ]
   },
@@ -1866,18 +1876,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82782,
+    "lastEventCycle": 82790,
     "events": [
-      {
-        "cycle": 82620,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Boreas Power Seals $3.8B Compute Campus Partnership in Landmark Expansion",
-        "body": "Boreas Power announced a defining $3.8B agreement to build and power a new large-scale compute campus adjacent to its Hollowmere site, with the newly acquired Vantell storage assets supplying grid-balancing capacity. CEO Mira Thorne called it the company's largest single commitment, projecting the campus will lift power-and-storage revenue by nearly 40% at full ramp. Construction begins next quarter, with first phase energization targeted within two years.",
-        "effects": {
-          "energy": 0.22
-        }
-      },
       {
         "cycle": 82627,
         "kind": "funding",
@@ -2106,6 +2106,16 @@
         "body": "Mira Thorne's acquisitive streak reached a new peak with a $6.8B third anchor supply pact that links the eastern and western campus networks into a single coast-to-coast grid. The deal brings total committed campus supply above $16B across three anchors in under two years. Thorne told TNN the network is now 'the backbone we always intended to build, not a collection of sites.'",
         "effects": {
           "energy": 0.22
+        }
+      },
+      {
+        "cycle": 82790,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Boreas Power Splits Compute and Power Units to Manage Coast-to-Coast Grid",
+        "body": "Mira Thorne unveiled a reorganization separating the compute-paired campus business from the core power and storage operation, creating dedicated leadership for each after the $6.8 billion third anchor pact. The move follows rapid expansion that left the single structure straining to service anchor tenants across four time zones. Thorne framed the split as a platform for the next wave of pacts rather than a pause.",
+        "effects": {
+          "energy": -0.13
         }
       }
     ]
@@ -10131,18 +10141,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82782,
+    "lastEventCycle": 82790,
     "events": [
-      {
-        "cycle": 82646,
-        "kind": "expansion",
-        "size": "standard",
-        "head": "Halhold Systems to Build Third Compute Campus on Back of $900M Pact Momentum",
-        "body": "Riding a blowout quarter, CEO Corin Vale committed $410M to a new compute campus expected to add 30% capacity by late next year. The move is designed to pre-position supply for follow-on orders after the anchor $900M deal, though Vale acknowledged the aggressive timeline stretches the balance sheet. The house said hiring would begin within the quarter.",
-        "effects": {
-          "technology": 0.13
-        }
-      },
       {
         "cycle": 82652,
         "kind": "outage",
@@ -10364,6 +10364,16 @@
         "effects": {
           "technology": 0.13
         }
+      },
+      {
+        "cycle": 82790,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Halhold Systems Posts Record Quarter as Third Meridian Framework Ramps",
+        "body": "Ines Corvalan reported revenue of $1.9 billion, up 34% year-on-year, as the two Meridian framework wins moved into volume delivery ahead of schedule. Compute margins widened to 21%, the strongest since her arrival, and Corvalan raised full-year guidance while cautioning that expansion capital would keep free cash flow tight. The shift marks a full reversal from the turbulence that greeted her 2026 appointment.",
+        "effects": {
+          "technology": 0.13
+        }
       }
     ]
   },
@@ -10378,16 +10388,8 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82783,
+    "lastEventCycle": 82790,
     "events": [
-      {
-        "cycle": 82645,
-        "kind": "leadership_change",
-        "size": "major",
-        "head": "Halhold Works Ousts CEO Lena Faircloth as Aveline Scandal Engulfs Board",
-        "body": "Halhold's board removed Lena Faircloth effective immediately following the disclosure of internal memos showing Aveline monitor flaws were known before launch, with directors citing 'a catastrophic breach of trust.' The company named interim chair Marcus Thorne as CEO and announced an independent review of all Medical Equipment lines. Shares of pending litigation now span four hospital networks and an estimated 1.2B in claimed damages.",
-        "effects": {}
-      },
       {
         "cycle": 82651,
         "kind": "recall",
@@ -10606,6 +10608,16 @@
         "size": "major",
         "head": "Halhold Works Under Regulatory Probe as Reborn Aveline Faces Fresh Fault Reports",
         "body": "The Devices Safety Directorate opened a formal inquiry into Halhold Works after 14 field reports of overheating in the relaunched Aveline line, just five months after its debut. CEO Naomi Fenwick, who staked her turnaround on a 'clean break' from the original recall, said the company is cooperating fully and has paused shipments to two regional distributors. Shares of the Devices division's parent came under heavy pressure as the probe reopened wounds from last year's $180M recall.",
+        "effects": {
+          "technology": -0.22
+        }
+      },
+      {
+        "cycle": 82790,
+        "kind": "recall",
+        "size": "major",
+        "head": "Halhold Works Recalls Reborn Aveline Line as Probe Confirms Fault, Fenwick Halts Sales",
+        "body": "Naomi Fenwick ordered a full recall of the relaunched Aveline devices after regulators confirmed a battery-connector defect tied to overheating in 47 reported units. The action pulls roughly 1.2 million devices from shelves barely months after the line's relaunch, wiping out the 'clean break' Fenwick had promised following Anselm Rocha's ouster. The company set aside $310 million for the recall and warned of a material hit to the medical-equipment division's supply timelines.",
         "effects": {
           "technology": -0.22
         }
@@ -13600,16 +13612,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82775,
+    "lastEventCycle": 82790,
     "events": [
-      {
-        "cycle": 0,
-        "kind": "profile",
-        "size": "standard",
-        "head": "Maison & Vale — Order, in every quiet detail",
-        "body": "Maison & Vale brought a touch of grace to the workaday business of keeping house. Their cleaning supplies, janitorial lines, and household goods marry function with a finish you'd actually want on display. The value range earns its place in everyday cupboards; the mid tier dresses boutique stays and well-run homes. There's a pleasing weight to their wares, a sense someone cared. Tidiness raised, gently, to something close to a small pleasure.",
-        "effects": {}
-      },
       {
         "cycle": 82521,
         "kind": "expansion",
@@ -13838,6 +13842,16 @@
         "body": "Fresh off the Larenthal integration, Maison & Vale agreed to acquire jansan specialist Sennhold for $1.3 billion, extending its reach into institutional cleaning supplies. CEO Rhys Kessler framed the purchase as a natural bolt-on that leverages the newly opened distribution hub. The company expects Sennhold to add roughly $400 million in annual revenue once folded into the consolidated network.",
         "effects": {
           "hospitality": 0.13
+        }
+      },
+      {
+        "cycle": 82790,
+        "kind": "major_deal",
+        "size": "major",
+        "head": "Maison & Vale Lands $2.6B Household-Goods Giant Corriveau in Kessler's Biggest Swing Yet",
+        "body": "Rhys Kessler capped a year of relentless dealmaking with a $2.6 billion agreement to absorb household-goods maker Corriveau, nearly doubling Maison & Vale's shelf presence overnight. The purchase folds Corriveau's 14 factory sites into the recently opened Larenthal hub network, though analysts warn integration strain is mounting after three back-to-back acquisitions. Kessler told the board the deal 'completes the pantry,' but declined to rule out further targets.",
+        "effects": {
+          "hospitality": 0.22
         }
       }
     ]
@@ -16558,7 +16572,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82773,
+    "lastEventCycle": 82790,
     "events": [
       {
         "cycle": 0,
@@ -16744,6 +16758,16 @@
         "size": "standard",
         "head": "Stegforge Beats Again as Consortium Locks Multi-Year Rail Plate Offtake",
         "body": "Aurelia Steg reported quarterly earnings above consensus, crediting a newly signed multi-year offtake agreement that reserves the bulk of the coming third line's output. Order backlog rose 14% to a record, with structural materials margins widening on firmer plate pricing. Steg reaffirmed the third rail plate line remains on schedule for startup next year.",
+        "effects": {
+          "manufacturing": 0.13
+        }
+      },
+      {
+        "cycle": 82790,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Stegforge Commissions Third Rail Plate Line Ahead of Schedule as Steg Adds Textile Capacity",
+        "body": "Aurelia Steg brought the third rail plate line online two months early, lifting total plate output by an estimated 40% to meet the consortium's multi-year offtake. Alongside the ramp, Steg quietly approved a modest expansion of the raw textiles mill, extending the disciplined build-out she has run for over a century. Management said the additions are fully covered by contracted demand, keeping the balance sheet conservative.",
         "effects": {
           "manufacturing": 0.13
         }
@@ -19820,18 +19844,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82778,
+    "lastEventCycle": 82790,
     "events": [
-      {
-        "cycle": 82544,
-        "kind": "earnings_beat",
-        "size": "major",
-        "head": "Woldmark Blows Past Forecasts as Halcyon Orders Surge",
-        "body": "Woldmark reported quarterly revenue of 3.4 billion, up 41 percent, crediting an unexpected wave of follow-on orders tied to its 2.1 billion Halcyon supply pact. Cole Carrow told a packed briefing that Halcyon backlogs now stretch eighteen months and pledged to triple output capacity, a characteristically bold vow that lifted the whole compute sector. The company raised full-year guidance for the second time in six months.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82555,
         "kind": "major_deal",
@@ -20052,6 +20066,16 @@
         "body": "CEO Petra Sonn confirmed a $900M plant in the Kessel corridor, projected to add 60% more Meridian capacity by late next year to service the recently signed supply commitment. Sonn said the facility would create roughly 1,100 skilled roles, framing it as proof the comeback narrative has legs. The company reaffirmed its output guidance despite tight component supply.",
         "effects": {
           "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82790,
+        "kind": "earnings_miss",
+        "size": "major",
+        "head": "Woldmark Misses Badly as Second Fab Delays Bite, Sonn's Big Bet Wobbles",
+        "body": "Petra Sonn's aggressive expansion backfired this quarter as construction setbacks at the second Meridian fab pushed deliveries under the $2.1 billion pact past deadline, triggering penalty clauses. Revenue fell 18% short of estimates at $640 million and Woldmark took a $150 million charge tied to the delay, sending the stock into its sharpest drop since Sonn's comeback declaration. Sonn insisted the fab will reach output within two quarters, but conceded the timeline 'left no room for error.'",
+        "effects": {
+          "technology": -0.22
         }
       }
     ]

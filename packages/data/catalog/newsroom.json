@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-09-01T11:16:32.080Z",
+  "generatedAt": "2026-09-01T16:13:49.522Z",
   "beats": [
+    {
+      "company": "Aldouscyon",
+      "sector": "consumer",
+      "kind": "earnings_beat",
+      "size": "flash",
+      "head": "Aldouscyon Beats Modestly as Seventh-City Conversion Begins Ramp",
+      "body": "Petra Mercer delivered another quiet quarter, edging past estimates by two cents as the seventh-city lighting conversion entered early production. Revenue rose 6% to $840 million with steady lighting demand and no surprises on cost. Mercer reaffirmed the conversion slate through the year, keeping to the measured cadence that has defined her long tenure.",
+      "cycle": 82790,
+      "dur": 1
+    },
+    {
+      "company": "Blackton Industries",
+      "sector": "automotive",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Blackton Industries Opens Second Drivetrain Plant, Unveils Next-Gen Axle Module",
+      "body": "Sable Renwick marked the completion of the second drivetrain plant by launching a new integrated axle module aimed at expanding beyond the national fleet pact. The plant adds capacity for 400,000 units annually and Renwick said early interest from two regional fleet builders could broaden the customer base. The launch caps a fast-moving first year, though Renwick acknowledged the ramp has pushed capital spending to the top of guidance.",
+      "cycle": 82790,
+      "dur": 2
+    },
+    {
+      "company": "Boreas Power",
+      "sector": "energy",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Boreas Power Splits Compute and Power Units to Manage Coast-to-Coast Grid",
+      "body": "Mira Thorne unveiled a reorganization separating the compute-paired campus business from the core power and storage operation, creating dedicated leadership for each after the $6.8 billion third anchor pact. The move follows rapid expansion that left the single structure straining to service anchor tenants across four time zones. Thorne framed the split as a platform for the next wave of pacts rather than a pause.",
+      "cycle": 82790,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Systems",
+      "sector": "technology",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Halhold Systems Posts Record Quarter as Third Meridian Framework Ramps",
+      "body": "Ines Corvalan reported revenue of $1.9 billion, up 34% year-on-year, as the two Meridian framework wins moved into volume delivery ahead of schedule. Compute margins widened to 21%, the strongest since her arrival, and Corvalan raised full-year guidance while cautioning that expansion capital would keep free cash flow tight. The shift marks a full reversal from the turbulence that greeted her 2026 appointment.",
+      "cycle": 82790,
+      "dur": 2
+    },
+    {
+      "company": "Halhold Works",
+      "sector": "technology",
+      "kind": "recall",
+      "size": "major",
+      "head": "Halhold Works Recalls Reborn Aveline Line as Probe Confirms Fault, Fenwick Halts Sales",
+      "body": "Naomi Fenwick ordered a full recall of the relaunched Aveline devices after regulators confirmed a battery-connector defect tied to overheating in 47 reported units. The action pulls roughly 1.2 million devices from shelves barely months after the line's relaunch, wiping out the 'clean break' Fenwick had promised following Anselm Rocha's ouster. The company set aside $310 million for the recall and warned of a material hit to the medical-equipment division's supply timelines.",
+      "cycle": 82790,
+      "dur": 8
+    },
+    {
+      "company": "Maison & Vale",
+      "sector": "hospitality",
+      "kind": "major_deal",
+      "size": "major",
+      "head": "Maison & Vale Lands $2.6B Household-Goods Giant Corriveau in Kessler's Biggest Swing Yet",
+      "body": "Rhys Kessler capped a year of relentless dealmaking with a $2.6 billion agreement to absorb household-goods maker Corriveau, nearly doubling Maison & Vale's shelf presence overnight. The purchase folds Corriveau's 14 factory sites into the recently opened Larenthal hub network, though analysts warn integration strain is mounting after three back-to-back acquisitions. Kessler told the board the deal 'completes the pantry,' but declined to rule out further targets.",
+      "cycle": 82790,
+      "dur": 8
+    },
+    {
+      "company": "Stegforge",
+      "sector": "manufacturing",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Stegforge Commissions Third Rail Plate Line Ahead of Schedule as Steg Adds Textile Capacity",
+      "body": "Aurelia Steg brought the third rail plate line online two months early, lifting total plate output by an estimated 40% to meet the consortium's multi-year offtake. Alongside the ramp, Steg quietly approved a modest expansion of the raw textiles mill, extending the disciplined build-out she has run for over a century. Management said the additions are fully covered by contracted demand, keeping the balance sheet conservative.",
+      "cycle": 82790,
+      "dur": 2
+    },
+    {
+      "company": "Woldmark",
+      "sector": "technology",
+      "kind": "earnings_miss",
+      "size": "major",
+      "head": "Woldmark Misses Badly as Second Fab Delays Bite, Sonn's Big Bet Wobbles",
+      "body": "Petra Sonn's aggressive expansion backfired this quarter as construction setbacks at the second Meridian fab pushed deliveries under the $2.1 billion pact past deadline, triggering penalty clauses. Revenue fell 18% short of estimates at $640 million and Woldmark took a $150 million charge tied to the delay, sending the stock into its sharpest drop since Sonn's comeback declaration. Sonn insisted the fab will reach output within two quarters, but conceded the timeline 'left no room for error.'",
+      "cycle": 82790,
+      "dur": 8
+    },
     {
       "company": "Aperture Compute",
       "sector": "technology",
@@ -52,16 +132,6 @@
       "dur": 2
     },
     {
-      "company": "Marrowmoor Holdings",
-      "sector": "hospitality",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Marrowmoor Holdings Stretches Streak to Nine as Household Goods Margins Firm",
-      "body": "Marrowmoor posted quarterly operating income of $88M, edging past the $84M consensus, as its household-goods lines lifted margins by 40 basis points. Dorian Steg credited disciplined pricing across the five-property base and hinted the acquisition pipeline remains 'open but unhurried.'",
-      "cycle": 82789,
-      "dur": 1
-    },
-    {
       "company": "Ornewright Supply",
       "sector": "consumer",
       "kind": "major_deal",
@@ -69,56 +139,6 @@
       "head": "Ornewright Supply Signs Regional Restaurant Group to Anchor Vellhorn Food-Service Volume",
       "body": "Ornewright Supply landed a five-year supply agreement with the Dunmere-based Halloway Table group, covering 240 outlets across the Vellhorn corridor. CEO Rhys Throne said the deal fills roughly 60% of the new hub's food-service throughput and pairs with existing farm-inputs contracts to keep cold-chain assets running near capacity.",
       "cycle": 82789,
-      "dur": 2
-    },
-    {
-      "company": "Varnvale House",
-      "sector": "luxury",
-      "kind": "award",
-      "size": "flash",
-      "head": "Varnvale House's Sovereign Minute Repeater Named Timepiece of the Year at Coudray Salon",
-      "body": "The $185,000 complication took top honors at the annual Coudray horological awards, beating a field of rival maisons. Beatrix Coyle called the win 'validation of a bolder Varnvale,' as the salon reported a waitlist stretching past eleven months for the Sovereign line.",
-      "cycle": 82789,
-      "dur": 1
-    },
-    {
-      "company": "Carrowcyon & Sons",
-      "sector": "consumer",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Carrowcyon & Sons Widens Ambient Series Rollout to Second Retail Chain",
-      "body": "Following its commercial lighting pact, Carrowcyon signed a second chain to deploy the Ambient Series across roughly 340 storefronts, lifting committed commercial installations past 900 sites. CEO Cole Brandt said commercial now represents the fastest-growing slice of the Lighting book, prompting a modest expansion of the smart-dimming assembly floor.",
-      "cycle": 82788,
-      "dur": 2
-    },
-    {
-      "company": "Fenncyon",
-      "sector": "construction",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Fenncyon Beats Again as Grand Loop Earthwork Passes Three-Quarters Complete",
-      "body": "Fenncyon reported revenue of $521M, up 11%, as Grand Loop earthmoving crossed the 75% completion mark ahead of schedule. CEO Nadia Ashby said the Northern Spur crews are running at peak efficiency and hinted the company is already scouting follow-on earthwork mandates to backfill capacity as the Grand Loop winds down.",
-      "cycle": 82788,
-      "dur": 2
-    },
-    {
-      "company": "Fennvale Mfg.",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Fennvale Mfg. Breaks Ground on Second Auto-Parts Bay to Ease Order Backlog",
-      "body": "Fennvale committed $85M to a second production bay at its Haldren works after auto-parts demand outstripped its first line's capacity for two straight quarters. CEO Theo Vossen said the expansion should lift auto-parts throughput by about 40% when it comes online next year, with fasteners output held steady in the interim.",
-      "cycle": 82788,
-      "dur": 2
-    },
-    {
-      "company": "Skarnstone Industries",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Skarnstone Industries Beats as Hospital Network Pact Lifts Consumables Volume",
-      "body": "Skarnstone posted revenue of $274M, up 7%, in the first full quarter under its multi-year regional hospital network supply deal, which accounted for most of the volume uplift. CEO Yvette Aldous said the twin loading bays are absorbing the added throughput comfortably and that the company remains focused on locking similar long-horizon contracts.",
-      "cycle": 82788,
       "dur": 2
     },
     {
@@ -130,16 +150,6 @@
       "body": "Vossenspire unveiled the Meridian Aurelian, a limited-run coachbuilt flagship pairing Corriveaux chassis work with Meridian Carrosserie bodywork, priced from $480,000 with just 250 units planned for the first year. CEO Quinn Marrow called it 'proof the Vehicles Division is more than the sum of its acquisitions,' with the launch order book reportedly covering nearly half of first-year output within weeks.",
       "cycle": 82788,
       "dur": 8
-    },
-    {
-      "company": "Wrenspire",
-      "sector": "consumer",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Wrenspire Beats as Everyroom Grower Channel Turns Profitable in New Regions",
-      "body": "Wrenspire reported quarterly revenue of $1.24B, up 9% year-on-year, as the two newly opened Everyroom regions reached breakeven a quarter ahead of plan. CEO Theo Aldous credited disciplined household-goods cross-sell, noting the grower channel now spans four regions and contributes roughly 18% of consumer revenue.",
-      "cycle": 82788,
-      "dur": 2
     },
     {
       "company": "Lhaus Industries",
@@ -179,26 +189,6 @@
       "head": "Halhold Works Under Regulatory Probe as Reborn Aveline Faces Fresh Fault Reports",
       "body": "The Devices Safety Directorate opened a formal inquiry into Halhold Works after 14 field reports of overheating in the relaunched Aveline line, just five months after its debut. CEO Naomi Fenwick, who staked her turnaround on a 'clean break' from the original recall, said the company is cooperating fully and has paused shipments to two regional distributors. Shares of the Devices division's parent came under heavy pressure as the probe reopened wounds from last year's $180M recall.",
       "cycle": 82783,
-      "dur": 8
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "major_deal",
-      "size": "major",
-      "head": "Boreas Power Seals $6.8B Third Anchor Pact, Cementing Coast-to-Coast Campus Grid",
-      "body": "Mira Thorne's acquisitive streak reached a new peak with a $6.8B third anchor supply pact that links the eastern and western campus networks into a single coast-to-coast grid. The deal brings total committed campus supply above $16B across three anchors in under two years. Thorne told TNN the network is now 'the backbone we always intended to build, not a collection of sites.'",
-      "cycle": 82782,
-      "dur": 8
-    },
-    {
-      "company": "Castlestone",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "major",
-      "head": "Castlestone Surges as Grid-Core Ascend Framework Drives Record Compute Quarter",
-      "body": "Castlestone completed its turnaround with a blowout quarter, as the $6.1B multi-region framework drove compute revenue up 71% year-over-year. CEO Pell Karsh, who staked his tenure on the Grid-Core Ascend line, said the platform is now shipping across four regions with a second framework in negotiation. The result fully reverses the earlier ramp-cost overrun that had dogged the launch.",
-      "cycle": 82782,
       "dur": 8
     }
   ]
