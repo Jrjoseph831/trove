@@ -4150,7 +4150,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82769,
+    "lastEventCycle": 82788,
     "events": [
       {
         "cycle": 0,
@@ -4326,6 +4326,16 @@
         "size": "standard",
         "head": "Carrowcyon & Sons Signs Commercial Lighting Pact to Roll Out Ambient Series Across Retail Chain",
         "body": "Cole Brandt landed a supply agreement placing the new Ambient Series smart-dimming systems in a national retail chain's 340 locations, the company's first large commercial deployment. The deal broadens Carrowcyon beyond its household roots and is expected to absorb much of the third line's added capacity. Brandt framed the pact as proof the Ambient bet on non-home markets is paying off.",
+        "effects": {
+          "consumer": 0.13
+        }
+      },
+      {
+        "cycle": 82788,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Carrowcyon & Sons Widens Ambient Series Rollout to Second Retail Chain",
+        "body": "Following its commercial lighting pact, Carrowcyon signed a second chain to deploy the Ambient Series across roughly 340 storefronts, lifting committed commercial installations past 900 sites. CEO Cole Brandt said commercial now represents the fastest-growing slice of the Lighting book, prompting a modest expansion of the smart-dimming assembly floor.",
         "effects": {
           "consumer": 0.13
         }
@@ -5296,7 +5306,7 @@
       "trait": "quiet and conservative"
     },
     "arc": null,
-    "lastEventCycle": 82751,
+    "lastEventCycle": 82788,
     "events": [
       {
         "cycle": 0,
@@ -5392,6 +5402,16 @@
         "size": "flash",
         "head": "Castlestead Notches Narrow Beat as Farm Equipment Firms Against Flat Earthmoving",
         "body": "Castlestead reported quarterly revenue of $4.11B, edging past the $4.06B consensus, with strength in seasonal Farm Equipment sales offsetting a still-soft Earthmoving segment. CEO Aurelia Calder reaffirmed full-year guidance and noted dealer inventories remain 'comfortably in balance.' Margins held steady at 18.3%.",
+        "effects": {
+          "agriculture": 0.06
+        }
+      },
+      {
+        "cycle": 82788,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Castlestead Edges Past Estimates as Farm Inputs Carry Another Quiet Quarter",
+        "body": "Castlestead posted a narrow beat with revenue of $612M, up 2%, as Farm Inputs demand offset persistently flat Earthmoving orders. CEO Aurelia Calder reaffirmed the company's steady-as-she-goes guidance, citing stable Harrowfield contribution and no change to capital plans.",
         "effects": {
           "agriculture": 0.06
         }
@@ -7553,7 +7573,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82771,
+    "lastEventCycle": 82788,
     "events": [
       {
         "cycle": 0,
@@ -7739,6 +7759,16 @@
         "size": "standard",
         "head": "Fenncyon Beats Again as Grand Loop Earthwork Nears Two-Thirds Complete",
         "body": "Fenncyon reported earnings of $1.90 per share against a $1.71 consensus, driven by peak-season output on the Grand Loop and steady progress on the Northern Spur. Nadia Ashby said cumulative earthwork has passed the 62% mark and flagged that early bidding has opened on a follow-on drainage package.",
+        "effects": {
+          "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82788,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Fenncyon Beats Again as Grand Loop Earthwork Passes Three-Quarters Complete",
+        "body": "Fenncyon reported revenue of $521M, up 11%, as Grand Loop earthmoving crossed the 75% completion mark ahead of schedule. CEO Nadia Ashby said the Northern Spur crews are running at peak efficiency and hinted the company is already scouting follow-on earthwork mandates to backfill capacity as the Grand Loop winds down.",
         "effects": {
           "construction": 0.13
         }
@@ -8011,7 +8041,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82766,
+    "lastEventCycle": 82788,
     "events": [
       {
         "cycle": 0,
@@ -8179,6 +8209,16 @@
         "body": "Fennvale Mfg. topped estimates for a third straight quarter as its ramped auto-parts line held full volume and fasteners orders rose 9%. CEO Theo Vossen said the plant's steady output had earned Fennvale two new supply agreements with regional assemblers. The company nudged its full-year revenue outlook higher.",
         "effects": {
           "manufacturing": 0.06
+        }
+      },
+      {
+        "cycle": 82788,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Fennvale Mfg. Breaks Ground on Second Auto-Parts Bay to Ease Order Backlog",
+        "body": "Fennvale committed $85M to a second production bay at its Haldren works after auto-parts demand outstripped its first line's capacity for two straight quarters. CEO Theo Vossen said the expansion should lift auto-parts throughput by about 40% when it comes online next year, with fasteners output held steady in the interim.",
+        "effects": {
+          "manufacturing": 0.13
         }
       }
     ]
@@ -15517,7 +15557,7 @@
       "trait": "unflashy and dependable"
     },
     "arc": null,
-    "lastEventCycle": 82764,
+    "lastEventCycle": 82788,
     "events": [
       {
         "cycle": 0,
@@ -15653,6 +15693,16 @@
         "size": "flash",
         "head": "Skarngrave Extends Streak as Jansan and Sterilizer Reorders Stay Steady",
         "body": "Skarngrave posted another modest beat, marking its longest run of consecutive quarterly gains in over a decade on stable cleaning and sterilizer demand. CEO Orla Dray credited 'dependable reorder patterns' across hospital service contracts, with margins holding flat. The company nudged full-year guidance up by a narrow margin.",
+        "effects": {
+          "medical": 0.06
+        }
+      },
+      {
+        "cycle": 82788,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Skarngrave Extends Streak as Sterilizer Renewals Push Service Book Higher",
+        "body": "Skarngrave reported another quarter of steady growth, with revenue up 4% to $388M as sterilizer service contracts renewed at a 96% rate. CEO Orla Dray highlighted dependable Jansan reorders and a growing installed base of serviced medical equipment as the backbone of the streak.",
         "effects": {
           "medical": 0.06
         }
@@ -15873,7 +15923,7 @@
       "trait": "slow-moving, long-horizon"
     },
     "arc": null,
-    "lastEventCycle": 82752,
+    "lastEventCycle": 82788,
     "events": [
       {
         "cycle": 0,
@@ -15959,6 +16009,16 @@
         "size": "standard",
         "head": "Skarnstone Industries Locks Multi-Year Consumables Supply Pact With Regional Hospital Network",
         "body": "Skarnstone signed a six-year agreement to supply medical consumables to the Merrick Health Consortium, a deal management valued at roughly $310 million over its term. CEO Yvette Aldous said the two new loading bays and recent throughput gains gave the firm the confidence to commit to the volumes. First shipments are slated to begin next quarter.",
+        "effects": {
+          "medical": 0.13
+        }
+      },
+      {
+        "cycle": 82788,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Skarnstone Industries Beats as Hospital Network Pact Lifts Consumables Volume",
+        "body": "Skarnstone posted revenue of $274M, up 7%, in the first full quarter under its multi-year regional hospital network supply deal, which accounted for most of the volume uplift. CEO Yvette Aldous said the twin loading bays are absorbing the added throughput comfortably and that the company remains focused on locking similar long-horizon contracts.",
         "effects": {
           "medical": 0.13
         }
@@ -18956,18 +19016,8 @@
       "trait": "restless and acquisitive"
     },
     "arc": null,
-    "lastEventCycle": 82777,
+    "lastEventCycle": 82788,
     "events": [
-      {
-        "cycle": 82587,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Vossenspire Supply Strikes 900M Distribution Pact to Take Calderon Grand Tourer Global",
-        "body": "Vossenspire secured an exclusive nine-figure distribution agreement spanning eleven luxury markets for its Heritage-badged Calderon grand tourer, with first deliveries slated for the coming winter season. CEO Quinn Marrow called it 'the cornerstone of a decade-long ambition,' committing to double Calderon Motorworks output within two years to meet projected demand.",
-        "effects": {
-          "luxury": 0.22
-        }
-      },
       {
         "cycle": 82594,
         "kind": "expansion",
@@ -19196,6 +19246,16 @@
         "body": "Quinn Marrow announced a reorganization splitting the company into distinct Timepieces and Vehicles units, folding the newly acquired Meridian Carrosserie and prior Corriveaux assets under a single coachbuilding arm. The move is aimed at capturing an additional $90M in combined synergies and clarifying reporting as the Vehicles push scales. Marrow named the division a 'growth engine' for the coming years.",
         "effects": {
           "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82788,
+        "kind": "product_launch",
+        "size": "major",
+        "head": "Vossenspire Supply Debuts Meridian-Bodied Flagship, First Fruit of Vehicles Division",
+        "body": "Vossenspire unveiled the Meridian Aurelian, a limited-run coachbuilt flagship pairing Corriveaux chassis work with Meridian Carrosserie bodywork, priced from $480,000 with just 250 units planned for the first year. CEO Quinn Marrow called it 'proof the Vehicles Division is more than the sum of its acquisitions,' with the launch order book reportedly covering nearly half of first-year output within weeks.",
+        "effects": {
+          "luxury": 0.22
         }
       }
     ]
@@ -20313,7 +20373,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82762,
+    "lastEventCycle": 82788,
     "events": [
       {
         "cycle": 0,
@@ -20451,6 +20511,16 @@
         "body": "Theo Aldous opened Everyroom distribution across the northern grower belt, adding roughly 1,800 farm accounts to the cross-sell network. The measured rollout brings household-goods and farm-inputs SKUs to regions previously served only by third parties. Aldous reiterated the goal of 'steady, defensible reach' over rapid land-grabs.",
         "effects": {
           "consumer": 0.06
+        }
+      },
+      {
+        "cycle": 82788,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Wrenspire Beats as Everyroom Grower Channel Turns Profitable in New Regions",
+        "body": "Wrenspire reported quarterly revenue of $1.24B, up 9% year-on-year, as the two newly opened Everyroom regions reached breakeven a quarter ahead of plan. CEO Theo Aldous credited disciplined household-goods cross-sell, noting the grower channel now spans four regions and contributes roughly 18% of consumer revenue.",
+        "effects": {
+          "consumer": 0.13
         }
       }
     ]
