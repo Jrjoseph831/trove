@@ -7,6 +7,7 @@ import { resolveDisplay } from "@/lib/display";
 import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
+import { ScreenHead, Stat } from "./ScreenHead";
 
 export function Vault() {
   const { state, sell, setListing, doBorrow, doRepay, desk, mySite, mfgName, myCustomizations } = useTrove();
@@ -27,28 +28,19 @@ export function Vault() {
   return (
     <div className="view">
       <div className="bento">
-        <header className="cat-head col-12">
-          <h2 className="serif">My Vault</h2>
+        <ScreenHead tab="vault" className="col-12">
           {mine.length > 0 && (
-            <div className="vault-sum">
-              <span className="vs">
-                <i>Holdings</i>
-                <b>{mine.length}</b>
-              </span>
-              <span className="vs">
-                <i>Market value</i>
-                <b>{moneyShort(holdingsValue)}</b>
-              </span>
-              <span className={`vs ${unrealized >= 0 ? "pos" : "neg"}`}>
-                <i>Unrealized</i>
-                <b>
-                  {unrealized >= 0 ? "+" : ""}
-                  {moneyShort(unrealized)}
-                </b>
-              </span>
-            </div>
+            <>
+              <Stat label="Holdings" value={mine.length} />
+              <Stat label="Market value" value={moneyShort(holdingsValue)} />
+              <Stat
+                label="Unrealized"
+                tone={unrealized >= 0 ? "pos" : "neg"}
+                value={`${unrealized >= 0 ? "+" : ""}${moneyShort(unrealized)}`}
+              />
+            </>
           )}
-        </header>
+        </ScreenHead>
 
         <section className="bento-card col-8">
           <div className="bc-h">

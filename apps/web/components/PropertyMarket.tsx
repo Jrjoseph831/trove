@@ -5,6 +5,7 @@ import { ArrowLeft, MapPin, TrendingUp } from "lucide-react";
 import { properties as catalog, type Property } from "@trove/data";
 import { money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+import { ScreenHead, Stat } from "./ScreenHead";
 import { ConfirmDeal } from "./ConfirmDeal";
 
 /** Card art lives at public/properties/<slug>.jpg (or .png from dall-e-3). Try
@@ -231,26 +232,12 @@ export function PropertyMarket() {
   // ── Marketplace grid ────────────────────────────────────────────────────────
   return (
     <div className="view estates">
-      <header className="est-head">
-        <div>
-          <h2 className="est-title">Trove Estates</h2>
-          <p className="est-sub">Real assets. Collect rent, watch them appreciate.</p>
-        </div>
-        <div className="est-portfolio">
-          <div className="est-pf">
-            <span className="k">Properties</span>
-            <span className="v">{owned.size}</span>
-          </div>
-          <div className="est-pf">
-            <span className="k">Portfolio value</span>
-            <span className="v">{money(ownedValue)}</span>
-          </div>
-          <div className="est-pf">
-            <span className="k">Rent / period</span>
-            <span className="v rent">+{money(rentPerPeriod)}</span>
-          </div>
-        </div>
-      </header>
+      <div className="page-col">
+      <ScreenHead tab="estates">
+        <Stat label="Properties" value={owned.size} />
+        <Stat label="Portfolio value" value={money(ownedValue)} />
+        <Stat label="Rent / period" tone="pos" value={`+${money(rentPerPeriod)}`} />
+      </ScreenHead>
 
       <div className="est-filters">
         <div className="est-chips">
@@ -313,6 +300,7 @@ export function PropertyMarket() {
           );
         })}
       </div>
+    </div>
     </div>
   );
 }

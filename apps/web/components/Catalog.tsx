@@ -17,8 +17,10 @@ import { money, pctChange } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { primarySectorLabel, stockState } from "@/lib/ui";
 import { itemPlate } from "@/lib/texture";
+import { sectorTone } from "@/lib/sectors";
 import { useTrove } from "@/lib/trove";
 import { AcquireConfirm } from "./AcquireConfirm";
+import { ScreenHead } from "./ScreenHead";
 
 type SortKey = "featured" | "price-asc" | "price-desc" | "change" | "name";
 
@@ -215,26 +217,30 @@ export function Catalog() {
   return (
     <div className="view view-shop">
       <div className="shop">
-        {/* Search bar spanning the top, the way a storefront reads */}
+        {/* One header, same anatomy as every other screen — the storefront's
+            search takes the slot the other screens put their readouts in,
+            because on this screen search IS the readout you reach for. */}
         <div className="shop-bar">
-          <div className="shop-search">
-            <Search size={17} strokeWidth={2} />
-            <input
-              placeholder="Search the market — brand, item, anything…"
-              value={cat.search}
-              onChange={(e) => setCatSearch(e.target.value)}
-              aria-label="Search the market"
-            />
-            {cat.search && (
-              <button
-                className="shop-search-x"
-                onClick={() => setCatSearch("")}
-                aria-label="Clear search"
-              >
-                <X size={15} />
-              </button>
-            )}
-          </div>
+          <ScreenHead tab="catalog" className="shop-head">
+            <div className="shop-search">
+              <Search size={17} strokeWidth={2} />
+              <input
+                placeholder="Search the market — brand, item, anything…"
+                value={cat.search}
+                onChange={(e) => setCatSearch(e.target.value)}
+                aria-label="Search the market"
+              />
+              {cat.search && (
+                <button
+                  className="shop-search-x"
+                  onClick={() => setCatSearch("")}
+                  aria-label="Clear search"
+                >
+                  <X size={15} />
+                </button>
+              )}
+            </div>
+          </ScreenHead>
         </div>
 
         <CatalogTicker log={state.log} />
@@ -248,17 +254,20 @@ export function Catalog() {
                   would fill the first screen before a single product showed. */}
               <div className="shopf-optrow">
               <button
-                className={`shopf-opt ${!cat.sector ? "on" : ""}`}
+                className={`shopf-opt all ${!cat.sector ? "on" : ""}`}
                 onClick={() => setCatSector(null)}
               >
+                <i className="shopf-dot" />
                 All departments
               </button>
               {sectorKeys.map((k) => (
                 <button
                   key={k}
                   className={`shopf-opt ${cat.sector === k ? "on" : ""}`}
+                  style={{ "--tone": sectorTone(k) } as React.CSSProperties}
                   onClick={() => setCatSector(k)}
                 >
+                  <i className="shopf-dot" />
                   {sectors[k]?.label}
                 </button>
               ))}
@@ -292,15 +301,15 @@ export function Catalog() {
           {/* Results */}
           <section className="shop-results">
             <div className="shop-resbar">
-              <span className="shop-count">
-                <b>{sorted.length.toLocaleString()}</b>{" "}
-                {sorted.length === 1 ? "result" : "results"}
-                {cat.search.trim() && (
-                  <>
-                    {" "}
-                    for <b>&ldquo;{cat.search.trim()}&rdquo;</b>
-                  </>
-                )}
+              <span className="hud-stat">
+                <i>
+                  {cat.search.trim()
+                    ? `Matching “${cat.search.trim()}”`
+                    : cat.sector
+                      ? (sectors[cat.sector]?.label ?? "Results")
+                      : "On the market"}
+                </i>
+                <b>{sorted.length.toLocaleString()}</b>
               </span>
               <label className="shop-sort">
                 Sort by

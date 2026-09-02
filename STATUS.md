@@ -93,9 +93,50 @@ than a list you read.
   product page's own `.page-peek` handle stays. `navOpen` still exists in the
   Trove context but nothing in the shell reads it any more.
 
+### Every screen wears the HUD (2026-09-02, same pass)
+The command bar's vocabulary — a tone-coloured tile, chip readouts, controls
+you press — now runs through the views themselves. All thirteen screens share
+one anatomy, the Factory and the Catalog included.
+
+- **`components/ScreenHead.tsx`** is the header every screen opens with:
+  the screen's colour and glyph, its purpose line (from `lib/nav.ts`'s new
+  `note` field), and its live readouts on the right as `<Stat>` chips. It
+  replaced `.cat-head`/`.est-head` — a 27px serif title that just repeated
+  the nav item you had clicked, followed by a hairline. Pass `tab` and the
+  colour, icon, title and note all come from the one nav list; `title`
+  overrides only where the screen names a thing you own (the Factory carries
+  the plant's name).
+- **One content column.** `--col: 1180px` replaced five different maxima
+  (1100/1180/1200/1280), so switching screens no longer nudges the left edge.
+  Note the trap: a `max-width` + `margin: 0 auto` on `.view` ITSELF collapses
+  the screen to its content, because `.view` is a flex item of `.main` and
+  auto margins eat the free space before `flex-grow` sees it. Always wrap in
+  an inner `.page-col` (Estates, Deal Room, Reputation were fixed this way).
+- **Shared parts** in `globals.css`: `.screenhead`/`.sh-*`, `.hud-stat`,
+  `.segbar`/`.segrow`/`.segnote` (the Factory's Lines/Floor switch),
+  `.hud-btn` (+ `.ghost`, `.wide`) for the pressable action, and `.hud-note`
+  for a screen explaining itself (the Factory intro and the Order Desk note
+  both use it). Section labels (`.desk-sec`, Trending's `.trend-sec > .bc-h`)
+  run a rule out from the words.
+- **Factory**: contained in the column, ScreenHead with Cash/Lines/Bays,
+  tabs on the `.segbar`, line bays (`.bay`) widened to the full column with
+  their running state on the leading edge. NB `.facline` and its `.fl-*`
+  children were DEAD CSS (the component renders `.bay`) and were deleted —
+  only `.fl-demolish` was live.
+- **Catalog**: the storefront is the one screen that stays full-bleed (its
+  filter rail and virtualized grid want the width), but it opens with the
+  same ScreenHead — the search sits in the readout slot. The filter rail is
+  a panel, and each department carries a colour from the new
+  `lib/sectors.ts` (also used by the Factory's industry picker). Acquire got
+  the deck's press.
+- **The Wire** keeps its newspaper masthead — a paper is what the screen is —
+  but the masthead now sits on the same panel every other header does.
+
 ### Bento rollout progress
-- **DONE:** Trending, My Vault, Order Desk, Companies, Estates, Deal Room, Catalog, Reports.
-- **REMAINING:** Goals (`Goals.tsx`), The Wire (`Wire.tsx`). (Factory has its own treatment; its line upgrades are collapsible via `<details>`.)
+- **DONE:** every screen. Trending, My Vault, Order Desk, Companies, Estates,
+  Deal Room, Catalog, Reports, Goals, Reputation, Studio, The Wire, Factory.
+- The Factory keeps its own line-bay treatment (upgrades collapsible via
+  `<details>`), but it is contained, headed and panelled like the rest now.
 
 ## The autonomous polish loop (how we work)
 Joe asked for a continuous, self-sustaining polish loop on beta. Each iteration: pick ONE focused area → improve (design/flow/logic/copy/companies) → `npm run -w @trove/web build` (green) → commit → push `beta` → verify on beta.trove.ceo with the browser tools → post a brief progress update → repeat. In Claude Code this self-schedules via wake-ups.

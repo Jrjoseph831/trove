@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Check, Lock } from "lucide-react";
 import { fetchReputation, unlockNode, type RepNodeStatus, type RepView } from "@/lib/api";
 import { useTrove } from "@/lib/trove";
+import { ScreenHead, Stat } from "./ScreenHead";
 import { money } from "@/lib/format";
 
 const HEAT_TIERS = ["CLEAN", "WATCHED", "FLAGGED", "UNDER INVESTIGATION"] as const;
@@ -49,24 +50,30 @@ export function Reputation() {
   if (!signedIn) {
     return (
       <div className="view rep-view">
-        <div className="cat-head"><h2 className="serif">Reputation</h2></div>
-        <div className="empty">Sign in to view your reputation.</div>
+        <div className="page-col">
+          <ScreenHead tab="reputation" />
+          <div className="empty">Sign in to view your reputation.</div>
+        </div>
       </div>
     );
   }
   if (loadErr) {
     return (
       <div className="view rep-view">
-        <div className="cat-head"><h2 className="serif">Reputation</h2></div>
-        <div className="empty">{loadErr}</div>
+        <div className="page-col">
+          <ScreenHead tab="reputation" />
+          <div className="empty">{loadErr}</div>
+        </div>
       </div>
     );
   }
   if (!view) {
     return (
       <div className="view rep-view">
-        <div className="cat-head"><h2 className="serif">Reputation</h2></div>
-        <div className="empty">Loading…</div>
+        <div className="page-col">
+          <ScreenHead tab="reputation" />
+          <div className="empty">Loading…</div>
+        </div>
       </div>
     );
   }
@@ -79,12 +86,10 @@ export function Reputation() {
 
   return (
     <div className="view rep-view">
-      <div className="cat-head">
-        <h2 className="serif">Reputation</h2>
-        <span className="eyebrow" style={{ marginLeft: "auto" }}>
-          {view.unlockedNodes.length} / 6 nodes unlocked
-        </span>
-      </div>
+      <div className="page-col">
+      <ScreenHead tab="reputation">
+        <Stat label="Nodes" value={`${view.unlockedNodes.length} / 6`} />
+      </ScreenHead>
 
       <div className="bento">
         {/* ── Shadow Rep ─────────────────────────────────────── */}
@@ -185,6 +190,7 @@ export function Reputation() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

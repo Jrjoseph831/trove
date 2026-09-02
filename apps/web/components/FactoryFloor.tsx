@@ -219,7 +219,7 @@ export function FactoryFloor({ mfg }: { mfg: string }) {
         <div className="cons-allclear">✅ No problems — everything's flowing.</div>
       )}
 
-      <button className="fac-build" onClick={expandFloor}>
+      <button className="hud-btn ghost wide fac-build" onClick={expandFloor}>
         Expand floor · +2 slots · {money(cost)}
       </button>
 

@@ -8,6 +8,7 @@ import { devAction, fetchCompanies, type DirEntry } from "@/lib/api";
 import { IS_STAGING } from "@/lib/config";
 import { money, moneyShort } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+import { ScreenHead, Stat } from "./ScreenHead";
 import { ConfirmDeal } from "./ConfirmDeal";
 
 const secName = (s: string | null | undefined) =>
@@ -413,26 +414,12 @@ export function DealRoom() {
   // ── The board: every firm, live or not, on one list ─────────────────────────
   return (
     <div className="view deals">
-      <header className="est-head">
-        <div>
-          <h2 className="est-title">The Deal Room</h2>
-          <p className="est-sub">Buy into firms, collect dividends, take control — or acquire a rival outright.</p>
-        </div>
-        <div className="est-portfolio">
-          <div className="est-pf">
-            <span className="k">Stakes held</span>
-            <span className="v">{mine.length}</span>
-          </div>
-          <div className="est-pf">
-            <span className="k">Stake value</span>
-            <span className="v">{moneyShort(Math.round(stakeVal))}</span>
-          </div>
-          <div className="est-pf">
-            <span className="k">Dividends / period</span>
-            <span className="v rent">+{money(divs)}</span>
-          </div>
-        </div>
-      </header>
+      <div className="page-col">
+      <ScreenHead tab="deals">
+        <Stat label="Stakes held" value={mine.length} />
+        <Stat label="Stake value" value={moneyShort(Math.round(stakeVal))} />
+        <Stat label="Dividends / period" tone="pos" value={`+${money(divs)}`} />
+      </ScreenHead>
 
       {IS_STAGING && (
         <div className="ma-dev">
@@ -573,6 +560,7 @@ export function DealRoom() {
           onCancel={() => setPending(null)}
         />
       )}
+    </div>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import {
 import type { DeskOrder, PvpOrder } from "@/lib/api";
 import { manufacturingName, money } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+import { ScreenHead, Stat } from "./ScreenHead";
 
 /** What it costs YOU to make the whole order (materials + upkeep, all-in), or
  *  null if you don't make it. productionCostOf is per-unit; × qty for the order. */
@@ -389,9 +390,7 @@ export function Desk() {
     return (
       <div className="view">
         <div className="desk-wrap">
-          <div className="cat-head">
-            <h2 className="serif">Order Desk</h2>
-          </div>
+          <ScreenHead tab="orders" />
           <div className="empty">
             Sign in to receive contracts from firms on the market.{" "}
             <button className="acct acct-inline" onClick={signIn}>
@@ -407,9 +406,7 @@ export function Desk() {
     return (
       <div className="view">
         <div className="desk-wrap">
-          <div className="cat-head">
-            <h2 className="serif">Order Desk</h2>
-          </div>
+          <ScreenHead tab="orders" />
           <div className="empty">Opening the desk…</div>
         </div>
       </div>
@@ -422,17 +419,15 @@ export function Desk() {
   return (
     <div className="view">
       <div className="desk-wrap">
-        <div className="cat-head">
-          <h2 className="serif">Order Desk</h2>
-          <div className="desk-rep">
-            Reputation <b>{desk.reputation}</b>
-          </div>
-        </div>
+        <ScreenHead tab="orders">
+          <Stat label="Reputation" value={desk.reputation} />
+          <Stat label="Open offers" value={offers.length} />
+        </ScreenHead>
 
         {/* Said once, here, rather than repeated on every card: clients open
             low on purpose, and a contract for goods you don't make has to beat
             what the floor charges you to source them. */}
-        <p className="desk-note">
+        <p className="hud-note desk-note">
           Clients open below what they&apos;ll pay. For goods you don&apos;t make,
           you buy the units on the floor to fill the order — so counter above the
           <b> to source</b> figure, or the contract costs you money.

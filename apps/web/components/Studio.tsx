@@ -8,6 +8,7 @@ import { resolveDisplay } from "@/lib/display";
 import { money } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
+import { ScreenHead, Stat } from "./ScreenHead";
 
 // ── Slot counter ─────────────────────────────────────────────────────────────
 function SlotBar({ used, total }: { used: number; total: number }) {
@@ -459,9 +460,7 @@ export function Studio() {
     return (
       <div className="view">
         <div className="bento">
-          <header className="cat-head col-12">
-            <h2 className="serif">Company Studio</h2>
-          </header>
+          <ScreenHead tab="studio" className="col-12" />
           <div className="bento-card col-12 studio-locked">
             <div className="studio-hero">
               <h3 className="studio-hero-title">Your brand. Your storefront.</h3>
@@ -517,9 +516,7 @@ export function Studio() {
     return (
       <div className="view">
         <div className="bento">
-          <header className="cat-head col-12">
-            <h2 className="serif">Company Studio</h2>
-          </header>
+          <ScreenHead tab="studio" className="col-12" />
           <div className="bento-card col-12 studio-empty-state">
             <div className="ses-icon"><Package size={28} /></div>
             <h3 className="ses-title">Studio is ready — build something to sell</h3>
@@ -540,9 +537,7 @@ export function Studio() {
     return (
       <div className="view">
         <div className="bento">
-          <header className="cat-head col-12">
-            <h2 className="serif">Company Studio</h2>
-          </header>
+          <ScreenHead tab="studio" className="col-12" />
           <BrandingPanel />
           <div className="bento-card col-12 studio-empty-state">
             <div className="ses-icon"><Package size={24} /></div>
@@ -567,13 +562,10 @@ export function Studio() {
   return (
     <div className="view">
       <div className="bento">
-        <header className="cat-head col-12">
-          <h2 className="serif">Company Studio</h2>
-          <div className="vault-sum">
-            <span className="vs"><i>Customized</i><b>{slotsUsed}</b></span>
-            <span className="vs"><i>Slots left</i><b>{totalSlots - slotsUsed}</b></span>
-          </div>
-        </header>
+        <ScreenHead tab="studio" className="col-12">
+          <Stat label="Customized" value={slotsUsed} />
+          <Stat label="Slots left" value={totalSlots - slotsUsed} />
+        </ScreenHead>
 
         <BrandingPanel />
 

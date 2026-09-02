@@ -21,6 +21,7 @@ import { resolveDisplay } from "@/lib/display";
 import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
+import { ScreenHead } from "./ScreenHead";
 
 const SECTION_LABELS: Record<SiteSectionId, string> = {
   masthead: "Masthead",
@@ -81,12 +82,12 @@ export function Companies() {
   if (mode === "sandbox") {
     return (
       <div className="view">
-        <div className="cat-head">
-          <h2 className="serif">Companies</h2>
-        </div>
-        <div className="empty">
-          Company websites are a live-world feature — sign in on the live market to
-          build your storefront and browse others.
+        <div className="page-col">
+          <ScreenHead tab="companies" />
+          <div className="empty">
+            Company websites are a live-world feature — sign in on the live
+            market to build your storefront and browse others.
+          </div>
         </div>
       </div>
     );
@@ -95,15 +96,15 @@ export function Companies() {
   if (!signedIn) {
     return (
       <div className="view">
-        <div className="cat-head">
-          <h2 className="serif">Companies</h2>
-        </div>
-        <div className="empty">
-          Sign in to build your company website and browse the directory.
-          <div style={{ marginTop: 14 }}>
-            <button className="site-btn" onClick={signIn}>
-              Sign in
-            </button>
+        <div className="page-col">
+          <ScreenHead tab="companies" />
+          <div className="empty">
+            Sign in to build your company website and browse the directory.
+            <div style={{ marginTop: 14 }}>
+              <button className="site-btn" onClick={signIn}>
+                Sign in
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -271,9 +272,7 @@ function Directory({
   return (
     <div className="view">
       <div className="page-col">
-        <div className="cat-head">
-          <h2 className="serif">Companies</h2>
-        </div>
+        <ScreenHead tab="companies" />
 
         <div className="site-myrow">
         <div className="site-myinfo">

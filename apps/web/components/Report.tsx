@@ -5,6 +5,7 @@ import { getItem } from "@trove/data";
 import type { ItemFlow, Ledger, Report } from "@trove/engine";
 import { money, moneyShort } from "@/lib/format";
 import { useTrove } from "@/lib/trove";
+import { ScreenHead, Stat } from "./ScreenHead";
 
 /** A Trove day rolled up from its (up to 2) flip reports. */
 interface DayAgg {
@@ -132,9 +133,7 @@ export function ReportView() {
     return (
       <div className="view">
         <div className="page-col">
-          <div className="cat-head">
-            <h2 className="serif">Reports</h2>
-          </div>
+          <ScreenHead tab="report" />
           <div className="empty">No data yet.</div>
         </div>
       </div>
@@ -179,12 +178,9 @@ export function ReportView() {
   return (
     <div className="view">
       <div className="page-col">
-      <div className="cat-head">
-        <h2 className="serif">Reports</h2>
-        <div className="rep-now">
-          Day net worth <b>{money(d.netWorth)}</b>
-        </div>
-      </div>
+      <ScreenHead tab="report">
+        <Stat label={`Day ${d.day} net worth`} value={money(d.netWorth)} />
+      </ScreenHead>
 
       {/* Day navigator */}
       <div className="dash-nav">

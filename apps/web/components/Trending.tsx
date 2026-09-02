@@ -7,6 +7,7 @@ import { impliedSectors } from "@/lib/ui";
 import { useLeaderboard } from "@/lib/useLeaderboard";
 import { useTrove } from "@/lib/trove";
 import { Movers } from "./Movers";
+import { ScreenHead, Stat } from "./ScreenHead";
 import { Tile } from "./Tile";
 import { WhileYouWereAwayCard } from "./WhileYouWereAway";
 
@@ -38,6 +39,16 @@ export function Trending() {
   return (
     <div className="view trend">
       <div className="bento">
+        <ScreenHead tab="trending" className="col-12">
+          <Stat label="Market day" value={state.cycle} />
+          <Stat label="Firms trading" value={ranked.length} />
+          {meRow && (
+            <Stat
+              label="Your rank"
+              value={`#${ranked.findIndex((e) => e.id === "YOU") + 1}`}
+            />
+          )}
+        </ScreenHead>
         <WhileYouWereAwayCard />
         {beat && (
           <article className={`brk-card col-12 ${beat.phase}`}>

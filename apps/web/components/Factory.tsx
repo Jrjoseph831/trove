@@ -28,7 +28,9 @@ import type { LineModule } from "@trove/data";
 import { resolveDisplay } from "@/lib/display";
 import { manufacturingName, money, moneyShort } from "@/lib/format";
 import { perHour, ticksToTvt } from "@/lib/tvt";
+import { sectorTone } from "@/lib/sectors";
 import { useTrove } from "@/lib/trove";
+import { ScreenHead, Stat } from "./ScreenHead";
 import { InboundStrip, SupplyPanel } from "./SupplyPanel";
 import { FactoryFloor } from "@/components/FactoryFloor";
 
@@ -92,15 +94,23 @@ export function Factory() {
 
   return (
     <div className="view">
-      <div className="cat-head">
-        <h2 className="serif">{mfg}</h2>
-        <button className="mfg-rename" onClick={() => setRenaming(true)}>
-          rename
-        </button>
-        <div className="fac-cash">
-          Cash <b>{moneyShort(state.cash)}</b>
-        </div>
-      </div>
+      <div className="page-col">
+      <ScreenHead
+        tab="factory"
+        title={mfg}
+        after={
+          <button className="mfg-rename" onClick={() => setRenaming(true)}>
+            rename
+          </button>
+        }
+      >
+        <Stat label="Cash" value={moneyShort(state.cash)} />
+        <Stat
+          label="Lines"
+          value={`${state.factories.length} / ${state.floorSlots}`}
+        />
+        <Stat label="Bays" value={floorBays(state.floorSlots)} />
+      </ScreenHead>
 
       {renaming && (
         <RenameMfg
@@ -113,20 +123,22 @@ export function Factory() {
       <InboundStrip />
       <SupplyPanel />
 
-      <div className="fac-tabs">
-        <button
-          className={view === "lines" ? "on" : ""}
-          onClick={() => setView("lines")}
-        >
-          Lines
-        </button>
-        <button
-          className={view === "floor" ? "on" : ""}
-          onClick={() => setView("floor")}
-        >
-          Floor
-        </button>
-        <span className="fac-tabnote">
+      <div className="segrow">
+        <div className="segbar">
+          <button
+            className={view === "lines" ? "on" : ""}
+            onClick={() => setView("lines")}
+          >
+            Lines
+          </button>
+          <button
+            className={view === "floor" ? "on" : ""}
+            onClick={() => setView("floor")}
+          >
+            Floor
+          </button>
+        </div>
+        <span className="segnote">
           {state.factories.length}/{state.floorSlots} slots ·{" "}
           {floorBays(state.floorSlots)} bay
           {floorBays(state.floorSlots) > 1 ? "s" : ""}
@@ -137,7 +149,7 @@ export function Factory() {
         <FactoryFloor mfg={mfg} />
       ) : (
         <>
-          <p className="fac-intro">
+          <p className="hud-note fac-intro">
             Engineer a line: pick a product, then install <b>modules</b> to push
             throughput up, upkeep down, or trim material per unit. Output is
             branded <b>{mfg}</b> and lands in your vault to sell or fill orders.
@@ -154,7 +166,7 @@ export function Factory() {
           ))}
 
           <button
-            className="fac-build"
+            className="hud-btn ghost wide fac-build"
             onClick={() => (full ? setView("floor") : setPicking(true))}
           >
             {full ? "Floor's full — expand it →" : "＋ Build a new line"}
@@ -172,6 +184,7 @@ export function Factory() {
           onClose={() => setPicking(false)}
         />
       )}
+      </div>
     </div>
   );
 }
@@ -875,9 +888,13 @@ function BuildPicker({
                 <button
                   key={s.key}
                   className="fp-ind"
+                  style={{ "--tone": sectorTone(s.key) } as React.CSSProperties}
                   onClick={() => setSector(s.key)}
                 >
-                  <span className="fp-ind-name">{s.label}</span>
+                  <span className="fp-ind-name">
+                    <i className="shopf-dot" />
+                    {s.label}
+                  </span>
                   <span className="fp-ind-count">
                     {s.count} product{s.count === 1 ? "" : "s"}
                   </span>

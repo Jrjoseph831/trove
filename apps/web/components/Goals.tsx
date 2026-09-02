@@ -3,6 +3,7 @@
 import { Check, Lock } from "lucide-react";
 import { useTrove } from "@/lib/trove";
 import { ACHIEVEMENTS } from "@/lib/goals";
+import { ScreenHead, Stat } from "./ScreenHead";
 
 export function Goals() {
   const { state } = useTrove();
@@ -15,12 +16,9 @@ export function Goals() {
   return (
     <div className="view">
       <div className="page-col">
-        <div className="cat-head">
-          <h2 className="serif">Goals</h2>
-          <span className="eyebrow" style={{ marginLeft: "auto" }}>
-            {count} / {total} complete
-          </span>
-        </div>
+        <ScreenHead tab="goals">
+          <Stat label="Cleared" value={`${count} / ${total}`} />
+        </ScreenHead>
 
         <div className="gl-track-wrap">
           <div className="gl-bar">
