@@ -1,14 +1,84 @@
 {
-  "generatedAt": "2026-09-01T20:42:34.816Z",
+  "generatedAt": "2026-09-02T03:25:16.529Z",
   "beats": [
     {
-      "company": "Ardent Health",
-      "sector": "medical",
+      "company": "Bruncrest Works",
+      "sector": "technology",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Bruncrest Works Debuts Aria Ultra X Pro as Marlow Chases Premium Tier",
+      "body": "CEO Ines Marlow unveiled the Aria Ultra X Pro at the company's Fulton campus, pitching a 30% efficiency gain over the base line for high-density buyers. Marlow told the room the Pro would 'own the top of the market by year-end,' with initial volume routed from the newly lit third line. Early commitments from two large customers cover roughly 40% of first-quarter output.",
+      "cycle": 82792,
+      "dur": 2
+    },
+    {
+      "company": "Carrowforge",
+      "sector": "manufacturing",
+      "kind": "recall",
+      "size": "major",
+      "head": "Carrowforge Recalls Heavy-Press Units as Weld Fault Widens Into Field Failures",
+      "body": "Carrowforge issued a recall covering an estimated 60 heavy-press machines after the weld fault first flagged at its new line was traced to units already delivered, including several tied to the $940M order. CEO Dahlia Renn confirmed shipments are frozen and second-line commissioning halted, with remediation costs pegged near $150M. At least one major customer has invoked delivery penalties as the safety review broadens.",
+      "cycle": 82792,
+      "dur": 8
+    },
+    {
+      "company": "Gromford Works",
+      "sector": "luxury",
+      "kind": "restructure",
+      "size": "standard",
+      "head": "Gromford Works Shelves Emblem Signature Line in Sweeping Reset",
+      "body": "Interim leadership announced the suspension of the entire Emblem Signature line and a consolidation of its timepiece operations into two verified workshops. New chief Adelheid Corven framed the move as 'clearing the deck,' with a charge of roughly $80M tied to inventory writedowns and supplier exits. The company said a relaunch under a new house standard would not come before next year.",
+      "cycle": 82792,
+      "dur": 2
+    },
+    {
+      "company": "Halcrest",
+      "sector": "luxury",
+      "kind": "product_launch",
+      "size": "standard",
+      "head": "Halcrest Crowns Meridian Family With Limited Meridian Grand at $62,000",
+      "body": "Halcrest launched the Meridian Grand, a 200-piece limited edition built on the rare movement secured under its recent supply accord. CEO Iris Marrow called it 'the definitive statement of the Meridian era,' with allocation prioritized to the new flagship boutiques. The house said the run sold out to waitlist within days of the announcement.",
+      "cycle": 82792,
+      "dur": 2
+    },
+    {
+      "company": "Ironcrestton",
+      "sector": "luxury",
+      "kind": "lawsuit",
+      "size": "standard",
+      "head": "Ironcrestton Hit With Suit as Aurelian Sourcing Scrutiny Escalates",
+      "body": "A consumer-advocacy group filed suit against Ironcrestton alleging the Aurelian Collection's provenance claims misled buyers, seeking refunds across an estimated 12,000 units. CEO Corwin Vale disputed the filing as 'opportunistic' but confirmed an internal audit of supplier documentation is underway. Two of the four new flagship ateliers have paused Aurelian window displays pending the review.",
+      "cycle": 82792,
+      "dur": 2
+    },
+    {
+      "company": "Korrworks",
+      "sector": "logistics",
+      "kind": "earnings_beat",
+      "size": "standard",
+      "head": "Korrworks Beats as Third Hub Reaches Structural Completion Ahead of Plan",
+      "body": "Korrworks topped estimates as the third hub hit structural completion weeks early, unlocking a step-up in anchor-tenant payments. CEO Rhys Throne said fit-out is now underway with a second tenant in advanced talks for adjacent bays. Handling volumes across the existing network rose 9%, supporting a raised full-year outlook.",
+      "cycle": 82792,
+      "dur": 2
+    },
+    {
+      "company": "Korrwright Group",
+      "sector": "construction",
+      "kind": "expansion",
+      "size": "standard",
+      "head": "Korrwright Group Adds Wire Capacity to Feed Transit Corridor Build",
+      "body": "Korrwright broke ground on a new cable-drawing facility near its eastern works to supply the $3.4B transit corridor contract, adding an estimated 220 jobs. CEO Halden Fenn said the plant would lift wire-and-cable output by about 18% and let Korrwright self-source rather than lean on outside mills. Harbor redevelopment billing continues to hold at peak alongside the new award.",
+      "cycle": 82792,
+      "dur": 2
+    },
+    {
+      "company": "Wrenhaus",
+      "sector": "construction",
       "kind": "earnings_beat",
       "size": "flash",
-      "head": "Ardent Health Beats Again as Continental Fleet Upgrades Complete Final Phase",
-      "body": "Orla Halloran delivered another modest beat as the last tranche of Continental fleet upgrades rolled out on schedule, locking in higher recurring service revenue. Operating margin ticked up 90 basis points on the completed deployment. Halloran said the mature contract now provides 'a very quiet, very reliable base.'",
-      "cycle": 82791,
+      "head": "Wrenhaus Edges Past Estimates as Riverside Corridor Volumes Steady",
+      "body": "Wrenhaus posted a modest beat, with fixtures shipments up 6% as the Riverside corridor network settled into steady throughput. CEO Quinn Thorne credited the distribution hub for trimming delivery times and holding margins firm. Guidance was left unchanged, in keeping with the company's measured cadence.",
+      "cycle": 82792,
       "dur": 1
     },
     {
@@ -32,16 +102,6 @@
       "dur": 2
     },
     {
-      "company": "Caldercraft Holdings",
-      "sector": "consumer",
-      "kind": "product_launch",
-      "size": "flash",
-      "head": "Caldercraft Holdings Extends Weatherproof Range Into Household Line",
-      "body": "Vale Fenn introduced a weatherproof household goods sub-range, carrying the hardware line's proven coatings into storage bins, outdoor fixtures, and tool chests. The extension leverages existing supply relationships to keep costs contained ahead of the spring selling season. Fenn described it as 'a natural stretch, not a gamble.'",
-      "cycle": 82791,
-      "dur": 1
-    },
-    {
       "company": "Kessel Drive",
       "sector": "automotive",
       "kind": "safety_probe",
@@ -59,56 +119,6 @@
       "head": "Kesselgrove Co. Launches Meridian Press Line as Third Bay Comes Online",
       "body": "Orla Steg unveiled the Meridian series of industrial presses, the first new platform in nine years, timed to fill the freshly commissioned third bay. The line targets high-tonnage forming work and carries a 20% energy-efficiency gain over prior models. Steg said early order interest already covers the first two production runs.",
       "cycle": 82791,
-      "dur": 2
-    },
-    {
-      "company": "Korrwright Works",
-      "sector": "luxury",
-      "kind": "expansion",
-      "size": "flash",
-      "head": "Korrwright Works Doubles Dovreux Frères Case Output to Ease Halbrook Waitlist",
-      "body": "Dunmore Carrow ordered a second production shift at the recently acquired Dovreux Frères workshop to address a swelling backlog for the prize-winning Halbrook Perpetual. The move adds roughly 4,000 cases of annual capacity and brings 60 additional artisans onto the payroll. Carrow said demand had 'outrun even our appetite.'",
-      "cycle": 82791,
-      "dur": 1
-    },
-    {
-      "company": "Venline & Sons",
-      "sector": "medical",
-      "kind": "earnings_beat",
-      "size": "flash",
-      "head": "Venline & Sons Extends Streak as Second Marden Cleanroom Reaches Full Output",
-      "body": "Mara Garr reported another slim beat as the second Marden cleanroom ramped to full production, adding consumable volume without disrupting the company's long unbroken run. Revenue rose 4% on the quarter. Garr reaffirmed the deliberate, incremental cadence that has defined the house for decades.",
-      "cycle": 82791,
-      "dur": 1
-    },
-    {
-      "company": "Blackton Industries",
-      "sector": "automotive",
-      "kind": "product_launch",
-      "size": "standard",
-      "head": "Blackton Industries Opens Second Drivetrain Plant, Unveils Next-Gen Axle Module",
-      "body": "Sable Renwick marked the completion of the second drivetrain plant by launching a new integrated axle module aimed at expanding beyond the national fleet pact. The plant adds capacity for 400,000 units annually and Renwick said early interest from two regional fleet builders could broaden the customer base. The launch caps a fast-moving first year, though Renwick acknowledged the ramp has pushed capital spending to the top of guidance.",
-      "cycle": 82790,
-      "dur": 2
-    },
-    {
-      "company": "Boreas Power",
-      "sector": "energy",
-      "kind": "restructure",
-      "size": "standard",
-      "head": "Boreas Power Splits Compute and Power Units to Manage Coast-to-Coast Grid",
-      "body": "Mira Thorne unveiled a reorganization separating the compute-paired campus business from the core power and storage operation, creating dedicated leadership for each after the $6.8 billion third anchor pact. The move follows rapid expansion that left the single structure straining to service anchor tenants across four time zones. Thorne framed the split as a platform for the next wave of pacts rather than a pause.",
-      "cycle": 82790,
-      "dur": 2
-    },
-    {
-      "company": "Halhold Systems",
-      "sector": "technology",
-      "kind": "earnings_beat",
-      "size": "standard",
-      "head": "Halhold Systems Posts Record Quarter as Third Meridian Framework Ramps",
-      "body": "Ines Corvalan reported revenue of $1.9 billion, up 34% year-on-year, as the two Meridian framework wins moved into volume delivery ahead of schedule. Compute margins widened to 21%, the strongest since her arrival, and Corvalan raised full-year guidance while cautioning that expansion capital would keep free cash flow tight. The shift marks a full reversal from the turbulence that greeted her 2026 appointment.",
-      "cycle": 82790,
       "dur": 2
     },
     {
@@ -130,16 +140,6 @@
       "body": "Rhys Kessler capped a year of relentless dealmaking with a $2.6 billion agreement to absorb household-goods maker Corriveau, nearly doubling Maison & Vale's shelf presence overnight. The purchase folds Corriveau's 14 factory sites into the recently opened Larenthal hub network, though analysts warn integration strain is mounting after three back-to-back acquisitions. Kessler told the board the deal 'completes the pantry,' but declined to rule out further targets.",
       "cycle": 82790,
       "dur": 8
-    },
-    {
-      "company": "Stegforge",
-      "sector": "manufacturing",
-      "kind": "expansion",
-      "size": "standard",
-      "head": "Stegforge Commissions Third Rail Plate Line Ahead of Schedule as Steg Adds Textile Capacity",
-      "body": "Aurelia Steg brought the third rail plate line online two months early, lifting total plate output by an estimated 40% to meet the consortium's multi-year offtake. Alongside the ramp, Steg quietly approved a modest expansion of the raw textiles mill, extending the disciplined build-out she has run for over a century. Management said the additions are fully covered by contracted demand, keeping the balance sheet conservative.",
-      "cycle": 82790,
-      "dur": 2
     },
     {
       "company": "Woldmark",
@@ -179,16 +179,6 @@
       "head": "Lhaus Industries Acquires Kellstrom Cell Maker Ardent Power in $9.2B Deal to Own Its Supply Chain",
       "body": "Cole Brandt sealed the largest acquisition in company history, buying cell specialist Ardent Power for $9.2 billion to bring Kellstrom cell production fully in-house across its Power & Storage division. The deal locks in supply for the $4.3B fleet contract and gives Lhaus manufacturing capacity that management projects will lift Power margins by up to 400 basis points. Brandt framed the purchase as the anchor of a multi-year vertical-integration push.",
       "cycle": 82787,
-      "dur": 8
-    },
-    {
-      "company": "Gromford Works",
-      "sector": "luxury",
-      "kind": "leadership_change",
-      "size": "major",
-      "head": "Gromford Works Ousts Halvard Pryce as Board Seeks Reset From Emblem Crisis",
-      "body": "The Gromford Works board removed chief executive Halvard Pryce after an emergency session, citing the deepening Emblem Signature sourcing scandal and mounting legal exposure now estimated near $900M. Incoming chief Adelheid Corven, a veteran of the group's Timepieces division, pledged an independent audit of every supply line and a suspension of the Signature Editions program pending review.",
-      "cycle": 82784,
       "dur": 8
     }
   ]

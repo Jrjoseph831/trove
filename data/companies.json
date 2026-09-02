@@ -2390,18 +2390,8 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82783,
+    "lastEventCycle": 82792,
     "events": [
-      {
-        "cycle": 82637,
-        "kind": "major_deal",
-        "size": "major",
-        "head": "Bruncrest Works Secures Alternate Component Supply, Restores Aria Pro Deliveries",
-        "body": "Bruncrest Works signed a 900M multi-year supply agreement with fabricator Delnor Components, resolving the shortage that idled its Eastfield line and threatened the 3.4B National Compute Consortium contract. CEO Ines Marlow said Eastfield had resumed full output within 72 hours of the deal and pledged all delayed Aria Pro units would ship by quarter's end. Shares of the volatile compute house had swung sharply during the three-week halt.",
-        "effects": {
-          "technology": 0.22
-        }
-      },
       {
         "cycle": 82645,
         "kind": "earnings_beat",
@@ -2628,6 +2618,16 @@
         "size": "standard",
         "head": "Bruncrest Works Fires Up Third Line as Aria Ultra X Demand Outruns Capacity",
         "body": "Bruncrest Works brought its long-awaited third line live this week, adding roughly 40% to nameplate compute output. CEO Ines Marlow, never shy with a forecast, told reporters the line was 'sold out before the first unit shipped' and floated a fourth line for review by summer. Backlog now stretches into the following year at current run rates.",
+        "effects": {
+          "technology": 0.13
+        }
+      },
+      {
+        "cycle": 82792,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Bruncrest Works Debuts Aria Ultra X Pro as Marlow Chases Premium Tier",
+        "body": "CEO Ines Marlow unveiled the Aria Ultra X Pro at the company's Fulton campus, pitching a 30% efficiency gain over the base line for high-density buyers. Marlow told the room the Pro would 'own the top of the market by year-end,' with initial volume routed from the newly lit third line. Early commitments from two large customers cover roughly 40% of first-quarter output.",
         "effects": {
           "technology": 0.13
         }
@@ -4383,7 +4383,7 @@
       "trait": "ambitious, often turbulent"
     },
     "arc": null,
-    "lastEventCycle": 82779,
+    "lastEventCycle": 82792,
     "events": [
       {
         "cycle": 0,
@@ -4603,6 +4603,16 @@
         "body": "Regulators opened an inspection into Carrowforge's second heavy-press line after workers flagged inconsistent weld seams on three initial frames, halting output for at least two weeks. CEO Dahlia Renn insisted the fault is 'isolated to early tooling calibration' and pledged full cooperation, though the pause threatens delivery timing on the $940M order book. Analysts warn any delay could pressure the freshly restored profit margin.",
         "effects": {
           "manufacturing": -0.13
+        }
+      },
+      {
+        "cycle": 82792,
+        "kind": "recall",
+        "size": "major",
+        "head": "Carrowforge Recalls Heavy-Press Units as Weld Fault Widens Into Field Failures",
+        "body": "Carrowforge issued a recall covering an estimated 60 heavy-press machines after the weld fault first flagged at its new line was traced to units already delivered, including several tied to the $940M order. CEO Dahlia Renn confirmed shipments are frozen and second-line commissioning halted, with remediation costs pegged near $150M. At least one major customer has invoked delivery penalties as the safety review broadens.",
+        "effects": {
+          "manufacturing": -0.22
         }
       }
     ]
@@ -9215,18 +9225,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82784,
+    "lastEventCycle": 82792,
     "events": [
-      {
-        "cycle": 82632,
-        "kind": "scandal",
-        "size": "standard",
-        "head": "Gromford Works Under Fire as Meridian Tourbillon Movements Traced to Undisclosed Supplier",
-        "body": "Reports surfaced that a portion of Gromford's Meridian Tourbillon movements were sourced from an outside workshop despite marketing claiming full in-house manufacture. Corin Aldwych issued a defensive statement acknowledging 'a limited transitional arrangement,' but collectors and guild observers questioned the timing of the fast-tracked launch and demanded an accounting of affected units.",
-        "effects": {
-          "luxury": -0.13
-        }
-      },
       {
         "cycle": 82638,
         "kind": "safety_probe",
@@ -9448,6 +9448,16 @@
         "head": "Gromford Works Ousts Halvard Pryce as Board Seeks Reset From Emblem Crisis",
         "body": "The Gromford Works board removed chief executive Halvard Pryce after an emergency session, citing the deepening Emblem Signature sourcing scandal and mounting legal exposure now estimated near $900M. Incoming chief Adelheid Corven, a veteran of the group's Timepieces division, pledged an independent audit of every supply line and a suspension of the Signature Editions program pending review.",
         "effects": {}
+      },
+      {
+        "cycle": 82792,
+        "kind": "restructure",
+        "size": "standard",
+        "head": "Gromford Works Shelves Emblem Signature Line in Sweeping Reset",
+        "body": "Interim leadership announced the suspension of the entire Emblem Signature line and a consolidation of its timepiece operations into two verified workshops. New chief Adelheid Corven framed the move as 'clearing the deck,' with a charge of roughly $80M tied to inventory writedowns and supplier exits. The company said a relaunch under a new house standard would not come before next year.",
+        "effects": {
+          "luxury": -0.13
+        }
       }
     ]
   },
@@ -9462,7 +9472,7 @@
       "trait": "prone to bold, public swings"
     },
     "arc": null,
-    "lastEventCycle": 82779,
+    "lastEventCycle": 82792,
     "events": [
       {
         "cycle": 0,
@@ -9688,6 +9698,16 @@
         "size": "standard",
         "head": "Halcrest Secures Rare Movement Supply Accord to Guard Meridian Expansion",
         "body": "Halcrest signed a ten-year exclusive supply agreement with movement specialist Corvane Manufacture, locking in escapement components as Meridian demand outstrips capacity. Iris Marrow framed the pact as 'a fortress around our finest calibers,' with terms said to guarantee 40,000 movements annually. The deal follows the sold-out Meridian Grand Complication and the newly launched Reserve line.",
+        "effects": {
+          "luxury": 0.13
+        }
+      },
+      {
+        "cycle": 82792,
+        "kind": "product_launch",
+        "size": "standard",
+        "head": "Halcrest Crowns Meridian Family With Limited Meridian Grand at $62,000",
+        "body": "Halcrest launched the Meridian Grand, a 200-piece limited edition built on the rare movement secured under its recent supply accord. CEO Iris Marrow called it 'the definitive statement of the Meridian era,' with allocation prioritized to the new flagship boutiques. The house said the run sold out to waitlist within days of the announcement.",
         "effects": {
           "luxury": 0.13
         }
@@ -11846,18 +11866,8 @@
       "trait": "fast-moving and headline-hungry"
     },
     "arc": null,
-    "lastEventCycle": 82780,
+    "lastEventCycle": 82792,
     "events": [
-      {
-        "cycle": 82567,
-        "kind": "lawsuit",
-        "size": "standard",
-        "head": "Ironcrestton Sued Over Carrow Atelier Origin Claims as Buyers Seek Refunds",
-        "body": "A group of Carrow Atelier clients filed suit against Ironcrestton, alleging that origin labels on premium goods misrepresented their sourcing, seeking $60 million in refunds and damages. The complaint builds on the regulator scrutiny of the atelier's provenance claims and names CEO Sable Carrow in marketing statements. Carrow said the company 'stands fully behind' its labeling and would contest the claims.",
-        "effects": {
-          "luxury": -0.13
-        }
-      },
       {
         "cycle": 82577,
         "kind": "scandal",
@@ -12076,6 +12086,16 @@
         "size": "standard",
         "head": "Ironcrestton Faces Backlash as Aurelian Sourcing Claims Draw Scrutiny",
         "body": "Ironcrestton came under fire after an industry review questioned 'heritage-sourced' labeling on select Aurelian pieces, alleging materials came from unverified suppliers. CEO Corwin Vale, known for aggressive marketing, defended the collection but announced an external audit of the atelier supply chain. Two flagship openings were quietly delayed as the review proceeds.",
+        "effects": {
+          "luxury": -0.13
+        }
+      },
+      {
+        "cycle": 82792,
+        "kind": "lawsuit",
+        "size": "standard",
+        "head": "Ironcrestton Hit With Suit as Aurelian Sourcing Scrutiny Escalates",
+        "body": "A consumer-advocacy group filed suit against Ironcrestton alleging the Aurelian Collection's provenance claims misled buyers, seeking refunds across an estimated 12,000 units. CEO Corwin Vale disputed the filing as 'opportunistic' but confirmed an internal audit of supplier documentation is underway. Two of the four new flagship ateliers have paused Aurelian window displays pending the review.",
         "effects": {
           "luxury": -0.13
         }
@@ -12668,7 +12688,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82780,
+    "lastEventCycle": 82792,
     "events": [
       {
         "cycle": 0,
@@ -12887,6 +12907,16 @@
         "effects": {
           "logistics": 0.13
         }
+      },
+      {
+        "cycle": 82792,
+        "kind": "earnings_beat",
+        "size": "standard",
+        "head": "Korrworks Beats as Third Hub Reaches Structural Completion Ahead of Plan",
+        "body": "Korrworks topped estimates as the third hub hit structural completion weeks early, unlocking a step-up in anchor-tenant payments. CEO Rhys Throne said fit-out is now underway with a second tenant in advanced talks for adjacent bays. Handling volumes across the existing network rose 9%, supporting a raised full-year outlook.",
+        "effects": {
+          "logistics": 0.13
+        }
       }
     ]
   },
@@ -12901,7 +12931,7 @@
       "trait": "measured but opportunistic"
     },
     "arc": null,
-    "lastEventCycle": 82777,
+    "lastEventCycle": 82792,
     "events": [
       {
         "cycle": 0,
@@ -13119,6 +13149,16 @@
         "body": "Halden Fenn secured the multi-year Eastreach Corridor package, supplying structural materials and wire & cable for a regional rail and utility spine. The award, worth $3.4B over six years, arrives just as Harbor redevelopment billing peaks, giving Korrwright a rare double-anchor backlog. Fenn said the win 'extends visibility well into the next decade' and lifts total backlog past $9B.",
         "effects": {
           "construction": 0.22
+        }
+      },
+      {
+        "cycle": 82792,
+        "kind": "expansion",
+        "size": "standard",
+        "head": "Korrwright Group Adds Wire Capacity to Feed Transit Corridor Build",
+        "body": "Korrwright broke ground on a new cable-drawing facility near its eastern works to supply the $3.4B transit corridor contract, adding an estimated 220 jobs. CEO Halden Fenn said the plant would lift wire-and-cable output by about 18% and let Korrwright self-source rather than lean on outside mills. Harbor redevelopment billing continues to hold at peak alongside the new award.",
+        "effects": {
+          "construction": 0.13
         }
       }
     ]
@@ -20304,7 +20344,7 @@
       "trait": "disciplined, quietly expanding"
     },
     "arc": null,
-    "lastEventCycle": 82769,
+    "lastEventCycle": 82792,
     "events": [
       {
         "cycle": 0,
@@ -20452,6 +20492,16 @@
         "body": "Quinn Thorne's Wrenhaus topped estimates as the recently opened distribution hub cut average corridor delivery times by 22%, lifting fixture volumes. Quarterly revenue climbed 9% with the second Riverside plant now at sustained full output. Thorne reaffirmed the disciplined expansion approach, citing improving inventory turns.",
         "effects": {
           "construction": 0.13
+        }
+      },
+      {
+        "cycle": 82792,
+        "kind": "earnings_beat",
+        "size": "flash",
+        "head": "Wrenhaus Edges Past Estimates as Riverside Corridor Volumes Steady",
+        "body": "Wrenhaus posted a modest beat, with fixtures shipments up 6% as the Riverside corridor network settled into steady throughput. CEO Quinn Thorne credited the distribution hub for trimming delivery times and holding margins firm. Guidance was left unchanged, in keeping with the company's measured cadence.",
+        "effects": {
+          "construction": 0.06
         }
       }
     ]
