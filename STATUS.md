@@ -1,6 +1,6 @@
 # TROVE — Status & Handoff
 
-_Last updated: 2026-08-12. This file travels with the repo — read it first to pick up where we left off (especially on a fresh machine, where local Claude "memory" does NOT exist)._
+_Last updated: 2026-09-02. This file travels with the repo — read it first to pick up where we left off (especially on a fresh machine, where local Claude "memory" does NOT exist)._
 
 ## What TROVE is
 A real-time, shared-world market/economy game for fictional physical goods. **Streaming-first**: the #1 design driver is 3h+ live YouTube solo-empire-building streams — judge every feature by _"does this make a better stream?"_
@@ -60,6 +60,38 @@ Apple-keynote **bento grid** of modular rounded card tiles — the "clean embedd
 - Centering: `.view > .bento { max-width:1200px; margin:0 auto }`; `.page-col { max-width:1100px; margin:0 auto }` for non-grid pages; `.cat-wrap` (Catalog); `.desk-wrap` + `.desk-grid` (Order Desk).
 - Shared tokens: `--bento-r` (16px radius), `--bento-gap`, `--paper` surface. **No per-page one-off radii** — that consistency is the whole point.
 - Conversion pattern: center the view's content column → give each panel the `--paper`/`--line`/`--bento-r` tile surface → section titles as `.bc-h` → align gaps to `--bento-gap`.
+
+### The command bar (game-style shell) — new 2026-09-02
+The left rail is gone. Navigation, identity and the readouts now live in one
+**command bar** across the top (`components/CommandBar.tsx`), with a thin
+**bottom rail** (`components/StatusBar.tsx`) carrying the shortcut hint, the
+ticker tape and the turn countdown. The reference is a management-sim HUD: a
+row of coloured, fixed-position icon tiles you hit from muscle memory rather
+than a list you read.
+
+- **One list drives everything**: `lib/nav.ts` holds the 13 destinations
+  (title, short tile label, icon, tone colour, group). The deck, the mobile
+  drawer, the F1 sheet and the hotkey map all read from it, so a destination
+  can't exist in one and be missing from another. Add a screen there, not in
+  three places.
+- **Layout**: screen title + firm name on the left; the tile deck (Market ·
+  Your firm, split by a hairline) in the centre; cash/rank/day/clock chips and
+  a settings gear on the right. The cash chip opens the firm sheet (net worth,
+  cash/assets/debt, rank ladder — the old rail's `.worth` and `.ladder` markup,
+  reused verbatim); the gear opens theme / account / sandbox / shortcuts.
+- **Keyboard**: 1–9 then 0 jump to the first ten destinations, Esc backs out
+  one layer at a time (panel → drawer → Trending), F1 opens the sheet.
+  Shortcuts are suppressed while focus is in a field.
+- **Responsive ladder** — the bar sheds weight in order, and the deck is never
+  cut off mid-tile (verified by sweeping widths and asserting
+  `scrollWidth === clientWidth`): ≤1520 drops the countdown, ≤1400 the day and
+  rank, ≤1220 the tile labels (icon-only), ≤1080 the deck becomes a
+  full-screen drawer off a burger, ≤640 trims the bottom rail.
+- **Removed with the rail**: `Rail.tsx`, `.topbar`/`.tlabel`, the drawer +
+  scrim + edge-handle machinery (`.nav-peek`, `.nav-collapse`, `.nav-menu`,
+  `.rail-close`), and the orphaned `.brand`/`.clock`/`.navbadge` styles. The
+  product page's own `.page-peek` handle stays. `navOpen` still exists in the
+  Trove context but nothing in the shell reads it any more.
 
 ### Bento rollout progress
 - **DONE:** Trending, My Vault, Order Desk, Companies, Estates, Deal Room, Catalog, Reports.

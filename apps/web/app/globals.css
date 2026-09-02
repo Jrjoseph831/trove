@@ -196,15 +196,10 @@ body::after {
 /* ============ SHELL ============ */
 .app {
   display: grid;
-  grid-template-columns: var(--rail) 1fr;
+  grid-template-columns: 1fr;
   height: 100vh;
   height: 100dvh; /* dynamic viewport — nothing hidden under mobile browser UI */
   background: var(--bg);
-}
-/* Signed-out on the real LIVE world: no Rail column at all, Catalog fills
-   the screen, just a floating sign-in button. */
-.app.no-rail {
-  grid-template-columns: 1fr;
 }
 /* Guest bar — centred at the bottom rather than tucked in a corner, so the
    way back into signing up is impossible to miss while browsing. */
@@ -267,36 +262,6 @@ body::after {
   }
 }
 
-/* ---- rail ---- */
-.rail {
-  background: var(--paper);
-  border-right: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  padding: 26px 22px 30px;
-  gap: 26px;
-  overflow-y: auto;
-}
-.brand {
-  font-family: var(--font-display);
-  font-size: 25px;
-  letter-spacing: 0.32em;
-  font-weight: 600;
-  color: var(--ink);
-  padding-left: 2px;
-}
-.brand b {
-  color: var(--ink);
-}
-.brand small {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 8px;
-  letter-spacing: 0.42em;
-  color: var(--ink-faint);
-  margin-top: 6px;
-  font-weight: 600;
-}
 .worth {
   border-top: 2px solid var(--rule);
   padding-top: 14px;
@@ -346,74 +311,6 @@ body::after {
 .worth .mini .debt b {
   color: var(--dn);
 }
-.nav {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.nav .navh {
-  font-size: 10.5px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  padding: 0 12px 10px;
-  font-weight: 600;
-}
-.nav button {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: transparent;
-  border: 0;
-  border-radius: 9px;
-  color: var(--ink-dim);
-  padding: 9px 12px;
-  cursor: pointer;
-  font-size: 13.5px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  transition: background 0.15s ease, color 0.15s ease;
-  width: 100%;
-  font-family: inherit;
-}
-.nav button .ic {
-  width: 16px;
-  display: inline-flex;
-  justify-content: center;
-  color: var(--ink-faint);
-}
-.nav button:hover {
-  color: var(--ink);
-  background: color-mix(in srgb, var(--ink) 6%, transparent);
-}
-.nav button.on {
-  color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
-  font-weight: 700;
-}
-.nav button.on .ic {
-  color: var(--accent);
-}
-.nav button:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-.nav button:disabled .soon {
-  margin-left: auto;
-  font-size: 8px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  border: 1px solid var(--line);
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-.rail-foot {
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
 .modeswitch {
   display: flex;
   border: 1px solid var(--line-2);
@@ -460,16 +357,6 @@ body::after {
   border-color: var(--ink-faint);
   color: var(--ink);
 }
-.clockline {
-  font-size: 10px;
-  color: var(--ink-faint);
-  letter-spacing: 0.04em;
-  text-align: center;
-}
-.clockline b {
-  color: var(--ink-dim);
-  font-variant-numeric: tabular-nums;
-}
 .warp {
   display: flex;
   gap: 6px;
@@ -491,6 +378,686 @@ body::after {
   border-color: var(--ink);
 }
 
+/* ============================================================ *
+ * COMMAND BAR — the game HUD.
+ *
+ * One strip across the top carries the three things a player checks
+ * between actions: where they are (screen name, left), where they can
+ * go (the icon deck, centre) and how they're doing (cash, rank, clock,
+ * right). It replaced a 256px left rail that spent a permanent column
+ * on navigation read half a second at a time — and that sat next to the
+ * storefront's own department list as a second, unrelated nav.
+ *
+ * The deck's tiles are the only saturated colour in an otherwise
+ * editorial UI. That's deliberate: colour plus a fixed position is what
+ * lets a player hit a destination from muscle memory instead of reading
+ * a list, which is the whole difference between an app menu and a game
+ * menu. Everything around them stays paper and hairlines.
+ * ============================================================ */
+:root {
+  --cmdbar-h: 78px;
+  --statusbar-h: 34px;
+}
+
+.cmdbar {
+  flex: none;
+  height: var(--cmdbar-h);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+  position: relative;
+  z-index: 30;
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--edge), 0 10px 26px -26px rgba(0, 0, 0, 0.8);
+}
+
+/* ---- left: who you are, and what screen you're on ---- */
+.cb-left {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.cb-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+.cb-burger:active {
+  background: var(--paper-2);
+}
+.cb-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.cb-kick {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cb-kick-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+.cb-kick-btn:hover {
+  color: var(--accent);
+}
+.cb-rename {
+  flex: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.cb-rename:hover {
+  color: var(--accent);
+}
+.cb-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* ---- centre: the deck ---- */
+.cb-deck {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+  height: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* When the deck does have to scroll, the outer tiles fade rather than being
+     sliced mid-icon — a cut-off tile reads as a rendering bug. */
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 14px,
+    #000 calc(100% - 14px),
+    transparent 100%
+  );
+}
+.cb-deck::-webkit-scrollbar {
+  display: none;
+}
+.cb-sep {
+  flex: none;
+  align-self: center;
+  width: 1px;
+  height: 30px;
+  margin: 0 9px;
+  background: var(--line);
+}
+.cb-tile {
+  position: relative;
+  flex: none;
+  width: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 2px 10px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+.cb-lab {
+  font-size: 8px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  transition: color 0.14s ease;
+}
+.cb-ic {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--tone) 82%, #ffffff) 0%,
+    var(--tone) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 2px 0 color-mix(in srgb, var(--tone) 62%, #000000),
+    0 7px 14px -9px rgba(0, 0, 0, 0.85);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+.cb-tile:hover .cb-ic {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 3px 0 color-mix(in srgb, var(--tone) 62%, #000000),
+    0 12px 20px -10px rgba(0, 0, 0, 0.9);
+}
+.cb-tile:hover .cb-lab,
+.cb-tile.on .cb-lab {
+  color: var(--ink);
+}
+/* The press has to move: a tile that only changes colour reads as a link. */
+.cb-tile:active .cb-ic {
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 1px 0 color-mix(in srgb, var(--tone) 62%, #000000);
+}
+/* Where you are — a dot in the tile's own colour, the way a dock marks a
+   running app. The label going solid alone was too quiet to find at a glance. */
+.cb-dot {
+  position: absolute;
+  bottom: 2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--tone);
+  opacity: 0;
+  transition: opacity 0.14s ease;
+}
+.cb-tile.on .cb-dot {
+  opacity: 1;
+}
+.cb-tile.on .cb-ic {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 0 0 2px color-mix(in srgb, var(--tone) 34%, transparent),
+    0 2px 0 color-mix(in srgb, var(--tone) 62%, #000000),
+    0 7px 14px -9px rgba(0, 0, 0, 0.85);
+}
+.cb-tile.locked {
+  cursor: default;
+}
+.cb-tile.locked .cb-ic {
+  filter: grayscale(1);
+  opacity: 0.42;
+}
+.cb-tile.locked:hover .cb-ic {
+  transform: none;
+}
+/* Badges ride the icon's top-right corner, not the label above it — a count
+   sitting on the word it counts is unreadable at 8px. */
+.cb-badge {
+  position: absolute;
+  top: 20px;
+  right: 3px;
+  display: grid;
+  place-items: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  border: 2px solid var(--paper);
+  background: var(--accent);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.cb-badge.quiet {
+  background: color-mix(in srgb, var(--ink) 20%, var(--paper));
+  color: var(--ink-dim);
+}
+.cb-badge.live {
+  background: var(--danger);
+  animation: brk-flick 1.6s ease-in-out infinite;
+}
+.cb-badge.lock {
+  background: var(--line-2);
+  color: var(--ink-dim);
+}
+
+/* ---- right: the readouts ---- */
+.cb-hud {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hud-chip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 11px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink-faint);
+  font-family: inherit;
+  font-size: 11px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.hud-chip b {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.hud-chip i {
+  font-style: normal;
+  font-size: 10.5px;
+  color: var(--ink-dim);
+}
+.hud-chip i.pos {
+  color: var(--up);
+}
+.hud-chip i.neg {
+  color: var(--dn);
+}
+button.hud-chip {
+  cursor: pointer;
+  transition: border-color 0.14s ease, background 0.14s ease;
+}
+button.hud-chip:hover {
+  border-color: var(--line-2);
+}
+button.hud-chip.open {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--paper));
+}
+.hud-chip.icon {
+  width: 36px;
+  padding: 0;
+  justify-content: center;
+  color: var(--ink-dim);
+}
+.hud-chip.rank {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 12px;
+}
+.hud-rank-n {
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink);
+}
+.hud-rank-bar {
+  display: block;
+  width: 68px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--track-bg);
+  overflow: hidden;
+}
+.hud-rank-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+/* ---- the two HUD sheets ---- */
+.hud-pop {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 14px;
+  z-index: 50;
+  width: 306px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--bento-r);
+  box-shadow: var(--lift-2);
+}
+.hud-pop .worth {
+  border-top: 0;
+  padding-top: 0;
+}
+.hp-h {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 700;
+}
+.hp-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink-dim);
+  font-family: inherit;
+  font-size: 11.5px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.14s ease, color 0.14s ease;
+}
+.hp-row:hover {
+  color: var(--ink);
+  border-color: var(--ink-faint);
+}
+.hp-row b {
+  color: var(--ink);
+}
+.hp-key {
+  margin-left: auto;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: var(--ink-faint);
+}
+
+/* ============ BOTTOM RAIL ============ *
+ * The strip a game keeps its context keys on. The tape runs through the
+ * middle because a marquee belongs at the edge of the screen, not above
+ * the content it keeps interrupting. */
+.statusbar .ticker .run {
+  font-size: 10.5px;
+  color: var(--ink-dim);
+}
+.statusbar {
+  flex: none;
+  height: var(--statusbar-h);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 14px;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  overflow: hidden;
+}
+.sb-left,
+.sb-right {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sb-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink-faint);
+  font-family: inherit;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.14s ease;
+}
+.sb-key:hover {
+  color: var(--ink);
+}
+.sb-turn {
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+}
+.sb-turn b {
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+}
+.sb-sandbox {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+kbd,
+.sb-key kbd,
+.keysheet kbd {
+  display: inline-grid;
+  place-items: center;
+  min-width: 20px;
+  padding: 2px 5px;
+  border: 1px solid var(--line-2);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: var(--paper-2);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+/* ============ MOBILE DRAWER ============ *
+ * Below ~900px the deck can't hold thirteen tiles in a row, so it becomes
+ * the full-screen grid the same tiles were always going to look right in. */
+.cb-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  padding: 62px 20px 32px;
+  background: var(--bg);
+  overflow-y: auto;
+}
+.cb-drawer-x {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink-dim);
+  cursor: pointer;
+}
+.cb-drawer-h {
+  margin: 12px 0 10px;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 700;
+}
+.cb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
+  gap: 8px;
+}
+.cb-grid .cb-tile {
+  width: 100%;
+  padding: 12px 4px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.cb-grid .cb-tile.on {
+  border-color: color-mix(in srgb, var(--tone) 55%, var(--line));
+}
+/* The drawer is the one place labels always show: it exists because the
+   screen is too narrow for the deck, so there's room for words here and
+   nothing else to identify a tile by. Higher specificity than the
+   icon-only breakpoint below, so it wins at every width. */
+.cb-drawer .cb-lab {
+  display: block;
+}
+
+/* ============ SHORTCUT SHEET (F1) ============ */
+.keysheet-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: var(--scrim);
+  backdrop-filter: blur(3px);
+}
+.keysheet {
+  width: min(520px, 100%);
+  max-height: 86vh;
+  overflow-y: auto;
+  padding: 22px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--bento-r);
+  box-shadow: var(--lift-2);
+}
+.ks-h {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--ink);
+}
+.ks-x {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink-dim);
+  cursor: pointer;
+}
+.ks-x:hover {
+  color: var(--ink);
+  border-color: var(--ink-faint);
+}
+.ks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+}
+.ks-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.ks-row.wide {
+  grid-column: 1 / -1;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.ks-foot {
+  margin-top: 16px;
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+/* ============ COMMAND BAR — responsive ============ *
+ * Thirteen tiles, a title and five readouts don't fit every laptop, so the
+ * bar sheds load-bearing weight in order: the countdown (the bottom rail
+ * carries it too), then the day, then the rank meter, then the tile labels
+ * (colour and fixed position still carry the deck), then the deck itself
+ * for a full-screen drawer. Nothing is ever cut off mid-tile. */
+@media (max-width: 1520px) {
+  .clock-next {
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  .hud-chip.day,
+  .hud-chip.rank {
+    display: none;
+  }
+}
+@media (max-width: 1220px) {
+  .cb-lab {
+    display: none;
+  }
+  .cb-tile {
+    width: 46px;
+    padding: 10px 2px 12px;
+  }
+  .cb-badge {
+    top: 8px;
+  }
+}
+@media (max-width: 1080px) {
+  .cb-deck {
+    display: none;
+  }
+  .cb-burger {
+    display: inline-flex;
+  }
+  .cb-title {
+    font-size: 20px;
+  }
+  .cmdbar {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --cmdbar-h: 62px;
+  }
+  .statusbar .ticker,
+  .sb-turn,
+  .sb-sandbox {
+    display: none;
+  }
+  .hud-pop {
+    right: 8px;
+    width: min(306px, calc(100vw - 16px));
+  }
+  .ks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- main ---- */
 .main {
   display: flex;
@@ -500,45 +1067,6 @@ body::after {
   overflow: hidden;
   position: relative;
   min-width: 0;
-}
-.main.sandbox::after {
-  content: "Sandbox — private tuning world";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 9.5px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--paper);
-  background: var(--ink);
-  padding: 4px;
-  z-index: 5;
-  font-weight: 600;
-}
-.topbar {
-  height: 42px;
-  flex: none;
-  display: flex;
-  align-items: center;
-  background: var(--paper);
-  border-bottom: 1px solid var(--line);
-  overflow: hidden;
-  position: relative;
-}
-.topbar .tlabel {
-  flex: none;
-  color: var(--ink-faint);
-  font-size: 9px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  padding: 0 18px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  border-right: 1px solid var(--line);
 }
 .ticker {
   flex: 1;
@@ -2208,7 +2736,7 @@ body::after {
 .toast {
   position: fixed;
   bottom: 28px;
-  left: calc(50% + var(--rail) / 2);
+  left: 50%;
   transform: translateX(-50%) translateY(8px);
   background: var(--ink);
   color: var(--paper);
@@ -2297,30 +2825,6 @@ body::after {
   text-transform: uppercase;
   cursor: pointer;
   font-family: inherit;
-}
-
-/* ---- responsive: rail → drawer ---- */
-@media (max-width: 780px) {
-  .app {
-    grid-template-columns: 1fr;
-  }
-  .rail {
-    position: fixed;
-    z-index: 40;
-    width: min(86vw, var(--rail));
-    height: 100vh;
-    height: 100dvh;
-    transform: translateX(-100%);
-    transition: 0.2s;
-    box-shadow: 0 0 40px -10px rgba(27, 23, 20, 0.25);
-    overflow-y: auto;
-  }
-  .app.navopen .rail {
-    transform: none;
-  }
-  .toast {
-    left: 50%;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2588,32 +3092,11 @@ body::after {
   }
 }
 
-/* tap-to-close scrim behind the mobile nav drawer */
-.nav-scrim {
-  position: fixed;
-  inset: 0;
-  z-index: 39;
-  border: 0;
-  background: rgba(20, 16, 12, 0.45);
-  cursor: pointer;
-  display: none;
-}
-@media (max-width: 780px) {
-  .nav-scrim {
-    display: block;
-  }
-}
-
 /* ====================== PHONE (≤640px) ====================== */
 @media (max-width: 640px) {
   .view {
     padding: 18px 14px 44px;
     overflow-x: hidden;
-  }
-
-  /* rail drawer: don't span the whole screen */
-  .rail {
-    width: min(86vw, 300px);
   }
 
   /* masthead / panels */
@@ -2799,49 +3282,6 @@ body::after {
   }
 }
 
-/* mobile drawer close button (hidden on desktop, shown in the drawer) */
-.rail-close {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  color: var(--ink-dim);
-  cursor: pointer;
-  z-index: 1;
-}
-.rail-close:hover {
-  color: var(--ink);
-  border-color: var(--ink-faint);
-}
-@media (max-width: 780px) {
-  .rail-close {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 38px;
-    height: 38px;
-    border-radius: 8px;
-    border: 1px solid var(--line);
-    background: var(--paper);
-    color: var(--ink-dim);
-    cursor: pointer;
-    z-index: 1;
-  }
-  .rail-close:hover {
-    color: var(--ink);
-    border-color: var(--ink-faint);
-  }
-}
 
 /* ====================== TNN STUDIO BROADCAST ====================== */
 .tnn-head-right {
@@ -3363,10 +3803,6 @@ body::after {
   max-width: 70ch;
 }
 
-/* shared-world account control in the rail footer */
-.accountline {
-  margin-bottom: 8px;
-}
 .acct {
   width: 100%;
   font-size: 11px;
@@ -3967,27 +4403,6 @@ body::after {
 }
 
 /* ── Order Desk + onboarding ─────────────────────────────────────────────── */
-.navbadge {
-  margin-left: auto;
-  background: var(--accent);
-  color: var(--paper);
-  font-size: 9px;
-  font-weight: 800;
-  border-radius: 999px;
-  padding: 1px 6px;
-  min-width: 16px;
-  text-align: center;
-}
-.holdingline {
-  margin-top: 10px;
-  font-size: 11px;
-  color: var(--ink);
-  font-weight: 600;
-}
-.holdingline span {
-  color: var(--ink-dim);
-  font-weight: 400;
-}
 .desk-rep {
   margin-left: auto;
   font-size: 12px;
@@ -7581,68 +7996,6 @@ details.bay-modules > summary.bay-sub:hover {
     display: none;
   }
 }
-.rename-btn {
-  margin-left: 8px;
-  background: none;
-  border: 0;
-  padding: 0;
-  font-size: 10px;
-  color: var(--ink-dim);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  cursor: pointer;
-}
-.rename-btn:hover {
-  color: var(--accent);
-}
-
-/* holding name in the brand slot */
-.brand-holding {
-  font-family: var(--font-display);
-  font-size: 19px;
-  letter-spacing: 0.04em;
-  line-height: 1.15;
-  display: block;
-  word-break: break-word;
-  color: var(--ink);
-}
-
-/* in-game clock in the topbar */
-.clock {
-  flex: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1px;
-  padding: 0 16px;
-  height: 100%;
-  border-right: 1px solid var(--line);
-  white-space: nowrap;
-}
-.clock-t {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--ink);
-  font-variant-numeric: tabular-nums;
-}
-.clock-t small {
-  font-size: 8px;
-  letter-spacing: 0.1em;
-  color: var(--ink-faint);
-  margin-left: 2px;
-}
-/* Seconds tick visibly (Trove time runs 2× real); kept dimmer so the
-   hours/minutes stay the focus. */
-.clock-s {
-  color: var(--ink-dim);
-  font-size: 10px;
-}
-.clock-n {
-  font-size: 8.5px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ink-dim);
-}
 @media (max-width: 560px) {
   .clock {
     padding: 0 10px;
@@ -8348,21 +8701,6 @@ details.bay-modules > summary.bay-sub:hover {
   color: var(--ink-faint);
   line-height: 1.3;
 }
-/* locked nav item */
-.rail .nav button.locked {
-  opacity: 0.55;
-  cursor: default;
-}
-.rail .nav button.locked:hover {
-  background: none;
-}
-.navlock {
-  margin-left: auto;
-  font-size: 9px;
-  font-weight: 800;
-  color: var(--ink-faint);
-  font-variant-numeric: tabular-nums;
-}
 /* ── Rank-up celebration ───────────────────────────────────────────────────── */
 .lu-wrap {
   position: fixed;
@@ -8418,11 +8756,6 @@ details.bay-modules > summary.bay-sub:hover {
 }
 
 /* ── Goals / achievements ──────────────────────────────────────────────────── */
-.navbadge.goals {
-  background: color-mix(in srgb, var(--ink) 10%, transparent);
-  color: var(--ink-dim);
-  font-variant-numeric: tabular-nums;
-}
 .gl-track-wrap {
   display: flex;
   align-items: center;
@@ -8693,11 +9026,6 @@ details.bay-modules > summary.bay-sub:hover {
     transform: translate(-50%, 14px);
     opacity: 0;
   }
-}
-.navbreak {
-  margin-left: auto;
-  font-size: 11px;
-  animation: brk-flick 1.6s ease-in-out infinite;
 }
 @keyframes brk-flick {
   0%,
@@ -10305,23 +10633,10 @@ body {
 .bay-run.moth { border-color: var(--accent); color: var(--ink); }
 .bay-run.moth:disabled { opacity: .5; cursor: not-allowed; border-color: var(--line); }
 
-/* The way back to the rail when the rail isn't there — a tab protruding from
-   the middle of the left edge, where the rail itself would be, with the
-   chevron pointing at what opening it does. A hamburger parked next to the
-   clock said nothing about which edge it belonged to; this is the folded
-   rail's own handle. Hidden by default: while the rail is on screen there's
-   nothing to open. */
-/* One casing for all three edge handles — the nav's open and close tabs, and
-   the product page's way back. They were three copies of the same values,
-   which is exactly how they drifted apart every time one got tuned.
-   Only position and default display differ; those are set per selector below.
-
-   Slim on purpose. The chevron keeps the accent so it stays findable, but the
-   casing recedes: at 25x80 behind a heavy gold edge it competed with the copy
-   on a reading screen like the Wire. Presence comes back on hover, which is
-   when it's actually wanted. */
-.nav-peek,
-.nav-collapse,
+/* The product page's edge handle — a tab protruding from the middle of the
+   left edge, with the chevron pointing at the way back to the market. Slim on
+   purpose: the chevron keeps the accent so it stays findable, but the casing
+   recedes rather than competing with the copy it sits beside. */
 .page-peek {
   position: fixed;
   top: 50%;
@@ -10344,111 +10659,24 @@ body {
     background 0.16s ease,
     border-color 0.16s ease;
 }
-.nav-peek:hover,
-.nav-collapse:hover,
+
 .page-peek:hover {
   width: 26px;
   background: color-mix(in srgb, var(--accent) 12%, var(--paper));
   border-color: color-mix(in srgb, var(--accent) 48%, var(--line));
 }
-.nav-peek {
-  display: none;
-  left: 0;
-}
-.nav-collapse {
-  display: inline-flex;
-  left: var(--rail);
-}
 .page-peek {
   display: inline-flex;
   left: 0;
 }
-/* A quiet pulse on the edge, so the eye catches it once without it becoming
-   something that blinks at you for the whole stream. */
-.nav-peek::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
-  animation: nav-peek-cue 3.2s ease-out 3;
-}
-@keyframes nav-peek-cue {
-  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 40%, transparent); }
-  40%, 100% { box-shadow: 0 0 0 9px transparent; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .nav-peek::after { animation: none; }
-}
-.nav-peek.show {
-  display: flex;
-}
-
-/* The collapse handle rides the rail's own width, so it stays attached to the
-   edge if that width ever changes. Everything else about it is the shared
-   casing above. */
-@media (max-width: 780px) {
-  /* No collapse handle on a phone. The drawer already carries its own close
-     button (.rail-close, top-right), so a second control was redundant — and
-     it landed over the drawer's contents rather than on its edge. */
-  .nav-collapse {
-    display: none;
-  }
-}
-
-/* The product page's edge handle takes the shared casing above. This route has
-   no rail, so it goes back to the market and points that way. Shown at every
-   width: on a phone it's the only way out that isn't the browser's own back
-   button. */
-/* No floating edge handles on a phone. A tab pinned to the middle of the left
+/* No floating edge handle on a phone. A tab pinned to the middle of the left
    edge works on a desktop because there is margin either side of the content
    for it to live in. On a narrow screen there is no margin — the text runs to
-   the edge — so the handle lands directly on top of the article being read.
-   Mobile gets a toolbar button instead, which is where a menu control belongs
-   on a phone anyway.
-
-   The drawer's CLOSE chevron stays: it only appears over the drawer itself,
-   never over the page, so it covers nothing. */
+   the edge — so the handle lands directly on top of the article being read. */
 @media (max-width: 780px) {
-  .nav-peek,
   .page-peek {
     display: none;
   }
-}
-/* The toolbar menu button — mobile only, since the edge handle serves desktop.
-   It fills the toolbar's height and is divided from the clock by a rule,
-   rather than floating in it as a bordered square: the toolbar is only 42px
-   tall and already carries the clock and the ticker, so a box inside a box
-   read as crammed. A full-height segment belongs to the bar instead of
-   sitting on it. */
-.nav-menu {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 100%;
-  flex: none;
-  padding: 0;
-  background: var(--paper);
-  border: 0;
-  border-right: 1px solid var(--line);
-  color: var(--ink);
-  cursor: pointer;
-}
-.nav-menu:active {
-  background: var(--paper-2);
-}
-.nav-menu.show {
-  display: inline-flex;
-}
-@media (max-width: 780px) {
-  /* On mobile the hamburger must always be visible when the drawer is closed,
-     regardless of whether JS thinks the rail is "open" (it might be open on
-     desktop but still off-screen as a drawer). Hide it only when the drawer
-     is actually pulled out (.app.navopen). */
-  .nav-menu { display: inline-flex; }
-  .app.navopen .nav-menu { display: none; }
 }
 
 /* Order Desk contracts, in the same card language as the Deal Room and Supply:

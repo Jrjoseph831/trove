@@ -25,7 +25,7 @@ export const COGNITO_CLIENT_ID =
 export const AUTH_ENABLED = Boolean(COGNITO_DOMAIN && COGNITO_CLIENT_ID);
 
 /** Sandbox is a dev/tuning lab, not a player feature — only available locally,
- *  hidden on the public site. (Evaluated client-side; the Rail renders post-mount.) */
+ *  hidden on the public site. (Evaluated client-side; the command bar renders post-mount.) */
 export function sandboxEnabled(): boolean {
   if (process.env.NEXT_PUBLIC_SANDBOX === "1") return true;
   if (typeof window === "undefined") return false;

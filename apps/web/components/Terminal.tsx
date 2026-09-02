@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Menu } from "lucide-react";
 import { validateHoldingName } from "@trove/data";
 import { ItemIcon } from "@/lib/icons";
 import { useTrove } from "@/lib/trove";
@@ -18,18 +17,16 @@ import { Landing } from "./Landing";
 import { LadderUp } from "./LadderUp";
 import { PropertyMarket } from "./PropertyMarket";
 import { DailyReportCard, ReportView } from "./Report";
-import { Rail } from "./Rail";
-import { Ticker } from "./Ticker";
+import { CommandBar } from "./CommandBar";
+import { StatusBar } from "./StatusBar";
 import { Trending } from "./Trending";
 import { Vault } from "./Vault";
 import { Wire } from "./Wire";
 import { Reputation } from "./Reputation";
 
 export function Terminal() {
-  const { mounted, authReady, mode, tab, navOpen, setNavOpen, reveal, signedIn, signIn, setTab, notify } =
+  const { mounted, authReady, mode, tab, reveal, signedIn, signIn, setTab, notify } =
     useTrove();
-  // Declared above the boot gate: hooks can't sit after a conditional return.
-  const [railClosed, setRailClosed] = useState(false);
 
   // Capture and immediately clean any ?studio= param left by a Stripe redirect.
   // This runs in the lazy initializer (synchronously on first render) so the URL
@@ -68,69 +65,36 @@ export function Terminal() {
 
   // Signed-out visitors browse the Catalog only in the real LIVE world —
   // Sandbox is a private practice world that's never required sign-in, so
-  // it stays fully open (mirrors Rail's canBrowseFull). Defense in depth
-  // against `tab` state ever drifting elsewhere (a stray deep link, a
-  // leftover value from before sign-out) even though Rail's own nav
-  // already only offers Catalog in this state.
+  // it stays fully open. Defense in depth against `tab` state ever drifting
+  // elsewhere (a stray deep link, a leftover value from before sign-out)
+  // even though the command bar isn't mounted in this state.
   const canBrowseFull = signedIn || mode === "sandbox";
   const effectiveTab = canBrowseFull ? tab : "catalog";
 
-  // The Catalog carries its OWN department sidebar, so showing the app rail
-  // beside it puts two navigations on the left and squeezes the storefront —
-  // it starts folded there and the handle brings it back. Everywhere else the
-  // rail starts open, and `railClosed` is the player folding it away by hand.
-  //
-  // Two flags rather than one because they answer different questions:
-  // navOpen is "the drawer is pulled out", which is the only thing that means
-  // anything on a narrow screen, while railClosed is a deliberate collapse on
-  // a wide one. Collapsing sets both, so the rail can't end up mounted but
-  // parked off-canvas with no way to reach it.
-  const railOpen = effectiveTab === "catalog" ? navOpen : !railClosed;
-  const railHidden = !canBrowseFull || !railOpen;
-  const openRail = () => {
-    setRailClosed(false);
-    setNavOpen(true);
-  };
-  const closeRail = () => {
-    setRailClosed(true);
-    setNavOpen(false);
-  };
-
   return (
-    <div className={`app ${navOpen ? "navopen" : ""} ${railHidden ? "no-rail" : ""}`}>
-      {canBrowseFull && navOpen && (
-        <button className="nav-scrim" aria-label="Close navigation" onClick={closeRail} />
-      )}
-      {canBrowseFull && !railHidden && <Rail onClose={closeRail} />}
-
-      {/* The way back out. Mirrors the open handle on the rail's far edge, with
-          the chevron pointing the other way, so opening and closing are the
-          same gesture in opposite directions. Desktop only — on a narrow
-          screen the rail is a drawer and the scrim already closes it. */}
-
-      {/* Desktop's way in: a tab on the left edge, where the rail would be, so
-          it reads as the nav folded away and the chevron points at what opening
-          it does. It's hidden on narrow screens — see the toolbar button below
-          — because with no margin beside the content it sits on the text. */}
-
+    <div className={`app ${canBrowseFull ? "" : "guest"}`}>
       <div className={`main ${mode === "sandbox" ? "sandbox" : ""}`}>
-        <div className="topbar">
-          {/* Mobile's way into the nav. The edge handle can't do this job on a
-              phone — there's no margin for it to sit in, so it lands on the
-              text. A control in the toolbar is both out of the way and where
-              anyone would look for it. */}
-          {canBrowseFull && (
-            <button
-              className={`nav-menu ${railHidden ? "show" : ""}`}
-              onClick={openRail}
-              aria-label="Open navigation"
-            >
-              <Menu size={18} strokeWidth={1.9} />
-            </button>
-          )}
-          <Clock />
-          <Ticker />
-        </div>
+        {canBrowseFull ? (
+          <CommandBar />
+        ) : (
+          /* Guests get the bar's title block and nothing else: there's one
+             destination open to them, and the sign-in ask already lives in
+             the guest bar at the bottom with the sentence that explains it. */
+          <header className="cmdbar guestbar-top">
+            <div className="cb-left">
+              <div className="cb-screen">
+                <button
+                  className="cb-kick cb-kick-btn"
+                  onClick={() => window.dispatchEvent(new Event("trove:show-landing"))}
+                  title="Back to the front page"
+                >
+                  Trove
+                </button>
+                <span className="cb-title">Catalog</span>
+              </div>
+            </div>
+          </header>
+        )}
         {effectiveTab === "trending" && <Trending />}
         {effectiveTab === "catalog" && <Catalog />}
         {effectiveTab === "wire" && <Wire />}
@@ -144,6 +108,7 @@ export function Terminal() {
         {effectiveTab === "studio" && <Studio />}
         {effectiveTab === "goals" && <Goals />}
         {effectiveTab === "reputation" && <Reputation />}
+        {canBrowseFull && <StatusBar />}
       </div>
       {!canBrowseFull && (
         <div className="guestbar">
@@ -175,18 +140,21 @@ export function Terminal() {
   );
 }
 
+/** The deterministic pre-hydration shell. It holds the command bar's exact
+ *  shape — same height, same title block — so the real bar drops into place
+ *  instead of the page jumping once live data arrives. */
 function BootShell() {
   return (
     <div className="app">
-      <nav className="rail">
-        <div className="brand">
-          TR<b>O</b>VE<small>HOLDINGS</small>
-        </div>
-      </nav>
       <div className="main">
-        <div className="topbar">
-          <div className="tlabel">The Wire</div>
-        </div>
+        <header className="cmdbar">
+          <div className="cb-left">
+            <div className="cb-screen">
+              <span className="cb-kick">Trove Holdings</span>
+              <span className="cb-title">Trending</span>
+            </div>
+          </div>
+        </header>
         <div className="view">
           <div className="empty">Opening the market…</div>
         </div>
@@ -388,37 +356,6 @@ function Onboarding() {
           </button>
         </div>
       </div>
-    </div>
-  );
-}
-
-/** In-game clock. Trove time runs 2× real (a full 24h day every 12 real hours).
- *  Anchored to real time, so the floor's 6-real-hour turns land exactly on
- *  in-game 00:00 and 12:00. Re-renders on the tick. */
-const TROVE_SPEED = 2;
-function Clock() {
-  useTrove(); // subscribe to the render tick
-  const DAY = 86_400_000;
-  const HALF = DAY / 2; // 12 in-game hours = 6 real hours = one market turn
-  const g = (Date.now() * TROVE_SPEED) % DAY; // ms into the in-game day
-  const hh = String(Math.floor(g / 3_600_000)).padStart(2, "0");
-  const mm = String(Math.floor((g % 3_600_000) / 60_000)).padStart(2, "0");
-  const ss = String(Math.floor((g % 60_000) / 1_000)).padStart(2, "0");
-  const left = HALF - (g % HALF); // in-game ms until the next turn
-  const nh = Math.floor(left / 3_600_000);
-  const nm = Math.floor((left % 3_600_000) / 60_000);
-  return (
-    <div
-      className="clock"
-      title="Trove time runs 2× real (a full day every 12 hours). The market turns at 00:00 and 12:00."
-    >
-      <span className="clock-t">
-        {hh}:{mm}
-        <span className="clock-s">:{ss}</span> <small>TVT</small>
-      </span>
-      <span className="clock-n">
-        next turn {nh}h {nm}m
-      </span>
     </div>
   );
 }
